@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bmw-ix1-xdrive30",
+    "familyId": "bmw-ix1",
+    "make": "BMW",
+    "model": "iX1",
+    "variant": "xDrive30",
+    "bodyType": "SUV",
+    "listPrice": 77900,
+    "batteryKwh": 65.2,
+    "rangeKm": 426,
+    "consumptionKwhPer100km": 17.2,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1495,
+    "seats": 5,
+    "towKg": 1200,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2100,
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "bmw-ix1-xdrive30-m-sport",
+    "familyId": "bmw-ix1",
+    "make": "BMW",
+    "model": "iX1",
+    "variant": "xDrive30 M Sport",
+    "bodyType": "SUV",
+    "listPrice": 86800,
+    "batteryKwh": 65.2,
+    "rangeKm": 400,
+    "consumptionKwhPer100km": 18.3,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1495,
+    "seats": 5,
+    "towKg": 1200,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2300,
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-07-26"
+  }
+]

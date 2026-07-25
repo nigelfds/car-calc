@@ -1,0 +1,42 @@
+[
+  {
+    "id": "geely-ex5-complete",
+    "familyId": "geely-ex5",
+    "make": "Geely",
+    "model": "EX5",
+    "variant": "Complete",
+    "bodyType": "SUV",
+    "listPrice": 41990,
+    "batteryKwh": 68.39,
+    "rangeKm": 475,
+    "consumptionKwhPer100km": 16.0,
+    "bootLitresSeatsUp": 410,
+    "bootLitresSeatsDown": 1877,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1600,
+    "depreciationCurve": [1, 0.75, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "geely-ex5-inspire",
+    "familyId": "geely-ex5",
+    "make": "Geely",
+    "model": "EX5",
+    "variant": "Inspire",
+    "bodyType": "SUV",
+    "listPrice": 45990,
+    "batteryKwh": 68.39,
+    "rangeKm": 450,
+    "consumptionKwhPer100km": 16.9,
+    "bootLitresSeatsUp": 410,
+    "bootLitresSeatsDown": 1877,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1700,
+    "depreciationCurve": [1, 0.75, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-26"
+  }
+]

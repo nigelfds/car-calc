@@ -1,0 +1,22 @@
+{
+  "id": "tesla-model-3",
+  "summary": "Australian reviewers regard the updated Model 3 as the class benchmark among electric sedans, praising a noticeably quieter cabin and softer ride than earlier versions alongside brisk performance and strong efficiency. The Long Range RWD's 750km WLTP claim makes it the longest-range EV sold in the country, while the screen-only control layout continues to split opinion. The Performance variant's near-$81,000 list price also pushes it close to the FBT exemption threshold that keeps novated-lease buyers interested in the cheaper variants.",
+  "pros": [
+    "Long Range RWD offers the longest WLTP range of any EV on sale in Australia at 750km",
+    "Access to Tesla's extensive Australian Supercharger network plus regular over-the-air software updates",
+    "Recent refresh brings a quieter cabin and noticeably improved ride comfort over the outgoing model",
+    "Strong outright performance, with the dual-motor Performance variant hitting 100km/h in around 3.1 seconds"
+  ],
+  "cons": [
+    "Touchscreen-only interface, including indicators and gear selection on some builds, remains a sticking point for reviewers",
+    "Comprehensive insurance premiums tend to sit at the higher end of the EV market due to repair and parts costs",
+    "Performance variant's list price sits close to the $75,000 FBT exemption threshold, eroding some of the novated-lease tax advantage"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/tesla/model-3/2026",
+    "https://www.carexpert.com.au/car-reviews/2026-tesla-model-3-review",
+    "https://www.carsguide.com.au/ev/tesla-model-3-premium-long-range-rwd-100750",
+    "https://www.carexpert.com.au/car-news/2026-tesla-model-3-now-australias-longest-range-ev"
+  ],
+  "sourcedAt": "2026-07-26"
+}

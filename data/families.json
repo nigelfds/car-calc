@@ -1,5 +1,28 @@
 [
   {
+    "id": "bmw-ix1",
+    "summary": "Australian reviewers rate the iX1 as one of the best small electric SUVs on sale, praising BMW's typically composed ride and precise steering alongside a genuinely upscale, well-finished cabin with quality materials and slick infotainment. It carries a clear price premium over mainstream EV rivals, and its roughly 400-450km real-world range trails segment leaders like the Tesla Model Y, but reviewers feel the driving experience and interior finish justify the extra spend for buyers prioritising refinement and brand prestige over outright value. CarExpert has named it its Best EV Small SUV in consecutive years, reflecting a broad consensus that BMW has successfully electrified its smallest SUV.",
+    "pros": [
+      "Composed, well-damped ride and precise steering that reviewers say outclasses cheaper EV rivals",
+      "Upscale, well-finished interior with quality materials and an intuitive, slick infotainment system",
+      "Surprisingly spacious cabin for a compact SUV, with rear seat space rivalling the front",
+      "Back-to-back CarExpert Choice Award winner for Best EV Small SUV"
+    ],
+    "cons": [
+      "Premium pricing sits well above mainstream small EV SUVs and undercuts few direct rivals",
+      "Real-world range (reviewers report high-17s to high-18s kWh/100km) trails key rivals such as the Tesla Model Y",
+      "490L boot is smaller than the petrol X1's due to the rear-mounted motor and battery pack",
+      "Expensive scheduled servicing over a typical ownership period"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2024-bmw-ix1-review",
+      "https://www.carsguide.com.au/bmw/ix1",
+      "https://www.carexpert.com.au/car-news/2026-carexpert-choice-winner-best-ev-small-suv",
+      "https://zecar.com/reviews/bmw-ix1-ix2-price-cut-range-boost-2026"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
     "id": "byd-atto3",
     "summary": "Sharply priced small SUV from BYD with a well-equipped cabin and a strong warranty, aimed squarely at first-time EV buyers.",
     "pros": [
@@ -17,6 +40,108 @@
       "https://www.carsales.com.au/research/byd/atto-3/"
     ],
     "sourcedAt": "2026-07-25"
+  },
+  {
+    "id": "byd-dolphin",
+    "summary": "Australia's cheapest new electric car, the Dolphin pairs a soft, comfortable ride with a surprisingly well-equipped, upscale-feeling cabin for the price, according to CarExpert, CarsGuide and WhichCar. Reviewers agree it is happiest as a city runabout: refined and efficient around town, but wind noise, mixed rear visibility and (on the base Essential) modest power blunt its appeal on the open road. It is not a driver's car, but on value and everyday livability it comfortably outpoints most petrol light hatches at a similar price.",
+    "pros": [
+      "Lowest entry price of any new EV in Australia",
+      "Comfortable, well-controlled ride for the segment",
+      "Roomy cabin and quality-feeling trim materials for the price",
+      "Strong standard equipment including a large rotating touchscreen",
+      "Five-star ANCAP safety rating with comprehensive driver assist tech"
+    ],
+    "cons": [
+      "Underpowered Essential struggles with highway overtaking",
+      "Slow 7kW AC home charging versus rivals' 11kW",
+      "Small boot and restricted rear visibility",
+      "6-year/150,000km warranty trails some rivals' 7-year cover",
+      "Steeper resale depreciation risk as BYD repeatedly cuts new prices"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2025-byd-dolphin-dynamic-review",
+      "https://www.carsguide.com.au/ev/byd-dolphin-91411",
+      "https://www.whichcar.com.au/reviews/2024-byd-dolphin-review-australia",
+      "https://www.carsguide.com.au/byd/dolphin/price/2026",
+      "https://zecar.com/electric-vehicles/byd/dolphin/2023/essential",
+      "https://zecar.com/electric-vehicles/byd/dolphin/2023/premium",
+      "https://www.carexpert.com.au/car-news/byd-importer-puts-electric-car-depreciation-in-the-spotlight"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "geely-ex5",
+    "summary": "The EX5 is Geely's first model for the Australian market, a mid-size front-wheel-drive electric SUV pitched on comfort and value below better-known rivals like the Tesla Model Y. Reviewers consistently praise its quiet, cushioned ride and roomy, lounge-like rear seating, but mark it down for a smaller-than-expected boot, touchscreen-only climate controls, and driving dynamics that favour softness over sharpness. A mid-2026 update brought a larger 68.39kWh battery lifting range to 475km (Complete) and 450km (Inspire), addressing the main complaint about the original 2025 launch cars.",
+    "pros": [
+      "Comfortable, well-cushioned ride tuned for Australian roads",
+      "Quiet cabin with strong urban energy efficiency",
+      "Sharp pricing relative to rivals such as Leapmotor C10 and Tesla Model Y",
+      "Spacious, lounge-like rear seat comfort",
+      "Long 7-year vehicle / 8-year battery warranty"
+    ],
+    "cons": [
+      "Boot space (302-410L) trails key rivals like the Leapmotor C10 (581L)",
+      "Modest ~100kW DC fast-charging rate",
+      "Touchscreen-only controls for climate and headlights are fiddly",
+      "No official towing rating in Australia as at mid-2026",
+      "Noticeable body roll and 'floaty' suspension feel when driven briskly"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-geely-ex5-price-and-specs-mid-size-electric-suv-gets-bigger-battery",
+      "https://www.carsguide.com.au/ev/geely-ex5-inspire-101373",
+      "https://www.carexpert.com.au/car-reviews/2025-geely-ex5-inspire-review",
+      "https://thebeep.com.au/car-reviews/2026-geely-ex5-review",
+      "https://www.carsguide.com.au/geely/ex5/towing-capacity/2026"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "hyundai-ioniq-5",
+    "summary": "Australian reviewers consistently rate the Ioniq 5 as one of the most complete mid-size electric SUVs on sale, praising its distinctive retro-futuristic styling, spacious and flexible cabin, and quick 800V DC charging. Ride comfort has improved with recent updates and is composed around town, though some testers still find body control loosens up over undulating country roads. The Ioniq 5 N adds genuine sports-car pace and track ability while retaining the practicality of the donor SUV, making it a standout among performance EVs, albeit at a steep price premium.",
+    "pros": [
+      "Distinctive, spacious interior with a flat floor and sliding rear seats",
+      "Fast 800V charging architecture supports rapid top-ups on road trips",
+      "Comfortable, grown-up highway ride with low wind and tyre noise",
+      "Ioniq 5 N offers genuine performance-car dynamics in a practical SUV body"
+    ],
+    "cons": [
+      "Body control can feel loose and float-y over undulating roads at speed",
+      "Real-world efficiency trails some rivals, particularly on the AWD and N variants",
+      "Boot space is only average for the class",
+      "N Line Premium and N variants push well into luxury-car pricing territory"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-hyundai-ioniq-5-price-and-specs-smaller-battery-axed-in-reshuffled-range",
+      "https://www.carexpert.com.au/car-news/hyundai-kona-ioniq-5-ev-pricing-slashed-by-thousands",
+      "https://www.chasingcars.com.au/news/new-car-prices/prices-slashed-by-8000-for-hyundai-ioniq-5-and-kona-electric-as-cheaper-rivals-continue-to-flood-australias-ev-market/",
+      "https://www.carexpert.com.au/car-reviews/2025-hyundai-ioniq-5-review",
+      "https://www.carsguide.com.au/hyundai/ioniq-5",
+      "https://www.carsales.com.au/research/hyundai/ioniq-5/2026/n-line-premium/"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "kia-ev3",
+    "summary": "Kia's compact electric SUV pairs a genuinely spacious, well-finished cabin with suspension tuning that Australian reviewers rate as composed and comfortable over rough surfaces. Entry Air variants are seen as strong value under $50k with usable real-world range, but the flagship GT-Line drifts close to $70,000 on-road, where reviewers feel it should offer more standard safety kit such as a surround-view camera.",
+    "pros": [
+      "Locally tuned ride soaks up broken Melbourne road surfaces while staying composed at highway speed",
+      "Roomy, well-packaged cabin and a genuinely usable 460L boot (1250L seats folded) for a compact SUV",
+      "Air Long Range offers a genuinely long 604km WLTP claim while still pricing under $55,000",
+      "Five-star ANCAP rating and Kia's 7-year/unlimited-km vehicle warranty (7yr/150,000km battery)"
+    ],
+    "cons": [
+      "GT-Line pricing approaches $70,000 drive-away yet still lacks a surround-view camera",
+      "Noticeable road and wind noise intrude at highway speeds on all variants",
+      "Modest DC fast-charging speeds mean longer top-up stops on road trips than key rivals",
+      "Entry Air Standard Range is rated to tow just 500kg braked, well below the 1000kg of Long Range variants"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-kia-ev3-review",
+      "https://www.carsguide.com.au/kia/ev3/price/2026",
+      "https://www.chasingcars.com.au/reviews/small-suvs/kia-ev3-earth-long-term-review/",
+      "https://www.racv.com.au/royalauto/car-reviews/kia/2026-kia-ev3-review.html"
+    ],
+    "sourcedAt": "2026-07-26"
   },
   {
     "id": "kia-ev5",
@@ -38,6 +163,79 @@
     "sourcedAt": "2026-07-25"
   },
   {
+    "id": "kia-ev9",
+    "summary": "Kia's flagship seven-seat electric SUV is consistently praised by Australian reviewers as one of the most family-practical EVs on sale, with a genuinely usable third row, fast 800V DC charging, and a plush, tech-laden cabin. It comes at a real cost though, with even the entry Air RWD pricing above the luxury-EV threshold and the range topping out with the performance-focused GT, which reviewers see more as a halo model than a value pick.",
+    "pros": [
+      "Spacious, genuinely adult-friendly third row that few seven-seat EV rivals match",
+      "Fast 800V architecture supports rapid DC charging, useful for family road trips",
+      "High-quality, feature-rich interior with strong safety tech across the range",
+      "Strong 7-year/unlimited-km warranty backing the whole lineup"
+    ],
+    "cons": [
+      "Every variant is priced above the FBT exemption threshold, eroding novated lease appeal",
+      "Big and heavy, so real-world efficiency and around-town manoeuvrability suffer versus smaller EVs",
+      "Boot space behind the third row is tight when all seven seats are needed",
+      "GT flagship commands a large premium mainly for extra performance few buyers will use"
+    ],
+    "sources": [
+      "https://thedriven.io/2026/02/17/2026-kia-ev9-pricing-reveals-new-top-trim-starts-at-129250/",
+      "https://www.chasingcars.com.au/news/electric-vehicles/kia-ev9-2026-flagship-gt-performance-suv-priced-at-129250-in-australia/",
+      "https://www.carexpert.com.au/kia/ev9",
+      "https://www.carsguide.com.au/kia/ev9"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "mg-4",
+    "summary": "The MG4 is consistently rated by Australian reviewers as one of the best-value small EVs on sale, combining sharp pricing with genuinely engaging rear-wheel-drive handling that punches above its budget-hatch positioning. The 2026 update fixed earlier interior gripes (better seats, more responsive touchscreen) and added the entry-level Urban variant, which reviewers praise for segment-busting cabin space and a surprisingly mature ride for the money. Common criticisms are a fiddly climate interface, an overactive speed-limit warning chime, and a boot that's merely adequate rather than class-leading.",
+    "pros": [
+      "Sharp pricing relative to range and equipment, undercutting most EV rivals",
+      "Engaging, well-sorted rear-wheel-drive handling and steering feel",
+      "Spacious, upmarket-feeling cabin for the price, especially in Urban trim",
+      "Strong standard safety suite (adaptive cruise, AEB, blind spot monitoring)",
+      "Quick DC charging (10-80% in around 25-30 minutes)"
+    ],
+    "cons": [
+      "Boot space is only middling for a hatch (350-382L)",
+      "Few physical controls; climate functions buried in the touchscreen",
+      "Overactive speed-limit and driver-attention warning chimes annoy some reviewers",
+      "XPower's real-world range drops noticeably under highway/AWD use"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-mg-4-ev-urban-review-quick-drive",
+      "https://www.carsguide.com.au/urban/mg-mg4-ev-urban-101245",
+      "https://www.carsguide.com.au/mg/mg4",
+      "https://www.whichcar.com.au/reviews/mg-4-review-australian-first-drive-of-budget-ev",
+      "https://www.carsales.com.au/research/mg/mg4/2026/essence-64/",
+      "https://www.carsales.com.au/research/mg/mg4/2026/xpower/",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mg4-ev-price-specs-release-date.html",
+      "https://www.carexpert.com.au/car-news/2026-mg-4-ev-urban-price-and-specs"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "tesla-model-3",
+    "summary": "Australian reviewers regard the updated Model 3 as the class benchmark among electric sedans, praising a noticeably quieter cabin and softer ride than earlier versions alongside brisk performance and strong efficiency. The Long Range RWD's 750km WLTP claim makes it the longest-range EV sold in the country, while the screen-only control layout continues to split opinion. The Performance variant's near-$81,000 list price also pushes it close to the FBT exemption threshold that keeps novated-lease buyers interested in the cheaper variants.",
+    "pros": [
+      "Long Range RWD offers the longest WLTP range of any EV on sale in Australia at 750km",
+      "Access to Tesla's extensive Australian Supercharger network plus regular over-the-air software updates",
+      "Recent refresh brings a quieter cabin and noticeably improved ride comfort over the outgoing model",
+      "Strong outright performance, with the dual-motor Performance variant hitting 100km/h in around 3.1 seconds"
+    ],
+    "cons": [
+      "Touchscreen-only interface, including indicators and gear selection on some builds, remains a sticking point for reviewers",
+      "Comprehensive insurance premiums tend to sit at the higher end of the EV market due to repair and parts costs",
+      "Performance variant's list price sits close to the $75,000 FBT exemption threshold, eroding some of the novated-lease tax advantage"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/tesla/model-3/2026",
+      "https://www.carexpert.com.au/car-reviews/2026-tesla-model-3-review",
+      "https://www.carsguide.com.au/ev/tesla-model-3-premium-long-range-rwd-100750",
+      "https://www.carexpert.com.au/car-news/2026-tesla-model-3-now-australias-longest-range-ev"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
     "id": "tesla-model-y",
     "summary": "Best-selling electric SUV globally, offering the longest range and lowest energy use of this trio plus access to Tesla's Supercharger network.",
     "pros": [
@@ -55,5 +253,52 @@
       "https://www.carsguide.com.au/tesla/model-y/price/2026"
     ],
     "sourcedAt": "2026-07-25"
+  },
+  {
+    "id": "volvo-ex30",
+    "summary": "The EX30 is Volvo's compact electric SUV, praised by Australian reviewers for punchy, agile handling, a well-damped ride and a distinctive, upmarket cabin featuring wool-blend seat trim. Sharp price cuts through 2026 have pushed the single-motor Plus below $50,000 before on-roads, making it one of the more attainable premium-badged EVs on the market, and it carries a five-star ANCAP safety rating. It is let down for family duty by a tight rear seat and modest boot, and reviewers are split on whether that's a fair trade-off for its style and driving manners.",
+    "pros": [
+      "Agile, well-controlled handling and a comfortable ride, with brisk acceleration even in the base single-motor form",
+      "Distinctive Scandinavian interior design with higher-grade materials, including wool-blend seat trim, that feels a step above rivals",
+      "Aggressive 2026 price cuts (Plus from $49,990 before on-roads) bring a premium-badged EV within reach of mainstream buyers",
+      "Five-star ANCAP safety rating and strong standard safety tech"
+    ],
+    "cons": [
+      "Almost every function -- climate control, mirror adjustment, even the glovebox -- is buried in the portrait touchscreen with no driver instrument display; some reviewers call this the car's biggest flaw and report the screen lagging or crashing, while others say it becomes tolerable after a week of familiarity, so opinion is genuinely split rather than uniformly negative",
+      "Window switches are relocated to the centre console instead of the doors, one of several cost-saving control choices reviewers find awkward",
+      "Small rear seat and boot space limit its practicality as a family car",
+      "DC fast-charging speeds are competent rather than class-leading"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-volvo-ex30-review",
+      "https://www.carsguide.com.au/volvo/ex30",
+      "https://thedriven.io/2026/04/03/volvo-slashes-prices-of-electric-suvs-by-more-than-10000-ahead-of-new-model-release/",
+      "https://www.carexpert.com.au/car-news/volvo-slashes-pricing-of-ex30-and-ex40-electric-suvs"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "xpeng-g6",
+    "summary": "The XPeng G6 is a mid-size electric SUV coupe pitched squarely at the Tesla Model Y, with reviewers praising its upmarket cabin, strong tech package and genuinely quick charging on the refreshed 800V architecture. Testers rate the ride and refinement highly and note the flagship AWD Performance model undercuts a comparable Model Y on price while offering vastly stronger acceleration. The main knocks are steering that feels heavy and artificial, a chassis that doesn't quite match the Performance variant's straight-line pace, and quirks like the lack of a glovebox and a fiddly steering-column gear selector.",
+    "pros": [
+      "Upmarket interior fit-out and strong tech/safety suite for the price",
+      "Fast 800V/451kW DC charging with a 10-80% top-up around 12 minutes",
+      "AWD Performance variant offers Tesla Model Y Performance-rivalling pace at a lower price",
+      "Spacious rear seating with good headroom for a coupe-SUV shape"
+    ],
+    "cons": [
+      "Steering feels heavy and artificial, chassis doesn't fully back up the Performance model's speed",
+      "No glovebox and limited cabin storage",
+      "Counterintuitive steering-column gear selector",
+      "Newer brand with a history of distributor changes in Australia, which may concern some buyers on parts/service continuity"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-xpeng-g6-prices-refreshed-suv-undercuts-tesla-model-y-zeekr-7x-and-byd-sealion-7-in-australia",
+      "https://www.carexpert.com.au/car-reviews/2026-xpeng-g6-review-quick-drive",
+      "https://www.carexpert.com.au/car-reviews/2026-xpeng-g6-awd-performance-review-quick-drive",
+      "https://www.evee.com.au/blog/2026-xpeng-g6-australia-price-specs-and-range/",
+      "https://xpeng.com.au/g6-warranty"
+    ],
+    "sourcedAt": "2026-07-26"
   }
 ]

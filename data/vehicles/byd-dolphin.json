@@ -1,0 +1,42 @@
+[
+  {
+    "id": "byd-dolphin-essential",
+    "familyId": "byd-dolphin",
+    "make": "BYD",
+    "model": "Dolphin",
+    "variant": "Essential",
+    "bodyType": "Hatch",
+    "listPrice": 29990,
+    "batteryKwh": 44.9,
+    "rangeKm": 340,
+    "consumptionKwhPer100km": 13.2,
+    "bootLitresSeatsUp": 345,
+    "bootLitresSeatsDown": 1310,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1250,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "byd-dolphin-premium",
+    "familyId": "byd-dolphin",
+    "make": "BYD",
+    "model": "Dolphin",
+    "variant": "Premium",
+    "bodyType": "Hatch",
+    "listPrice": 36990,
+    "batteryKwh": 60.5,
+    "rangeKm": 427,
+    "consumptionKwhPer100km": 14.2,
+    "bootLitresSeatsUp": 345,
+    "bootLitresSeatsDown": 1310,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1400,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-26"
+  }
+]
