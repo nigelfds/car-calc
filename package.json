@@ -1,0 +1,11 @@
+{
+  "name": "car-calc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "start": "node server/index.js"
+  }
+}
