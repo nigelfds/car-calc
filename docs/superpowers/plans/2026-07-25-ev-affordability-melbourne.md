@@ -1734,4 +1734,694 @@ git commit -m "feat: add researched EV dataset with family reviews and press ima
 
 ---
 
-**Remaining tasks to append:** 13–15 (Express server, Claude client, and the three endpoints with fallbacks), 16–20 (UI sections, crossover chart, wiring, Heroku deploy).
+## Phase 3 — Server
+
+### Task 13: Express server, static hosting, and the keyword fallback parser
+
+The fallback parser is built **before** the Claude endpoint that it backs up, so the server is never in a state where an API failure has no answer.
+
+**Files:**
+- Create: `server/index.js`, `server/fallback-parser.js`, `Procfile`, `.env.example`
+- Modify: `package.json` (add dependencies)
+- Test: `server/fallback-parser.test.js`
+
+**Interfaces:**
+- Consumes: nothing
+- Produces: `parseKeywords(text) -> { bodyTypes, minBootLitres, minRangeKm, seats, grossSalary, monthlyBudget, termMonths }` with `null` for anything not found
+
+- [ ] **Step 1: Install dependencies**
+
+```bash
+npm install express@^5 zod@^3 @anthropic-ai/sdk
+```
+
+- [ ] **Step 2: Write the failing test**
+
+Create `server/fallback-parser.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { parseKeywords } from './fallback-parser.js';
+
+test('extracts salary written with a k suffix', () => {
+  assert.equal(parseKeywords('I earn $145k a year').grossSalary, 145000);
+});
+
+test('extracts salary written in full', () => {
+  assert.equal(parseKeywords('my salary is $145,000').grossSalary, 145000);
+});
+
+test('extracts a monthly budget', () => {
+  assert.equal(parseKeywords('I can spend about $900 a month').monthlyBudget, 900);
+});
+
+test('distinguishes annual salary from monthly budget in one sentence', () => {
+  const r = parseKeywords('I earn $145k and can spend about $900 a month on a car');
+  assert.equal(r.grossSalary, 145000);
+  assert.equal(r.monthlyBudget, 900);
+});
+
+test('recognises body types', () => {
+  assert.deepEqual(parseKeywords('looking for an SUV').bodyTypes, ['SUV']);
+  assert.deepEqual(parseKeywords('a small hatchback please').bodyTypes, ['Hatch']);
+});
+
+test('infers a boot requirement from a dog', () => {
+  const r = parseKeywords('I need a big boot for my large dog');
+  assert.ok(r.minBootLitres >= 500);
+});
+
+test('extracts a range requirement', () => {
+  assert.equal(parseKeywords('I want at least 400km of range').minRangeKm, 400);
+});
+
+test('extracts a loan term in years', () => {
+  assert.equal(parseKeywords('over 5 years').termMonths, 60);
+});
+
+test('returns nulls for text with nothing extractable', () => {
+  const r = parseKeywords('something nice please');
+  assert.equal(r.grossSalary, null);
+  assert.equal(r.monthlyBudget, null);
+  assert.deepEqual(r.bodyTypes, []);
+});
+```
+
+- [ ] **Step 3: Write the fallback parser**
+
+Create `server/fallback-parser.js`:
+
+```js
+const BODY_TYPES = [
+  { match: /\bsuv\b/i, value: 'SUV' },
+  { match: /\bsedan\b/i, value: 'Sedan' },
+  { match: /\bhatch(back)?\b/i, value: 'Hatch' },
+  { match: /\bwagon\b/i, value: 'Wagon' },
+  { match: /\bute\b/i, value: 'Ute' }
+];
+
+function toNumber(raw) {
+  return Number(raw.replace(/[$,\s]/g, ''));
+}
+
+export function parseKeywords(text) {
+  const result = {
+    bodyTypes: [],
+    minBootLitres: null,
+    minRangeKm: null,
+    seats: null,
+    grossSalary: null,
+    monthlyBudget: null,
+    termMonths: null
+  };
+  if (typeof text !== 'string') return result;
+
+  const monthly = text.match(/\$?([\d,.]+)\s*k?\s*(?:per month|a month|\/month|pm\b|monthly)/i);
+  if (monthly) {
+    const value = toNumber(monthly[1]);
+    result.monthlyBudget = /k/i.test(monthly[0]) ? value * 1000 : value;
+  }
+
+  const salary = text.match(/\$?([\d,.]+)\s*k\b|\$([\d,]{5,})/i);
+  if (salary) {
+    const raw = salary[1] ?? salary[2];
+    const value = toNumber(raw);
+    const scaled = salary[1] ? value * 1000 : value;
+    if (scaled !== result.monthlyBudget && scaled >= 20000) result.grossSalary = scaled;
+  }
+
+  for (const { match, value } of BODY_TYPES) {
+    if (match.test(text)) result.bodyTypes.push(value);
+  }
+
+  if (/\bdog\b|\bpram\b|\bcamping\b|\bbig boot\b|\blarge boot\b/i.test(text)) {
+    result.minBootLitres = /\blarge dog\b|\bbig dog\b|\bcrate\b/i.test(text) ? 500 : 400;
+  }
+
+  const range = text.match(/(\d{3})\s*(?:\+)?\s*km/i);
+  if (range) result.minRangeKm = Number(range[1]);
+
+  const seats = text.match(/(\d)\s*seat/i);
+  if (seats) result.seats = Number(seats[1]);
+
+  const years = text.match(/(\d)\s*year/i);
+  if (years) result.termMonths = Number(years[1]) * 12;
+
+  return result;
+}
+```
+
+- [ ] **Step 4: Run tests to verify they pass**
+
+Run: `npm test`
+Expected: PASS, 73 tests total.
+
+- [ ] **Step 5: Create the server**
+
+Create `server/index.js`:
+
+```js
+import express from 'express';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+import { loadDataset } from '../data/schema.js';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const readJson = name =>
+  JSON.parse(readFileSync(join(here, '..', 'data', name), 'utf8'));
+
+const dataset = loadDataset({
+  vehicles: readJson('vehicles.json'),
+  families: readJson('families.json')
+});
+
+if (dataset.skipped.length > 0) {
+  console.warn(`Skipped ${dataset.skipped.length} invalid vehicle rows:`);
+  for (const s of dataset.skipped) console.warn(`  ${s.id}: ${s.errors.join('; ')}`);
+}
+
+const app = express();
+app.use(express.json({ limit: '64kb' }));
+app.use(express.static(join(here, '..', 'public')));
+
+app.get('/api/dataset', (req, res) => {
+  res.json({
+    vehicles: dataset.vehicles,
+    families: dataset.families,
+    rates: readJson('rates.json'),
+    tables: readJson('tax-tables.json'),
+    aiEnabled: Boolean(process.env.ANTHROPIC_API_KEY)
+  });
+});
+
+app.get('/api/health', (req, res) => {
+  res.json({ ok: true, vehicles: dataset.vehicles.length });
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on ${port}`));
+
+export { app, dataset };
+```
+
+Create `Procfile`:
+
+```
+web: node server/index.js
+```
+
+Create `.env.example`:
+
+```
+ANTHROPIC_API_KEY=sk-ant-your-key-here
+```
+
+- [ ] **Step 6: Verify the server boots and serves the dataset**
+
+Run: `node server/index.js &` then `curl -s localhost:3000/api/health`
+Expected: `{"ok":true,"vehicles":NN}` where NN matches the dataset size. Confirm it boots **without** `ANTHROPIC_API_KEY` set and reports `aiEnabled: false` from `/api/dataset`. Stop the server afterwards.
+
+- [ ] **Step 7: Commit**
+
+```bash
+git add server/index.js server/fallback-parser.js server/fallback-parser.test.js Procfile .env.example package.json package-lock.json
+git commit -m "feat: add Express server, dataset endpoint and keyword fallback parser"
+```
+
+---
+
+### Task 14: Claude client and response schemas
+
+**Files:**
+- Create: `server/claude.js`, `server/schema.js`
+- Test: `server/schema.test.js`
+
+**Interfaces:**
+- Consumes: nothing
+- Produces:
+  - `askClaude({ system, messages, tool, timeoutMs = 10000 }) -> object | null` — returns the validated tool input, or `null` on any failure (no key, timeout, network error, malformed response). It never throws.
+  - `parseSchema`, `rankSchema`, `explainSchema` — zod schemas
+  - `clampParsed(parsed) -> parsed` — clamps numeric fields to sane ranges per the spec
+
+- [ ] **Step 1: Write the failing test**
+
+Create `server/schema.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { parseSchema, rankSchema, explainSchema, clampParsed } from './schema.js';
+
+test('a well-formed parse result validates', () => {
+  const result = parseSchema.safeParse({
+    bodyTypes: ['SUV'],
+    minBootLitres: 500,
+    minRangeKm: 400,
+    seats: 5,
+    grossSalary: 145000,
+    monthlyBudget: 900,
+    termMonths: 60,
+    clarifyingQuestion: null
+  });
+  assert.equal(result.success, true);
+});
+
+test('an unknown body type is rejected', () => {
+  const result = parseSchema.safeParse({ bodyTypes: ['Spaceship'] });
+  assert.equal(result.success, false);
+});
+
+test('a parse result may omit every optional field', () => {
+  assert.equal(parseSchema.safeParse({}).success, true);
+});
+
+test('rank results require an id and a reason', () => {
+  assert.equal(rankSchema.safeParse({
+    ranked: [{ id: 'kia-ev5-air', reason: 'Biggest boot in your budget.' }]
+  }).success, true);
+  assert.equal(rankSchema.safeParse({ ranked: [{ id: 'kia-ev5-air' }] }).success, false);
+});
+
+test('explain results require non-empty prose', () => {
+  assert.equal(explainSchema.safeParse({ explanation: 'Because you are in the 37% bracket.' }).success, true);
+  assert.equal(explainSchema.safeParse({ explanation: '' }).success, false);
+});
+
+test('an implausible salary is clamped, not rejected', () => {
+  assert.equal(clampParsed({ grossSalary: 99000000 }).grossSalary, 1000000);
+  assert.equal(clampParsed({ grossSalary: 200 }).grossSalary, 20000);
+});
+
+test('an implausible budget is clamped', () => {
+  assert.equal(clampParsed({ monthlyBudget: 500000 }).monthlyBudget, 10000);
+});
+
+test('the term is snapped to a supported ATO lease term', () => {
+  assert.equal(clampParsed({ termMonths: 50 }).termMonths, 48);
+  assert.equal(clampParsed({ termMonths: 999 }).termMonths, 60);
+});
+
+test('clamping leaves absent fields absent', () => {
+  assert.deepEqual(clampParsed({}), {});
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './schema.js'`.
+
+- [ ] **Step 3: Write the schemas**
+
+Create `server/schema.js`:
+
+```js
+import { z } from 'zod';
+
+const BODY_TYPES = ['SUV', 'Sedan', 'Hatch', 'Wagon', 'Ute'];
+const TERMS = [12, 24, 36, 48, 60];
+
+export const parseSchema = z.object({
+  bodyTypes: z.array(z.enum(BODY_TYPES)).optional(),
+  minBootLitres: z.number().nullable().optional(),
+  minRangeKm: z.number().nullable().optional(),
+  seats: z.number().int().nullable().optional(),
+  grossSalary: z.number().nullable().optional(),
+  monthlyBudget: z.number().nullable().optional(),
+  termMonths: z.number().int().nullable().optional(),
+  clarifyingQuestion: z.string().nullable().optional()
+});
+
+export const rankSchema = z.object({
+  ranked: z.array(z.object({
+    id: z.string().min(1),
+    reason: z.string().min(1)
+  })).max(5)
+});
+
+export const explainSchema = z.object({
+  explanation: z.string().min(1)
+});
+
+const clamp = (value, low, high) => Math.min(high, Math.max(low, value));
+
+export function clampParsed(parsed) {
+  const out = { ...parsed };
+  if (typeof out.grossSalary === 'number') out.grossSalary = clamp(out.grossSalary, 20000, 1000000);
+  if (typeof out.monthlyBudget === 'number') out.monthlyBudget = clamp(out.monthlyBudget, 100, 10000);
+  if (typeof out.minBootLitres === 'number') out.minBootLitres = clamp(out.minBootLitres, 0, 3000);
+  if (typeof out.minRangeKm === 'number') out.minRangeKm = clamp(out.minRangeKm, 0, 1000);
+  if (typeof out.seats === 'number') out.seats = clamp(out.seats, 2, 9);
+  if (typeof out.termMonths === 'number') {
+    out.termMonths = TERMS.reduce((best, t) =>
+      Math.abs(t - out.termMonths) < Math.abs(best - out.termMonths) ? t : best
+    );
+  }
+  return out;
+}
+```
+
+- [ ] **Step 4: Write the Claude client**
+
+Create `server/claude.js`:
+
+```js
+import Anthropic from '@anthropic-ai/sdk';
+
+const MODEL = 'claude-sonnet-5';
+const client = process.env.ANTHROPIC_API_KEY
+  ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+  : null;
+
+export const aiEnabled = () => client !== null;
+
+/**
+ * Calls Claude and returns the validated tool input, or null on any failure.
+ * Never throws — every caller has a working fallback path.
+ */
+export async function askClaude({ system, messages, tool, schema, timeoutMs = 10000 }) {
+  if (!client) return null;
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await client.messages.create({
+      model: MODEL,
+      max_tokens: 1024,
+      system,
+      messages,
+      tools: [tool],
+      tool_choice: { type: 'tool', name: tool.name }
+    }, { signal: controller.signal });
+
+    const block = response.content.find(c => c.type === 'tool_use');
+    if (!block) return null;
+
+    const validated = schema.safeParse(block.input);
+    return validated.success ? validated.data : null;
+  } catch (error) {
+    console.warn(`Claude call failed: ${error.message}`);
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+```
+
+- [ ] **Step 5: Run tests to verify they pass**
+
+Run: `npm test`
+Expected: PASS, 82 tests total.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add server/claude.js server/schema.js server/schema.test.js
+git commit -m "feat: add Claude client with validation, timeout and graceful failure"
+```
+
+---
+
+### Task 15: The three Claude endpoints
+
+**Files:**
+- Create: `server/routes/parse.js`, `server/routes/rank.js`, `server/routes/explain.js`
+- Modify: `server/index.js` (mount the routes)
+- Test: `server/routes/parse.test.js`
+
+**Interfaces:**
+- Consumes: `askClaude` (Task 14), `parseKeywords` (Task 13), schemas (Task 14)
+- Produces: three mounted Express routers. Each response carries `source: 'claude' | 'fallback' | 'none'` so the UI can show what happened.
+
+- [ ] **Step 1: Write the failing test**
+
+Create `server/routes/parse.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { mergeParsed } from './parse.js';
+
+test('Claude values win over keyword values', () => {
+  const merged = mergeParsed(
+    { grossSalary: 100000, monthlyBudget: 500 },
+    { grossSalary: 145000, monthlyBudget: 900 }
+  );
+  assert.equal(merged.grossSalary, 145000);
+  assert.equal(merged.monthlyBudget, 900);
+});
+
+test('keyword values fill gaps Claude left null', () => {
+  const merged = mergeParsed(
+    { grossSalary: 145000, minRangeKm: 400 },
+    { grossSalary: null, monthlyBudget: 900 }
+  );
+  assert.equal(merged.grossSalary, 145000);
+  assert.equal(merged.monthlyBudget, 900);
+  assert.equal(merged.minRangeKm, 400);
+});
+
+test('merging with a null Claude result returns the keyword result', () => {
+  const merged = mergeParsed({ grossSalary: 145000 }, null);
+  assert.equal(merged.grossSalary, 145000);
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './parse.js'`.
+
+- [ ] **Step 3: Write the parse route**
+
+Create `server/routes/parse.js`:
+
+```js
+import express from 'express';
+import { askClaude, aiEnabled } from '../claude.js';
+import { parseSchema, clampParsed } from '../schema.js';
+import { parseKeywords } from '../fallback-parser.js';
+
+const TOOL = {
+  name: 'record_preferences',
+  description: 'Record the car preferences and financial details stated by the user.',
+  input_schema: {
+    type: 'object',
+    properties: {
+      bodyTypes: { type: 'array', items: { type: 'string', enum: ['SUV', 'Sedan', 'Hatch', 'Wagon', 'Ute'] } },
+      minBootLitres: { type: ['number', 'null'] },
+      minRangeKm: { type: ['number', 'null'] },
+      seats: { type: ['integer', 'null'] },
+      grossSalary: { type: ['number', 'null'], description: 'Annual salary before tax in AUD' },
+      monthlyBudget: { type: ['number', 'null'], description: 'Monthly car spend from take-home pay in AUD' },
+      termMonths: { type: ['integer', 'null'] },
+      clarifyingQuestion: {
+        type: ['string', 'null'],
+        description: 'One short question, only if the input is too vague to act on. Otherwise null.'
+      }
+    }
+  }
+};
+
+const SYSTEM = `You extract structured car-buying preferences from a person's description.
+You never calculate costs, taxes, or affordability — a separate deterministic engine does that.
+Convert natural phrasing into numbers: "145k" means 145000; "big boot for a large dog" implies
+minBootLitres of at least 500. Set a field to null when the user did not indicate it. Ask a
+clarifying question only when the input is too vague to filter on at all.`;
+
+export function mergeParsed(keywordResult, claudeResult) {
+  if (!claudeResult) return keywordResult;
+  const merged = { ...keywordResult };
+  for (const [key, value] of Object.entries(claudeResult)) {
+    if (value !== null && value !== undefined) {
+      if (Array.isArray(value) && value.length === 0) continue;
+      merged[key] = value;
+    }
+  }
+  return merged;
+}
+
+const router = express.Router();
+
+router.post('/', async (req, res) => {
+  const { text, history = [] } = req.body ?? {};
+  if (typeof text !== 'string' || text.trim() === '') {
+    return res.status(400).json({ error: 'text is required' });
+  }
+
+  const keywordResult = parseKeywords(text);
+
+  const claudeResult = await askClaude({
+    system: SYSTEM,
+    messages: [...history, { role: 'user', content: text }],
+    tool: TOOL,
+    schema: parseSchema
+  });
+
+  const merged = clampParsed(mergeParsed(keywordResult, claudeResult));
+  res.json({
+    preferences: merged,
+    clarifyingQuestion: claudeResult?.clarifyingQuestion ?? null,
+    source: claudeResult ? 'claude' : (aiEnabled() ? 'fallback' : 'none')
+  });
+});
+
+export default router;
+```
+
+- [ ] **Step 4: Write the rank and explain routes**
+
+Create `server/routes/rank.js`:
+
+```js
+import express from 'express';
+import { askClaude } from '../claude.js';
+import { rankSchema } from '../schema.js';
+
+const TOOL = {
+  name: 'rank_vehicles',
+  description: 'Order the shortlisted vehicles against the buyer\'s stated priorities.',
+  input_schema: {
+    type: 'object',
+    properties: {
+      ranked: {
+        type: 'array',
+        maxItems: 5,
+        items: {
+          type: 'object',
+          properties: {
+            id: { type: 'string' },
+            reason: { type: 'string', description: 'One short sentence, referring only to given facts.' }
+          },
+          required: ['id', 'reason']
+        }
+      }
+    },
+    required: ['ranked']
+  }
+};
+
+const SYSTEM = `You order already-filtered, already-costed vehicles against a buyer's soft
+priorities. Every vehicle given to you is affordable and matches their hard filters. Use only the
+attributes supplied — never invent specifications, prices, or running costs. Choose at most five.`;
+
+const router = express.Router();
+
+router.post('/', async (req, res) => {
+  const { candidates = [], priorities = '' } = req.body ?? {};
+  if (candidates.length === 0) return res.json({ ranked: [], source: 'none' });
+
+  const result = await askClaude({
+    system: SYSTEM,
+    messages: [{
+      role: 'user',
+      content: `Priorities: ${priorities || 'none stated'}\n\nCandidates:\n${JSON.stringify(candidates, null, 2)}`
+    }],
+    tool: TOOL,
+    schema: rankSchema
+  });
+
+  if (!result) {
+    return res.json({ ranked: candidates.slice(0, 5).map(c => ({ id: c.id, reason: '' })), source: 'fallback' });
+  }
+
+  const known = new Set(candidates.map(c => c.id));
+  res.json({ ranked: result.ranked.filter(r => known.has(r.id)), source: 'claude' });
+});
+
+export default router;
+```
+
+Create `server/routes/explain.js`:
+
+```js
+import express from 'express';
+import { askClaude } from '../claude.js';
+import { explainSchema } from '../schema.js';
+
+const TOOL = {
+  name: 'explain_recommendation',
+  description: 'Explain in plain English why the winning financing option won.',
+  input_schema: {
+    type: 'object',
+    properties: {
+      explanation: {
+        type: 'string',
+        description: 'Two to four sentences. Use only the figures supplied. No new numbers.'
+      }
+    },
+    required: ['explanation']
+  }
+};
+
+const SYSTEM = `You explain a car financing recommendation to an Australian buyer in plain English.
+Every dollar figure has already been computed and is supplied to you. Use only those figures —
+never calculate, estimate, or introduce a number that is not given. Mention the balloon payment
+when a novated lease wins, since buyers routinely overlook it. Do not give financial advice.`;
+
+const router = express.Router();
+
+router.post('/', async (req, res) => {
+  const { result } = req.body ?? {};
+  if (!result) return res.status(400).json({ error: 'result is required' });
+
+  const explanation = await askClaude({
+    system: SYSTEM,
+    messages: [{ role: 'user', content: JSON.stringify(result, null, 2) }],
+    tool: TOOL,
+    schema: explainSchema
+  });
+
+  res.json({
+    explanation: explanation?.explanation ?? null,
+    source: explanation ? 'claude' : 'none'
+  });
+});
+
+export default router;
+```
+
+- [ ] **Step 5: Mount the routes**
+
+In `server/index.js`, add the imports below the existing ones:
+
+```js
+import parseRoute from './routes/parse.js';
+import rankRoute from './routes/rank.js';
+import explainRoute from './routes/explain.js';
+```
+
+and mount them immediately after the `express.static` line:
+
+```js
+app.use('/api/parse', parseRoute);
+app.use('/api/rank', rankRoute);
+app.use('/api/explain', explainRoute);
+```
+
+- [ ] **Step 6: Run tests and verify the endpoint works without a key**
+
+Run: `npm test`
+Expected: PASS, 85 tests total.
+
+Run, with no `ANTHROPIC_API_KEY` in the environment:
+```bash
+node server/index.js &
+curl -s -X POST localhost:3000/api/parse -H 'content-type: application/json' \
+  -d '{"text":"I earn $145k and can spend about $900 a month, want an SUV with a big boot for my dog"}'
+```
+Expected: JSON with `grossSalary: 145000`, `monthlyBudget: 900`, `bodyTypes: ["SUV"]`, `minBootLitres: 500`, and `source: "none"` — proving the keyword fallback fully covers a missing API key. Stop the server afterwards.
+
+- [ ] **Step 7: Commit**
+
+```bash
+git add server/routes server/index.js
+git commit -m "feat: add parse, rank and explain endpoints with fallbacks"
+```
+
+---
+
+**Remaining tasks to append:** 16–20 (UI shell and state, section 1 inputs and parse hand-off, section 2 slider and rates panel, crossover chart, section 3 cards, and Heroku deploy).
