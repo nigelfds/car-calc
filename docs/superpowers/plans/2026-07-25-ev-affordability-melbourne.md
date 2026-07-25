@@ -884,8 +884,11 @@ export function novatedQuote(input, tables) {
 
   const credit = gstCredit(driveAwayTotal, tables);
   const financedAmount = driveAwayTotal - credit;
+  // The residual is a percentage of the CAR's cost, not the drive-away total.
+  // Stamp duty and registration have no resale value, so applying a residual
+  // percentage to them would overstate what the car is worth at term end.
   const residual = residualAmount(
-    { vehicleCost: driveAwayTotal, termMonths, residualPctOverride },
+    { vehicleCost: vehicleValue, termMonths, residualPctOverride },
     tables
   );
 
@@ -1373,8 +1376,9 @@ test('GOLDEN: Kia EV5 Air drive-away in Victoria is $59,232', () => {
   close(optionCosts({ vehicle: ev5, inputs }, tables).novated.detail.driveAway, 59232);
 });
 
-test('GOLDEN: the 48-month residual is $22,212 of drive-away price', () => {
-  close(optionCosts({ vehicle: ev5, inputs }, tables).novated.detail.residual, 59232 * 0.375);
+test('GOLDEN: the 48-month residual is 37.5% of the car price, not the drive-away price', () => {
+  // $21,000, not $22,212 — stamp duty and rego are excluded from the residual base.
+  close(optionCosts({ vehicle: ev5, inputs }, tables).novated.detail.residual, 56000 * 0.375);
 });
 
 test('GOLDEN: novated beats loan, and loan beats upfront on this profile', () => {
