@@ -37,7 +37,7 @@
 | `data/tax-tables.json` | Brackets, LITO, Medicare, LCT, car limit, residuals, FBT phases, VIC duty |
 | `data/rates.json` | Finance and running-cost defaults with sources |
 | `data/vehicles.json` | 60–80 variants, numeric fields only |
-| `data/families.json` | Per-family reviews, pros/cons, source links, press image URLs |
+| `data/families.json` | Per-family reviews, pros/cons, source links (images deferred) |
 | `calc/tax.js` | Gross salary → tax, Medicare, LITO, take-home |
 | `calc/onroad.js` | List price → LCT, VIC stamp duty, rego, drive-away |
 | `calc/fbt.js` | Lease start date + value → phase, treatment, FBT liability |
@@ -1665,7 +1665,7 @@ git commit -m "feat: add dataset schema, validator and seed rows"
 A research pass, not automated code, and the only task in the plan that fans out. Each family is researched by its own subagent writing its **own pair of files**, so parallel agents never touch a shared file. `build-dataset.js` then merges the per-family files into the two JSON files the server reads.
 
 **Files:**
-- Create: `scripts/build-dataset.js`, `data/families/<familyId>.json` (~30), `data/vehicles/<familyId>.json` (~30)
+- Create: `scripts/build-dataset.js`, `data/families/<familyId>.json` (~43), `data/vehicles/<familyId>.json` (~43)
 - Modify: `data/vehicles.json`, `data/families.json` — now **generated**, never hand-edited
 
 **Interfaces:**
@@ -1736,20 +1736,50 @@ Split the three seed rows and two seed families from Task 11 into `data/vehicles
 
 - [ ] **Step 3: Research each family (fanned out, one subagent per family)**
 
-Target families, roughly 30: BYD Atto 3, Dolphin, Seal, Sealion 7; Tesla Model 3, Model Y; MG4, MGS5; Kia EV3, EV5, EV6, EV9; Hyundai Inster, Kona Electric, Ioniq 5, Ioniq 6; Polestar 2, 4; Volvo EX30, EX40; GWM Ora; Zeekr X, 7X; Xpeng G6, G9; Leapmotor C10; Cupra Born; Nissan Leaf; Subaru Solterra; Toyota bZ4X; Ford Mustang Mach-E.
+Target families, 43, chosen so the dataset spans both FBT thresholds rather than clustering
+below them. The $75,000 and $91,661 boundaries are where the recommendation flips, so families
+that straddle a threshold at variant level are the most valuable rows in the set.
+
+**Under ~$50k — exempt in every phase (9):** BYD Dolphin · BYD Atto 3 · MG4 · GWM Ora ·
+Hyundai Inster · Leapmotor C10 · Kia EV3 · Chery Omoda E5 · Geely EX5
+
+**~$50–75k — exempt now, still exempt after Apr 2027 (19):** BYD Seal · BYD Sealion 7 · MGS5 ·
+Tesla Model 3 · Tesla Model Y · Kia EV5 · Hyundai Kona Electric · Xpeng G6 · Zeekr X ·
+Volvo EX30 · Subaru Solterra · Toyota bZ4X · Deepal S07 · Skoda Elroq · Renault Megane E-Tech ·
+Nissan Ariya · Mahindra XEV 9e · Mini Cooper E · Jeep Avenger
+
+**~$75–91.7k — exempt today, 25% discount from Apr 2027 (13):** Hyundai Ioniq 5 ·
+Hyundai Ioniq 6 · Kia EV6 · Polestar 4 · Volvo EX40 · Zeekr 7X · Xpeng G9 ·
+Ford Mustang Mach-E · Skoda Enyaq · BMW iX1 · Mercedes EQA · Mercedes EQB · Audi Q4 e-tron
+
+**Above ~$91.7k — never exempt (2):** Kia EV9 · BMW i4
+
+Band placement above is indicative only, from list price recall — the research pass establishes
+the real Victorian pricing, and a family may land in a different band or straddle two. Several
+are expected to straddle at variant level (BMW i4 eDrive35 versus M50, Kia EV6 versus EV6 GT),
+which is exactly the case the app exists to illuminate.
+
+**Excluded after review, do not research:** Nissan Leaf, Cupra Born and Polestar 2 — each is
+either withdrawn from the Australian market or of uncertain current availability, and would
+consume a research slot to establish that.
+
+If an agent finds its assigned family is not actually on sale in Australia as at the research
+date, it must report that and write no files, rather than inventing a plausible row.
 
 Each subagent handles exactly one family and writes exactly two files, `data/families/<id>.json` and `data/vehicles/<id>.json`. It must not touch `vehicles.json`, `families.json`, or any other family's files.
 
 **Vehicles file** — one row per **variant** on sale in Victoria. Variant granularity is the point: a Long Range trim crossing the FBT threshold when the base does not is exactly the case the app exists to catch. Fields per the Task 11 schema: VIC drive-away price, list price, battery kWh, range, consumption, boot litres seats up and down, seats, tow rating, warranty, insurance estimate, and a depreciation curve. Default curve for mainstream EVs is `[1, 0.78, 0.68, 0.60, 0.53, 0.47]`; adjust for families with notably strong or weak resale.
 
-**Families file** — a two-to-three sentence consensus summary in the app's own words, three to five pros, two to five cons, source URLs (preferring CarExpert, Drive, CarsGuide, WhichCar, since verdicts on ride and value are market-specific), and two or three image URLs from the **manufacturer's press or media room only**. Press rooms exist for republication; review-site photography does not. Set `sourcedAt`.
+**Families file** — a two-to-three sentence consensus summary in the app's own words, three to five pros, two to five cons, source URLs (preferring CarExpert, Drive, CarsGuide, WhichCar, since verdicts on ride and value are market-specific), and `sourcedAt`.
+
+**Do not research or supply images.** The `images` field is deferred and must be omitted entirely. Spend the effort on pricing accuracy and review quality instead — those are what the app actually reasons about.
 
 Each subagent validates its own two files before reporting, by running `node scripts/build-dataset.js` and confirming its own family produces no `FAIL` lines. A non-zero exit caused by *another* family still in flight is expected and not its concern.
 
 - [ ] **Step 4: Merge and validate the whole dataset**
 
 Run: `node scripts/build-dataset.js`
-Expected: `NN variants across ~30 families, 0 failures`, exit code 0, and both merged files rewritten.
+Expected: `NN variants across ~43 families, 0 failures`, exit code 0, and both merged files rewritten.
 
 - [ ] **Step 5: Run the full test suite**
 

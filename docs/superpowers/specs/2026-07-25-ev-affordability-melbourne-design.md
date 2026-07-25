@@ -229,9 +229,10 @@ Per family:
 - `sources` — URLs the summary was drawn from, preferring established Australian outlets
   (CarExpert, Drive, CarsGuide, WhichCar) since verdicts on ride quality and value are
   market-specific.
-- `images` — two or three URLs, **official manufacturer press and media room links only**.
-  Press rooms exist for republication; review-site photography does not. Nothing is committed to
-  the repo.
+- `images` — **deferred, optional.** Manufacturer press rooms proved unreliable to fetch in
+  practice (Tesla blocks automated requests; Kia serves a JavaScript gallery, not image files).
+  The field stays in the schema and is validated when present, so images can be added later
+  without a migration, but nothing sources them for now.
 - `sourcedAt` — dates the research.
 
 Qualitative research feeds display and Claude's ranking rationale. It never feeds `calc/`, which
@@ -344,10 +345,10 @@ Mobile-first. Three sections, stacked vertically on a phone, laid out as columns
    across the budget range, with the user's position marked. Three thin lines in 96px of height
    is not legible on a phone.
 3. **Cars that match** — the ranked shortlist with the attributes that drove the match. Each card
-   carries a hero image, and expands to show the family summary, pros and cons, and links to the
-   source reviews. Images are lazy-loaded from external press URLs; any that fails to load is
-   replaced by a body-type SVG silhouette, so a rotted link degrades to a plain card rather than
-   a broken one.
+   shows a body-type SVG silhouette, and expands to show the family summary, pros and cons, and
+   links to the source reviews. Photography is deferred; where a family does carry image URLs
+   they are lazy-loaded with the silhouette as the fallback, so adding images later needs no
+   UI change.
 
 A sticky one-line summary bar on mobile ("🏆 Novated · Kia EV5 · $871/mo") scrolls to section 3
 on tap, so the payoff is always one tap away despite being third in the stack.
@@ -395,10 +396,9 @@ State lives in a single object serialised to the URL query string, making any re
   quote should be entered. This single input moves the crossover more than any other.
 - **Drive-away prices move often**, particularly for Chinese brands. Rows carry `sourcedAt`, and
   the UI shows dataset age.
-- **External image URLs will rot**, and some hosts block hotlinking. Accepted deliberately in
-  exchange for keeping copyrighted photography out of the repo; the silhouette fallback means the
-  cost is cosmetic. Restricting to manufacturer press rooms keeps copyright exposure low, but
-  does not eliminate it — these are still third-party images served from someone else's host.
+- **Images are deferred**, which removes a whole class of fragility (rotted links, hotlink
+  blocking, licensing questions) at a purely cosmetic cost. The schema keeps the field so they
+  can be added later without a migration.
 - **Review summaries are editorial opinion**, condensed by a model from a handful of sources and
   fixed at `sourcedAt`. They inform browsing, never the numbers.
 - **RFBA effects are out of scope** and can materially reduce a lease's benefit for users with
