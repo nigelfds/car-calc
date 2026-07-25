@@ -114,10 +114,17 @@ export function validateFamily(entry) {
     errors.push('sourcedAt must match YYYY-MM-DD');
   }
 
-  const lists = { pros: 3, cons: 2, sources: 1, images: 1 };
+  const lists = { pros: 3, cons: 2, sources: 1 };
   for (const [field, minimum] of Object.entries(lists)) {
     if (!Array.isArray(entry[field]) || entry[field].length < minimum) {
       errors.push(`${field} must be an array of at least ${minimum}`);
+    }
+  }
+
+  // images is optional: can be missing, can be empty, but if supplied must be valid
+  if (Array.isArray(entry.images) && entry.images.length > 0) {
+    if (entry.images.some(u => typeof u !== 'string' || !IMAGE_URL_RE.test(u))) {
+      errors.push('images must all be https URLs ending in .jpg, .jpeg, .png or .webp');
     }
   }
 
@@ -129,9 +136,6 @@ export function validateFamily(entry) {
   }
   if (Array.isArray(entry.sources) && entry.sources.some(u => typeof u !== 'string' || !u.startsWith('https://'))) {
     errors.push('sources must all be https URLs');
-  }
-  if (Array.isArray(entry.images) && entry.images.some(u => typeof u !== 'string' || !IMAGE_URL_RE.test(u))) {
-    errors.push('images must all be https URLs ending in .jpg, .jpeg, .png or .webp');
   }
 
   return { valid: errors.length === 0, errors };

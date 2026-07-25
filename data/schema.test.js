@@ -58,7 +58,7 @@ const goodFamily = {
   sourcedAt: '2026-07-25'
 };
 
-test('a family entry requires summary, pros, cons, sources and images', () => {
+test('a family entry requires summary, pros, cons, and sources (but images is optional)', () => {
   assert.equal(validateFamily(goodFamily).valid, true);
   assert.equal(validateFamily({ id: 'kia-ev5', summary: 'x' }).valid, false);
 });
@@ -159,7 +159,16 @@ test('consumption within 25% of the implied figure passes', () => {
 
 // --- Item 5: image URLs must be direct image files ----------------------
 
-test('family images must be https and end in a real image extension', () => {
+test('a family with no images key is valid', () => {
+  const { images, ...noImages } = goodFamily;
+  assert.equal(validateFamily(noImages).valid, true);
+});
+
+test('a family with an empty images array is valid', () => {
+  assert.equal(validateFamily({ ...goodFamily, images: [] }).valid, true);
+});
+
+test('family images must be https and end in a real image extension when supplied', () => {
   assert.equal(validateFamily({ ...goodFamily, images: ['https://www.kiapressoffice.com/models/ev5'] }).valid, false);
   assert.equal(validateFamily({ ...goodFamily, images: ['http://press.kia.com/ev5-front.jpg'] }).valid, false);
   assert.equal(validateFamily({ ...goodFamily, images: ['https://press.kia.com/ev5-front.jpg?w=800'] }).valid, true);
