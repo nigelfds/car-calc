@@ -1035,4 +1035,377 @@ git commit -m "feat: add upfront cash purchase calculation"
 
 ---
 
-**Remaining tasks to append:** 9 (`compare.js` — TCO, ranking, reachable vehicle, crossover solver), 10–11 (dataset schema, validator, research pass), 12–14 (Express server and the three Claude endpoints), 15–19 (UI sections, chart, wiring, Heroku deploy).
+### Task 9: `calc/compare.js` — TCO, reachable vehicle, crossover solver
+
+The module that answers the app's actual question. Note the two rules from the spec that are easy to get wrong: TCO must subtract what the user is left holding, and **upfront is bounded by savings, not by monthly budget**, so its line is horizontal.
+
+**Files:**
+- Create: `calc/compare.js`
+- Test: `calc/compare.test.js`
+
+**Interfaces:**
+- Consumes: every module from Tasks 2–8
+- Produces:
+  - `optionCosts({ vehicle, inputs }, tables) -> { novated, loan, upfront }` — each entry `{ option, monthlyCost, tco, feasible, detail }`, with `upfront.feasible` false when savings are short
+  - `reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables) -> vehicle | null` — the **highest-priced** variant whose monthly cost under that option is at or below budget
+  - `crossoverSeries({ vehicles, inputs, budgetRange }, tables) -> { points, crossovers }` — `points` is `[{ budget, novated, loan, upfront }]` with `null` where an option can reach nothing; `crossovers` is `[{ budget, from, to }]`
+
+`inputs` throughout is
+`{ grossSalary, savings, termMonths, annualKm, leaseStartDate, leaseRatePct, loanRatePct, opportunityRatePct, adminFeeAnnual, deposit }`.
+
+- [ ] **Step 1: Write the failing test**
+
+Create `calc/compare.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { optionCosts, reachableVehicle, crossoverSeries } from './compare.js';
+
+const tables = JSON.parse(readFileSync(new URL('../data/tax-tables.json', import.meta.url)));
+
+const vehicle = (id, listPrice) => ({
+  id,
+  listPrice,
+  consumptionKwhPer100km: 16,
+  insuranceAnnual: 1850,
+  depreciationCurve: [1, 0.78, 0.68, 0.60, 0.53, 0.47]
+});
+
+const inputs = {
+  grossSalary: 145000,
+  savings: 15000,
+  termMonths: 48,
+  annualKm: 15000,
+  leaseStartDate: '2026-07-25',
+  leaseRatePct: 7.5,
+  loanRatePct: 6.5,
+  opportunityRatePct: 4.5,
+  adminFeeAnnual: 1020,
+  deposit: 0
+};
+
+test('all three options are costed for one vehicle', () => {
+  const c = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables);
+  assert.ok(c.novated.tco > 0 && c.loan.tco > 0 && c.upfront.tco > 0);
+});
+
+test('TCO subtracts the resale value the user is left holding', () => {
+  const c = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables);
+  const grossOutflow = c.loan.detail.totalRepaid + c.loan.detail.runningCostsTotal;
+  assert.ok(c.loan.tco < grossOutflow, 'resale value is credited back');
+});
+
+test('upfront is infeasible when savings cannot cover the car', () => {
+  const c = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables);
+  assert.equal(c.upfront.feasible, false);
+
+  const rich = optionCosts({ vehicle: vehicle('a', 56000), inputs: { ...inputs, savings: 80000 } }, tables);
+  assert.equal(rich.upfront.feasible, true);
+});
+
+test('a novated lease beats a direct loan for a 37% earner on a cheap EV', () => {
+  const c = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables);
+  assert.ok(c.novated.tco < c.loan.tco, 'pre-tax packaging wins under the threshold');
+});
+
+test('reachableVehicle picks the dearest variant within budget', () => {
+  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000), vehicle('dear', 95000)];
+  const picked = reachableVehicle({ fleet, vehicles: fleet, budgetMonthly: 1000, option: 'novated', inputs }, tables);
+  assert.ok(picked, 'something is affordable at $1000/mo');
+  assert.notEqual(picked.id, 'cheap', 'it does not settle for the cheapest');
+});
+
+test('reachableVehicle returns null when nothing fits', () => {
+  const fleet = [vehicle('dear', 95000)];
+  const picked = reachableVehicle({ vehicles: fleet, budgetMonthly: 200, option: 'loan', inputs }, tables);
+  assert.equal(picked, null);
+});
+
+test('the crossover series produces a point per budget step', () => {
+  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000), vehicle('dear', 95000)];
+  const series = crossoverSeries(
+    { vehicles: fleet, inputs, budgetRange: { min: 400, max: 1600, step: 100 } },
+    tables
+  );
+  assert.equal(series.points.length, 13);
+  assert.ok(series.points.every(p => 'budget' in p && 'novated' in p && 'loan' in p));
+});
+
+test('the upfront line is flat because savings, not budget, bound it', () => {
+  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000)];
+  const series = crossoverSeries(
+    { vehicles: fleet, inputs: { ...inputs, savings: 60000 }, budgetRange: { min: 400, max: 1600, step: 400 } },
+    tables
+  );
+  const upfrontValues = series.points.map(p => p.upfront).filter(v => v !== null);
+  assert.ok(upfrontValues.length > 1);
+  assert.ok(upfrontValues.every(v => Math.abs(v - upfrontValues[0]) < 0.01), 'flat across budgets');
+});
+
+test('crossovers are reported where the leading option changes', () => {
+  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000), vehicle('dear', 95000)];
+  const series = crossoverSeries(
+    { vehicles: fleet, inputs, budgetRange: { min: 400, max: 2500, step: 50 } },
+    tables
+  );
+  assert.ok(Array.isArray(series.crossovers));
+  for (const c of series.crossovers) {
+    assert.ok(c.budget >= 400 && c.budget <= 2500);
+    assert.notEqual(c.from, c.to);
+  }
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './compare.js'`.
+
+- [ ] **Step 3: Write the implementation**
+
+Create `calc/compare.js`:
+
+```js
+import { driveAwayPrice } from './onroad.js';
+import { runningCosts } from './running-costs.js';
+import { resaleValue } from './resale.js';
+import { novatedQuote } from './novated.js';
+import { loanSummary, monthlyRepayment } from './loan.js';
+import { upfrontQuote } from './upfront.js';
+
+const RATE_DEFAULTS = { electricityCentsPerKwh: 28, otherRunningCostsAnnual: 1240 };
+
+function vehicleContext(vehicle, inputs, tables) {
+  const onRoad = driveAwayPrice({ listPrice: vehicle.listPrice }, tables);
+  const running = runningCosts({
+    vehicle,
+    annualKm: inputs.annualKm,
+    rates: RATE_DEFAULTS
+  });
+  const resale = resaleValue({
+    driveAwayTotal: onRoad.total,
+    termMonths: inputs.termMonths,
+    depreciationCurve: vehicle.depreciationCurve
+  });
+  return { onRoad, running, resale, years: inputs.termMonths / 12 };
+}
+
+export function optionCosts({ vehicle, inputs }, tables) {
+  const { onRoad, running, resale, years } = vehicleContext(vehicle, inputs, tables);
+
+  const novated = novatedQuote({
+    driveAwayTotal: onRoad.total,
+    termMonths: inputs.termMonths,
+    leaseRatePct: inputs.leaseRatePct,
+    adminFeeAnnual: inputs.adminFeeAnnual,
+    runningCostsAnnualExGst: running.totalExGst,
+    runningCostsAnnualIncGst: running.totalIncGst,
+    leaseStartDate: inputs.leaseStartDate,
+    vehicleValue: vehicle.listPrice,
+    grossSalary: inputs.grossSalary,
+    residualPctOverride: inputs.residualPctOverride ?? null
+  }, tables);
+
+  // Paying the balloon buys the car outright, so the resale value is credited.
+  const novatedTco = novated.netAnnualCost * years + novated.residual - resale;
+
+  const principal = Math.max(0, onRoad.total - inputs.deposit);
+  const loan = loanSummary({
+    principal,
+    annualRatePct: inputs.loanRatePct,
+    termMonths: inputs.termMonths
+  });
+  const loanRunningTotal = running.totalIncGst * years;
+  const loanTco = loan.totalRepaid + inputs.deposit + loanRunningTotal - resale;
+
+  const upfront = upfrontQuote({
+    driveAwayTotal: onRoad.total,
+    termMonths: inputs.termMonths,
+    opportunityRatePct: inputs.opportunityRatePct,
+    runningCostsAnnualIncGst: running.totalIncGst
+  });
+  const upfrontTco =
+    upfront.cashOutlay + upfront.opportunityCost + upfront.runningCostsTotal - resale;
+
+  return {
+    novated: {
+      option: 'novated',
+      monthlyCost: novated.netMonthlyCost,
+      tco: novatedTco,
+      feasible: true,
+      detail: { ...novated, resale, driveAway: onRoad.total }
+    },
+    loan: {
+      option: 'loan',
+      monthlyCost: loan.monthlyRepayment + running.totalIncGst / 12,
+      tco: loanTco,
+      feasible: true,
+      detail: { ...loan, runningCostsTotal: loanRunningTotal, resale, driveAway: onRoad.total }
+    },
+    upfront: {
+      option: 'upfront',
+      monthlyCost: upfront.netMonthlyRunningCost,
+      tco: upfrontTco,
+      feasible: inputs.savings >= onRoad.total,
+      detail: { ...upfront, resale, driveAway: onRoad.total }
+    }
+  };
+}
+
+export function reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables) {
+  const affordable = vehicles
+    .map(vehicle => ({ vehicle, costs: optionCosts({ vehicle, inputs }, tables)[option] }))
+    .filter(({ costs }) => costs.feasible && costs.monthlyCost <= budgetMonthly);
+
+  if (affordable.length === 0) return null;
+  return affordable.reduce((dearest, current) =>
+    current.vehicle.listPrice > dearest.vehicle.listPrice ? current : dearest
+  ).vehicle;
+}
+
+export function crossoverSeries({ vehicles, inputs, budgetRange }, tables) {
+  const { min, max, step } = budgetRange;
+  const options = ['novated', 'loan', 'upfront'];
+  const points = [];
+
+  for (let budget = min; budget <= max; budget += step) {
+    const point = { budget };
+    for (const option of options) {
+      const vehicle = reachableVehicle({ vehicles, budgetMonthly: budget, option, inputs }, tables);
+      point[option] = vehicle
+        ? optionCosts({ vehicle, inputs }, tables)[option].tco
+        : null;
+    }
+    points.push(point);
+  }
+
+  const leaderAt = point => {
+    const priced = options
+      .filter(o => point[o] !== null)
+      .map(o => ({ option: o, tco: point[o] }));
+    if (priced.length === 0) return null;
+    return priced.reduce((best, cur) => (cur.tco < best.tco ? cur : best)).option;
+  };
+
+  const crossovers = [];
+  for (let i = 1; i < points.length; i++) {
+    const previous = leaderAt(points[i - 1]);
+    const current = leaderAt(points[i]);
+    if (previous && current && previous !== current) {
+      crossovers.push({ budget: points[i].budget, from: previous, to: current });
+    }
+  }
+
+  return { points, crossovers };
+}
+```
+
+- [ ] **Step 4: Run tests to verify they pass**
+
+Run: `npm test`
+Expected: PASS, 50 tests total.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add calc/compare.js calc/compare.test.js
+git commit -m "feat: add option comparison and budget crossover solver"
+```
+
+---
+
+### Task 10: Golden-case regression tests
+
+Protects the whole core against silent drift when tax tables are refreshed. These are the tests that will fail loudly if someone edits `tax-tables.json` carelessly.
+
+**Files:**
+- Create: `calc/golden.test.js`
+
+**Interfaces:**
+- Consumes: `optionCosts` (Task 9)
+- Produces: nothing consumed by later tasks
+
+- [ ] **Step 1: Write the test with hand-verified figures**
+
+Create `calc/golden.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { optionCosts } from './compare.js';
+import { netIncome } from './tax.js';
+
+const tables = JSON.parse(readFileSync(new URL('../data/tax-tables.json', import.meta.url)));
+const close = (a, b, tol = 1) => assert.ok(Math.abs(a - b) < tol, `${a} !== ${b}`);
+
+const inputs = {
+  grossSalary: 145000,
+  savings: 15000,
+  termMonths: 48,
+  annualKm: 15000,
+  leaseStartDate: '2026-07-25',
+  leaseRatePct: 7.5,
+  loanRatePct: 6.5,
+  opportunityRatePct: 4.5,
+  adminFeeAnnual: 1020,
+  deposit: 0
+};
+
+const ev5 = {
+  id: 'kia-ev5-air',
+  listPrice: 56000,
+  consumptionKwhPer100km: 16,
+  insuranceAnnual: 1850,
+  depreciationCurve: [1, 0.78, 0.68, 0.60, 0.53, 0.47]
+};
+
+test('GOLDEN: a $145k earner takes home $107,380 a year', () => {
+  close(netIncome({ grossSalary: 145000 }, tables).netAnnual, 107380);
+});
+
+test('GOLDEN: Kia EV5 Air drive-away in Victoria is $59,232', () => {
+  close(optionCosts({ vehicle: ev5, inputs }, tables).novated.detail.driveAway, 59232);
+});
+
+test('GOLDEN: the 48-month residual is $22,212 of drive-away price', () => {
+  close(optionCosts({ vehicle: ev5, inputs }, tables).novated.detail.residual, 59232 * 0.375);
+});
+
+test('GOLDEN: novated beats loan, and loan beats upfront on this profile', () => {
+  const c = optionCosts({ vehicle: ev5, inputs }, tables);
+  assert.ok(c.novated.tco < c.loan.tco, 'novated is cheapest');
+  assert.equal(c.upfront.feasible, false, 'upfront is out of reach on $15k savings');
+});
+
+test('GOLDEN: crossing the LCT threshold reverses the novated advantage', () => {
+  const dear = { ...ev5, listPrice: 95000 };
+  const c = optionCosts({ vehicle: dear, inputs }, tables);
+  const gap = c.loan.tco - c.novated.tco;
+  const cheapGap = (() => {
+    const cheap = optionCosts({ vehicle: ev5, inputs }, tables);
+    return cheap.loan.tco - cheap.novated.tco;
+  })();
+  assert.ok(gap < cheapGap, 'the novated advantage shrinks above the threshold');
+});
+```
+
+- [ ] **Step 2: Run tests**
+
+Run: `npm test`
+Expected: PASS, 55 tests total. If any golden figure fails, the tax tables or a formula changed — investigate before adjusting the expected value.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add calc/golden.test.js
+git commit -m "test: add golden-case regression tests for the calculation core"
+```
+
+---
+
+**Phase 1 complete.** The calculation core is finished and fully tested with no network, no server, and no UI. Everything from here builds on a foundation that already answers the question correctly.
+
+**Remaining tasks to append:** 11–12 (dataset schema, validator and the research pass producing `vehicles.json` and `families.json`), 13–15 (Express server, Claude client and the three endpoints with fallbacks), 16–20 (UI sections, crossover chart, wiring, Heroku deploy).
