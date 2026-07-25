@@ -2424,4 +2424,841 @@ git commit -m "feat: add parse, rank and explain endpoints with fallbacks"
 
 ---
 
-**Remaining tasks to append:** 16–20 (UI shell and state, section 1 inputs and parse hand-off, section 2 slider and rates panel, crossover chart, section 3 cards, and Heroku deploy).
+## Phase 4 — User interface
+
+Mobile-first throughout. Three sections stack vertically on a phone and become columns from 900px.
+
+### Task 16: HTML shell, styles, and URL-backed state
+
+**Files:**
+- Create: `public/index.html`, `public/styles.css`, `public/ui/state.js`
+- Test: `public/ui/state.test.js`
+
+**Interfaces:**
+- Consumes: nothing
+- Produces:
+  - `defaultState(rates) -> state` where state is
+    `{ grossSalary, monthlyBudget, termMonths, savings, annualKm, leaseStartDate, deposit, leaseRatePct, loanRatePct, adminFeeAnnual, opportunityRatePct, residualPctOverride, bodyTypes, minBootLitres, minRangeKm, seats, freeText }`
+  - `toQueryString(state, defaults) -> string` — omits anything still at its default, keeping shared URLs short
+  - `fromQueryString(search, defaults) -> state`
+
+- [ ] **Step 1: Write the failing test**
+
+Create `public/ui/state.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { defaultState, toQueryString, fromQueryString } from './state.js';
+
+const rates = {
+  loanRatePct: 6.5, leaseRatePct: 7.5, adminFeeAnnual: 1020,
+  opportunityRatePct: 4.5, defaultAnnualKm: 15000
+};
+
+test('default state draws its rates from rates.json', () => {
+  const s = defaultState(rates);
+  assert.equal(s.loanRatePct, 6.5);
+  assert.equal(s.leaseRatePct, 7.5);
+  assert.equal(s.annualKm, 15000);
+});
+
+test('a state at defaults serialises to an empty query string', () => {
+  const defaults = defaultState(rates);
+  assert.equal(toQueryString(defaults, defaults), '');
+});
+
+test('only changed fields are serialised', () => {
+  const defaults = defaultState(rates);
+  const changed = { ...defaults, grossSalary: 145000, monthlyBudget: 900 };
+  const query = toQueryString(changed, defaults);
+  assert.ok(query.includes('grossSalary=145000'));
+  assert.ok(query.includes('monthlyBudget=900'));
+  assert.ok(!query.includes('loanRatePct'));
+});
+
+test('a round trip preserves changed values', () => {
+  const defaults = defaultState(rates);
+  const changed = { ...defaults, grossSalary: 145000, bodyTypes: ['SUV'], leaseRatePct: 8.2 };
+  const restored = fromQueryString(toQueryString(changed, defaults), defaults);
+  assert.equal(restored.grossSalary, 145000);
+  assert.equal(restored.leaseRatePct, 8.2);
+  assert.deepEqual(restored.bodyTypes, ['SUV']);
+});
+
+test('an unknown query parameter is ignored', () => {
+  const defaults = defaultState(rates);
+  const restored = fromQueryString('?grossSalary=145000&evil=1', defaults);
+  assert.equal(restored.grossSalary, 145000);
+  assert.equal(restored.evil, undefined);
+});
+
+test('a non-numeric value for a numeric field falls back to the default', () => {
+  const defaults = defaultState(rates);
+  const restored = fromQueryString('?grossSalary=abc', defaults);
+  assert.equal(restored.grossSalary, defaults.grossSalary);
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './state.js'`.
+
+- [ ] **Step 3: Write the state module**
+
+Create `public/ui/state.js`:
+
+```js
+const ARRAY_FIELDS = new Set(['bodyTypes']);
+const STRING_FIELDS = new Set(['leaseStartDate', 'freeText']);
+
+export function defaultState(rates) {
+  return {
+    grossSalary: 100000,
+    monthlyBudget: 900,
+    termMonths: 60,
+    savings: 0,
+    annualKm: rates.defaultAnnualKm,
+    leaseStartDate: '2026-07-25',
+    deposit: 0,
+    leaseRatePct: rates.leaseRatePct,
+    loanRatePct: rates.loanRatePct,
+    adminFeeAnnual: rates.adminFeeAnnual,
+    opportunityRatePct: rates.opportunityRatePct,
+    residualPctOverride: null,
+    bodyTypes: [],
+    minBootLitres: null,
+    minRangeKm: null,
+    seats: null,
+    freeText: ''
+  };
+}
+
+const same = (a, b) =>
+  Array.isArray(a) && Array.isArray(b)
+    ? a.length === b.length && a.every((v, i) => v === b[i])
+    : a === b;
+
+export function toQueryString(state, defaults) {
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(state)) {
+    if (value === null || value === '' || same(value, defaults[key])) continue;
+    params.set(key, Array.isArray(value) ? value.join(',') : String(value));
+  }
+  const query = params.toString();
+  return query ? `?${query}` : '';
+}
+
+export function fromQueryString(search, defaults) {
+  const params = new URLSearchParams(search);
+  const state = { ...defaults };
+
+  for (const key of Object.keys(defaults)) {
+    if (!params.has(key)) continue;
+    const raw = params.get(key);
+
+    if (ARRAY_FIELDS.has(key)) {
+      state[key] = raw ? raw.split(',') : [];
+    } else if (STRING_FIELDS.has(key)) {
+      state[key] = raw;
+    } else {
+      const parsed = Number(raw);
+      state[key] = Number.isFinite(parsed) ? parsed : defaults[key];
+    }
+  }
+  return state;
+}
+```
+
+- [ ] **Step 4: Write the HTML shell**
+
+Create `public/index.html` with the three-section structure: a header, then `<section id="about">`, `<section id="afford">`, `<section id="cars">`, then a mobile sticky summary bar `<div id="summary-bar">`. Section 1 contains a `<textarea id="free-text">` with the placeholder `I earn $145k and can spend about $900 a month. I want an SUV with a big boot for my dog.` above the numeric fields. Load `ui/app.js` as `<script type="module">`.
+
+Create `public/styles.css` with a single-column layout by default and `@media (min-width: 900px) { .sections { display: grid; grid-template-columns: 250px 1fr 236px; gap: 1rem; } }`. Hide `#summary-bar` above 900px. Include a `.field-updated` class with a brief background highlight for the parse hand-off.
+
+- [ ] **Step 5: Run tests and view the page**
+
+Run: `npm test`
+Expected: PASS, 91 tests total.
+
+Run: `node server/index.js &` then open `http://localhost:3000`
+Expected: three stacked sections with the textarea showing the placeholder. Narrow the window below 900px and confirm the columns stack.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add public/index.html public/styles.css public/ui/state.js public/ui/state.test.js
+git commit -m "feat: add HTML shell, responsive styles and URL-backed state"
+```
+
+---
+
+### Task 17: Section 1 — inputs and the visible parse hand-off
+
+**Files:**
+- Create: `public/ui/sections.js`
+- Test: `public/ui/sections.test.js`
+
+**Interfaces:**
+- Consumes: state module (Task 16), `POST /api/parse` (Task 15)
+- Produces:
+  - `applyPreferences(state, preferences) -> { state, changedFields }` — returns which fields changed so the UI can highlight them
+  - `renderInputs(root, state, onChange)` — binds the numeric fields
+  - `bindFreeText(root, state, { onParsed })` — posts the textarea content and applies the result
+
+Manual edits always win over parsed text: a field the user has touched is recorded in `state.touched` and is never overwritten by a parse.
+
+- [ ] **Step 1: Write the failing test**
+
+Create `public/ui/sections.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { applyPreferences } from './sections.js';
+
+const base = {
+  grossSalary: 100000, monthlyBudget: 900, termMonths: 60,
+  bodyTypes: [], minBootLitres: null, touched: []
+};
+
+test('parsed preferences are applied to untouched fields', () => {
+  const { state, changedFields } = applyPreferences(base, { grossSalary: 145000, bodyTypes: ['SUV'] });
+  assert.equal(state.grossSalary, 145000);
+  assert.deepEqual(state.bodyTypes, ['SUV']);
+  assert.ok(changedFields.includes('grossSalary'));
+  assert.ok(changedFields.includes('bodyTypes'));
+});
+
+test('a field the user has edited is never overwritten', () => {
+  const touched = { ...base, touched: ['grossSalary'] };
+  const { state, changedFields } = applyPreferences(touched, { grossSalary: 145000 });
+  assert.equal(state.grossSalary, 100000, 'the manual value survives');
+  assert.ok(!changedFields.includes('grossSalary'));
+});
+
+test('null preferences leave the state alone', () => {
+  const { state, changedFields } = applyPreferences(base, { grossSalary: null, seats: null });
+  assert.equal(state.grossSalary, 100000);
+  assert.equal(changedFields.length, 0);
+});
+
+test('a value identical to the current one is not reported as changed', () => {
+  const { changedFields } = applyPreferences(base, { grossSalary: 100000 });
+  assert.equal(changedFields.length, 0);
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './sections.js'`.
+
+- [ ] **Step 3: Write the implementation**
+
+Create `public/ui/sections.js`. `applyPreferences` is the pure, tested part; the DOM binding below it is thin.
+
+```js
+const same = (a, b) =>
+  Array.isArray(a) && Array.isArray(b)
+    ? a.length === b.length && a.every((v, i) => v === b[i])
+    : a === b;
+
+export function applyPreferences(state, preferences) {
+  const touched = new Set(state.touched ?? []);
+  const next = { ...state };
+  const changedFields = [];
+
+  for (const [key, value] of Object.entries(preferences)) {
+    if (value === null || value === undefined) continue;
+    if (Array.isArray(value) && value.length === 0) continue;
+    if (touched.has(key)) continue;
+    if (!(key in state)) continue;
+    if (same(state[key], value)) continue;
+    next[key] = value;
+    changedFields.push(key);
+  }
+
+  return { state: next, changedFields };
+}
+
+export function renderInputs(root, state, onChange) {
+  for (const input of root.querySelectorAll('[data-field]')) {
+    const field = input.dataset.field;
+    if (field in state && state[field] !== null) input.value = state[field];
+
+    input.addEventListener('input', () => {
+      const raw = input.value;
+      const value = input.type === 'number' ? Number(raw) : raw;
+      const touched = new Set(state.touched ?? []);
+      touched.add(field);
+      onChange({ ...state, [field]: value, touched: [...touched] });
+    });
+  }
+}
+
+export function highlightChanged(root, changedFields) {
+  for (const field of changedFields) {
+    const input = root.querySelector(`[data-field="${field}"]`);
+    if (!input) continue;
+    input.classList.add('field-updated');
+    setTimeout(() => input.classList.remove('field-updated'), 1500);
+  }
+}
+
+export function bindFreeText(root, getState, { onParsed }) {
+  const textarea = root.querySelector('#free-text');
+  const button = root.querySelector('#parse-button');
+  const status = root.querySelector('#parse-status');
+
+  button.addEventListener('click', async () => {
+    const text = textarea.value.trim();
+    if (!text) return;
+
+    status.textContent = 'Reading your description…';
+    button.disabled = true;
+
+    try {
+      const response = await fetch('/api/parse', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ text })
+      });
+      const data = await response.json();
+      const { state, changedFields } = applyPreferences(getState(), data.preferences);
+      highlightChanged(root, changedFields);
+      status.textContent = data.clarifyingQuestion
+        ? data.clarifyingQuestion
+        : `Filled in ${changedFields.length} field${changedFields.length === 1 ? '' : 's'} from your description.`;
+      onParsed(state);
+    } catch {
+      status.textContent = 'Could not read that — fill the fields in below instead.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+}
+```
+
+- [ ] **Step 4: Run tests to verify they pass**
+
+Run: `npm test`
+Expected: PASS, 95 tests total.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add public/ui/sections.js public/ui/sections.test.js
+git commit -m "feat: add section 1 inputs with visible parse hand-off"
+```
+
+---
+
+### Task 18: Section 2 — slider, verdict, totals and rates panel
+
+**Files:**
+- Create: `public/ui/slider.js`
+- Test: `public/ui/slider.test.js`
+
+**Interfaces:**
+- Consumes: `optionCosts`, `reachableVehicle` (Task 9), state (Task 16)
+- Produces:
+  - `verdictAt({ vehicles, budgetMonthly, inputs }, tables) -> { winner, options, vehicle }` — `winner` is `null` when no option can reach anything
+  - `renderVerdict(root, verdict)`, `renderRatesPanel(root, state, onChange)`
+
+- [ ] **Step 1: Write the failing test**
+
+Create `public/ui/slider.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { verdictAt } from './slider.js';
+
+const tables = JSON.parse(readFileSync(new URL('../../data/tax-tables.json', import.meta.url)));
+
+const vehicle = (id, listPrice) => ({
+  id, listPrice, consumptionKwhPer100km: 16, insuranceAnnual: 1850,
+  depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47]
+});
+
+const inputs = {
+  grossSalary: 145000, savings: 15000, termMonths: 48, annualKm: 15000,
+  leaseStartDate: '2026-07-25', leaseRatePct: 7.5, loanRatePct: 6.5,
+  opportunityRatePct: 4.5, adminFeeAnnual: 1020, deposit: 0
+};
+
+test('a workable budget produces a winner and a vehicle', () => {
+  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1000, inputs }, tables);
+  assert.ok(v.winner);
+  assert.ok(v.vehicle);
+});
+
+test('a budget too small for anything yields no winner', () => {
+  const fleet = [vehicle('dear', 95000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 50, inputs }, tables);
+  assert.equal(v.winner, null);
+});
+
+test('the winner is the option with the lowest TCO among the feasible', () => {
+  const fleet = [vehicle('mid', 56000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs }, tables);
+  const feasible = Object.values(v.options).filter(o => o.tco !== null);
+  const lowest = feasible.reduce((best, cur) => (cur.tco < best.tco ? cur : best));
+  assert.equal(v.winner, lowest.option);
+});
+
+test('upfront is excluded when savings cannot cover the car', () => {
+  const fleet = [vehicle('mid', 56000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs }, tables);
+  assert.equal(v.options.upfront.tco, null);
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './slider.js'`.
+
+- [ ] **Step 3: Write the implementation**
+
+Create `public/ui/slider.js`:
+
+```js
+import { optionCosts, reachableVehicle } from '../../calc/compare.js';
+
+const OPTIONS = ['novated', 'loan', 'upfront'];
+
+export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
+  const options = {};
+  let best = null;
+  let bestVehicle = null;
+
+  for (const option of OPTIONS) {
+    const vehicle = reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables);
+    if (!vehicle) {
+      options[option] = { option, tco: null, vehicle: null };
+      continue;
+    }
+    const costs = optionCosts({ vehicle, inputs }, tables)[option];
+    options[option] = { option, tco: costs.tco, monthlyCost: costs.monthlyCost, vehicle, detail: costs.detail };
+
+    if (best === null || costs.tco < options[best].tco) {
+      best = option;
+      bestVehicle = vehicle;
+    }
+  }
+
+  return { winner: best, options, vehicle: bestVehicle };
+}
+
+const money = value => `$${Math.round(value).toLocaleString('en-AU')}`;
+
+export function renderVerdict(root, verdict) {
+  const panel = root.querySelector('#verdict');
+  if (!verdict.winner) {
+    panel.innerHTML = '<p>No option reaches a matching car at this budget. Try raising it.</p>';
+    return;
+  }
+
+  const winner = verdict.options[verdict.winner];
+  const labels = { novated: 'Novated lease', loan: 'Direct loan', upfront: 'Buy upfront' };
+  const runnerUp = Object.values(verdict.options)
+    .filter(o => o.tco !== null && o.option !== verdict.winner)
+    .sort((a, b) => a.tco - b.tco)[0];
+
+  panel.innerHTML = `
+    <div class="winner">🏆 ${labels[verdict.winner]} — ${verdict.vehicle.make} ${verdict.vehicle.model}</div>
+    <div class="detail">${money(winner.tco)} total over the term${
+      runnerUp ? `, saving ${money(runnerUp.tco - winner.tco)} versus ${labels[runnerUp.option].toLowerCase()}` : ''
+    }</div>
+    <div class="totals">${OPTIONS.map(o => {
+      const entry = verdict.options[o];
+      return `<div class="total${o === verdict.winner ? ' is-winner' : ''}">
+        <span>${labels[o]}</span>
+        <strong>${entry.tco === null ? 'out of reach' : money(entry.tco)}</strong>
+      </div>`;
+    }).join('')}</div>`;
+}
+
+export function renderRatesPanel(root, state, onChange) {
+  for (const input of root.querySelectorAll('#rates-panel [data-field]')) {
+    const field = input.dataset.field;
+    input.value = state[field];
+    input.addEventListener('input', () => {
+      onChange({ ...state, [field]: Number(input.value) });
+    });
+  }
+
+  for (const button of root.querySelectorAll('#rates-panel [data-reset]')) {
+    button.addEventListener('click', () => {
+      const field = button.dataset.reset;
+      onChange({ ...state, [field]: state.defaults[field] });
+    });
+  }
+}
+```
+
+- [ ] **Step 4: Run tests to verify they pass**
+
+Run: `npm test`
+Expected: PASS, 99 tests total.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add public/ui/slider.js public/ui/slider.test.js
+git commit -m "feat: add budget slider verdict and editable rates panel"
+```
+
+---
+
+### Task 19: The crossover chart
+
+Two renderings of the same data: SVG lines on desktop, a single winner band on mobile, because three thin lines in 96px of height is not legible on a phone.
+
+**Files:**
+- Create: `public/ui/crossover-chart.js`
+- Test: `public/ui/crossover-chart.test.js`
+
+**Interfaces:**
+- Consumes: `crossoverSeries` (Task 9)
+- Produces:
+  - `toPolylines(series, { width, height }) -> { novated, loan, upfront }` — each an SVG `points` string, with gaps where an option is unreachable
+  - `toWinnerBands(series) -> [{ option, fromPct, toPct }]`
+
+- [ ] **Step 1: Write the failing test**
+
+Create `public/ui/crossover-chart.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { toPolylines, toWinnerBands } from './crossover-chart.js';
+
+const series = {
+  points: [
+    { budget: 400, novated: 50000, loan: 55000, upfront: null },
+    { budget: 800, novated: 60000, loan: 62000, upfront: null },
+    { budget: 1200, novated: 75000, loan: 72000, upfront: null }
+  ],
+  crossovers: [{ budget: 1200, from: 'novated', to: 'loan' }]
+};
+
+test('each option becomes an SVG points string', () => {
+  const lines = toPolylines(series, { width: 400, height: 200 });
+  assert.equal(typeof lines.novated, 'string');
+  assert.equal(lines.novated.split(' ').length, 3);
+});
+
+test('an option with no reachable car produces an empty line', () => {
+  const lines = toPolylines(series, { width: 400, height: 200 });
+  assert.equal(lines.upfront, '');
+});
+
+test('the cheapest point sits lower on screen than the dearest', () => {
+  const lines = toPolylines(series, { width: 400, height: 200 });
+  const ys = lines.novated.split(' ').map(pair => Number(pair.split(',')[1]));
+  assert.ok(ys[0] > ys[2], 'a lower cost is a larger y in SVG coordinates');
+});
+
+test('winner bands cover the full width and change at the crossover', () => {
+  const bands = toWinnerBands(series);
+  assert.equal(bands[0].fromPct, 0);
+  assert.equal(bands[bands.length - 1].toPct, 100);
+  assert.ok(bands.length >= 2, 'the winner changes at least once');
+  assert.equal(bands[0].option, 'novated');
+  assert.equal(bands[bands.length - 1].option, 'loan');
+});
+
+test('a series with a single leader produces one band', () => {
+  const flat = { points: [
+    { budget: 400, novated: 50000, loan: 55000, upfront: null },
+    { budget: 800, novated: 60000, loan: 65000, upfront: null }
+  ], crossovers: [] };
+  const bands = toWinnerBands(flat);
+  assert.equal(bands.length, 1);
+  assert.equal(bands[0].option, 'novated');
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './crossover-chart.js'`.
+
+- [ ] **Step 3: Write the implementation**
+
+Create `public/ui/crossover-chart.js`:
+
+```js
+const OPTIONS = ['novated', 'loan', 'upfront'];
+
+function bounds(series) {
+  const values = series.points
+    .flatMap(p => OPTIONS.map(o => p[o]))
+    .filter(v => v !== null);
+  return { min: Math.min(...values), max: Math.max(...values) };
+}
+
+export function toPolylines(series, { width, height }) {
+  const { min, max } = bounds(series);
+  const span = max - min || 1;
+  const lastIndex = series.points.length - 1 || 1;
+  const lines = {};
+
+  for (const option of OPTIONS) {
+    const coordinates = series.points
+      .map((point, index) => {
+        if (point[option] === null) return null;
+        const x = (index / lastIndex) * width;
+        const y = height - ((point[option] - min) / span) * height;
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      })
+      .filter(Boolean);
+    lines[option] = coordinates.join(' ');
+  }
+  return lines;
+}
+
+export function toWinnerBands(series) {
+  const leaderAt = point => {
+    const priced = OPTIONS.filter(o => point[o] !== null);
+    if (priced.length === 0) return null;
+    return priced.reduce((best, cur) => (point[cur] < point[best] ? cur : best));
+  };
+
+  const bands = [];
+  const total = series.points.length - 1 || 1;
+
+  series.points.forEach((point, index) => {
+    const leader = leaderAt(point);
+    if (leader === null) return;
+    const pct = (index / total) * 100;
+    const last = bands[bands.length - 1];
+
+    if (last && last.option === leader) {
+      last.toPct = pct;
+    } else {
+      if (last) last.toPct = pct;
+      bands.push({ option: leader, fromPct: pct, toPct: pct });
+    }
+  });
+
+  if (bands.length > 0) {
+    bands[0].fromPct = 0;
+    bands[bands.length - 1].toPct = 100;
+  }
+  return bands;
+}
+
+export function renderChart(root, series) {
+  const isMobile = root.clientWidth < 900;
+  const target = root.querySelector('#crossover');
+
+  if (isMobile) {
+    const bands = toWinnerBands(series);
+    target.innerHTML = `<div class="winner-band">${bands.map(b =>
+      `<span class="band band-${b.option}" style="left:${b.fromPct}%;width:${b.toPct - b.fromPct}%"></span>`
+    ).join('')}</div>`;
+    return;
+  }
+
+  const width = 600;
+  const height = 200;
+  const lines = toPolylines(series, { width, height });
+  target.innerHTML = `<svg viewBox="0 0 ${width} ${height}" class="chart">${
+    OPTIONS.filter(o => lines[o]).map(o =>
+      `<polyline class="line line-${o}" points="${lines[o]}" fill="none" stroke-width="2" />`
+    ).join('')
+  }</svg>`;
+}
+```
+
+- [ ] **Step 4: Run tests to verify they pass**
+
+Run: `npm test`
+Expected: PASS, 104 tests total.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add public/ui/crossover-chart.js public/ui/crossover-chart.test.js
+git commit -m "feat: add crossover chart with mobile winner band"
+```
+
+---
+
+### Task 20: Section 3 cards, app wiring, and Heroku deploy
+
+**Files:**
+- Create: `public/ui/cars.js`, `public/ui/app.js`, `README.md`
+- Test: `public/ui/cars.test.js`
+
+**Interfaces:**
+- Consumes: everything above
+- Produces: a running, deployed application
+
+- [ ] **Step 1: Write the failing test**
+
+Create `public/ui/cars.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { filterVehicles, cardModel } from './cars.js';
+
+const fleet = [
+  { id: 'a', familyId: 'fa', make: 'Kia', model: 'EV5', bodyType: 'SUV', bootLitresSeatsUp: 513, rangeKm: 400, seats: 5, listPrice: 56000 },
+  { id: 'b', familyId: 'fb', make: 'BYD', model: 'Dolphin', bodyType: 'Hatch', bootLitresSeatsUp: 345, rangeKm: 340, seats: 5, listPrice: 34000 }
+];
+const families = [
+  { id: 'fa', summary: 'Roomy electric SUV.', pros: ['Big boot'], cons: ['Slow charging'], sources: ['https://x'], images: ['https://press/a.jpg'] }
+];
+
+test('body type filters the fleet', () => {
+  assert.deepEqual(filterVehicles(fleet, { bodyTypes: ['SUV'] }).map(v => v.id), ['a']);
+});
+
+test('a boot minimum excludes cars that fall short', () => {
+  assert.deepEqual(filterVehicles(fleet, { minBootLitres: 500 }).map(v => v.id), ['a']);
+});
+
+test('filters combine', () => {
+  assert.equal(filterVehicles(fleet, { bodyTypes: ['SUV'], minRangeKm: 500 }).length, 0);
+});
+
+test('an empty filter returns everything', () => {
+  assert.equal(filterVehicles(fleet, {}).length, 2);
+});
+
+test('a card carries its family review when one exists', () => {
+  const card = cardModel(fleet[0], families);
+  assert.equal(card.summary, 'Roomy electric SUV.');
+  assert.equal(card.image, 'https://press/a.jpg');
+});
+
+test('a card without a family still renders', () => {
+  const card = cardModel(fleet[1], families);
+  assert.equal(card.summary, null);
+  assert.equal(card.image, null);
+  assert.equal(card.make, 'BYD');
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './cars.js'`.
+
+- [ ] **Step 3: Write the cars module**
+
+Create `public/ui/cars.js`:
+
+```js
+export function filterVehicles(vehicles, filters) {
+  return vehicles.filter(v => {
+    if (filters.bodyTypes?.length && !filters.bodyTypes.includes(v.bodyType)) return false;
+    if (filters.minBootLitres && v.bootLitresSeatsUp < filters.minBootLitres) return false;
+    if (filters.minRangeKm && v.rangeKm < filters.minRangeKm) return false;
+    if (filters.seats && v.seats < filters.seats) return false;
+    return true;
+  });
+}
+
+export function cardModel(vehicle, families) {
+  const family = families.find(f => f.id === vehicle.familyId) ?? null;
+  return {
+    ...vehicle,
+    summary: family?.summary ?? null,
+    pros: family?.pros ?? [],
+    cons: family?.cons ?? [],
+    sources: family?.sources ?? [],
+    image: family?.images?.[0] ?? null
+  };
+}
+
+const SILHOUETTES = {
+  SUV: 'M10,40 L20,20 L60,20 L75,40 Z',
+  Sedan: 'M10,40 L25,22 L60,22 L78,40 Z',
+  Hatch: 'M10,40 L22,20 L55,20 L68,40 Z',
+  Wagon: 'M10,40 L22,20 L65,20 L78,40 Z',
+  Ute: 'M10,40 L22,20 L45,20 L50,32 L78,32 L78,40 Z'
+};
+
+export function renderCards(root, cards) {
+  root.innerHTML = cards.map(card => `
+    <article class="car-card" data-id="${card.id}">
+      <div class="car-image">
+        ${card.image
+          ? `<img src="${card.image}" alt="${card.make} ${card.model}" loading="lazy"
+                  onerror="this.replaceWith(document.querySelector('#silhouette-${card.bodyType}').cloneNode(true))">`
+          : `<svg viewBox="0 0 88 50" class="silhouette"><path d="${SILHOUETTES[card.bodyType] ?? SILHOUETTES.Sedan}" /></svg>`}
+      </div>
+      <div class="car-body">
+        <h3>${card.make} ${card.model} ${card.variant ?? ''}</h3>
+        <p class="car-specs">${card.bootLitresSeatsUp}L boot · ${card.rangeKm}km · $${Math.round(card.listPrice / 1000)}k</p>
+        ${card.summary ? `<details>
+          <summary>Why this one</summary>
+          <p>${card.summary}</p>
+          ${card.pros.length ? `<ul class="pros">${card.pros.map(p => `<li>${p}</li>`).join('')}</ul>` : ''}
+          ${card.cons.length ? `<ul class="cons">${card.cons.map(c => `<li>${c}</li>`).join('')}</ul>` : ''}
+          ${card.sources.length ? `<p class="sources">${card.sources.map(s => `<a href="${s}" rel="noopener">review</a>`).join(' · ')}</p>` : ''}
+        </details>` : ''}
+      </div>
+    </article>`).join('');
+}
+```
+
+Add a hidden `<svg>` sprite in `index.html` containing one `<svg id="silhouette-SUV">` element per body type, so the `onerror` fallback has something to clone.
+
+- [ ] **Step 4: Write the app wiring**
+
+Create `public/ui/app.js` that: fetches `/api/dataset` once; builds state from the URL via `fromQueryString`; on any state change recomputes `verdictAt` and `crossoverSeries` locally and re-renders sections 2 and 3 plus the sticky summary bar; writes the new query string with `history.replaceState`; and calls `/api/rank` and `/api/explain` only after a *parse*, never on a slider drag. Wrap both AI calls in `try/catch` so a failure leaves the numbers untouched.
+
+- [ ] **Step 5: Verify the whole app end to end**
+
+Run: `npm test`
+Expected: PASS, 110 tests total.
+
+Run: `node server/index.js &` then open `http://localhost:3000`
+Expected: type the placeholder sentence, click parse, watch the fields highlight, drag the slider and see the verdict change without any network request in the Network tab. Confirm the app is fully usable with `ANTHROPIC_API_KEY` unset.
+
+- [ ] **Step 6: Write the README**
+
+Create `README.md` covering: what the app does, the "no advice" disclaimer, local setup (`nvm use`, `npm install`, `.env`, `npm start`), `npm test`, how to refresh the dataset (`node scripts/build-dataset.js`), and where each default rate came from.
+
+- [ ] **Step 7: Deploy to Heroku**
+
+```bash
+brew install heroku/brew/heroku
+heroku login
+heroku create
+heroku config:set ANTHROPIC_API_KEY=sk-ant-...
+git push heroku main
+heroku open
+```
+
+Expected: the app loads on the Heroku URL. Verify `/api/health` returns the dataset size and that a parse request succeeds with the key set.
+
+- [ ] **Step 8: Commit**
+
+```bash
+git add public/ui/cars.js public/ui/cars.test.js public/ui/app.js public/index.html README.md
+git commit -m "feat: add car cards, app wiring and deployment docs"
+```
+
+---
+
+## Plan self-review
+
+**Spec coverage.** Every section of the spec maps to a task: tax → 2; on-road → 3; FBT phases → 4; loan → 5; resale and running costs → 6; novated → 7; upfront → 8; comparison basis and crossover semantics → 9; golden cases → 10; dataset schema, families, images → 11–12; server, key handling, fallbacks → 13–15; the three Claude endpoints → 15; UI sections, mobile stacking, parse hand-off, sticky bar, chart and winner band → 16–20; Heroku and `.gitignore` → 20 and the existing repo state.
+
+**Deliberate gap.** The spec's "one-line RFBA caveat in the UI" is copy, not logic, and belongs in the `index.html` written in Task 16 — noted here so it is not forgotten: it must appear near the novated verdict.
+
+**Type consistency.** `optionCosts` returns `{ novated, loan, upfront }` keyed by option name in Tasks 9, 18 and 20. `leaseStartDate` is an ISO string everywhere, never a `Date`. `driveAwayTotal` is the name used by `novatedQuote`, `upfrontQuote` and `resaleValue`. `runningCosts` returns both `totalIncGst` and `totalExGst`, and Task 7 consumes the ex-GST figure for packaging while Tasks 8 and 9 use the inc-GST figure for post-tax paths — that asymmetry is intentional and is what makes the packaging benefit correct.
+
+**Known deviation from strict TDD.** Tasks 12, 16 (steps 4–5) and 20 (steps 4, 6–7) involve research, markup and deployment that have no meaningful failing test. Their acceptance is the validator run, the browser check, and the deployed URL respectively.
