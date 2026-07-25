@@ -209,6 +209,26 @@ Per variant: make, model, variant, body type, VIC drive-away price, list price, 
 range km, kWh/100km, boot litres (seats up and down), seats, tow rating, warranty, depreciation
 curve, insurance band, `sourcedAt`.
 
+`data/families.json` — qualitative research at **family** level (roughly 30 families), keyed by
+family id and referenced by each variant. Family level rather than variant level because a
+review of "the Kia EV5" does not differ meaningfully between Air and Earth trims, and it keeps
+~30 research passes tractable instead of 80.
+
+Per family:
+
+- `summary` — two or three sentences of reviewer consensus, in the app's own words.
+- `pros` / `cons` — three to five short points each, drawn from multiple reviews rather than one.
+- `sources` — URLs the summary was drawn from, preferring established Australian outlets
+  (CarExpert, Drive, CarsGuide, WhichCar) since verdicts on ride quality and value are
+  market-specific.
+- `images` — two or three URLs, **official manufacturer press and media room links only**.
+  Press rooms exist for republication; review-site photography does not. Nothing is committed to
+  the repo.
+- `sourcedAt` — dates the research.
+
+Qualitative research feeds display and Claude's ranking rationale. It never feeds `calc/`, which
+consumes only the numeric fields in `vehicles.json`.
+
 `data/rates.json` — finance and running-cost defaults with sources and `sourcedAt`.
 `data/tax-tables.json` — brackets, LITO, LCT thresholds, car limit, ATO residuals, FBT phase
 dates, VIC duty rates.
@@ -271,7 +291,11 @@ Mobile-first. Three sections, stacked vertically on a phone, laid out as columns
    lines; on mobile it is replaced by a single horizontal winner band showing which option leads
    across the budget range, with the user's position marked. Three thin lines in 96px of height
    is not legible on a phone.
-3. **Cars that match** — the ranked shortlist with the attributes that drove the match.
+3. **Cars that match** — the ranked shortlist with the attributes that drove the match. Each card
+   carries a hero image, and expands to show the family summary, pros and cons, and links to the
+   source reviews. Images are lazy-loaded from external press URLs; any that fails to load is
+   replaced by a body-type SVG silhouette, so a rotted link degrades to a plain card rather than
+   a broken one.
 
 A sticky one-line summary bar on mobile ("🏆 Novated · Kia EV5 · $871/mo") scrolls to section 3
 on tap, so the payoff is always one tap away despite being third in the stack.
@@ -319,6 +343,12 @@ State lives in a single object serialised to the URL query string, making any re
   quote should be entered. This single input moves the crossover more than any other.
 - **Drive-away prices move often**, particularly for Chinese brands. Rows carry `sourcedAt`, and
   the UI shows dataset age.
+- **External image URLs will rot**, and some hosts block hotlinking. Accepted deliberately in
+  exchange for keeping copyrighted photography out of the repo; the silhouette fallback means the
+  cost is cosmetic. Restricting to manufacturer press rooms keeps copyright exposure low, but
+  does not eliminate it — these are still third-party images served from someone else's host.
+- **Review summaries are editorial opinion**, condensed by a model from a handful of sources and
+  fixed at `sourcedAt`. They inform browsing, never the numbers.
 - **RFBA effects are out of scope** and can materially reduce a lease's benefit for users with
   HELP debt or without private hospital cover. Stated in the UI as a caveat.
 - The app informs a decision; it does not replace a quote or professional advice.
