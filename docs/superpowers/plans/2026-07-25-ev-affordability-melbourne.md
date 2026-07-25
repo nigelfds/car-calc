@@ -1408,4 +1408,330 @@ git commit -m "test: add golden-case regression tests for the calculation core"
 
 **Phase 1 complete.** The calculation core is finished and fully tested with no network, no server, and no UI. Everything from here builds on a foundation that already answers the question correctly.
 
-**Remaining tasks to append:** 11–12 (dataset schema, validator and the research pass producing `vehicles.json` and `families.json`), 13–15 (Express server, Claude client and the three endpoints with fallbacks), 16–20 (UI sections, crossover chart, wiring, Heroku deploy).
+## Phase 2 — Dataset
+
+### Task 11: Dataset schema and validator
+
+Written **before** the research so the research has a target to fill, and so a malformed row fails a test rather than crashing the app.
+
+**Files:**
+- Create: `data/schema.js`, `data/vehicles.json` (seed, 3 rows), `data/families.json` (seed, 2 families), `data/rates.json`
+- Test: `data/schema.test.js`
+
+**Interfaces:**
+- Consumes: nothing
+- Produces:
+  - `validateVehicle(row) -> { valid: boolean, errors: string[] }`
+  - `validateFamily(entry) -> { valid: boolean, errors: string[] }`
+  - `loadDataset({ vehicles, families }) -> { vehicles, families, skipped }` — skips and reports invalid rows rather than throwing, per the spec's error handling
+
+- [ ] **Step 1: Write the failing test**
+
+Create `data/schema.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { validateVehicle, validateFamily, loadDataset } from './schema.js';
+
+const vehicles = JSON.parse(readFileSync(new URL('./vehicles.json', import.meta.url)));
+const families = JSON.parse(readFileSync(new URL('./families.json', import.meta.url)));
+
+const goodVehicle = {
+  id: 'kia-ev5-air',
+  familyId: 'kia-ev5',
+  make: 'Kia',
+  model: 'EV5',
+  variant: 'Air Standard Range',
+  bodyType: 'SUV',
+  listPrice: 56000,
+  batteryKwh: 64.2,
+  rangeKm: 400,
+  consumptionKwhPer100km: 16,
+  bootLitresSeatsUp: 513,
+  bootLitresSeatsDown: 1714,
+  seats: 5,
+  towKg: 1000,
+  warrantyYears: 7,
+  insuranceAnnual: 1850,
+  depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+  sourcedAt: '2026-07-25'
+};
+
+test('a complete vehicle row validates', () => {
+  assert.equal(validateVehicle(goodVehicle).valid, true);
+});
+
+test('a missing required field is reported by name', () => {
+  const { bootLitresSeatsUp, ...missing } = goodVehicle;
+  const result = validateVehicle(missing);
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some(e => e.includes('bootLitresSeatsUp')));
+});
+
+test('a non-numeric price is rejected', () => {
+  const result = validateVehicle({ ...goodVehicle, listPrice: '56,000' });
+  assert.equal(result.valid, false);
+});
+
+test('a depreciation curve must start at 1 and decline', () => {
+  assert.equal(validateVehicle({ ...goodVehicle, depreciationCurve: [0.9, 0.8] }).valid, false);
+  assert.equal(validateVehicle({ ...goodVehicle, depreciationCurve: [1, 0.8, 0.9] }).valid, false);
+});
+
+test('a family entry requires summary, pros, cons, sources and images', () => {
+  assert.equal(validateFamily({
+    id: 'kia-ev5',
+    summary: 'Roomy mid-size electric SUV with a big boot.',
+    pros: ['Large boot', 'Long warranty', 'Comfortable ride'],
+    cons: ['Slow charging', 'Firm seats'],
+    sources: ['https://www.carexpert.com.au/kia/ev5'],
+    images: ['https://press.kia.com/ev5-front.jpg'],
+    sourcedAt: '2026-07-25'
+  }).valid, true);
+
+  assert.equal(validateFamily({ id: 'kia-ev5', summary: 'x' }).valid, false);
+});
+
+test('every committed vehicle row is valid', () => {
+  for (const row of vehicles) {
+    const result = validateVehicle(row);
+    assert.equal(result.valid, true, `${row.id}: ${result.errors.join(', ')}`);
+  }
+});
+
+test('every committed family entry is valid', () => {
+  for (const entry of families) {
+    const result = validateFamily(entry);
+    assert.equal(result.valid, true, `${entry.id}: ${result.errors.join(', ')}`);
+  }
+});
+
+test('every vehicle points at a family that exists', () => {
+  const ids = new Set(families.map(f => f.id));
+  for (const row of vehicles) {
+    assert.ok(ids.has(row.familyId), `${row.id} references missing family ${row.familyId}`);
+  }
+});
+
+test('loadDataset skips invalid rows rather than throwing', () => {
+  const result = loadDataset({
+    vehicles: [goodVehicle, { id: 'broken' }],
+    families
+  });
+  assert.equal(result.vehicles.length, 1);
+  assert.equal(result.skipped.length, 1);
+  assert.equal(result.skipped[0].id, 'broken');
+});
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './schema.js'`.
+
+- [ ] **Step 3: Write the validator**
+
+Create `data/schema.js`:
+
+```js
+const VEHICLE_NUMBERS = [
+  'listPrice', 'batteryKwh', 'rangeKm', 'consumptionKwhPer100km',
+  'bootLitresSeatsUp', 'bootLitresSeatsDown', 'seats', 'towKg',
+  'warrantyYears', 'insuranceAnnual'
+];
+const VEHICLE_STRINGS = ['id', 'familyId', 'make', 'model', 'variant', 'bodyType', 'sourcedAt'];
+
+export function validateVehicle(row) {
+  const errors = [];
+  if (!row || typeof row !== 'object') return { valid: false, errors: ['row is not an object'] };
+
+  for (const field of VEHICLE_STRINGS) {
+    if (typeof row[field] !== 'string' || row[field].length === 0) {
+      errors.push(`${field} must be a non-empty string`);
+    }
+  }
+  for (const field of VEHICLE_NUMBERS) {
+    if (typeof row[field] !== 'number' || !Number.isFinite(row[field])) {
+      errors.push(`${field} must be a finite number`);
+    }
+  }
+
+  const curve = row.depreciationCurve;
+  if (!Array.isArray(curve) || curve.length < 2) {
+    errors.push('depreciationCurve must be an array of at least two values');
+  } else {
+    if (curve[0] !== 1) errors.push('depreciationCurve must start at 1');
+    for (let i = 1; i < curve.length; i++) {
+      if (curve[i] > curve[i - 1]) {
+        errors.push('depreciationCurve must decline monotonically');
+        break;
+      }
+    }
+  }
+
+  return { valid: errors.length === 0, errors };
+}
+
+export function validateFamily(entry) {
+  const errors = [];
+  if (!entry || typeof entry !== 'object') return { valid: false, errors: ['entry is not an object'] };
+
+  if (typeof entry.id !== 'string' || !entry.id) errors.push('id must be a non-empty string');
+  if (typeof entry.summary !== 'string' || entry.summary.length < 20) {
+    errors.push('summary must be at least 20 characters');
+  }
+  if (typeof entry.sourcedAt !== 'string') errors.push('sourcedAt must be a date string');
+
+  const lists = { pros: 3, cons: 2, sources: 1, images: 1 };
+  for (const [field, minimum] of Object.entries(lists)) {
+    if (!Array.isArray(entry[field]) || entry[field].length < minimum) {
+      errors.push(`${field} must be an array of at least ${minimum}`);
+    }
+  }
+  if (Array.isArray(entry.images) && entry.images.some(u => !u.startsWith('https://'))) {
+    errors.push('images must all be https URLs');
+  }
+
+  return { valid: errors.length === 0, errors };
+}
+
+export function loadDataset({ vehicles, families }) {
+  const skipped = [];
+  const valid = [];
+
+  for (const row of vehicles) {
+    const result = validateVehicle(row);
+    if (result.valid) valid.push(row);
+    else skipped.push({ id: row?.id ?? 'unknown', errors: result.errors });
+  }
+
+  return { vehicles: valid, families, skipped };
+}
+```
+
+- [ ] **Step 4: Create the seed data files**
+
+Create `data/vehicles.json` with three real, researched rows (Kia EV5 Air, BYD Atto 3, Tesla Model Y RWD) following the shape in the test. Create `data/families.json` with the two matching family entries. Create `data/rates.json`:
+
+```json
+{
+  "loanRatePct": 6.5,
+  "leaseRatePct": 7.5,
+  "adminFeeAnnual": 1020,
+  "opportunityRatePct": 4.5,
+  "electricityCentsPerKwh": 28,
+  "otherRunningCostsAnnual": 1240,
+  "defaultAnnualKm": 15000,
+  "sources": {
+    "loanRatePct": "Mid-market green EV secured rate, July 2026. Best advertised 5.66%.",
+    "leaseRatePct": "Competitive novated comparison rate 6.5-7.5%; ~9.5% effective on 5 years.",
+    "adminFeeAnnual": "Typical $85/month packaging fee.",
+    "otherRunningCostsAnnual": "VIC rego ~$880 plus servicing and tyres. ZLEV discount ended 1 Jan 2026."
+  },
+  "sourcedAt": "2026-07-25"
+}
+```
+
+- [ ] **Step 5: Run tests to verify they pass**
+
+Run: `npm test`
+Expected: PASS, 64 tests total.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add data/schema.js data/schema.test.js data/vehicles.json data/families.json data/rates.json
+git commit -m "feat: add dataset schema, validator and seed rows"
+```
+
+---
+
+### Task 12: Research and build the full dataset
+
+A manual research pass, not automated code. The validator from Task 11 is the acceptance gate.
+
+**Files:**
+- Create: `scripts/build-dataset.js`
+- Modify: `data/vehicles.json` (expand to 60–80 rows), `data/families.json` (expand to ~30 families)
+
+**Interfaces:**
+- Consumes: `validateVehicle`, `validateFamily` (Task 11)
+- Produces: the complete committed dataset
+
+- [ ] **Step 1: Write the validation runner**
+
+Create `scripts/build-dataset.js`:
+
+```js
+import { readFileSync } from 'node:fs';
+import { validateVehicle, validateFamily } from '../data/schema.js';
+
+const vehicles = JSON.parse(readFileSync(new URL('../data/vehicles.json', import.meta.url)));
+const families = JSON.parse(readFileSync(new URL('../data/families.json', import.meta.url)));
+const familyIds = new Set(families.map(f => f.id));
+
+let failures = 0;
+
+for (const row of vehicles) {
+  const result = validateVehicle(row);
+  if (!result.valid) {
+    console.error(`FAIL ${row.id ?? 'unknown'}: ${result.errors.join('; ')}`);
+    failures++;
+  }
+  if (!familyIds.has(row.familyId)) {
+    console.error(`FAIL ${row.id}: references missing family ${row.familyId}`);
+    failures++;
+  }
+}
+
+for (const entry of families) {
+  const result = validateFamily(entry);
+  if (!result.valid) {
+    console.error(`FAIL family ${entry.id ?? 'unknown'}: ${result.errors.join('; ')}`);
+    failures++;
+  }
+}
+
+const covered = new Set(vehicles.map(v => v.familyId));
+for (const id of familyIds) {
+  if (!covered.has(id)) console.warn(`WARN family ${id} has no variants`);
+}
+
+console.log(`${vehicles.length} variants across ${families.length} families, ${failures} failures`);
+process.exit(failures > 0 ? 1 : 0);
+```
+
+- [ ] **Step 2: Research the variant data**
+
+Cover the EVs actually on sale in Victoria, at **variant** level — a Long Range trim crossing the FBT threshold when the base does not is precisely the case the app exists to catch. Target families: BYD Atto 3, Dolphin, Seal, Sealion 7; Tesla Model 3, Model Y; MG4, MGS5; Kia EV3, EV5, EV6, EV9; Hyundai Inster, Kona Electric, Ioniq 5, Ioniq 6; Polestar 2, 4; Volvo EX30, EX40; GWM Ora; Zeekr X, 7X; Xpeng G6, G9; Leapmotor C10; Cupra Born; Nissan Leaf; Subaru Solterra; Toyota bZ4X; Ford Mustang Mach-E.
+
+For each variant record VIC drive-away price, list price, battery kWh, range, consumption, boot litres seats up and down, seats, tow rating, warranty and an insurance estimate scaled from the family's brand and the variant's value.
+
+For the depreciation curve, use a per-family retained-value curve. A reasonable default for mainstream EVs is `[1, 0.78, 0.68, 0.60, 0.53, 0.47]`; adjust for families with notably strong or weak resale.
+
+- [ ] **Step 3: Research each family's reviews and images**
+
+One short research pass per family, roughly 30 in total. For each, collect a two-to-three sentence consensus summary in the app's own words, three to five pros, two to five cons, the source URLs (preferring CarExpert, Drive, CarsGuide, WhichCar since verdicts on ride and value are market-specific), and two or three image URLs from the **manufacturer's press or media room only** — press rooms exist for republication, review-site photography does not. Set `sourcedAt` on each entry.
+
+- [ ] **Step 4: Validate the dataset**
+
+Run: `node scripts/build-dataset.js`
+Expected: `NN variants across ~30 families, 0 failures` and exit code 0.
+
+- [ ] **Step 5: Run the full test suite**
+
+Run: `npm test`
+Expected: PASS — the "every committed vehicle row is valid" and family-reference tests now cover the full dataset.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add scripts/build-dataset.js data/vehicles.json data/families.json
+git commit -m "feat: add researched EV dataset with family reviews and press images"
+```
+
+---
+
+**Remaining tasks to append:** 13–15 (Express server, Claude client, and the three endpoints with fallbacks), 16–20 (UI sections, crossover chart, wiring, Heroku deploy).
