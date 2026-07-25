@@ -2,7 +2,7 @@ import { driveAwayPrice } from './onroad.js';
 import { runningCosts } from './running-costs.js';
 import { resaleValue } from './resale.js';
 import { novatedQuote } from './novated.js';
-import { loanSummary, monthlyRepayment } from './loan.js';
+import { loanSummary } from './loan.js';
 import { upfrontQuote } from './upfront.js';
 
 const RATE_DEFAULTS = { electricityCentsPerKwh: 28, otherRunningCostsAnnual: 1240 };
@@ -100,7 +100,9 @@ export function crossoverSeries({ vehicles, inputs, budgetRange }, tables) {
   const options = ['novated', 'loan', 'upfront'];
   const points = [];
 
-  for (let budget = min; budget <= max; budget += step) {
+  const stepCount = Math.round((max - min) / step) + 1;
+  for (let i = 0; i < stepCount; i++) {
+    const budget = min + i * step;
     const point = { budget };
     for (const option of options) {
       const vehicle = reachableVehicle({ vehicles, budgetMonthly: budget, option, inputs }, tables);

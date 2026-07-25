@@ -96,3 +96,14 @@ test('crossovers are reported where the leading option changes', () => {
     assert.notEqual(c.from, c.to);
   }
 });
+
+test('fractional steps include the endpoint', () => {
+  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000)];
+  const series = crossoverSeries(
+    { vehicles: fleet, inputs, budgetRange: { min: 400, max: 401, step: 0.1 } },
+    tables
+  );
+  assert.equal(series.points.length, 11, 'min 400, max 401, step 0.1 should yield 11 points');
+  const lastBudget = series.points[series.points.length - 1].budget;
+  assert.ok(Math.abs(lastBudget - 401) < 0.0001, 'last point budget should be 401');
+});
