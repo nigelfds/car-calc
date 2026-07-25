@@ -1,0 +1,68 @@
+[
+  {
+    "id": "kia-ev5",
+    "summary": "Roomy mid-size electric SUV with a huge boot and Kia's class-leading 7-year warranty, priced to undercut most mid-size EV rivals.",
+    "pros": [
+      "Largest boot in this comparison at 513L (1714L seats down)",
+      "7-year/150,000km vehicle and battery warranty",
+      "Comfortable, family-friendly interior with strong rear-seat space"
+    ],
+    "cons": [
+      "Entry Air Standard Range is front-wheel drive only and rated to tow just 300kg braked",
+      "DC charging tops out lower than rivals, so road-trip top-ups take longer",
+      "Firmer low-speed ride than some competitors on Melbourne's rougher back streets"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
+      "https://zecar.com/electric-vehicles/kia/ev5/air-standard-range"
+    ],
+    "images": [
+      "https://www.kiapressoffice.com/models/ev5"
+    ],
+    "sourcedAt": "2026-07-25"
+  },
+  {
+    "id": "byd-atto3",
+    "summary": "Sharply priced small SUV from BYD with a well-equipped cabin and a strong warranty, aimed squarely at first-time EV buyers.",
+    "pros": [
+      "Cheapest list price in this comparison at $39,990 before on-road costs",
+      "6-year/150,000km warranty with BYD's LFP Blade battery chemistry",
+      "Quirky but well-finished interior with a rotating touchscreen and good standard equipment"
+    ],
+    "cons": [
+      "Shortest range of the three at 345km WLTP on the entry Essential variant",
+      "Smallest boot of the comparison at 440L seats up",
+      "Resale value in Australia is still largely unproven for the brand"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/byd/atto-3/2026",
+      "https://www.carsales.com.au/research/byd/atto-3/"
+    ],
+    "images": [
+      "https://cdn.virtualyard.com.au/75df63609809c7a2052fdffe5c00a84e/2c229a16a91c75765f5b75c0997baf31/models/atto-3/hero.png"
+    ],
+    "sourcedAt": "2026-07-25"
+  },
+  {
+    "id": "tesla-model-y",
+    "summary": "Best-selling electric SUV globally, offering the longest range and lowest energy use of this trio plus access to Tesla's Supercharger network.",
+    "pros": [
+      "Longest range in this comparison at 466km WLTP",
+      "Most efficient of the three at 13.9kWh/100km, lowering running costs",
+      "Direct access to Tesla's extensive Australian Supercharger network and frequent over-the-air updates"
+    ],
+    "cons": [
+      "Touchscreen-only controls, including for indicators and gear selection on some builds, split opinion",
+      "Comprehensive insurance premiums tend to run higher than the Kia or BYD due to repair costs",
+      "Braked towing capacity on the RWD variant is lower than the AWD Model Y variants"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/tesla/model-y/2026-rear-wheel-drive-suv-rwd-electric-jsf8wmgo20251114",
+      "https://www.carsguide.com.au/tesla/model-y/price/2026"
+    ],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tesla_Model_Y_Premium_%28Facelift%29_%E2%80%93_f_05052026.jpg/330px-Tesla_Model_Y_Premium_%28Facelift%29_%E2%80%93_f_05052026.jpg"
+    ],
+    "sourcedAt": "2026-07-25"
+  }
+]

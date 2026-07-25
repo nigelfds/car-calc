@@ -1,0 +1,16 @@
+{
+  "loanRatePct": 6.5,
+  "leaseRatePct": 7.5,
+  "adminFeeAnnual": 1020,
+  "opportunityRatePct": 4.5,
+  "electricityCentsPerKwh": 28,
+  "otherRunningCostsAnnual": 1240,
+  "defaultAnnualKm": 15000,
+  "sources": {
+    "loanRatePct": "Mid-market green EV secured rate, July 2026. Best advertised 5.66%.",
+    "leaseRatePct": "Competitive novated comparison rate 6.5-7.5%; ~9.5% effective on 5 years.",
+    "adminFeeAnnual": "Typical $85/month packaging fee.",
+    "otherRunningCostsAnnual": "VIC rego ~$880 plus servicing and tyres. ZLEV discount ended 1 Jan 2026."
+  },
+  "sourcedAt": "2026-07-25"
+}
