@@ -118,7 +118,7 @@ the UI must state.
 | Phase | Dates | Treatment |
 |---|---|---|
 | 1 | to 31 Mar 2027 | Full exemption for BEVs under the LCT fuel-efficient threshold |
-| 2 | 1 Apr 2027 – 31 Mar 2029 | Full exemption under $75,000; 25% FBT discount from $75,000 to the threshold |
+| 2 | 1 Apr 2027 – 31 Mar 2029 | Full exemption at $75,000 or less; 25% FBT discount above $75,000 up to the threshold |
 | 3 | from 1 Apr 2029 | 25% discount for all eligible BEVs |
 
 Leases entered before a phase begins are **grandfathered** for their whole term. Lease start
@@ -130,7 +130,8 @@ held or used on or after 1 July 2022. The binding price cap is the LCT fuel-effi
 
 Where FBT is payable (phases 2 and 3 above the relevant cap), use the statutory formula: 20% of
 base value, grossed up at 2.0802 (type 1, GST credit claimable), taxed at 47%. The 25% discount
-reduces the taxable value. Employee contribution method then reduces FBT to nil via post-tax
+reduces the taxable value — legislated as a 15% statutory rate in place of 20%, which is
+arithmetically identical to applying a 25% reduction to the 20% rate. Employee contribution method then reduces FBT to nil via post-tax
 contributions — modelling those post-tax dollars is what stops the app overstating the benefit.
 
 ### Novated lease

@@ -20,7 +20,7 @@
 - LCT fuel-efficient threshold 2026-27: **$91,661**. Car limit 2026-27: **$69,883** (GST credit cap **$6,353**).
 - ATO minimum residuals: 12mo 65.63% · 24mo 56.25% · 36mo 46.88% · 48mo 37.5% · 60mo 28.13%.
 - VIC green passenger car duty: **$8.40 per $200** of dutiable value at every price point.
-- FBT phases: full exemption to 31 Mar 2027 · exempt under $75,000 with 25% discount above, 1 Apr 2027 to 31 Mar 2029 · 25% discount for all from 1 Apr 2029. Leases are grandfathered at their start date.
+- FBT phases: full exemption to 31 Mar 2027 · exempt at **$75,000 or less** with a 25% discount above that, 1 Apr 2027 to 31 Mar 2029 · 25% discount for all from 1 Apr 2029. Leases are grandfathered at their start date. The $75,000 cap is inclusive — a car priced at exactly $75,000 keeps the full exemption.
 - Not modelled: HELP/HECS, Medicare Levy Surcharge, Division 293, family benefits.
 - Test command is always `npm test` (`node --test`). Every task ends green.
 
