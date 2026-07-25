@@ -137,11 +137,15 @@ export function validateFamily(entry) {
   return { valid: errors.length === 0, errors };
 }
 
-export function loadDataset({ vehicles, families }) {
+export function loadDataset({ vehicles = [], families = [] } = {}) {
+  // Coerce to empty arrays if not arrays
+  const vehicleRows = Array.isArray(vehicles) ? vehicles : [];
+  const familyEntries = Array.isArray(families) ? families : [];
+
   const skippedFamilies = [];
   const validFamilies = [];
 
-  for (const entry of families) {
+  for (const entry of familyEntries) {
     const result = validateFamily(entry);
     if (result.valid) validFamilies.push(entry);
     else skippedFamilies.push({ id: entry?.id ?? 'unknown', errors: result.errors });
@@ -152,7 +156,7 @@ export function loadDataset({ vehicles, families }) {
   const skipped = [];
   const valid = [];
 
-  for (const row of vehicles) {
+  for (const row of vehicleRows) {
     const result = validateVehicle(row);
     const errors = [...result.errors];
 

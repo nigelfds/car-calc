@@ -215,3 +215,41 @@ test('loadDataset detects and reports duplicate vehicle ids', () => {
   assert.equal(result.vehicles.length, 1);
   assert.ok(result.skipped.some(s => s.id === 'dup-vehicle' && s.errors.some(e => e.toLowerCase().includes('duplicate'))));
 });
+
+// --- Item 13: loadDataset must guard against malformed containers -------
+
+test('loadDataset handles missing families key gracefully', () => {
+  const result = loadDataset({ vehicles: [] });
+  assert.ok(result);
+  assert.equal(result.vehicles.length, 0);
+  assert.equal(result.families.length, 0);
+  assert.equal(result.skipped.length, 0);
+  assert.equal(result.skippedFamilies.length, 0);
+});
+
+test('loadDataset handles missing vehicles key gracefully', () => {
+  const result = loadDataset({ families: [] });
+  assert.ok(result);
+  assert.equal(result.vehicles.length, 0);
+  assert.equal(result.families.length, 0);
+  assert.equal(result.skipped.length, 0);
+  assert.equal(result.skippedFamilies.length, 0);
+});
+
+test('loadDataset handles null families gracefully', () => {
+  const result = loadDataset({ vehicles: [], families: null });
+  assert.ok(result);
+  assert.equal(result.vehicles.length, 0);
+  assert.equal(result.families.length, 0);
+  assert.equal(result.skipped.length, 0);
+  assert.equal(result.skippedFamilies.length, 0);
+});
+
+test('loadDataset handles undefined input gracefully', () => {
+  const result = loadDataset();
+  assert.ok(result);
+  assert.equal(result.vehicles.length, 0);
+  assert.equal(result.families.length, 0);
+  assert.equal(result.skipped.length, 0);
+  assert.equal(result.skippedFamilies.length, 0);
+});
