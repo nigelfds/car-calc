@@ -12,7 +12,11 @@
 
 - Node 22 LTS pinned in `.nvmrc`; `engines.node: ">=20"` in `package.json`; `"type": "module"`.
 - Everything in `calc/` is pure: no `fetch`, no `Date.now()`, no randomness, no imports from `server/`. Dates and tax tables are always passed in as arguments.
-- Claude never calculates. It converts prose to inputs before the maths and narrates figures after it.
+- No model ever calculates. Models convert prose to inputs before the maths and narrate figures after it.
+- Parsing runs on-device first via Chrome's `LanguageModel` (Prompt API), falling back to `/api/parse` on **Claude Haiku** (`claude-haiku-4-5-20251001`), then to a keyword parser.
+- Ranking is **deterministic** — a pure scoring function in `calc/rank.js`, never a model call.
+- Explanation is the only reasoning call and uses **Claude Sonnet** (`claude-sonnet-5`).
+- The UI must carry a non-dismissible general-advice disclaimer next to the recommendation.
 - All money is handled as JavaScript numbers in dollars; round only at display time.
 - Every Claude response is validated with zod before anything downstream consumes it.
 - The calculator must work fully with the Claude API unavailable.
@@ -42,13 +46,14 @@
 | `calc/running-costs.js` | Insurance, electricity, rego/tyres/servicing |
 | `calc/novated.js` | Lease payment, residual, packaging, net take-home impact |
 | `calc/upfront.js` | Cash outlay plus opportunity cost |
-| `calc/compare.js` | TCO for all three, ranking, reachable vehicle, crossover solver |
+| `calc/compare.js` | TCO for all three, reachable vehicle, crossover solver |
+| `calc/rank.js` | Deterministic shortlist scoring — no model call |
+| `public/ui/prompt-api.js` | Chrome on-device LanguageModel client, availability-gated |
 | `server/index.js` | Express boot, static, PORT |
-| `server/claude.js` | SDK client, timeout, retry, graceful failure |
+| `server/claude.js` | SDK client, per-route model, timeout, graceful failure |
 | `server/schema.js` | zod schemas for every Claude response |
-| `server/routes/parse.js` | Free text → filters, with keyword fallback |
-| `server/routes/rank.js` | Shortlist ordering |
-| `server/routes/explain.js` | Plain-English narration |
+| `server/routes/parse.js` | Free text → filters (Haiku); fallback for non-Chrome browsers |
+| `server/routes/explain.js` | Plain-English narration (Sonnet) |
 | `server/fallback-parser.js` | Keyword parser used when Claude is unavailable |
 | `public/index.html` | Three-section shell |
 | `public/ui/state.js` | Single state object ↔ URL query string |
@@ -1980,6 +1985,8 @@ git commit -m "feat: add Express server, dataset endpoint and keyword fallback p
 
 ### Task 14: Claude client and response schemas
 
+One model per job: Haiku for structured extraction, Sonnet for the single call that needs reasoning. `askClaude` takes the model as an argument rather than hardcoding one.
+
 **Files:**
 - Create: `server/claude.js`, `server/schema.js`
 - Test: `server/schema.test.js`
@@ -1988,7 +1995,8 @@ git commit -m "feat: add Express server, dataset endpoint and keyword fallback p
 - Consumes: nothing
 - Produces:
   - `askClaude({ system, messages, tool, timeoutMs = 10000 }) -> object | null` — returns the validated tool input, or `null` on any failure (no key, timeout, network error, malformed response). It never throws.
-  - `parseSchema`, `rankSchema`, `explainSchema` — zod schemas
+  - `parseSchema`, `explainSchema` — zod schemas
+  - `MODELS` — `{ parse: 'claude-haiku-4-5-20251001', explain: 'claude-sonnet-5' }`
   - `clampParsed(parsed) -> parsed` — clamps numeric fields to sane ranges per the spec
 
 - [ ] **Step 1: Write the failing test**
@@ -1998,7 +2006,7 @@ Create `server/schema.test.js`:
 ```js
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseSchema, rankSchema, explainSchema, clampParsed } from './schema.js';
+import { parseSchema, explainSchema, clampParsed } from './schema.js';
 
 test('a well-formed parse result validates', () => {
   const result = parseSchema.safeParse({
@@ -2021,13 +2029,6 @@ test('an unknown body type is rejected', () => {
 
 test('a parse result may omit every optional field', () => {
   assert.equal(parseSchema.safeParse({}).success, true);
-});
-
-test('rank results require an id and a reason', () => {
-  assert.equal(rankSchema.safeParse({
-    ranked: [{ id: 'kia-ev5-air', reason: 'Biggest boot in your budget.' }]
-  }).success, true);
-  assert.equal(rankSchema.safeParse({ ranked: [{ id: 'kia-ev5-air' }] }).success, false);
 });
 
 test('explain results require non-empty prose', () => {
@@ -2080,13 +2081,6 @@ export const parseSchema = z.object({
   clarifyingQuestion: z.string().nullable().optional()
 });
 
-export const rankSchema = z.object({
-  ranked: z.array(z.object({
-    id: z.string().min(1),
-    reason: z.string().min(1)
-  })).max(5)
-});
-
 export const explainSchema = z.object({
   explanation: z.string().min(1)
 });
@@ -2116,7 +2110,15 @@ Create `server/claude.js`:
 ```js
 import Anthropic from '@anthropic-ai/sdk';
 
-const MODEL = 'claude-sonnet-5';
+// Model per job, not one model for everything.
+// HAIKU: structured extraction — narrow, well-specified, high volume, cheap.
+//        Only reached when the browser's on-device Prompt API is unavailable.
+// SONNET: the explanation — the one job that genuinely needs reasoning.
+export const MODELS = {
+  parse: 'claude-haiku-4-5-20251001',
+  explain: 'claude-sonnet-5'
+};
+
 const client = process.env.ANTHROPIC_API_KEY
   ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
   : null;
@@ -2127,7 +2129,7 @@ export const aiEnabled = () => client !== null;
  * Calls Claude and returns the validated tool input, or null on any failure.
  * Never throws — every caller has a working fallback path.
  */
-export async function askClaude({ system, messages, tool, schema, timeoutMs = 10000 }) {
+export async function askClaude({ model, system, messages, tool, schema, timeoutMs = 10000 }) {
   if (!client) return null;
 
   const controller = new AbortController();
@@ -2135,7 +2137,7 @@ export async function askClaude({ system, messages, tool, schema, timeoutMs = 10
 
   try {
     const response = await client.messages.create({
-      model: MODEL,
+      model,
       max_tokens: 1024,
       system,
       messages,
@@ -2171,16 +2173,179 @@ git commit -m "feat: add Claude client with validation, timeout and graceful fai
 
 ---
 
-### Task 15: The three Claude endpoints
+### Task 15: Deterministic ranking, and the two Claude endpoints
+
+Ranking is a **pure scoring function**, not a model call. Given the same inputs it returns the same order every time, it costs nothing, it works offline, and it is unit-testable — none of which is true of a model-ranked list. Only two jobs remain for Claude: parsing (Haiku, and only when the browser's on-device Prompt API is unavailable) and explaining (Sonnet).
 
 **Files:**
-- Create: `server/routes/parse.js`, `server/routes/rank.js`, `server/routes/explain.js`
+- Create: `calc/rank.js`, `server/routes/parse.js`, `server/routes/explain.js`
 - Modify: `server/index.js` (mount the routes)
-- Test: `server/routes/parse.test.js`
+- Test: `calc/rank.test.js`, `server/routes/parse.test.js`
 
 **Interfaces:**
-- Consumes: `askClaude` (Task 14), `parseKeywords` (Task 13), schemas (Task 14)
-- Produces: three mounted Express routers. Each response carries `source: 'claude' | 'fallback' | 'none'` so the UI can show what happened.
+- Consumes: `askClaude` and `MODELS` (Task 14), `parseKeywords` (Task 13), schemas (Task 14)
+- Produces:
+  - `scoreVehicle(vehicle, preferences) -> number` — higher is better
+  - `rankVehicles(vehicles, preferences, limit = 5) -> [{ vehicle, score, reasons }]`
+  - two mounted Express routers. Each response carries `source: 'claude' | 'fallback' | 'none'` so the UI can show what happened.
+
+- [ ] **Step 0: Write the failing test for deterministic ranking**
+
+Create `calc/rank.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { scoreVehicle, rankVehicles } from './rank.js';
+
+const car = (id, over = {}) => ({
+  id, listPrice: 55000, bootLitresSeatsUp: 450, rangeKm: 450,
+  warrantyYears: 5, seats: 5, bodyType: 'SUV', ...over
+});
+
+test('a bigger boot scores higher when boot space is wanted', () => {
+  const prefs = { minBootLitres: 500 };
+  assert.ok(
+    scoreVehicle(car('big', { bootLitresSeatsUp: 700 }), prefs) >
+    scoreVehicle(car('small', { bootLitresSeatsUp: 520 }), prefs)
+  );
+});
+
+test('boot space barely matters when it was never mentioned', () => {
+  const prefs = {};
+  const spread = Math.abs(
+    scoreVehicle(car('big', { bootLitresSeatsUp: 700 }), prefs) -
+    scoreVehicle(car('small', { bootLitresSeatsUp: 300 }), prefs)
+  );
+  const bootSpread = Math.abs(
+    scoreVehicle(car('big', { bootLitresSeatsUp: 700 }), { minBootLitres: 500 }) -
+    scoreVehicle(car('small', { bootLitresSeatsUp: 300 }), { minBootLitres: 500 })
+  );
+  assert.ok(spread < bootSpread, 'an unstated preference carries less weight');
+});
+
+test('longer range scores higher when range is wanted', () => {
+  const prefs = { minRangeKm: 400 };
+  assert.ok(
+    scoreVehicle(car('far', { rangeKm: 600 }), prefs) >
+    scoreVehicle(car('near', { rangeKm: 410 }), prefs)
+  );
+});
+
+test('ranking is deterministic — same input, same order, every time', () => {
+  const fleet = [car('a'), car('b', { bootLitresSeatsUp: 600 }), car('c', { rangeKm: 520 })];
+  const prefs = { minBootLitres: 500, minRangeKm: 400 };
+  const first = rankVehicles(fleet, prefs).map(r => r.vehicle.id);
+  for (let i = 0; i < 5; i++) {
+    assert.deepEqual(rankVehicles(fleet, prefs).map(r => r.vehicle.id), first);
+  }
+});
+
+test('ranking respects the limit', () => {
+  const fleet = Array.from({ length: 12 }, (_, i) => car(`v${i}`));
+  assert.equal(rankVehicles(fleet, {}, 3).length, 3);
+});
+
+test('each result carries human-readable reasons', () => {
+  const ranked = rankVehicles([car('a', { bootLitresSeatsUp: 700 })], { minBootLitres: 500 });
+  assert.ok(Array.isArray(ranked[0].reasons));
+  assert.ok(ranked[0].reasons.length > 0);
+  assert.equal(typeof ranked[0].reasons[0], 'string');
+});
+
+test('an empty fleet ranks to an empty list', () => {
+  assert.deepEqual(rankVehicles([], { minBootLitres: 500 }), []);
+});
+
+test('ties break on a stable, documented rule rather than array order', () => {
+  const fleet = [car('zzz'), car('aaa')];
+  assert.deepEqual(rankVehicles(fleet, {}).map(r => r.vehicle.id), ['aaa', 'zzz']);
+});
+```
+
+- [ ] **Step 0b: Run it and confirm it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './rank.js'`.
+
+- [ ] **Step 0c: Write the deterministic ranker**
+
+Create `calc/rank.js`:
+
+```js
+// Deterministic shortlist scoring. No model call: same inputs always give the
+// same order, it costs nothing, and it works with no network.
+//
+// Each dimension contributes a 0..1 normalised value times a weight. A weight
+// is raised when the user actually expressed that preference, so an unstated
+// preference still nudges but never dominates.
+
+const WEIGHTS = {
+  boot: { stated: 3.0, unstated: 0.5 },
+  range: { stated: 2.5, unstated: 0.8 },
+  warranty: { stated: 0, unstated: 0.6 },
+  value: { stated: 0, unstated: 1.0 }
+};
+
+const ratio = (value, reference) =>
+  reference > 0 ? Math.min(1, value / reference) : 0;
+
+export function scoreVehicle(vehicle, preferences = {}) {
+  const bootWanted = typeof preferences.minBootLitres === 'number';
+  const rangeWanted = typeof preferences.minRangeKm === 'number';
+
+  const bootWeight = bootWanted ? WEIGHTS.boot.stated : WEIGHTS.boot.unstated;
+  const rangeWeight = rangeWanted ? WEIGHTS.range.stated : WEIGHTS.range.unstated;
+
+  // Normalise against generous ceilings so the scale is stable across fleets.
+  const boot = ratio(vehicle.bootLitresSeatsUp, 900);
+  const range = ratio(vehicle.rangeKm, 700);
+  const warranty = ratio(vehicle.warrantyYears, 10);
+  // Cheaper is better, all else equal.
+  const value = 1 - ratio(vehicle.listPrice, 120000);
+
+  return (
+    boot * bootWeight +
+    range * rangeWeight +
+    warranty * WEIGHTS.warranty.unstated +
+    value * WEIGHTS.value.unstated
+  );
+}
+
+function reasonsFor(vehicle, preferences) {
+  const reasons = [];
+  if (typeof preferences.minBootLitres === 'number') {
+    reasons.push(`${vehicle.bootLitresSeatsUp}L boot, ${vehicle.bootLitresSeatsUp - preferences.minBootLitres}L more than you asked for`);
+  }
+  if (typeof preferences.minRangeKm === 'number') {
+    reasons.push(`${vehicle.rangeKm}km range`);
+  }
+  if (vehicle.warrantyYears >= 7) {
+    reasons.push(`${vehicle.warrantyYears}-year warranty`);
+  }
+  if (reasons.length === 0) {
+    reasons.push(`${vehicle.rangeKm}km range, ${vehicle.bootLitresSeatsUp}L boot`);
+  }
+  return reasons;
+}
+
+export function rankVehicles(vehicles, preferences = {}, limit = 5) {
+  return vehicles
+    .map(vehicle => ({
+      vehicle,
+      score: scoreVehicle(vehicle, preferences),
+      reasons: reasonsFor(vehicle, preferences)
+    }))
+    // Ties break on id, so the order never depends on input array order.
+    .sort((a, b) => b.score - a.score || a.vehicle.id.localeCompare(b.vehicle.id))
+    .slice(0, limit);
+}
+```
+
+- [ ] **Step 0d: Run the tests and confirm they pass**
+
+Run: `npm test`
+Expected: PASS, including the eight new ranking tests.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -2227,7 +2392,7 @@ Create `server/routes/parse.js`:
 
 ```js
 import express from 'express';
-import { askClaude, aiEnabled } from '../claude.js';
+import { askClaude, aiEnabled, MODELS } from '../claude.js';
 import { parseSchema, clampParsed } from '../schema.js';
 import { parseKeywords } from '../fallback-parser.js';
 
@@ -2281,6 +2446,7 @@ router.post('/', async (req, res) => {
   const keywordResult = parseKeywords(text);
 
   const claudeResult = await askClaude({
+    model: MODELS.parse,
     system: SYSTEM,
     messages: [...history, { role: 'user', content: text }],
     tool: TOOL,
@@ -2298,74 +2464,13 @@ router.post('/', async (req, res) => {
 export default router;
 ```
 
-- [ ] **Step 4: Write the rank and explain routes**
-
-Create `server/routes/rank.js`:
-
-```js
-import express from 'express';
-import { askClaude } from '../claude.js';
-import { rankSchema } from '../schema.js';
-
-const TOOL = {
-  name: 'rank_vehicles',
-  description: 'Order the shortlisted vehicles against the buyer\'s stated priorities.',
-  input_schema: {
-    type: 'object',
-    properties: {
-      ranked: {
-        type: 'array',
-        maxItems: 5,
-        items: {
-          type: 'object',
-          properties: {
-            id: { type: 'string' },
-            reason: { type: 'string', description: 'One short sentence, referring only to given facts.' }
-          },
-          required: ['id', 'reason']
-        }
-      }
-    },
-    required: ['ranked']
-  }
-};
-
-const SYSTEM = `You order already-filtered, already-costed vehicles against a buyer's soft
-priorities. Every vehicle given to you is affordable and matches their hard filters. Use only the
-attributes supplied — never invent specifications, prices, or running costs. Choose at most five.`;
-
-const router = express.Router();
-
-router.post('/', async (req, res) => {
-  const { candidates = [], priorities = '' } = req.body ?? {};
-  if (candidates.length === 0) return res.json({ ranked: [], source: 'none' });
-
-  const result = await askClaude({
-    system: SYSTEM,
-    messages: [{
-      role: 'user',
-      content: `Priorities: ${priorities || 'none stated'}\n\nCandidates:\n${JSON.stringify(candidates, null, 2)}`
-    }],
-    tool: TOOL,
-    schema: rankSchema
-  });
-
-  if (!result) {
-    return res.json({ ranked: candidates.slice(0, 5).map(c => ({ id: c.id, reason: '' })), source: 'fallback' });
-  }
-
-  const known = new Set(candidates.map(c => c.id));
-  res.json({ ranked: result.ranked.filter(r => known.has(r.id)), source: 'claude' });
-});
-
-export default router;
-```
+- [ ] **Step 4: Write the explain route**
 
 Create `server/routes/explain.js`:
 
 ```js
 import express from 'express';
-import { askClaude } from '../claude.js';
+import { askClaude, MODELS } from '../claude.js';
 import { explainSchema } from '../schema.js';
 
 const TOOL = {
@@ -2395,6 +2500,7 @@ router.post('/', async (req, res) => {
   if (!result) return res.status(400).json({ error: 'result is required' });
 
   const explanation = await askClaude({
+    model: MODELS.explain,
     system: SYSTEM,
     messages: [{ role: 'user', content: JSON.stringify(result, null, 2) }],
     tool: TOOL,
@@ -2416,7 +2522,6 @@ In `server/index.js`, add the imports below the existing ones:
 
 ```js
 import parseRoute from './routes/parse.js';
-import rankRoute from './routes/rank.js';
 import explainRoute from './routes/explain.js';
 ```
 
@@ -2424,7 +2529,6 @@ and mount them immediately after the `express.static` line:
 
 ```js
 app.use('/api/parse', parseRoute);
-app.use('/api/rank', rankRoute);
 app.use('/api/explain', explainRoute);
 ```
 
@@ -2444,8 +2548,8 @@ Expected: JSON with `grossSalary: 145000`, `monthlyBudget: 900`, `bodyTypes: ["S
 - [ ] **Step 7: Commit**
 
 ```bash
-git add server/routes server/index.js
-git commit -m "feat: add parse, rank and explain endpoints with fallbacks"
+git add calc/rank.js calc/rank.test.js server/routes server/index.js
+git commit -m "feat: add deterministic ranking plus parse and explain endpoints"
 ```
 
 ---
@@ -2599,7 +2703,13 @@ export function fromQueryString(search, defaults) {
 
 - [ ] **Step 4: Write the HTML shell**
 
-Create `public/index.html` with the three-section structure: a header, then `<section id="about">`, `<section id="afford">`, `<section id="cars">`, then a mobile sticky summary bar `<div id="summary-bar">`. Section 1 contains a `<textarea id="free-text">` with the placeholder `I earn $145k and can spend about $900 a month. I want an SUV with a big boot for my dog.` above the numeric fields. Load `ui/app.js` as `<script type="module">`.
+Create `public/index.html` with the three-section structure: a header, then `<section id="about">`, `<section id="afford">`, `<section id="cars">`, then a mobile sticky summary bar `<div id="summary-bar">`.
+
+**The general-advice disclaimer is required, not optional.** Add a `<p class="disclaimer">` immediately beneath the recommendation in section 2 — next to the number it qualifies, not buried in a footer — reading:
+
+> **General information only.** This tool does not take account of your objectives, financial situation or needs. It is not personal financial, tax or credit advice. Figures are estimates based on published rates and your inputs, and will differ from a real quote. Consider seeking advice from a licensed adviser before deciding.
+
+It must not be dismissible. Also add a shorter line in the page footer: *"General information only — not personal financial advice."* And note the FBT caveat the spec requires, near the novated verdict: *"An FBT-exempt lease still creates a Reportable Fringe Benefits Amount, which can affect HELP repayments and the Medicare Levy Surcharge. This tool does not model that."* Section 1 contains a `<textarea id="free-text">` with the placeholder `I earn $145k and can spend about $900 a month. I want an SUV with a big boot for my dog.` above the numeric fields. Load `ui/app.js` as `<script type="module">`.
 
 Create `public/styles.css` with a single-column layout by default and `@media (min-width: 900px) { .sections { display: grid; grid-template-columns: 250px 1fr 236px; gap: 1rem; } }`. Hide `#summary-bar` above 900px. Include a `.field-updated` class with a brief background highlight for the parse hand-off.
 
@@ -2620,18 +2730,185 @@ git commit -m "feat: add HTML shell, responsive styles and URL-backed state"
 
 ---
 
-### Task 17: Section 1 — inputs and the visible parse hand-off
+### Task 17: Section 1 — inputs, on-device parsing, and the visible hand-off
+
+Parsing runs in **three tiers**, best-available first. Tier 1 is Chrome's built-in `LanguageModel`, on-device: nothing about the user's salary leaves their machine, there is no per-query cost and no network latency. Tier 2 is `POST /api/parse` (Haiku) for every other browser. Tier 3 is the keyword parser, which always works.
 
 **Files:**
-- Create: `public/ui/sections.js`
-- Test: `public/ui/sections.test.js`
+- Create: `public/ui/prompt-api.js`, `public/ui/sections.js`
+- Test: `public/ui/prompt-api.test.js`, `public/ui/sections.test.js`
 
 **Interfaces:**
 - Consumes: state module (Task 16), `POST /api/parse` (Task 15)
 - Produces:
+  - `PARSE_SCHEMA` — the JSON schema handed to `responseConstraint`
+  - `isPromptApiAvailable() -> Promise<boolean>` — feature-detects and checks `LanguageModel.availability()`
+  - `parseOnDevice(text) -> Promise<object|null>` — returns parsed preferences, or `null` on any failure
   - `applyPreferences(state, preferences) -> { state, changedFields }` — returns which fields changed so the UI can highlight them
   - `renderInputs(root, state, onChange)` — binds the numeric fields
-  - `bindFreeText(root, state, { onParsed })` — posts the textarea content and applies the result
+  - `bindFreeText(root, state, { onParsed })` — runs the three-tier parse and applies the result
+
+- [ ] **Step 0: Write the failing test for the on-device client**
+
+Create `public/ui/prompt-api.test.js`:
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { PARSE_SCHEMA, isPromptApiAvailable, parseOnDevice } from './prompt-api.js';
+
+// The Prompt API is a browser global. These tests stub it, so they run in node
+// and prove the availability gating and failure handling without a browser.
+const withStub = async (stub, fn) => {
+  globalThis.LanguageModel = stub;
+  try { return await fn(); } finally { delete globalThis.LanguageModel; }
+};
+
+test('reports unavailable when the global is missing entirely', async () => {
+  delete globalThis.LanguageModel;
+  assert.equal(await isPromptApiAvailable(), false);
+});
+
+test('reports unavailable when the model cannot be provided', async () => {
+  await withStub({ availability: async () => 'unavailable' }, async () => {
+    assert.equal(await isPromptApiAvailable(), false);
+  });
+});
+
+test('reports available only when the model is ready to use', async () => {
+  await withStub({ availability: async () => 'available' }, async () => {
+    assert.equal(await isPromptApiAvailable(), true);
+  });
+  await withStub({ availability: async () => 'downloadable' }, async () => {
+    assert.equal(await isPromptApiAvailable(), false);
+  });
+});
+
+test('the schema constrains the fields the engine consumes', () => {
+  assert.equal(PARSE_SCHEMA.type, 'object');
+  for (const field of ['grossSalary', 'monthlyBudget', 'bodyTypes', 'minBootLitres']) {
+    assert.ok(field in PARSE_SCHEMA.properties, `${field} missing from schema`);
+  }
+});
+
+test('parses a stringified JSON response from the session', async () => {
+  const stub = {
+    availability: async () => 'available',
+    create: async () => ({
+      prompt: async () => JSON.stringify({ grossSalary: 145000, bodyTypes: ['SUV'] }),
+      destroy() {}
+    })
+  };
+  await withStub(stub, async () => {
+    const result = await parseOnDevice('I earn $145k, want an SUV');
+    assert.equal(result.grossSalary, 145000);
+    assert.deepEqual(result.bodyTypes, ['SUV']);
+  });
+});
+
+test('returns null rather than throwing when the session fails', async () => {
+  const stub = {
+    availability: async () => 'available',
+    create: async () => { throw new Error('model gone'); }
+  };
+  await withStub(stub, async () => {
+    assert.equal(await parseOnDevice('anything'), null);
+  });
+});
+
+test('returns null when the model emits unparseable output', async () => {
+  const stub = {
+    availability: async () => 'available',
+    create: async () => ({ prompt: async () => 'not json at all', destroy() {} })
+  };
+  await withStub(stub, async () => {
+    assert.equal(await parseOnDevice('anything'), null);
+  });
+});
+
+test('always destroys the session, even when prompting throws', async () => {
+  let destroyed = false;
+  const stub = {
+    availability: async () => 'available',
+    create: async () => ({
+      prompt: async () => { throw new Error('boom'); },
+      destroy() { destroyed = true; }
+    })
+  };
+  await withStub(stub, async () => {
+    await parseOnDevice('anything');
+    assert.equal(destroyed, true, 'session must not leak');
+  });
+});
+```
+
+- [ ] **Step 0b: Run it and confirm it fails**
+
+Run: `npm test`
+Expected: FAIL — `Cannot find module './prompt-api.js'`.
+
+- [ ] **Step 0c: Write the on-device client**
+
+Create `public/ui/prompt-api.js`:
+
+```js
+// Chrome's built-in Prompt API, on-device. Desktop Chrome only, and only once
+// the model has downloaded — so this is strictly an enhancement. Every failure
+// path returns null and the caller falls back to the server.
+
+export const PARSE_SCHEMA = {
+  type: 'object',
+  properties: {
+    bodyTypes: {
+      type: 'array',
+      items: { type: 'string', enum: ['SUV', 'Sedan', 'Hatch', 'Wagon', 'Ute'] }
+    },
+    minBootLitres: { type: ['number', 'null'] },
+    minRangeKm: { type: ['number', 'null'] },
+    seats: { type: ['integer', 'null'] },
+    grossSalary: { type: ['number', 'null'] },
+    monthlyBudget: { type: ['number', 'null'] },
+    termMonths: { type: ['integer', 'null'] }
+  },
+  additionalProperties: false
+};
+
+const SYSTEM = `You extract car-buying preferences from a person's description.
+Convert natural phrasing into numbers: "145k" means 145000; "big boot for a large dog"
+implies minBootLitres of at least 500. A salary is annual; a budget is monthly.
+Use null for anything the person did not indicate. Never calculate costs or taxes.`;
+
+export async function isPromptApiAvailable() {
+  try {
+    if (typeof globalThis.LanguageModel === 'undefined') return false;
+    return (await globalThis.LanguageModel.availability()) === 'available';
+  } catch {
+    return false;
+  }
+}
+
+export async function parseOnDevice(text) {
+  if (!(await isPromptApiAvailable())) return null;
+
+  let session = null;
+  try {
+    session = await globalThis.LanguageModel.create({
+      initialPrompts: [{ role: 'system', content: SYSTEM }]
+    });
+    const raw = await session.prompt(text, { responseConstraint: PARSE_SCHEMA });
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  } finally {
+    session?.destroy?.();
+  }
+}
+```
+
+- [ ] **Step 0d: Run the tests and confirm they pass**
+
+Run: `npm test`
+Expected: PASS, including the eight new on-device tests.
 
 Manual edits always win over parsed text: a field the user has touched is recorded in `state.touched` and is never overwritten by a parse.
 
@@ -2686,6 +2963,8 @@ Expected: FAIL — `Cannot find module './sections.js'`.
 Create `public/ui/sections.js`. `applyPreferences` is the pure, tested part; the DOM binding below it is thin.
 
 ```js
+import { parseOnDevice } from './prompt-api.js';
+
 const same = (a, b) =>
   Array.isArray(a) && Array.isArray(b)
     ? a.length === b.length && a.every((v, i) => v === b[i])
@@ -2746,12 +3025,23 @@ export function bindFreeText(root, getState, { onParsed }) {
     button.disabled = true;
 
     try {
-      const response = await fetch('/api/parse', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ text })
-      });
-      const data = await response.json();
+      // Tier 1: on-device, in Chrome. Nothing leaves the machine.
+      let preferences = await parseOnDevice(text);
+      let clarifyingQuestion = null;
+
+      // Tier 2: the server, on Haiku. Every other browser lands here.
+      if (!preferences) {
+        const response = await fetch('/api/parse', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text })
+        });
+        const data = await response.json();
+        preferences = data.preferences;
+        clarifyingQuestion = data.clarifyingQuestion;
+      }
+
+      const data = { preferences, clarifyingQuestion };
       const { state, changedFields } = applyPreferences(getState(), data.preferences);
       highlightChanged(root, changedFields);
       status.textContent = data.clarifyingQuestion
@@ -2775,8 +3065,8 @@ Expected: PASS, 95 tests total.
 - [ ] **Step 5: Commit**
 
 ```bash
-git add public/ui/sections.js public/ui/sections.test.js
-git commit -m "feat: add section 1 inputs with visible parse hand-off"
+git add public/ui/prompt-api.js public/ui/prompt-api.test.js public/ui/sections.js public/ui/sections.test.js
+git commit -m "feat: add on-device parsing with server and keyword fallbacks"
 ```
 
 ---
@@ -3136,6 +3426,7 @@ Create `public/ui/cars.test.js`:
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { filterVehicles, cardModel } from './cars.js';
+import { rankVehicles } from '../../calc/rank.js';
 
 const fleet = [
   { id: 'a', familyId: 'fa', make: 'Kia', model: 'EV5', bodyType: 'SUV', bootLitresSeatsUp: 513, rangeKm: 400, seats: 5, listPrice: 56000 },
@@ -3241,9 +3532,15 @@ export function renderCards(root, cards) {
 
 Add a hidden `<svg>` sprite in `index.html` containing one `<svg id="silhouette-SUV">` element per body type, so the `onerror` fallback has something to clone.
 
+- [ ] **Step 3b: Wire the deterministic ranker into the shortlist**
+
+`public/ui/cars.js` filters; `calc/rank.js` orders. Import `rankVehicles` and use it to order the filtered list before rendering, passing the parsed preferences so a stated need for boot space or range actually moves the order. Do not call any API to rank — the ordering must be reproducible and must work offline.
+
 - [ ] **Step 4: Write the app wiring**
 
-Create `public/ui/app.js` that: fetches `/api/dataset` once; builds state from the URL via `fromQueryString`; on any state change recomputes `verdictAt` and `crossoverSeries` locally and re-renders sections 2 and 3 plus the sticky summary bar; writes the new query string with `history.replaceState`; and calls `/api/rank` and `/api/explain` only after a *parse*, never on a slider drag. Wrap both AI calls in `try/catch` so a failure leaves the numbers untouched.
+Create `public/ui/app.js` that: fetches `/api/dataset` once; builds state from the URL via `fromQueryString`; on any state change recomputes `verdictAt` and `crossoverSeries` locally and re-renders sections 2 and 3 plus the sticky summary bar; writes the new query string with `history.replaceState`; and calls `/api/explain` only after a *parse*, never on a slider drag. Ranking is local and deterministic, so it re-runs freely. Wrap the explain call in `try/catch` so a failure leaves the numbers untouched.
+
+**Performance requirement:** `crossoverSeries` was measured at roughly 17ms for 80 vehicles across 25 budget steps, which exceeds a 16ms frame. Do NOT recompute on raw `input` events. Debounce the slider or schedule recomputation with `requestAnimationFrame`, so dragging stays smooth.
 
 - [ ] **Step 5: Verify the whole app end to end**
 
@@ -3255,7 +3552,7 @@ Expected: type the placeholder sentence, click parse, watch the fields highlight
 
 - [ ] **Step 6: Write the README**
 
-Create `README.md` covering: what the app does, the "no advice" disclaimer, local setup (`nvm use`, `npm install`, `.env`, `npm start`), `npm test`, how to refresh the dataset (`node scripts/build-dataset.js`), and where each default rate came from.
+Create `README.md` covering: what the app does, the general-advice disclaimer stated prominently near the top (the same wording as the UI: general information only, not personal financial, tax or credit advice, figures are estimates and will differ from a real quote), local setup (`nvm use`, `npm install`, `.env`, `npm start`), `npm test`, how to refresh the dataset (`node scripts/build-dataset.js`), and where each default rate came from.
 
 - [ ] **Step 7: Deploy to Heroku**
 
