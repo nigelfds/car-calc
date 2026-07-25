@@ -46,3 +46,32 @@ test('a discounted treatment produces 75% of full FBT', () => {
   const expected = 85000 * 0.20 * 0.75 * 2.0802 * 0.47;
   close(annualFbt({ baseValue: 85000, treatment }, tables), expected);
 });
+
+test('phase 2 exemption cap at $75,000 is inclusive', () => {
+  const atCap = fbtTreatment({ leaseStartDate: '2027-06-01', vehicleValue: 75000 }, tables);
+  assert.equal(atCap.exempt, true);
+});
+
+test('phase 2 cars above $75,000 cap lose exemption and get 25% discount', () => {
+  const aboveCap = fbtTreatment({ leaseStartDate: '2027-06-01', vehicleValue: 75001 }, tables);
+  assert.equal(aboveCap.exempt, false);
+  assert.equal(aboveCap.discountRate, 0.25);
+});
+
+test('LCT threshold test is exclusive - car at exactly threshold is exempt', () => {
+  const atThreshold = fbtTreatment({ leaseStartDate: '2026-07-25', vehicleValue: tables.lct.fuelEfficientThreshold }, tables);
+  assert.equal(atThreshold.exempt, true);
+  assert.equal(atThreshold.overThreshold, false);
+});
+
+test('LCT threshold test is exclusive - car above threshold is not exempt', () => {
+  const aboveThreshold = fbtTreatment({ leaseStartDate: '2026-07-25', vehicleValue: tables.lct.fuelEfficientThreshold + 1 }, tables);
+  assert.equal(aboveThreshold.exempt, false);
+  assert.equal(aboveThreshold.overThreshold, true);
+});
+
+test('over-threshold cars pay same FBT in phase 1 and phase 3', () => {
+  const phase1 = annualFbt({ baseValue: 95000, treatment: fbtTreatment({ leaseStartDate: '2026-07-25', vehicleValue: 95000 }, tables) }, tables);
+  const phase3 = annualFbt({ baseValue: 95000, treatment: fbtTreatment({ leaseStartDate: '2029-06-01', vehicleValue: 95000 }, tables) }, tables);
+  close(phase1, phase3);
+});
