@@ -638,7 +638,8 @@ test('resale at a whole year reads straight off the curve', () => {
 });
 
 test('resale mid-year interpolates linearly', () => {
-  close(resaleValue({ driveAwayTotal: 60000, termMonths: 42, depreciationCurve: curve }), 34200);
+  // 3.5 years sits halfway between year 3 (0.60) and year 4 (0.53) => 0.565
+  close(resaleValue({ driveAwayTotal: 60000, termMonths: 42, depreciationCurve: curve }), 33900);
 });
 
 test('a term beyond the curve extends the final decline', () => {
@@ -1112,7 +1113,7 @@ test('a novated lease beats a direct loan for a 37% earner on a cheap EV', () =>
 
 test('reachableVehicle picks the dearest variant within budget', () => {
   const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000), vehicle('dear', 95000)];
-  const picked = reachableVehicle({ fleet, vehicles: fleet, budgetMonthly: 1000, option: 'novated', inputs }, tables);
+  const picked = reachableVehicle({ vehicles: fleet, budgetMonthly: 1000, option: 'novated', inputs }, tables);
   assert.ok(picked, 'something is affordable at $1000/mo');
   assert.notEqual(picked.id, 'cheap', 'it does not settle for the cheapest');
 });
@@ -1648,87 +1649,106 @@ git commit -m "feat: add dataset schema, validator and seed rows"
 
 ---
 
-### Task 12: Research and build the full dataset
+### Task 12: Research and build the full dataset (parallel fan-out)
 
-A manual research pass, not automated code. The validator from Task 11 is the acceptance gate.
+A research pass, not automated code, and the only task in the plan that fans out. Each family is researched by its own subagent writing its **own pair of files**, so parallel agents never touch a shared file. `build-dataset.js` then merges the per-family files into the two JSON files the server reads.
 
 **Files:**
-- Create: `scripts/build-dataset.js`
-- Modify: `data/vehicles.json` (expand to 60–80 rows), `data/families.json` (expand to ~30 families)
+- Create: `scripts/build-dataset.js`, `data/families/<familyId>.json` (~30), `data/vehicles/<familyId>.json` (~30)
+- Modify: `data/vehicles.json`, `data/families.json` — now **generated**, never hand-edited
 
 **Interfaces:**
 - Consumes: `validateVehicle`, `validateFamily` (Task 11)
 - Produces: the complete committed dataset
 
-- [ ] **Step 1: Write the validation runner**
+- [ ] **Step 1: Write the merge-and-validate script**
 
 Create `scripts/build-dataset.js`:
 
 ```js
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { validateVehicle, validateFamily } from '../data/schema.js';
 
-const vehicles = JSON.parse(readFileSync(new URL('../data/vehicles.json', import.meta.url)));
-const families = JSON.parse(readFileSync(new URL('../data/families.json', import.meta.url)));
-const familyIds = new Set(families.map(f => f.id));
+const dataDir = new URL('../data/', import.meta.url).pathname;
+const readAll = folder => {
+  const dir = join(dataDir, folder);
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter(name => name.endsWith('.json'))
+    .flatMap(name => {
+      const parsed = JSON.parse(readFileSync(join(dir, name), 'utf8'));
+      return Array.isArray(parsed) ? parsed : [parsed];
+    });
+};
 
+const families = readAll('families');
+const vehicles = readAll('vehicles');
+const familyIds = new Set(families.map(f => f.id));
 let failures = 0;
+
+const fail = message => { console.error(`FAIL ${message}`); failures++; };
 
 for (const row of vehicles) {
   const result = validateVehicle(row);
-  if (!result.valid) {
-    console.error(`FAIL ${row.id ?? 'unknown'}: ${result.errors.join('; ')}`);
-    failures++;
-  }
-  if (!familyIds.has(row.familyId)) {
-    console.error(`FAIL ${row.id}: references missing family ${row.familyId}`);
-    failures++;
-  }
+  if (!result.valid) fail(`${row.id ?? 'unknown'}: ${result.errors.join('; ')}`);
+  if (!familyIds.has(row.familyId)) fail(`${row.id}: missing family ${row.familyId}`);
 }
 
 for (const entry of families) {
   const result = validateFamily(entry);
-  if (!result.valid) {
-    console.error(`FAIL family ${entry.id ?? 'unknown'}: ${result.errors.join('; ')}`);
-    failures++;
-  }
+  if (!result.valid) fail(`family ${entry.id ?? 'unknown'}: ${result.errors.join('; ')}`);
 }
+
+const ids = vehicles.map(v => v.id);
+const duplicates = ids.filter((id, i) => ids.indexOf(id) !== i);
+if (duplicates.length) fail(`duplicate vehicle ids: ${[...new Set(duplicates)].join(', ')}`);
 
 const covered = new Set(vehicles.map(v => v.familyId));
 for (const id of familyIds) {
   if (!covered.has(id)) console.warn(`WARN family ${id} has no variants`);
 }
 
+if (failures === 0) {
+  const sortById = (a, b) => a.id.localeCompare(b.id);
+  writeFileSync(join(dataDir, 'vehicles.json'), JSON.stringify([...vehicles].sort(sortById), null, 2) + '\n');
+  writeFileSync(join(dataDir, 'families.json'), JSON.stringify([...families].sort(sortById), null, 2) + '\n');
+}
+
 console.log(`${vehicles.length} variants across ${families.length} families, ${failures} failures`);
 process.exit(failures > 0 ? 1 : 0);
 ```
 
-- [ ] **Step 2: Research the variant data**
+- [ ] **Step 2: Migrate the Task 11 seed rows into per-family files**
 
-Cover the EVs actually on sale in Victoria, at **variant** level — a Long Range trim crossing the FBT threshold when the base does not is precisely the case the app exists to catch. Target families: BYD Atto 3, Dolphin, Seal, Sealion 7; Tesla Model 3, Model Y; MG4, MGS5; Kia EV3, EV5, EV6, EV9; Hyundai Inster, Kona Electric, Ioniq 5, Ioniq 6; Polestar 2, 4; Volvo EX30, EX40; GWM Ora; Zeekr X, 7X; Xpeng G6, G9; Leapmotor C10; Cupra Born; Nissan Leaf; Subaru Solterra; Toyota bZ4X; Ford Mustang Mach-E.
+Split the three seed rows and two seed families from Task 11 into `data/vehicles/<familyId>.json` and `data/families/<familyId>.json`. Run `node scripts/build-dataset.js` and confirm it regenerates the two merged files with `0 failures`.
 
-For each variant record VIC drive-away price, list price, battery kWh, range, consumption, boot litres seats up and down, seats, tow rating, warranty and an insurance estimate scaled from the family's brand and the variant's value.
+- [ ] **Step 3: Research each family (fanned out, one subagent per family)**
 
-For the depreciation curve, use a per-family retained-value curve. A reasonable default for mainstream EVs is `[1, 0.78, 0.68, 0.60, 0.53, 0.47]`; adjust for families with notably strong or weak resale.
+Target families, roughly 30: BYD Atto 3, Dolphin, Seal, Sealion 7; Tesla Model 3, Model Y; MG4, MGS5; Kia EV3, EV5, EV6, EV9; Hyundai Inster, Kona Electric, Ioniq 5, Ioniq 6; Polestar 2, 4; Volvo EX30, EX40; GWM Ora; Zeekr X, 7X; Xpeng G6, G9; Leapmotor C10; Cupra Born; Nissan Leaf; Subaru Solterra; Toyota bZ4X; Ford Mustang Mach-E.
 
-- [ ] **Step 3: Research each family's reviews and images**
+Each subagent handles exactly one family and writes exactly two files, `data/families/<id>.json` and `data/vehicles/<id>.json`. It must not touch `vehicles.json`, `families.json`, or any other family's files.
 
-One short research pass per family, roughly 30 in total. For each, collect a two-to-three sentence consensus summary in the app's own words, three to five pros, two to five cons, the source URLs (preferring CarExpert, Drive, CarsGuide, WhichCar since verdicts on ride and value are market-specific), and two or three image URLs from the **manufacturer's press or media room only** — press rooms exist for republication, review-site photography does not. Set `sourcedAt` on each entry.
+**Vehicles file** — one row per **variant** on sale in Victoria. Variant granularity is the point: a Long Range trim crossing the FBT threshold when the base does not is exactly the case the app exists to catch. Fields per the Task 11 schema: VIC drive-away price, list price, battery kWh, range, consumption, boot litres seats up and down, seats, tow rating, warranty, insurance estimate, and a depreciation curve. Default curve for mainstream EVs is `[1, 0.78, 0.68, 0.60, 0.53, 0.47]`; adjust for families with notably strong or weak resale.
 
-- [ ] **Step 4: Validate the dataset**
+**Families file** — a two-to-three sentence consensus summary in the app's own words, three to five pros, two to five cons, source URLs (preferring CarExpert, Drive, CarsGuide, WhichCar, since verdicts on ride and value are market-specific), and two or three image URLs from the **manufacturer's press or media room only**. Press rooms exist for republication; review-site photography does not. Set `sourcedAt`.
+
+Each subagent validates its own two files before reporting, by running `node scripts/build-dataset.js` and confirming its own family produces no `FAIL` lines. A non-zero exit caused by *another* family still in flight is expected and not its concern.
+
+- [ ] **Step 4: Merge and validate the whole dataset**
 
 Run: `node scripts/build-dataset.js`
-Expected: `NN variants across ~30 families, 0 failures` and exit code 0.
+Expected: `NN variants across ~30 families, 0 failures`, exit code 0, and both merged files rewritten.
 
 - [ ] **Step 5: Run the full test suite**
 
 Run: `npm test`
-Expected: PASS — the "every committed vehicle row is valid" and family-reference tests now cover the full dataset.
+Expected: PASS — the "every committed vehicle row is valid" and family-reference tests from Task 11 now cover the full dataset.
 
 - [ ] **Step 6: Commit**
 
 ```bash
-git add scripts/build-dataset.js data/vehicles.json data/families.json
+git add scripts/build-dataset.js data/families data/vehicles data/vehicles.json data/families.json
 git commit -m "feat: add researched EV dataset with family reviews and press images"
 ```
 
