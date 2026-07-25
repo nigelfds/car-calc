@@ -1,24 +1,5 @@
 [
   {
-    "id": "kia-ev5",
-    "summary": "Roomy mid-size electric SUV with a huge boot and Kia's class-leading 7-year warranty, priced to undercut most mid-size EV rivals.",
-    "pros": [
-      "Largest boot in this comparison at 513L (1714L seats down)",
-      "7-year/150,000km vehicle and battery warranty",
-      "Comfortable, family-friendly interior with strong rear-seat space"
-    ],
-    "cons": [
-      "Entry Air Standard Range is front-wheel drive only and rated to tow just 300kg braked",
-      "DC charging tops out lower than rivals, so road-trip top-ups take longer",
-      "Firmer low-speed ride than some competitors on Melbourne's rougher back streets"
-    ],
-    "sources": [
-      "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
-      "https://zecar.com/electric-vehicles/kia/ev5/air-standard-range"
-    ],
-    "sourcedAt": "2026-07-25"
-  },
-  {
     "id": "byd-atto3",
     "summary": "Sharply priced small SUV from BYD with a well-equipped cabin and a strong warranty, aimed squarely at first-time EV buyers.",
     "pros": [
@@ -34,6 +15,25 @@
     "sources": [
       "https://www.carexpert.com.au/byd/atto-3/2026",
       "https://www.carsales.com.au/research/byd/atto-3/"
+    ],
+    "sourcedAt": "2026-07-25"
+  },
+  {
+    "id": "kia-ev5",
+    "summary": "Roomy mid-size electric SUV with a huge boot and Kia's class-leading 7-year warranty, priced to undercut most mid-size EV rivals.",
+    "pros": [
+      "Largest boot in this comparison at 513L (1714L seats down)",
+      "7-year/150,000km vehicle and battery warranty",
+      "Comfortable, family-friendly interior with strong rear-seat space"
+    ],
+    "cons": [
+      "Entry Air Standard Range is front-wheel drive only and rated to tow just 300kg braked",
+      "DC charging tops out lower than rivals, so road-trip top-ups take longer",
+      "Firmer low-speed ride than some competitors on Melbourne's rougher back streets"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
+      "https://zecar.com/electric-vehicles/kia/ev5/air-standard-range"
     ],
     "sourcedAt": "2026-07-25"
   },

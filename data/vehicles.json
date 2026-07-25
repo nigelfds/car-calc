@@ -1,25 +1,5 @@
 [
   {
-    "id": "kia-ev5-air",
-    "familyId": "kia-ev5",
-    "make": "Kia",
-    "model": "EV5",
-    "variant": "Air Standard Range",
-    "bodyType": "SUV",
-    "listPrice": 49720,
-    "batteryKwh": 64.2,
-    "rangeKm": 400,
-    "consumptionKwhPer100km": 16.1,
-    "bootLitresSeatsUp": 513,
-    "bootLitresSeatsDown": 1714,
-    "seats": 5,
-    "towKg": 300,
-    "warrantyYears": 7,
-    "insuranceAnnual": 1800,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-25"
-  },
-  {
     "id": "byd-atto3-essential",
     "familyId": "byd-atto3",
     "make": "BYD",
@@ -36,7 +16,41 @@
     "towKg": 750,
     "warrantyYears": 6,
     "insuranceAnnual": 1500,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-07-25"
+  },
+  {
+    "id": "kia-ev5-air",
+    "familyId": "kia-ev5",
+    "make": "Kia",
+    "model": "EV5",
+    "variant": "Air Standard Range",
+    "bodyType": "SUV",
+    "listPrice": 49720,
+    "batteryKwh": 64.2,
+    "rangeKm": 400,
+    "consumptionKwhPer100km": 16.1,
+    "bootLitresSeatsUp": 513,
+    "bootLitresSeatsDown": 1714,
+    "seats": 5,
+    "towKg": 300,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1800,
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-25"
   },
   {
@@ -56,7 +70,14 @@
     "towKg": 1588,
     "warrantyYears": 4,
     "insuranceAnnual": 2400,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-25"
   }
 ]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tesla-model-y-rwd",
+    "familyId": "tesla-model-y",
+    "make": "Tesla",
+    "model": "Model Y",
+    "variant": "RWD",
+    "bodyType": "SUV",
+    "listPrice": 58900,
+    "batteryKwh": 62.5,
+    "rangeKm": 466,
+    "consumptionKwhPer100km": 13.9,
+    "bootLitresSeatsUp": 854,
+    "bootLitresSeatsDown": 2022,
+    "seats": 5,
+    "towKg": 1588,
+    "warrantyYears": 4,
+    "insuranceAnnual": 2400,
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-07-25"
+  }
+]
