@@ -20,6 +20,15 @@ test('income tax part-way through the 37% bracket', () => {
   close(incomeTax(145000, tables), 34720);
 });
 
+test('medicare levy is nil below the low-income threshold', () => {
+  close(medicareLevy(20000, tables), 0);
+});
+
+test('medicare levy phases in between the threshold and shade-out point', () => {
+  close(medicareLevy(30000, tables), 277.80);
+  close(medicareLevy(34027, tables), 680.54);
+});
+
 test('medicare levy is 2% above the shade-out point', () => {
   close(medicareLevy(145000, tables), 2900);
 });
