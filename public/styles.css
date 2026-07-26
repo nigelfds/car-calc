@@ -446,6 +446,133 @@ input[type='date'],
   min-height: 3rem;
 }
 
+/* =========================================================================
+   Crossover chart — Task 19. Two renderings of one series, chosen in JS by
+   container width at the project's 900px breakpoint:
+     - desktop: three SVG lines, cost against budget.
+     - mobile: a single "winner band" — three thin lines in ~96px of height
+       don't read on a phone, so the whole width becomes coloured segments
+       showing who's cheapest at each point on the budget slider.
+   Colours match the .line-legend dots above (lease/loan/cash). Colour is
+   never the only identity channel: the desktop lines also carry a stroke
+   pattern (solid / dashed / dotted), and both renderings carry direct
+   text labels.
+   ========================================================================= */
+
+.crossover-chart {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.crossover-chart .grid-line {
+  stroke: var(--hairline);
+  stroke-width: 1;
+}
+
+/* The vertical marker at a crossover — where the cheapest option flips.
+   Dashed on purpose: this is a threshold annotation, not chart grid. */
+.crossover-chart .crossover-line {
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.crossover-chart .axis-label {
+  fill: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 9px;
+}
+
+.crossover-chart .axis-label--crossover {
+  fill: var(--ink-soft);
+  font-weight: 600;
+}
+
+.crossover-chart .line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.crossover-chart .line-novated { stroke: var(--line-lease); }
+.crossover-chart .line-loan { stroke: var(--line-loan); }
+.crossover-chart .line-upfront { stroke: var(--line-cash); }
+
+.crossover-chart .marker,
+.crossover-chart .end-dot {
+  stroke: var(--paper-raised);
+  stroke-width: 2;
+}
+
+.crossover-chart .marker-novated,
+.crossover-chart .end-dot-novated { fill: var(--line-lease); }
+.crossover-chart .marker-loan,
+.crossover-chart .end-dot-loan { fill: var(--line-loan); }
+.crossover-chart .marker-upfront,
+.crossover-chart .end-dot-upfront { fill: var(--line-cash); }
+
+.crossover-chart .leader-line {
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+}
+
+/* Direct end-labels render in ink, never the series colour — the adjacent
+   dot carries identity, so the text itself stays legible as text. */
+.crossover-chart .end-label {
+  fill: var(--ink-soft);
+  font-family: var(--font-text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.winner-band {
+  position: relative;
+  height: 3.25rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.winner-band .band {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid var(--paper-raised);
+}
+
+.winner-band .band:last-child { border-right: none; }
+
+.winner-band .band-novated { background: var(--line-lease); }
+.winner-band .band-loan { background: var(--line-loan); }
+.winner-band .band-upfront { background: var(--line-cash); }
+
+/* 1.2rem/700 clears the WCAG large-text bold threshold (14pt / 18.66px),
+   which matters here: white-on-lease is ~4.1:1, enough for large text but
+   not for body-size text. */
+.winner-band .band__label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.winner-band__scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
 .rates-panel__intro {
   margin: 0 0 var(--space-4);
   font-size: 0.85rem;
