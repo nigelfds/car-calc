@@ -350,6 +350,47 @@ input[type='date'],
   min-height: 4rem;
 }
 
+.verdict-panel .winner {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.verdict-panel .detail {
+  margin-top: var(--space-1);
+  color: var(--ink-soft);
+}
+
+.verdict-panel .totals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.verdict-panel .total {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+}
+
+.verdict-panel .total span {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.verdict-panel .total strong {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+}
+
+.verdict-panel .total.is-winner {
+  border-color: var(--line-lease);
+  background: var(--line-lease-bg);
+}
+
 .disclaimer {
   margin: var(--space-4) 0 0;
   padding: var(--space-3) var(--space-4);
@@ -403,6 +444,46 @@ input[type='date'],
   padding-top: var(--space-4);
   border-top: 1px solid var(--hairline);
   min-height: 3rem;
+}
+
+.rates-panel__intro {
+  margin: 0 0 var(--space-4);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.rates-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.rates-panel .rates-panel__intro {
+  grid-column: 1 / -1;
+}
+
+.rate-field__provenance {
+  margin: var(--space-1) 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--ink-faint);
+}
+
+.rate-field__reset {
+  margin-top: var(--space-2);
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--line-loan);
+  cursor: pointer;
+}
+
+.rate-field__reset:hover { text-decoration: underline; }
+
+@media (min-width: 640px) {
+  .rates-panel { grid-template-columns: repeat(2, 1fr); }
 }
 
 .skeleton-note {
