@@ -32,6 +32,21 @@ const OPTION_SHORT_LABEL = {
   upfront: 'Cash'
 };
 
+// Even a sliver of a winner band still needs an identity that isn't colour —
+// used in place of OPTION_SHORT_LABEL when a band is too narrow for the full
+// word. '$' for cash is a symbol, not a colour, and reads unambiguously next
+// to the other two initials.
+const OPTION_ABBR = {
+  novated: 'N',
+  loan: 'L',
+  upfront: '$'
+};
+
+// Sentinel winner used only by toWinnerBands()/renderWinnerBand() when no
+// option is reachable at any sampled budget — never a member of OPTIONS, so
+// it never touches bounds()/toPolylines()/toSegments()/renderLineChart().
+const NO_OPTION = 'none';
+
 // Colour distinguishes the three lines, but colour alone can't be relied on
 // for CVD readers, so every option also gets its own stroke pattern —
 // solid / dashed / dotted — matched consistently wherever a line for that
@@ -51,6 +66,15 @@ function bounds(series) {
   return { min: Math.min(...values), max: Math.max(...values) };
 }
 
+// UNSAFE FOR DIRECT PAINTING. Nulls are filtered out and what remains is
+// joined into one continuous points string per option, so a real gap in the
+// middle of a series (option unreachable, then reachable again) is bridged
+// by a straight line — exactly the "the cost dipped" misread this module's
+// top comment warns against. This export exists for callers who only need
+// "does this option have any reachable points at all" (its shape is a
+// simple joined string, which is what its tests check). Anyone painting a
+// chart should use the exported toSegments() below instead: it keeps each
+// contiguous run separate so a real gap renders as a real gap.
 export function toPolylines(series, { width, height }) {
   const { min, max } = bounds(series);
   const span = max - min || 1;
@@ -80,6 +104,9 @@ export function toWinnerBands(series) {
 
   const bands = [];
   const total = series.points.length - 1 || 1;
+  // pct of the last point that had any leader at all — not necessarily the
+  // previous index, if leaderless points sit between two priced ones.
+  let prevPct = null;
 
   series.points.forEach((point, index) => {
     const leader = leaderAt(point);
@@ -89,32 +116,42 @@ export function toWinnerBands(series) {
 
     if (last && last.option === leader) {
       last.toPct = pct;
+    } else if (last) {
+      // The true crossover lies somewhere between the two sampled points —
+      // the midpoint is the honest estimate. Placing the boundary at `pct`
+      // for both edges (the old fix) collapses the new band to zero width
+      // whenever the leader flips on the very last sample.
+      const boundary = prevPct === null ? pct : (prevPct + pct) / 2;
+      last.toPct = boundary;
+      bands.push({ option: leader, fromPct: boundary, toPct: pct });
     } else {
-      if (last) last.toPct = pct;
       bands.push({ option: leader, fromPct: pct, toPct: pct });
     }
+    prevPct = pct;
   });
 
   if (bands.length > 0) {
     bands[0].fromPct = 0;
     bands[bands.length - 1].toPct = 100;
+  } else {
+    // Nothing was affordable at any sampled budget. [] would violate "first
+    // band starts at 0, last ends at 100" and render a blank strip with a
+    // stub aria-label — make the empty state explicit instead.
+    bands.push({ option: NO_OPTION, fromPct: 0, toPct: 100 });
   }
   return bands;
 }
 
 // ---------------------------------------------------------------------------
-// Rendering support below this line. toPolylines() above deliberately
-// returns one joined `points` string per option — that's the tested
-// contract, and it's the right shape for "does this option have any
-// reachable points at all". It is the wrong shape for painting: filtering
-// out nulls and joining what's left draws one continuous <polyline> that
-// bridges straight across a gap instead of breaking it, which would read as
-// "the cost dipped" rather than "this option was out of reach here".
+// Rendering support below this line.
 //
-// toSegments() re-walks the same coordinate maths but keeps each contiguous
-// run of reachable points separate, so the renderer below draws one
-// <polyline> per run and a real gap shows as a real gap.
-function toSegments(series, { width, height }) {
+// toSegments() is the public painting interface: same coordinate maths as
+// toPolylines() above, but it keeps each contiguous run of reachable points
+// separate instead of joining everything that survives the null filter, so
+// a real gap in the data renders as a real gap — one <polyline> per run —
+// rather than a straight line bridging across it. Any future caller that
+// wants to draw this series should call this, not toPolylines().
+export function toSegments(series, { width, height }) {
   const { min, max } = bounds(series);
   const span = max - min || 1;
   const lastIndex = series.points.length - 1 || 1;
@@ -249,9 +286,18 @@ function renderLineChart(target, series) {
   const firstBudget = series.points[0].budget;
   const lastBudget = series.points[series.points.length - 1].budget;
 
+  // The one thing this chart exists to show: where the cheapest option
+  // flips. The dashed vertical marker carries it visually; say it in words
+  // too, the way the mobile winner-band's label already does.
+  const crossoverSummary = series.crossovers.length
+    ? ' The cheapest option changes ' + series.crossovers
+        .map(c => `at $${c.budget}/mo, from ${OPTION_LABEL[c.from]} to ${OPTION_LABEL[c.to]}`)
+        .join('; then ') + '.'
+    : ' No option changes lead across this range.';
+
   target.innerHTML = `
     <svg viewBox="0 0 ${width} ${height}" class="crossover-chart" role="img"
-      aria-label="Total cost of a novated lease, a car loan and paying cash, plotted against monthly budget from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.">
+      aria-label="Total cost of a novated lease, a car loan and paying cash, plotted against monthly budget from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.${crossoverSummary}">
       <g transform="translate(${margin.left},${margin.top})">
         ${gridlines}
         ${crossoverMarkers}
@@ -266,21 +312,29 @@ function renderWinnerBand(target, series) {
   const firstBudget = series.points[0].budget;
   const lastBudget = series.points[series.points.length - 1].budget;
   const pctToBudget = pct => Math.round(firstBudget + (pct / 100) * (lastBudget - firstBudget));
+  const isUnaffordable = bands.length === 1 && bands[0].option === NO_OPTION;
 
-  const summary = bands
-    .map(b => `${OPTION_LABEL[b.option]} from $${pctToBudget(b.fromPct)} to $${pctToBudget(b.toPct)} a month`)
-    .join('; then ');
+  const summary = isUnaffordable
+    ? `No option is affordable anywhere from $${firstBudget} to $${lastBudget} a month.`
+    : bands
+        .map(b => `${OPTION_LABEL[b.option]} from $${pctToBudget(b.fromPct)} to $${pctToBudget(b.toPct)} a month`)
+        .join('; then ') + '.';
 
+  // Identity never depends on colour alone: every segment gets a text
+  // label, full word when there's room, a short abbreviation when there
+  // isn't. Never nothing, even for a sliver crossover band.
   const segmentsHtml = bands.map(b => {
     const widthPct = b.toPct - b.fromPct;
-    const showLabel = widthPct >= 16;
+    const label = b.option === NO_OPTION
+      ? 'Not affordable'
+      : (widthPct >= 16 ? OPTION_SHORT_LABEL[b.option] : OPTION_ABBR[b.option]);
     return `<span class="band band-${b.option}" style="left:${b.fromPct}%;width:${widthPct}%">` +
-      (showLabel ? `<span class="band__label">${OPTION_SHORT_LABEL[b.option]}</span>` : '') +
+      `<span class="band__label">${label}</span>` +
     `</span>`;
   }).join('');
 
   target.innerHTML = `
-    <div class="winner-band" role="img" aria-label="Cheapest way to pay, by monthly budget: ${summary}.">
+    <div class="winner-band" role="img" aria-label="Cheapest way to pay, by monthly budget: ${summary}">
       ${segmentsHtml}
     </div>
     <div class="winner-band__scale" aria-hidden="true">

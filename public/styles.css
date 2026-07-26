@@ -20,13 +20,26 @@
   --ink-soft: #4b5560;
   --ink-faint: #7a8480;
 
-  /* The three "lines": novated lease, car loan, cash */
+  /* The three "lines": novated lease, car loan, cash.
+     loan and cash were re-picked together (Task 19 review, issue 4): the
+     old navy (#2b5c86) and teal (#1f7a5c) sit only ~13 ΔE apart in OKLab
+     under normal vision — below the 15 floor a full-colour reader needs to
+     tell two hues apart — and both fall below the OKLCH chroma floor that
+     keeps a colour reading as a colour rather than a gray. loan moved to a
+     deeper, more saturated blue at nearly the same hue (chroma 0.087→0.115,
+     L 0.461→0.441); cash moved off teal entirely to a violet
+     (H 166°→302°), pushed away in hue AND lightness rather than nudged, so
+     it clears both the CVD-simulated (protan/deutan, ΔE >= 11.9) and
+     normal-vision (ΔE 19.8) separation floors against loan. Validated with
+     dataviz's validate_palette.js — all checks pass, --pairs adjacent and
+     --pairs all (winner-band segments can land adjacent in any order,
+     unlike a fixed-order legend). */
   --line-lease: #b96a1e;
   --line-lease-bg: #f7e9d8;
-  --line-loan: #2b5c86;
-  --line-loan-bg: #dde7ee;
-  --line-cash: #1f7a5c;
-  --line-cash-bg: #dcede6;
+  --line-loan: #10558f;
+  --line-loan-bg: #d8e6f5;
+  --line-cash: #8f59d1;
+  --line-cash-bg: #e8e0f9;
 
   /* System */
   --warn: #9c2f22;
@@ -551,14 +564,30 @@ input[type='date'],
 .winner-band .band-loan { background: var(--line-loan); }
 .winner-band .band-upfront { background: var(--line-cash); }
 
+/* Issue 3: nothing affordable at any sampled budget. Deliberately neutral
+   (ink-soft, not one of the three option hues) plus a diagonal hatch — a
+   texture channel, not just another flat colour — so this reads as "no
+   answer" rather than a fourth option. */
+.winner-band .band-none {
+  background:
+    repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.12) 0 6px,
+      transparent 6px 12px),
+    var(--ink-soft);
+}
+
 /* 1.2rem/700 clears the WCAG large-text bold threshold (14pt / 18.66px),
-   which matters here: white-on-lease is ~4.1:1, enough for large text but
-   not for body-size text. */
+   which matters here: white text is ~4.1:1 on lease, ~7.7:1 on loan and
+   ~4.6:1 on cash — all clear the large-text floor, none clear body-size
+   (4.5:1), which is why this stays bold/large rather than shrinking. Every
+   band always carries this label — a full word at >=16% width, a one- or
+   two-character abbreviation (OPTION_ABBR) below that — so identity never
+   depends on colour alone even for a narrow crossover sliver. */
 .winner-band .band__label {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
-  padding: 0 0.5em;
+  padding: 0 0.35em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
