@@ -3397,8 +3397,13 @@ export function toWinnerBands(series) {
     if (last && last.option === leader) {
       last.toPct = pct;
     } else {
-      if (last) last.toPct = pct;
-      bands.push({ option: leader, fromPct: pct, toPct: pct });
+      // Split the boundary at the MIDPOINT between the two samples. Closing the
+      // old band and opening the new one both at `pct` collapses the new band to
+      // zero width whenever the crossover falls on the final sampled point,
+      // which silently hides the flip -- the one thing this chart exists to show.
+      const boundary = last ? (last.toPct + pct) / 2 : pct;
+      if (last) last.toPct = boundary;
+      bands.push({ option: leader, fromPct: boundary, toPct: pct });
     }
   });
 
