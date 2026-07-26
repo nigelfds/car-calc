@@ -44,3 +44,27 @@ test('returns nulls for text with nothing extractable', () => {
   assert.equal(r.monthlyBudget, null);
   assert.deepEqual(r.bodyTypes, []);
 });
+
+test('finds a real salary even when a smaller savings figure appears first', () => {
+  const r = parseKeywords('I have $15k savings, earn $145k, want to spend $900 a month');
+  assert.equal(r.grossSalary, 145000);
+  assert.equal(r.monthlyBudget, 900);
+});
+
+test('extracts a salary given as a bare number with no dollar sign', () => {
+  assert.equal(parseKeywords('I earn 145000').grossSalary, 145000);
+});
+
+test('does not treat a bare small number as a salary', () => {
+  assert.equal(parseKeywords('I have 500 saved so far').grossSalary, null);
+});
+
+test('finds salary regardless of whether it appears before or after savings', () => {
+  const r = parseKeywords('I earn $145k and have $15k saved');
+  assert.equal(r.grossSalary, 145000);
+});
+
+test('prefers the figure near a salary word over a larger unrelated figure', () => {
+  const r = parseKeywords('I earn $50k, and my rent is $80k a year');
+  assert.equal(r.grossSalary, 50000);
+});
