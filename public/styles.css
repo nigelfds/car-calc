@@ -1,0 +1,482 @@
+/* =========================================================================
+   Can I afford an EV? — design tokens
+
+   The subject: three ways to pay for the same car (novated lease, car loan,
+   cash), which this tool tracks like three lines on a Melbourne transit
+   map — each gets one identity colour, used consistently everywhere that
+   option appears (now: the legend; later: the crossover chart and car
+   cards). Numeric readouts use a monospaced face, a nod to a station
+   departure board — the numbers you actually came here for.
+   ========================================================================= */
+
+:root {
+  /* Surfaces */
+  --paper: #eef1ee;
+  --paper-raised: #ffffff;
+  --hairline: #d3d9d2;
+
+  /* Text */
+  --ink: #161b1f;
+  --ink-soft: #4b5560;
+  --ink-faint: #7a8480;
+
+  /* The three "lines": novated lease, car loan, cash */
+  --line-lease: #b96a1e;
+  --line-lease-bg: #f7e9d8;
+  --line-loan: #2b5c86;
+  --line-loan-bg: #dde7ee;
+  --line-cash: #1f7a5c;
+  --line-cash-bg: #dcede6;
+
+  /* System */
+  --warn: #9c2f22;
+  --warn-bg: #f6e2de;
+  --focus-ring: #2b5c86;
+
+  /* Type */
+  --font-text: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* Rhythm */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --radius: 10px;
+
+  color-scheme: light;
+}
+
+/* =========================================================================
+   Reset & base
+   ========================================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, textarea, input, select, button {
+  font-family: inherit;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+button { font: inherit; }
+
+a { color: var(--line-loan); }
+
+/* Numeric / data readouts get the mono face throughout */
+input[type='number'],
+input[type='date'],
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--paper-raised);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 0 6px 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================================
+   Header
+   ========================================================================= */
+
+.site-header {
+  background: var(--paper-raised);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.site-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) var(--space-4);
+}
+
+.wordmark {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.wordmark__mark {
+  color: var(--line-lease);
+}
+
+.site-header__subhead {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: 46ch;
+}
+
+/* The route-map fragment: three lines meeting, the visual signature that
+   recurs wherever the three payment options are compared. */
+.route-rule {
+  display: flex;
+  height: 4px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.route-rule__seg { flex: 1; }
+.route-rule__seg--lease { background: var(--line-lease); }
+.route-rule__seg--loan { background: var(--line-loan); }
+.route-rule__seg--cash { background: var(--line-cash); }
+
+/* =========================================================================
+   Layout — mobile-first stack, three columns from 900px
+   ========================================================================= */
+
+.sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sections > section {
+  background: var(--paper-raised);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+@media (min-width: 900px) {
+  .sections {
+    display: grid;
+    grid-template-columns: 250px 1fr 236px;
+    gap: 1rem;
+    align-items: start;
+  }
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.section-heading__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 0.05em 0.4em;
+}
+
+/* =========================================================================
+   Section 1 — about you
+   ========================================================================= */
+
+.field-group + .field-group { margin-top: var(--space-5); }
+
+.field-group--free-text label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+#free-text {
+  width: 100%;
+  resize: vertical;
+  min-height: 6rem;
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#free-text::placeholder { color: var(--ink-faint); }
+
+#free-text:focus {
+  background: var(--paper-raised);
+}
+
+.free-text__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.55em 1.1em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.button--primary {
+  background: var(--ink);
+  color: var(--paper-raised);
+}
+
+.button--primary:hover { background: #000; }
+
+.parse-status {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  min-height: 1.2em;
+}
+
+.field-group--numeric {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-1);
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 0.5em 0.7em;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.field select { font-family: var(--font-text); }
+
+.field input:focus,
+.field select:focus {
+  background: var(--paper-raised);
+}
+
+.field__input {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  padding-inline: 0.6em;
+}
+
+.field__input input {
+  border: none;
+  background: transparent;
+  padding-block: 0.5em;
+  padding-inline: 0.2em;
+}
+
+.field__input input:focus { outline-offset: -2px; }
+
+.field__input:focus-within { background: var(--paper-raised); }
+
+.field__prefix, .field__suffix {
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+/* Brief highlight used when parsing free text fills a field in, so the
+   hand-off from prose to numbers is visible. */
+.field-updated {
+  animation: field-updated-flash 1.6s ease-out;
+}
+
+@keyframes field-updated-flash {
+  0% { background-color: var(--line-lease-bg); }
+  100% { background-color: transparent; }
+}
+
+/* =========================================================================
+   Section 2 — what you can afford
+   ========================================================================= */
+
+.verdict-panel {
+  min-height: 4rem;
+}
+
+.disclaimer {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--paper);
+  border-left: 3px solid var(--ink-faint);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.disclaimer strong { color: var(--ink); }
+
+.fbt-caveat {
+  margin: var(--space-3) 0 0;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  line-height: 1.5;
+}
+
+.line-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin: var(--space-5) 0 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--hairline);
+}
+
+.line-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.line-legend__dot {
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.line-legend__dot--lease { background: var(--line-lease); }
+.line-legend__dot--loan { background: var(--line-loan); }
+.line-legend__dot--cash { background: var(--line-cash); }
+
+.crossover-panel, .rates-panel {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--hairline);
+  min-height: 3rem;
+}
+
+.skeleton-note {
+  margin: 0;
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* =========================================================================
+   Section 3 — cars that match
+   ========================================================================= */
+
+.car-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.car-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+}
+
+.car-card__silhouette {
+  width: 3.5rem;
+  height: 1.3rem;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+
+/* =========================================================================
+   Sticky mobile summary bar — visible only below 900px
+   ========================================================================= */
+
+.summary-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--ink);
+  color: var(--paper-raised);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.summary-bar__arrow { color: var(--line-lease); font-weight: 700; }
+
+@media (min-width: 900px) {
+  .summary-bar { display: none; }
+}
+
+/* =========================================================================
+   Footer
+   ========================================================================= */
+
+.site-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) var(--space-6);
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.site-footer p { margin: 0; }
