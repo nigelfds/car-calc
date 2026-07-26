@@ -180,6 +180,22 @@ function fieldMarkup({ field, label, prefix, suffix, step, allowEmpty, fallbackN
     </div>`;
 }
 
+// Task 20: rebuilding this panel's markup on every render (the previous
+// approach) tears down and recreates every <input> in it each time — which
+// in a real browser blurs and discards whatever element the user currently
+// has focus in. render() (ui/app.js) calls this on every debounced
+// recompute, so that made the panel un-typeable: type a custom rate, wait
+// 80ms, lose focus and cursor position.
+//
+// Fix: build the markup exactly once per panel element (guarded by
+// `panel._ratesBuilt`, and bind the field/reset listeners then), and on
+// every subsequent call only patch each input's `.value` in place — mirroring
+// syncFieldInputs (ui/app.js), which does the same "update value, skip
+// whatever has focus" for the plain fields. The listeners close over `panel`
+// rather than `state`/`onChange`/`defaults` directly, reading
+// `panel._ratesState`/`panel._ratesOnChange`/`panel._ratesDefaults`, which
+// this function refreshes on every call — otherwise a listener bound on the
+// first render would forever act on that first render's stale state.
 export function renderRatesPanel(root, state, onChange, rates = null) {
   const panel = root.querySelector('#rates-panel');
   const defaults = {
@@ -191,30 +207,47 @@ export function renderRatesPanel(root, state, onChange, rates = null) {
     deposit: FIELD_DEFAULTS.deposit
   };
 
-  panel.innerHTML = `
-    <p class="rates-panel__intro">These are researched market defaults — edit any of them to match a real quote.</p>
-    ${RATE_FIELDS.map(spec => fieldMarkup(spec, state, rates)).join('')}`;
+  panel._ratesState = state;
+  panel._ratesOnChange = onChange;
+  panel._ratesDefaults = defaults;
 
-  for (const input of panel.querySelectorAll('[data-field]')) {
-    const field = input.dataset.field;
-    input.addEventListener('input', () => {
-      const raw = input.value;
-      const value = raw === '' ? null : Number(raw);
-      onChange({ ...state, [field]: value });
-    });
+  if (!panel._ratesBuilt) {
+    panel.innerHTML = `
+      <p class="rates-panel__intro">These are researched market defaults — edit any of them to match a real quote.</p>
+      ${RATE_FIELDS.map(spec => fieldMarkup(spec, state, rates)).join('')}`;
+    panel._ratesBuilt = true;
+
+    for (const input of panel.querySelectorAll('[data-field]')) {
+      const field = input.dataset.field;
+      input.addEventListener('input', () => {
+        const raw = input.value;
+        const value = raw === '' ? null : Number(raw);
+        panel._ratesOnChange({ ...panel._ratesState, [field]: value });
+      });
+    }
+
+    for (const button of panel.querySelectorAll('[data-reset]')) {
+      button.addEventListener('click', () => {
+        const field = button.dataset.reset;
+        const currentDefaults = panel._ratesDefaults;
+        // Guard against writing `undefined` into state: when renderRatesPanel
+        // is called with no `rates` (rates === null), the researched-default
+        // fields (leaseRatePct, loanRatePct, adminFeeAnnual,
+        // opportunityRatePct) have nothing to reset to. ui/app.js always
+        // fetches /api/dataset once and passes rates through, so this branch
+        // is a defence-in-depth guard, not the primary fix.
+        if (!(field in currentDefaults) || currentDefaults[field] === undefined) return;
+        panel._ratesOnChange({ ...panel._ratesState, [field]: currentDefaults[field] });
+      });
+    }
+    return;
   }
 
-  for (const button of panel.querySelectorAll('[data-reset]')) {
-    button.addEventListener('click', () => {
-      const field = button.dataset.reset;
-      // Guard against writing `undefined` into state: when renderRatesPanel
-      // is called with no `rates` (rates === null), the researched-default
-      // fields (leaseRatePct, loanRatePct, adminFeeAnnual,
-      // opportunityRatePct) have nothing to reset to. ui/app.js always
-      // fetches /api/dataset once and passes rates through, so this branch
-      // is a defence-in-depth guard, not the primary fix.
-      if (!(field in defaults) || defaults[field] === undefined) return;
-      onChange({ ...state, [field]: defaults[field] });
-    });
+  for (const input of panel.querySelectorAll('[data-field]')) {
+    if (root.activeElement === input) continue; // never clobber what the user is mid-typing
+    const field = input.dataset.field;
+    const raw = state[field];
+    const value = raw === null || raw === undefined ? '' : String(raw);
+    if (String(input.value) !== value) input.value = value;
   }
 }
