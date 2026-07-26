@@ -74,6 +74,23 @@ test('a string state field (e.g. leaseStartDate) is left as a string', () => {
   assert.equal(typeof received.leaseStartDate, 'string');
 });
 
+test('a numeric field whose default is null (minBootLitres) still coerces to a Number when bound', () => {
+  // minBootLitres defaults to null in state.js, so `typeof value === 'number'`
+  // would have misclassified it as non-numeric — this pins the explicit
+  // NUMERIC_FIELDS declaration in state.js against that regression.
+  const state = { minBootLitres: null, touched: [] };
+  const input = fakeInput('minBootLitres', '');
+  const root = { querySelectorAll: () => [input] };
+  let received;
+  renderInputs(root, state, next => { received = next; });
+
+  input.value = '400';
+  input.fire();
+
+  assert.equal(received.minBootLitres, 400);
+  assert.equal(typeof received.minBootLitres, 'number');
+});
+
 test('clearing a numeric field does not silently coerce to 0', () => {
   const state = { grossSalary: 100000, touched: [] };
   const input = fakeInput('grossSalary', '100000');

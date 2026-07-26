@@ -25,7 +25,11 @@ app.use(express.json({ limit: '64kb' }));
 app.use(express.static(join(here, '..', 'public')));
 // ui/prompt-api.js imports calc/clamp.js directly by relative path (native ES
 // modules, no bundler) — the browser resolves that to /calc/clamp.js, so the
-// pure core needs to be reachable at that path too.
+// pure core needs to be reachable at that path too. Test files live
+// alongside the source in calc/ but must never be shipped to the browser —
+// block them before they reach express.static rather than trying to filter
+// them out of the mounted directory.
+app.use('/calc', (req, res, next) => (req.path.endsWith('.test.js') ? res.sendStatus(404) : next()));
 app.use('/calc', express.static(join(here, '..', 'calc')));
 app.use('/api/parse', parseRoute);
 app.use('/api/explain', explainRoute);

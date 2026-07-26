@@ -1,21 +1,17 @@
-import { defaultState } from './state.js';
+import { NUMERIC_FIELDS } from './state.js';
 import { parseOnDevice } from './prompt-api.js';
 
-// Which state.js fields are numbers, derived from defaultState itself rather
-// than from any particular input element's DOM type. A <select> reports type
-// "select-one", never "number" — sniffing input.type is what let the term
-// dropdown write the string "60" into a field defaultState() defines as the
-// number 60. Driving this off the state's own shape instead is robust to any
-// field becoming a select, a radio group or a range input in future, which
-// element-type sniffing is not. (The rates argument only matters for fields
-// that are never null by default, so any stub values work here.)
-const NUMERIC_FIELDS = new Set(
-  Object.entries(
-    defaultState({ defaultAnnualKm: 0, leaseRatePct: 0, loanRatePct: 0, adminFeeAnnual: 0, opportunityRatePct: 0 })
-  )
-    .filter(([, value]) => typeof value === 'number')
-    .map(([key]) => key)
-);
+// Which state.js fields are numbers. Declared explicitly in state.js
+// (exported alongside defaultState) rather than sniffed from any particular
+// input element's DOM type or inferred from a runtime default value. A
+// <select> reports type "select-one", never "number" — sniffing input.type
+// is what let the term dropdown write the string "60" into a field
+// defaultState() defines as the number 60. Inferring numeric-ness from
+// `typeof defaultValue === 'number'` has its own trap: fields like
+// minBootLitres default to null (no filter applied), so that check would
+// misclassify them as non-numeric. Driving this off an explicit, declared
+// set is robust to both a field becoming a select/radio/range input and a
+// numeric field's default being null.
 
 const same = (a, b) =>
   Array.isArray(a) && Array.isArray(b)

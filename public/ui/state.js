@@ -1,6 +1,18 @@
 const ARRAY_FIELDS = new Set(['bodyTypes']);
 const STRING_FIELDS = new Set(['leaseStartDate', 'freeText']);
 
+// Declared explicitly rather than inferred from defaultState()'s runtime
+// values: minBootLitres, minRangeKm and seats default to null (no filter
+// applied), so `typeof value === 'number'` would silently misclassify them
+// as non-numeric the moment a null default is legitimate. Keeping this list
+// next to defaultState() keeps the state shape and its types in one place.
+export const NUMERIC_FIELDS = new Set([
+  'grossSalary', 'monthlyBudget', 'termMonths', 'savings', 'annualKm',
+  'deposit', 'leaseRatePct', 'loanRatePct', 'adminFeeAnnual',
+  'opportunityRatePct', 'residualPctOverride',
+  'minBootLitres', 'minRangeKm', 'seats'
+]);
+
 export function defaultState(rates) {
   return {
     grossSalary: 100000,
