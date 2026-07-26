@@ -1768,6 +1768,11 @@ consume a research slot to establish that.
   Ora 5 SUV, a different vehicle on a different platform. Remaining stock is dealer run-out.
 - **Xpeng G9** — xpeng.com.au shows register-interest only, with no configurator, variants or
   prices. CarExpert lists only the G6 as XPeng's on-sale Australian model.
+- **Mahindra XEV 9e** — Mahindra Australia sells three ICE SUVs only; the "EV" link in its own
+  footer redirects to the India-market site with rupee pricing, and CarExpert and CarsGuide both
+  404 on model/price pages. Latest coverage (CarsGuide, 2 June 2026) is a Melbourne test mule with
+  Mahindra declining to comment, headlined as a 2027 model. Every price figure in circulation is a
+  conversion of Indian pricing or a journalist estimate.
 
 If an agent finds its assigned family is not actually on sale in Australia as at the research
 date, it must report that and write no files, rather than inventing a plausible row.
@@ -1798,6 +1803,34 @@ Expected: PASS — the "every committed vehicle row is valid" and family-referen
 git add scripts/build-dataset.js data/families data/vehicles data/vehicles.json data/families.json
 git commit -m "feat: add researched EV dataset with family reviews and press images"
 ```
+
+- [ ] **Step 7: Resolve three known data-consistency items left open by the research pass**
+
+Carried over from the 2026-07-27 research pass, which exhausted its web-search budget before these
+could be settled. None is a schema failure — the build and `npm test` are green with all three
+present — but **each affects a field that feeds `calc/rank.js`, so each changes recommendations
+rather than just tidiness.** Full context, including how to re-run research, is in
+`docs/dataset-research-status.md`; the per-family research spec is `docs/ev-family-research-brief.md`.
+
+- [ ] **Solterra vs bZ4X range disagreement.** `subaru-solterra` AWD records 566km WLTP;
+  `toyota-bz4x` AWD records 517km. They are mechanically identical twins. Plausibly a genuine
+  18-inch vs 20-inch wheel difference — the bZ4X researcher noted AWD/Touring run 20s — but if the
+  two rows quote different wheel specs they are not comparable, and `rangeKm` is a ranking input.
+- [ ] **`mercedes-eqa` `rangeKm` is probably NEDC, not WLTP.** EQA and EQB share the same 70.5kWh
+  pack, yet `mercedes-eqa` records 578km against the freshly-researched `mercedes-eqb`'s 536km.
+  578km on 70.5kWh implies 12.2kWh/100km, implausibly efficient for the platform and the classic
+  signature of an NEDC figure. If correct, the EQA has been over-scoring on range. While there,
+  check whether the EQA's list prices also predate the $900 MY2026 increase applied across both EQ
+  lines.
+- [ ] **MG depreciation curves disagree within one brand.** `mg-s5` uses a weakened
+  `[1, 0.73, 0.63, 0.55, 0.48, 0.42]`, justified on evidence about *MG4* resale (~50% at three
+  years against a ~60% Australian EV average) — but `mg-4` itself still carries the mainstream
+  default. The evidence applies more directly to the family not using it. Pick one convention.
+
+Also outstanding, and cheaper: `mercedes-eqb`'s 250+ City Edition list price ($86,300) came from
+third-party pricing plus a documented $900 rise because `mercedes-benz.com.au` timed out, and
+`zeekr-7x` claims Euro NCAP rather than ANCAP because its agent ran out of searches before it could
+confirm whether an ANCAP rating exists. Both are spot-checks, not re-researches.
 
 ---
 

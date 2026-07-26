@@ -1,0 +1,83 @@
+[
+  {
+    "id": "mini-cooper-electric-se-favoured",
+    "familyId": "mini-cooper-electric",
+    "make": "Mini",
+    "model": "Cooper",
+    "variant": "SE Favoured",
+    "bodyType": "Hatch",
+    "listPrice": 58990,
+    "batteryKwh": 49.2,
+    "rangeKm": 400,
+    "consumptionKwhPer100km": 14.7,
+    "bootLitresSeatsUp": 210,
+    "bootLitresSeatsDown": 800,
+    "seats": 4,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1950,
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "mini-cooper-electric-se-paul-smith-edition",
+    "familyId": "mini-cooper-electric",
+    "make": "Mini",
+    "model": "Cooper",
+    "variant": "SE Paul Smith Edition",
+    "bodyType": "Hatch",
+    "listPrice": 60990,
+    "batteryKwh": 49.2,
+    "rangeKm": 400,
+    "consumptionKwhPer100km": 14.7,
+    "bootLitresSeatsUp": 210,
+    "bootLitresSeatsDown": 800,
+    "seats": 4,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2000,
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "mini-cooper-electric-jcw-e-favoured",
+    "familyId": "mini-cooper-electric",
+    "make": "Mini",
+    "model": "Cooper",
+    "variant": "JCW E Favoured",
+    "bodyType": "Hatch",
+    "listPrice": 63990,
+    "batteryKwh": 49.2,
+    "rangeKm": 371,
+    "consumptionKwhPer100km": 15.6,
+    "bootLitresSeatsUp": 210,
+    "bootLitresSeatsDown": 800,
+    "seats": 4,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2300,
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-07-27"
+  }
+]

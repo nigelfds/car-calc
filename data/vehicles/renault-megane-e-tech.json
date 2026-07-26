@@ -1,0 +1,22 @@
+[
+  {
+    "id": "renault-megane-e-tech-techno-ev60",
+    "familyId": "renault-megane-e-tech",
+    "make": "Renault",
+    "model": "Megane E-Tech",
+    "variant": "Techno EV60",
+    "bodyType": "Hatch",
+    "listPrice": 54990,
+    "batteryKwh": 60,
+    "rangeKm": 454,
+    "consumptionKwhPer100km": 15.6,
+    "bootLitresSeatsUp": 440,
+    "bootLitresSeatsDown": 1332,
+    "seats": 5,
+    "towKg": 900,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1750,
+    "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
+    "sourcedAt": "2026-07-27"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "id": "ford-mustang-mach-e",
+  "summary": "The Mustang Mach-E is a coupe-profiled mid-size electric SUV and Ford Australia's only battery-electric passenger car, updated for 2026 with more power, a standard heat pump and a 15.5-inch portrait touchscreen. Australian reviewers consistently like how it drives — genuinely rear-drive-flavoured, precise steering, strong straight-line pace — and rate the cabin as quiet and upmarket, but they are split on the firm suspension, with CarExpert calling the ride 'far too firm' while CarsGuide found the 2026 retune acceptable. The recurring verdict is that the Select makes the value case and the Premium does not, because Chinese and Korean rivals deliver more space and equipment for less money.",
+  "pros": [
+    "Extended-range Premium claims 600km WLTP from 88kWh usable, further than a Tesla Model Y Long Range RWD or Kia EV6 GT-Line, and Chasing Cars still saw 465km on a highway loop",
+    "GT makes 434kW/955Nm for 2026 (up 76kW) and undercuts a Kia EV6 GT on both price and outputs",
+    "2026 update adds a standard heat pump across the range, which reduces the cold-weather range penalty",
+    "Cheap to service for a $65k-plus EV: 12-month/15,000km intervals at roughly $158 a year, about $790 over five years",
+    "Rear-drive chassis is genuinely playful in Untamed mode, with steering CarsGuide described as light yet precise"
+  ],
+  "cons": [
+    "402-litre boot is small for the class and the tapered roofline limits what fits, versus 513L in a Kia EV5 and 526L in a Polestar 4 — and the frunk shrank to 49L for 2026 to make room for the heat pump",
+    "Not rated to tow anything in Australia (0kg braked), where European Mach-Es are rated to 1000kg and rivals like the EV6 tow 1600kg",
+    "Ride is firm to the point of bump-crashiness on suburban roads, and the GT's MagneRide dampers were judged to make it worse rather than better",
+    "Real-world efficiency is poor: Chasing Cars averaged about 19kWh/100km and 19.6kWh/100km on the highway against a 17.7kWh/100km claim, which hurts anyone relying on public charging",
+    "Electronic door releases with a B-pillar button and no conventional handle, no spare wheel, and no charging cable included; Ford also ran an Australian stop-sale in late 2025 over two door-latch and related recalls"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-ford-mustang-mach-e-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-ford-mustang-mach-e-review",
+    "https://www.carsguide.com.au/ev/ford-mustang-mach-e-100096",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/ford-mustang-mach-e-premium-long-term-review/",
+    "https://evcentral.com.au/2026-ford-mustang-mach-e-premium-review-will-the-latest-price-slash-finally-bring-some-sales/",
+    "https://www.carsales.com.au/research/ford/mustang-mach-e/",
+    "https://www.ford.com.au/price/MustangMach-E"
+  ],
+  "sourcedAt": "2026-07-27"
+}

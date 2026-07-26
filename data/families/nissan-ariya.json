@@ -1,0 +1,27 @@
+{
+  "id": "nissan-ariya",
+  "summary": "Nissan's only EV in Australia is a quiet, comfort-tuned mid-size SUV that finally went on sale here in September 2025, roughly six years after its global reveal, and Australian reviewers consistently rate it competent rather than class-leading. Its strongest cards are the 10-year/300,000km conditional warranty, better-than-claimed real-world efficiency and a 1500kg tow rating on the dual-motor Evolve; against that, 130kW DC charging and a fidgety ride over sharp bumps leave it behind newer rivals. Verdicts diverge on value: testers praise the drivetrain refinement and cabin isolation, but most call the list pricing optimistic next to a Tesla Model Y, BYD Sealion 7 or Kia EV5.",
+  "pros": [
+    "10-year/300,000km warranty if every service is done at a Nissan dealer, with $299 capped-price servicing; stay outside the dealer network and it reverts to 5 years/unlimited km, short of Kia's unconditional 7",
+    "Real-world efficiency beats the WLTP claim: Australian testers recorded mid-17kWh/100km around town and 557km from the 87kWh Advance+ against its 504km WLTP figure",
+    "Evolve e-4ORCE is rated to tow 1500kg braked — five times the Kia EV5 Air's 300kg — and does 0-100km/h in 5.6s from 290kW/600Nm",
+    "Unusually quiet cabin and comfort-biased seating, backed by a 5-star ANCAP rating and a nationwide Nissan dealer network rather than an online-only channel"
+  ],
+  "cons": [
+    "DC charging peaks at only 130kW, so 10-80% takes 35-40 minutes — roughly double an 800V Hyundai Ioniq 5 or Kia EV6",
+    "Engage and Advance are stuck with 385km WLTP from the 63kWh pack; the 87kWh battery costs $63,840 in Advance+ form, an $8,000 step up from the base car",
+    "Suspension reacts abruptly to sharp bumps and the Evolve's 20-inch wheels make the ride busy on coarse Melbourne surfaces",
+    "No front boot on any variant, a high rear floor that leaves rear passengers knees-up with negligible toe room, and wired-only Android Auto",
+    "Resale risk is real: 127 deliveries in 2025 and ~104 in the first four months of 2026, with factory bonuses near $7,000 and $49,990-$53,990 driveaway offers appearing within a year of launch"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-review",
+    "https://www.carsguide.com.au/car-news/2026-nissan-ariya-pricing-and-features-byd-sealion-7-tesla-model-y-and-xpeng-g6-rival",
+    "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/nissan-ariya-2026-review/",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/nissan-ariya-advance-2026-review/",
+    "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+    "https://zecar.com/reviews/nissan-ariya-deals-australia-2026"
+  ],
+  "sourcedAt": "2026-07-27"
+}

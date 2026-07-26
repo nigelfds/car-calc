@@ -1,0 +1,30 @@
+{
+  "id": "toyota-bz4x",
+  "summary": "The updated bZ4X is a much stronger car than the one Toyota launched: a 74.7kWh battery lifts the front-drive model to 591km WLTP and Toyota cut $10,010 off its price, so at $55,990 before on-roads it now undercuts a Tesla Model Y RWD while claiming 125km more range. Australian reviewers agree it is efficient, quiet and far better value than before - scores land between 6.5 and 8 out of 10 - but they split on the chassis, with CarsGuide and carsales calling the ride comfortable and nicely balanced while CarExpert and Chasing Cars find it lumpy above 40km/h with numb steering. The recurring complaints are ergonomic rather than mechanical, and the entry 2WD on 18-inch wheels is the grade most reviewers single out as the pick of the range.",
+  "pros": [
+    "At $55,990 before on-roads the 2WD undercuts a Tesla Model Y RWD ($58,900) and a Kia EV5 Air Standard Range ($56,770) while claiming 591km WLTP against their 466km and 400km",
+    "Genuinely efficient rather than just optimistic on paper: 138Wh/km WLTP, and Australian testers recorded 14.4-14.9kWh/100km in mixed driving, so 500km between charges is realistic",
+    "AC charging doubled to 22kW three-phase, filling the 74.7kWh pack in about 3h30m - unusually quick for AC and useful if you have three-phase at home",
+    "Battery cover extends to 10 years with on-time servicing and the electric motors are warranted for 7, beyond the 8-year/160,000km battery-only cover most rivals stop at",
+    "AWD and Touring are rated at 1,500kg braked towing, and the Touring adds a 603L boot and 211mm of running ground clearance without the usual EV load-lip"
+  ],
+  "cons": [
+    "Its mechanical twin undercuts it: the Subaru Solterra AWD lists at $61,990 against the bZ4X AWD's $67,990, and Subaru bundles five years of scheduled servicing where Toyota charges roughly $180-$190 per 12-month/15,000km visit - the Toyota's counterarguments are the cheaper FWD grade, the longer motor and battery warranty, and a dealer network roughly twice the size",
+    "452 litres seats-up is small for a mid-size SUV (a Kia EV5 has 513L, a Model Y 854L) and there is no frunk and no conventional glovebox, so cabin storage is genuinely short",
+    "The 7-inch instrument display sits far forward and is partly obscured by the steering wheel rim for taller drivers - flagged by CarExpert, carsales, Chasing Cars and CarsGuide alike, and not fixed by this update",
+    "DC fast charging is still capped at 150kW, with Toyota quoting 10-80% in about 45 minutes for the 2WD, so road-trip stops are longer than in an 800V Hyundai Ioniq 5 or Kia EV6",
+    "Cuts of $10,010 (2WD) and $6,910 (AWD) inside a single model year gutted residuals on earlier bZ4X stock, and no Australian reviewer lists resale as a strength; there is also no spare wheel on any grade, only a repair kit"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-toyota-bz4x-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-toyota-bz4x-review",
+    "https://www.carexpert.com.au/car-reviews/2026-toyota-bz4x-touring-review",
+    "https://www.carsguide.com.au/ev/toyota-bz4x-awd-100529",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/toyota-bz4x-2wd-2026-review/",
+    "https://www.carsales.com.au/editorial/details/toyota-bz4x-2wd-2026-review-151644/",
+    "https://www.carsales.com.au/editorial/details/2026-toyota-bz4x-touring-pricing-and-specs-confirmed-151786/",
+    "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/bz4x/files/20260619-bz4x_spec_table_gtp-010030.pdf",
+    "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/bz4x-touring/file/20260507_bz4x_touring-_spec_table_gtp-009807.pdf"
+  ],
+  "sourcedAt": "2026-07-27"
+}

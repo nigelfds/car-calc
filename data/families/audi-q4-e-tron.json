@@ -1,0 +1,28 @@
+{
+  "id": "audi-q4-e-tron",
+  "summary": "The Q4 e-tron is Audi's MEB-platform medium electric SUV, sold in Australia as a conventional SUV and a lower-roofed Sportback, each in rear-drive 45 and quattro 55 form. Australian reviewers rate the cabin quality, driving position and packaging highly and note it carries more usable space than its compact footprint suggests, but they are lukewarm about its handling and point out it costs meaningfully more than the mechanically related Volkswagen Group EVs. The critical decision inside the range is the price step: the 45 grades sit under the $91,661 luxury-car-tax and FBT threshold while both 55 quattro grades clear it, which changes the ownership maths far more than the extra performance does.",
+  "pros": [
+    "Both 45 grades list under the $91,661 fuel-efficient LCT/FBT threshold, so they attract no luxury car tax and stay eligible for the novated-lease FBT exemption",
+    "Biggest boot in its premium class: 520L in the SUV and 535L in the Sportback, versus 490L in a BMW iX1 and just 340L in a Mercedes EQA",
+    "175kW DC charging across the whole range since the 82kWh battery update, Audi quotes 10-80 per cent in about 28 minutes",
+    "Sportback 45 is the efficiency pick at 540km WLTP, and CarsGuide measures the Sportback body using roughly 0.5kWh/100km less than the SUV",
+    "Genuinely roomy for the footprint, with reviewers singling out front and rear legroom, the driving position and cabin storage"
+  ],
+  "cons": [
+    "Both 55 quattro grades list at $97,936, above the $91,661 threshold, so they cop luxury car tax (about $2,932) and lose the FBT exemption entirely",
+    "No spare wheel of any kind, just a tyre inflation kit, on every variant",
+    "CarsGuide criticises rear visibility in the Sportback 55 and says the heavier 55 is less agile than the lighter rear-drive 45",
+    "Braked towing is capped at 1000kg for the 45 and 1200kg for the 55 quattro, well short of a Tesla Model Y (1588kg) or Polestar 4 (up to 2000kg)",
+    "CarExpert notes it is pricier than the mechanically related Volkswagen Group EVs, with only so-so charging speed and unremarkable handling, and a facelifted Q4 has already been revealed overseas"
+  ],
+  "sources": [
+    "https://www.audi.com.au/en/models/q4-e-tron/q4-e-tron/layer/starting-price/",
+    "https://magazine.audi.com.au/article/refined-q4-etron-offer",
+    "https://www.carsguide.com.au/audi/q4-e-tron",
+    "https://www.carexpert.com.au/car-news/2025-audi-q4-e-tron-price-and-specs",
+    "https://www.carexpert.com.au/audi/q4-e-tron/2026-base-jsfwmask20250825",
+    "https://www.carsales.com.au/editorial/details/audi-q4-e-tron-joins-ev-price-cut-rush-147336/",
+    "https://ev-database.org/car/2013/Audi-Q4-e-tron-45"
+  ],
+  "sourcedAt": "2026-07-27"
+}

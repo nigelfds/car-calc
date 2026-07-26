@@ -1,0 +1,42 @@
+[
+  {
+    "id": "skoda-elroq-60-select",
+    "familyId": "skoda-elroq",
+    "make": "Skoda",
+    "model": "Elroq",
+    "variant": "60 Select",
+    "bodyType": "SUV",
+    "listPrice": 48990,
+    "batteryKwh": 58,
+    "rangeKm": 395,
+    "consumptionKwhPer100km": 15.9,
+    "bootLitresSeatsUp": 470,
+    "bootLitresSeatsDown": 1580,
+    "seats": 5,
+    "towKg": 1000,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1600,
+    "depreciationCurve": [1, 0.75, 0.65, 0.57, 0.5, 0.44],
+    "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "skoda-elroq-85-select",
+    "familyId": "skoda-elroq",
+    "make": "Skoda",
+    "model": "Elroq",
+    "variant": "85 Select",
+    "bodyType": "SUV",
+    "listPrice": 55990,
+    "batteryKwh": 77,
+    "rangeKm": 529,
+    "consumptionKwhPer100km": 16.6,
+    "bootLitresSeatsUp": 470,
+    "bootLitresSeatsDown": 1580,
+    "seats": 5,
+    "towKg": 1000,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1750,
+    "depreciationCurve": [1, 0.75, 0.65, 0.57, 0.5, 0.44],
+    "sourcedAt": "2026-07-27"
+  }
+]

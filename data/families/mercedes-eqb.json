@@ -1,0 +1,31 @@
+{
+  "id": "mercedes-eqb",
+  "summary": "The EQB is a battery-electric version of Mercedes-Benz's boxy GLB small SUV, and its point of difference in Australia is a standard third row in a car under 4.7 metres long. Reviewers are consistent that it rides and insulates like a Mercedes and that the packaging is clever, but equally consistent that the third row is a 5+2 for children, that 100kW DC charging and roughly 350km of real-world range are behind the class in 2026, and that the money buys less car than the badge suggests. It is now a run-out model, with the GLB Electric replacing it locally in the final quarter of 2026.",
+  "pros": [
+    "One of the very few seven-seat EVs on sale here under the $91,661 fuel-efficient LCT cap, and the third row is standard on all three variants rather than the $2,900 option it once was",
+    "Rides pliantly and quietly even on the standard 20-inch wheels, with sound insulation Australian reviewers rate as a clear step above mainstream electric SUVs",
+    "Second row slides through 140mm of travel, so third-row legroom can be traded against boot space rather than being fixed",
+    "Compact 4,684mm length and 210mm ground clearance make it far easier to park and garage than a Kia EV9, which needs a $97,000 entry price for the same seat count",
+    "Advertised price includes a three-year service plan package and 12 months of Chargefox public charging, which offsets Mercedes-Benz's high standalone servicing costs"
+  ],
+  "cons": [
+    "Only 130 litres of boot space with all seven seats in use, which CarExpert put behind a Volkswagen Tiguan Allspace in every seating configuration",
+    "The third row is explicitly a 5+2: Mercedes-Benz specifies occupants under 1.65m tall, and headroom runs out for adults",
+    "DC charging peaks at just 100kW, around half what a Kia EV9 or Tesla Model Y will take, so long-trip stops are noticeably longer",
+    "CarExpert measured 19.1kWh/100km in mixed driving against the 536km WLTP claim, cutting realistic range to roughly 350km",
+    "Out of production since January 2026 and superseded locally by the GLB Electric in Q4 2026, which leaves resale exposed; at $90,000 the 250+ also has only $1,661 of headroom under the FBT-exemption cap, so one option pack can cost a novated-lease buyer the exemption"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2023-mercedes-benz-eqb-250-review",
+    "https://www.carsguide.com.au/ev/mercedes-eq-eqb-350-88555",
+    "https://www.carexpert.com.au/car-news/mercedes-benz-eqa-and-eqb-250-electric-suvs-bring-lowest-prices-yet",
+    "https://www.carsguide.com.au/car-news/special-luxe-electric-cars-confirmed-2026-mercedes-benz-eqa-and-eqb-250-city-edition",
+    "https://www.carsguide.com.au/mercedes-benz/eqb250/2026",
+    "https://www.carexpert.com.au/mercedes-benz/eqb/2026/specs",
+    "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-glb-electric-review-quick-drive",
+    "https://www.carsauce.com/car-news/mercedes-benz-eqa-and-eqb-night-editions-announced",
+    "https://www.exhaustnotes.com.au/mercedes-benz-launches-eqa-and-eqb-250-city-edition/",
+    "https://ev-database.org/car/1988/Mercedes-Benz-EQB-250plus"
+  ],
+  "sourcedAt": "2026-07-27"
+}

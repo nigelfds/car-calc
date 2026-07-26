@@ -1,0 +1,30 @@
+{
+  "id": "skoda-enyaq",
+  "summary": "The Enyaq is Skoda's mid-size electric SUV and the larger sibling to the Elroq, sold in Australia as a conventional SUV and a fastback Coupe across 60 Select, 85 Sportline and dual-motor RS grades. Australian reviewers rate it highly for packaging, real-world efficiency and a cabin that keeps physical controls, with scores clustered around 8.3/10, but they consistently criticise a firm ride and coarse-chip road noise unless the optional adaptive dampers are fitted. The critical buying decision is the price ladder: everything up to the Coupe 85 Sportline sits under the $75,000 FBT cap for novated leasing, while both RS grades sit just above it.",
+  "pros": [
+    "85 Sportline lists at $60,990 for 547km WLTP and 210kW, undercutting a Tesla Model Y Premium Long Range AWD ($68,900) and a Kia EV5 GT-Line AWD ($71,770) on range per dollar",
+    "Genuinely efficient in Australian conditions: CarsGuide averaged 16.6kWh/100km over 970km in the 85 Sportline and saw 13kWh/100km in city running, against a 15.9kWh/100km WLTP claim",
+    "585L boot expanding to 1710L in the SUV with Skoda's Simply Clever storage, plus rear-seat head and knee room reviewers single out as class-leading against the Kia EV5 and BYD Sealion 7",
+    "Long, cheap ownership terms: 7-year/unlimited-km warranty (8-year/160,000km battery) with 2-year/30,000km service intervals and a prepaid 8-year/120,000km pack for $1,650, about $206 a year",
+    "The RS adds 250kW/545Nm, 5.4s to 100km/h and a bigger 84kWh (79kWh usable) pack charging at up to 185kW DC, so 10-80 per cent takes about 26 minutes"
+  ],
+  "cons": [
+    "Both RS grades ($76,590 SUV, $77,590 Coupe) sit above the $75,000 FBT exemption cap, so a novated lease loses the exemption that the $66,990 Coupe 85 Sportline still qualifies for",
+    "Ride is tuned too firmly without the cost-optional adaptive dampers - carsales calls it 'a little too tied down' on bumpy roads and CarsGuide reports intrusive road noise on coarse-chip surfaces with the 21-inch wheels",
+    "Only 1000kg braked towing on the 60 Select and 85 Sportline (1200kg on RS), well short of a Tesla Model Y's 1588kg or a Zeekr 7X's 2000kg",
+    "No spare tyre at any grade, only a repair kit, and the surround-view camera plus semi-autonomous park assist are options rather than standard on Sportline",
+    "Safety rating leans on a 2021 five-star Euro NCAP result for the pre-facelift car with no fresh ANCAP assessment, and the MY27 60 Select's switch to a smaller 61kWh LFP pack has no republished Australian WLTP range yet"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
+    "https://www.carexpert.com.au/car-news/2026-skoda-enyaq-price-and-specs",
+    "https://www.carexpert.com.au/car-news/2026-skoda-enyaq-rs-priced-updated-sporty-electric-suv-cheaper-than-before",
+    "https://www.carsguide.com.au/ev/skoda-enyaq-99606",
+    "https://www.carsguide.com.au/family/skoda-enyaq-85-sportline-suv-101218",
+    "https://www.carsales.com.au/editorial/details/skoda-enyaq-85-sportline-suv-2026-review-150378/",
+    "https://www.chasingcars.com.au/news/future-cars/skoda-enyaq-rs-2026-australia-pricing-and-specifications-confirmed-for-sporty-electric-suv/",
+    "https://www.skoda.com.au/models/enyaq-family/enyaq-suv-sportline",
+    "https://www.skoda.com.au/models/enyaq-family/enyaq-coupe-sportline"
+  ],
+  "sourcedAt": "2026-07-27"
+}
