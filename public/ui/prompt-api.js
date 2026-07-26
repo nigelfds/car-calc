@@ -2,6 +2,8 @@
 // the model has downloaded — so this is strictly an enhancement. Every failure
 // path returns null and the caller falls back to the server.
 
+import { clampParsed } from '../../calc/clamp.js';
+
 export const PARSE_SCHEMA = {
   type: 'object',
   properties: {
@@ -42,10 +44,14 @@ export async function parseOnDevice(text) {
       initialPrompts: [{ role: 'system', content: SYSTEM }]
     });
     const raw = await session.prompt(text, { responseConstraint: PARSE_SCHEMA });
-    return JSON.parse(raw);
+    // Bound the same way the server bounds tier 2, so the two tiers never
+    // disagree on what counts as a valid salary, budget, boot, range or term.
+    return clampParsed(JSON.parse(raw));
   } catch {
     return null;
   } finally {
-    session?.destroy?.();
+    // destroy() is cleanup, not part of the contract — this function must
+    // never throw, so a throwing destroy() must not escape the finally.
+    try { session?.destroy?.(); } catch { /* ignore */ }
   }
 }

@@ -23,6 +23,10 @@ if (dataset.skipped.length > 0) {
 const app = express();
 app.use(express.json({ limit: '64kb' }));
 app.use(express.static(join(here, '..', 'public')));
+// ui/prompt-api.js imports calc/clamp.js directly by relative path (native ES
+// modules, no bundler) — the browser resolves that to /calc/clamp.js, so the
+// pure core needs to be reachable at that path too.
+app.use('/calc', express.static(join(here, '..', 'calc')));
 app.use('/api/parse', parseRoute);
 app.use('/api/explain', explainRoute);
 

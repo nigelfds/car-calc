@@ -1,4 +1,21 @@
+import { defaultState } from './state.js';
 import { parseOnDevice } from './prompt-api.js';
+
+// Which state.js fields are numbers, derived from defaultState itself rather
+// than from any particular input element's DOM type. A <select> reports type
+// "select-one", never "number" — sniffing input.type is what let the term
+// dropdown write the string "60" into a field defaultState() defines as the
+// number 60. Driving this off the state's own shape instead is robust to any
+// field becoming a select, a radio group or a range input in future, which
+// element-type sniffing is not. (The rates argument only matters for fields
+// that are never null by default, so any stub values work here.)
+const NUMERIC_FIELDS = new Set(
+  Object.entries(
+    defaultState({ defaultAnnualKm: 0, leaseRatePct: 0, loanRatePct: 0, adminFeeAnnual: 0, opportunityRatePct: 0 })
+  )
+    .filter(([, value]) => typeof value === 'number')
+    .map(([key]) => key)
+);
 
 const same = (a, b) =>
   Array.isArray(a) && Array.isArray(b)
@@ -30,7 +47,9 @@ export function renderInputs(root, state, onChange) {
 
     input.addEventListener('input', () => {
       const raw = input.value;
-      const value = input.type === 'number' ? Number(raw) : raw;
+      // Number('') is 0, which would silently resurrect a cleared numeric
+      // field as zero — leave a cleared field as the empty string instead.
+      const value = NUMERIC_FIELDS.has(field) && raw !== '' ? Number(raw) : raw;
       const touched = new Set(state.touched ?? []);
       touched.add(field);
       onChange({ ...state, [field]: value, touched: [...touched] });
@@ -47,7 +66,22 @@ export function highlightChanged(root, changedFields) {
   }
 }
 
-export function bindFreeText(root, getState, { onParsed }) {
+// Sentinel distinguishing "the timer won the race" from any real resolved
+// value (including a legitimate null from parseOnDevice).
+const TIMED_OUT = Symbol('timed-out');
+
+function withTimeout(promise, ms) {
+  let timer;
+  const timeout = new Promise(resolve => {
+    timer = setTimeout(() => resolve(TIMED_OUT), ms);
+  });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
+}
+
+// 10s matches the timeout server/claude.js applies to the Claude call itself.
+const DEFAULT_TIER_TIMEOUT_MS = 10000;
+
+export function bindFreeText(root, getState, { onParsed, timeoutMs = DEFAULT_TIER_TIMEOUT_MS }) {
   const textarea = root.querySelector('#free-text');
   const button = root.querySelector('#parse-button');
   const status = root.querySelector('#parse-status');
@@ -60,31 +94,53 @@ export function bindFreeText(root, getState, { onParsed }) {
     button.disabled = true;
 
     try {
-      // Tier 1: on-device, in Chrome. Nothing leaves the machine.
-      let preferences = await parseOnDevice(text);
+      // Tier 1: on-device, in Chrome. Nothing leaves the machine. A stalled
+      // model must not leave the button disabled forever, so this races a
+      // timeout and falls through to tier 2 rather than waiting indefinitely.
+      let preferences = await withTimeout(parseOnDevice(text), timeoutMs);
+      if (preferences === TIMED_OUT) preferences = null;
       let clarifyingQuestion = null;
 
-      // Tier 2: the server, on Haiku. Every other browser lands here.
+      // Tier 2: the server, on Haiku. Every other browser lands here. Also
+      // capped, via AbortController, so a hung request can't strand the button.
       if (!preferences) {
-        const response = await fetch('/api/parse', {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text })
-        });
-        const data = await response.json();
-        preferences = data.preferences;
-        clarifyingQuestion = data.clarifyingQuestion;
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), timeoutMs);
+        try {
+          const response = await fetch('/api/parse', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ text }),
+            signal: controller.signal
+          });
+          const body = await response.json();
+          // Tolerate an error response with no preferences key (e.g. a 4xx
+          // body of just { error }) instead of leaning on the outer catch.
+          preferences = body?.preferences ?? null;
+          clarifyingQuestion = body?.clarifyingQuestion ?? null;
+        } finally {
+          clearTimeout(timer);
+        }
       }
 
-      const data = { preferences, clarifyingQuestion };
-      const { state, changedFields } = applyPreferences(getState(), data.preferences);
+      if (!preferences) {
+        status.textContent = 'Could not read that — fill the fields in below instead.';
+        return;
+      }
+
+      const { state, changedFields } = applyPreferences(getState(), preferences);
       highlightChanged(root, changedFields);
-      status.textContent = data.clarifyingQuestion
-        ? data.clarifyingQuestion
+      status.textContent = clarifyingQuestion
+        ? clarifyingQuestion
         : `Filled in ${changedFields.length} field${changedFields.length === 1 ? '' : 's'} from your description.`;
       onParsed(state);
-    } catch {
-      status.textContent = 'Could not read that — fill the fields in below instead.';
+    } catch (err) {
+      // Every tier timed out or failed outright — recover with a status
+      // message that says so, rather than a generic one, when we know it's a
+      // timeout (an aborted fetch surfaces here as an AbortError).
+      status.textContent = err?.name === 'AbortError'
+        ? "That's taking too long — fill the fields in below instead."
+        : 'Could not read that — fill the fields in below instead.';
     } finally {
       button.disabled = false;
     }
