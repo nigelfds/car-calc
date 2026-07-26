@@ -23,7 +23,9 @@ const inputs = {
   loanRatePct: 6.5,
   opportunityRatePct: 4.5,
   adminFeeAnnual: 1020,
-  deposit: 0
+  deposit: 0,
+  electricityCentsPerKwh: 28,
+  otherRunningCostsAnnual: 1240
 };
 
 test('all three options are costed for one vehicle', () => {
@@ -95,6 +97,23 @@ test('crossovers are reported where the leading option changes', () => {
     assert.ok(c.budget >= 400 && c.budget <= 2500);
     assert.notEqual(c.from, c.to);
   }
+});
+
+// I5: electricityCentsPerKwh/otherRunningCostsAnnual used to be hardcoded
+// inside this module (RATE_DEFAULTS), so editing data/rates.json — or a
+// user's own edit in the rates panel — had no effect at all. They must
+// flow through as plain arguments, like every other rate.
+test('running-cost rates arrive as arguments, not a hardcoded default', () => {
+  const v = vehicle('a', 56000);
+  const cheap = optionCosts({ vehicle: v, inputs }, tables);
+  const pricier = optionCosts({
+    vehicle: v,
+    inputs: { ...inputs, electricityCentsPerKwh: 60, otherRunningCostsAnnual: 5000 }
+  }, tables);
+
+  assert.ok(pricier.loan.detail.runningCostsTotal > cheap.loan.detail.runningCostsTotal,
+    'raising the running-cost rates must raise the costed total');
+  assert.notEqual(pricier.novated.tco, cheap.novated.tco);
 });
 
 test('fractional steps include the endpoint', () => {

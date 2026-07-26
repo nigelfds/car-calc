@@ -23,6 +23,16 @@ import { money } from './format.js';
 const BUDGET_RANGE = { min: 300, max: 2700, step: 100 };
 const RECOMPUTE_DEBOUNCE_MS = 80;
 
+// I4: renderChart's viewport pick (>=900px desktop line chart, <900px
+// mobile winner band) has to re-run on a real window resize or a phone
+// rotation — render() only runs on a state change, so without this the
+// chart would be stuck in whichever representation happened to be current
+// at the last recompute. resize/orientationchange can fire in bursts
+// (dragging a window edge), so this goes through the same debounce
+// primitive as the slider, just with its own, slightly longer window —
+// there's no drag-smoothness reason to keep this one at 80ms.
+const RESIZE_DEBOUNCE_MS = 150;
+
 const escapeHtml = value =>
   String(value).replace(/[&<>"']/g, ch => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -56,7 +66,11 @@ function buildInputs(state) {
     adminFeeAnnual: state.adminFeeAnnual,
     opportunityRatePct: state.opportunityRatePct,
     residualPctOverride: state.residualPctOverride,
-    deposit: state.deposit
+    deposit: state.deposit,
+    // I5: these flow from data/rates.json via defaultState (or the rates
+    // panel's edits) rather than being hardcoded in calc/compare.js.
+    electricityCentsPerKwh: state.electricityCentsPerKwh,
+    otherRunningCostsAnnual: state.otherRunningCostsAnnual
   };
 }
 
@@ -91,6 +105,11 @@ function boot(root, dataset) {
   const defaults = defaultState(rates);
   let state = fromQueryString(location.search, defaults);
   let lastVerdict = null;
+  // I4: the last series painted, so a resize/orientation change can ask the
+  // chart to re-pick its representation (mobile band vs desktop lines)
+  // without waiting for the next state-driven recompute — see the resize
+  // listener bound near the bottom of boot().
+  let lastSeries = null;
 
   const budgetOutput = root.querySelector('#budgetSliderValue');
 
@@ -152,7 +171,11 @@ function boot(root, dataset) {
     // asking the chart to paint zero/negative-cost points.
     if (salaryReady) {
       const series = crossoverSeries({ vehicles, inputs, budgetRange: BUDGET_RANGE }, tables);
-      renderChart(root, series);
+      lastSeries = series;
+      // I7: pass the current budget through so both the desktop line chart
+      // and the mobile winner band can mark the user's own position, not
+      // just where the cheapest option changes.
+      renderChart(root, series, state.monthlyBudget);
     }
 
     renderRatesPanel(root, state, onRatesChange, rates);
@@ -233,12 +256,36 @@ function boot(root, dataset) {
 
   const slider = root.querySelector('#budgetSlider');
   if (slider) {
+    // I7: public/index.html previously hardcoded the slider's max (3000)
+    // independently of BUDGET_RANGE.max (2700, the highest budget the chart
+    // actually samples) — the two could drift, and had: dragging past
+    // $2,700 put the user off the plotted range with no indication. Deriving
+    // the slider's bounds from BUDGET_RANGE here, rather than hardcoding
+    // both, keeps them unable to disagree.
+    slider.min = String(BUDGET_RANGE.min);
+    slider.max = String(BUDGET_RANGE.max);
+
     // A separate, cheap listener purely for the live $ readout — never the
     // expensive recompute. renderInputs's own 'input' listener on this same
     // element (bound above) is what carries the debounced recompute.
     slider.addEventListener('input', () => {
       if (budgetOutput) budgetOutput.textContent = money(Number(slider.value));
     });
+  }
+
+  // I4: render() only runs on a state change, so without this the chart
+  // stays stuck in whichever representation (mobile band / desktop lines)
+  // was current at the last recompute — a window resize or a phone
+  // rotation never triggers a state change. Re-picking the representation
+  // doesn't need a full recompute, just another call to renderChart with
+  // the series already on hand.
+  const rerenderChartForViewport = debounce(() => {
+    if (lastSeries) renderChart(root, lastSeries, state.monthlyBudget);
+  }, RESIZE_DEBOUNCE_MS);
+
+  if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+    window.addEventListener('resize', rerenderChartForViewport);
+    window.addEventListener('orientationchange', rerenderChartForViewport);
   }
 
   bindFreeText(root, () => state, { onParsed });

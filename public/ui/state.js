@@ -10,6 +10,7 @@ export const NUMERIC_FIELDS = new Set([
   'grossSalary', 'monthlyBudget', 'termMonths', 'savings', 'annualKm',
   'deposit', 'leaseRatePct', 'loanRatePct', 'adminFeeAnnual',
   'opportunityRatePct', 'residualPctOverride',
+  'electricityCentsPerKwh', 'otherRunningCostsAnnual',
   'minBootLitres', 'minRangeKm', 'seats'
 ]);
 
@@ -26,6 +27,11 @@ export function defaultState(rates) {
     loanRatePct: rates.loanRatePct,
     adminFeeAnnual: rates.adminFeeAnnual,
     opportunityRatePct: rates.opportunityRatePct,
+    // I5: these used to be hardcoded inside calc/compare.js (RATE_DEFAULTS)
+    // instead of flowing from data/rates.json, so neither an edit to the
+    // data file nor an edit in the rates panel ever reached the engine.
+    electricityCentsPerKwh: rates.electricityCentsPerKwh,
+    otherRunningCostsAnnual: rates.otherRunningCostsAnnual,
     residualPctOverride: null,
     bodyTypes: [],
     minBootLitres: null,

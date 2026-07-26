@@ -173,6 +173,19 @@ const RATE_FIELDS = [
     step: 10
   },
   {
+    field: 'electricityCentsPerKwh',
+    label: 'Electricity price',
+    suffix: 'c/kWh',
+    step: 1,
+    fallbackNote: 'Melbourne residential off-peak-weighted estimate — edit it to match your own plan or home charging rate.'
+  },
+  {
+    field: 'otherRunningCostsAnnual',
+    label: 'Other running costs (rego, servicing, tyres)',
+    prefix: '$',
+    step: 10
+  },
+  {
     field: 'opportunityRatePct',
     label: "Return your savings would otherwise earn",
     suffix: '%',
@@ -243,6 +256,8 @@ export function renderRatesPanel(root, state, onChange, rates = null) {
     leaseRatePct: rates?.leaseRatePct,
     loanRatePct: rates?.loanRatePct,
     adminFeeAnnual: rates?.adminFeeAnnual,
+    electricityCentsPerKwh: rates?.electricityCentsPerKwh,
+    otherRunningCostsAnnual: rates?.otherRunningCostsAnnual,
     opportunityRatePct: rates?.opportunityRatePct,
     residualPctOverride: FIELD_DEFAULTS.residualPctOverride,
     deposit: FIELD_DEFAULTS.deposit

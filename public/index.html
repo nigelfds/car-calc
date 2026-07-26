@@ -142,8 +142,11 @@
 
       <div class="budget-slider">
         <label for="budgetSlider">Monthly budget: <output id="budgetSliderValue" for="budgetSlider">$900</output></label>
+        <!-- min/max here are just a sane pre-JS default; ui/app.js overwrites them at
+             boot from BUDGET_RANGE so this can never drift from what the chart samples
+             (see the I7 fix note in ui/app.js's boot()). -->
         <input type="range" id="budgetSlider" name="budgetSlider" data-field="monthlyBudget"
-          min="300" max="3000" step="25" value="900" />
+          min="300" max="2700" step="25" value="900" />
       </div>
 
       <div id="verdict" class="verdict-panel">

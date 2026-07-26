@@ -4,7 +4,8 @@ import { defaultState, toQueryString, fromQueryString } from './state.js';
 
 const rates = {
   loanRatePct: 6.5, leaseRatePct: 7.5, adminFeeAnnual: 1020,
-  opportunityRatePct: 4.5, defaultAnnualKm: 15000
+  opportunityRatePct: 4.5, defaultAnnualKm: 15000,
+  electricityCentsPerKwh: 28, otherRunningCostsAnnual: 1240
 };
 
 test('default state draws its rates from rates.json', () => {

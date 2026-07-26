@@ -17,7 +17,8 @@ const vehicle = (id, listPrice) => ({
 const inputs = {
   grossSalary: 145000, savings: 15000, termMonths: 48, annualKm: 15000,
   leaseStartDate: '2026-07-25', leaseRatePct: 7.5, loanRatePct: 6.5,
-  opportunityRatePct: 4.5, adminFeeAnnual: 1020, deposit: 0
+  opportunityRatePct: 4.5, adminFeeAnnual: 1020, deposit: 0,
+  electricityCentsPerKwh: 28, otherRunningCostsAnnual: 1240
 };
 
 test('a workable budget produces a winner and a vehicle', () => {

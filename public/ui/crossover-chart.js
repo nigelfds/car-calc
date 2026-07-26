@@ -187,6 +187,23 @@ function budgetToX(series, budget, width) {
   return ((index < 0 ? 0 : index) / lastIndex) * width;
 }
 
+// I7: the user's current budget (from the slider) almost never lands
+// exactly on one of the series' sampled points (sampled every $100;
+// dragged in $25 steps), so budgetToX's exact-match lookup isn't the right
+// tool here — it silently falls back to index 0 for anything that doesn't
+// match. This interpolates linearly between the series' first and last
+// budget instead, and clamps so a budget outside the charted range (which
+// I7 also fixes at the source, by keeping the slider's range and the
+// charted range in agreement) still places a marker at the nearest edge
+// rather than off the plot.
+function valueToX(series, value, width) {
+  const first = series.points[0].budget;
+  const last = series.points[series.points.length - 1].budget;
+  const span = last - first || 1;
+  const clamped = Math.min(Math.max(value, first), last);
+  return ((clamped - first) / span) * width;
+}
+
 function niceTicks(min, max, count) {
   if (min === max) return [min];
   return Array.from({ length: count }, (_, i) => min + ((max - min) * i) / (count - 1));
@@ -207,7 +224,7 @@ function layoutEndLabels(entries, minGap) {
   return laidOut;
 }
 
-function renderLineChart(target, series) {
+function renderLineChart(target, series, budgetMonthly) {
   const { min, max } = bounds(series);
   const margin = { top: 26, right: 112, bottom: 30, left: 64 };
   const plotWidth = 560;
@@ -286,6 +303,20 @@ function renderLineChart(target, series) {
   const firstBudget = series.points[0].budget;
   const lastBudget = series.points[series.points.length - 1].budget;
 
+  // I7: mark where the user's own budget sits on the chart — previously
+  // renderChart never received the budget at all, so neither rendering
+  // could show the user's own position, only the crossover points.
+  const budgetMarkup = budgetMonthly !== null ? (() => {
+    const x = valueToX(series, budgetMonthly, plotWidth);
+    return `<g class="budget-marker">
+      <line class="budget-marker__line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="-8" y2="${plotHeight}" />
+      <polygon class="budget-marker__flag" points="${(x - 5).toFixed(1)},-8 ${(x + 5).toFixed(1)},-8 ${x.toFixed(1)},0" />
+    </g>`;
+  })() : '';
+  const budgetSummary = budgetMonthly !== null
+    ? ` Your current budget of $${budgetMonthly}/mo is marked on the chart.`
+    : '';
+
   // The one thing this chart exists to show: where the cheapest option
   // flips. The dashed vertical marker carries it visually; say it in words
   // too, the way the mobile winner-band's label already does.
@@ -297,17 +328,18 @@ function renderLineChart(target, series) {
 
   target.innerHTML = `
     <svg viewBox="0 0 ${width} ${height}" class="crossover-chart" role="img"
-      aria-label="Total cost of a novated lease, a car loan and paying cash, plotted against monthly budget from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.${crossoverSummary}">
+      aria-label="Total cost of a novated lease, a car loan and paying cash, plotted against monthly budget from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.${crossoverSummary}${budgetSummary}">
       <g transform="translate(${margin.left},${margin.top})">
         ${gridlines}
         ${crossoverMarkers}
         ${lineGroups}
         ${xLabels}
+        ${budgetMarkup}
       </g>
     </svg>`;
 }
 
-function renderWinnerBand(target, series) {
+function renderWinnerBand(target, series, budgetMonthly) {
   const bands = toWinnerBands(series);
   const firstBudget = series.points[0].budget;
   const lastBudget = series.points[series.points.length - 1].budget;
@@ -319,6 +351,17 @@ function renderWinnerBand(target, series) {
     : bands
         .map(b => `${OPTION_LABEL[b.option]} from $${pctToBudget(b.fromPct)} to $${pctToBudget(b.toPct)} a month`)
         .join('; then ') + '.';
+
+  // I7: the spec requires the band to show the user's own position, not
+  // just where the winner changes. Percent-of-range, same maths as
+  // valueToX above but expressed as a CSS left% for this non-SVG rendering.
+  const budgetPct = budgetMonthly !== null
+    ? Math.min(100, Math.max(0, ((budgetMonthly - firstBudget) / (lastBudget - firstBudget || 1)) * 100))
+    : null;
+  const budgetMarkerHtml = budgetPct !== null
+    ? `<span class="winner-band__budget-marker" style="left:${budgetPct}%" aria-hidden="true"></span>`
+    : '';
+  const budgetSummary = budgetMonthly !== null ? ` Your current budget of $${budgetMonthly}/mo is marked.` : '';
 
   // Identity never depends on colour alone: every segment gets a text
   // label, full word when there's room, a short abbreviation when there
@@ -334,8 +377,9 @@ function renderWinnerBand(target, series) {
   }).join('');
 
   target.innerHTML = `
-    <div class="winner-band" role="img" aria-label="Cheapest way to pay, by monthly budget: ${summary}">
+    <div class="winner-band" role="img" aria-label="Cheapest way to pay, by monthly budget: ${summary}${budgetSummary}">
       ${segmentsHtml}
+      ${budgetMarkerHtml}
     </div>
     <div class="winner-band__scale" aria-hidden="true">
       <span>$${firstBudget}/mo</span>
@@ -343,14 +387,30 @@ function renderWinnerBand(target, series) {
     </div>`;
 }
 
-export function renderChart(root, series) {
+// I4: root is always `document` in the real app (public/ui/app.js calls
+// renderChart(document, ...)), and Document has no `clientWidth` — the old
+// `root.clientWidth < 900` was `undefined < 900`, always false, so the
+// mobile winner band could never render at any viewport. matchMedia is the
+// standard way to ask "how wide is the viewport" in a browser (and reacts
+// correctly to a real window resize, unlike a one-off element measurement);
+// document.documentElement.clientWidth is the fallback for an environment
+// with no matchMedia (there is none in practice among supported browsers,
+// but this keeps the function from throwing under, say, a headless runner
+// that stubs one but not the other).
+function isDesktopViewport(root) {
+  if (typeof matchMedia === 'function') return matchMedia('(min-width: 900px)').matches;
+  const width = root?.documentElement?.clientWidth;
+  return typeof width === 'number' ? width >= 900 : true;
+}
+
+export function renderChart(root, series, budgetMonthly = null) {
   const target = root.querySelector('#crossover');
   if (!target) return;
 
-  const isMobile = root.clientWidth < 900;
+  const isMobile = !isDesktopViewport(root);
   if (isMobile) {
-    renderWinnerBand(target, series);
+    renderWinnerBand(target, series, budgetMonthly);
   } else {
-    renderLineChart(target, series);
+    renderLineChart(target, series, budgetMonthly);
   }
 }

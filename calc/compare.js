@@ -5,14 +5,20 @@ import { novatedQuote } from './novated.js';
 import { loanSummary } from './loan.js';
 import { upfrontQuote } from './upfront.js';
 
-const RATE_DEFAULTS = { electricityCentsPerKwh: 28, otherRunningCostsAnnual: 1240 };
-
 function vehicleContext(vehicle, inputs, tables) {
   const onRoad = driveAwayPrice({ listPrice: vehicle.listPrice }, tables);
   const running = runningCosts({
     vehicle,
     annualKm: inputs.annualKm,
-    rates: RATE_DEFAULTS
+    // I5: these used to be hardcoded here, duplicating data/rates.json and
+    // ignoring both the data file and the rates panel's edits entirely.
+    // calc/ stays pure — no file reads — so the caller (ui/app.js's
+    // buildInputs) is what threads data/rates.json's values through as
+    // plain arguments, exactly like every other rate in `inputs`.
+    rates: {
+      electricityCentsPerKwh: inputs.electricityCentsPerKwh,
+      otherRunningCostsAnnual: inputs.otherRunningCostsAnnual
+    }
   });
   const resale = resaleValue({
     driveAwayTotal: onRoad.total,

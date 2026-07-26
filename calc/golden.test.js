@@ -17,7 +17,9 @@ const inputs = {
   loanRatePct: 6.5,
   opportunityRatePct: 4.5,
   adminFeeAnnual: 1020,
-  deposit: 0
+  deposit: 0,
+  electricityCentsPerKwh: 28,
+  otherRunningCostsAnnual: 1240
 };
 
 const ev5 = {

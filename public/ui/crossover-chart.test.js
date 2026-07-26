@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { toPolylines, toSegments, toWinnerBands } from './crossover-chart.js';
+import { toPolylines, toSegments, toWinnerBands, renderChart } from './crossover-chart.js';
 
 const series = {
   points: [
@@ -123,4 +123,105 @@ test('toSegments breaks a run at a null point instead of bridging it', () => {
   // No gap in the source data: novated stays one contiguous run.
   assert.equal(segments.novated.length, 1);
   assert.equal(segments.novated[0].length, 3);
+});
+
+// ---------------------------------------------------------------------------
+// I4: renderChart used to pick its rendering with `root.clientWidth < 900`.
+// app.js always calls it with `root = document`, and Document has no
+// clientWidth — `undefined < 900` is always false, so the mobile winner
+// band could never render at any real viewport. These fixtures put a
+// deliberately wrong `clientWidth` directly on the fake `root` (the
+// property the old, buggy code actually read) so that if renderChart were
+// still reading it, the assertion below would fail — the only way these
+// pass is if the viewport-width source is something else (matchMedia).
+
+// Returns { root, getHtml } rather than a destructured `html` value —
+// destructuring a getter reads it once, immediately, before renderChart has
+// run, which would silently capture the empty starting string every time.
+function fakeChartRoot(extra = {}) {
+  let html = '';
+  const target = {
+    set innerHTML(value) { html = value; },
+    get innerHTML() { return html; }
+  };
+  const root = {
+    querySelector: sel => (sel === '#crossover' ? target : null),
+    ...extra
+  };
+  return { root, getHtml: () => html };
+}
+
+function withMatchMedia(matches, fn) {
+  const original = globalThis.matchMedia;
+  globalThis.matchMedia = query => ({ media: query, matches });
+  try {
+    fn();
+  } finally {
+    if (original === undefined) delete globalThis.matchMedia;
+    else globalThis.matchMedia = original;
+  }
+}
+
+test('renderChart renders the mobile winner band when matchMedia reports a narrow viewport, ignoring a large clientWidth on root', () => {
+  withMatchMedia(false, () => {
+    // clientWidth: 5000 is a decoy — under the old bug this property was
+    // never even read correctly (root was `document`), but if some fix
+    // wrongly started reading root.clientWidth directly, this large value
+    // would flip the outcome to the desktop chart and fail the assertion.
+    const { root, getHtml } = fakeChartRoot({ clientWidth: 5000 });
+    renderChart(root, series);
+    assert.ok(getHtml().includes('winner-band'), 'expected the mobile winner band markup');
+    assert.ok(!getHtml().includes('crossover-chart'), 'the desktop chart must not also render');
+  });
+});
+
+test('renderChart renders the desktop line chart when matchMedia reports a wide viewport, ignoring a tiny clientWidth on root', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot({ clientWidth: 10 });
+    renderChart(root, series);
+    assert.ok(getHtml().includes('crossover-chart'), 'expected the desktop SVG line chart markup');
+    assert.ok(!getHtml().includes('winner-band'), 'the mobile band must not also render');
+  });
+});
+
+test('without matchMedia, renderChart falls back to document.documentElement.clientWidth, not root.clientWidth', () => {
+  const original = globalThis.matchMedia;
+  delete globalThis.matchMedia;
+  try {
+    // clientWidth directly on root (the old buggy read) is huge; the real
+    // Document-shaped fallback (documentElement.clientWidth) is narrow.
+    const { root, getHtml } = fakeChartRoot({ clientWidth: 5000, documentElement: { clientWidth: 400 } });
+    renderChart(root, series);
+    assert.ok(getHtml().includes('winner-band'), 'expected the fallback to read documentElement.clientWidth, not root.clientWidth');
+  } finally {
+    if (original !== undefined) globalThis.matchMedia = original;
+  }
+});
+
+// ---------------------------------------------------------------------------
+// I7: the user's current budget must be marked on whichever rendering is
+// chosen — previously renderChart never received the budget at all.
+
+test('the desktop line chart marks the current budget when one is passed', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    assert.ok(getHtml().includes('budget-marker'), 'expected a budget-marker element in the SVG');
+  });
+});
+
+test('the mobile winner band marks the current budget when one is passed', () => {
+  withMatchMedia(false, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    assert.ok(getHtml().includes('winner-band__budget-marker'), 'expected a budget-marker element on the band');
+  });
+});
+
+test('no budget marker renders when renderChart is called without a budget', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series);
+    assert.ok(!getHtml().includes('budget-marker'), 'no budget was passed, so no marker should render');
+  });
 });
