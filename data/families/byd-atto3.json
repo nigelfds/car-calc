@@ -1,19 +1,32 @@
 {
   "id": "byd-atto3",
-  "summary": "Sharply priced small SUV from BYD with a well-equipped cabin and a strong warranty, aimed squarely at first-time EV buyers.",
+  "summary": "The Atto 3 is the car that made BYD a volume brand in Australia, and after successive price cuts it remains one of the cheapest electric SUVs on sale, with a genuinely spacious cabin and a tow rating most rivals at the price cannot match. Australian reviewers are broadly positive but not unanimous: Chasing Cars found the chassis fluent and nicely balanced, while CarsGuide scored its driving dynamics a flat 6/10, and everyone flags coarse-surface road noise and the deliberately weird interior as the things buyers must forgive. It is showing its age on charging hardware, and the same aggressive discounting that makes it good value new has punished resale for earlier owners.",
   "pros": [
-    "Cheapest list price in this comparison at $39,990 before on-road costs",
-    "6-year/150,000km warranty with BYD's LFP Blade battery chemistry",
-    "Quirky but well-finished interior with a rotating touchscreen and good standard equipment"
+    "Essential lists at $39,990 before on-road costs, undercutting essentially every other new electric SUV in Australia",
+    "Rated to tow 750kg braked, where the MG 4, BYD Dolphin and several similarly priced EVs are rated at zero",
+    "LFP Blade battery covered for 8 years/160,000km with a guaranteed 70 per cent state of health, on top of the 6-year/150,000km vehicle warranty",
+    "The 2025 update swapped the widely criticised Atlas Batman tyres for Continental EcoContact 6Q rubber and grew the rotating touchscreen to 15.6 inches",
+    "Five-star ANCAP (2022 test) with 91 per cent adult occupant protection"
   ],
   "cons": [
-    "Shortest range of the three at 345km WLTP on the entry Essential variant",
-    "Smallest boot of the comparison at 440L seats up",
-    "Resale value in Australia is still largely unproven for the brand"
+    "Only a 7kW single-phase AC onboard charger on both grades, so a full home charge takes around nine hours where 11kW rivals need under six",
+    "DC charging peaks at just 70kW on the Essential and 88kW on the Premium, making 10-80 per cent a 35-38 minute stop",
+    "Independent tests returned 16.8-18.7kWh/100km against the 14.9 claim, cutting the Premium's real-world range to roughly 320-380km rather than 420km",
+    "Reviewers consistently criticise intrusive road noise and an over-designed cabin with tiny door bins and poor small-item storage",
+    "BYD's repeated new-car price cuts have hammered resale, with three-year retained value forecast at about 51 per cent"
   ],
   "sources": [
-    "https://www.carexpert.com.au/byd/atto-3/2026",
-    "https://www.carsales.com.au/research/byd/atto-3/"
+    "https://www.carexpert.com.au/car-reviews/2025-byd-atto-3-review",
+    "https://www.chasingcars.com.au/reviews/small-suvs/byd-atto-3-premium-2026-review/",
+    "https://www.carsguide.com.au/ev/byd-atto-3-94389",
+    "https://www.carsguide.com.au/byd/atto-3/price/2026",
+    "https://www.carexpert.com.au/byd/atto-3/essential/features-and-specs",
+    "https://www.carexpert.com.au/byd/atto-3/premium/features-and-specs",
+    "https://www.carsales.com.au/research/byd/atto-3/2026/premium/",
+    "https://zecar.com/electric-vehicles/byd/atto-3/2022/standard-range",
+    "https://zecar.com/reviews/byd-atto-3-evo-registrations-of-interest-australia",
+    "https://bydautomotive.com.au/atto-3",
+    "https://evdepreciation.com/byd-atto-3-depreciation-australia-2025-review/"
   ],
-  "sourcedAt": "2026-07-25"
+  "sourcedAt": "2026-07-27"
 }

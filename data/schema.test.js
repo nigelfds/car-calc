@@ -184,9 +184,22 @@ test('bootLitresSeatsDown must be at least bootLitresSeatsUp', () => {
 
 // --- Item 7: Kia EV5 Air price corrected to a pre-on-road list price ---
 
-test('Kia EV5 Air seed listPrice is the manufacturer list price, not a drive-away figure', () => {
-  const kia = vehicles.find(v => v.id === 'kia-ev5-air');
-  assert.equal(kia.listPrice, 49720);
+// The EV5 is the canary for the drive-away trap: Kia's GT-Line is widely
+// reported at "over $75,000", but that is its drive-away price — every variant
+// is under the threshold on list price. If a refresh ever pastes drive-away
+// figures into listPrice, this family is where it will show up first.
+test('Kia EV5 listPrices are manufacturer list prices, not drive-away figures', () => {
+  const air = vehicles.find(v => v.id === 'kia-ev5-air-standard-range');
+  assert.ok(air, 'kia-ev5-air-standard-range is missing from the dataset');
+  assert.equal(air.listPrice, 56770);
+
+  // The whole family sits below the $75,000 FBT threshold on list price, even
+  // though the GT-Line's drive-away price clears it.
+  const ev5 = vehicles.filter(v => v.familyId === 'kia-ev5');
+  assert.equal(ev5.length, 4);
+  for (const row of ev5) {
+    assert.ok(row.listPrice < 75000, `${row.id} at ${row.listPrice} looks like a drive-away price`);
+  }
 });
 
 // --- Item 8: depreciationCurve values must be between 0 and 1 ----------

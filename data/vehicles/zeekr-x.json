@@ -1,0 +1,42 @@
+[
+  {
+    "id": "zeekr-x-rwd",
+    "familyId": "zeekr-x",
+    "make": "Zeekr",
+    "model": "X",
+    "variant": "RWD",
+    "bodyType": "SUV",
+    "listPrice": 46080,
+    "batteryKwh": 59,
+    "rangeKm": 405,
+    "consumptionKwhPer100km": 14.6,
+    "bootLitresSeatsUp": 404,
+    "bootLitresSeatsDown": 1247,
+    "seats": 5,
+    "towKg": 1600,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1950,
+    "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
+    "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "zeekr-x-performance-awd",
+    "familyId": "zeekr-x",
+    "make": "Zeekr",
+    "model": "X",
+    "variant": "Performance AWD",
+    "bodyType": "SUV",
+    "listPrice": 54720,
+    "batteryKwh": 65,
+    "rangeKm": 415,
+    "consumptionKwhPer100km": 15.7,
+    "bootLitresSeatsUp": 404,
+    "bootLitresSeatsDown": 1247,
+    "seats": 5,
+    "towKg": 1600,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2350,
+    "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
+    "sourcedAt": "2026-07-27"
+  }
+]

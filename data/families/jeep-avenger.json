@@ -1,0 +1,29 @@
+{
+  "id": "jeep-avenger",
+  "summary": "The Avenger is Jeep's first battery-electric model and its only small SUV in Australia, sold here in three front-wheel-drive grades sharing a 115kW motor and a 51kWh usable battery. Australian reviewers consistently rate it one of the better-driving cars Jeep has produced, and its light 1520kg kerb weight makes it genuinely efficient, but the same reviewers call the pricing hard to justify against Chinese and Korean rivals and single out a three-star crash rating, a bare rear seat and cheap cabin plastics. Opinion splits on whether the Jeep character and 200mm of ground clearance offset a spec sheet that a Kia EV3 or Skoda Elroq beats on range, space and safety for similar money.",
+  "pros": [
+    "Efficient for a high-riding SUV: 51kWh usable stretches to 396km WLTP at a claimed 15.6kWh/100km, and Australian testers recorded 14.3kWh/100km in mixed driving — better than the claim.",
+    "Lightest car in its class at 1520kg, more than 200kg under a BYD Atto 3, which is why it matches rivals' range on a much smaller battery and why reviewers praise its steering and body control.",
+    "Genuinely more capable off-sealed-road than its rivals: 200mm of ground clearance, selectable terrain modes and hill descent control, none of which a Volvo EX30 or Kia EV3 offers.",
+    "Cheap and predictable to maintain: servicing is capped at $250 per visit at 12-month/12,500km intervals, with roadside assistance renewed for life while it is serviced through the Jeep network.",
+    "Slow sales have made it heavily negotiable — Jeep Australia has run the Longitude at $40,000 drive-away with premium paint included, roughly $16,000 below the equivalent of its $49,990 list price."
+  ],
+  "cons": [
+    "Three-star ANCAP rating (shared with Euro NCAP, 2023): 59 per cent for vulnerable road user protection and 53 per cent for safety assist, with no child presence detection, against five stars for the Volvo EX30, Kia EV3 and Skoda Elroq.",
+    "Rear seat and boot are the weakest part of the car: 355L behind the second row versus 470L in a Skoda Elroq, no rear air vents, no centre armrest and no rear door pockets, so it suits couples rather than families.",
+    "Only 115kW and 260Nm for about nine seconds to 100km/h, and reviewers repeatedly criticise over-light steering and brakes that give dead travel and then bite too hard.",
+    "Ownership risk is real: Jeep Australia is down to three models with a shrinking dealer network, the Avenger sold just 92 cars here in 2025, the five-year warranty is capped at 100,000km, and $16,000 discounts point to poor resale."
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
+    "https://www.carsguide.com.au/jeep/avenger/price/2026",
+    "https://www.carsguide.com.au/ev/jeep-avenger-95848",
+    "https://evcentral.com.au/seven-day-test-jeep-avenger-summit-too-much-fun-or-just-too-much/",
+    "https://thedriven.io/2024/12/14/jeep-avenger-review-light-and-efficient-but-this-electric-suv-lacks-space-and-features/",
+    "https://www.carexpert.com.au/car-news/jeep-australia-sticking-with-wrangler-new-chinese-bronco-rival-firming-1",
+    "https://www.carsguide.com.au/jeep/avenger/boot-space",
+    "https://www.jeep.com.au/avenger.html",
+    "https://www.euroncap.com/assessments/jeep/avenger/1063/"
+  ],
+  "sourcedAt": "2026-07-27"
+}

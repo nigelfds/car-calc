@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mg-s5-essence-49",
+    "familyId": "mg-s5",
+    "make": "MG",
+    "model": "S5 EV",
+    "variant": "Essence 49",
+    "bodyType": "SUV",
+    "listPrice": 42990,
+    "batteryKwh": 49,
+    "rangeKm": 335,
+    "consumptionKwhPer100km": 16.9,
+    "bootLitresSeatsUp": 453,
+    "bootLitresSeatsDown": 1441,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1500,
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "mg-s5-essence-62",
+    "familyId": "mg-s5",
+    "make": "MG",
+    "model": "S5 EV",
+    "variant": "Essence 62",
+    "bodyType": "SUV",
+    "listPrice": 47990,
+    "batteryKwh": 62,
+    "rangeKm": 450,
+    "consumptionKwhPer100km": 16.1,
+    "bootLitresSeatsUp": 453,
+    "bootLitresSeatsDown": 1441,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1600,
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-07-27"
+  }
+]

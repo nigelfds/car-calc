@@ -1,0 +1,29 @@
+{
+  "id": "mini-cooper-electric",
+  "summary": "Mini's third-generation electric Cooper hatch is, by broad Australian reviewer consensus, the most entertaining EV in its price bracket — CarsGuide scored the driving experience a perfect 10 and Chasing Cars called it one of the most enjoyable electric cars on sale here — but the same reviewers keep landing on the same objection: it is a very small, very expensive car. Mini Australia deleted the cheaper Cooper E in 2025, so the range now opens at $58,990 before on-road costs for the 400km Cooper SE, roughly $20,000 above an equivalently sized MG 4. Opinion splits hardest on the ride: some testers treat the taut, fidgety damping as part of the go-kart appeal, others find it wearing on suburban roads, and the JCW E does without the adaptive dampers the petrol JCW gets.",
+  "pros": [
+    "Genuinely engaging chassis — sharp steering and go-kart agility that no other electric hatch near the price matches, per CarsGuide (10/10 driving) and Chasing Cars",
+    "Quick for a small hatch: 160kW/330Nm and 0-100km/h in 6.7s in the Cooper SE, 190kW and 5.9s in the JCW E",
+    "The 9.4-inch circular OLED touchscreen is a real design statement rather than a generic tablet, and reviewers rate the interface fast and genuinely fun to use",
+    "Every variant sits well under the $75,000 FBT exemption cap, so a novated-lease buyer keeps the exemption even on the top JCW E at $63,990",
+    "High-voltage battery covered for 8 years on top of the 5-year unlimited-kilometre vehicle warranty"
+  ],
+  "cons": [
+    "210-litre boot is among the smallest of any EV on sale in Australia — under half the 470 litres of a Skoda Elroq, and only 800 litres with the rear seats folded",
+    "Strictly a four-seater with token rear legroom; CarExpert's 185cm tester could not sit behind his own driving position, and CarsGuide called the rear backrests too upright for adults",
+    "Real-world consumption of 17-18kWh/100km against the 14.7kWh/100km claim drops usable range to roughly 300km from the 49.2kWh battery",
+    "Expensive for the metal: an MG 4 Essence 64 is $37,510 and a Tesla Model 3 RWD $54,900, both far more practical, and Mini offers only one interior trim on the SE",
+    "95kW peak DC charging is modest — 30 minutes for 10-80 per cent, where similarly priced rivals manage well over 100kW"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2025-mini-cooper-review",
+    "https://www.chasingcars.com.au/reviews/small-cars/mini-cooper-se-2024-review/",
+    "https://www.carsguide.com.au/ev/mini-cooper-electric-94123",
+    "https://www.carexpert.com.au/car-news/when-mini-will-run-out-of-its-cheapest-evs-in-australia",
+    "https://www.carexpert.com.au/car-news/2026-mini-cooper-se-paul-smith-edition-arrives-in-australia",
+    "https://www.chasingcars.com.au/reviews/small-cars/mini-john-cooper-works-2025-review-ev-hatch-convertible-aceman-and-countryman-track-test/",
+    "https://www.carsales.com.au/research/mini/cooper/"
+  ],
+  "sourcedAt": "2026-07-27"
+}

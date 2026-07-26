@@ -1,0 +1,31 @@
+{
+  "id": "zeekr-x",
+  "summary": "The Zeekr X is a compact premium-badged electric SUV that Australian reviewers rate highly for cabin materials, standard equipment and outright pace, with the MY26 update adding 50kW per variant and repricing the range to flat drive-away figures of $48,900 (RWD) and $57,900 (Performance AWD). Opinion is genuinely split on the chassis: CarsGuide rates it one of the more engaging small SUVs to drive, while CarExpert and EV Central find the ride firm and the body underdamped over broken Victorian back roads. The consistent criticisms are a menu-heavy touchscreen, hyperactive driver-assistance chimes, a 405-415km WLTP range that trails cheaper rivals on real-world testing, and the ownership unknowns of a brand that only arrived in Australia in 2024.",
+  "pros": [
+    "MY26 repricing to $48,900 drive-away for the RWD lands it under the Volvo EX30 and well under a BMW iX1 while adding 50kW (now 250kW) and cutting the 0-100km/h claim to 5.6 seconds",
+    "Cabin is the standout at the price: quilted leather, 13-speaker Yamaha audio and heated front and rear seats are standard, with massaging front seats and a temperature-controlled fridge on the AWD, and reviewers consistently rate the materials above mainstream rivals such as the Geely EX5 and BYD Atto 3",
+    "The RWD's 61kWh LFP pack accepts up to 230kW DC charging for a 10-80 per cent top-up in about 18 minutes, comfortably quicker than the Volvo EX30 or Kia EV3 at similar money, plus 11kW AC",
+    "365kW Performance AWD claims 0-100km/h in 3.7 seconds, quicker than anything else in the small electric SUV class",
+    "Five-star ANCAP rating, a 1600kg braked tow rating and a 404L boot that is 42L larger than the MY25 car"
+  ],
+  "cons": [
+    "405-415km WLTP range is short for the money, and Australian testers recorded 16.5-20.7kWh/100km against the 15.5kWh/100km claim (carsales measured 20.7), so plan on roughly 300-350km between charges rather than 400",
+    "Driver-assistance calibration is the near-universal complaint across CarExpert, carsales and CarsGuide: overspeed warnings that repeatedly cut the audio, an attention monitor that chimes on ordinary head checks, and lane-centring that tugs at the wheel",
+    "Almost every function including drive modes, seat adjustment and climate is buried in a menu-heavy touchscreen, and reviewers report the reversing camera hijacking the display and wireless CarPlay microphone dropouts",
+    "Service and support proposition is thin for a five-year commitment: about 16 Zeekr retail and service sites nationally (three in Melbourne plus Geelong, nothing in Tasmania or the NT), MY26 servicing moved to 12-month/20,000km intervals at roughly $614 a visit and $3,072 over five years, and the standard warranty is five years unlimited km now that the seven-year pre-order offer closed on 31 May 2026, where a Volvo EX30 includes five years of free servicing",
+    "Resale is an unquantified risk on a brand first sold here in 2024, and Chasing Cars notes MY26 prices dropped $5,000-$10,000 in a single model year, which immediately devalues the outgoing cars and gives no reason to expect the MY26 pricing to hold"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-zeekr-x-price-and-specs-updated-ev-gets-massive-price-cuts-1",
+    "https://www.carexpert.com.au/car-reviews/2026-zeekr-x-review-quick-drive",
+    "https://www.carexpert.com.au/car-reviews/2025-zeekr-x-awd-review",
+    "https://www.carsguide.com.au/ev/zeekr-x-awd-101316",
+    "https://www.carsales.com.au/editorial/details/2026-zeekr-x-awd-review-151703/",
+    "https://www.carsales.com.au/editorial/details/zeekr-x-prices-slashed-for-2026-151748/",
+    "https://www.chasingcars.com.au/news/new-car-prices/zeekr-x-2026-drops-up-to-10000-with-more-power-and-better-equipment-confirmed-for-kia-ev3-bmw-ix1-rival/",
+    "https://evcentral.com.au/2026-zeekr-x-review-compact-electric-suv-gets-more-power-and-more-polish-to-take-on-byd-kia-geely-and-jaecoo/",
+    "https://ev-database.org/car/3585/Zeekr-X-Long-Range-RWD",
+    "https://ev-database.org/car/3586/Zeekr-X-Privilege-AWD"
+  ],
+  "sourcedAt": "2026-07-27"
+}

@@ -3,5 +3,6 @@ node_modules/
 .env.*
 !.env.example
 .superpowers/
+.playwright-mcp/
 .DS_Store
 npm-debug.log*

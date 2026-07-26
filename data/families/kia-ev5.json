@@ -1,19 +1,28 @@
 {
   "id": "kia-ev5",
-  "summary": "Roomy mid-size electric SUV with a huge boot and Kia's class-leading 7-year warranty, priced to undercut most mid-size EV rivals.",
+  "summary": "Kia's China-built mid-size electric SUV has become one of Australia's best-selling EVs on the strength of space and familiarity: a 513L boot plus a 67L frunk, a conventional dashboard with real climate buttons, and ride comfort Australian reviewers rate highly over broken suburban roads. The trade-off critics keep returning to is charging and range, because the 400V architecture caps DC fast-charging at 140kW and long-term testers get about 424km from the 470km-claimed GT-Line. Reviewers broadly agree the Air grades are the value pick, and split on whether the $71,770 GT-Line's hard-plastic cabin justifies the money against a Tesla Model Y Long Range.",
   "pros": [
-    "Largest boot in this comparison at 513L (1714L seats down)",
-    "7-year/150,000km vehicle and battery warranty",
-    "Comfortable, family-friendly interior with strong rear-seat space"
+    "513L boot (1714L seats folded) plus a 67L frunk, one of the largest load bays among mid-size EVs and roomier than a Tesla Model Y",
+    "Air Long Range claims 555km WLTP for $61,170 before on-roads, undercutting the Model Y Long Range AWD while adding standard equipment",
+    "Keeps a separate physical climate-control panel and a conventional dash layout instead of burying HVAC in the touchscreen",
+    "Five-star ANCAP rating plus Kia's 7-year/unlimited-km vehicle warranty and 7-year/150,000km battery warranty",
+    "CarExpert recorded about 17.0kWh/100km in the Air Standard Range and 18-20kWh/100km in the Earth AWD, better than the WLTP claims"
   ],
   "cons": [
-    "Entry Air Standard Range is front-wheel drive only and rated to tow just 300kg braked",
-    "DC charging tops out lower than rivals, so road-trip top-ups take longer",
-    "Firmer low-speed ride than some competitors on Melbourne's rougher back streets"
+    "400V architecture caps DC charging at 140kW, and only about 102kW on the Air Standard Range, so 10-80% takes roughly 38 minutes against about half that in a Kia EV6",
+    "CarsGuide's GT-Line long-termer averaged 19.8kWh/100km over 932km for a real 424km against the 470km WLTP claim, and carsales saw 23-25kWh/100km in the Earth AWD",
+    "Cabin uses a lot of hard plastic that reviewers call low-rent at $70,000, and the climate display is partly obscured by the steering wheel rim",
+    "Lane-keep assist over-reacts on country bends and the speed-limit chime fires constantly, both needing to be switched off at every start-up",
+    "Surround-view camera and wireless phone charging are reserved for higher grades rather than standard across the range"
   ],
   "sources": [
     "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
-    "https://zecar.com/electric-vehicles/kia/ev5/air-standard-range"
+    "https://www.carexpert.com.au/car-reviews/2025-kia-ev5-review",
+    "https://www.carsguide.com.au/kia/ev5/price/2026",
+    "https://www.carsguide.com.au/ev/kia-ev5-gt-line-long-term-part-1-97468",
+    "https://www.carsales.com.au/editorial/details/kia-ev5-earth-2025-review-147748/",
+    "https://www.chasingcars.com.au/news/future-cars/kia-ev5-2025-australian-pricing-and-specifications/",
+    "https://www.whichcar.com.au/reviews/2025-kia-ev5-all-you-need-to-know"
   ],
-  "sourcedAt": "2026-07-25"
+  "sourcedAt": "2026-07-27"
 }

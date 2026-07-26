@@ -1,0 +1,30 @@
+{
+  "id": "leapmotor-c10",
+  "summary": "The C10 is Stellantis-distributed Leapmotor's mid-size electric SUV, sold in Australia as a deliberate value play against the Tesla Model Y and Kia EV5 with list prices from the mid-$40,000s. Australian reviewers broadly agree on the package — RACV, CarExpert and CarsGuide all praise its limousine-like rear legroom, Maserati-tuned ride comfort and equipment level, and CarsGuide's 2026 BEV Design review scored it 7.5/10 after an over-the-air update tamed the intrusive driver-assist alerts. Where they diverge is how much the usability faults matter: the missing Apple CarPlay and Android Auto, everything-in-the-touchscreen layout and fiddly key card drew consistent criticism, and Chasing Cars marked the related C10 down to 5.5/10 for grabby brakes and numb steering, while RACV explicitly warned buyers about brand risk given Leapmotor's tiny local volume.",
+  "pros": [
+    "Roughly $10,000 under a Tesla Model Y and several thousand under a Kia EV5 Air, with a panoramic roof, 14.6-inch screen and 17 driver-assist systems standard even on the $45,888 Style",
+    "Class-leading rear legroom on a flat floor — reviewers consistently rate the second row as the C10's standout, ahead of the Model Y and EV5 — plus a 581L boot expanding to 1410L",
+    "Ride comfort was tuned with Maserati chassis input and RACV found it smothers poor surfaces rather than fidgeting like most cheap EVs on 20-inch wheels",
+    "The $49,888 Design LR gets an 81.9kWh battery, 800V architecture and 180kW DC charging (30-80% in about 22 minutes) for the same price the smaller-battery Design used to cost",
+    "Cheap to keep: five services capped at $2000 total ($400 each, 12 months/20,000km) and a five-star ANCAP rating from 2024 testing"
+  ],
+  "cons": [
+    "No Apple CarPlay or Android Auto on any grade, with mirrors, vents and most functions buried in the touchscreen and no physical console buttons",
+    "The entry Style is stuck on the old 69.9kWh pack and 84kW DC charging — roughly half the Design LR's peak rate — so the $4000 step up buys a materially different car, not just trim",
+    "Leapmotor cut the C10's warranty from seven years/160,000km to six years/150,000km for MY25, so it now trails the seven years offered by Kia, MG, Deepal and Geely",
+    "Weak resale outlook: Leapmotor delivered only 579 C10s in Australia in 2025 and 39 in the first two months of 2026, and dealers are already listing stock in the high-$30,000s against a $45,888 list price",
+    "Numb steering, grabby friction brakes that are hard to modulate in traffic, no frunk, and a key-card entry system reviewers called convoluted enough that Leapmotor has admitted a rethink"
+  ],
+  "sources": [
+    "https://www.carsguide.com.au/ev/leapmotor-c10-bev-design-100447",
+    "https://www.carexpert.com.au/car-reviews/2025-leapmotor-c10-review",
+    "https://www.carexpert.com.au/car-news/2026-leapmotor-c10-design-long-range-adds-more-range-for-no-extra-money",
+    "https://www.racv.com.au/royalauto/car-reviews/leapmotor/2025-leapmotor-c10-review.html",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/leapmotor-c10-reev-ultra-hybrid-2026-review/",
+    "https://www.carexpert.com.au/car-news/leapmotor-c10-awd-sports-is-an-exclusive-but-affordable-model-y-performance-rival",
+    "https://www.carexpert.com.au/car-news/leapmotor-winds-back-warranty-for-its-tesla-model-y-rival",
+    "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+    "https://www.ancap.com.au/safety-ratings/leapmotor/c10/00117b"
+  ],
+  "sourcedAt": "2026-07-27"
+}

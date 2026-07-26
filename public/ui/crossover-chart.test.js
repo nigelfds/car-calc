@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { toPolylines, toSegments, toWinnerBands, renderChart } from './crossover-chart.js';
+import { toPolylines, toSegments, toWinnerBands, renderChart, layoutCrossoverLabels } from './crossover-chart.js';
 
 const series = {
   points: [
@@ -223,5 +223,91 @@ test('no budget marker renders when renderChart is called without a budget', () 
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, series);
     assert.ok(!getHtml().includes('budget-marker'), 'no budget was passed, so no marker should render');
+  });
+});
+
+// --- Crossover label collision -----------------------------------------
+// A richer dataset means more variants, which means more budgets at which
+// the cheapest option flips. Three crossovers inside ~100px used to render
+// their labels on top of each other ("$110$1200/mo"), so labels now get
+// stacked onto extra rows rather than overprinting.
+
+const labelsOverlap = (a, b, charWidth = 5.4, gap = 4) => {
+  const halfWidth = e => (`$${e.budget}/mo`.length * charWidth) / 2;
+  return Math.abs(a.x - b.x) < halfWidth(a) + halfWidth(b) + gap;
+};
+
+test('two well-separated crossover labels both stay on the first row', () => {
+  const laidOut = layoutCrossoverLabels([
+    { budget: 500, x: 20 },
+    { budget: 2500, x: 500 }
+  ]);
+  assert.deepEqual(laidOut.map(e => e.row), [0, 0]);
+});
+
+test('a crossover label that would overprint its neighbour moves to the next row', () => {
+  const laidOut = layoutCrossoverLabels([
+    { budget: 1100, x: 200 },
+    { budget: 1200, x: 210 }
+  ]);
+  assert.equal(laidOut[0].row, 0);
+  assert.equal(laidOut[1].row, 1, 'the colliding label must not share row 0');
+});
+
+test('no two crossover labels on the same row ever overlap', () => {
+  const laidOut = layoutCrossoverLabels([
+    { budget: 900, x: 100 },
+    { budget: 1100, x: 118 },
+    { budget: 1200, x: 131 },
+    { budget: 1500, x: 149 },
+    { budget: 1600, x: 160 }
+  ]);
+  for (const a of laidOut) {
+    for (const b of laidOut) {
+      if (a === b || a.row !== b.row) continue;
+      assert.ok(!labelsOverlap(a, b), `$${a.budget} and $${b.budget} overlap on row ${a.row}`);
+    }
+  }
+});
+
+test('crossover labels keep the x of their own marker line, only the row changes', () => {
+  const input = [{ budget: 1100, x: 200 }, { budget: 1200, x: 210 }];
+  const laidOut = layoutCrossoverLabels(input);
+  assert.deepEqual(laidOut.map(e => e.x), [200, 210]);
+});
+
+test('a label reuses an earlier row once it has cleared that row horizontally', () => {
+  const laidOut = layoutCrossoverLabels([
+    { budget: 900, x: 100 },
+    { budget: 1000, x: 112 },
+    { budget: 2500, x: 400 }
+  ]);
+  assert.deepEqual(laidOut.map(e => e.row), [0, 1, 0], 'the far-right label should drop back to row 0');
+});
+
+test('the rendered SVG stacks colliding crossover labels on different y values', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    // budgetToX spaces points by index across a fixed 560px plot, so a dense
+    // series is what puts two crossovers close enough together to collide:
+    // 21 points leaves adjacent budgets only 28px apart, well inside the
+    // ~43px a "$1000/mo" label occupies.
+    const dense = Array.from({ length: 21 }, (_, i) => ({
+      budget: 300 + i * 100,
+      novated: 50000 + i * 1000,
+      loan: 52000 + i * 900,
+      upfront: null
+    }));
+    renderChart(root, {
+      points: dense,
+      crossovers: [
+        { budget: 1000, from: 'novated', to: 'loan' },
+        { budget: 1100, from: 'loan', to: 'novated' }
+      ]
+    }, 800);
+    const ys = [...getHtml().matchAll(/class="axis-label axis-label--crossover"[^>]*y="(-?[\d.]+)"/g)]
+      .map(m => m[1]);
+    assert.equal(ys.length, 2, 'expected both crossover labels to render');
+    assert.notEqual(ys[0], ys[1], 'colliding crossover labels must not share a y');
   });
 });

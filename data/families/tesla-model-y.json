@@ -1,19 +1,30 @@
 {
   "id": "tesla-model-y",
-  "summary": "Best-selling electric SUV globally, offering the longest range and lowest energy use of this trio plus access to Tesla's Supercharger network.",
+  "summary": "The Model Y is Australia's highest-volume EV, and since the 2025 'Juniper' overhaul Australian reviewers broadly agree it fixed the old car's crashy ride without surrendering its efficiency or Supercharger advantage. The range now runs from the $58,900 Premium RWD to the $89,400 Performance, plus a $74,900 six-seat Model Y L that lands just $100 under the $75,000 mark a novated-lease buyer cares about. Where reviewers split is the cabin: some rate the 16-inch-screen minimalism as fast and uncluttered, others call the car soulless and will not forgive the absence of Apple CarPlay at any price.",
   "pros": [
-    "Longest range in this comparison at 466km WLTP",
-    "Most efficient of the three at 13.9kWh/100km, lowering running costs",
-    "Direct access to Tesla's extensive Australian Supercharger network and frequent over-the-air updates"
+    "Range per dollar leads the segment: $68,900 buys 600km WLTP in the Premium Long Range AWD, and even the $58,900 Premium RWD claims 466km",
+    "The Juniper update's adaptive dampers and extra sound deadening are the specific thing CarExpert and Chasing Cars single out as fixing the pre-2025 car's harsh ride and road noise",
+    "Model Y L adds a genuinely adult-usable third row and 3.3kW vehicle-to-load for $74,900 — around $20,000 under a Kia EV9 and still inside the FBT-exempt window",
+    "Every variant is rated to tow 1,588kg braked, including the entry RWD, and all carry the 5-star 2025 ANCAP result",
+    "Tesla lifted its Australian warranty to 5 years/unlimited km for cars delivered from 1 January 2026 (previously 4 years/80,000km), with 5 years of roadside assistance"
   ],
   "cons": [
-    "Touchscreen-only controls, including for indicators and gear selection on some builds, split opinion",
-    "Comprehensive insurance premiums tend to run higher than the Kia or BYD due to repair costs",
-    "Braked towing capacity on the RWD variant is lower than the AWD Model Y variants"
+    "No Apple CarPlay or Android Auto on any variant — the single most repeated criticism in Australian reviews and a deal-breaker for some buyers",
+    "Wipers, mirrors, glovebox and drive modes all live in the 16-inch touchscreen; the Juniper update brought the indicator stalk back but nothing else",
+    "The $89,400 Performance costs $20,500 more than the Long Range for 20km less WLTP range, and it is the only variant that pushes a lease past the $75,000 mark",
+    "Resale carries Tesla-specific risk: the entry car's list price fell roughly $16,000 across 2023-24, and Tesla now sells a guaranteed-future-value product locally to reassure buyers about it"
   ],
   "sources": [
-    "https://www.carexpert.com.au/tesla/model-y/2026-rear-wheel-drive-suv-rwd-electric-jsf8wmgo20251114",
-    "https://www.carsguide.com.au/tesla/model-y/price/2026"
+    "https://www.carexpert.com.au/car-news/2026-tesla-model-y-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-tesla-model-y-review",
+    "https://www.carexpert.com.au/car-news/2026-tesla-model-y-l-price-and-specs",
+    "https://www.carsguide.com.au/tesla/model-y/price/2026",
+    "https://www.carsguide.com.au/ev/tesla-model-y-l-101209",
+    "https://www.carsales.com.au/editorial/details/tesla-model-y-l-premium-2026-review-151595/",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/tesla-model-y-performance-2026-review/",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-tesla-model-y-l-price-specs-release-date.html",
+    "https://manofmany.com/auto/cars/2026-tesla-model-y-performance-review",
+    "https://thedriven.io/2026/01/09/tesla-ups-warranty-to-5-year-unlimited-km-in-australia-a-world-first/"
   ],
-  "sourcedAt": "2026-07-25"
+  "sourcedAt": "2026-07-27"
 }
