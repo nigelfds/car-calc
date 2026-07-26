@@ -2636,10 +2636,12 @@ test('a state at defaults serialises to an empty query string', () => {
 
 test('only changed fields are serialised', () => {
   const defaults = defaultState(rates);
-  const changed = { ...defaults, grossSalary: 145000, monthlyBudget: 900 };
+  // Both values must differ from their defaults, or they are correctly omitted.
+  // defaultState sets monthlyBudget to 900, so 900 would NOT be serialised.
+  const changed = { ...defaults, grossSalary: 145000, monthlyBudget: 1200 };
   const query = toQueryString(changed, defaults);
   assert.ok(query.includes('grossSalary=145000'));
-  assert.ok(query.includes('monthlyBudget=900'));
+  assert.ok(query.includes('monthlyBudget=1200'));
   assert.ok(!query.includes('loanRatePct'));
 });
 
