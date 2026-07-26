@@ -167,6 +167,30 @@
     "sourcedAt": "2026-07-26"
   },
   {
+    "id": "deepal-s07",
+    "summary": "The S07 is Australia's first Deepal model, a mid-size electric SUV sold in a single RWD grade and visibly benchmarked against the Tesla Model Y. CarExpert's 2025 review called it competently executed but derivative, marked down for a bouncy ride, a wide turning circle and overreactive driver-assist alerts, while praising its equipment list and quiet cabin. CarsGuide's follow-up in 2026 found Deepal had used over-the-air updates to fix several of those early complaints, lifting its verdict to 7.4/10 and noting the car is a more convincing daily proposition now than at launch, even if it remains an unexciting drive with slower DC charging than key rivals.",
+    "pros": [
+      "Strong standard equipment for the price, including a large tilting touchscreen, augmented-reality head-up display and 14-speaker Sony audio",
+      "Quiet, comfortable cabin with well-insulated highway cruising and good seat ergonomics",
+      "Deepal has shown it will fix early software and driver-assist niggles via over-the-air updates rather than leaving them unresolved",
+      "Undercuts the Tesla Model Y and roughly matches the Kia EV5 on list price while offering a longer 7-year vehicle warranty"
+    ],
+    "cons": [
+      "Bouncy ride quality with excessive body roll in corners, and a poor 11.5m turning circle for a rear-wheel-drive car",
+      "Driver-assistance systems (lane-keep, driver monitoring) were criticised as intrusive and overreactive at launch, and remain only partly resolved",
+      "Capped-price servicing runs dearer over the ownership period than rivals like the Kia EV5",
+      "Slower DC fast-charging than key mid-size EV SUV competitors",
+      "As Australia's newest EV brand with no resale history, and evidence of the brand already discounting hard via drive-away deals well below list price, resale value is genuinely unproven"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2025-deepal-s07-review",
+      "https://www.carexpert.com.au/deepal/s07/price-and-specs",
+      "https://www.carsguide.com.au/ev/deepal-s07-99411",
+      "https://www.deepal.com.au/vehicles/deepal/s07/"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
     "id": "geely-ex5",
     "summary": "The EX5 is Geely's first model for the Australian market, a mid-size front-wheel-drive electric SUV pitched on comfort and value below better-known rivals like the Tesla Model Y. Reviewers consistently praise its quiet, cushioned ride and roomy, lounge-like rear seating, but mark it down for a smaller-than-expected boot, touchscreen-only climate controls, and driving dynamics that favour softness over sharpness. A mid-2026 update brought a larger 68.39kWh battery lifting range to 475km (Complete) and 450km (Inspire), addressing the main complaint about the original 2025 launch cars.",
     "pros": [
@@ -429,6 +453,31 @@
       "https://www.whichcar.com.au/reviews/polestar-4-review-mid-sized-electric-suv",
       "https://thedriven.io/2025/04/09/i-love-the-polestar-4-but-the-rear-view-camera-made-my-wife-carsick/",
       "https://www.carexpert.com.au/car-news/2026-polestar-4-price-and-specs"
+    ],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "subaru-solterra",
+    "summary": "The facelifted 2026 Solterra addresses the original car's biggest weaknesses, gaining a larger 74.7kWh battery, more power (252kW combined) and up to 566km of WLTP range, backed by two rounds of price cuts in six months that make it far more competitive. Australian reviewers rate the driving experience highly - composed, quick and comfortable - and praise the upgraded, more premium-feeling cabin, though they still mark it down for tight practicality, some cabin ergonomic quirks and a ride that could use further tuning. Several reviewers suggest the entry AWD variant is the sweet spot of the range, rather than the higher-priced Touring.",
+    "pros": [
+      "Major step up over the outgoing model: bigger battery, +92kW more power and notably longer range",
+      "Composed, quick and engaging to drive - CarsGuide rated the driving experience 9/10",
+      "Upgraded, more premium-feeling interior with a redesigned console and larger touchscreen",
+      "Two price cuts within six months have made it meaningfully more competitive against rivals like the Tesla Model Y and BYD Sealion 7",
+      "Standard AWD on both variants with a useful 1,500kg tow rating, unusual for a mid-size EV SUV at this price"
+    ],
+    "cons": [
+      "Practicality trails rivals - CarsGuide scored it just 5/10 on practicality, citing tight boot space and no passenger-side glovebox",
+      "Ride quality still needs further tuning - reviewers describe it as firm with more bounciness than ideal",
+      "Cabin ergonomic quirks, including an instrument display that can be partly obstructed and an intrusive driver-monitoring system",
+      "Repeated price cuts so soon after launch raise doubts about resale value and initial pricing",
+      "Touring grade seen as poor value next to the base AWD, which reviewers say is the better buy in the range"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-subaru-solterra-review",
+      "https://www.carsguide.com.au/subaru/solterra",
+      "https://thebeep.com.au/car-news/2026-subaru-solterra-trailseeker-price-cut-australia",
+      "https://www.whichcar.com.au/news/2026-subaru-solterra-electric-mid-size-suv-lands-in-australia"
     ],
     "sourcedAt": "2026-07-26"
   },

@@ -1763,6 +1763,12 @@ which is exactly the case the app exists to illuminate.
 either withdrawn from the Australian market or of uncertain current availability, and would
 consume a research slot to establish that.
 
+**Established NOT on sale during research — do not re-research:**
+- **GWM Ora** — production ended; GWM confirmed the hatch is discontinued and replaced by the
+  Ora 5 SUV, a different vehicle on a different platform. Remaining stock is dealer run-out.
+- **Xpeng G9** — xpeng.com.au shows register-interest only, with no configurator, variants or
+  prices. CarExpert lists only the G6 as XPeng's on-sale Australian model.
+
 If an agent finds its assigned family is not actually on sale in Australia as at the research
 date, it must report that and write no files, rather than inventing a plausible row.
 
