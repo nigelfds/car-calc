@@ -11,7 +11,7 @@ import { renderInputs, bindFreeText } from './sections.js';
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards } from './cars.js';
-import { rankVehicles } from '../../calc/rank.js';
+import { rankVehicles, collapseToTopPerFamily } from '../../calc/rank.js';
 import { crossoverSeries } from '../../calc/compare.js';
 import { money } from './format.js';
 
@@ -130,10 +130,19 @@ function boot(root, dataset) {
   }
 
   function renderShortlist() {
-    const shortlist = rankVehicles(filterVehicles(vehicles, state), state, 5);
-    const cards = shortlist.map(({ vehicle, reasons }) => ({
+    const matches = filterVehicles(vehicles, state);
+    // Rank every matching variant first (no limit — collapsing needs the
+    // full field, including family-mates that would otherwise crowd the
+    // top of the list), then keep one card per family so five cards are
+    // five genuine choices, not one model shown five times.
+    const ranked = rankVehicles(matches, state, matches.length);
+    const shortlist = collapseToTopPerFamily(ranked, 5);
+    const cards = shortlist.map(({ vehicle, reasons, otherTrims }) => ({
       ...cardModel(vehicle, families),
-      reason: reasons[0]
+      reason: reasons[0],
+      otherTrimsText: otherTrims
+        ? `${otherTrims.count} other ${otherTrims.count === 1 ? 'trim' : 'trims'} from ${money(otherTrims.fromPrice)}`
+        : null
     }));
     renderCards(root, cards);
   }

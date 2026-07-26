@@ -785,6 +785,13 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
+.car-other-trims {
+  margin: 0.2em 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
 /* =========================================================================
    Sticky mobile summary bar — visible only below 900px
    ========================================================================= */

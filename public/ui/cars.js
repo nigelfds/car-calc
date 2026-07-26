@@ -72,6 +72,7 @@ export function renderCards(root, cards) {
         <h3>${escapeHtml(card.make)} ${escapeHtml(card.model)} ${escapeHtml(card.variant ?? '')}</h3>
         <p class="car-specs">${card.bootLitresSeatsUp}L boot &middot; ${card.rangeKm}km range &middot; ${money(card.listPrice)}</p>
         ${card.reason ? `<p class="car-reason">${escapeHtml(card.reason)}</p>` : ''}
+        ${card.otherTrimsText ? `<p class="car-other-trims">${escapeHtml(card.otherTrimsText)}</p>` : ''}
         ${card.summary ? `<details>
           <summary>Why this one</summary>
           <p>${escapeHtml(card.summary)}</p>
