@@ -62,8 +62,21 @@ export function novatedQuote(input, tables) {
     : vehicleValue * tables.fbt.statutoryRate * (1 - treatment.discountRate);
 
   const withoutPackaging = netIncome({ grossSalary }, tables);
+
+  // Defence in depth for C3: a pre-tax deduction bigger than the salary it's
+  // deducted from isn't a real scenario — netIncome (calc/tax.js) floors
+  // taxable income at zero either way, so ui/app.js is what stops a
+  // missing/blank/non-positive salary reaching here at all. This clamp
+  // guards the other half — a genuine but very low salary packaging a car
+  // whose lease payment alone exceeds it — so netAnnualCost below can never
+  // be inflated by a deduction that could never actually be withheld from
+  // pay. Reported `annualPreTaxDeduction` stays the true, uncapped figure
+  // (what the lease actually costs pre-tax); only the netIncome comparison
+  // that derives the *cost* of packaging uses the capped value.
+  const safeGrossSalary = Number.isFinite(grossSalary) ? Math.max(0, grossSalary) : 0;
+  const cappedPreTaxDeduction = Math.min(annualPreTaxDeduction, safeGrossSalary);
   const withPackaging = netIncome(
-    { grossSalary, preTaxDeductions: annualPreTaxDeduction },
+    { grossSalary, preTaxDeductions: cappedPreTaxDeduction },
     tables
   );
 

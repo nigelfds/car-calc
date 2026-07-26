@@ -36,12 +36,24 @@ export function applyPreferences(state, preferences) {
   return { state: next, changedFields };
 }
 
-export function renderInputs(root, state, onChange) {
+// Takes `getState` — a getter, not a state value — for the same reason
+// bindFreeText below does: listeners are bound once, at boot, but the state
+// they must act on changes on every edit. app.js's boot() reassigns its
+// local `state` on every onFieldChange; a listener that closed over the
+// `state` *value* passed in at bind time would forever spread that first
+// snapshot back in, silently reverting every field but the one most
+// recently edited (see the C1 fix note in the project's SDD docs). Reading
+// getState() inside the listener, at event time, is what keeps two fields
+// edited in sequence both alive — mirrors renderRatesPanel's
+// panel._ratesState, refreshed on every call rather than captured once.
+export function renderInputs(root, getState, onChange) {
   for (const input of root.querySelectorAll('[data-field]')) {
     const field = input.dataset.field;
-    if (field in state && state[field] !== null) input.value = state[field];
+    const initial = getState();
+    if (field in initial && initial[field] !== null) input.value = initial[field];
 
     input.addEventListener('input', () => {
+      const state = getState();
       const raw = input.value;
       // Number('') is 0, which would silently resurrect a cleared numeric
       // field as zero — leave a cleared field as the empty string instead.

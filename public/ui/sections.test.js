@@ -51,7 +51,7 @@ test('a <select> bound to a numeric state field coerces its value to a Number', 
   const input = fakeInput('termMonths', '60');
   const root = { querySelectorAll: () => [input] };
   let received;
-  renderInputs(root, state, next => { received = next; });
+  renderInputs(root, () => state, next => { received = next; });
 
   input.value = '48'; // simulates picking a different <option>
   input.fire();
@@ -65,7 +65,7 @@ test('a string state field (e.g. leaseStartDate) is left as a string', () => {
   const input = fakeInput('leaseStartDate', '2026-07-25');
   const root = { querySelectorAll: () => [input] };
   let received;
-  renderInputs(root, state, next => { received = next; });
+  renderInputs(root, () => state, next => { received = next; });
 
   input.value = '2026-08-01';
   input.fire();
@@ -82,7 +82,7 @@ test('a numeric field whose default is null (minBootLitres) still coerces to a N
   const input = fakeInput('minBootLitres', '');
   const root = { querySelectorAll: () => [input] };
   let received;
-  renderInputs(root, state, next => { received = next; });
+  renderInputs(root, () => state, next => { received = next; });
 
   input.value = '400';
   input.fire();
@@ -96,13 +96,46 @@ test('clearing a numeric field does not silently coerce to 0', () => {
   const input = fakeInput('grossSalary', '100000');
   const root = { querySelectorAll: () => [input] };
   let received;
-  renderInputs(root, state, next => { received = next; });
+  renderInputs(root, () => state, next => { received = next; });
 
   input.value = '';
   input.fire();
 
   assert.notEqual(received.grossSalary, 0);
   assert.equal(received.grossSalary, '');
+});
+
+// --- C1 regression: renderInputs must read state live, not close over a
+// stale snapshot from bind time. app.js binds renderInputs's listeners
+// once at boot and reassigns its own local `state` on every onChange; a
+// getter is how the listener sees each edit's up-to-date state rather than
+// forever spreading the very first state object it was bound with. Before
+// this fix, editing a second field silently discarded the first (touched
+// was rebuilt from the stale object every time too, so it was always a
+// single-element array no matter how many fields had actually been
+// edited).
+test('firing input on two different fields in sequence keeps both edits and accumulates touched', () => {
+  let state = { grossSalary: 100000, monthlyBudget: 900, touched: [] };
+  const salaryInput = fakeInput('grossSalary', '100000');
+  const budgetInput = fakeInput('monthlyBudget', '900');
+  const root = { querySelectorAll: () => [salaryInput, budgetInput] };
+
+  let received;
+  // Mirrors app.js's boot(): onChange reassigns the same `state` the
+  // getter reads, so renderInputs is exercised exactly as it's really used.
+  renderInputs(root, () => state, next => { received = next; state = next; });
+
+  salaryInput.value = '200000';
+  salaryInput.fire();
+  assert.equal(received.grossSalary, 200000, 'the salary edit is applied');
+  assert.equal(received.monthlyBudget, 900, 'budget is untouched so far');
+  assert.deepEqual(received.touched, ['grossSalary']);
+
+  budgetInput.value = '1500';
+  budgetInput.fire();
+  assert.equal(received.grossSalary, 200000, 'the salary edit must survive editing a second field');
+  assert.equal(received.monthlyBudget, 1500, 'the budget edit is applied');
+  assert.deepEqual(received.touched, ['grossSalary', 'monthlyBudget'], 'touched accumulates both fields');
 });
 
 // --- bindFreeText: timeouts on both tiers ---

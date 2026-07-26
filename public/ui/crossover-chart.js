@@ -57,7 +57,7 @@ const OPTION_DASH = {
   upfront: '2 5'
 };
 
-const money = value => `$${Math.round(value).toLocaleString('en-AU')}`;
+import { money } from './format.js';
 
 function bounds(series) {
   const values = series.points

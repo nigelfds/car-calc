@@ -7,7 +7,11 @@ const tables = JSON.parse(readFileSync(new URL('../../data/tax-tables.json', imp
 
 const vehicle = (id, listPrice) => ({
   id, listPrice, consumptionKwhPer100km: 16, insuranceAnnual: 1850,
-  depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47]
+  depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+  // rankVehicles (calc/rank.js) needs these to score a vehicle — every
+  // dimension but price held equal across fixtures so ranking is driven
+  // solely by the one thing under test.
+  bootLitresSeatsUp: 450, rangeKm: 450, warrantyYears: 7, seats: 5, bodyType: 'SUV'
 });
 
 const inputs = {
@@ -41,6 +45,53 @@ test('upfront is excluded when savings cannot cover the car', () => {
   const fleet = [vehicle('mid', 56000)];
   const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs }, tables);
   assert.equal(v.options.upfront.tco, null);
+});
+
+// --- C2 regression: the verdict must settle on ONE car and compare all
+// three options against it, not let each option independently reach for
+// the dearest car *it* can individually afford (reachableVehicle per
+// option, the old approach) — that put a cheap car's loan total in
+// competition with a dear car's novated total and crowned whichever
+// option could afford the *least* car, because a dearer car has a higher
+// TCO almost by construction.
+
+test('all three reported options price the same vehicle, even though a cheap and a dear car are both in reach', () => {
+  const fleet = [vehicle('cheap', 42500), vehicle('dear', 88900)];
+  const wideInputs = { ...inputs, grossSalary: 145000, termMonths: 60 };
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs: wideInputs }, tables);
+
+  const priced = Object.values(v.options).filter(o => o.vehicle !== null);
+  assert.ok(priced.length >= 2, 'more than one option must be feasible for this fixture');
+  const vehicleIds = new Set(priced.map(o => o.vehicle.id));
+  assert.equal(vehicleIds.size, 1, 'every priced option must refer to the same vehicle');
+  assert.equal(v.vehicle.id, [...vehicleIds][0]);
+});
+
+test('the winner is the lowest-TCO feasible option for the one vehicle the verdict settles on', () => {
+  const fleet = [vehicle('cheap', 42500), vehicle('dear', 88900)];
+  const wideInputs = { ...inputs, grossSalary: 145000, termMonths: 60 };
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs: wideInputs }, tables);
+
+  const feasible = Object.values(v.options).filter(o => o.tco !== null);
+  const lowest = feasible.reduce((best, cur) => (cur.tco < best.tco ? cur : best));
+  assert.equal(v.winner, lowest.option);
+  // Every feasible option — including the winner — must be priced against
+  // the same vehicle the verdict reports overall.
+  for (const option of feasible) {
+    assert.equal(option.vehicle.id, v.vehicle.id);
+  }
+});
+
+test('an option infeasible for the chosen car renders as unreachable, never as the winner', () => {
+  // A single, expensive vehicle: upfront can't be funded by savings, so it
+  // must never win and must never carry a numeric tco.
+  const fleet = [vehicle('dear', 88900)];
+  const tightSavings = { ...inputs, savings: 5000, grossSalary: 145000, termMonths: 60 };
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 2000, inputs: tightSavings }, tables);
+
+  assert.equal(v.options.upfront.tco, null);
+  assert.notEqual(v.winner, 'upfront');
+  if (v.winner) assert.equal(v.options[v.winner].vehicle.id, v.vehicle.id);
 });
 
 // --- renderRatesPanel: re-rendering must never steal focus mid-type ---

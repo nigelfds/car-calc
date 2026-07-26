@@ -13,6 +13,7 @@ import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards } from './cars.js';
 import { rankVehicles } from '../../calc/rank.js';
 import { crossoverSeries } from '../../calc/compare.js';
+import { money } from './format.js';
 
 // crossoverSeries was measured at ~17ms for 80 vehicles across 25 budget
 // steps (Task 18/20 design intent) — over a 16ms frame budget, so this can
@@ -22,14 +23,26 @@ import { crossoverSeries } from '../../calc/compare.js';
 const BUDGET_RANGE = { min: 300, max: 2700, step: 100 };
 const RECOMPUTE_DEBOUNCE_MS = 80;
 
-const money = value => `$${Math.round(value).toLocaleString('en-AU')}`;
-
 const escapeHtml = value =>
   String(value).replace(/[&<>"']/g, ch => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
 
 const OPTION_PHRASE = { novated: 'A novated lease', loan: 'A car loan', upfront: 'Paying cash' };
+
+// C3: a missing/blank (sections.js deliberately writes '' rather than 0 —
+// see NUMERIC_FIELDS.has(field) && raw !== '' there) or non-positive salary
+// must never reach the calc engine. netIncome (calc/tax.js) floors taxable
+// income at zero, so a salary of '' or 0 makes the fall in take-home pay
+// from packaging a car read as zero — every car looks free and the total
+// can go negative (a lease "costing" -$11,463). That's a domain rule
+// (calc/tax.js) this branch is deliberately not touching — the fix is to
+// never call the engine with a salary that can't produce a real answer.
+function hasValidSalary(state) {
+  return typeof state.grossSalary === 'number' &&
+    Number.isFinite(state.grossSalary) &&
+    state.grossSalary > 0;
+}
 
 function buildInputs(state) {
   return {
@@ -84,6 +97,10 @@ function boot(root, dataset) {
   function renderSummaryBar(verdict) {
     const text = root.querySelector('#summary-bar .summary-bar__text');
     if (!text) return;
+    if (verdict.insufficientInput) {
+      text.textContent = 'Enter your gross salary to see what you can afford';
+      return;
+    }
     if (!verdict.winner) {
       text.textContent = 'Fill in your details to see what you can afford';
       return;
@@ -112,14 +129,31 @@ function boot(root, dataset) {
     if (budgetOutput) budgetOutput.textContent = money(state.monthlyBudget);
 
     const inputs = buildInputs(state);
+    const salaryReady = hasValidSalary(state);
 
-    const verdict = verdictAt({ vehicles, budgetMonthly: state.monthlyBudget, inputs }, tables);
+    // Neither the engine nor the chart is called at all when the salary
+    // isn't a real number yet — not called-then-discarded, so there is no
+    // window where a bogus $-11,463 "novated lease is free" figure ever
+    // reaches the DOM (see hasValidSalary's comment for why).
+    const verdict = salaryReady
+      ? verdictAt({ vehicles: filterVehicles(vehicles, state), budgetMonthly: state.monthlyBudget, inputs }, tables)
+      : { winner: null, options: {}, vehicle: null, insufficientInput: true };
     lastVerdict = verdict;
     renderVerdict(root, verdict);
     renderSummaryBar(verdict);
 
-    const series = crossoverSeries({ vehicles, inputs, budgetRange: BUDGET_RANGE }, tables);
-    renderChart(root, series);
+    // crossoverSeries/renderChart are untouched (see C2's note on chart
+    // scope) and both assume a non-empty `points` array — an empty series
+    // would crash renderWinnerBand's `series.points[0].budget` on mobile,
+    // not degrade gracefully. So this simply skips the recompute+repaint
+    // while the salary is invalid, leaving whatever the chart last showed
+    // (always a legitimate render — defaultState()'s salary is valid, so
+    // the very first render() at boot always succeeds) rather than ever
+    // asking the chart to paint zero/negative-cost points.
+    if (salaryReady) {
+      const series = crossoverSeries({ vehicles, inputs, budgetRange: BUDGET_RANGE }, tables);
+      renderChart(root, series);
+    }
 
     renderRatesPanel(root, state, onRatesChange, rates);
 
@@ -191,7 +225,11 @@ function boot(root, dataset) {
     await maybeExplain();
   }
 
-  renderInputs(root, state, onFieldChange);
+  // A getter, not `state` itself — see renderInputs's own doc comment
+  // (ui/sections.js). onFieldChange below reassigns this closure's local
+  // `state`; renderInputs must read it live, at event time, or a second
+  // field edited after the first discards the first (C1).
+  renderInputs(root, () => state, onFieldChange);
 
   const slider = root.querySelector('#budgetSlider');
   if (slider) {

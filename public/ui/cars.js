@@ -8,6 +8,8 @@
 // works with no network) and callers (ui/app.js) are expected to filter
 // here, then rank, then slice, then pass the result to renderCards.
 
+import { money } from './format.js';
+
 export function filterVehicles(vehicles, filters) {
   return vehicles.filter(v => {
     if (filters.bodyTypes?.length && !filters.bodyTypes.includes(v.bodyType)) return false;
@@ -29,8 +31,6 @@ export function cardModel(vehicle, families) {
     image: family?.images?.[0] ?? null
   };
 }
-
-const money = value => `$${Math.round(value).toLocaleString('en-AU')}`;
 
 const escapeHtml = value =>
   String(value).replace(/[&<>"']/g, ch => ({

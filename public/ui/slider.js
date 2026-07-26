@@ -1,4 +1,6 @@
-import { optionCosts, reachableVehicle } from '../../calc/compare.js';
+import { optionCosts } from '../../calc/compare.js';
+import { rankVehicles } from '../../calc/rank.js';
+import { money } from './format.js';
 
 const OPTIONS = ['novated', 'loan', 'upfront'];
 
@@ -9,27 +11,59 @@ const OPTIONS = ['novated', 'loan', 'upfront'];
 // itself (it's always present, just empty).
 const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: null, detail: null });
 
+// C2 fix: settle on ONE car and compare all three options against it,
+// rather than letting each option independently reach for the dearest car
+// *it* can afford (the old behaviour, via reachableVehicle per option).
+// That put the three totals-row figures in competition across different
+// cars — a dearer car has a higher TCO, so it systematically rewarded
+// whichever option could afford the least car (e.g. loan "winning" over
+// novated only because loan could reach nothing better than a cheap
+// hatchback while novated was pricing a $90k SUV). The three numbers in
+// the totals row are presented as like-for-like; this makes them actually
+// be like-for-like, and aligns the verdict with the shortlist rendered
+// below it (calc/rank.js's rankVehicles), which is deterministic and
+// already the mechanism used to choose *that* list's order.
+//
+// `vehicles` is expected to already be filtered to the caller's stated
+// preferences (ui/app.js does this before calling in) — verdictAt itself
+// does no filtering beyond "can at least one option afford it".
 export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
   const options = {};
-  let best = null;
-  let bestVehicle = null;
 
+  const isReachable = vehicle =>
+    OPTIONS.some(option => {
+      const costs = optionCosts({ vehicle, inputs }, tables)[option];
+      return costs.feasible && costs.monthlyCost <= budgetMonthly;
+    });
+
+  const affordableVehicles = vehicles.filter(isReachable);
+
+  if (affordableVehicles.length === 0) {
+    for (const option of OPTIONS) options[option] = emptyOption(option);
+    return { winner: null, options, vehicle: null };
+  }
+
+  // Deterministic, single choice of car — same ranking the shortlist below
+  // the verdict uses. No stated preferences are passed here (verdictAt
+  // only ever receives financial `inputs`, not the filter/preference
+  // fields rankVehicles can weight) so this ranks on the "unstated"
+  // dimensions: boot, range, warranty, and value-for-money.
+  const [{ vehicle }] = rankVehicles(affordableVehicles, {}, 1);
+  const costsByOption = optionCosts({ vehicle, inputs }, tables);
+
+  let best = null;
   for (const option of OPTIONS) {
-    const vehicle = reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables);
-    if (!vehicle) {
+    const costs = costsByOption[option];
+    const feasible = costs.feasible && costs.monthlyCost <= budgetMonthly;
+    if (!feasible) {
       options[option] = emptyOption(option);
       continue;
     }
-    const costs = optionCosts({ vehicle, inputs }, tables)[option];
     options[option] = { option, tco: costs.tco, monthlyCost: costs.monthlyCost, vehicle, detail: costs.detail };
-
-    if (best === null || costs.tco < options[best].tco) {
-      best = option;
-      bestVehicle = vehicle;
-    }
+    if (best === null || costs.tco < options[best].tco) best = option;
   }
 
-  return { winner: best, options, vehicle: bestVehicle };
+  return { winner: best, options, vehicle };
 }
 
 // ---------------------------------------------------------------------------
@@ -65,8 +99,6 @@ export function debounce(fn, waitMs = 80) {
   };
 }
 
-const money = value => `$${Math.round(value).toLocaleString('en-AU')}`;
-
 const escapeHtml = value =>
   String(value).replace(/[&<>"']/g, ch => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -74,6 +106,15 @@ const escapeHtml = value =>
 
 export function renderVerdict(root, verdict) {
   const panel = root.querySelector('#verdict');
+  // C3: a missing/blank/non-positive salary is "not enough information
+  // yet", not a budget that happens to reach nothing — ui/app.js sets this
+  // flag instead of calling verdictAt at all, so this must never be
+  // confused with the "no car reachable" case below (that one still names
+  // a real, if unaffordable, situation; this one has no result to show).
+  if (verdict.insufficientInput) {
+    panel.innerHTML = '<p class="skeleton-note">Enter your gross salary to see what you can afford.</p>';
+    return;
+  }
   if (!verdict.winner) {
     panel.innerHTML = '<p class="skeleton-note">No option reaches a matching car at this budget. Try raising it.</p>';
     return;
