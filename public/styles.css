@@ -226,7 +226,7 @@ input[type='date'],
 #free-text {
   width: 100%;
   resize: vertical;
-  min-height: 6rem;
+  min-height: 8.5rem;
   padding: var(--space-3);
   border: 1px solid var(--hairline);
   border-radius: 8px;
