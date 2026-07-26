@@ -34,6 +34,7 @@ export function mergeParsed(keywordResult, claudeResult) {
   if (!claudeResult) return keywordResult;
   const merged = { ...keywordResult };
   for (const [key, value] of Object.entries(claudeResult)) {
+    if (key === 'clarifyingQuestion') continue;
     if (value !== null && value !== undefined) {
       if (Array.isArray(value) && value.length === 0) continue;
       merged[key] = value;
@@ -42,20 +43,40 @@ export function mergeParsed(keywordResult, claudeResult) {
   return merged;
 }
 
+// A history entry must look like a real message: a role Claude accepts and
+// string content. Anything else would be passed straight to the model.
+function isValidHistoryEntry(entry) {
+  return (
+    entry !== null &&
+    typeof entry === 'object' &&
+    !Array.isArray(entry) &&
+    (entry.role === 'user' || entry.role === 'assistant') &&
+    typeof entry.content === 'string'
+  );
+}
+
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-  const { text, history = [] } = req.body ?? {};
+  const { text, history } = req.body ?? {};
   if (typeof text !== 'string' || text.trim() === '') {
     return res.status(400).json({ error: 'text is required' });
   }
+
+  if (history !== undefined && !Array.isArray(history)) {
+    return res.status(400).json({ error: 'history must be an array' });
+  }
+  if (history !== undefined && !history.every(isValidHistoryEntry)) {
+    return res.status(400).json({ error: 'history entries must have a role of user or assistant and string content' });
+  }
+  const safeHistory = history ?? [];
 
   const keywordResult = parseKeywords(text);
 
   const claudeResult = await askClaude({
     model: MODELS.parse,
     system: SYSTEM,
-    messages: [...history, { role: 'user', content: text }],
+    messages: [...safeHistory, { role: 'user', content: text }],
     tool: TOOL,
     schema: parseSchema
   });

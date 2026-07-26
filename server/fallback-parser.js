@@ -90,7 +90,7 @@ export function parseKeywords(text) {
   }
 
   if (/\bdog\b|\bpram\b|\bcamping\b|\bbig boot\b|\blarge boot\b/i.test(text)) {
-    result.minBootLitres = /\blarge dog\b|\bbig dog\b|\bcrate\b/i.test(text) ? 500 : 400;
+    result.minBootLitres = /\blarge dog\b|\bbig dog\b|\bcrate\b|\bbig boot\b|\blarge boot\b/i.test(text) ? 500 : 400;
   }
 
   const range = text.match(/(\d{3})\s*(?:\+)?\s*km/i);

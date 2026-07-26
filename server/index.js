@@ -40,6 +40,14 @@ app.get('/api/health', (req, res) => {
   res.json({ ok: true, vehicles: dataset.vehicles.length });
 });
 
+// Catch-all error handler: log the real error server-side, but never leak
+// stack traces or internal details to the client (e.g. in production on Heroku).
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({ error: 'Internal server error' });
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on ${port}`));
 

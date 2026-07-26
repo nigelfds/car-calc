@@ -30,6 +30,15 @@ test('infers a boot requirement from a dog', () => {
   assert.ok(r.minBootLitres >= 500);
 });
 
+test('an explicit big boot escalates minBootLitres even without "big dog"', () => {
+  const r = parseKeywords('I want an SUV with a big boot for my dog');
+  assert.ok(r.minBootLitres >= 500);
+});
+
+test('a bare dog mention keeps the softer default', () => {
+  assert.equal(parseKeywords('I have a dog').minBootLitres, 400);
+});
+
 test('extracts a range requirement', () => {
   assert.equal(parseKeywords('I want at least 400km of range').minRangeKm, 400);
 });
