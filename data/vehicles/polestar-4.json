@@ -1,0 +1,42 @@
+[
+  {
+    "id": "polestar-4-long-range-single-motor",
+    "familyId": "polestar-4",
+    "make": "Polestar",
+    "model": "4",
+    "variant": "Long Range Single Motor",
+    "bodyType": "SUV",
+    "listPrice": 78500,
+    "batteryKwh": 94,
+    "rangeKm": 620,
+    "consumptionKwhPer100km": 17.8,
+    "bootLitresSeatsUp": 526,
+    "bootLitresSeatsDown": 1536,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2350,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "polestar-4-long-range-dual-motor",
+    "familyId": "polestar-4",
+    "make": "Polestar",
+    "model": "4",
+    "variant": "Long Range Dual Motor",
+    "bodyType": "SUV",
+    "listPrice": 88350,
+    "batteryKwh": 94,
+    "rangeKm": 590,
+    "consumptionKwhPer100km": 18.7,
+    "bootLitresSeatsUp": 526,
+    "bootLitresSeatsDown": 1536,
+    "seats": 5,
+    "towKg": 2000,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2650,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-26"
+  }
+]

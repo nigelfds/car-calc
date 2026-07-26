@@ -1,0 +1,22 @@
+[
+  {
+    "id": "chery-e5-ultimate",
+    "familyId": "chery-omoda-e5",
+    "make": "Chery",
+    "model": "E5",
+    "variant": "Ultimate",
+    "bodyType": "SUV",
+    "listPrice": 36990,
+    "batteryKwh": 58.9,
+    "rangeKm": 430,
+    "consumptionKwhPer100km": 13.0,
+    "bootLitresSeatsUp": 300,
+    "bootLitresSeatsDown": 1079,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1550,
+    "depreciationCurve": [1, 0.7, 0.58, 0.5, 0.44, 0.39],
+    "sourcedAt": "2026-07-26"
+  }
+]
