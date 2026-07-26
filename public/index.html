@@ -140,10 +140,18 @@
         <span class="section-heading__eyebrow">2</span> What you can afford
       </h2>
 
+      <div class="budget-slider">
+        <label for="budgetSlider">Monthly budget: <output id="budgetSliderValue" for="budgetSlider">$900</output></label>
+        <input type="range" id="budgetSlider" name="budgetSlider" data-field="monthlyBudget"
+          min="300" max="3000" step="25" value="900" />
+      </div>
+
       <div id="verdict" class="verdict-panel">
         <p class="skeleton-note">Fill in the form and we'll work out which way of paying — novated lease, car loan
           or cash — gets you the most car for your budget.</p>
       </div>
+
+      <div id="explanation" class="explanation-panel" aria-live="polite"></div>
 
       <p class="disclaimer">
         <strong>General information only.</strong> This tool does not take account of your objectives, financial
@@ -193,12 +201,6 @@
     <p>General information only — not personal financial advice.</p>
   </footer>
 
-  <script type="module">
-    // ui/app.js (a later task) wires this page up to state, the API and the
-    // ranking/chart modules. For now, load the one module this task owns so
-    // the page proves out native ES module loading with no console errors.
-    import { defaultState, toQueryString, fromQueryString } from './ui/state.js';
-    window.__evCalc = { defaultState, toQueryString, fromQueryString };
-  </script>
+  <script type="module" src="ui/app.js"></script>
 </body>
 </html>

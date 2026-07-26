@@ -459,6 +459,47 @@ input[type='date'],
   min-height: 3rem;
 }
 
+/* The one range input the design calls "the slider" — drags it and the
+   verdict/chart/shortlist below recompute locally (debounced, see
+   ui/app.js), with no network call. */
+.budget-slider {
+  margin-bottom: var(--space-4);
+}
+
+.budget-slider label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-2);
+}
+
+.budget-slider output {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.budget-slider input[type='range'] {
+  width: 100%;
+  accent-color: var(--line-lease);
+}
+
+.explanation-panel:empty {
+  display: none;
+}
+
+.explanation-panel__text {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--line-lease-bg);
+  border-radius: 6px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
 /* =========================================================================
    Crossover chart — Task 19. Two renderings of one series, chosen in JS by
    container width at the project's 900px breakpoint:
@@ -673,6 +714,36 @@ input[type='date'],
   height: 1.3rem;
   color: var(--ink-soft);
   flex-shrink: 0;
+}
+
+.car-image {
+  flex-shrink: 0;
+  width: 3.5rem;
+}
+
+.car-image img {
+  width: 3.5rem;
+  height: 2.6rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.car-body h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.car-specs {
+  margin: 0.2em 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.car-reason {
+  margin: 0.3em 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
 }
 
 /* =========================================================================

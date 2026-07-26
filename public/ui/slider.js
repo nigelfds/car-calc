@@ -207,7 +207,14 @@ export function renderRatesPanel(root, state, onChange, rates = null) {
   for (const button of panel.querySelectorAll('[data-reset]')) {
     button.addEventListener('click', () => {
       const field = button.dataset.reset;
-      if (field in defaults) onChange({ ...state, [field]: defaults[field] });
+      // Guard against writing `undefined` into state: when renderRatesPanel
+      // is called with no `rates` (rates === null), the researched-default
+      // fields (leaseRatePct, loanRatePct, adminFeeAnnual,
+      // opportunityRatePct) have nothing to reset to. ui/app.js always
+      // fetches /api/dataset once and passes rates through, so this branch
+      // is a defence-in-depth guard, not the primary fix.
+      if (!(field in defaults) || defaults[field] === undefined) return;
+      onChange({ ...state, [field]: defaults[field] });
     });
   }
 }
