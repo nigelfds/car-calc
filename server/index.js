@@ -3,6 +3,8 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { loadDataset } from '../data/schema.js';
+import parseRoute from './routes/parse.js';
+import explainRoute from './routes/explain.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const readJson = name =>
@@ -21,6 +23,8 @@ if (dataset.skipped.length > 0) {
 const app = express();
 app.use(express.json({ limit: '64kb' }));
 app.use(express.static(join(here, '..', 'public')));
+app.use('/api/parse', parseRoute);
+app.use('/api/explain', explainRoute);
 
 app.get('/api/dataset', (req, res) => {
   res.json({
