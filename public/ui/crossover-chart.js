@@ -224,11 +224,55 @@ function layoutEndLabels(entries, minGap) {
   return laidOut;
 }
 
+// Every crossover label sits above the plot at the same height, so two
+// crossovers close together used to overprint into mush ("$110$1200/mo").
+// A denser dataset makes that routine: more variants means more budgets at
+// which the cheapest option flips. Sliding a label sideways is not an option
+// — it would sit above the wrong budget — so each label keeps the x of its
+// own marker line and collisions are stacked onto additional rows instead.
+const CROSSOVER_LABEL_CHAR_WIDTH = 5.4; // 9px monospace
+const CROSSOVER_LABEL_GAP = 4;
+const CROSSOVER_LABEL_ROW_HEIGHT = 11;
+
+export function layoutCrossoverLabels(entries, options = {}) {
+  const charWidth = options.charWidth ?? CROSSOVER_LABEL_CHAR_WIDTH;
+  const gap = options.gap ?? CROSSOVER_LABEL_GAP;
+  // Rightmost edge claimed so far on each row. A label may drop back to an
+  // earlier row as soon as it clears whatever is already sitting there.
+  const rowRightEdge = [];
+  return [...entries]
+    .sort((a, b) => a.x - b.x)
+    .map(entry => {
+      const halfWidth = (`$${entry.budget}/mo`.length * charWidth) / 2;
+      const left = entry.x - halfWidth;
+      let row = 0;
+      while (rowRightEdge[row] !== undefined && left < rowRightEdge[row] + gap) row++;
+      rowRightEdge[row] = Math.max(rowRightEdge[row] ?? -Infinity, entry.x + halfWidth);
+      return { ...entry, row };
+    });
+}
+
 function renderLineChart(target, series, budgetMonthly) {
   const { min, max } = bounds(series);
-  const margin = { top: 26, right: 112, bottom: 30, left: 64 };
   const plotWidth = 560;
   const plotHeight = 190;
+
+  // Laid out before the margin is fixed, because stacked label rows are what
+  // decide how much headroom the plot needs.
+  const crossoverLabels = layoutCrossoverLabels(
+    series.crossovers.map(crossover => ({
+      ...crossover,
+      x: budgetToX(series, crossover.budget, plotWidth)
+    }))
+  );
+  const extraLabelRows = crossoverLabels.reduce((most, e) => Math.max(most, e.row), 0);
+
+  const margin = {
+    top: 26 + extraLabelRows * CROSSOVER_LABEL_ROW_HEIGHT,
+    right: 112,
+    bottom: 30,
+    left: 64
+  };
   const width = plotWidth + margin.left + margin.right;
   const height = plotHeight + margin.top + margin.bottom;
   const lastIndex = series.points.length - 1 || 1;
@@ -252,11 +296,14 @@ function renderLineChart(target, series, budgetMonthly) {
   }).join('');
 
   // The point of this chart: mark exactly where the cheapest option flips.
-  const crossoverMarkers = series.crossovers.map(crossover => {
-    const x = budgetToX(series, crossover.budget, plotWidth);
+  const crossoverMarkers = crossoverLabels.map(crossover => {
+    const x = crossover.x;
+    // Row 0 is nearest the plot; extra rows stack upward into the headroom
+    // reserved in margin.top above.
+    const labelY = -10 - crossover.row * CROSSOVER_LABEL_ROW_HEIGHT;
     return `<g>
       <line class="crossover-line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="0" y2="${plotHeight}" />
-      <text class="axis-label axis-label--crossover" x="${x.toFixed(1)}" y="-10" text-anchor="middle">$${crossover.budget}/mo</text>
+      <text class="axis-label axis-label--crossover" x="${x.toFixed(1)}" y="${labelY}" text-anchor="middle">$${crossover.budget}/mo</text>
     </g>`;
   }).join('');
 

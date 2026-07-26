@@ -27,8 +27,7 @@ export function cardModel(vehicle, families) {
     summary: family?.summary ?? null,
     pros: family?.pros ?? [],
     cons: family?.cons ?? [],
-    sources: family?.sources ?? [],
-    image: family?.images?.[0] ?? null
+    sources: family?.sources ?? []
   };
 }
 
@@ -36,18 +35,6 @@ const escapeHtml = value =>
   String(value).replace(/[&<>"']/g, ch => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
-
-const SILHOUETTE_IDS = new Set(['SUV', 'Sedan', 'Hatch', 'Wagon', 'Ute']);
-
-// Photography is deliberately out of scope for this project (see the sprite
-// in index.html) — the silhouette is the normal rendering for every car,
-// not a fallback for a missing/broken image. A family's `images[0]` (when
-// present) is layered on top of it; the sprite is what's still there if
-// that image URL 404s.
-function silhouetteMarkup(bodyType) {
-  const id = SILHOUETTE_IDS.has(bodyType) ? bodyType : 'Sedan';
-  return `<svg class="car-card__silhouette" viewBox="0 0 120 44" aria-hidden="true"><use href="#silhouette-${id}"></use></svg>`;
-}
 
 export function renderCards(root, cards) {
   const target = root.querySelector('#car-list');
@@ -58,16 +45,13 @@ export function renderCards(root, cards) {
     return;
   }
 
+  // No car imagery at all: photography was always out of scope, and the
+  // body-type silhouette that stood in for it was costing a fixed 3.5rem of
+  // every card's width to convey one fact ("it's an SUV") that the specs line
+  // and the filters already carry. The space goes to the text instead.
   target.innerHTML = cards.map(card => {
-    const bodyType = SILHOUETTE_IDS.has(card.bodyType) ? card.bodyType : 'Sedan';
     return `
     <article class="car-card" data-id="${escapeHtml(card.id)}">
-      <div class="car-image">
-        ${card.image
-          ? `<img src="${escapeHtml(card.image)}" alt="${escapeHtml(card.make)} ${escapeHtml(card.model)}" loading="lazy"
-                  onerror="this.replaceWith(document.querySelector('#silhouette-${bodyType}').cloneNode(true))">`
-          : silhouetteMarkup(card.bodyType)}
-      </div>
       <div class="car-body">
         <h3>${escapeHtml(card.make)} ${escapeHtml(card.model)} ${escapeHtml(card.variant ?? '')}</h3>
         <p class="car-specs">${card.bootLitresSeatsUp}L boot &middot; ${card.rangeKm}km range &middot; ${money(card.listPrice)}</p>
