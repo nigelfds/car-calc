@@ -1,0 +1,42 @@
+[
+  {
+    "id": "byd-sealion-7-premium",
+    "familyId": "byd-sealion-7",
+    "make": "BYD",
+    "model": "Sealion 7",
+    "variant": "Premium",
+    "bodyType": "SUV",
+    "listPrice": 54990,
+    "batteryKwh": 82.5,
+    "rangeKm": 482,
+    "consumptionKwhPer100km": 17.0,
+    "bootLitresSeatsUp": 500,
+    "bootLitresSeatsDown": 1789,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1650,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "byd-sealion-7-performance",
+    "familyId": "byd-sealion-7",
+    "make": "BYD",
+    "model": "Sealion 7",
+    "variant": "Performance",
+    "bodyType": "SUV",
+    "listPrice": 63990,
+    "batteryKwh": 82.5,
+    "rangeKm": 456,
+    "consumptionKwhPer100km": 17.9,
+    "bootLitresSeatsUp": 500,
+    "bootLitresSeatsDown": 1789,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1900,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-26"
+  }
+]

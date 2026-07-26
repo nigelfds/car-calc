@@ -1,0 +1,37 @@
+{
+  "financialYear": "2026-27",
+  "incomeTaxBrackets": [
+    { "upTo": 18200, "rate": 0 },
+    { "upTo": 45000, "rate": 0.15 },
+    { "upTo": 135000, "rate": 0.30 },
+    { "upTo": 190000, "rate": 0.37 },
+    { "upTo": null, "rate": 0.45 }
+  ],
+  "medicareLevy": {
+    "rate": 0.02,
+    "lowIncomeThreshold": 27222,
+    "shadeOutTo": 34027,
+    "note": "2025-26 figures, refresh when ATO publishes 2026-27"
+  },
+  "lito": { "max": 700, "taperFrom": 37500, "taperRate": 0.05, "secondTaperFrom": 45000, "secondTaperRate": 0.015 },
+  "lct": { "fuelEfficientThreshold": 91661, "otherThreshold": 80809, "rate": 0.33 },
+  "carLimit": { "value": 69883, "maxGstCredit": 6353 },
+  "residuals": { "12": 0.6563, "24": 0.5625, "36": 0.4688, "48": 0.375, "60": 0.2813 },
+  "fbtPhases": [
+    { "from": "1900-01-01", "fullExemptionUpTo": null, "discountRate": 0 },
+    { "from": "2027-04-01", "fullExemptionUpTo": 75000, "discountRate": 0.25 },
+    { "from": "2029-04-01", "fullExemptionUpTo": 0, "discountRate": 0.25 }
+  ],
+  "fbt": { "statutoryRate": 0.20, "grossUpType1": 2.0802, "rate": 0.47 },
+  "vicDuty": {
+    "greenRatePer200": 8.40,
+    "otherTiers": [
+      { "upTo": 80809, "ratePer200": 8.40 },
+      { "upTo": 100000, "ratePer200": 10.40 },
+      { "upTo": 150000, "ratePer200": 14.00 },
+      { "upTo": null, "ratePer200": 18.00 }
+    ]
+  },
+  "registrationAnnual": 880,
+  "sourcedAt": "2026-07-25"
+}

@@ -1,0 +1,836 @@
+/* =========================================================================
+   Can I afford an EV? — design tokens
+
+   The subject: three ways to pay for the same car (novated lease, car loan,
+   cash), which this tool tracks like three lines on a Melbourne transit
+   map — each gets one identity colour, used consistently everywhere that
+   option appears (now: the legend; later: the crossover chart and car
+   cards). Numeric readouts use a monospaced face, a nod to a station
+   departure board — the numbers you actually came here for.
+   ========================================================================= */
+
+:root {
+  /* Surfaces */
+  --paper: #eef1ee;
+  --paper-raised: #ffffff;
+  --hairline: #d3d9d2;
+
+  /* Text */
+  --ink: #161b1f;
+  --ink-soft: #4b5560;
+  --ink-faint: #7a8480;
+
+  /* The three "lines": novated lease, car loan, cash.
+     loan and cash were re-picked together (Task 19 review, issue 4): the
+     old navy (#2b5c86) and teal (#1f7a5c) sit only ~13 ΔE apart in OKLab
+     under normal vision — below the 15 floor a full-colour reader needs to
+     tell two hues apart — and both fall below the OKLCH chroma floor that
+     keeps a colour reading as a colour rather than a gray. loan moved to a
+     deeper, more saturated blue at nearly the same hue (chroma 0.087→0.115,
+     L 0.461→0.441); cash moved off teal entirely to a violet
+     (H 166°→302°), pushed away in hue AND lightness rather than nudged, so
+     it clears both the CVD-simulated (protan/deutan, ΔE >= 11.9) and
+     normal-vision (ΔE 19.8) separation floors against loan. Validated with
+     dataviz's validate_palette.js — all checks pass, --pairs adjacent and
+     --pairs all (winner-band segments can land adjacent in any order,
+     unlike a fixed-order legend). */
+  --line-lease: #b96a1e;
+  --line-lease-bg: #f7e9d8;
+  --line-loan: #10558f;
+  --line-loan-bg: #d8e6f5;
+  --line-cash: #8f59d1;
+  --line-cash-bg: #e8e0f9;
+
+  /* System */
+  --warn: #9c2f22;
+  --warn-bg: #f6e2de;
+  --focus-ring: #2b5c86;
+
+  /* Type */
+  --font-text: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* Rhythm */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --radius: 10px;
+
+  color-scheme: light;
+}
+
+/* =========================================================================
+   Reset & base
+   ========================================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, textarea, input, select, button {
+  font-family: inherit;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+button { font: inherit; }
+
+a { color: var(--line-loan); }
+
+/* Numeric / data readouts get the mono face throughout */
+input[type='number'],
+input[type='date'],
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--paper-raised);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 0 6px 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================================
+   Header
+   ========================================================================= */
+
+.site-header {
+  background: var(--paper-raised);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.site-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) var(--space-4);
+}
+
+.wordmark {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.wordmark__mark {
+  color: var(--line-lease);
+}
+
+.site-header__subhead {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: 46ch;
+}
+
+/* The route-map fragment: three lines meeting, the visual signature that
+   recurs wherever the three payment options are compared. */
+.route-rule {
+  display: flex;
+  height: 4px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.route-rule__seg { flex: 1; }
+.route-rule__seg--lease { background: var(--line-lease); }
+.route-rule__seg--loan { background: var(--line-loan); }
+.route-rule__seg--cash { background: var(--line-cash); }
+
+/* =========================================================================
+   Layout — mobile-first stack, three columns from 900px
+   ========================================================================= */
+
+.sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sections > section {
+  background: var(--paper-raised);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+@media (min-width: 900px) {
+  .sections {
+    display: grid;
+    grid-template-columns: 250px 1fr 236px;
+    gap: 1rem;
+    align-items: start;
+  }
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.section-heading__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 0.05em 0.4em;
+}
+
+/* =========================================================================
+   Section 1 — about you
+   ========================================================================= */
+
+.field-group + .field-group { margin-top: var(--space-5); }
+
+.field-group--free-text label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+#free-text {
+  width: 100%;
+  resize: vertical;
+  min-height: 8.5rem;
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#free-text::placeholder { color: var(--ink-faint); }
+
+#free-text:focus {
+  background: var(--paper-raised);
+}
+
+.free-text__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.55em 1.1em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.button--primary {
+  background: var(--ink);
+  color: var(--paper-raised);
+}
+
+.button--primary:hover { background: #000; }
+
+.parse-status {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  min-height: 1.2em;
+}
+
+.field-group--numeric {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-1);
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 0.5em 0.7em;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.field select { font-family: var(--font-text); }
+
+.field input:focus,
+.field select:focus {
+  background: var(--paper-raised);
+}
+
+.field__input {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  padding-inline: 0.6em;
+}
+
+.field__input input {
+  border: none;
+  background: transparent;
+  padding-block: 0.5em;
+  padding-inline: 0.2em;
+}
+
+.field__input input:focus { outline-offset: -2px; }
+
+.field__input:focus-within { background: var(--paper-raised); }
+
+.field__prefix, .field__suffix {
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+/* Brief highlight used when parsing free text fills a field in, so the
+   hand-off from prose to numbers is visible. */
+.field-updated {
+  animation: field-updated-flash 1.6s ease-out;
+}
+
+@keyframes field-updated-flash {
+  0% { background-color: var(--line-lease-bg); }
+  100% { background-color: transparent; }
+}
+
+/* =========================================================================
+   Section 2 — what you can afford
+   ========================================================================= */
+
+.verdict-panel {
+  min-height: 4rem;
+}
+
+.verdict-panel .winner {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.verdict-panel .detail {
+  margin-top: var(--space-1);
+  color: var(--ink-soft);
+}
+
+.verdict-panel .totals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.verdict-panel .total {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+}
+
+.verdict-panel .total span {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.verdict-panel .total strong {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+}
+
+.verdict-panel .total.is-winner {
+  border-color: var(--line-lease);
+  background: var(--line-lease-bg);
+}
+
+.disclaimer {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--paper);
+  border-left: 3px solid var(--ink-faint);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.disclaimer strong { color: var(--ink); }
+
+.fbt-caveat {
+  margin: var(--space-3) 0 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.line-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin: var(--space-5) 0 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--hairline);
+}
+
+.line-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.line-legend__dot {
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.line-legend__dot--lease { background: var(--line-lease); }
+.line-legend__dot--loan { background: var(--line-loan); }
+.line-legend__dot--cash { background: var(--line-cash); }
+
+.crossover-panel, .rates-panel {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--hairline);
+  min-height: 3rem;
+}
+
+/* The one range input the design calls "the slider" — drags it and the
+   verdict/chart/shortlist below recompute locally (debounced, see
+   ui/app.js), with no network call. */
+.budget-slider {
+  margin-bottom: var(--space-4);
+}
+
+.budget-slider label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-2);
+}
+
+.budget-slider output {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.budget-slider input[type='range'] {
+  width: 100%;
+  accent-color: var(--line-lease);
+}
+
+.explanation-panel:empty {
+  display: none;
+}
+
+.explanation-panel__text {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--line-lease-bg);
+  border-radius: 6px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* =========================================================================
+   Crossover chart — Task 19. Two renderings of one series, chosen in JS by
+   container width at the project's 900px breakpoint:
+     - desktop: three SVG lines, cost against budget.
+     - mobile: a single "winner band" — three thin lines in ~96px of height
+       don't read on a phone, so the whole width becomes coloured segments
+       showing who's cheapest at each point on the budget slider.
+   Colours match the .line-legend dots above (lease/loan/cash). Colour is
+   never the only identity channel: the desktop lines also carry a stroke
+   pattern (solid / dashed / dotted), and both renderings carry direct
+   text labels.
+   ========================================================================= */
+
+.crossover-chart {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.crossover-chart .grid-line {
+  stroke: var(--hairline);
+  stroke-width: 1;
+}
+
+/* The vertical marker at a crossover — where the cheapest option flips.
+   Dashed on purpose: this is a threshold annotation, not chart grid. */
+.crossover-chart .crossover-line {
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.crossover-chart .axis-label {
+  fill: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 9px;
+}
+
+.crossover-chart .axis-label--crossover {
+  fill: var(--ink-soft);
+  font-weight: 600;
+}
+
+.crossover-chart .line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.crossover-chart .line-novated { stroke: var(--line-lease); }
+.crossover-chart .line-loan { stroke: var(--line-loan); }
+.crossover-chart .line-upfront { stroke: var(--line-cash); }
+
+.crossover-chart .marker,
+.crossover-chart .end-dot {
+  stroke: var(--paper-raised);
+  stroke-width: 2;
+}
+
+.crossover-chart .marker-novated,
+.crossover-chart .end-dot-novated { fill: var(--line-lease); }
+.crossover-chart .marker-loan,
+.crossover-chart .end-dot-loan { fill: var(--line-loan); }
+.crossover-chart .marker-upfront,
+.crossover-chart .end-dot-upfront { fill: var(--line-cash); }
+
+.crossover-chart .leader-line {
+  stroke: var(--ink-faint);
+  stroke-width: 1;
+}
+
+/* Direct end-labels render in ink, never the series colour — the adjacent
+   dot carries identity, so the text itself stays legible as text. */
+.crossover-chart .end-label {
+  fill: var(--ink-soft);
+  font-family: var(--font-text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* I7: marks where the user's own budget sits on the chart. Deliberately
+   distinct from .crossover-line (which marks where the winner flips) —
+   solid, not dashed, and carries a small flag at the top rather than a
+   text label, so it never gets mistaken for another crossover threshold. */
+.crossover-chart .budget-marker__line {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.crossover-chart .budget-marker__flag {
+  fill: var(--ink);
+}
+
+.winner-band {
+  position: relative;
+  height: 3.25rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.winner-band .band {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid var(--paper-raised);
+}
+
+.winner-band .band:last-child { border-right: none; }
+
+.winner-band .band-novated { background: var(--line-lease); }
+.winner-band .band-loan { background: var(--line-loan); }
+.winner-band .band-upfront { background: var(--line-cash); }
+
+/* Issue 3: nothing affordable at any sampled budget. Deliberately neutral
+   (ink-soft, not one of the three option hues) plus a diagonal hatch — a
+   texture channel, not just another flat colour — so this reads as "no
+   answer" rather than a fourth option. */
+.winner-band .band-none {
+  background:
+    repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.12) 0 6px,
+      transparent 6px 12px),
+    var(--ink-soft);
+}
+
+/* 1.2rem/700 clears the WCAG large-text bold threshold (14pt / 18.66px),
+   which matters here: white text is ~4.1:1 on lease, ~7.7:1 on loan and
+   ~4.6:1 on cash — all clear the large-text floor, none clear body-size
+   (4.5:1), which is why this stays bold/large rather than shrinking. Every
+   band always carries this label — a full word at >=16% width, a one- or
+   two-character abbreviation (OPTION_ABBR) below that — so identity never
+   depends on colour alone even for a narrow crossover sliver. */
+.winner-band .band__label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0 0.35em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* I7: same budget marker as the desktop chart's .budget-marker__line,
+   expressed as an absolutely-positioned strip since the winner band isn't
+   SVG. A thin light stripe plus a small triangular flag at the top reads
+   over any of the three band colours. */
+.winner-band__budget-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.winner-band__budget-marker::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5));
+}
+
+.winner-band__scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+.rates-panel__intro {
+  margin: 0 0 var(--space-4);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.rates-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.rates-panel .rates-panel__intro {
+  grid-column: 1 / -1;
+}
+
+.rate-field__provenance {
+  margin: var(--space-1) 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--ink-faint);
+}
+
+.rate-field__reset {
+  margin-top: var(--space-2);
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--line-loan);
+  cursor: pointer;
+}
+
+.rate-field__reset:hover { text-decoration: underline; }
+
+@media (min-width: 640px) {
+  .rates-panel { grid-template-columns: repeat(2, 1fr); }
+}
+
+.skeleton-note {
+  margin: 0;
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* =========================================================================
+   Section 3 — cars that match
+   ========================================================================= */
+
+.car-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.car-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+}
+
+.car-card__silhouette {
+  width: 3.5rem;
+  height: 1.3rem;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+
+.car-image {
+  flex-shrink: 0;
+  width: 3.5rem;
+}
+
+.car-image img {
+  width: 3.5rem;
+  height: 2.6rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.car-body h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.car-specs {
+  margin: 0.2em 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.car-reason {
+  margin: 0.3em 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+
+.car-other-trims {
+  margin: 0.2em 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+/* =========================================================================
+   Sticky mobile summary bar — visible only below 900px
+   ========================================================================= */
+
+.summary-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--ink);
+  color: var(--paper-raised);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.summary-bar__arrow { color: var(--line-lease); font-weight: 700; }
+
+@media (min-width: 900px) {
+  .summary-bar { display: none; }
+}
+
+/* =========================================================================
+   Footer
+   ========================================================================= */
+
+.site-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) var(--space-6);
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.site-footer p { margin: 0; }

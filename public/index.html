@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Can I afford an EV? — Melbourne affordability calculator</title>
+  <meta name="description" content="Work out what EV you can actually afford in Melbourne, and whether a novated lease, a car loan or paying cash gets you there for less." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Silhouette sprite: the permanent visual treatment for cars in this tool
+       (no photography). Referenced elsewhere with <use href="#silhouette-…">. -->
+  <svg aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
+    <defs>
+      <symbol id="silhouette-SUV" viewBox="0 0 120 44">
+        <path fill="currentColor" d="M8,34 L8,24 L12,16 L34,16 L40,6 L96,6 L102,16 L108,16 L108,34 Z" />
+        <circle fill="currentColor" cx="28" cy="34" r="7.5" />
+        <circle fill="currentColor" cx="94" cy="34" r="7.5" />
+      </symbol>
+      <symbol id="silhouette-Sedan" viewBox="0 0 120 44">
+        <path fill="currentColor" d="M8,34 L8,26 L12,20 L34,20 L40,12 L76,12 L82,20 L104,20 L112,26 L112,34 Z" />
+        <circle fill="currentColor" cx="28" cy="34" r="7" />
+        <circle fill="currentColor" cx="92" cy="34" r="7" />
+      </symbol>
+      <symbol id="silhouette-Hatch" viewBox="0 0 120 44">
+        <path fill="currentColor" d="M8,34 L8,26 L12,20 L32,20 L38,12 L66,12 L94,24 L100,24 L100,34 Z" />
+        <circle fill="currentColor" cx="26" cy="34" r="7" />
+        <circle fill="currentColor" cx="82" cy="34" r="7" />
+      </symbol>
+      <symbol id="silhouette-Wagon" viewBox="0 0 120 44">
+        <path fill="currentColor" d="M8,34 L8,26 L12,20 L34,20 L40,12 L98,12 L104,20 L110,20 L110,34 Z" />
+        <circle fill="currentColor" cx="28" cy="34" r="7" />
+        <circle fill="currentColor" cx="94" cy="34" r="7" />
+      </symbol>
+      <symbol id="silhouette-Ute" viewBox="0 0 120 44">
+        <path fill="currentColor" d="M8,34 L8,26 L12,20 L30,20 L36,12 L54,12 L60,20 L100,20 L100,16 L104,16 L104,20 L108,20 L108,34 Z" />
+        <circle fill="currentColor" cx="28" cy="34" r="7" />
+        <circle fill="currentColor" cx="90" cy="34" r="7" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#about">Skip to the form</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <p class="wordmark">Can I afford an EV<span class="wordmark__mark">?</span></p>
+      <p class="site-header__subhead">A straight answer for Melbourne buyers, built from published rates.</p>
+    </div>
+    <div class="route-rule" aria-hidden="true">
+      <span class="route-rule__seg route-rule__seg--lease"></span>
+      <span class="route-rule__seg route-rule__seg--loan"></span>
+      <span class="route-rule__seg route-rule__seg--cash"></span>
+    </div>
+  </header>
+
+  <main class="sections">
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="section-heading">
+        <span class="section-heading__eyebrow">1</span> Tell us about you
+      </h2>
+
+      <div class="field-group field-group--free-text">
+        <label for="free-text">Describe your situation, in your own words</label>
+        <textarea
+          id="free-text"
+          name="freeText"
+          rows="4"
+          placeholder="I earn $145k and can spend about $900 a month. I want an SUV with a big boot for my dog."
+        ></textarea>
+        <div class="free-text__actions">
+          <button type="button" id="parse-button" class="button button--primary">Fill in the form for me</button>
+          <p id="parse-status" class="parse-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="field-group field-group--numeric">
+        <div class="field">
+          <label for="grossSalary">Annual salary, before tax</label>
+          <div class="field__input">
+            <span class="field__prefix" aria-hidden="true">$</span>
+            <input type="number" id="grossSalary" name="grossSalary" data-field="grossSalary"
+              min="0" step="1000" value="100000" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="monthlyBudget">Monthly budget for the car</label>
+          <div class="field__input">
+            <span class="field__prefix" aria-hidden="true">$</span>
+            <input type="number" id="monthlyBudget" name="monthlyBudget" data-field="monthlyBudget"
+              min="0" step="50" value="900" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="termMonths">Term</label>
+          <select id="termMonths" name="termMonths" data-field="termMonths">
+            <option value="12">1 year</option>
+            <option value="24">2 years</option>
+            <option value="36">3 years</option>
+            <option value="48">4 years</option>
+            <option value="60" selected>5 years</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="savings">Savings available as a deposit</label>
+          <div class="field__input">
+            <span class="field__prefix" aria-hidden="true">$</span>
+            <input type="number" id="savings" name="savings" data-field="savings"
+              min="0" step="500" value="0" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="annualKm">Distance you drive each year</label>
+          <div class="field__input">
+            <input type="number" id="annualKm" name="annualKm" data-field="annualKm"
+              min="0" step="500" value="15000" inputmode="numeric" />
+            <span class="field__suffix" aria-hidden="true">km</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="leaseStartDate">Lease start date</label>
+          <input type="date" id="leaseStartDate" name="leaseStartDate" data-field="leaseStartDate"
+            value="2026-07-25" />
+        </div>
+      </div>
+    </section>
+
+    <section id="afford" aria-labelledby="afford-heading">
+      <h2 id="afford-heading" class="section-heading">
+        <span class="section-heading__eyebrow">2</span> What you can afford
+      </h2>
+
+      <div class="budget-slider">
+        <label for="budgetSlider">Monthly budget: <output id="budgetSliderValue" for="budgetSlider">$900</output></label>
+        <!-- min/max here are just a sane pre-JS default; ui/app.js overwrites them at
+             boot from BUDGET_RANGE so this can never drift from what the chart samples
+             (see the I7 fix note in ui/app.js's boot()). -->
+        <input type="range" id="budgetSlider" name="budgetSlider" data-field="monthlyBudget"
+          min="300" max="2700" step="25" value="900" />
+      </div>
+
+      <div id="verdict" class="verdict-panel">
+        <p class="skeleton-note">Fill in the form and we'll work out which way of paying — novated lease, car loan
+          or cash — gets you the most car for your budget.</p>
+      </div>
+
+      <div id="explanation" class="explanation-panel" aria-live="polite"></div>
+
+      <p class="disclaimer">
+        <strong>General information only.</strong> This tool does not take account of your objectives, financial
+        situation or needs. It is not personal financial, tax or credit advice. Figures are estimates based on
+        published rates and your inputs, and will differ from a real quote. Consider seeking advice from a
+        licensed adviser before deciding.
+      </p>
+
+      <p class="fbt-caveat">
+        An FBT-exempt lease still creates a Reportable Fringe Benefits Amount, which can affect HELP repayments
+        and the Medicare Levy Surcharge. This tool does not model that.
+      </p>
+
+      <div class="line-legend" aria-hidden="true">
+        <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--lease"></span>Novated lease</span>
+        <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--loan"></span>Car loan</span>
+        <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--cash"></span>Cash</span>
+      </div>
+
+      <div id="crossover" class="crossover-panel">
+        <p class="skeleton-note">A chart will appear here showing how the cost of each option changes over time,
+          and where they cross over.</p>
+      </div>
+
+      <div id="rates-panel" class="rates-panel">
+        <p class="skeleton-note">The published rates behind this estimate will be listed here.</p>
+      </div>
+    </section>
+
+    <section id="cars" aria-labelledby="cars-heading">
+      <h2 id="cars-heading" class="section-heading">
+        <span class="section-heading__eyebrow">3</span> Cars that match
+      </h2>
+      <div id="car-list" class="car-list" aria-live="polite">
+        <p class="skeleton-note">Matching cars will appear here once we know your budget and what you're after.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="summary-bar" class="summary-bar" role="status" aria-live="polite">
+    <span class="summary-bar__text">Fill in your details to see what you can afford</span>
+    <span class="summary-bar__arrow" aria-hidden="true">→</span>
+  </div>
+
+  <footer class="site-footer">
+    <p>General information only — not personal financial advice.</p>
+  </footer>
+
+  <script type="module" src="ui/app.js"></script>
+</body>
+</html>

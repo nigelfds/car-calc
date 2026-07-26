@@ -39,28 +39,33 @@ Three tiers, with a hard wall between calculation and AI.
 ```
 Browser (static, served by Express)
   ui/sections.js, ui/slider.js, ui/crossover-chart.js, ui/state.js
+  ui/prompt-api.js  ── Chrome LanguageModel, on-device       ← tier 1, no network
         │ imports directly
         ▼
 calc/  — pure core, shared by browser and server, no I/O          ← deterministic
-  tax.js  fbt.js  novated.js  loan.js  upfront.js  onroad.js  compare.js
+  tax.js  fbt.js  novated.js  loan.js  upfront.js  onroad.js
+  compare.js  rank.js
         ▲ reads
-data/  — vehicles.json, rates.json, tax-tables.json
+data/  — vehicles.json, families.json, rates.json, tax-tables.json
         ▲ reads at boot
-server/ — Express on Heroku                                       ← Claude-backed
-  static.js, routes/parse.js, routes/rank.js, routes/explain.js,
-  claude.js, schema.js
+server/ — Express on Heroku
+  static.js, claude.js, schema.js,
+  routes/parse.js    ← tier 2, Claude Haiku (parsing fallback only)
+  routes/explain.js  ← tier 3, Claude Sonnet (the only reasoning call)
 ```
 
 **The organising principle:** everything in `calc/` is a pure function — plain object in, plain
-object out. No `fetch`, no `Date.now()`, no randomness. Claude sits outside that wall on both
-sides: it converts prose into inputs *before* the maths, and narrates results *after* it. It
-never produces a dollar figure. A bad model response can therefore mislead the user's filters
-but can never corrupt their costs.
+object out. No `fetch`, no `Date.now()`, no randomness. Language models sit outside that wall on
+both sides: they convert prose into inputs *before* the maths, and narrate results *after* it.
+Neither ever produces a dollar figure, and neither orders the shortlist — ranking is a
+deterministic scoring function inside the wall. A bad model response can therefore mislead the
+user's filters but can never corrupt their costs or reorder their results.
 
 **Consequence worth protecting:** dragging the slider recomputes locally, with no network call.
-Claude is invoked on text submit only. If the API is down, out of credit, or slow, the keyword
-fallback parser covers filtering and the explanation panel does not render. The calculator
-never depends on the API.
+A model is invoked on text submit only. If the Prompt API is unavailable, the server falls back
+to Haiku; if the server is unreachable, out of credit, or slow, the keyword parser covers
+filtering and the explanation panel simply does not render. The calculator never depends on any
+model being available.
 
 ### Stack
 
@@ -82,7 +87,9 @@ never depends on the API.
 | `calc/loan.js` | Amortisation schedule, total interest | — |
 | `calc/upfront.js` | Cash cost plus opportunity cost of capital | — |
 | `calc/compare.js` | Runs all three, ranks them, solves the crossover budget | all of the above |
-| `server/claude.js` | SDK client; key from env; retry, timeout, graceful failure | — |
+| `calc/rank.js` | Deterministic scoring of the shortlist against soft preferences | — |
+| `ui/prompt-api.js` | Chrome on-device `LanguageModel` client, availability-gated | — |
+| `server/claude.js` | SDK client; per-route model; key from env; retry, timeout, graceful failure | — |
 | `server/schema.js` | zod schemas validating every Claude response | — |
 
 Each `calc/` module is independently testable with no mocks, because none of them perform I/O.
@@ -118,7 +125,7 @@ the UI must state.
 | Phase | Dates | Treatment |
 |---|---|---|
 | 1 | to 31 Mar 2027 | Full exemption for BEVs under the LCT fuel-efficient threshold |
-| 2 | 1 Apr 2027 – 31 Mar 2029 | Full exemption under $75,000; 25% FBT discount from $75,000 to the threshold |
+| 2 | 1 Apr 2027 – 31 Mar 2029 | Full exemption at $75,000 or less; 25% FBT discount above $75,000 up to the threshold |
 | 3 | from 1 Apr 2029 | 25% discount for all eligible BEVs |
 
 Leases entered before a phase begins are **grandfathered** for their whole term. Lease start
@@ -130,7 +137,8 @@ held or used on or after 1 July 2022. The binding price cap is the LCT fuel-effi
 
 Where FBT is payable (phases 2 and 3 above the relevant cap), use the statutory formula: 20% of
 base value, grossed up at 2.0802 (type 1, GST credit claimable), taxed at 47%. The 25% discount
-reduces the taxable value. Employee contribution method then reduces FBT to nil via post-tax
+reduces the taxable value — legislated as a 15% statutory rate in place of 20%, which is
+arithmetically identical to applying a 25% reduction to the 20% rate. Employee contribution method then reduces FBT to nil via post-tax
 contributions — modelling those post-tax dollars is what stops the app overstating the benefit.
 
 ### Novated lease
@@ -221,9 +229,10 @@ Per family:
 - `sources` — URLs the summary was drawn from, preferring established Australian outlets
   (CarExpert, Drive, CarsGuide, WhichCar) since verdicts on ride quality and value are
   market-specific.
-- `images` — two or three URLs, **official manufacturer press and media room links only**.
-  Press rooms exist for republication; review-site photography does not. Nothing is committed to
-  the repo.
+- `images` — **deferred, optional.** Manufacturer press rooms proved unreliable to fetch in
+  practice (Tesla blocks automated requests; Kia serves a JavaScript gallery, not image files).
+  The field stays in the schema and is validated when present, so images can be added later
+  without a migration, but nothing sources them for now.
 - `sourcedAt` — dates the research.
 
 Qualitative research feeds display and Claude's ranking rationale. It never feeds `calc/`, which
@@ -261,21 +270,64 @@ Every default is editable in the UI, shows its source, and resets in one tap.
 
 No ZLEV road-user charge applies — struck down by the High Court in 2023.
 
-## Claude integration
+## AI integration
 
-Three endpoints, each validated with zod, each degrading gracefully.
+Three tiers, arranged so the most privacy-preserving and cheapest option runs first and the most
+capable model is reserved for the one job that genuinely needs judgment.
 
-| Endpoint | Input | Output | On failure |
-|---|---|---|---|
-| `POST /api/parse` | free text | structured filter + income object, via tool-use | keyword fallback parser |
-| `POST /api/rank` | filtered cars + soft priorities | ordered top 3–5 with one-line reasons | dataset sort order |
-| `POST /api/explain` | computed figures | plain-English explanation of the winner | panel not rendered |
+### Tier 1 — On-device, in the browser: understanding what the user typed
+
+Free-text parsing runs **on-device via Chrome's built-in Prompt API** (`LanguageModel`), using
+`responseConstraint` with a JSON schema so the output is structurally guaranteed rather than
+hoped for. Nothing about the user's salary or circumstances leaves their machine, there is no
+per-query cost, and there is no network latency.
+
+Availability is checked with `LanguageModel.availability()` before use. The API is desktop-Chrome
+only and needs a model download, so it is treated as an enhancement, never a requirement.
+
+### Tier 2 — Server, Claude Haiku: the parsing fallback
+
+When the Prompt API is unavailable — Firefox, Safari, mobile, or a model that has not downloaded —
+the same parse goes to `POST /api/parse`, backed by **Claude Haiku**. Structured extraction is
+exactly the kind of narrow, well-specified task Haiku handles well, and it keeps the fallback
+cheap enough to serve every non-Chrome visitor.
+
+### Tier 3 — Server, Claude Sonnet: the explanation
+
+`POST /api/explain` is the only call that asks a model to reason, and the only one that uses
+**Sonnet**. It receives figures the engine has already computed and writes the plain-English
+"why" — why a lease beats a loan at this salary, what the balloon means, what happens on leaving
+a job. It is given the numbers and forbidden from producing new ones.
+
+### Ranking is deterministic, not a model call
+
+Ordering the shortlist is a **pure scoring function** in `calc/rank.js`, not an API call. Given
+the same inputs it always returns the same order, it costs nothing, it works offline, and it is
+unit-testable — none of which is true of a model-ranked list. Soft preferences extracted during
+parsing (a large dog, long trips, a tight budget) become weights over boot space, range, price
+headroom and warranty.
+
+| Job | Where it runs | Fallback |
+|---|---|---|
+| Parse free text | Chrome Prompt API, on-device | `/api/parse` (Haiku) → keyword parser |
+| Rank the shortlist | `calc/rank.js`, deterministic | none needed — it cannot fail |
+| Explain the result | `/api/explain` (Sonnet) | panel not rendered |
 
 Vague input triggers a single clarifying question. Conversation state is **client-held and posted
 back** with each request, so the Heroku dyno needs no session store and survives restarts.
 
-Claude receives computed figures and narrates them; it is never asked to calculate. Prompts state
-this explicitly. Parsed numeric values are clamped to sane ranges before reaching `calc/`.
+No model is ever asked to calculate. Prompts state this explicitly, every server response is
+validated with zod, and parsed numeric values are clamped to sane ranges before reaching `calc/`.
+
+## Disclaimer
+
+The app displays a persistent, non-dismissible notice that **everything it produces is general
+information only** — it does not account for the user's objectives, financial situation or needs,
+and is not personal financial, tax or credit advice. The notice appears next to the
+recommendation rather than buried in a footer, is repeated in the explanation panel, and is
+restated in the README. This is not decoration: the app compares credit products and salary
+packaging arrangements for Australian users, and a general-advice warning is the honest and
+appropriate framing for that.
 
 ## User interface
 
@@ -287,15 +339,16 @@ Mobile-first. Three sections, stacked vertically on a phone, laid out as columns
    When Claude parses the text, changed fields highlight briefly and carry a "from your
    description" marker, so the hand-off is visible. Manual edits always win over parsed text.
 2. **What you can afford** — the budget slider, the winning option, the three totals side by
-   side, the crossover chart, and the collapsible rates panel. On desktop the chart is three SVG
+   side, the crossover chart, and the collapsible rates panel. The general-advice notice sits
+   directly beneath the recommendation, where the number it qualifies is actually read. On desktop the chart is three SVG
    lines; on mobile it is replaced by a single horizontal winner band showing which option leads
    across the budget range, with the user's position marked. Three thin lines in 96px of height
    is not legible on a phone.
 3. **Cars that match** — the ranked shortlist with the attributes that drove the match. Each card
-   carries a hero image, and expands to show the family summary, pros and cons, and links to the
-   source reviews. Images are lazy-loaded from external press URLs; any that fails to load is
-   replaced by a body-type SVG silhouette, so a rotted link degrades to a plain card rather than
-   a broken one.
+   shows a body-type SVG silhouette, and expands to show the family summary, pros and cons, and
+   links to the source reviews. Photography is deferred; where a family does carry image URLs
+   they are lazy-loaded with the silhouette as the fallback, so adding images later needs no
+   UI change.
 
 A sticky one-line summary bar on mobile ("🏆 Novated · Kia EV5 · $871/mo") scrolls to section 3
 on tap, so the payoff is always one tap away despite being third in the stack.
@@ -343,10 +396,9 @@ State lives in a single object serialised to the URL query string, making any re
   quote should be entered. This single input moves the crossover more than any other.
 - **Drive-away prices move often**, particularly for Chinese brands. Rows carry `sourcedAt`, and
   the UI shows dataset age.
-- **External image URLs will rot**, and some hosts block hotlinking. Accepted deliberately in
-  exchange for keeping copyrighted photography out of the repo; the silhouette fallback means the
-  cost is cosmetic. Restricting to manufacturer press rooms keeps copyright exposure low, but
-  does not eliminate it — these are still third-party images served from someone else's host.
+- **Images are deferred**, which removes a whole class of fragility (rotted links, hotlink
+  blocking, licensing questions) at a purely cosmetic cost. The schema keeps the field so they
+  can be added later without a migration.
 - **Review summaries are editorial opinion**, condensed by a model from a handful of sources and
   fixed at `sourcedAt`. They inform browsing, never the numbers.
 - **RFBA effects are out of scope** and can materially reduce a lease's benefit for users with

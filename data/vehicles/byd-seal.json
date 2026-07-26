@@ -1,0 +1,42 @@
+[
+  {
+    "id": "byd-seal-premium",
+    "familyId": "byd-seal",
+    "make": "BYD",
+    "model": "Seal",
+    "variant": "Premium",
+    "bodyType": "Sedan",
+    "listPrice": 52990,
+    "batteryKwh": 82.56,
+    "rangeKm": 570,
+    "consumptionKwhPer100km": 16.6,
+    "bootLitresSeatsUp": 400,
+    "bootLitresSeatsDown": 950,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1600,
+    "depreciationCurve": [1, 0.7, 0.58, 0.5, 0.44, 0.39],
+    "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "byd-seal-performance",
+    "familyId": "byd-seal",
+    "make": "BYD",
+    "model": "Seal",
+    "variant": "Performance",
+    "bodyType": "Sedan",
+    "listPrice": 61990,
+    "batteryKwh": 82.56,
+    "rangeKm": 520,
+    "consumptionKwhPer100km": 18.2,
+    "bootLitresSeatsUp": 400,
+    "bootLitresSeatsDown": 950,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1800,
+    "depreciationCurve": [1, 0.7, 0.58, 0.5, 0.44, 0.39],
+    "sourcedAt": "2026-07-26"
+  }
+]
