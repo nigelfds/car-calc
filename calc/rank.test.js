@@ -28,6 +28,44 @@ test('boot space barely matters when it was never mentioned', () => {
   assert.ok(spread < bootSpread, 'an unstated preference carries less weight');
 });
 
+// Price is the strongest unstated signal: someone who has stated nothing but
+// a budget is telling you the budget is what they care about.
+test('a cheaper car outscores a dearer one when nothing else is stated', () => {
+  assert.ok(
+    scoreVehicle(car('cheap', { listPrice: 45000 }), {}) >
+    scoreVehicle(car('dear', { listPrice: 75000 }), {})
+  );
+});
+
+test('price outweighs every other unstated dimension', () => {
+  const prefs = {};
+  const priceSpread = Math.abs(
+    scoreVehicle(car('cheap', { listPrice: 30000 }), prefs) -
+    scoreVehicle(car('dear', { listPrice: 90000 }), prefs)
+  );
+  for (const [name, over] of [
+    ['boot', [{ bootLitresSeatsUp: 900 }, { bootLitresSeatsUp: 300 }]],
+    ['range', [{ rangeKm: 700 }, { rangeKm: 300 }]],
+    ['warranty', [{ warrantyYears: 10 }, { warrantyYears: 3 }]]
+  ]) {
+    const spread = Math.abs(
+      scoreVehicle(car('a', over[0]), prefs) - scoreVehicle(car('b', over[1]), prefs)
+    );
+    assert.ok(priceSpread > spread, `a $60,000 price gap should beat the ${name} spread`);
+  }
+});
+
+// A stated boot preference is a direct instruction and still outranks price —
+// raising the value weight was meant to stop cheapness being ignored, not to
+// start overruling what the user actually asked for.
+test('a stated boot preference still outweighs price', () => {
+  const prefs = { minBootLitres: 500 };
+  assert.ok(
+    scoreVehicle(car('roomy-dear', { bootLitresSeatsUp: 800, listPrice: 75000 }), prefs) >
+    scoreVehicle(car('small-cheap', { bootLitresSeatsUp: 520, listPrice: 45000 }), prefs)
+  );
+});
+
 test('longer range scores higher when range is wanted', () => {
   const prefs = { minRangeKm: 400 };
   assert.ok(

@@ -5,11 +5,22 @@
 // is raised when the user actually expressed that preference, so an unstated
 // preference still nudges but never dominates.
 
+// Price carries twice what it used to. At 1.0 it was the weakest lever on the
+// board — the entire spread of the market, $0 to $120,000, was worth one point
+// against boot's three, so a car being $15,000 cheaper counted for about a
+// tenth of what a large boot counted for.
+//
+// Note what this can and cannot reach. The shortlist is bracketed by price
+// before it is scored (bracketAroundPrice), so within the at-budget band every
+// candidate is already inside ±5% of the anchor and the whole value term
+// varies by ~0.05 there — doubling it buys ~0.05 more. The band it actually
+// moves is "just under your budget", which spans 70–95% of the anchor: a real
+// 25% spread, where the value term now varies by ~0.33 instead of ~0.17.
 const WEIGHTS = {
   boot: { stated: 3.0, unstated: 0.5 },
   range: { stated: 2.5, unstated: 0.8 },
   warranty: { stated: 0, unstated: 0.6 },
-  value: { stated: 0, unstated: 1.0 }
+  value: { stated: 0, unstated: 2.0 }
 };
 
 const ratio = (value, reference) =>
