@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   optionCosts, reachableVehicle, crossoverSeries,
-  isVehicleReachable, reachableVehicles, optionBlocker
+  isVehicleReachable, reachableVehicles, optionBlocker, valueRatio
 } from './compare.js';
 
 const tables = JSON.parse(readFileSync(new URL('../data/tax-tables.json', import.meta.url)));
@@ -200,4 +200,38 @@ test('an affordable option has no blocker', () => {
   const costs = optionCosts({ vehicle: vehicle('a', 40000), inputs: { ...inputs, savings: 200000 } }, tables);
   assert.equal(optionBlocker(costs.upfront, 5000), null);
   assert.equal(optionBlocker(costs.loan, 5000), null);
+});
+
+// --- Value retained per dollar spent -------------------------------------
+// The gold-cup winner is no longer "lowest total cost". Each option now
+// reaches the dearest car IT can afford, so the three tiles describe
+// different cars, and comparing their raw totals would just reward whichever
+// option is stuck shopping cheapest. The question that survives across
+// different cars is: of everything you spent, how much are you still holding
+// at the end of the term?
+
+test('value ratio is resale over total cost', () => {
+  const costs = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables);
+  const ratio = valueRatio(costs.loan);
+  assert.ok(ratio > 0);
+  assert.ok(Math.abs(ratio - costs.loan.detail.resale / costs.loan.tco) < 1e-9);
+});
+
+test('spending less for the same car retained gives a better ratio', () => {
+  const car = vehicle('a', 56000);
+  const cheapFinance = optionCosts({ vehicle: car, inputs: { ...inputs, loanRatePct: 1 } }, tables);
+  const dearFinance = optionCosts({ vehicle: car, inputs: { ...inputs, loanRatePct: 15 } }, tables);
+  assert.ok(valueRatio(cheapFinance.loan) > valueRatio(dearFinance.loan),
+    'a cheaper loan on the identical car must score better');
+});
+
+test('an option that cannot reach a car has no value ratio', () => {
+  assert.equal(valueRatio(null), null);
+});
+
+// A car whose total cost lands at or below zero (a hypothetical where resale
+// exceeds every outflow) would make the ratio meaningless or infinite.
+test('a non-positive total cost yields no ratio rather than Infinity', () => {
+  assert.equal(valueRatio({ tco: 0, detail: { resale: 1000 } }), null);
+  assert.equal(valueRatio({ tco: -500, detail: { resale: 1000 } }), null);
 });

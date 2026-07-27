@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { scoreVehicle, rankVehicles, collapseToTopPerFamily } from './rank.js';
+import { scoreVehicle, rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from './rank.js';
 
 const car = (id, over = {}) => ({
   id, listPrice: 55000, bootLitresSeatsUp: 450, rangeKm: 450,
@@ -208,4 +208,87 @@ test('the SUV + 500L shortlist scenario: five collapsed cards do not all share o
 
   const firstReasons = shortlist.map(e => e.reasons[0]);
   assert.notEqual(new Set(firstReasons).size, 1, 'not every card should share the same headline reason');
+});
+
+// --- Bracketing the shortlist around the affordable ceiling --------------
+// Section 3 no longer shows "the five best matches". It answers a narrower,
+// more useful question: given the dearest car the winning payment option
+// reaches, what is the best car just under that price, at it, and one step
+// beyond it if you stretched?
+
+const priced = (id, listPrice) => car(id, { listPrice });
+
+test('the three bands sit below, at and above the anchor price', () => {
+  const ranked = rankVehicles(
+    [priced('a', 48000), priced('b', 60000), priced('c', 72000)],
+    {}, 3
+  );
+  const bands = bracketAroundPrice(ranked, 60000);
+  assert.deepEqual(bands.map(b => b.band), ['below', 'at', 'above']);
+  assert.equal(bands.find(b => b.band === 'at').entry.vehicle.id, 'b');
+  assert.equal(bands.find(b => b.band === 'below').entry.vehicle.id, 'a');
+  assert.equal(bands.find(b => b.band === 'above').entry.vehicle.id, 'c');
+});
+
+test('a car within the tolerance of the anchor counts as "at", not "below"', () => {
+  // 58,000 is inside 5% of 60,000, so it is at the ceiling, not under it.
+  const ranked = rankVehicles([priced('near', 58000)], {}, 1);
+  const bands = bracketAroundPrice(ranked, 60000);
+  assert.equal(bands.length, 1);
+  assert.equal(bands[0].band, 'at');
+});
+
+test('each band picks the best-ranked car in it, not the closest price', () => {
+  // Same price bracket, different quality: the better car must win the slot.
+  const ranked = rankVehicles([
+    car('poor', { listPrice: 48000, bootLitresSeatsUp: 200, rangeKm: 250 }),
+    car('good', { listPrice: 49000, bootLitresSeatsUp: 600, rangeKm: 600 })
+  ], {}, 2);
+  const bands = bracketAroundPrice(ranked, 60000);
+  assert.equal(bands.length, 1);
+  assert.equal(bands[0].band, 'below');
+  assert.equal(bands[0].entry.vehicle.id, 'good');
+});
+
+test('missing bands are omitted rather than padded', () => {
+  // Nothing above the anchor at all.
+  const ranked = rankVehicles([priced('a', 48000), priced('b', 60000)], {}, 2);
+  const bands = bracketAroundPrice(ranked, 60000);
+  assert.deepEqual(bands.map(b => b.band), ['below', 'at']);
+});
+
+test('an empty pool produces no bands rather than throwing', () => {
+  assert.deepEqual(bracketAroundPrice([], 60000), []);
+});
+
+test('no car is used twice across the bands', () => {
+  const ranked = rankVehicles(
+    [priced('a', 40000), priced('b', 60000), priced('c', 90000)],
+    {}, 3
+  );
+  const ids = bracketAroundPrice(ranked, 60000).map(b => b.entry.vehicle.id);
+  assert.equal(new Set(ids).size, ids.length);
+});
+
+test('a car far outside the window belongs to no band', () => {
+  // A $62,000 car against a $37,000 ceiling is a fantasy, not a stretch.
+  const ranked = rankVehicles([priced('miles-away', 62000)], {}, 1);
+  assert.deepEqual(bracketAroundPrice(ranked, 37000), []);
+});
+
+test('the stretch card is a near miss, not the best car at any price', () => {
+  const ranked = rankVehicles([
+    car('reachable-stretch', { listPrice: 44000, bootLitresSeatsUp: 400 }),
+    car('dream-car', { listPrice: 90000, bootLitresSeatsUp: 900, rangeKm: 700 })
+  ], {}, 2);
+  const bands = bracketAroundPrice(ranked, 37000);
+  const above = bands.find(b => b.band === 'above');
+  assert.ok(above, 'expected a stretch card');
+  assert.equal(above.entry.vehicle.id, 'reachable-stretch',
+    'the far better but far dearer car must not take the stretch slot');
+});
+
+test('the window is configurable for callers that want a wider net', () => {
+  const ranked = rankVehicles([priced('far', 62000)], {}, 1);
+  assert.deepEqual(bracketAroundPrice(ranked, 37000, { window: 0.8 }).map(b => b.band), ['above']);
 });

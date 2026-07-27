@@ -126,6 +126,21 @@ export function optionBlocker(costs, budgetMonthly) {
   return null;
 }
 
+// Return on the money spent, expressed as "of everything this costs you over
+// the term, how much are you still holding at the end?" — resale ÷ total cost,
+// higher is better.
+//
+// This is what lets the three option tiles be compared at all now that each
+// reaches the dearest car it can individually afford. Raw total cost cannot:
+// a cheaper car always costs less, so comparing totals across different cars
+// systematically crowns whichever option is stuck shopping lowest (cash,
+// bounded by savings, "won" at high budgets purely by being capped at a
+// cheaper car). A ratio is scale-free, so it survives the comparison.
+export function valueRatio(costs) {
+  if (!costs || typeof costs.tco !== 'number' || costs.tco <= 0) return null;
+  return costs.detail.resale / costs.tco;
+}
+
 export function reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables) {
   const affordable = vehicles
     .map(vehicle => ({ vehicle, costs: optionCosts({ vehicle, inputs }, tables)[option] }))

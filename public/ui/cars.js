@@ -55,8 +55,9 @@ export function renderCards(root, cards, emptyMessage) {
   // and the filters already carry. The space goes to the text instead.
   target.innerHTML = cards.map(card => {
     return `
-    <article class="car-card" data-id="${escapeHtml(card.id)}">
+    <article class="car-card${card.band ? ` car-card--${card.band}` : ''}" data-id="${escapeHtml(card.id)}">
       <div class="car-body">
+        ${card.bandLabel ? `<p class="car-card__band">${escapeHtml(card.bandLabel)}</p>` : ''}
         <h3>${escapeHtml(card.make)} ${escapeHtml(card.model)} ${escapeHtml(card.variant ?? '')}</h3>
         <p class="car-specs">${card.bootLitresSeatsUp}L boot &middot; ${card.rangeKm}km range &middot; ${money(card.listPrice)}</p>
         ${card.reason ? `<p class="car-reason">${escapeHtml(card.reason)}</p>` : ''}

@@ -48,39 +48,66 @@ test('upfront is excluded when savings cannot cover the car', () => {
   assert.equal(v.options.upfront.tco, null);
 });
 
-// --- C2 regression: the verdict must settle on ONE car and compare all
-// three options against it, not let each option independently reach for
-// the dearest car *it* can individually afford (reachableVehicle per
-// option, the old approach) — that put a cheap car's loan total in
-// competition with a dear car's novated total and crowned whichever
-// option could afford the *least* car, because a dearer car has a higher
-// TCO almost by construction.
+// --- Each option now prices the dearest car IT reaches ------------------
+// Superseding the earlier "one car for all three" rule. Each tile answers
+// "the most expensive car this way of paying gets you into", so the tiles
+// legitimately describe different cars.
+//
+// The hazard that rule existed to prevent is still real and still guarded,
+// two tests below: raw totals cannot be compared across different cars,
+// because a cheaper car always costs less, which would crown whichever
+// option is stuck shopping lowest. The winner is decided on valueRatio
+// instead — resale over total cost — which is scale-free and so survives the
+// comparison.
 
-test('all three reported options price the same vehicle, even though a cheap and a dear car are both in reach', () => {
+test('each option prices the dearest car it can reach, not one shared car', () => {
   const fleet = [vehicle('cheap', 42500), vehicle('dear', 88900)];
-  const wideInputs = { ...inputs, grossSalary: 145000, termMonths: 60 };
+  const wideInputs = { ...inputs, grossSalary: 145000, termMonths: 60, savings: 50000 };
   const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs: wideInputs }, tables);
 
-  const priced = Object.values(v.options).filter(o => o.vehicle !== null);
-  assert.ok(priced.length >= 2, 'more than one option must be feasible for this fixture');
-  const vehicleIds = new Set(priced.map(o => o.vehicle.id));
-  assert.equal(vehicleIds.size, 1, 'every priced option must refer to the same vehicle');
-  assert.equal(v.vehicle.id, [...vehicleIds][0]);
+  // Cash is capped by $50k of savings so it can only reach the cheap car,
+  // while financing reaches the dear one. The tiles must say so.
+  assert.equal(v.options.upfront.vehicle.id, 'cheap');
+  assert.equal(v.options.novated.vehicle.id, 'dear');
 });
 
-test('the winner is the lowest-TCO feasible option for the one vehicle the verdict settles on', () => {
+test('the winner is the best value ratio, not the smallest total', () => {
   const fleet = [vehicle('cheap', 42500), vehicle('dear', 88900)];
-  const wideInputs = { ...inputs, grossSalary: 145000, termMonths: 60 };
+  const wideInputs = { ...inputs, grossSalary: 145000, termMonths: 60, savings: 50000 };
   const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs: wideInputs }, tables);
 
   const feasible = Object.values(v.options).filter(o => o.tco !== null);
-  const lowest = feasible.reduce((best, cur) => (cur.tco < best.tco ? cur : best));
-  assert.equal(v.winner, lowest.option);
-  // Every feasible option — including the winner — must be priced against
-  // the same vehicle the verdict reports overall.
-  for (const option of feasible) {
-    assert.equal(option.vehicle.id, v.vehicle.id);
-  }
+  const bestRatio = feasible.reduce((best, cur) => (cur.valueRatio > best.valueRatio ? cur : best));
+  assert.equal(v.winner, bestRatio.option);
+});
+
+// The specific misread that motivated all of this: cash is capped by savings
+// to a cheap car, so its total can be the smallest of the three while being
+// the worst deal going. A lowest-total rule crowns it; the ratio must not.
+// The two cars need different depreciation curves for the inversion to bite —
+// with one shared curve, resale scales with price and the effect vanishes.
+test('an option stuck on a cheaper car does not win merely for costing less', () => {
+  const withCurve = (id, listPrice, depreciationCurve) =>
+    ({ ...vehicle(id, listPrice), depreciationCurve });
+  const fleet = [
+    withCurve('cheap', 46080, [1, 0.55, 0.4, 0.3, 0.22, 0.16]),  // holds value badly
+    withCurve('dear', 100000, [1, 0.85, 0.78, 0.72, 0.66, 0.6])  // holds value well
+  ];
+  const wideInputs = { ...inputs, grossSalary: 100000, termMonths: 60, savings: 50000 };
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 3500, inputs: wideInputs }, tables);
+
+  const cash = v.options.upfront;
+  assert.equal(cash.vehicle.id, 'cheap', 'cash is capped by savings to the cheap car');
+  assert.ok(cash.tco < v.options.novated.tco, 'and its total really is the smaller number');
+  assert.ok(cash.valueRatio < v.options.novated.valueRatio, 'but it retains far less of it');
+  assert.notEqual(v.winner, 'upfront', 'costing less on a worse car must not win');
+});
+
+test('the headline vehicle is the winning option\'s car', () => {
+  const fleet = [vehicle('cheap', 42500), vehicle('dear', 88900)];
+  const wideInputs = { ...inputs, grossSalary: 145000, termMonths: 60, savings: 50000 };
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs: wideInputs }, tables);
+  assert.equal(v.vehicle.id, v.options[v.winner].vehicle.id);
 });
 
 test('an option infeasible for the chosen car renders as unreachable, never as the winner', () => {

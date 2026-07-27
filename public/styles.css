@@ -419,6 +419,25 @@ input[type='date'],
   font-size: 1.05rem;
 }
 
+/* Each tile prices a different car, so the car it reaches is part of the
+   number's meaning, not a decoration. */
+.verdict-panel .total__reach {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+
+.verdict-panel .total__reach-price {
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.verdict-panel .total__ratio {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
+}
+
 /* The lever that would unblock an out-of-reach option. Quieter than the
    option label above it — it is a footnote to "out of reach", not a heading. */
 .verdict-panel .total__blocker {
@@ -716,14 +735,52 @@ input[type='date'],
   color: var(--ink-soft);
 }
 
-.rates-panel {
+/* The grid sits on the disclosure body, not on .rates-panel, so wrapping the
+   fields in <details> doesn't leave the grid with a single child. */
+.rates-disclosure__body {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
+  margin-top: var(--space-4);
 }
 
-.rates-panel .rates-panel__intro {
+.rates-disclosure__body .rates-panel__intro {
   grid-column: 1 / -1;
+}
+
+.rates-disclosure__summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.rates-disclosure__summary::-webkit-details-marker { display: none; }
+
+/* Own triangle, so the affordance is identical across browsers and rotates
+   to signal state. */
+.rates-disclosure__summary::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid currentColor;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform 120ms ease;
+}
+
+.rates-disclosure[open] > .rates-disclosure__summary::before {
+  transform: rotate(90deg);
+}
+
+.rates-disclosure__summary:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .rate-field__provenance {
@@ -747,7 +804,7 @@ input[type='date'],
 .rate-field__reset:hover { text-decoration: underline; }
 
 @media (min-width: 640px) {
-  .rates-panel { grid-template-columns: repeat(2, 1fr); }
+  .rates-disclosure__body { grid-template-columns: repeat(2, 1fr); }
 }
 
 .skeleton-note {
@@ -771,6 +828,33 @@ input[type='date'],
   padding: var(--space-3);
   border: 1px solid var(--hairline);
   border-radius: 8px;
+}
+
+/* The three cards are a price ladder around the affordable ceiling, so each
+   one says where it sits rather than leaving the order to be inferred. */
+.car-card__band {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* The car at the ceiling is the one the verdict just recommended, so it gets
+   the same accent the winning option tile carries. */
+.car-card--at {
+  border-color: var(--line-lease);
+}
+
+.car-card--at .car-card__band {
+  color: var(--line-lease);
+}
+
+/* Above the ceiling is not affordable — muted so it never reads as a
+   recommendation. */
+.car-card--above {
+  border-style: dashed;
 }
 
 .car-body h3 {

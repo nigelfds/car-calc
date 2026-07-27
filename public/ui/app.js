@@ -11,8 +11,8 @@ import { renderInputs, bindFreeText } from './sections.js';
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards } from './cars.js';
-import { rankVehicles, collapseToTopPerFamily } from '../../calc/rank.js';
-import { crossoverSeries, reachableVehicles } from '../../calc/compare.js';
+import { rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from '../../calc/rank.js';
+import { crossoverSeries } from '../../calc/compare.js';
 import { money } from './format.js';
 
 // crossoverSeries was measured at ~17ms for 80 vehicles across 25 budget
@@ -129,35 +129,40 @@ function boot(root, dataset) {
       `${OPTION_PHRASE[verdict.winner]} for the ${verdict.vehicle.make} ${verdict.vehicle.model}: ${money(winner.tco)} total`;
   }
 
-  function renderShortlist() {
-    const matches = filterVehicles(vehicles, state);
-    // Budget is a hard filter, not a ranking nudge: a car you cannot pay for
-    // is not a match, and showing it here contradicted the verdict directly
-    // above it. Uses the same predicate verdictAt does, so the two sections
-    // agree by construction. Needs a salary — without one there is no tax
-    // position to cost a lease against, so leave the list unfiltered rather
-    // than silently empty it.
-    const affordable = hasValidSalary(state)
-      ? reachableVehicles(
-        { vehicles: matches, budgetMonthly: state.monthlyBudget, inputs: buildInputs(state) },
-        tables
-      )
-      : matches;
+  const BAND_LABEL = {
+    below: 'Just under your ceiling',
+    at: 'At your ceiling',
+    above: 'If you stretched'
+  };
 
-    // Rank every matching variant first (no limit — collapsing needs the
-    // full field, including family-mates that would otherwise crowd the
-    // top of the list), then keep one card per family so five cards are
-    // five genuine choices, not one model shown five times.
-    const ranked = rankVehicles(affordable, state, affordable.length);
-    const shortlist = collapseToTopPerFamily(ranked, 5);
-    const cards = shortlist.map(({ vehicle, reasons, otherTrims }) => ({
-      ...cardModel(vehicle, families),
-      reason: reasons[0],
-      otherTrimsText: otherTrims
-        ? `${otherTrims.count} other ${otherTrims.count === 1 ? 'trim' : 'trims'} from ${money(otherTrims.fromPrice)}`
+  function renderShortlist(verdict) {
+    const matches = filterVehicles(vehicles, state);
+
+    // The ceiling: the dearest car the recommended way of paying reaches.
+    // Section 3 is framed entirely around it, so section 2's recommendation
+    // and section 3's cars tell one story rather than two.
+    const anchorPrice = verdict?.vehicle?.listPrice ?? null;
+
+    // Ranked over every preference-match, not just the affordable ones — the
+    // "if you stretched" card is deliberately above the ceiling, and could
+    // not be found in an affordability-filtered pool.
+    const ranked = collapseToTopPerFamily(
+      rankVehicles(matches, state, matches.length),
+      matches.length
+    );
+
+    const bands = anchorPrice !== null ? bracketAroundPrice(ranked, anchorPrice) : [];
+    const cards = bands.map(({ band, entry }) => ({
+      ...cardModel(entry.vehicle, families),
+      band,
+      bandLabel: BAND_LABEL[band],
+      reason: entry.reasons[0],
+      otherTrimsText: entry.otherTrims
+        ? `${entry.otherTrims.count} other ${entry.otherTrims.count === 1 ? 'trim' : 'trims'} from ${money(entry.otherTrims.fromPrice)}`
         : null
     }));
-    // An empty list has two very different causes and two different fixes.
+
+    // An empty list has distinct causes and distinct fixes.
     const emptyMessage = matches.length === 0
       ? 'No car in the dataset matches these preferences. Try relaxing one.'
       : `Nothing in the dataset is reachable on ${money(state.monthlyBudget)}/mo. Raise the budget, or add savings to make buying outright an option.`;
@@ -206,7 +211,7 @@ function boot(root, dataset) {
 
     renderRatesPanel(root, state, onRatesChange, rates);
 
-    renderShortlist();
+    renderShortlist(verdict);
   }
 
   const debouncedRender = debounce(render, RECOMPUTE_DEBOUNCE_MS);

@@ -171,3 +171,57 @@ export function collapseToTopPerFamily(ranked, limit = 5) {
     .sort((a, b) => b.score - a.score || a.vehicle.id.localeCompare(b.vehicle.id))
     .slice(0, limit);
 }
+
+// The shortlist answers a narrower question than "your five best matches":
+// given the dearest car the recommended payment option actually reaches,
+// what is the best car just under that ceiling, at it, and one step past it?
+// Three cars framed by price beat five ranked in the abstract, because the
+// ceiling is the number the whole page has been working out.
+//
+// The `above` band is deliberately out of reach — it is the "if you stretched"
+// option, and callers should label it as such rather than implying it is
+// affordable.
+const BRACKET_TOLERANCE = 0.05;
+// How far outside the tolerance a car may sit and still count as "just"
+// under or over. Without an outer bound the `above` slot goes to the
+// best-ranked car at *any* price — a $62k Tesla against a $37k ceiling —
+// which is a fantasy, not a stretch.
+const BRACKET_WINDOW = 0.30;
+
+export function bracketAroundPrice(
+  ranked,
+  anchorPrice,
+  { tolerance = BRACKET_TOLERANCE, window = BRACKET_WINDOW } = {}
+) {
+  if (!Array.isArray(ranked) || ranked.length === 0) return [];
+  if (typeof anchorPrice !== 'number' || !Number.isFinite(anchorPrice) || anchorPrice <= 0) return [];
+
+  const low = anchorPrice * (1 - tolerance);
+  const high = anchorPrice * (1 + tolerance);
+  const floor = anchorPrice * (1 - window);
+  const ceiling = anchorPrice * (1 + window);
+
+  // `ranked` arrives best-first, so the first match in each band is that
+  // band's best car — the slot goes to the best car in the price range, not
+  // to whichever car sits closest to the anchor. Anything outside the window
+  // belongs to no band and is skipped.
+  const bandOf = vehicle => {
+    const price = vehicle.listPrice;
+    if (price < floor || price > ceiling) return null;
+    if (price < low) return 'below';
+    if (price > high) return 'above';
+    return 'at';
+  };
+
+  const picked = new Map();
+  for (const entry of ranked) {
+    const band = bandOf(entry.vehicle);
+    if (band === null) continue;
+    if (!picked.has(band)) picked.set(band, { band, entry });
+    if (picked.size === 3) break;
+  }
+
+  // Cheapest first, so the three read as a price ladder.
+  const order = ['below', 'at', 'above'];
+  return order.filter(band => picked.has(band)).map(band => picked.get(band));
+}

@@ -1,4 +1,4 @@
-import { optionCosts, reachableVehicles, optionBlocker } from '../../calc/compare.js';
+import { optionCosts, reachableVehicle, reachableVehicles, optionBlocker, valueRatio } from '../../calc/compare.js';
 import { rankVehicles } from '../../calc/rank.js';
 import { money } from './format.js';
 
@@ -9,24 +9,24 @@ const OPTIONS = ['novated', 'loan', 'upfront'];
 // as "out of reach" rather than $NaN. Every downstream consumer keys off
 // `tco === null` for that, never a truthy/falsy check on the option object
 // itself (it's always present, just empty).
-const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: null, detail: null, blocker: null });
+const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: null, detail: null, valueRatio: null, blocker: null });
 
-// C2 fix: settle on ONE car and compare all three options against it,
-// rather than letting each option independently reach for the dearest car
-// *it* can afford (the old behaviour, via reachableVehicle per option).
-// That put the three totals-row figures in competition across different
-// cars — a dearer car has a higher TCO, so it systematically rewarded
-// whichever option could afford the least car (e.g. loan "winning" over
-// novated only because loan could reach nothing better than a cheap
-// hatchback while novated was pricing a $90k SUV). The three numbers in
-// the totals row are presented as like-for-like; this makes them actually
-// be like-for-like, and aligns the verdict with the shortlist rendered
-// below it (calc/rank.js's rankVehicles), which is deterministic and
-// already the mechanism used to choose *that* list's order.
+// Each option answers "what is the most expensive car this way of paying
+// gets you into, at this budget?" — so the three tiles describe three
+// different cars, and the winner is decided on return rather than on raw
+// total cost.
+//
+// An earlier revision settled on ONE car and compared the three options
+// against it, because comparing raw totals across different cars is
+// indefensible: a cheaper car always costs less, so it crowned whichever
+// option was stuck shopping lowest (cash, capped by savings, "won" at high
+// budgets purely by being unable to reach anything dear). That objection is
+// answered here by the metric, not by forcing one car — valueRatio is
+// scale-free, so "how much of what you spent are you still holding" compares
+// honestly across a $46k Zeekr and a $90k EQB.
 //
 // `vehicles` is expected to already be filtered to the caller's stated
-// preferences (ui/app.js does this before calling in) — verdictAt itself
-// does no filtering beyond "can at least one option afford it".
+// preferences (ui/app.js does this before calling in).
 export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
   const options = {};
 
@@ -39,31 +39,40 @@ export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
     return { winner: null, options, vehicle: null };
   }
 
-  // Deterministic, single choice of car — same ranking the shortlist below
-  // the verdict uses. No stated preferences are passed here (verdictAt
-  // only ever receives financial `inputs`, not the filter/preference
-  // fields rankVehicles can weight) so this ranks on the "unstated"
-  // dimensions: boot, range, warranty, and value-for-money.
-  const [{ vehicle }] = rankVehicles(affordableVehicles, {}, 1);
-  const costsByOption = optionCosts({ vehicle, inputs }, tables);
+  // Quoting a blocker needs *some* car to quote against. The cheapest one in
+  // the pool is the honest choice: it is the smallest ask that would put this
+  // option in play at all.
+  const cheapest = affordableVehicles.reduce((low, v) => (v.listPrice < low.listPrice ? v : low));
 
   let best = null;
   for (const option of OPTIONS) {
-    const costs = costsByOption[option];
-    const feasible = costs.feasible && costs.monthlyCost <= budgetMonthly;
-    if (!feasible) {
+    const vehicle = reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables);
+
+    if (!vehicle) {
       // Carry *why*, so the totals row can name the lever instead of saying
       // "out of reach" three identical times.
+      const costs = optionCosts({ vehicle: cheapest, inputs }, tables)[option];
       options[option] = { ...emptyOption(option), blocker: optionBlocker(costs, budgetMonthly) };
       continue;
     }
+
+    const costs = optionCosts({ vehicle, inputs }, tables)[option];
     // `blocker: null` rather than absent, so every option object has the
     // same shape whether it is reachable or not.
-    options[option] = { option, tco: costs.tco, monthlyCost: costs.monthlyCost, vehicle, detail: costs.detail, blocker: null };
-    if (best === null || costs.tco < options[best].tco) best = option;
+    options[option] = {
+      option,
+      tco: costs.tco,
+      monthlyCost: costs.monthlyCost,
+      vehicle,
+      detail: costs.detail,
+      valueRatio: valueRatio(costs),
+      blocker: null
+    };
+    if (best === null || options[option].valueRatio > options[best].valueRatio) best = option;
   }
 
-  return { winner: best, options, vehicle };
+  // The headline car is the winning option's car — section 3 anchors on it.
+  return { winner: best, options, vehicle: best ? options[best].vehicle : null };
 }
 
 // ---------------------------------------------------------------------------
@@ -131,21 +140,37 @@ export function renderVerdict(root, verdict) {
 
   const winner = verdict.options[verdict.winner];
   const labels = { novated: 'Novated lease', loan: 'Direct loan', upfront: 'Buy upfront' };
+  // Runner-up is now the next-best *return*, not the next-smallest total —
+  // the totals belong to different cars and cannot be subtracted from one
+  // another meaningfully.
   const runnerUp = Object.values(verdict.options)
-    .filter(o => o.tco !== null && o.option !== verdict.winner)
-    .sort((a, b) => a.tco - b.tco)[0];
+    .filter(o => o.valueRatio !== null && o.option !== verdict.winner)
+    .sort((a, b) => b.valueRatio - a.valueRatio)[0];
 
   panel.innerHTML = `
     <div class="winner">🏆 ${labels[verdict.winner]} — ${escapeHtml(verdict.vehicle.make)} ${escapeHtml(verdict.vehicle.model)}</div>
-    <div class="detail">${money(winner.tco)} total over the term${
-      runnerUp ? `, saving ${money(runnerUp.tco - winner.tco)} versus ${labels[runnerUp.option].toLowerCase()}` : ''
-    }</div>
+    <div class="detail">Best return over the term: ${money(winner.tco)} spent, and you still own about ${money(winner.detail.resale)} of car${
+      runnerUp ? ` — better value than ${labels[runnerUp.option].toLowerCase()}` : ''
+    }.</div>
     <div class="totals">${OPTIONS.map(o => {
       const entry = verdict.options[o];
+      if (entry.tco === null) {
+        return `<div class="total">
+          <span>${labels[o]}</span>
+          <strong>out of reach</strong>
+          ${entry.blocker ? `<span class="total__blocker">${blockerText(entry.blocker)}</span>` : ''}
+        </div>`;
+      }
+      // Each option reaches a different car, so the car has to be named on
+      // the tile — otherwise three unlike totals sit side by side looking
+      // like a like-for-like comparison.
       return `<div class="total${o === verdict.winner ? ' is-winner' : ''}">
         <span>${labels[o]}</span>
-        <strong>${entry.tco === null ? 'out of reach' : money(entry.tco)}</strong>
-        ${entry.tco === null && entry.blocker ? `<span class="total__blocker">${blockerText(entry.blocker)}</span>` : ''}
+        <strong>${money(entry.tco)}</strong>
+        <span class="total__reach">most expensive car you could buy:
+          ${escapeHtml(entry.vehicle.make)} ${escapeHtml(entry.vehicle.model)}
+          <span class="total__reach-price">${money(entry.vehicle.listPrice)}</span></span>
+        <span class="total__ratio">keeps ${Math.round(entry.valueRatio * 100)}c of every $1 spent</span>
       </div>`;
     }).join('')}</div>`;
 }
@@ -278,9 +303,18 @@ export function renderRatesPanel(root, state, onChange, rates = null) {
   panel._ratesDefaults = defaults;
 
   if (!panel._ratesBuilt) {
+    // Collapsed by default: eight editable rates is a lot of screen between
+    // the verdict and the shortlist, and most people never touch them. The
+    // `_ratesBuilt` guard below means this markup is written once, so a user
+    // who opens the disclosure keeps it open across every recompute.
     panel.innerHTML = `
-      <p class="rates-panel__intro">These are researched market defaults — edit any of them to match a real quote.</p>
-      ${RATE_FIELDS.map(spec => fieldMarkup(spec, state, rates)).join('')}`;
+      <details class="rates-disclosure">
+        <summary class="rates-disclosure__summary">Rates and settings</summary>
+        <div class="rates-disclosure__body">
+          <p class="rates-panel__intro">These are researched market defaults — edit any of them to match a real quote.</p>
+          ${RATE_FIELDS.map(spec => fieldMarkup(spec, state, rates)).join('')}
+        </div>
+      </details>`;
     panel._ratesBuilt = true;
 
     for (const input of panel.querySelectorAll('[data-field]')) {
