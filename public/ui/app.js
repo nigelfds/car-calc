@@ -12,7 +12,8 @@ import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.j
 import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
 import { rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from '../../calc/rank.js';
-import { crossoverSeries, fbtCliff, optionEntryPoint } from '../../calc/compare.js';
+import { crossoverSeries, fbtCliff } from '../../calc/compare.js';
+import { optionEntryPoint } from '../../calc/capacity.js';
 import { money } from './format.js';
 
 // crossoverSeries was measured at ~17ms for 80 vehicles across 25 budget

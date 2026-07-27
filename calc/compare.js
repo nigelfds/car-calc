@@ -217,31 +217,6 @@ export function fbtCliff({ vehicles, inputs }, tables) {
   return { cliffPrice, budgetAt, budgetNeeded, carBelow, carAbove };
 }
 
-// The budget at which an option can first reach anything at all, and the car
-// that sets it. A chart line just begins partway across when nothing below
-// that budget is reachable, which reads as missing data rather than as "this
-// way of paying cannot buy you a car yet".
-//
-// Chosen on monthly cost, not on list price: the two differ. In the shipped
-// dataset the cheapest car to buy (MG 4 Urban 43, $29,840) is not the
-// cheapest to finance — the BYD Dolphin Essential costs $150 more but $7/mo
-// less, because insurance and consumption differ.
-export function optionEntryPoint({ vehicles, inputs, option }, tables) {
-  if (!Array.isArray(vehicles) || vehicles.length === 0) return null;
-
-  let best = null;
-  for (const vehicle of vehicles) {
-    const costs = optionCosts({ vehicle, inputs }, tables)[option];
-    // Cash is bounded by savings at any budget, so an unaffordable car can
-    // never be the entry point however cheap its running costs are.
-    if (!costs.feasible) continue;
-    if (best === null || costs.monthlyCost < best.budget) {
-      best = { budget: costs.monthlyCost, vehicle };
-    }
-  }
-  return best;
-}
-
 export function crossoverSeries({ vehicles, inputs, budgetRange }, tables) {
   const { min, max, step } = budgetRange;
   const options = ['novated', 'loan', 'upfront'];
