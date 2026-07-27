@@ -9,6 +9,7 @@
 // here, then rank, then slice, then pass the result to renderCards.
 
 import { money } from './format.js';
+import { optionCosts, valueRatio } from '../../calc/compare.js';
 
 export function filterVehicles(vehicles, filters) {
   return vehicles.filter(v => {
@@ -46,15 +47,55 @@ export function datasetStats({ vehicles = [], families = [] } = {}) {
   };
 }
 
-export function cardModel(vehicle, families) {
+// `context` ({ inputs, tables }) is optional: without it the card carries only
+// review copy, which keeps the model usable in tests and in any caller that
+// does not need money. With it, the card is costed under all three funding
+// options — a fair comparison here in a way it never was in step 2, because
+// all three price the SAME car.
+export function cardModel(vehicle, families, context = null) {
   const family = families.find(f => f.id === vehicle.familyId) ?? null;
+  const costs = context
+    ? optionCosts({ vehicle, inputs: context.inputs }, context.tables)
+    : null;
+
   return {
     ...vehicle,
     summary: family?.summary ?? null,
     pros: family?.pros ?? [],
     cons: family?.cons ?? [],
-    sources: family?.sources ?? []
+    sources: family?.sources ?? [],
+    costs
   };
+}
+
+const COST_LABEL = { novated: 'Novated', loan: 'Loan', upfront: 'Cash' };
+
+// Three totals for one car, plus how much of each dollar survives as resale.
+// The ratio is the tiebreaker the totals cannot give you: two cards $600 apart
+// on sticker can be 13c apart on what they retain.
+function costTableMarkup(card) {
+  if (!card.costs) return '';
+  const rows = ['novated', 'loan', 'upfront'].map(option => {
+    const entry = card.costs[option];
+    const ratio = valueRatio(entry);
+    // Two columns, not three: the shortlist lives in a ~236px column and a
+    // third column crushed the figures into each other. The ratio sits under
+    // its own total instead.
+    return `<tr${option === card.winningOption ? ' class="is-winner"' : ''}>
+        <th scope="row">${COST_LABEL[option]}</th>
+        <td>
+          <span class="car-costs__total">${entry.feasible ? money(entry.tco) : 'out of reach'}</span>
+          ${entry.feasible && ratio !== null
+            ? `<span class="car-costs__ratio">keeps ${Math.round(ratio * 100)}c of every $1</span>`
+            : ''}
+        </td>
+      </tr>`;
+  }).join('');
+
+  return `<table class="car-costs">
+        <caption>Total cost over the term</caption>
+        <tbody>${rows}</tbody>
+      </table>`;
 }
 
 const escapeHtml = value =>
@@ -86,6 +127,7 @@ export function renderCards(root, cards, emptyMessage) {
         ${card.bandLabel ? `<p class="car-card__band">${escapeHtml(card.bandLabel)}</p>` : ''}
         <h3>${escapeHtml(card.make)} ${escapeHtml(card.model)} ${escapeHtml(card.variant ?? '')}</h3>
         <p class="car-specs">${card.bootLitresSeatsUp}L boot &middot; ${card.rangeKm}km range &middot; ${money(card.listPrice)}</p>
+        ${costTableMarkup(card)}
         ${card.reason ? `<p class="car-reason">${escapeHtml(card.reason)}</p>` : ''}
         ${card.otherTrimsText ? `<p class="car-other-trims">${escapeHtml(card.otherTrimsText)}</p>` : ''}
         ${card.summary ? `<details>

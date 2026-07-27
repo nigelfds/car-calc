@@ -187,11 +187,15 @@ const BRACKET_TOLERANCE = 0.05;
 // best-ranked car at *any* price — a $62k Tesla against a $37k ceiling —
 // which is a fantasy, not a stretch.
 const BRACKET_WINDOW = 0.30;
+// Two below, two at, one above. Two at the ceiling gives the price point the
+// buyer can actually reach a genuine choice rather than a single
+// take-it-or-leave-it; one stretch is enough to show what a little more buys.
+const DEFAULT_COUNTS = { below: 2, at: 2, above: 1 };
 
 export function bracketAroundPrice(
   ranked,
   anchorPrice,
-  { tolerance = BRACKET_TOLERANCE, window = BRACKET_WINDOW } = {}
+  { tolerance = BRACKET_TOLERANCE, window = BRACKET_WINDOW, counts = DEFAULT_COUNTS } = {}
 ) {
   if (!Array.isArray(ranked) || ranked.length === 0) return [];
   if (typeof anchorPrice !== 'number' || !Number.isFinite(anchorPrice) || anchorPrice <= 0) return [];
@@ -213,15 +217,18 @@ export function bracketAroundPrice(
     return 'at';
   };
 
-  const picked = new Map();
+  // `ranked` is best-first, so taking the first N in a band gives the N best
+  // cars at that price point rather than the N nearest the anchor. A band with
+  // too few cars simply yields fewer cards — it never borrows from a
+  // neighbour, which would put a card under a label that misdescribes it.
+  const picked = { below: [], at: [], above: [] };
   for (const entry of ranked) {
     const band = bandOf(entry.vehicle);
     if (band === null) continue;
-    if (!picked.has(band)) picked.set(band, { band, entry });
-    if (picked.size === 3) break;
+    if (picked[band].length >= (counts[band] ?? 0)) continue;
+    picked[band].push({ band, entry });
   }
 
-  // Cheapest first, so the three read as a price ladder.
-  const order = ['below', 'at', 'above'];
-  return order.filter(band => picked.has(band)).map(band => picked.get(band));
+  // Cheapest first, so the cards read as a price ladder.
+  return [...picked.below, ...picked.at, ...picked.above];
 }

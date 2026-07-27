@@ -1,6 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { filterVehicles, cardModel, datasetStats } from './cars.js';
+import { readFileSync } from 'node:fs';
+import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
+import { valueRatio } from '../../calc/compare.js';
 import { rankVehicles } from '../../calc/rank.js';
 
 const fleet = [
@@ -102,4 +104,66 @@ test('models counts families that actually have variants', () => {
     families: [{ id: 'a' }, { id: 'orphan' }]
   });
   assert.equal(stats.models, 1);
+});
+
+// --- Each card costed under all three funding options ---------------------
+// Step 2 no longer names a car, so the cost comparison moved here — and here
+// it is a fair one, because all three options price the SAME car.
+
+const costTables = JSON.parse(readFileSync(new URL('../../data/tax-tables.json', import.meta.url)));
+const costInputs = {
+  grossSalary: 145000, savings: 80000, termMonths: 60, annualKm: 15000,
+  leaseStartDate: '2026-07-25', deposit: 0, leaseRatePct: 7.5, loanRatePct: 6.5,
+  opportunityRatePct: 4.5, adminFeeAnnual: 1020,
+  electricityCentsPerKwh: 28, otherRunningCostsAnnual: 1240, residualPctOverride: null
+};
+const vehicleFixture = {
+  id: 'a', familyId: 'fa', make: 'Kia', model: 'EV5', listPrice: 56000,
+  consumptionKwhPer100km: 16, insuranceAnnual: 1850, bootLitresSeatsUp: 513,
+  rangeKm: 400, seats: 5, bodyType: 'SUV',
+  depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47]
+};
+
+test('a card carries the cost of that car under all three options', () => {
+  const card = cardModel(vehicleFixture, [], { inputs: costInputs, tables: costTables });
+  for (const option of ['novated', 'loan', 'upfront']) {
+    assert.equal(typeof card.costs[option].tco, 'number', `${option} must be costed`);
+  }
+  assert.ok(card.costs.novated.tco < card.costs.loan.tco, 'packaging beats a loan on this salary');
+});
+
+test('an unaffordable cash purchase is marked, not silently costed', () => {
+  const card = cardModel(vehicleFixture, [], {
+    inputs: { ...costInputs, savings: 1000 }, tables: costTables
+  });
+  assert.equal(card.costs.upfront.feasible, false);
+});
+
+test('the card model still works with no costing context', () => {
+  const card = cardModel(vehicleFixture, []);
+  assert.equal(card.costs, null);
+});
+
+// The reason valueRatio survives the rework: across five differently-priced
+// cars, the total alone cannot say which holds its value.
+test('two similarly-priced cars can differ sharply on value retained', () => {
+  const holder = { ...vehicleFixture, id: 'holder', depreciationCurve: [1, 0.9, 0.84, 0.79, 0.75, 0.71] };
+  const sinker = { ...vehicleFixture, id: 'sinker', depreciationCurve: [1, 0.6, 0.45, 0.35, 0.28, 0.22] };
+  const a = cardModel(holder, [], { inputs: costInputs, tables: costTables });
+  const b = cardModel(sinker, [], { inputs: costInputs, tables: costTables });
+  assert.ok(valueRatio(a.costs.novated) > valueRatio(b.costs.novated) + 0.1,
+    'the same price with a very different curve must show a very different ratio');
+});
+
+test('renderCards prints all three totals and marks the winning option', () => {
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const card = cardModel(vehicleFixture, [], { inputs: costInputs, tables: costTables });
+  renderCards({ querySelector: () => target }, [
+    { ...card, bandLabel: 'At your ceiling', band: 'at', winningOption: 'novated' }
+  ]);
+  assert.ok(html.includes('car-costs'), 'expected the cost table');
+  assert.ok(html.includes('Novated') && html.includes('Loan') && html.includes('Cash'));
+  assert.ok(/is-winner/.test(html), 'the winning option must be marked');
+  assert.ok(/keeps \d+c/.test(html), 'expected the value-retained figure per option');
 });

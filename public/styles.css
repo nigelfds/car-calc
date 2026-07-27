@@ -1035,8 +1035,60 @@ input[type='date'],
   border-radius: 8px;
 }
 
-/* The three cards are a price ladder around the affordable ceiling, so each
-   one says where it sits rather than leaving the order to be inferred. */
+/* Three totals for one car: the comparison step 2 cannot make, because there
+   every option priced a different vehicle. */
+.car-costs {
+  width: 100%;
+  margin-top: var(--space-2);
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.car-costs caption {
+  text-align: left;
+  color: var(--ink-faint);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: var(--space-1);
+}
+
+.car-costs th {
+  text-align: left;
+  vertical-align: top;
+  font-weight: 400;
+  color: var(--ink-soft);
+  padding: 0.2em var(--space-2) 0.2em 0;
+  white-space: nowrap;
+}
+
+.car-costs td {
+  text-align: right;
+  padding: 0.2em 0;
+}
+
+.car-costs__total {
+  display: block;
+  font-family: var(--font-mono);
+}
+
+.car-costs tr.is-winner th,
+.car-costs tr.is-winner td {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* How much of each dollar survives as resale. Quieter than the total: it is a
+   tiebreaker between similarly-priced cars, not the headline. */
+.car-costs__ratio {
+  display: block;
+  color: var(--ink-faint);
+  font-size: 0.66rem;
+  line-height: 1.3;
+}
+
+/* The cards are a price ladder around the affordable ceiling, so each one says
+   where it sits rather than leaving the order to be inferred. */
 .car-card__band {
   margin: 0 0 var(--space-1);
   font-family: var(--font-mono);

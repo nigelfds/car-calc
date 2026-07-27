@@ -167,10 +167,15 @@ function boot(root, dataset) {
     );
 
     const bands = anchorPrice !== null ? bracketAroundPrice(ranked, anchorPrice) : [];
+    // Real figures here, unlike step 2's typical-EV profile: each card is
+    // costed from its own consumption, insurance and depreciation curve.
+    const context = { inputs: buildInputs(state), tables };
+
     const cards = bands.map(({ band, entry }) => ({
-      ...cardModel(entry.vehicle, families),
+      ...cardModel(entry.vehicle, families, context),
       band,
       bandLabel: BAND_LABEL[band],
+      winningOption: verdict.winner,
       reason: entry.reasons[0],
       otherTrimsText: entry.otherTrims
         ? `${entry.otherTrims.count} other ${entry.otherTrims.count === 1 ? 'trim' : 'trims'} from ${money(entry.otherTrims.fromPrice)}`
