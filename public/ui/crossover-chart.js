@@ -265,13 +265,15 @@ function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
   if (cliff.budgetAt < first || cliff.budgetAt > last) return '';
 
   const x = valueToX(series, cliff.budgetAt, plotWidth);
+  // Kept tight on purpose: at disclaimer-sized text the box has to fit inside
+  // the plot, and a wall of small print is not much better than no note.
   const explanation =
-    `FBT cliff at ${money(cliff.cliffPrice)}. A novated lease is FBT-exempt up to this price; ` +
-    `one dollar over and the exemption is lost outright, with no taper. ` +
-    `The dearest exempt car here is the ${cliff.carBelow.make} ${cliff.carBelow.model} at ` +
-    `${money(cliff.carBelow.listPrice)}, costing ${money(cliff.budgetAt)}/mo. The next car up, the ` +
-    `${cliff.carAbove.make} ${cliff.carAbove.model} at ${money(cliff.carAbove.listPrice)}, ` +
-    `would cost ${money(cliff.budgetNeeded)}/mo. That is why the novated lease line stops climbing here.`;
+    `FBT cliff at ${money(cliff.cliffPrice)}. Above this price a novated lease loses its ` +
+    `FBT exemption outright — there is no taper. The dearest exempt car here is the ` +
+    `${cliff.carBelow.make} ${cliff.carBelow.model} at ${money(cliff.carBelow.listPrice)} ` +
+    `(${money(cliff.budgetAt)}/mo). The next one up, the ${cliff.carAbove.make} ` +
+    `${cliff.carAbove.model} at ${money(cliff.carAbove.listPrice)}, would need ` +
+    `${money(cliff.budgetNeeded)}/mo — which is why the novated line stops climbing.`;
 
   // A native <title> waits for the browser's ~1s tooltip delay before it
   // appears. This is drawn as part of the chart instead, so it shows the
@@ -308,13 +310,20 @@ function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
 }
 
 // SVG <text> has no wrapping, so the tooltip copy is split into lines here
-// and emitted as <tspan>s. Characters rather than measured pixels: the tip
-// is a fixed-size monospace-ish block, and a character budget is both good
-// enough and testable without a layout engine.
-const TIP_CHARS_PER_LINE = 52;
-const TIP_CHAR_WIDTH = 4.6;
-const TIP_LINE_HEIGHT = 12;
-const TIP_PADDING = 8;
+// and emitted as <tspan>s. Characters rather than measured pixels: a
+// character budget is good enough for a fixed block of copy and testable
+// without a layout engine.
+//
+// These are viewBox units, not CSS pixels. The chart's viewBox is 752 wide
+// and renders around 600, so everything inside is scaled by ~0.8: the font
+// size below is set in styles.css to 16.4 units so it lands at roughly the
+// 13.1px of .disclaimer. TIP_CHAR_WIDTH is the average glyph advance at that
+// size, and the two must be changed together or the box stops matching its
+// text.
+const TIP_CHARS_PER_LINE = 60;
+const TIP_CHAR_WIDTH = 8.4;
+const TIP_LINE_HEIGHT = 21;
+const TIP_PADDING = 10;
 
 export function wrapText(text, maxChars) {
   const words = String(text).split(/\s+/).filter(Boolean);

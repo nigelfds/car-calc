@@ -619,10 +619,14 @@ input[type='date'],
   opacity: 0.96;
 }
 
+/* 16.4 viewBox units, not pixels: the chart's 752-unit viewBox renders at
+   about 600px, so this lands at roughly 13.1px on screen — the same as
+   .disclaimer. Paired with TIP_CHAR_WIDTH in ui/crossover-chart.js, which
+   sizes the box around the text; change the two together. */
 .crossover-chart .fbt-cliff__tip-text {
   fill: #fff;
   font-family: var(--font-text);
-  font-size: 9px;
+  font-size: 16.4px;
 }
 
 .crossover-chart .fbt-cliff__line {
