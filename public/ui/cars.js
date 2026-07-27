@@ -58,13 +58,25 @@ export function cardModel(vehicle, families, context = null) {
     ? optionCosts({ vehicle, inputs: context.inputs }, context.tables)
     : null;
 
+  // A novated lease ends with a lump-sum residual. It is already inside the
+  // novated total, but a total is not a cash-flow warning: affordability is
+  // tested on the monthly figure alone, so a lease that fits comfortably each
+  // month can still leave a five-figure bill due on the last day of the term.
+  // Whether selling the car would clear it is the part worth flagging.
+  const balloon = costs ? costs.novated.detail.residual : null;
+  const balloonCovered = balloon === null
+    ? null
+    : costs.novated.detail.resale >= balloon;
+
   return {
     ...vehicle,
     summary: family?.summary ?? null,
     pros: family?.pros ?? [],
     cons: family?.cons ?? [],
     sources: family?.sources ?? [],
-    costs
+    costs,
+    balloon,
+    balloonCovered
   };
 }
 
@@ -92,10 +104,19 @@ function costTableMarkup(card) {
       </tr>`;
   }).join('');
 
+  const balloonNote = card.balloon
+    ? `<p class="car-balloon${card.balloonCovered ? '' : ' is-short'}">
+        Novated ends with a ${money(card.balloon)} balloon to own it${
+          card.balloonCovered
+            ? `, roughly covered by selling it (${money(card.costs.novated.detail.resale)})`
+            : ` — more than its projected ${money(card.costs.novated.detail.resale)} resale, so selling would not clear it`
+        }.</p>`
+    : '';
+
   return `<table class="car-costs">
         <caption>Total cost over the term</caption>
         <tbody>${rows}</tbody>
-      </table>`;
+      </table>${balloonNote}`;
 }
 
 const escapeHtml = value =>

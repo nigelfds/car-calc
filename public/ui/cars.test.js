@@ -167,3 +167,51 @@ test('renderCards prints all three totals and marks the winning option', () => {
   assert.ok(/is-winner/.test(html), 'the winning option must be marked');
   assert.ok(/keeps \d+c/.test(html), 'expected the value-retained figure per option');
 });
+
+// --- The lease balloon, back where a car price exists ---------------------
+// Step 2 used to disclose the residual, but it no longer names a car, so
+// there is nothing to compute one from. It belongs per card. The
+// affordability test is still monthly-only, so a five-figure bill on the last
+// day of the term is otherwise invisible.
+
+test('a card discloses the balloon on its novated option', () => {
+  const card = cardModel(vehicleFixture, [], { inputs: costInputs, tables: costTables });
+  assert.ok(card.balloon > 0, 'the residual must be surfaced, not buried in the total');
+  assert.equal(card.balloon, card.costs.novated.detail.residual);
+});
+
+test('a card flags a balloon the car will not be worth enough to clear', () => {
+  const sinker = { ...vehicleFixture, depreciationCurve: [1, 0.4, 0.28, 0.2, 0.15, 0.1] };
+  const card = cardModel(sinker, [], { inputs: costInputs, tables: costTables });
+  assert.ok(card.costs.novated.detail.resale < card.balloon, 'fixture must be underwater');
+  assert.equal(card.balloonCovered, false);
+});
+
+test('a card that holds its value covers its own balloon', () => {
+  const holder = { ...vehicleFixture, depreciationCurve: [1, 0.95, 0.92, 0.9, 0.88, 0.85] };
+  const card = cardModel(holder, [], { inputs: costInputs, tables: costTables });
+  assert.equal(card.balloonCovered, true);
+});
+
+test('no costing context means no balloon rather than a crash', () => {
+  const card = cardModel(vehicleFixture, []);
+  assert.equal(card.balloon, null);
+  assert.equal(card.balloonCovered, null);
+});
+
+test('renderCards prints the balloon under the cost table', () => {
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const card = cardModel(vehicleFixture, [], { inputs: costInputs, tables: costTables });
+  renderCards({ querySelector: () => target }, [{ ...card, bandLabel: 'At your ceiling' }]);
+  assert.ok(/balloon/i.test(html), `expected the balloon named, got: ${html}`);
+});
+
+test('an underwater balloon is marked so it reads as a warning', () => {
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const sinker = { ...vehicleFixture, depreciationCurve: [1, 0.4, 0.28, 0.2, 0.15, 0.1] };
+  const card = cardModel(sinker, [], { inputs: costInputs, tables: costTables });
+  renderCards({ querySelector: () => target }, [{ ...card, bandLabel: 'At your ceiling' }]);
+  assert.ok(/is-short/.test(html), 'a shortfall must be visually distinct from a covered balloon');
+});
