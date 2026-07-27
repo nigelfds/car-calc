@@ -252,19 +252,60 @@ export function layoutCrossoverLabels(entries, options = {}) {
     });
 }
 
+// A vertical rule with an "i" badge and an instant hover explanation. Shared
+// by every chart annotation so the tooltip geometry — wrapping, box sizing,
+// edge clamping — exists once. `variant` only picks the colour.
+//
+// Returns '' when the marker would fall outside the charted budget range:
+// valueToX clamps, so it would otherwise be pinned to an axis end and read as
+// though it belonged there.
+function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeight, badgeY = 8 }) {
+  const first = series.points[0].budget;
+  const last = series.points[series.points.length - 1].budget;
+  if (budget < first || budget > last) return '';
+
+  const x = valueToX(series, budget, plotWidth);
+
+  // A native <title> waits for the browser's ~1s tooltip delay before it
+  // appears. This is drawn as part of the chart instead, so it shows the
+  // instant the pointer arrives, via CSS only.
+  const lines = wrapText(explanation, TIP_CHARS_PER_LINE);
+  const boxWidth = TIP_CHARS_PER_LINE * TIP_CHAR_WIDTH + TIP_PADDING * 2;
+  const boxHeight = lines.length * TIP_LINE_HEIGHT + TIP_PADDING * 2;
+  // Keep the box inside the plot: nudged sideways when the marker sits near
+  // an edge, rather than overflowing the SVG.
+  const boxX = Math.min(Math.max(x - boxWidth / 2, 0), Math.max(0, plotWidth - boxWidth));
+  const boxY = badgeY + 12;
+
+  const tspans = lines.map((line, i) =>
+    `<tspan x="${(boxX + TIP_PADDING).toFixed(1)}" dy="${i === 0 ? 0 : TIP_LINE_HEIGHT}">${escapeAttr(line)}</tspan>`
+  ).join('');
+
+  // aria-label carries the same text for screen readers. No tabindex: this
+  // is an annotation, not a control, so it stays out of the tab order.
+  return `<g class="chart-marker chart-marker--${variant}" role="img" aria-label="${escapeAttr(explanation)}">
+      <line class="chart-marker__line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${badgeY + 6}" y2="${plotHeight}" />
+      <circle class="chart-marker__badge" cx="${x.toFixed(1)}" cy="${badgeY}" r="7" />
+      <text class="chart-marker__glyph" x="${x.toFixed(1)}" y="${badgeY}" text-anchor="middle"
+        dominant-baseline="central">i</text>
+      <!-- A <g> has no fill of its own, so without this the only hoverable
+           pixels are a 7px circle and a 1px rule. Transparent, and kept to
+           the badge so it never covers the plotted points behind it. -->
+      <circle class="chart-marker__hit" cx="${x.toFixed(1)}" cy="${badgeY}" r="13" />
+      <g class="chart-marker__tip" aria-hidden="true">
+        <rect class="chart-marker__tip-box" x="${boxX.toFixed(1)}" y="${boxY}"
+          width="${boxWidth.toFixed(1)}" height="${boxHeight.toFixed(1)}" rx="4" />
+        <text class="chart-marker__tip-text" y="${boxY + TIP_PADDING + TIP_LINE_HEIGHT * 0.75}">${tspans}</text>
+      </g>
+    </g>`;
+}
+
 // The novated line plateaus for a reason the chart cannot otherwise show:
 // the FBT exemption is a cliff, not a taper, so past a certain car price the
 // monthly cost roughly doubles and the lease simply stops being able to
-// reach anything dearer. Marked with an "i" carrying the explanation.
+// reach anything dearer.
 function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
   if (!cliff) return '';
-  const first = series.points[0].budget;
-  const last = series.points[series.points.length - 1].budget;
-  // valueToX clamps, so a cliff outside the charted range would be pinned to
-  // an edge and read as though it sat there. Better to draw nothing.
-  if (cliff.budgetAt < first || cliff.budgetAt > last) return '';
-
-  const x = valueToX(series, cliff.budgetAt, plotWidth);
   // Kept tight on purpose: at disclaimer-sized text the box has to fit inside
   // the plot, and a wall of small print is not much better than no note.
   const explanation =
@@ -275,38 +316,43 @@ function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
     `${cliff.carAbove.model} at ${money(cliff.carAbove.listPrice)}, would need ` +
     `${money(cliff.budgetNeeded)}/mo — which is why the novated line stops climbing.`;
 
-  // A native <title> waits for the browser's ~1s tooltip delay before it
-  // appears. This is drawn as part of the chart instead, so it shows the
-  // instant the pointer arrives, via CSS only.
-  const lines = wrapText(explanation, TIP_CHARS_PER_LINE);
-  const boxWidth = TIP_CHARS_PER_LINE * TIP_CHAR_WIDTH + TIP_PADDING * 2;
-  const boxHeight = lines.length * TIP_LINE_HEIGHT + TIP_PADDING * 2;
-  // Keep the box inside the plot: nudged left when the marker sits near the
-  // right-hand edge, rather than overflowing the SVG.
-  const boxX = Math.min(Math.max(x - boxWidth / 2, 0), Math.max(0, plotWidth - boxWidth));
-  const boxY = 20;
+  return chartMarker({
+    series, budget: cliff.budgetAt, explanation,
+    variant: 'cliff', plotWidth, plotHeight
+  });
+}
 
-  const tspans = lines.map((line, i) =>
-    `<tspan x="${(boxX + TIP_PADDING).toFixed(1)}" dy="${i === 0 ? 0 : TIP_LINE_HEIGHT}">${escapeAttr(line)}</tspan>`
-  ).join('');
+// A line that simply begins partway across reads as missing data. This says
+// what the gap actually means: below here, that way of paying cannot buy the
+// cheapest car on the market.
+//
+// Anchored to the first *plotted* point rather than to the raw threshold. The
+// series is sampled in fixed budget steps, so a line can only begin on a
+// sample: a threshold of $1,036.70 produces a line starting at $1,100, and
+// placing the badge at the threshold left it floating ~15px clear of the line
+// it was labelling. The precise threshold is still what the tooltip quotes —
+// it is the number the reader needs — but the badge points at the line.
+function entryMarkup(series, entry, plotWidth, plotHeight) {
+  if (!entry) return '';
 
-  // aria-label carries the same text for screen readers. No tabindex: this
-  // is an annotation, not a control, so it stays out of the tab order.
-  return `<g class="fbt-cliff" role="img" aria-label="${escapeAttr(explanation)}">
-      <line class="fbt-cliff__line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="14" y2="${plotHeight}" />
-      <circle class="fbt-cliff__badge" cx="${x.toFixed(1)}" cy="8" r="7" />
-      <text class="fbt-cliff__glyph" x="${x.toFixed(1)}" y="8" text-anchor="middle"
-        dominant-baseline="central">i</text>
-      <!-- A <g> has no fill of its own, so without this the only hoverable
-           pixels are a 7px circle and a 1px rule. Transparent, and kept to
-           the badge so it never covers the plotted points behind it. -->
-      <circle class="fbt-cliff__hit" cx="${x.toFixed(1)}" cy="8" r="13" />
-      <g class="fbt-cliff__tip" aria-hidden="true">
-        <rect class="fbt-cliff__tip-box" x="${boxX.toFixed(1)}" y="${boxY}"
-          width="${boxWidth.toFixed(1)}" height="${boxHeight.toFixed(1)}" rx="4" />
-        <text class="fbt-cliff__tip-text" y="${boxY + TIP_PADDING + TIP_LINE_HEIGHT * 0.75}">${tspans}</text>
-      </g>
-    </g>`;
+  const firstPlotted = series.points.findIndex(point => point.loan !== null);
+  // The loan never appears in this range, so there is no line to introduce.
+  if (firstPlotted < 0) return '';
+  // Nothing to explain when the line starts at the left edge anyway.
+  if (firstPlotted === 0) return '';
+
+  const explanation =
+    `The car loan line starts here. Below ${money(entry.budget)}/mo a loan cannot cover ` +
+    `even the cheapest car available to you — the ${entry.vehicle.make} ${entry.vehicle.model} ` +
+    `at ${money(entry.vehicle.listPrice)}, which needs ${money(entry.budget)}/mo over this term. ` +
+    `A longer term or a bigger deposit would lower that and start the line sooner.`;
+
+  // Sits below the cliff badge so the two never overlap when they land close
+  // together on the budget axis.
+  return chartMarker({
+    series, budget: series.points[firstPlotted].budget, explanation,
+    variant: 'entry', plotWidth, plotHeight, badgeY: 26
+  });
 }
 
 // SVG <text> has no wrapping, so the tooltip copy is split into lines here
@@ -349,7 +395,7 @@ const escapeAttr = value =>
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
 
-function renderLineChart(target, series, budgetMonthly, cliff) {
+function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   const { min, max } = bounds(series);
   const plotWidth = 560;
   const plotHeight = 190;
@@ -478,6 +524,7 @@ function renderLineChart(target, series, budgetMonthly, cliff) {
         ${xLabels}
         ${axisTitles}
         ${fbtCliffMarkup(series, cliff, plotWidth, plotHeight)}
+        ${entryMarkup(series, entry, plotWidth, plotHeight)}
         ${budgetMarkup}
       </g>
     </svg>`;
@@ -548,7 +595,7 @@ function isDesktopViewport(root) {
   return typeof width === 'number' ? width >= 900 : true;
 }
 
-export function renderChart(root, series, budgetMonthly = null, cliff = null) {
+export function renderChart(root, series, budgetMonthly = null, cliff = null, entry = null) {
   const target = root.querySelector('#crossover');
   if (!target) return;
 
@@ -558,6 +605,6 @@ export function renderChart(root, series, budgetMonthly = null, cliff = null) {
     // nothing for a cliff marker to explain there.
     renderWinnerBand(target, series, budgetMonthly);
   } else {
-    renderLineChart(target, series, budgetMonthly, cliff);
+    renderLineChart(target, series, budgetMonthly, cliff, entry);
   }
 }

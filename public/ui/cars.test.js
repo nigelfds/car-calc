@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { filterVehicles, cardModel } from './cars.js';
+import { filterVehicles, cardModel, datasetStats } from './cars.js';
 import { rankVehicles } from '../../calc/rank.js';
 
 const fleet = [
@@ -48,4 +48,58 @@ test('the card model does not carry an image, even when the family has one', () 
   const card = cardModel(fleet[0], withImages);
   assert.equal(card.image, undefined);
   assert.ok(!('image' in card), 'cardModel must not expose an image field');
+});
+
+// --- Dataset stats in the header -----------------------------------------
+// Written from the data rather than typed into the markup, so the counts
+// cannot drift from what actually ships.
+
+test('the stats line counts models and variants and dates the data', () => {
+  const stats = datasetStats({
+    vehicles: [
+      { familyId: 'a', sourcedAt: '2026-07-26' },
+      { familyId: 'a', sourcedAt: '2026-07-27' },
+      { familyId: 'b', sourcedAt: '2026-07-20' }
+    ],
+    families: [{ id: 'a' }, { id: 'b' }]
+  });
+  assert.equal(stats.models, 2);
+  assert.equal(stats.variants, 3);
+  assert.equal(stats.updated, 'July 2026');
+});
+
+test('the date is the most recent sourcedAt, not the first or the clock', () => {
+  const stats = datasetStats({
+    vehicles: [
+      { familyId: 'a', sourcedAt: '2025-02-10' },
+      { familyId: 'a', sourcedAt: '2026-11-03' }
+    ],
+    families: [{ id: 'a' }]
+  });
+  assert.equal(stats.updated, 'November 2026');
+});
+
+test('missing or malformed dates do not produce an Invalid Date', () => {
+  const stats = datasetStats({
+    vehicles: [{ familyId: 'a' }, { familyId: 'a', sourcedAt: 'not-a-date' }],
+    families: [{ id: 'a' }]
+  });
+  assert.equal(stats.updated, null);
+  assert.equal(stats.variants, 2);
+});
+
+test('an empty dataset reports zeroes rather than throwing', () => {
+  const stats = datasetStats({ vehicles: [], families: [] });
+  assert.equal(stats.models, 0);
+  assert.equal(stats.variants, 0);
+  assert.equal(stats.updated, null);
+});
+
+test('models counts families that actually have variants', () => {
+  // A family with no rows is not a car anyone can be shown.
+  const stats = datasetStats({
+    vehicles: [{ familyId: 'a', sourcedAt: '2026-07-27' }],
+    families: [{ id: 'a' }, { id: 'orphan' }]
+  });
+  assert.equal(stats.models, 1);
 });

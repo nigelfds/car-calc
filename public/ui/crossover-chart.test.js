@@ -383,7 +383,7 @@ test('the cliff marker renders with its explanation when one applies', () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, wideSeries, 800, cliffFixture);
     const html = getHtml();
-    assert.ok(html.includes('fbt-cliff'), 'expected a cliff marker');
+    assert.ok(html.includes('chart-marker--cliff'), 'expected a cliff marker');
     assert.ok(/loses|lost outright|exemption/i.test(html), 'expected the exemption explained');
     assert.ok(html.includes('$91,661'), 'expected the threshold named');
     assert.ok(html.includes('<title>'), 'the explanation must be reachable as a tooltip');
@@ -394,7 +394,7 @@ test('no cliff marker renders when there is no cliff', () => {
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, wideSeries, 800, null);
-    assert.ok(!getHtml().includes('fbt-cliff'), 'nothing to mark, so nothing drawn');
+    assert.ok(!getHtml().includes('chart-marker--cliff'), 'nothing to mark, so nothing drawn');
   });
 });
 
@@ -405,7 +405,7 @@ test('a cliff outside the charted budget range is not drawn at the edge', () => 
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, wideSeries, 800, { ...cliffFixture, budgetAt: 9999 });
-    assert.ok(!getHtml().includes('fbt-cliff'), 'a cliff off the right of the chart must not be pinned to the edge');
+    assert.ok(!getHtml().includes('chart-marker--cliff'), 'a cliff off the right of the chart must not be pinned to the edge');
   });
 });
 
@@ -442,11 +442,11 @@ test('the explanation is drawn into the chart, not left to a native title toolti
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, wideSeries, 800, cliffFixture);
     const html = getHtml();
-    assert.ok(html.includes('fbt-cliff__tip'), 'expected a drawn tooltip element');
+    assert.ok(html.includes('chart-marker__tip'), 'expected a drawn tooltip element');
     assert.ok(html.includes('<tspan'), 'expected the copy wrapped into tspans');
     // Scoped to the cliff group: the data points legitimately keep their own
     // <title> hover labels, so a document-wide check would never pass.
-    const group = html.slice(html.indexOf('class="fbt-cliff"'));
+    const group = html.slice(html.indexOf('chart-marker--cliff'));
     assert.ok(!group.slice(0, group.indexOf('</g>')).includes('<title>'),
       'the cliff should not rely on the delayed native tooltip');
   });
@@ -471,4 +471,117 @@ test('wrapText keeps a word longer than the limit rather than truncating it', ()
 test('wrapText on empty input produces no lines', () => {
   assert.deepEqual(wrapText('', 20), []);
   assert.deepEqual(wrapText('   ', 20), []);
+});
+
+// --- Loan entry-point marker ---------------------------------------------
+
+const entryFixture = {
+  budget: 1181,
+  vehicle: { make: 'BYD', model: 'Dolphin', listPrice: 29990 }
+};
+
+// wideSeries has a loan value at every point, so under the corrected
+// anchoring there is nothing to mark. This fixture withholds the loan for the
+// first few budgets, the way a real short-term, no-deposit loan does.
+const lateLoanSeries = {
+  points: Array.from({ length: 25 }, (_, i) => ({
+    budget: 300 + i * 100,
+    novated: 30000 + i * 500,
+    loan: i < 9 ? null : 40000 + i * 900,
+    upfront: 62835
+  })),
+  crossovers: []
+};
+
+test('the entry marker explains where the loan line starts and why', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, lateLoanSeries, 800, null, entryFixture);
+    const html = getHtml();
+    assert.ok(html.includes('chart-marker--entry'), 'expected an entry marker');
+    assert.ok(html.includes('$1,181'), 'expected the entry budget quoted');
+    assert.ok(html.includes('Dolphin'), 'expected the cheapest reachable car named');
+    assert.ok(html.includes('$29,990'), 'expected that car\'s price');
+  });
+});
+
+// If the line already starts at the left edge there is no gap to account for.
+test('no entry marker when the line starts at the beginning of the range', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    const atFirst = { ...entryFixture, budget: wideSeries.points[0].budget };
+    // wideSeries has a loan value from the very first point, so the line
+    // already starts at the left edge.
+    renderChart(root, wideSeries, 800, null, atFirst);
+    assert.ok(!getHtml().includes('chart-marker--entry'), 'nothing to explain at the left edge');
+  });
+});
+
+test('no entry marker when none is supplied', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, wideSeries, 800, null, null);
+    assert.ok(!getHtml().includes('chart-marker--entry'));
+  });
+});
+
+test('the cliff and entry markers can coexist without sharing a badge position', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, lateLoanSeries, 800, cliffFixture, entryFixture);
+    const html = getHtml();
+    assert.ok(html.includes('chart-marker--cliff'));
+    assert.ok(html.includes('chart-marker--entry'));
+    // Both badges are circles; they must sit at different heights so that two
+    // markers landing on nearby budgets do not overlap into one blob.
+    const cys = [...html.matchAll(/class="chart-marker__badge" cx="[\d.]+" cy="([\d.]+)"/g)].map(m => m[1]);
+    assert.equal(cys.length, 2);
+    assert.notEqual(cys[0], cys[1], 'the two badges must not share a y');
+  });
+});
+
+// The chart samples budgets in fixed steps, so a line can only begin on a
+// sampled point. Anchoring the marker at the true threshold left it floating
+// to the left of the line it was pointing at — up to ~15px adrift once a
+// deposit lowered the threshold mid-step.
+test('the entry marker sits where the line actually starts, not at the raw threshold', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    // Loan unreachable until the third sampled point (budget 500).
+    const stepped = {
+      points: [
+        { budget: 300, novated: 20000, loan: null, upfront: 40000 },
+        { budget: 400, novated: 22000, loan: null, upfront: 40000 },
+        { budget: 500, novated: 24000, loan: 30000, upfront: 40000 },
+        { budget: 600, novated: 26000, loan: 31000, upfront: 40000 }
+      ],
+      crossovers: []
+    };
+    // A threshold of 432 falls between samples; the line begins at 500.
+    renderChart(root, stepped, 350, null, {
+      budget: 432, vehicle: { make: 'BYD', model: 'Dolphin', listPrice: 29990 }
+    });
+    const html = getHtml();
+    const markerX = Number(/chart-marker--entry[\s\S]*?<line[^>]*x1="([\d.]+)"/.exec(html)[1]);
+    // Index 2 of 3 across a 560-wide plot.
+    assert.ok(Math.abs(markerX - (2 / 3) * 560) < 0.5,
+      `marker at ${markerX} should sit on the first plotted loan point`);
+    // The precise figure is still what the reader is told they need.
+    assert.ok(html.includes('$432'), 'the true minimum must still be quoted');
+  });
+});
+
+test('no entry marker when the loan line never appears in range', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    const never = {
+      points: [
+        { budget: 300, novated: 20000, loan: null, upfront: 40000 },
+        { budget: 400, novated: 22000, loan: null, upfront: 40000 }
+      ],
+      crossovers: []
+    };
+    renderChart(root, never, 350, null, { budget: 9999, vehicle: { make: 'BYD', model: 'Dolphin', listPrice: 29990 } });
+    assert.ok(!getHtml().includes('chart-marker--entry'));
+  });
 });

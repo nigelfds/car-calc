@@ -142,6 +142,29 @@ input[type='date'],
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--space-5) var(--space-4) var(--space-4);
+  /* Titles left, provenance right. Stacks on narrow screens rather than
+     squeezing the stats into a column too thin to read. */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+}
+
+.site-header__titles { min-width: min(100%, 28ch); }
+
+/* How much data stands behind the answers, and how fresh it is. Quiet: it is
+   provenance, not a headline. */
+.site-header__stats {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  text-align: right;
+}
+
+@media (max-width: 599px) {
+  .site-header__stats { text-align: left; }
 }
 
 .wordmark {
@@ -614,25 +637,29 @@ input[type='date'],
    nothing to click. Hovering anywhere on the marker reveals the explanation
    with no transition delay — a native <title> waits about a second first,
    which is long enough that most people never see it. */
-.crossover-chart .fbt-cliff { cursor: default; }
+.crossover-chart .chart-marker { cursor: default; }
 
-.crossover-chart .fbt-cliff__hit {
+.crossover-chart .chart-marker__hit {
   fill: transparent;
   pointer-events: all;
 }
 
-.crossover-chart .fbt-cliff__tip {
+.crossover-chart .chart-marker__tip {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.crossover-chart .fbt-cliff:hover .fbt-cliff__tip {
+.crossover-chart .chart-marker:hover .chart-marker__tip {
   opacity: 1;
   visibility: visible;
 }
 
-.crossover-chart .fbt-cliff__tip-box {
+/* A hovered marker's tooltip must sit above the other marker's badge and
+   rule, not behind them. */
+.crossover-chart .chart-marker:hover { isolation: isolate; }
+
+.crossover-chart .chart-marker__tip-box {
   fill: var(--ink);
   opacity: 0.96;
 }
@@ -641,24 +668,29 @@ input[type='date'],
    about 600px, so this lands at roughly 13.1px on screen — the same as
    .disclaimer. Paired with TIP_CHAR_WIDTH in ui/crossover-chart.js, which
    sizes the box around the text; change the two together. */
-.crossover-chart .fbt-cliff__tip-text {
+.crossover-chart .chart-marker__tip-text {
   fill: #fff;
   font-family: var(--font-text);
   font-size: 16.4px;
 }
 
-.crossover-chart .fbt-cliff__line {
-  stroke: var(--warn);
+.crossover-chart .chart-marker__line {
   stroke-width: 1;
   stroke-dasharray: 1 3;
   opacity: 0.7;
 }
 
-.crossover-chart .fbt-cliff__badge {
-  fill: var(--warn);
-}
+/* The cliff is warn-coloured: it marks a discontinuity in the tax treatment,
+   something to be careful of. The entry point is not a hazard — it just says
+   where a line begins — so it takes that option's own identity colour
+   instead, tying the badge to the line it explains. */
+.crossover-chart .chart-marker--cliff .chart-marker__line { stroke: var(--warn); }
+.crossover-chart .chart-marker--cliff .chart-marker__badge { fill: var(--warn); }
 
-.crossover-chart .fbt-cliff__glyph {
+.crossover-chart .chart-marker--entry .chart-marker__line { stroke: var(--line-loan); }
+.crossover-chart .chart-marker--entry .chart-marker__badge { fill: var(--line-loan); }
+
+.crossover-chart .chart-marker__glyph {
   fill: #fff;
   font-family: var(--font-text);
   font-size: 9px;
@@ -667,7 +699,7 @@ input[type='date'],
   pointer-events: none;
 }
 
-.crossover-chart .fbt-cliff:focus-visible {
+.crossover-chart .chart-marker:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }

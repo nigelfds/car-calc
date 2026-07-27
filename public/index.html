@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Can I afford an EV? — Melbourne affordability calculator</title>
+  <title>What's the best EV I could get? — Melbourne EV affordability calculator</title>
   <meta name="description" content="Work out what EV you can actually afford in Melbourne, and whether a novated lease, a car loan or paying cash gets you there for less." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +16,14 @@
 
   <header class="site-header">
     <div class="site-header__inner">
-      <p class="wordmark">Can I afford an EV<span class="wordmark__mark">?</span></p>
-      <p class="site-header__subhead">A straight answer for Melbourne buyers, built from published rates.</p>
+      <div class="site-header__titles">
+        <p class="wordmark">What's the best EV I could get<span class="wordmark__mark">?</span></p>
+        <p class="site-header__subhead">Melbourne EVs matched to what you earn and what they really cost to
+          own — purchase, tax, running costs and resale, over the whole term.</p>
+      </div>
+      <!-- Populated at boot from /api/dataset (ui/app.js) rather than written
+           here, so the counts cannot drift from the data actually shipped. -->
+      <p class="site-header__stats" id="dataset-stats"></p>
     </div>
     <div class="route-rule" aria-hidden="true">
       <span class="route-rule__seg route-rule__seg--lease"></span>

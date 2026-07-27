@@ -20,6 +20,32 @@ export function filterVehicles(vehicles, filters) {
   });
 }
 
+// Header provenance: how much data is behind the answers, and how fresh it
+// is. Derived from the dataset itself rather than written into the markup, so
+// the numbers cannot quietly drift from what actually ships.
+export function datasetStats({ vehicles = [], families = [] } = {}) {
+  const withVariants = new Set(vehicles.map(v => v.familyId));
+  // Families with no rows are not cars anyone can be shown, so they are not
+  // counted as models.
+  const models = families.filter(f => withVariants.has(f.id)).length;
+
+  const dates = [...vehicles, ...families]
+    .map(row => row?.sourcedAt)
+    .filter(value => typeof value === 'string' && !Number.isNaN(Date.parse(value)))
+    .sort();
+  const latest = dates[dates.length - 1];
+
+  return {
+    models,
+    variants: vehicles.length,
+    // UTC so the month never shifts backwards for a reader west of the data's
+    // timezone.
+    updated: latest
+      ? new Date(latest).toLocaleString('en-AU', { month: 'long', year: 'numeric', timeZone: 'UTC' })
+      : null
+  };
+}
+
 export function cardModel(vehicle, families) {
   const family = families.find(f => f.id === vehicle.familyId) ?? null;
   return {

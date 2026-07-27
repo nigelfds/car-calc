@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   optionCosts, reachableVehicle, crossoverSeries,
-  isVehicleReachable, reachableVehicles, optionBlocker, valueRatio, fbtCliff
+  isVehicleReachable, reachableVehicles, optionBlocker, valueRatio, fbtCliff, optionEntryPoint
 } from './compare.js';
 
 const tables = JSON.parse(readFileSync(new URL('../data/tax-tables.json', import.meta.url)));
@@ -339,4 +339,54 @@ test('a ratio is still reported when the net cost is zero or negative', () => {
   const rich = { ...inputs, grossSalary: 1500000, termMonths: 36 };
   const c = optionCosts({ vehicle: vehicle('a', 45000), inputs: rich }, tables).novated;
   assert.notEqual(valueRatio(c), null);
+});
+
+// --- Where a line can first appear ---------------------------------------
+// A chart line simply begins partway across when nothing is reachable below
+// that budget, which reads as missing data rather than as "unaffordable".
+// The entry point is the lowest monthly cost any car in the fleet can be had
+// for under that option.
+
+test('the entry point is the cheapest monthly cost across the fleet', () => {
+  const fleet = [vehicle('a', 40000), vehicle('b', 60000), vehicle('c', 90000)];
+  const entry = optionEntryPoint({ vehicles: fleet, inputs, option: 'loan' }, tables);
+  const cheapestMonthly = Math.min(
+    ...fleet.map(v => optionCosts({ vehicle: v, inputs }, tables).loan.monthlyCost)
+  );
+  assert.ok(Math.abs(entry.budget - cheapestMonthly) < 1e-9);
+});
+
+// The cheapest car to buy is not always the cheapest to run: insurance and
+// consumption differ, so a slightly dearer car can carry a lower monthly.
+test('the entry car is chosen on monthly cost, not on list price', () => {
+  const thirsty = { ...vehicle('cheap-but-thirsty', 40000), insuranceAnnual: 6000 };
+  const frugal = { ...vehicle('dearer-but-frugal', 42000), insuranceAnnual: 900 };
+  const entry = optionEntryPoint({ vehicles: [thirsty, frugal], inputs, option: 'loan' }, tables);
+  assert.equal(entry.vehicle.id, 'dearer-but-frugal');
+});
+
+test('cash ignores cars that savings cannot cover', () => {
+  // Only the cheap car is within savings, so it must set the entry point even
+  // though the dear car would have a lower running-cost-only monthly.
+  const tight = { ...inputs, savings: 45000 };
+  const fleet = [vehicle('within', 40000), { ...vehicle('beyond', 90000), insuranceAnnual: 500 }];
+  const entry = optionEntryPoint({ vehicles: fleet, inputs: tight, option: 'upfront' }, tables);
+  assert.equal(entry.vehicle.id, 'within');
+});
+
+test('no entry point when nothing is feasible at any budget', () => {
+  const broke = { ...inputs, savings: 0 };
+  const entry = optionEntryPoint({ vehicles: [vehicle('a', 40000)], inputs: broke, option: 'upfront' }, tables);
+  assert.equal(entry, null);
+});
+
+test('an empty fleet has no entry point', () => {
+  assert.equal(optionEntryPoint({ vehicles: [], inputs, option: 'loan' }, tables), null);
+});
+
+test('a shorter term pushes the loan entry point higher', () => {
+  const fleet = [vehicle('a', 40000)];
+  const short = optionEntryPoint({ vehicles: fleet, inputs: { ...inputs, termMonths: 36 }, option: 'loan' }, tables);
+  const long = optionEntryPoint({ vehicles: fleet, inputs: { ...inputs, termMonths: 60 }, option: 'loan' }, tables);
+  assert.ok(short.budget > long.budget, 'repaying the same car faster costs more per month');
 });

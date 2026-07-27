@@ -10,9 +10,9 @@ import { defaultState, toQueryString, fromQueryString } from './state.js';
 import { renderInputs, bindFreeText } from './sections.js';
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
-import { filterVehicles, cardModel, renderCards } from './cars.js';
+import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
 import { rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from '../../calc/rank.js';
-import { crossoverSeries, fbtCliff } from '../../calc/compare.js';
+import { crossoverSeries, fbtCliff, optionEntryPoint } from '../../calc/compare.js';
 import { money } from './format.js';
 
 // crossoverSeries was measured at ~17ms for 80 vehicles across 25 budget
@@ -113,6 +113,7 @@ function boot(root, dataset) {
   // I4 companion: the cliff belongs to the same snapshot as lastSeries, so a
   // resize repaint redraws the marker instead of dropping it.
   let lastCliff = null;
+  let lastEntry = null;
 
   const budgetOutput = root.querySelector('#budgetSliderValue');
 
@@ -208,11 +209,16 @@ function boot(root, dataset) {
       lastSeries = series;
       // Computed over the same preference-filtered pool the chart is drawn
       // from, so the cars it names are cars the user could actually be shown.
-      lastCliff = fbtCliff({ vehicles: filterVehicles(vehicles, state), inputs }, tables);
+      const pool = filterVehicles(vehicles, state);
+      lastCliff = fbtCliff({ vehicles: pool, inputs }, tables);
+      // Where the car-loan line can first appear. Loan only: the other two
+      // lines start at or near the left edge on realistic inputs, so a badge
+      // on each would be clutter rather than explanation.
+      lastEntry = optionEntryPoint({ vehicles: pool, inputs, option: 'loan' }, tables);
       // I7: pass the current budget through so both the desktop line chart
       // and the mobile winner band can mark the user's own position, not
       // just where the cheapest option changes.
-      renderChart(root, series, state.monthlyBudget, lastCliff);
+      renderChart(root, series, state.monthlyBudget, lastCliff, lastEntry);
     }
 
     renderRatesPanel(root, state, onRatesChange, rates);
@@ -291,6 +297,18 @@ function boot(root, dataset) {
   // field edited after the first discards the first (C1).
   renderInputs(root, () => state, onFieldChange);
 
+  // Written once at boot: the dataset is fetched once and never changes
+  // during a session, so this does not belong in render().
+  const statsEl = root.querySelector('#dataset-stats');
+  if (statsEl) {
+    const stats = datasetStats({ vehicles, families });
+    statsEl.textContent = [
+      `${stats.models} cars`,
+      `${stats.variants} variants`,
+      stats.updated ? `last updated ${stats.updated}` : null
+    ].filter(Boolean).join(' · ');
+  }
+
   const slider = root.querySelector('#budgetSlider');
   if (slider) {
     // I7: public/index.html previously hardcoded the slider's max (3000)
@@ -317,7 +335,7 @@ function boot(root, dataset) {
   // doesn't need a full recompute, just another call to renderChart with
   // the series already on hand.
   const rerenderChartForViewport = debounce(() => {
-    if (lastSeries) renderChart(root, lastSeries, state.monthlyBudget, lastCliff);
+    if (lastSeries) renderChart(root, lastSeries, state.monthlyBudget, lastCliff, lastEntry);
   }, RESIZE_DEBOUNCE_MS);
 
   if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
