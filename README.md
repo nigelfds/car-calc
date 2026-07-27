@@ -1,9 +1,9 @@
-# Can I afford an EV?
+# What's the best EV I could get?
 
-A straight answer for Melbourne buyers: type what you earn, what you can spend, and what you're
-after in a car, and this tool works out which way of paying for an EV — a novated lease, a car
-loan, or paying cash — gets you the most car for the least money, and which cars in the current
-Australian EV market are actually reachable on that budget.
+A straight answer for Melbourne buyers: say what you earn and what you want in a car, set a
+monthly budget, and this tool works out how much car each way of paying — a novated lease, a car
+loan, or cash — actually reaches, then shows you the real EVs sitting at that ceiling and what
+each of them would cost you three ways.
 
 ## General information only
 
@@ -11,29 +11,38 @@ Australian EV market are actually reachable on that budget.
 personal financial, tax or credit advice.** Every figure it shows is an estimate, computed from
 published rates and the numbers you enter — it will differ from a real quote. Consider seeking
 advice from a licensed adviser before deciding. This disclaimer is shown non-dismissibly in the
-app itself, next to the verdict.
+app itself, below the chart and ahead of the shortlist.
 
-One caveat worth stating up front: an FBT-exempt novated lease still creates a Reportable Fringe
-Benefits Amount, which can affect HELP repayments and the Medicare Levy Surcharge. This tool does
-not model that.
+One caveat worth stating up front, and repeated in that box: an FBT-exempt novated lease still
+creates a Reportable Fringe Benefits Amount, which can affect HELP repayments and the Medicare
+Levy Surcharge. This tool does not model that.
 
 ## What it does
 
-1. **Tell us about you** — your salary, monthly budget, lease term, deposit/savings, annual
-   kilometres and lease start date. You can type a sentence instead ("I earn $145k and can spend
-   about $900 a month, I want an SUV with a big boot for my dog") and the tool fills the form in
-   for you — see [How parsing works](#how-parsing-works) below.
-2. **What you can afford** — drag the budget slider and watch the recommendation, the chart and
-   the total costs for all three payment options recompute instantly, entirely in the browser,
-   with no network call. The chart shows where the cheapest option changes as your budget moves.
-   Every rate behind the numbers (lease finance rate, loan rate, admin fee, opportunity cost of
-   your own savings) is shown, sourced, and editable — put in your own quote and the numbers
-   update.
-3. **Cars that match** — a shortlist of real EVs currently sold in Australia, ranked by how well
-   they fit what you asked for (boot space, range, warranty, value), each with a plain-English
-   summary, pros/cons and source links where the family has been researched. No photography — an
-   EV's silhouette by body type stands in for a picture, since car imagery in this dataset is
-   deliberately out of scope.
+The three steps do three different jobs, and the split is deliberate: **step 2 knows nothing about
+specific cars**, and step 3 does all the car work.
+
+1. **Tell us about you** — salary, lease term, savings, annual kilometres and lease start date,
+   plus what you want in a car: body type, minimum boot, seats and range. You can type a sentence
+   instead ("I earn $145k and can spend about $900 a month, I want an SUV with a big boot for my
+   dog") and the tool fills the form in for you — see [How parsing works](#how-parsing-works).
+2. **What you can afford** — drag the budget slider and watch how much car each way of paying
+   reaches. The y axis is a car price, not a cost, and that is the point: three capacities are
+   directly comparable, where three totals for three different cars never were. The shape carries
+   the two facts that matter most. The novated line climbs and then flattens dead at the
+   $91,661 FBT threshold, because one dollar over it the exemption is lost outright and the
+   monthly cost roughly doubles. Cash is a horizontal line at your savings ceiling, visibly
+   independent of the monthly budget. Where the loan line crosses above the capped lease is a
+   genuine crossover: the budget past which borrowing buys you more car than packaging does.
+   Every rate behind it (lease finance rate, loan rate, admin fee, the return your savings would
+   otherwise earn) is shown, sourced and editable under **Rates and settings**.
+   Running costs here assume a typical EV from the dataset — step 3 uses each car's real figures.
+3. **Cars that match** — five real EVs bracketed around that ceiling: two just under it, two at
+   it, and one stretch above. Each is filtered by your stated preferences and costed under all
+   three funding options, which is a fair comparison because all three price the *same* car.
+   Each card also shows how much of every dollar survives as resale — the figure that separates
+   two similarly-priced cars — and, for a novated lease, the balloon due at the end of the term
+   and whether selling the car would clear it. No photography; car imagery is out of scope.
 
 ## How parsing works
 
@@ -75,8 +84,8 @@ npm test
 ```
 
 Runs the full suite on Node's built-in test runner (`node --test`) — no test framework
-dependency. 233 tests across the tax/FBT/loan/lease/resale calculators, the dataset validator, the
-server routes, and the browser-side UI modules (parsed and rendered the same way whether run
+dependency. 330 tests across the tax/FBT/loan/lease/capacity/resale calculators, the dataset
+validator, the server routes, and the browser-side UI modules (parsed and rendered the same way whether run
 under Node or loaded natively in the browser, since there's no bundler or build step — `calc/` is
 imported unchanged by both).
 
@@ -137,8 +146,8 @@ core (`calc/`) is imported completely unchanged by both the Node test runner and
 Express (`server/`) serves the static frontend (`public/`), the dataset, and three thin API
 routes: `/api/parse` (tier 2/3 of the free-text parser), `/api/explain` (the plain-English verdict
 explanation), and `/api/dataset` (vehicles, families, rates and tax tables, fetched once at boot).
-Ranking the shortlist is a deterministic scoring function (`calc/rank.js`) that never calls a
-model — the same inputs always produce the same order, for free, offline.
+Purchasing power (`calc/capacity.js`) and shortlist ranking (`calc/rank.js`) are deterministic
+functions that never call a model — the same inputs always produce the same order, for free, offline.
 
 ## Deployment
 

@@ -415,15 +415,17 @@ test('a cliff outside the charted budget range is not drawn at the edge', () => 
   });
 });
 
-test('the cliff marker names both cars and both monthly figures', () => {
+// Under the capacity chart the cliff explains a plateau, not a pair of cars:
+// the line flattens because the lease cannot reach anything dearer, and the
+// actionable number is what crossing would cost per month.
+test('the cliff marker explains the plateau and what crossing would cost', () => {
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, wideSeries, 800, cliffFixture);
     const html = getHtml();
-    assert.ok(html.includes('EQB'), 'the dearest exempt car');
-    assert.ok(html.includes('EV6'), 'the first car past the cliff');
-    assert.ok(html.includes('$1,217'), 'what the exempt car costs monthly');
-    assert.ok(html.includes('$3,039'), 'what the next car up would cost');
+    assert.ok(html.includes('$91,661'), 'the threshold itself');
+    assert.ok(/flattens here/i.test(html), 'it must explain the shape of the line');
+    assert.ok(html.includes('$3,039'), 'what crossing the cliff would need per month');
   });
 });
 
@@ -505,9 +507,11 @@ test('the entry marker explains where the loan line starts and why', () => {
     renderChart(root, lateLoanSeries, 800, null, entryFixture);
     const html = getHtml();
     assert.ok(html.includes('chart-marker--entry'), 'expected an entry marker');
-    assert.ok(html.includes('$1,181'), 'expected the entry budget quoted');
-    assert.ok(html.includes('Dolphin'), 'expected the cheapest reachable car named');
-    assert.ok(html.includes('$29,990'), 'expected that car\'s price');
+    assert.ok(/cheapest car on the market/i.test(html), 'expected the gap explained');
+    // Deliberately no car named: the line is drawn from a typical EV's running
+    // costs, so one real car's monthly figure beside it would invite a
+    // comparison between two numbers that do not measure the same thing.
+    assert.ok(!html.includes('Dolphin'), 'the capacity line is not about one car');
   });
 });
 
@@ -572,8 +576,9 @@ test('the entry marker sits where the line actually starts, not at the raw thres
     // Index 2 of 3 across a 560-wide plot.
     assert.ok(Math.abs(markerX - (2 / 3) * 560) < 0.5,
       `marker at ${markerX} should sit on the first plotted loan point`);
-    // The precise figure is still what the reader is told they need.
-    assert.ok(html.includes('$432'), 'the true minimum must still be quoted');
+    // No dollar figure is quoted any more — see the note on entryMarkup — so
+    // this asserts only the anchoring, which is the point of the test.
+    assert.ok(html.includes('chart-marker--entry'));
   });
 });
 

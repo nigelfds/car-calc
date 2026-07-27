@@ -296,12 +296,11 @@ function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
   // Kept tight on purpose: at disclaimer-sized text the box has to fit inside
   // the plot, and a wall of small print is not much better than no note.
   const explanation =
-    `FBT cliff at ${money(cliff.cliffPrice)}. Above this price a novated lease loses its ` +
-    `FBT exemption outright — there is no taper. The dearest exempt car here is the ` +
-    `${cliff.carBelow.make} ${cliff.carBelow.model} at ${money(cliff.carBelow.listPrice)} ` +
-    `(${money(cliff.budgetAt)}/mo). The next one up, the ${cliff.carAbove.make} ` +
-    `${cliff.carAbove.model} at ${money(cliff.carAbove.listPrice)}, would need ` +
-    `${money(cliff.budgetNeeded)}/mo — which is why the novated line stops climbing.`;
+    `FBT cliff at ${money(cliff.cliffPrice)}. A novated lease is FBT-exempt up to this price; ` +
+    `one dollar over and the exemption is lost outright, with no taper, and the monthly cost ` +
+    `roughly doubles. That is why the novated line flattens here: until your budget can ` +
+    `absorb the unexempted cost, a lease cannot reach a dearer car however much the budget ` +
+    `rises. Crossing it needs about ${money(cliff.budgetNeeded)}/mo.`;
 
   return chartMarker({
     series, budget: cliff.budgetAt, explanation,
@@ -328,11 +327,13 @@ function entryMarkup(series, entry, plotWidth, plotHeight) {
   // Nothing to explain when the line starts at the left edge anyway.
   if (firstPlotted === 0) return '';
 
+  // Deliberately no car named. The line is drawn from a typical EV's running
+  // costs, so quoting one real car's monthly figure beside it invites a
+  // comparison between two numbers that are not measuring the same thing.
   const explanation =
-    `The car loan line starts here. Below ${money(entry.budget)}/mo a loan cannot cover ` +
-    `even the cheapest car available to you — the ${entry.vehicle.make} ${entry.vehicle.model} ` +
-    `at ${money(entry.vehicle.listPrice)}, which needs ${money(entry.budget)}/mo over this term. ` +
-    `A longer term or a bigger deposit would lower that and start the line sooner.`;
+    `The car loan line starts here. Below this budget a loan cannot cover even the cheapest ` +
+    `car on the market, so there is nothing to plot. A longer term or a bigger deposit would ` +
+    `lower the entry point and start the line sooner.`;
 
   // Sits below the cliff badge so the two never overlap when they land close
   // together on the budget axis.
