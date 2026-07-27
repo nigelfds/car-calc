@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { toPolylines, toSegments, toWinnerBands, renderChart, layoutCrossoverLabels, wrapText } from './crossover-chart.js';
+import { toPolylines, toSegments, renderChart, layoutCrossoverLabels, wrapText } from './crossover-chart.js';
 
 const series = {
   points: [
@@ -29,90 +29,6 @@ test('the cheapest point sits lower on screen than the dearest', () => {
 });
 
 // Values are capacities now — dollars of car reached — so the leader is the
-// HIGHEST at each budget. `series` above reads as loan leading at 400 and 800
-// (55,000 and 62,000 against novated's 50,000 and 60,000), then novated at
-// 1200 (75,000 against 72,000).
-test('winner bands cover the full width and change at the crossover', () => {
-  const bands = toWinnerBands(series);
-  assert.equal(bands[0].fromPct, 0);
-  assert.equal(bands[bands.length - 1].toPct, 100);
-  assert.ok(bands.length >= 2, 'the winner changes at least once');
-  assert.equal(bands[0].option, 'loan');
-  assert.equal(bands[bands.length - 1].option, 'novated');
-});
-
-test('a series with a single leader produces one band', () => {
-  const flat = { points: [
-    { budget: 400, novated: 50000, loan: 55000, upfront: null },
-    { budget: 800, novated: 60000, loan: 65000, upfront: null }
-  ], crossovers: [] };
-  const bands = toWinnerBands(flat);
-  assert.equal(bands.length, 1);
-  assert.equal(bands[0].option, 'loan', 'the loan reaches more at both budgets');
-});
-
-// Issue 1 regression: a crossover placed at the boundary between the
-// second-to-last and last sampled points used to collapse the new leader's
-// band to `{ fromPct: pct, toPct: pct }` — zero width, invisible, and with
-// no later point to grow it. The fixture above already has its crossover on
-// the last point; every band in it (and in any series) must render as an
-// actual strip.
-test('every winner band has non-zero width', () => {
-  const bands = toWinnerBands(series);
-  assert.ok(bands.length > 0);
-  for (const band of bands) {
-    assert.ok(band.toPct - band.fromPct > 0, `${band.option} band is zero-width (${band.fromPct}-${band.toPct})`);
-  }
-});
-
-test('a crossover on the very last sampled point still produces a visible second band', () => {
-  const lateCrossover = { points: [
-    { budget: 400, novated: 50000, loan: 60000, upfront: null },
-    { budget: 800, novated: 60000, loan: 68000, upfront: null },
-    { budget: 1200, novated: 75000, loan: 90000, upfront: null },
-    { budget: 1600, novated: 90000, loan: 88000, upfront: null }
-  ], crossovers: [{ budget: 1600, from: 'novated', to: 'loan' }] };
-
-  // Read as capacity: the loan reaches more at the first three budgets, and
-  // novated overtakes it only on the last one.
-  const bands = toWinnerBands(lateCrossover);
-  assert.equal(bands.length, 2);
-  assert.equal(bands[0].option, 'loan');
-  assert.equal(bands[1].option, 'novated');
-  assert.ok(bands[1].toPct - bands[1].fromPct > 0, 'the late-crossover band must have non-zero width');
-  // The boundary is the midpoint between the two samples that disagree
-  // (index 2 at 66.6% and index 3 at 100%), not the later sample's own pct.
-  assert.ok(bands[0].toPct > 66.6 && bands[0].toPct < 100, `boundary ${bands[0].toPct} should sit strictly between the two samples`);
-  assert.equal(bands[0].toPct, bands[1].fromPct, 'bands stay contiguous — no gap, no overlap');
-});
-
-test('bands stay contiguous, first starts at 0, last ends at 100', () => {
-  const bands = toWinnerBands(series);
-  assert.equal(bands[0].fromPct, 0);
-  assert.equal(bands[bands.length - 1].toPct, 100);
-  for (let i = 1; i < bands.length; i++) {
-    assert.equal(bands[i - 1].toPct, bands[i].fromPct, `gap or overlap between band ${i - 1} and ${i}`);
-  }
-});
-
-// Issue 3: nothing reachable at any sampled budget must not produce [],
-// which would violate "first band starts at 0, last ends at 100" and leave
-// the caller rendering a blank strip with a stub aria-label.
-test('a series with no reachable option anywhere produces an explicit unaffordable band, not []', () => {
-  const nothingAffordable = { points: [
-    { budget: 400, novated: null, loan: null, upfront: null },
-    { budget: 800, novated: null, loan: null, upfront: null }
-  ], crossovers: [] };
-  const bands = toWinnerBands(nothingAffordable);
-  assert.equal(bands.length, 1);
-  assert.equal(bands[0].fromPct, 0);
-  assert.equal(bands[0].toPct, 100);
-  assert.notEqual(bands[0].option, undefined);
-  assert.notEqual(bands[0].option, 'novated');
-  assert.notEqual(bands[0].option, 'loan');
-  assert.notEqual(bands[0].option, 'upfront');
-});
-
 // Issue 2: toPolylines() is documented as unsafe for direct painting
 // because it bridges gaps; toSegments() is the public painting interface
 // that breaks a real gap into separate runs instead.
@@ -168,25 +84,29 @@ function withMatchMedia(matches, fn) {
   }
 }
 
-test('renderChart renders the mobile winner band when matchMedia reports a narrow viewport, ignoring a large clientWidth on root', () => {
+test('a narrow viewport gets the compact chart, ignoring a large clientWidth on root', () => {
   withMatchMedia(false, () => {
     // clientWidth: 5000 is a decoy — under the old bug this property was
     // never even read correctly (root was `document`), but if some fix
     // wrongly started reading root.clientWidth directly, this large value
-    // would flip the outcome to the desktop chart and fail the assertion.
+    // would flip the outcome to the wide geometry and fail the assertion.
     const { root, getHtml } = fakeChartRoot({ clientWidth: 5000 });
     renderChart(root, series);
-    assert.ok(getHtml().includes('winner-band'), 'expected the mobile winner band markup');
-    assert.ok(!getHtml().includes('crossover-chart'), 'the desktop chart must not also render');
+    const html = getHtml();
+    assert.ok(html.includes('crossover-chart'), 'the same line chart renders at every width');
+    assert.ok(/viewBox="0 0 380 /.test(html), 'expected the compact viewBox');
+    assert.ok(!html.includes('end-label'), 'end labels have no room and the legend covers them');
   });
 });
 
-test('renderChart renders the desktop line chart when matchMedia reports a wide viewport, ignoring a tiny clientWidth on root', () => {
+test('a wide viewport gets the full chart, ignoring a tiny clientWidth on root', () => {
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot({ clientWidth: 10 });
     renderChart(root, series);
-    assert.ok(getHtml().includes('crossover-chart'), 'expected the desktop SVG line chart markup');
-    assert.ok(!getHtml().includes('winner-band'), 'the mobile band must not also render');
+    const html = getHtml();
+    assert.ok(html.includes('crossover-chart'), 'expected the SVG line chart markup');
+    assert.ok(/viewBox="0 0 784 /.test(html), 'expected the wide viewBox');
+    assert.ok(html.includes('end-label'), 'there is room to name the lines in place');
   });
 });
 
@@ -198,7 +118,10 @@ test('without matchMedia, renderChart falls back to document.documentElement.cli
     // Document-shaped fallback (documentElement.clientWidth) is narrow.
     const { root, getHtml } = fakeChartRoot({ clientWidth: 5000, documentElement: { clientWidth: 400 } });
     renderChart(root, series);
-    assert.ok(getHtml().includes('winner-band'), 'expected the fallback to read documentElement.clientWidth, not root.clientWidth');
+    // A narrow viewport now means compact geometry rather than a winner band.
+    // The compact viewBox is 380 wide; the desktop one is 784.
+    assert.ok(/viewBox="0 0 380 /.test(getHtml()),
+      'expected the fallback to read documentElement.clientWidth, not root.clientWidth');
   } finally {
     if (original !== undefined) globalThis.matchMedia = original;
   }
@@ -216,11 +139,11 @@ test('the desktop line chart marks the current budget when one is passed', () =>
   });
 });
 
-test('the mobile winner band marks the current budget when one is passed', () => {
+test('the compact chart marks the current budget too', () => {
   withMatchMedia(false, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, series, 800);
-    assert.ok(getHtml().includes('winner-band__budget-marker'), 'expected a budget-marker element on the band');
+    assert.ok(getHtml().includes('budget-marker'), 'expected a budget-marker element in the compact SVG');
   });
 });
 
@@ -356,14 +279,16 @@ test('the y-axis title is rotated so it reads along the axis', () => {
   });
 });
 
-test('the mobile winner band names its axis in visible text, not just aria', () => {
+// The y axis title cannot be a rotated block when there is no left margin to
+// rotate it into, so compact puts it on a line above the plot instead.
+test('the compact chart still names both axes', () => {
   withMatchMedia(false, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, series, 800);
-    // The aria-label already contained the words "by monthly budget", so
-    // assert on a real element instead — otherwise this passes vacuously.
-    assert.ok(getHtml().includes('winner-band__axis-title'),
-      'the band scale is a budget axis and should say so on screen');
+    const html = getHtml();
+    assert.ok(html.includes('axis-title--x'), 'the budget axis is named');
+    assert.ok(html.includes('axis-title--y-top'), 'the car-price axis is named above the plot');
+    assert.ok(!html.includes('axis-title--y"'), 'and not as a rotated block it has no room for');
   });
 });
 
@@ -682,9 +607,3 @@ test('the accessible description explains the axes in capacity terms', () => {
 });
 
 // Under capacity the leader is the option reaching the DEAREST car, where the
-// cost series took the lowest number.
-test('the winner band follows the highest capacity, not the lowest number', () => {
-  const bands = toWinnerBands(capacitySeries);
-  assert.equal(bands[0].option, 'upfront', 'cash reaches the most at $300/mo');
-  assert.equal(bands[bands.length - 1].option, 'loan', 'the loan reaches the most at $2700/mo');
-});

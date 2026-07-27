@@ -2,12 +2,13 @@
 // pay for the same car, and where the cheapest one changes as the monthly
 // budget rises.
 //
-// Two renderings of the same series, picked at render time by container
-// width (the 900px breakpoint used throughout this project):
-//   - >=900px: three SVG lines plotting total cost against budget.
-//   - <900px:  a single "winner band" — coloured segments showing which
-//     option leads at each budget, because three thin lines in ~96px of
-//     height is illegible on a phone. Not a shortcut — a deliberate choice.
+// One rendering at every width, in two geometries picked at render time by
+// the 900px breakpoint used throughout this project. Narrow viewports get a
+// smaller viewBox rather than a different chart: the wide one is 784 units
+// across and would scale to 0.4 on a phone, taking its labels down to 5px
+// with it. That shrinkage is what the old "winner band" summary worked
+// around; a 380-unit viewBox scales to about 0.8 instead, so the lines, the
+// markers and their tooltips all survive the trip to a small screen.
 //
 // `null` on a point means "no car reaches this budget on this option", not
 // "$0" — a line must break rather than dive to zero, or it reads as free.
@@ -26,27 +27,6 @@ const OPTION_LABEL = {
   upfront: 'Cash'
 };
 
-const OPTION_SHORT_LABEL = {
-  novated: 'Novated',
-  loan: 'Loan',
-  upfront: 'Cash'
-};
-
-// Even a sliver of a winner band still needs an identity that isn't colour —
-// used in place of OPTION_SHORT_LABEL when a band is too narrow for the full
-// word. '$' for cash is a symbol, not a colour, and reads unambiguously next
-// to the other two initials.
-const OPTION_ABBR = {
-  novated: 'N',
-  loan: 'L',
-  upfront: '$'
-};
-
-// Sentinel winner used only by toWinnerBands()/renderWinnerBand() when no
-// option is reachable at any sampled budget — never a member of OPTIONS, so
-// it never touches bounds()/toPolylines()/toSegments()/renderLineChart().
-const NO_OPTION = 'none';
-
 // Colour distinguishes the three lines, but colour alone can't be relied on
 // for CVD readers, so every option also gets its own stroke pattern —
 // solid / dashed / dotted — matched consistently wherever a line for that
@@ -57,7 +37,7 @@ const OPTION_DASH = {
   upfront: '2 5'
 };
 
-import { money } from './format.js';
+import { money, shortMoney } from './format.js';
 
 function bounds(series) {
   const values = series.points
@@ -93,55 +73,6 @@ export function toPolylines(series, { width, height }) {
     lines[option] = coordinates.join(' ');
   }
   return lines;
-}
-
-export function toWinnerBands(series) {
-  const leaderAt = point => {
-    const priced = OPTIONS.filter(o => point[o] !== null);
-    if (priced.length === 0) return null;
-    // Capacity, not cost: the leader is whichever option reaches the DEAREST
-    // car. The series this replaced took the lowest number.
-    return priced.reduce((best, cur) => (point[cur] > point[best] ? cur : best));
-  };
-
-  const bands = [];
-  const total = series.points.length - 1 || 1;
-  // pct of the last point that had any leader at all — not necessarily the
-  // previous index, if leaderless points sit between two priced ones.
-  let prevPct = null;
-
-  series.points.forEach((point, index) => {
-    const leader = leaderAt(point);
-    if (leader === null) return;
-    const pct = (index / total) * 100;
-    const last = bands[bands.length - 1];
-
-    if (last && last.option === leader) {
-      last.toPct = pct;
-    } else if (last) {
-      // The true crossover lies somewhere between the two sampled points —
-      // the midpoint is the honest estimate. Placing the boundary at `pct`
-      // for both edges (the old fix) collapses the new band to zero width
-      // whenever the leader flips on the very last sample.
-      const boundary = prevPct === null ? pct : (prevPct + pct) / 2;
-      last.toPct = boundary;
-      bands.push({ option: leader, fromPct: boundary, toPct: pct });
-    } else {
-      bands.push({ option: leader, fromPct: pct, toPct: pct });
-    }
-    prevPct = pct;
-  });
-
-  if (bands.length > 0) {
-    bands[0].fromPct = 0;
-    bands[bands.length - 1].toPct = 100;
-  } else {
-    // Nothing was affordable at any sampled budget. [] would violate "first
-    // band starts at 0, last ends at 100" and render a blank strip with a
-    // stub aria-label — make the empty state explicit instead.
-    bands.push({ option: NO_OPTION, fromPct: 0, toPct: 100 });
-  }
-  return bands;
 }
 
 // ---------------------------------------------------------------------------
@@ -261,7 +192,7 @@ export function layoutCrossoverLabels(entries, options = {}) {
 // Returns '' when the marker would fall outside the charted budget range:
 // valueToX clamps, so it would otherwise be pinned to an axis end and read as
 // though it belonged there.
-function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeight, badgeY = 8 }) {
+function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeight, badgeY = 8, chars }) {
   const first = series.points[0].budget;
   const last = series.points[series.points.length - 1].budget;
   if (budget < first || budget > last) return '';
@@ -283,7 +214,7 @@ function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeig
            pixels are a 7px circle and a 1px rule. Transparent, and kept to
            the badge so it never covers the plotted points behind it. -->
       <circle class="chart-marker__hit" cx="${x.toFixed(1)}" cy="${badgeY}" r="13" />
-      ${tipMarkup(explanation, { anchorX: x, plotWidth, boxY: badgeY + 12 })}
+      ${tipMarkup(explanation, { anchorX: x, plotWidth, boxY: badgeY + 12, chars })}
     </g>`;
 }
 
@@ -291,7 +222,7 @@ function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeig
 // the FBT exemption is a cliff, not a taper, so past a certain car price the
 // monthly cost roughly doubles and the lease simply stops being able to
 // reach anything dearer.
-function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
+function fbtCliffMarkup(series, cliff, plotWidth, plotHeight, chars) {
   if (!cliff) return '';
   // Kept tight on purpose: at disclaimer-sized text the box has to fit inside
   // the plot, and a wall of small print is not much better than no note.
@@ -304,7 +235,7 @@ function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
 
   return chartMarker({
     series, budget: cliff.budgetAt, explanation,
-    variant: 'cliff', plotWidth, plotHeight
+    variant: 'cliff', plotWidth, plotHeight, chars
   });
 }
 
@@ -318,7 +249,7 @@ function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
 // placing the badge at the threshold left it floating ~15px clear of the line
 // it was labelling. The precise threshold is still what the tooltip quotes —
 // it is the number the reader needs — but the badge points at the line.
-function entryMarkup(series, entry, plotWidth, plotHeight) {
+function entryMarkup(series, entry, plotWidth, plotHeight, chars) {
   if (!entry) return '';
 
   const firstPlotted = series.points.findIndex(point => point.loan !== null);
@@ -339,7 +270,7 @@ function entryMarkup(series, entry, plotWidth, plotHeight) {
   // together on the budget axis.
   return chartMarker({
     series, budget: series.points[firstPlotted].budget, explanation,
-    variant: 'entry', plotWidth, plotHeight, badgeY: 26
+    variant: 'entry', plotWidth, plotHeight, badgeY: 26, chars
   });
 }
 
@@ -367,9 +298,9 @@ const TIP_PADDING = 10;
 // be moved to follow the pointer (see bindTipTracking). The transform written
 // here is the static fallback position, used before the first mousemove and
 // if the tracking never binds.
-export function tipMarkup(explanation, { anchorX, plotWidth, boxY }) {
-  const lines = wrapText(explanation, TIP_CHARS_PER_LINE);
-  const boxWidth = TIP_CHARS_PER_LINE * TIP_CHAR_WIDTH + TIP_PADDING * 2;
+export function tipMarkup(explanation, { anchorX, plotWidth, boxY, chars = TIP_CHARS_PER_LINE }) {
+  const lines = wrapText(explanation, chars);
+  const boxWidth = chars * TIP_CHAR_WIDTH + TIP_PADDING * 2;
   const boxHeight = lines.length * TIP_LINE_HEIGHT + TIP_PADDING * 2;
   const fallbackX = Math.min(Math.max(anchorX - boxWidth / 2, 0), Math.max(0, plotWidth - boxWidth));
 
@@ -452,10 +383,14 @@ const escapeAttr = value =>
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
 
-function renderLineChart(target, series, budgetMonthly, cliff, entry) {
+function renderLineChart(target, series, budgetMonthly, cliff, entry, compact = false) {
   const { min, max } = bounds(series);
-  const plotWidth = 560;
-  const plotHeight = 190;
+  // A phone gives the chart roughly 310 CSS pixels. The desktop viewBox is 780
+  // wide, so it would scale to 0.4 and render 13.5-unit labels at 5.3px —
+  // unreadable, and the reason this used to fall back to a winner band. A
+  // narrower viewBox scales far less (0.8), so the same type stays legible.
+  const plotWidth = compact ? 310 : 560;
+  const plotHeight = compact ? 170 : 190;
 
   // The leader-change markers (a dashed rule and a "$N/mo" label at every
   // budget where the leading option changes) are still not drawn.
@@ -474,12 +409,16 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   // Sized for the enlarged label type: "$101,973" at 13.5 units of mono needs
   // ~65 plus its 8-unit offset, and "Novated lease" at 15 units of sans needs
   // ~98 plus its 10-unit leader.
-  const margin = {
-    top: 26,
-    right: 128,
-    bottom: 54,
-    left: 96
-  };
+  //
+  // Compact spends its width very differently. The right margin goes to almost
+  // nothing because the end labels are dropped — the legend above the chart
+  // already names all three lines, in the same colours and dash patterns — and
+  // the left shrinks because the y ticks abbreviate to "$116k". The y-axis
+  // title moves from a rotated block in the left margin to a plain line above
+  // the plot, which costs height instead of the width there is none of.
+  const margin = compact
+    ? { top: 34, right: 14, bottom: 50, left: 56 }
+    : { top: 26, right: 128, bottom: 54, left: 96 };
   const width = plotWidth + margin.left + margin.right;
   const height = plotHeight + margin.top + margin.bottom;
   const lastIndex = series.points.length - 1 || 1;
@@ -491,7 +430,7 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
     const y = plotHeight - ((tick - min) / (max - min || 1)) * plotHeight;
     return `<g>
       <line class="grid-line" x1="0" x2="${plotWidth}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" />
-      <text class="axis-label axis-label--y" x="-8" y="${y.toFixed(1)}" text-anchor="end" dominant-baseline="middle">${money(tick)}</text>
+      <text class="axis-label axis-label--y" x="-8" y="${y.toFixed(1)}" text-anchor="end" dominant-baseline="middle">${compact ? shortMoney(tick) : money(tick)}</text>
     </g>`;
   }).join('');
 
@@ -515,18 +454,38 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   // name; the note behind it is the sentence that stops the axis being
   // misread — particularly the y axis, which people read as an affordability
   // ceiling rather than as a cost.
-  const axisTitles = `
+  // Tip copy has to fit the plot it sits in, and compact has half the width.
+  const tipChars = compact ? 34 : TIP_CHARS_PER_LINE;
+
+  const xTitleY = plotHeight + (compact ? 42 : 46);
+  const xNote = `
     <g class="axis-note">
-      <text class="axis-title axis-title--x" x="${(plotWidth / 2).toFixed(1)}" y="${plotHeight + 46}"
+      <text class="axis-title axis-title--x" x="${(plotWidth / 2).toFixed(1)}" y="${xTitleY}"
         text-anchor="middle">Monthly budget — the slider above</text>
       ${tipMarkup(
         'What you can put toward the car each month — the same figure as the slider above. ' +
-        'Each point on a line is what that way of paying would cost you at that budget.',
-        { anchorX: plotWidth / 2, plotWidth, boxY: plotHeight - 96 }
+        'Each point on a line is the dearest car that way of paying reaches at that budget.',
+        { anchorX: plotWidth / 2, plotWidth, boxY: compact ? 8 : plotHeight - 96, chars: tipChars }
       )}
-      <rect class="axis-note__hit" x="${(plotWidth / 2 - 130).toFixed(1)}" y="${plotHeight + 32}"
+      <rect class="axis-note__hit" x="${(plotWidth / 2 - 130).toFixed(1)}" y="${xTitleY - 14}"
         width="260" height="20" />
-    </g>
+    </g>`;
+
+  // Rotated in the left margin on desktop; a plain line above the plot when
+  // compact, because there is no left margin to spend on a rotated block.
+  const yNote = compact
+    ? `
+    <g class="axis-note">
+      <text class="axis-title axis-title--y-top" x="${(-margin.left + 4).toFixed(1)}" y="-14">Most expensive car you could buy</text>
+      ${tipMarkup(
+        'The dearest car each way of paying could get you at that budget, before on-road ' +
+        'costs. Higher is more car. Running costs assume a typical EV, so treat it as a guide.',
+        { anchorX: plotWidth / 2, plotWidth, boxY: 8, chars: tipChars }
+      )}
+      <rect class="axis-note__hit" x="${(-margin.left + 4).toFixed(1)}" y="-26"
+        width="${(plotWidth + margin.left - 8).toFixed(1)}" height="18" />
+    </g>`
+    : `
     <g class="axis-note">
       <text class="axis-title axis-title--y" transform="rotate(-90)"
         x="${(-plotHeight / 2).toFixed(1)}" y="${-(margin.left - 14)}"
@@ -535,13 +494,17 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
         'The dearest car each way of paying could get you at that budget, before on-road ' +
         'costs. Higher is more car. Running costs assume a typical EV from this dataset, so ' +
         'treat it as a guide rather than a quote — the cars below use their own real figures.',
-        { anchorX: 0, plotWidth, boxY: 12 }
+        { anchorX: 0, plotWidth, boxY: 12, chars: tipChars }
       )}
       <rect class="axis-note__hit" x="${(-margin.left + 4).toFixed(1)}" y="${(plotHeight / 2 - 100).toFixed(1)}"
         width="20" height="200" />
     </g>`;
 
-  const endEntries = OPTIONS
+  const axisTitles = xNote + yNote;
+
+  // Dropped when compact: there is no right margin to put them in, and the
+  // legend above the chart already names all three lines in matching colours.
+  const endEntries = compact ? [] : OPTIONS
     .map(option => {
       const runs = segments[option];
       if (runs.length === 0) return null;
@@ -612,8 +575,8 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
         ${lineGroups}
         ${xLabels}
         ${axisTitles}
-        ${fbtCliffMarkup(series, cliff, plotWidth, plotHeight)}
-        ${entryMarkup(series, entry, plotWidth, plotHeight)}
+        ${fbtCliffMarkup(series, cliff, plotWidth, plotHeight, tipChars)}
+        ${entryMarkup(series, entry, plotWidth, plotHeight, tipChars)}
         ${budgetMarkup}
       </g>
     </svg>`;
@@ -622,59 +585,10 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   bindTipTracking(target);
 }
 
-function renderWinnerBand(target, series, budgetMonthly) {
-  const bands = toWinnerBands(series);
-  const firstBudget = series.points[0].budget;
-  const lastBudget = series.points[series.points.length - 1].budget;
-  const pctToBudget = pct => Math.round(firstBudget + (pct / 100) * (lastBudget - firstBudget));
-  const isUnaffordable = bands.length === 1 && bands[0].option === NO_OPTION;
-
-  const summary = isUnaffordable
-    ? `No option is affordable anywhere from $${firstBudget} to $${lastBudget} a month.`
-    : bands
-        .map(b => `${OPTION_LABEL[b.option]} from $${pctToBudget(b.fromPct)} to $${pctToBudget(b.toPct)} a month`)
-        .join('; then ') + '.';
-
-  // I7: the spec requires the band to show the user's own position, not
-  // just where the winner changes. Percent-of-range, same maths as
-  // valueToX above but expressed as a CSS left% for this non-SVG rendering.
-  const budgetPct = budgetMonthly !== null
-    ? Math.min(100, Math.max(0, ((budgetMonthly - firstBudget) / (lastBudget - firstBudget || 1)) * 100))
-    : null;
-  const budgetMarkerHtml = budgetPct !== null
-    ? `<span class="winner-band__budget-marker" style="left:${budgetPct}%" aria-hidden="true"></span>`
-    : '';
-  const budgetSummary = budgetMonthly !== null ? ` Your current budget of $${budgetMonthly}/mo is marked.` : '';
-
-  // Identity never depends on colour alone: every segment gets a text
-  // label, full word when there's room, a short abbreviation when there
-  // isn't. Never nothing, even for a sliver crossover band.
-  const segmentsHtml = bands.map(b => {
-    const widthPct = b.toPct - b.fromPct;
-    const label = b.option === NO_OPTION
-      ? 'Not affordable'
-      : (widthPct >= 16 ? OPTION_SHORT_LABEL[b.option] : OPTION_ABBR[b.option]);
-    return `<span class="band band-${b.option}" style="left:${b.fromPct}%;width:${widthPct}%">` +
-      `<span class="band__label">${label}</span>` +
-    `</span>`;
-  }).join('');
-
-  target.innerHTML = `
-    <div class="winner-band" role="img" aria-label="Cheapest way to pay, by monthly budget: ${summary}${budgetSummary}">
-      ${segmentsHtml}
-      ${budgetMarkerHtml}
-    </div>
-    <div class="winner-band__scale" aria-hidden="true">
-      <span>$${firstBudget}/mo</span>
-      <span>$${lastBudget}/mo</span>
-    </div>
-    <p class="winner-band__axis-title" aria-hidden="true">Monthly budget — the slider above</p>`;
-}
-
 // I4: root is always `document` in the real app (public/ui/app.js calls
 // renderChart(document, ...)), and Document has no `clientWidth` — the old
 // `root.clientWidth < 900` was `undefined < 900`, always false, so the
-// mobile winner band could never render at any viewport. matchMedia is the
+// the narrow-viewport geometry could never be picked at any viewport. matchMedia is the
 // standard way to ask "how wide is the viewport" in a browser (and reacts
 // correctly to a real window resize, unlike a one-off element measurement);
 // document.documentElement.clientWidth is the fallback for an environment
@@ -694,8 +608,8 @@ export function renderChart(root, series, budgetMonthly = null, cliff = null, en
   // A capacity of 0 means "this way of paying reaches nothing at this budget",
   // which is exactly what a null meant in the cost series it replaced: the
   // line must break. Plotted as a point it would sit on the axis and read as
-  // a free car. Normalised once here so every downstream helper — bounds,
-  // toSegments, toWinnerBands — keeps its existing null handling.
+  // a free car. Normalised once here so every downstream helper — bounds and
+  // toSegments — keeps its existing null handling.
   const withGaps = {
     ...series,
     points: series.points.map(point => ({
@@ -706,12 +620,11 @@ export function renderChart(root, series, budgetMonthly = null, cliff = null, en
     }))
   };
 
-  const isMobile = !isDesktopViewport(root);
-  if (isMobile) {
-    // The band has no cost axis for the plateau to show up on, so there is
-    // nothing for a cliff marker to explain there.
-    renderWinnerBand(target, withGaps, budgetMonthly);
-  } else {
-    renderLineChart(target, withGaps, budgetMonthly, cliff, entry);
-  }
+  // One chart everywhere now, in two geometries. The winner band existed
+  // because the desktop viewBox shrank to 0.4 on a phone and took the labels
+  // with it; a compact viewBox scales to about 0.8 instead, so the lines and
+  // their markers survive the trip. A phone reader gets the same picture as
+  // everyone else — the FBT plateau, the flat cash line, the crossover —
+  // rather than a summary of it.
+  renderLineChart(target, withGaps, budgetMonthly, cliff, entry, !isDesktopViewport(root));
 }

@@ -32,8 +32,7 @@
      it clears both the CVD-simulated (protan/deutan, ΔE >= 11.9) and
      normal-vision (ΔE 19.8) separation floors against loan. Validated with
      dataviz's validate_palette.js — all checks pass, --pairs adjacent and
-     --pairs all (winner-band segments can land adjacent in any order,
-     unlike a fixed-order legend). */
+     --pairs all, since any two lines can end up adjacent on the chart). */
   --line-lease: #b96a1e;
   --line-lease-bg: #f7e9d8;
   --line-loan: #10558f;
@@ -557,7 +556,6 @@ input[type='date'],
   color: var(--ink-soft);
 }
 
-
 .line-legend__dot {
   width: 0.65em;
   height: 0.65em;
@@ -801,103 +799,18 @@ input[type='date'],
   fill: var(--ink);
 }
 
-.winner-band {
-  position: relative;
-  height: 3.25rem;
-  border-radius: 6px;
-  overflow: hidden;
-  background: var(--paper);
-}
-
-.winner-band .band {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 2px solid var(--paper-raised);
-}
-
-.winner-band .band:last-child { border-right: none; }
-
-.winner-band .band-novated { background: var(--line-lease); }
-.winner-band .band-loan { background: var(--line-loan); }
-.winner-band .band-upfront { background: var(--line-cash); }
-
 /* Issue 3: nothing affordable at any sampled budget. Deliberately neutral
    (ink-soft, not one of the three option hues) plus a diagonal hatch — a
    texture channel, not just another flat colour — so this reads as "no
-   answer" rather than a fourth option. */
-.winner-band .band-none {
-  background:
-    repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.12) 0 6px,
-      transparent 6px 12px),
-    var(--ink-soft);
-}
-
 /* 1.2rem/700 clears the WCAG large-text bold threshold (14pt / 18.66px),
    which matters here: white text is ~4.1:1 on lease, ~7.7:1 on loan and
    ~4.6:1 on cash — all clear the large-text floor, none clear body-size
    (4.5:1), which is why this stays bold/large rather than shrinking. Every
    band always carries this label — a full word at >=16% width, a one- or
    two-character abbreviation (OPTION_ABBR) below that — so identity never
-   depends on colour alone even for a narrow crossover sliver. */
-.winner-band .band__label {
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 0 0.35em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /* I7: same budget marker as the desktop chart's .budget-marker__line,
    expressed as an absolutely-positioned strip since the winner band isn't
    SVG. A thin light stripe plus a small triangular flag at the top reads
-   over any of the three band colours. */
-.winner-band__budget-marker {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #fff;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
-  pointer-events: none;
-}
-
-.winner-band__budget-marker::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid #fff;
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5));
-}
-
-.winner-band__scale {
-  display: flex;
-  justify-content: space-between;
-  margin-top: var(--space-2);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--ink-faint);
-}
-
-/* The band has only one axis — the budget running left to right — so it gets
-   the same naming the desktop chart's x axis does. */
-.winner-band__axis-title {
-  margin: var(--space-1) 0 0;
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--ink-soft);
-}
-
 .rates-panel__intro {
   margin: 0 0 var(--space-4);
   font-size: 0.85rem;

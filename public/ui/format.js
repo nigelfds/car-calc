@@ -8,3 +8,16 @@ export function money(value) {
   const sign = rounded < 0 ? '-' : '';
   return `${sign}$${Math.abs(rounded).toLocaleString('en-AU')}`;
 }
+
+// Axis-sized currency. A phone leaves the chart roughly 310 units of plot
+// width, and "$115,989" costs a fifth of that in the left margin before a
+// single line is drawn. Only used where space is the binding constraint —
+// everything a reader might act on still uses money() in full.
+export function shortMoney(value) {
+  const rounded = Math.round(value);
+  const sign = rounded < 0 ? '-' : '';
+  const abs = Math.abs(rounded);
+  if (abs >= 1000000) return `${sign}$${(abs / 1000000).toFixed(1)}m`;
+  if (abs >= 1000) return `${sign}$${Math.round(abs / 1000)}k`;
+  return `${sign}$${abs.toLocaleString('en-AU')}`;
+}
