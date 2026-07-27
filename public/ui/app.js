@@ -271,7 +271,10 @@ function boot(root, dataset) {
   if (statsEl) {
     const stats = datasetStats({ vehicles, families });
     statsEl.textContent = [
-      `${stats.models} cars`,
+      // "cars" for the model count was ambiguous — it read as either the
+      // number of brands or the number of buyable variants, and was neither.
+      `${stats.brands} brands`,
+      `${stats.models} models`,
       `${stats.variants} variants`,
       stats.updated ? `last updated ${stats.updated}` : null
     ].filter(Boolean).join(' · ');

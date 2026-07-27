@@ -29,6 +29,10 @@ export function datasetStats({ vehicles = [], families = [] } = {}) {
   // Families with no rows are not cars anyone can be shown, so they are not
   // counted as models.
   const models = families.filter(f => withVariants.has(f.id)).length;
+  // Counted off the variants, not the families, for the same reason: a brand
+  // present only in families.json with no rows behind it is a brand this site
+  // cannot actually show you a car from.
+  const brands = new Set(vehicles.map(v => v.make).filter(Boolean)).size;
 
   const dates = [...vehicles, ...families]
     .map(row => row?.sourcedAt)
@@ -37,6 +41,7 @@ export function datasetStats({ vehicles = [], families = [] } = {}) {
   const latest = dates[dates.length - 1];
 
   return {
+    brands,
     models,
     variants: vehicles.length,
     // UTC so the month never shifts backwards for a reader west of the data's

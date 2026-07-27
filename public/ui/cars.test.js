@@ -56,15 +56,16 @@ test('the card model does not carry an image, even when the family has one', () 
 // Written from the data rather than typed into the markup, so the counts
 // cannot drift from what actually ships.
 
-test('the stats line counts models and variants and dates the data', () => {
+test('the stats line counts brands, models and variants and dates the data', () => {
   const stats = datasetStats({
     vehicles: [
-      { familyId: 'a', sourcedAt: '2026-07-26' },
-      { familyId: 'a', sourcedAt: '2026-07-27' },
-      { familyId: 'b', sourcedAt: '2026-07-20' }
+      { familyId: 'a', make: 'Kia', sourcedAt: '2026-07-26' },
+      { familyId: 'a', make: 'Kia', sourcedAt: '2026-07-27' },
+      { familyId: 'b', make: 'BYD', sourcedAt: '2026-07-20' }
     ],
     families: [{ id: 'a' }, { id: 'b' }]
   });
+  assert.equal(stats.brands, 2);
   assert.equal(stats.models, 2);
   assert.equal(stats.variants, 3);
   assert.equal(stats.updated, 'July 2026');
@@ -92,9 +93,44 @@ test('missing or malformed dates do not produce an Invalid Date', () => {
 
 test('an empty dataset reports zeroes rather than throwing', () => {
   const stats = datasetStats({ vehicles: [], families: [] });
+  assert.equal(stats.brands, 0);
   assert.equal(stats.models, 0);
   assert.equal(stats.variants, 0);
   assert.equal(stats.updated, null);
+});
+
+// Brands and models are different counts and must not be confused: the header
+// said "40 cars" for what was really 40 models across 24 brands.
+test('one brand with several models counts once as a brand', () => {
+  const stats = datasetStats({
+    vehicles: [
+      { familyId: 'ev3', make: 'Kia', sourcedAt: '2026-07-27' },
+      { familyId: 'ev5', make: 'Kia', sourcedAt: '2026-07-27' },
+      { familyId: 'ev6', make: 'Kia', sourcedAt: '2026-07-27' }
+    ],
+    families: [{ id: 'ev3' }, { id: 'ev5' }, { id: 'ev6' }]
+  });
+  assert.equal(stats.brands, 1);
+  assert.equal(stats.models, 3);
+  assert.equal(stats.variants, 3);
+});
+
+// Same rule as models: a brand present only in families.json, with no rows
+// behind it, is one this site cannot show you a car from.
+test('a brand with no variants is not counted', () => {
+  const stats = datasetStats({
+    vehicles: [{ familyId: 'a', make: 'Kia', sourcedAt: '2026-07-27' }],
+    families: [{ id: 'a', make: 'Kia' }, { id: 'orphan', make: 'Rivian' }]
+  });
+  assert.equal(stats.brands, 1, 'Rivian has no variants to show');
+});
+
+test('a vehicle with no make does not count as a brand', () => {
+  const stats = datasetStats({
+    vehicles: [{ familyId: 'a', make: 'Kia' }, { familyId: 'b' }],
+    families: [{ id: 'a' }, { id: 'b' }]
+  });
+  assert.equal(stats.brands, 1);
 });
 
 test('models counts families that actually have variants', () => {
