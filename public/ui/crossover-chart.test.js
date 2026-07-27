@@ -348,3 +348,71 @@ test('the mobile winner band names its axis in visible text, not just aria', () 
       'the band scale is a budget axis and should say so on screen');
   });
 });
+
+// --- FBT cliff marker ----------------------------------------------------
+
+const cliffFixture = {
+  cliffPrice: 91661,
+  budgetAt: 1217,
+  budgetNeeded: 3039,
+  carBelow: { make: 'Mercedes-Benz', model: 'EQB', listPrice: 90000 },
+  carAbove: { make: 'Kia', model: 'EV6', listPrice: 99660 }
+};
+
+const wideSeries = {
+  points: Array.from({ length: 25 }, (_, i) => ({
+    budget: 300 + i * 100, novated: 30000 + i * 500, loan: 40000 + i * 900, upfront: 62835
+  })),
+  crossovers: []
+};
+
+test('the cliff marker renders with its explanation when one applies', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, wideSeries, 800, cliffFixture);
+    const html = getHtml();
+    assert.ok(html.includes('fbt-cliff'), 'expected a cliff marker');
+    assert.ok(/loses|lost outright|exemption/i.test(html), 'expected the exemption explained');
+    assert.ok(html.includes('$91,661'), 'expected the threshold named');
+    assert.ok(html.includes('<title>'), 'the explanation must be reachable as a tooltip');
+  });
+});
+
+test('no cliff marker renders when there is no cliff', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, wideSeries, 800, null);
+    assert.ok(!getHtml().includes('fbt-cliff'), 'nothing to mark, so nothing drawn');
+  });
+});
+
+// valueToX clamps out-of-range values to an edge, so a cliff beyond the
+// charted budget range would be pinned to the axis end and read as though it
+// sat there. Drawing nothing is the honest option.
+test('a cliff outside the charted budget range is not drawn at the edge', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, wideSeries, 800, { ...cliffFixture, budgetAt: 9999 });
+    assert.ok(!getHtml().includes('fbt-cliff'), 'a cliff off the right of the chart must not be pinned to the edge');
+  });
+});
+
+test('the cliff marker names both cars and both monthly figures', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, wideSeries, 800, cliffFixture);
+    const html = getHtml();
+    assert.ok(html.includes('EQB'), 'the dearest exempt car');
+    assert.ok(html.includes('EV6'), 'the first car past the cliff');
+    assert.ok(html.includes('$1,217'), 'what the exempt car costs monthly');
+    assert.ok(html.includes('$3,039'), 'what the next car up would cost');
+  });
+});
+
+test('the cliff marker is keyboard reachable', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, wideSeries, 800, cliffFixture);
+    assert.ok(/tabindex="0"/.test(getHtml()), 'a hover-only explanation excludes keyboard users');
+  });
+});

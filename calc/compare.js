@@ -4,6 +4,7 @@ import { resaleValue } from './resale.js';
 import { novatedQuote } from './novated.js';
 import { loanSummary } from './loan.js';
 import { upfrontQuote } from './upfront.js';
+import { resolvePhase } from './fbt.js';
 
 function vehicleContext(vehicle, inputs, tables) {
   const onRoad = driveAwayPrice({ listPrice: vehicle.listPrice }, tables);
@@ -150,6 +151,43 @@ export function reachableVehicle({ vehicles, budgetMonthly, option, inputs }, ta
   return affordable.reduce((dearest, current) =>
     current.vehicle.listPrice > dearest.vehicle.listPrice ? current : dearest
   ).vehicle;
+}
+
+// Where the novated line stops being able to climb, and why.
+//
+// calc/fbt.js treats the LCT fuel-efficient threshold as a hard edge rather
+// than a taper: one dollar over and the lease is not exempt and gets no
+// discount either. The net monthly cost roughly doubles across that dollar,
+// so a novated lease cannot reach the next car up until the budget doubles
+// too. On the chart that reads as an unexplained plateau.
+//
+// The binding cliff is phase-dependent: from April 2027 full exemption is
+// capped at $75,000, below the LCT threshold, so that becomes the first edge
+// a buyer hits. Resolved from the lease start date rather than hardcoded.
+export function fbtCliff({ vehicles, inputs }, tables) {
+  if (!Array.isArray(vehicles) || vehicles.length === 0) return null;
+
+  const phase = resolvePhase(inputs.leaseStartDate, tables);
+  const lctThreshold = tables.lct.fuelEfficientThreshold;
+  const cliffPrice = phase.fullExemptionUpTo !== null && phase.fullExemptionUpTo < lctThreshold
+    ? phase.fullExemptionUpTo
+    : lctThreshold;
+
+  const below = vehicles.filter(v => v.listPrice <= cliffPrice);
+  const above = vehicles.filter(v => v.listPrice > cliffPrice);
+  // A cliff is only meaningful if there are cars on both sides of it.
+  if (below.length === 0 || above.length === 0) return null;
+
+  const carBelow = below.reduce((best, v) => (v.listPrice > best.listPrice ? v : best));
+  const carAbove = above.reduce((best, v) => (v.listPrice < best.listPrice ? v : best));
+
+  const budgetAt = optionCosts({ vehicle: carBelow, inputs }, tables).novated.monthlyCost;
+  const budgetNeeded = optionCosts({ vehicle: carAbove, inputs }, tables).novated.monthlyCost;
+
+  // If crossing costs no more per month there is no cliff worth drawing.
+  if (!(budgetNeeded > budgetAt)) return null;
+
+  return { cliffPrice, budgetAt, budgetNeeded, carBelow, carAbove };
 }
 
 export function crossoverSeries({ vehicles, inputs, budgetRange }, tables) {

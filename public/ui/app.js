@@ -12,7 +12,7 @@ import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.j
 import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards } from './cars.js';
 import { rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from '../../calc/rank.js';
-import { crossoverSeries } from '../../calc/compare.js';
+import { crossoverSeries, fbtCliff } from '../../calc/compare.js';
 import { money } from './format.js';
 
 // crossoverSeries was measured at ~17ms for 80 vehicles across 25 budget
@@ -110,6 +110,9 @@ function boot(root, dataset) {
   // without waiting for the next state-driven recompute — see the resize
   // listener bound near the bottom of boot().
   let lastSeries = null;
+  // I4 companion: the cliff belongs to the same snapshot as lastSeries, so a
+  // resize repaint redraws the marker instead of dropping it.
+  let lastCliff = null;
 
   const budgetOutput = root.querySelector('#budgetSliderValue');
 
@@ -203,10 +206,13 @@ function boot(root, dataset) {
     if (salaryReady) {
       const series = crossoverSeries({ vehicles, inputs, budgetRange: BUDGET_RANGE }, tables);
       lastSeries = series;
+      // Computed over the same preference-filtered pool the chart is drawn
+      // from, so the cars it names are cars the user could actually be shown.
+      lastCliff = fbtCliff({ vehicles: filterVehicles(vehicles, state), inputs }, tables);
       // I7: pass the current budget through so both the desktop line chart
       // and the mobile winner band can mark the user's own position, not
       // just where the cheapest option changes.
-      renderChart(root, series, state.monthlyBudget);
+      renderChart(root, series, state.monthlyBudget, lastCliff);
     }
 
     renderRatesPanel(root, state, onRatesChange, rates);
@@ -311,7 +317,7 @@ function boot(root, dataset) {
   // doesn't need a full recompute, just another call to renderChart with
   // the series already on hand.
   const rerenderChartForViewport = debounce(() => {
-    if (lastSeries) renderChart(root, lastSeries, state.monthlyBudget);
+    if (lastSeries) renderChart(root, lastSeries, state.monthlyBudget, lastCliff);
   }, RESIZE_DEBOUNCE_MS);
 
   if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {

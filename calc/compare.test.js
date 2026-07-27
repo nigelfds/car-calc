@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   optionCosts, reachableVehicle, crossoverSeries,
-  isVehicleReachable, reachableVehicles, optionBlocker, valueRatio
+  isVehicleReachable, reachableVehicles, optionBlocker, valueRatio, fbtCliff
 } from './compare.js';
 
 const tables = JSON.parse(readFileSync(new URL('../data/tax-tables.json', import.meta.url)));
@@ -234,4 +234,53 @@ test('an option that cannot reach a car has no value ratio', () => {
 test('a non-positive total cost yields no ratio rather than Infinity', () => {
   assert.equal(valueRatio({ tco: 0, detail: { resale: 1000 } }), null);
   assert.equal(valueRatio({ tco: -500, detail: { resale: 1000 } }), null);
+});
+
+// --- The FBT cliff --------------------------------------------------------
+// calc/fbt.js treats the LCT fuel-efficient threshold as a hard edge: one
+// dollar over and the lease loses its exemption outright (exempt: false,
+// discountRate: 0). The monthly cost roughly doubles across that dollar, so
+// a novated lease simply cannot reach the next car up until the budget more
+// than doubles too — which is why the novated line on the chart plateaus.
+
+test('the cliff sits at the LCT threshold for a lease starting today', () => {
+  const fleet = [vehicle('under', 90000), vehicle('over', 95000)];
+  const cliff = fbtCliff({ vehicles: fleet, inputs }, tables);
+  assert.equal(cliff.cliffPrice, tables.lct.fuelEfficientThreshold);
+});
+
+test('crossing the cliff costs far more per month than the price step suggests', () => {
+  const fleet = [vehicle('under', 91000), vehicle('over', 92000)];
+  const cliff = fbtCliff({ vehicles: fleet, inputs }, tables);
+  assert.equal(cliff.carBelow.id, 'under');
+  assert.equal(cliff.carAbove.id, 'over');
+  // $1,000 more car, but the monthly ask must jump by far more than that.
+  assert.ok(cliff.budgetNeeded > cliff.budgetAt * 1.5,
+    `expected a steep jump, got ${cliff.budgetAt} -> ${cliff.budgetNeeded}`);
+});
+
+test('a lease starting after April 2027 has its cliff at the phase cap instead', () => {
+  const fleet = [vehicle('under', 70000), vehicle('over', 80000)];
+  const later = { ...inputs, leaseStartDate: '2027-06-01' };
+  const cliff = fbtCliff({ vehicles: fleet, inputs: later }, tables);
+  assert.equal(cliff.cliffPrice, 75000, 'the 2027 phase caps full exemption at $75,000');
+});
+
+test('no cliff is reported when every car sits on one side of it', () => {
+  assert.equal(fbtCliff({ vehicles: [vehicle('a', 50000), vehicle('b', 60000)], inputs }, tables), null);
+  assert.equal(fbtCliff({ vehicles: [vehicle('a', 95000), vehicle('b', 99000)], inputs }, tables), null);
+});
+
+test('the cliff names the dearest car below it and the cheapest above', () => {
+  const fleet = [
+    vehicle('cheap', 40000), vehicle('best-below', 90000),
+    vehicle('first-above', 93000), vehicle('way-above', 120000)
+  ];
+  const cliff = fbtCliff({ vehicles: fleet, inputs }, tables);
+  assert.equal(cliff.carBelow.id, 'best-below');
+  assert.equal(cliff.carAbove.id, 'first-above');
+});
+
+test('an empty fleet reports no cliff rather than throwing', () => {
+  assert.equal(fbtCliff({ vehicles: [], inputs }, tables), null);
 });

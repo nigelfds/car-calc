@@ -252,7 +252,42 @@ export function layoutCrossoverLabels(entries, options = {}) {
     });
 }
 
-function renderLineChart(target, series, budgetMonthly) {
+// The novated line plateaus for a reason the chart cannot otherwise show:
+// the FBT exemption is a cliff, not a taper, so past a certain car price the
+// monthly cost roughly doubles and the lease simply stops being able to
+// reach anything dearer. Marked with an "i" carrying the explanation.
+function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
+  if (!cliff) return '';
+  const first = series.points[0].budget;
+  const last = series.points[series.points.length - 1].budget;
+  // valueToX clamps, so a cliff outside the charted range would be pinned to
+  // an edge and read as though it sat there. Better to draw nothing.
+  if (cliff.budgetAt < first || cliff.budgetAt > last) return '';
+
+  const x = valueToX(series, cliff.budgetAt, plotWidth);
+  const explanation =
+    `FBT cliff at ${money(cliff.cliffPrice)}. A novated lease is FBT-exempt up to this price; ` +
+    `one dollar over and the exemption is lost outright, with no taper. ` +
+    `The dearest exempt car here is the ${cliff.carBelow.make} ${cliff.carBelow.model} at ` +
+    `${money(cliff.carBelow.listPrice)}, costing ${money(cliff.budgetAt)}/mo. The next car up, the ` +
+    `${cliff.carAbove.make} ${cliff.carAbove.model} at ${money(cliff.carAbove.listPrice)}, ` +
+    `would cost ${money(cliff.budgetNeeded)}/mo. That is why the novated lease line stops climbing here.`;
+
+  return `<g class="fbt-cliff" role="img" tabindex="0" aria-label="${escapeAttr(explanation)}">
+      <title>${escapeAttr(explanation)}</title>
+      <line class="fbt-cliff__line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="14" y2="${plotHeight}" />
+      <circle class="fbt-cliff__badge" cx="${x.toFixed(1)}" cy="8" r="7" />
+      <text class="fbt-cliff__glyph" x="${x.toFixed(1)}" y="8" text-anchor="middle"
+        dominant-baseline="central">i</text>
+    </g>`;
+}
+
+const escapeAttr = value =>
+  String(value).replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[ch]);
+
+function renderLineChart(target, series, budgetMonthly, cliff) {
   const { min, max } = bounds(series);
   const plotWidth = 560;
   const plotHeight = 190;
@@ -398,6 +433,7 @@ function renderLineChart(target, series, budgetMonthly) {
         ${lineGroups}
         ${xLabels}
         ${axisTitles}
+        ${fbtCliffMarkup(series, cliff, plotWidth, plotHeight)}
         ${budgetMarkup}
       </g>
     </svg>`;
@@ -468,14 +504,16 @@ function isDesktopViewport(root) {
   return typeof width === 'number' ? width >= 900 : true;
 }
 
-export function renderChart(root, series, budgetMonthly = null) {
+export function renderChart(root, series, budgetMonthly = null, cliff = null) {
   const target = root.querySelector('#crossover');
   if (!target) return;
 
   const isMobile = !isDesktopViewport(root);
   if (isMobile) {
+    // The band has no cost axis for the plateau to show up on, so there is
+    // nothing for a cliff marker to explain there.
     renderWinnerBand(target, series, budgetMonthly);
   } else {
-    renderLineChart(target, series, budgetMonthly);
+    renderLineChart(target, series, budgetMonthly, cliff);
   }
 }
