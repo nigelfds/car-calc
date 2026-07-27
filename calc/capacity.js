@@ -20,6 +20,12 @@ const FALLBACK_PROFILE = {
   depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47]
 };
 
+// The cheapest car on the market, used as the capacity floor.
+export function cheapestPrice(vehicles = []) {
+  const prices = vehicles.map(v => v.listPrice).filter(Number.isFinite);
+  return prices.length > 0 ? Math.min(...prices) : 0;
+}
+
 const median = numbers => {
   const sorted = numbers.filter(Number.isFinite).sort((a, b) => a - b);
   if (sorted.length === 0) return null;
@@ -51,7 +57,15 @@ const SEARCH_ITERATIONS = 40;
 // The dearest list price this option supports at this budget. Monthly cost is
 // monotonic in price for all three options, so a bisection finds the boundary
 // exactly and costs 40 evaluations rather than one per car in the fleet.
-export function maxAffordablePrice({ budgetMonthly, option, inputs, profile }, tables) {
+// `floorPrice` is the cheapest car actually on the market. Without it the
+// solver reports arithmetic that has no product behind it — "at $400/mo a loan
+// reaches a $3,177 car" — which drew a curve whose low end was fiction and
+// contradicted the entry marker, which counts real cars. Below the floor there
+// is nothing to buy, so capacity is nothing.
+export function maxAffordablePrice(
+  { budgetMonthly, option, inputs, profile, floorPrice = 0 },
+  tables
+) {
   const affordable = price => {
     const vehicle = { id: 'probe', listPrice: price, ...profile };
     const costs = optionCosts({ vehicle, inputs }, tables)[option];
@@ -68,10 +82,10 @@ export function maxAffordablePrice({ budgetMonthly, option, inputs, profile }, t
     const mid = (low + high) / 2;
     if (affordable(mid)) low = mid; else high = mid;
   }
-  return low;
+  return low < floorPrice ? 0 : low;
 }
 
-export function purchasingPowerSeries({ inputs, profile, budgetRange }, tables) {
+export function purchasingPowerSeries({ inputs, profile, budgetRange, floorPrice = 0 }, tables) {
   const { min, max, step } = budgetRange;
   const stepCount = Math.round((max - min) / step) + 1;
   const points = [];
@@ -80,7 +94,9 @@ export function purchasingPowerSeries({ inputs, profile, budgetRange }, tables) 
     const budget = min + i * step;
     const point = { budget };
     for (const option of OPTIONS) {
-      point[option] = maxAffordablePrice({ budgetMonthly: budget, option, inputs, profile }, tables);
+      point[option] = maxAffordablePrice(
+        { budgetMonthly: budget, option, inputs, profile, floorPrice }, tables
+      );
     }
     points.push(point);
   }

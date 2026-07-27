@@ -99,7 +99,9 @@ export function toWinnerBands(series) {
   const leaderAt = point => {
     const priced = OPTIONS.filter(o => point[o] !== null);
     if (priced.length === 0) return null;
-    return priced.reduce((best, cur) => (point[cur] < point[best] ? cur : best));
+    // Capacity, not cost: the leader is whichever option reaches the DEAREST
+    // car. The series this replaced took the lowest number.
+    return priced.reduce((best, cur) => (point[cur] > point[best] ? cur : best));
   };
 
   const bands = [];
@@ -455,15 +457,17 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   const plotHeight = 190;
 
   // The leader-change markers (a dashed rule and a "$N/mo" label at every
-  // budget where the cheapest option flips) are not drawn at present. They
-  // annotate a comparison that is not yet sound: crossoverSeries prices each
-  // option against a different car, so a "crossover" can mean nothing more
-  // than one option starting to shop dearer. Marking those as decision points
-  // gave them a confidence the underlying numbers do not support.
+  // budget where the leading option changes) are still not drawn.
   //
-  // layoutCrossoverLabels and its tests are kept — the markers come back once
-  // the series compares like with like, and the collision handling will be
-  // needed again then.
+  // The reason they were suspended has gone: they used to annotate a
+  // comparison that was not sound, because the old series priced each option
+  // against a different car and a "crossover" could mean nothing more than one
+  // option starting to shop dearer. Under capacity a crossover is real — it is
+  // the budget at which a different way of paying starts buying you more car.
+  //
+  // They stay off because the author asked for them off, not because they
+  // would now mislead. layoutCrossoverLabels and its collision tests are kept
+  // for whenever they are wanted back.
 
   // bottom/left carry an axis title each, beneath and beside the tick labels.
   // Sized for the enlarged label type: "$101,973" at 13.5 units of mono needs
@@ -525,10 +529,11 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
     <g class="axis-note">
       <text class="axis-title axis-title--y" transform="rotate(-90)"
         x="${(-plotHeight / 2).toFixed(1)}" y="${-(margin.left - 14)}"
-        text-anchor="middle">Total cost over the term</text>
+        text-anchor="middle">Most expensive car you could buy</text>
       ${tipMarkup(
-        'Everything that way of paying costs you across the whole term, less what the car ' +
-        'is still worth at the end. Lower is cheaper. It is a cost, not a limit on what you can spend.',
+        'The dearest car each way of paying could get you at that budget, before on-road ' +
+        'costs. Higher is more car. Running costs assume a typical EV from this dataset, so ' +
+        'treat it as a guide rather than a quote — the cars below use their own real figures.',
         { anchorX: 0, plotWidth, boxY: 12 }
       )}
       <rect class="axis-note__hit" x="${(-margin.left + 4).toFixed(1)}" y="${(plotHeight / 2 - 100).toFixed(1)}"
@@ -600,7 +605,7 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   target.innerHTML = `
     <svg viewBox="0 0 ${width} ${height}" class="crossover-chart" role="img"
       data-margin-left="${margin.left}" data-margin-top="${margin.top}"
-      aria-label="Total cost of a novated lease, a car loan and paying cash, plotted against monthly budget from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.${budgetSummary}">
+      aria-label="How much car each way of paying reaches, by monthly budget, from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.${budgetSummary}">
       <g transform="translate(${margin.left},${margin.top})">
         ${gridlines}
         ${lineGroups}
@@ -685,12 +690,27 @@ export function renderChart(root, series, budgetMonthly = null, cliff = null, en
   const target = root.querySelector('#crossover');
   if (!target) return;
 
+  // A capacity of 0 means "this way of paying reaches nothing at this budget",
+  // which is exactly what a null meant in the cost series it replaced: the
+  // line must break. Plotted as a point it would sit on the axis and read as
+  // a free car. Normalised once here so every downstream helper — bounds,
+  // toSegments, toWinnerBands — keeps its existing null handling.
+  const withGaps = {
+    ...series,
+    points: series.points.map(point => ({
+      ...point,
+      novated: point.novated > 0 ? point.novated : null,
+      loan: point.loan > 0 ? point.loan : null,
+      upfront: point.upfront > 0 ? point.upfront : null
+    }))
+  };
+
   const isMobile = !isDesktopViewport(root);
   if (isMobile) {
     // The band has no cost axis for the plateau to show up on, so there is
     // nothing for a cliff marker to explain there.
-    renderWinnerBand(target, series, budgetMonthly);
+    renderWinnerBand(target, withGaps, budgetMonthly);
   } else {
-    renderLineChart(target, series, budgetMonthly, cliff, entry);
+    renderLineChart(target, withGaps, budgetMonthly, cliff, entry);
   }
 }

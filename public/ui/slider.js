@@ -40,12 +40,11 @@ export function verdictAt({ budgetMonthly, inputs, profile }, tables) {
 
 // ---------------------------------------------------------------------------
 // Debounced/rAF-scheduled recompute — see Task 18 design intent:
-// crossoverSeries measured ~17ms for 80 vehicles x 25 budget steps, over a
-// 16ms frame budget. Wiring a slider's raw 'input' event straight to a
-// verdictAt/crossoverSeries recompute would jank every drag. Whoever binds
+// The step-2 recompute (verdictAt plus purchasingPowerSeries) is cheap now,
+// but a slider emits a burst of 'input' events per drag and a DOM write per
+// event would still jank. Whoever binds
 // the budget control (ui/app.js, a later task) must run its recompute
-// through this rather than calling straight into verdictAt/crossoverSeries
-// on every 'input' event.
+// through this rather than recomputing on every 'input' event.
 //
 // Strategy: coalesce bursts of 'input' events behind a short debounce window
 // (rapid drag ticks collapse into one), then align the actual recompute +

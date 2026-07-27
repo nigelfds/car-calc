@@ -172,3 +172,49 @@ test('a shorter term pushes the loan entry point higher', () => {
   const long = optionEntryPoint({ vehicles: fleet, inputs: { ...inputs, termMonths: 60 }, option: 'loan' }, tables);
   assert.ok(short.budget > long.budget, 'repaying the same car faster costs more per month');
 });
+
+// --- The market floor ------------------------------------------------------
+// The solver will happily report "at $400/mo a loan reaches a $3,177 car".
+// Arithmetically true, but no such car exists — the cheapest in the dataset is
+// $29,840 — so the low end of the curve was fiction, and it contradicted the
+// entry marker, which uses real cars and said $882/mo.
+
+test('capacity below the cheapest real car is reported as nothing', () => {
+  const floorPrice = 29840;
+  const belowFloor = maxAffordablePrice(
+    { budgetMonthly: 400, option: 'loan', inputs, profile, floorPrice }, tables
+  );
+  assert.equal(belowFloor, 0, 'no car exists at this price, so nothing is reachable');
+});
+
+test('capacity at or above the floor is unaffected', () => {
+  const floorPrice = 29840;
+  const withFloor = maxAffordablePrice(
+    { budgetMonthly: 1400, option: 'loan', inputs, profile, floorPrice }, tables
+  );
+  const without = maxAffordablePrice(
+    { budgetMonthly: 1400, option: 'loan', inputs, profile }, tables
+  );
+  assert.ok(withFloor > floorPrice);
+  assert.equal(withFloor, without);
+});
+
+test('the floor defaults to zero so existing callers are unchanged', () => {
+  const a = maxAffordablePrice({ budgetMonthly: 900, option: 'loan', inputs, profile }, tables);
+  const b = maxAffordablePrice(
+    { budgetMonthly: 900, option: 'loan', inputs, profile, floorPrice: 0 }, tables
+  );
+  assert.equal(a, b);
+});
+
+test('the series applies the floor to every option at every budget', () => {
+  const series = purchasingPowerSeries(
+    { inputs, profile, floorPrice: 29840, budgetRange: { min: 300, max: 700, step: 100 } }, tables
+  );
+  for (const point of series.points) {
+    for (const option of ['novated', 'loan', 'upfront']) {
+      assert.ok(point[option] === 0 || point[option] >= 29840,
+        `${option} at $${point.budget} reported ${point[option]}, between zero and the floor`);
+    }
+  }
+});
