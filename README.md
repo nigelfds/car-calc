@@ -75,10 +75,28 @@ npm test
 ```
 
 Runs the full suite on Node's built-in test runner (`node --test`) — no test framework
-dependency. 186 tests across the tax/FBT/loan/lease/resale calculators, the dataset validator, the
+dependency. 233 tests across the tax/FBT/loan/lease/resale calculators, the dataset validator, the
 server routes, and the browser-side UI modules (parsed and rendered the same way whether run
 under Node or loaded natively in the browser, since there's no bundler or build step — `calc/` is
 imported unchanged by both).
+
+### The pre-push hook
+
+`main` auto-deploys to Heroku on every push, with no CI gate and no review step in between, so a
+red commit reaching `main` reaches production. `.githooks/pre-push` runs the suite and refuses the
+push unless it is green.
+
+Hooks live in the tracked `.githooks/` directory rather than `.git/hooks/`, so they are
+version-controlled — but `core.hooksPath` is local config, so **a fresh clone must opt in once**:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+Check it took with `git config core.hooksPath` (should print `.githooks`). The hook skips
+deletion-only pushes, explains itself if `npm` isn't on `PATH` (common when pushing from a GUI
+client), and writes full output to `/tmp/car-calc-pre-push.log` on failure. `git push --no-verify`
+bypasses it — reasonable for a WIP branch, rarely so for `main`.
 
 ## Refreshing the dataset
 
