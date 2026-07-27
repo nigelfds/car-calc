@@ -46,22 +46,14 @@
 
     <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading" class="section-heading">
-        <span class="section-heading__eyebrow">1</span> Tell us about you
+        <span class="section-heading__eyebrow">1</span> What you want
       </h2>
 
-      <div class="field-group field-group--free-text">
-        <label for="free-text">Describe your situation, in your own words</label>
-        <textarea
-          id="free-text"
-          name="freeText"
-          rows="4"
-          placeholder="I earn $145k and can spend about $900 a month. I want an SUV with a big boot for my dog."
-        ></textarea>
-        <div class="free-text__actions">
-          <button type="button" id="parse-button" class="button button--primary">Fill in the form for me</button>
-          <p id="parse-status" class="parse-status" role="status" aria-live="polite"></p>
-        </div>
-      </div>
+      <!-- The free-text box and its "fill in the form for me" parse are
+           removed for now: the fields below cover the same ground directly,
+           and the parse only ever worked when a model was reachable. The
+           parsing code (ui/sections.js, ui/prompt-api.js, /api/parse) is
+           untouched and still tested, so it can be wired back in. -->
 
       <div class="field-group field-group--numeric">
         <div class="field">
@@ -169,7 +161,7 @@
 
     <section id="afford" aria-labelledby="afford-heading">
       <h2 id="afford-heading" class="section-heading">
-        <span class="section-heading__eyebrow">2</span> What you can afford
+        <span class="section-heading__eyebrow">2</span> How much to spend?
       </h2>
 
       <div class="budget-slider">
@@ -185,8 +177,6 @@
         <p class="skeleton-note">Fill in the form and we'll work out which way of paying — novated lease, car loan
           or cash — gets you the most car for your budget.</p>
       </div>
-
-      <div id="explanation" class="explanation-panel" aria-live="polite"></div>
 
       <div class="line-legend" aria-hidden="true">
         <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--lease"></span>Novated lease</span>
@@ -222,7 +212,7 @@
 
     <section id="cars" aria-labelledby="cars-heading">
       <h2 id="cars-heading" class="section-heading">
-        <span class="section-heading__eyebrow">3</span> Cars that match
+        <span class="section-heading__eyebrow">3</span> Cars for you
       </h2>
       <div id="car-list" class="car-list" aria-live="polite">
         <p class="skeleton-note">Matching cars will appear here once we know your budget and what you're after.</p>

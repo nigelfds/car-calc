@@ -2,12 +2,12 @@
 // state to the DOM, and keeps the verdict, chart, shortlist and URL in
 // sync. Ranking and filtering are local and deterministic (calc/rank.js,
 // ui/cars.js) so they can run on every keystroke or drag with no network
-// call. The only network calls this file makes after boot are /api/parse
-// (inside ui/sections.js's bindFreeText) and /api/explain — and
-// /api/explain only ever follows a completed parse, never a slider drag.
+// call. After the one /api/dataset fetch at boot this file makes no network
+// calls at all: the free-text parse and the verdict explanation that used
+// them are currently unwired (see the note where maybeExplain used to be).
 
 import { defaultState, toQueryString, fromQueryString } from './state.js';
-import { renderInputs, bindFreeText } from './sections.js';
+import { renderInputs } from './sections.js';
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
@@ -35,11 +35,6 @@ const RECOMPUTE_DEBOUNCE_MS = 80;
 // primitive as the slider, just with its own, slightly longer window —
 // there's no drag-smoothness reason to keep this one at 80ms.
 const RESIZE_DEBOUNCE_MS = 150;
-
-const escapeHtml = value =>
-  String(value).replace(/[&<>"']/g, ch => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[ch]);
 
 const OPTION_PHRASE = { novated: 'A novated lease', loan: 'A car loan', upfront: 'Paying cash' };
 
@@ -114,7 +109,6 @@ function boot(root, dataset) {
   const floorPrice = cheapestPrice(vehicles);
   const defaults = defaultState(rates);
   let state = fromQueryString(location.search, defaults);
-  let lastVerdict = null;
   // I4: the last series painted, so a resize/orientation change can ask the
   // chart to re-pick its representation (mobile band vs desktop lines)
   // without waiting for the next state-driven recompute — see the resize
@@ -208,7 +202,6 @@ function boot(root, dataset) {
     const verdict = salaryReady
       ? verdictAt({ budgetMonthly: state.monthlyBudget, inputs, profile }, tables)
       : { winner: null, maxSpend: 0, options: {}, insufficientInput: true };
-    lastVerdict = verdict;
     renderVerdict(root, verdict);
     renderSummaryBar(verdict);
 
@@ -256,58 +249,12 @@ function boot(root, dataset) {
     debouncedRender();
   }
 
-  async function maybeExplain() {
-    const panel = root.querySelector('#explanation');
-    if (!panel) return;
-    if (!lastVerdict?.winner) {
-      panel.innerHTML = '';
-      return;
-    }
-
-    const winner = lastVerdict.options[lastVerdict.winner];
-    const result = {
-      winner: lastVerdict.winner,
-      vehicle: `${lastVerdict.vehicle.make} ${lastVerdict.vehicle.model}`,
-      termMonths: state.termMonths,
-      monthlyBudget: state.monthlyBudget,
-      winnerTotalCost: winner.tco,
-      winnerMonthlyCost: winner.monthlyCost,
-      // Buyers routinely overlook the balloon payment on a novated lease —
-      // supply it explicitly whenever novated wins so the explanation can
-      // mention it, per server/routes/explain.js's system prompt.
-      balloonPayment: lastVerdict.winner === 'novated' ? (winner.detail?.residual ?? null) : null,
-      options: Object.fromEntries(
-        Object.entries(lastVerdict.options).map(([key, o]) => [key, { tco: o.tco, monthlyCost: o.monthlyCost }])
-      )
-    };
-
-    try {
-      const response = await fetch('/api/explain', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ result })
-      });
-      const body = await response.json();
-      panel.innerHTML = body?.explanation
-        ? `<p class="explanation-panel__text">${escapeHtml(body.explanation)}</p>`
-        : '';
-    } catch {
-      // No key, no network, a timeout, a 5xx — any failure here must leave
-      // the numbers already rendered above untouched, and simply render no
-      // explanation. Never let this reach the caller.
-      panel.innerHTML = '';
-    }
-  }
-
-  // A parse is a single discrete action (a button click), never a rapid
-  // burst — render immediately rather than through the drag-oriented
-  // debounce, then explain what the numbers mean. Explain runs only here,
-  // never from onFieldChange/onRatesChange.
-  async function onParsed(next) {
-    state = next;
-    render();
-    await maybeExplain();
-  }
+  // The plain-English verdict explanation is gone with the free-text box that
+  // triggered it — /api/explain only ever ran after a successful parse. It had
+  // also broken silently in the capacity rework: it read lastVerdict.vehicle,
+  // and the verdict no longer names a car. The server route and its tests are
+  // untouched, so rewiring it means writing a caller against the new shape
+  // rather than resurrecting this one.
 
   // A getter, not `state` itself — see renderInputs's own doc comment
   // (ui/sections.js). onFieldChange below reassigns this closure's local
@@ -361,7 +308,6 @@ function boot(root, dataset) {
     window.addEventListener('orientationchange', rerenderChartForViewport);
   }
 
-  bindFreeText(root, () => state, { onParsed });
 
   root.querySelector('#summary-bar')?.addEventListener('click', () => {
     root.querySelector('#afford')?.scrollIntoView({ behavior: 'smooth', block: 'start' });

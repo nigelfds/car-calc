@@ -300,62 +300,6 @@ input[type='date'],
 
 .field-group + .field-group { margin-top: var(--space-5); }
 
-.field-group--free-text label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: var(--space-2);
-}
-
-#free-text {
-  width: 100%;
-  resize: vertical;
-  min-height: 8.5rem;
-  padding: var(--space-3);
-  border: 1px solid var(--hairline);
-  border-radius: 8px;
-  background: var(--paper);
-  color: var(--ink);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-#free-text::placeholder { color: var(--ink-faint); }
-
-#free-text:focus {
-  background: var(--paper-raised);
-}
-
-.free-text__actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin-top: var(--space-3);
-  flex-wrap: wrap;
-}
-
-.button {
-  border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 0.55em 1.1em;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.button--primary {
-  background: var(--ink);
-  color: var(--paper-raised);
-}
-
-.button--primary:hover { background: #000; }
-
-.parse-status {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-  min-height: 1.2em;
-}
-
 /* The preference block sits below the financial fields and is visually
    separated: step 1 asks two different kinds of question, and the split makes
    the second one findable. */
@@ -657,20 +601,6 @@ input[type='date'],
 .budget-slider input[type='range'] {
   width: 100%;
   accent-color: var(--line-lease);
-}
-
-.explanation-panel:empty {
-  display: none;
-}
-
-.explanation-panel__text {
-  margin: var(--space-4) 0 0;
-  padding: var(--space-3) var(--space-4);
-  background: var(--line-lease-bg);
-  border-radius: 6px;
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: var(--ink);
 }
 
 /* =========================================================================

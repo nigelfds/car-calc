@@ -22,11 +22,9 @@ Levy Surcharge. This tool does not model that.
 The three steps do three different jobs, and the split is deliberate: **step 2 knows nothing about
 specific cars**, and step 3 does all the car work.
 
-1. **Tell us about you** — salary, lease term, savings, annual kilometres and lease start date,
-   plus what you want in a car: body type, minimum boot, seats and range. You can type a sentence
-   instead ("I earn $145k and can spend about $900 a month, I want an SUV with a big boot for my
-   dog") and the tool fills the form in for you — see [How parsing works](#how-parsing-works).
-2. **What you can afford** — drag the budget slider and watch how much car each way of paying
+1. **What you want** — salary, lease term, savings, annual kilometres and lease start date, plus
+   what you want in a car: body type, minimum boot, seats and range.
+2. **How much to spend?** — drag the budget slider and watch how much car each way of paying
    reaches. The y axis is a car price, not a cost, and that is the point: three capacities are
    directly comparable, where three totals for three different cars never were. The shape carries
    the two facts that matter most. The novated line climbs and then flattens dead at the
@@ -37,30 +35,24 @@ specific cars**, and step 3 does all the car work.
    Every rate behind it (lease finance rate, loan rate, admin fee, the return your savings would
    otherwise earn) is shown, sourced and editable under **Rates and settings**.
    Running costs here assume a typical EV from the dataset — step 3 uses each car's real figures.
-3. **Cars that match** — five real EVs bracketed around that ceiling: two just under it, two at
-   it, and one stretch above. Each is filtered by your stated preferences and costed under all
+3. **Cars for you** — five real EVs bracketed around that ceiling, at-budget first, then two
+   just under it and one stretch above. Each is filtered by your stated preferences and costed under all
    three funding options, which is a fair comparison because all three price the *same* car.
    Each card also shows how much of every dollar survives as resale — the figure that separates
    two similarly-priced cars — and, for a novated lease, the balloon due at the end of the term
    and whether selling the car would clear it. No photography; car imagery is out of scope.
 
-## How parsing works
+## No model in the loop
 
-Typing a sentence and clicking "Fill in the form for me" tries three tiers, in order, and always
-degrades gracefully:
+Nothing in the app calls a model. The free-text "describe your situation" box and the
+plain-English verdict explanation are currently unwired, so after the single `/api/dataset` fetch
+at boot there are no network calls at all — every number, the ranking and the shortlist are
+computed locally and deterministically, and `ANTHROPIC_API_KEY` is not needed for anything.
 
-1. **On-device**, via Chrome's built-in Prompt API, if it's available — nothing leaves your
-   machine.
-2. **The server**, on Claude Haiku, if `ANTHROPIC_API_KEY` is configured.
-3. **A local keyword parser**, with no model at all, if neither of the above is available.
-
-A model is only ever asked to extract preferences (salary, budget, body type, boot size...) —
-never to compute a dollar figure. All the money maths (tax, FBT, stamp duty, loan amortisation,
-depreciation, comparisons) is a deterministic calculator that runs the same way regardless of
-which parsing tier fired, or whether one fired at all. **The calculator, the slider, the chart
-and the shortlist all work with `ANTHROPIC_API_KEY` unset** — the only things that go away are the
-free-text parse (the manual fields below it still work) and the one-paragraph plain-English
-explanation of the verdict.
+The parsing machinery is still present and still tested (`public/ui/sections.js`,
+`public/ui/prompt-api.js`, `/api/parse`, `/api/explain`) so it can be reconnected. Note that if
+the explanation is rewired it needs a caller written against the current verdict shape: it used
+to read a vehicle from the verdict, and step 2 no longer names one.
 
 ## Local setup
 
@@ -70,8 +62,8 @@ Requires Node 22 (pinned in `.nvmrc`).
 nvm use
 npm install
 cp .env.example .env
-# edit .env and set ANTHROPIC_API_KEY if you want free-text parsing and the
-# plain-English explanation — everything else works without it
+# ANTHROPIC_API_KEY is not needed: nothing in the UI calls a model right now.
+# The routes that would use it are still there and still tested.
 npm start
 ```
 
@@ -144,7 +136,7 @@ rates move, so check them against a real quote before relying on the numbers her
 No bundler, no framework, no build step — native ES modules throughout, so the pure calculation
 core (`calc/`) is imported completely unchanged by both the Node test runner and the browser.
 Express (`server/`) serves the static frontend (`public/`), the dataset, and three thin API
-routes: `/api/parse` (tier 2/3 of the free-text parser), `/api/explain` (the plain-English verdict
+routes: `/api/parse` (tier 2/3 of the free-text parser, currently unwired), `/api/explain` (the plain-English verdict
 explanation), and `/api/dataset` (vehicles, families, rates and tax tables, fetched once at boot).
 Purchasing power (`calc/capacity.js`) and shortlist ranking (`calc/rank.js`) are deterministic
 functions that never call a model — the same inputs always produce the same order, for free, offline.
@@ -152,5 +144,6 @@ functions that never call a model — the same inputs always produce the same or
 ## Deployment
 
 A `Procfile` is included for Heroku (`web: node server/index.js`). Deployment itself is a
-separate, deliberate step — set `ANTHROPIC_API_KEY` in the target environment's config if you want
-free-text parsing and explanations there too; the app runs without it either way.
+separate, deliberate step. `ANTHROPIC_API_KEY` is not required while the parse and explanation are
+unwired; set it in the target environment's config if you reconnect them later. The app runs
+without it either way.
