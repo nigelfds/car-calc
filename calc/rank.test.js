@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { scoreVehicle, rankVehicles, bracketAroundPrice } from './rank.js';
+import { scoreVehicle, rankVehicles, bracketAroundPrice, bootReferenceFor } from './rank.js';
 
 const car = (id, over = {}) => ({
   id, listPrice: 55000, bootLitresSeatsUp: 450, rangeKm: 450,
@@ -63,6 +63,68 @@ test('a stated boot preference still outweighs price', () => {
   assert.ok(
     scoreVehicle(car('roomy-dear', { bootLitresSeatsUp: 800, listPrice: 75000 }), prefs) >
     scoreVehicle(car('small-cheap', { bootLitresSeatsUp: 520, listPrice: 45000 }), prefs)
+  );
+});
+
+// --- Boot is measured against the pool ------------------------------------
+// A fixed 900L ceiling was one outlier's yardstick: in the real SUV pool 94 of
+// 97 cars are 603L or less and three Model Y variants sit at 854L, so an
+// ordinary 500L boot scored 0.56 and the outlier took a lead nothing could
+// close.
+
+test('the boot reference comes from the pool, not a constant', () => {
+  const smallFleet = Array.from({ length: 10 }, (_, i) => car(`v${i}`, { bootLitresSeatsUp: 300 + i * 10 }));
+  // floor((10 - 1) * 0.9) = index 8 of 300,310,...,390.
+  assert.equal(bootReferenceFor(smallFleet), 380, 'the 90th percentile of 300..390');
+});
+
+// The whole point: one enormous boot must not rescale everyone else.
+test('a single outlier does not drag the reference up', () => {
+  const ordinary = Array.from({ length: 20 }, (_, i) => car(`v${i}`, { bootLitresSeatsUp: 400 + i * 5 }));
+  const withOutlier = [...ordinary, car('huge', { bootLitresSeatsUp: 1400 })];
+  const before = bootReferenceFor(ordinary);
+  const after = bootReferenceFor(withOutlier);
+  assert.ok(after - before < 60, `reference moved ${before} -> ${after}, an outlier should barely shift it`);
+});
+
+test('a pool with no usable boot figures falls back rather than dividing by zero', () => {
+  assert.equal(bootReferenceFor([]), 900);
+  assert.equal(bootReferenceFor([car('a', { bootLitresSeatsUp: 0 }), car('b', { bootLitresSeatsUp: null })]), 900);
+});
+
+test('an ordinary boot scores mid-pack against its pool, not against an outlier', () => {
+  const pool = [
+    ...Array.from({ length: 9 }, (_, i) => car(`v${i}`, { bootLitresSeatsUp: 450 + i * 15 })),
+    car('outlier', { bootLitresSeatsUp: 900 })
+  ];
+  const prefs = { minBootLitres: 400 };
+  const mid = car('mid', { bootLitresSeatsUp: 540 });
+  const againstPool = scoreVehicle(mid, prefs, { bootReference: bootReferenceFor(pool) });
+  const againstConstant = scoreVehicle(mid, prefs);
+  assert.ok(againstPool > againstConstant, 'a pool-relative boot must not be penalised by the outlier');
+});
+
+test('scoreVehicle still works with no pool context', () => {
+  assert.equal(
+    scoreVehicle(car('a', { bootLitresSeatsUp: 450 }), {}),
+    scoreVehicle(car('a', { bootLitresSeatsUp: 450 }), {}, { bootReference: 900 })
+  );
+});
+
+// Ranking must stay a comparison, so cars at or above the reference tie on
+// this dimension and are separated by the others.
+test('every car in the roomiest tenth is treated as roomy enough', () => {
+  const pool = [
+    ...Array.from({ length: 8 }, (_, i) => car(`v${i}`, { bootLitresSeatsUp: 300 + i * 20 })),
+    car('big', { bootLitresSeatsUp: 700, listPrice: 60000 }),
+    car('bigger', { bootLitresSeatsUp: 900, listPrice: 60000 })
+  ];
+  const ctx = { bootReference: bootReferenceFor(pool) };
+  const prefs = { minBootLitres: 400 };
+  assert.equal(
+    scoreVehicle(pool.at(-1), prefs, ctx),
+    scoreVehicle(pool.at(-2), prefs, ctx),
+    '700L and 900L are both past the reference, so neither out-boots the other'
   );
 });
 

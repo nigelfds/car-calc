@@ -26,15 +26,51 @@ const WEIGHTS = {
 const ratio = (value, reference) =>
   reference > 0 ? Math.min(1, value / reference) : 0;
 
-export function scoreVehicle(vehicle, preferences = {}) {
+// Used when there is no pool to measure against — a bare scoreVehicle call.
+const FALLBACK_BOOT_REFERENCE = 900;
+
+// Boot is measured against the pool, not a fixed 900L, because 900L was an
+// outlier's yardstick. In the SUV pool 94 of 97 cars are 603L or less and then
+// three Model Y variants jump to 854L; against a fixed ceiling that lone step
+// made a perfectly ordinary 500L boot read as "55% of ideal" and handed the
+// Model Y a 1.18-point lead on this dimension alone, which no amount of price
+// advantage could close.
+//
+// The reference is the pool's 90th percentile rather than its maximum. Using
+// the maximum barely helps — the outlier IS the maximum, so 854 simply
+// replaces 900. A percentile says instead that the roomiest tenth of the pool
+// are all "as big as anyone needs", and lets the rest spread out below them.
+//
+// Not min-max normalised between the pool's smallest and largest, which was
+// the other candidate: that is unstable under filtering (the same car scores
+// differently depending on how the list was narrowed) and it drove the 440L
+// Atto 3 down to 0.19 in a filtered pool, worse than the fixed ceiling it was
+// meant to fix. A ratio to a robust ceiling keeps the interpretation the rest
+// of the file assumes — 1.0 means "as much as you could want", 0.5 means half
+// of that.
+export function bootReferenceFor(vehicles) {
+  const boots = vehicles
+    .map(vehicle => vehicle.bootLitresSeatsUp)
+    .filter(litres => typeof litres === 'number' && litres > 0)
+    .sort((a, b) => a - b);
+  if (boots.length === 0) return FALLBACK_BOOT_REFERENCE;
+  return boots[Math.floor((boots.length - 1) * 0.9)];
+}
+
+// `context.bootReference` comes from bootReferenceFor over the pool being
+// ranked. It defaults to the old fixed ceiling so a direct call still scores
+// something sensible with no pool in hand.
+export function scoreVehicle(vehicle, preferences = {}, context = {}) {
   const bootWanted = typeof preferences.minBootLitres === 'number';
   const rangeWanted = typeof preferences.minRangeKm === 'number';
 
   const bootWeight = bootWanted ? WEIGHTS.boot.stated : WEIGHTS.boot.unstated;
   const rangeWeight = rangeWanted ? WEIGHTS.range.stated : WEIGHTS.range.unstated;
 
-  // Normalise against generous ceilings so the scale is stable across fleets.
-  const boot = ratio(vehicle.bootLitresSeatsUp, 900);
+  // Range, warranty and price keep their fixed ceilings: those scales are
+  // meaningful in absolute terms (700km is a long way, 10 years is a long
+  // warranty, $120,000 is dear) and none of them has boot's outlier problem.
+  const boot = ratio(vehicle.bootLitresSeatsUp, context.bootReference ?? FALLBACK_BOOT_REFERENCE);
   const range = ratio(vehicle.rangeKm, 700);
   const warranty = ratio(vehicle.warrantyYears, 10);
   // Cheaper is better, all else equal.
@@ -128,10 +164,14 @@ function reasonsFor(vehicle, preferences, pool) {
 }
 
 export function rankVehicles(vehicles, preferences = {}, limit = 5) {
+  // Measured once over the whole pool, so every card in one shortlist is
+  // scored on the same scale. reasonsFor already works this way.
+  const context = { bootReference: bootReferenceFor(vehicles) };
+
   return vehicles
     .map(vehicle => ({
       vehicle,
-      score: scoreVehicle(vehicle, preferences),
+      score: scoreVehicle(vehicle, preferences, context),
       reasons: reasonsFor(vehicle, preferences, vehicles)
     }))
     // Ties break on id, so the order never depends on input array order.
