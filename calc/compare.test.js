@@ -5,6 +5,7 @@ import {
   optionCosts, reachableVehicle, crossoverSeries,
   isVehicleReachable, reachableVehicles, optionBlocker, valueRatio, fbtCliff, optionEntryPoint
 } from './compare.js';
+import { forgoneReturn } from './upfront.js';
 
 const tables = JSON.parse(readFileSync(new URL('../data/tax-tables.json', import.meta.url)));
 
@@ -389,4 +390,76 @@ test('a shorter term pushes the loan entry point higher', () => {
   const short = optionEntryPoint({ vehicles: fleet, inputs: { ...inputs, termMonths: 36 }, option: 'loan' }, tables);
   const long = optionEntryPoint({ vehicles: fleet, inputs: { ...inputs, termMonths: 60 }, option: 'loan' }, tables);
   assert.ok(short.budget > long.budget, 'repaying the same car faster costs more per month');
+});
+
+// --- Opportunity cost on a loan deposit -----------------------------------
+// A deposit is cash pulled out of savings, exactly like an upfront purchase:
+// it stops earning the moment it is handed over. Cash was charged for that
+// and a deposit was not, so any deposit made a loan look cheaper than it is,
+// by more as the deposit grew.
+
+test('a loan deposit carries the same forgone return a cash purchase does', () => {
+  const withDeposit = optionCosts(
+    { vehicle: vehicle('a', 56000), inputs: { ...inputs, deposit: 10000 } }, tables
+  ).loan;
+  const expected = forgoneReturn({
+    amount: 10000, opportunityRatePct: inputs.opportunityRatePct, termMonths: inputs.termMonths
+  });
+  assert.ok(Math.abs(withDeposit.detail.depositOpportunityCost - expected) < 1e-9);
+});
+
+test('no deposit means no deposit opportunity cost', () => {
+  const c = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables).loan;
+  assert.equal(c.detail.depositOpportunityCost, 0);
+});
+
+test('the deposit forgone return is inside the loan gross outlay', () => {
+  const c = optionCosts(
+    { vehicle: vehicle('a', 56000), inputs: { ...inputs, deposit: 10000 } }, tables
+  ).loan;
+  const parts = c.detail.totalRepaid + 10000 + c.detail.runningCostsTotal + c.detail.depositOpportunityCost;
+  assert.ok(Math.abs(c.detail.grossOutlay - parts) < 1e-6);
+  // And the invariant that binds gross to net still holds.
+  assert.ok(Math.abs(c.tco - (c.detail.grossOutlay - c.detail.resale)) < 1e-6);
+});
+
+test('the charge scales with the size of the deposit', () => {
+  const car = vehicle('a', 56000);
+  const small = optionCosts({ vehicle: car, inputs: { ...inputs, deposit: 5000 } }, tables).loan;
+  const large = optionCosts({ vehicle: car, inputs: { ...inputs, deposit: 20000 } }, tables).loan;
+  assert.ok(large.detail.depositOpportunityCost > small.detail.depositOpportunityCost * 3.9,
+    'four times the deposit forgoes four times the return');
+});
+
+// Whether a deposit is worth making is NOT simply "loan rate beats savings
+// rate". An amortising loan charges interest on a falling balance, so its
+// total interest over the term is a much smaller multiple of principal than
+// compound growth on the same sum left untouched. The deposit is worth making
+// only when the savings growth multiplier is below the loan's repayment
+// multiplier — at the default rates over four years that is 1.1925 against
+// 1.1383, so a deposit costs about $1,084 more than it saves.
+test('a deposit helps only when savings growth is below the repayment multiplier', () => {
+  const car = vehicle('a', 56000);
+  // Savings at 1%: growth 1.0406, well under the 1.1383 repayment multiplier.
+  const lowReturn = { ...inputs, opportunityRatePct: 1 };
+  const noneLow = optionCosts({ vehicle: car, inputs: { ...lowReturn, deposit: 0 } }, tables).loan;
+  const someLow = optionCosts({ vehicle: car, inputs: { ...lowReturn, deposit: 20000 } }, tables).loan;
+  assert.ok(someLow.tco < noneLow.tco, 'with savings earning almost nothing, a deposit pays');
+
+  // Savings at 8% against a 1% loan: growth far exceeds the interest avoided.
+  const highReturn = { ...inputs, loanRatePct: 1, opportunityRatePct: 8 };
+  const noneHigh = optionCosts({ vehicle: car, inputs: { ...highReturn, deposit: 0 } }, tables).loan;
+  const someHigh = optionCosts({ vehicle: car, inputs: { ...highReturn, deposit: 20000 } }, tables).loan;
+  assert.ok(someHigh.tco > noneHigh.tco, 'tying up cash at 8% to dodge 1% interest is a loss');
+});
+
+// Guards the counterintuitive default case, so nobody "fixes" it back later:
+// at the shipped rates a deposit is mildly counterproductive, and that is the
+// arithmetic rather than a bug.
+test('at the default rates a deposit slightly raises the total', () => {
+  const car = vehicle('a', 56000);
+  const none = optionCosts({ vehicle: car, inputs: { ...inputs, deposit: 0 } }, tables).loan;
+  const some = optionCosts({ vehicle: car, inputs: { ...inputs, deposit: 20000 } }, tables).loan;
+  assert.ok(some.tco > none.tco);
+  assert.ok(some.tco - none.tco < 2000, 'but only mildly — this is a close call, not a blowout');
 });

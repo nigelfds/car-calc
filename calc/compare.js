@@ -3,7 +3,7 @@ import { runningCosts } from './running-costs.js';
 import { resaleValue } from './resale.js';
 import { novatedQuote } from './novated.js';
 import { loanSummary } from './loan.js';
-import { upfrontQuote } from './upfront.js';
+import { upfrontQuote, forgoneReturn } from './upfront.js';
 import { resolvePhase } from './fbt.js';
 
 function vehicleContext(vehicle, inputs, tables) {
@@ -63,7 +63,16 @@ export function optionCosts({ vehicle, inputs }, tables) {
     termMonths: inputs.termMonths
   });
   const loanRunningTotal = running.totalIncGst * years;
-  const loanGross = loan.totalRepaid + inputs.deposit + loanRunningTotal;
+  // A deposit is savings spent early, exactly like a cash purchase, so it is
+  // charged the same forgone return. Without this a deposit only ever looked
+  // like a saving — it cut the interest but its cost of capital was free.
+  const depositOpportunityCost = forgoneReturn({
+    amount: inputs.deposit,
+    opportunityRatePct: inputs.opportunityRatePct,
+    termMonths: inputs.termMonths
+  });
+  const loanGross =
+    loan.totalRepaid + inputs.deposit + loanRunningTotal + depositOpportunityCost;
   const loanTco = loanGross - resale;
 
   const upfront = upfrontQuote({
@@ -92,6 +101,7 @@ export function optionCosts({ vehicle, inputs }, tables) {
       detail: {
         ...loan,
         runningCostsTotal: loanRunningTotal,
+        depositOpportunityCost,
         resale,
         grossOutlay: loanGross,
         driveAway: onRoad.total
