@@ -18,18 +18,46 @@ const OPTIONS = ['novated', 'loan', 'upfront'];
 // a blocked option is blocked; nothing here touches the real fleet.
 const PROBE_PRICE = 30000;
 
+// What separates the three options isn't the ceiling — that's the number
+// already on the card — it's what you are signed up for to get there. Each
+// option gets the one figure that is peculiar to it and that the ceiling
+// hides: the lump sum still owed at the end of a lease, what the interest and
+// deposit on a loan add up to, and what the cash gives up by not being
+// invested. `parts` is a list so the loan can carry two.
+function optionDetail(option, detail, inputs) {
+  if (option === 'novated') {
+    return [`${money(detail.residual)} balloon payment due at the end`];
+  }
+  if (option === 'loan') {
+    return [
+      `${money(detail.totalInterest)} interest over ${inputs.termMonths} months`,
+      inputs.deposit > 0
+        ? `${money(inputs.deposit)} deposit up front`
+        : 'no deposit'
+    ];
+  }
+  return [`${money(detail.opportunityCost)} of savings returns given up over the term`];
+}
+
 export function verdictAt({ budgetMonthly, inputs, profile }, tables) {
   const options = {};
   let best = null;
 
   for (const option of OPTIONS) {
     const maxSpend = maxAffordablePrice({ budgetMonthly, option, inputs, profile }, tables);
-    const probe = { id: 'probe', listPrice: PROBE_PRICE, ...profile };
-    const costs = optionCosts({ vehicle: probe, inputs }, tables)[option];
+    // Price the detail at this option's OWN ceiling rather than the shared
+    // probe: the balloon on an $86,643 lease is not the balloon on the
+    // $42,236 the loan reaches, and quoting one for the other would be worse
+    // than saying nothing. The probe is still what a blocked option is
+    // measured against — there is no ceiling to price at when nothing is
+    // reachable.
+    const priced = maxSpend > 0 ? maxSpend : PROBE_PRICE;
+    const costs = optionCosts({ vehicle: { id: 'probe', ...profile, listPrice: priced }, inputs }, tables)[option];
 
     options[option] = {
       option,
       maxSpend,
+      parts: maxSpend > 0 ? optionDetail(option, costs.detail, inputs) : [],
       blocker: maxSpend > 0 ? null : optionBlocker(costs, budgetMonthly)
     };
     if (maxSpend > 0 && (best === null || maxSpend > options[best].maxSpend)) best = option;
@@ -105,7 +133,10 @@ export function renderVerdict(root, verdict) {
 
   panel.innerHTML = `
     <div class="winner">🏆 ${labels[verdict.winner]} — up to ${money(winner.maxSpend)}</div>
-    <div class="detail">That is the most car this budget reaches. The cars themselves are below.</div>
+    <!-- Said once, here, rather than repeated under all three figures: they
+         are all the same kind of number, and the space under each is better
+         spent on what makes that option different. -->
+    <div class="detail">Each figure is the dearest car that way of paying reaches. The cars themselves are below.</div>
     <div class="totals">${OPTIONS.map(o => {
       const entry = verdict.options[o];
       if (entry.maxSpend <= 0) {
@@ -118,7 +149,9 @@ export function renderVerdict(root, verdict) {
       return `<div class="total${o === verdict.winner ? ' is-winner' : ''}">
         <span>${labels[o]}</span>
         <strong>${money(entry.maxSpend)}</strong>
-        <span class="total__reach">most expensive car this way of paying reaches</span>
+        <ul class="total__parts">${
+          (entry.parts ?? []).map(part => `<li>${escapeHtml(part)}</li>`).join('')
+        }</ul>
       </div>`;
     }).join('')}</div>`;
 }

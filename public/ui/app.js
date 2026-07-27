@@ -11,7 +11,7 @@ import { renderInputs } from './sections.js';
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
-import { rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from '../../calc/rank.js';
+import { rankVehicles, bracketAroundPrice } from '../../calc/rank.js';
 import { fbtCliff } from '../../calc/compare.js';
 import {
   optionEntryPoint, representativeProfile, purchasingPowerSeries, cheapestPrice
@@ -155,10 +155,13 @@ function boot(root, dataset) {
     // Ranked over every preference-match, not just the affordable ones — the
     // "if you stretched" card is deliberately above the ceiling, and could
     // not be found in an affordability-filtered pool.
-    const ranked = collapseToTopPerFamily(
-      rankVehicles(matches, state, matches.length),
-      matches.length
-    );
+    //
+    // Every variant goes in, not one per family: collapsing first threw away
+    // the trims the price bands are made of. A family whose cheap trim scores
+    // best would be represented only by that trim, so its expensive trim could
+    // never be the stretch card, and bands went unfilled. bracketAroundPrice
+    // does its own de-duplication, per band, where it can see the prices.
+    const ranked = rankVehicles(matches, state, matches.length);
 
     const bands = anchorPrice !== null ? bracketAroundPrice(ranked, anchorPrice) : [];
     // Real figures here, unlike step 2's typical-EV profile: each card is

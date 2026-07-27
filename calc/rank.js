@@ -128,50 +128,6 @@ export function rankVehicles(vehicles, preferences = {}, limit = 5) {
     .slice(0, limit);
 }
 
-// A ranked list (rankVehicles' full output, not pre-sliced) is naturally
-// dominated by whichever family scores best, since near-identical trims of
-// the same car score alike (same body, same boot, similar range) — with a
-// tight filter that can fill a five-card shortlist with one model shown
-// five ways. collapseToTopPerFamily keeps the ranker's judgement about
-// *which* trim is best (still the highest-scoring one) but shows each
-// family only once, so a shortlist of N cards is N genuine choices.
-//
-// otherTrims is derived from `ranked` itself — the full set the caller
-// passed in, before collapsing — never from the collapsed output, so a
-// buyer who likes the family but not this exact trim can see there's more
-// to look at. It's null when this was the only matching variant in its
-// family, so callers can skip the line entirely rather than print "0 other
-// trims".
-export function collapseToTopPerFamily(ranked, limit = 5) {
-  const byFamily = new Map();
-  for (const entry of ranked) {
-    const familyId = entry.vehicle.familyId;
-    if (!byFamily.has(familyId)) byFamily.set(familyId, []);
-    byFamily.get(familyId).push(entry);
-  }
-
-  const collapsed = [];
-  for (const entries of byFamily.values()) {
-    // Same tie-break rule as rankVehicles: highest score wins, ties go to
-    // the lower id — so this doesn't depend on `ranked`'s incoming order.
-    const best = entries.reduce((top, entry) =>
-      entry.score > top.score ||
-      (entry.score === top.score && entry.vehicle.id.localeCompare(top.vehicle.id) < 0)
-        ? entry
-        : top
-    );
-    const others = entries.filter(entry => entry.vehicle.id !== best.vehicle.id);
-    const otherTrims = others.length > 0
-      ? { count: others.length, fromPrice: Math.min(...others.map(entry => entry.vehicle.listPrice)) }
-      : null;
-    collapsed.push({ ...best, otherTrims });
-  }
-
-  return collapsed
-    .sort((a, b) => b.score - a.score || a.vehicle.id.localeCompare(b.vehicle.id))
-    .slice(0, limit);
-}
-
 // The shortlist answers a narrower question than "your five best matches":
 // given the dearest car the recommended payment option actually reaches,
 // what is the best car just under that ceiling, at it, and one step past it?
@@ -217,16 +173,54 @@ export function bracketAroundPrice(
     return 'at';
   };
 
+  // Family identity, with a fallback so fixtures and any row lacking a
+  // familyId are each treated as their own family rather than all collapsing
+  // into one notional group.
+  const familyOf = vehicle => vehicle.familyId ?? `#${vehicle.id}`;
+
+  // How many other variants of this car the filtered set holds, and what the
+  // cheapest of them costs — so a buyer who likes the model but not this exact
+  // trim can see there is more to look at.
+  const otherTrimsFor = entry => {
+    const family = familyOf(entry.vehicle);
+    const siblings = ranked.filter(other =>
+      familyOf(other.vehicle) === family && other.vehicle.id !== entry.vehicle.id
+    );
+    return siblings.length > 0
+      ? { count: siblings.length, fromPrice: Math.min(...siblings.map(s => s.vehicle.listPrice)) }
+      : null;
+  };
+
+  // Bands are filled from every matching VARIANT, not from a list already
+  // collapsed to one variant per family. Collapsing first starved the bands:
+  // a family whose best-scoring variant sat under budget could never supply
+  // the stretch card even when it had a variant squarely in that band, so a
+  // filtered search that genuinely offered 7 at-budget / 33 below / 4 above
+  // rendered three cards.
+  //
+  // One trim per family WITHIN a band, not across the whole selection. Two
+  // trims of the same car at nearly the same price are redundant; the same car
+  // at $72,000 and at $99,000 is two genuinely different propositions, and
+  // forbidding that was itself starving the stretch band.
+  //
+  // Filled in display order — at-budget, then below, then the stretch.
+  //
   // `ranked` is best-first, so taking the first N in a band gives the N best
   // cars at that price point rather than the N nearest the anchor. A band with
   // too few cars simply yields fewer cards — it never borrows from a
   // neighbour, which would put a card under a label that misdescribes it.
   const picked = { below: [], at: [], above: [] };
-  for (const entry of ranked) {
-    const band = bandOf(entry.vehicle);
-    if (band === null) continue;
-    if (picked[band].length >= (counts[band] ?? 0)) continue;
-    picked[band].push({ band, entry });
+
+  for (const band of ['at', 'below', 'above']) {
+    const seenInBand = new Set();
+    for (const entry of ranked) {
+      if (picked[band].length >= (counts[band] ?? 0)) break;
+      if (bandOf(entry.vehicle) !== band) continue;
+      const family = familyOf(entry.vehicle);
+      if (seenInBand.has(family)) continue;
+      seenInBand.add(family);
+      picked[band].push({ band, entry: { ...entry, otherTrims: otherTrimsFor(entry) } });
+    }
   }
 
   // At-budget first: those cars are the answer to the question the whole page

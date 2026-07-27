@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { scoreVehicle, rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from './rank.js';
+import { scoreVehicle, rankVehicles, bracketAroundPrice } from './rank.js';
 
 const car = (id, over = {}) => ({
   id, listPrice: 55000, bootLitresSeatsUp: 450, rangeKm: 450,
@@ -66,94 +66,6 @@ test('ties break on a stable, documented rule rather than array order', () => {
   assert.deepEqual(rankVehicles(fleet, {}).map(r => r.vehicle.id), ['aaa', 'zzz']);
 });
 
-// --- collapseToTopPerFamily -------------------------------------------------
-
-test('collapsing keeps only the highest-scoring variant per family', () => {
-  const fleet = [
-    car('g6-a', { familyId: 'xpeng-g6', bootLitresSeatsUp: 571, listPrice: 55000 }),
-    car('g6-b', { familyId: 'xpeng-g6', bootLitresSeatsUp: 571, listPrice: 60000 }),
-    car('g6-c', { familyId: 'xpeng-g6', bootLitresSeatsUp: 571, listPrice: 65000 }),
-    car('g6-d', { familyId: 'xpeng-g6', bootLitresSeatsUp: 571, listPrice: 70000 }),
-    car('model-y', { familyId: 'tesla-model-y', bootLitresSeatsUp: 500, listPrice: 58000 })
-  ];
-  const prefs = { minBootLitres: 500 };
-  const ranked = rankVehicles(fleet, prefs, fleet.length);
-  const collapsed = collapseToTopPerFamily(ranked, 5);
-
-  assert.equal(collapsed.length, 2, 'one card per family, not one per variant');
-  const familyIds = collapsed.map(entry => entry.vehicle.familyId);
-  assert.deepEqual(new Set(familyIds), new Set(['xpeng-g6', 'tesla-model-y']));
-
-  // Among identical boots, value (cheaper is better) breaks the tie, so the
-  // cheapest G6 variant should be the one that survives.
-  const g6Entry = collapsed.find(entry => entry.vehicle.familyId === 'xpeng-g6');
-  assert.equal(g6Entry.vehicle.id, 'g6-a');
-});
-
-test('collapsing then slicing to N still returns N distinct families when enough exist', () => {
-  const fleet = [
-    car('g6-a', { familyId: 'xpeng-g6', listPrice: 50000 }),
-    car('g6-b', { familyId: 'xpeng-g6', listPrice: 55000 }),
-    car('g6-c', { familyId: 'xpeng-g6', listPrice: 60000 }),
-    car('y-a', { familyId: 'tesla-model-y', listPrice: 58000 }),
-    car('ev5-a', { familyId: 'kia-ev5', listPrice: 56000 }),
-    car('atto3-a', { familyId: 'byd-atto3', listPrice: 45000 })
-  ];
-  const ranked = rankVehicles(fleet, {}, fleet.length);
-  const collapsed = collapseToTopPerFamily(ranked, 3);
-  assert.equal(collapsed.length, 3);
-  assert.equal(new Set(collapsed.map(e => e.vehicle.familyId)).size, 3, 'no family repeats');
-});
-
-test('a surviving card reports how many other trims its family has and their cheapest price', () => {
-  const fleet = [
-    car('g6-a', { familyId: 'xpeng-g6', listPrice: 50000 }),
-    car('g6-b', { familyId: 'xpeng-g6', listPrice: 55000 }),
-    car('g6-c', { familyId: 'xpeng-g6', listPrice: 51800 }),
-    car('y-a', { familyId: 'tesla-model-y', listPrice: 58000 })
-  ];
-  const ranked = rankVehicles(fleet, {}, fleet.length);
-  const collapsed = collapseToTopPerFamily(ranked, 5);
-
-  const g6Entry = collapsed.find(entry => entry.vehicle.familyId === 'xpeng-g6');
-  assert.deepEqual(g6Entry.otherTrims, { count: 2, fromPrice: 51800 });
-
-  const yEntry = collapsed.find(entry => entry.vehicle.familyId === 'tesla-model-y');
-  assert.equal(yEntry.otherTrims, null, 'a family with only one matching variant gets no "other trims" line');
-});
-
-test('otherTrims is derived from the full filtered set, not the collapsed list', () => {
-  // Even though only one xpeng-g6 card survives collapsing, the count of
-  // "other trims" must reflect all four matching variants that were passed
-  // in, not the single survivor.
-  const fleet = Array.from({ length: 4 }, (_, i) =>
-    car(`g6-${i}`, { familyId: 'xpeng-g6', listPrice: 50000 + i * 1000 })
-  );
-  const ranked = rankVehicles(fleet, {}, fleet.length);
-  const collapsed = collapseToTopPerFamily(ranked, 5);
-  assert.equal(collapsed.length, 1);
-  assert.equal(collapsed[0].otherTrims.count, 3);
-  assert.equal(collapsed[0].otherTrims.fromPrice, 51000);
-});
-
-test('collapsing is deterministic — same input, same collapsed order, every time', () => {
-  const fleet = [
-    car('g6-a', { familyId: 'xpeng-g6', listPrice: 50000 }),
-    car('g6-b', { familyId: 'xpeng-g6', listPrice: 55000 }),
-    car('y-a', { familyId: 'tesla-model-y', listPrice: 58000 }),
-    car('ev5-a', { familyId: 'kia-ev5', listPrice: 56000 })
-  ];
-  const ranked = rankVehicles(fleet, {}, fleet.length);
-  const first = collapseToTopPerFamily(ranked, 5).map(e => e.vehicle.id);
-  for (let i = 0; i < 5; i++) {
-    assert.deepEqual(collapseToTopPerFamily(ranked, 5).map(e => e.vehicle.id), first);
-  }
-});
-
-test('collapsing an empty ranked list returns an empty list', () => {
-  assert.deepEqual(collapseToTopPerFamily([], 5), []);
-});
-
 // --- reasonsFor --------------------------------------------------------------
 
 test('two cars with different strengths produce different reasons', () => {
@@ -185,7 +97,7 @@ test('reasons no longer just echo the user\'s own filter numbers back at them', 
   }
 });
 
-test('the SUV + 500L shortlist scenario: five collapsed cards do not all share one reason', () => {
+test('the SUV + 500L shortlist scenario: five cards do not all share one reason', () => {
   // Regression for the exact bug report: four near-identical XPeng G6 trims
   // used to fill four of five slots with an identical reason string.
   const g6 = (id, over) => car(id, { familyId: 'xpeng-g6', bodyType: 'SUV', bootLitresSeatsUp: 571, rangeKm: 505, ...over });
@@ -201,10 +113,9 @@ test('the SUV + 500L shortlist scenario: five collapsed cards do not all share o
   ];
   const prefs = { minBootLitres: 500, bodyTypes: ['SUV'] };
   const ranked = rankVehicles(fleet, prefs, fleet.length);
-  const shortlist = collapseToTopPerFamily(ranked, 5);
+  const shortlist = bracketAroundPrice(ranked, 56000).map(b => b.entry);
 
   assert.equal(shortlist.length, 5);
-  assert.equal(new Set(shortlist.map(e => e.vehicle.familyId)).size, 5, 'five distinct families');
 
   const firstReasons = shortlist.map(e => e.reasons[0]);
   assert.notEqual(new Set(firstReasons).size, 1, 'not every card should share the same headline reason');
@@ -345,4 +256,92 @@ test('the at-budget band leads, then cheaper, then the stretch', () => {
     bracketAroundPrice(ranked, 53000).map(b => b.band),
     ['at', 'below', 'above']
   );
+});
+
+// --- Bands fill from variants, not from pre-collapsed families ------------
+// The shortlist used to collapse each family to its single best-scoring
+// variant BEFORE bracketing, which starved the bands: a family whose best
+// variant sits under budget could never supply the stretch card, even when it
+// had a variant sitting squarely in that band. With SUV, 400L and 5 seats
+// selected the real dataset offered 7 at-budget variants, 33 below and 4
+// above, and the page rendered three cards.
+
+const trim = (id, familyId, listPrice, over = {}) =>
+  car(id, { familyId, listPrice, ...over });
+
+test('a family can supply the stretch card even when its cheap trim is under budget', () => {
+  const ranked = rankVehicles([
+    trim('ev6-air', 'kia-ev6', 72000),
+    trim('ev6-gt', 'kia-ev6', 99000),
+    trim('other', 'other-fam', 86000)
+  ], {}, 3);
+  const bands = bracketAroundPrice(ranked, 86643, { counts: { below: 1, at: 1, above: 1 } });
+  assert.ok(bands.some(b => b.band === 'above'),
+    'the GT trim is in the stretch band and must be reachable');
+});
+
+// Within a band, two trims of one car at nearly the same price would just be
+// the same recommendation twice.
+test('a band never shows two trims of the same family', () => {
+  const ranked = rankVehicles([
+    trim('a1', 'fam-a', 84000), trim('a2', 'fam-a', 86000),
+    trim('b1', 'fam-b', 85000)
+  ], {}, 3);
+  const bands = bracketAroundPrice(ranked, 86643, { counts: { below: 0, at: 2, above: 0 } });
+  const families = bands.map(b => b.entry.vehicle.familyId);
+  assert.deepEqual(new Set(families).size, families.length, `repeated family in ${families}`);
+  assert.equal(bands.length, 2, 'the second slot goes to a different family');
+});
+
+// Across bands it is allowed, and wanted: the cheap trim and the expensive
+// trim of one car are different propositions at different price points.
+test('the same family may appear in two different bands', () => {
+  const ranked = rankVehicles([
+    trim('ev6-air', 'kia-ev6', 72000),
+    trim('ev6-gt', 'kia-ev6', 99000)
+  ], {}, 2);
+  const bands = bracketAroundPrice(ranked, 86643, { counts: { below: 1, at: 1, above: 1 } });
+  assert.deepEqual(bands.map(b => b.band), ['below', 'above']);
+});
+
+test('cards come back in display order: at budget, then below, then stretch', () => {
+  const ranked = rankVehicles([
+    trim('a-at', 'fam-a', 86000),
+    trim('b-below', 'fam-b', 71000),
+    trim('c-above', 'fam-c', 98000)
+  ], {}, 3);
+  const bands = bracketAroundPrice(ranked, 86643, { counts: { below: 1, at: 1, above: 1 } });
+  assert.deepEqual(bands.map(b => b.entry.vehicle.id), ['a-at', 'b-below', 'c-above']);
+});
+
+test('each card still reports its family\'s other trims and their cheapest price', () => {
+  const ranked = rankVehicles([
+    trim('g6-a', 'xpeng-g6', 86000),
+    trim('g6-b', 'xpeng-g6', 88000),
+    trim('g6-c', 'xpeng-g6', 84000)
+  ], {}, 3);
+  const bands = bracketAroundPrice(ranked, 86643, { counts: { below: 0, at: 1, above: 0 } });
+  assert.equal(bands.length, 1);
+  // Which trim wins the slot is the ranker's call, so derive the expectation
+  // from the one it picked rather than assuming.
+  const chosen = bands[0].entry.vehicle.id;
+  const others = [['g6-a', 86000], ['g6-b', 88000], ['g6-c', 84000]].filter(([id]) => id !== chosen);
+  assert.deepEqual(bands[0].entry.otherTrims, {
+    count: 2,
+    fromPrice: Math.min(...others.map(([, price]) => price))
+  });
+});
+
+test('a family with a single matching variant reports no other trims', () => {
+  const ranked = rankVehicles([trim('solo', 'fam-solo', 86000)], {}, 1);
+  const bands = bracketAroundPrice(ranked, 86643, { counts: { below: 0, at: 1, above: 0 } });
+  assert.equal(bands[0].entry.otherTrims, null);
+});
+
+// Fixtures elsewhere in this file build vehicles with no familyId at all, and
+// they must not all collapse into one notional family.
+test('vehicles without a familyId are treated as distinct', () => {
+  const ranked = rankVehicles([priced('a', 84000), priced('b', 86000)], {}, 2);
+  const bands = bracketAroundPrice(ranked, 86643, { counts: { below: 0, at: 2, above: 0 } });
+  assert.equal(bands.length, 2);
 });

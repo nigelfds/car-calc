@@ -21,7 +21,6 @@ const inputs = {
   electricityCentsPerKwh: 28, otherRunningCostsAnnual: 1240
 };
 
-// The specific misread that motivated all of this: cash is capped by savings
 // --- renderRatesPanel: re-rendering must never steal focus mid-type ---
 //
 // There's no jsdom here (see sections.test.js's `fakeInput` for the same
@@ -144,7 +143,6 @@ test('the reset button still resets a field and never writes undefined into stat
   assert.equal(received, null, 'resetting a field with no known default must not call onChange with undefined');
 });
 
-// The headline had the same double-count as valueRatio did: it paired the
 // --- Step 2 stops knowing about cars --------------------------------------
 // The verdict now answers "how much car does each way of paying reach at this
 // budget", not "which option is cheapest for this particular car". That is
@@ -206,4 +204,63 @@ test('renderVerdict states the ceiling and the option that sets it', () => {
   renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
   assert.ok(/up to/i.test(html), 'expected the ceiling phrased as a maximum');
   assert.ok(html.includes('Novated lease'));
+});
+
+// --- What each option commits you to -------------------------------------
+// All three tiles used to carry the identical sentence "most expensive car
+// this way of paying reaches", which told the reader nothing about the choice
+// in front of them. Each now carries the obligation peculiar to it.
+
+test('the lease tile discloses the balloon payment', () => {
+  const v = verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables);
+  assert.match(v.options.novated.parts.join(' '), /balloon/i);
+});
+
+test('the loan tile discloses total interest over the term, and the deposit', () => {
+  const withDeposit = { ...inputs, deposit: 10000 };
+  const v = verdictAt({ budgetMonthly: 1200, inputs: withDeposit, profile: capacityProfile }, tables);
+  const text = v.options.loan.parts.join(' ');
+  assert.match(text, /interest over 48 months/);
+  assert.match(text, /\$10,000 deposit/);
+});
+
+test('a loan with no deposit says so rather than printing $0', () => {
+  const v = verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables);
+  const text = v.options.loan.parts.join(' ');
+  assert.match(text, /no deposit/);
+  assert.ok(!text.includes('$0 deposit'), text);
+});
+
+test('the cash tile discloses the return given up', () => {
+  const funded = { ...inputs, savings: 60000 };
+  const v = verdictAt({ budgetMonthly: 400, inputs: funded, profile: capacityProfile }, tables);
+  assert.match(v.options.upfront.parts.join(' '), /of savings returns given up over the term/i);
+});
+
+// Each figure describes the car THAT option reaches. Quoting the lease's
+// balloon against the loan's smaller ceiling would be a plausible-looking lie.
+test('each tile prices its detail at its own ceiling, not a shared probe', () => {
+  const v = verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables);
+  const balloonAt = budget => {
+    const seen = verdictAt({ budgetMonthly: budget, inputs, profile: capacityProfile }, tables);
+    return seen.options.novated.parts[0];
+  };
+  assert.ok(v.options.novated.maxSpend > 0);
+  assert.notEqual(balloonAt(1200), balloonAt(1800), 'a bigger ceiling must mean a bigger balloon');
+});
+
+test('a blocked option carries no detail lines to explain', () => {
+  const broke = { ...inputs, savings: 0 };
+  const v = verdictAt({ budgetMonthly: 300, inputs: broke, profile: capacityProfile }, tables);
+  assert.deepEqual(v.options.upfront.parts, []);
+});
+
+test('renderVerdict prints the per-option details and not the old repeated line', () => {
+  const v = verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables);
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+  assert.ok(!html.includes('most expensive car this way of paying reaches'), 'the duplicated line is gone');
+  assert.match(html, /balloon payment/i);
+  assert.match(html, /interest over/i);
 });
