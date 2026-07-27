@@ -13,7 +13,7 @@ import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
 import { rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from '../../calc/rank.js';
 import { crossoverSeries, fbtCliff } from '../../calc/compare.js';
-import { optionEntryPoint } from '../../calc/capacity.js';
+import { optionEntryPoint, representativeProfile } from '../../calc/capacity.js';
 import { money } from './format.js';
 
 // crossoverSeries was measured at ~17ms for 80 vehicles across 25 budget
@@ -103,6 +103,9 @@ export function start(root = document) {
 
 function boot(root, dataset) {
   const { vehicles, families, rates, tables } = dataset;
+  // Step 2 costs a typical EV rather than any particular one, so this is
+  // computed once at boot and never varies with the slider.
+  const profile = representativeProfile(vehicles);
   const defaults = defaultState(rates);
   let state = fromQueryString(location.search, defaults);
   let lastVerdict = null;
@@ -131,7 +134,7 @@ function boot(root, dataset) {
     }
     const winner = verdict.options[verdict.winner];
     text.textContent =
-      `${OPTION_PHRASE[verdict.winner]} for the ${verdict.vehicle.make} ${verdict.vehicle.model}: ${money(winner.tco)} total`;
+      `${OPTION_PHRASE[verdict.winner]} reaches up to ${money(winner.maxSpend)} of car`;
   }
 
   const BAND_LABEL = {
@@ -145,8 +148,9 @@ function boot(root, dataset) {
 
     // The ceiling: the dearest car the recommended way of paying reaches.
     // Section 3 is framed entirely around it, so section 2's recommendation
-    // and section 3's cars tell one story rather than two.
-    const anchorPrice = verdict?.vehicle?.listPrice ?? null;
+    // and section 3's cars tell one story rather than two. It is now a single
+    // number from the capacity model rather than a car's price.
+    const anchorPrice = verdict?.maxSpend > 0 ? verdict.maxSpend : null;
 
     // Ranked over every preference-match, not just the affordable ones — the
     // "if you stretched" card is deliberately above the ceiling, and could
@@ -191,8 +195,8 @@ function boot(root, dataset) {
     // window where a bogus $-11,463 "novated lease is free" figure ever
     // reaches the DOM (see hasValidSalary's comment for why).
     const verdict = salaryReady
-      ? verdictAt({ vehicles: filterVehicles(vehicles, state), budgetMonthly: state.monthlyBudget, inputs }, tables)
-      : { winner: null, options: {}, vehicle: null, insufficientInput: true };
+      ? verdictAt({ budgetMonthly: state.monthlyBudget, inputs, profile }, tables)
+      : { winner: null, maxSpend: 0, options: {}, insufficientInput: true };
     lastVerdict = verdict;
     renderVerdict(root, verdict);
     renderSummaryBar(verdict);

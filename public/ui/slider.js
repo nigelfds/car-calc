@@ -1,88 +1,41 @@
-import { optionCosts, reachableVehicle, reachableVehicles, optionBlocker, valueRatio } from '../../calc/compare.js';
-import { rankVehicles } from '../../calc/rank.js';
+import { optionCosts, optionBlocker } from '../../calc/compare.js';
+import { maxAffordablePrice } from '../../calc/capacity.js';
 import { money } from './format.js';
 
 const OPTIONS = ['novated', 'loan', 'upfront'];
 
-// Feasibility differs per option (upfront is bounded by savings, not
-// budget — see calc/compare.js), so a missing/infeasible option must render
-// as "out of reach" rather than $NaN. Every downstream consumer keys off
-// `tco === null` for that, never a truthy/falsy check on the option object
-// itself (it's always present, just empty).
-const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: null, detail: null, valueRatio: null, balloon: null, balloonCovered: null, blocker: null });
+// Step 2 answers one question: how much car will each way of paying get me at
+// this budget? No car is named here — that is step 3's job.
+//
+// Keeping cars out is what makes the three numbers comparable. The previous
+// design had each option price the dearest car IT could reach and then
+// compared those totals, which is not a comparison at all: a cheaper car
+// always costs less, so it rewarded whichever option was stuck shopping
+// lowest. Three capacities are all denominated in dollars of car, so they can
+// simply be read against each other.
+//
+// A probe car priced against the representative profile is enough to say why
+// a blocked option is blocked; nothing here touches the real fleet.
+const PROBE_PRICE = 30000;
 
-// Each option answers "what is the most expensive car this way of paying
-// gets you into, at this budget?" — so the three tiles describe three
-// different cars, and the winner is decided on return rather than on raw
-// total cost.
-//
-// An earlier revision settled on ONE car and compared the three options
-// against it, because comparing raw totals across different cars is
-// indefensible: a cheaper car always costs less, so it crowned whichever
-// option was stuck shopping lowest (cash, capped by savings, "won" at high
-// budgets purely by being unable to reach anything dear). That objection is
-// answered here by the metric, not by forcing one car — valueRatio is
-// scale-free, so "how much of what you spent are you still holding" compares
-// honestly across a $46k Zeekr and a $90k EQB.
-//
-// `vehicles` is expected to already be filtered to the caller's stated
-// preferences (ui/app.js does this before calling in).
-export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
+export function verdictAt({ budgetMonthly, inputs, profile }, tables) {
   const options = {};
-
-  // Shared with the shortlist (calc/compare.js) so the two sections can
-  // never disagree about what this budget reaches.
-  const affordableVehicles = reachableVehicles({ vehicles, budgetMonthly, inputs }, tables);
-
-  if (affordableVehicles.length === 0) {
-    for (const option of OPTIONS) options[option] = emptyOption(option);
-    return { winner: null, options, vehicle: null };
-  }
-
-  // Quoting a blocker needs *some* car to quote against. The cheapest one in
-  // the pool is the honest choice: it is the smallest ask that would put this
-  // option in play at all.
-  const cheapest = affordableVehicles.reduce((low, v) => (v.listPrice < low.listPrice ? v : low));
-
   let best = null;
+
   for (const option of OPTIONS) {
-    const vehicle = reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables);
-
-    if (!vehicle) {
-      // Carry *why*, so the totals row can name the lever instead of saying
-      // "out of reach" three identical times.
-      const costs = optionCosts({ vehicle: cheapest, inputs }, tables)[option];
-      options[option] = { ...emptyOption(option), blocker: optionBlocker(costs, budgetMonthly) };
-      continue;
-    }
-
-    const costs = optionCosts({ vehicle, inputs }, tables)[option];
-    // `blocker: null` rather than absent, so every option object has the
-    // same shape whether it is reachable or not.
-    // A novated lease ends with a lump-sum residual. It is already inside the
-    // total, but a total is not a cash-flow warning: affordability is tested
-    // against the monthly figure alone, so a budget that covers the payments
-    // comfortably can still leave a five-figure bill due on the last day.
-    // Surfaced separately, with whether the car is projected to be worth
-    // enough to clear it on sale.
-    const balloon = option === 'novated' ? costs.detail.residual : null;
+    const maxSpend = maxAffordablePrice({ budgetMonthly, option, inputs, profile }, tables);
+    const probe = { id: 'probe', listPrice: PROBE_PRICE, ...profile };
+    const costs = optionCosts({ vehicle: probe, inputs }, tables)[option];
 
     options[option] = {
       option,
-      tco: costs.tco,
-      monthlyCost: costs.monthlyCost,
-      vehicle,
-      detail: costs.detail,
-      valueRatio: valueRatio(costs),
-      balloon,
-      balloonCovered: balloon === null ? null : costs.detail.resale >= balloon,
-      blocker: null
+      maxSpend,
+      blocker: maxSpend > 0 ? null : optionBlocker(costs, budgetMonthly)
     };
-    if (best === null || options[option].valueRatio > options[best].valueRatio) best = option;
+    if (maxSpend > 0 && (best === null || maxSpend > options[best].maxSpend)) best = option;
   }
 
-  // The headline car is the winning option's car — section 3 anchors on it.
-  return { winner: best, options, vehicle: best ? options[best].vehicle : null };
+  return { winner: best, maxSpend: best ? options[best].maxSpend : 0, options };
 }
 
 // ---------------------------------------------------------------------------
@@ -144,49 +97,29 @@ export function renderVerdict(root, verdict) {
     return;
   }
   if (!verdict.winner) {
-    panel.innerHTML = '<p class="skeleton-note">No option reaches a matching car at this budget. Try raising it.</p>';
+    panel.innerHTML = '<p class="skeleton-note">No way of paying reaches a car at this budget. Try raising it, or adding savings.</p>';
     return;
   }
 
   const winner = verdict.options[verdict.winner];
   const labels = { novated: 'Novated lease', loan: 'Direct loan', upfront: 'Buy upfront' };
-  // Runner-up is now the next-best *return*, not the next-smallest total —
-  // the totals belong to different cars and cannot be subtracted from one
-  // another meaningfully.
-  const runnerUp = Object.values(verdict.options)
-    .filter(o => o.valueRatio !== null && o.option !== verdict.winner)
-    .sort((a, b) => b.valueRatio - a.valueRatio)[0];
 
   panel.innerHTML = `
-    <div class="winner">🏆 ${labels[verdict.winner]} — ${escapeHtml(verdict.vehicle.make)} ${escapeHtml(verdict.vehicle.model)}</div>
-    <div class="detail">Best return over the term: ${money(winner.detail.grossOutlay)} out of pocket, and you still own about ${money(winner.detail.resale)} of car — a net cost of ${money(winner.tco)}${
-      runnerUp ? `, better value than ${labels[runnerUp.option].toLowerCase()}` : ''
-    }.</div>
+    <div class="winner">🏆 ${labels[verdict.winner]} — up to ${money(winner.maxSpend)}</div>
+    <div class="detail">That is the most car this budget reaches. The cars themselves are below.</div>
     <div class="totals">${OPTIONS.map(o => {
       const entry = verdict.options[o];
-      if (entry.tco === null) {
+      if (entry.maxSpend <= 0) {
         return `<div class="total">
           <span>${labels[o]}</span>
           <strong>out of reach</strong>
           ${entry.blocker ? `<span class="total__blocker">${blockerText(entry.blocker)}</span>` : ''}
         </div>`;
       }
-      // Each option reaches a different car, so the car has to be named on
-      // the tile — otherwise three unlike totals sit side by side looking
-      // like a like-for-like comparison.
       return `<div class="total${o === verdict.winner ? ' is-winner' : ''}">
         <span>${labels[o]}</span>
-        <strong>${money(entry.tco)}</strong>
-        <span class="total__reach">most expensive car you could buy:
-          ${escapeHtml(entry.vehicle.make)} ${escapeHtml(entry.vehicle.model)}
-          <span class="total__reach-price">${money(entry.vehicle.listPrice)}</span></span>
-        <span class="total__ratio">keeps ${Math.round(entry.valueRatio * 100)}c of every $1 spent</span>
-        ${entry.balloon ? `<span class="total__balloon${entry.balloonCovered ? '' : ' is-short'}">
-          plus a ${money(entry.balloon)} balloon to own it at the end${
-            entry.balloonCovered
-              ? `, roughly covered by selling it (${money(entry.detail.resale)})`
-              : ` — more than it is projected to be worth (${money(entry.detail.resale)}), so selling it would not clear the debt`
-          }</span>` : ''}
+        <strong>${money(entry.maxSpend)}</strong>
+        <span class="total__reach">most expensive car this way of paying reaches</span>
       </div>`;
     }).join('')}</div>`;
 }
