@@ -311,3 +311,40 @@ test('the rendered SVG stacks colliding crossover labels on different y values',
     assert.notEqual(ys[0], ys[1], 'colliding crossover labels must not share a y');
   });
 });
+
+// --- Axis titles ---------------------------------------------------------
+// The bare tick labels ("$300/mo", "$62,816") never said what either axis
+// measured, so the Y axis in particular was easy to read as an affordability
+// ceiling rather than as what each option costs you over the term.
+
+test('the chart titles both axes', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    const html = getHtml();
+    assert.ok(html.includes('axis-title--x'), 'expected an x-axis title element');
+    assert.ok(html.includes('axis-title--y'), 'expected a y-axis title element');
+    assert.ok(/Monthly budget/i.test(html), `expected the x axis to name the budget, got: ${html}`);
+    assert.ok(/Total cost/i.test(html), 'expected the y axis to name total cost');
+  });
+});
+
+test('the y-axis title is rotated so it reads along the axis', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    assert.ok(/axis-title--y[^>]*rotate\(-90\)|rotate\(-90\)[^>]*axis-title--y/.test(getHtml()),
+      'the y title must carry a -90 degree rotation');
+  });
+});
+
+test('the mobile winner band names its axis in visible text, not just aria', () => {
+  withMatchMedia(false, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    // The aria-label already contained the words "by monthly budget", so
+    // assert on a real element instead — otherwise this passes vacuously.
+    assert.ok(getHtml().includes('winner-band__axis-title'),
+      'the band scale is a budget axis and should say so on screen');
+  });
+});

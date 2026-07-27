@@ -267,11 +267,12 @@ function renderLineChart(target, series, budgetMonthly) {
   );
   const extraLabelRows = crossoverLabels.reduce((most, e) => Math.max(most, e.row), 0);
 
+  // bottom/left carry an axis title each, beneath and beside the tick labels.
   const margin = {
     top: 26 + extraLabelRows * CROSSOVER_LABEL_ROW_HEIGHT,
     right: 112,
-    bottom: 30,
-    left: 64
+    bottom: 48,
+    left: 80
   };
   const width = plotWidth + margin.left + margin.right;
   const height = plotHeight + margin.top + margin.bottom;
@@ -294,6 +295,21 @@ function renderLineChart(target, series, budgetMonthly) {
     const x = (index / lastIndex) * plotWidth;
     return `<text class="axis-label axis-label--x" x="${x.toFixed(1)}" y="${plotHeight + 20}" text-anchor="middle">$${point.budget}/mo</text>`;
   }).join('');
+
+  // Bare tick labels never said what either axis measured. The y axis in
+  // particular reads as an affordability ceiling unless it says otherwise —
+  // it is what each option *costs* over the term, net of resale, not a limit
+  // on what you can spend.
+  //
+  // rotate(-90) maps a local (x, y) to a global (y, -x), so the vertical
+  // title sits at local x = -plotHeight/2 (vertically centred on the plot)
+  // and local y = -(margin.left - 14) (just inside the left margin).
+  const axisTitles = `
+    <text class="axis-title axis-title--x" x="${(plotWidth / 2).toFixed(1)}" y="${plotHeight + 42}"
+      text-anchor="middle">Monthly budget — the slider above</text>
+    <text class="axis-title axis-title--y" transform="rotate(-90)"
+      x="${(-plotHeight / 2).toFixed(1)}" y="${-(margin.left - 14)}"
+      text-anchor="middle">Total cost over the term</text>`;
 
   // The point of this chart: mark exactly where the cheapest option flips.
   const crossoverMarkers = crossoverLabels.map(crossover => {
@@ -381,6 +397,7 @@ function renderLineChart(target, series, budgetMonthly) {
         ${crossoverMarkers}
         ${lineGroups}
         ${xLabels}
+        ${axisTitles}
         ${budgetMarkup}
       </g>
     </svg>`;
@@ -431,7 +448,8 @@ function renderWinnerBand(target, series, budgetMonthly) {
     <div class="winner-band__scale" aria-hidden="true">
       <span>$${firstBudget}/mo</span>
       <span>$${lastBudget}/mo</span>
-    </div>`;
+    </div>
+    <p class="winner-band__axis-title" aria-hidden="true">Monthly budget — the slider above</p>`;
 }
 
 // I4: root is always `document` in the real app (public/ui/app.js calls

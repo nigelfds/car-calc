@@ -585,6 +585,14 @@ input[type='date'],
   font-size: 9px;
 }
 
+/* Names what each axis measures. Quieter than the tick values themselves —
+   you read a tick to get a number, the title only once to orient. */
+.crossover-chart .axis-title {
+  fill: var(--ink-soft);
+  font-family: var(--font-text);
+  font-size: 10px;
+}
+
 .crossover-chart .axis-label--crossover {
   fill: var(--ink-soft);
   font-weight: 600;
@@ -727,6 +735,15 @@ input[type='date'],
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--ink-faint);
+}
+
+/* The band has only one axis — the budget running left to right — so it gets
+   the same naming the desktop chart's x axis does. */
+.winner-band__axis-title {
+  margin: var(--space-1) 0 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
 }
 
 .rates-panel__intro {
