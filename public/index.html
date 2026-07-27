@@ -17,7 +17,17 @@
   <header class="site-header">
     <div class="site-header__inner">
       <div class="site-header__titles">
-        <p class="wordmark">What's the best EV I could get<span class="wordmark__mark">?</span></p>
+        <p class="wordmark">
+          <!-- Wrapped rather than cropped in the file: the source is a
+               portrait cut-out with the face right of centre, and object-fit
+               only gives you the overflowing axis to position along. The span
+               clips, the img inside is scaled and offset onto the face.
+               Decorative — the wordmark beside it already names the site, so
+               an alt would only repeat it aloud. -->
+          <span class="wordmark__logo" aria-hidden="true"><img src="logo.png" alt="" /></span>
+          <!-- One flex item, so the accent "?" stays welded to "get" instead
+               of becoming a sibling the flex row can strand on its own line. -->
+          <span class="wordmark__text">What's the best EV I could get<span class="wordmark__mark">?</span></span></p>
         <p class="site-header__subhead">Melbourne EVs matched to what you earn and what they really cost to
           own — purchase, tax, running costs and resale, over the whole term.</p>
       </div>
