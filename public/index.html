@@ -63,14 +63,8 @@
           </div>
         </div>
 
-        <div class="field">
-          <label for="monthlyBudget">Monthly budget for the car</label>
-          <div class="field__input">
-            <span class="field__prefix" aria-hidden="true">$</span>
-            <input type="number" id="monthlyBudget" name="monthlyBudget" data-field="monthlyBudget"
-              min="0" step="50" value="900" inputmode="numeric" />
-          </div>
-        </div>
+        <!-- The monthly budget lives in step 2, on the slider, and nowhere
+             else: step 1 is about you, step 2 is about what you can spend. -->
 
         <div class="field">
           <label for="termMonths">Term</label>
@@ -111,6 +105,54 @@
           <label for="leaseStartDate">Lease start date</label>
           <input type="date" id="leaseStartDate" name="leaseStartDate" data-field="leaseStartDate"
             value="2026-07-25" />
+        </div>
+      </div>
+
+      <!-- These four already drove the shortlist filter, but had no controls:
+           the only way to set them was the free-text parse, so "an SUV with a
+           big boot" did nothing at all whenever that parse did not fire. -->
+      <div class="field-group field-group--prefs">
+        <h3 class="field-group__heading">What you want in a car</h3>
+
+        <fieldset class="field field--choices">
+          <legend>Body type</legend>
+          <div class="checkbox-row">
+            <label class="checkbox"><input type="checkbox" data-field="bodyTypes" data-value="SUV" /> SUV</label>
+            <label class="checkbox"><input type="checkbox" data-field="bodyTypes" data-value="Sedan" /> Sedan</label>
+            <label class="checkbox"><input type="checkbox" data-field="bodyTypes" data-value="Hatch" /> Hatch</label>
+            <label class="checkbox"><input type="checkbox" data-field="bodyTypes" data-value="Wagon" /> Wagon</label>
+            <label class="checkbox"><input type="checkbox" data-field="bodyTypes" data-value="Ute" /> Ute</label>
+          </div>
+          <p class="field__hint">Leave all unticked to consider every body type.</p>
+        </fieldset>
+
+        <div class="field">
+          <label for="minBootLitres">Minimum boot space</label>
+          <div class="field__input">
+            <input type="number" id="minBootLitres" name="minBootLitres" data-field="minBootLitres"
+              min="0" step="10" inputmode="numeric" placeholder="any" />
+            <span class="field__suffix" aria-hidden="true">L</span>
+          </div>
+          <p class="field__hint">Seats up. A large dog crate needs roughly 500L.</p>
+        </div>
+
+        <div class="field">
+          <label for="seats">Minimum seats</label>
+          <select id="seats" name="seats" data-field="seats">
+            <option value="">Any</option>
+            <option value="4">4 or more</option>
+            <option value="5">5 or more</option>
+            <option value="7">7 or more</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="minRangeKm">Minimum range</label>
+          <div class="field__input">
+            <input type="number" id="minRangeKm" name="minRangeKm" data-field="minRangeKm"
+              min="0" step="25" inputmode="numeric" placeholder="any" />
+            <span class="field__suffix" aria-hidden="true">km</span>
+          </div>
         </div>
       </div>
     </section>
