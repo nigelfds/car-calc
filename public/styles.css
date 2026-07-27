@@ -255,7 +255,11 @@ input[type='date'],
 @media (min-width: 900px) {
   .sections {
     display: grid;
-    grid-template-columns: 250px 1fr 236px;
+    /* Step 1 is a fixed rail — it is a form, and a form does not get better
+       with more width. Steps 2 and 3 split what is left evenly: step 3 used
+       to get 236px, which was narrower than the shortlist cards it holds,
+       while step 2 had room it did not need. */
+    grid-template-columns: 250px 1fr 1fr;
     gap: 1rem;
     align-items: start;
   }
@@ -469,36 +473,21 @@ input[type='date'],
   font-size: 1.05rem;
 }
 
-/* Each tile prices a different car, so the car it reaches is part of the
-   number's meaning, not a decoration. */
-.verdict-panel .total__reach {
+/* What this way of paying commits you to, beyond the ceiling above. Three
+   tiles used to repeat one identical sentence; these lines differ per option,
+   so they are worth the space. Unbulleted — these are half-width columns now,
+   and the marker plus its indent cost about four characters per line, which
+   is a wrapped line the tile cannot spare. */
+.verdict-panel .total__parts {
+  margin: 0.15em 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.verdict-panel .total__parts li {
   font-size: 0.75rem;
-  line-height: 1.35;
-  color: var(--ink-soft);
-}
-
-.verdict-panel .total__reach-price {
-  font-family: var(--font-mono);
-  white-space: nowrap;
-}
-
-.verdict-panel .total__ratio {
-  font-size: 0.72rem;
-  font-family: var(--font-mono);
-  color: var(--ink-faint);
-}
-
-/* The residual is a lump sum due on the last day of the term, and nothing in
-   the monthly affordability test accounts for it. Loud enough to be read. */
-.verdict-panel .total__balloon {
-  font-size: 0.72rem;
   line-height: 1.4;
   color: var(--ink-soft);
-}
-
-.verdict-panel .total__balloon.is-short {
-  color: var(--warn);
-  font-weight: 500;
 }
 
 /* The lever that would unblock an out-of-reach option. Quieter than the
@@ -659,27 +648,17 @@ input[type='date'],
   pointer-events: all;
 }
 
-/* One hidden panel used by both the "i" markers and the axis notes. */
+/* The hidden panel behind the "i" markers. The axis explainers used to share
+   it; they are HTML now (see .axis-key__tip) and have their own. */
 .crossover-chart .chart-tip {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.crossover-chart .chart-marker:hover .chart-tip,
-.crossover-chart .axis-note:hover .chart-tip {
+.crossover-chart .chart-marker:hover .chart-tip {
   opacity: 1;
   visibility: visible;
-}
-
-/* An axis title is the affordance for its own explainer, so the whole note
-   takes the help cursor and a transparent hit strip over the label — SVG text
-   only receives pointer events on its glyphs, not the gaps between them. */
-.crossover-chart .axis-note { cursor: help; }
-
-.crossover-chart .axis-note__hit {
-  fill: transparent;
-  pointer-events: all;
 }
 
 /* A hovered marker's tooltip must sit above the other marker's badge and
@@ -731,14 +710,57 @@ input[type='date'],
   outline-offset: 2px;
 }
 
-/* Names what each axis measures. Quieter than the tick values themselves —
-   you read a tick to get a number, the title only once to orient.
-   Sized in viewBox units: the 752-unit viewBox renders near 600px, so these
-   are scaled by ~0.8 on screen. 14.5 lands at about 11.6px. */
-.crossover-chart .axis-title {
-  fill: var(--ink-soft);
-  font-family: var(--font-text);
-  font-size: 14.5px;
+/* Names what each axis measures, below the chart rather than on it. Quieter
+   than the tick values themselves — you read a tick to get a number, the key
+   only once to orient. Real CSS pixels now, not viewBox units, so it no
+   longer has to be pre-divided by the chart's scale factor. */
+.axis-key {
+  margin: var(--space-3) 0 0;
+  display: grid;
+  gap: 0.2em;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.axis-key__row {
+  display: flex;
+  gap: 0.4em;
+  /* Each row is the affordance for its own explainer. */
+  cursor: help;
+}
+
+.axis-key__axis {
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.axis-key__label {
+  margin: 0;
+}
+
+/* Fixed, so it escapes the chart panel and is positioned straight from the
+   pointer's client coordinates by bindAxisKeyTracking — same down-and-right
+   offset the SVG tooltips use, so the cursor never covers the first words. */
+.axis-key__tip {
+  position: fixed;
+  z-index: 20;
+  max-width: min(30rem, calc(100vw - 2rem));
+  padding: 0.5em 0.7em;
+  border-radius: 4px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.axis-key__row:hover .axis-key__tip {
+  opacity: 0.96;
+  visibility: visible;
 }
 
 .crossover-chart .axis-label--crossover {

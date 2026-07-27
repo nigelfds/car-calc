@@ -105,7 +105,7 @@ test('a wide viewport gets the full chart, ignoring a tiny clientWidth on root',
     renderChart(root, series);
     const html = getHtml();
     assert.ok(html.includes('crossover-chart'), 'expected the SVG line chart markup');
-    assert.ok(/viewBox="0 0 784 /.test(html), 'expected the wide viewBox');
+    assert.ok(/viewBox="0 0 766 /.test(html), 'expected the wide viewBox');
     assert.ok(html.includes('end-label'), 'there is room to name the lines in place');
   });
 });
@@ -253,42 +253,83 @@ test('the accessible description no longer narrates leader changes either', () =
   });
 });
 
-// --- Axis titles ---------------------------------------------------------
+// --- Axis key -------------------------------------------------------------
 // The bare tick labels ("$300/mo", "$62,816") never said what either axis
 // measured, so the Y axis in particular was easy to read as an affordability
-// ceiling rather than as what each option costs you over the term.
+// ceiling rather than as what each option costs you over the term. The titles
+// used to sit inside the SVG; they now sit in an HTML key below it, labelled
+// by axis so neither has to be inferred from its position.
 
-test('the chart titles both axes', () => {
+test('the chart names both axes in a key below it, by axis', () => {
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, series, 800);
     const html = getHtml();
-    assert.ok(html.includes('axis-title--x'), 'expected an x-axis title element');
-    assert.ok(html.includes('axis-title--y'), 'expected a y-axis title element');
-    assert.ok(/Monthly budget/i.test(html), `expected the x axis to name the budget, got: ${html}`);
-    assert.ok(/Most expensive car/i.test(html), 'expected the y axis to name what it measures');
+    assert.ok(html.includes('axis-key'), 'expected the axis key');
+    assert.match(html, /X-Axis:<\/dt>\s*<dd class="axis-key__label">Monthly budget/);
+    assert.match(html, /Y-Axis:<\/dt>\s*<dd class="axis-key__label">Most expensive car/);
   });
 });
 
-test('the y-axis title is rotated so it reads along the axis', () => {
+test('the key sits after the chart, not inside it', () => {
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, series, 800);
-    assert.ok(/axis-title--y[^>]*rotate\(-90\)|rotate\(-90\)[^>]*axis-title--y/.test(getHtml()),
-      'the y title must carry a -90 degree rotation');
+    const html = getHtml();
+    assert.ok(html.indexOf('</svg>') < html.indexOf('axis-key'), 'the key must follow the SVG');
+    assert.ok(!html.includes('axis-title'), 'the old in-SVG titles are gone');
+    assert.ok(!html.includes('axis-note'), 'and so are their in-SVG hit areas');
   });
 });
 
-// The y axis title cannot be a rotated block when there is no left margin to
-// rotate it into, so compact puts it on a line above the plot instead.
-test('the compact chart still names both axes', () => {
+// One wording now serves both geometries: HTML wraps at whatever width the
+// column is, where the SVG needed its own shorter copy for the narrow tip box.
+test('the compact chart gets the same key as the wide one', () => {
+  const wide = (() => {
+    let html;
+    withMatchMedia(true, () => {
+      const f = fakeChartRoot();
+      renderChart(f.root, series, 800);
+      html = f.getHtml();
+    });
+    return html;
+  })();
+  const compact = (() => {
+    let html;
+    withMatchMedia(false, () => {
+      const f = fakeChartRoot();
+      renderChart(f.root, series, 800);
+      html = f.getHtml();
+    });
+    return html;
+  })();
+  const keyOf = html => html.slice(html.indexOf('<dl class="axis-key">'));
+  assert.equal(keyOf(compact), keyOf(wide));
+});
+
+test('each axis carries a hover explainer naming what it does not say outright', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    const html = getHtml();
+    assert.equal((html.match(/class="axis-key__tip"/g) ?? []).length, 2, 'one explainer per axis');
+    assert.match(html, /the same figure as the slider above/);
+    assert.match(html, /treat it as a guide rather than a quote/);
+  });
+});
+
+// Reclaimed when the titles left: the bottom margin held the x title beneath
+// the tick labels, and the wide left margin held the rotated y one.
+test('the margins the titles occupied are given back to the plot', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    assert.match(getHtml(), /viewBox="0 0 766 246"/, 'wide: left 96 -> 78, bottom 54 -> 30');
+  });
   withMatchMedia(false, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, series, 800);
-    const html = getHtml();
-    assert.ok(html.includes('axis-title--x'), 'the budget axis is named');
-    assert.ok(html.includes('axis-title--y-top'), 'the car-price axis is named above the plot');
-    assert.ok(!html.includes('axis-title--y"'), 'and not as a rotated block it has no room for');
+    assert.match(getHtml(), /viewBox="0 0 380 226"/, 'compact: top 34 -> 26, bottom 50 -> 30');
   });
 });
 
@@ -526,38 +567,6 @@ test('no entry marker when the loan line never appears in range', () => {
 // The axis titles are short names; hovering one gives the sentence that stops
 // the axis being misread. The y axis especially reads as an affordability
 // ceiling rather than as a cost.
-
-test('both axis titles carry a hover explainer', () => {
-  withMatchMedia(true, () => {
-    const { root, getHtml } = fakeChartRoot();
-    renderChart(root, series, 800);
-    const html = getHtml();
-    const notes = html.match(/class="axis-note"/g) ?? [];
-    assert.equal(notes.length, 2, 'expected one note per axis');
-    assert.ok(/each point on a line/i.test(html), 'expected the x axis explained');
-    assert.ok(/higher is more car/i.test(html), 'expected the y axis explained');
-  });
-});
-
-// SVG text only receives pointer events on the glyphs themselves, so without
-// a hit strip the gaps between letters are dead space.
-test('each axis note has a hit area rather than relying on the glyphs', () => {
-  withMatchMedia(true, () => {
-    const { root, getHtml } = fakeChartRoot();
-    renderChart(root, series, 800);
-    assert.equal((getHtml().match(/axis-note__hit/g) ?? []).length, 2);
-  });
-});
-
-test('the axis explainers reuse the same tooltip block as the markers', () => {
-  withMatchMedia(true, () => {
-    const { root, getHtml } = fakeChartRoot();
-    renderChart(root, series, 800);
-    const html = getHtml();
-    assert.ok(html.includes('chart-tip__box'), 'shared panel, not a second implementation');
-    assert.ok(html.includes('chart-tip__text'));
-  });
-});
 
 // --- The chart plots capacity, not cost -----------------------------------
 // Step 2 stopped knowing about cars, so the y axis is now "how much car does

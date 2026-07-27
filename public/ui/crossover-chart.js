@@ -383,6 +383,70 @@ const escapeAttr = value =>
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
 
+// The two axis titles used to live inside the SVG — one along the bottom, one
+// rotated up the left margin (or squeezed above the plot when compact). Both
+// now sit in an HTML key below the chart, named outright as "X-Axis:" and
+// "Y-Axis:" so there is no guessing which line belongs to which edge, and both
+// margins got the space back.
+//
+// HTML rather than more <text>: the copy wraps by itself at whatever width the
+// column happens to be, so the compact geometry no longer needs its own
+// shorter wording, and the hover explainer can be an ordinary element instead
+// of a hand-wrapped <tspan> block in viewBox units.
+const AXIS_KEY = [
+  {
+    axis: 'X-Axis',
+    label: 'Monthly budget — the slider above',
+    explanation:
+      'What you can put toward the car each month — the same figure as the slider above. ' +
+      'Each point on a line is the dearest car that way of paying reaches at that budget.'
+  },
+  {
+    axis: 'Y-Axis',
+    label: 'Most expensive car you could buy',
+    explanation:
+      'The dearest car each way of paying could get you at that budget, before on-road ' +
+      'costs. Higher is more car. Running costs assume a typical EV from this dataset, so ' +
+      'treat it as a guide rather than a quote — the cars below use their own real figures.'
+  }
+];
+
+function axisKeyMarkup() {
+  return `<dl class="axis-key">${AXIS_KEY.map(({ axis, label, explanation }) => `
+    <div class="axis-key__row">
+      <dt class="axis-key__axis">${axis}:</dt>
+      <dd class="axis-key__label">${escapeAttr(label)}</dd>
+      <span class="axis-key__tip" role="tooltip">${escapeAttr(explanation)}</span>
+    </div>`).join('')}</dl>`;
+}
+
+// Same behaviour the SVG notes had: the explainer appears on hover and follows
+// the pointer, down and to the right so the cursor never covers the first
+// words. CSS does the showing; this only does the following. Guarded like
+// bindTipTracking — under `node --test` the target is a plain object with an
+// innerHTML setter and none of this DOM exists.
+function bindAxisKeyTracking(target) {
+  if (!target || typeof target.querySelectorAll !== 'function') return;
+
+  for (const row of target.querySelectorAll('.axis-key__row')) {
+    const tip = row.querySelector?.('.axis-key__tip');
+    if (!tip || typeof row.addEventListener !== 'function') continue;
+
+    const follow = event => {
+      // Clamp inside the viewport so a row near the right or bottom edge does
+      // not push its explainer off screen.
+      const maxX = window.innerWidth - tip.offsetWidth - 8;
+      const maxY = window.innerHeight - tip.offsetHeight - 8;
+      tip.style.left = `${clampTo(event.clientX + TIP_CURSOR_DX, 8, maxX)}px`;
+      tip.style.top = `${clampTo(event.clientY + TIP_CURSOR_DY, 8, maxY)}px`;
+    };
+    // mouseenter as well as mousemove: a pointer that lands on the row without
+    // moving again would otherwise show the tip at its unpositioned default.
+    row.addEventListener('mouseenter', follow);
+    row.addEventListener('mousemove', follow);
+  }
+}
+
 function renderLineChart(target, series, budgetMonthly, cliff, entry, compact = false) {
   const { min, max } = bounds(series);
   // A phone gives the chart roughly 310 CSS pixels. The desktop viewBox is 780
@@ -405,20 +469,21 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry, compact = 
   // would now mislead. layoutCrossoverLabels and its collision tests are kept
   // for whenever they are wanted back.
 
-  // bottom/left carry an axis title each, beneath and beside the tick labels.
-  // Sized for the enlarged label type: "$101,973" at 13.5 units of mono needs
-  // ~65 plus its 8-unit offset, and "Novated lease" at 15 units of sans needs
-  // ~98 plus its 10-unit leader.
+  // Both axis titles now live in an HTML key below the SVG (axisKeyMarkup),
+  // so no margin pays for them any more: bottom holds only the x tick labels,
+  // and the left margin only the y ones. That is what shrank bottom from
+  // 50/54 and, on the wide geometry, left from 96 — a rotated title used to
+  // stand in there.
   //
-  // Compact spends its width very differently. The right margin goes to almost
-  // nothing because the end labels are dropped — the legend above the chart
-  // already names all three lines, in the same colours and dash patterns — and
-  // the left shrinks because the y ticks abbreviate to "$116k". The y-axis
-  // title moves from a rotated block in the left margin to a plain line above
-  // the plot, which costs height instead of the width there is none of.
+  // Sized for the label type: "$101,973" at 13.5 units of mono needs ~65 plus
+  // its 8-unit offset. Compact spends its width very differently — the right
+  // margin goes to almost nothing because the end labels are dropped (the
+  // legend above the chart already names all three lines, in the same colours
+  // and dash patterns) and the left shrinks because the y ticks abbreviate to
+  // "$116k".
   const margin = compact
-    ? { top: 34, right: 14, bottom: 50, left: 56 }
-    : { top: 26, right: 128, bottom: 54, left: 96 };
+    ? { top: 26, right: 14, bottom: 30, left: 56 }
+    : { top: 26, right: 128, bottom: 30, left: 78 };
   const width = plotWidth + margin.left + margin.right;
   const height = plotHeight + margin.top + margin.bottom;
   const lastIndex = series.points.length - 1 || 1;
@@ -441,66 +506,8 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry, compact = 
     return `<text class="axis-label axis-label--x" x="${x.toFixed(1)}" y="${plotHeight + 22}" text-anchor="middle">$${point.budget}/mo</text>`;
   }).join('');
 
-  // Bare tick labels never said what either axis measured. The y axis in
-  // particular reads as an affordability ceiling unless it says otherwise —
-  // it is what each option *costs* over the term, net of resale, not a limit
-  // on what you can spend.
-  //
-  // rotate(-90) maps a local (x, y) to a global (y, -x), so the vertical
-  // title sits at local x = -plotHeight/2 (vertically centred on the plot)
-  // and local y = -(margin.left - 14) (just inside the left margin).
-  //
-  // Each title also carries a hover explainer. The title itself is a short
-  // name; the note behind it is the sentence that stops the axis being
-  // misread — particularly the y axis, which people read as an affordability
-  // ceiling rather than as a cost.
   // Tip copy has to fit the plot it sits in, and compact has half the width.
   const tipChars = compact ? 34 : TIP_CHARS_PER_LINE;
-
-  const xTitleY = plotHeight + (compact ? 42 : 46);
-  const xNote = `
-    <g class="axis-note">
-      <text class="axis-title axis-title--x" x="${(plotWidth / 2).toFixed(1)}" y="${xTitleY}"
-        text-anchor="middle">Monthly budget — the slider above</text>
-      ${tipMarkup(
-        'What you can put toward the car each month — the same figure as the slider above. ' +
-        'Each point on a line is the dearest car that way of paying reaches at that budget.',
-        { anchorX: plotWidth / 2, plotWidth, boxY: compact ? 8 : plotHeight - 96, chars: tipChars }
-      )}
-      <rect class="axis-note__hit" x="${(plotWidth / 2 - 130).toFixed(1)}" y="${xTitleY - 14}"
-        width="260" height="20" />
-    </g>`;
-
-  // Rotated in the left margin on desktop; a plain line above the plot when
-  // compact, because there is no left margin to spend on a rotated block.
-  const yNote = compact
-    ? `
-    <g class="axis-note">
-      <text class="axis-title axis-title--y-top" x="${(-margin.left + 4).toFixed(1)}" y="-14">Most expensive car you could buy</text>
-      ${tipMarkup(
-        'The dearest car each way of paying could get you at that budget, before on-road ' +
-        'costs. Higher is more car. Running costs assume a typical EV, so treat it as a guide.',
-        { anchorX: plotWidth / 2, plotWidth, boxY: 8, chars: tipChars }
-      )}
-      <rect class="axis-note__hit" x="${(-margin.left + 4).toFixed(1)}" y="-26"
-        width="${(plotWidth + margin.left - 8).toFixed(1)}" height="18" />
-    </g>`
-    : `
-    <g class="axis-note">
-      <text class="axis-title axis-title--y" transform="rotate(-90)"
-        x="${(-plotHeight / 2).toFixed(1)}" y="${-(margin.left - 14)}"
-        text-anchor="middle">Most expensive car you could buy</text>
-      ${tipMarkup(
-        'The dearest car each way of paying could get you at that budget, before on-road ' +
-        'costs. Higher is more car. Running costs assume a typical EV from this dataset, so ' +
-        'treat it as a guide rather than a quote — the cars below use their own real figures.',
-        { anchorX: 0, plotWidth, boxY: 12, chars: tipChars }
-      )}
-      <rect class="axis-note__hit" x="${(-margin.left + 4).toFixed(1)}" y="${(plotHeight / 2 - 100).toFixed(1)}"
-        width="20" height="200" />
-    </g>`;
-
-  const axisTitles = xNote + yNote;
 
   // Dropped when compact: there is no right margin to put them in, and the
   // legend above the chart already names all three lines in matching colours.
@@ -574,31 +581,40 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry, compact = 
         ${gridlines}
         ${lineGroups}
         ${xLabels}
-        ${axisTitles}
         ${fbtCliffMarkup(series, cliff, plotWidth, plotHeight, tipChars)}
         ${entryMarkup(series, entry, plotWidth, plotHeight, tipChars)}
         ${budgetMarkup}
       </g>
-    </svg>`;
+    </svg>
+    ${axisKeyMarkup()}`;
 
-  // Must run after the markup lands, since it binds to the new nodes.
+  // Must run after the markup lands, since they bind to the new nodes.
   bindTipTracking(target);
+  bindAxisKeyTracking(target);
 }
 
-// I4: root is always `document` in the real app (public/ui/app.js calls
-// renderChart(document, ...)), and Document has no `clientWidth` — the old
-// `root.clientWidth < 900` was `undefined < 900`, always false, so the
-// the narrow-viewport geometry could never be picked at any viewport. matchMedia is the
-// standard way to ask "how wide is the viewport" in a browser (and reacts
-// correctly to a real window resize, unlike a one-off element measurement);
-// document.documentElement.clientWidth is the fallback for an environment
-// with no matchMedia (there is none in practice among supported browsers,
-// but this keeps the function from throwing under, say, a headless runner
-// that stubs one but not the other).
-function isDesktopViewport(root) {
+// The wide geometry is a 784-unit viewBox whose font sizes are viewBox units,
+// so it only reads at something near 1:1. The real question is therefore "does
+// the chart have room", not "is this a phone" — and since step 2 became a
+// half-width column, a wide viewport no longer implies a wide chart. Measure
+// the element the SVG actually goes into.
+const WIDE_CHART_MIN_PX = 620;
+
+function hasRoomForWideChart(target, root) {
+  const width = target?.clientWidth;
+  if (typeof width === 'number' && width > 0) return width >= WIDE_CHART_MIN_PX;
+
+  // Unmeasurable: a detached node, or the plain objects the tests render into.
+  // Fall back to the viewport. I4: app.js always calls renderChart with `root
+  // = document`, and Document has no clientWidth — `undefined < 900` was
+  // always false, so the narrow geometry could never be picked at any
+  // viewport. matchMedia is the standard way to ask how wide the viewport is
+  // (and reacts to a real resize, unlike a one-off measurement);
+  // documentElement.clientWidth covers an environment that stubs one but not
+  // the other.
   if (typeof matchMedia === 'function') return matchMedia('(min-width: 900px)').matches;
-  const width = root?.documentElement?.clientWidth;
-  return typeof width === 'number' ? width >= 900 : true;
+  const docWidth = root?.documentElement?.clientWidth;
+  return typeof docWidth === 'number' ? docWidth >= 900 : true;
 }
 
 export function renderChart(root, series, budgetMonthly = null, cliff = null, entry = null) {
@@ -626,5 +642,5 @@ export function renderChart(root, series, budgetMonthly = null, cliff = null, en
   // their markers survive the trip. A phone reader gets the same picture as
   // everyone else — the FBT plateau, the flat cash line, the crossover —
   // rather than a summary of it.
-  renderLineChart(target, withGaps, budgetMonthly, cliff, entry, !isDesktopViewport(root));
+  renderLineChart(target, withGaps, budgetMonthly, cliff, entry, !hasRoomForWideChart(target, root));
 }
