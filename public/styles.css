@@ -1135,8 +1135,8 @@ input[type='date'],
   font-weight: 500;
 }
 
-/* The cards are a price ladder around the affordable ceiling, so each one says
-   where it sits rather than leaving the order to be inferred. */
+/* The cards are not in price order — the at-budget ones lead — so each says
+   where it sits rather than leaving the reader to infer it from the sequence. */
 .car-card__band {
   margin: 0 0 var(--space-1);
   font-family: var(--font-mono);
@@ -1146,8 +1146,8 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
-/* The car at the ceiling is the one the verdict just recommended, so it gets
-   the same accent the winning option tile carries. */
+/* At-budget cars answer the question the page has been working out, so they
+   lead the list and carry the same accent as the winning option tile. */
 .car-card--at {
   border-color: var(--line-lease);
 }
@@ -1156,8 +1156,8 @@ input[type='date'],
   color: var(--line-lease);
 }
 
-/* Above the ceiling is not affordable — muted so it never reads as a
-   recommendation. */
+/* Above budget is not affordable — dashed so it never reads as a
+   recommendation, especially now that it is no longer last by price alone. */
 .car-card--above {
   border-style: dashed;
 }

@@ -144,8 +144,8 @@ function boot(root, dataset) {
   }
 
   const BAND_LABEL = {
-    below: 'Just under your ceiling',
-    at: 'At your ceiling',
+    at: 'At your budget',
+    below: 'Just under your budget',
     above: 'If you stretched'
   };
 

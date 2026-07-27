@@ -160,7 +160,7 @@ test('renderCards prints all three totals and marks the winning option', () => {
   const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
   const card = cardModel(vehicleFixture, [], { inputs: costInputs, tables: costTables });
   renderCards({ querySelector: () => target }, [
-    { ...card, bandLabel: 'At your ceiling', band: 'at', winningOption: 'novated' }
+    { ...card, bandLabel: 'At your budget', band: 'at', winningOption: 'novated' }
   ]);
   assert.ok(html.includes('car-costs'), 'expected the cost table');
   assert.ok(html.includes('Novated') && html.includes('Loan') && html.includes('Cash'));
@@ -203,7 +203,7 @@ test('renderCards prints the balloon under the cost table', () => {
   let html = '';
   const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
   const card = cardModel(vehicleFixture, [], { inputs: costInputs, tables: costTables });
-  renderCards({ querySelector: () => target }, [{ ...card, bandLabel: 'At your ceiling' }]);
+  renderCards({ querySelector: () => target }, [{ ...card, bandLabel: 'At your budget' }]);
   assert.ok(/balloon/i.test(html), `expected the balloon named, got: ${html}`);
 });
 
@@ -212,6 +212,6 @@ test('an underwater balloon is marked so it reads as a warning', () => {
   const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
   const sinker = { ...vehicleFixture, depreciationCurve: [1, 0.4, 0.28, 0.2, 0.15, 0.1] };
   const card = cardModel(sinker, [], { inputs: costInputs, tables: costTables });
-  renderCards({ querySelector: () => target }, [{ ...card, bandLabel: 'At your ceiling' }]);
+  renderCards({ querySelector: () => target }, [{ ...card, bandLabel: 'At your budget' }]);
   assert.ok(/is-short/.test(html), 'a shortfall must be visually distinct from a covered balloon');
 });

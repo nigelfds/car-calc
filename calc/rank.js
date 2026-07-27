@@ -229,6 +229,8 @@ export function bracketAroundPrice(
     picked[band].push({ band, entry });
   }
 
-  // Cheapest first, so the cards read as a price ladder.
-  return [...picked.below, ...picked.at, ...picked.above];
+  // At-budget first: those cars are the answer to the question the whole page
+  // has been working out, so they should not be scrolled past. Cheaper
+  // alternatives come next, and the stretch last.
+  return [...picked.at, ...picked.below, ...picked.above];
 }

@@ -224,7 +224,7 @@ test('the three bands sit below, at and above the anchor price', () => {
     {}, 3
   );
   const bands = bracketAroundPrice(ranked, 60000);
-  assert.deepEqual(bands.map(b => b.band), ['below', 'at', 'above']);
+  assert.deepEqual(bands.map(b => b.band), ['at', 'below', 'above']);
   assert.equal(bands.find(b => b.band === 'at').entry.vehicle.id, 'b');
   assert.equal(bands.find(b => b.band === 'below').entry.vehicle.id, 'a');
   assert.equal(bands.find(b => b.band === 'above').entry.vehicle.id, 'c');
@@ -254,7 +254,7 @@ test('missing bands are omitted rather than padded', () => {
   // Nothing above the anchor at all.
   const ranked = rankVehicles([priced('a', 48000), priced('b', 60000)], {}, 2);
   const bands = bracketAroundPrice(ranked, 60000);
-  assert.deepEqual(bands.map(b => b.band), ['below', 'at']);
+  assert.deepEqual(bands.map(b => b.band), ['at', 'below']);
 });
 
 test('an empty pool produces no bands rather than throwing', () => {
@@ -305,7 +305,9 @@ test('the bracket returns two below, two at and one above', () => {
     priced('x1', 60000), priced('x2', 61000)
   ], {}, 6);
   const bands = bracketAroundPrice(ranked, 53000, { counts: { below: 2, at: 2, above: 1 } });
-  assert.deepEqual(bands.map(b => b.band), ['below', 'below', 'at', 'at', 'above']);
+  // At-budget first: those are the answer to the question the page asked.
+  // Cheaper alternatives follow, then the stretch.
+  assert.deepEqual(bands.map(b => b.band), ['at', 'at', 'below', 'below', 'above']);
   assert.equal(new Set(bands.map(b => b.entry.vehicle.id)).size, 5, 'no car appears twice');
 });
 
@@ -333,4 +335,14 @@ test('each band still takes its best-ranked cars, not the closest priced', () =>
   const bands = bracketAroundPrice(ranked, 60000, { counts: { below: 2, at: 2, above: 1 } });
   assert.deepEqual(bands.map(b => b.entry.vehicle.id), ['best', 'good'],
     'the two best in the band, in rank order');
+});
+
+test('the at-budget band leads, then cheaper, then the stretch', () => {
+  const ranked = rankVehicles([
+    priced('under', 47000), priced('spot-on', 53000), priced('stretch', 60000)
+  ], {}, 3);
+  assert.deepEqual(
+    bracketAroundPrice(ranked, 53000).map(b => b.band),
+    ['at', 'below', 'above']
+  );
 });
