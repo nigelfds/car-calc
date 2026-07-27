@@ -189,22 +189,23 @@ input[type='date'],
   background: var(--paper);
 }
 
-/* Scaled up and offset so the circle lands on the face. Derived rather than
+/* Scaled and offset so the circle lands on the face. Derived rather than
    eyeballed: the face centroid sits at (0.566, 0.481) of the source, the
    source is 199x240 so height renders at 1.206x the zoom, and the offsets
    that put the face at (0.5, 0.47) of the circle are therefore
-   0.5 - 0.566Z and 0.47 - 0.580Z. At Z = 1.45 that is -32% and -37%.
+   0.5 - 0.566Z and 0.47 - 0.580Z. At Z = 1.15 that is -15% and -20%.
    Both margins are percentages of the circle's width — which is also its
-   height — so the framing holds at any logo size. */
+   height — so the framing holds at any logo size, and changing the zoom
+   only means recomputing the two offsets from those formulas. */
 .wordmark__logo img {
   display: block;
   /* The global `img { max-width: 100% }` reset would clamp the zoom below
      back to 100% and quietly leave the offsets applied to an unscaled image. */
   max-width: none;
-  width: 145%;
+  width: 115%;
   height: auto;
-  margin-left: -32%;
-  margin-top: -37%;
+  margin-left: -15%;
+  margin-top: -20%;
 }
 
 .wordmark__mark {
