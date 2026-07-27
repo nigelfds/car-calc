@@ -573,6 +573,10 @@ input[type='date'],
 
 /* The vertical marker at a crossover — where the cheapest option flips.
    Dashed on purpose: this is a threshold annotation, not chart grid. */
+/* Currently unused: leader-change markers are suspended while crossoverSeries
+   still prices each option against a different car (see the note in
+   ui/crossover-chart.js). Kept alongside layoutCrossoverLabels for when the
+   markers return. */
 .crossover-chart .crossover-line {
   stroke: var(--ink-faint);
   stroke-width: 1;
@@ -588,7 +592,38 @@ input[type='date'],
 /* The FBT cliff. Warn-coloured because it marks a discontinuity in the tax
    treatment, not another crossover — the novated line stops climbing here
    for a legal reason rather than a financial one. */
-.crossover-chart .fbt-cliff { cursor: help; }
+/* An annotation, not a control: no pointer cursor, not in the tab order, and
+   nothing to click. Hovering anywhere on the marker reveals the explanation
+   with no transition delay — a native <title> waits about a second first,
+   which is long enough that most people never see it. */
+.crossover-chart .fbt-cliff { cursor: default; }
+
+.crossover-chart .fbt-cliff__hit {
+  fill: transparent;
+  pointer-events: all;
+}
+
+.crossover-chart .fbt-cliff__tip {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.crossover-chart .fbt-cliff:hover .fbt-cliff__tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.crossover-chart .fbt-cliff__tip-box {
+  fill: var(--ink);
+  opacity: 0.96;
+}
+
+.crossover-chart .fbt-cliff__tip-text {
+  fill: #fff;
+  font-family: var(--font-text);
+  font-size: 9px;
+}
 
 .crossover-chart .fbt-cliff__line {
   stroke: var(--warn);
@@ -666,10 +701,10 @@ input[type='date'],
   font-weight: 600;
 }
 
-/* I7: marks where the user's own budget sits on the chart. Deliberately
-   distinct from .crossover-line (which marks where the winner flips) —
-   solid, not dashed, and carries a small flag at the top rather than a
-   text label, so it never gets mistaken for another crossover threshold. */
+/* I7: marks where the user's own budget sits on the chart. Solid and flagged
+   rather than dashed, so it reads as "you are here" and not as another
+   threshold — now the only vertical rule besides the FBT cliff, since the
+   leader-change markers are suspended. */
 .crossover-chart .budget-marker__line {
   stroke: var(--ink);
   stroke-width: 1.5;

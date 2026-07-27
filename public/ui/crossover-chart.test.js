@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { toPolylines, toSegments, toWinnerBands, renderChart, layoutCrossoverLabels } from './crossover-chart.js';
+import { toPolylines, toSegments, toWinnerBands, renderChart, layoutCrossoverLabels, wrapText } from './crossover-chart.js';
 
 const series = {
   points: [
@@ -285,13 +285,14 @@ test('a label reuses an earlier row once it has cleared that row horizontally', 
   assert.deepEqual(laidOut.map(e => e.row), [0, 1, 0], 'the far-right label should drop back to row 0');
 });
 
-test('the rendered SVG stacks colliding crossover labels on different y values', () => {
+// Leader-change markers are suspended: crossoverSeries prices each option
+// against a different car, so a "crossover" can mean nothing more than one
+// option starting to shop dearer. Drawing a decision point there implied a
+// confidence the numbers do not support. layoutCrossoverLabels above is kept
+// against the markers returning once the series compares like with like.
+test('no leader-change markers are drawn while the series compares different cars', () => {
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot();
-    // budgetToX spaces points by index across a fixed 560px plot, so a dense
-    // series is what puts two crossovers close enough together to collide:
-    // 21 points leaves adjacent budgets only 28px apart, well inside the
-    // ~43px a "$1000/mo" label occupies.
     const dense = Array.from({ length: 21 }, (_, i) => ({
       budget: 300 + i * 100,
       novated: 50000 + i * 1000,
@@ -305,10 +306,21 @@ test('the rendered SVG stacks colliding crossover labels on different y values',
         { budget: 1100, from: 'loan', to: 'novated' }
       ]
     }, 800);
-    const ys = [...getHtml().matchAll(/class="axis-label axis-label--crossover"[^>]*y="(-?[\d.]+)"/g)]
-      .map(m => m[1]);
-    assert.equal(ys.length, 2, 'expected both crossover labels to render');
-    assert.notEqual(ys[0], ys[1], 'colliding crossover labels must not share a y');
+    const html = getHtml();
+    assert.ok(!html.includes('crossover-line'), 'the dashed leader-change rules must be gone');
+    assert.ok(!html.includes('axis-label--crossover'), 'their budget labels must be gone too');
+  });
+});
+
+// The accessible description has to describe the chart as drawn — leaving the
+// spoken "the cheapest option changes at $X" summary in place would describe
+// markers a sighted user can no longer see.
+test('the accessible description no longer narrates leader changes either', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    assert.ok(!/cheapest option changes/i.test(getHtml()),
+      'the aria description must match what is actually drawn');
   });
 });
 
@@ -409,10 +421,54 @@ test('the cliff marker names both cars and both monthly figures', () => {
   });
 });
 
-test('the cliff marker is keyboard reachable', () => {
+// The marker is an annotation, not a control: it stays out of the tab order
+// so it cannot be tabbed to or clicked. Its text is still exposed to assistive
+// technology through aria-label on the group.
+test('the cliff marker is not focusable or clickable', () => {
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, wideSeries, 800, cliffFixture);
-    assert.ok(/tabindex="0"/.test(getHtml()), 'a hover-only explanation excludes keyboard users');
+    const html = getHtml();
+    assert.ok(!/tabindex/.test(html), 'an annotation must not enter the tab order');
+    assert.ok(!/onclick|<a /.test(html), 'and must not be a control');
+    assert.ok(/aria-label="FBT cliff/.test(html), 'its text must still reach assistive tech');
   });
+});
+
+// A native <title> only appears after the browser's ~1s tooltip delay. The
+// explanation is drawn into the chart instead so it shows instantly on hover.
+test('the explanation is drawn into the chart, not left to a native title tooltip', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, wideSeries, 800, cliffFixture);
+    const html = getHtml();
+    assert.ok(html.includes('fbt-cliff__tip'), 'expected a drawn tooltip element');
+    assert.ok(html.includes('<tspan'), 'expected the copy wrapped into tspans');
+    // Scoped to the cliff group: the data points legitimately keep their own
+    // <title> hover labels, so a document-wide check would never pass.
+    const group = html.slice(html.indexOf('class="fbt-cliff"'));
+    assert.ok(!group.slice(0, group.indexOf('</g>')).includes('<title>'),
+      'the cliff should not rely on the delayed native tooltip');
+  });
+});
+
+// --- Tooltip text wrapping ------------------------------------------------
+// SVG <text> does not wrap, so the cliff explanation has to be split into
+// lines by hand before it becomes <tspan>s.
+
+test('wrapText splits on whitespace without exceeding the width', () => {
+  const lines = wrapText('the quick brown fox jumps over the lazy dog', 12);
+  assert.ok(lines.length > 1);
+  for (const line of lines) assert.ok(line.length <= 12, `"${line}" is too long`);
+  assert.equal(lines.join(' '), 'the quick brown fox jumps over the lazy dog', 'no words lost or reordered');
+});
+
+test('wrapText keeps a word longer than the limit rather than truncating it', () => {
+  const lines = wrapText('a supercalifragilistic word', 8);
+  assert.ok(lines.includes('supercalifragilistic'), 'an over-long word must survive intact');
+});
+
+test('wrapText on empty input produces no lines', () => {
+  assert.deepEqual(wrapText('', 20), []);
+  assert.deepEqual(wrapText('   ', 20), []);
 });

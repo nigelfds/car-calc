@@ -273,13 +273,66 @@ function fbtCliffMarkup(series, cliff, plotWidth, plotHeight) {
     `${cliff.carAbove.make} ${cliff.carAbove.model} at ${money(cliff.carAbove.listPrice)}, ` +
     `would cost ${money(cliff.budgetNeeded)}/mo. That is why the novated lease line stops climbing here.`;
 
-  return `<g class="fbt-cliff" role="img" tabindex="0" aria-label="${escapeAttr(explanation)}">
-      <title>${escapeAttr(explanation)}</title>
+  // A native <title> waits for the browser's ~1s tooltip delay before it
+  // appears. This is drawn as part of the chart instead, so it shows the
+  // instant the pointer arrives, via CSS only.
+  const lines = wrapText(explanation, TIP_CHARS_PER_LINE);
+  const boxWidth = TIP_CHARS_PER_LINE * TIP_CHAR_WIDTH + TIP_PADDING * 2;
+  const boxHeight = lines.length * TIP_LINE_HEIGHT + TIP_PADDING * 2;
+  // Keep the box inside the plot: nudged left when the marker sits near the
+  // right-hand edge, rather than overflowing the SVG.
+  const boxX = Math.min(Math.max(x - boxWidth / 2, 0), Math.max(0, plotWidth - boxWidth));
+  const boxY = 20;
+
+  const tspans = lines.map((line, i) =>
+    `<tspan x="${(boxX + TIP_PADDING).toFixed(1)}" dy="${i === 0 ? 0 : TIP_LINE_HEIGHT}">${escapeAttr(line)}</tspan>`
+  ).join('');
+
+  // aria-label carries the same text for screen readers. No tabindex: this
+  // is an annotation, not a control, so it stays out of the tab order.
+  return `<g class="fbt-cliff" role="img" aria-label="${escapeAttr(explanation)}">
       <line class="fbt-cliff__line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="14" y2="${plotHeight}" />
       <circle class="fbt-cliff__badge" cx="${x.toFixed(1)}" cy="8" r="7" />
       <text class="fbt-cliff__glyph" x="${x.toFixed(1)}" y="8" text-anchor="middle"
         dominant-baseline="central">i</text>
+      <!-- A <g> has no fill of its own, so without this the only hoverable
+           pixels are a 7px circle and a 1px rule. Transparent, and kept to
+           the badge so it never covers the plotted points behind it. -->
+      <circle class="fbt-cliff__hit" cx="${x.toFixed(1)}" cy="8" r="13" />
+      <g class="fbt-cliff__tip" aria-hidden="true">
+        <rect class="fbt-cliff__tip-box" x="${boxX.toFixed(1)}" y="${boxY}"
+          width="${boxWidth.toFixed(1)}" height="${boxHeight.toFixed(1)}" rx="4" />
+        <text class="fbt-cliff__tip-text" y="${boxY + TIP_PADDING + TIP_LINE_HEIGHT * 0.75}">${tspans}</text>
+      </g>
     </g>`;
+}
+
+// SVG <text> has no wrapping, so the tooltip copy is split into lines here
+// and emitted as <tspan>s. Characters rather than measured pixels: the tip
+// is a fixed-size monospace-ish block, and a character budget is both good
+// enough and testable without a layout engine.
+const TIP_CHARS_PER_LINE = 52;
+const TIP_CHAR_WIDTH = 4.6;
+const TIP_LINE_HEIGHT = 12;
+const TIP_PADDING = 8;
+
+export function wrapText(text, maxChars) {
+  const words = String(text).split(/\s+/).filter(Boolean);
+  const lines = [];
+  let current = '';
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (candidate.length <= maxChars) {
+      current = candidate;
+      continue;
+    }
+    if (current) lines.push(current);
+    // A single word longer than the limit goes on its own line rather than
+    // being cut in half.
+    current = word;
+  }
+  if (current) lines.push(current);
+  return lines;
 }
 
 const escapeAttr = value =>
@@ -292,19 +345,20 @@ function renderLineChart(target, series, budgetMonthly, cliff) {
   const plotWidth = 560;
   const plotHeight = 190;
 
-  // Laid out before the margin is fixed, because stacked label rows are what
-  // decide how much headroom the plot needs.
-  const crossoverLabels = layoutCrossoverLabels(
-    series.crossovers.map(crossover => ({
-      ...crossover,
-      x: budgetToX(series, crossover.budget, plotWidth)
-    }))
-  );
-  const extraLabelRows = crossoverLabels.reduce((most, e) => Math.max(most, e.row), 0);
+  // The leader-change markers (a dashed rule and a "$N/mo" label at every
+  // budget where the cheapest option flips) are not drawn at present. They
+  // annotate a comparison that is not yet sound: crossoverSeries prices each
+  // option against a different car, so a "crossover" can mean nothing more
+  // than one option starting to shop dearer. Marking those as decision points
+  // gave them a confidence the underlying numbers do not support.
+  //
+  // layoutCrossoverLabels and its tests are kept — the markers come back once
+  // the series compares like with like, and the collision handling will be
+  // needed again then.
 
   // bottom/left carry an axis title each, beneath and beside the tick labels.
   const margin = {
-    top: 26 + extraLabelRows * CROSSOVER_LABEL_ROW_HEIGHT,
+    top: 26,
     right: 112,
     bottom: 48,
     left: 80
@@ -345,18 +399,6 @@ function renderLineChart(target, series, budgetMonthly, cliff) {
     <text class="axis-title axis-title--y" transform="rotate(-90)"
       x="${(-plotHeight / 2).toFixed(1)}" y="${-(margin.left - 14)}"
       text-anchor="middle">Total cost over the term</text>`;
-
-  // The point of this chart: mark exactly where the cheapest option flips.
-  const crossoverMarkers = crossoverLabels.map(crossover => {
-    const x = crossover.x;
-    // Row 0 is nearest the plot; extra rows stack upward into the headroom
-    // reserved in margin.top above.
-    const labelY = -10 - crossover.row * CROSSOVER_LABEL_ROW_HEIGHT;
-    return `<g>
-      <line class="crossover-line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="0" y2="${plotHeight}" />
-      <text class="axis-label axis-label--crossover" x="${x.toFixed(1)}" y="${labelY}" text-anchor="middle">$${crossover.budget}/mo</text>
-    </g>`;
-  }).join('');
 
   const endEntries = OPTIONS
     .map(option => {
@@ -415,21 +457,14 @@ function renderLineChart(target, series, budgetMonthly, cliff) {
     ? ` Your current budget of $${budgetMonthly}/mo is marked on the chart.`
     : '';
 
-  // The one thing this chart exists to show: where the cheapest option
-  // flips. The dashed vertical marker carries it visually; say it in words
-  // too, the way the mobile winner-band's label already does.
-  const crossoverSummary = series.crossovers.length
-    ? ' The cheapest option changes ' + series.crossovers
-        .map(c => `at $${c.budget}/mo, from ${OPTION_LABEL[c.from]} to ${OPTION_LABEL[c.to]}`)
-        .join('; then ') + '.'
-    : ' No option changes lead across this range.';
-
+  // No crossover summary here either: the visual markers are suspended (see
+  // the note in renderLineChart), and an accessible description must describe
+  // the chart as drawn, not a version of it that no longer exists.
   target.innerHTML = `
     <svg viewBox="0 0 ${width} ${height}" class="crossover-chart" role="img"
-      aria-label="Total cost of a novated lease, a car loan and paying cash, plotted against monthly budget from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.${crossoverSummary}${budgetSummary}">
+      aria-label="Total cost of a novated lease, a car loan and paying cash, plotted against monthly budget from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.${budgetSummary}">
       <g transform="translate(${margin.left},${margin.top})">
         ${gridlines}
-        ${crossoverMarkers}
         ${lineGroups}
         ${xLabels}
         ${axisTitles}
