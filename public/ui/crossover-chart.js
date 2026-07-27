@@ -269,18 +269,7 @@ function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeig
   // A native <title> waits for the browser's ~1s tooltip delay before it
   // appears. This is drawn as part of the chart instead, so it shows the
   // instant the pointer arrives, via CSS only.
-  const lines = wrapText(explanation, TIP_CHARS_PER_LINE);
-  const boxWidth = TIP_CHARS_PER_LINE * TIP_CHAR_WIDTH + TIP_PADDING * 2;
-  const boxHeight = lines.length * TIP_LINE_HEIGHT + TIP_PADDING * 2;
-  // Keep the box inside the plot: nudged sideways when the marker sits near
-  // an edge, rather than overflowing the SVG.
-  const boxX = Math.min(Math.max(x - boxWidth / 2, 0), Math.max(0, plotWidth - boxWidth));
-  const boxY = badgeY + 12;
-
-  const tspans = lines.map((line, i) =>
-    `<tspan x="${(boxX + TIP_PADDING).toFixed(1)}" dy="${i === 0 ? 0 : TIP_LINE_HEIGHT}">${escapeAttr(line)}</tspan>`
-  ).join('');
-
+  //
   // aria-label carries the same text for screen readers. No tabindex: this
   // is an annotation, not a control, so it stays out of the tab order.
   return `<g class="chart-marker chart-marker--${variant}" role="img" aria-label="${escapeAttr(explanation)}">
@@ -292,11 +281,7 @@ function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeig
            pixels are a 7px circle and a 1px rule. Transparent, and kept to
            the badge so it never covers the plotted points behind it. -->
       <circle class="chart-marker__hit" cx="${x.toFixed(1)}" cy="${badgeY}" r="13" />
-      <g class="chart-marker__tip" aria-hidden="true">
-        <rect class="chart-marker__tip-box" x="${boxX.toFixed(1)}" y="${boxY}"
-          width="${boxWidth.toFixed(1)}" height="${boxHeight.toFixed(1)}" rx="4" />
-        <text class="chart-marker__tip-text" y="${boxY + TIP_PADDING + TIP_LINE_HEIGHT * 0.75}">${tspans}</text>
-      </g>
+      ${tipMarkup(explanation, { anchorX: x, plotWidth, boxY: badgeY + 12 })}
     </g>`;
 }
 
@@ -371,6 +356,75 @@ const TIP_CHAR_WIDTH = 8.4;
 const TIP_LINE_HEIGHT = 21;
 const TIP_PADDING = 10;
 
+// The hidden tooltip block shared by the chart markers and the axis notes:
+// a rounded panel of wrapped copy, revealed by CSS on hover of whatever
+// wraps it. `anchorX` is the point it wants to centre on; it is clamped so
+// the box never leaves the plot.
+// Built at its own origin and placed with a transform, so the same markup can
+// be moved to follow the pointer (see bindTipTracking). The transform written
+// here is the static fallback position, used before the first mousemove and
+// if the tracking never binds.
+export function tipMarkup(explanation, { anchorX, plotWidth, boxY }) {
+  const lines = wrapText(explanation, TIP_CHARS_PER_LINE);
+  const boxWidth = TIP_CHARS_PER_LINE * TIP_CHAR_WIDTH + TIP_PADDING * 2;
+  const boxHeight = lines.length * TIP_LINE_HEIGHT + TIP_PADDING * 2;
+  const fallbackX = Math.min(Math.max(anchorX - boxWidth / 2, 0), Math.max(0, plotWidth - boxWidth));
+
+  const tspans = lines.map((line, i) =>
+    `<tspan x="${TIP_PADDING}" dy="${i === 0 ? 0 : TIP_LINE_HEIGHT}">${escapeAttr(line)}</tspan>`
+  ).join('');
+
+  return `<g class="chart-tip" aria-hidden="true"
+      data-tip-width="${boxWidth.toFixed(1)}" data-tip-height="${boxHeight.toFixed(1)}"
+      transform="translate(${fallbackX.toFixed(1)},${boxY.toFixed(1)})">
+      <rect class="chart-tip__box" x="0" y="0"
+        width="${boxWidth.toFixed(1)}" height="${boxHeight.toFixed(1)}" rx="4" />
+      <text class="chart-tip__text" y="${(TIP_PADDING + TIP_LINE_HEIGHT * 0.75).toFixed(1)}">${tspans}</text>
+    </g>`;
+}
+
+// Offset from the cursor: down and to the right, so the pointer never covers
+// the first words.
+const TIP_CURSOR_DX = 14;
+const TIP_CURSOR_DY = 18;
+
+// Moves each tooltip to follow the pointer while its owner is hovered.
+// Guarded throughout: renderChart is exercised under `node --test` against a
+// plain object with only an innerHTML setter, so none of this DOM may be
+// assumed to exist.
+function bindTipTracking(target) {
+  if (!target || typeof target.querySelectorAll !== 'function') return;
+
+  for (const owner of target.querySelectorAll('.chart-marker, .axis-note')) {
+    const tip = owner.querySelector?.('.chart-tip');
+    if (!tip || typeof owner.addEventListener !== 'function') continue;
+
+    owner.addEventListener('mousemove', event => {
+      const svg = tip.ownerSVGElement;
+      const parent = tip.parentNode;
+      // getScreenCTM is null for a detached or display:none SVG.
+      const ctm = parent?.getScreenCTM?.();
+      if (!svg || !ctm || typeof DOMPoint !== 'function') return;
+
+      const local = new DOMPoint(event.clientX, event.clientY).matrixTransform(ctm.inverse());
+      const boxWidth = Number(tip.dataset.tipWidth);
+      const boxHeight = Number(tip.dataset.tipHeight);
+
+      // The tip lives inside the margin-translated group, so the visible area
+      // in these coordinates runs from -margin to viewBox - margin.
+      const marginLeft = Number(svg.dataset.marginLeft ?? 0);
+      const marginTop = Number(svg.dataset.marginTop ?? 0);
+      const view = svg.viewBox.baseVal;
+
+      const x = clampTo(local.x + TIP_CURSOR_DX, -marginLeft, view.width - marginLeft - boxWidth);
+      const y = clampTo(local.y + TIP_CURSOR_DY, -marginTop, view.height - marginTop - boxHeight);
+      tip.setAttribute('transform', `translate(${x.toFixed(1)},${y.toFixed(1)})`);
+    });
+  }
+}
+
+const clampTo = (value, min, max) => Math.min(Math.max(value, min), Math.max(min, max));
+
 export function wrapText(text, maxChars) {
   const words = String(text).split(/\s+/).filter(Boolean);
   const lines = [];
@@ -412,11 +466,14 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   // needed again then.
 
   // bottom/left carry an axis title each, beneath and beside the tick labels.
+  // Sized for the enlarged label type: "$101,973" at 13.5 units of mono needs
+  // ~65 plus its 8-unit offset, and "Novated lease" at 15 units of sans needs
+  // ~98 plus its 10-unit leader.
   const margin = {
     top: 26,
-    right: 112,
-    bottom: 48,
-    left: 80
+    right: 128,
+    bottom: 54,
+    left: 96
   };
   const width = plotWidth + margin.left + margin.right;
   const height = plotHeight + margin.top + margin.bottom;
@@ -437,7 +494,7 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   const xLabels = xTickIndices.map(index => {
     const point = series.points[index];
     const x = (index / lastIndex) * plotWidth;
-    return `<text class="axis-label axis-label--x" x="${x.toFixed(1)}" y="${plotHeight + 20}" text-anchor="middle">$${point.budget}/mo</text>`;
+    return `<text class="axis-label axis-label--x" x="${x.toFixed(1)}" y="${plotHeight + 22}" text-anchor="middle">$${point.budget}/mo</text>`;
   }).join('');
 
   // Bare tick labels never said what either axis measured. The y axis in
@@ -448,12 +505,35 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   // rotate(-90) maps a local (x, y) to a global (y, -x), so the vertical
   // title sits at local x = -plotHeight/2 (vertically centred on the plot)
   // and local y = -(margin.left - 14) (just inside the left margin).
+  //
+  // Each title also carries a hover explainer. The title itself is a short
+  // name; the note behind it is the sentence that stops the axis being
+  // misread — particularly the y axis, which people read as an affordability
+  // ceiling rather than as a cost.
   const axisTitles = `
-    <text class="axis-title axis-title--x" x="${(plotWidth / 2).toFixed(1)}" y="${plotHeight + 42}"
-      text-anchor="middle">Monthly budget — the slider above</text>
-    <text class="axis-title axis-title--y" transform="rotate(-90)"
-      x="${(-plotHeight / 2).toFixed(1)}" y="${-(margin.left - 14)}"
-      text-anchor="middle">Total cost over the term</text>`;
+    <g class="axis-note">
+      <text class="axis-title axis-title--x" x="${(plotWidth / 2).toFixed(1)}" y="${plotHeight + 46}"
+        text-anchor="middle">Monthly budget — the slider above</text>
+      ${tipMarkup(
+        'What you can put toward the car each month — the same figure as the slider above. ' +
+        'Each point on a line is what that way of paying would cost you at that budget.',
+        { anchorX: plotWidth / 2, plotWidth, boxY: plotHeight - 96 }
+      )}
+      <rect class="axis-note__hit" x="${(plotWidth / 2 - 130).toFixed(1)}" y="${plotHeight + 32}"
+        width="260" height="20" />
+    </g>
+    <g class="axis-note">
+      <text class="axis-title axis-title--y" transform="rotate(-90)"
+        x="${(-plotHeight / 2).toFixed(1)}" y="${-(margin.left - 14)}"
+        text-anchor="middle">Total cost over the term</text>
+      ${tipMarkup(
+        'Everything that way of paying costs you across the whole term, less what the car ' +
+        'is still worth at the end. Lower is cheaper. It is a cost, not a limit on what you can spend.',
+        { anchorX: 0, plotWidth, boxY: 12 }
+      )}
+      <rect class="axis-note__hit" x="${(-margin.left + 4).toFixed(1)}" y="${(plotHeight / 2 - 100).toFixed(1)}"
+        width="20" height="200" />
+    </g>`;
 
   const endEntries = OPTIONS
     .map(option => {
@@ -465,7 +545,9 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
     })
     .filter(Boolean);
   const endLabelByOption = new Map(
-    layoutEndLabels(endEntries, 14).map(entry => [entry.option, entry])
+    // Gap tracks the end-label type size (15 units): too small and two
+    // lines finishing close together overprint.
+    layoutEndLabels(endEntries, 18).map(entry => [entry.option, entry])
   );
 
   const lineGroups = OPTIONS.map(option => {
@@ -517,6 +599,7 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
   // the chart as drawn, not a version of it that no longer exists.
   target.innerHTML = `
     <svg viewBox="0 0 ${width} ${height}" class="crossover-chart" role="img"
+      data-margin-left="${margin.left}" data-margin-top="${margin.top}"
       aria-label="Total cost of a novated lease, a car loan and paying cash, plotted against monthly budget from $${firstBudget} to $${lastBudget} a month. ${OPTION_LABEL.upfront} is flat because it is bounded by savings, not by the monthly budget.${budgetSummary}">
       <g transform="translate(${margin.left},${margin.top})">
         ${gridlines}
@@ -528,6 +611,9 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry) {
         ${budgetMarkup}
       </g>
     </svg>`;
+
+  // Must run after the markup lands, since it binds to the new nodes.
+  bindTipTracking(target);
 }
 
 function renderWinnerBand(target, series, budgetMonthly) {

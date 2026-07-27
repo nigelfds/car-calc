@@ -442,7 +442,7 @@ test('the explanation is drawn into the chart, not left to a native title toolti
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, wideSeries, 800, cliffFixture);
     const html = getHtml();
-    assert.ok(html.includes('chart-marker__tip'), 'expected a drawn tooltip element');
+    assert.ok(html.includes('chart-tip'), 'expected a drawn tooltip element');
     assert.ok(html.includes('<tspan'), 'expected the copy wrapped into tspans');
     // Scoped to the cliff group: the data points legitimately keep their own
     // <title> hover labels, so a document-wide check would never pass.
@@ -583,5 +583,42 @@ test('no entry marker when the loan line never appears in range', () => {
     };
     renderChart(root, never, 350, null, { budget: 9999, vehicle: { make: 'BYD', model: 'Dolphin', listPrice: 29990 } });
     assert.ok(!getHtml().includes('chart-marker--entry'));
+  });
+});
+
+// --- Axis explainers ------------------------------------------------------
+// The axis titles are short names; hovering one gives the sentence that stops
+// the axis being misread. The y axis especially reads as an affordability
+// ceiling rather than as a cost.
+
+test('both axis titles carry a hover explainer', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    const html = getHtml();
+    const notes = html.match(/class="axis-note"/g) ?? [];
+    assert.equal(notes.length, 2, 'expected one note per axis');
+    assert.ok(/each point on a line/i.test(html), 'expected the x axis explained');
+    assert.ok(/it is a cost, not a limit/i.test(html), 'expected the y axis explained');
+  });
+});
+
+// SVG text only receives pointer events on the glyphs themselves, so without
+// a hit strip the gaps between letters are dead space.
+test('each axis note has a hit area rather than relying on the glyphs', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    assert.equal((getHtml().match(/axis-note__hit/g) ?? []).length, 2);
+  });
+});
+
+test('the axis explainers reuse the same tooltip block as the markers', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, series, 800);
+    const html = getHtml();
+    assert.ok(html.includes('chart-tip__box'), 'shared panel, not a second implementation');
+    assert.ok(html.includes('chart-tip__text'));
   });
 });

@@ -525,9 +525,10 @@ input[type='date'],
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: var(--ink-soft);
 }
+
 
 .line-legend__dot {
   width: 0.65em;
@@ -624,10 +625,12 @@ input[type='date'],
   stroke-dasharray: 3 3;
 }
 
+/* 13.5 viewBox units lands at about 10.8px on screen — 9 rendered at 7.2px,
+   which is below what anyone should be asked to read for a dollar figure. */
 .crossover-chart .axis-label {
   fill: var(--ink-faint);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 13.5px;
 }
 
 /* The FBT cliff. Warn-coloured because it marks a discontinuity in the tax
@@ -644,22 +647,34 @@ input[type='date'],
   pointer-events: all;
 }
 
-.crossover-chart .chart-marker__tip {
+/* One hidden panel used by both the "i" markers and the axis notes. */
+.crossover-chart .chart-tip {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.crossover-chart .chart-marker:hover .chart-marker__tip {
+.crossover-chart .chart-marker:hover .chart-tip,
+.crossover-chart .axis-note:hover .chart-tip {
   opacity: 1;
   visibility: visible;
+}
+
+/* An axis title is the affordance for its own explainer, so the whole note
+   takes the help cursor and a transparent hit strip over the label — SVG text
+   only receives pointer events on its glyphs, not the gaps between them. */
+.crossover-chart .axis-note { cursor: help; }
+
+.crossover-chart .axis-note__hit {
+  fill: transparent;
+  pointer-events: all;
 }
 
 /* A hovered marker's tooltip must sit above the other marker's badge and
    rule, not behind them. */
 .crossover-chart .chart-marker:hover { isolation: isolate; }
 
-.crossover-chart .chart-marker__tip-box {
+.crossover-chart .chart-tip__box {
   fill: var(--ink);
   opacity: 0.96;
 }
@@ -668,7 +683,7 @@ input[type='date'],
    about 600px, so this lands at roughly 13.1px on screen — the same as
    .disclaimer. Paired with TIP_CHAR_WIDTH in ui/crossover-chart.js, which
    sizes the box around the text; change the two together. */
-.crossover-chart .chart-marker__tip-text {
+.crossover-chart .chart-tip__text {
   fill: #fff;
   font-family: var(--font-text);
   font-size: 16.4px;
@@ -705,11 +720,13 @@ input[type='date'],
 }
 
 /* Names what each axis measures. Quieter than the tick values themselves —
-   you read a tick to get a number, the title only once to orient. */
+   you read a tick to get a number, the title only once to orient.
+   Sized in viewBox units: the 752-unit viewBox renders near 600px, so these
+   are scaled by ~0.8 on screen. 14.5 lands at about 11.6px. */
 .crossover-chart .axis-title {
   fill: var(--ink-soft);
   font-family: var(--font-text);
-  font-size: 10px;
+  font-size: 14.5px;
 }
 
 .crossover-chart .axis-label--crossover {
@@ -748,10 +765,12 @@ input[type='date'],
 
 /* Direct end-labels render in ink, never the series colour — the adjacent
    dot carries identity, so the text itself stays legible as text. */
+/* 15 viewBox units, about 12px on screen. These name the lines, so they are
+   the labels most worth reading at a glance. */
 .crossover-chart .end-label {
   fill: var(--ink-soft);
   font-family: var(--font-text);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
 }
 
