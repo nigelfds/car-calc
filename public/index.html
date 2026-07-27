@@ -130,18 +130,6 @@
 
       <div id="explanation" class="explanation-panel" aria-live="polite"></div>
 
-      <p class="disclaimer">
-        <strong>General information only.</strong> This tool does not take account of your objectives, financial
-        situation or needs. It is not personal financial, tax or credit advice. Figures are estimates based on
-        published rates and your inputs, and will differ from a real quote. Consider seeking advice from a
-        licensed adviser before deciding.
-      </p>
-
-      <p class="fbt-caveat">
-        An FBT-exempt lease still creates a Reportable Fringe Benefits Amount, which can affect HELP repayments
-        and the Medicare Levy Surcharge. This tool does not model that.
-      </p>
-
       <div class="line-legend" aria-hidden="true">
         <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--lease"></span>Novated lease</span>
         <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--loan"></span>Car loan</span>
@@ -152,6 +140,22 @@
         <p class="skeleton-note">A chart will appear here showing how the cost of each option changes over time,
           and where they cross over.</p>
       </div>
+
+      <!-- One box, below the chart: these are caveats on everything above
+           them, so they read better once the reader has seen the numbers than
+           as an interruption between the verdict and the chart. Still
+           non-dismissible, and still ahead of the shortlist. -->
+      <aside class="disclaimer" aria-label="Important limitations">
+        <p class="disclaimer__lead"><strong>General information only.</strong></p>
+        <ul class="disclaimer__list">
+          <li>This tool does not take account of your objectives, financial situation or needs. It is not
+            personal financial, tax or credit advice.</li>
+          <li>Figures are estimates based on published rates and your inputs, and will differ from a real
+            quote. Consider seeking advice from a licensed adviser before deciding.</li>
+          <li>An FBT-exempt lease still creates a Reportable Fringe Benefits Amount, which can affect HELP
+            repayments and the Medicare Levy Surcharge. This tool does not model that.</li>
+        </ul>
+      </aside>
 
       <div id="rates-panel" class="rates-panel">
         <p class="skeleton-note">The published rates behind this estimate will be listed here.</p>
@@ -176,6 +180,7 @@
 
   <footer class="site-footer">
     <p>General information only — not personal financial advice.</p>
+    <p class="site-footer__colophon">© 2026 Nigel Fernandes · Built in Melbourne.</p>
   </footer>
 
   <script type="module" src="ui/app.js"></script>

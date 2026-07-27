@@ -477,12 +477,17 @@ input[type='date'],
 
 .disclaimer strong { color: var(--ink); }
 
-.fbt-caveat {
-  margin: var(--space-3) 0 0;
-  font-size: 0.8rem;
-  color: var(--ink-soft);
-  line-height: 1.5;
+.disclaimer__lead { margin: 0; }
+
+/* Bulleted rather than three runs of prose: these are separate, unrelated
+   limitations, and a reader scanning for "does this apply to me" should be
+   able to find the relevant one without reading the other two. */
+.disclaimer__list {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.1em;
 }
+
+.disclaimer__list li + li { margin-top: var(--space-2); }
 
 .line-legend {
   display: flex;
@@ -1023,3 +1028,10 @@ input[type='date'],
 }
 
 .site-footer p { margin: 0; }
+
+/* Selector carries the element too, so it out-specifies `.site-footer p`
+   above without reaching for !important. */
+.site-footer p.site-footer__colophon {
+  margin-top: var(--space-2);
+  color: var(--ink-faint);
+}
