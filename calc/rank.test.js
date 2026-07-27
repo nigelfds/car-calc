@@ -238,16 +238,16 @@ test('a car within the tolerance of the anchor counts as "at", not "below"', () 
   assert.equal(bands[0].band, 'at');
 });
 
-test('each band picks the best-ranked car in it, not the closest price', () => {
-  // Same price bracket, different quality: the better car must win the slot.
+test('a band fills in rank order, best car first', () => {
+  // Same price bracket, different quality. The band takes two cards, and the
+  // better car must be the first of them rather than the nearer-priced one.
   const ranked = rankVehicles([
     car('poor', { listPrice: 48000, bootLitresSeatsUp: 200, rangeKm: 250 }),
     car('good', { listPrice: 49000, bootLitresSeatsUp: 600, rangeKm: 600 })
   ], {}, 2);
   const bands = bracketAroundPrice(ranked, 60000);
-  assert.equal(bands.length, 1);
-  assert.equal(bands[0].band, 'below');
-  assert.equal(bands[0].entry.vehicle.id, 'good');
+  assert.deepEqual(bands.map(b => b.band), ['below', 'below']);
+  assert.equal(bands[0].entry.vehicle.id, 'good', 'the better car leads the band');
 });
 
 test('missing bands are omitted rather than padded', () => {
@@ -291,4 +291,46 @@ test('the stretch card is a near miss, not the best car at any price', () => {
 test('the window is configurable for callers that want a wider net', () => {
   const ranked = rankVehicles([priced('far', 62000)], {}, 1);
   assert.deepEqual(bracketAroundPrice(ranked, 37000, { window: 0.8 }).map(b => b.band), ['above']);
+});
+
+// --- Band counts -----------------------------------------------------------
+// Five cards rather than three: two just under the ceiling, two at it, and one
+// stretch. Two at the ceiling gives the price point the user can actually
+// reach a genuine choice rather than a single take-it-or-leave-it.
+
+test('the bracket returns two below, two at and one above', () => {
+  const ranked = rankVehicles([
+    priced('b1', 46000), priced('b2', 47000),
+    priced('a1', 53000), priced('a2', 53500),
+    priced('x1', 60000), priced('x2', 61000)
+  ], {}, 6);
+  const bands = bracketAroundPrice(ranked, 53000, { counts: { below: 2, at: 2, above: 1 } });
+  assert.deepEqual(bands.map(b => b.band), ['below', 'below', 'at', 'at', 'above']);
+  assert.equal(new Set(bands.map(b => b.entry.vehicle.id)).size, 5, 'no car appears twice');
+});
+
+test('two below, two at and one above is the default', () => {
+  const ranked = rankVehicles([
+    priced('b1', 46000), priced('b2', 47000),
+    priced('a1', 53000), priced('a2', 53500),
+    priced('x1', 60000)
+  ], {}, 5);
+  assert.equal(bracketAroundPrice(ranked, 53000).length, 5);
+});
+
+test('a band short of cars yields fewer cards rather than borrowing from another', () => {
+  const ranked = rankVehicles([priced('a1', 53000)], {}, 1);
+  const bands = bracketAroundPrice(ranked, 53000, { counts: { below: 2, at: 2, above: 1 } });
+  assert.deepEqual(bands.map(b => b.band), ['at']);
+});
+
+test('each band still takes its best-ranked cars, not the closest priced', () => {
+  const ranked = rankVehicles([
+    car('poor', { listPrice: 48000, bootLitresSeatsUp: 200, rangeKm: 250 }),
+    car('good', { listPrice: 49000, bootLitresSeatsUp: 600, rangeKm: 600 }),
+    car('best', { listPrice: 47500, bootLitresSeatsUp: 700, rangeKm: 650 })
+  ], {}, 3);
+  const bands = bracketAroundPrice(ranked, 60000, { counts: { below: 2, at: 2, above: 1 } });
+  assert.deepEqual(bands.map(b => b.entry.vehicle.id), ['best', 'good'],
+    'the two best in the band, in rank order');
 });

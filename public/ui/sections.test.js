@@ -253,3 +253,67 @@ test('a server response with no preferences key is tolerated without throwing', 
     }
   );
 });
+
+// --- Checkbox support: the body-type filter -------------------------------
+// bodyTypes, minBootLitres, minRangeKm and seats already drove filterVehicles
+// but had no controls at all — they were settable only through the free-text
+// parse, so "an SUV with a big boot" did nothing whenever the parse did not
+// fire. bodyTypes is an array, so it needs checkboxes, which renderInputs did
+// not handle: it bound `input` events and read `.value`.
+
+function fakeCheckbox(field, memberValue, checked) {
+  let handler = null;
+  return {
+    dataset: { field, value: memberValue },
+    type: 'checkbox',
+    checked,
+    classList: { add() {}, remove() {} },
+    addEventListener(type, fn) { if (type === 'change') handler = fn; },
+    fire() { handler(); }
+  };
+}
+
+test('ticking a body-type box adds it to the bodyTypes array', () => {
+  const state = { bodyTypes: [], touched: [] };
+  const box = fakeCheckbox('bodyTypes', 'SUV', false);
+  let received;
+  renderInputs({ querySelectorAll: () => [box] }, () => state, next => { received = next; });
+
+  box.checked = true;
+  box.fire();
+
+  assert.deepEqual(received.bodyTypes, ['SUV']);
+  assert.ok(received.touched.includes('bodyTypes'));
+});
+
+test('unticking removes that body type and leaves the others', () => {
+  const state = { bodyTypes: ['SUV', 'Hatch'], touched: [] };
+  const box = fakeCheckbox('bodyTypes', 'SUV', true);
+  let received;
+  renderInputs({ querySelectorAll: () => [box] }, () => state, next => { received = next; });
+
+  box.checked = false;
+  box.fire();
+
+  assert.deepEqual(received.bodyTypes, ['Hatch']);
+});
+
+test('a box reflects whether its type is already selected', () => {
+  const state = { bodyTypes: ['Wagon'], touched: [] };
+  const selected = fakeCheckbox('bodyTypes', 'Wagon', false);
+  const other = fakeCheckbox('bodyTypes', 'Ute', true);
+  renderInputs({ querySelectorAll: () => [selected, other] }, () => state, () => {});
+
+  assert.equal(selected.checked, true, 'a selected type must show as ticked');
+  assert.equal(other.checked, false, 'an unselected one must not');
+});
+
+test('a checkbox never has its value coerced like a scalar field', () => {
+  const state = { bodyTypes: [], touched: [] };
+  const box = fakeCheckbox('bodyTypes', 'Sedan', false);
+  let received;
+  renderInputs({ querySelectorAll: () => [box] }, () => state, next => { received = next; });
+  box.checked = true;
+  box.fire();
+  assert.ok(Array.isArray(received.bodyTypes), 'bodyTypes must stay an array');
+});

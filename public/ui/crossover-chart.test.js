@@ -28,13 +28,17 @@ test('the cheapest point sits lower on screen than the dearest', () => {
   assert.ok(ys[0] > ys[2], 'a lower cost is a larger y in SVG coordinates');
 });
 
+// Values are capacities now — dollars of car reached — so the leader is the
+// HIGHEST at each budget. `series` above reads as loan leading at 400 and 800
+// (55,000 and 62,000 against novated's 50,000 and 60,000), then novated at
+// 1200 (75,000 against 72,000).
 test('winner bands cover the full width and change at the crossover', () => {
   const bands = toWinnerBands(series);
   assert.equal(bands[0].fromPct, 0);
   assert.equal(bands[bands.length - 1].toPct, 100);
   assert.ok(bands.length >= 2, 'the winner changes at least once');
-  assert.equal(bands[0].option, 'novated');
-  assert.equal(bands[bands.length - 1].option, 'loan');
+  assert.equal(bands[0].option, 'loan');
+  assert.equal(bands[bands.length - 1].option, 'novated');
 });
 
 test('a series with a single leader produces one band', () => {
@@ -44,7 +48,7 @@ test('a series with a single leader produces one band', () => {
   ], crossovers: [] };
   const bands = toWinnerBands(flat);
   assert.equal(bands.length, 1);
-  assert.equal(bands[0].option, 'novated');
+  assert.equal(bands[0].option, 'loan', 'the loan reaches more at both budgets');
 });
 
 // Issue 1 regression: a crossover placed at the boundary between the
@@ -69,10 +73,12 @@ test('a crossover on the very last sampled point still produces a visible second
     { budget: 1600, novated: 90000, loan: 88000, upfront: null }
   ], crossovers: [{ budget: 1600, from: 'novated', to: 'loan' }] };
 
+  // Read as capacity: the loan reaches more at the first three budgets, and
+  // novated overtakes it only on the last one.
   const bands = toWinnerBands(lateCrossover);
   assert.equal(bands.length, 2);
-  assert.equal(bands[0].option, 'novated');
-  assert.equal(bands[1].option, 'loan');
+  assert.equal(bands[0].option, 'loan');
+  assert.equal(bands[1].option, 'novated');
   assert.ok(bands[1].toPct - bands[1].fromPct > 0, 'the late-crossover band must have non-zero width');
   // The boundary is the midpoint between the two samples that disagree
   // (index 2 at 66.6% and index 3 at 100%), not the later sample's own pct.
@@ -337,7 +343,7 @@ test('the chart titles both axes', () => {
     assert.ok(html.includes('axis-title--x'), 'expected an x-axis title element');
     assert.ok(html.includes('axis-title--y'), 'expected a y-axis title element');
     assert.ok(/Monthly budget/i.test(html), `expected the x axis to name the budget, got: ${html}`);
-    assert.ok(/Total cost/i.test(html), 'expected the y axis to name total cost');
+    assert.ok(/Most expensive car/i.test(html), 'expected the y axis to name what it measures');
   });
 });
 
@@ -409,15 +415,17 @@ test('a cliff outside the charted budget range is not drawn at the edge', () => 
   });
 });
 
-test('the cliff marker names both cars and both monthly figures', () => {
+// Under the capacity chart the cliff explains a plateau, not a pair of cars:
+// the line flattens because the lease cannot reach anything dearer, and the
+// actionable number is what crossing would cost per month.
+test('the cliff marker explains the plateau and what crossing would cost', () => {
   withMatchMedia(true, () => {
     const { root, getHtml } = fakeChartRoot();
     renderChart(root, wideSeries, 800, cliffFixture);
     const html = getHtml();
-    assert.ok(html.includes('EQB'), 'the dearest exempt car');
-    assert.ok(html.includes('EV6'), 'the first car past the cliff');
-    assert.ok(html.includes('$1,217'), 'what the exempt car costs monthly');
-    assert.ok(html.includes('$3,039'), 'what the next car up would cost');
+    assert.ok(html.includes('$91,661'), 'the threshold itself');
+    assert.ok(/flattens here/i.test(html), 'it must explain the shape of the line');
+    assert.ok(html.includes('$3,039'), 'what crossing the cliff would need per month');
   });
 });
 
@@ -499,9 +507,11 @@ test('the entry marker explains where the loan line starts and why', () => {
     renderChart(root, lateLoanSeries, 800, null, entryFixture);
     const html = getHtml();
     assert.ok(html.includes('chart-marker--entry'), 'expected an entry marker');
-    assert.ok(html.includes('$1,181'), 'expected the entry budget quoted');
-    assert.ok(html.includes('Dolphin'), 'expected the cheapest reachable car named');
-    assert.ok(html.includes('$29,990'), 'expected that car\'s price');
+    assert.ok(/cheapest car on the market/i.test(html), 'expected the gap explained');
+    // Deliberately no car named: the line is drawn from a typical EV's running
+    // costs, so one real car's monthly figure beside it would invite a
+    // comparison between two numbers that do not measure the same thing.
+    assert.ok(!html.includes('Dolphin'), 'the capacity line is not about one car');
   });
 });
 
@@ -566,8 +576,9 @@ test('the entry marker sits where the line actually starts, not at the raw thres
     // Index 2 of 3 across a 560-wide plot.
     assert.ok(Math.abs(markerX - (2 / 3) * 560) < 0.5,
       `marker at ${markerX} should sit on the first plotted loan point`);
-    // The precise figure is still what the reader is told they need.
-    assert.ok(html.includes('$432'), 'the true minimum must still be quoted');
+    // No dollar figure is quoted any more — see the note on entryMarkup — so
+    // this asserts only the anchoring, which is the point of the test.
+    assert.ok(html.includes('chart-marker--entry'));
   });
 });
 
@@ -599,7 +610,7 @@ test('both axis titles carry a hover explainer', () => {
     const notes = html.match(/class="axis-note"/g) ?? [];
     assert.equal(notes.length, 2, 'expected one note per axis');
     assert.ok(/each point on a line/i.test(html), 'expected the x axis explained');
-    assert.ok(/it is a cost, not a limit/i.test(html), 'expected the y axis explained');
+    assert.ok(/higher is more car/i.test(html), 'expected the y axis explained');
   });
 });
 
@@ -621,4 +632,59 @@ test('the axis explainers reuse the same tooltip block as the markers', () => {
     assert.ok(html.includes('chart-tip__box'), 'shared panel, not a second implementation');
     assert.ok(html.includes('chart-tip__text'));
   });
+});
+
+// --- The chart plots capacity, not cost -----------------------------------
+// Step 2 stopped knowing about cars, so the y axis is now "how much car does
+// this budget reach", not "what does this car cost". Higher is better, which
+// is the opposite of the series this replaced.
+
+const capacitySeries = {
+  points: [
+    { budget: 300, novated: 12000, loan: 0, upfront: 47140 },
+    { budget: 900, novated: 67342, loan: 27701, upfront: 47140 },
+    { budget: 1500, novated: 91661, loan: 56000, upfront: 47140 },
+    { budget: 2700, novated: 91661, loan: 115989, upfront: 47140 }
+  ],
+  crossovers: [{ budget: 2700, from: 'novated', to: 'loan' }]
+};
+
+test('the y axis is labelled as car price, not as cost', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, capacitySeries, 900);
+    const html = getHtml();
+    assert.ok(/most expensive car/i.test(html), 'the axis must name what it measures');
+    assert.ok(!/total cost over the term/i.test(html), 'the old cost axis label must be gone');
+  });
+});
+
+// A zero capacity means "this way of paying reaches nothing here". Plotted as
+// a point it would read as a free car, so it must break the line the way a
+// null did in the cost series.
+test('a zero-capacity point breaks the line rather than plotting zero', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, capacitySeries, 900);
+    const loan = /class="line line-loan"[^>]*points="([^"]+)"/.exec(getHtml());
+    assert.ok(loan, 'expected a loan polyline');
+    // Four budgets, but the loan reaches nothing at the first, so three points.
+    assert.equal(loan[1].trim().split(' ').length, 3);
+  });
+});
+
+test('the accessible description explains the axes in capacity terms', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, capacitySeries, 900);
+    assert.ok(/how much car/i.test(getHtml()));
+  });
+});
+
+// Under capacity the leader is the option reaching the DEAREST car, where the
+// cost series took the lowest number.
+test('the winner band follows the highest capacity, not the lowest number', () => {
+  const bands = toWinnerBands(capacitySeries);
+  assert.equal(bands[0].option, 'upfront', 'cash reaches the most at $300/mo');
+  assert.equal(bands[bands.length - 1].option, 'loan', 'the loan reaches the most at $2700/mo');
 });

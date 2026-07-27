@@ -50,6 +50,26 @@ export function renderInputs(root, getState, onChange) {
   for (const input of root.querySelectorAll('[data-field]')) {
     const field = input.dataset.field;
     const initial = getState();
+
+    // A checkbox toggles membership of an array field rather than replacing a
+    // scalar, carries its own member in data-value, and fires `change` rather
+    // than `input` when driven by the keyboard. Handled before the scalar path
+    // below, which would otherwise coerce it and clobber the array.
+    if (input.type === 'checkbox') {
+      const member = input.dataset.value;
+      input.checked = (initial[field] ?? []).includes(member);
+
+      input.addEventListener('change', () => {
+        const state = getState();
+        const current = new Set(state[field] ?? []);
+        if (input.checked) current.add(member); else current.delete(member);
+        const touched = new Set(state.touched ?? []);
+        touched.add(field);
+        onChange({ ...state, [field]: [...current], touched: [...touched] });
+      });
+      continue;
+    }
+
     if (field in initial && initial[field] !== null) input.value = initial[field];
 
     input.addEventListener('input', () => {

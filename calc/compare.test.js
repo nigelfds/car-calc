@@ -2,8 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  optionCosts, reachableVehicle, crossoverSeries,
-  isVehicleReachable, reachableVehicles, optionBlocker, valueRatio, fbtCliff, optionEntryPoint
+  optionCosts, reachableVehicle,
+  isVehicleReachable, reachableVehicles, optionBlocker, valueRatio, fbtCliff
 } from './compare.js';
 import { forgoneReturn } from './upfront.js';
 
@@ -69,40 +69,6 @@ test('reachableVehicle returns null when nothing fits', () => {
   assert.equal(picked, null);
 });
 
-test('the crossover series produces a point per budget step', () => {
-  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000), vehicle('dear', 95000)];
-  const series = crossoverSeries(
-    { vehicles: fleet, inputs, budgetRange: { min: 400, max: 1600, step: 100 } },
-    tables
-  );
-  assert.equal(series.points.length, 13);
-  assert.ok(series.points.every(p => 'budget' in p && 'novated' in p && 'loan' in p));
-});
-
-test('the upfront line is flat because savings, not budget, bound it', () => {
-  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000)];
-  const series = crossoverSeries(
-    { vehicles: fleet, inputs: { ...inputs, savings: 60000 }, budgetRange: { min: 400, max: 1600, step: 400 } },
-    tables
-  );
-  const upfrontValues = series.points.map(p => p.upfront).filter(v => v !== null);
-  assert.ok(upfrontValues.length > 1);
-  assert.ok(upfrontValues.every(v => Math.abs(v - upfrontValues[0]) < 0.01), 'flat across budgets');
-});
-
-test('crossovers are reported where the leading option changes', () => {
-  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000), vehicle('dear', 95000)];
-  const series = crossoverSeries(
-    { vehicles: fleet, inputs, budgetRange: { min: 400, max: 2500, step: 50 } },
-    tables
-  );
-  assert.ok(Array.isArray(series.crossovers));
-  for (const c of series.crossovers) {
-    assert.ok(c.budget >= 400 && c.budget <= 2500);
-    assert.notEqual(c.from, c.to);
-  }
-});
-
 // I5: electricityCentsPerKwh/otherRunningCostsAnnual used to be hardcoded
 // inside this module (RATE_DEFAULTS), so editing data/rates.json — or a
 // user's own edit in the rates panel — had no effect at all. They must
@@ -118,17 +84,6 @@ test('running-cost rates arrive as arguments, not a hardcoded default', () => {
   assert.ok(pricier.loan.detail.runningCostsTotal > cheap.loan.detail.runningCostsTotal,
     'raising the running-cost rates must raise the costed total');
   assert.notEqual(pricier.novated.tco, cheap.novated.tco);
-});
-
-test('fractional steps include the endpoint', () => {
-  const fleet = [vehicle('cheap', 40000), vehicle('mid', 56000)];
-  const series = crossoverSeries(
-    { vehicles: fleet, inputs, budgetRange: { min: 400, max: 401, step: 0.1 } },
-    tables
-  );
-  assert.equal(series.points.length, 11, 'min 400, max 401, step 0.1 should yield 11 points');
-  const lastBudget = series.points[series.points.length - 1].budget;
-  assert.ok(Math.abs(lastBudget - 401) < 0.0001, 'last point budget should be 401');
 });
 
 // --- Reachability, shared by the verdict and the shortlist ---------------
@@ -340,56 +295,6 @@ test('a ratio is still reported when the net cost is zero or negative', () => {
   const rich = { ...inputs, grossSalary: 1500000, termMonths: 36 };
   const c = optionCosts({ vehicle: vehicle('a', 45000), inputs: rich }, tables).novated;
   assert.notEqual(valueRatio(c), null);
-});
-
-// --- Where a line can first appear ---------------------------------------
-// A chart line simply begins partway across when nothing is reachable below
-// that budget, which reads as missing data rather than as "unaffordable".
-// The entry point is the lowest monthly cost any car in the fleet can be had
-// for under that option.
-
-test('the entry point is the cheapest monthly cost across the fleet', () => {
-  const fleet = [vehicle('a', 40000), vehicle('b', 60000), vehicle('c', 90000)];
-  const entry = optionEntryPoint({ vehicles: fleet, inputs, option: 'loan' }, tables);
-  const cheapestMonthly = Math.min(
-    ...fleet.map(v => optionCosts({ vehicle: v, inputs }, tables).loan.monthlyCost)
-  );
-  assert.ok(Math.abs(entry.budget - cheapestMonthly) < 1e-9);
-});
-
-// The cheapest car to buy is not always the cheapest to run: insurance and
-// consumption differ, so a slightly dearer car can carry a lower monthly.
-test('the entry car is chosen on monthly cost, not on list price', () => {
-  const thirsty = { ...vehicle('cheap-but-thirsty', 40000), insuranceAnnual: 6000 };
-  const frugal = { ...vehicle('dearer-but-frugal', 42000), insuranceAnnual: 900 };
-  const entry = optionEntryPoint({ vehicles: [thirsty, frugal], inputs, option: 'loan' }, tables);
-  assert.equal(entry.vehicle.id, 'dearer-but-frugal');
-});
-
-test('cash ignores cars that savings cannot cover', () => {
-  // Only the cheap car is within savings, so it must set the entry point even
-  // though the dear car would have a lower running-cost-only monthly.
-  const tight = { ...inputs, savings: 45000 };
-  const fleet = [vehicle('within', 40000), { ...vehicle('beyond', 90000), insuranceAnnual: 500 }];
-  const entry = optionEntryPoint({ vehicles: fleet, inputs: tight, option: 'upfront' }, tables);
-  assert.equal(entry.vehicle.id, 'within');
-});
-
-test('no entry point when nothing is feasible at any budget', () => {
-  const broke = { ...inputs, savings: 0 };
-  const entry = optionEntryPoint({ vehicles: [vehicle('a', 40000)], inputs: broke, option: 'upfront' }, tables);
-  assert.equal(entry, null);
-});
-
-test('an empty fleet has no entry point', () => {
-  assert.equal(optionEntryPoint({ vehicles: [], inputs, option: 'loan' }, tables), null);
-});
-
-test('a shorter term pushes the loan entry point higher', () => {
-  const fleet = [vehicle('a', 40000)];
-  const short = optionEntryPoint({ vehicles: fleet, inputs: { ...inputs, termMonths: 36 }, option: 'loan' }, tables);
-  const long = optionEntryPoint({ vehicles: fleet, inputs: { ...inputs, termMonths: 60 }, option: 'loan' }, tables);
-  assert.ok(short.budget > long.budget, 'repaying the same car faster costs more per month');
 });
 
 // --- Opportunity cost on a loan deposit -----------------------------------

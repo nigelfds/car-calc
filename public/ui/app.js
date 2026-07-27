@@ -12,14 +12,17 @@ import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.j
 import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
 import { rankVehicles, collapseToTopPerFamily, bracketAroundPrice } from '../../calc/rank.js';
-import { crossoverSeries, fbtCliff, optionEntryPoint } from '../../calc/compare.js';
+import { fbtCliff } from '../../calc/compare.js';
+import {
+  optionEntryPoint, representativeProfile, purchasingPowerSeries, cheapestPrice
+} from '../../calc/capacity.js';
 import { money } from './format.js';
 
-// crossoverSeries was measured at ~17ms for 80 vehicles across 25 budget
-// steps (Task 18/20 design intent) — over a 16ms frame budget, so this can
-// never be recomputed straight off a raw 'input' event. 25 points across a
-// realistic monthly-budget range mirrors that measurement while still
-// covering enough of the range to show a genuine crossover.
+// purchasingPowerSeries measures ~2.4ms for these 25 points — it bisects 40
+// probe prices per option rather than costing all 114 real cars at every
+// budget, which is why it beats the ~17ms cost series it replaced. Still
+// routed through the debounce below: 25 points is a deliberate ceiling, and a
+// raw 'input' event stream should never drive a recompute directly.
 const BUDGET_RANGE = { min: 300, max: 2700, step: 100 };
 const RECOMPUTE_DEBOUNCE_MS = 80;
 
@@ -102,6 +105,13 @@ export function start(root = document) {
 
 function boot(root, dataset) {
   const { vehicles, families, rates, tables } = dataset;
+  // Step 2 costs a typical EV rather than any particular one, so this is
+  // computed once at boot and never varies with the slider.
+  const profile = representativeProfile(vehicles);
+  // The market's entry price. Capacity below it is arithmetic with no product
+  // behind it, so the curve reports nothing rather than a car that cannot be
+  // bought.
+  const floorPrice = cheapestPrice(vehicles);
   const defaults = defaultState(rates);
   let state = fromQueryString(location.search, defaults);
   let lastVerdict = null;
@@ -130,7 +140,7 @@ function boot(root, dataset) {
     }
     const winner = verdict.options[verdict.winner];
     text.textContent =
-      `${OPTION_PHRASE[verdict.winner]} for the ${verdict.vehicle.make} ${verdict.vehicle.model}: ${money(winner.tco)} total`;
+      `${OPTION_PHRASE[verdict.winner]} reaches up to ${money(winner.maxSpend)} of car`;
   }
 
   const BAND_LABEL = {
@@ -144,8 +154,9 @@ function boot(root, dataset) {
 
     // The ceiling: the dearest car the recommended way of paying reaches.
     // Section 3 is framed entirely around it, so section 2's recommendation
-    // and section 3's cars tell one story rather than two.
-    const anchorPrice = verdict?.vehicle?.listPrice ?? null;
+    // and section 3's cars tell one story rather than two. It is now a single
+    // number from the capacity model rather than a car's price.
+    const anchorPrice = verdict?.maxSpend > 0 ? verdict.maxSpend : null;
 
     // Ranked over every preference-match, not just the affordable ones — the
     // "if you stretched" card is deliberately above the ceiling, and could
@@ -156,10 +167,15 @@ function boot(root, dataset) {
     );
 
     const bands = anchorPrice !== null ? bracketAroundPrice(ranked, anchorPrice) : [];
+    // Real figures here, unlike step 2's typical-EV profile: each card is
+    // costed from its own consumption, insurance and depreciation curve.
+    const context = { inputs: buildInputs(state), tables };
+
     const cards = bands.map(({ band, entry }) => ({
-      ...cardModel(entry.vehicle, families),
+      ...cardModel(entry.vehicle, families, context),
       band,
       bandLabel: BAND_LABEL[band],
+      winningOption: verdict.winner,
       reason: entry.reasons[0],
       otherTrimsText: entry.otherTrims
         ? `${entry.otherTrims.count} other ${entry.otherTrims.count === 1 ? 'trim' : 'trims'} from ${money(entry.otherTrims.fromPrice)}`
@@ -190,14 +206,14 @@ function boot(root, dataset) {
     // window where a bogus $-11,463 "novated lease is free" figure ever
     // reaches the DOM (see hasValidSalary's comment for why).
     const verdict = salaryReady
-      ? verdictAt({ vehicles: filterVehicles(vehicles, state), budgetMonthly: state.monthlyBudget, inputs }, tables)
-      : { winner: null, options: {}, vehicle: null, insufficientInput: true };
+      ? verdictAt({ budgetMonthly: state.monthlyBudget, inputs, profile }, tables)
+      : { winner: null, maxSpend: 0, options: {}, insufficientInput: true };
     lastVerdict = verdict;
     renderVerdict(root, verdict);
     renderSummaryBar(verdict);
 
-    // crossoverSeries/renderChart are untouched (see C2's note on chart
-    // scope) and both assume a non-empty `points` array — an empty series
+    // purchasingPowerSeries/renderChart both assume a non-empty `points` array
+    // — an empty series
     // would crash renderWinnerBand's `series.points[0].budget` on mobile,
     // not degrade gracefully. So this simply skips the recompute+repaint
     // while the salary is invalid, leaving whatever the chart last showed
@@ -205,7 +221,9 @@ function boot(root, dataset) {
     // the very first render() at boot always succeeds) rather than ever
     // asking the chart to paint zero/negative-cost points.
     if (salaryReady) {
-      const series = crossoverSeries({ vehicles, inputs, budgetRange: BUDGET_RANGE }, tables);
+      const series = purchasingPowerSeries(
+        { inputs, profile, floorPrice, budgetRange: BUDGET_RANGE }, tables
+      );
       lastSeries = series;
       // Computed over the same preference-filtered pool the chart is drawn
       // from, so the cars it names are cars the user could actually be shown.
