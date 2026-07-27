@@ -78,12 +78,18 @@
         </div>
 
         <div class="field">
-          <label for="savings">Savings available as a deposit</label>
+          <!-- Not a deposit: this is the cash you could put in outright, and
+               it is the only thing that makes "Buy upfront" reachable, since
+               that option needs the whole drive-away price. The separate
+               "Deposit on a car loan" field in the rates panel is what
+               reduces loan principal. -->
+          <label for="savings">Savings you could spend outright</label>
           <div class="field__input">
             <span class="field__prefix" aria-hidden="true">$</span>
             <input type="number" id="savings" name="savings" data-field="savings"
               min="0" step="500" value="0" inputmode="numeric" />
           </div>
+          <p class="field__hint">Buying outright needs this to cover the full drive-away price. Leave it at $0 if you would finance the car.</p>
         </div>
 
         <div class="field">

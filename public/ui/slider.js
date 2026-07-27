@@ -1,4 +1,4 @@
-import { optionCosts } from '../../calc/compare.js';
+import { optionCosts, reachableVehicles, optionBlocker } from '../../calc/compare.js';
 import { rankVehicles } from '../../calc/rank.js';
 import { money } from './format.js';
 
@@ -9,7 +9,7 @@ const OPTIONS = ['novated', 'loan', 'upfront'];
 // as "out of reach" rather than $NaN. Every downstream consumer keys off
 // `tco === null` for that, never a truthy/falsy check on the option object
 // itself (it's always present, just empty).
-const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: null, detail: null });
+const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: null, detail: null, blocker: null });
 
 // C2 fix: settle on ONE car and compare all three options against it,
 // rather than letting each option independently reach for the dearest car
@@ -30,13 +30,9 @@ const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: 
 export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
   const options = {};
 
-  const isReachable = vehicle =>
-    OPTIONS.some(option => {
-      const costs = optionCosts({ vehicle, inputs }, tables)[option];
-      return costs.feasible && costs.monthlyCost <= budgetMonthly;
-    });
-
-  const affordableVehicles = vehicles.filter(isReachable);
+  // Shared with the shortlist (calc/compare.js) so the two sections can
+  // never disagree about what this budget reaches.
+  const affordableVehicles = reachableVehicles({ vehicles, budgetMonthly, inputs }, tables);
 
   if (affordableVehicles.length === 0) {
     for (const option of OPTIONS) options[option] = emptyOption(option);
@@ -56,10 +52,14 @@ export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
     const costs = costsByOption[option];
     const feasible = costs.feasible && costs.monthlyCost <= budgetMonthly;
     if (!feasible) {
-      options[option] = emptyOption(option);
+      // Carry *why*, so the totals row can name the lever instead of saying
+      // "out of reach" three identical times.
+      options[option] = { ...emptyOption(option), blocker: optionBlocker(costs, budgetMonthly) };
       continue;
     }
-    options[option] = { option, tco: costs.tco, monthlyCost: costs.monthlyCost, vehicle, detail: costs.detail };
+    // `blocker: null` rather than absent, so every option object has the
+    // same shape whether it is reachable or not.
+    options[option] = { option, tco: costs.tco, monthlyCost: costs.monthlyCost, vehicle, detail: costs.detail, blocker: null };
     if (best === null || costs.tco < options[best].tco) best = option;
   }
 
@@ -104,6 +104,15 @@ const escapeHtml = value =>
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
 
+// "out of reach" is the same three words whichever option is blocked, but
+// the fix isn't the same: raise the monthly budget for a lease or a loan,
+// or have the whole purchase price saved for cash. Name the lever.
+function blockerText(blocker) {
+  return blocker.kind === 'savings'
+    ? `needs ${money(blocker.needed)} saved`
+    : `needs ${money(blocker.needed)}/mo`;
+}
+
 export function renderVerdict(root, verdict) {
   const panel = root.querySelector('#verdict');
   // C3: a missing/blank/non-positive salary is "not enough information
@@ -136,6 +145,7 @@ export function renderVerdict(root, verdict) {
       return `<div class="total${o === verdict.winner ? ' is-winner' : ''}">
         <span>${labels[o]}</span>
         <strong>${entry.tco === null ? 'out of reach' : money(entry.tco)}</strong>
+        ${entry.tco === null && entry.blocker ? `<span class="total__blocker">${blockerText(entry.blocker)}</span>` : ''}
       </div>`;
     }).join('')}</div>`;
 }

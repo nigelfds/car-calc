@@ -90,6 +90,42 @@ export function optionCosts({ vehicle, inputs }, tables) {
   };
 }
 
+const ALL_OPTIONS = ['novated', 'loan', 'upfront'];
+
+// "Can any of the three ways of paying get this buyer into this car at this
+// budget?" Lives here, in the pure core, because two places need the same
+// answer: the verdict in section 2 and the shortlist in section 3. They used
+// to disagree — the shortlist screened only on boot/range/seats/body and
+// never saw the budget at all, so it would recommend a $68,900 Model Y on
+// $400/mo while the verdict beside it called that car out of reach.
+export function isVehicleReachable({ vehicle, budgetMonthly, inputs }, tables) {
+  const costs = optionCosts({ vehicle, inputs }, tables);
+  return ALL_OPTIONS.some(option => {
+    const entry = costs[option];
+    return entry.feasible && entry.monthlyCost <= budgetMonthly;
+  });
+}
+
+// Returns the surviving vehicles, in the order given and by identity, so
+// callers can keep ranking and comparing them by reference.
+export function reachableVehicles({ vehicles, budgetMonthly, inputs }, tables) {
+  return vehicles.filter(vehicle =>
+    isVehicleReachable({ vehicle, budgetMonthly, inputs }, tables)
+  );
+}
+
+// Which lever is actually stopping this option, and what it would take.
+// The totals row rendered a bare "out of reach" on every blocked option,
+// which hid the fact that the fixes are different: a lease or a loan needs a
+// bigger monthly budget, while cash needs the whole drive-away price sitting
+// in savings. Savings is checked first — an unaffordable cash purchase is
+// blocked by the money you don't have, not by its (small) running costs.
+export function optionBlocker(costs, budgetMonthly) {
+  if (!costs.feasible) return { kind: 'savings', needed: costs.detail.driveAway };
+  if (costs.monthlyCost > budgetMonthly) return { kind: 'budget', needed: costs.monthlyCost };
+  return null;
+}
+
 export function reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables) {
   const affordable = vehicles
     .map(vehicle => ({ vehicle, costs: optionCosts({ vehicle, inputs }, tables)[option] }))

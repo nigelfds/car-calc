@@ -36,12 +36,16 @@ const escapeHtml = value =>
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
 
-export function renderCards(root, cards) {
+export function renderCards(root, cards, emptyMessage) {
   const target = root.querySelector('#car-list');
   if (!target) return;
 
   if (cards.length === 0) {
-    target.innerHTML = '<p class="skeleton-note">No car in the dataset matches these filters at this budget. Try relaxing one.</p>';
+    // Which lever to pull depends on which stage emptied the list — the
+    // caller knows, because it filtered on preferences and budget in turn.
+    const note = emptyMessage
+      ?? 'No car in the dataset matches these filters at this budget. Try relaxing one.';
+    target.innerHTML = `<p class="skeleton-note">${escapeHtml(note)}</p>`;
     return;
   }
 

@@ -12,7 +12,7 @@ import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.j
 import { renderChart } from './crossover-chart.js';
 import { filterVehicles, cardModel, renderCards } from './cars.js';
 import { rankVehicles, collapseToTopPerFamily } from '../../calc/rank.js';
-import { crossoverSeries } from '../../calc/compare.js';
+import { crossoverSeries, reachableVehicles } from '../../calc/compare.js';
 import { money } from './format.js';
 
 // crossoverSeries was measured at ~17ms for 80 vehicles across 25 budget
@@ -131,11 +131,24 @@ function boot(root, dataset) {
 
   function renderShortlist() {
     const matches = filterVehicles(vehicles, state);
+    // Budget is a hard filter, not a ranking nudge: a car you cannot pay for
+    // is not a match, and showing it here contradicted the verdict directly
+    // above it. Uses the same predicate verdictAt does, so the two sections
+    // agree by construction. Needs a salary — without one there is no tax
+    // position to cost a lease against, so leave the list unfiltered rather
+    // than silently empty it.
+    const affordable = hasValidSalary(state)
+      ? reachableVehicles(
+        { vehicles: matches, budgetMonthly: state.monthlyBudget, inputs: buildInputs(state) },
+        tables
+      )
+      : matches;
+
     // Rank every matching variant first (no limit — collapsing needs the
     // full field, including family-mates that would otherwise crowd the
     // top of the list), then keep one card per family so five cards are
     // five genuine choices, not one model shown five times.
-    const ranked = rankVehicles(matches, state, matches.length);
+    const ranked = rankVehicles(affordable, state, affordable.length);
     const shortlist = collapseToTopPerFamily(ranked, 5);
     const cards = shortlist.map(({ vehicle, reasons, otherTrims }) => ({
       ...cardModel(vehicle, families),
@@ -144,7 +157,11 @@ function boot(root, dataset) {
         ? `${otherTrims.count} other ${otherTrims.count === 1 ? 'trim' : 'trims'} from ${money(otherTrims.fromPrice)}`
         : null
     }));
-    renderCards(root, cards);
+    // An empty list has two very different causes and two different fixes.
+    const emptyMessage = matches.length === 0
+      ? 'No car in the dataset matches these preferences. Try relaxing one.'
+      : `Nothing in the dataset is reachable on ${money(state.monthlyBudget)}/mo. Raise the budget, or add savings to make buying outright an option.`;
+    renderCards(root, cards, emptyMessage);
   }
 
   // The full recompute-and-repaint pass. Deliberately routed through

@@ -313,6 +313,13 @@ input[type='date'],
   margin-bottom: var(--space-1);
 }
 
+.field__hint {
+  margin: var(--space-1) 0 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--ink-faint);
+}
+
 .field input,
 .field select {
   width: 100%;
@@ -410,6 +417,14 @@ input[type='date'],
 .verdict-panel .total strong {
   font-family: var(--font-mono);
   font-size: 1.05rem;
+}
+
+/* The lever that would unblock an out-of-reach option. Quieter than the
+   option label above it — it is a footnote to "out of reach", not a heading. */
+.verdict-panel .total__blocker {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
 }
 
 .verdict-panel .total.is-winner {

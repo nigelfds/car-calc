@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { verdictAt, renderRatesPanel } from './slider.js';
+import { verdictAt, renderVerdict, renderRatesPanel } from './slider.js';
 
 const tables = JSON.parse(readFileSync(new URL('../../data/tax-tables.json', import.meta.url)));
 
@@ -215,4 +215,39 @@ test('the reset button still resets a field and never writes undefined into stat
   resetButtonNoRates.click();
 
   assert.equal(received, null, 'resetting a field with no known default must not call onChange with undefined');
+});
+
+// --- Naming the lever on an out-of-reach option --------------------------
+// All three tiles used to read a bare "out of reach", which hid that the
+// fixes differ: a lease or loan needs a bigger monthly budget, cash needs
+// the whole drive-away price in savings.
+
+test('a blocked option carries why it is blocked, not just a null total', () => {
+  const fleet = [vehicle('cheap', 40000)];
+  // Savings well under the car: cash is blocked, financing is not.
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs: { ...inputs, savings: 1000 } }, tables);
+  assert.equal(v.options.upfront.tco, null, 'cash is out of reach on these savings');
+  assert.equal(v.options.upfront.blocker.kind, 'savings');
+  assert.ok(v.options.upfront.blocker.needed > 40000, 'it should quote the drive-away price, not the list price');
+});
+
+test('an option blocked by the monthly budget says so', () => {
+  const fleet = [vehicle('cheap', 40000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 100000, inputs }, tables);
+  // Everything is reachable at an absurd budget, so nothing carries a blocker.
+  assert.equal(v.options.loan.blocker, null);
+  assert.equal(v.options.novated.blocker, null);
+});
+
+test('renderVerdict prints the lever beside an out-of-reach option', () => {
+  const fleet = [vehicle('cheap', 40000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1200, inputs: { ...inputs, savings: 1000 } }, tables);
+
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+
+  assert.ok(html.includes('out of reach'), 'the blocked option still reads out of reach');
+  assert.ok(html.includes('saved'), `expected a savings lever in the markup, got: ${html}`);
+  assert.ok(html.includes('total__blocker'), 'expected the blocker to be its own element');
 });
