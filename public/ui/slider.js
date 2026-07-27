@@ -9,7 +9,7 @@ const OPTIONS = ['novated', 'loan', 'upfront'];
 // as "out of reach" rather than $NaN. Every downstream consumer keys off
 // `tco === null` for that, never a truthy/falsy check on the option object
 // itself (it's always present, just empty).
-const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: null, detail: null, valueRatio: null, blocker: null });
+const emptyOption = option => ({ option, tco: null, monthlyCost: null, vehicle: null, detail: null, valueRatio: null, balloon: null, balloonCovered: null, blocker: null });
 
 // Each option answers "what is the most expensive car this way of paying
 // gets you into, at this budget?" — so the three tiles describe three
@@ -59,6 +59,14 @@ export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
     const costs = optionCosts({ vehicle, inputs }, tables)[option];
     // `blocker: null` rather than absent, so every option object has the
     // same shape whether it is reachable or not.
+    // A novated lease ends with a lump-sum residual. It is already inside the
+    // total, but a total is not a cash-flow warning: affordability is tested
+    // against the monthly figure alone, so a budget that covers the payments
+    // comfortably can still leave a five-figure bill due on the last day.
+    // Surfaced separately, with whether the car is projected to be worth
+    // enough to clear it on sale.
+    const balloon = option === 'novated' ? costs.detail.residual : null;
+
     options[option] = {
       option,
       tco: costs.tco,
@@ -66,6 +74,8 @@ export function verdictAt({ vehicles, budgetMonthly, inputs }, tables) {
       vehicle,
       detail: costs.detail,
       valueRatio: valueRatio(costs),
+      balloon,
+      balloonCovered: balloon === null ? null : costs.detail.resale >= balloon,
       blocker: null
     };
     if (best === null || options[option].valueRatio > options[best].valueRatio) best = option;
@@ -149,8 +159,8 @@ export function renderVerdict(root, verdict) {
 
   panel.innerHTML = `
     <div class="winner">🏆 ${labels[verdict.winner]} — ${escapeHtml(verdict.vehicle.make)} ${escapeHtml(verdict.vehicle.model)}</div>
-    <div class="detail">Best return over the term: ${money(winner.tco)} spent, and you still own about ${money(winner.detail.resale)} of car${
-      runnerUp ? ` — better value than ${labels[runnerUp.option].toLowerCase()}` : ''
+    <div class="detail">Best return over the term: ${money(winner.detail.grossOutlay)} out of pocket, and you still own about ${money(winner.detail.resale)} of car — a net cost of ${money(winner.tco)}${
+      runnerUp ? `, better value than ${labels[runnerUp.option].toLowerCase()}` : ''
     }.</div>
     <div class="totals">${OPTIONS.map(o => {
       const entry = verdict.options[o];
@@ -171,6 +181,12 @@ export function renderVerdict(root, verdict) {
           ${escapeHtml(entry.vehicle.make)} ${escapeHtml(entry.vehicle.model)}
           <span class="total__reach-price">${money(entry.vehicle.listPrice)}</span></span>
         <span class="total__ratio">keeps ${Math.round(entry.valueRatio * 100)}c of every $1 spent</span>
+        ${entry.balloon ? `<span class="total__balloon${entry.balloonCovered ? '' : ' is-short'}">
+          plus a ${money(entry.balloon)} balloon to own it at the end${
+            entry.balloonCovered
+              ? `, roughly covered by selling it (${money(entry.detail.resale)})`
+              : ` — more than it is projected to be worth (${money(entry.detail.resale)}), so selling it would not clear the debt`
+          }</span>` : ''}
       </div>`;
     }).join('')}</div>`;
 }

@@ -210,11 +210,14 @@ test('an affordable option has no blocker', () => {
 // different cars is: of everything you spent, how much are you still holding
 // at the end of the term?
 
-test('value ratio is resale over total cost', () => {
+test('value ratio is resale over gross outlay', () => {
   const costs = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables);
   const ratio = valueRatio(costs.loan);
   assert.ok(ratio > 0);
-  assert.ok(Math.abs(ratio - costs.loan.detail.resale / costs.loan.tco) < 1e-9);
+  // Against the gross, deliberately: dividing by tco would put resale on both
+  // sides of the division, since tco is already net of it.
+  assert.ok(Math.abs(ratio - costs.loan.detail.resale / costs.loan.detail.grossOutlay) < 1e-9);
+  assert.ok(ratio < 1, 'you cannot end up holding more than you paid out');
 });
 
 test('spending less for the same car retained gives a better ratio', () => {
@@ -229,9 +232,10 @@ test('an option that cannot reach a car has no value ratio', () => {
   assert.equal(valueRatio(null), null);
 });
 
-// A car whose total cost lands at or below zero (a hypothetical where resale
-// exceeds every outflow) would make the ratio meaningless or infinite.
-test('a non-positive total cost yields no ratio rather than Infinity', () => {
+// Gross outlay is the divisor now, so a zero or missing one is the only case
+// that could produce Infinity or NaN.
+test('a non-positive gross outlay yields no ratio rather than Infinity', () => {
+  assert.equal(valueRatio({ tco: 0, detail: { resale: 1000, grossOutlay: 0 } }), null);
   assert.equal(valueRatio({ tco: 0, detail: { resale: 1000 } }), null);
   assert.equal(valueRatio({ tco: -500, detail: { resale: 1000 } }), null);
 });
@@ -283,4 +287,56 @@ test('the cliff names the dearest car below it and the cheapest above', () => {
 
 test('an empty fleet reports no cliff rather than throwing', () => {
   assert.equal(fbtCliff({ vehicles: [], inputs }, tables), null);
+});
+
+// --- Gross outlay, and the value ratio that depends on it -----------------
+// valueRatio originally divided resale by tco. But tco is already net of
+// resale, so resale appeared on both sides of the division: the ratio was
+// resale / (gross - resale), which climbs without bound as the net cost
+// approaches zero. A $1.5m earner packaging an EQB produced "121c of every
+// $1 spent" — you cannot retain more than you spent.
+
+test('every option reports the gross amount that actually leaves your pocket', () => {
+  const c = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables);
+  for (const option of ['novated', 'loan', 'upfront']) {
+    assert.ok(c[option].detail.grossOutlay > 0, `${option} must report a gross outlay`);
+    // The invariant that keeps the two figures honest with each other.
+    assert.ok(
+      Math.abs(c[option].tco - (c[option].detail.grossOutlay - c[option].detail.resale)) < 1e-6,
+      `${option}: tco must be gross outlay minus resale`
+    );
+  }
+});
+
+test('the novated gross outlay includes the residual balloon', () => {
+  const c = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables).novated;
+  const years = inputs.termMonths / 12;
+  assert.ok(Math.abs(c.detail.grossOutlay - (c.detail.netAnnualCost * years + c.detail.residual)) < 1e-6,
+    'the balloon is money that leaves your pocket and must be in the gross');
+});
+
+test('the value ratio measures resale against gross outlay, not against net cost', () => {
+  const c = optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables).loan;
+  assert.ok(Math.abs(valueRatio(c) - c.detail.resale / c.detail.grossOutlay) < 1e-9);
+});
+
+// The reported case: $1.5m salary, 36-month term, so the pre-tax saving is
+// enormous and the net cost collapses. The ratio must stay a proportion.
+test('a very high earner cannot retain more than they spent', () => {
+  const rich = { ...inputs, grossSalary: 1500000, termMonths: 36, leaseRatePct: 6.5 };
+  const c = optionCosts({ vehicle: vehicle('a', 90000), inputs: rich }, tables);
+  for (const option of ['novated', 'loan', 'upfront']) {
+    const ratio = valueRatio(c[option]);
+    if (ratio === null) continue;
+    assert.ok(ratio > 0 && ratio <= 1,
+      `${option} ratio ${ratio} must be a proportion of what was spent`);
+  }
+});
+
+test('a ratio is still reported when the net cost is zero or negative', () => {
+  // tco <= 0 used to return null, hiding exactly the cases that mattered.
+  // Gross outlay is always positive, so the ratio survives.
+  const rich = { ...inputs, grossSalary: 1500000, termMonths: 36 };
+  const c = optionCosts({ vehicle: vehicle('a', 45000), inputs: rich }, tables).novated;
+  assert.notEqual(valueRatio(c), null);
 });

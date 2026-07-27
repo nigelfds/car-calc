@@ -45,8 +45,16 @@ export function optionCosts({ vehicle, inputs }, tables) {
     residualPctOverride: inputs.residualPctOverride ?? null
   }, tables);
 
-  // Paying the balloon buys the car outright, so the resale value is credited.
-  const novatedTco = novated.netAnnualCost * years + novated.residual - resale;
+  // Gross outlay is everything that actually leaves your pocket, before any
+  // credit for what you are left holding. Each option's TCO is then that
+  // minus resale, so the two figures are derived from one number and cannot
+  // drift apart. Anything comparing options on "value retained" must divide
+  // by the gross, never by the net — see valueRatio below.
+  //
+  // For a novated lease the balloon is part of the gross: paying the residual
+  // is what buys the car outright at the end of the term.
+  const novatedGross = novated.netAnnualCost * years + novated.residual;
+  const novatedTco = novatedGross - resale;
 
   const principal = Math.max(0, onRoad.total - inputs.deposit);
   const loan = loanSummary({
@@ -55,7 +63,8 @@ export function optionCosts({ vehicle, inputs }, tables) {
     termMonths: inputs.termMonths
   });
   const loanRunningTotal = running.totalIncGst * years;
-  const loanTco = loan.totalRepaid + inputs.deposit + loanRunningTotal - resale;
+  const loanGross = loan.totalRepaid + inputs.deposit + loanRunningTotal;
+  const loanTco = loanGross - resale;
 
   const upfront = upfrontQuote({
     driveAwayTotal: onRoad.total,
@@ -63,8 +72,9 @@ export function optionCosts({ vehicle, inputs }, tables) {
     opportunityRatePct: inputs.opportunityRatePct,
     runningCostsAnnualIncGst: running.totalIncGst
   });
-  const upfrontTco =
-    upfront.cashOutlay + upfront.opportunityCost + upfront.runningCostsTotal - resale;
+  const upfrontGross =
+    upfront.cashOutlay + upfront.opportunityCost + upfront.runningCostsTotal;
+  const upfrontTco = upfrontGross - resale;
 
   return {
     novated: {
@@ -72,21 +82,27 @@ export function optionCosts({ vehicle, inputs }, tables) {
       monthlyCost: novated.netMonthlyCost,
       tco: novatedTco,
       feasible: true,
-      detail: { ...novated, resale, driveAway: onRoad.total }
+      detail: { ...novated, resale, grossOutlay: novatedGross, driveAway: onRoad.total }
     },
     loan: {
       option: 'loan',
       monthlyCost: loan.monthlyRepayment + running.totalIncGst / 12,
       tco: loanTco,
       feasible: true,
-      detail: { ...loan, runningCostsTotal: loanRunningTotal, resale, driveAway: onRoad.total }
+      detail: {
+        ...loan,
+        runningCostsTotal: loanRunningTotal,
+        resale,
+        grossOutlay: loanGross,
+        driveAway: onRoad.total
+      }
     },
     upfront: {
       option: 'upfront',
       monthlyCost: upfront.netMonthlyRunningCost,
       tco: upfrontTco,
       feasible: inputs.savings >= onRoad.total,
-      detail: { ...upfront, resale, driveAway: onRoad.total }
+      detail: { ...upfront, resale, grossOutlay: upfrontGross, driveAway: onRoad.total }
     }
   };
 }
@@ -138,8 +154,9 @@ export function optionBlocker(costs, budgetMonthly) {
 // bounded by savings, "won" at high budgets purely by being capped at a
 // cheaper car). A ratio is scale-free, so it survives the comparison.
 export function valueRatio(costs) {
-  if (!costs || typeof costs.tco !== 'number' || costs.tco <= 0) return null;
-  return costs.detail.resale / costs.tco;
+  const gross = costs?.detail?.grossOutlay;
+  if (typeof gross !== 'number' || !Number.isFinite(gross) || gross <= 0) return null;
+  return costs.detail.resale / gross;
 }
 
 export function reachableVehicle({ vehicles, budgetMonthly, option, inputs }, tables) {

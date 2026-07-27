@@ -278,3 +278,71 @@ test('renderVerdict prints the lever beside an out-of-reach option', () => {
   assert.ok(html.includes('saved'), `expected a savings lever in the markup, got: ${html}`);
   assert.ok(html.includes('total__blocker'), 'expected the blocker to be its own element');
 });
+
+// --- The residual balloon -------------------------------------------------
+// A novated lease ends with a lump-sum residual. It is inside the total cost,
+// but a total is not a cash-flow warning: the affordability test only checks
+// the monthly figure, so a budget that comfortably covers the payments can
+// still leave a five-figure bill due on the last day of the term.
+
+test('the novated option reports the balloon due at the end of the term', () => {
+  const fleet = [vehicle('mid', 56000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1500, inputs }, tables);
+  assert.ok(v.options.novated.balloon > 0, 'the residual must be reported, not buried in the total');
+  assert.equal(v.options.novated.balloon, v.options.novated.detail.residual);
+});
+
+test('the balloon is flagged when the car will not be worth enough to cover it', () => {
+  // A car that holds value badly: selling it at the end leaves a shortfall
+  // the driver has to find in cash.
+  const sinker = {
+    ...vehicle('sinker', 56000),
+    depreciationCurve: [1, 0.4, 0.28, 0.2, 0.15, 0.1]
+  };
+  const v = verdictAt({ vehicles: [sinker], budgetMonthly: 1500, inputs }, tables);
+  const novated = v.options.novated;
+  assert.ok(novated.detail.resale < novated.balloon, 'this fixture must actually be underwater');
+  assert.equal(novated.balloonCovered, false);
+});
+
+test('a car that holds its value covers its own balloon', () => {
+  const holder = {
+    ...vehicle('holder', 56000),
+    depreciationCurve: [1, 0.95, 0.92, 0.9, 0.88, 0.85]
+  };
+  const v = verdictAt({ vehicles: [holder], budgetMonthly: 1500, inputs }, tables);
+  const novated = v.options.novated;
+  assert.ok(novated.detail.resale > novated.balloon, 'this fixture must actually be above water');
+  assert.equal(novated.balloonCovered, true);
+});
+
+test('renderVerdict shows the balloon on the novated tile', () => {
+  const fleet = [vehicle('mid', 56000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1500, inputs }, tables);
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+  assert.ok(/balloon/i.test(html), `expected the balloon named in the tile, got: ${html}`);
+});
+
+test('non-novated options carry no balloon', () => {
+  const fleet = [vehicle('mid', 56000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1500, inputs: { ...inputs, savings: 200000 } }, tables);
+  assert.equal(v.options.loan.balloon, null);
+  assert.equal(v.options.upfront.balloon, null);
+});
+
+// The headline had the same double-count as valueRatio did: it paired the
+// NET total with the resale, which reads as though you finished ahead.
+test('the headline separates money out of pocket from what you still hold', () => {
+  const fleet = [vehicle('mid', 56000)];
+  const v = verdictAt({ vehicles: fleet, budgetMonthly: 1500, inputs }, tables);
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+
+  const winner = v.options[v.winner];
+  assert.ok(winner.detail.grossOutlay > winner.tco, 'gross must exceed net for this fixture');
+  assert.ok(html.includes('out of pocket'), 'the gross figure must be labelled as money spent');
+  assert.ok(html.includes('net cost'), 'and the net figure labelled as net');
+});

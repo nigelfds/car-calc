@@ -438,6 +438,19 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
+/* The residual is a lump sum due on the last day of the term, and nothing in
+   the monthly affordability test accounts for it. Loud enough to be read. */
+.verdict-panel .total__balloon {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.verdict-panel .total__balloon.is-short {
+  color: var(--warn);
+  font-weight: 500;
+}
+
 /* The lever that would unblock an out-of-reach option. Quieter than the
    option label above it — it is a footnote to "out of reach", not a heading. */
 .verdict-panel .total__blocker {
