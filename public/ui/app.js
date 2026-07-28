@@ -185,9 +185,21 @@ function boot(root, dataset) {
         : null
     }));
 
-    // An empty list has distinct causes and distinct fixes.
+    // An empty list has distinct causes and distinct fixes, and "relax a
+    // preference" is the wrong advice when the preference is fine and the
+    // toggle is what is hiding everything. Every ute in the dataset is a
+    // plug-in hybrid, so ticking Ute alone matches nothing at all — the
+    // filters look broken when they are working exactly as asked. Tested
+    // rather than assumed: this re-runs the filter with plug-in hybrids
+    // included and only says so if that would genuinely help, which keeps it
+    // correct for whatever body type turns out to be PHEV-only next.
+    const phevWouldHelp = matches.length === 0 && !state.includePhev &&
+      filterVehicles(vehicles, { ...state, includePhev: true }).length > 0;
+
     const emptyMessage = matches.length === 0
-      ? 'No car in the dataset matches these preferences. Try relaxing one.'
+      ? (phevWouldHelp
+        ? 'Every car matching these preferences is a plug-in hybrid. Tick "Include plug-in hybrids" in step 1 to see them.'
+        : 'No car in the dataset matches these preferences. Try relaxing one.')
       : `Nothing in the dataset is reachable on ${money(state.monthlyBudget)}/mo. Raise the budget, or add savings to make buying outright an option.`;
     renderCards(root, cards, emptyMessage);
   }

@@ -31,6 +31,11 @@ export const powertrainOf = row => row?.powertrain ?? 'bev';
 // declared powertrain: 'phev' is an error, not a harmless extra: the
 // dangerous direction of this mistake is a PHEV being costed as an
 // FBT-exempt EV, so the check runs both ways.
+// Optional on any row, any powertrain: a battery-electric ute would be a goods
+// vehicle too. Absent means passenger car, which is what every row assumed
+// before this existed.
+const OPTIONAL_BOOLEAN_FIELDS = ['isNonPassengerForVicDuty'];
+
 const PHEV_ONLY_FIELDS = [
   'combinedRangeKm', 'fuelConsumptionL100km', 'isFuelEfficientForLct', 'isGreenForVicDuty'
 ];
@@ -74,6 +79,12 @@ export function validateVehicle(row) {
   const powertrain = powertrainOf(row);
   if (!POWERTRAINS.includes(powertrain)) {
     errors.push(`powertrain must be one of ${POWERTRAINS.join(', ')}, got ${row.powertrain}`);
+  }
+
+  for (const field of OPTIONAL_BOOLEAN_FIELDS) {
+    if (row[field] !== undefined && typeof row[field] !== 'boolean') {
+      errors.push(`${field} must be true or false when present — it decides which duty rate applies`);
+    }
   }
 
   const strayPhevFields = PHEV_ONLY_FIELDS.filter(f => row[f] !== undefined);

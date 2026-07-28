@@ -15,13 +15,21 @@
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": false,
+    "isNonPassengerForVicDuty": true,
     "bootLitresSeatsUp": 1185,
     "bootLitresSeatsDown": 1185,
     "seats": 5,
     "towKg": 3500,
     "warrantyYears": 5,
     "insuranceAnnual": 1700,
-    "depreciationCurve": [1, 0.75, 0.64, 0.56, 0.49, 0.43],
+    "depreciationCurve": [
+      1,
+      0.75,
+      0.64,
+      0.56,
+      0.49,
+      0.43
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -40,13 +48,21 @@
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": false,
+    "isNonPassengerForVicDuty": true,
     "bootLitresSeatsUp": 1185,
     "bootLitresSeatsDown": 1185,
     "seats": 5,
     "towKg": 3500,
     "warrantyYears": 5,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.75, 0.64, 0.56, 0.49, 0.43],
+    "depreciationCurve": [
+      1,
+      0.75,
+      0.64,
+      0.56,
+      0.49,
+      0.43
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -65,13 +81,21 @@
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": false,
+    "isNonPassengerForVicDuty": true,
     "bootLitresSeatsUp": 1185,
     "bootLitresSeatsDown": 1185,
     "seats": 5,
     "towKg": 3500,
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [1, 0.75, 0.64, 0.56, 0.49, 0.43],
+    "depreciationCurve": [
+      1,
+      0.75,
+      0.64,
+      0.56,
+      0.49,
+      0.43
+    ],
     "sourcedAt": "2026-07-28"
   }
 ]

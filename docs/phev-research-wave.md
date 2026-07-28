@@ -1,7 +1,6 @@
 # PHEV research wave — batch plan
 
-Prepared 2026-07-28. **Not yet run.** The session that prepared this had already spent its
-200/200 WebSearch budget, so nothing here was dispatched.
+Prepared 2026-07-28. **Batch 1 complete.** Batches 2-4 outstanding.
 
 The calculation side of PHEV support is finished and merged. This is data work only: no code
 change should be needed for any family below. `node scripts/build-dataset.js` validates every row,
@@ -9,17 +8,24 @@ and a row it rejects is wrong — fix the row, not the schema.
 
 ## Where the dataset stands
 
+After batch 1: 28 brands, 48 models, 141 variants.
+
 | Body type | BEV | PHEV |
 |---|---|---|
-| SUV | 97 | 10 |
+| SUV | 97 | 19 |
 | Hatch | 10 | 0 |
 | Sedan | 7 | 0 |
-| Wagon | 0 | 0 |
-| Ute | 0 | 0 |
+| Ute | 0 | 8 |
 
-Two PHEV families (BYD Sealion 6, Mazda CX-60), both SUVs. **"Ute" and "Wagon" are offered as
-filters in step 1 and match nothing at all** — ticking either returns an empty shortlist. Australia's
-plug-in ute segment is essentially all PHEV, so batch 1 is what closes half that hole.
+Eight PHEV families. **Ute is no longer an empty filter** — it was offered in step 1 and matched
+nothing at all until batch 1 landed, and Australia's plug-in ute segment being entirely PHEV is why
+no amount of EV research could have filled it.
+
+**Wagon has been dropped from the UI** rather than waiting for data that was never coming. It is
+gone from the checkbox, both parse schemas, the fallback parser and the allowed `bodyType` list in
+both briefs. A genuine wagon should now be classified as the nearest of SUV / Sedan / Hatch / Ute
+and flagged in the report. Re-adding means the checkbox row in `public/index.html` and `BODY_TYPES`
+in `server/schema.js`, together.
 
 ## Budget: one batch per session
 
@@ -53,9 +59,10 @@ Watch particularly for: grades that are conventional hybrids rather than plug-in
 scope), range-extenders where the engine never drives the wheels (out of scope), and nameplates
 shared with a BEV or petrol sibling (price the plug-in only).
 
-## Batch 1 — utes and volume sellers
+## Batch 1 — utes and volume sellers — **DONE**
 
-Fills the empty `Ute` body type and covers the highest-volume plug-ins.
+All six landed; see the `data:` commit for batch 1 and that session's reports for each family's
+disclosed low-confidence figures.
 
 | Family | `familyId` | Note |
 |---|---|---|
@@ -131,6 +138,16 @@ that disclosure is the only record of which figures are soft.
 - **Derived consumption.** All ten current PHEV rows have `consumptionKwhPer100km` exactly equal to
   `batteryKwh / rangeKm * 100`, so the schema's 25% cross-check catches nothing for them. The brief
   now asks agents to say which figures they sourced and which they derived.
-- **Body-type spread.** If batch 1 lands, `Ute` stops being an empty filter. `Wagon` will still be
-  empty and no PHEV is likely to fix it — worth deciding separately whether to keep offering a
-  filter that matches nothing.
+- **Body-type spread.** Batch 1 closed `Ute`. `Wagon` was dropped rather than left empty. Every
+  PHEV so far is an SUV or a ute; if `Hatch` and `Sedan` stay BEV-only that is a real fact about
+  the market rather than a gap, but worth noticing if a batch turns one up.
+- **Agents finding calculator bugs is a good outcome, not scope creep.** Batch 1's three ute
+  agents independently worked out that a ute is a non-passenger vehicle for VIC duty and reported
+  that the calculator had no such category — it was billing every ute the passenger rate and
+  overstating duty by $814-$1,005 each. That is now fixed and there is a
+  `isNonPassengerForVicDuty` flag to set. Keep encouraging agents to report what does not fit
+  rather than forcing a value into a field that cannot hold it.
+- **The powertrain trap gets worse from batch 2 on.** Batch 1 was mostly plug-in-specific
+  nameplates. Batches 2-4 are dominated by models that also sell as petrol, diesel or conventional
+  hybrid, where an agent pricing the wrong grade produces a plausible row that is entirely wrong
+  and that the schema cannot catch. Require every agent to name the grades it excluded.

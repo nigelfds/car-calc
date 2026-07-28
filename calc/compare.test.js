@@ -468,3 +468,25 @@ test('the fuel-efficient LCT flag leaves the drive-away total untouched', () => 
     'LCT is reported, never added to the on-road total'
   );
 });
+
+// A ute reaching optionCosts must actually get the goods rate — the flag has
+// to survive the trip from the vehicle row through vehicleContext, which is
+// where the two existing duty/LCT flags sat unpassed for months.
+test('a ute is costed at the non-passenger duty rate end to end', () => {
+  const ute = { ...phevVehicle, id: 'test-ute', bodyType: 'Ute', isGreenForVicDuty: false, isNonPassengerForVicDuty: true };
+  const car = { ...phevVehicle, id: 'test-car', bodyType: 'SUV', isGreenForVicDuty: false };
+  const uteCost = optionCosts({ vehicle: ute, inputs }, tables).upfront.detail.driveAway;
+  const carCost = optionCosts({ vehicle: car, inputs }, tables).upfront.detail.driveAway;
+  assert.ok(uteCost < carCost, 'a goods vehicle must not be billed the passenger rate');
+  assert.equal(carCost - uteCost, (ute.listPrice / 200) * (8.40 - 5.40));
+});
+
+test('a row without the flag is still costed as a passenger car', () => {
+  // `vehicle` in this file is a factory, not an object — call it.
+  const car = vehicle('a', 56000);
+  const absent = optionCosts({ vehicle: car, inputs }, tables).upfront.detail.driveAway;
+  const explicit = optionCosts(
+    { vehicle: { ...car, isNonPassengerForVicDuty: false }, inputs }, tables
+  ).upfront.detail.driveAway;
+  assert.equal(absent, explicit, 'absent must mean passenger car, as it did before the flag existed');
+});
