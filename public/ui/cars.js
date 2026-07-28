@@ -13,9 +13,24 @@ import { optionCosts, valueRatio } from '../../calc/compare.js';
 
 export function filterVehicles(vehicles, filters) {
   return vehicles.filter(v => {
+    // Read inline rather than importing data/schema.js's powertrainOf: that
+    // module is never served to the browser, so an import here would pass
+    // node --test and then 404 in the browser with nothing to catch it.
+    const isPhev = v.powertrain === 'phev';
+    // Opt-in. A plug-in hybrid is not an EV, does not get the FBT exemption,
+    // and would change every answer on the page for someone who never asked.
+    if (isPhev && !filters.includePhev) return false;
     if (filters.bodyTypes?.length && !filters.bodyTypes.includes(v.bodyType)) return false;
     if (filters.minBootLitres && v.bootLitresSeatsUp < filters.minBootLitres) return false;
-    if (filters.minRangeKm && v.rangeKm < filters.minRangeKm) return false;
+    // "Minimum range" means "how far before I have to stop", which for a
+    // plug-in hybrid is the tank as well as the battery. Its electric-only
+    // range answers a different question — the one minElectricRangeKm asks.
+    const rangeForFilter = isPhev ? (v.combinedRangeKm ?? v.rangeKm) : v.rangeKm;
+    if (filters.minRangeKm && rangeForFilter < filters.minRangeKm) return false;
+    // PHEVs only. A BEV's electric range is its whole range, so applying this
+    // to one would just be a second, stricter minRangeKm applied behind the
+    // user's back.
+    if (isPhev && filters.minElectricRangeKm && v.rangeKm < filters.minElectricRangeKm) return false;
     if (filters.seats && v.seats < filters.seats) return false;
     return true;
   });
@@ -73,6 +88,16 @@ export function cardModel(vehicle, families, context = null) {
     ? null
     : costs.novated.detail.resale >= balloon;
 
+  const powertrain = vehicle.powertrain ?? 'bev';
+  const phevIneligible = costs?.novated.detail.phevIneligible ?? false;
+  // Cards are banded on list price, so a PHEV can legitimately sit under
+  // "At your budget" while costing more per month than the budget allows —
+  // the budget was worked out from an FBT-exempt EV. Saying so on the card is
+  // what keeps the band label honest.
+  const novatedOverBudget = costs && typeof context?.monthlyBudget === 'number'
+    ? costs.novated.monthlyCost > context.monthlyBudget
+    : false;
+
   return {
     ...vehicle,
     summary: family?.summary ?? null,
@@ -81,7 +106,10 @@ export function cardModel(vehicle, families, context = null) {
     sources: family?.sources ?? [],
     costs,
     balloon,
-    balloonCovered
+    balloonCovered,
+    powertrain,
+    phevIneligible,
+    novatedOverBudget
   };
 }
 
@@ -104,6 +132,9 @@ function costTableMarkup(card) {
           <span class="car-costs__total">${entry.feasible ? money(entry.tco) : 'out of reach'}</span>
           ${entry.feasible && ratio !== null
             ? `<span class="car-costs__ratio">keeps ${Math.round(ratio * 100)}c of every $1</span>`
+            : ''}
+          ${option === 'novated' && card.novatedOverBudget
+            ? `<span class="cost-row__warn">over your budget</span>`
             : ''}
         </td>
       </tr>`;
@@ -152,8 +183,14 @@ export function renderCards(root, cards, emptyMessage) {
       <div class="car-body">
         ${card.bandLabel ? `<p class="car-card__band">${escapeHtml(card.bandLabel)}</p>` : ''}
         <h3>${escapeHtml(card.make)} ${escapeHtml(card.model)} ${escapeHtml(card.variant ?? '')}</h3>
-        <p class="car-specs">${card.bootLitresSeatsUp}L boot &middot; ${card.rangeKm}km range &middot; ${money(card.listPrice)}</p>
+        <p class="car-specs">${card.bootLitresSeatsUp}L boot &middot; ${
+          card.powertrain === 'phev'
+            ? `${card.rangeKm}km electric, ${card.combinedRangeKm}km combined`
+            : `${card.rangeKm}km range`
+        } &middot; ${money(card.listPrice)}</p>
         ${costTableMarkup(card)}
+        ${card.phevIneligible ? `<p class="car-phev-note">Plug-in hybrids lost the FBT exemption on
+          1 April 2025, so a novated lease costs far more than for an equivalent EV.</p>` : ''}
         ${card.reason ? `<p class="car-reason">${escapeHtml(card.reason)}</p>` : ''}
         ${card.otherTrimsText ? `<p class="car-other-trims">${escapeHtml(card.otherTrimsText)}</p>` : ''}
         ${card.summary ? `<details>

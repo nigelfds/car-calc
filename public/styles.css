@@ -1010,6 +1010,24 @@ input[type='date'],
   font-weight: 500;
 }
 
+/* A PHEV keeps its price band, banded on list price like everything else, so
+   this is the only place a real monthly cost above the budget surfaces. */
+.cost-row__warn {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--warn);
+  font-weight: 500;
+}
+
+/* Sits under the cost table rather than the specs line, because it explains
+   the novated figures just above it, not the car itself. */
+.car-phev-note {
+  margin: var(--space-2) 0 0;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--warn);
+}
+
 /* The cards are not in price order — the at-budget ones lead — so each says
    where it sits rather than leaving the reader to infer it from the sequence. */
 .car-card__band {
