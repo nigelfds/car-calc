@@ -1,0 +1,32 @@
+{
+  "id": "gwm-haval-h6-phev",
+  "summary": "The plug-in Haval H6 undercuts almost every mid-size PHEV rival while claiming 100-106km of electric range and a 560L boot, and the mid-2025 update added Australian-signed-off suspension tuning that reviewers agree fixed the previous car's biggest flaw. Testers are consistent that the powertrain is smooth and genuinely quick in 268kW Hi4 all-wheel-drive form, and equally consistent that the driver-assist and stability-control calibration still needs work. Its case rests on being charged nightly: with a flat battery it uses 5.4-6.7L/100km in Australian testing, which is no better than the cheaper non-plug-in H6 Hybrid.",
+  "pros": [
+    "Claims 106km of electric range (2WD) from a 19.09kWh LFP pack for $43,490 list - more than the $42,990 BYD Sealion 6 Essential's 92km, and enough that most Melbourne commuters would rarely start the engine",
+    "560L boot seats-up and 1445L folded, versus 425L in the BYD Sealion 6, and the floor-mounted pack costs it nothing against the petrol H6's seats-up figure",
+    "Seven-year/unlimited-km warranty with no dealer-servicing condition attached, plus separate eight-year/unlimited-km cover on the drive battery, against BYD's six years",
+    "DC fast charging at up to 34kW (30-80 per cent in under 30 minutes) is rare in a sub-$50,000 plug-in hybrid, so the battery can be topped up on a trip rather than only overnight",
+    "The $49,490 Ultra PHEV AWD's Hi4 dual-motor system makes 268kW/760Nm for a claimed 4.8sec 0-100km/h, quicker than any Sealion 6, and tows 1500kg braked"
+  ],
+  "cons": [
+    "The 1.0-1.1L/100km ADR label figure is meaningless once the battery is flat: Australian testers recorded 5.4L/100km (carsales), 5.8L/100km (Chasing Cars) and 6.2-6.7L/100km (CarExpert, CarsGuide), so a buyer without home charging is worse off than in the cheaper H6 Hybrid at 5.2L/100km",
+    "Electric range is quoted on the NEDC-derived ADR 81/02 cycle and no WLTP figure is published, and independent tests returned 89km (Chasing Cars) and 95.8km (carsales) against the 100-106km claim",
+    "Reviewers repeatedly flag the safety-system calibration: over-eager lane-keeping, and traction and stability control that carsales found cuts power abruptly in the wet",
+    "No spare wheel on any PHEV variant - a repair kit only - and kerb weight climbs to about 1980kg in Hi4 AWD form, roughly 250kg above the petrol H6",
+    "GWM sells almost exclusively on capped drive-away campaigns (the $43,490 Lux PHEV has been advertised at $40,990-$44,990 drive-away with a free wall charger), which supports the transaction price but not the resale value"
+  ],
+  "sources": [
+    "https://www.gwmanz.com/au/models/suv/haval-h6/powertrains/",
+    "https://www.carexpert.com.au/car-reviews/2026-gwm-haval-h6-ultra-phev-awd-review",
+    "https://www.carexpert.com.au/gwm/h6/phev-ultra/powertrain-and-performance",
+    "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/gwm-haval-h6-phev-2026-review-australian-first-drive/",
+    "https://www.carsales.com.au/editorial/details/gwm-haval-h6-ultra-phev-awd-2026-review-151766/",
+    "https://www.carsguide.com.au/ev/gwm-haval-h6-ultra-phev-awd-100053",
+    "https://www.carsguide.com.au/gwm/haval-h6/price/2026/ultra-phev-awd",
+    "https://www.racv.com.au/royalauto/car-reviews/gwm/2025-gwm-haval-h6-phev-review.html",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+    "https://www.ato.gov.au/tax-rates-and-codes/luxury-car-tax-rate-and-thresholds"
+  ],
+  "sourcedAt": "2026-07-28"
+}

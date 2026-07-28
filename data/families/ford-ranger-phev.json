@@ -1,0 +1,33 @@
+{
+  "id": "ford-ranger-phev",
+  "summary": "The plug-in hybrid Ranger keeps the hardware that makes the diesel version work — 3500kg braked towing, a full-size dual-cab tub and the same off-road gear — and adds a 6.9kW mains outlet that Australian reviewers rate as its single best feature. The compromise is an 11.8kWh battery: testers here recorded 27-34km of real electric range against Ford's 49km ADR claim, and once it is flat the 2.3-litre petrol drinks 7.0-10.5L/100km. Opinion splits on value: after Ford's mid-2026 repricing to $59,000-$70,000 drive-away it finally undercuts the BYD Shark 6, but that rival still carries roughly triple the battery.",
+  "pros": [
+    "Braked towing stays at 3500kg with a 6580kg gross combination mass, where the BYD Shark 6 PHEV is rated to 2500kg — it is the plug-in ute that can still pull a full-size caravan.",
+    "Pro Power Onboard supplies up to 6.9kW of 240V mains from the tub and cabin, which reviewers treat as a genuine replacement for a site generator or a camp setup.",
+    "Ford's MY26.5 repricing dropped the range to $59,000-$70,000 drive-away, about $10,000-$14,000 below the 2025 launch prices, and added an XL grade below where the range previously started.",
+    "Five years/unlimited km warranty with no condition to service inside the dealer network, an 8-year/160,000km battery warranty, and capped servicing at $399 per visit on 12-month/15,000km intervals."
+  ],
+  "cons": [
+    "The 11.8kWh battery is about a third of the BYD Shark 6's, and Australian testers recorded 27-34km of usable electric range against the 49km ADR claim.",
+    "AC charging only and capped at 3.5kW — roughly four hours from a wallbox, seven from a household socket, and no DC fast charging — so the economics collapse for anyone who cannot plug in at home overnight.",
+    "With the battery depleted, reviewers measured 7.0-10.5L/100km, and 9.3L/100km loaded to GVM, against the 2.9L/100km ADR label; on a long tow it is no cheaper to run than a V6 diesel Ranger.",
+    "The battery sits between the rear chassis rails and raises the tub floor about 27-31mm, and Ford advises against fitting an aftermarket tray or canopy — ruling out a standard trade fit-out.",
+    "Payload falls from 973kg on the entry grades to about 808kg on the heaviest, so an accessorised plug-in Ranger runs out of GVM well before the diesel does."
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2025-ford-ranger-phev-stormtrak-review",
+    "https://www.carexpert.com.au/car-news/updated-ford-ranger-hybrid-cheaper-than-byd-shark-6",
+    "https://www.carexpert.com.au/car-news/ford-ranger-phev-prices-cut-by-up-to-10000-other-rangers-get-4000-fuel-offer",
+    "https://www.carsguide.com.au/tradies/ford-ranger-xlt-phev-99811",
+    "https://www.carsguide.com.au/family/ford-ranger-stormtrak-phev-99721",
+    "https://www.carsales.com.au/editorial/details/ford-ranger-phev-stormtrak-2025-review-149634/",
+    "https://www.carsales.com.au/editorial/details/2026-ford-ranger-hybrid-range-slashes-prices-152054/",
+    "https://www.chasingcars.com.au/reviews/utes/ford-ranger-phev-2025-australian-first-drive/",
+    "https://www.4x4australia.com.au/reviews/2025-ford-ranger-phev-review",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2025-ford-ranger-phev-price-specs-release-date.html",
+    "https://www.mynrma.com.au/open-road/news/2025/2025-ford-ranger-phev-pricing-and-specs",
+    "https://media.ford.com/content/fordmedia/feu/en/news/2025/11/26/ford-expands-and-enhances-ranger-line-up.html",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

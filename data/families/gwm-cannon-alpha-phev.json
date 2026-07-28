@@ -1,0 +1,33 @@
+{
+  "id": "gwm-cannon-alpha-phev",
+  "summary": "Australian reviewers rate the Cannon Alpha PHEV as the most electric-capable dual-cab ute on sale here, pairing a 37.11kWh battery with a class-benchmark 3500kg braked tow rating that no other plug-in ute matches. They are equally unanimous that the 2810kg kerb weight blunts it, leaving a 685kg payload and body control that wallows next to a conventional diesel dual-cab. Verdicts split hard on whether the size and equipment justify the money — CarsGuide scores it 8.5 and calls it a genuine HiLux alternative, Chasing Cars gives it 6.5 for unpredictable throttle response and the full-size spare standing up in the tub — but every reviewer agrees the running-cost case collapses for a buyer who cannot charge at home.",
+  "pros": [
+    "Class-benchmark 3500kg braked towing across both grades, matching a diesel Ford Ranger or Toyota HiLux where most plug-in utes are rated to 2500kg, which is the single reason ute buyers look past a plug-in hybrid",
+    "The largest plug-in battery in any Australian ute at 37.11kWh: GWM claims 115km electric-only, though that is quoted on the superseded NEDC cycle and independent testers returned 85-100km from a full charge",
+    "7-year/unlimited-km unconditional warranty with no servicing strings attached, plus 8-year/unlimited-km battery cover and $4615 capped-price servicing across those seven years",
+    "50kW DC fast charging (30-80 per cent in about 24 minutes) is rare on a plug-in ute — the Ford Ranger PHEV is AC-only — and 6kW vehicle-to-load runs site tools off the traction battery",
+    "Five-star ANCAP (2024 criteria) and, at $59,990 before on-road costs for the Lux, roughly $12,000 under a Ford Ranger PHEV"
+  ],
+  "cons": [
+    "The 1.7L/100km label figure is meaningless once the battery is flat: GWM's own charge-sustaining number is 7.9L/100km, the NRMA measured 10-11L/100km on the motorway and over 15L/100km towing 2000kg, so a buyer without home charging is running a thirsty 2.8-tonne petrol ute",
+    "685kg payload falls well short of the one-tonne rating dual-cab buyers expect, and towing at the full 3500kg drops usable payload to about 435kg to stay inside the 6745kg GCM",
+    "Packaging the battery under the floor forces the full-size spare to stand upright in the tub, costing working floor space and fouling tonneau covers — CarsGuide, Chasing Cars and the NRMA all single this out",
+    "At 2810kg kerb it carries roughly half a tonne over a diesel dual-cab, and reviewers consistently describe loose body control, numb steering and a driver-monitoring system that is intrusive and hard to switch off",
+    "GWM has run repeated national drive-away campaigns on this ute (as low as $57,490 drive-away for the Lux, several thousand under a nominal drive-away price), which is good news at purchase and bad news for resale"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2025-gwm-cannon-alpha-phev-review",
+    "https://www.carexpert.com.au/gwm/cannon-alpha/ultra-phev/features-and-specs",
+    "https://www.carexpert.com.au/car-news/australias-cheapest-phev-ute-gets-even-cheaper",
+    "https://www.carsguide.com.au/tradies/gwm-cannon-alpha-ultra-phev-99244",
+    "https://www.carsguide.com.au/gwm/cannon-alpha/price/2026",
+    "https://www.carsguide.com.au/car-news/australias-only-hybrid-mid-size-ute-axed-as-2026-gwm-cannon-alpha-phev-takes-reins-as",
+    "https://www.chasingcars.com.au/reviews/utes/gwm-cannon-alpha-phev-2025-review-australian-first-drive/",
+    "https://www.mynrma.com.au/open-road/car-reviews/gwm/2025-gwm-cannon-alpha-phev-review",
+    "https://www.4x4australia.com.au/reviews/2025-gwm-cannon-alpha-phev-review",
+    "https://evcentral.com.au/2025-gwm-cannon-alpha-phev-review-plus-sized-plug-in-dual-cab-on-aussie-soil/",
+    "https://www.gwmanz.com/au/models/ute/cannon-alpha/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-07-28"
+}
