@@ -1,0 +1,27 @@
+[
+  {
+    "id": "skoda-kodiaq-phev-select",
+    "familyId": "skoda-kodiaq-phev",
+    "make": "Skoda",
+    "model": "Kodiaq",
+    "variant": "Select Plug-in Hybrid",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 63490,
+    "batteryKwh": 19.7,
+    "rangeKm": 110,
+    "consumptionKwhPer100km": 17.9,
+    "combinedRangeKm": 753,
+    "fuelConsumptionL100km": 7,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 745,
+    "bootLitresSeatsDown": 1945,
+    "seats": 5,
+    "towKg": 1800,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1900,
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
+    "sourcedAt": "2026-07-28"
+  }
+]

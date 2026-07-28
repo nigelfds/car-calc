@@ -1,0 +1,38 @@
+{
+  "id": "jaecoo-j8-shs",
+  "summary": "The J8 SHS Summit is Jaecoo's flagship and its first car above $50,000: a single $59,990 seven-seat plug-in hybrid with a 34.5kWh battery, 315kW/580Nm from a 1.5-litre turbo and three motors, and a 70-litre tank that stretches combined range past 1,100km. Australian reviewers agree the equipment list and the electric range are extraordinary for the money — CarExpert measured 124km on a charge against a 134km WLTP figure — and equally agree the chassis is the weak point, describing a floaty, under-damped ride, heavy body roll and steering with no meaningful feel, none of it locally tuned. The third row is the other consistent objection: it is a 5+2 with no airbag coverage, no ISOFIX and roadside-only access, where the BYD Sealion 8 gives you all three.",
+  "pros": [
+    "134km of WLTP electric range from a 34.5kWh usable battery — roughly double the BYD Sealion 8's electric range and enough that most owners will only burn petrol on trips, with CarExpert observing 124km from a full charge in Australian conditions",
+    "70kW DC fast charging plus 6.6kW AC, where the BYD Sealion 8, Mitsubishi Outlander PHEV and Mazda CX-80 PHEV have no DC capability at all, so a mid-trip top-up takes about 25 minutes rather than an overnight plug-in",
+    "Eight-year/unlimited-kilometre vehicle warranty with no dealer-servicing exclusivity condition, matched by an eight-year unlimited-kilometre high-voltage battery warranty guaranteeing 70 per cent residual capacity, and eight years of capped-price servicing averaging about $485 a year",
+    "315kW/580Nm and a claimed 5.8-second 0-100km/h make it quicker than a Sealion 8 Premium AWD while towing 1600kg braked, and at $59,990 it sits $24,000 below the fuel-efficient LCT threshold so no luxury car tax applies",
+    "2021 litres of cargo space with both rear rows folded, and a 738-litre load bay with just the third row down — genuinely van-like for a $60,000 seven-seater"
+  ],
+  "cons": [
+    "Only 200 litres behind the third row when all seven seats are in use — less than a Toyota Corolla's boot, and well down on the Sealion 8's 270 litres, so it cannot carry seven people and their luggage",
+    "The 1.2L/100km ADR combined label is meaningless as a running cost: CarExpert measured 6.6L/100km once the battery was flat and closer to 10L/100km in stop-start city driving, so a buyer without home charging is running a 2275kg SUV on a 1.5-litre engine at large-petrol-SUV consumption",
+    "Reviewers are unanimous on the chassis — CarsGuide calls the ride wallowy and floaty with excessive bounce over speed bumps, carsales criticises the body roll, vague steering and poor bump absorption, and EV Central found the steering too light for anything but town work; there is no Australian suspension tuning",
+    "The third row has no airbag coverage and no child-seat anchor points, headroom suits nobody taller than an average 10-year-old, and the single-fold middle seat is on the traffic side rather than the kerb side — the Sealion 8 offers third-row ISOFIX and dedicated rear climate controls",
+    "Jaecoo's electric range is quoted only as 169km NEDC in Australia, with no local WLTP homologation published; the 134km figure here comes from the identical UK-market Jaecoo 8 SHS-P, and the brand's Australian resale record above $50,000 is entirely unproven"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-jaecoo-j8-shs-prices-chinese-large-suv-gets-seven-seats-phev-powertrain",
+    "https://www.carexpert.com.au/car-reviews/2026-jaecoo-j8-shs-review",
+    "https://www.carexpert.com.au/car-news/2026-jaecoo-j8-price-and-specs",
+    "https://www.carsguide.com.au/ev/jaecoo-j8-summit-shs-102208",
+    "https://www.carsguide.com.au/jaecoo/j8/fuel-consumption",
+    "https://www.carsguide.com.au/jaecoo/j8/boot-space",
+    "https://www.carsales.com.au/editorial/details/jaecoo-j8-summit-shs-2026-review-152515/",
+    "https://www.carsales.com.au/research/jaecoo/j8/2026/shs-summit/",
+    "https://www.carsales.com.au/editorial/details/2026-jaecoo-j8-summit-shs-inbound-152372/",
+    "https://evcentral.com.au/2026-jaecoo-j8-shs-priced-for-australia-315kw-seven-seat-plug-in-hybrid-suv-arrives-to-take-on-byd-sealion-8-toyota-kluger-and-many-many-more/",
+    "https://evcentral.com.au/2026-jaecoo-j8-shs-phev-brief-drive-with-such-luxe-features-should-you-care-how-it-drives/",
+    "https://www.omodajaecoo.com.au/models/jaecoo-j8-shs",
+    "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+    "https://www.autoexpress.co.uk/jaecoo/8",
+    "https://www.carwow.co.uk/jaecoo/8",
+    "https://www.electrifying.com/reviews/jaecoo/8-1/review",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

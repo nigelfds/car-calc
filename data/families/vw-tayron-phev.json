@@ -1,0 +1,33 @@
+{
+  "id": "vw-tayron-phev",
+  "summary": "The Tayron eHybrid is the long-wheelbase Tiguan's plug-in sibling, and in Australia it arrives as two front-wheel-drive grades sharing a 19.7kWh usable battery good for a claimed 113-116km of WLTP electric range — among the longest of any plug-in hybrid on sale here, and enough that most Melbourne commuters would run it as an EV during the week. Reviewers are consistent about the appeal: a 705-litre boot, DC fast charging and genuinely usable EV range at $62,390, which undercuts a Mitsubishi Outlander PHEV Exceed. They are equally consistent about the catch — the battery sits where the third row would go, so unlike every petrol Tayron the eHybrid is a five-seater only, and CarExpert judged it less polished than the smaller Tiguan eHybrid it is based on.",
+  "pros": [
+    "113-116km of WLTP electric range from a 19.7kWh usable battery is the longest in the mainstream plug-in SUV class — a Mitsubishi Outlander PHEV claims 86km and a Mazda CX-60 PHEV 76km — and CarExpert covered a 50km loop at an indicated 0.0L/100km on battery alone",
+    "705 litres of boot with the pack installed beats a Hyundai Santa Fe Hybrid's 628 litres, and 1,915 litres with the rear seats folded is genuinely van-like for the class",
+    "40kW DC fast charging (10-80 per cent in about 30 minutes) plus 11kW AC is rare on a plug-in hybrid — the Outlander PHEV has no 11kW AC and most rivals have no DC capability at all",
+    "Volkswagen Australia's five-year unlimited-kilometre warranty is unconditional, not tied to servicing inside the dealer network, and the high-voltage battery is separately covered for 8 years/160,000km",
+    "Both grades sit below the $80,809 ordinary LCT threshold and rate 38-40g/km CO2 on the combined cycle, well inside Victoria's 120g/km green passenger car test, so no luxury car tax applies and stamp duty is charged at the flat $8.40 per $200 green rate"
+  ],
+  "cons": [
+    "The battery occupies the third-row well, so neither eHybrid grade can be had with seven seats — every petrol Tayron from the $48,950 110TSI Life up can, which makes the plug-in the wrong car for the family the nameplate is otherwise aimed at",
+    "The 1.7-1.8L/100km label figure assumes you start every trip charged; once the battery is flat it is a 1.5-litre turbo hauling about 1,930kg, and UK testing puts it at roughly 40-45mpg (6.3-7.1L/100km), so the running-cost case collapses for a buyer without home charging",
+    "Front-wheel drive only — there is no 4MOTION eHybrid — and NRMA found the 1.5-litre engine feels underdone against the kerb weight once it is doing the work on its own",
+    "The 200TSI R-Line asks a $14,160 premium over the 150TSI Elegance for 50kW, a 200kg-higher tow rating and trim, and it crosses the $75,000 mark that the 2027 FBT cap is set at",
+    "The plug-in hybrid FBT exemption ended on 1 April 2025, so the novated-lease advantage that made earlier PHEVs compelling no longer applies to this car at all"
+  ],
+  "sources": [
+    "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+    "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tayron-ehybrid-review",
+    "https://www.carexpert.com.au/car-news/2026-volkswagen-tiguan-tayron-ehybrid-priced-brands-most-affordable-phevs-yet",
+    "https://www.carsales.com.au/editorial/details/volkswagen-tayron-ehybrid-2026-review-152151/",
+    "https://www.carsales.com.au/research/volkswagen/tayron/2026/200tsi-ehybrid-r-line/",
+    "https://www.mynrma.com.au/open-road/car-reviews/volkswagen/2026-volkswagen-tayron-ehybrid-review",
+    "https://www.chasingcars.com.au/news/new-car-prices/volkswagen-tiguan-and-tayron-ehybrid-2026-sharp-pricing-for-midsize-euros-undercuts-key-rival-mitsubishi-but-no-seven-seater-will-be-offered/",
+    "https://www.volkswagen-newsroom.com/en/the-new-tayron-media-drive-19011/engine-versions-19014",
+    "https://www.completecar.ie/car-reviews/article/Volkswagen/Tayron/Tayron_eHybrid_(2025)/2527/13957/2025-Volkswagen-Tayron-eHybrid-(2025)-review.html",
+    "https://www.rac.co.uk/drive/car-reviews/volkswagen/tayron/tayron/",
+    "https://www.volkswagen.com.au/en/owners-service/warranty.html",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

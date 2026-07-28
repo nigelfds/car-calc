@@ -1,0 +1,37 @@
+{
+  "id": "chery-tiggo-9-phev",
+  "summary": "The Tiggo 9 Super Hybrid is Chery Australia's flagship: a 4.8-metre seven-seat plug-in hybrid sold only as a PHEV here, in a 225kW front-drive Elite at $52,990 and a 315kW all-wheel-drive Ultimate at $59,990 before on-road costs. Australian reviewers are close to unanimous that the powertrain is the story — the Ultimate's 34.5kWh pack returns a genuine 146km WLTP electric range that testers repeatedly measured at 138-145km, and 71kW DC charging is something no Outlander PHEV or BYD Sealion 6 offers. Where they diverge is the body around it: CarExpert, carsales and the NRMA rate the equipment and refinement well above the price, while CarsGuide, Chasing Cars and bttr.reviews mark down a third row with no airbag coverage, a floaty 20-inch ride and hard interior plastics, and there is still no ANCAP rating.",
+  "pros": [
+    "146km of WLTP electric range on the Ultimate — the longest of any plug-in hybrid on sale in Australia and roughly double a Mitsubishi Outlander PHEV's 84km — from a 34.5kWh CATL NMC pack, with Australian testers independently recording 138km, 143km and 145km before the engine started",
+    "71kW DC fast charging (30-80 per cent in about 18 minutes) plus 6.6kW AC and 6.6kW vehicle-to-load, where the Outlander PHEV, Kia Sorento PHEV and BYD Sealion 6 offer no meaningful DC capability at all",
+    "Seven-year/unlimited-kilometre warranty with no dealer-servicing-exclusivity condition, a separate eight-year/unlimited-kilometre high-voltage battery warranty, and seven years of capped-price servicing totalling about $3,174",
+    "315kW/580Nm and 0-100km/h in 5.4 seconds in the Ultimate, with a 1500kg braked tow rating and a 70-litre tank, where the Tiggo 7 and Tiggo 8 Super Hybrids are not rated to tow anything braked at all",
+    "At $59,990 the top Ultimate sits nearly $21,000 below the ordinary $80,809 LCT threshold and undercuts a seven-seat Kia Sorento PHEV by roughly $25,000, so no luxury car tax is payable on either grade"
+  ],
+  "cons": [
+    "Only 143 litres of boot with all seven seats up — less than a Kia Sorento's 179 litres and a Mitsubishi Outlander PHEV's 191 litres — and the curtain airbags do not extend to the third row, which CarExpert and carsales both call an outright oversight; there is no ANCAP rating for the Tiggo 9 either way",
+    "The 1.3-1.4L/100km combined label figure is a fiction for anyone who cannot charge: Australian testers measured 5.9L/100km (carsales), 6.3L/100km (CarExpert) and 7.1L/100km (CarsGuide) once the battery was flat, and the car demands 95-octane premium, so a 2.2-tonne SUV with no home charger costs about the same to fuel as a petrol Kluger",
+    "Reviewers are consistent that the Ultimate's 20-inch wheels leave the ride busy over sharp edges with excessive body pitch, that the steering is over-light beyond 80km/h, and that the cabin mixes a good 15.6-inch screen with obviously cheap hard plastics",
+    "Third-row access is awkward and kerbside-biased, the boot floor does not lie flat with the third row folded, and neither grade carries a spare wheel — the repair kit is velcroed to the boot carpet with no dedicated stowage for it or the charging cable",
+    "The Elite arrived in May 2026 at $7,000 under the Ultimate that launched six months earlier, and Chery discounts hard on national drive-away campaigns, so residual values for both grades are unproven and the depreciation assumption here is inherited from the Tiggo 7 and Tiggo 8 rather than observed"
+  ],
+  "sources": [
+    "https://cherymotor.com.au/models/tiggo-9-super-hybrid",
+    "https://cherymotor.com.au/news/chery-announces-price-and-spec-incoming-tiggo-9-super-hybrid",
+    "https://www.carexpert.com.au/car-news/2026-chery-tiggo-9-price-and-specs",
+    "https://www.carexpert.com.au/car-news/2026-chery-tiggo-9-elite-prices-chinese-brands-largest-suv-just-got-cheaper",
+    "https://www.carexpert.com.au/car-reviews/2026-chery-tiggo-9-review",
+    "https://www.carsales.com.au/editorial/details/chery-tiggo-9-super-hybrid-2026-review-151799/",
+    "https://www.carsguide.com.au/ev/chery-tiggo-9-super-hybrid-ultimate-100341",
+    "https://www.carsguide.com.au/family/chery-tiggo-9-super-hybrid-elite-fwd-101992",
+    "https://www.carsguide.com.au/chery/tiggo-9/boot-space",
+    "https://www.mynrma.com.au/open-road/car-reviews/chery/2026-chery-tiggo-9-review",
+    "https://www.bttr.reviews/chery-tiggo-9-super-hybrid-ultimate-awd-review/",
+    "https://www.cherycar.co.uk/models/tiggo-9-csh",
+    "https://www.parkers.co.uk/chery/tiggo-9/review/mpg-running-costs/",
+    "https://www.autocar.co.uk/car-news/new-cars/chery-tiggo-9-422bhp-seven-seat-phev-offers-91-mile-ev-range-%C2%A343k",
+    "https://data.carnewschina.com/database/chery/chery-tiggo-9-c-dm/2026/params",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

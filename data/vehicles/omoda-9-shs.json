@@ -1,0 +1,27 @@
+[
+  {
+    "id": "omoda-9-shs-virtue",
+    "familyId": "omoda-9-shs",
+    "make": "Omoda",
+    "model": "9",
+    "variant": "SHS Virtue AWD",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 61990,
+    "batteryKwh": 34.46,
+    "rangeKm": 145,
+    "consumptionKwhPer100km": 23.8,
+    "combinedRangeKm": 1145,
+    "fuelConsumptionL100km": 7,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 660,
+    "bootLitresSeatsDown": 1783,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 8,
+    "insuranceAnnual": 2000,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-28"
+  }
+]

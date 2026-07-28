@@ -1,0 +1,32 @@
+{
+  "id": "skoda-kodiaq-phev",
+  "summary": "The Kodiaq Select Plug-in Hybrid is the only plug-in grade in Skoda Australia's large-SUV range, and its 19.7kWh usable battery and 110km WLTP electric range are the longest of any plug-in SUV under $70,000 here — enough that a Melbourne commuter with home charging would rarely wake the 1.5-litre engine. Reviewers are near-unanimous that the drivetrain is smooth and the cabin genuinely large, and equally unanimous on the catch: this is the one Kodiaq you cannot have with seven seats or all-wheel drive, because the battery sits where the third row goes. Where they split is value — CarExpert notes the $8,500 premium over the petrol Select 4x4 buys you fewer seats and less traction, while Chasing Cars still calls it easy to recommend against a Mitsubishi Outlander PHEV or BYD Sealion 6.",
+  "pros": [
+    "110km of WLTP electric range from a 19.7kWh usable battery is the longest in the mainstream plug-in SUV class — Mitsubishi Outlander PHEV claims 86km, BYD Sealion 6 81km and Mazda CX-60 PHEV 76km",
+    "50kW DC fast charging (10-80 per cent in 25 minutes) plus 11kW AC is unusual on a plug-in hybrid; neither the Outlander PHEV nor the Sealion 6 can take DC at all",
+    "Seven-year, unlimited-kilometre warranty applies with no strings — Skoda Australia made it standard across the range in September 2022 and it is not tied to buying a service pack or servicing inside the dealer network; the high-voltage battery is separately covered for 8 years/160,000km",
+    "745 litres behind the second row and 1,945 litres with it folded is more usable space than most five-seat rivals, and the second row slides and reclines",
+    "At $63,490 before on-roads it sits below the $80,809 ordinary LCT threshold, and at 42g/km CO2 it clears Victoria's 120g/km green passenger car test, so stamp duty is charged at the flat green rate"
+  ],
+  "cons": [
+    "Five seats only — the battery occupies the third-row well, so the one Kodiaq a large family would most want is the one that cannot carry seven; the petrol Select, Sportline and RS all seat seven and even the cheaper mild-hybrid offers a seven-seat option for $2,000",
+    "The 1.9L/100km label figure only survives if you plug in every night; Chasing Cars measured roughly 800km from the 45-litre tank with a brimmed battery on an interstate run, and UK owners report 32-40mpg (7-8.8L/100km) once the battery is flat, so the economics collapse for a buyer who cannot charge at home",
+    "Front-wheel drive only and 1,800kg braked towing, against 4x4 and 2,300kg on every petrol Kodiaq — CarExpert lists 'loses all-wheel drive' among its three headline dislikes",
+    "No spare wheel: the PHEV gets a tyre inflation kit where every other Kodiaq gets a space-saver, and it also loses the head-up display and the 289-litre third-row boot area",
+    "Plug-in hybrids lost the FBT exemption on 1 April 2025, and Skoda Australia is already advertising the car at $59,990 drive-away against a $68,990 launch drive-away published in its own April 2026 spec sheet — roughly $9,000 off within months of launch, which is a real resale-value warning"
+  ],
+  "sources": [
+    "https://www.skoda.com.au/models/kodiaq-family/kodiaq-phev",
+    "https://www.skoda.com.au/own/warranty",
+    "https://www.carexpert.com.au/car-reviews/2026-skoda-kodiaq-select-phev-review",
+    "https://www.carexpert.com.au/car-news/2026-skoda-kodiaq-phev-priced-for-australia",
+    "https://www.chasingcars.com.au/reviews/large-suvs/skoda-kodiaq-select-phev-2026-review/",
+    "https://www.carsales.com.au/editorial/details/skoda-kodiaq-phev-2026-review-151667/",
+    "https://www.carsguide.com.au/skoda/kodiaq/price/2026",
+    "https://cdn.skoda-storyboard.com/2024/04/TD_Kodiaq_PHEV_EN_ca44c6d3.pdf",
+    "https://www.autoexpress.co.uk/skoda/kodiaq/364193/skoda-kodiaq-iv-review-class-leading-large-suv-gets-plug-hybrid-power",
+    "https://www.ancap.com.au/safety-ratings/skoda/kodiaq/cd78ac",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-07-28"
+}

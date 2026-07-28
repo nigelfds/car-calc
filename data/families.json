@@ -542,6 +542,43 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "chery-tiggo-9-phev",
+    "summary": "The Tiggo 9 Super Hybrid is Chery Australia's flagship: a 4.8-metre seven-seat plug-in hybrid sold only as a PHEV here, in a 225kW front-drive Elite at $52,990 and a 315kW all-wheel-drive Ultimate at $59,990 before on-road costs. Australian reviewers are close to unanimous that the powertrain is the story — the Ultimate's 34.5kWh pack returns a genuine 146km WLTP electric range that testers repeatedly measured at 138-145km, and 71kW DC charging is something no Outlander PHEV or BYD Sealion 6 offers. Where they diverge is the body around it: CarExpert, carsales and the NRMA rate the equipment and refinement well above the price, while CarsGuide, Chasing Cars and bttr.reviews mark down a third row with no airbag coverage, a floaty 20-inch ride and hard interior plastics, and there is still no ANCAP rating.",
+    "pros": [
+      "146km of WLTP electric range on the Ultimate — the longest of any plug-in hybrid on sale in Australia and roughly double a Mitsubishi Outlander PHEV's 84km — from a 34.5kWh CATL NMC pack, with Australian testers independently recording 138km, 143km and 145km before the engine started",
+      "71kW DC fast charging (30-80 per cent in about 18 minutes) plus 6.6kW AC and 6.6kW vehicle-to-load, where the Outlander PHEV, Kia Sorento PHEV and BYD Sealion 6 offer no meaningful DC capability at all",
+      "Seven-year/unlimited-kilometre warranty with no dealer-servicing-exclusivity condition, a separate eight-year/unlimited-kilometre high-voltage battery warranty, and seven years of capped-price servicing totalling about $3,174",
+      "315kW/580Nm and 0-100km/h in 5.4 seconds in the Ultimate, with a 1500kg braked tow rating and a 70-litre tank, where the Tiggo 7 and Tiggo 8 Super Hybrids are not rated to tow anything braked at all",
+      "At $59,990 the top Ultimate sits nearly $21,000 below the ordinary $80,809 LCT threshold and undercuts a seven-seat Kia Sorento PHEV by roughly $25,000, so no luxury car tax is payable on either grade"
+    ],
+    "cons": [
+      "Only 143 litres of boot with all seven seats up — less than a Kia Sorento's 179 litres and a Mitsubishi Outlander PHEV's 191 litres — and the curtain airbags do not extend to the third row, which CarExpert and carsales both call an outright oversight; there is no ANCAP rating for the Tiggo 9 either way",
+      "The 1.3-1.4L/100km combined label figure is a fiction for anyone who cannot charge: Australian testers measured 5.9L/100km (carsales), 6.3L/100km (CarExpert) and 7.1L/100km (CarsGuide) once the battery was flat, and the car demands 95-octane premium, so a 2.2-tonne SUV with no home charger costs about the same to fuel as a petrol Kluger",
+      "Reviewers are consistent that the Ultimate's 20-inch wheels leave the ride busy over sharp edges with excessive body pitch, that the steering is over-light beyond 80km/h, and that the cabin mixes a good 15.6-inch screen with obviously cheap hard plastics",
+      "Third-row access is awkward and kerbside-biased, the boot floor does not lie flat with the third row folded, and neither grade carries a spare wheel — the repair kit is velcroed to the boot carpet with no dedicated stowage for it or the charging cable",
+      "The Elite arrived in May 2026 at $7,000 under the Ultimate that launched six months earlier, and Chery discounts hard on national drive-away campaigns, so residual values for both grades are unproven and the depreciation assumption here is inherited from the Tiggo 7 and Tiggo 8 rather than observed"
+    ],
+    "sources": [
+      "https://cherymotor.com.au/models/tiggo-9-super-hybrid",
+      "https://cherymotor.com.au/news/chery-announces-price-and-spec-incoming-tiggo-9-super-hybrid",
+      "https://www.carexpert.com.au/car-news/2026-chery-tiggo-9-price-and-specs",
+      "https://www.carexpert.com.au/car-news/2026-chery-tiggo-9-elite-prices-chinese-brands-largest-suv-just-got-cheaper",
+      "https://www.carexpert.com.au/car-reviews/2026-chery-tiggo-9-review",
+      "https://www.carsales.com.au/editorial/details/chery-tiggo-9-super-hybrid-2026-review-151799/",
+      "https://www.carsguide.com.au/ev/chery-tiggo-9-super-hybrid-ultimate-100341",
+      "https://www.carsguide.com.au/family/chery-tiggo-9-super-hybrid-elite-fwd-101992",
+      "https://www.carsguide.com.au/chery/tiggo-9/boot-space",
+      "https://www.mynrma.com.au/open-road/car-reviews/chery/2026-chery-tiggo-9-review",
+      "https://www.bttr.reviews/chery-tiggo-9-super-hybrid-ultimate-awd-review/",
+      "https://www.cherycar.co.uk/models/tiggo-9-csh",
+      "https://www.parkers.co.uk/chery/tiggo-9/review/mpg-running-costs/",
+      "https://www.autocar.co.uk/car-news/new-cars/chery-tiggo-9-422bhp-seven-seat-phev-offers-91-mile-ev-range-%C2%A343k",
+      "https://data.carnewschina.com/database/chery/chery-tiggo-9-c-dm/2026/params",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
     "id": "cupra-formentor-phev",
     "summary": "The Formentor VZe is the sole plug-in hybrid in Cupra's coupe-styled small SUV range, and the MY26 update roughly doubled its battery to 20kWh usable for a claimed 114km of WLTP electric range — enough that most Melbourne commuters would rarely start the 1.5-litre engine. Reviewers agree the second-generation drivetrain is smooth and genuinely quick at 200kW, but they split on whether it is worth $68,990: CarExpert found it the least resolved car in the range to drive, with heavy steering and a soft-front/stiff-rear ride, and pointed buyers at a Skoda Kodiaq PHEV for similar range and more space. The recurring practical complaint is that the battery costs it a third of its boot and its spare wheel.",
     "pros": [
@@ -956,6 +993,44 @@
       "https://www.omodajaecoo.com.au/models/jaecoo-j7-shs",
       "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "jaecoo-j8-shs",
+    "summary": "The J8 SHS Summit is Jaecoo's flagship and its first car above $50,000: a single $59,990 seven-seat plug-in hybrid with a 34.5kWh battery, 315kW/580Nm from a 1.5-litre turbo and three motors, and a 70-litre tank that stretches combined range past 1,100km. Australian reviewers agree the equipment list and the electric range are extraordinary for the money — CarExpert measured 124km on a charge against a 134km WLTP figure — and equally agree the chassis is the weak point, describing a floaty, under-damped ride, heavy body roll and steering with no meaningful feel, none of it locally tuned. The third row is the other consistent objection: it is a 5+2 with no airbag coverage, no ISOFIX and roadside-only access, where the BYD Sealion 8 gives you all three.",
+    "pros": [
+      "134km of WLTP electric range from a 34.5kWh usable battery — roughly double the BYD Sealion 8's electric range and enough that most owners will only burn petrol on trips, with CarExpert observing 124km from a full charge in Australian conditions",
+      "70kW DC fast charging plus 6.6kW AC, where the BYD Sealion 8, Mitsubishi Outlander PHEV and Mazda CX-80 PHEV have no DC capability at all, so a mid-trip top-up takes about 25 minutes rather than an overnight plug-in",
+      "Eight-year/unlimited-kilometre vehicle warranty with no dealer-servicing exclusivity condition, matched by an eight-year unlimited-kilometre high-voltage battery warranty guaranteeing 70 per cent residual capacity, and eight years of capped-price servicing averaging about $485 a year",
+      "315kW/580Nm and a claimed 5.8-second 0-100km/h make it quicker than a Sealion 8 Premium AWD while towing 1600kg braked, and at $59,990 it sits $24,000 below the fuel-efficient LCT threshold so no luxury car tax applies",
+      "2021 litres of cargo space with both rear rows folded, and a 738-litre load bay with just the third row down — genuinely van-like for a $60,000 seven-seater"
+    ],
+    "cons": [
+      "Only 200 litres behind the third row when all seven seats are in use — less than a Toyota Corolla's boot, and well down on the Sealion 8's 270 litres, so it cannot carry seven people and their luggage",
+      "The 1.2L/100km ADR combined label is meaningless as a running cost: CarExpert measured 6.6L/100km once the battery was flat and closer to 10L/100km in stop-start city driving, so a buyer without home charging is running a 2275kg SUV on a 1.5-litre engine at large-petrol-SUV consumption",
+      "Reviewers are unanimous on the chassis — CarsGuide calls the ride wallowy and floaty with excessive bounce over speed bumps, carsales criticises the body roll, vague steering and poor bump absorption, and EV Central found the steering too light for anything but town work; there is no Australian suspension tuning",
+      "The third row has no airbag coverage and no child-seat anchor points, headroom suits nobody taller than an average 10-year-old, and the single-fold middle seat is on the traffic side rather than the kerb side — the Sealion 8 offers third-row ISOFIX and dedicated rear climate controls",
+      "Jaecoo's electric range is quoted only as 169km NEDC in Australia, with no local WLTP homologation published; the 134km figure here comes from the identical UK-market Jaecoo 8 SHS-P, and the brand's Australian resale record above $50,000 is entirely unproven"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-jaecoo-j8-shs-prices-chinese-large-suv-gets-seven-seats-phev-powertrain",
+      "https://www.carexpert.com.au/car-reviews/2026-jaecoo-j8-shs-review",
+      "https://www.carexpert.com.au/car-news/2026-jaecoo-j8-price-and-specs",
+      "https://www.carsguide.com.au/ev/jaecoo-j8-summit-shs-102208",
+      "https://www.carsguide.com.au/jaecoo/j8/fuel-consumption",
+      "https://www.carsguide.com.au/jaecoo/j8/boot-space",
+      "https://www.carsales.com.au/editorial/details/jaecoo-j8-summit-shs-2026-review-152515/",
+      "https://www.carsales.com.au/research/jaecoo/j8/2026/shs-summit/",
+      "https://www.carsales.com.au/editorial/details/2026-jaecoo-j8-summit-shs-inbound-152372/",
+      "https://evcentral.com.au/2026-jaecoo-j8-shs-priced-for-australia-315kw-seven-seat-plug-in-hybrid-suv-arrives-to-take-on-byd-sealion-8-toyota-kluger-and-many-many-more/",
+      "https://evcentral.com.au/2026-jaecoo-j8-shs-phev-brief-drive-with-such-luxe-features-should-you-care-how-it-drives/",
+      "https://www.omodajaecoo.com.au/models/jaecoo-j8-shs",
+      "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+      "https://www.autoexpress.co.uk/jaecoo/8",
+      "https://www.carwow.co.uk/jaecoo/8",
+      "https://www.electrifying.com/reviews/jaecoo/8-1/review",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
     "sourcedAt": "2026-07-28"
   },
@@ -1577,6 +1652,41 @@
     "sourcedAt": "2026-07-27"
   },
   {
+    "id": "omoda-9-shs",
+    "summary": "The Omoda 9 SHS is Chery's flagship in Australia and is sold here in a single $61,990 Virtue AWD grade, pairing a 1.5-litre turbo petrol with three electric motors for 395kW, a 4.9-second 0-100km/h claim and 145km of WLTP electric range from a 34.46kWh battery — roughly double the electric range of a BYD Sealion 6 or Mitsubishi Outlander PHEV for similar money. Australian reviewers are consistent that the powertrain, equipment list and cabin quality are the strongest part of the car and that the chassis is not: CarExpert, CarsGuide, Chasing Cars and carsales all criticise vague steering, loose body control and a busy, head-tossing ride, and none rates it as a genuine premium drive. It is a compelling equipment-and-range package with a hard ceiling on driving polish, and with no resale history in a brand that launched here in 2025.",
+    "pros": [
+      "145km of WLTP electric-only range from a 34.46kWh usable battery — around double a BYD Sealion 6 Premium AWD (81km) or a Mitsubishi Outlander PHEV, and enough that most Melbourne buyers would rarely start the engine",
+      "395kW/650Nm from a 1.5-litre turbo petrol and three motors gives a claimed 4.9-second 0-100km/h, quicker than any PHEV SUV near the price and quicker than most $100k performance SUVs",
+      "70kW DC fast charging (30-80 per cent in about 25 minutes) plus 6.6kW AC — the Sealion 6 and Outlander PHEV have no DC capability at all, so an Omoda 9 can top up its electric range on a road trip",
+      "Eight-year/unlimited-kilometre vehicle warranty with a matching eight-year/unlimited-kilometre high-voltage battery warranty guaranteeing at least 70 per cent residual capacity, plus eight years of capped-price servicing ($3343 total) and roadside assistance",
+      "1500kg braked towing and a 660-litre boot (1783 litres folded) — the Jaecoo J7 SHS has no braked tow rating at all and only 340 litres, and the seven-seat Chery Tiggo 8 PHEV leaves just 117 litres behind its third row"
+    ],
+    "cons": [
+      "Omoda's own figure for a depleted battery is 7.0L/100km, not the 1.4L/100km combined label, and a 2000km European test returned 7.2L/100km — a 2.2-tonne AWD SUV on 95-octane premium, so the running-cost case collapses for anyone who cannot charge at home",
+      "Ride and steering are the near-universal complaint: CarExpert calls it a 'bouncy, head-tossing ride', CarsGuide marks it down for 'vague steering' and 'lacking body control', and Chasing Cars describes the steering as 'numb and lifeless' — it does not drive like the premium car its price and equipment imply",
+      "Five seats only, where a Chery Tiggo 8 Super Hybrid at $42,990 and several rivals at this money seat seven, and the front seats lack height and tilt adjustment despite being power-operated",
+      "Omoda launched in Australia in 2025 with one model and a small dealer network, and the flagship is already being advertised with a $5000 factory bonus — resale is unproven and the transaction price keeps resetting, which is why a steeper-than-average depreciation curve is assumed here",
+      "Only one grade is offered, so there is no cheaper way into the nameplate: the choice is $61,990 or nothing, roughly $20,000 above the closely related Jaecoo J7 SHS Track"
+    ],
+    "sources": [
+      "https://www.omodajaecoo.com.au/models/omoda-9",
+      "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+      "https://www.carexpert.com.au/car-news/2025-omoda-9-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2025-omoda-9-review",
+      "https://www.carsguide.com.au/ev/omoda-9-99281",
+      "https://www.carsguide.com.au/family/omoda-9-virtue-shs-awd-101089",
+      "https://www.carsguide.com.au/omoda/omoda-9/price/2026",
+      "https://www.carsales.com.au/editorial/details/omoda-9-virtue-2026-review-151140/",
+      "https://www.carsales.com.au/research/omoda/omoda-9/",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/omoda-9-virtue-shs-2025-review/",
+      "https://www.exhaustnotes.com.au/2025-omoda-9-virtue-shs-car-review/",
+      "https://www.completecar.ie/car-reviews/article/Omoda/9/9_SHS_(2025)/2560/14172/2025-Omoda-9-SHS-(2025)-review.html",
+      "https://omodaauto.co.uk/news/one-charge-one-tank-nine-countries-omoda-9-shs/",
+      "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
     "id": "polestar-4",
     "summary": "The Polestar 4 is a coupe-styled mid-size electric SUV that Australian reviewers rate highly for its involving, well-composed driving manners, spacious and upmarket cabin, and genuinely competitive pricing against premium rivals like the Porsche Macan Electric. Its standout talking point is the deletion of a conventional rear window in favour of a camera-fed digital mirror, a decision reviewers describe as a workable, even class-leading, trade for headroom but not a universally comfortable one. Value is undercut by a lengthy, pricey options list and a control layout that pushes nearly everything through the touchscreen.",
     "pros": [
@@ -1687,6 +1797,38 @@
       "https://www.skoda.com.au/models/enyaq-family/enyaq-coupe-sportline"
     ],
     "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "skoda-kodiaq-phev",
+    "summary": "The Kodiaq Select Plug-in Hybrid is the only plug-in grade in Skoda Australia's large-SUV range, and its 19.7kWh usable battery and 110km WLTP electric range are the longest of any plug-in SUV under $70,000 here — enough that a Melbourne commuter with home charging would rarely wake the 1.5-litre engine. Reviewers are near-unanimous that the drivetrain is smooth and the cabin genuinely large, and equally unanimous on the catch: this is the one Kodiaq you cannot have with seven seats or all-wheel drive, because the battery sits where the third row goes. Where they split is value — CarExpert notes the $8,500 premium over the petrol Select 4x4 buys you fewer seats and less traction, while Chasing Cars still calls it easy to recommend against a Mitsubishi Outlander PHEV or BYD Sealion 6.",
+    "pros": [
+      "110km of WLTP electric range from a 19.7kWh usable battery is the longest in the mainstream plug-in SUV class — Mitsubishi Outlander PHEV claims 86km, BYD Sealion 6 81km and Mazda CX-60 PHEV 76km",
+      "50kW DC fast charging (10-80 per cent in 25 minutes) plus 11kW AC is unusual on a plug-in hybrid; neither the Outlander PHEV nor the Sealion 6 can take DC at all",
+      "Seven-year, unlimited-kilometre warranty applies with no strings — Skoda Australia made it standard across the range in September 2022 and it is not tied to buying a service pack or servicing inside the dealer network; the high-voltage battery is separately covered for 8 years/160,000km",
+      "745 litres behind the second row and 1,945 litres with it folded is more usable space than most five-seat rivals, and the second row slides and reclines",
+      "At $63,490 before on-roads it sits below the $80,809 ordinary LCT threshold, and at 42g/km CO2 it clears Victoria's 120g/km green passenger car test, so stamp duty is charged at the flat green rate"
+    ],
+    "cons": [
+      "Five seats only — the battery occupies the third-row well, so the one Kodiaq a large family would most want is the one that cannot carry seven; the petrol Select, Sportline and RS all seat seven and even the cheaper mild-hybrid offers a seven-seat option for $2,000",
+      "The 1.9L/100km label figure only survives if you plug in every night; Chasing Cars measured roughly 800km from the 45-litre tank with a brimmed battery on an interstate run, and UK owners report 32-40mpg (7-8.8L/100km) once the battery is flat, so the economics collapse for a buyer who cannot charge at home",
+      "Front-wheel drive only and 1,800kg braked towing, against 4x4 and 2,300kg on every petrol Kodiaq — CarExpert lists 'loses all-wheel drive' among its three headline dislikes",
+      "No spare wheel: the PHEV gets a tyre inflation kit where every other Kodiaq gets a space-saver, and it also loses the head-up display and the 289-litre third-row boot area",
+      "Plug-in hybrids lost the FBT exemption on 1 April 2025, and Skoda Australia is already advertising the car at $59,990 drive-away against a $68,990 launch drive-away published in its own April 2026 spec sheet — roughly $9,000 off within months of launch, which is a real resale-value warning"
+    ],
+    "sources": [
+      "https://www.skoda.com.au/models/kodiaq-family/kodiaq-phev",
+      "https://www.skoda.com.au/own/warranty",
+      "https://www.carexpert.com.au/car-reviews/2026-skoda-kodiaq-select-phev-review",
+      "https://www.carexpert.com.au/car-news/2026-skoda-kodiaq-phev-priced-for-australia",
+      "https://www.chasingcars.com.au/reviews/large-suvs/skoda-kodiaq-select-phev-2026-review/",
+      "https://www.carsales.com.au/editorial/details/skoda-kodiaq-phev-2026-review-151667/",
+      "https://www.carsguide.com.au/skoda/kodiaq/price/2026",
+      "https://cdn.skoda-storyboard.com/2024/04/TD_Kodiaq_PHEV_EN_ca44c6d3.pdf",
+      "https://www.autoexpress.co.uk/skoda/kodiaq/364193/skoda-kodiaq-iv-review-class-leading-large-suv-gets-plug-hybrid-power",
+      "https://www.ancap.com.au/safety-ratings/skoda/kodiaq/cd78ac",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+    ],
+    "sourcedAt": "2026-07-28"
   },
   {
     "id": "subaru-solterra",
@@ -1937,6 +2079,72 @@
       "https://www.volvocars.com/uk/cars/xc90-hybrid/specifications/",
       "https://www.volvocars.com/ie/cars/xc90-hybrid/specifications/",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "vw-tayron-phev",
+    "summary": "The Tayron eHybrid is the long-wheelbase Tiguan's plug-in sibling, and in Australia it arrives as two front-wheel-drive grades sharing a 19.7kWh usable battery good for a claimed 113-116km of WLTP electric range — among the longest of any plug-in hybrid on sale here, and enough that most Melbourne commuters would run it as an EV during the week. Reviewers are consistent about the appeal: a 705-litre boot, DC fast charging and genuinely usable EV range at $62,390, which undercuts a Mitsubishi Outlander PHEV Exceed. They are equally consistent about the catch — the battery sits where the third row would go, so unlike every petrol Tayron the eHybrid is a five-seater only, and CarExpert judged it less polished than the smaller Tiguan eHybrid it is based on.",
+    "pros": [
+      "113-116km of WLTP electric range from a 19.7kWh usable battery is the longest in the mainstream plug-in SUV class — a Mitsubishi Outlander PHEV claims 86km and a Mazda CX-60 PHEV 76km — and CarExpert covered a 50km loop at an indicated 0.0L/100km on battery alone",
+      "705 litres of boot with the pack installed beats a Hyundai Santa Fe Hybrid's 628 litres, and 1,915 litres with the rear seats folded is genuinely van-like for the class",
+      "40kW DC fast charging (10-80 per cent in about 30 minutes) plus 11kW AC is rare on a plug-in hybrid — the Outlander PHEV has no 11kW AC and most rivals have no DC capability at all",
+      "Volkswagen Australia's five-year unlimited-kilometre warranty is unconditional, not tied to servicing inside the dealer network, and the high-voltage battery is separately covered for 8 years/160,000km",
+      "Both grades sit below the $80,809 ordinary LCT threshold and rate 38-40g/km CO2 on the combined cycle, well inside Victoria's 120g/km green passenger car test, so no luxury car tax applies and stamp duty is charged at the flat $8.40 per $200 green rate"
+    ],
+    "cons": [
+      "The battery occupies the third-row well, so neither eHybrid grade can be had with seven seats — every petrol Tayron from the $48,950 110TSI Life up can, which makes the plug-in the wrong car for the family the nameplate is otherwise aimed at",
+      "The 1.7-1.8L/100km label figure assumes you start every trip charged; once the battery is flat it is a 1.5-litre turbo hauling about 1,930kg, and UK testing puts it at roughly 40-45mpg (6.3-7.1L/100km), so the running-cost case collapses for a buyer without home charging",
+      "Front-wheel drive only — there is no 4MOTION eHybrid — and NRMA found the 1.5-litre engine feels underdone against the kerb weight once it is doing the work on its own",
+      "The 200TSI R-Line asks a $14,160 premium over the 150TSI Elegance for 50kW, a 200kg-higher tow rating and trim, and it crosses the $75,000 mark that the 2027 FBT cap is set at",
+      "The plug-in hybrid FBT exemption ended on 1 April 2025, so the novated-lease advantage that made earlier PHEVs compelling no longer applies to this car at all"
+    ],
+    "sources": [
+      "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+      "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tayron-ehybrid-review",
+      "https://www.carexpert.com.au/car-news/2026-volkswagen-tiguan-tayron-ehybrid-priced-brands-most-affordable-phevs-yet",
+      "https://www.carsales.com.au/editorial/details/volkswagen-tayron-ehybrid-2026-review-152151/",
+      "https://www.carsales.com.au/research/volkswagen/tayron/2026/200tsi-ehybrid-r-line/",
+      "https://www.mynrma.com.au/open-road/car-reviews/volkswagen/2026-volkswagen-tayron-ehybrid-review",
+      "https://www.chasingcars.com.au/news/new-car-prices/volkswagen-tiguan-and-tayron-ehybrid-2026-sharp-pricing-for-midsize-euros-undercuts-key-rival-mitsubishi-but-no-seven-seater-will-be-offered/",
+      "https://www.volkswagen-newsroom.com/en/the-new-tayron-media-drive-19011/engine-versions-19014",
+      "https://www.completecar.ie/car-reviews/article/Volkswagen/Tayron/Tayron_eHybrid_(2025)/2527/13957/2025-Volkswagen-Tayron-eHybrid-(2025)-review.html",
+      "https://www.rac.co.uk/drive/car-reviews/volkswagen/tayron/tayron/",
+      "https://www.volkswagen.com.au/en/owners-service/warranty.html",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "vw-tiguan-phev",
+    "summary": "Volkswagen's first affordable plug-in hybrid for Australia takes the third-generation Tiguan and adds a 19.7kWh usable battery for a WLTP electric range of 113-117km, roughly double what the Outlander PHEV and Sealion 6 offer. Reviewers rate the drivetrain refinement, the 11kW AC and 40kW DC charging and the fact that most buyers will rarely wake the petrol engine, but are consistently critical of inconsistent brake and steering weighting and of a 490L boot that gives up 162L to the petrol Tiguan. Opinion splits on value: it undercuts European rivals but is roughly $20,000 more than a BYD Sealion 6 with similar equipment.",
+    "pros": [
+      "113-117km of WLTP electric range from a 19.7kWh usable battery is the longest in the mainstream mid-size PHEV class - about double the Mitsubishi Outlander PHEV and BYD Sealion 6",
+      "40kW DC fast charging (10-80% in about 26 minutes) is rare among PHEVs, which mostly offer AC only; 11kW AC fills the pack in roughly 2.5 hours",
+      "At 1.6-1.7L/100km and 37-38g/km CO2 combined it clears the LCT fuel-efficient test and Victoria's 120g/km green-car duty threshold comfortably",
+      "The high-voltage battery carries an 8-year/160,000km warranty on top of the vehicle's 5-year unlimited-kilometre cover, which is unconditional and not tied to servicing at a Volkswagen dealer",
+      "200TSI R-Line is rated to tow 2000kg braked (1800kg on the Elegance), better than most plug-in hybrids in the segment"
+    ],
+    "cons": [
+      "The battery costs 162L of boot: 490L versus 652L in the petrol Tiguan, and the fuel tank shrinks from 58L to 45L, so touring range depends on plugging in",
+      "Once the battery is flat it is a 1873-1883kg SUV on a 1.5-litre engine - reviewers report roughly 5L/100km on a gentle launch loop and about 7L/100km in mixed European testing, so a buyer without home charging is worse off than in a plain 150TSI",
+      "Front-wheel drive only - there is no 4MOTION eHybrid, unlike the 150TSI and 195TSI petrol grades which are all-wheel drive",
+      "Five seats only, with no seven-seat option and no spare wheel (tyre inflation kit only); buyers needing a third row are pushed to the Tayron eHybrid",
+      "The $74,550 200TSI R-Line commands a $9,960 premium over the Elegance for 50kW and little else, and sits about $20,000 above a comparably equipped BYD Sealion 6"
+    ],
+    "sources": [
+      "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+      "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tiguan-ehybrid-review",
+      "https://www.carsales.com.au/editorial/details/volkswagen-tiguan-ehybrid-2026-review-152146/",
+      "https://www.carsales.com.au/research/volkswagen/tiguan/2026/150tsi-ehybrid-elegance/",
+      "https://www.carsales.com.au/research/volkswagen/tiguan/2026/200tsi-ehybrid-r-line/",
+      "https://www.chasingcars.com.au/news/new-car-prices/volkswagen-tiguan-and-tayron-ehybrid-2026-sharp-pricing-for-midsize-euros-undercuts-key-rival-mitsubishi-but-no-seven-seater-will-be-offered/",
+      "https://www.carsguide.com.au/ev/volkswagen-tiguan-ehybrid-101723",
+      "https://www.mynrma.com.au/open-road/car-reviews/volkswagen/2026-volkswagen-tiguan-ehybrid-review",
+      "https://evcentral.com.au/2026-volkswagen-tiguan-ehybrid-review-vw-joins-the-plug-in-hybrid-battle-with-an-ace-up-its-sleeve/",
+      "https://www.volkswagen-newsroom.com/en/press-releases/now-available-to-order-long-range-plug-in-hybrid-drives-for-the-tiguan-from-48655-euro-18182",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+      "https://www.volkswagen.com.au/en/owners-service/warranty.html"
     ],
     "sourcedAt": "2026-07-28"
   },

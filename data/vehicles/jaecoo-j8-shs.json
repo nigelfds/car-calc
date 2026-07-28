@@ -1,0 +1,27 @@
+[
+  {
+    "id": "jaecoo-j8-shs-summit",
+    "familyId": "jaecoo-j8-shs",
+    "make": "Jaecoo",
+    "model": "J8",
+    "variant": "SHS Summit",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 59990,
+    "batteryKwh": 34.5,
+    "rangeKm": 134,
+    "consumptionKwhPer100km": 25.7,
+    "combinedRangeKm": 1195,
+    "fuelConsumptionL100km": 6.6,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 200,
+    "bootLitresSeatsDown": 2021,
+    "seats": 7,
+    "towKg": 1600,
+    "warrantyYears": 8,
+    "insuranceAnnual": 1950,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-28"
+  }
+]

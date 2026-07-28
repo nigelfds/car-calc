@@ -1,0 +1,33 @@
+{
+  "id": "vw-tiguan-phev",
+  "summary": "Volkswagen's first affordable plug-in hybrid for Australia takes the third-generation Tiguan and adds a 19.7kWh usable battery for a WLTP electric range of 113-117km, roughly double what the Outlander PHEV and Sealion 6 offer. Reviewers rate the drivetrain refinement, the 11kW AC and 40kW DC charging and the fact that most buyers will rarely wake the petrol engine, but are consistently critical of inconsistent brake and steering weighting and of a 490L boot that gives up 162L to the petrol Tiguan. Opinion splits on value: it undercuts European rivals but is roughly $20,000 more than a BYD Sealion 6 with similar equipment.",
+  "pros": [
+    "113-117km of WLTP electric range from a 19.7kWh usable battery is the longest in the mainstream mid-size PHEV class - about double the Mitsubishi Outlander PHEV and BYD Sealion 6",
+    "40kW DC fast charging (10-80% in about 26 minutes) is rare among PHEVs, which mostly offer AC only; 11kW AC fills the pack in roughly 2.5 hours",
+    "At 1.6-1.7L/100km and 37-38g/km CO2 combined it clears the LCT fuel-efficient test and Victoria's 120g/km green-car duty threshold comfortably",
+    "The high-voltage battery carries an 8-year/160,000km warranty on top of the vehicle's 5-year unlimited-kilometre cover, which is unconditional and not tied to servicing at a Volkswagen dealer",
+    "200TSI R-Line is rated to tow 2000kg braked (1800kg on the Elegance), better than most plug-in hybrids in the segment"
+  ],
+  "cons": [
+    "The battery costs 162L of boot: 490L versus 652L in the petrol Tiguan, and the fuel tank shrinks from 58L to 45L, so touring range depends on plugging in",
+    "Once the battery is flat it is a 1873-1883kg SUV on a 1.5-litre engine - reviewers report roughly 5L/100km on a gentle launch loop and about 7L/100km in mixed European testing, so a buyer without home charging is worse off than in a plain 150TSI",
+    "Front-wheel drive only - there is no 4MOTION eHybrid, unlike the 150TSI and 195TSI petrol grades which are all-wheel drive",
+    "Five seats only, with no seven-seat option and no spare wheel (tyre inflation kit only); buyers needing a third row are pushed to the Tayron eHybrid",
+    "The $74,550 200TSI R-Line commands a $9,960 premium over the Elegance for 50kW and little else, and sits about $20,000 above a comparably equipped BYD Sealion 6"
+  ],
+  "sources": [
+    "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+    "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tiguan-ehybrid-review",
+    "https://www.carsales.com.au/editorial/details/volkswagen-tiguan-ehybrid-2026-review-152146/",
+    "https://www.carsales.com.au/research/volkswagen/tiguan/2026/150tsi-ehybrid-elegance/",
+    "https://www.carsales.com.au/research/volkswagen/tiguan/2026/200tsi-ehybrid-r-line/",
+    "https://www.chasingcars.com.au/news/new-car-prices/volkswagen-tiguan-and-tayron-ehybrid-2026-sharp-pricing-for-midsize-euros-undercuts-key-rival-mitsubishi-but-no-seven-seater-will-be-offered/",
+    "https://www.carsguide.com.au/ev/volkswagen-tiguan-ehybrid-101723",
+    "https://www.mynrma.com.au/open-road/car-reviews/volkswagen/2026-volkswagen-tiguan-ehybrid-review",
+    "https://evcentral.com.au/2026-volkswagen-tiguan-ehybrid-review-vw-joins-the-plug-in-hybrid-battle-with-an-ace-up-its-sleeve/",
+    "https://www.volkswagen-newsroom.com/en/press-releases/now-available-to-order-long-range-plug-in-hybrid-drives-for-the-tiguan-from-48655-euro-18182",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+    "https://www.volkswagen.com.au/en/owners-service/warranty.html"
+  ],
+  "sourcedAt": "2026-07-28"
+}
