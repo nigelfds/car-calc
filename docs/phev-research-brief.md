@@ -99,9 +99,20 @@ your own from sources.
   now rejects a row carrying any PHEV-only field without this, and rejects `"phev"` without all of
   them, so you cannot half-declare a car — but get it right rather than relying on the validator.
 - **`rangeKm` is the ELECTRIC-ONLY range**, not the combined range. This is the biggest difference
-  from the EV brief, where `rangeKm` is the whole story. Use the WLTP electric range (EAER where
-  published) and **state which standard your figure is** in your report. NEDC electric ranges are
-  substantially optimistic and are still quoted by some Chinese-market sources.
+  from the EV brief, where `rangeKm` is the whole story.
+  **Find the WLTP figure. Treat NEDC as a last resort, not an equivalent.** WLTP EAER
+  (Equivalent All-Electric Range) is the figure to want; WLTP electric range is acceptable. NEDC
+  electric ranges are substantially optimistic — typically 20–30% high — and are still quoted by
+  some Chinese-market sources and press releases. If you can only find NEDC, search the European
+  or UK press pack for the same model year before settling, and if you still cannot find WLTP,
+  **say so prominently in your report and name it as your least-confident figure**. The first
+  research wave shipped a whole family on NEDC and only disclosed it in passing.
+  **State which standard every range figure is** in your report, per variant if they differ.
+- **`combinedRangeKm`: source it if you possibly can.** Every combined range in the dataset today
+  is computed rather than quoted, and this field now drives the shortlist ranking, so a computed
+  figure is load-bearing rather than decorative. If you must compute it as electric range plus
+  (tank capacity ÷ `fuelConsumptionL100km`), show the arithmetic and the tank capacity's source in
+  your report, and flag it as computed.
 - **`combinedRangeKm`** is electric plus a full tank. Must be greater than `rangeKm`; the validator
   enforces it.
 - **`fuelConsumptionL100km` is the COMBUSTION-MODE figure** — what it drinks with the battery
@@ -117,6 +128,12 @@ your own from sources.
   computes `batteryKwh / rangeKm * 100` and rejects the row if your stated consumption is more than
   **25%** away from it. Use the **usable** battery capacity and the **electric** range from the same
   source so the three numbers agree.
+  **Source this independently where you can, rather than back-computing it.** All ten PHEV rows in
+  the dataset today have a stated consumption exactly equal to `batteryKwh / rangeKm * 100`, which
+  makes the validator's cross-check tautological — it cannot catch a unit error when the third
+  number is derived from the other two. Deriving it is legitimate when nothing is published, but
+  say in your report which of the three you sourced and which you derived, so the check's value is
+  known rather than assumed.
 
 ### The shared fields
 
