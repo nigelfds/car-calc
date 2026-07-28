@@ -1,0 +1,37 @@
+{
+  "id": "chery-tiggo-8-phev",
+  "summary": "The Tiggo 8 Super Hybrid is the cheapest seven-seat plug-in hybrid on sale in Australia, and Australian reviewers agree the powertrain is the reason to buy it: a 1.5-litre turbo petrol engine and 150kW motor in a single-speed dedicated hybrid transmission, an 18.4kWh LFP battery good for 90km of WLTP electric range, and roughly 6L/100km once the battery is flat. Where they split is the chassis and the third row — CarsGuide and EV Central rate the value and the powertrain calibration highly, while Chasing Cars, carsales and the NRMA mark down a floaty, underdamped ride, screen-buried controls and a rearmost row that has no top-tether or ISOFIX anchorages at all. As a two-row family SUV with occasional seats seven and eight it is compelling; as a genuine three-row people mover it is compromised by 117 litres of boot behind the third row and kerbside-only access to it.",
+  "pros": [
+    "The cheapest seven-seat PHEV in Australia at $42,990 before on-road costs for the Urban — roughly $25,000 under a Mitsubishi Outlander Exceed PHEV and about $30,000 under a Kia Sorento PHEV, both of which also seat seven",
+    "90km of WLTP electric-only range (56 miles, Chery UK) from the 18.4kWh LFP pack, enough to cover most Melbourne commutes on electricity, and Chery quotes 1200km combined; 40kW DC fast charging takes 30-80 per cent in about 20 minutes, which neither the Outlander PHEV nor a BYD Sealion 6 offers at all",
+    "Seven-year/unlimited-kilometre warranty with no dealer-servicing-exclusivity condition, plus a separate eight-year/unlimited-kilometre high-voltage battery warranty and seven years of capped-price servicing totalling $3,174.15",
+    "The petrol engine drives the wheels directly through the DHT in parallel mode rather than acting only as a generator, so highway consumption settles at 5.4-6.1L/100km on a flat battery instead of collapsing the way a range-extender's does",
+    "Five-star ANCAP rating from 2025 covering all variants including the Super Hybrid, with 86 per cent child occupant protection and nine airbags, and at $46,990 the top Ultimate still sits about $34,000 under the ordinary $80,809 LCT threshold"
+  ],
+  "cons": [
+    "Only 117 litres of boot with all seven seats in use — less than a Kia Sorento's 179 litres and a Mitsubishi Outlander PHEV's 191 litres — so the third row and the weekly shop are effectively mutually exclusive",
+    "No top-tether or ISOFIX anchorages in the third row at all, which ANCAP explicitly flags, and third-row access is via the kerbside door only, putting children out on the traffic side on a right-hand kerb",
+    "The 1.3L/100km combined label figure is meaningless in use: Chery itself points buyers to about 6.0L/100km charge-sustaining (47.1mpg WLTP with the battery depleted), and Australian testers recorded 5.4-6.1L/100km, so a buyer without home charging is running a 1.9-tonne seven-seater on premium 95-octane at ordinary-SUV cost",
+    "No braked towing rating whatsoever — 750kg unbraked only — where the 2.0-litre petrol Tiggo 8 and most seven-seat rivals are rated for a caravan or a boat, and neither grade carries a spare wheel (inflator kit only)",
+    "Reviewers are consistent that the ride is soft and floaty with poor body control at speed, the climate and drive-mode functions are buried in the touchscreen, and Chery's aggressive national drive-away pricing plus a current $2,000 cashback offer leaves resale value unproven"
+  ],
+  "sources": [
+    "https://cherymotor.com.au/models/tiggo-8-super-hybrid",
+    "https://cherymotor.com.au/legal/owners/7-year-new-car-warranty-policy-statement",
+    "https://www.carexpert.com.au/car-news/2025-chery-tiggo-8-super-hybrid-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2025-chery-tiggo-8-super-hybrid-review",
+    "https://www.carsguide.com.au/ev/chery-tiggo-8-super-hybrid-99206",
+    "https://www.carsguide.com.au/chery/tiggo-8/price",
+    "https://www.carsguide.com.au/family/chery-tiggo-8-ultimate-super-hybrid-long-term-part-2-100875",
+    "https://www.chasingcars.com.au/reviews/large-suvs/chery-tiggo-8-super-hybrid-urban-2026-review/",
+    "https://www.carsales.com.au/editorial/details/chery-tiggo-8-csh-urban-2026-review-151332/",
+    "https://evcentral.com.au/2026-chery-tiggo-8-csh-urban-review-sharp-pricing-and-a-heap-of-equipment-arent-the-only-positives-offered-by-this-plug-in-seven-seat-family-suv/",
+    "https://www.mynrma.com.au/open-road/car-reviews/chery/2026-chery-tiggo-8-super-hybrid-launch-review",
+    "https://www.ancap.com.au/safety-ratings/chery/tiggo-8/60ce71",
+    "https://www.sytner.co.uk/chery/range/tiggo-8-hybrid",
+    "https://www.parkers.co.uk/chery/tiggo-8/review/mpg-running-costs/",
+    "https://www.carwow.co.uk/chery/tiggo-8",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

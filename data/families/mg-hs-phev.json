@@ -1,0 +1,30 @@
+{
+  "id": "mg-hs-phev",
+  "summary": "The HS Super Hybrid is MG's plug-in version of its mid-size SUV, and its 120km WLTP electric range is the longest of any PHEV SUV under $55,000 in Australia — enough that most buyers with a driveway charger will rarely burn petrol. Reviewers agree the powertrain is the drawcard and that the car is comfortable and well equipped, but are consistently unimpressed by the chassis: 220kW through the front wheels overwhelms the standard tyres, and the steering is remote. The catch is charging, since the car takes AC only and cannot DC fast-charge at all, so the whole value case collapses for anyone who has to rely on public infrastructure.",
+  "pros": [
+    "120km of WLTP electric range from a 24.7kWh (23.2kWh usable) LFP pack beats the GWM Haval H6 PHEV's 106km, the BYD Sealion 6 Essential's 92km and the Jaecoo J7 SHS's 90km, and carsales and EV Central both verified 100km-plus of real-world EV running before the engine woke up.",
+    "MG advertises a 10-year/250,000km warranty, but that term is conditional on servicing exclusively within the MG dealer network; the unconditional cover a buyer gets regardless is seven years/unlimited kilometres, and the drive battery is covered on the same terms as the vehicle.",
+    "The 24.7kWh pack costs nothing in packaging: 507 litres seats-up and 1484 litres folded are identical to the petrol and Hybrid+ HS, where most PHEVs give up boot floor to the battery.",
+    "220kW/350Nm combined and a 6.8-second 0-100km/h make it the quickest thing in the price bracket, and carsales covered 809km on 49.95 litres plus one charge, supporting MG's 1000km-plus combined-range claim."
+  ],
+  "cons": [
+    "There is no DC fast-charging capability at all — AC only, at up to 6.6kW — and carsales measured 16 hours 16 minutes for a full recharge on test, so this is a car that only makes financial sense if you can leave it plugged in at home overnight.",
+    "Once the battery is flat it is just a heavy petrol SUV: the NRMA recorded about 6.0L/100km over 230km of suburban running in hybrid mode and carsales saw 5.9L/100km on a long highway leg, against MG's 'under 5.0L/100km' claim and a 0.7L/100km combined label figure that is meaningless as a running cost.",
+    "Reviewers at carsales and the NRMA both single out traction: the standard tyres cannot put 220kW through the front axle in the wet, and the steering is described as disconnected — the Sealion 6 Premium AWD and Haval H6 PHEV AWD have driven axles at both ends for similar money.",
+    "Advertised pricing swings hard — MG cut $5,000 off the range for an EOFY campaign in June 2026, taking the Excite to $42,990 drive-away — which is good for a buyer timing a deal but poor for resale, and PHEVs lost the FBT exemption on 1 April 2025 so there is no novated-lease tax shelter to offset it."
+  ],
+  "sources": [
+    "https://www.carsales.com.au/editorial/details/mg-hs-super-hybrid-excite-2025-review-150475/",
+    "https://www.carsales.com.au/editorial/details/mg-hs-super-hybrid-1000km-attempt-151196/",
+    "https://www.carsales.com.au/research/mg/hs/2026/super-hybrid-excite/",
+    "https://www.carexpert.com.au/car-news/2025-mg-hs-super-hybrid-long-range-phev-priced-from-52990-drive-away",
+    "https://www.carexpert.com.au/car-reviews/2025-mg-hs-super-hybrid-review-quick-drive",
+    "https://www.carsguide.com.au/family/mg-hs-super-hybrid-essence-101943",
+    "https://www.carsguide.com.au/mg/hs-super-hybrid/price/2026",
+    "https://www.mynrma.com.au/open-road/car-reviews/mg/2025-mg-hs-super-hybrid-review",
+    "https://evcentral.com.au/2025-mg-hs-super-hybrid-120km-of-ev-range-to-take-on-byd-gwm-chery-and-more/",
+    "https://mgmotor.com.au/offers",
+    "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

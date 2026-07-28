@@ -1,0 +1,33 @@
+{
+  "id": "kia-sorento-phev",
+  "summary": "The Sorento plug-in hybrid is a genuinely large seven-seater with about 58km of WLTP electric range, and for 2026 Kia finally broadened it from a single GT-Line grade to a four-grade walk opening at $70,880. Australian reviewers consistently like the way it drives and rate the charge-sustaining economy — roughly 6.4-6.5L/100km once the battery is flat, which is real hybrid territory — but they are close to unanimous that the value case is thin, with the GT-Line asking around $17,500 more than the equivalent diesel and $12,500 more than the equivalent hybrid. The recurring complaints are structural rather than cosmetic: 3.3kW AC-only charging with no DC option, a 175-litre boot with the third row up, and a braked tow rating cut to 1010kg.",
+  "pros": [
+    "One of only two seven-seat plug-in hybrids on sale in Australia under $90,000 — the Mitsubishi Outlander Aspire is the other, while the BYD Sealion 6, Mazda CX-60 PHEV and Ford Ranger PHEV are all five-seat — and unlike the Outlander's children-only third row this is a full-size large SUV body",
+    "Charge-sustaining economy is genuinely good for a 2.1-tonne seven-seater: CarExpert measured 6.5L/100km and Carscoops 6.4L/100km over a week without plugging in, so the car still behaves like a proper hybrid when the battery is empty rather than reverting to petrol-SUV consumption",
+    "Kia's seven-year, unlimited-kilometre warranty is unconditional — it is not tied to servicing inside the Kia dealer network, unlike the conditional 10-year offers from Mitsubishi and MG — and the high-voltage battery carries its own separate seven-year/150,000km cover",
+    "For 2026 the PHEV is no longer GT-Line-only: S, Sport, Sport+ and GT-Line are all offered in AWD, each priced exactly $11,500 above the equivalent all-wheel-drive hybrid grade, so a buyer can get the plug-in drivetrain from $70,880 instead of being forced into the $86,790 flagship",
+    "Real-world electric range holds up against the claim — CarExpert saw 55km and Carscoops comfortably over 50km against the 58km WLTP figure — which covers a typical Melbourne school run and commute without starting the engine"
+  ],
+  "cons": [
+    "Charging is AC-only and capped at 3.3kW through a Type 2 port, with no DC fast-charging at all; Kia quotes 3 hours 26 minutes for 15-95 per cent, so a driver who cannot charge overnight at home has no practical way to keep the battery full",
+    "The 1.6L/100km label figure is meaningless in normal use: Carscoops recorded 6.4L/100km without charging against 6.0L/100km for the Sorento diesel, meaning an unplugged PHEV is slightly worse on fuel than the diesel it costs about $17,500 more than",
+    "Boot space with all three rows up drops to 175 litres because the battery sits under the second-row seat, down from 187 litres in the petrol and diesel Sorento, and the curtain airbags still do not extend to the third row",
+    "Braked towing was cut to 1010kg for the facelifted PHEV (down from 1350kg previously, and against 2000kg for the Sorento diesel), which rules out most camper trailers and is the single spec reviewers flag as a deal-breaker for towing families",
+    "Running costs are higher than the badge suggests: it requires 95 RON premium unleaded, and servicing falls due every 12 months or 10,000km at roughly $705-$765 a visit, short intervals for a family SUV"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-kia-sorento-price-and-specs",
+    "https://www.carexpert.com.au/car-news/kia-sorento-hybrid-and-phev-lineups-expand-with-cheaper-entry-level-grades",
+    "https://www.carexpert.com.au/car-news/2025-kia-sorento-phev-price-rises-scores-cleaner-plug-in-system",
+    "https://www.carexpert.com.au/car-reviews/2025-kia-sorento-gt-line-phev-review",
+    "https://www.carsguide.com.au/family/kia-sorento-gt-line-phev-awd-98680",
+    "https://www.carsguide.com.au/kia/sorento/price/2026",
+    "https://www.carsales.com.au/research/kia/sorento/",
+    "https://www.carscoops.com/2026/06/kia-sorento-phev-review/",
+    "https://www.electrive.com/2023/02/14/kia-sorento-phev-lots-of-space-and-high-consumption/",
+    "https://prod2-press.kia.com/eu/en/home/media-resouces/press-kits/products/2021/the-new-Kia-Sorento-Plug-in-Hybrid.html",
+    "https://www.kia.com/au/shopping-tools/build-and-price.trim.sorento-plug-in-hybrid.html",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}
