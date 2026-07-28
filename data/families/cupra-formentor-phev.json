@@ -1,0 +1,31 @@
+{
+  "id": "cupra-formentor-phev",
+  "summary": "The Formentor VZe is the sole plug-in hybrid in Cupra's coupe-styled small SUV range, and the MY26 update roughly doubled its battery to 20kWh usable for a claimed 114km of WLTP electric range — enough that most Melbourne commuters would rarely start the 1.5-litre engine. Reviewers agree the second-generation drivetrain is smooth and genuinely quick at 200kW, but they split on whether it is worth $68,990: CarExpert found it the least resolved car in the range to drive, with heavy steering and a soft-front/stiff-rear ride, and pointed buyers at a Skoda Kodiaq PHEV for similar range and more space. The recurring practical complaint is that the battery costs it a third of its boot and its spare wheel.",
+  "pros": [
+    "114km of WLTP electric range from a 20kWh usable battery is roughly double the previous VZe's 58km and beats every PHEV SUV near the price — Mitsubishi Outlander PHEV claims 86km, Mazda CX-60 PHEV 76km",
+    "50kW DC fast charging plus 11kW AC is rare on a plug-in hybrid: most PHEV rivals, including the Outlander and CX-60, have no DC capability at all",
+    "200kW/400Nm and 7.2sec to 100km/h makes it quicker than the 150kW petrol Formentor V that sits $11,500 below it",
+    "Five-year unlimited-kilometre warranty is unconditional — it is not tied to servicing inside the Cupra network — and the high-voltage battery is separately covered for 8 years/160,000km",
+    "Priced at $68,990 before on-roads it sits under both the $80,809 ordinary LCT threshold and Victoria's green-car duty test at 43g/km CO2, so no luxury car tax applies and stamp duty is charged at the flat green rate"
+  ],
+  "cons": [
+    "The battery cuts the boot from roughly 450 litres in the petrol Formentor to 345 litres, and deletes the spare wheel entirely — CarsGuide lists 'small boot in PHEV' and 'no spare wheel' as its headline dislikes",
+    "Once the battery is flat it is an ordinary 1.5-litre turbo hauling 1,730kg, and the 1.7L/100km label figure is meaningless — expect roughly 6.5L/100km on petrol alone, so the economics collapse for a buyer without home charging",
+    "CarExpert judged the VZe the most disconnected car in the Formentor range to drive, citing heavy, feel-free steering from the extra front-axle mass and suspension that is too soft at the front and too stiff at the rear",
+    "The plug-in hybrid lost its FBT exemption on 1 April 2025, and Cupra's own MY24 run-out saw the previous VZe cut from $64,990 to $47,990 drive-away — with Formentor sales down 61.3 per cent in the first half of 2026, resale risk is real",
+    "No vehicle-to-load outlet, a 40-litre fuel tank that limits touring range once the battery is depleted, and a 1,500kg braked tow rating that trails the petrol VZx's 1,800kg"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-cupra-formentor-updated-suv-range-priced-for-australia",
+    "https://www.carexpert.com.au/cupra/formentor/vze/features-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-cupra-formentor-quick-drive",
+    "https://www.carsales.com.au/editorial/details/cupra-formentor-2026-review-152405/",
+    "https://www.carsguide.com.au/urban/cupra-formentor-102035",
+    "https://www.cupraofficial.com.au/cars/formentor",
+    "https://www.cupraofficial.com.au/owners/warranty",
+    "https://www.carexpert.com.au/car-news/cupra-slashes-more-than-20000-off-formentor-phev",
+    "https://www.carexpert.com.au/car-news/the-biggest-winners-and-losers-on-the-australian-new-vehicle-sales-charts-so-far-in-2026",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-07-28"
+}
