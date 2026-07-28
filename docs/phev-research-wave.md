@@ -1,6 +1,6 @@
 # PHEV research wave — batch plan
 
-Prepared 2026-07-28. **Batches 1-5 complete.** Batches 6-9 outstanding.
+Prepared 2026-07-28. **Batches 1-6 complete.** Batches 7-9 outstanding.
 
 **The wave is not finished. It is roughly 58% of the market.** Batch 4's fifth agent surveyed
 what is actually on sale rather than researching a family, and the answer changed the plan: the
@@ -15,16 +15,16 @@ and a row it rejects is wrong — fix the row, not the schema.
 
 ## Where the dataset stands
 
-After batch 5: 31 brands, 69 families, 183 variants.
+After batch 6: 33 brands, 75 families, 192 variants.
 
 | Body type | BEV | PHEV |
 |---|---|---|
-| SUV | 97 | 60 |
+| SUV | 97 | 69 |
 | Hatch | 10 | 0 |
 | Sedan | 7 | 1 |
 | Ute | 0 | 8 |
 
-Twenty-nine PHEV families. **Ute is no longer an empty filter** — it was offered in step 1 and matched
+Thirty-five PHEV families. **Ute is no longer an empty filter** — it was offered in step 1 and matched
 nothing at all until batch 1 landed, and Australia's plug-in ute segment being entirely PHEV is why
 no amount of EV research could have filled it.
 
@@ -328,7 +328,125 @@ a family that shares a platform with an already-shipped one, diff against the sh
   the on-road allowance. It is the batch's least-confident figure and is flagged as such in the
   commit. Batch 7's two GWM Tanks will hit the same problem.
 
-## Batch 6 — mainstream Chinese and Volkswagen Group
+## Batch 6 — mainstream Chinese and Volkswagen Group — **DONE**
+
+All six landed, 9 variants, no family withdrawn. See commit `951d77b` for each family's disclosed
+low-confidence figures — that commit message is the only record of which numbers are soft.
+
+| Family | `familyId` | Grade written |
+|---|---|---|
+| Chery Tiggo 9 Super Hybrid | `chery-tiggo-9-phev` | Elite FWD / Ultimate AWD |
+| Jaecoo J8 SHS | `jaecoo-j8-shs` | SHS Summit AWD — sole SHS grade |
+| Omoda 9 SHS | `omoda-9-shs` | SHS Virtue AWD — sole grade |
+| VW Tiguan eHybrid | `vw-tiguan-phev` | 150TSI eHybrid Elegance / 200TSI eHybrid R-Line |
+| VW Tayron eHybrid | `vw-tayron-phev` | 150TSI eHybrid Elegance / 200TSI eHybrid R-Line |
+| Skoda Kodiaq PHEV | `skoda-kodiaq-phev` | Select Plug-in Hybrid — sole PHEV grade |
+
+**Grade names: five of six wrong, so the wave's running total is thirteen of twenty-two.** Batch 5's
+new failure mode is now the *only* failure mode — every one of batch 6's errors was a wrong grade
+**count**, not a wrong badge. The Chery is two grades where the plan implied one; the Jaecoo and the
+Omoda are single-grade where the plan implied a range; both VWs are two-grade. Only the Kodiaq's
+"local badging is PHEV, not iV" note was right as written, and it was right because a previous
+session had already checked it. **Counting grades on the configurator is now the highest-yield check
+in the batch prompt.**
+
+### The UK-arm rule is now proven, not provisional
+
+Batch 5 found that BYD and Geely publish WLTP in the UK. Batch 6 tested the generalisation against
+the three brands the plan was least confident about, and **all three have UK arms and all three
+publish WLTP**. Five of six families carry genuine WLTP; the survey's "169km NEDC" leads were
+replaceable in every case they applied to.
+
+| Family | Standard used | Australian NEDC figure rejected |
+|---|---|---|
+| Chery Tiggo 9 Ultimate | WLTP 146 km, corroborated by **Parkers/Autocar UK** | 170 km NEDC |
+| Jaecoo J8 | WLTP 134 km, **UK-market SHS-P** | 169 km NEDC — AU publishes nothing else |
+| Omoda 9 | WLTP 145 km, four AU sources | 169 km NEDC, still Omoda AU's headline |
+| VW Tiguan | WLTP 117 / 113 km | — |
+| VW Tayron | WLTP 116 / 113 km | — |
+| Skoda Kodiaq | WLTP 110 km | — |
+| Chery Tiggo 9 **Elite** | **NEDC 90 km** | no WLTP exists |
+
+**So stop treating "Chinese brand" as a proxy for "no WLTP".** The real predictor is whether the
+brand sells the *same variant* in the UK or Europe. The one NEDC row in this batch proves the point
+from the other direction: the Tiggo 9 **Elite** is NEDC-only not because Chery lacks a UK arm but
+because **the UK took the 34.5 kWh AWD and not the 18.7 kWh FWD**. Ask which variant Europe
+imported, not which brand.
+
+That row is also the batch's worst figure and is worth knowing about before anyone trusts it. The
+Ultimate's own NEDC-to-WLTP ratio (170 → 146) implies the Elite's true range is nearer **77 km than
+90 km**, so the Elite currently looks equal to the Tiggo 7/8 — which carry genuine 90 km WLTP from
+Chery UK — when it is almost certainly worse.
+
+### The cross-family diff earned its place in the checklist
+
+Batch 5 recorded the Sealion 5/6 inconsistency but could not act on it because it crossed a batch
+boundary. **Batch 6 contained the clash inside one batch and it was caught and fixed before the
+commit.** Four rows in the dataset now run the same VW Group 1.5 TSI eHybrid, and their
+charge-sustaining figures came back ordered backwards by mass:
+
+| Row | Kerb | As reported | Committed |
+|---|---|---|---|
+| `cupra-formentor-phev-vze` (batch 2) | 1730 kg | 6.5 | 6.5 |
+| `vw-tiguan-phev` | 1873 kg | 7.0 | 7.0 |
+| `vw-tayron-phev` | 1930 kg | **6.3 / 6.6** | **7.0** |
+| `skoda-kodiaq-phev` | 1985 kg | 7.0 | 7.0 |
+
+Three agents drew three different figures from the same 5.5–8.0 spread of real-world reviews,
+because **no VW Group market publishes a charge-sustaining figure for any of these cars**. Each was
+defensible alone; together they gave the heavier Tayron 70 km *more* combined range than the smaller
+Tiguan on an identical 45 L tank, and `combinedRangeKm` drives the shortlist ranking. The Tayron was
+reconciled to 7.0 on both grades — its own agent's second data point was Parkers at 7.06, and it had
+flagged its inter-grade split as "judged, not sourced" — and `combinedRangeKm` recomputed to 759 and
+756.
+
+**The generalisable rule: when a batch contains families sharing a powertrain, diff the *judged*
+fields, not just the sourced ones.** The validator cannot see across rows, and every one of these
+four rows passed independently. Sourced fields agreed perfectly here — all four record 19.7 kWh
+usable and all four are WLTP. It was the field nobody could source that diverged.
+
+### 19.7 kWh is the USABLE figure, and the batch prompt said otherwise
+
+The prompts for all three VW Group families warned that 19.7 kWh is the gross figure and told agents
+to hunt for a smaller usable one. **That was wrong**, and two agents said so directly: VW's own press
+pack says "19.7-kWh (net)", with 25.7 kWh gross. An agent that obeyed the prompt would have chased a
+number that does not exist, or invented one.
+
+Worth carrying for the rest of the VW Group: **Skoda Australia's MY26 spec sheet prints a single
+number under a "High Voltage Battery Capacity (Gross / Nett)" heading, and that number is the
+gross.** A label naming both quantities is not evidence of which one is printed.
+
+### Other findings worth carrying
+
+- **The ADR/VESR label trap fired on four of six families and was correctly refused every time.**
+  Jaecoo 19.3, Omoda 19.3, Tayron 14.0–14.4, Kodiaq 148 Wh/km. The Tayron's is the cleanest proof
+  yet after the RAV4's: 14.4 × 116 km = 16.7 kWh, **less energy than the 19.7 kWh usable pack**, so
+  it cannot be a charge-depleting figure. The Kodiaq's 148 Wh/km sits 17% below battery ÷ range.
+- **`consumptionKwhPer100km` was derived on five of six families**, so the schema's 25% cross-check
+  is tautological on those rows. The exception is the **Skoda Kodiaq**, where Škoda publishes a
+  charge-depleting band of 17.2–20.5 kWh/100km and the derived 17.9 falls inside it. That matches
+  the pattern batches 3 and 5 established — European brands sometimes publish a usable figure,
+  volume and Chinese brands do not — and it is the only genuine check in the batch.
+- **The seat-count trap is real and it is a VW Group trap specifically.** Both the Tayron and the
+  Kodiaq are seven-seat nameplates whose plug-in grade is **five seats only**, because the battery
+  occupies the third-row well. The Kodiaq agent proved it from Škoda's own spec sheet, where the
+  "luggage capacity behind 3rd row" cell is `—` for the PHEV and 289 L for every petrol grade.
+  Anyone copying a family-level seat count would have put a five-seater in front of seven-seat
+  buyers. Expect the same on any PHEV derivative of a three-row SUV.
+- **The powertrain price trap appeared in both VWs and inverted between them.** VW sells a petrol
+  **150TSI Elegance** alongside a plug-in **150TSI eHybrid Elegance** in both ranges: in the Tiguan
+  the petrol is $3,000 *cheaper*, in the Tayron $2,000 *cheaper*. Near-identical names, and price
+  alone identifies neither. Both agents named the excluded grade explicitly, which is exactly what
+  the "name what you excluded" requirement is for.
+- **GWM's no-RRP problem did not generalise to the other Chinese brands.** All three published or
+  had recoverable list prices; the drive-away figures were present but never the only figure. Batch
+  7's two GWM Tanks will still hit it.
+- **Skoda advertises two different drive-away prices for the same car** — $68,990 on the April 2026
+  spec sheet and $59,990 on the current website, roughly $9,000 apart within months of launch.
+  Neither is the $63,490 list price. This is the drive-away rule's clearest illustration so far:
+  the drive-away number is a campaign, not a property of the car.
+
+## Batch 6 — original plan, kept for context
 
 **One of batch 5's two warnings survived; the other was disproved — read the batch 5 section before
 dispatching.**
@@ -362,11 +480,11 @@ of them.**
 
 | Family | `familyId` | Expected plug-in grade — confirm, don't assume |
 |---|---|---|
-| GWM Tank 300 Hi4-T | `gwm-tank-300-phev` | Anchor against the GWM families already in the dataset. Survey quotes 115km NEDC. |
-| GWM Tank 500 Hi4-T | `gwm-tank-500-phev` | Ultra Hi4-T. Survey quotes 120km NEDC. |
+| GWM Tank 300 Hi4-T | `gwm-tank-300-phev` | Anchor against the GWM families already in the dataset. Survey quotes 115km NEDC. **GWM is the one brand batch 6 did not clear**: no RRP and, on batches 1 and 5's evidence, no WLTP homologation for any Australian PHEV. Establish both absences rather than assuming them. |
+| GWM Tank 500 Hi4-T | `gwm-tank-500-phev` | Ultra Hi4-T. Survey quotes 120km NEDC. Same GWM caveats as the Tank 300. |
 | Denza B5 | `denza-b5` | **Verify it is a true PHEV before writing anything.** |
 | Denza B8 | `denza-b8` | **Same verification.** |
-| Cupra Terramar VZe | `cupra-terramar-phev` | Anchor against `cupra-formentor-phev` already in the dataset. |
+| Cupra Terramar VZe | `cupra-terramar-phev` | Anchor against `cupra-formentor-phev` already in the dataset. **Batch 6 added three more rows on the same VW Group 1.5 TSI eHybrid** — `vw-tiguan-phev`, `vw-tayron-phev`, `skoda-kodiaq-phev`. All four record 19.7 kWh **usable** (25.7 gross) and 7.0 or 6.5 L/100km charge-sustaining; diff against them and match the convention rather than re-deriving it. |
 
 **The Denza check, and why it is a stop condition.** Both use BYD's DMO off-road platform, and the
 survey could not confirm first-hand that the engine mechanically drives the wheels. If it only
@@ -502,8 +620,11 @@ Restate these in the agent prompts. Every one comes from a batch that got it wro
    range by more than a few percent, suspect the quantity before the arithmetic.
 4. **`batteryKwh` is usable, not gross.** Two families shipped gross and spent the validator's
    whole tolerance on a definitional mismatch.
-5. **Grade names are leads.** Five of ten failed verification across batches 3 and 4 — `TFSI e` is
-   retired, `P400e` no longer exists, and `NX450h+` differs from `NX350h` by one character.
+5. **Grade names are leads.** Thirteen of twenty-two have now failed verification across batches
+   3-6 — `TFSI e` is retired, `P400e` no longer exists, and `NX450h+` differs from `NX350h` by one
+   character. **Since batch 5 the failures have been wrong grade *counts* rather than wrong badges**,
+   which is more dangerous because it silently merges or invents cars. Count the grades on the
+   configurator; do not just match the names.
 
 ### What a good batch looks like
 
@@ -535,6 +656,14 @@ that cannot be entered honestly should not be entered.
   WLTP came from* — **BYD UK and Geely UK**, for brands this plan had assumed had no European
   presence at all. Before recording an NEDC figure, check whether the brand has a UK arm.
 
+  **Batch 6 tested that on the three brands the plan was least sure of — Chery, Jaecoo, Omoda — and
+  all three had UK arms publishing WLTP.** Five of six families carry genuine WLTP and the
+  Australian figure was optimistic every time: Tiggo 9 170→146 km (16%), Jaecoo J8 169→134 km (26%),
+  Omoda 9 169→145 km (17%). **The rule is now: the predictor is not the brand, it is whether the
+  UK or Europe imported the *same variant*.** Batch 6's one NEDC row proves it from the other side —
+  the Tiggo 9 **Elite** has no WLTP not because Chery lacks a UK arm but because the UK took the
+  34.5 kWh AWD and not the 18.7 kWh FWD. Ask which variant Europe imported, not which brand.
+
   **Batch 4 produced the wave's first counter-example, and it matters.** The Audi Q5 e-hybrid's
   Australian 82 km is genuine WLTP *and is conservative* — it sits below Europe's headline 100 km,
   because the local car is the 270kW quattro on 20-inch wheels while the European figure is the
@@ -563,11 +692,23 @@ that cannot be entered honestly should not be entered.
   So the realistic expectation is: premium European brands sometimes publish a usable figure,
   volume and Chinese brands do not. Keep asking, expect no from the latter, and keep saying which
   it was — where a figure was derived, that is stated in the agent's report rather than silent.
+  **Batch 6 held to that split exactly**: derived on five of six, with the **Skoda Kodiaq** the lone
+  exception — Škoda publishes a charge-depleting band of 17.2–20.5 kWh/100km and the derived 17.9
+  falls inside it. Note that VW itself, on the same powertrain, publishes nothing usable, so this is
+  not even consistent within one corporate group. Ask per model, not per brand.
 - **Cross-family consistency is not automatic and the validator cannot see it.** The XC60 and XC90
   agents ran in parallel on the *same T8 battery pack* and returned incompatible conventions —
   18.8 kWh gross / AU range against 14.7 kWh usable / UK range. Both rows passed the validator
   independently; only reading the two reports side by side caught it. **When a batch contains two
   families sharing a platform or powertrain, diff their rows before committing.**
+
+  **Batch 6 is where this check finally paid, and it refines what to diff.** Three agents on the
+  same VW Group 1.5 TSI eHybrid agreed perfectly on every *sourced* field — all recorded 19.7 kWh
+  usable, all recorded WLTP — and diverged on the one field none of them could source, giving the
+  heavier Tayron more combined range than the smaller Tiguan on an identical tank. So the sourced
+  fields are not where the risk is. **Diff the judged fields**: charge-sustaining fuel consumption,
+  insurance, depreciation. And sanity-check them against a physical ordering — mass, size, output —
+  because a set of individually defensible estimates can still be collectively impossible.
 - **Body-type spread — the earlier reading of this was wrong.** Batch 1 closed `Ute`. Every PHEV
   in the dataset is an SUV or a ute, and this document previously said that if `Hatch` and `Sedan`
   stayed BEV-only that would be "a real fact about the market rather than a gap". **The survey
