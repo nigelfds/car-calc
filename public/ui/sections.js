@@ -51,12 +51,32 @@ export function renderInputs(root, getState, onChange) {
     const field = input.dataset.field;
     const initial = getState();
 
-    // A checkbox toggles membership of an array field rather than replacing a
-    // scalar, carries its own member in data-value, and fires `change` rather
-    // than `input` when driven by the keyboard. Handled before the scalar path
-    // below, which would otherwise coerce it and clobber the array.
+    // A checkbox fires `change` rather than `input` when driven by the
+    // keyboard, so it is handled before the scalar path below in every case.
+    // But "checkbox" covers two different shapes of field: bodyTypes-style
+    // boxes toggle membership of an array and each carry their own member in
+    // data-value (SUV, Hatch, ...); includePhev-style boxes are a plain
+    // boolean field with no member to speak of. data-value's presence is
+    // what tells the two apart — without this split, includePhev's initial
+    // value (a real `false`, never null/undefined) skipped the `?? []`
+    // fallback and called `.includes` on a boolean, throwing inside boot()
+    // before render() ever ran (the whole page stayed on its skeleton
+    // placeholders).
     if (input.type === 'checkbox') {
       const member = input.dataset.value;
+
+      if (member === undefined) {
+        input.checked = Boolean(initial[field]);
+
+        input.addEventListener('change', () => {
+          const state = getState();
+          const touched = new Set(state.touched ?? []);
+          touched.add(field);
+          onChange({ ...state, [field]: input.checked, touched: [...touched] });
+        });
+        continue;
+      }
+
       input.checked = (initial[field] ?? []).includes(member);
 
       input.addEventListener('change', () => {
