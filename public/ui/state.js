@@ -10,6 +10,21 @@ const BOOLEAN_FIELDS = new Set(['includePhev']);
 // applied), so `typeof value === 'number'` would silently misclassify them
 // as non-numeric the moment a null default is legitimate. Keeping this list
 // next to defaultState() keeps the state shape and its types in one place.
+// Clearing one of these has no meaning, so blank must not be a value the model
+// uses. A car is always driven some distance; a plug-in hybrid always does some
+// share of that on battery. The old behaviour wrote '' and moved on, and ''
+// is not nullish — so every `?? default` downstream was bypassed and
+// Math.max(0, '') quietly became 0. Blanking annualKm meant a car free to run,
+// which changed which car the shortlist recommended; blanking the battery share
+// meant a plug-in hybrid burning petrol for every kilometre.
+//
+// Deliberately NOT every numeric field. Blank is meaningful for the optional
+// filters (minBootLitres, minRangeKm, minElectricRangeKm all default to null
+// and read "any"), and for grossSalary, where blank is caught by
+// hasValidSalary in ui/app.js and asks the user for a number rather than
+// inventing one.
+export const DEFAULT_ON_BLANK_FIELDS = new Set(['annualKm', 'phevBatterySharePct']);
+
 export const NUMERIC_FIELDS = new Set([
   'grossSalary', 'monthlyBudget', 'termMonths', 'savings', 'annualKm',
   'deposit', 'leaseRatePct', 'loanRatePct', 'adminFeeAnnual',

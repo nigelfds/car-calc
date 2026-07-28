@@ -36,14 +36,22 @@ test('a value identical to the current one is not reported as changed', () => {
 
 // --- renderInputs: coercion is driven by state's own type, not DOM type ---
 
+// Keyed by event type, not a single slot. renderInputs binds both 'input' and
+// 'blur' to every field, and a stub that keeps only the last handler silently
+// runs the wrong one — which is how this stub first failed: the blur listener
+// displaced the input listener and five passing tests started exercising code
+// they were never about.
 function fakeInput(field, initial) {
-  let handler = null;
+  const handlers = {};
   return {
     dataset: { field },
     value: initial,
     classList: { add() {}, remove() {} },
-    addEventListener(type, fn) { handler = fn; },
-    fire() { handler(); }
+    addEventListener(type, fn) { handlers[type] = fn; },
+    fire(type = 'input') {
+      if (!handlers[type]) throw new Error(`nothing bound to '${type}' for ${field}`);
+      handlers[type]();
+    }
   };
 }
 
@@ -115,6 +123,118 @@ test('clearing a numeric field does not silently coerce to 0', () => {
 // was rebuilt from the stale object every time too, so it was always a
 // single-element array no matter how many fields had actually been
 // edited).
+// --- Clearing a field that has no meaningful blank state -------------------
+// '' is not nullish, so every `?? default` downstream was bypassed and
+// Math.max(0, '') became 0. Blanking annualKm meant a car free to run, which
+// changed which car the shortlist recommended; blanking the battery share
+// meant a plug-in hybrid burning petrol for every kilometre. Both failed
+// silently, with the box showing nothing.
+
+test('clearing annual km falls back to the default rather than meaning zero', () => {
+  const input = fakeInput('annualKm', '15000');
+  let received = null;
+  renderInputs(
+    { querySelectorAll: () => [input] },
+    () => ({ annualKm: 30000 }),
+    next => { received = next; },
+    { annualKm: 15000 }
+  );
+  input.value = '';
+  input.fire();
+  assert.equal(received.annualKm, 15000, 'a cleared distance must not become 0km a year');
+});
+
+test('clearing the battery share falls back to the default rather than meaning all petrol', () => {
+  const input = fakeInput('phevBatterySharePct', '50');
+  let received = null;
+  renderInputs(
+    { querySelectorAll: () => [input] },
+    () => ({ phevBatterySharePct: 80 }),
+    next => { received = next; },
+    { phevBatterySharePct: 50 }
+  );
+  input.value = '';
+  input.fire();
+  assert.equal(received.phevBatterySharePct, 50, 'a cleared share must not become 0% on battery');
+});
+
+// The counterpart: blank IS the answer for the optional filters, and for the
+// salary, where ui/app.js's hasValidSalary asks for a number rather than
+// inventing one. Falling those back to a default would be the worse bug.
+test('clearing an optional filter still means "any", not its default', () => {
+  for (const field of ['minBootLitres', 'minRangeKm', 'minElectricRangeKm']) {
+    const input = fakeInput(field, '500');
+    let received = null;
+    renderInputs(
+      { querySelectorAll: () => [input] },
+      () => ({ [field]: 500 }),
+      next => { received = next; },
+      { [field]: null }
+    );
+    input.value = '';
+    input.fire();
+    assert.equal(received[field], '', `${field} must stay clearable to mean "any"`);
+  }
+});
+
+test('clearing the salary still leaves it blank so the app can ask for one', () => {
+  const input = fakeInput('grossSalary', '100000');
+  let received = null;
+  renderInputs(
+    { querySelectorAll: () => [input] },
+    () => ({ grossSalary: 100000 }),
+    next => { received = next; },
+    { grossSalary: 100000 }
+  );
+  input.value = '';
+  input.fire();
+  assert.equal(received.grossSalary, '', 'a blank salary must not silently become $100,000');
+});
+
+// syncFieldInputs (ui/app.js) skips whatever has focus so it never fights a
+// user mid-type, which leaves a cleared box showing nothing while the model
+// uses a real number. Blur is where that gap closes.
+test('leaving a cleared field restores what the model is actually using', () => {
+  const input = fakeInput('annualKm', '15000');
+  renderInputs(
+    { querySelectorAll: () => [input] },
+    () => ({ annualKm: 15000 }),
+    () => {},
+    { annualKm: 15000 }
+  );
+  input.value = '';
+  input.fire('blur');
+  assert.equal(input.value, '15000', 'the box must end up showing the number being used');
+});
+
+test('leaving a field alone does not rewrite what the user typed', () => {
+  const input = fakeInput('annualKm', '22000');
+  renderInputs(
+    { querySelectorAll: () => [input] },
+    () => ({ annualKm: 22000 }),
+    () => {},
+    { annualKm: 15000 }
+  );
+  input.fire('blur');
+  // String(): a real DOM input coerces .value to a string, the stub does not,
+  // and renderInputs seeds it from state's number at bind time.
+  assert.equal(String(input.value), '22000');
+});
+
+// A blank optional filter is a legitimate resting state, so blur must not
+// stuff a number back into a box the user deliberately emptied.
+test('leaving a blank optional filter blank does not repopulate it', () => {
+  const input = fakeInput('minBootLitres', '');
+  renderInputs(
+    { querySelectorAll: () => [input] },
+    () => ({ minBootLitres: null }),
+    () => {},
+    { minBootLitres: null }
+  );
+  input.fire('blur');
+  assert.equal(input.value, '', 'an "any" filter must stay visibly empty');
+});
+
 test('firing input on two different fields in sequence keeps both edits and accumulates touched', () => {
   let state = { grossSalary: 100000, monthlyBudget: 900, touched: [] };
   const salaryInput = fakeInput('grossSalary', '100000');
