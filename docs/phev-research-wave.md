@@ -86,8 +86,17 @@ disclosed low-confidence figures.
 
 ## Batch 3 — premium
 
-Most likely to straddle the LCT thresholds ($80,809 ordinary, $91,661 fuel-efficient), so
-`isFuelEfficientForLct` is load-bearing here rather than decorative.
+**Correction to an earlier claim in this plan.** It said batch 3 is where `isFuelEfficientForLct`
+starts to bite. That is wrong, and was verified wrong: the flag changes nothing in the app's output
+at any price. LCT is embedded in the advertised list price and `calc/onroad.js` deliberately does
+not add it to the total (see the comment there), and the FBT threshold path it feeds only matters
+for a car that could be FBT-exempt — which no plug-in hybrid is. Record the flag accurately because
+it is a real tax fact and a future BEV wave will need it, but do not spend research effort treating
+it as decisive. It is not.
+
+What actually decides a premium PHEV's numbers is the same as everywhere else: list price (bands
+the card), `fuelConsumptionL100km` (the petrol half of running cost) and `combinedRangeKm` (the
+ranking).
 
 | Family | `familyId` |
 |---|---|

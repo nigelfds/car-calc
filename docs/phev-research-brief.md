@@ -144,6 +144,11 @@ your own from sources.
   by how much of it the test cycle assumes happens in EV mode. It is not EV-mode consumption, and
   the two are different numbers for the same car. Batch 1 saw 21.2, 18.7 and 15.9 kWh/100km quoted
   this way, none of which reconciled with the car's own battery and electric range.
+  Batch 2 turned that caution into hard evidence. The Kia Sorento's 182 Wh/km ADR label sits
+  **30.7% away** from the figure its own battery and range imply — it would have failed the
+  validator's 25% check outright. And a measured 28 kWh/100km in EV mode confirms real consumption
+  sits **above** the derived figure, not below the label: the label is not a conservative version
+  of the right number, it is a different quantity.
   What to use instead: the manufacturer's EV-mode consumption if it is published, and otherwise
   derive it from **usable battery capacity ÷ electric range × 100**, which is what the validator
   checks against anyway. Say in your report which you did.
