@@ -368,3 +368,66 @@ test('at the default rates a deposit slightly raises the total', () => {
   assert.ok(some.tco > none.tco);
   assert.ok(some.tco - none.tco < 2000, 'but only mildly — this is a close call, not a blowout');
 });
+
+// --- PHEV: powertrain, battery share and tax flags threaded through --------
+
+const phevVehicle = {
+  id: 'test-phev', powertrain: 'phev', listPrice: 60000,
+  batteryKwh: 18.1, rangeKm: 84, consumptionKwhPer100km: 21.5,
+  combinedRangeKm: 760, fuelConsumptionL100km: 6.8,
+  isFuelEfficientForLct: true, isGreenForVicDuty: true,
+  insuranceAnnual: 1700, depreciationCurve: [1, 0.72, 0.61, 0.53, 0.46, 0.40]
+};
+
+test('a novated lease on a PHEV costs more than on an equivalent BEV', () => {
+  const bevVehicle = { ...phevVehicle, id: 'test-bev', powertrain: 'bev' };
+  delete bevVehicle.combinedRangeKm;
+  delete bevVehicle.fuelConsumptionL100km;
+  delete bevVehicle.isFuelEfficientForLct;
+  delete bevVehicle.isGreenForVicDuty;
+
+  const phevCost = optionCosts({ vehicle: phevVehicle, inputs }, tables).novated;
+  const bevCost = optionCosts({ vehicle: bevVehicle, inputs }, tables).novated;
+  assert.ok(phevCost.monthlyCost > bevCost.monthlyCost,
+    'losing the FBT exemption must show up in the monthly figure');
+});
+
+test('the PHEV ineligibility is reported so the card can disclose it', () => {
+  const costs = optionCosts({ vehicle: phevVehicle, inputs }, tables);
+  assert.equal(costs.novated.detail.phevIneligible, true);
+});
+
+test('a BEV reports itself as eligible', () => {
+  assert.equal(optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables).novated.detail.phevIneligible, false);
+});
+
+test('the battery share reaches the running costs through optionCosts', () => {
+  const electric = optionCosts({ vehicle: phevVehicle, inputs: { ...inputs, phevBatterySharePct: 100 } }, tables);
+  const petrol = optionCosts({ vehicle: phevVehicle, inputs: { ...inputs, phevBatterySharePct: 0 } }, tables);
+  assert.notEqual(electric.loan.tco, petrol.loan.tco, 'the share must not be dropped on the way through');
+});
+
+// These two flags have existed on calc/onroad.js since the beginning and were
+// never passed by anything. A PHEV that is not a "green passenger car" for
+// VIC duty pays the higher tiered rate.
+//
+// Deviation from the brief: at phevVehicle's $60,000 list price the green
+// rate (8.4/$200) and the first "other" tier (also 8.4/$200 up to $80,809)
+// are identical, so green vs not-green produce the same stamp duty and this
+// test cannot discriminate. Bumped to $85,000 — still under the $91,661
+// fuel-efficient LCT threshold, so LCT stays uninvolved — which crosses into
+// the 10.4/$200 "other" tier and actually exercises the flag.
+test('a PHEV that is not green for VIC duty pays more on-road', () => {
+  const dutyTierVehicle = { ...phevVehicle, listPrice: 85000 };
+  const green = optionCosts({ vehicle: dutyTierVehicle, inputs }, tables);
+  const notGreen = optionCosts({
+    vehicle: { ...dutyTierVehicle, isGreenForVicDuty: false }, inputs
+  }, tables);
+  assert.ok(notGreen.upfront.detail.driveAway > green.upfront.detail.driveAway);
+});
+
+test('a PHEV outside the fuel-efficient LCT threshold is reported as such', () => {
+  const dear = { ...phevVehicle, listPrice: 88000, isFuelEfficientForLct: false };
+  const costs = optionCosts({ vehicle: dear, inputs }, tables);
+  assert.ok(costs.novated.detail.driveAway > 0, 'still costs out, just under the lower threshold');
+});
