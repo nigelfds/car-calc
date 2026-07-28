@@ -287,7 +287,7 @@ function boot(root, dataset) {
   // (ui/sections.js). onFieldChange below reassigns this closure's local
   // `state`; renderInputs must read it live, at event time, or a second
   // field edited after the first discards the first (C1).
-  renderInputs(root, () => state, onFieldChange);
+  renderInputs(root, () => state, onFieldChange, defaults);
 
   // Written once at boot: the dataset is fetched once and never changes
   // during a session, so this does not belong in render().

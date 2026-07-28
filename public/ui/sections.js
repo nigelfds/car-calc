@@ -1,4 +1,4 @@
-import { NUMERIC_FIELDS } from './state.js';
+import { NUMERIC_FIELDS, DEFAULT_ON_BLANK_FIELDS } from './state.js';
 import { parseOnDevice } from './prompt-api.js';
 
 // Which state.js fields are numbers. Declared explicitly in state.js
@@ -46,7 +46,7 @@ export function applyPreferences(state, preferences) {
 // getState() inside the listener, at event time, is what keeps two fields
 // edited in sequence both alive — mirrors renderRatesPanel's
 // panel._ratesState, refreshed on every call rather than captured once.
-export function renderInputs(root, getState, onChange) {
+export function renderInputs(root, getState, onChange, defaults = {}) {
   for (const input of root.querySelectorAll('[data-field]')) {
     const field = input.dataset.field;
     const initial = getState();
@@ -96,11 +96,29 @@ export function renderInputs(root, getState, onChange) {
       const state = getState();
       const raw = input.value;
       // Number('') is 0, which would silently resurrect a cleared numeric
-      // field as zero — leave a cleared field as the empty string instead.
-      const value = NUMERIC_FIELDS.has(field) && raw !== '' ? Number(raw) : raw;
+      // field as zero. For a field with no meaningful blank state that zero
+      // was a real answer the model used — 0km a year, 0% on battery — so
+      // those fall back to their default instead. Everything else keeps the
+      // empty string, which is what makes "any" work for the optional filters
+      // and what lets hasValidSalary (ui/app.js) ask for a salary rather than
+      // invent one.
+      const value = raw === '' && DEFAULT_ON_BLANK_FIELDS.has(field)
+        ? defaults[field]
+        : (NUMERIC_FIELDS.has(field) && raw !== '' ? Number(raw) : raw);
       const touched = new Set(state.touched ?? []);
       touched.add(field);
       onChange({ ...state, [field]: value, touched: [...touched] });
+    });
+
+    // The box and the model must not disagree once the user has finished
+    // with the field. syncFieldInputs (ui/app.js) deliberately skips whatever
+    // has focus so it never fights someone mid-type, which leaves a cleared
+    // box showing nothing while the model uses a real number. Restoring on
+    // blur closes that gap without reintroducing the fight.
+    input.addEventListener('blur', () => {
+      const value = getState()[field];
+      if (value === null || value === undefined || value === '') return;
+      if (String(input.value) !== String(value)) input.value = String(value);
     });
   }
 }
