@@ -357,3 +357,42 @@ test('a BEV card says nothing about FBT eligibility', () => {
   ]);
   assert.ok(!/FBT exemption/i.test(target.innerHTML));
 });
+
+// C1: rolling the lease start date back one day makes a PHEV FBT-exempt and
+// ~$47,000 cheaper over the term. The disclosure used to appear only in the
+// expensive case, so the cheap, load-bearing assumption went unstated.
+const earlyLease = { ...costInputs, leaseStartDate: '2025-03-31' };
+
+test('a PHEV exempt only by an early lease date carries that on the card', () => {
+  const card = cardModel(phev(), [], { inputs: earlyLease, tables: costTables, monthlyBudget: 1200 });
+  assert.equal(card.phevExemptByDate, true);
+  assert.equal(card.phevIneligible, false);
+});
+
+test('the rendered card names the date and the binding commitment behind the exemption', () => {
+  const target = { innerHTML: '' };
+  renderCards({ querySelector: () => target }, [
+    cardModel(phev(), [], { inputs: earlyLease, tables: costTables, monthlyBudget: 1200 })
+  ]);
+  assert.match(target.innerHTML, /1 April 2025/);
+  assert.match(target.innerHTML, /binding commitment/i);
+});
+
+// The two notes describe opposite treatments, so a card must never carry both.
+test('a PHEV leased after the cut-off keeps the ineligibility note and not the exempt one', () => {
+  const target = { innerHTML: '' };
+  renderCards({ querySelector: () => target }, [
+    cardModel(phev(), [], { inputs: costInputs, tables: costTables, monthlyBudget: 1200 })
+  ]);
+  assert.match(target.innerHTML, /lost the FBT exemption/i);
+  assert.ok(!/binding commitment/i.test(target.innerHTML));
+});
+
+test('a BEV on an early lease date carries neither note', () => {
+  const target = { innerHTML: '' };
+  renderCards({ querySelector: () => target }, [
+    cardModel(bev(), [], { inputs: earlyLease, tables: costTables, monthlyBudget: 100000 })
+  ]);
+  assert.ok(!/FBT exemption/i.test(target.innerHTML));
+  assert.ok(!/binding commitment/i.test(target.innerHTML));
+});

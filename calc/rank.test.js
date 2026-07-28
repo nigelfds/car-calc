@@ -245,6 +245,40 @@ test('reasons no longer just echo the user\'s own filter numbers back at them', 
   }
 });
 
+// I2: scoreVehicle read combinedRangeKm for a PHEV while reasonsFor still read
+// rangeKm, so one shortlist could carry a BEV card claiming "longest range of
+// this group, 750km" beside a PHEV card whose own specs line read "140km
+// electric, 1340km combined". Both now measure range the same way.
+test('a PHEV and a BEV in one pool never make contradictory range claims', () => {
+  const fleet = [
+    car('bev-long', { familyId: 'fam-bev', rangeKm: 750 }),
+    car('phev-longer', {
+      familyId: 'fam-phev', powertrain: 'phev', rangeKm: 140, combinedRangeKm: 1340
+    })
+  ];
+  const ranked = rankVehicles(fleet, {}, fleet.length);
+  const byId = Object.fromEntries(ranked.map(r => [r.vehicle.id, r.reasons]));
+
+  assert.ok(
+    !byId['bev-long'].some(r => /longest range/.test(r)),
+    'the 750km BEV is not the longest-legged car here — the PHEV goes 1340km'
+  );
+  assert.ok(
+    byId['phev-longer'].some(r => /longest range of this group, 1340km/.test(r)),
+    `expected the PHEV to claim the group's longest range, got ${JSON.stringify(byId['phev-longer'])}`
+  );
+});
+
+// The fallback line used to print a PHEV's electric-only range as its "range",
+// directly beneath a specs line quoting the combined figure.
+test('the fallback reason quotes a PHEV\'s combined range, matching its specs line', () => {
+  const phev = car('phev-only', {
+    powertrain: 'phev', rangeKm: 76, combinedRangeKm: 664, warrantyYears: 5
+  });
+  const [entry] = rankVehicles([phev], {}, 1);
+  assert.deepEqual(entry.reasons, ['664km range, 450L boot']);
+});
+
 test('the SUV + 500L shortlist scenario: five cards do not all share one reason', () => {
   // Regression for the exact bug report: four near-identical XPeng G6 trims
   // used to fill four of five slots with an identical reason string.

@@ -57,6 +57,36 @@ export function bootReferenceFor(vehicles) {
   return boots[Math.floor((boots.length - 1) * 0.9)];
 }
 
+// How far this car goes, for every purpose in this file.
+//
+// A PHEV's rangeKm is electric-only (76-140km on this dataset), and
+// running-costs.js already charges it for the petrol it burns once that
+// battery is flat — that charge IS the cost of a short electric range.
+// Scoring rangeKm here too would penalise the same shortcoming twice, and in
+// practice it did: against a 700km ceiling a PHEV's electric range scored so
+// low that no price advantage could rescue it, and PHEVs never reached a
+// shortlist at any budget. combinedRangeKm (electric + a full tank) is the
+// honest measure of how far the car goes, and it is also what filterVehicles
+// (public/ui/cars.js) already uses for minRangeKm — scoring rangeKm here left
+// the two disagreeing about what "range" means for the same car. Not imported
+// from data/schema.js's powertrainOf: that module is never served to the
+// browser, so an import here would pass node --test and then 404 in the
+// browser with nothing to catch it.
+//
+// One function rather than the same expression in two places: scoreVehicle
+// read combined range while reasonsFor read electric range, so a shortlist
+// could carry a Tesla card claiming "longest range of this group, 750km"
+// beside a PHEV card whose own specs line said 1340km. Both now measure the
+// same thing, and cannot drift apart again.
+//
+// Falls back to rangeKm if combinedRangeKm is missing — the schema requires
+// it, but a hole here should degrade to the old behaviour, not poison the
+// score with NaN and silently reorder the whole shortlist.
+const rangeOf = vehicle =>
+  vehicle.powertrain === 'phev'
+    ? (vehicle.combinedRangeKm ?? vehicle.rangeKm)
+    : vehicle.rangeKm;
+
 // `context.bootReference` comes from bootReferenceFor over the pool being
 // ranked. It defaults to the old fixed ceiling so a direct call still scores
 // something sensible with no pool in hand.
@@ -71,25 +101,7 @@ export function scoreVehicle(vehicle, preferences = {}, context = {}) {
   // meaningful in absolute terms (700km is a long way, 10 years is a long
   // warranty, $120,000 is dear) and none of them has boot's outlier problem.
   const boot = ratio(vehicle.bootLitresSeatsUp, context.bootReference ?? FALLBACK_BOOT_REFERENCE);
-  // A PHEV's rangeKm is electric-only (76-140km on this dataset), and
-  // running-costs.js already charges it for the petrol it burns once that
-  // battery is flat — that charge IS the cost of a short electric range.
-  // Scoring rangeKm here too would penalise the same shortcoming twice, and
-  // in practice it did: against a 700km ceiling a PHEV's electric range
-  // scored so low that no price advantage could rescue it, and PHEVs never
-  // reached a shortlist at any budget. combinedRangeKm (electric + a full
-  // tank) is the honest measure of how far the car goes, and it is also
-  // what filterVehicles (public/ui/cars.js) already uses for minRangeKm —
-  // scoring rangeKm here left the two disagreeing about what "range" means
-  // for the same car. Not imported from data/schema.js's powertrainOf: that
-  // module is never served to the browser, so an import here would pass
-  // node --test and then 404 in the browser with nothing to catch it.
-  const isPhev = vehicle.powertrain === 'phev';
-  // Fall back to rangeKm if combinedRangeKm is missing — the schema requires
-  // it, but a hole here should degrade to the old behaviour, not poison the
-  // score with NaN and silently reorder the whole shortlist.
-  const rangeKm = isPhev ? (vehicle.combinedRangeKm ?? vehicle.rangeKm) : vehicle.rangeKm;
-  const range = ratio(rangeKm, 700);
+  const range = ratio(rangeOf(vehicle), 700);
   const warranty = ratio(vehicle.warrantyYears, 10);
   // Cheaper is better, all else equal.
   const value = 1 - ratio(vehicle.listPrice, 120000);
@@ -118,7 +130,10 @@ const median = numbers => {
 function reasonsFor(vehicle, preferences, pool) {
   const group = pool && pool.length > 0 ? pool : [vehicle];
   const boots = group.map(v => v.bootLitresSeatsUp);
-  const ranges = group.map(v => v.rangeKm);
+  // rangeOf, not rangeKm: the reasons are read next to the card's own specs
+  // line, which quotes a PHEV's combined range.
+  const ranges = group.map(rangeOf);
+  const vehicleRange = rangeOf(vehicle);
   const prices = group.map(v => v.listPrice);
   const warranties = group.map(v => v.warrantyYears);
 
@@ -151,10 +166,10 @@ function reasonsFor(vehicle, preferences, pool) {
     facts.push({ weight: 2, text: `unusually large boot, ${vehicle.bootLitresSeatsUp}L` });
   }
 
-  if (!isGroupOfOne && vehicle.rangeKm === maxRange) {
-    facts.push({ weight: 3.5, text: `longest range of this group, ${vehicle.rangeKm}km` });
-  } else if (medianRange > 0 && vehicle.rangeKm >= medianRange * 1.15) {
-    facts.push({ weight: 2, text: `unusually long range, ${vehicle.rangeKm}km` });
+  if (!isGroupOfOne && vehicleRange === maxRange) {
+    facts.push({ weight: 3.5, text: `longest range of this group, ${vehicleRange}km` });
+  } else if (medianRange > 0 && vehicleRange >= medianRange * 1.15) {
+    facts.push({ weight: 2, text: `unusually long range, ${vehicleRange}km` });
   }
 
   if (vehicle.warrantyYears >= 7 && !isGroupOfOne && vehicle.warrantyYears === maxWarranty) {
@@ -176,7 +191,7 @@ function reasonsFor(vehicle, preferences, pool) {
   const chosen = facts.slice(0, 2).map(f => f.text);
 
   if (chosen.length === 0) {
-    chosen.push(`${vehicle.rangeKm}km range, ${vehicle.bootLitresSeatsUp}L boot`);
+    chosen.push(`${vehicleRange}km range, ${vehicle.bootLitresSeatsUp}L boot`);
   }
   return chosen;
 }

@@ -401,6 +401,29 @@ test('a BEV reports itself as eligible', () => {
   assert.equal(optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables).novated.detail.phevIneligible, false);
 });
 
+// C1: the cheap answer is the one that needs explaining. A pre-cut-off lease
+// date makes a PHEV exempt and takes tens of thousands off its novated total,
+// so every option carries the flag the card discloses.
+test('a PHEV exempt only by an early lease date is reported on every option', () => {
+  const early = { ...inputs, leaseStartDate: '2025-03-31' };
+  const costs = optionCosts({ vehicle: phevVehicle, inputs: early }, tables);
+  for (const option of ['novated', 'loan', 'upfront']) {
+    assert.equal(costs[option].detail.phevExemptByDate, true, option);
+    assert.equal(costs[option].detail.phevIneligible, false, option);
+  }
+});
+
+test('a PHEV leased today is ineligible rather than exempt by date', () => {
+  const costs = optionCosts({ vehicle: phevVehicle, inputs }, tables);
+  assert.equal(costs.novated.detail.phevExemptByDate, false);
+});
+
+test('a BEV is never reported as exempt by date, however early the lease starts', () => {
+  const early = { ...inputs, leaseStartDate: '2025-03-31' };
+  const costs = optionCosts({ vehicle: vehicle('a', 56000), inputs: early }, tables);
+  assert.equal(costs.novated.detail.phevExemptByDate, false);
+});
+
 test('the battery share reaches the running costs through optionCosts', () => {
   const electric = optionCosts({ vehicle: phevVehicle, inputs: { ...inputs, phevBatterySharePct: 100 } }, tables);
   const petrol = optionCosts({ vehicle: phevVehicle, inputs: { ...inputs, phevBatterySharePct: 0 } }, tables);
@@ -426,8 +449,22 @@ test('a PHEV that is not green for VIC duty pays more on-road', () => {
   assert.ok(notGreen.upfront.detail.driveAway > green.upfront.detail.driveAway);
 });
 
-test('a PHEV outside the fuel-efficient LCT threshold is reported as such', () => {
-  const dear = { ...phevVehicle, listPrice: 88000, isFuelEfficientForLct: false };
-  const costs = optionCosts({ vehicle: dear, inputs }, tables);
-  assert.ok(costs.novated.detail.driveAway > 0, 'still costs out, just under the lower threshold');
+// LCT is reported-only: driveAwayPrice computes it but deliberately leaves it
+// out of the on-road total (see the comment at calc/onroad.js:17-25), so the
+// fuel-efficient flag cannot move any figure optionCosts returns. Asserted as
+// an equality rather than the "> 0" this used to check — that was true no
+// matter what the flag did. If LCT is ever wired into the total, this fails.
+test('the fuel-efficient LCT flag leaves the drive-away total untouched', () => {
+  const dear = { ...phevVehicle, listPrice: 88000 };
+  const fuelEfficient = optionCosts({
+    vehicle: { ...dear, isFuelEfficientForLct: true }, inputs
+  }, tables);
+  const notFuelEfficient = optionCosts({
+    vehicle: { ...dear, isFuelEfficientForLct: false }, inputs
+  }, tables);
+  assert.equal(
+    notFuelEfficient.novated.detail.driveAway,
+    fuelEfficient.novated.detail.driveAway,
+    'LCT is reported, never added to the on-road total'
+  );
 });

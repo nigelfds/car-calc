@@ -236,7 +236,14 @@ function boot(root, dataset) {
       // places the "a loan reaches nothing below $X" marker on the chart —
       // if a cheaper PHEV is on the shortlist, that marker would otherwise
       // contradict the card sitting right beneath it.
-      const floorPrice = cheapestPrice(pool);
+      //
+      // Falls back to the whole fleet when the preferences match nothing:
+      // cheapestPrice([]) is 0, and a zero floor switches the floor off
+      // entirely (see maxAffordablePrice, calc/capacity.js), so the chart went
+      // straight back to plotting $3,379 of capacity at $300/mo above a
+      // shortlist reading "no car matches these preferences". An impossible
+      // filter narrows what you can be shown; it does not make cars cheaper.
+      const floorPrice = cheapestPrice(pool.length > 0 ? pool : vehicles);
       const series = purchasingPowerSeries(
         { inputs, profile, floorPrice, budgetRange: BUDGET_RANGE }, tables
       );

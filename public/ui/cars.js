@@ -90,6 +90,13 @@ export function cardModel(vehicle, families, context = null) {
 
   const powertrain = vehicle.powertrain ?? 'bev';
   const phevIneligible = costs?.novated.detail.phevIneligible ?? false;
+  // The cheap case needs disclosing more than the dear one does. A lease start
+  // date before 1 April 2025 hands a PHEV the exemption and takes tens of
+  // thousands off its novated total, on an assumption the form never asks
+  // about — so the card says which assumption it made. Read off the treatment
+  // (calc/fbt.js via compare.js) rather than comparing dates here: when the
+  // exemption ended is tax knowledge, and it lives in calc/.
+  const phevExemptByDate = costs?.novated.detail.phevExemptByDate ?? false;
   // Cards are banded on list price, so a PHEV can legitimately sit under
   // "At your budget" while costing more per month than the budget allows —
   // the budget was worked out from an FBT-exempt EV. Saying so on the card is
@@ -109,6 +116,7 @@ export function cardModel(vehicle, families, context = null) {
     balloonCovered,
     powertrain,
     phevIneligible,
+    phevExemptByDate,
     novatedOverBudget
   };
 }
@@ -191,6 +199,10 @@ export function renderCards(root, cards, emptyMessage) {
         ${costTableMarkup(card)}
         ${card.phevIneligible ? `<p class="car-phev-note">Plug-in hybrids lost the FBT exemption on
           1 April 2025, so a novated lease costs far more than for an equivalent EV.</p>` : ''}
+        ${card.phevExemptByDate ? `<p class="car-phev-note">These figures treat the lease as FBT-exempt
+          only because it starts before 1 April 2025, when plug-in hybrids lost the exemption. That
+          holds only if you had a binding commitment in place by then. On a later start date the
+          novated cost is far higher.</p>` : ''}
         ${card.reason ? `<p class="car-reason">${escapeHtml(card.reason)}</p>` : ''}
         ${card.otherTrimsText ? `<p class="car-other-trims">${escapeHtml(card.otherTrimsText)}</p>` : ''}
         ${card.summary ? `<details>
