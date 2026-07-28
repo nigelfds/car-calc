@@ -53,6 +53,15 @@ PHEV's numbers depend on two eligibility flags you must establish from sources, 
 
 Both are booleans and both are required. Getting one wrong changes the drive-away price.
 
+**A third flag, for goods vehicles only: `isNonPassengerForVicDuty`.** Victoria charges
+non-passenger vehicles a flat $5.40 per $200 — a different rate from both the green passenger rate
+and the ordinary passenger tiers. A ute is a goods vehicle whatever its emissions, so it is neither
+green nor tiered. **Set `isNonPassengerForVicDuty: true` on every ute**, alongside
+`isGreenForVicDuty: false`. Omit the field entirely for passenger cars; absent means passenger.
+Batch 1's three ute agents all correctly set `isGreenForVicDuty: false` and reported that the
+calculator had no goods-vehicle category to route them to — it does now, and this is the flag that
+reaches it.
+
 ## `data/vehicles/<familyId>.json` — an ARRAY of variant rows
 
 One row **per variant currently orderable in Victoria**. Variant granularity is the point: a trim
