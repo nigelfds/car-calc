@@ -198,7 +198,18 @@ your own from sources.
   threshold logic. If a source only gives drive-away, find the list price elsewhere or back it out
   and say so. LCT is already embedded in the advertised list price — do not add it.
 - **`bodyType`** must be exactly one of `SUV`, `Sedan`, `Hatch`, `Ute`. Any other string
-  silently breaks the body-type filter. Pick the closest of the four. Wagon was dropped — no wagon is on sale, and an unfilterable body type is worse than an approximate one; if you find a genuine wagon, classify it as the nearest of the four and say so in your report.
+  silently breaks the body-type filter. Pick the closest of the four.
+
+  **Wagons are out of scope. Do not classify one as something else.** `Wagon` was dropped from the
+  UI on the premise that none was on sale; batch 4's market survey disproved that premise, and the
+  author's decision is to leave wagons out anyway. So a plug-in wagon is now a deliberate exclusion,
+  not a rounding problem: **write no files for a wagon-only model, and for a family sold as both,
+  write only the non-wagon variants.** Name what you left out in your report.
+
+  This matters because the earlier instruction — classify it as the nearest of the four — would put
+  a wagon under `SUV` or `Hatch`, where it would be returned to someone filtering for those and
+  would compete on boot space against cars of a different shape. A missing car is honest; a
+  miscategorised one is not.
 - `bootLitresSeatsDown` must be **>=** `bootLitresSeatsUp`. For a PHEV, use the boot figure **with
   the battery pack installed** — several PHEVs lose boot space to the pack versus their petrol
   twin, and the petrol car's brochure figure is a common trap.

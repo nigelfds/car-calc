@@ -26,17 +26,19 @@ Twenty-three PHEV families. **Ute is no longer an empty filter** — it was offe
 nothing at all until batch 1 landed, and Australia's plug-in ute segment being entirely PHEV is why
 no amount of EV research could have filled it.
 
-**Wagon has been dropped from the UI** rather than waiting for data that was never coming. It is
-gone from the checkbox, both parse schemas, the fallback parser and the allowed `bodyType` list in
-both briefs. A genuine wagon should now be classified as the nearest of SUV / Sedan / Hatch / Ute
-and flagged in the report. Re-adding means the checkbox row in `public/index.html` and `BODY_TYPES`
-in `server/schema.js`, together.
+**Wagon is dropped from the UI, and wagons are out of scope — decided, not pending.**
 
-**Batch 4's survey says that decision was premature, and it should be revisited before batch 6.**
-There are three plug-in wagons on sale: BYD Seal 6 Touring (Australia's cheapest wagon of any
-kind), Cupra Leon VZe Sportstourer, and Skoda Superb PHEV — which is **wagon-only in Australia**,
-so it cannot be entered honestly at all while `Wagon` does not exist. Wagon was dropped because no
-wagon was on sale; that premise was wrong, and it was wrong because nobody had surveyed the market.
+It was originally dropped on the premise that no wagon was on sale. Batch 4's market survey
+disproved that premise: three plug-in wagons are on sale (BYD Seal 6 Touring, Cupra Leon VZe
+Sportstourer, and Skoda Superb PHEV, which is wagon-only here). Presented with that, the author's
+call is to leave wagons out regardless.
+
+So this is now a scope boundary rather than a data gap. **Do not research wagon-only models, and
+for a family sold as both, take only the non-wagon variants.** Do not classify a wagon as the
+nearest of the four — that would return it to someone filtering for SUV or Hatch and make it
+compete on boot space against a different shape of car. A missing car is honest; a miscategorised
+one is not. Skoda Superb PHEV is therefore permanently out; BYD Seal 6 contributes its sedan
+only.
 Two of the three land in batch 6, so the decision is due before then.
 
 **The empty PHEV `Sedan` cell is likewise no longer a fact about the market.** The BYD Seal 6 sedan
@@ -221,7 +223,7 @@ dispatching** — five of ten failed that test in batches 3 and 4.
 |---|---|---|
 | Toyota RAV4 PHEV | `toyota-rav4-phev` | XSE 2WD / XSE AWD / GR Sport AWD, ~$58,840-$66,340. The most important family in the wave. RAV4 also sells as a conventional hybrid across most of the range — plug-in only. |
 | BYD Sealion 5 | `byd-sealion-5` | Essential / Premium, from ~$33,990. Anchor against `byd-sealion-6` already in the dataset. |
-| BYD Seal 6 | `byd-seal-6` | Essential / Premium, ~$34,990-$39,990. **Sedan and Touring wagon.** The sedan is the first PHEV `Sedan` in the dataset; the Touring is a wagon and cannot be classified honestly until `Wagon` returns. |
+| BYD Seal 6 | `byd-seal-6` | Essential / Premium, ~$34,990-$39,990. **Sedan variants only** — the Touring is a wagon and wagons are out of scope (see the scope boundary above). The sedan is the first PHEV `Sedan` in the dataset. |
 | Geely Starray EM-i | `geely-starray-em-i` | Complete / Inspire, ~$37,490-$39,990. New brand to the dataset. |
 | GWM Haval H6 GT PHEV | `gwm-haval-h6-gt-phev` | Hi4 PHEV, ~$52,990 **drive-away** — back out the list price. Distinct from `gwm-haval-h6-phev` already in the dataset; anchor against it and note where they genuinely differ. |
 | BYD Sealion 8 | `byd-sealion-8` | Dynamic / Premium, 7 seats, ~$61,957-$76,657 **drive-away**. |
@@ -248,7 +250,7 @@ Not yet planned in detail; grade names below are unverified leads from the surve
   "iV" suffix** — local badging is just "PHEV", so a row keyed to "Kodiaq iV" will never match.
 - **Batch 7 — off-roaders and the rest of the European mainstream.** GWM Tank 300 Hi4-T ·
   GWM Tank 500 Ultra Hi4-T · Denza B5 · Denza B8 · Cupra Terramar VZe · Skoda Superb PHEV
-  (**wagon-only** — blocked until `Wagon` returns). **Verify the Denzas are true PHEVs**: they use
+  (**wagon-only — permanently out of scope, do not research**). **Verify the Denzas are true PHEVs**: they use
   BYD's DMO off-road platform and the survey could not confirm first-hand that the engine
   mechanically drives the wheels. If it does not, they are REEVs and out of scope.
 - **Batch 8 — premium.** Mercedes C 350e (a **sedan**) · Mercedes GLA 250e · BMW X5 xDrive50e ·
@@ -344,8 +346,9 @@ different measurement convention from every other row. Neither is visible to the
 - **Body-type spread — the earlier reading of this was wrong.** Batch 1 closed `Ute`. Every PHEV
   in the dataset is an SUV or a ute, and this document previously said that if `Hatch` and `Sedan`
   stayed BEV-only that would be "a real fact about the market rather than a gap". **The survey
-  disproved that.** Plug-in sedans and wagons are on sale here now; the dataset lacks them because
-  nobody researched them. `Wagon` was dropped on the same mistaken premise. Do not infer market
+  disproved that.** Plug-in sedans are on sale here now and the dataset lacks them only because
+  nobody researched them — go get them. Wagons are also on sale but are a deliberate scope
+  exclusion, which is a different thing from a gap. Do not infer market
   facts from the shape of a dataset that was assembled from one session's recollection.
 - **Agents finding calculator bugs is a good outcome, not scope creep.** Batch 1's three ute
   agents independently worked out that a ute is a non-passenger vehicle for VIC duty and reported
