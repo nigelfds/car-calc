@@ -359,3 +359,20 @@ test('the electric consistency check uses electric range for a PHEV', () => {
   assert.equal(result.valid, false);
   assert.match(result.errors.join(' '), /consumptionKwhPer100km/);
 });
+
+// Optional on any powertrain: a battery-electric ute would be a goods vehicle
+// too, so this is not a PHEV-only field and must not be rejected on a BEV.
+test('the non-passenger duty flag is accepted on any row', () => {
+  assert.equal(validateVehicle({ ...bevRow(), isNonPassengerForVicDuty: true }).valid, true);
+  assert.equal(validateVehicle({ ...phevRow(), isNonPassengerForVicDuty: true }).valid, true);
+});
+
+test('a row with no non-passenger flag is still valid, and means passenger car', () => {
+  assert.equal(validateVehicle(bevRow()).valid, true);
+});
+
+test('the non-passenger flag must be a boolean when present', () => {
+  const result = validateVehicle({ ...bevRow(), isNonPassengerForVicDuty: 'yes' });
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join(' '), /isNonPassengerForVicDuty/);
+});

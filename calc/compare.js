@@ -15,7 +15,10 @@ function vehicleContext(vehicle, inputs, tables) {
   const onRoad = driveAwayPrice({
     listPrice: vehicle.listPrice,
     isGreen: vehicle.isGreenForVicDuty ?? true,
-    isFuelEfficient: vehicle.isFuelEfficientForLct ?? true
+    isFuelEfficient: vehicle.isFuelEfficientForLct ?? true,
+    // A goods vehicle rather than a passenger car — a category the other two
+    // flags cannot express, since a ute is neither green nor tiered.
+    isNonPassenger: vehicle.isNonPassengerForVicDuty ?? false
   }, tables);
   const running = runningCosts({
     vehicle,

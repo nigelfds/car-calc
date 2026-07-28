@@ -26,6 +26,7 @@
   "fbt": { "statutoryRate": 0.20, "grossUpType1": 2.0802, "rate": 0.47 },
   "vicDuty": {
     "greenRatePer200": 8.40,
+    "nonPassengerRatePer200": 5.40,
     "otherTiers": [
       { "upTo": 80809, "ratePer200": 8.40 },
       { "upTo": 100000, "ratePer200": 10.40 },
