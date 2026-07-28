@@ -122,7 +122,20 @@ your own from sources.
   **say so prominently in your report and name it as your least-confident figure**. The first
   research wave shipped a whole family on NEDC and only disclosed it in passing.
   **State which standard every range figure is** in your report, per variant if they differ.
-- **`combinedRangeKm`: source it if you possibly can.** Every combined range in the dataset today
+- **`combinedRangeKm`: compute it to the convention below.** Batch 3 established that this figure
+  is essentially never published: Volvo, BMW and Mercedes publish nothing across AU, UK, IE, DE and
+  NL, and the one exception (Lexus's "1167 km total range") is built on the NEDC electric figure,
+  so adopting it would reimport the very defect the WLTP rule exists to keep out. All 51 PHEV rows
+  are computed. That is a real absence in the market's published data, not a research gap, so stop
+  hunting for it and apply this instead:
+
+      combinedRangeKm = WLTP electric range + (tank capacity in litres ÷ charge-sustaining
+                        L/100km × 100)
+
+  **Source the tank capacity**, show the arithmetic in your report, and use the same
+  `fuelConsumptionL100km` you wrote to the row so the two figures cannot disagree. If a
+  manufacturer figure does exist AND is built on WLTP, prefer it and say so.
+- **(Superseded, kept for context) `combinedRangeKm`: source it if you possibly can.** Every combined range in the dataset today
   is computed rather than quoted, and this field now drives the shortlist ranking, so a computed
   figure is load-bearing rather than decorative. If you must compute it as electric range plus
   (tank capacity ÷ `fuelConsumptionL100km`), show the arithmetic and the tank capacity's source in
@@ -152,10 +165,23 @@ your own from sources.
   What to use instead: the manufacturer's EV-mode consumption if it is published, and otherwise
   derive it from **usable battery capacity ÷ electric range × 100**, which is what the validator
   checks against anyway. Say in your report which you did.
+  **A published figure is not automatically the right quantity — check which market published it.**
+  Batch 3 found Volvo publishing three different quantities under nearly identical labels across
+  one brand's markets: the UK site gives a true charge-depleting figure, Ireland/Germany/the
+  Netherlands give the utility-factor-weighted number, and Australia gives the NEDC one. Same field
+  name, three meanings. If a figure disagrees with battery ÷ range by more than a few percent,
+  suspect the quantity before you suspect the arithmetic. A published *band* rather than a point
+  (BMW gives 22.3–24.0) is usable as a check but not as a value.
 - **`consumptionKwhPer100km`** is electric consumption while running on battery. The validator
   computes `batteryKwh / rangeKm * 100` and rejects the row if your stated consumption is more than
   **25%** away from it. Use the **usable** battery capacity and the **electric** range from the same
   source so the three numbers agree.
+  **`batteryKwh` must be the USABLE capacity, not the gross.** Two families already in the dataset
+  record gross: the Mitsubishi Outlander's 22.7 kWh sits 20% from what its own range and
+  consumption imply (~18.9 usable), and the Lexus NX's 18.1 kWh implies exactly 16.0. Neither
+  changes a number the app shows — `batteryKwh` is read by nothing but this cross-check — but both
+  eat the 25% tolerance and leave the check with nothing left to catch a real error with. If the
+  brochure gives only a gross figure, say so in your report rather than passing it off as usable.
   **Source this independently where you can, rather than back-computing it.** All ten PHEV rows in
   the dataset today have a stated consumption exactly equal to `batteryKwh / rangeKm * 100`, which
   makes the validator's cross-check tautological — it cannot catch a unit error when the third
