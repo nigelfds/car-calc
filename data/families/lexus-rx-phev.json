@@ -1,0 +1,33 @@
+{
+  "id": "lexus-rx-phev",
+  "summary": "The RX 450h+ is the only plug-in grade in the Lexus RX range — the RX350h and the flagship RX500h are conventional hybrids with no plug at all — and it pairs an 18.1kWh battery with a 2.5-litre petrol four for 227kW and all-wheel drive. Australian reviewers rate it highly for refinement, the 612-litre boot and a charge-sustaining thirst of roughly 6.5-7.0L/100km once the battery is flat, which is well under what similarly sized European plug-ins drink. The recurring criticisms are the modest 67km WLTP electric range against a BMW X5 xDrive50e's 101km, AC-only 7kW charging with no DC capability, a 1500kg tow rating, and the fact that the $123,650 Sports Luxury asks flagship money for a car whose $105,350 Luxury twin shares the whole drivetrain.",
+  "pros": [
+    "The $105,350 RX450h+ Luxury added in November 2025 undercuts the Sports Luxury by $18,300 while keeping the identical 18.1kWh battery, 227kW output and e-Four all-wheel drive — it drops 21-inch wheels, adaptive suspension, adaptive headlights, the hands-free tailgate and the premium audio, but nothing that affects range or running cost",
+    "Charge-sustaining consumption is genuinely low for a 2.1-tonne large SUV: EV Central measured roughly 6.5-7.0L/100km with the battery depleted and the US EPA rates it at 35mpg (6.7L/100km) in hybrid mode, so an owner who cannot plug in still gets Toyota hybrid economy rather than the 9L/100km-plus typical of a large European PHEV",
+    "The 612-litre boot (1678 litres seats-down) is unchanged from the petrol and hybrid RX because the battery sits under the cabin floor — the Kia Sorento PHEV and Mazda CX-60 PHEV both surrender load space to their packs",
+    "Lexus Australia's five-year, unlimited-kilometre warranty is unconditional, the hybrid battery is covered separately for 10 years, and servicing is capped at $695 per visit for five years or 75,000km",
+    "Unlike PHEVs that simply revert to the petrol engine when the battery empties, the RX drops into full Toyota-style hybrid operation and recharges the pack on the move, and it will hold EV mode to 135km/h rather than firing the engine at highway speed"
+  ],
+  "cons": [
+    "The 85km electric range Lexus Australia advertises is an NEDC figure carried by the ADR 81/02 energy label; the European WLTP figure for the same car is 67-69km, so the headline overstates the range by around 25 per cent before real-world driving is considered, and Australian testers recorded 55-60km",
+    "Charging is AC-only at 7kW with no DC fast-charge option, so a full recharge takes just under three hours on a wallbox and most of a working day on a household socket — a buyer without home charging is paying a large premium over an RX350h for a battery they cannot keep full",
+    "The 1.3L/100km label consumption is meaningless in use: it assumes every trip starts fully charged, where real Australian tests land at 4.8-5.1L/100km with regular plugging in and 6.5-7.0L/100km without, roughly five times the sticker",
+    "Braked towing is capped at 1500kg, below the 2000kg the same car is rated for in Europe and well under the 2400-2500kg of the Volvo XC90 T8 and Mercedes GLC/GLE plug-ins, and there is no spare wheel — only a repair kit",
+    "At $123,650 the Sports Luxury sits $32,000 above the fuel-efficient luxury car tax threshold of $91,661 and buys a five-seat SUV with less electric range than a BMW X5 xDrive50e; CarsGuide called the EV-only range 'relatively short' for the money and the Luxury grade is the value pick by a wide margin"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-lexus-rx-gets-tech-upgrades-more-affordable-phev",
+    "https://www.carexpert.com.au/car-news/2025-lexus-rx-phev-priced-for-australia",
+    "https://www.carsguide.com.au/ev/lexus-rx-450h-sports-luxury-99054",
+    "https://www.carsguide.com.au/car-news/18k-price-cut-for-luxury-hybrid-suv-100364",
+    "https://www.carsales.com.au/editorial/details/lexus-rx-450h-sports-luxury-2025-review-150386/",
+    "https://evcentral.com.au/2025-lexus-rx450h-sports-luxury-review-plug-in-hybrid-newcomer-takes-on-bmw-mercedes-benz-and-volvo/",
+    "https://www.exhaustnotes.com.au/2025-lexus-rx-450h-awd-sports-luxury-car-review/",
+    "https://www.lexus.com.au/models/rx/rx-phev",
+    "https://newsroom.lexus.eu/go-further-do-more-with-the-all-new-lexus-rx-450h-plug-in-hybrid-electric/",
+    "https://www.lexus.co.uk/new-cars/rx/rx-450h-retail-offer",
+    "https://www.parkers.co.uk/lexus/rx/suv-2022/450h-25-takumi-5dr-e-cvt/specs/",
+    "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

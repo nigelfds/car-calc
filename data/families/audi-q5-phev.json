@@ -1,0 +1,34 @@
+{
+  "id": "audi-q5-phev",
+  "summary": "Audi's new-generation Q5 e-hybrid quattro is the plug-in the brand badged TFSI e last time round, and its headline is price parity: at $96,900 for the SUV and $100,400 for the Sportback it costs exactly the same as the 200kW TFSI quattro sport petrol while making 270kW/500Nm and adding 82km of WLTP electric range from a 20.7kWh usable battery. That undercuts the Mercedes-Benz GLC 350e and the BMW X3 30e while carrying more claimed electric range than the BMW, and reviewers rate the PPC-platform Q5's new-found ride comfort and cabin technology highly. The reservations are consistent and not about the powertrain: capacitive touch panels have replaced most physical controls, the steering is over-assisted, the battery costs 82 litres of boot, and with the PHEV FBT exemption gone since April 2025 the case rests entirely on charging at home.",
+  "pros": [
+    "270kW/500Nm and 5.1sec to 100km/h for exactly the same $96,900 (SUV) / $100,400 (Sportback) as the 200kW TFSI quattro sport petrol — 70kW more for no extra money, and it undercuts the Mercedes-Benz GLC 350e ($99,900) and BMW X3 30e ($104,800)",
+    "82km WLTP electric range from a 20.7kWh usable (25.9kWh gross) battery, about 45 per cent more capacity than the old Q5 55 TFSI e, so a typical 30-45km Melbourne commute runs on electricity alone",
+    "11kW three-phase AC charging fills the pack 0-100 per cent in about 2.5 hours, up from 7.2kW on the superseded Q5 TFSI e, which makes daytime top-ups practical rather than overnight-only",
+    "75g/km combined CO2 is well under Victoria's 120g/km green passenger car threshold, so it pays $8.40 per $200 duty instead of the $10.40 (SUV) or $14.00 (Sportback) per $200 an equivalently priced petrol Q5 attracts — worth roughly $970 on the SUV and $2,800 on the Sportback",
+    "2000kg braked towing plus standard 20-inch Audi Sport wheels, sport suspension, red calipers, black styling pack, privacy glass and auxiliary air-conditioning that the same-priced petrol does not get; five-year/unlimited-kilometre vehicle warranty with the high-voltage battery covered eight years/160,000km"
+  ],
+  "cons": [
+    "The battery under the boot floor costs 82 litres: 438L seats-up in the SUV and 433L in the Sportback, against 520L in the petrol and diesel Q5, and 1358L/1300L folded versus 1473L — the Mercedes GLC 350e carries 590L and the BMW X3 30e 460L",
+    "The 3.3L/100km ADR label figure only holds if you start every trip charged: Audi's own WLTP figure with the battery discharged is 7.4-8.4L/100km for the 270kW car and an independent charge-sustaining test returned 7.8L/100km, so an apartment-dwelling buyer is running a 2170kg petrol SUV on 95 RON",
+    "AC-only charging capped at 11kW with no DC fast-charge hardware at all, where the Mercedes GLC 350e accepts up to 60kW DC — a flat battery on a road trip stays flat until you find a destination charger",
+    "PHEVs lost the FBT exemption on 1 April 2025, and both variants sit above the $91,661 fuel-efficient LCT threshold and far above the $75,000 FBT phase cap, so the novated-lease concessions that once justified the plug-in premium no longer apply",
+    "Reviewers are consistent that the new Q5 trades away driver engagement and usability: steering with too much electronic assist, climate and most secondary functions moved to capacitive touch panels, a tight rear seat with a high floor hump, and a tyre repair kit rather than a spare"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-audi-q5-adds-270kw-phev-with-ice-price-parity",
+    "https://www.carexpert.com.au/car-news/2026-audi-q5-e-hybrid-brings-phev-tech-to-new-gen-suv",
+    "https://www.carexpert.com.au/car-reviews/2026-audi-q5-review-quick-drive",
+    "https://www.carsguide.com.au/car-news/price-shock-for-luxe-hybrid-suv-100073",
+    "https://www.carsguide.com.au/luxury/audi-q5-99428",
+    "https://www.chasingcars.com.au/news/new-car-prices/hybrid-steal-audi-q5-plug-in-hybrid-with-270kw-priced-identically-to-new-200kw-turbo-petrol-option/",
+    "https://www.carsales.com.au/editorial/details/2026-audi-q5-range-expands-with-phev-and-hotter-petrol-variants-150821/",
+    "https://www.carsales.com.au/research/audi/q5/2026/e-hybrid-270kw/",
+    "https://evcentral.com.au/price-parity-plug-in-audi-q5-e-hybrid-arrives-with-more-power-fuel-savings-80km-ev-range-and-same-price-as-slower-ice/",
+    "https://www.audi.com/en/press-releases/the-audi-q5-e-hybrid-all-rounder-with-great-electric-range-16685",
+    "https://www.audi.com/en/audi-q5-suv-e-hybrid-quattro-16677",
+    "https://www.auto-data.net/en/audi-q5-iii-gu-2.0-tfsi-367hp-e-hybrid-quattro-ultra-s-tronic-54561",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

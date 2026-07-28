@@ -1,0 +1,28 @@
+{
+  "id": "land-rover-defender-phev",
+  "summary": "The only plug-in Defender is the 110 P300e, a 221kW 2.0-litre petrol hybrid sold in two trims and no other body length. Reviewers agree it keeps everything that makes a Defender a Defender — the twin-speed transfer case, the air suspension, the 3000kg tow rating — and adds around 48km of quiet electric running that suits a Melbourne commute. Where they split is whether that is worth the money: the battery costs boot space, a third-row seat and roughly $13,000-$16,600 over the equivalent D350 diesel, and the fuel saving only materialises if the car is plugged in nightly.",
+  "pros": [
+    "The only Defender you can plug in: about 48km of WLTP electric range covers a typical Melbourne commute, and it is one of the few PHEVs at any price with DC fast charging (40kW, 0-80 per cent in roughly 30 minutes) rather than AC only.",
+    "Keeps the Defender's touring hardware intact — 3000kg braked towing, a 90-litre tank, twin-speed transfer case and up to 900mm wading on air suspension — so the battery is added capability rather than a substitution.",
+    "Clears both Australian tax tests: 78g/km CO2 on the Australian label is well inside Victoria's 120g/km green-car duty threshold, and the 3.4L/100km combined figure sneaks under the 3.5L/100km fuel-efficient LCT limit that lifts the threshold from $80,809 to $91,661.",
+    "Five-year, unlimited-kilometre warranty with five years of roadside assistance and six-year anti-corrosion cover, level with Volvo and BMW rather than the shorter terms Land Rover Australia used to offer."
+  ],
+  "cons": [
+    "CarExpert measured 9.7L/100km on the same drivetrain once the battery was flat and never recharged — about 63 per cent above the 3.4L/100km label — so a buyer without home charging is running a 2.6-tonne car on a small four-cylinder engine and paying for it in fuel.",
+    "The pack eats the boot: Land Rover quotes up to 116 litres less loadspace than a non-hybrid 110 and a loadspace floor raised 36mm, leaving 853 litres behind the second row.",
+    "No third row. Land Rover does not offer the seven-seat Family Pack on the P300e, so a family that needs six or seven seats has to take a D350 110 or step up to a 130.",
+    "Braked towing falls to 3000kg against 3500kg for the D350 and P425, and the PHEV carries roughly 100kg more kerb weight, so it is the worst Defender in the range for a heavy trailer.",
+    "At $131,100 and $143,200 before on-road costs it asks $13,000-$16,600 more than the D350 X-Dynamic SE and HSE, and it is well past the $75,000 cap in the 2027 FBT phase-down as well as both LCT thresholds."
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-land-rover-defender-upgrade-brings-more-v8-options-new-tech-design-tweaks",
+    "https://www.carexpert.com.au/car-reviews/2024-defender-110-p400e-x-dynamic-se-review",
+    "https://www.carsguide.com.au/land-rover/defender/price/2026/110-p300e-x-dynamic-se-phev",
+    "https://www.carsales.com.au/research/land-rover/defender/2026/110-p300e-x-dynamic-se/",
+    "https://www.landrover.com.au/defender/defender/models-and-specifications.html",
+    "https://www.landrover.co.uk/content/dam/lrdx/pdfs/uk/wltp-pdfs/Land-Rover-Defender-TD-Insert-1L6632600000GBEN01P.pdf",
+    "https://www.vesr.gov.au/vehicle/land-rover-defender-le-110-p400e-electric-hybrid-awd-5-seats-suv-2024-2025",
+    "https://sro.vic.gov.au/exemptions-and-reductions-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-07-28"
+}
