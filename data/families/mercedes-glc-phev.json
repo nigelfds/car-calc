@@ -1,0 +1,34 @@
+{
+  "id": "mercedes-glc-phev",
+  "summary": "The GLC 350e 4MATIC is Mercedes-Benz Australia's first non-AMG plug-in hybrid GLC, and its 25.28kWh usable battery is roughly a third larger than most rivals' — 107km of WLTP electric range is enough that many owners will use the petrol engine only on country trips. Australian reviewers are consistently positive about the calibration and the near-silent EV mode, and note that at $99,900 it undercuts both the GLC 300 petrol it outperforms and the BMW X3 30e. The recurring criticisms are the 2.3-tonne kerb weight, a boot that loses its underfloor storage and spare wheel to the battery, and a five-year service plan that Chasing Cars priced at $7350.",
+  "pros": [
+    "107km of WLTP electric range from a 25.28kWh usable battery is the longest of any plug-in hybrid SUV under $110,000 in Australia — roughly double the Lexus NX 450h+ (87km) and Volvo XC60 T8, and enough that a typical Melbourne commute never starts the engine",
+    "Charges properly for a PHEV: 11kW AC three-phase gets 0-100 per cent in about 2h45m, and it is one of very few plug-in hybrids on sale here with DC fast charging (up to 60kW, 10-80 per cent in about 29 minutes), so a driver without a home charger still has an option",
+    "At $99,900 before on-road costs it lists $5200 below the GLC 300 4MATIC petrol it comfortably out-accelerates — 230kW/550Nm combined, 0-100km/h in 6.7 seconds — which is unusual for a plug-in hybrid, and it is 10kW/100Nm up on the $104,800 BMW X3 30e",
+    "Braked towing is rated at 2400kg, well ahead of the Kia Sorento PHEV's 1010kg and the Mitsubishi Outlander PHEV's 1600kg, so the battery has not cost it usefulness as a tow car",
+    "Mercedes-Benz Australia's five-year, unlimited-kilometre warranty is unconditional and is not tied to servicing inside the dealer network"
+  ],
+  "cons": [
+    "The 1.2L/100km combined label is meaningless once the battery is flat: Australian testers recorded 7.3L/100km (Chasing Cars), 7.8L/100km (NRMA, CarsGuide) and 8.8L/100km (CarExpert) in charge-sustaining mode on 95 RON premium, so a buyer who cannot charge at home is running a 2.3-tonne petrol SUV and the whole case for the car collapses",
+    "The battery sits over the rear axle and takes the boot from the GLC 300's 620 litres to 590, removes the underfloor storage entirely and replaces the spare wheel with a repair kit — the floor is no longer flat",
+    "Servicing is expensive even by German standards: Chasing Cars quotes $7350 for a five-year plan on 12-month/25,000km intervals, roughly ten times what a Mitsubishi Outlander PHEV costs to service over the same period",
+    "It sits well above both Luxury Car Tax thresholds at $99,900 and above the $75,000 FBT cap, and since the FBT exemption for plug-in hybrids ended on 1 April 2025 there is no novated-lease advantage left to offset that",
+    "Kerb weight is about 2316kg — some 200kg more than the GLC 300 — and reviewers note the extra mass in direction changes and under brakes, though the air-free steel-spring suspension copes better than expected"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-mercedes-benz-glc350e-phev-lands-in-australia-with-over-100km-of-electric-range",
+    "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-glc-review",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/mercedes-benz-glc-350e-2026-plug-in-hybrid-review/",
+    "https://www.mynrma.com.au/open-road/car-reviews/mercedes-benz/2025-mercedes-benz-glc350e-review",
+    "https://www.carsguide.com.au/ev/mercedes-benz-glc-glc350e-99846",
+    "https://www.carsguide.com.au/car-news/new-long-range-plug-in-hybrid-suv-arrives-99484",
+    "https://www.carsales.com.au/research/mercedes-benz/glc-class/2026/glc350-e/",
+    "https://www.carsales.com.au/editorial/details/mercedes-benz-glc-350e-2025-review-150608/",
+    "https://www.motoringnz.com/tested/2026/3/11/mercedes-benz-glc-350e-road-test-review-power-surge",
+    "https://www.carexpert.com.au/car-news/2027-mercedes-amg-glc53-prices-hot-six-cylinder-suv-replacing-four-cylinder-glc43-glc63-in-australia",
+    "https://www.carexpert.com.au/car-reviews/2025-mercedes-amg-glc63-s-e-performance-review",
+    "https://www.vesr.gov.au/vehicle/mercedes-benz-glc-class-glc300e-4matic-wagon-auto-2021-2026",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

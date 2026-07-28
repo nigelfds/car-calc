@@ -1,0 +1,32 @@
+{
+  "id": "bmw-x1-phev",
+  "summary": "The xDrive25e is the first plug-in hybrid X1 BMW Australia has ever sold locally, added mid-2026 as the only PHEV in a range that otherwise runs mild-hybrid petrol or the battery-electric iX1. It pairs the base car's 1.5-litre three-cylinder with an 80kW motor and a 14.2kWh usable battery for 180kW, 6.8sec to 100km/h and a WLTP electric range BMW Australia quotes at 67-82km depending on wheels — enough to cover most Melbourne commutes on grid power. Reviewers rate the underlying X1 highly (CarExpert's Best Luxury Small SUV two years running, CarsGuide's best small car under $80,000), but no Australian outlet has road-tested the PHEV yet, and the case for it over the cheaper petrol or the FBT-exempt iX1 is a tax and charging-access argument rather than a driving one.",
+  "pros": [
+    "67-82km of WLTP electric range from a 14.2kWh usable battery clears the daily commute for most buyers, and beats the Mazda CX-60 PHEV's 76km and the Mitsubishi Outlander PHEV's 86km on usable-battery-per-dollar within a genuinely premium small SUV",
+    "At $79,500 before on-roads it sits $1,309 under the ordinary $80,809 LCT threshold, so no luxury car tax applies at all — and at 53-75g/km CO2 combined it is comfortably inside Victoria's 120g/km green passenger car limit, so stamp duty is charged at the flat green rate",
+    "180kW and 477Nm for 6.8sec to 100km/h makes it the second-quickest X1 behind the $93,900 M35i, and 1.7 seconds quicker than the $66,700 sDrive20i it is based on",
+    "1,700kg braked towing is unusually strong for a compact PHEV — the Cupra Formentor VZe manages 1,500kg and most small plug-ins are rated at 750kg or not rated at all",
+    "Five-year unlimited-kilometre warranty is unconditional and not tied to servicing inside the BMW network, with the high-voltage battery separately covered for six years or 100,000km"
+  ],
+  "cons": [
+    "The battery costs the X1 50 litres of boot, dropping it from 540 litres in the petrol car to 490 — and Carwow notes the plug-in is the smallest boot in the whole X1 line-up, below even the mild-hybrid grades",
+    "Once the battery is flat it is a 1.5-litre three-cylinder hauling roughly 1,855kg: BMW's own charge-sustaining figure is 6.3-7.1L/100km, three times the 2.3-3.3L/100km combined label, so the running-cost case collapses for anyone who cannot charge at home",
+    "It lost the FBT exemption that PHEVs held until 1 April 2025, while the iX1 xDrive30 sitting $7,300 above it at $86,800 keeps it — on a novated lease that gap can outweigh the sticker difference entirely",
+    "Charging is AC-only at 11kW with no DC capability, so a flat battery is a one-hour-45-minute stop on a wallbox and cannot be topped up usefully on the road; the Cupra Formentor VZe offers 50kW DC for $10,510 less",
+    "Only one grade is offered and the M Sport package with 19-inch wheels is mandatory, which pushes the car to the pessimistic end of BMW's 67-82km range band and leaves no cheaper entry point into the X1 PHEV"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-bmw-x1-and-x2-updates-bring-phev-and-mhev-power",
+    "https://www.whichcar.com.au/news/bmw-updates-x1-x2-lineup-2026-plug-in-hybrid",
+    "https://www.carsales.com.au/editorial/details/2026-bmw-x1-and-x2-updated-151322/",
+    "https://www.carsales.com.au/research/bmw/x1/2026/xdrive25e-m-sport/",
+    "https://www.cars24.com.au/car-news/2026-bmw-x1-plug-in-hybrid-and-x2-updated-prices-for-australia/",
+    "https://zecar.com/reviews/bmw-x1-x2-2026-electric-updates",
+    "https://www.carexpert.com.au/car-news/2026-carexpert-choice-winner-best-luxury-small-suv",
+    "https://www.carsguide.com.au/bmw/x-models/x1/price/2026",
+    "https://www.carwow.co.uk/bmw/x1",
+    "https://www.bmw.com.au/en/models/x-series/x1/bmw-x1.html",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

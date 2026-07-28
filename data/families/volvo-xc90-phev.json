@@ -1,0 +1,33 @@
+{
+  "id": "volvo-xc90-phev",
+  "summary": "The T8 is the only plug-in XC90 — the B5 grades alongside it are 48-volt mild hybrids with no charge port — and it is currently the only seven-seat plug-in hybrid sold in Australia above $100,000, which is most of its case. Australian reviewers are close to unanimous on the driving: 340kW, air suspension as standard and a ride-handling balance carsales rated among the best it has sampled in an SUV. Where they diverge is on whether a decade-old platform justifies $130,990, and they agree the numbers are dated — about 69km of WLTP electric range when newer plug-ins clear 100km, AC-only charging, and 7.7L/100km once the battery is flat.",
+  "pros": [
+    "The only seven-seat plug-in hybrid on sale in Australia above $100,000: the Audi Q7, BMW X5 xDrive50e and Mercedes-Benz GLE 450e are all five-seat in their PHEV form, and the cheaper seven-seat plug-ins (Kia Sorento PHEV, Mazda CX-80) sit a full class below on price and equipment",
+    "Braked towing is 2400kg, unusually high for a monocoque plug-in hybrid — the Kia Sorento PHEV manages 1010kg and the Mazda CX-80 PHEV 2500kg — so the battery does not cost you a caravan the way it does in most PHEV rivals",
+    "Height-adjustable four-mode air suspension is standard on both grades, and carsales rated the resulting ride-handling balance as one of the best it has experienced in an SUV, achieved on 22-inch wheels without any Australian-specific retune",
+    "Charge it and the petrol engine barely runs: CarsGuide recorded 3.4L/100km across a week of mixed driving with regular home charging, against 8.1L/100km for the mild-hybrid B5 XC90 that costs about $25,000 less",
+    "Volvo's five-year unlimited-kilometre warranty is unconditional, the high-voltage battery carries a separate eight-year/160,000km cover, and capped-price servicing runs $2380 for three years or $3870 for five on 12-month/15,000km intervals"
+  ],
+  "cons": [
+    "Charging is AC-only through a 3.6kW onboard charger with no DC capability at all — roughly three hours on a two-phase 6.4kW wallbox, and overnight on a household socket — so a buyer without off-street parking cannot realistically keep the battery full and is left running a 2.4-tonne petrol SUV",
+    "Once the battery is depleted it drinks like what it is: carsales measured 7.7L/100km over a week-long loan, and Volvo's own European data quotes 7.2-8.0L/100km with the battery empty, against a 1.8L/100km label figure that assumes you start every trip charged",
+    "Electric range is the weak spot of the package — about 69km on WLTP, and both CarsGuide and carsales ran out of battery in the low 60s against the 77km NEDC figure Volvo Australia advertises — at a time when several cheaper plug-in hybrids claim more than 100km",
+    "The third row is genuinely awkward: there is no boot-side release, so raising the seats means climbing into the load bay or reaching through a rear door to work a heavy lever, and CarsGuide described the process as too much effort to want to repeat regularly",
+    "Boot space behind the raised third row is 262 litres, and there is no spare wheel of any kind — only a repair kit — because of the packaging demanded by the battery pack"
+  ],
+  "sources": [
+    "https://www.volvocars.com/au/cars/xc90-hybrid/specifications/",
+    "https://www.volvocars.com/au/build/xc90-hybrid/",
+    "https://www.carsguide.com.au/ev/volvo-xc90-ultra-t8-phev-99295",
+    "https://www.carsguide.com.au/volvo/xc90/price/2026",
+    "https://www.carsales.com.au/editorial/details/volvo-xc90-ultra-t8-awd-phev-2026-review-151416/",
+    "https://www.carsales.com.au/research/volvo/xc90/",
+    "https://www.exhaustnotes.com.au/2026-volvo-xc90-t8-phev-launch-drive-review/",
+    "https://www.carexpert.com.au/volvo/xc90/2026/specs",
+    "https://www.vesr.gov.au/vehicle/volvo-xc90-t8-recharge-suv-auto-2022-2026",
+    "https://www.volvocars.com/uk/cars/xc90-hybrid/specifications/",
+    "https://www.volvocars.com/ie/cars/xc90-hybrid/specifications/",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

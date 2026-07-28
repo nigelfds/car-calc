@@ -1,0 +1,36 @@
+{
+  "id": "lexus-nx-phev",
+  "summary": "The NX 450h+ is the only plug-in hybrid in the Lexus NX range — the far more common NX 350h is a conventional hybrid with no plug — and it pairs an 18.1kWh battery with a 2.5-litre petrol four for 227kW and all-wheel drive. Its distinguishing trait is that it stays frugal once the battery is flat: Australian testers record about 5.4-6.0L/100km in charge-sustaining running, where most European PHEVs of this size drink 8L/100km or more. Reviewers rate the refinement, build and the newly added $84,500 Luxury grade, but are consistently critical of the $96,000 F Sport's value against cheaper plug-in rivals, the 6.6kW AC-only charging with no DC option, and an official 87km range claim that is NEDC-derived and about 15 per cent above the European WLTP figure.",
+  "pros": [
+    "Charge-sustaining economy is genuinely low for a 2.05-tonne premium SUV: Chasing Cars measured about 6.0L/100km running on petrol alone with the battery depleted over a ~1000km long-term test, and CarExpert saw 5.7L/100km across a mostly-highway week — so an owner who cannot plug in still gets Toyota hybrid consumption rather than the 8-9L/100km typical of European PHEVs",
+    "Adding the NX450h+ Luxury AWD at $84,500 in late 2025 cut $11,500 off the price of entry to the plug-in drivetrain, which previously required the $96,000 F Sport, and it keeps the same 18.1kWh battery, 227kW output and e-Four all-wheel drive as the flagship",
+    "Lexus Australia's five-year, unlimited-kilometre warranty is unconditional, and the hybrid battery carries separate 10-year unlimited-kilometre cover that can be extended a further 10 years through annual health checks at a Lexus dealer",
+    "Boot space is not sacrificed to the plug-in hardware — the battery sits under the cabin floor, so the 450h+ keeps the same 520-litre boot as the NX 350h hybrid, unlike the Kia Sorento PHEV and Mazda CX-60 PHEV which both lose volume to their packs",
+    "Real-world electric range is usable rather than token: Australian testers report 53-70km on a full charge, enough for a typical Melbourne commute, and the car will hold EV mode to 135km/h rather than firing the engine at highway speeds"
+  ],
+  "cons": [
+    "Charging is AC-only at a maximum 6.6kW with no DC fast-charge capability at all, and the supplied cable is a 10A domestic lead that CarsGuide timed at roughly six hours for 35-100 per cent — a buyer without a home wallbox has no practical way to keep the battery full, at which point the car is simply an expensive NX 350h",
+    "The advertised 87km electric range is an NEDC figure mandated by ADR 81/02 for the Australian energy label; the equivalent European WLTP figure is 70-74km, so the headline number overstates the range by roughly 15 per cent before real-world driving is considered",
+    "The 1.3L/100km label consumption is meaningless in normal use — EV Central measured 5.4L/100km and CarExpert 5.7L/100km — and the car requires 95 RON premium unleaded, so the fuel bill is roughly four times what the sticker implies",
+    "At $96,000 before on-roads the F Sport sits above the $91,661 fuel-efficient luxury car tax threshold and draws direct comparison with the Audi Q5 and BMW X3; EV Central scored it 3/5 on the basis that it is 'just not that rare or special any more' against Chinese plug-in hybrids costing $40,000-$60,000 less",
+    "Braked towing is capped at 1000kg, well under the 2000kg-plus of comparably sized diesel and petrol SUVs, and the NX still carries its 2022 ANCAP rating without the centre front airbag newer rivals fit"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-lexus-nx450h-cheaper-phev-priced-for-australia",
+    "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+    "https://www.carexpert.com.au/lexus/nx/2026-luxury-2-5l-suv-4x4-electric-jsgw5mgg20260428",
+    "https://www.carsguide.com.au/luxury/lexus-nx-450h-luxury-100844",
+    "https://www.carsguide.com.au/lexus/nx/nx450h/price/2026",
+    "https://www.carsguide.com.au/lexus/nx/price/2026",
+    "https://www.carsguide.com.au/ev/lexus-nx-450h-plug-in-hybrid-86090",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/lexus-nx-450h-long-term-review/",
+    "https://www.carsales.com.au/research/lexus/nx/2026/nx450h-plus-luxury/",
+    "https://www.carsales.com.au/editorial/details/lexus-nx-450h-f-sport-2025-review-150552/",
+    "https://evcentral.com.au/2025-lexus-nx-450h-f-sport-review-as-chinese-plug-in-hybrids-sweep-into-australia-does-the-nx-phev-still-justify-its-100k-price/",
+    "https://www.electrifying.com/reviews/lexus-reviews/nx450h/review",
+    "https://parkers.co.uk/lexus/nx/suv-2021/450h-25-f-sport-5dr-e-cvt-%5Bpremium-plus-pack%5D/specs",
+    "https://media.lexus.co.uk/lexus-technology-leadership-gives-the-all-new-nx-450h-class-leading-potential/",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

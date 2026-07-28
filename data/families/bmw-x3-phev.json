@@ -1,0 +1,31 @@
+{
+  "id": "bmw-x3-phev",
+  "summary": "The X3 30e xDrive is the only plug-in hybrid in BMW Australia's G45 X3 range, pairing a 2.0-litre turbo petrol with a 19.7kWh usable battery for 220kW/450Nm and a WLTP electric range in the 81-90km band — roughly double the previous X3 PHEV and enough for most Australian buyers to commute on electricity alone. Reviewers rate the ride and the EV-mode refinement highly, and several nominate the 30e as the pick of the X3 range, but they are consistent about the trade-offs: the battery costs 110 litres of boot space, the brake pedal loses the feel of the petrol cars, and the engine audibly strains once the charge is gone. At about $105,000 before on-roads it sits well above both LCT thresholds, and with the FBT exemption for plug-in hybrids gone since April 2025 the case rests entirely on charging at home every night.",
+  "pros": [
+    "81-90km WLTP electric range from a 19.7kWh usable battery — roughly double the 41km of the previous X3 xDrive30e — with reviewers reporting 70-80km in real Australian conditions, so a typical 30-45km commute runs on electricity alone",
+    "11kW three-phase AC charging is standard (up from 7.4kW on the pre-update car), giving a full charge in about 2 hours 15 minutes rather than an overnight-only proposition",
+    "2000kg braked towing and 220kW/450Nm for a 6.2-second 0-100km/h means the plug-in doesn't give away capability to the 20 xDrive petrol it costs more than",
+    "38g/km combined CO2 puts it comfortably under Victoria's 120g/km green passenger car threshold, so it attracts the $8.40-per-$200 duty rate instead of the $14.00-per-$200 tier a $100,000-plus petrol X3 pays — worth roughly $2,900 at this price",
+    "Five years/unlimited kilometres vehicle warranty with a separate six-year/100,000km high-voltage battery warranty, and M Sport package, panoramic roof and adaptive LED headlights are standard rather than optional"
+  ],
+  "cons": [
+    "The battery sits under the boot floor and costs 110 litres: 460L seats-up versus 570L in the 20 xDrive and M50, and 1600L versus 1700L folded — the Mercedes GLC 300e and Volkswagen Tiguan eHybrid also carry more claimed electric range",
+    "The 1.6L/100km label figure is meaningless once the battery is flat: Parkers' WLTP charge-sustaining figure is 37.2mpg (about 7.6L/100km), and BMW Blog recorded around 14L/100km driving a depleted 30e in Sport mode, so a buyer without home charging is running a 2065kg petrol SUV",
+    "PHEVs lost the FBT exemption on 1 April 2025, and at $104,800 the X3 30e is above both the $80,809 ordinary and $91,661 fuel-efficient LCT thresholds and far above the $75,000 FBT cap — the concessions that made this car a novated-lease case are gone",
+    "AC-only charging at 11kW with no DC fast-charge capability, where the Mercedes GLC 300e accepts up to 60kW, and no vehicle-to-load or vehicle-to-home output",
+    "Multiple reviewers flag a soft, indistinct brake pedal from the regenerative blending — carsales called it 'squashy' versus the petrol variants — and CarExpert notes the engine 'sounds and feels like it has to work hard' climbing hills on a low battery"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2025-bmw-x3-30e-xdrive-priced-for-australia-as-brand-stands-by-phevs",
+    "https://www.carexpert.com.au/car-reviews/2025-bmw-x3-review-2",
+    "https://www.carsguide.com.au/car-reviews/bmw-x3-30e-xdrive-97096",
+    "https://www.carsguide.com.au/bmw/x-models/price/2026/x3-30e-xdrive-phev",
+    "https://www.carsales.com.au/editorial/details/bmw-x3-2025-review-148869/",
+    "https://evcentral.com.au/2025-bmw-x3-30e-xdrive-review-phev-variant-is-the-ultimate-driving-machine/",
+    "https://theredline.com.au/2025-bmw-x3-30e-review/",
+    "https://www.parkers.co.uk/bmw/x3/review/mpg-running-costs/",
+    "https://www.bmwblog.com/2024/06/18/2025-bmw-x3-plug-in-hybrid-specs/",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

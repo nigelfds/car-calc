@@ -1,0 +1,31 @@
+{
+  "id": "volvo-xc60-phev",
+  "summary": "The XC60 T8 is the plug-in half of Volvo's mid-size luxury SUV range, sold in Australia only in Plus and Ultra Dark trim alongside the non-plug-in B5 mild hybrids. Reviewers are consistent that it is the calmest and best-finished car in its class and that its 79km WLTP electric range is among the longest of the mainstream premium plug-ins, but they split on whether the money makes sense: at $92,990-$101,990 it is priced against a BMW X3 30e xDrive and a Mercedes-Benz GLC 350e while carrying an ageing cabin architecture and an expired ANCAP rating. The economics rest entirely on charging at home, because with the battery flat it drinks like the petrol SUV it becomes.",
+  "pros": [
+    "79km of WLTP electric range is well ahead of a Mazda CX-60 PHEV's 62km or a Kia Sorento PHEV's 58km, and Chasing Cars measured just over 70km in real driving — enough that a typical Melbourne commute never wakes the engine.",
+    "340kW/709Nm and 4.8sec to 100km/h make the T8 quicker than any petrol XC60 and quicker than the BMW X3 30e xDrive it is priced against.",
+    "Rated to tow 2250kg braked, which is 250kg more than a Mazda CX-60 PHEV and unusually strong for a plug-in hybrid.",
+    "Five-year unconditional unlimited-kilometre warranty, with the drive battery separately covered for 8 years/160,000km.",
+    "Reviewers repeatedly single out ride comfort and noise isolation as the car's real advantage over the German plug-ins rather than outright pace."
+  ],
+  "cons": [
+    "The 1.6L/100km label figure only holds if you plug in every night; once the battery is depleted the T8 runs at roughly 8.4L/100km, so a buyer without home charging is paying luxury-PHEV money to run a 2.2-tonne petrol SUV.",
+    "AC charging only at 6.4kW and no DC fast-charging, so a full recharge is about three hours on a wallbox and around seven from a household socket — you cannot usefully top up on a road trip.",
+    "The battery pack costs 15 litres of boot (468L against the petrol XC60's 483L) and raises the centre tunnel enough that Chasing Cars called the middle rear seat close to unusable.",
+    "Both grades sit above the $91,661 fuel-efficient LCT threshold and far above the $75,000 FBT cap, and PHEVs lost the electric-car FBT exemption on 1 April 2025 — the novated-lease case that carried this car in 2024 no longer exists.",
+    "CarExpert notes the XC60's ANCAP rating expired in December 2023 and that the platform is showing its age against newer rivals on cabin tech."
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-volvo-xc60-price-and-specs",
+    "https://www.carexpert.com.au/car-news/2026-volvo-xc60-prices-refreshed-suv-gets-tech-upgrade",
+    "https://www.carexpert.com.au/car-reviews/2026-volvo-xc60-review",
+    "https://www.volvocars.com/au/cars/xc60-hybrid/specifications/",
+    "https://www.volvocars.com/uk/cars/xc60-hybrid/specifications/",
+    "https://evcentral.com.au/2026-volvo-xc60-t8-ultra-phev-review-let-scandi-cool-convince-you-away-from-german-plug-ins/",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/volvo-xc60-recharge-phev-2023-review/",
+    "https://www.carsguide.com.au/volvo/xc60/price/2026",
+    "https://www.carsguide.com.au/ev/volvo-xc60-recharge-87822",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-07-28"
+}

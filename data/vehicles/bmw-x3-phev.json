@@ -1,0 +1,34 @@
+[
+  {
+    "id": "bmw-x3-phev-30e-xdrive",
+    "familyId": "bmw-x3-phev",
+    "make": "BMW",
+    "model": "X3",
+    "variant": "30e xDrive",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 104800,
+    "batteryKwh": 19.7,
+    "rangeKm": 85,
+    "consumptionKwhPer100km": 23.2,
+    "combinedRangeKm": 743,
+    "fuelConsumptionL100km": 7.6,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 460,
+    "bootLitresSeatsDown": 1600,
+    "seats": 5,
+    "towKg": 2000,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2600,
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-07-28"
+  }
+]

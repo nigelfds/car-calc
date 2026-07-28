@@ -74,6 +74,69 @@
     "sourcedAt": "2026-07-26"
   },
   {
+    "id": "bmw-x1-phev",
+    "summary": "The xDrive25e is the first plug-in hybrid X1 BMW Australia has ever sold locally, added mid-2026 as the only PHEV in a range that otherwise runs mild-hybrid petrol or the battery-electric iX1. It pairs the base car's 1.5-litre three-cylinder with an 80kW motor and a 14.2kWh usable battery for 180kW, 6.8sec to 100km/h and a WLTP electric range BMW Australia quotes at 67-82km depending on wheels — enough to cover most Melbourne commutes on grid power. Reviewers rate the underlying X1 highly (CarExpert's Best Luxury Small SUV two years running, CarsGuide's best small car under $80,000), but no Australian outlet has road-tested the PHEV yet, and the case for it over the cheaper petrol or the FBT-exempt iX1 is a tax and charging-access argument rather than a driving one.",
+    "pros": [
+      "67-82km of WLTP electric range from a 14.2kWh usable battery clears the daily commute for most buyers, and beats the Mazda CX-60 PHEV's 76km and the Mitsubishi Outlander PHEV's 86km on usable-battery-per-dollar within a genuinely premium small SUV",
+      "At $79,500 before on-roads it sits $1,309 under the ordinary $80,809 LCT threshold, so no luxury car tax applies at all — and at 53-75g/km CO2 combined it is comfortably inside Victoria's 120g/km green passenger car limit, so stamp duty is charged at the flat green rate",
+      "180kW and 477Nm for 6.8sec to 100km/h makes it the second-quickest X1 behind the $93,900 M35i, and 1.7 seconds quicker than the $66,700 sDrive20i it is based on",
+      "1,700kg braked towing is unusually strong for a compact PHEV — the Cupra Formentor VZe manages 1,500kg and most small plug-ins are rated at 750kg or not rated at all",
+      "Five-year unlimited-kilometre warranty is unconditional and not tied to servicing inside the BMW network, with the high-voltage battery separately covered for six years or 100,000km"
+    ],
+    "cons": [
+      "The battery costs the X1 50 litres of boot, dropping it from 540 litres in the petrol car to 490 — and Carwow notes the plug-in is the smallest boot in the whole X1 line-up, below even the mild-hybrid grades",
+      "Once the battery is flat it is a 1.5-litre three-cylinder hauling roughly 1,855kg: BMW's own charge-sustaining figure is 6.3-7.1L/100km, three times the 2.3-3.3L/100km combined label, so the running-cost case collapses for anyone who cannot charge at home",
+      "It lost the FBT exemption that PHEVs held until 1 April 2025, while the iX1 xDrive30 sitting $7,300 above it at $86,800 keeps it — on a novated lease that gap can outweigh the sticker difference entirely",
+      "Charging is AC-only at 11kW with no DC capability, so a flat battery is a one-hour-45-minute stop on a wallbox and cannot be topped up usefully on the road; the Cupra Formentor VZe offers 50kW DC for $10,510 less",
+      "Only one grade is offered and the M Sport package with 19-inch wheels is mandatory, which pushes the car to the pessimistic end of BMW's 67-82km range band and leaves no cheaper entry point into the X1 PHEV"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-bmw-x1-and-x2-updates-bring-phev-and-mhev-power",
+      "https://www.whichcar.com.au/news/bmw-updates-x1-x2-lineup-2026-plug-in-hybrid",
+      "https://www.carsales.com.au/editorial/details/2026-bmw-x1-and-x2-updated-151322/",
+      "https://www.carsales.com.au/research/bmw/x1/2026/xdrive25e-m-sport/",
+      "https://www.cars24.com.au/car-news/2026-bmw-x1-plug-in-hybrid-and-x2-updated-prices-for-australia/",
+      "https://zecar.com/reviews/bmw-x1-x2-2026-electric-updates",
+      "https://www.carexpert.com.au/car-news/2026-carexpert-choice-winner-best-luxury-small-suv",
+      "https://www.carsguide.com.au/bmw/x-models/x1/price/2026",
+      "https://www.carwow.co.uk/bmw/x1",
+      "https://www.bmw.com.au/en/models/x-series/x1/bmw-x1.html",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "bmw-x3-phev",
+    "summary": "The X3 30e xDrive is the only plug-in hybrid in BMW Australia's G45 X3 range, pairing a 2.0-litre turbo petrol with a 19.7kWh usable battery for 220kW/450Nm and a WLTP electric range in the 81-90km band — roughly double the previous X3 PHEV and enough for most Australian buyers to commute on electricity alone. Reviewers rate the ride and the EV-mode refinement highly, and several nominate the 30e as the pick of the X3 range, but they are consistent about the trade-offs: the battery costs 110 litres of boot space, the brake pedal loses the feel of the petrol cars, and the engine audibly strains once the charge is gone. At about $105,000 before on-roads it sits well above both LCT thresholds, and with the FBT exemption for plug-in hybrids gone since April 2025 the case rests entirely on charging at home every night.",
+    "pros": [
+      "81-90km WLTP electric range from a 19.7kWh usable battery — roughly double the 41km of the previous X3 xDrive30e — with reviewers reporting 70-80km in real Australian conditions, so a typical 30-45km commute runs on electricity alone",
+      "11kW three-phase AC charging is standard (up from 7.4kW on the pre-update car), giving a full charge in about 2 hours 15 minutes rather than an overnight-only proposition",
+      "2000kg braked towing and 220kW/450Nm for a 6.2-second 0-100km/h means the plug-in doesn't give away capability to the 20 xDrive petrol it costs more than",
+      "38g/km combined CO2 puts it comfortably under Victoria's 120g/km green passenger car threshold, so it attracts the $8.40-per-$200 duty rate instead of the $14.00-per-$200 tier a $100,000-plus petrol X3 pays — worth roughly $2,900 at this price",
+      "Five years/unlimited kilometres vehicle warranty with a separate six-year/100,000km high-voltage battery warranty, and M Sport package, panoramic roof and adaptive LED headlights are standard rather than optional"
+    ],
+    "cons": [
+      "The battery sits under the boot floor and costs 110 litres: 460L seats-up versus 570L in the 20 xDrive and M50, and 1600L versus 1700L folded — the Mercedes GLC 300e and Volkswagen Tiguan eHybrid also carry more claimed electric range",
+      "The 1.6L/100km label figure is meaningless once the battery is flat: Parkers' WLTP charge-sustaining figure is 37.2mpg (about 7.6L/100km), and BMW Blog recorded around 14L/100km driving a depleted 30e in Sport mode, so a buyer without home charging is running a 2065kg petrol SUV",
+      "PHEVs lost the FBT exemption on 1 April 2025, and at $104,800 the X3 30e is above both the $80,809 ordinary and $91,661 fuel-efficient LCT thresholds and far above the $75,000 FBT cap — the concessions that made this car a novated-lease case are gone",
+      "AC-only charging at 11kW with no DC fast-charge capability, where the Mercedes GLC 300e accepts up to 60kW, and no vehicle-to-load or vehicle-to-home output",
+      "Multiple reviewers flag a soft, indistinct brake pedal from the regenerative blending — carsales called it 'squashy' versus the petrol variants — and CarExpert notes the engine 'sounds and feels like it has to work hard' climbing hills on a low battery"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2025-bmw-x3-30e-xdrive-priced-for-australia-as-brand-stands-by-phevs",
+      "https://www.carexpert.com.au/car-reviews/2025-bmw-x3-review-2",
+      "https://www.carsguide.com.au/car-reviews/bmw-x3-30e-xdrive-97096",
+      "https://www.carsguide.com.au/bmw/x-models/price/2026/x3-30e-xdrive-phev",
+      "https://www.carsales.com.au/editorial/details/bmw-x3-2025-review-148869/",
+      "https://evcentral.com.au/2025-bmw-x3-30e-xdrive-review-phev-variant-is-the-ultimate-driving-machine/",
+      "https://theredline.com.au/2025-bmw-x3-30e-review/",
+      "https://www.parkers.co.uk/bmw/x3/review/mpg-running-costs/",
+      "https://www.bmwblog.com/2024/06/18/2025-bmw-x3-plug-in-hybrid-specs/",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
     "id": "byd-atto3",
     "summary": "The Atto 3 is the car that made BYD a volume brand in Australia, and after successive price cuts it remains one of the cheapest electric SUVs on sale, with a genuinely spacious cabin and a tow rating most rivals at the price cannot match. Australian reviewers are broadly positive but not unanimous: Chasing Cars found the chassis fluent and nicely balanced, while CarsGuide scored its driving dynamics a flat 6/10, and everyone flags coarse-surface road noise and the deliberately weird interior as the things buyers must forgive. It is showing its age on charging hardware, and the same aggressive discounting that makes it good value new has punished resale for earlier owners.",
     "pros": [
@@ -881,6 +944,42 @@
     "sourcedAt": "2026-07-27"
   },
   {
+    "id": "lexus-nx-phev",
+    "summary": "The NX 450h+ is the only plug-in hybrid in the Lexus NX range — the far more common NX 350h is a conventional hybrid with no plug — and it pairs an 18.1kWh battery with a 2.5-litre petrol four for 227kW and all-wheel drive. Its distinguishing trait is that it stays frugal once the battery is flat: Australian testers record about 5.4-6.0L/100km in charge-sustaining running, where most European PHEVs of this size drink 8L/100km or more. Reviewers rate the refinement, build and the newly added $84,500 Luxury grade, but are consistently critical of the $96,000 F Sport's value against cheaper plug-in rivals, the 6.6kW AC-only charging with no DC option, and an official 87km range claim that is NEDC-derived and about 15 per cent above the European WLTP figure.",
+    "pros": [
+      "Charge-sustaining economy is genuinely low for a 2.05-tonne premium SUV: Chasing Cars measured about 6.0L/100km running on petrol alone with the battery depleted over a ~1000km long-term test, and CarExpert saw 5.7L/100km across a mostly-highway week — so an owner who cannot plug in still gets Toyota hybrid consumption rather than the 8-9L/100km typical of European PHEVs",
+      "Adding the NX450h+ Luxury AWD at $84,500 in late 2025 cut $11,500 off the price of entry to the plug-in drivetrain, which previously required the $96,000 F Sport, and it keeps the same 18.1kWh battery, 227kW output and e-Four all-wheel drive as the flagship",
+      "Lexus Australia's five-year, unlimited-kilometre warranty is unconditional, and the hybrid battery carries separate 10-year unlimited-kilometre cover that can be extended a further 10 years through annual health checks at a Lexus dealer",
+      "Boot space is not sacrificed to the plug-in hardware — the battery sits under the cabin floor, so the 450h+ keeps the same 520-litre boot as the NX 350h hybrid, unlike the Kia Sorento PHEV and Mazda CX-60 PHEV which both lose volume to their packs",
+      "Real-world electric range is usable rather than token: Australian testers report 53-70km on a full charge, enough for a typical Melbourne commute, and the car will hold EV mode to 135km/h rather than firing the engine at highway speeds"
+    ],
+    "cons": [
+      "Charging is AC-only at a maximum 6.6kW with no DC fast-charge capability at all, and the supplied cable is a 10A domestic lead that CarsGuide timed at roughly six hours for 35-100 per cent — a buyer without a home wallbox has no practical way to keep the battery full, at which point the car is simply an expensive NX 350h",
+      "The advertised 87km electric range is an NEDC figure mandated by ADR 81/02 for the Australian energy label; the equivalent European WLTP figure is 70-74km, so the headline number overstates the range by roughly 15 per cent before real-world driving is considered",
+      "The 1.3L/100km label consumption is meaningless in normal use — EV Central measured 5.4L/100km and CarExpert 5.7L/100km — and the car requires 95 RON premium unleaded, so the fuel bill is roughly four times what the sticker implies",
+      "At $96,000 before on-roads the F Sport sits above the $91,661 fuel-efficient luxury car tax threshold and draws direct comparison with the Audi Q5 and BMW X3; EV Central scored it 3/5 on the basis that it is 'just not that rare or special any more' against Chinese plug-in hybrids costing $40,000-$60,000 less",
+      "Braked towing is capped at 1000kg, well under the 2000kg-plus of comparably sized diesel and petrol SUVs, and the NX still carries its 2022 ANCAP rating without the centre front airbag newer rivals fit"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-lexus-nx450h-cheaper-phev-priced-for-australia",
+      "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+      "https://www.carexpert.com.au/lexus/nx/2026-luxury-2-5l-suv-4x4-electric-jsgw5mgg20260428",
+      "https://www.carsguide.com.au/luxury/lexus-nx-450h-luxury-100844",
+      "https://www.carsguide.com.au/lexus/nx/nx450h/price/2026",
+      "https://www.carsguide.com.au/lexus/nx/price/2026",
+      "https://www.carsguide.com.au/ev/lexus-nx-450h-plug-in-hybrid-86090",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/lexus-nx-450h-long-term-review/",
+      "https://www.carsales.com.au/research/lexus/nx/2026/nx450h-plus-luxury/",
+      "https://www.carsales.com.au/editorial/details/lexus-nx-450h-f-sport-2025-review-150552/",
+      "https://evcentral.com.au/2025-lexus-nx-450h-f-sport-review-as-chinese-plug-in-hybrids-sweep-into-australia-does-the-nx-phev-still-justify-its-100k-price/",
+      "https://www.electrifying.com/reviews/lexus-reviews/nx450h/review",
+      "https://parkers.co.uk/lexus/nx/suv-2021/450h-25-f-sport-5dr-e-cvt-%5Bpremium-plus-pack%5D/specs",
+      "https://media.lexus.co.uk/lexus-technology-leadership-gives-the-all-new-nx-450h-class-leading-potential/",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
     "id": "mazda-cx-60-phev",
     "summary": "Mazda's P50e plug-in hybrid pairs a 2.5-litre turbo petrol engine with a 17.8kWh battery for a claimed 76km of EV-only range and brisk 5.8-second 0-100km/h performance, wrapped in Mazda's most upmarket cabin. Reviewers rate the interior materials and safety kit highly and note the boot doesn't shrink for the battery pack, but they consistently flag drivetrain roughness — jerky low-speed transmission behaviour, occasional 'tug-of-war' shunt between engine and motor, and creaks reviewers say feel unresolved for the price. With the FBT exemption for plug-in hybrids gone since April 2025, reviewers are also blunt that the economics only work for buyers who charge at home every night; leave it unplugged and fuel use climbs sharply.",
     "pros": [
@@ -994,6 +1093,40 @@
       "https://ev-database.org/car/1988/Mercedes-Benz-EQB-250plus"
     ],
     "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "mercedes-glc-phev",
+    "summary": "The GLC 350e 4MATIC is Mercedes-Benz Australia's first non-AMG plug-in hybrid GLC, and its 25.28kWh usable battery is roughly a third larger than most rivals' — 107km of WLTP electric range is enough that many owners will use the petrol engine only on country trips. Australian reviewers are consistently positive about the calibration and the near-silent EV mode, and note that at $99,900 it undercuts both the GLC 300 petrol it outperforms and the BMW X3 30e. The recurring criticisms are the 2.3-tonne kerb weight, a boot that loses its underfloor storage and spare wheel to the battery, and a five-year service plan that Chasing Cars priced at $7350.",
+    "pros": [
+      "107km of WLTP electric range from a 25.28kWh usable battery is the longest of any plug-in hybrid SUV under $110,000 in Australia — roughly double the Lexus NX 450h+ (87km) and Volvo XC60 T8, and enough that a typical Melbourne commute never starts the engine",
+      "Charges properly for a PHEV: 11kW AC three-phase gets 0-100 per cent in about 2h45m, and it is one of very few plug-in hybrids on sale here with DC fast charging (up to 60kW, 10-80 per cent in about 29 minutes), so a driver without a home charger still has an option",
+      "At $99,900 before on-road costs it lists $5200 below the GLC 300 4MATIC petrol it comfortably out-accelerates — 230kW/550Nm combined, 0-100km/h in 6.7 seconds — which is unusual for a plug-in hybrid, and it is 10kW/100Nm up on the $104,800 BMW X3 30e",
+      "Braked towing is rated at 2400kg, well ahead of the Kia Sorento PHEV's 1010kg and the Mitsubishi Outlander PHEV's 1600kg, so the battery has not cost it usefulness as a tow car",
+      "Mercedes-Benz Australia's five-year, unlimited-kilometre warranty is unconditional and is not tied to servicing inside the dealer network"
+    ],
+    "cons": [
+      "The 1.2L/100km combined label is meaningless once the battery is flat: Australian testers recorded 7.3L/100km (Chasing Cars), 7.8L/100km (NRMA, CarsGuide) and 8.8L/100km (CarExpert) in charge-sustaining mode on 95 RON premium, so a buyer who cannot charge at home is running a 2.3-tonne petrol SUV and the whole case for the car collapses",
+      "The battery sits over the rear axle and takes the boot from the GLC 300's 620 litres to 590, removes the underfloor storage entirely and replaces the spare wheel with a repair kit — the floor is no longer flat",
+      "Servicing is expensive even by German standards: Chasing Cars quotes $7350 for a five-year plan on 12-month/25,000km intervals, roughly ten times what a Mitsubishi Outlander PHEV costs to service over the same period",
+      "It sits well above both Luxury Car Tax thresholds at $99,900 and above the $75,000 FBT cap, and since the FBT exemption for plug-in hybrids ended on 1 April 2025 there is no novated-lease advantage left to offset that",
+      "Kerb weight is about 2316kg — some 200kg more than the GLC 300 — and reviewers note the extra mass in direction changes and under brakes, though the air-free steel-spring suspension copes better than expected"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-mercedes-benz-glc350e-phev-lands-in-australia-with-over-100km-of-electric-range",
+      "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-glc-review",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/mercedes-benz-glc-350e-2026-plug-in-hybrid-review/",
+      "https://www.mynrma.com.au/open-road/car-reviews/mercedes-benz/2025-mercedes-benz-glc350e-review",
+      "https://www.carsguide.com.au/ev/mercedes-benz-glc-glc350e-99846",
+      "https://www.carsguide.com.au/car-news/new-long-range-plug-in-hybrid-suv-arrives-99484",
+      "https://www.carsales.com.au/research/mercedes-benz/glc-class/2026/glc350-e/",
+      "https://www.carsales.com.au/editorial/details/mercedes-benz-glc-350e-2025-review-150608/",
+      "https://www.motoringnz.com/tested/2026/3/11/mercedes-benz-glc-350e-road-test-review-power-surge",
+      "https://www.carexpert.com.au/car-news/2027-mercedes-amg-glc53-prices-hot-six-cylinder-suv-replacing-four-cylinder-glc43-glc63-in-australia",
+      "https://www.carexpert.com.au/car-reviews/2025-mercedes-amg-glc63-s-e-performance-review",
+      "https://www.vesr.gov.au/vehicle/mercedes-benz-glc-class-glc300e-4matic-wagon-auto-2021-2026",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
   },
   {
     "id": "mg-4",
@@ -1446,6 +1579,70 @@
       "https://zecar.com/reviews/volvo-ex30-ex40-price-cuts-australia-2026"
     ],
     "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "volvo-xc60-phev",
+    "summary": "The XC60 T8 is the plug-in half of Volvo's mid-size luxury SUV range, sold in Australia only in Plus and Ultra Dark trim alongside the non-plug-in B5 mild hybrids. Reviewers are consistent that it is the calmest and best-finished car in its class and that its 79km WLTP electric range is among the longest of the mainstream premium plug-ins, but they split on whether the money makes sense: at $92,990-$101,990 it is priced against a BMW X3 30e xDrive and a Mercedes-Benz GLC 350e while carrying an ageing cabin architecture and an expired ANCAP rating. The economics rest entirely on charging at home, because with the battery flat it drinks like the petrol SUV it becomes.",
+    "pros": [
+      "79km of WLTP electric range is well ahead of a Mazda CX-60 PHEV's 62km or a Kia Sorento PHEV's 58km, and Chasing Cars measured just over 70km in real driving — enough that a typical Melbourne commute never wakes the engine.",
+      "340kW/709Nm and 4.8sec to 100km/h make the T8 quicker than any petrol XC60 and quicker than the BMW X3 30e xDrive it is priced against.",
+      "Rated to tow 2250kg braked, which is 250kg more than a Mazda CX-60 PHEV and unusually strong for a plug-in hybrid.",
+      "Five-year unconditional unlimited-kilometre warranty, with the drive battery separately covered for 8 years/160,000km.",
+      "Reviewers repeatedly single out ride comfort and noise isolation as the car's real advantage over the German plug-ins rather than outright pace."
+    ],
+    "cons": [
+      "The 1.6L/100km label figure only holds if you plug in every night; once the battery is depleted the T8 runs at roughly 8.4L/100km, so a buyer without home charging is paying luxury-PHEV money to run a 2.2-tonne petrol SUV.",
+      "AC charging only at 6.4kW and no DC fast-charging, so a full recharge is about three hours on a wallbox and around seven from a household socket — you cannot usefully top up on a road trip.",
+      "The battery pack costs 15 litres of boot (468L against the petrol XC60's 483L) and raises the centre tunnel enough that Chasing Cars called the middle rear seat close to unusable.",
+      "Both grades sit above the $91,661 fuel-efficient LCT threshold and far above the $75,000 FBT cap, and PHEVs lost the electric-car FBT exemption on 1 April 2025 — the novated-lease case that carried this car in 2024 no longer exists.",
+      "CarExpert notes the XC60's ANCAP rating expired in December 2023 and that the platform is showing its age against newer rivals on cabin tech."
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-volvo-xc60-price-and-specs",
+      "https://www.carexpert.com.au/car-news/2026-volvo-xc60-prices-refreshed-suv-gets-tech-upgrade",
+      "https://www.carexpert.com.au/car-reviews/2026-volvo-xc60-review",
+      "https://www.volvocars.com/au/cars/xc60-hybrid/specifications/",
+      "https://www.volvocars.com/uk/cars/xc60-hybrid/specifications/",
+      "https://evcentral.com.au/2026-volvo-xc60-t8-ultra-phev-review-let-scandi-cool-convince-you-away-from-german-plug-ins/",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/volvo-xc60-recharge-phev-2023-review/",
+      "https://www.carsguide.com.au/volvo/xc60/price/2026",
+      "https://www.carsguide.com.au/ev/volvo-xc60-recharge-87822",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "volvo-xc90-phev",
+    "summary": "The T8 is the only plug-in XC90 — the B5 grades alongside it are 48-volt mild hybrids with no charge port — and it is currently the only seven-seat plug-in hybrid sold in Australia above $100,000, which is most of its case. Australian reviewers are close to unanimous on the driving: 340kW, air suspension as standard and a ride-handling balance carsales rated among the best it has sampled in an SUV. Where they diverge is on whether a decade-old platform justifies $130,990, and they agree the numbers are dated — about 69km of WLTP electric range when newer plug-ins clear 100km, AC-only charging, and 7.7L/100km once the battery is flat.",
+    "pros": [
+      "The only seven-seat plug-in hybrid on sale in Australia above $100,000: the Audi Q7, BMW X5 xDrive50e and Mercedes-Benz GLE 450e are all five-seat in their PHEV form, and the cheaper seven-seat plug-ins (Kia Sorento PHEV, Mazda CX-80) sit a full class below on price and equipment",
+      "Braked towing is 2400kg, unusually high for a monocoque plug-in hybrid — the Kia Sorento PHEV manages 1010kg and the Mazda CX-80 PHEV 2500kg — so the battery does not cost you a caravan the way it does in most PHEV rivals",
+      "Height-adjustable four-mode air suspension is standard on both grades, and carsales rated the resulting ride-handling balance as one of the best it has experienced in an SUV, achieved on 22-inch wheels without any Australian-specific retune",
+      "Charge it and the petrol engine barely runs: CarsGuide recorded 3.4L/100km across a week of mixed driving with regular home charging, against 8.1L/100km for the mild-hybrid B5 XC90 that costs about $25,000 less",
+      "Volvo's five-year unlimited-kilometre warranty is unconditional, the high-voltage battery carries a separate eight-year/160,000km cover, and capped-price servicing runs $2380 for three years or $3870 for five on 12-month/15,000km intervals"
+    ],
+    "cons": [
+      "Charging is AC-only through a 3.6kW onboard charger with no DC capability at all — roughly three hours on a two-phase 6.4kW wallbox, and overnight on a household socket — so a buyer without off-street parking cannot realistically keep the battery full and is left running a 2.4-tonne petrol SUV",
+      "Once the battery is depleted it drinks like what it is: carsales measured 7.7L/100km over a week-long loan, and Volvo's own European data quotes 7.2-8.0L/100km with the battery empty, against a 1.8L/100km label figure that assumes you start every trip charged",
+      "Electric range is the weak spot of the package — about 69km on WLTP, and both CarsGuide and carsales ran out of battery in the low 60s against the 77km NEDC figure Volvo Australia advertises — at a time when several cheaper plug-in hybrids claim more than 100km",
+      "The third row is genuinely awkward: there is no boot-side release, so raising the seats means climbing into the load bay or reaching through a rear door to work a heavy lever, and CarsGuide described the process as too much effort to want to repeat regularly",
+      "Boot space behind the raised third row is 262 litres, and there is no spare wheel of any kind — only a repair kit — because of the packaging demanded by the battery pack"
+    ],
+    "sources": [
+      "https://www.volvocars.com/au/cars/xc90-hybrid/specifications/",
+      "https://www.volvocars.com/au/build/xc90-hybrid/",
+      "https://www.carsguide.com.au/ev/volvo-xc90-ultra-t8-phev-99295",
+      "https://www.carsguide.com.au/volvo/xc90/price/2026",
+      "https://www.carsales.com.au/editorial/details/volvo-xc90-ultra-t8-awd-phev-2026-review-151416/",
+      "https://www.carsales.com.au/research/volvo/xc90/",
+      "https://www.exhaustnotes.com.au/2026-volvo-xc90-t8-phev-launch-drive-review/",
+      "https://www.carexpert.com.au/volvo/xc90/2026/specs",
+      "https://www.vesr.gov.au/vehicle/volvo-xc90-t8-recharge-suv-auto-2022-2026",
+      "https://www.volvocars.com/uk/cars/xc90-hybrid/specifications/",
+      "https://www.volvocars.com/ie/cars/xc90-hybrid/specifications/",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
   },
   {
     "id": "xpeng-g6",

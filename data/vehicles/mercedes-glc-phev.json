@@ -1,0 +1,27 @@
+[
+  {
+    "id": "mercedes-glc-phev-350e-4matic",
+    "familyId": "mercedes-glc-phev",
+    "make": "Mercedes-Benz",
+    "model": "GLC",
+    "variant": "350e 4MATIC",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 99900,
+    "batteryKwh": 25.28,
+    "rangeKm": 107,
+    "consumptionKwhPer100km": 23.6,
+    "combinedRangeKm": 902,
+    "fuelConsumptionL100km": 7.8,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 590,
+    "bootLitresSeatsDown": 1650,
+    "seats": 5,
+    "towKg": 2400,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2500,
+    "depreciationCurve": [1, 0.68, 0.57, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-28"
+  }
+]
