@@ -4,6 +4,7 @@
   "adminFeeAnnual": 1020,
   "opportunityRatePct": 4.5,
   "electricityCentsPerKwh": 28,
+  "petrolCentsPerLitre": 195,
   "otherRunningCostsAnnual": 1240,
   "defaultAnnualKm": 15000,
   "sources": {
@@ -11,6 +12,7 @@
     "leaseRatePct": "Competitive novated comparison rate 6.5-7.5%; ~9.5% effective on 5 years.",
     "adminFeeAnnual": "Typical $85/month packaging fee.",
     "electricityCentsPerKwh": "Melbourne residential off-peak-weighted estimate.",
+    "petrolCentsPerLitre": "Melbourne 91 unleaded, cycle-averaged estimate July 2026. Only used for plug-in hybrids.",
     "otherRunningCostsAnnual": "VIC rego ~$880 plus servicing and tyres. ZLEV discount ended 1 Jan 2026."
   },
   "sourcedAt": "2026-07-25"
