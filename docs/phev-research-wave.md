@@ -1,6 +1,6 @@
 # PHEV research wave — batch plan
 
-Prepared 2026-07-28. **Batch 1 complete.** Batches 2-4 outstanding.
+Prepared 2026-07-28. **Batches 1-3 complete.** Batch 4 outstanding.
 
 The calculation side of PHEV support is finished and merged. This is data work only: no code
 change should be needed for any family below. `node scripts/build-dataset.js` validates every row,
@@ -8,16 +8,16 @@ and a row it rejects is wrong — fix the row, not the schema.
 
 ## Where the dataset stands
 
-After batch 1: 28 brands, 48 models, 141 variants.
+After batch 3: 30 brands, 60 families, 165 variants.
 
 | Body type | BEV | PHEV |
 |---|---|---|
-| SUV | 97 | 19 |
+| SUV | 97 | 43 |
 | Hatch | 10 | 0 |
 | Sedan | 7 | 0 |
 | Ute | 0 | 8 |
 
-Eight PHEV families. **Ute is no longer an empty filter** — it was offered in step 1 and matched
+Twenty PHEV families. **Ute is no longer an empty filter** — it was offered in step 1 and matched
 nothing at all until batch 1 landed, and Australia's plug-in ute segment being entirely PHEV is why
 no amount of EV research could have filled it.
 
@@ -98,23 +98,46 @@ What actually decides a premium PHEV's numbers is the same as everywhere else: l
 the card), `fuelConsumptionL100km` (the petrol half of running cost) and `combinedRangeKm` (the
 ranking).
 
-| Family | `familyId` |
+## Batch 3 — premium — **DONE**
+
+All six landed. **Three of the six grade names in this plan were wrong**, which is the batch's
+main lesson: a batch plan written from a knowledge cutoff names the grade the *world* sells, not
+the grade *Australia* sells. Corrections, for anyone reading the rows later:
+
+| Planned grade | Actually on sale in Australia |
 |---|---|
-| Volvo XC60 PHEV | `volvo-xc60-phev` |
-| Volvo XC90 PHEV | `volvo-xc90-phev` |
-| BMW X1 PHEV | `bmw-x1-phev` |
-| BMW X3 PHEV | `bmw-x3-phev` |
-| Mercedes-Benz GLC PHEV | `mercedes-glc-phev` |
-| Lexus NX PHEV | `lexus-nx-phev` |
+| BMW X1 xDrive30e | **xDrive25e** — the 30e is Europe-only and has never been sold here |
+| Mercedes-Benz GLC 300e | **GLC 350e 4MATIC** — the 300e was the previous X253 generation |
+| BMW X3 xDrive30i (named as the trap) | No such grade in the current G45 range; the traps are `20 xDrive`, `40d xDrive`, `M50 xDrive` |
+
+The discontinued GLC 300e is still in the federal **VESR database with 2021-2026 dates and a 49km
+NEDC range**. A researcher starting from the government database rather than the configurator would
+have shipped it. Prefer the manufacturer's live configurator for "what is orderable".
+
+| Family | `familyId` | Grade written |
+|---|---|---|
+| Volvo XC60 PHEV | `volvo-xc60-phev` | Plus / Ultra T8 Plug-in Hybrid Dark |
+| Volvo XC90 PHEV | `volvo-xc90-phev` | Plus / Ultra T8 Plug-in Hybrid Dark |
+| BMW X1 PHEV | `bmw-x1-phev` | xDrive25e |
+| BMW X3 PHEV | `bmw-x3-phev` | 30e xDrive |
+| Mercedes-Benz GLC PHEV | `mercedes-glc-phev` | 350e 4MATIC |
+| Lexus NX PHEV | `lexus-nx-phev` | 450h+ Luxury / F Sport AWD |
 
 ## Batch 4 — remainder
 
-| Family | `familyId` |
-|---|---|
-| Lexus RX PHEV | `lexus-rx-phev` |
-| Audi Q5 PHEV | `audi-q5-phev` |
-| Peugeot 3008 PHEV | `peugeot-3008-phev` |
-| Land Rover Defender PHEV | `land-rover-defender-phev` |
+**Verify the grade name against the live Australian configurator before dispatching.** Batch 3 got
+three of six wrong from a knowledge cutoff. The grades below are leads with the same status.
+
+| Family | `familyId` | Expected plug-in grade — confirm, don't assume |
+|---|---|---|
+| Lexus RX PHEV | `lexus-rx-phev` | `RX450h+` is the plug-in. `RX350h` and `RX500h` are conventional hybrids — the same `+` trap as the NX, and the RX500h's bigger number makes it look like the flagship. |
+| Audi Q5 PHEV | `audi-q5-phev` | Audi badges plug-ins `TFSI e`. Confirm the current generation still offers one in Australia — Audi has dropped PHEV grades locally before. |
+| Peugeot 3008 PHEV | `peugeot-3008-phev` | The 3008 also sells as a BEV (`e-3008`) and as a mild hybrid. Confirm the plug-in is still imported at all; Peugeot Australia's range has contracted sharply. |
+| Land Rover Defender PHEV | `land-rover-defender-phev` | `P400e` is the plug-in. Defender also sells as P300/P400 petrol and D250/D350 diesel. Check which body length the P400e comes in — it may be 110-only, which changes `seats`. |
+
+Batch 4 is four families, not six, so it has budget headroom. Spend it on the two things batch 3
+showed are worth it: a **manufacturer-published EV-mode consumption** where one exists, and a
+**sourced rather than computed `combinedRangeKm`** (see below — no brand in batch 3 published one).
 
 ## How to dispatch a batch
 
@@ -141,12 +164,40 @@ that disclosure is the only record of which figures are soft.
 
 ## What to watch across the whole wave
 
-- **Range provenance.** The brief was hardened after the first wave shipped a family on NEDC
-  ranges. WLTP EAER is the figure to want. If several families come back NEDC-only, that is worth
-  raising before the dataset grows further, because combined range now drives the ranking.
-- **Derived consumption.** All ten current PHEV rows have `consumptionKwhPer100km` exactly equal to
-  `batteryKwh / rangeKm * 100`, so the schema's 25% cross-check catches nothing for them. The brief
-  now asks agents to say which figures they sourced and which they derived.
+- **Range provenance is the wave's confirmed dominant defect — treat every Australian range figure
+  as NEDC until proven otherwise.** This is no longer a worry, it is a measured pattern. Batch 3
+  found an NEDC figure being presented as WLTP in **four of six families**, and a fifth case was
+  found in already-shipped batch-1 data:
+
+  | Family | Australian figure | Actual WLTP | Optimism |
+  |---|---|---|---|
+  | Mazda CX-60 | 76 km | 62 km | 23% |
+  | Mercedes GLC 350e | 132 km | 107 km | 23% |
+  | Volvo XC90 T8 | 77 km | 69 km | 12% |
+  | Volvo XC60 T8 | 89 km | 79 km | 13% |
+  | Lexus NX450h+ | 87 km | 70-74 km | 18% |
+
+  The dangerous part is that **manufacturers' own Australian sites label these "WLTP"**. Volvo
+  Australia claims 77 km "according to WLTP" on a page whose own spec table gives the paired
+  electric consumption as "(NEDC)"; BMW Australia's 91 km sits *above* BMW's global WLTP ceiling of
+  90 km. So "the manufacturer said WLTP" is not evidence. What works, every time, is the
+  **European/UK press pack or spec page for the same model year** — it caught all five.
+  A useful tell: if the page's electric-consumption figure is flagged NEDC, the range beside it is
+  NEDC too.
+- **The same field name means different quantities in different markets.** Volvo UK publishes a
+  true charge-depleting WLTP electric consumption; Volvo IE/DE/NL publish the utility-factor-weighted
+  number under a near-identical label; Volvo AU publishes the NEDC one. Check the market, not just
+  the label.
+- **Derived consumption — improving.** Before batch 3 every PHEV row had `consumptionKwhPer100km`
+  exactly equal to `batteryKwh / rangeKm * 100`, making the schema's 25% cross-check tautological.
+  Batch 3 produced the first rows where it genuinely bites: XC60 (2.2% gap), XC90 (4.6%),
+  NX (6.8-12.9%), and X3 corroborated against BMW's published 22.3-24.0 band. Keep asking.
+  Where a figure *was* derived, that is now stated in the agent's report rather than silent.
+- **Cross-family consistency is not automatic and the validator cannot see it.** The XC60 and XC90
+  agents ran in parallel on the *same T8 battery pack* and returned incompatible conventions —
+  18.8 kWh gross / AU range against 14.7 kWh usable / UK range. Both rows passed the validator
+  independently; only reading the two reports side by side caught it. **When a batch contains two
+  families sharing a platform or powertrain, diff their rows before committing.**
 - **Body-type spread.** Batch 1 closed `Ute`. `Wagon` was dropped rather than left empty. Every
   PHEV so far is an SUV or a ute; if `Hatch` and `Sedan` stay BEV-only that is a real fact about
   the market rather than a gap, but worth noticing if a batch turns one up.
