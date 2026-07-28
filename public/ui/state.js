@@ -1,5 +1,9 @@
 const ARRAY_FIELDS = new Set(['bodyTypes']);
 const STRING_FIELDS = new Set(['leaseStartDate', 'freeText']);
+// Declared for the same reason as NUMERIC_FIELDS below: fromQueryString sends
+// anything unlisted through Number(), and Number('false') is NaN — the toggle
+// would silently reset every time a shared link was opened.
+const BOOLEAN_FIELDS = new Set(['includePhev']);
 
 // Declared explicitly rather than inferred from defaultState()'s runtime
 // values: minBootLitres, minRangeKm and seats default to null (no filter
@@ -11,7 +15,8 @@ export const NUMERIC_FIELDS = new Set([
   'deposit', 'leaseRatePct', 'loanRatePct', 'adminFeeAnnual',
   'opportunityRatePct', 'residualPctOverride',
   'electricityCentsPerKwh', 'otherRunningCostsAnnual',
-  'minBootLitres', 'minRangeKm', 'seats'
+  'minBootLitres', 'minRangeKm', 'seats',
+  'phevBatterySharePct', 'minElectricRangeKm'
 ]);
 
 export function defaultState(rates) {
@@ -37,6 +42,16 @@ export function defaultState(rates) {
     minBootLitres: null,
     minRangeKm: null,
     seats: null,
+    // Plug-in hybrids are opt-in: they are not EVs, they do not get the FBT
+    // exemption, and including them silently would change every answer on
+    // the page for a user who never asked for them.
+    includePhev: false,
+    // Only consulted for a PHEV. 50% is a starting point, not a claim — the
+    // control exists precisely because the honest answer is personal.
+    phevBatterySharePct: 50,
+    // Filters on electric-only range. Meaningless for a BEV, where it would
+    // duplicate minRangeKm, so the control is hidden with the rest.
+    minElectricRangeKm: null,
     freeText: ''
   };
 }
@@ -68,6 +83,8 @@ export function fromQueryString(search, defaults) {
       state[key] = raw ? raw.split(',') : [];
     } else if (STRING_FIELDS.has(key)) {
       state[key] = raw;
+    } else if (BOOLEAN_FIELDS.has(key)) {
+      state[key] = raw === 'true';
     } else {
       const parsed = Number(raw);
       state[key] = Number.isFinite(parsed) ? parsed : defaults[key];

@@ -418,6 +418,16 @@ input[type='date'],
   font-size: 0.9rem;
 }
 
+/* Indented under the toggle that reveals it, so the relationship is visible
+   rather than implied by proximity alone. */
+.phev-options {
+  margin-top: var(--space-3);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--hairline);
+}
+
+.phev-options[hidden] { display: none; }
+
 /* Brief highlight used when parsing free text fills a field in, so the
    hand-off from prose to numbers is visible. */
 .field-updated {
