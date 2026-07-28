@@ -9,9 +9,9 @@
     "powertrain": "phev",
     "listPrice": 63790,
     "batteryKwh": 17.8,
-    "rangeKm": 76,
-    "consumptionKwhPer100km": 23.4,
-    "combinedRangeKm": 664,
+    "rangeKm": 62,
+    "consumptionKwhPer100km": 28.7,
+    "combinedRangeKm": 650,
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -21,7 +21,14 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1750,
-    "depreciationCurve": [1, 0.73, 0.62, 0.54, 0.47, 0.41],
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.62,
+      0.54,
+      0.47,
+      0.41
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -34,9 +41,9 @@
     "powertrain": "phev",
     "listPrice": 68790,
     "batteryKwh": 17.8,
-    "rangeKm": 76,
-    "consumptionKwhPer100km": 23.4,
-    "combinedRangeKm": 664,
+    "rangeKm": 62,
+    "consumptionKwhPer100km": 28.7,
+    "combinedRangeKm": 650,
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -46,7 +53,14 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1800,
-    "depreciationCurve": [1, 0.73, 0.62, 0.54, 0.47, 0.41],
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.62,
+      0.54,
+      0.47,
+      0.41
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -59,9 +73,9 @@
     "powertrain": "phev",
     "listPrice": 71790,
     "batteryKwh": 17.8,
-    "rangeKm": 76,
-    "consumptionKwhPer100km": 23.4,
-    "combinedRangeKm": 664,
+    "rangeKm": 62,
+    "consumptionKwhPer100km": 28.7,
+    "combinedRangeKm": 650,
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -71,7 +85,14 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.73, 0.62, 0.54, 0.47, 0.41],
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.62,
+      0.54,
+      0.47,
+      0.41
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -84,9 +105,9 @@
     "powertrain": "phev",
     "listPrice": 77790,
     "batteryKwh": 17.8,
-    "rangeKm": 76,
-    "consumptionKwhPer100km": 23.4,
-    "combinedRangeKm": 664,
+    "rangeKm": 62,
+    "consumptionKwhPer100km": 28.7,
+    "combinedRangeKm": 650,
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -96,7 +117,14 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [1, 0.73, 0.62, 0.54, 0.47, 0.41],
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.62,
+      0.54,
+      0.47,
+      0.41
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -109,9 +137,9 @@
     "powertrain": "phev",
     "listPrice": 81990,
     "batteryKwh": 17.8,
-    "rangeKm": 76,
-    "consumptionKwhPer100km": 23.4,
-    "combinedRangeKm": 664,
+    "rangeKm": 62,
+    "consumptionKwhPer100km": 28.7,
+    "combinedRangeKm": 650,
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -121,7 +149,14 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 2050,
-    "depreciationCurve": [1, 0.73, 0.62, 0.54, 0.47, 0.41],
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.62,
+      0.54,
+      0.47,
+      0.41
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -134,9 +169,9 @@
     "powertrain": "phev",
     "listPrice": 83990,
     "batteryKwh": 17.8,
-    "rangeKm": 76,
-    "consumptionKwhPer100km": 23.4,
-    "combinedRangeKm": 664,
+    "rangeKm": 62,
+    "consumptionKwhPer100km": 28.7,
+    "combinedRangeKm": 650,
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -146,7 +181,14 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.73, 0.62, 0.54, 0.47, 0.41],
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.62,
+      0.54,
+      0.47,
+      0.41
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -159,9 +201,9 @@
     "powertrain": "phev",
     "listPrice": 83990,
     "batteryKwh": 17.8,
-    "rangeKm": 76,
-    "consumptionKwhPer100km": 23.4,
-    "combinedRangeKm": 664,
+    "rangeKm": 62,
+    "consumptionKwhPer100km": 28.7,
+    "combinedRangeKm": 650,
     "fuelConsumptionL100km": 8.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -171,7 +213,14 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.73, 0.62, 0.54, 0.47, 0.41],
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.62,
+      0.54,
+      0.47,
+      0.41
+    ],
     "sourcedAt": "2026-07-28"
   }
 ]
