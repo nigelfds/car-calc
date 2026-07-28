@@ -1,11 +1,13 @@
 # PHEV research wave — batch plan
 
-Prepared 2026-07-28. **Batches 1-4 complete.** Batches 5-8 outstanding.
+Prepared 2026-07-28. **Batches 1-5 complete.** Batches 6-9 outstanding.
 
-**The wave is not finished. It is roughly 40% of the market.** Batch 4's fifth agent surveyed
+**The wave is not finished. It is roughly 58% of the market.** Batch 4's fifth agent surveyed
 what is actually on sale rather than researching a family, and the answer changed the plan: the
 22 families this document was built from came from one session's recollection and were never
 checked against the market. See [The survey](#the-survey--why-there-is-a-batch-5) below.
+Batch 5 landed all six of its families, including the two the survey called out as the wave's
+largest omissions — the Toyota RAV4 PHEV and the dataset's first plug-in sedan.
 
 The calculation side of PHEV support is finished and merged. This is data work only: no code
 change should be needed for any family below. `node scripts/build-dataset.js` validates every row,
@@ -13,18 +15,23 @@ and a row it rejects is wrong — fix the row, not the schema.
 
 ## Where the dataset stands
 
-After batch 4: 31 brands, 63 families, 171 variants.
+After batch 5: 31 brands, 69 families, 183 variants.
 
 | Body type | BEV | PHEV |
 |---|---|---|
-| SUV | 97 | 49 |
+| SUV | 97 | 60 |
 | Hatch | 10 | 0 |
-| Sedan | 7 | 0 |
+| Sedan | 7 | 1 |
 | Ute | 0 | 8 |
 
-Twenty-three PHEV families. **Ute is no longer an empty filter** — it was offered in step 1 and matched
+Twenty-nine PHEV families. **Ute is no longer an empty filter** — it was offered in step 1 and matched
 nothing at all until batch 1 landed, and Australia's plug-in ute segment being entirely PHEV is why
 no amount of EV research could have filled it.
+
+**The PHEV `Sedan` cell is no longer empty either.** The BYD Seal 6 Essential ($34,990) is the
+first, landed in batch 5, and it is currently the only one — the Mercedes C 350e in batch 8 is the
+other known candidate. One row is enough to prove the filter works but not enough to make it
+useful, so treat the sedan cell as opened rather than filled.
 
 **Wagon is dropped from the UI, and wagons are out of scope — decided, not pending.**
 
@@ -41,10 +48,10 @@ one is not. Skoda Superb PHEV is therefore permanently out; BYD Seal 6 contribut
 only.
 Two of the three land in batch 6, so the decision is due before then.
 
-**The empty PHEV `Sedan` cell is likewise no longer a fact about the market.** The BYD Seal 6 sedan
-(batch 5) and Mercedes C 350e (batch 8) are both plug-in sedans. Do not conclude from the table
-above that plug-in hybrids are only SUVs and utes — conclude that the dataset has only researched
-SUVs and utes.
+**The empty PHEV `Sedan` cell was never a fact about the market, and batch 5 proved it.** The BYD
+Seal 6 sedan landed at $34,990; the Mercedes C 350e (batch 8) is the other known plug-in sedan.
+Do not conclude from the table above that plug-in hybrids are only SUVs and utes — conclude that
+the dataset had only researched SUVs and utes.
 
 ## Budget: one batch per session
 
@@ -212,38 +219,132 @@ brief): Leapmotor C10 and B10, Forthing Taikon 5. All three appear in Australian
 lists. Nissan **e-Power** and Honda **e:HEV** are series hybrids with no plug; Porsche's **911
 T-Hybrid** and Mercedes' **GLC 53 / GLE 53** are mild hybrids. None belong here.
 
-## Batch 5 — volume sellers
+## Batch 5 — volume sellers — **DONE**
 
-Highest volume, highest confidence, and cheap enough that the numbers actually change a
-recommendation. **Verify every grade name against the live Australian configurator before
-dispatching** — five of ten failed that test in batches 3 and 4.
+All six landed, 13 variants. See commit `9d76ef1` for each family's disclosed low-confidence
+figures — that commit message is the only record of which numbers are soft.
 
-| Family | `familyId` | Expected plug-in grade — confirm, don't assume |
+| Family | `familyId` | Grade written |
 |---|---|---|
-| Toyota RAV4 PHEV | `toyota-rav4-phev` | XSE 2WD / XSE AWD / GR Sport AWD, ~$58,840-$66,340. The most important family in the wave. RAV4 also sells as a conventional hybrid across most of the range — plug-in only. |
-| BYD Sealion 5 | `byd-sealion-5` | Essential / Premium, from ~$33,990. Anchor against `byd-sealion-6` already in the dataset. |
-| BYD Seal 6 | `byd-seal-6` | Essential / Premium, ~$34,990-$39,990. **Sedan variants only** — the Touring is a wagon and wagons are out of scope (see the scope boundary above). The sedan is the first PHEV `Sedan` in the dataset. |
-| Geely Starray EM-i | `geely-starray-em-i` | Complete / Inspire, ~$37,490-$39,990. New brand to the dataset. |
-| GWM Haval H6 GT PHEV | `gwm-haval-h6-gt-phev` | Hi4 PHEV, ~$52,990 **drive-away** — back out the list price. Distinct from `gwm-haval-h6-phev` already in the dataset; anchor against it and note where they genuinely differ. |
-| BYD Sealion 8 | `byd-sealion-8` | Dynamic / Premium, 7 seats, ~$61,957-$76,657 **drive-away**. |
+| Toyota RAV4 PHEV | `toyota-rav4-phev` | XSE 2WD / XSE AWD / GR Sport AWD |
+| BYD Sealion 5 | `byd-sealion-5` | Essential / Premium |
+| BYD Seal 6 | `byd-seal-6` | Essential — **sedan only**, Touring correctly excluded |
+| Geely Starray EM-i | `geely-starray-em-i` | Complete / Inspire Extended Range |
+| GWM Haval H6 GT PHEV | `gwm-haval-h6-gt-phev` | Ultra PHEV Hi4 |
+| BYD Sealion 8 | `byd-sealion-8` | Dynamic FWD / Dynamic AWD / Premium AWD |
 
-**Two warnings specific to batch 5, both worse than anything batches 1-4 faced.**
+**Grade names: three of six wrong, so the wave's running total is eight of sixteen.** The pattern
+holds exactly — a plan written from a knowledge cutoff names the grade the *world* sells, not the
+grade *Australia* sells. Batch 5's failures were of a new kind, though: not renamed badges but
+**wrong grade counts**, which is more dangerous because it silently merges or invents cars.
 
-1. **Prices in the survey are a mix of MSRP and drive-away** and are leads, not values. CarExpert
-   quotes drive-away Sydney (7-10% above list), CarsGuide quotes MRLP. The brief already warns that
-   drive-away is the most common `listPrice` mistake; in batch 5 it is the *default* for several
-   families.
-2. **Range provenance will be worse than batch 3, and the batch-3 rescue will not work.** Chinese
-   brands quote NEDC almost universally — Tank 300 "115km", Tank 500 "120km", Omoda 9 and Jaecoo J8
-   both "169km", Tiggo 9 "~170km". What saved five families in batch 3 was the European or UK press
-   pack for the same model year, and **for these brands there is no European press pack**. Expect
-   "no WLTP exists" to be the honest answer more often, and require the agent to say so explicitly
-   rather than passing NEDC off as WLTP.
+| Planned | Actually on sale in Australia |
+|---|---|
+| Seal 6 `Essential / Premium`, $34,990-$39,990 | **Essential only** as a sedan. The "Premium" is the *Touring* — the plan was quoting a sedan price and a wagon price as one band |
+| Sealion 8 `Dynamic / Premium` | **Three** grades: Dynamic splits FWD/AWD across two different powertrains (19.0 kWh DM-i vs 35.6 kWh DM-p, 103 km vs 152 km). Collapsing them would have merged two unlike cars |
+| Starray `Complete / Inspire`, ~$37,490-$39,990 | **Complete / Inspire Extended Range.** The MY26 Inspire was superseded in late May 2026, so the price band was stale too |
+| RAV4, Sealion 5, H6 GT | Correct as planned |
+
+### The batch-5 range warning was wrong, and this is the batch's main lesson
+
+The warning said Chinese brands would have no European press pack and "no WLTP exists" would
+usually be the honest answer. **Four of six families carry genuine WLTP.**
+
+| Family | Standard used | Australian NEDC figure rejected |
+|---|---|---|
+| Toyota RAV4 | WLTP 121 / 113 km | 154 / 144 km NEDC, Toyota AU's own spec table |
+| BYD Sealion 5 | WLTP 62 / 85 km, **BYD UK** | 71 / 100 km NEDC |
+| BYD Seal 6 | WLTP 55 km | 70 km NEDC, BYD AU's own site — a 21% gap |
+| Geely Starray EM-i | WLTP 83 / 136 km, **UK Pro/Max/Ultra** | — |
+| BYD Sealion 8 | **NEDC 103 / 152 km** | no WLTP exists |
+| GWM Haval H6 GT | **NEDC 183 km** | no WLTP exists |
+
+**BYD and Geely both sell in the UK and both publish WLTP there.** So the rule is not "Chinese
+brands have no press pack" — it is the same rule batches 3 and 4 already established: *check which
+market and which spec published the number*. Look for a UK arm before concluding none exists.
+
+The two genuine NEDC families each established the absence rather than assuming it, which is what
+makes them trustworthy: **the Tang L (Sealion 8) is not sold in Europe or the UK at all**, and
+CarsGuide recorded the H6 GT's WLTP as "pending" 18 months ago with none published since. That
+matches the brief's existing finding for the standard Haval H6 and Cannon Alpha — GWM appears to
+have no WLTP homologation for any Australian PHEV.
+
+**RACV publishes editorial NEDC-to-WLTP conversions** ("152km NEDC, or about 130km WLTP"). The
+Sealion 8 agent declined to adopt them. That is correct and should stay the rule: a conversion is
+not a homologated figure, and adopting one would put an estimate where a source belongs.
+
+### Aggregator spec databases are a systematically worse source than launch reviews
+
+Batch 5 hit this three times in three different aggregators, and it is a distinct failure mode from
+"the brand site is stale" that batch 4 documented:
+
+- **carsales' research grid** listed all four Essential/Premium × Sedan/Wagon permutations for the
+  Seal 6. Only two exist. The grid is database permutations, not availability — it would have
+  produced three phantom rows.
+- **CarsGuide's spec database** priced the RAV4 GR Sport at $66,430 (transposed from $66,340) on a
+  page that also claimed a nickel-metal-hydride battery. The agent discarded the whole record
+  rather than just the price, which is the right response to a source caught in one clear error.
+- **CarsGuide's price widget** showed a $34,990-$38,990 sedan band for the Seal 6, contradicted by
+  BYD Australia's own site and by CarExpert's spec URLs, which literally contain `-sedan-fwd-` and
+  `-station-wagon-fwd-`.
+
+Prefer the manufacturer configurator for *what is orderable* and an Australian launch review for
+*what the numbers are*. Treat an auto-generated spec grid as a lead only.
+
+### A cross-family inconsistency this batch found but did not fix
+
+**`byd-sealion-6` and `byd-sealion-5` disagree on range standard for the same 18.3 kWh pack.**
+
+| Row | Battery | Range | Standard |
+|---|---|---|---|
+| `byd-sealion-5-premium` (batch 5) | 18.3 kWh | 85 km | WLTP, BYD UK |
+| `byd-sealion-6-essential` (pre-wave) | 18.3 kWh | 92 km | unverified |
+
+The Sealion 5 is the smaller, lighter car (1785 kg) and gets *less* range from the same pack. That
+is backwards, and the likeliest explanation is that the Sealion 6's 92 km is NEDC. **This was not
+fixed** — re-researching a shipped family was outside batch 5's scope and its budget. It is a
+one-family job for a later session: verify the Sealion 6's three ranges against BYD UK and correct
+them if they are NEDC. Note this is the XC60/XC90 defect the doc already warns about, except it
+crosses a batch boundary, so diffing within a batch would never have caught it. **When a batch adds
+a family that shares a platform with an already-shipped one, diff against the shipped row too.**
+
+### Other findings worth carrying
+
+- **The powertrain trap arrived exactly as predicted, and the RAV4 is the sharpest case yet.** The
+  XSE name spans both powertrains: **XSE Hybrid AWD is $58,340 and XSE PHEV 2WD is $58,840**, $500
+  apart and different cars. An agent anchoring on price would have written the conventional hybrid
+  and produced a plausible row that was entirely wrong.
+- **The clearest proof yet of why the ADR/VESR label rule exists.** Toyota's label gives 184 Wh/km
+  against a 154 km NEDC range, which multiplies out to **28.3 kWh — more energy than the 22.7 kWh
+  gross pack physically holds**. That is not one estimate disagreeing with another; it is
+  arithmetic proof the label is a different quantity.
+- **`consumptionKwhPer100km` is derived on all six families**, so the schema's 25% cross-check is
+  tautological on every new row. Batch 3's progress on this did not carry: the figure is only
+  independently sourceable when a manufacturer publishes EV-mode consumption, and none of these six
+  does. Keep asking, but do not expect it from volume brands.
+- **GWM sells on drive-away only and has no published RRP.** The H6 GT's list price had to be
+  triangulated from CarsGuide's MSRP field against carsales' indicative drive-away minus a $2,000
+  campaign, landing on $52,990 — the same number as the campaign drive-away, because GWM absorbs
+  the on-road allowance. It is the batch's least-confident figure and is flagged as such in the
+  commit. Batch 7's two GWM Tanks will hit the same problem.
 
 ## Batch 6 — mainstream Chinese and Volkswagen Group
 
-Same two warnings as batch 5, for the same reasons: drive-away pricing is common, and there is no
-European press pack behind the Chinese brands, so "no WLTP exists" will often be the honest answer.
+**One of batch 5's two warnings survived; the other was disproved — read the batch 5 section before
+dispatching.**
+
+- **Drive-away pricing is common and the warning stands.** GWM in particular publishes no RRP at
+  all.
+- **"There is no European press pack behind the Chinese brands" is wrong.** Batch 5 found genuine
+  WLTP for four of six families, including two Chinese ones, because **BYD and Geely both sell in
+  the UK and publish WLTP there**. Chery, Jaecoo and Omoda all have UK arms too — check them before
+  accepting an NEDC figure. Skoda and VW are European outright, so their press packs are not in
+  doubt at all; for those two the NEDC worry barely applies and the survey's "169km NEDC" leads for
+  the Chery/Jaecoo/Omoda cars should be treated as leads to *replace*, not to record.
+
+Also: batch 5's grade-name failures were **wrong grade counts** rather than wrong badges — a
+family sold in three grades listed as two, and a wagon price quoted inside a sedan band. Count the
+grades on the configurator, do not just match the names.
 
 | Family | `familyId` | Expected plug-in grade — confirm, don't assume |
 |---|---|---|
@@ -272,6 +373,22 @@ survey could not confirm first-hand that the engine mechanically drives the whee
 charges the battery they are range-extenders (REEV), which the brief puts out of scope, and neither
 should be written. Establish this before researching either — a REEV costed as a PHEV would be
 wrong in a way the schema cannot catch, because every field would validate.
+
+**Batch 5 settled the same question for the Geely Starray and the method it used is the one to
+copy.** Two Australian reviews described the Starray's engine as running "as a generator", which
+read literally would have made it a REEV and put it out of scope. That prose was wrong — or rather,
+it described normal operation, not the architecture's limit. What settled it was **the motor
+layout**: Geely's own technology page gives a **P1 + P3** arrangement, which by definition includes
+an engine-to-output path, and UK reviews confirmed the engine drives the front wheels directly in
+Power mode. So:
+
+- **Do not settle this on review prose.** "Acts as a generator" and "mostly drives the wheels
+  electrically" are descriptions of behaviour, not of architecture, and both appear in reviews of
+  cars that are unambiguously PHEVs.
+- **Settle it on the motor topology.** P1-only is a range-extender. Any P2/P3/P4 motor, or a
+  published mechanical/direct-drive mode, means the engine can reach the wheels.
+- The confirmed REEVs the survey already excluded — Leapmotor C10 and B10, Forthing Taikon 5 — are
+  the negative controls to check any method against.
 
 Skoda Superb PHEV was originally listed here and is **permanently out**: wagon-only in Australia,
 and wagons are out of scope.
@@ -357,7 +474,9 @@ When they return:
   - node scripts/build-dataset.js  (must end "0 failures")
   - npm test
   - Restart any dev server. It caches the dataset at boot and will otherwise serve
-    stale rows — this has caught two sessions already.
+    stale rows — this has caught three sessions already. Check with
+    `lsof -nP -iTCP:3000 -sTCP:LISTEN`, not `ps | grep`, and confirm the page
+    header's variant count matches the build output.
   - Load the page in a browser with ?includePhev=true and confirm the new families
     render. Do not substitute an API check for this; a green API and a broken page
     have happened on this project.
@@ -410,6 +529,12 @@ that cannot be entered honestly should not be entered.
   | Lexus RX450h+ | 85 km | 67 km | 27% |
   | Defender P300e | 52 km | 48 km | 8% |
 
+  **Batch 5 confirmed the pattern again and widened where to look.** Four of its six families had
+  genuine WLTP available, and in every case the Australian figure was the optimistic one: RAV4
+  154→121 km (27%), Sealion 5 100→85 km (18%), Seal 6 70→55 km (27%). The new part is *where the
+  WLTP came from* — **BYD UK and Geely UK**, for brands this plan had assumed had no European
+  presence at all. Before recording an NEDC figure, check whether the brand has a UK arm.
+
   **Batch 4 produced the wave's first counter-example, and it matters.** The Audi Q5 e-hybrid's
   Australian 82 km is genuine WLTP *and is conservative* — it sits below Europe's headline 100 km,
   because the local car is the 270kW quattro on 20-inch wheels while the European figure is the
@@ -428,11 +553,16 @@ that cannot be entered honestly should not be entered.
   true charge-depleting WLTP electric consumption; Volvo IE/DE/NL publish the utility-factor-weighted
   number under a near-identical label; Volvo AU publishes the NEDC one. Check the market, not just
   the label.
-- **Derived consumption — improving.** Before batch 3 every PHEV row had `consumptionKwhPer100km`
-  exactly equal to `batteryKwh / rangeKm * 100`, making the schema's 25% cross-check tautological.
-  Batch 3 produced the first rows where it genuinely bites: XC60 (2.2% gap), XC90 (4.6%),
-  NX (6.8-12.9%), and X3 corroborated against BMW's published 22.3-24.0 band. Keep asking.
-  Where a figure *was* derived, that is now stated in the agent's report rather than silent.
+- **Derived consumption — improved in batch 3, regressed in batch 5, and the split is by brand.**
+  Before batch 3 every PHEV row had `consumptionKwhPer100km` exactly equal to
+  `batteryKwh / rangeKm * 100`, making the schema's 25% cross-check tautological. Batch 3 produced
+  the first rows where it genuinely bites: XC60 (2.2% gap), XC90 (4.6%), NX (6.8-12.9%), and X3
+  corroborated against BMW's published 22.3-24.0 band. **Batch 5 went back to fully derived on all
+  six families** — not through laziness but because no volume brand publishes EV-mode consumption,
+  and the only published alternative is the ADR utility-factor-weighted label the brief forbids.
+  So the realistic expectation is: premium European brands sometimes publish a usable figure,
+  volume and Chinese brands do not. Keep asking, expect no from the latter, and keep saying which
+  it was — where a figure was derived, that is stated in the agent's report rather than silent.
 - **Cross-family consistency is not automatic and the validator cannot see it.** The XC60 and XC90
   agents ran in parallel on the *same T8 battery pack* and returned incompatible conventions —
   18.8 kWh gross / AU range against 14.7 kWh usable / UK range. Both rows passed the validator
@@ -463,6 +593,19 @@ that cannot be entered honestly should not be entered.
   Cayenne Turbo S E-Hybrid on CarExpert, Compass 4xe on CarsGuide, and the Eclipse Cross PHEV
   (discontinued March 2025) in an April 2026 roundup. Corroborate across a brand page *and* an
   independent Australian source before concluding either "on sale" or "withdrawn".
+- **The dev-server cache is a real trap and it bit again in batch 5.** A `node server/index.js`
+  from an earlier session was still holding port 3000, and `ps aux | grep` did not surface it —
+  only `lsof -nP -iTCP:3000 -sTCP:LISTEN` did. Worse, `npm start` printed "Listening on 3000" and
+  exited 0 without ever taking the port, so the log looked like a successful restart while the old
+  process kept serving the pre-batch dataset. **Verify the restart by the page header's
+  "N brands · N models · N variants" line matching the build output**, not by the server's own log.
+  Batch 5's header read `31 brands · 69 models · 183 variants`, which is what proved it.
+- **The shortlist is ranked, so a new family not appearing is usually not a bug.** The page shows
+  roughly five cards nearest the budget ceiling. At the default $900/mo only the RAV4 of batch 5's
+  six appeared; the others needed the budget moved to where they sit ($560 for the Seal 6, $600 for
+  the Sealion 5 and Starray) or a filter that selects them (7 seats for the Sealion 8). Use
+  `?monthlyBudget=`, `?bodyTypes=`, `?seats=` and `?minElectricRangeKm=` to drive each new family
+  onto the page individually — confirming the aggregate count alone does not prove a row renders.
 - **Budget: the survey exhausted the 200-call WebSearch ceiling on its own.** It finished via
   WebFetch against known URLs. Treat a survey as a whole session's work, not a spare slot in a
   research batch — and note that the four family agents in batch 4 each cost 24-62 tool calls,
