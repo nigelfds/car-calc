@@ -2,7 +2,6 @@ const BODY_TYPES = [
   { match: /\bsuv\b/i, value: 'SUV' },
   { match: /\bsedan\b/i, value: 'Sedan' },
   { match: /\bhatch(back)?\b/i, value: 'Hatch' },
-  { match: /\bwagon\b/i, value: 'Wagon' },
   { match: /\bute\b/i, value: 'Ute' }
 ];
 

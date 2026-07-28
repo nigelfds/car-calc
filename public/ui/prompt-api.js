@@ -9,7 +9,7 @@ export const PARSE_SCHEMA = {
   properties: {
     bodyTypes: {
       type: 'array',
-      items: { type: 'string', enum: ['SUV', 'Sedan', 'Hatch', 'Wagon', 'Ute'] }
+      items: { type: 'string', enum: ['SUV', 'Sedan', 'Hatch', 'Ute'] }
     },
     minBootLitres: { type: ['number', 'null'] },
     minRangeKm: { type: ['number', 'null'] },

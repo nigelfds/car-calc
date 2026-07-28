@@ -87,8 +87,8 @@ Field rules — every one of these is enforced by `data/schema.js`, and a violat
   (`calc/onroad.js`), so a drive-away figure here double-counts on-roads and corrupts the FBT
   threshold logic. If a source only gives drive-away, find the list price elsewhere or back it out
   and say so in your report. Note LCT is already embedded in the advertised list price — do not add it.
-- **`bodyType`** must be exactly one of `SUV`, `Sedan`, `Hatch`, `Wagon`, `Ute`. Any other string
-  silently breaks the body-type filter and the card silhouette. Pick the closest of those five.
+- **`bodyType`** must be exactly one of `SUV`, `Sedan`, `Hatch`, `Ute`. Any other string
+  silently breaks the body-type filter and the card silhouette. Pick the closest of those four. Wagon was dropped — no wagon is on sale, and an unfilterable body type is worse than an approximate one; if you find a genuine wagon, classify it as the nearest of the four and say so in your report.
 - **`consumptionKwhPer100km` is cross-checked against `batteryKwh` and `rangeKm`.** The validator
   computes `batteryKwh / rangeKm * 100` and rejects the row if the stated consumption is more than
   **25%** away from it. Use the **usable** battery capacity and the **WLTP** range and combined

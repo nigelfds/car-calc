@@ -9,7 +9,7 @@ const TOOL = {
   input_schema: {
     type: 'object',
     properties: {
-      bodyTypes: { type: 'array', items: { type: 'string', enum: ['SUV', 'Sedan', 'Hatch', 'Wagon', 'Ute'] } },
+      bodyTypes: { type: 'array', items: { type: 'string', enum: ['SUV', 'Sedan', 'Hatch', 'Ute'] } },
       minBootLitres: { type: ['number', 'null'] },
       minRangeKm: { type: ['number', 'null'] },
       seats: { type: ['integer', 'null'] },
