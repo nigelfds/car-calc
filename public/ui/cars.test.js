@@ -396,3 +396,32 @@ test('a BEV on an early lease date carries neither note', () => {
   assert.ok(!/FBT exemption/i.test(target.innerHTML));
   assert.ok(!/binding commitment/i.test(target.innerHTML));
 });
+
+// --- The empty shortlist must name the right lever ------------------------
+// Every ute in the dataset is a plug-in hybrid, so ticking Ute with the
+// toggle off matches nothing. "Try relaxing a preference" is wrong advice
+// there: the preference is fine, the toggle is what is hiding everything.
+
+test('a body type that is entirely PHEV matches nothing with the toggle off', () => {
+  const fleet = [
+    bev({ id: 'suv', bodyType: 'SUV' }),
+    phev({ id: 'ute1', bodyType: 'Ute' }),
+    phev({ id: 'ute2', bodyType: 'Ute' })
+  ];
+  assert.equal(filterVehicles(fleet, { bodyTypes: ['Ute'] }).length, 0);
+  assert.equal(filterVehicles(fleet, { bodyTypes: ['Ute'], includePhev: true }).length, 2);
+});
+
+// The message is chosen by re-running the filter, not by hardcoding "Ute", so
+// it stays correct for whatever body type turns out to be PHEV-only next.
+test('the toggle is only the answer when it would genuinely change the result', () => {
+  const fleet = [bev({ id: 'suv', bodyType: 'SUV' }), phev({ id: 'ute1', bodyType: 'Ute' })];
+  const wouldHelp = filters =>
+    filterVehicles(fleet, filters).length === 0 &&
+    !filters.includePhev &&
+    filterVehicles(fleet, { ...filters, includePhev: true }).length > 0;
+
+  assert.equal(wouldHelp({ bodyTypes: ['Ute'] }), true, 'utes are all PHEV — the toggle is the fix');
+  assert.equal(wouldHelp({ bodyTypes: ['Sedan'] }), false, 'no sedan of any powertrain — relaxing is the fix');
+  assert.equal(wouldHelp({ bodyTypes: ['Ute'], includePhev: true }), false, 'already on');
+});
