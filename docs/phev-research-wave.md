@@ -92,7 +92,7 @@ disclosed low-confidence figures.
 | GWM Haval H6 PHEV | `gwm-haval-h6-phev` | H6 also sells as petrol and as a conventional hybrid. Plug-in only. |
 | Jaecoo J7 SHS | `jaecoo-j7-shs` | "SHS" is the plug-in; the J7 also sells as petrol. |
 
-## Batch 2 — mainstream SUVs
+## Batch 2 — mainstream SUVs — **DONE**
 
 | Family | `familyId` | Note |
 |---|---|---|
@@ -103,7 +103,7 @@ disclosed low-confidence figures.
 | Mazda CX-80 PHEV | `mazda-cx-80-phev` | Sibling of `mazda-cx-60-phev` already in the dataset — anchor against it and note where they genuinely differ. |
 | Cupra Formentor PHEV | `cupra-formentor-phev` | |
 
-## Batch 3 — premium
+## Batch 3 — premium — **DONE**
 
 **Correction to an earlier claim in this plan.** It said batch 3 is where `isFuelEfficientForLct`
 starts to bite. That is wrong, and was verified wrong: the flag changes nothing in the app's output
@@ -117,7 +117,6 @@ What actually decides a premium PHEV's numbers is the same as everywhere else: l
 the card), `fuelConsumptionL100km` (the petrol half of running cost) and `combinedRangeKm` (the
 ranking).
 
-## Batch 3 — premium — **DONE**
 
 All six landed. **Three of the six grade names in this plan were wrong**, which is the batch's
 main lesson: a batch plan written from a knowledge cutoff names the grade the *world* sells, not
@@ -241,20 +240,74 @@ dispatching** — five of ten failed that test in batches 3 and 4.
    "no WLTP exists" to be the honest answer more often, and require the agent to say so explicitly
    rather than passing NEDC off as WLTP.
 
-## Batches 6-8 — outline
+## Batch 6 — mainstream Chinese and Volkswagen Group
 
-Not yet planned in detail; grade names below are unverified leads from the survey.
+Same two warnings as batch 5, for the same reasons: drive-away pricing is common, and there is no
+European press pack behind the Chinese brands, so "no WLTP exists" will often be the honest answer.
 
-- **Batch 6 — mainstream.** Chery Tiggo 9 Super Hybrid · Jaecoo J8 SHS · Omoda 9 SHS ·
-  VW Tiguan eHybrid · VW Tayron eHybrid · Skoda Kodiaq PHEV. Note **Skoda Australia dropped the
-  "iV" suffix** — local badging is just "PHEV", so a row keyed to "Kodiaq iV" will never match.
-- **Batch 7 — off-roaders and the rest of the European mainstream.** GWM Tank 300 Hi4-T ·
-  GWM Tank 500 Ultra Hi4-T · Denza B5 · Denza B8 · Cupra Terramar VZe · Skoda Superb PHEV
-  (**wagon-only — permanently out of scope, do not research**). **Verify the Denzas are true PHEVs**: they use
-  BYD's DMO off-road platform and the survey could not confirm first-hand that the engine
-  mechanically drives the wheels. If it does not, they are REEVs and out of scope.
-- **Batch 8 — premium.** Mercedes C 350e (a **sedan**) · Mercedes GLA 250e · BMW X5 xDrive50e ·
-  Porsche Cayenne E-Hybrid · Alfa Romeo Tonale · Audi A5 e-hybrid.
+| Family | `familyId` | Expected plug-in grade — confirm, don't assume |
+|---|---|---|
+| Chery Tiggo 9 Super Hybrid | `chery-tiggo-9-phev` | Anchor against `chery-tiggo-7-phev` and `chery-tiggo-8-phev` already in the dataset. Survey quotes ~170km electric as NEDC. |
+| Jaecoo J8 SHS | `jaecoo-j8-shs` | "SHS" is the plug-in, as with the J7. Anchor against `jaecoo-j7-shs`. Survey quotes 169km NEDC. |
+| Omoda 9 SHS | `omoda-9-shs` | New nameplate to the dataset. Survey quotes 169km NEDC. |
+| VW Tiguan eHybrid | `vw-tiguan-phev` | Tiguan also sells as petrol — plug-in grades only. |
+| VW Tayron eHybrid | `vw-tayron-phev` | Seven-seat Tiguan sibling; confirm seat count per variant. |
+| Skoda Kodiaq PHEV | `skoda-kodiaq-phev` | **Skoda Australia dropped the "iV" suffix** — local badging is just "PHEV", so anything keyed to "Kodiaq iV" will never match the configurator. |
+
+## Batch 7 — off-roaders
+
+Five families, so there is headroom. **The Denza question must be settled first and may remove two
+of them.**
+
+| Family | `familyId` | Expected plug-in grade — confirm, don't assume |
+|---|---|---|
+| GWM Tank 300 Hi4-T | `gwm-tank-300-phev` | Anchor against the GWM families already in the dataset. Survey quotes 115km NEDC. |
+| GWM Tank 500 Hi4-T | `gwm-tank-500-phev` | Ultra Hi4-T. Survey quotes 120km NEDC. |
+| Denza B5 | `denza-b5` | **Verify it is a true PHEV before writing anything.** |
+| Denza B8 | `denza-b8` | **Same verification.** |
+| Cupra Terramar VZe | `cupra-terramar-phev` | Anchor against `cupra-formentor-phev` already in the dataset. |
+
+**The Denza check, and why it is a stop condition.** Both use BYD's DMO off-road platform, and the
+survey could not confirm first-hand that the engine mechanically drives the wheels. If it only
+charges the battery they are range-extenders (REEV), which the brief puts out of scope, and neither
+should be written. Establish this before researching either — a REEV costed as a PHEV would be
+wrong in a way the schema cannot catch, because every field would validate.
+
+Skoda Superb PHEV was originally listed here and is **permanently out**: wagon-only in Australia,
+and wagons are out of scope.
+
+## Batch 8 — premium
+
+Note the first **sedan** in the wave. The empty PHEV `Sedan` cell is an artefact of nobody looking,
+not a fact about the market, and batches 5 and 8 are what fix it.
+
+| Family | `familyId` | Expected plug-in grade — confirm, don't assume |
+|---|---|---|
+| Mercedes-Benz C 350e | `mercedes-c-350e-phev` | **A sedan.** Anchor against `mercedes-glc-phev` already in the dataset. |
+| Mercedes-Benz GLA 250e | `mercedes-gla-phev` | Same anchor. |
+| BMW X5 xDrive50e | `bmw-x5-phev` | Anchor against `bmw-x1-phev` / `bmw-x3-phev`. Check it is under the $250,000 bound. |
+| Porsche Cayenne E-Hybrid | `porsche-cayenne-phev` | **Base E-Hybrid only** — the Turbo E-Hybrid is over the $250,000 bound and is excluded below. |
+| Alfa Romeo Tonale | `alfa-romeo-tonale-phev` | Tonale also sells as a mild hybrid — plug-in only. |
+| Audi A5 e-hybrid | `audi-a5-phev` | Anchor against `audi-q5-phev` already in the dataset. Note **TFSI e is a retired badge** — batch 4 found the Q5 is now "e-hybrid". |
+
+## Batch 9 — the re-check pass
+
+Run this last, and expect most of it to produce nothing. These were pre-launch or borderline at the
+time of the batch-4 survey, so the job is to establish whether each is now on sale and research only
+those that are. **A batch that writes two families and eight evidenced "still not on sale" reports
+has done its job** — and the reports are what stop batch 10 re-checking the same dead ends.
+
+| Family | `familyId` | Status at survey |
+|---|---|---|
+| JAC Hunter PHEV | `jac-hunter-phev` | $49,988, reservable, showrooms August 2026. Would be Australia's cheapest PHEV ute. |
+| Omoda 7 PHEV | `omoda-7-phev` | Pre-launch. |
+| Chery Stockman PHEV | `chery-stockman-phev` | Diesel PHEV ute, pre-launch. |
+| GWM Haval Jolion Max PHEV | `gwm-haval-jolion-phev` | Pre-launch. |
+| Zeekr 9X | `zeekr-9x` | Confirmed for Australia, not on sale at survey. |
+| Zeekr 8X | `zeekr-8x` | Same. |
+
+**Ford Transit Custom PHEV is out of scope** — a true plug-in hybrid, but a commercial van rather
+than a passenger carrier, and there is no body type that fits it honestly.
 
 **Above the $250,000 `listPrice` bound and therefore unrepresentable — do not research:** Range
 Rover P460e, BMW XM Label, Porsche Cayenne Turbo E-Hybrid, all four Panamera E-Hybrids, Ferrari
@@ -268,35 +321,77 @@ August 2026 — would be Australia's cheapest PHEV ute); Zeekr 9X/8X (confirmed 
 sale); Omoda 7 PHEV, Chery Stockman diesel PHEV ute, GWM Haval Jolion Max PHEV (all pre-launch);
 Ford Transit Custom PHEV (a true PHEV but a commercial van, not a passenger carrier).
 
-## How to dispatch a batch
+## How to run a batch — paste this into a new session
 
-Six `general-purpose` subagents in a single message so they run in parallel. Each prompt carries:
+One batch per session. Substitute the batch number; everything else is the same every time, which
+is the point — this replaces a hand-written prompt per batch.
 
-1. The family name and `familyId` from the table.
-2. The path to the brief: `docs/phev-research-brief.md` — "read this first, it is binding".
-3. The research date to record.
-4. Its own note from the table above, plus any sibling already in the dataset to anchor
-   `insuranceAnnual` and `depreciationCurve` against.
-5. The hard boundaries, restated: write only its own two files, never an aggregate file, never
-   another family's files, never `data/schema.js`, run no git commands.
+```
+Run batch N of the PHEV research wave for car-calc.
 
-After the batch returns:
+Read docs/phev-research-wave.md for batch N's family table and its batch-specific
+warnings, and docs/phev-research-brief.md for the binding field rules. Both carry
+the accumulated findings of every earlier batch — do not re-derive them, and do not
+re-litigate decisions they record.
 
-```bash
-node scripts/build-dataset.js   # must end "N variants across M families, 0 failures"
-npm test
+Before dispatching:
+  - Confirm `node scripts/build-dataset.js` reports 0 failures.
+  - If the batch section names a stop condition (batch 7's Denza check), settle it
+    first. It may remove families from the batch.
+  - If the batch section names a data fix to apply first, do it and commit it
+    separately, before the batch.
+
+Then dispatch one general-purpose subagent per family, all in a single message so
+they run in parallel. Each agent gets: its family name and familyId, its row's note
+from the table verbatim, the path to the brief introduced as "read this first, it is
+binding", the research date, any sibling already in the dataset to anchor
+insuranceAnnual and depreciationCurve against, and the hard boundaries — write only
+its own two files under data/families/ and data/vehicles/, never an aggregate file,
+never another family's files, never data/schema.js, and run no git commands.
+
+Require every agent to report: the grade names it EXCLUDED and why, which standard
+each range figure came from, which of batteryKwh / rangeKm / consumptionKwhPer100km
+it sourced versus derived, and its least-confident figure named outright.
+
+When they return:
+  - node scripts/build-dataset.js  (must end "0 failures")
+  - npm test
+  - Restart any dev server. It caches the dataset at boot and will otherwise serve
+    stale rows — this has caught two sessions already.
+  - Load the page in a browser with ?includePhev=true and confirm the new families
+    render. Do not substitute an API check for this; a green API and a broken page
+    have happened on this project.
+  - Commit the data with a message naming each agent's low-confidence figures. That
+    disclosure is the only record of which figures are soft.
+  - Update this doc: mark batch N done, refresh the coverage table, and record
+    anything later batches should know.
+
+Stop after batch N. The search budget covers one batch per session, and a family that
+runs out of searches half way through is worse than no family.
 ```
 
-**Restart any running dev server before checking a browser.** `server/index.js` reads the dataset
-once at boot and will otherwise serve the pre-batch rows, which looks exactly like an agent having
-failed to write its files. Then check the new families appear with the plug-in-hybrid toggle on.
-Commit the data with a message naming what each agent flagged as low-confidence — that disclosure
-is the only record of which figures are soft.
+### The five rules that have each already caught something
 
-**Diff rows that share a platform before committing.** Batch 3 caught the XC60 and XC90 returning
-incompatible battery conventions this way. Batch 4 needed it twice: the RX inherited its
-`batteryKwh` from the NX correction rather than sourcing it, and the Defender's boot figures used a
-different measurement convention from every other row. Neither is visible to the validator.
+Restate these in the agent prompts. Every one comes from a batch that got it wrong first.
+
+1. **`listPrice` is the manufacturer list price, never drive-away.** The single most common error,
+   and for the Chinese brands drive-away is the *default* quoted figure.
+2. **Never use the ADR/VESR label for `consumptionKwhPer100km`.** Kia's was 30.7% from its own
+   battery and range and would have failed the validator; Lexus's was 39% low against measured.
+3. **A published figure may still be the wrong quantity.** Volvo publishes three different ones
+   under nearly identical labels across its own markets. If a figure disagrees with usable battery ÷
+   range by more than a few percent, suspect the quantity before the arithmetic.
+4. **`batteryKwh` is usable, not gross.** Two families shipped gross and spent the validator's
+   whole tolerance on a definitional mismatch.
+5. **Grade names are leads.** Five of ten failed verification across batches 3 and 4 — `TFSI e` is
+   retired, `P400e` no longer exists, and `NX450h+` differs from `NX350h` by one character.
+
+### What a good batch looks like
+
+Not "six families landed". A batch that writes three families, reports two as evidenced "not on
+sale", and stops on one because a stop condition failed has done its job — batch 4 wrote three of
+four and its most valuable output was the survey that showed the wave was 40% finished. Families
+that cannot be entered honestly should not be entered.
 
 ## What to watch across the whole wave
 
