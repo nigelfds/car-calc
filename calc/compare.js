@@ -7,10 +7,23 @@ import { upfrontQuote, forgoneReturn } from './upfront.js';
 import { resolvePhase } from './fbt.js';
 
 function vehicleContext(vehicle, inputs, tables) {
-  const onRoad = driveAwayPrice({ listPrice: vehicle.listPrice }, tables);
+  // The isGreen / isFuelEfficient flags have been on driveAwayPrice since the
+  // beginning with nothing ever passing them, because every car in the
+  // dataset was a BEV and every BEV qualifies for both. A PHEV may qualify
+  // for neither, so this is where they finally get passed. A row without them
+  // is a BEV (see data/schema.js) and keeps the true defaults.
+  const onRoad = driveAwayPrice({
+    listPrice: vehicle.listPrice,
+    isGreen: vehicle.isGreenForVicDuty ?? true,
+    isFuelEfficient: vehicle.isFuelEfficientForLct ?? true
+  }, tables);
   const running = runningCosts({
     vehicle,
     annualKm: inputs.annualKm,
+    // Ignored outright for a BEV; for a PHEV it is the single biggest lever
+    // on the figure. Defaulting to 100 keeps a caller that has not been
+    // updated producing the same answer it always did.
+    batterySharePct: inputs.phevBatterySharePct ?? 100,
     // I5: these used to be hardcoded here, duplicating data/rates.json and
     // ignoring both the data file and the rates panel's edits entirely.
     // calc/ stays pure — no file reads — so the caller (ui/app.js's
@@ -18,7 +31,8 @@ function vehicleContext(vehicle, inputs, tables) {
     // plain arguments, exactly like every other rate in `inputs`.
     rates: {
       electricityCentsPerKwh: inputs.electricityCentsPerKwh,
-      otherRunningCostsAnnual: inputs.otherRunningCostsAnnual
+      otherRunningCostsAnnual: inputs.otherRunningCostsAnnual,
+      petrolCentsPerLitre: inputs.petrolCentsPerLitre
     }
   });
   const resale = resaleValue({
@@ -42,8 +56,21 @@ export function optionCosts({ vehicle, inputs }, tables) {
     leaseStartDate: inputs.leaseStartDate,
     vehicleValue: vehicle.listPrice,
     grossSalary: inputs.grossSalary,
-    residualPctOverride: inputs.residualPctOverride ?? null
+    residualPctOverride: inputs.residualPctOverride ?? null,
+    powertrain: vehicle.powertrain ?? 'bev'
   }, tables);
+
+  // A PHEV that lost its FBT exemption on 1 April 2025 still costs out —
+  // it just pays FBT on the full statutory formula instead of getting an
+  // exemption or discount (see calc/fbt.js). Surfaced on all three options,
+  // not just novated, so a card comparing them can disclose it consistently.
+  const phevIneligible = novated.treatment?.phevIneligible ?? false;
+  // The other half of the same disclosure, and the more dangerous one: a lease
+  // start date before the cut-off makes these figures ~$47,000 cheaper over
+  // the term, on an assumption (a binding commitment by 1 April 2025) the
+  // inputs cannot confirm. Reported alongside, so a card cannot show the
+  // cheap answer without showing why it is cheap.
+  const phevExemptByDate = novated.treatment?.phevExemptByDate ?? false;
 
   // Gross outlay is everything that actually leaves your pocket, before any
   // credit for what you are left holding. Each option's TCO is then that
@@ -91,7 +118,10 @@ export function optionCosts({ vehicle, inputs }, tables) {
       monthlyCost: novated.netMonthlyCost,
       tco: novatedTco,
       feasible: true,
-      detail: { ...novated, resale, grossOutlay: novatedGross, driveAway: onRoad.total }
+      detail: {
+        ...novated, resale, grossOutlay: novatedGross, driveAway: onRoad.total,
+        phevIneligible, phevExemptByDate
+      }
     },
     loan: {
       option: 'loan',
@@ -104,7 +134,9 @@ export function optionCosts({ vehicle, inputs }, tables) {
         depositOpportunityCost,
         resale,
         grossOutlay: loanGross,
-        driveAway: onRoad.total
+        driveAway: onRoad.total,
+        phevIneligible,
+        phevExemptByDate
       }
     },
     upfront: {
@@ -112,7 +144,10 @@ export function optionCosts({ vehicle, inputs }, tables) {
       monthlyCost: upfront.netMonthlyRunningCost,
       tco: upfrontTco,
       feasible: inputs.savings >= onRoad.total,
-      detail: { ...upfront, resale, grossOutlay: upfrontGross, driveAway: onRoad.total }
+      detail: {
+        ...upfront, resale, grossOutlay: upfrontGross, driveAway: onRoad.total,
+        phevIneligible, phevExemptByDate
+      }
     }
   };
 }

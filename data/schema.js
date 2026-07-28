@@ -21,6 +21,35 @@ export const NUMERIC_BOUNDS = {
 };
 const INTEGER_FIELDS = new Set(['seats', 'warrantyYears']);
 
+export const POWERTRAINS = ['bev', 'phev'];
+
+// Absent means BEV — that is what keeps the existing 40 families from needing
+// a migration. Everything downstream reads powertrain through this.
+export const powertrainOf = row => row?.powertrain ?? 'bev';
+
+// Fields that only a PHEV carries. Their presence on a row that has not
+// declared powertrain: 'phev' is an error, not a harmless extra: the
+// dangerous direction of this mistake is a PHEV being costed as an
+// FBT-exempt EV, so the check runs both ways.
+const PHEV_ONLY_FIELDS = [
+  'combinedRangeKm', 'fuelConsumptionL100km', 'isFuelEfficientForLct', 'isGreenForVicDuty'
+];
+
+// A PHEV's battery and electric range are both far below anything a BEV
+// could plausibly have, so one shared bound cannot serve both. rangeKm is
+// electric range for every powertrain (for a BEV that is also its total),
+// which is what keeps the batteryKwh/rangeKm consistency check below valid
+// for both.
+const PHEV_BOUNDS = {
+  batteryKwh: [8, 60],
+  rangeKm: [30, 200],
+  combinedRangeKm: [300, 1500],
+  fuelConsumptionL100km: [1, 15]
+};
+
+const boundsFor = (row, field) =>
+  (powertrainOf(row) === 'phev' && PHEV_BOUNDS[field]) || NUMERIC_BOUNDS[field];
+
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const IMAGE_URL_RE = /^https:\/\/.+\.(jpg|jpeg|png|webp)(\?.*)?$/i;
 
@@ -42,13 +71,51 @@ export function validateVehicle(row) {
     errors.push('sourcedAt must match YYYY-MM-DD');
   }
 
+  const powertrain = powertrainOf(row);
+  if (!POWERTRAINS.includes(powertrain)) {
+    errors.push(`powertrain must be one of ${POWERTRAINS.join(', ')}, got ${row.powertrain}`);
+  }
+
+  const strayPhevFields = PHEV_ONLY_FIELDS.filter(f => row[f] !== undefined);
+  if (powertrain !== 'phev' && strayPhevFields.length > 0) {
+    errors.push(
+      `${strayPhevFields.join(', ')} only belong on a plug-in hybrid — set powertrain: "phev" or remove them`
+    );
+  }
+  if (powertrain === 'phev') {
+    for (const field of ['combinedRangeKm', 'fuelConsumptionL100km']) {
+      const value = row[field];
+      if (typeof value !== 'number' || !Number.isFinite(value)) {
+        errors.push(`${field} must be a finite number on a plug-in hybrid`);
+        continue;
+      }
+      const [min, max] = PHEV_BOUNDS[field];
+      if (value < min || value > max) {
+        errors.push(`${field} must be between ${min} and ${max}, got ${value}`);
+      }
+    }
+    for (const field of ['isFuelEfficientForLct', 'isGreenForVicDuty']) {
+      if (typeof row[field] !== 'boolean') {
+        errors.push(`${field} must be true or false on a plug-in hybrid — it decides which tax rate applies`);
+      }
+    }
+    if (
+      typeof row.combinedRangeKm === 'number' && typeof row.rangeKm === 'number' &&
+      row.combinedRangeKm <= row.rangeKm
+    ) {
+      errors.push(
+        `combinedRangeKm (${row.combinedRangeKm}) must exceed rangeKm (${row.rangeKm}), which is the electric-only range`
+      );
+    }
+  }
+
   for (const field of VEHICLE_NUMBERS) {
     const value = row[field];
     if (typeof value !== 'number' || !Number.isFinite(value)) {
       errors.push(`${field} must be a finite number`);
       continue;
     }
-    const [min, max] = NUMERIC_BOUNDS[field];
+    const [min, max] = boundsFor(row, field);
     if (value < min || value > max) {
       errors.push(`${field} must be between ${min} and ${max}, got ${value}`);
     }

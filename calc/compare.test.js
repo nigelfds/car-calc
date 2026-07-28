@@ -368,3 +368,103 @@ test('at the default rates a deposit slightly raises the total', () => {
   assert.ok(some.tco > none.tco);
   assert.ok(some.tco - none.tco < 2000, 'but only mildly — this is a close call, not a blowout');
 });
+
+// --- PHEV: powertrain, battery share and tax flags threaded through --------
+
+const phevVehicle = {
+  id: 'test-phev', powertrain: 'phev', listPrice: 60000,
+  batteryKwh: 18.1, rangeKm: 84, consumptionKwhPer100km: 21.5,
+  combinedRangeKm: 760, fuelConsumptionL100km: 6.8,
+  isFuelEfficientForLct: true, isGreenForVicDuty: true,
+  insuranceAnnual: 1700, depreciationCurve: [1, 0.72, 0.61, 0.53, 0.46, 0.40]
+};
+
+test('a novated lease on a PHEV costs more than on an equivalent BEV', () => {
+  const bevVehicle = { ...phevVehicle, id: 'test-bev', powertrain: 'bev' };
+  delete bevVehicle.combinedRangeKm;
+  delete bevVehicle.fuelConsumptionL100km;
+  delete bevVehicle.isFuelEfficientForLct;
+  delete bevVehicle.isGreenForVicDuty;
+
+  const phevCost = optionCosts({ vehicle: phevVehicle, inputs }, tables).novated;
+  const bevCost = optionCosts({ vehicle: bevVehicle, inputs }, tables).novated;
+  assert.ok(phevCost.monthlyCost > bevCost.monthlyCost,
+    'losing the FBT exemption must show up in the monthly figure');
+});
+
+test('the PHEV ineligibility is reported so the card can disclose it', () => {
+  const costs = optionCosts({ vehicle: phevVehicle, inputs }, tables);
+  assert.equal(costs.novated.detail.phevIneligible, true);
+});
+
+test('a BEV reports itself as eligible', () => {
+  assert.equal(optionCosts({ vehicle: vehicle('a', 56000), inputs }, tables).novated.detail.phevIneligible, false);
+});
+
+// C1: the cheap answer is the one that needs explaining. A pre-cut-off lease
+// date makes a PHEV exempt and takes tens of thousands off its novated total,
+// so every option carries the flag the card discloses.
+test('a PHEV exempt only by an early lease date is reported on every option', () => {
+  const early = { ...inputs, leaseStartDate: '2025-03-31' };
+  const costs = optionCosts({ vehicle: phevVehicle, inputs: early }, tables);
+  for (const option of ['novated', 'loan', 'upfront']) {
+    assert.equal(costs[option].detail.phevExemptByDate, true, option);
+    assert.equal(costs[option].detail.phevIneligible, false, option);
+  }
+});
+
+test('a PHEV leased today is ineligible rather than exempt by date', () => {
+  const costs = optionCosts({ vehicle: phevVehicle, inputs }, tables);
+  assert.equal(costs.novated.detail.phevExemptByDate, false);
+});
+
+test('a BEV is never reported as exempt by date, however early the lease starts', () => {
+  const early = { ...inputs, leaseStartDate: '2025-03-31' };
+  const costs = optionCosts({ vehicle: vehicle('a', 56000), inputs: early }, tables);
+  assert.equal(costs.novated.detail.phevExemptByDate, false);
+});
+
+test('the battery share reaches the running costs through optionCosts', () => {
+  const electric = optionCosts({ vehicle: phevVehicle, inputs: { ...inputs, phevBatterySharePct: 100 } }, tables);
+  const petrol = optionCosts({ vehicle: phevVehicle, inputs: { ...inputs, phevBatterySharePct: 0 } }, tables);
+  assert.notEqual(electric.loan.tco, petrol.loan.tco, 'the share must not be dropped on the way through');
+});
+
+// These two flags have existed on calc/onroad.js since the beginning and were
+// never passed by anything. A PHEV that is not a "green passenger car" for
+// VIC duty pays the higher tiered rate.
+//
+// Deviation from the brief: at phevVehicle's $60,000 list price the green
+// rate (8.4/$200) and the first "other" tier (also 8.4/$200 up to $80,809)
+// are identical, so green vs not-green produce the same stamp duty and this
+// test cannot discriminate. Bumped to $85,000 — still under the $91,661
+// fuel-efficient LCT threshold, so LCT stays uninvolved — which crosses into
+// the 10.4/$200 "other" tier and actually exercises the flag.
+test('a PHEV that is not green for VIC duty pays more on-road', () => {
+  const dutyTierVehicle = { ...phevVehicle, listPrice: 85000 };
+  const green = optionCosts({ vehicle: dutyTierVehicle, inputs }, tables);
+  const notGreen = optionCosts({
+    vehicle: { ...dutyTierVehicle, isGreenForVicDuty: false }, inputs
+  }, tables);
+  assert.ok(notGreen.upfront.detail.driveAway > green.upfront.detail.driveAway);
+});
+
+// LCT is reported-only: driveAwayPrice computes it but deliberately leaves it
+// out of the on-road total (see the comment at calc/onroad.js:17-25), so the
+// fuel-efficient flag cannot move any figure optionCosts returns. Asserted as
+// an equality rather than the "> 0" this used to check — that was true no
+// matter what the flag did. If LCT is ever wired into the total, this fails.
+test('the fuel-efficient LCT flag leaves the drive-away total untouched', () => {
+  const dear = { ...phevVehicle, listPrice: 88000 };
+  const fuelEfficient = optionCosts({
+    vehicle: { ...dear, isFuelEfficientForLct: true }, inputs
+  }, tables);
+  const notFuelEfficient = optionCosts({
+    vehicle: { ...dear, isFuelEfficientForLct: false }, inputs
+  }, tables);
+  assert.equal(
+    notFuelEfficient.novated.detail.driveAway,
+    fuelEfficient.novated.detail.driveAway,
+    'LCT is reported, never added to the on-road total'
+  );
+});

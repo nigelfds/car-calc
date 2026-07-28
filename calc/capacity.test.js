@@ -2,7 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  representativeProfile, maxAffordablePrice, purchasingPowerSeries, optionEntryPoint
+  representativeProfile, maxAffordablePrice, purchasingPowerSeries, optionEntryPoint,
+  cheapestPrice
 } from './capacity.js';
 import { optionCosts } from './compare.js';
 
@@ -205,6 +206,34 @@ test('the floor defaults to zero so existing callers are unchanged', () => {
     { budgetMonthly: 900, option: 'loan', inputs, profile, floorPrice: 0 }, tables
   );
   assert.equal(a, b);
+});
+
+// I1: ui/app.js derives the floor from the preference-filtered pool, and a
+// filter like minBootLitres: 1200 empties that pool. cheapestPrice([]) is 0, a
+// zero floor is no floor at all, and the chart went back to plotting $3,379 of
+// capacity at $300/mo directly above a shortlist reading "No car in the
+// dataset matches these preferences". The fallback in app.js is what stops
+// that; this is the arithmetic that makes it necessary.
+test('an empty pool leaves no floor, so the caller must fall back to the whole fleet', () => {
+  const fleet = [vehicle('cheapest', 29840), vehicle('dearer', 56000)];
+  const pool = [];
+
+  assert.equal(cheapestPrice(pool), 0, 'nothing to measure means no floor');
+
+  const unfloored = maxAffordablePrice(
+    { budgetMonthly: 400, option: 'loan', inputs, profile, floorPrice: cheapestPrice(pool) }, tables
+  );
+  assert.ok(unfloored > 0 && unfloored < 29840,
+    `a zero floor lets the solver invent a $${Math.round(unfloored)} car`);
+
+  const floored = maxAffordablePrice(
+    {
+      budgetMonthly: 400, option: 'loan', inputs, profile,
+      floorPrice: cheapestPrice(pool.length > 0 ? pool : fleet)
+    },
+    tables
+  );
+  assert.equal(floored, 0, 'measured against the fleet, nothing is reachable at $400/mo');
 });
 
 test('the series applies the floor to every option at every budget', () => {

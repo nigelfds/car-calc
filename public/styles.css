@@ -418,6 +418,16 @@ input[type='date'],
   font-size: 0.9rem;
 }
 
+/* Indented under the toggle that reveals it, so the relationship is visible
+   rather than implied by proximity alone. */
+.phev-options {
+  margin-top: var(--space-3);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--hairline);
+}
+
+.phev-options[hidden] { display: none; }
+
 /* Brief highlight used when parsing free text fills a field in, so the
    hand-off from prose to numbers is visible. */
 .field-updated {
@@ -998,6 +1008,24 @@ input[type='date'],
 .car-balloon.is-short {
   color: var(--warn);
   font-weight: 500;
+}
+
+/* A PHEV keeps its price band, banded on list price like everything else, so
+   this is the only place a real monthly cost above the budget surfaces. */
+.cost-row__warn {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--warn);
+  font-weight: 500;
+}
+
+/* Sits under the cost table rather than the specs line, because it explains
+   the novated figures just above it, not the car itself. */
+.car-phev-note {
+  margin: var(--space-2) 0 0;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--warn);
 }
 
 /* The cards are not in price order — the at-budget ones lead — so each says

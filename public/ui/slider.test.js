@@ -34,7 +34,8 @@ const inputs = {
 // way it fails a real browser; a fix that builds once and only patches
 // values afterward passes.
 const RATE_FIELD_NAMES = [
-  'leaseRatePct', 'loanRatePct', 'adminFeeAnnual', 'opportunityRatePct', 'residualPctOverride', 'deposit'
+  'leaseRatePct', 'loanRatePct', 'adminFeeAnnual', 'opportunityRatePct',
+  'petrolCentsPerLitre', 'residualPctOverride', 'deposit'
 ];
 
 function fakeRatesRoot() {
@@ -87,8 +88,44 @@ function fakeRatesRoot() {
   return { root, panel };
 }
 
-const RATES = { leaseRatePct: 7.5, loanRatePct: 6.5, adminFeeAnnual: 1020, opportunityRatePct: 4.5, sources: {} };
-const RATES_STATE = { leaseRatePct: 7.5, loanRatePct: 6.5, adminFeeAnnual: 1020, opportunityRatePct: 4.5, residualPctOverride: null, deposit: 0 };
+const RATES = { leaseRatePct: 7.5, loanRatePct: 6.5, adminFeeAnnual: 1020, opportunityRatePct: 4.5, petrolCentsPerLitre: 195, sources: {} };
+const RATES_STATE = { leaseRatePct: 7.5, loanRatePct: 6.5, adminFeeAnnual: 1020, opportunityRatePct: 4.5, petrolCentsPerLitre: 195, residualPctOverride: null, deposit: 0 };
+
+// I3: the petrol price was the one researched rate with no control — its
+// citation in data/rates.json was never displayed, and the panel's own intro
+// promised every figure was editable. Read against the shipped file rather
+// than a fixture, so a rate researched later and never given a field fails
+// here rather than shipping a dead citation.
+const shippedRates = JSON.parse(readFileSync(new URL('../../data/rates.json', import.meta.url)));
+
+test('every researched rate with a citation gets an editable field that shows it', () => {
+  let html = '';
+  const panel = {
+    set innerHTML(value) { html = value; },
+    get innerHTML() { return html; },
+    querySelectorAll: () => []
+  };
+  const root = { activeElement: null, querySelector: sel => (sel === '#rates-panel' ? panel : null) };
+
+  renderRatesPanel(root, { ...shippedRates }, () => {}, shippedRates);
+
+  for (const [field, citation] of Object.entries(shippedRates.sources)) {
+    assert.match(html, new RegExp(`data-field="${field}"`), `${field} has a citation but no control`);
+    // None of the shipped citations contain HTML-escapable characters, so a
+    // plain substring match is the same string the reader sees.
+    assert.ok(html.includes(citation), `${field}'s citation is never rendered`);
+  }
+});
+
+test('the petrol price resets to the researched default like any other rate', () => {
+  const { root, panel } = fakeRatesRoot();
+  let received = null;
+
+  renderRatesPanel(root, { ...RATES_STATE, petrolCentsPerLitre: 240 }, next => { received = next; }, RATES);
+  panel.querySelectorAll('[data-reset]').find(b => b.dataset.reset === 'petrolCentsPerLitre').click();
+
+  assert.equal(received.petrolCentsPerLitre, 195);
+});
 
 test('a re-render does not rebuild the panel, destroy, or blur the focused input', () => {
   const { root, panel } = fakeRatesRoot();

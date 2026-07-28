@@ -196,6 +196,16 @@ const RATE_FIELDS = [
     fallbackNote: 'Melbourne residential off-peak-weighted estimate — edit it to match your own plan or home charging rate.'
   },
   {
+    // Inert for a BEV, and the dominant term in a plug-in hybrid's fuel bill.
+    // Listed here on the same footing as the rest because it is a researched
+    // rate with a citation of its own (data/rates.json), and the panel's
+    // promise that every figure is editable was false while it was missing.
+    field: 'petrolCentsPerLitre',
+    label: 'Petrol price',
+    suffix: 'c/L',
+    step: 1
+  },
+  {
     field: 'otherRunningCostsAnnual',
     label: 'Other running costs (rego, servicing, tyres)',
     prefix: '$',
@@ -273,6 +283,7 @@ export function renderRatesPanel(root, state, onChange, rates = null) {
     loanRatePct: rates?.loanRatePct,
     adminFeeAnnual: rates?.adminFeeAnnual,
     electricityCentsPerKwh: rates?.electricityCentsPerKwh,
+    petrolCentsPerLitre: rates?.petrolCentsPerLitre,
     otherRunningCostsAnnual: rates?.otherRunningCostsAnnual,
     opportunityRatePct: rates?.opportunityRatePct,
     residualPctOverride: FIELD_DEFAULTS.residualPctOverride,
@@ -284,7 +295,7 @@ export function renderRatesPanel(root, state, onChange, rates = null) {
   panel._ratesDefaults = defaults;
 
   if (!panel._ratesBuilt) {
-    // Collapsed by default: eight editable rates is a lot of screen between
+    // Collapsed by default: nine editable rates is a lot of screen between
     // the verdict and the shortlist, and most people never touch them. The
     // `_ratesBuilt` guard below means this markup is written once, so a user
     // who opens the disclosure keeps it open across every recompute.

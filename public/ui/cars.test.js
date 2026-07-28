@@ -29,6 +29,72 @@ test('an empty filter returns everything', () => {
   assert.equal(filterVehicles(fleet, {}).length, 2);
 });
 
+// --- Plug-in hybrids in the filter -----------------------------------------
+// A PHEV row carries powertrain: 'phev' plus a combined (tank+battery) range;
+// everything else in data/schema.js's 114 existing rows omits powertrain and
+// is a BEV by default.
+
+// consumptionKwhPer100km, insuranceAnnual, fuelConsumptionL100km and
+// depreciationCurve are not part of the brief's filter fixtures, but the
+// cardModel tests below feed these same fixtures through optionCosts, which
+// needs them to produce real numbers (resaleValue reads depreciationCurve.length
+// unconditionally). Added here rather than duplicating a second pair of
+// fixtures, and overridable via `over` like everything else.
+const phev = (over = {}) => ({
+  id: 'p1', familyId: 'p', make: 'Test', model: 'PHEV', variant: 'Base',
+  bodyType: 'SUV', powertrain: 'phev', listPrice: 60000,
+  rangeKm: 84, combinedRangeKm: 760, bootLitresSeatsUp: 500, seats: 5,
+  consumptionKwhPer100km: 16, fuelConsumptionL100km: 1.8, insuranceAnnual: 1850,
+  depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47], ...over
+});
+const bev = (over = {}) => ({
+  id: 'b1', familyId: 'b', make: 'Test', model: 'BEV', variant: 'Base',
+  bodyType: 'SUV', listPrice: 60000, rangeKm: 450,
+  bootLitresSeatsUp: 500, seats: 5,
+  consumptionKwhPer100km: 16, insuranceAnnual: 1850,
+  depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47], ...over
+});
+
+test('plug-in hybrids are excluded unless asked for', () => {
+  const out = filterVehicles([bev(), phev()], { includePhev: false });
+  assert.deepEqual(out.map(v => v.id), ['b1']);
+});
+
+test('plug-in hybrids appear when asked for', () => {
+  const out = filterVehicles([bev(), phev()], { includePhev: true });
+  assert.deepEqual(out.map(v => v.id), ['b1', 'p1']);
+});
+
+// A user asking for 400km means "before I have to stop", and a PHEV genuinely
+// does that on a tank. Judging it on its 84km electric range would exclude
+// every plug-in hybrid from any range filter worth setting.
+test('the range filter judges a PHEV on combined range, not electric range', () => {
+  const out = filterVehicles([phev()], { includePhev: true, minRangeKm: 400 });
+  assert.deepEqual(out.map(v => v.id), ['p1'], '760km combined clears a 400km bar');
+});
+
+test('a BEV is still judged on its own range', () => {
+  assert.equal(filterVehicles([bev({ rangeKm: 300 })], { minRangeKm: 400 }).length, 0);
+});
+
+test('a PHEV whose combined range is short is still excluded', () => {
+  const out = filterVehicles([phev({ combinedRangeKm: 350 })], { includePhev: true, minRangeKm: 400 });
+  assert.equal(out.length, 0);
+});
+
+// The separate control, for someone buying a PHEV to commute on electricity.
+test('the electric-range filter judges a PHEV on its electric range', () => {
+  assert.equal(filterVehicles([phev({ rangeKm: 84 })], { includePhev: true, minElectricRangeKm: 60 }).length, 1);
+  assert.equal(filterVehicles([phev({ rangeKm: 42 })], { includePhev: true, minElectricRangeKm: 60 }).length, 0);
+});
+
+// A BEV's electric range is its whole range, so this filter would silently
+// become a second, stricter minRangeKm for every EV on the list.
+test('the electric-range filter never applies to a BEV', () => {
+  const out = filterVehicles([bev({ rangeKm: 450 })], { includePhev: true, minElectricRangeKm: 600 });
+  assert.deepEqual(out.map(v => v.id), ['b1']);
+});
+
 test('a card carries its family review when one exists', () => {
   const card = cardModel(fleet[0], families);
   assert.equal(card.summary, 'Roomy electric SUV.');
@@ -250,4 +316,83 @@ test('an underwater balloon is marked so it reads as a warning', () => {
   const card = cardModel(sinker, [], { inputs: costInputs, tables: costTables });
   renderCards({ querySelector: () => target }, [{ ...card, bandLabel: 'At your budget' }]);
   assert.ok(/is-short/.test(html), 'a shortfall must be visually distinct from a covered balloon');
+});
+
+// --- Plug-in hybrids on the card --------------------------------------------
+// PHEVs keep their normal price band, so the card is where the fact that a
+// PHEV lost the FBT exemption (and can therefore cost more per month than an
+// EV in the same band) has to surface.
+
+test('a card reports its powertrain and FBT status', () => {
+  const card = cardModel(phev(), [], { inputs: costInputs, tables: costTables, monthlyBudget: 1200 });
+  assert.equal(card.powertrain, 'phev');
+  assert.equal(card.phevIneligible, true);
+});
+
+// The card sits under "At your budget" because it is banded on price, so the
+// one thing it must not do is stay quiet about not being affordable there.
+test('a card flags a novated cost above the budget', () => {
+  const card = cardModel(phev(), [], { inputs: costInputs, tables: costTables, monthlyBudget: 1 });
+  assert.equal(card.novatedOverBudget, true);
+});
+
+test('a card within budget is not flagged', () => {
+  const card = cardModel(bev(), [], { inputs: costInputs, tables: costTables, monthlyBudget: 100000 });
+  assert.equal(card.novatedOverBudget, false);
+});
+
+test('the rendered PHEV card discloses the lost exemption and the date', () => {
+  const target = { innerHTML: '' };
+  renderCards({ querySelector: () => target }, [
+    cardModel(phev(), [], { inputs: costInputs, tables: costTables, monthlyBudget: 1 })
+  ]);
+  assert.match(target.innerHTML, /FBT exemption/i);
+  assert.match(target.innerHTML, /1 April 2025/);
+});
+
+test('a BEV card says nothing about FBT eligibility', () => {
+  const target = { innerHTML: '' };
+  renderCards({ querySelector: () => target }, [
+    cardModel(bev(), [], { inputs: costInputs, tables: costTables, monthlyBudget: 100000 })
+  ]);
+  assert.ok(!/FBT exemption/i.test(target.innerHTML));
+});
+
+// C1: rolling the lease start date back one day makes a PHEV FBT-exempt and
+// ~$47,000 cheaper over the term. The disclosure used to appear only in the
+// expensive case, so the cheap, load-bearing assumption went unstated.
+const earlyLease = { ...costInputs, leaseStartDate: '2025-03-31' };
+
+test('a PHEV exempt only by an early lease date carries that on the card', () => {
+  const card = cardModel(phev(), [], { inputs: earlyLease, tables: costTables, monthlyBudget: 1200 });
+  assert.equal(card.phevExemptByDate, true);
+  assert.equal(card.phevIneligible, false);
+});
+
+test('the rendered card names the date and the binding commitment behind the exemption', () => {
+  const target = { innerHTML: '' };
+  renderCards({ querySelector: () => target }, [
+    cardModel(phev(), [], { inputs: earlyLease, tables: costTables, monthlyBudget: 1200 })
+  ]);
+  assert.match(target.innerHTML, /1 April 2025/);
+  assert.match(target.innerHTML, /binding commitment/i);
+});
+
+// The two notes describe opposite treatments, so a card must never carry both.
+test('a PHEV leased after the cut-off keeps the ineligibility note and not the exempt one', () => {
+  const target = { innerHTML: '' };
+  renderCards({ querySelector: () => target }, [
+    cardModel(phev(), [], { inputs: costInputs, tables: costTables, monthlyBudget: 1200 })
+  ]);
+  assert.match(target.innerHTML, /lost the FBT exemption/i);
+  assert.ok(!/binding commitment/i.test(target.innerHTML));
+});
+
+test('a BEV on an early lease date carries neither note', () => {
+  const target = { innerHTML: '' };
+  renderCards({ querySelector: () => target }, [
+    cardModel(bev(), [], { inputs: earlyLease, tables: costTables, monthlyBudget: 100000 })
+  ]);
+  assert.ok(!/FBT exemption/i.test(target.innerHTML));
+  assert.ok(!/binding commitment/i.test(target.innerHTML));
 });

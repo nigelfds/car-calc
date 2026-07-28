@@ -105,8 +105,13 @@
 
         <div class="field">
           <label for="leaseStartDate">Lease start date</label>
+          <!-- min is a guard, not the fix: a date before 1 April 2025 makes a
+               plug-in hybrid FBT-exempt (calc/fbt.js), which is only true where
+               a binding commitment was already in place. fromQueryString will
+               still accept an earlier date from a shared link, so the card
+               discloses that assumption whenever it applies. -->
           <input type="date" id="leaseStartDate" name="leaseStartDate" data-field="leaseStartDate"
-            value="2026-07-25" />
+            min="2025-04-01" value="2026-07-25" />
         </div>
       </div>
 
@@ -155,6 +160,55 @@
               min="0" step="25" inputmode="numeric" placeholder="any" />
             <span class="field__suffix" aria-hidden="true">km</span>
           </div>
+          <p class="field__hint">For a plug-in hybrid this is its combined range on a full
+            battery and a full tank.</p>
+        </div>
+
+        <!-- Opt-in, and hidden behind it: the extra range figure and the
+             battery-share control are meaningless for a battery-electric car,
+             so they only appear once plug-in hybrids are actually in play.
+             ui/app.js toggles the hidden attribute on #phev-options. -->
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox" id="includePhev" data-field="includePhev" /> Include plug-in hybrids
+          </label>
+          <p class="field__hint">PHEVs lost the FBT exemption on 1 April 2025, so a novated lease
+            costs considerably more than for an EV.</p>
+        </div>
+
+        <div id="phev-options" class="phev-options" hidden>
+          <!-- Electric range only makes sense as a filter once plug-in
+               hybrids are in the pool: for a BEV it is the same number as
+               "Minimum range" above, so showing both would be two controls
+               for one fact. -->
+          <div class="field">
+            <label for="minElectricRangeKm">Minimum electric range</label>
+            <div class="field__input">
+              <input type="number" id="minElectricRangeKm" name="minElectricRangeKm"
+                data-field="minElectricRangeKm" min="0" step="10" inputmode="numeric" placeholder="any" />
+              <span class="field__suffix" aria-hidden="true">km</span>
+            </div>
+            <p class="field__hint">How far it goes before the engine starts. Set this to your daily
+              commute if you want to drive mostly on electricity.</p>
+          </div>
+
+          <div class="field">
+            <label for="phevBatterySharePct">Share of driving on battery</label>
+            <div class="field__input">
+              <input type="number" id="phevBatterySharePct" name="phevBatterySharePct"
+                data-field="phevBatterySharePct" min="0" max="100" step="5" inputmode="numeric" />
+              <span class="field__suffix" aria-hidden="true">%</span>
+            </div>
+            <!-- The honest scale, measured rather than asserted: dropping from
+                 100% to 0% roughly doubles a plug-in hybrid's yearly fuel and
+                 energy bill, but moves the monthly figure by only about $35,
+                 because running costs are a small share of a packaged lease.
+                 The earlier copy here claimed this was the biggest lever on the
+                 page, which is true of the fuel bill alone and false of the
+                 number you actually read. -->
+            <p class="field__hint">Short daily trips you can charge for. Running on petrol instead
+              roughly doubles the fuel bill, though it moves the monthly figure much less.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -202,6 +256,9 @@
             quote. Consider seeking advice from a licensed adviser before deciding.</li>
           <li>An FBT-exempt lease still creates a Reportable Fringe Benefits Amount, which can affect HELP
             repayments and the Medicare Levy Surcharge. This tool does not model that.</li>
+          <li>Vehicle specifications come from the makers, but a plug-in hybrid's combined range is
+            calculated from its battery and tank rather than quoted, and some electric ranges are
+            NEDC figures, which read higher than WLTP. Treat them as close, not exact.</li>
         </ul>
       </aside>
 

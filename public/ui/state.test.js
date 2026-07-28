@@ -50,3 +50,31 @@ test('a non-numeric value for a numeric field falls back to the default', () => 
   const restored = fromQueryString('?grossSalary=abc', defaults);
   assert.equal(restored.grossSalary, defaults.grossSalary);
 });
+
+test('plug-in hybrids are excluded until asked for', () => {
+  const state = defaultState(rates);
+  assert.equal(state.includePhev, false);
+  assert.equal(state.phevBatterySharePct, 50);
+  assert.equal(state.minElectricRangeKm, null, 'no electric-range filter until one is set');
+});
+
+// Number('false') is NaN. Without a boolean branch the toggle would silently
+// reset every time someone opened a shared link.
+test('the toggle survives a round trip through the URL', () => {
+  const defaults = defaultState(rates);
+  const state = { ...defaults, includePhev: true, phevBatterySharePct: 70 };
+  const restored = fromQueryString(toQueryString(state, defaults), defaults);
+  assert.equal(restored.includePhev, true);
+  assert.equal(restored.phevBatterySharePct, 70);
+});
+
+test('an explicit false in the URL does not become NaN', () => {
+  const defaults = defaultState(rates);
+  const restored = fromQueryString('?includePhev=false', defaults);
+  assert.equal(restored.includePhev, false);
+});
+
+test('the default toggle stays out of the query string', () => {
+  const defaults = defaultState(rates);
+  assert.equal(toQueryString({ ...defaults }, defaults).includes('includePhev'), false);
+});

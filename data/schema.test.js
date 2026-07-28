@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { validateVehicle, validateFamily, loadDataset, NUMERIC_BOUNDS } from './schema.js';
+import { validateVehicle, validateFamily, loadDataset, NUMERIC_BOUNDS, POWERTRAINS } from './schema.js';
 
 const vehicles = JSON.parse(readFileSync(new URL('./vehicles.json', import.meta.url)));
 const families = JSON.parse(readFileSync(new URL('./families.json', import.meta.url)));
@@ -26,6 +26,25 @@ const goodVehicle = {
   depreciationCurve: [1, 0.78, 0.68, 0.6, 0.53, 0.47],
   sourcedAt: '2026-07-25'
 };
+
+const bevRow = (over = {}) => ({
+  id: 'test-bev', familyId: 'test', make: 'Test', model: 'Car', variant: 'Base',
+  bodyType: 'SUV', sourcedAt: '2026-07-28',
+  listPrice: 55000, batteryKwh: 60, rangeKm: 450, consumptionKwhPer100km: 13.3,
+  bootLitresSeatsUp: 450, bootLitresSeatsDown: 1200, seats: 5, towKg: 750,
+  warrantyYears: 5, insuranceAnnual: 1600,
+  depreciationCurve: [1, 0.75, 0.64, 0.56, 0.49, 0.43],
+  ...over
+});
+
+const phevRow = (over = {}) => ({
+  ...bevRow(),
+  id: 'test-phev', powertrain: 'phev',
+  batteryKwh: 18.1, rangeKm: 84, consumptionKwhPer100km: 21.5,
+  combinedRangeKm: 760, fuelConsumptionL100km: 6.8,
+  isFuelEfficientForLct: true, isGreenForVicDuty: true,
+  ...over
+});
 
 test('a complete vehicle row validates', () => {
   assert.equal(validateVehicle(goodVehicle).valid, true);
@@ -274,4 +293,69 @@ test('loadDataset handles undefined input gracefully', () => {
   assert.equal(result.families.length, 0);
   assert.equal(result.skipped.length, 0);
   assert.equal(result.skippedFamilies.length, 0);
+});
+
+// --- Item 14: powertrain field (PHEV support) ---------------------------
+
+// A row that says nothing about its powertrain is a BEV. This is what keeps
+// the existing 40 families from needing a migration.
+test('a row with no powertrain is still valid and treated as a BEV', () => {
+  const row = bevRow();
+  delete row.powertrain;
+  assert.equal(validateVehicle(row).valid, true);
+});
+
+test('powertrain must be one of the known values', () => {
+  const result = validateVehicle({ ...bevRow(), powertrain: 'diesel' });
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join(' '), /powertrain/);
+});
+
+test('POWERTRAINS names exactly the two supported drivetrains', () => {
+  assert.deepEqual(POWERTRAINS, ['bev', 'phev']);
+});
+
+// The dangerous failure mode: a PHEV that forgets to say so is scored as an
+// FBT-exempt EV, which is wrong by thousands of dollars. Closed from both
+// directions rather than trusting the author to remember.
+test('PHEV-only fields without powertrain: phev is rejected', () => {
+  const result = validateVehicle({ ...bevRow(), fuelConsumptionL100km: 6.8 });
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join(' '), /powertrain/);
+});
+
+test('powertrain phev without its required fields is rejected', () => {
+  const result = validateVehicle({ ...bevRow(), powertrain: 'phev' });
+  assert.equal(result.valid, false);
+  for (const field of ['combinedRangeKm', 'fuelConsumptionL100km', 'isFuelEfficientForLct', 'isGreenForVicDuty']) {
+    assert.match(result.errors.join(' '), new RegExp(field), `expected ${field} to be required`);
+  }
+});
+
+test('a complete PHEV row validates', () => {
+  assert.equal(validateVehicle(phevRow()).valid, true);
+});
+
+// A PHEV's electric range and battery are both far below the BEV floors.
+test('PHEV battery and electric range use their own bounds', () => {
+  const row = phevRow({ batteryKwh: 11.8, rangeKm: 55, consumptionKwhPer100km: 21 });
+  assert.equal(validateVehicle(row).valid, true, validateVehicle(row).errors.join('; '));
+});
+
+test('a BEV still may not have a 55km range', () => {
+  const result = validateVehicle(bevRow({ rangeKm: 55 }));
+  assert.equal(result.valid, false);
+});
+
+test('combined range must exceed electric range', () => {
+  const result = validateVehicle(phevRow({ rangeKm: 84, combinedRangeKm: 80 }));
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join(' '), /combinedRangeKm/);
+});
+
+test('the electric consistency check uses electric range for a PHEV', () => {
+  // 11.8kWh over 84km implies 14.0kWh/100km; stating 25 is a real error.
+  const result = validateVehicle(phevRow({ batteryKwh: 11.8, rangeKm: 84, consumptionKwhPer100km: 25 }));
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join(' '), /consumptionKwhPer100km/);
 });

@@ -1,5 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { applyPreferences, renderInputs, bindFreeText } from './sections.js';
 
 const base = {
@@ -316,4 +317,113 @@ test('a checkbox never has its value coerced like a scalar field', () => {
   box.checked = true;
   box.fire();
   assert.ok(Array.isArray(received.bodyTypes), 'bodyTypes must stay an array');
+});
+
+// --- Checkbox support: a scalar boolean field (includePhev) --------------
+// includePhev is the first checkbox whose state field is a plain boolean,
+// not an array. Its initial value is always `false` or `true` — never null
+// or undefined — so the array branch's `(initial[field] ?? []).includes(...)`
+// never fell through to `[]` and instead called `.includes` on a boolean,
+// throwing inside renderInputs (and so inside boot(), before render() ever
+// ran). fakeScalarCheckbox deliberately omits data-value: that omission is
+// what renderInputs now uses to pick this branch, and a stub that carried
+// data-value (like fakeCheckbox above) would not have reproduced the bug.
+
+function fakeScalarCheckbox(field, checked) {
+  let handler = null;
+  return {
+    dataset: { field },
+    type: 'checkbox',
+    checked,
+    classList: { add() {}, remove() {} },
+    addEventListener(type, fn) { if (type === 'change') handler = fn; },
+    fire() { handler(); }
+  };
+}
+
+test('a scalar boolean checkbox reflects true/false from state without throwing', () => {
+  const state = { includePhev: false, touched: [] };
+  const box = fakeScalarCheckbox('includePhev', false);
+  assert.doesNotThrow(() => {
+    renderInputs({ querySelectorAll: () => [box] }, () => state, () => {});
+  });
+  assert.equal(box.checked, false);
+
+  const onState = { includePhev: true, touched: [] };
+  const onBox = fakeScalarCheckbox('includePhev', false);
+  renderInputs({ querySelectorAll: () => [onBox] }, () => onState, () => {});
+  assert.equal(onBox.checked, true, 'a true state value must tick the box');
+});
+
+test('ticking a scalar boolean checkbox writes a boolean, not an array or string', () => {
+  const state = { includePhev: false, touched: [] };
+  const box = fakeScalarCheckbox('includePhev', false);
+  let received;
+  renderInputs({ querySelectorAll: () => [box] }, () => state, next => { received = next; });
+
+  box.checked = true;
+  box.fire();
+
+  assert.equal(received.includePhev, true);
+  assert.equal(typeof received.includePhev, 'boolean');
+  assert.ok(received.touched.includes('includePhev'));
+});
+
+test('unticking a scalar boolean checkbox writes false', () => {
+  const state = { includePhev: true, touched: [] };
+  const box = fakeScalarCheckbox('includePhev', true);
+  let received;
+  renderInputs({ querySelectorAll: () => [box] }, () => state, next => { received = next; });
+
+  box.checked = false;
+  box.fire();
+
+  assert.equal(received.includePhev, false);
+  assert.equal(typeof received.includePhev, 'boolean');
+});
+
+// --- Regression: every real checkbox in index.html must survive renderInputs
+// The two tests above pin the fix at the unit level, but 379/379 stayed green
+// on the branch this fix responds to precisely because every hand-built
+// stub in this file already carried data-value — none of them exercised a
+// real scalar checkbox. This test reads the actual markup (same
+// readFileSync approach as slider.test.js reading tax-tables.json) and
+// drives renderInputs against every `[data-field]` checkbox found in it, so
+// a future scalar checkbox added straight to index.html without a matching
+// stub here still gets caught.
+
+function checkboxesFromHtml(html) {
+  const boxes = [];
+  const inputTagPattern = /<input\b[^>]*>/g;
+  for (const [tag] of html.matchAll(inputTagPattern)) {
+    if (!/type=["']checkbox["']/.test(tag)) continue;
+    const field = tag.match(/data-field=["']([^"']+)["']/)?.[1];
+    if (!field) continue;
+    const hasValue = /data-value=["']/.test(tag);
+    boxes.push({ field, hasValue });
+  }
+  return boxes;
+}
+
+test('every checkbox in index.html is handled by renderInputs without throwing', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const boxes = checkboxesFromHtml(html);
+
+  // Guards the guard: if the markup pattern ever stops matching (a rewrite
+  // to index.html, say), this test must fail loudly rather than silently
+  // pass over zero checkboxes.
+  assert.ok(boxes.length > 0, 'expected to find at least one checkbox in index.html');
+  assert.ok(boxes.some(b => b.hasValue), 'expected at least one array-membership checkbox (bodyTypes)');
+  assert.ok(boxes.some(b => !b.hasValue), 'expected at least one scalar checkbox (includePhev)');
+
+  const state = { bodyTypes: [], includePhev: false, touched: [] };
+  const inputs = boxes.map(({ field, hasValue }) => {
+    const stub = hasValue ? fakeCheckbox(field, 'SUV', false) : fakeScalarCheckbox(field, false);
+    return stub;
+  });
+
+  assert.doesNotThrow(() => {
+    renderInputs({ querySelectorAll: () => inputs }, () => state, () => {});
+    for (const input of inputs) input.fire();
+  });
 });

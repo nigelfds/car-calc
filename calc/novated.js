@@ -21,7 +21,7 @@ export function novatedQuote(input, tables) {
   const {
     driveAwayTotal, termMonths, leaseRatePct, adminFeeAnnual,
     runningCostsAnnualExGst, leaseStartDate, vehicleValue,
-    grossSalary, residualPctOverride = null
+    grossSalary, residualPctOverride = null, powertrain = 'bev'
   } = input;
 
   const credit = gstCredit(driveAwayTotal, tables);
@@ -48,7 +48,7 @@ export function novatedQuote(input, tables) {
   const annualPreTaxDeduction =
     monthlyLeasePayment * 12 + runningCostsAnnualExGst + adminFeeAnnual;
 
-  const treatment = fbtTreatment({ leaseStartDate, vehicleValue }, tables);
+  const treatment = fbtTreatment({ leaseStartDate, vehicleValue, powertrain }, tables);
   const fbt = computeFbt({ baseValue: vehicleValue, treatment }, tables);
 
   // Where FBT is payable it is reduced to nil by a post-tax employee
@@ -95,6 +95,9 @@ export function novatedQuote(input, tables) {
     annualPostTaxContribution,
     annualFbt: fbt,
     netAnnualCost,
-    netMonthlyCost: netAnnualCost / 12
+    netMonthlyCost: netAnnualCost / 12,
+    // So callers (compare.js) can disclose the FBT treatment — in particular
+    // phevIneligible — without recomputing fbtTreatment themselves.
+    treatment
   };
 }

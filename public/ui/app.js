@@ -68,7 +68,10 @@ function buildInputs(state) {
     // I5: these flow from data/rates.json via defaultState (or the rates
     // panel's edits) rather than being hardcoded in calc/compare.js.
     electricityCentsPerKwh: state.electricityCentsPerKwh,
-    otherRunningCostsAnnual: state.otherRunningCostsAnnual
+    otherRunningCostsAnnual: state.otherRunningCostsAnnual,
+    petrolCentsPerLitre: state.petrolCentsPerLitre,
+    // Ignored for every BEV; the dominant term for a PHEV.
+    phevBatterySharePct: state.phevBatterySharePct
   };
 }
 
@@ -87,6 +90,10 @@ function syncFieldInputs(root, state) {
     const value = state[field];
     if (value === null || value === undefined) continue;
     if (root.activeElement === input) continue;
+    if (input.type === 'checkbox' && !Array.isArray(value)) {
+      if (input.checked !== Boolean(value)) input.checked = Boolean(value);
+      continue;
+    }
     if (String(input.value) !== String(value)) input.value = value;
   }
 }
@@ -100,13 +107,12 @@ export function start(root = document) {
 
 function boot(root, dataset) {
   const { vehicles, families, rates, tables } = dataset;
-  // Step 2 costs a typical EV rather than any particular one, so this is
-  // computed once at boot and never varies with the slider.
-  const profile = representativeProfile(vehicles);
-  // The market's entry price. Capacity below it is arithmetic with no product
-  // behind it, so the curve reports nothing rather than a car that cannot be
-  // bought.
-  const floorPrice = cheapestPrice(vehicles);
+  // Step 2's ceiling is an EV ceiling and stays one whatever the PHEV toggle
+  // says: the whole point of the median profile is that it is stable while
+  // the user drags the slider, and it is the FBT-exempt case the headline
+  // number describes. A PHEV's real cost is worked out per car in step 3.
+  const bevOnly = vehicles.filter(v => (v.powertrain ?? 'bev') === 'bev');
+  const profile = representativeProfile(bevOnly);
   const defaults = defaultState(rates);
   let state = fromQueryString(location.search, defaults);
   // I4: the last series painted, so a resize/orientation change can ask the
@@ -166,7 +172,7 @@ function boot(root, dataset) {
     const bands = anchorPrice !== null ? bracketAroundPrice(ranked, anchorPrice) : [];
     // Real figures here, unlike step 2's typical-EV profile: each card is
     // costed from its own consumption, insurance and depreciation curve.
-    const context = { inputs: buildInputs(state), tables };
+    const context = { inputs: buildInputs(state), tables, monthlyBudget: state.monthlyBudget };
 
     const cards = bands.map(({ band, entry }) => ({
       ...cardModel(entry.vehicle, families, context),
@@ -195,6 +201,11 @@ function boot(root, dataset) {
     syncFieldInputs(root, state);
     if (budgetOutput) budgetOutput.textContent = money(state.monthlyBudget);
 
+    // The battery-share control is meaningless without a plug-in hybrid to
+    // apply it to, so it only exists once the toggle is on.
+    const phevOptions = root.querySelector('#phev-options');
+    if (phevOptions) phevOptions.hidden = !state.includePhev;
+
     const inputs = buildInputs(state);
     const salaryReady = hasValidSalary(state);
 
@@ -217,13 +228,26 @@ function boot(root, dataset) {
     // the very first render() at boot always succeeds) rather than ever
     // asking the chart to paint zero/negative-cost points.
     if (salaryReady) {
+      // Computed over the same preference-filtered pool the chart is drawn
+      // from, so the cars it names are cars the user could actually be shown.
+      const pool = filterVehicles(vehicles, state);
+      // Unlike the profile, this one does follow the toggle. It is the price
+      // of the cheapest car that can actually be bought, and it is what
+      // places the "a loan reaches nothing below $X" marker on the chart —
+      // if a cheaper PHEV is on the shortlist, that marker would otherwise
+      // contradict the card sitting right beneath it.
+      //
+      // Falls back to the whole fleet when the preferences match nothing:
+      // cheapestPrice([]) is 0, and a zero floor switches the floor off
+      // entirely (see maxAffordablePrice, calc/capacity.js), so the chart went
+      // straight back to plotting $3,379 of capacity at $300/mo above a
+      // shortlist reading "no car matches these preferences". An impossible
+      // filter narrows what you can be shown; it does not make cars cheaper.
+      const floorPrice = cheapestPrice(pool.length > 0 ? pool : vehicles);
       const series = purchasingPowerSeries(
         { inputs, profile, floorPrice, budgetRange: BUDGET_RANGE }, tables
       );
       lastSeries = series;
-      // Computed over the same preference-filtered pool the chart is drawn
-      // from, so the cars it names are cars the user could actually be shown.
-      const pool = filterVehicles(vehicles, state);
       lastCliff = fbtCliff({ vehicles: pool, inputs }, tables);
       // Where the car-loan line can first appear. Loan only: the other two
       // lines start at or near the left edge on realistic inputs, so a badge

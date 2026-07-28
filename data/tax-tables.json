@@ -22,6 +22,7 @@
     { "from": "2027-04-01", "fullExemptionUpTo": 75000, "discountRate": 0.25 },
     { "from": "2029-04-01", "fullExemptionUpTo": 0, "discountRate": 0.25 }
   ],
+  "phevFbtExemptionEnded": "2025-04-01",
   "fbt": { "statutoryRate": 0.20, "grossUpType1": 2.0802, "rate": 0.47 },
   "vicDuty": {
     "greenRatePer200": 8.40,
