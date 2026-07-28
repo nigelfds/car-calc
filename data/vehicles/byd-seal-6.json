@@ -1,0 +1,27 @@
+[
+  {
+    "id": "byd-seal-6-essential",
+    "familyId": "byd-seal-6",
+    "make": "BYD",
+    "model": "Seal 6",
+    "variant": "Essential",
+    "bodyType": "Sedan",
+    "powertrain": "phev",
+    "listPrice": 34990,
+    "batteryKwh": 10.08,
+    "rangeKm": 55,
+    "consumptionKwhPer100km": 18.3,
+    "combinedRangeKm": 1355,
+    "fuelConsumptionL100km": 5.0,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 491,
+    "bootLitresSeatsDown": 1370,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1300,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-28"
+  }
+]

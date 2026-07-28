@@ -1,0 +1,30 @@
+{
+  "id": "byd-sealion-8",
+  "summary": "The Sealion 8 is BYD's first three-row model in Australia, a large seven-seat plug-in hybrid that undercuts the Kia Sorento PHEV and Mazda CX-80 PHEV by roughly $11,000-$14,000 at the entry point while claiming far more electric range on paper — up to 152km, though on the lenient NEDC cycle rather than WLTP. Reviewers broadly agree on the value case, the presentation of the cabin and the generous second row, and agree that the 359kW AWD grades offer more performance than a family SUV needs. Where they diverge is ride and refinement: some rate it quiet and well-resolved, while CarExpert and Chasing Cars both flag inconsistent damping and road noise at speed.",
+  "pros": [
+    "The 35.6kWh battery in the AWD grades is the largest plug-in pack in any seven-seat SUV sold here — roughly two and a half times the Kia Sorento PHEV's 13.8kWh — and BYD claims 152km of electric running from it.",
+    "Sharp entry pricing: $56,990 before on-roads for the Dynamic FWD against $70,880 for the cheapest Kia Sorento PHEV and $68,100 for the Mazda CX-80 PHEV Touring.",
+    "Braked towing of 1800kg (Dynamic FWD) or 2000kg (both AWD grades) comfortably beats the Kia Sorento PHEV's 1010kg, which is the usual weak point of a plug-in seven-seater.",
+    "Warranty is six years/150,000km with no servicing conditions attached, and the high-voltage battery carries a separate eight-year/160,000km cover.",
+    "Combined tailpipe CO2 of 22-24g/km puts every grade under Victoria's 120g/km green-passenger-car duty threshold and well inside the LCT fuel-efficient test, and all three list prices sit below the $80,809 ordinary LCT threshold so no luxury car tax is payable."
+  ],
+  "cons": [
+    "Only 270 litres of boot behind the third row — enough for a school run, not a seven-up holiday — and there is no spare wheel at all, just a puncture repair kit.",
+    "Every electric range figure is NEDC. No WLTP number exists for this model in any market, and RACV's own conversion puts the realistic equivalents nearer 88km (FWD) and 130km (AWD).",
+    "The plug-in compromise is visible in BYD's own numbers: the 1.0-1.1L/100km label assumes a charged battery, and BYD quotes 5.3L/100km (FWD) or 6.3L/100km (AWD) once the pack falls below 25 per cent — so a buyer who cannot charge at home is simply running a 2.3-2.6 tonne SUV on petrol.",
+    "The third row is described by CarsGuide as strictly for smaller kids, with tight access, and Chasing Cars criticises cabin noise, front-seat support and the reliance on touchscreen controls for basic functions.",
+    "CarsGuide calls the 359kW AWD grades' performance irrelevant in a family car, yet they carry a $7,000-$14,000 premium over the Dynamic FWD and add around 265kg of kerb weight."
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-byd-sealion-8-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-8-dynamic-fwd-review",
+    "https://www.carexpert.com.au/byd/sealion-8/premium/features-and-specs",
+    "https://www.carsguide.com.au/car-reviews/byd-sealion-8-100787",
+    "https://www.chasingcars.com.au/reviews/large-suvs/byd-sealion-8-2026-review/",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-sealion-8-price-specs-release-date.html",
+    "https://bydautomotive.com.au/sealion-8",
+    "https://evcentral.com.au/byd-sealion-8-phev-priced-from-56990-first-seven-seat-suv-from-chinese-giant-undercuts-most-rivals/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-07-28"
+}

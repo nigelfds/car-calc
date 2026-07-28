@@ -1,0 +1,29 @@
+{
+  "id": "toyota-rav4-phev",
+  "summary": "Toyota's first plug-in hybrid for Australia, launched on the country's best-selling SUV nameplate in late June 2026: a 22.7kWh pack, 113-121km of WLTP electric range and 50kW DC charging, in three grades from $58,840 to $66,340. Reviewers agree the powertrain sets the class benchmark for electric range and refinement and that the car is genuinely quick, but they are just as consistent that once the battery is flat it drinks about 6L/100km - no better than the cheaper conventional hybrid. The argument against it is price rather than execution: it undercuts nothing from BYD or Chery, and without home charging the plug-in premium is money wasted.",
+  "pros": [
+    "121km of WLTP electric range on the XSE 2WD and 113km on the AWD grades, against 84km for a Mitsubishi Outlander PHEV and 81km for a BYD Sealion 6 - enough to cover a week of average Melbourne commuting between plug-ins.",
+    "50kW DC fast charging (10-80 per cent in about 30 minutes) and 11kW three-phase AC are standard across the PHEV range, where most plug-in rivals in the class top out at 3.7kW or 6.6kW AC and cannot DC charge at all.",
+    "227kW combined in AWD form makes this the quickest RAV4 sold in Australia at around 5.7sec to 100km/h; the 2WD still musters 201kW.",
+    "The battery costs less boot than in most plug-in rivals - 655L VDA versus 705L for the non-plug-in RAV4, a 50L penalty rather than the 80-100L several competitors give up.",
+    "Five years/unlimited km warranty with no servicing strings attached (driveline cover extends to seven years if you service in the Toyota network), and capped-price servicing at about $325 per visit for the first five services."
+  ],
+  "cons": [
+    "Once the battery is depleted it is simply a heavy hybrid: RACV measured 6.0L/100km in HEV mode on an undemanding rural route, no better than the cheaper non-plug-in RAV4, and Toyota specifies 95 RON premium.",
+    "Toyota's 0.7L/100km ADR combined-cycle figure is a laboratory artefact that assumes you start every trip fully charged - CarsGuide calls it 'fanciful' - so the running-cost case collapses for anyone who cannot charge at home overnight.",
+    "Plug-in hybrids lost the FBT exemption on 1 April 2025, so the novated-lease maths is far weaker than for a battery-electric rival at the same money, including Toyota's own bZ4X.",
+    "At $58,840-$66,340 the PHEV asks roughly $5,000 more than the equivalent hybrid RAV4 and thousands more again than a BYD Sealion 6 or Chery Tiggo 8 PHEV; multiple Australian reviews call the pricing uncompetitive against the Chinese plug-ins.",
+    "There is no driver-selectable mode that meaningfully recharges the drive battery on the move, the AWD PHEV carries about 285kg more than the hybrid, and the new-generation RAV4 has no ANCAP rating at launch."
+  ],
+  "sources": [
+    "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+    "https://www.carexpert.com.au/car-news/2026-toyota-rav4-price-and-specs",
+    "https://www.carsguide.com.au/ev/toyota-rav4-phev-102110",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/toyota-rav4-phev-2026-review-australian-first-drive/",
+    "https://www.racv.com.au/royalauto/car-reviews/toyota/2026-toyota-rav4-phev-review.html",
+    "https://www.carsales.com.au/editorial/details/toyota-rav4-gr-sport-phev-2026-review-152437/",
+    "https://babydrive.com.au/reviews/suvs/2026-toyota-rav4-phev-review/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-07-28"
+}

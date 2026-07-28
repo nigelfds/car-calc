@@ -1,0 +1,39 @@
+{
+  "id": "geely-starray-em-i",
+  "summary": "The Starray EM-i is Geely's first plug-in hybrid for Australia and undercuts almost every mid-size PHEV SUV on the market, with 83km of WLTP electric range in the $37,490 Complete and 136km in the $41,490 Inspire Extended Range. Australian reviewers agree the powertrain and the equipment list are the reasons to buy it — Chasing Cars measured 5.1L/100km over 5,000km of long-term use and 95km of real electric range — and they agree just as consistently that the chassis and the driver-assist software are not sorted, with CarExpert, carsales and Chasing Cars all describing an under-damped rear end and an adaptive cruise system that cuts speed for no reason. It is a value argument, not a driving one, and it rests on a brand with roughly two years of Australian sales history behind its resale values.",
+  "pros": [
+    "The $41,490 Inspire Extended Range carries a 29.8kWh usable pack for 136km of WLTP electric range — more than double a BYD Sealion 6 Dynamic's 81km and enough to keep most Melbourne commuters off petrol entirely",
+    "60kW DC fast charging on the Extended Range (30-80 per cent in a claimed 16 minutes) and 30kW on the Complete, where the Mitsubishi Outlander PHEV and BYD Sealion 6 offer no DC charging at all",
+    "Seven-year unlimited-kilometre warranty with no dealer-servicing condition attached, plus a separate eight-year unlimited-kilometre battery warranty guaranteed to 70 per cent capacity, and capped-price servicing quoted at $1,932 over five years",
+    "Five-star ANCAP rating (90 per cent adult occupant, 87 per cent child occupant) and both grades sit more than $35,000 below the $80,809 ordinary LCT threshold, so no luxury car tax applies either way",
+    "Stays genuinely cheap with the battery flat: Chasing Cars recorded 5.1L/100km cumulatively over five months and 5,000km, and 95.2km of real electric range at 14.2kWh/100km on a gentle run"
+  ],
+  "cons": [
+    "Ride and body control are the consistent complaint: carsales calls the suspension 'far too under damped, especially from the rear' and reports porpoising, Chasing Cars describes 'pogo-like body control' on country roads, and its own long-term test concluded the ride is too soft for Australian speeds",
+    "The driver-assist software misbehaves rather than merely nags — carsales recorded the adaptive cruise cutting 30-40km/h for no reason on country roads, and multiple testers report an aggressive lane-keep that adds heavy steering weight and resets at every restart",
+    "Charge-sustaining fuel use is real money: with the battery depleted testers recorded roughly 5.9-7.0L/100km (Chasing Cars) and the UK's Auto Express managed 6.6L/100km, so a buyer without home charging is running a 1,730-1,815kg SUV on a 1.5-litre naturally aspirated engine and the plug-in premium never pays back",
+    "The 428-litre boot is small for a mid-size SUV — NRMA singles it out as a weakness, it needs the floor removed to reach the quoted 528 litres, and there is no spare wheel, only a repair kit",
+    "Geely has sold cars in Australia for about two years and has already run EOFY campaigns at 6 per cent off plus 0.88 per cent finance on the Starray EM-i and EX5, so transaction prices keep resetting and there is no resale record to anchor a residual against"
+  ],
+  "sources": [
+    "https://www.geely.com.au/models/starray-em-i",
+    "https://www.geely.com.au/ownership/warranty",
+    "https://www.carexpert.com.au/car-news/2027-geely-starray-em-i-prices-one-of-australias-cheapest-phevs-now-offers-over-130km-of-electric-range",
+    "https://www.carexpert.com.au/geely/starray-em-i/2027/price-and-specs",
+    "https://www.carexpert.com.au/geely/starray-em-i/2027/complete/features-and-specs",
+    "https://www.carexpert.com.au/geely/starray-em-i/2027/inspire-extended-range/features-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-geely-starray-em-i-review",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/geely-starray-em-i-inspire-2026-review/",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/geely-starray-em-i-long-term-review/",
+    "https://www.carsguide.com.au/ev/geely-starray-em-i-99655",
+    "https://www.carsales.com.au/editorial/details/geely-starray-em-i-inspire-2026-review-151393/",
+    "https://www.mynrma.com.au/open-road/car-reviews/geely/2026-geely-starray-em-i-launch-review",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-geely-starray-em-i-phev-price-specs-release-date.html",
+    "https://zecar.com/reviews/geely-starray-em-i-inspire-extended-range-my27-australia-price-specs",
+    "https://www.autoexpress.co.uk/geely/starray",
+    "https://en.wikipedia.org/wiki/Geely_Galaxy_Starship_7",
+    "https://www.geely.com/en/news/2026/geely-starray-em-i-euro-ncap-ancap",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

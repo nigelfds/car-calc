@@ -1,0 +1,27 @@
+[
+  {
+    "id": "gwm-haval-h6-gt-phev-ultra-hi4",
+    "familyId": "gwm-haval-h6-gt-phev",
+    "make": "GWM",
+    "model": "Haval H6 GT",
+    "variant": "Ultra PHEV Hi4",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 52990,
+    "batteryKwh": 35.43,
+    "rangeKm": 183,
+    "consumptionKwhPer100km": 19.4,
+    "combinedRangeKm": 1131,
+    "fuelConsumptionL100km": 5.8,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 392,
+    "bootLitresSeatsDown": 1390,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1950,
+    "depreciationCurve": [1, 0.69, 0.58, 0.5, 0.43, 0.37],
+    "sourcedAt": "2026-07-28"
+  }
+]
