@@ -71,7 +71,25 @@ export function scoreVehicle(vehicle, preferences = {}, context = {}) {
   // meaningful in absolute terms (700km is a long way, 10 years is a long
   // warranty, $120,000 is dear) and none of them has boot's outlier problem.
   const boot = ratio(vehicle.bootLitresSeatsUp, context.bootReference ?? FALLBACK_BOOT_REFERENCE);
-  const range = ratio(vehicle.rangeKm, 700);
+  // A PHEV's rangeKm is electric-only (76-140km on this dataset), and
+  // running-costs.js already charges it for the petrol it burns once that
+  // battery is flat — that charge IS the cost of a short electric range.
+  // Scoring rangeKm here too would penalise the same shortcoming twice, and
+  // in practice it did: against a 700km ceiling a PHEV's electric range
+  // scored so low that no price advantage could rescue it, and PHEVs never
+  // reached a shortlist at any budget. combinedRangeKm (electric + a full
+  // tank) is the honest measure of how far the car goes, and it is also
+  // what filterVehicles (public/ui/cars.js) already uses for minRangeKm —
+  // scoring rangeKm here left the two disagreeing about what "range" means
+  // for the same car. Not imported from data/schema.js's powertrainOf: that
+  // module is never served to the browser, so an import here would pass
+  // node --test and then 404 in the browser with nothing to catch it.
+  const isPhev = vehicle.powertrain === 'phev';
+  // Fall back to rangeKm if combinedRangeKm is missing — the schema requires
+  // it, but a hole here should degrade to the old behaviour, not poison the
+  // score with NaN and silently reorder the whole shortlist.
+  const rangeKm = isPhev ? (vehicle.combinedRangeKm ?? vehicle.rangeKm) : vehicle.rangeKm;
+  const range = ratio(rangeKm, 700);
   const warranty = ratio(vehicle.warrantyYears, 10);
   // Cheaper is better, all else equal.
   const value = 1 - ratio(vehicle.listPrice, 120000);

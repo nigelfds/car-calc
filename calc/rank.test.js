@@ -136,6 +136,54 @@ test('longer range scores higher when range is wanted', () => {
   );
 });
 
+// --- PHEVs are scored on combined range, not electric-only range ----------
+// A PHEV's rangeKm is electric-only (76-140km on this dataset). Scoring that
+// against the same 700km ceiling a BEV uses made a PHEV's range term read as
+// almost empty, even though running-costs.js already charges the car for
+// every km it drives on petrol once the battery is flat. That double-charged
+// the same shortcoming and meant a PHEV could not out-score a BEV on price
+// alone, no matter how cheap: PHEVs never reached a shortlist at any budget.
+
+test('a PHEV is scored on its combined range, not its electric-only range', () => {
+  const phev = car('phev', { powertrain: 'phev', rangeKm: 100, combinedRangeKm: 650 });
+  const equivalentBev = car('bev', { powertrain: 'bev', rangeKm: 650 });
+  // Same preferences, same everything else, so the two must land on exactly
+  // the same score: the range term is reading combinedRangeKm for the PHEV
+  // and rangeKm for the BEV, and here those two figures are equal.
+  assert.equal(scoreVehicle(phev, { minRangeKm: 400 }), scoreVehicle(equivalentBev, { minRangeKm: 400 }));
+});
+
+test('a BEV is unaffected: two BEVs still order by their own rangeKm', () => {
+  const prefs = { minRangeKm: 400 };
+  assert.ok(
+    scoreVehicle(car('far', { powertrain: 'bev', rangeKm: 600, combinedRangeKm: 100 }), prefs) >
+    scoreVehicle(car('near', { powertrain: 'bev', rangeKm: 410, combinedRangeKm: 900 }), prefs),
+    'a BEV must ignore combinedRangeKm entirely, even a bogus one, and score on rangeKm'
+  );
+});
+
+test('a PHEV missing combinedRangeKm falls back to rangeKm instead of scoring NaN', () => {
+  const phev = car('phev-no-combined', { powertrain: 'phev', rangeKm: 100 });
+  delete phev.combinedRangeKm;
+  const score = scoreVehicle(phev, { minRangeKm: 400 });
+  assert.ok(Number.isFinite(score), `expected a finite score, got ${score}`);
+  assert.equal(score, scoreVehicle(car('bev-equivalent', { powertrain: 'bev', rangeKm: 100 }), { minRangeKm: 400 }));
+});
+
+// Regression for the exact defect this task fixes: at the unstated weight a
+// 0.48-point range deficit (1.50 at the stated weight) against a PHEV's
+// electric-only range could never be closed by price, worth at most 2.0
+// points in total. Scoring combined range must let a long-legged PHEV beat a
+// short-legged BEV on range alone, all else held equal.
+test('a PHEV with a long combined range out-scores a BEV with a shorter range', () => {
+  const phev = car('phev-long-combined', { powertrain: 'phev', rangeKm: 90, combinedRangeKm: 700 });
+  const bev = car('bev-short', { powertrain: 'bev', rangeKm: 300 });
+  assert.ok(
+    scoreVehicle(phev, { minRangeKm: 400 }) > scoreVehicle(bev, { minRangeKm: 400 }),
+    'a PHEV scored on electric-only range would lose here; scored on combined range it should win'
+  );
+});
+
 test('ranking is deterministic — same input, same order, every time', () => {
   const fleet = [car('a'), car('b', { bootLitresSeatsUp: 600 }), car('c', { rangeKm: 520 })];
   const prefs = { minBootLitres: 500, minRangeKm: 400 };
