@@ -347,10 +347,12 @@ input[type='date'],
   cursor: pointer;
 }
 
-/* Overrides the full-width rule the scalar inputs get below. */
+/* The scalar-input rules below now exclude checkboxes, so this no longer has
+   to out-specify anything — it just zeroes the browser's default margin so the
+   gap above is the only spacing. */
 .checkbox input {
-  width: auto;
   margin: 0;
+  flex: none;
 }
 
 .field-group--numeric {
@@ -359,7 +361,11 @@ input[type='date'],
   gap: var(--space-4);
 }
 
-.field label {
+/* :not(.checkbox) because a checkbox's label is not a caption sitting above
+   its control — it is the word beside the box, and it owns the box. Without
+   the exclusion this rule beat `.checkbox`'s own inline-flex on specificity
+   (0,1,1 against 0,1,0) and stacked every tick-box above its text. */
+.field label:not(.checkbox) {
   display: block;
   font-size: 0.85rem;
   font-weight: 500;
@@ -374,7 +380,11 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
-.field input,
+/* Full width suits a value you type into. A tick-box has an intrinsic size,
+   and stretching it to the column width pushed its own label onto the next
+   line — this rule tied with `.checkbox input { width: auto }` on specificity
+   and won on source order. */
+.field input:not([type="checkbox"]),
 .field select {
   width: 100%;
   padding: 0.5em 0.7em;
@@ -387,7 +397,7 @@ input[type='date'],
 
 .field select { font-family: var(--font-text); }
 
-.field input:focus,
+.field input:not([type="checkbox"]):focus,
 .field select:focus {
   background: var(--paper-raised);
 }
