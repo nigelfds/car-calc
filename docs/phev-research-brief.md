@@ -100,7 +100,12 @@ your own from sources.
   them, so you cannot half-declare a car — but get it right rather than relying on the validator.
 - **`rangeKm` is the ELECTRIC-ONLY range**, not the combined range. This is the biggest difference
   from the EV brief, where `rangeKm` is the whole story.
-  **Find the WLTP figure. Treat NEDC as a last resort, not an equivalent.** WLTP EAER
+  **Find the WLTP figure. Treat NEDC as a last resort, not an equivalent.**
+  Batch 1's experience: of six families, only Mitsubishi Outlander and Jaecoo J7 were cleanly
+  WLTP. GWM Haval H6 and GWM Cannon Alpha have **no WLTP figure in existence** — for those, NEDC
+  is not laziness, it is the only number there is. So: search for WLTP, and if you conclude none
+  exists, say so explicitly and say where you looked. "No WLTP published" is a finding worth
+  recording; "used NEDC" without that sentence is not. WLTP EAER
   (Equivalent All-Electric Range) is the figure to want; WLTP electric range is acceptable. NEDC
   electric ranges are substantially optimistic — typically 20–30% high — and are still quoted by
   some Chinese-market sources and press releases. If you can only find NEDC, search the European
@@ -124,6 +129,15 @@ your own from sources.
   the petrol half of the running cost, so a label number here understates it by a factor of three
   or more. Note that `isFuelEfficientForLct` is judged on the *combined-cycle* figure, so the two
   numbers legitimately differ and serve different purposes.
+- **Do NOT use the ADR / VESR electric-consumption label figure.** This wasted time in three
+  separate families in batch 1 and would have failed the schema in every one. That label is
+  *utility-factor-weighted grid energy* — grid electricity per 100km of **total** driving, weighted
+  by how much of it the test cycle assumes happens in EV mode. It is not EV-mode consumption, and
+  the two are different numbers for the same car. Batch 1 saw 21.2, 18.7 and 15.9 kWh/100km quoted
+  this way, none of which reconciled with the car's own battery and electric range.
+  What to use instead: the manufacturer's EV-mode consumption if it is published, and otherwise
+  derive it from **usable battery capacity ÷ electric range × 100**, which is what the validator
+  checks against anyway. Say in your report which you did.
 - **`consumptionKwhPer100km`** is electric consumption while running on battery. The validator
   computes `batteryKwh / rangeKm * 100` and rejects the row if your stated consumption is more than
   **25%** away from it. Use the **usable** battery capacity and the **electric** range from the same
