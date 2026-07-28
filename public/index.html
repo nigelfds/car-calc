@@ -199,8 +199,15 @@
                 data-field="phevBatterySharePct" min="0" max="100" step="5" inputmode="numeric" />
               <span class="field__suffix" aria-hidden="true">%</span>
             </div>
-            <p class="field__hint">Short daily trips you can charge for. This swings a plug-in
-              hybrid's fuel bill further than any other figure here.</p>
+            <!-- The honest scale, measured rather than asserted: dropping from
+                 100% to 0% roughly doubles a plug-in hybrid's yearly fuel and
+                 energy bill, but moves the monthly figure by only about $35,
+                 because running costs are a small share of a packaged lease.
+                 The earlier copy here claimed this was the biggest lever on the
+                 page, which is true of the fuel bill alone and false of the
+                 number you actually read. -->
+            <p class="field__hint">Short daily trips you can charge for. Running on petrol instead
+              roughly doubles the fuel bill, though it moves the monthly figure much less.</p>
           </div>
         </div>
       </div>

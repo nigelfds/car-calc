@@ -1,9 +1,20 @@
-// A plug-in hybrid runs on two fuels, and the split between them moves its
-// running cost more than any other single figure — mostly-battery is about
-// what a BEV costs, mostly-petrol is about what a petrol car costs. The share
-// is therefore an input the user sets, not a constant chosen here: real-world
-// studies consistently find private PHEVs fall well short of the electric
-// share their type-approval figures assume.
+// A plug-in hybrid runs on two fuels, and the split between them decides
+// which one it mostly is — mostly-battery costs about what a BEV costs to
+// run, mostly-petrol about what a petrol car costs. Measured on the Sealion 6
+// Dynamic ER at 15,000km: the yearly fuel and energy bill goes $798 -> $1,463
+// across the full range of this figure, so it roughly doubles.
+//
+// Worth knowing what that is and is not. It is the largest single lever on
+// the RUNNING cost, but running costs are a small share of a packaged novated
+// lease, so the same swing moves the monthly figure by only about $35 and the
+// five-year total by around $2,000. An earlier version of this comment, and
+// the hint in index.html, claimed it was the biggest lever on the page —
+// true of the fuel bill alone, false of the number the user actually reads.
+//
+// The share is an input the user sets rather than a constant chosen here:
+// real-world studies consistently find private PHEVs fall well short of the
+// electric share their type-approval figures assume, and the honest answer
+// depends on whether they can charge at home.
 //
 // A BEV ignores the share entirely. It has no combustion side, so there is
 // nothing for the petrol term to describe.
