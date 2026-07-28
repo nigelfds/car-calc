@@ -420,8 +420,8 @@ test('unticking removes that body type and leaves the others', () => {
 });
 
 test('a box reflects whether its type is already selected', () => {
-  const state = { bodyTypes: ['Wagon'], touched: [] };
-  const selected = fakeCheckbox('bodyTypes', 'Wagon', false);
+  const state = { bodyTypes: ['Sedan'], touched: [] };
+  const selected = fakeCheckbox('bodyTypes', 'Sedan', false);
   const other = fakeCheckbox('bodyTypes', 'Ute', true);
   renderInputs({ querySelectorAll: () => [selected, other] }, () => state, () => {});
 

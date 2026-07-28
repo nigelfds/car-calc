@@ -1,0 +1,34 @@
+{
+  "id": "mitsubishi-outlander-phev",
+  "summary": "The March 2026 update gave Australia's longest-serving plug-in hybrid a 22.7kWh battery, 221kW and a locally developed suspension and steering tune, and reviewers agree the ride and steering are genuinely better than the pre-update car even if 20-inch wheels still let sharp bumps through. Where they split is value: the extra 86km of WLTP electric range and the unique seven-seat Aspire earn praise, but prices rose $1700-$3000 and the range now sits well above cheaper Chinese plug-in rivals that offer more EV range for less. The charging hardware is the consistent complaint, with a CHAdeMO DC port on a standard that is disappearing from Australian chargers and only 3.6kW AC charging.",
+  "pros": [
+    "86km of WLTP electric range from the new 22.7kWh pack, up from 20kWh and 84km NEDC on the pre-update car; CarsGuide saw about 80km in real-world urban running, enough to cover a typical Melbourne commute without starting the engine",
+    "The Aspire is the only seven-seat plug-in hybrid at this price - the BYD Sealion 6, Mazda CX-60 PHEV and Toyota RAV4 PHEV are all five-seat only",
+    "1600kg braked towing across the whole PHEV range, roughly double the BYD Sealion 6 Essential's 750kg and enough for a small camper or box trailer",
+    "Mitsubishi advertises a 10-year/200,000km warranty and 10 years of capped-price servicing (about $550 a year), but that term is conditional on every scheduled service being done inside the Mitsubishi dealer network; walk away from the dealer and the cover reverts to 5 years/100,000km. The drive battery is separately warranted for 8 years/160,000km",
+    "Springs, dampers and steering were re-tuned in South Australia for the 2026 update, and Australian reviewers report noticeably less float and better-weighted steering at speed than the car it replaces"
+  ],
+  "cons": [
+    "DC fast charging uses a CHAdeMO plug, a standard being decommissioned across Australian public charging networks, and AC charging is capped at 3.6kW so a full recharge takes about 6.5 hours on a home wallbox",
+    "The 1.2L/100km NEDC label figure only holds if you start every trip fully charged - Mitsubishi's own battery-depleted figure is 6.7L/100km, and CarsGuide measured around 10L/100km when the engine is actively charging the pack, so the running-cost case collapses for a buyer without home charging",
+    "The 2026 update added $1700-$3000 across the range, putting the ES at $58,990 and the Exceed Tourer at $74,490; reviewers call the flagship overpriced next to cheaper plug-in rivals with more electric range",
+    "The Aspire's third row leaves only 191 litres of boot behind it and is not covered by the curtain airbags, which extend to the first two rows only - it is a children-only occasional space, not a genuine seven-seater",
+    "The 2.4-litre engine is audibly coarse when it cuts in, described by reviewers as sounding like a vacuum cleaner from inside the cabin"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+    "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+    "https://www.carexpert.com.au/car-reviews/2025-mitsubishi-outlander-phev-review",
+    "https://www.carexpert.com.au/car-news/mitsubishi-keen-on-more-accurate-phev-fuel-economy-tests",
+    "https://www.carsguide.com.au/ev/mitsubishi-outlander-plug-in-hybrid-ev-exceed-101825",
+    "https://www.carsguide.com.au/car-news/hybrid-family-suv-prices-up-2026-mitsubishi-outlander-phev-updated-for-australia-to-take",
+    "https://www.carsguide.com.au/mitsubishi/outlander/price/2026",
+    "https://www.carsales.com.au/editorial/details/2026-mitsubishi-outlander-phev-detailed-150811/",
+    "https://www.carsales.com.au/research/mitsubishi/outlander/",
+    "https://www.chasingcars.com.au/news/electric-vehicles/mitsubishi-outlander-phev-specifications-confirmed-more-ev-range-and-yamaha-stereo-for-hybrid-midsize-suv/",
+    "https://evcentral.com.au/2026-mitsubishi-outlander-phev-has-landed-in-australia-more-range-more-power-more-stuff-more-dollars/",
+    "https://www.ancap.com.au/safety-ratings/mitsubishi/outlander",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-07-28"
+}

@@ -143,8 +143,8 @@ your own from sources.
   (`calc/onroad.js`), so a drive-away figure here double-counts on-roads and corrupts the tax
   threshold logic. If a source only gives drive-away, find the list price elsewhere or back it out
   and say so. LCT is already embedded in the advertised list price — do not add it.
-- **`bodyType`** must be exactly one of `SUV`, `Sedan`, `Hatch`, `Wagon`, `Ute`. Any other string
-  silently breaks the body-type filter. Pick the closest of the five.
+- **`bodyType`** must be exactly one of `SUV`, `Sedan`, `Hatch`, `Ute`. Any other string
+  silently breaks the body-type filter. Pick the closest of the four. Wagon was dropped — no wagon is on sale, and an unfilterable body type is worse than an approximate one; if you find a genuine wagon, classify it as the nearest of the four and say so in your report.
 - `bootLitresSeatsDown` must be **>=** `bootLitresSeatsUp`. For a PHEV, use the boot figure **with
   the battery pack installed** — several PHEVs lose boot space to the pack versus their petrol
   twin, and the petrol car's brochure figure is a common trap.
