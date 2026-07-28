@@ -16,7 +16,7 @@ export const NUMERIC_FIELDS = new Set([
   'opportunityRatePct', 'residualPctOverride',
   'electricityCentsPerKwh', 'otherRunningCostsAnnual',
   'minBootLitres', 'minRangeKm', 'seats',
-  'phevBatterySharePct', 'minElectricRangeKm'
+  'phevBatterySharePct', 'minElectricRangeKm', 'petrolCentsPerLitre'
 ]);
 
 export function defaultState(rates) {
@@ -37,6 +37,9 @@ export function defaultState(rates) {
     // data file nor an edit in the rates panel ever reached the engine.
     electricityCentsPerKwh: rates.electricityCentsPerKwh,
     otherRunningCostsAnnual: rates.otherRunningCostsAnnual,
+    // Only consulted for a PHEV (see optionCosts, calc/compare.js) — a BEV
+    // never burns petrol, so this rate is inert for the rest of the fleet.
+    petrolCentsPerLitre: rates.petrolCentsPerLitre,
     residualPctOverride: null,
     bodyTypes: [],
     minBootLitres: null,
