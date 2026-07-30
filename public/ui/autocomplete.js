@@ -35,14 +35,30 @@ export function renderSuggestions(root, slotIndex, groups, activeId) {
   const list = root.querySelector(`#compare-listbox-${slotIndex}`);
   if (!list) return;
   list.innerHTML = suggestionsMarkup(groups, activeId);
-  // Results present -> show the list; no results -> hide it. The empty-state
-  // paragraph still renders into the listbox (so a screen reader hears "No
-  // car matches that" if the box is ever shown), but there is nothing gained
-  // by leaving an empty listbox open under the input, and every caller here
-  // already has an explicit reason to render (an edit, a search, an arrow
-  // key) so "hidden tracks emptiness" is the whole rule — activeId plays no
-  // part in it.
+  // This function only owns half the visibility rule: whenever there are
+  // results, the box must be open, so `groups.length > 0` always opens it —
+  // no caller ever needs to second-guess that. An empty groups array is
+  // ambiguous on its own, though: it means either "nothing typed yet" (stay
+  // closed) or "typed something, found nothing" (open on the "No car
+  // matches" message), and telling those apart needs the query text, which
+  // this function is never given (see the interface list this task must
+  // keep). So the default here is closed, and bindAutocomplete's `input`
+  // listener — which does hold the query — is the caller that reopens the
+  // box for the second case.
   list.hidden = groups.length === 0;
+}
+
+// Where the arrow keys land next. Pure and DOM-free on purpose: it is the one
+// piece of the keydown handler that needs no element at all, just the
+// rendered option ids, so it can be unit-tested directly rather than deferred
+// to the browser check the rest of the handler needs. `step` is +1 (down) or
+// -1 (up); wraps at both ends, and treats "nothing active yet" the same way
+// the original inline computation did — activeId absent from ids reads as
+// index -1, one before the first option.
+export function nextActiveId(ids, activeId, step) {
+  if (ids.length === 0) return null;
+  const current = ids.indexOf(activeId);
+  return ids[(current + step + ids.length) % ids.length];
 }
 
 // Bound once, on the compare panel. `getVehicles` is a getter rather than an
@@ -60,6 +76,8 @@ export function bindAutocomplete(root, { getVehicles, onSelect }) {
     return slot ? Number(slot.dataset.slot) : null;
   };
 
+  const inputFor = slotIndex => root.querySelector(`[data-slot="${slotIndex}"] .compare-slot__input`);
+
   const optionIds = slotIndex => {
     const list = root.querySelector(`#compare-listbox-${slotIndex}`);
     return [...(list?.querySelectorAll('[data-vehicle-id]') ?? [])]
@@ -69,7 +87,21 @@ export function bindAutocomplete(root, { getVehicles, onSelect }) {
   const close = slotIndex => {
     active.delete(slotIndex);
     const list = root.querySelector(`#compare-listbox-${slotIndex}`);
-    if (list) list.hidden = true;
+    if (list) {
+      list.hidden = true;
+      // Escape (or a commit) ends this dropdown's session, not just its
+      // visibility. Leaving the old options sitting in the DOM let a stray
+      // ArrowDown right afterward silently reopen the previous, now-stale,
+      // search with no new input driving it — closed means closed until the
+      // next edit regenerates suggestions.
+      list.innerHTML = '';
+    }
+    // The old aria-activedescendant would otherwise keep pointing at an
+    // option id that no longer exists once the innerHTML above (or the next
+    // render) replaces it — a screen reader left referencing a dead node.
+    // Every path that ends the active option (Escape, a commit, a clear)
+    // funnels through close(), so clearing it here covers all of them.
+    inputFor(slotIndex)?.removeAttribute('aria-activedescendant');
   };
 
   const commit = (slotIndex, vehicleId) => {
@@ -87,6 +119,9 @@ export function bindAutocomplete(root, { getVehicles, onSelect }) {
     if (slotIndex === null) return;
     const groups = searchVehicles(getVehicles(), input.value, SEARCH_LIMIT);
     active.delete(slotIndex);
+    // A fresh keystroke abandons whatever the arrow keys had landed on, so
+    // the input must stop pointing the screen reader at it too.
+    input.removeAttribute('aria-activedescendant');
     renderSuggestions(root, slotIndex, groups, null);
     const list = root.querySelector(`#compare-listbox-${slotIndex}`);
     if (list) list.hidden = input.value.trim() === '';
@@ -109,23 +144,27 @@ export function bindAutocomplete(root, { getVehicles, onSelect }) {
     if (ids.length === 0) return;
 
     event.preventDefault();
-    const current = ids.indexOf(active.get(slotIndex));
     const step = event.key === 'ArrowDown' ? 1 : -1;
-    // Wraps at both ends: from the last option, down returns to the first.
-    const next = (current + step + ids.length) % ids.length;
-    active.set(slotIndex, ids[next]);
+    const next = nextActiveId(ids, active.get(slotIndex), step);
+    active.set(slotIndex, next);
     renderSuggestions(
-      root, slotIndex, searchVehicles(getVehicles(), input.value, SEARCH_LIMIT), ids[next]
+      root, slotIndex, searchVehicles(getVehicles(), input.value, SEARCH_LIMIT), next
     );
-    input.setAttribute('aria-activedescendant', `opt-${ids[next]}`);
+    input.setAttribute('aria-activedescendant', `opt-${next}`);
   });
 
   panel.addEventListener('click', event => {
     const option = event.target.closest?.('[data-vehicle-id]');
     if (option) { commit(slotOf(option), option.dataset.vehicleId); return; }
     const clear = event.target.closest?.('[data-clear-slot]');
+    if (!clear) return;
+    const slotIndex = Number(clear.dataset.clearSlot);
     // Clearing empties the slot in place. It must not promote slot 3 into
     // slot 2 — the URL carries position, and a share should survive a clear.
-    if (clear) onSelect(Number(clear.dataset.clearSlot), '');
+    // It also ends that slot's dropdown session (stale options, a lingering
+    // aria-activedescendant), the same as any other commit — close() covers
+    // both.
+    close(slotIndex);
+    onSelect(slotIndex, '');
   });
 }

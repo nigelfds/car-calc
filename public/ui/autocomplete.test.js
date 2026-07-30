@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { suggestionsMarkup } from './autocomplete.js';
+import { suggestionsMarkup, renderSuggestions, nextActiveId } from './autocomplete.js';
 import { searchVehicles } from './vehicle-search.js';
 
 const fleet = [
@@ -53,4 +53,70 @@ test('markup escapes anything that could close a tag', () => {
   assert.doesNotMatch(html, /<script>/);
   assert.doesNotMatch(html, /<img>/);
   assert.match(html, /&lt;script&gt;/);
+});
+
+// --- renderSuggestions -------------------------------------------------
+// Stubbed the same way renderCards is tested (ui/cars.test.js): a fake root
+// whose querySelector always returns one fake element, extended with
+// `hidden` since that is the property this function's visibility contract
+// turns on.
+function fakeListbox() {
+  let html = '';
+  const target = {
+    set innerHTML(v) { html = v; },
+    get innerHTML() { return html; },
+    hidden: true
+  };
+  return { root: { querySelector: () => target }, target };
+}
+
+test('renderSuggestions opens the listbox when there are results', () => {
+  const { root, target } = fakeListbox();
+  renderSuggestions(root, 0, searchVehicles(fleet, 'ev5'), null);
+  assert.equal(target.hidden, false);
+  assert.match(target.innerHTML, /role="option"/);
+});
+
+test('renderSuggestions defaults the listbox to closed when there are no results', () => {
+  // This is the "nothing typed yet" half of the ambiguity documented on the
+  // function: on its own, an empty groups array closes the box. The "typed
+  // something, found nothing" half is the caller's job (bindAutocomplete's
+  // `input` listener), verified in the browser during Task 9 since it needs
+  // a real input element and DOM.
+  const { root, target } = fakeListbox();
+  target.hidden = false; // starts open, to prove this call closes it
+  renderSuggestions(root, 0, [], null);
+  assert.equal(target.hidden, true);
+  assert.match(target.innerHTML, /No car matches/i);
+});
+
+test('renderSuggestions does nothing when the slot has no listbox in the DOM', () => {
+  assert.doesNotThrow(() => renderSuggestions({ querySelector: () => null }, 0, [], null));
+});
+
+// --- nextActiveId -------------------------------------------------------
+// Pure and DOM-free, extracted from the keydown handler so the wrap-around
+// arithmetic can be checked directly rather than only through a browser.
+test('nextActiveId wraps from the last option back to the first going down', () => {
+  assert.equal(nextActiveId(['a', 'b', 'c'], 'c', 1), 'a');
+});
+
+test('nextActiveId wraps from the first option back to the last going up', () => {
+  assert.equal(nextActiveId(['a', 'b', 'c'], 'a', -1), 'c');
+});
+
+test('nextActiveId lands on the first option going down when nothing is active yet', () => {
+  assert.equal(nextActiveId(['a', 'b', 'c'], null, 1), 'a');
+});
+
+test('nextActiveId with a single option always returns that option', () => {
+  assert.equal(nextActiveId(['a'], null, 1), 'a');
+  assert.equal(nextActiveId(['a'], null, -1), 'a');
+  assert.equal(nextActiveId(['a'], 'a', 1), 'a');
+  assert.equal(nextActiveId(['a'], 'a', -1), 'a');
+});
+
+test('nextActiveId returns null for an empty list', () => {
+  assert.equal(nextActiveId([], null, 1), null);
+  assert.equal(nextActiveId([], null, -1), null);
 });
