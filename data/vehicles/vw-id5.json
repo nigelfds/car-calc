@@ -1,0 +1,42 @@
+[
+  {
+    "id": "vw-id5-pro",
+    "familyId": "vw-id5",
+    "make": "Volkswagen",
+    "model": "ID.5",
+    "variant": "Pro",
+    "bodyType": "SUV",
+    "listPrice": 62990,
+    "batteryKwh": 77,
+    "rangeKm": 543,
+    "consumptionKwhPer100km": 16.3,
+    "bootLitresSeatsUp": 549,
+    "bootLitresSeatsDown": 1561,
+    "seats": 5,
+    "towKg": 1200,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1900,
+    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "vw-id5-gtx",
+    "familyId": "vw-id5",
+    "make": "Volkswagen",
+    "model": "ID.5",
+    "variant": "GTX 4Motion",
+    "bodyType": "SUV",
+    "listPrice": 72990,
+    "batteryKwh": 79,
+    "rangeKm": 522,
+    "consumptionKwhPer100km": 17.0,
+    "bootLitresSeatsUp": 549,
+    "bootLitresSeatsDown": 1561,
+    "seats": 5,
+    "towKg": 1800,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2100,
+    "depreciationCurve": [1, 0.69, 0.57, 0.48, 0.41, 0.35],
+    "sourcedAt": "2026-07-30"
+  }
+]

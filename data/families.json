@@ -442,6 +442,93 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "cadillac-lyriq",
+    "summary": "Cadillac's first Australian model is a 2.8-tonne dual-motor electric SUV that a permanent $32,000 cut has re-priced from $122,000 to $90,000 before on-road costs, dropping it under the fuel-efficient LCT threshold and into FBT-exempt novated-lease territory. Reviewers agree on the hushed ride, the 530km WLTP range and the distinctive styling, but split hard on the cabin: CarExpert and carsales rate it genuinely luxurious, while Chasing Cars judges the materials and rear-seat packaging not good enough at any price. The unresolved risks are a three-outlet retail network across Australia and New Zealand, no tow rating at all, and the resale damage the cut inflicts on every car sold before it.",
+    "pros": [
+      "The permanent cut from $122,000 to $90,000 before on-road costs puts it under the $91,661 fuel-efficient LCT threshold, so it now qualifies for the FBT exemption on a novated lease — it did not at launch.",
+      "530km WLTP from a 102kWh pack, and a 22.1kW three-phase AC onboard charger roughly double the 11kW most rivals fit, so a full charge on three-phase takes about five hours rather than overnight-plus.",
+      "793 litres behind the second row and 1,722 litres folded, against 526/1,536L in a Polestar 4 and 333L behind row two in a seven-seat Kia EV9.",
+      "Five years unlimited-kilometre warranty plus five years of complimentary scheduled servicing at 12-month/12,000km intervals, an eight-year/160,000km battery warranty, and a year of free public charging upgradable to three years or a 7kW home charger.",
+      "Genuinely quiet: active noise cancellation that pre-empts road impacts and a 19-speaker AKG Studio system with Dolby Atmos are what every Australian reviewer singles out, alongside 388kW/610Nm and 0-100km/h in 5.3 seconds."
+    ],
+    "cons": [
+      "The $32,000 cut is a resale problem as much as a bargain — every Lyriq sold at $117,000 to $124,000 was re-based overnight to $90,000, and Cadillac does not report sales to VFACTS, so there is no local residual data to argue with.",
+      "Not rated to tow anything in Australia, where a Kia EV9 pulls 2,500kg braked and a Zeekr 7X 2,000kg.",
+      "Three retail outlets across Australia and New Zealand — the Rosebery Experience Centre in Sydney, a Port Melbourne test-drive venue and Auckland — with the promised Brisbane site still unopened, so servicing and panel repair mean a long trip for most buyers.",
+      "Super Cruise is not approved for Australian roads and the adaptive cruise ships without lane centring; there is also no head-up display and no native navigation at $90,000.",
+      "At 2,774kg and a claimed 22.5kWh/100km it is markedly thirstier than a Polestar 4 Dual Motor's 18.7kWh/100km, and Chasing Cars rates the rear seat's high floor and hard ISOFIX bracing covers as genuinely uncomfortable."
+    ],
+    "sources": [
+      "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and",
+      "https://www.carexpert.com.au/car-news/cadillac-lyriq-ev-prices-cut-with-new-drive-away-offer",
+      "https://www.carexpert.com.au/car-news/cadillac-lyriq-offer-extended-and-this-is-one-luxury-ev-buyers-shouldnt-ignore",
+      "https://www.carexpert.com.au/car-news/why-cadillac-is-yet-another-luxury-brand-to-slash-ev-prices",
+      "https://www.carsguide.com.au/ev/cadillac-lyriq-luxury-101266",
+      "https://www.carsguide.com.au/ev/cadillac-lyriq-sport-97727",
+      "https://www.carexpert.com.au/car-reviews/2025-cadillac-lyriq-sport-review",
+      "https://www.chasingcars.com.au/reviews/large-suvs/cadillac-lyriq-sport-2025-review/",
+      "https://www.carsales.com.au/editorial/details/cadillac-lyriq-2025-review-147540/",
+      "https://www.carexpert.com.au/car-news/cadillac-to-expand-ev-dealer-network-across-australia-and-new-zealand"
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "cadillac-optiq",
+    "summary": "The Optiq is the cheapest way into General Motors' relaunched Cadillac brand in Australia, and reviewers consistently praise its distinctive, well-finished cabin, quiet running and unusually generous standard equipment for $80,000 before on-road costs. The consensus criticism is just as consistent: 425km of WLTP range and a 110kW DC charging ceiling are the weakest numbers among luxury mid-size electric SUVs on sale here, and Australia takes the superseded 224kW powertrain rather than the US car's 328kW update. Opinion divides mainly on the ride, which most describe as composed and connected but firmer and less plush than the badge implies.",
+    "pros": [
+      "At $80,000 before on-road costs it undercuts the BMW iX3 ($89,900), Genesis GV60 ($88,300) and Lexus RZ ($84,500), and sits well under the $91,661 fuel-efficient LCT threshold that governs the novated-lease FBT exemption",
+      "Genuinely big for the class: a 744-litre boot with the rear seats up (1603 litres folded) and a 2954mm wheelbase that reviewers rate for near-limousine rear knee room",
+      "Heavily specified in its single grade — 33-inch curved display with wireless Apple CarPlay and Android Auto (features GM deleted from its US EVs), 19-speaker AKG Dolby Atmos audio, heated/ventilated/massaging front seats, Brembo front brakes, panoramic glass roof and 21-inch wheels",
+      "22.1kW three-phase AC charging is unusually quick for the segment and adds roughly 100km of range per hour at home, which softens the weak DC rate for overnight chargers",
+      "Five-year unlimited-kilometre warranty with no servicing strings attached, an eight-year/160,000km battery warranty, and a five-star Euro NCAP result (2025) scoring 83% for adult occupant protection"
+    ],
+    "cons": [
+      "110kW is the lowest DC fast-charging peak of any luxury mid-size electric SUV sold in Australia — a Polestar 4 accepts 200kW — so road trips mean noticeably longer stops",
+      "425km of WLTP range is short for an $80,000 EV in 2026, and the 19.9kWh/100km WLTP consumption claim is high for the class (CarExpert measured 17.9kWh/100km on test)",
+      "Australia gets the superseded 224kW/480Nm dual-motor drivetrain while the US MY26 car has 328kW/675Nm and 150kW charging, and GM Australia has given no timing for bringing the update here; the Optiq-V is ruled out entirely",
+      "Firm-riding on 21-inch wheels with no adaptive dampers available, which several Australian reviewers judged short of the plushness a luxury badge implies, and the steering is described as vague on-centre",
+      "New-brand ownership risk: Cadillac does not report Australian sales, retails through a handful of metropolitan experience centres, permanently cut the larger Lyriq's price by $32,000 during 2026, and had still not confirmed Optiq service pricing at launch"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-cadillac-optiq-review",
+      "https://www.carsguide.com.au/ev/cadillac-optiq-101795",
+      "https://www.carsales.com.au/editorial/details/cadillac-optiq-2026-review-152184/",
+      "https://www.carsguide.com.au/car-news/sharp-price-for-luxury-challenger-evs-2026-cadillac-vistiq-and-cadillac-optiq-price-and",
+      "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-arriving-without-us-updates-hot-v-flagship-not-coming-to-australia",
+      "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and",
+      "https://thedriven.io/2026/06/05/cadillac-is-back-with-a-very-different-electric-pitch-for-australian-buyers/"
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "cadillac-vistiq",
+    "summary": "The Vistiq is Cadillac's three-row flagship EV for Australia, sold in a single fully-loaded Platinum grade at $116,000 before on-road costs — sharp enough to undercut a Kia EV9 GT-Line and well under a Volvo EX90 or Hyundai Ioniq 9. Australian reviewers rate the cabin, the AKG audio and the genuinely usable third row highly, and are near-unanimous that the drivetrain is far quicker than the class needs. Where they diverge is whether the Australia-only 91kWh pack is enough: 461km of WLTP range and a 130kW DC charging ceiling are both below what the price and the badge imply, and the brand's tiny local footprint makes resale the open question.",
+    "pros": [
+      "At $116,000 before on-roads it undercuts the Kia EV9 GT-Line ($121,000), Hyundai Ioniq 9 and Volvo EX90 while arriving in top Platinum trim only — 22-inch wheels, adaptive air suspension, rear-wheel steering, four-zone climate, a 33-inch curved display and 23-speaker AKG audio are all standard, with no options ladder to climb",
+      "Third row is adult-sized rather than the usual '5+2' afterthought, and the second-row captain's chairs leave a walk-through aisle to reach it",
+      "459kW/880Nm dual-motor AWD covers 0-100km/h in 4.2 seconds, quicker than any EV9 including the GT",
+      "Five years of complimentary scheduled servicing and roadside assistance comes on top of the 5-year/unlimited-km warranty, with the battery covered for 8 years/160,000km"
+    ],
+    "cons": [
+      "DC charging peaks at just 130kW — the US car gets 190kW, and the 800V Kia EV9 recharges materially faster, so long trips cost more time than the price suggests",
+      "461km WLTP from the Australia-only 91kWh usable pack (the US car gets 102kWh) trails the Kia EV9 Earth's 521km and the Ioniq 9, in a 5.2m SUV that is thirsty at a claimed 22kWh/100km",
+      "Six seats only in Australia — the US seven-seat bench is not offered — with 430L behind the third row and no front boot under the long bonnet",
+      "Resale is the brand risk: Cadillac sells through a handful of Australian stores and the closely related Lyriq took a permanent $32,000 price cut in 2026, which drags residuals across the range"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-cadillac-vistiq-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-cadillac-vistiq-platinum-review",
+      "https://www.carsguide.com.au/ev/cadillac-vistiq-platinum-101638",
+      "https://www.carsguide.com.au/car-news/sharp-price-for-luxury-challenger-evs-2026-cadillac-vistiq-and-cadillac-optiq-price-and",
+      "https://www.carexpert.com.au/car-news/cadillac-says-smaller-ev-batteries-for-australia-are-driven-by-european-regulations",
+      "https://evcentral.com.au/2026-cadillac-vistiq-review-six-seat-luxury-suv-takes-on-volvo-ex90-kia-ev9-hyundai-ioniq-9/",
+      "https://www.carsales.com.au/editorial/details/2026-cadillac-vistiq-priced-for-oz-151515/",
+      "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and"
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
     "id": "chery-omoda-e5",
     "summary": "The Chery E5 (rebranded from Omoda E5 during 2025, with the Omoda name now being reserved for a separate model line launching later) is one of the cheapest new electric SUVs on sale in Australia, a small front-wheel-drive EV pitched squarely on price and standard equipment rather than dynamic polish. Australian reviewers consistently praise its value proposition, long warranty and cheap servicing, well-equipped cabin, but mark it down for unsettled ride quality, an over-cautious safety-assist calibration, and a boot that trails class rivals. For MY26 the range was simplified to a single Ultimate grade with a smaller but more efficient battery, holding range steady at 430km WLTP while sharpening the price further.",
     "pros": [
@@ -1095,6 +1182,42 @@
       "https://ev-database.org/car/3447/KGM-Musso-EV-2WD",
       "https://www.carexpert.com.au/car-news/vfacts-the-brands-with-the-biggest-sales-drops-in-australia-in-2025",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "kgm-torres-evx",
+    "summary": "KGM's first electric SUV for Australia arrives as a single fully-equipped front-drive grade carrying the largest battery in its price class - 80.6kWh of BYD LFP Blade - but Australian reviewers agree that battery buys less range than it should, with a 462km WLTP claim that trails the smaller-batteried Geely EX5 and testers recording between 18.2 and 21.7kWh/100km. Where they part company is whether the fundamentals compensate: CarsGuide scored it 7.1/10 for interfaces that simply work and a genuinely roomy cabin, while CarExpert and The Driven both flagged missing equipment for the money and 339Nm regularly overwhelming the front tyres. The counterweight is running cost - $2,114 of capped-price servicing over seven years and an unconditional seven-year warranty - set against no ANCAP rating at all and just 168 Torres of any kind sold in Australia across the whole first half of 2025.",
+    "pros": [
+      "Capped-price servicing totals $2,114 over seven years/140,000km (about $302 a year) with a complimentary first service inside six months or 5,000km, and KGM's seven-year/unlimited-kilometre warranty is unconditional - you may service outside the KGM dealer network provided you keep records proving the work met KGM's specification - while the BYD Blade pack carries a separate 10-year/unlimited-kilometre warranty guaranteeing at least 70 per cent state of health",
+      "The 80.6kWh battery is the biggest in the sub-$60,000 mid-size electric SUV class - Geely EX5 68.4kWh, MG S5 62kWh, BYD Atto 3 60.5kWh - and it supports 3.5kW vehicle-to-load, 120-130kW DC charging (10-80 per cent in about 37 minutes) and 10.5kW three-phase AC",
+      "1,500kg braked towing where the Geely EX5 is not rated to tow at all and the MG S5 and BYD Atto 3 stop at 750kg, plus a 465-litre boot that opens out to 1,526 litres with the rear seats folded",
+      "One grade, no options list to navigate and no cheaper trim that deletes equipment: 18-inch alloys, powered sunroof, twin 12.3-inch screens, synthetic leather, heated and ventilated front seats, 360-degree camera, eight airbags and full driver-assist including lane centring and junction-assist AEB are all standard",
+      "A $5,010 factory bonus off the recommended retail price was running at the research date, taking the car to $53,690 drive-away with metallic paint included - available for a limited time and while stocks last, so it is a buying-window discount rather than a permanent repositioning"
+    ],
+    "cons": [
+      "462km WLTP from 80.6kWh is the weakest efficiency in the class - the Geely EX5 gets 475km from 68.4kWh - and CarExpert measured 21.7kWh/100km against the 18.7kWh/100km claim; worse, 462km is the identical figure KGM published for the superseded 73.4kWh pack while Europe rates the 80.6kWh car at 503km, so the Australian range claim may simply be a carried-over number",
+      "No ANCAP rating at all, and no KGM or SsangYong model is ANCAP-rated, so a fleet or salary-packaging buyer with a five-star purchasing policy cannot order one despite the eight airbags and full driver-assist suite",
+      "Front-wheel drive only with no AWD option offered, and CarsGuide, CarExpert and The Driven independently report the 339Nm overwhelming the front Nexen tyres off the line, with regenerative braking that feels inconsistent",
+      "KGM sold 168 Torres in the first half of 2025 against 24,034 Toyota RAV4s, and the brand's total 2025 Australian volume of 4,116 was down 23.7 per cent - thin dealer coverage, and a $5,010 factory bonus on new stock pushes used values down further; CarsGuide's own verdict is that rivals come 'from brands that might hold their value better'",
+      "No spare wheel (a repair kit only), climate control is touchscreen-only so you must leave CarPlay to change the temperature, and there is no built-in navigation, no wireless phone mirroring and no wireless charging pad - a cable is mandatory"
+    ],
+    "sources": [
+      "https://kgm.com.au/models/torres",
+      "https://www.kgm.com.au/owners-and-service/servicing/torres-evx",
+      "https://kgm.com.au/owners-and-service/warranty/warranty-terms",
+      "https://www.carexpert.com.au/car-news/2026-kgm-torres-evx-price-and-specs-ex-ssangyong-suv-the-latest-tesla-model-y-rival",
+      "https://www.carexpert.com.au/car-reviews/2026-kgm-torres-evx-review",
+      "https://www.carexpert.com.au/kgm/torres/2026-evx-suv-fwd-electric-jsk5mmg520251125",
+      "https://www.carsguide.com.au/ev/kgm-torres-evx-100443",
+      "https://www.carsguide.com.au/kgm/torres-evx/price/2026",
+      "https://www.carsguide.com.au/car-news/koreas-byd-battler-is-here-100194",
+      "https://www.carsguide.com.au/kgm/torres-evx/towing-capacity/2026",
+      "https://thedriven.io/2026/04/04/kgm-torres-evx-review-an-electric-suv-that-is-worth-looking-at/",
+      "https://zecar.com/reviews/kgm-torres-evx-arrives-in-australia-from-58k-driveaway",
+      "https://www.cars24.com.au/car-news/2026-kgm-torres-evx-prices-and-specs-detailed/",
+      "https://ev-database.org/car/3389/KGM-Torres-EVX-806-kWh",
+      "https://ev-database.org/car/2189/KGM-Torres-EVX"
     ],
     "sourcedAt": "2026-07-30"
   },
@@ -2256,6 +2379,73 @@
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
     "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "vw-id4",
+    "summary": "The ID.4 is Volkswagen's mid-size electric SUV and its first battery-electric car sold here in volume, offered in exactly two grades: the 210kW rear-drive Pro and the 250kW dual-motor GTX 4MOTION. Australian reviewers land around 7.8/10 and agree on the strengths - ride comfort, the massaging front seats and genuinely good highway efficiency - but split on whether the cabin plastics and the missing built-in navigation are forgivable at the price. Both grades list below the $75,000 FBT exemption cap, so the real decision is whether the GTX's extra 40kW, all-wheel drive and 1800kg tow rating justify $10,000 and 33km of WLTP range.",
+    "pros": [
+      "The $59,990 Pro claims 544km WLTP from a 77kWh usable pack, roughly 80km more than the Tesla Model Y RWD it is priced against ($58,900), and 15km more than a Skoda Elroq 85 Select",
+      "Efficiency holds up in Australian testing: carsales averaged 16.6kWh/100km over more than 1000km against a 16.7kWh/100km WLTP claim, so the Pro's real highway range lands near 450-470km",
+      "Adaptive dampers with 15 settings, Matrix LED headlights, a panoramic glass roof and heated massaging ErgoActive front seats are standard on the base Pro - a Skoda Enyaq Sportline charges extra for the dampers",
+      "Both grades DC fast-charge at up to 175kW, adding about 178km in 10 minutes, and 24-month/30,000km service intervals keep six years of maintenance to $1,785 (about $298 a year)",
+      "The $69,990 GTX adds 250kW/679Nm and 4MOTION for 5.4s to 100km/h plus an 1800kg braked tow rating, well clear of a Tesla Model Y's 1588kg and a Skoda Enyaq RS's 1200kg"
+    ],
+    "cons": [
+      "No embedded satellite navigation and no wireless Apple CarPlay or Android Auto, and no spare tyre at any grade - only a repair kit",
+      "Volkswagen has repriced the Pro three times in about a year on drive-away campaigns ($59,990, then $63,990, then $64,990) while still clearing run-out MY25.0 stock at $59,990 drive-away, which weighs on resale",
+      "400V architecture caps DC charging at 175kW against the 800V Hyundai Ioniq 5 and Kia EV6, and real-world consumption stretches a long way past the claim - 18.7kWh/100km on Chasing Cars' hilly launch route and about 20kWh/100km for CarsGuide",
+      "Wind and road noise dominate at motorway speeds - CarsGuide rates the Ioniq 5, EV6 and Model Y as more peaceful - and multiple reviewers call the steering devoid of feedback",
+      "The five-star ANCAP rating carries over from a 2021 Euro NCAP test of the pre-update car, and Australian media have flagged an extensively revised ID.4, so the current car is late in its cycle"
+    ],
+    "sources": [
+      "https://www.volkswagen.com.au/en/models/id4.html",
+      "https://www.volkswagen.com.au/en/models/id4-gtx.html",
+      "https://www.volkswagen.com.au/en/hybrid-and-electric/latest-ev-news-/upgrade-for-the-ID4-and-ID5.html",
+      "https://www.carexpert.com.au/car-news/volkswagen-rounds-out-electric-suv-lineup-with-faster-id-4-cheaper-id-5",
+      "https://www.carexpert.com.au/car-reviews/2025-volkswagen-id-4-review",
+      "https://www.carexpert.com.au/volkswagen/id-4/2026-gtx-suv-4x4-electric-jsgskoos20251201",
+      "https://www.carsales.com.au/editorial/details/volkswagen-id-4-pro-2026-review-151531/",
+      "https://www.carsguide.com.au/family/volkswagen-id4-pro-98838",
+      "https://www.carsguide.com.au/volkswagen/id4/2026",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/volkswagen-id-4-pro-2025-review-australian-first-drive/",
+      "https://www.ecocarguide.com.au/volkswagen-id4-gtx-2026-review/",
+      "https://ev-database.org/uk/car/3250/Volkswagen-ID4-Pro",
+      "https://ev-database.org/car/3252/Volkswagen-ID4-GTX"
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "vw-id5",
+    "summary": "The ID.5 is the coupe-liftback body of Volkswagen's ID.4, sold in Australia in only two grades - the 210kW rear-drive Pro and the 250kW dual-motor GTX 4Motion - both on the same MEB platform and 82-84kWh battery. Australian reviewers rate the Pro highly for real-world efficiency and ride refinement, with several calling it one of the better-driving mid-size electric SUVs, but they are close to unanimous that the GTX's $10,000 premium buys less range than it costs and that the sloping roof and haptic controls cost the car genuine practicality. Both grades list under the $75,000 FBT exemption cap, though the GTX clears it by only $2,010 before dealer delivery or options.",
+    "pros": [
+      "The Pro lists at $62,990 for 543km WLTP from a 77kWh usable pack, $3,000 more than the ID.4 Pro but $4,000 under a Skoda Enyaq Coupe 85 Sportline ($66,990) with almost identical range",
+      "Beats its own efficiency claim in Australian conditions: CarsGuide's long-term Pro averaged 15.8kWh/100km against a 16.3kWh/100km claim, and carsales recorded 16.1kWh/100km in the GTX against 16.9kWh/100km claimed",
+      "Tows well clear of its MEB siblings: 1,200kg braked on the Pro and 1,800kg on the dual-motor GTX 4Motion (rated at a 12 per cent gradient), against 1,000-1,200kg for a Skoda Enyaq and 1,000-1,200kg for an Audi Q4 e-tron",
+      "Cheap scheduled maintenance: 2-year/30,000km service intervals with a prepaid 10-year/150,000km plan at $2,890 - about $289 a year - alongside an 8-year/160,000km battery warranty",
+      "GTX adds 250kW dual-motor 4Motion, 5.4s to 100km/h and a rear-biased torque split sending up to 80 per cent to the back axle, and CarsGuide rated the chassis 'resolved, refined' at 7.5/10"
+    ],
+    "cons": [
+      "The $72,990 GTX gives up 21km of range to the $62,990 Pro (522km v 543km) for 0.9s of 0-100km/h; both CarExpert and CarsGuide judge it the worse buy of the two",
+      "The coupe roofline is a real practicality cost, not just a style choice - CarsGuide's long-termer found child-seat installation awkward and tall loads won't fit, and folded volume drops to 1,561L against the ID.4's 1,575L",
+      "Haptic and touch controls for climate and volume draw consistent criticism (CarsGuide: they 'sometimes work and sometimes don't'), and there is no frunk, no vehicle-to-load and no vehicle-to-grid at either grade",
+      "The GTX sits only $2,010 under the $75,000 FBT exemption cap on list price, so dealer delivery plus one option can push a novated lease past the threshold the Pro clears comfortably",
+      "Five-star ANCAP rating is carried over from 2021 Euro NCAP testing of the pre-facelift ID.4, with no fresh local assessment of the updated car"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-volkswagen-id5-review",
+      "https://www.carexpert.com.au/car-news/volkswagen-id-4-and-id-5-more-kit-and-more-models-complete-ev-suv-range",
+      "https://www.carexpert.com.au/volkswagen/id-5/2026-pro-jsgskoow20251201",
+      "https://www.carsguide.com.au/family/volkswagen-id5-pro-long-term-part-1-101674",
+      "https://www.carsguide.com.au/ev/volkswagen-id5-gtx-97583",
+      "https://www.carsguide.com.au/volkswagen/id5/price/2026",
+      "https://www.carsales.com.au/editorial/details/volkswagen-id-4-and-id-5-2025-review-149120/",
+      "https://www.carsales.com.au/research/volkswagen/id-5/2026/pro/",
+      "https://www.carsales.com.au/research/volkswagen/id-5/2025/gtx/",
+      "https://www.mynrma.com.au/open-road/car-reviews/volkswagen/2025-volkswagen-id4-pro-and-id5-gtx-review",
+      "https://www.volkswagen.com.au/en/models/id5.html",
+      "https://www.volkswagen.com.au/en/models/id5-gtx.html"
+    ],
+    "sourcedAt": "2026-07-30"
   },
   {
     "id": "vw-tayron-phev",

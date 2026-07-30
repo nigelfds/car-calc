@@ -1,0 +1,29 @@
+{
+  "id": "cadillac-optiq",
+  "summary": "The Optiq is the cheapest way into General Motors' relaunched Cadillac brand in Australia, and reviewers consistently praise its distinctive, well-finished cabin, quiet running and unusually generous standard equipment for $80,000 before on-road costs. The consensus criticism is just as consistent: 425km of WLTP range and a 110kW DC charging ceiling are the weakest numbers among luxury mid-size electric SUVs on sale here, and Australia takes the superseded 224kW powertrain rather than the US car's 328kW update. Opinion divides mainly on the ride, which most describe as composed and connected but firmer and less plush than the badge implies.",
+  "pros": [
+    "At $80,000 before on-road costs it undercuts the BMW iX3 ($89,900), Genesis GV60 ($88,300) and Lexus RZ ($84,500), and sits well under the $91,661 fuel-efficient LCT threshold that governs the novated-lease FBT exemption",
+    "Genuinely big for the class: a 744-litre boot with the rear seats up (1603 litres folded) and a 2954mm wheelbase that reviewers rate for near-limousine rear knee room",
+    "Heavily specified in its single grade — 33-inch curved display with wireless Apple CarPlay and Android Auto (features GM deleted from its US EVs), 19-speaker AKG Dolby Atmos audio, heated/ventilated/massaging front seats, Brembo front brakes, panoramic glass roof and 21-inch wheels",
+    "22.1kW three-phase AC charging is unusually quick for the segment and adds roughly 100km of range per hour at home, which softens the weak DC rate for overnight chargers",
+    "Five-year unlimited-kilometre warranty with no servicing strings attached, an eight-year/160,000km battery warranty, and a five-star Euro NCAP result (2025) scoring 83% for adult occupant protection"
+  ],
+  "cons": [
+    "110kW is the lowest DC fast-charging peak of any luxury mid-size electric SUV sold in Australia — a Polestar 4 accepts 200kW — so road trips mean noticeably longer stops",
+    "425km of WLTP range is short for an $80,000 EV in 2026, and the 19.9kWh/100km WLTP consumption claim is high for the class (CarExpert measured 17.9kWh/100km on test)",
+    "Australia gets the superseded 224kW/480Nm dual-motor drivetrain while the US MY26 car has 328kW/675Nm and 150kW charging, and GM Australia has given no timing for bringing the update here; the Optiq-V is ruled out entirely",
+    "Firm-riding on 21-inch wheels with no adaptive dampers available, which several Australian reviewers judged short of the plushness a luxury badge implies, and the steering is described as vague on-centre",
+    "New-brand ownership risk: Cadillac does not report Australian sales, retails through a handful of metropolitan experience centres, permanently cut the larger Lyriq's price by $32,000 during 2026, and had still not confirmed Optiq service pricing at launch"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-cadillac-optiq-review",
+    "https://www.carsguide.com.au/ev/cadillac-optiq-101795",
+    "https://www.carsales.com.au/editorial/details/cadillac-optiq-2026-review-152184/",
+    "https://www.carsguide.com.au/car-news/sharp-price-for-luxury-challenger-evs-2026-cadillac-vistiq-and-cadillac-optiq-price-and",
+    "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-arriving-without-us-updates-hot-v-flagship-not-coming-to-australia",
+    "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and",
+    "https://thedriven.io/2026/06/05/cadillac-is-back-with-a-very-different-electric-pitch-for-australian-buyers/"
+  ],
+  "sourcedAt": "2026-07-30"
+}

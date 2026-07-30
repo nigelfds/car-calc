@@ -1,0 +1,34 @@
+{
+  "id": "vw-id4",
+  "summary": "The ID.4 is Volkswagen's mid-size electric SUV and its first battery-electric car sold here in volume, offered in exactly two grades: the 210kW rear-drive Pro and the 250kW dual-motor GTX 4MOTION. Australian reviewers land around 7.8/10 and agree on the strengths - ride comfort, the massaging front seats and genuinely good highway efficiency - but split on whether the cabin plastics and the missing built-in navigation are forgivable at the price. Both grades list below the $75,000 FBT exemption cap, so the real decision is whether the GTX's extra 40kW, all-wheel drive and 1800kg tow rating justify $10,000 and 33km of WLTP range.",
+  "pros": [
+    "The $59,990 Pro claims 544km WLTP from a 77kWh usable pack, roughly 80km more than the Tesla Model Y RWD it is priced against ($58,900), and 15km more than a Skoda Elroq 85 Select",
+    "Efficiency holds up in Australian testing: carsales averaged 16.6kWh/100km over more than 1000km against a 16.7kWh/100km WLTP claim, so the Pro's real highway range lands near 450-470km",
+    "Adaptive dampers with 15 settings, Matrix LED headlights, a panoramic glass roof and heated massaging ErgoActive front seats are standard on the base Pro - a Skoda Enyaq Sportline charges extra for the dampers",
+    "Both grades DC fast-charge at up to 175kW, adding about 178km in 10 minutes, and 24-month/30,000km service intervals keep six years of maintenance to $1,785 (about $298 a year)",
+    "The $69,990 GTX adds 250kW/679Nm and 4MOTION for 5.4s to 100km/h plus an 1800kg braked tow rating, well clear of a Tesla Model Y's 1588kg and a Skoda Enyaq RS's 1200kg"
+  ],
+  "cons": [
+    "No embedded satellite navigation and no wireless Apple CarPlay or Android Auto, and no spare tyre at any grade - only a repair kit",
+    "Volkswagen has repriced the Pro three times in about a year on drive-away campaigns ($59,990, then $63,990, then $64,990) while still clearing run-out MY25.0 stock at $59,990 drive-away, which weighs on resale",
+    "400V architecture caps DC charging at 175kW against the 800V Hyundai Ioniq 5 and Kia EV6, and real-world consumption stretches a long way past the claim - 18.7kWh/100km on Chasing Cars' hilly launch route and about 20kWh/100km for CarsGuide",
+    "Wind and road noise dominate at motorway speeds - CarsGuide rates the Ioniq 5, EV6 and Model Y as more peaceful - and multiple reviewers call the steering devoid of feedback",
+    "The five-star ANCAP rating carries over from a 2021 Euro NCAP test of the pre-update car, and Australian media have flagged an extensively revised ID.4, so the current car is late in its cycle"
+  ],
+  "sources": [
+    "https://www.volkswagen.com.au/en/models/id4.html",
+    "https://www.volkswagen.com.au/en/models/id4-gtx.html",
+    "https://www.volkswagen.com.au/en/hybrid-and-electric/latest-ev-news-/upgrade-for-the-ID4-and-ID5.html",
+    "https://www.carexpert.com.au/car-news/volkswagen-rounds-out-electric-suv-lineup-with-faster-id-4-cheaper-id-5",
+    "https://www.carexpert.com.au/car-reviews/2025-volkswagen-id-4-review",
+    "https://www.carexpert.com.au/volkswagen/id-4/2026-gtx-suv-4x4-electric-jsgskoos20251201",
+    "https://www.carsales.com.au/editorial/details/volkswagen-id-4-pro-2026-review-151531/",
+    "https://www.carsguide.com.au/family/volkswagen-id4-pro-98838",
+    "https://www.carsguide.com.au/volkswagen/id4/2026",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/volkswagen-id-4-pro-2025-review-australian-first-drive/",
+    "https://www.ecocarguide.com.au/volkswagen-id4-gtx-2026-review/",
+    "https://ev-database.org/uk/car/3250/Volkswagen-ID4-Pro",
+    "https://ev-database.org/car/3252/Volkswagen-ID4-GTX"
+  ],
+  "sourcedAt": "2026-07-30"
+}

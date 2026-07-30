@@ -1,0 +1,22 @@
+[
+  {
+    "id": "kgm-torres-evx-2wd",
+    "familyId": "kgm-torres-evx",
+    "make": "KGM",
+    "model": "Torres EVX",
+    "variant": "2WD",
+    "bodyType": "SUV",
+    "listPrice": 55188,
+    "batteryKwh": 80.6,
+    "rangeKm": 462,
+    "consumptionKwhPer100km": 18.7,
+    "bootLitresSeatsUp": 465,
+    "bootLitresSeatsDown": 1526,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1800,
+    "depreciationCurve": [1, 0.66, 0.54, 0.45, 0.38, 0.32],
+    "sourcedAt": "2026-07-30"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cadillac-optiq-sport-awd",
+    "familyId": "cadillac-optiq",
+    "make": "Cadillac",
+    "model": "Optiq",
+    "variant": "Sport AWD",
+    "bodyType": "SUV",
+    "listPrice": 80000,
+    "batteryKwh": 75,
+    "rangeKm": 425,
+    "consumptionKwhPer100km": 19.9,
+    "bootLitresSeatsUp": 744,
+    "bootLitresSeatsDown": 1603,
+    "seats": 5,
+    "towKg": 680,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2500,
+    "depreciationCurve": [1, 0.66, 0.54, 0.45, 0.38, 0.33],
+    "sourcedAt": "2026-07-30"
+  }
+]

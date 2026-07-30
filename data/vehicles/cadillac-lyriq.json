@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cadillac-lyriq-luxury",
+    "familyId": "cadillac-lyriq",
+    "make": "Cadillac",
+    "model": "Lyriq",
+    "variant": "Luxury AWD",
+    "bodyType": "SUV",
+    "listPrice": 90000,
+    "batteryKwh": 102,
+    "rangeKm": 530,
+    "consumptionKwhPer100km": 22.5,
+    "bootLitresSeatsUp": 793,
+    "bootLitresSeatsDown": 1722,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2850,
+    "depreciationCurve": [1, 0.64, 0.52, 0.43, 0.36, 0.31],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "cadillac-lyriq-sport",
+    "familyId": "cadillac-lyriq",
+    "make": "Cadillac",
+    "model": "Lyriq",
+    "variant": "Sport AWD",
+    "bodyType": "SUV",
+    "listPrice": 90000,
+    "batteryKwh": 102,
+    "rangeKm": 530,
+    "consumptionKwhPer100km": 22.5,
+    "bootLitresSeatsUp": 793,
+    "bootLitresSeatsDown": 1722,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2850,
+    "depreciationCurve": [1, 0.64, 0.52, 0.43, 0.36, 0.31],
+    "sourcedAt": "2026-07-30"
+  }
+]
