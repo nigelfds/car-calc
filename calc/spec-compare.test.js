@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { comparisonRows, ROW_GROUPS } from './spec-compare.js';
+import { comparisonRows, ROW_GROUPS, CAVEAT_PRECEDENCE } from './spec-compare.js';
 
 const tables = JSON.parse(
   readFileSync(new URL('../data/tax-tables.json', import.meta.url), 'utf8')
@@ -105,4 +105,110 @@ test('three cars work as well as two', () => {
 test('caveats are an empty array when nothing is amiss', () => {
   const model = comparisonRows([ev5, modelY], tables);
   assert.deepEqual(rowByKey(model, 'listPrice').caveats, []);
+});
+
+const sealion = {
+  id: 'sl6', make: 'BYD', model: 'Sealion 6', variant: 'Dynamic ER', bodyType: 'SUV',
+  powertrain: 'phev', listPrice: 46990, batteryKwh: 26.6, rangeKm: 140,
+  combinedRangeKm: 1340, consumptionKwhPer100km: 19, fuelConsumptionL100km: 5,
+  bootLitresSeatsUp: 425, bootLitresSeatsDown: 1200, seats: 5, towKg: 750,
+  warrantyYears: 6, insuranceAnnual: 1500,
+  depreciationCurve: [1, 0.72, 0.6, 0.5, 0.46, 0.42], sourcedAt: '2026-07-28'
+};
+const ranger = {
+  id: 'rgr', make: 'Ford', model: 'Ranger', variant: 'PHEV Wildtrak', bodyType: 'Ute',
+  powertrain: 'phev', listPrice: 86990, batteryKwh: 11.8, rangeKm: 49,
+  combinedRangeKm: 800, consumptionKwhPer100km: 24, fuelConsumptionL100km: 8.3,
+  bootLitresSeatsUp: 1185, bootLitresSeatsDown: 1185, seats: 5, towKg: 3500,
+  warrantyYears: 5, insuranceAnnual: 2400, isNonPassengerForVicDuty: true,
+  depreciationCurve: [1, 0.8, 0.7, 0.62, 0.56, 0.5], sourcedAt: '2026-07-28'
+};
+const sixSeat = { ...modelY, id: 'my6', seats: 6, bootLitresSeatsUp: 536 };
+
+const caveatIds = (model, key) => rowByKey(model, key).caveats.map(c => c.id);
+
+test('mixing a BEV and a PHEV caveats the rows where the numbers mean different things', () => {
+  const model = comparisonRows([ev5, sealion], tables);
+  assert.deepEqual(caveatIds(model, 'totalRange'), ['mixed-powertrain']);
+  assert.deepEqual(caveatIds(model, 'batteryKwh'), ['mixed-powertrain']);
+  assert.deepEqual(caveatIds(model, 'energyUse'), ['mixed-powertrain']);
+  assert.deepEqual(caveatIds(model, 'petrolUse'), ['mixed-powertrain']);
+});
+
+test('the electric range row is like for like and stays uncaveated', () => {
+  const model = comparisonRows([ev5, sealion], tables);
+  assert.deepEqual(caveatIds(model, 'electricRange'), []);
+  assert.equal(rowByKey(model, 'electricRange').winnerIndex, 0);
+});
+
+test('an all-electric set caveats nothing', () => {
+  const model = comparisonRows([ev5, modelY], tables);
+  for (const group of model.groups) {
+    for (const row of group.rows) {
+      assert.deepEqual(row.caveats, [], `${row.key} should be clean`);
+    }
+  }
+});
+
+test('a caveated row marks no winner', () => {
+  const model = comparisonRows([ev5, sealion], tables);
+  assert.equal(rowByKey(model, 'totalRange').winnerIndex, null);
+  assert.equal(rowByKey(model, 'energyUse').winnerIndex, null);
+});
+
+test('the caveat names the car responsible and gives the number', () => {
+  const model = comparisonRows([ev5, sealion], tables);
+  const [caveat] = rowByKey(model, 'totalRange').caveats;
+  assert.match(caveat.text, /Sealion 6/);
+  assert.match(caveat.text, /140/);
+});
+
+test('any plug-in hybrid caveats the threshold row, even with no BEV present', () => {
+  const model = comparisonRows([sealion, ranger], tables);
+  assert.deepEqual(caveatIds(model, 'underThreshold'), ['phev-present']);
+  assert.match(rowByKey(model, 'underThreshold').caveats[0].text, /1 April 2025/);
+});
+
+test('an all-electric set leaves the threshold row alone', () => {
+  const model = comparisonRows([ev5, modelY], tables);
+  assert.deepEqual(caveatIds(model, 'underThreshold'), []);
+});
+
+test('a ute against a non-ute caveats both boot rows', () => {
+  const model = comparisonRows([ev5, ranger], tables);
+  assert.ok(caveatIds(model, 'bootUp').includes('ute-vs-other'));
+  assert.ok(caveatIds(model, 'bootDown').includes('ute-vs-other'));
+  assert.match(rowByKey(model, 'bootUp').caveats[0].text, /tray/);
+});
+
+test('a ute in the set caveats seats-down, where every ute repeats its seats-up figure', () => {
+  const model = comparisonRows([ranger, { ...ranger, id: 'r2', make: 'GWM', model: 'Cannon Alpha' }], tables);
+  assert.deepEqual(caveatIds(model, 'bootDown'), ['ute-present']);
+  assert.deepEqual(caveatIds(model, 'bootUp'), []);
+});
+
+test('differing seat counts caveat the boot rows', () => {
+  const model = comparisonRows([ev5, sixSeat], tables);
+  assert.deepEqual(caveatIds(model, 'bootUp'), ['mixed-seats']);
+  assert.deepEqual(caveatIds(model, 'bootDown'), ['mixed-seats']);
+  assert.match(rowByKey(model, 'bootUp').caveats[0].text, /seat/i);
+});
+
+test('caveats on one row come back in precedence order', () => {
+  // A ute and a six-seat SUV: ute-vs-other, ute-present and mixed-seats all fire.
+  const model = comparisonRows([ranger, sixSeat], tables);
+  assert.deepEqual(caveatIds(model, 'bootDown'), ['ute-vs-other', 'ute-present', 'mixed-seats']);
+  assert.deepEqual(CAVEAT_PRECEDENCE, [
+    'ute-vs-other', 'ute-present', 'mixed-seats', 'mixed-powertrain', 'phev-present'
+  ]);
+});
+
+test('every caveat text is a non-empty sentence', () => {
+  const model = comparisonRows([ev5, sealion, ranger], tables);
+  const all = model.groups.flatMap(g => g.rows).flatMap(r => r.caveats);
+  assert.ok(all.length > 0);
+  for (const caveat of all) {
+    assert.ok(caveat.text.length > 20, `${caveat.id} text is too short`);
+    assert.ok(caveat.text.trim().endsWith('.'), `${caveat.id} should end in a full stop`);
+  }
 });
