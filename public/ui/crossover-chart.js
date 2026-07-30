@@ -700,8 +700,18 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry, compact = 
 // the element the SVG actually goes into.
 const WIDE_CHART_MIN_PX = 620;
 
-function hasRoomForWideChart(target, root) {
+// A real measurement of the target, distinct from "we have no idea": a
+// hidden (display:none) element genuinely measures 0, where a detached node
+// or the plain objects the tests render into have no clientWidth at all
+// (undefined). Those two must not be conflated — see renderChart's own guard
+// below, which only fires on a real 0.
+function measuredWidth(target) {
   const width = target?.clientWidth;
+  if (typeof width === 'number') return width;
+  return target?.getBoundingClientRect?.().width;
+}
+
+function hasRoomForWideChart(width, root) {
   if (typeof width === 'number' && width > 0) return width >= WIDE_CHART_MIN_PX;
 
   // Unmeasurable: a detached node, or the plain objects the tests render into.
@@ -720,6 +730,19 @@ function hasRoomForWideChart(target, root) {
 export function renderChart(root, series, budgetMonthly = null, cliff = null, entry = null) {
   const target = root.querySelector('#crossover');
   if (!target) return;
+
+  // The compare tab hides this panel with the `hidden` attribute, and the
+  // resize/orientationchange listeners in app.js fire whichever tab is
+  // showing. A hidden element measures zero, and painting against a zero
+  // width bakes a broken layout into the cached SVG. Skip instead; app.js
+  // repaints when tab 1 comes back (see the bindTabs callback there).
+  //
+  // Deliberately not `width === 0` on an *unmeasurable* target — the plain
+  // objects the rest of this file's tests render into have no clientWidth at
+  // all (undefined), which must keep falling through to hasRoomForWideChart's
+  // own viewport fallback below, not be mistaken for a hidden element.
+  const width = measuredWidth(target);
+  if (width === 0) return;
 
   // A capacity of 0 means "this way of paying reaches nothing at this budget",
   // which is exactly what a null meant in the cost series it replaced: the
@@ -742,5 +765,5 @@ export function renderChart(root, series, budgetMonthly = null, cliff = null, en
   // their markers survive the trip. A phone reader gets the same picture as
   // everyone else — the FBT plateau, the flat cash line, the crossover —
   // rather than a summary of it.
-  renderLineChart(target, withGaps, budgetMonthly, cliff, entry, !hasRoomForWideChart(target, root));
+  renderLineChart(target, withGaps, budgetMonthly, cliff, entry, !hasRoomForWideChart(width, root));
 }

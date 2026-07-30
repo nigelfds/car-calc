@@ -6,7 +6,7 @@
 // calls at all: the free-text parse and the verdict explanation that used
 // them are currently unwired (see the note where maybeExplain used to be).
 
-import { defaultState, toQueryString, fromQueryString } from './state.js';
+import { defaultState, toQueryString, fromQueryString, normaliseCompare, MAX_COMPARE_SLOTS } from './state.js';
 import { renderInputs, bindPresets, syncPresets, renderEchoes } from './sections.js';
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
@@ -20,6 +20,10 @@ import {
 } from '../../calc/capacity.js';
 import { money } from './format.js';
 import { OPTION_PHRASE } from './labels.js';
+import { applyTab, bindTabs } from './tabs.js';
+import { bindAutocomplete } from './autocomplete.js';
+import { renderSlots, renderComparison, renderBench } from './compare-tab.js';
+import { comparisonRows } from '../../calc/spec-compare.js';
 
 // purchasingPowerSeries measures ~2.4ms for these 25 points — it bisects 40
 // probe prices per option rather than costing all 114 real cars at every
@@ -38,6 +42,11 @@ const RECOMPUTE_DEBOUNCE_MS = 80;
 // primitive as the slider, just with its own, slightly longer window —
 // there's no drag-smoothness reason to keep this one at 80ms.
 const RESIZE_DEBOUNCE_MS = 150;
+
+// Below this the comparison drops to two columns and benches the third car.
+// Matches the breakpoint in styles.css; a phone cannot show three columns of
+// "$61,170" and a row label without one of them being a lie about its width.
+const COMPARE_TWO_UP_MAX_PX = 700;
 
 // Sentence form — "A novated lease reaches up to $61,802 of car". From
 // ui/labels.js, alongside the other two shapes the page needs.
@@ -250,6 +259,37 @@ function boot(root, dataset) {
     renderCards(root, cards, emptyMessage);
   }
 
+  // Which car is off-screen on a phone. View state only — never in the URL,
+  // because it is an artefact of the viewport rather than of the comparison.
+  let benchIndex = 2;
+
+  function compareSlots() {
+    const slots = normaliseCompare(state.compare);
+    while (slots.length < MAX_COMPARE_SLOTS) slots.push('');
+    return slots;
+  }
+
+  function renderCompareTab() {
+    const slots = compareSlots();
+    // An id from a shared link that names no car in the dataset leaves its
+    // slot empty rather than throwing — the dataset changes, links outlive it.
+    const picked = slots.map(id => vehicles.find(v => v.id === id) ?? null).filter(Boolean);
+
+    renderSlots(root, { slots, vehicles });
+
+    const twoUp = typeof window !== 'undefined' && window.innerWidth <= COMPARE_TWO_UP_MAX_PX;
+    const bench = twoUp && picked.length === 3
+      ? Math.min(benchIndex, picked.length - 1)
+      : null;
+
+    renderComparison(root, { vehicles: picked, families, tables, benchIndex: bench });
+    renderBench(root, {
+      vehicles: picked,
+      benchIndex: bench,
+      model: picked.length >= 2 ? comparisonRows(picked, tables) : { groups: [] }
+    });
+  }
+
   // The full recompute-and-repaint pass. Deliberately routed through
   // `debounce` (see below) for every DOM-driven change — a budget-slider
   // drag above all, since that's the control most likely to fire a burst of
@@ -347,6 +387,9 @@ function boot(root, dataset) {
     renderRatesPanel(root, state, onRatesChange, rates);
 
     renderShortlist(verdict);
+
+    applyTab(root, state.tab);
+    renderCompareTab();
   }
 
   const debouncedRender = debounce(render, RECOMPUTE_DEBOUNCE_MS);
@@ -377,6 +420,41 @@ function boot(root, dataset) {
   // their inputs rather than state directly, so this needs nothing from the
   // closure.
   bindPresets(root);
+
+  bindTabs(root, tab => {
+    state = { ...state, tab };
+    render();
+    // The chart skips painting while its panel is hidden, so coming back to
+    // tab 1 needs one repaint with a real width to measure against.
+    if (tab === 'find' && lastSeries) {
+      renderChart(root, lastSeries, state.monthlyBudget, lastCliff, lastEntry);
+    }
+  });
+
+  bindAutocomplete(root, {
+    getVehicles: () => vehicles,
+    onSelect: (slotIndex, vehicleId) => {
+      const slots = compareSlots();
+      slots[slotIndex] = vehicleId;
+      state = { ...state, compare: normaliseCompare(slots) };
+      // Picking commits straight away: the slot and the comparison both
+      // repaint on the spot, with no Apply button in between.
+      render();
+    }
+  });
+
+  // Tapping a benched chip swaps it with the right-hand visible column, which
+  // is predictable enough to need no extra affordance.
+  root.querySelector('#compare-bench')?.addEventListener('click', event => {
+    const chip = event.target.closest?.('[data-bench-index]');
+    if (!chip) return;
+    const tapped = Number(chip.dataset.benchIndex);
+    if (tapped === benchIndex) {
+      const rightHand = [0, 1, 2].filter(i => i !== benchIndex)[1];
+      benchIndex = rightHand;
+      renderCompareTab();
+    }
+  });
 
   // The preference block is collapsed by default (item 25) — every filter in it
   // is optional, and on a phone it was most of what stood between the reader and
@@ -434,6 +512,9 @@ function boot(root, dataset) {
   // the series already on hand.
   const rerenderChartForViewport = debounce(() => {
     if (lastSeries) renderChart(root, lastSeries, state.monthlyBudget, lastCliff, lastEntry);
+    // The comparison picks two-up or three-up from the viewport too, and like
+    // the chart it only re-runs on a state change without this.
+    renderCompareTab();
   }, RESIZE_DEBOUNCE_MS);
 
   if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {

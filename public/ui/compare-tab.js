@@ -106,8 +106,7 @@ export function renderBench(root, { vehicles, benchIndex, model }) {
     </p>
     ${vehicles.map((vehicle, index) => `
       <button type="button" class="compare-chip${index === benchIndex ? ' compare-chip--benched' : ''}"
-              data-bench-index="${index}" aria-describedby="compare-bench-hint"
-              ${index === benchIndex ? '' : 'aria-pressed="true"'}>
+              data-bench-index="${index}" aria-describedby="compare-bench-hint">
         ${escapeHtml(carName(vehicle))}${
           index === benchIndex && mentioned ? '<span class="compare-chip__dot" aria-hidden="true"></span>' : ''
         }
