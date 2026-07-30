@@ -122,3 +122,41 @@ test('the default toggle stays out of the query string', () => {
   const defaults = defaultState(rates);
   assert.equal(toQueryString({ ...defaults }, defaults).includes('includePhev'), false);
 });
+
+import { normaliseCompare, TABS, MAX_COMPARE_SLOTS } from './state.js';
+
+test('an all-empty comparison normalises away entirely', () => {
+  assert.deepEqual(normaliseCompare(['', '', '']), []);
+  assert.deepEqual(normaliseCompare([]), []);
+  assert.deepEqual(normaliseCompare(undefined), []);
+});
+
+test('trailing empty slots are trimmed but interior ones are kept', () => {
+  assert.deepEqual(normaliseCompare(['a', '', '']), ['a']);
+  assert.deepEqual(normaliseCompare(['a', '', 'c']), ['a', '', 'c']);
+});
+
+test('no more than three slots survive', () => {
+  assert.deepEqual(normaliseCompare(['a', 'b', 'c', 'd']), ['a', 'b', 'c']);
+  assert.equal(MAX_COMPARE_SLOTS, 3);
+});
+
+test('an empty comparison is absent from the query string', () => {
+  const defaults = defaultState(rates);
+  assert.equal(toQueryString({ ...defaults, compare: ['', '', ''] }, defaults), '');
+});
+
+test('a gapped comparison keeps its slot positions through a round trip', () => {
+  const defaults = defaultState(rates);
+  const query = toQueryString({ ...defaults, tab: 'compare', compare: ['a', '', 'c'] }, defaults);
+  assert.match(query, /compare=a%2C%2Cc/);
+  const back = fromQueryString(query, defaults);
+  assert.deepEqual(back.compare, ['a', '', 'c']);
+  assert.equal(back.tab, 'compare');
+});
+
+test('an unknown tab falls back to the default rather than routing nowhere', () => {
+  const defaults = defaultState(rates);
+  assert.equal(fromQueryString('?tab=nonsense', defaults).tab, 'find');
+  assert.deepEqual(TABS, ['find', 'compare']);
+});

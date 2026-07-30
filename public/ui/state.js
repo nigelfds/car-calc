@@ -1,5 +1,5 @@
-const ARRAY_FIELDS = new Set(['bodyTypes']);
-const STRING_FIELDS = new Set(['leaseStartDate', 'freeText']);
+const ARRAY_FIELDS = new Set(['bodyTypes', 'compare']);
+const STRING_FIELDS = new Set(['leaseStartDate', 'freeText', 'tab']);
 // Declared for the same reason as NUMERIC_FIELDS below: fromQueryString sends
 // anything unlisted through Number(), and Number('false') is NaN — the toggle
 // would silently reset every time a shared link was opened.
@@ -50,6 +50,22 @@ export function defaultLeaseStart(today = new Date()) {
   return `${start.getFullYear()}-${pad(start.getMonth() + 1)}-${pad(start.getDate())}`;
 }
 
+export const TABS = ['find', 'compare'];
+export const MAX_COMPARE_SLOTS = 3;
+
+// A slot's *position* is meaningful — clearing slot 2 must not promote slot 3
+// into it — so an empty slot round-trips through the URL as an empty segment
+// ("a,,c"). Trailing empties carry no such information, and an all-empty array
+// must collapse to [] or toQueryString's default comparison fails to drop it
+// and every visitor gets a "?compare=,," glued to their address bar.
+export function normaliseCompare(ids) {
+  const slots = (ids ?? [])
+    .slice(0, MAX_COMPARE_SLOTS)
+    .map(id => (typeof id === 'string' ? id.trim() : ''));
+  while (slots.length > 0 && slots[slots.length - 1] === '') slots.pop();
+  return slots;
+}
+
 export function defaultState(rates) {
   return {
     grossSalary: 100000,
@@ -93,7 +109,13 @@ export function defaultState(rates) {
     // Filters on electric-only range. Meaningless for a BEV, where it would
     // duplicate minRangeKm, so the control is hidden with the rest.
     minElectricRangeKm: null,
-    freeText: ''
+    freeText: '',
+    // Which tab is showing. In the URL so a comparison can be linked to
+    // directly, which is also what lets step 3 hand cars over later.
+    tab: 'find',
+    // Up to three vehicle ids, by slot. Specs only — nothing here reads the
+    // reader's salary, so a shared comparison link carries no income.
+    compare: []
   };
 }
 
@@ -104,7 +126,8 @@ const same = (a, b) =>
 
 export function toQueryString(state, defaults) {
   const params = new URLSearchParams();
-  for (const [key, value] of Object.entries(state)) {
+  for (const [key, raw] of Object.entries(state)) {
+    const value = key === 'compare' ? normaliseCompare(raw) : raw;
     if (value === null || value === '' || same(value, defaults[key])) continue;
     params.set(key, Array.isArray(value) ? value.join(',') : String(value));
   }
@@ -121,9 +144,12 @@ export function fromQueryString(search, defaults) {
     const raw = params.get(key);
 
     if (ARRAY_FIELDS.has(key)) {
-      state[key] = raw ? raw.split(',') : [];
+      const parts = raw ? raw.split(',') : [];
+      state[key] = key === 'compare' ? normaliseCompare(parts) : parts;
     } else if (STRING_FIELDS.has(key)) {
-      state[key] = raw;
+      // A tab value that names no panel would leave the page blank, so an
+      // unrecognised one falls back rather than routing nowhere.
+      state[key] = key === 'tab' && !TABS.includes(raw) ? defaults[key] : raw;
     } else if (BOOLEAN_FIELDS.has(key)) {
       state[key] = raw === 'true';
     } else {
