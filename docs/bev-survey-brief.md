@@ -452,12 +452,58 @@ split off as a separate sub-brand. The `familyId`, make and model are all stale.
 | MG 4 | **Urban** entry grade, $31,990 d/a; whole range restructured Apr 2026 |
 | Kia EV9 | **GT** grade added (range now Air/Earth/GT-Line/GT) |
 
+> **Checked against the dataset 2026-07-30: three of these four are already held.**
+> Only the i4 M60 is outstanding, and it contradicts the i4's own family record. Verified by reading
+> `data/vehicles/*.json`, not by re-searching the market.
+>
+> | Claim | Actually held | Verdict |
+> |---|---|---|
+> | Ioniq 6 N | `N` $115,000, 487km — the family's **only** row | Already held. See the note below — this one is wrong in both directions |
+> | MG 4 Urban | `Urban 43` and `Urban 54`, alongside `Essence 64` and `XPower` | Already held |
+> | Kia EV9 GT | `GT AWD`, alongside Air RWD / Earth AWD / GT-Line AWD | Already held |
+> | BMW i4 M60 xDrive | Not held — `eDrive35` $88,900 is the only row | **Unresolved, needs a real check** |
+>
+> **The Ioniq 6 note is stale in both directions.** It reads as though the dataset holds the
+> mainstream grades and is missing the N. The reverse is true: the N is the only row, because
+> `data/families/hyundai-ioniq-6.json` records that Hyundai **withdrew the Dynamiq and Epiq grades
+> in the first half of 2026** after 1,214 local sales, and has not confirmed timing for the
+> facelifted non-N cars. Sourced, among others, to a CarsGuide piece titled "standard Hyundai Ioniq 6
+> electric car pulled from sale". So there is nothing to add here, and adding the base grades would
+> invent cars nobody can order — the failure mode the research brief warns about hardest.
+>
+> **The i4 M60 needs settling before a slot is spent on it,** because two records disagree.
+> `data/families/bmw-i4.json` (sourced 2026-07-26) says BMW "pared the local range back to this
+> single grade for 2026, dropping the eDrive40 and M50", citing EV Central's "BMW i4 range trimmed in
+> Australia… more expensive models follow ICE 4 Series out the door". A $139,900 M60 arriving *after*
+> that trim is possible, but it is the opposite of what the held record says. Confirm against BMW's
+> own configurator before writing anything; if the M60 is not orderable, correct this table instead
+> of adding a row.
+
 **4. One held family needs its powertrain confirmed:** `leapmotor/c10` is sold here as both a BEV
 and a REEV. Confirm the dataset holds the battery-electric one.
+
+> **Settled 2026-07-30: the dataset holds the BEV.** All three rows carry BEV-sized batteries and
+> ranges — Style 69.9kWh/420km, Design LR 81.9kWh/510km, AWD Sports+ 81.9kWh/437km — where the C10
+> REEV pairs a ~28kWh pack with a petrol generator and a far shorter electric range. The family
+> summary describes it as an electric SUV set against the Model Y and EV5, and cites a "2026 BEV
+> Design" review. No `powertrain` field is present on the rows, which `data/schema.js` reads as
+> `bev`, and that is correct here. No action.
 
 **5. Two held families are on borrowed time:** Mercedes EQA and EQB are being replaced by the
 CLA/GLC EQ generation, and the Mini Cooper Electric is in run-out with stock quoted only "until the
 end of the year".
+
+**6. A held family with one expensive variant is not evidence of a gap.** Added 2026-07-30, after a
+review of the dataset flagged `hyundai-ioniq-6` (N only, $115,000) and `bmw-i4` (eDrive35 only,
+$88,900) as families whose affordable grades had been missed. Both are correct: the Ioniq 6's
+mainstream grades were withdrawn from sale and the i4's were dropped for 2026, and both findings are
+recorded in the family summaries with sources. Scanning for "one row, dear" finds precisely the two
+families where a culled range is the right answer, so the heuristic is worse than useless — it points
+at the families most likely to be invented back into existence. Read the family summary before
+concluding anything is missing; a withdrawn grade looks identical to an unresearched one from the
+variant table alone. Four held families have a single variant priced over $80,000, and all four are
+right: `hyundai-ioniq-6` and `bmw-i4` by culling as above, `cadillac-vistiq` (Platinum only) and
+`cadillac-optiq` (Sport only) by the brand's local lineup, exactly as the batch 2 brief specified.
 
 ## Proposed batch plan — 12 batches, six families each
 
@@ -602,7 +648,7 @@ maintenance debt is real.
 | Lotus Eletre | Top R variant is quoted at both $279,990 and $315,000; base $189,900 qualifies |
 | Lotus Emeya | `Sedan` |
 | Maserati Grecale Folgore | **Verify orderable, not run-out.** Maserati has retrenched hard on EVs and told dealers to discount Folgore stock ~43% |
-| Maintenance sweep | Rename `omoda-e5` → Chery E5; add Ioniq 6 N, BMW i4 M60, MG4 Urban, Kia EV9 GT; re-price Hyundai, Volvo, BMW iX1, Renault, XPeng G6; confirm Leapmotor C10 is the BEV |
+| Maintenance sweep | **Shrunk 2026-07-30 — see the checks under "the price data is not current".** Still to do: rename `omoda-e5` → Chery E5; settle whether the BMW i4 M60 is orderable at all (two records disagree) and add it only if it is; re-price XPeng G6. **Already done, do not redo:** Ioniq 6 N, MG4 Urban and Kia EV9 GT are all held; Leapmotor C10 is confirmed BEV; Kona ($46,000–$63,000) and Ioniq 5 ($68,200–$83,700) already match this survey's own "now" figures exactly. **Still worth checking:** the Inster, where this survey quotes $38,990 *drive-away* against a held list of $39,000 — a drive-away figure is not a list price, and that one backs out to about $36,574, so either the held row is $2,400 high or the survey is quoting a grade the dataset does not hold. Volvo, BMW iX1 and Renault re-pricing is unverified either way |
 
 ### Batch 12 — people movers, filed as `SUV`
 Last of the research batches, deliberately. Every family here is only in scope because of the
