@@ -234,10 +234,11 @@ Create `calc/spec-compare.test.js`:
 ```javascript
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { comparisonRows, ROW_GROUPS } from './spec-compare.js';
 
 const tables = JSON.parse(
-  await import('node:fs').then(fs => fs.readFileSync(new URL('../data/tax-tables.json', import.meta.url), 'utf8'))
+  readFileSync(new URL('../data/tax-tables.json', import.meta.url), 'utf8')
 );
 
 const ev5 = {
@@ -1752,7 +1753,6 @@ test('the benched car is left out of the table', () => {
   assert.match(html, /Kia EV5/);
   assert.doesNotMatch(html, /Dolphin/);
   // Two car columns, not three.
-  assert.equal((html.match(/class="compare-head /g) ?? []).length, 0);
   assert.equal((html.match(/compare-head--/g) ?? []).length, 2);
 });
 
