@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { formatValue, renderComparison, renderSlots } from './compare-tab.js';
+import { formatValue, renderComparison, renderSlots, renderBench, offScreenNote } from './compare-tab.js';
+import { comparisonRows } from '../../calc/spec-compare.js';
 
 const tables = JSON.parse(readFileSync(new URL('../../data/tax-tables.json', import.meta.url), 'utf8'));
 
@@ -135,4 +136,68 @@ test('rendered car names are escaped', () => {
   // assert the escaped form actually made it through, as autocomplete.test.js
   // does for the same class of input.
   assert.match(html, /&lt;script&gt;/);
+});
+
+const cheap = { ...sealion, id: 'chp', make: 'BYD', model: 'Dolphin', powertrain: 'bev',
+  listPrice: 29840, combinedRangeKm: undefined, fuelConsumptionL100km: undefined };
+
+test('the benched car is left out of the table', () => {
+  const root = stubRoot();
+  renderComparison(root, { vehicles: [ev5, sealion, cheap], families, tables, benchIndex: 2 });
+  const html = root.targets['compare-table'].innerHTML;
+  const head = html.split('<tbody')[0];
+  assert.match(html, /Kia EV5/);
+  // The benched car gets no column of its own — though (see the next test)
+  // it can still be named further down, in an off-screen note.
+  assert.doesNotMatch(head, /Dolphin/);
+  // Two car columns, not three.
+  assert.equal((html.match(/compare-head--/g) ?? []).length, 2);
+});
+
+test('a row the benched car wins says so, and names the number', () => {
+  const root = stubRoot();
+  renderComparison(root, { vehicles: [ev5, sealion, cheap], families, tables, benchIndex: 2 });
+  const html = root.targets['compare-table'].innerHTML;
+  const priceRow = html.split('data-row="listPrice"')[1].split('data-row="')[0];
+  assert.match(priceRow, /compare-offscreen/);
+  assert.match(priceRow, /Dolphin/);
+  assert.match(priceRow, /\$29,840/);
+});
+
+test('no off-screen note on a row a visible car wins', () => {
+  const root = stubRoot();
+  renderComparison(root, { vehicles: [ev5, sealion, cheap], families, tables, benchIndex: 2 });
+  const html = root.targets['compare-table'].innerHTML;
+  const warranty = html.split('data-row="warrantyYears"')[1].split('data-row="')[0];
+  assert.doesNotMatch(warranty, /compare-offscreen/);
+});
+
+test('a caveated row gets no off-screen note, because it has no winner to report', () => {
+  const model = comparisonRows([ev5, sealion, cheap], tables);
+  const totalRange = model.groups.flatMap(g => g.rows).find(r => r.key === 'totalRange');
+  assert.equal(offScreenNote(totalRange, [ev5, sealion, cheap], 1), null);
+});
+
+test('desktop passes no bench and gets no notes at all', () => {
+  const root = stubRoot();
+  renderComparison(root, { vehicles: [ev5, sealion, cheap], families, tables, benchIndex: null });
+  assert.doesNotMatch(root.targets['compare-table'].innerHTML, /compare-offscreen/);
+  assert.match(root.targets['compare-table'].innerHTML, /Dolphin/);
+});
+
+test('the bench names the car and flags that it appears in a callout', () => {
+  const root = stubRoot();
+  const model = comparisonRows([ev5, sealion, cheap], tables);
+  renderBench(root, { vehicles: [ev5, sealion, cheap], benchIndex: 2, model });
+  const html = root.targets['compare-bench'].innerHTML;
+  assert.match(html, /Dolphin/);
+  assert.match(html, /data-bench-index="2"/);
+  assert.match(html, /compare-chip__dot/);
+});
+
+test('the bench is empty when only two cars are being compared', () => {
+  const root = stubRoot();
+  const model = comparisonRows([ev5, sealion], tables);
+  renderBench(root, { vehicles: [ev5, sealion], benchIndex: null, model });
+  assert.equal(root.targets['compare-bench'].innerHTML.trim(), '');
 });

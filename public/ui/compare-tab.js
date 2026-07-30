@@ -70,6 +70,50 @@ function caveatMarkup(caveats, columns) {
     </tr>`).join('');
 }
 
+// Best-in-row is scored across every filled slot, including the one that is
+// off-screen on a phone (calc/spec-compare.js never sees the bench). So a
+// two-up view has to account for a winner it is not showing — otherwise the
+// marker lands on the best *visible* car and quietly misreports the set.
+export function offScreenNote(row, vehicles, benchIndex) {
+  if (benchIndex === null || benchIndex === undefined) return null;
+  if (row.caveats.length > 0) return null;
+  if (row.winnerIndex !== benchIndex) return null;
+
+  const vehicle = vehicles[benchIndex];
+  const value = formatValue(row.values[benchIndex], row.format, row.unit);
+  return `Off screen · ${carName(vehicle)} — ${value}, best of the three.`;
+}
+
+export function renderBench(root, { vehicles, benchIndex, model }) {
+  const target = root.querySelector('#compare-bench');
+  if (!target) return;
+  if (benchIndex === null || benchIndex === undefined || vehicles.length < 3) {
+    target.innerHTML = '';
+    return;
+  }
+
+  // A dot warns that the benched car appears in at least one callout, so the
+  // reader knows before scrolling that it is doing more than sitting out.
+  const rows = model.groups.flatMap(group => group.rows);
+  const mentioned = rows.some(row =>
+    row.winnerIndex === benchIndex ||
+    row.caveats.some(caveat => caveat.text.includes(carName(vehicles[benchIndex])))
+  );
+
+  target.innerHTML = `
+    <p class="compare-bench__hint" id="compare-bench-hint">
+      Two fit on screen. Tap the third to swap it in.
+    </p>
+    ${vehicles.map((vehicle, index) => `
+      <button type="button" class="compare-chip${index === benchIndex ? ' compare-chip--benched' : ''}"
+              data-bench-index="${index}" aria-describedby="compare-bench-hint"
+              ${index === benchIndex ? '' : 'aria-pressed="true"'}>
+        ${escapeHtml(carName(vehicle))}${
+          index === benchIndex && mentioned ? '<span class="compare-chip__dot" aria-hidden="true"></span>' : ''
+        }
+      </button>`).join('')}`;
+}
+
 export function renderComparison(root, { vehicles, families, tables, benchIndex = null }) {
   const table = root.querySelector('#compare-table');
   const prose = root.querySelector('#compare-prose');
@@ -82,17 +126,22 @@ export function renderComparison(root, { vehicles, families, tables, benchIndex 
     return;
   }
 
+  // The row model is always built from ALL filled slots — that is what keeps
+  // the winner honest. Only the *rendering* drops the benched column.
   const model = comparisonRows(vehicles, tables);
-  const columns = vehicles.length;
+  const shown = vehicles
+    .map((vehicle, index) => ({ vehicle, index }))
+    .filter(entry => entry.index !== benchIndex);
+  const columns = shown.length;
 
   const head = `
     <thead>
       <tr>
         <th scope="col"><span class="visually-hidden">Specification</span></th>
-        ${vehicles.map((v, i) => `
-          <th scope="col" class="compare-head compare-head--${i}">
-            ${escapeHtml(carName(v))}
-            <span class="compare-head__variant">${escapeHtml(v.variant ?? '')}</span>
+        ${shown.map(({ vehicle, index }) => `
+          <th scope="col" class="compare-head compare-head--${index}">
+            ${escapeHtml(carName(vehicle))}
+            <span class="compare-head__variant">${escapeHtml(vehicle.variant ?? '')}</span>
           </th>`).join('')}
       </tr>
     </thead>`;
@@ -102,15 +151,20 @@ export function renderComparison(root, { vehicles, families, tables, benchIndex 
       <tr><th class="compare-group__label" colspan="${columns + 1}" scope="rowgroup">
         ${escapeHtml(group.label)}
       </th></tr>
-      ${group.rows.map(row => `
+      ${group.rows.map(row => {
+        const note = offScreenNote(row, vehicles, benchIndex);
+        return `
         <tr data-row="${escapeHtml(row.key)}">
           <th scope="row" class="compare-row__label">${escapeHtml(row.label)}</th>
-          ${row.values.map((value, i) => `
-            <td class="compare-cell${row.winnerIndex === i ? ' compare-cell--win' : ''}">
-              ${escapeHtml(formatValue(value, row.format, row.unit))}
+          ${shown.map(({ index }) => `
+            <td class="compare-cell${row.winnerIndex === index ? ' compare-cell--win' : ''}">
+              ${escapeHtml(formatValue(row.values[index], row.format, row.unit))}
             </td>`).join('')}
         </tr>
-        ${caveatMarkup(row.caveats, columns)}`).join('')}
+        ${caveatMarkup(row.caveats, columns)}
+        ${note ? `<tr class="compare-caveat-row"><td class="compare-offscreen" colspan="${columns + 1}">
+          ${escapeHtml(note)}</td></tr>` : ''}`;
+      }).join('')}
     </tbody>`).join('');
 
   table.innerHTML = `<table class="compare-grid">${head}${body}</table>`;
