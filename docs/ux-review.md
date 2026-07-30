@@ -5,8 +5,10 @@ Findings from a design, usability and financial-clarity review of the live site
 each written so it can be picked up as a standalone task without re-deriving the
 diagnosis.
 
-Tick a box when it lands. **Done so far: 1, 2, 3, 5, 6.** Item 4 was
-deliberately deferred; everything from 7 on is untouched.
+Tick a box when it lands.
+
+**Done: 1, 2, 3, 5-14, 16-21, 23.** **Won't fix: 4** (see its entry).
+**Still open: 15, 22, 24-30.**
 
 ## How this was reviewed
 
@@ -126,7 +128,12 @@ equals the default, so shared links stay short.
 
 ### 4. A card can read "at your budget" and "over your budget" at once
 
-- [ ] **Effort** M · **Files** `public/ui/cars.js`, `public/ui/app.js`
+- **Won't fix.** Item 7 puts the monthly figure the warning is computed from
+  onto the card itself, which turns the apparent contradiction into an
+  explanation: the reader can see $712/mo against their $900 budget and the
+  price band beside it, and the two signals stop reading as a disagreement.
+  Reopen if the pairing still confuses anyone once 7 has landed.
+- **Effort** M · **Files** `public/ui/cars.js`, `public/ui/app.js`
 
 **Symptom** Default state: Tesla Model 3 Long Range RWD, $61,990. It gets the
 *AT YOUR BUDGET* band and, four lines below, a red *over your budget* warning on
@@ -192,7 +199,12 @@ usability lives.
 
 ### 7. Cards speak in term totals; everything above them speaks in $/month
 
-- [ ] **Effort** M · **Files** `public/ui/cars.js`
+- [x] **Done** — monthly leads each row, term total beneath it. Cash is
+  deliberately not parallel: it leads with its up-front outlay and carries the
+  running cost second, because its `monthlyCost` is running costs alone and a
+  "$103/mo" headline beside a lease's "$712/mo" would read as cash being seven
+  times cheaper. `termLabel` moved to `ui/format.js`, shared with item 11.
+- **Effort** M · **Files** `public/ui/cars.js`
 
 **Symptom** The slider, the verdict, the summary bar and the chart are all
 monthly. Every shortlist card then switches to "TOTAL COST OVER THE TERM"
@@ -209,7 +221,12 @@ against the slider, and the term total is still reachable.
 
 ### 8. Four different label sets for the same three options
 
-- [ ] **Effort** S · **Files** `public/index.html`, `public/ui/{slider,cars,app}.js`
+- [x] **Done** — `public/ui/labels.js` holds `OPTIONS` plus the long, short and
+  sentence forms; the legend's wording won because it is the one a reader meets
+  first. "Direct loan" and "Buy upfront" are gone. Its own test asserts the three
+  maps cover the same keys and that the short and sentence forms only ever drop
+  or add connectives, which is the drift that produced the original four.
+- **Effort** S · **Files** `public/index.html`, `public/ui/{slider,cars,app}.js`
 
 | Place | | | |
 |---|---|---|---|
@@ -226,7 +243,11 @@ summary bar needs one. Every rename costs the reader a re-identification.
 
 ### 9. The page never defines "novated lease"
 
-- [ ] **Effort** S · **Files** `public/index.html`
+- [x] **Done** — a `.section-intro` at the head of step 2 defines all three
+  options before any number that depends on knowing the difference, and names
+  the FBT exemption as where the saving comes from. It also says a lease needs an
+  employer who offers packaging, which sets up item 10's checkbox.
+- **Effort** S · **Files** `public/index.html`
 
 **Symptom** It is the term the entire tool turns on, the default winner at most
 salaries, and it is assumed knowledge throughout.
@@ -238,7 +259,18 @@ naturally with item 19, which also wants explanatory text near the chart.
 
 ### 10. Never asks whether the reader's employer offers salary packaging
 
-- [ ] **Effort** M · **Files** `public/index.html`, `public/ui/{state,app,slider}.js`
+- [x] **Done** — `employerOffersNovated`, defaulted true, declared in
+  `BOOLEAN_FIELDS` so a shared link round-trips it (the generic numeric path
+  would have turned `'false'` into `NaN` and silently re-enabled the lease).
+  Unticking bars a lease from winning but keeps its real ceiling: unavailable is
+  not unaffordable, so no blocker and no zeroed figure. One
+  `novated-unavailable` class on `#afford` and `#cars` dims the chart's lease
+  line, its legend entry and the shortlist's novated rows, rather than teaching
+  two renderers to draw a greyed variant of themselves.
+- **Note**: the eligibility flag is a sibling of `inputs` in `verdictAt`, not a
+  member of it — `inputs` is the calc engine's contract, and whose employer runs
+  a scheme is not a fact about the money.
+- **Effort** M · **Files** `public/index.html`, `public/ui/{state,app,slider}.js`
 
 **Symptom** A novated lease requires an employer that offers it. Sole traders,
 casuals, many small employers and some public-sector schemes are out.
@@ -257,7 +289,15 @@ novated line (visibly de-emphasised), and the shared URL round-trips the flag.
 
 ### 11. The winner headline is a ceiling that reads as affordability
 
-- [ ] **Effort** M · **Files** `public/ui/slider.js`, `public/styles.css`
+- [x] **Done** — the commitment ("on $900 a month for 5 years") sits beside the
+  ceiling at comparable weight; `verdictAt` now returns `budgetMonthly` and
+  `termMonths` so the panel can say it. The trophy is replaced by a 3rem rule in
+  the winning option's own colour, reusing item 2's `--option-line`. The winner's
+  own obligation — the balloon, on a lease — is promoted out of 0.75rem grey.
+- **Note**: the balloon is promoted in place rather than repeated in the
+  headline. Two adjacent elements saying the same thing is the duplication this
+  panel was criticised for before.
+- **Effort** M · **Files** `public/ui/slider.js`, `public/styles.css`
 
 **Symptom** `🏆 Novated lease — up to $61,802` (`slider.js:135`). It is a price
 ceiling under a specific set of assumptions; reaching it means a balloon payment
@@ -272,7 +312,10 @@ Replace with a coloured rule in the winning option's hue (see item 2).
 
 ### 12. Novated total sits below the car's price with no explanation
 
-- [ ] **Effort** S · **Files** `public/ui/cars.js`
+- [x] **Done** — the caption carries both missing qualifiers once, rather than
+  repeating them on three rows: "Totals are over 5 years, after resale". The
+  period comes from the state's own term via `termLabel`.
+- **Effort** S · **Files** `public/ui/cars.js`
 
 **Symptom** Model 3 card: total cost $43,404 against a $61,990 car. Correct —
 the balloon and projected resale net out — but it looks like an error until the
@@ -283,7 +326,9 @@ the term, after resale".
 
 ### 13. Nothing states that the monthly figures include running costs
 
-- [ ] **Effort** S · **Files** `public/index.html` or `public/ui/slider.js`
+- [x] **Done** — a hint under the budget slider, which is where the page's
+  monthly unit is set, rather than beside each figure that uses it.
+- **Effort** S · **Files** `public/index.html`
 
 **Symptom** All three options fold charging, rego, servicing and tyres into
 `monthlyCost` (`calc/compare.js:118-145`). This is right, and it is what makes
@@ -296,7 +341,15 @@ important once item 7 puts monthly figures on the cards.
 
 ### 14. Empty shortlist doesn't name the binding filter
 
-- [ ] **Effort** M · **Files** `public/ui/app.js`
+- [x] **Done** — `diagnoseEmptyFilters` (`ui/cars.js`) drops each active filter in
+  turn and reports the one that alone brings the list back, with the value that
+  would work computed from the remaining pool: *"Easing the range minimum to
+  750km gives you 24 cars."* Where two filters are jointly binding it returns
+  null and the caller says so rather than giving advice that would not help.
+  Subsumes the PHEV-only special case, which keeps its better wording.
+- **Note**: the suggested value respects the filters that are staying, not the
+  whole fleet — otherwise it names a number that still returns nothing.
+- **Effort** M · **Files** `public/ui/app.js`, `public/ui/cars.js`
 
 **Symptom** "No car in the dataset matches these preferences. Try relaxing one."
 (`app.js:190`) leaves the reader to bisect five filters by hand.
@@ -327,7 +380,12 @@ marks it as not-yours.
 
 ### 16. Explanatory content is hover-only, so touch users cannot reach it
 
-- [ ] **Effort** M · **Files** `public/ui/crossover-chart.js`, `public/styles.css`
+- [x] **Done** — `chartNotesMarkup` prints the same explanations in text below the
+  chart, in a `<details>` closed by default. The hover tooltips stay for pointer
+  users; they are simply no longer the only route. `cliffExplanation` and
+  `entryExplanation` are shared by the badge and the note, so the two cannot
+  drift apart the way two copies of the copy would.
+- **Effort** M · **Files** `public/ui/crossover-chart.js`, `public/styles.css`
 
 **Symptom** Two separate mechanisms, same flaw. The axis key's explanations
 appear on hover and follow the pointer (`crossover-chart.js:414-448`); the two
@@ -345,7 +403,11 @@ explanations are reachable.
 
 ### 17. Both chart markers use the same glyph
 
-- [ ] **Effort** S · **Files** `public/ui/crossover-chart.js`
+- [x] **Done** — the cliff is a warning and draws "!", the entry point is
+  information and keeps "i". Each note in the block from item 16 is prefixed with
+  the glyph its badge draws, in the badge's colour, which is the key the two
+  markers never had.
+- **Effort** S · **Files** `public/ui/crossover-chart.js`
 
 **Symptom** The FBT cliff and the loan entry point both render a lowercase "i",
 distinguished only by colour (red and blue), with no key anywhere.
@@ -354,7 +416,13 @@ distinguished only by colour (red and blue), with no key anywhere.
 
 ### 18. Y-axis ticks are data-derived, not round
 
-- [ ] **Effort** S · **Files** `public/ui/crossover-chart.js`
+- [x] **Done** — `niceTicks` now picks a conventional 1/2/2.5/5 step and emits
+  multiples of it, so the axis reads $50k / $75k / $100k rather than $33k / $74k
+  / $116k. Ticks fall inside the true bounds rather than extending them: the lines
+  are scaled to the data, and stretching the axis outward would pad the plot with
+  space no data reaches. The step is the smallest that keeps the tick count within
+  what was asked for, so a phone does not gain gridlines as the range widens.
+- **Effort** S · **Files** `public/ui/crossover-chart.js`
 
 **Symptom** The axis reads `$33k / $74k / $116k`. The reader is estimating line
 positions against those.
@@ -365,7 +433,10 @@ extents.
 
 ### 19. The best explanation on the page is buried in a tooltip
 
-- [ ] **Effort** S · **Files** `public/ui/crossover-chart.js`
+- [x] **Done** — it appears in the notes block as "Why the novated line flattens",
+  in full, alongside "Why the car loan line starts late". Placement, as
+  predicted; the copy needed no rewriting.
+- **Effort** S · **Files** `public/ui/crossover-chart.js`
 
 **Symptom** The FBT cliff marker's own text already says it:
 
@@ -385,7 +456,11 @@ full text in the marker. The copy is written; this is placement, not authoring.
 
 ### 20. The two money fields are in different places
 
-- [ ] **Effort** S · **Files** `public/index.html`, `public/ui/slider.js`
+- [x] **Done** — the deposit moved out of the collapsed rates panel and up beside
+  savings in step 1, and out of `RATE_FIELDS` entirely so there is one control per
+  field. It was also the wrong tenant for that panel: every other field there is
+  a market rate with a citation, and a deposit is a decision.
+- **Effort** S · **Files** `public/index.html`, `public/ui/slider.js`
 
 **Symptom** "Savings you could spend outright" is in step 1 (`index.html:88`);
 "Deposit on a car loan" is inside the collapsed *Rates and settings* disclosure
@@ -396,7 +471,16 @@ type it into savings and get an answer that ignores it.
 
 ### 21. Boot litres and range km demand numbers people don't have
 
-- [ ] **Effort** M · **Files** `public/index.html`, `public/ui/sections.js`
+- [x] **Done** — preset pills above each box (*Weekly shop 300L / Pram and gear
+  450L / Camping, dogs 550L*; *City only 300km / Weekend trips 450km / Long
+  highway runs 550km*), each showing the figure it stands for so the reader learns
+  the unit rather than guessing it. An "Any" pill clears the filter. The number
+  box stays for anyone who knows their figure.
+- **Note**: `bindPresets` knows nothing about state — it writes the input and
+  dispatches the same `input` event a keystroke would, so `renderInputs` remains
+  the single path into state. `syncPresets` marks whichever pill matches on every
+  render, since the value can also change from the box or a shared link.
+- **Effort** M · **Files** `public/index.html`, `public/ui/sections.js`
 
 **Symptom** Both ask for a figure the reader must invent. The dog-crate hint
 (`index.html:143`) shows the problem is already understood.
@@ -415,7 +499,14 @@ It is both the lease/loan length and the window every total is computed over.
 
 ### 23. Salary renders without thousands separators
 
-- [ ] **Effort** S · **Files** `public/index.html:63`, `public/ui/sections.js`
+- [x] **Done** — a formatted echo below the box (`renderEchoes`), so an extra zero
+  is obvious at a glance. Kept as an echo rather than switching to a text input:
+  that would mean stripping separators back out on every keystroke and would cost
+  the numeric keypad on a phone.
+- **Note**: applied to savings and the loan deposit as well, not just salary.
+  They sit side by side and formatting only one of three would read as an
+  oversight. Blank and zero echo nothing — "$0" beside an empty box is noise.
+- **Effort** S · **Files** `public/index.html`, `public/ui/{sections,app}.js`
 
 `100000` is hard to read and easy to mistype by an order of magnitude. Formatting
 inside `type="number"` isn't possible directly — either format on blur with a

@@ -1,6 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { toPolylines, toSegments, renderChart, layoutCrossoverLabels, wrapText } from './crossover-chart.js';
+import {
+  toPolylines, toSegments, renderChart, layoutCrossoverLabels, wrapText,
+  niceTicks, chartNotesMarkup, cliffExplanation, entryExplanation
+} from './crossover-chart.js';
 
 const series = {
   points: [
@@ -616,3 +619,98 @@ test('the accessible description explains the axes in capacity terms', () => {
 });
 
 // Under capacity the leader is the option reaching the DEAREST car, where the
+
+// --- Round axis ticks ------------------------------------------------------
+// niceTicks used to interpolate between the data's own min and max, so the axis
+// read "$33k / $74k / $116k" — three numbers a reader has to decode before they
+// can estimate where a line sits, which is the axis's only job.
+
+test('ticks land on round numbers rather than on the data bounds', () => {
+  const ticks = niceTicks(32606, 115989, 3);
+  assert.ok(ticks.length >= 2, 'expected at least two gridlines');
+  for (const tick of ticks) {
+    assert.equal(tick % 25000, 0, `${tick} is not a round value`);
+  }
+});
+
+test('every tick stays inside the plotted range', () => {
+  // Ticks inside the bounds rather than extending them: the lines are scaled to
+  // the true min and max, and stretching the axis outward would pad the plot
+  // with space no data reaches.
+  const ticks = niceTicks(32606, 115989, 3);
+  for (const tick of ticks) {
+    assert.ok(tick >= 32606 && tick <= 115989, `${tick} is outside the range`);
+  }
+});
+
+test('the tick count never exceeds what was asked for', () => {
+  for (const [min, max] of [[0, 10], [32606, 115989], [1000, 1_000_000], [45, 91]]) {
+    assert.ok(niceTicks(min, max, 3).length <= 3, `${min}-${max} produced too many ticks`);
+  }
+});
+
+test('a flat series still yields one tick rather than crashing', () => {
+  assert.deepEqual(niceTicks(62835, 62835, 3), [62835]);
+});
+
+// The step candidates scale with the range, so even an absurdly narrow one gets
+// real ticks rather than the endpoint fallback — which makes that fallback a
+// guard against a range this function cannot currently be handed, not a path.
+// Asserted here so the claim is checked rather than assumed.
+test('even an absurdly narrow range gets round ticks', () => {
+  const ticks = niceTicks(1.0001, 1.0002, 3);
+  assert.ok(ticks.length >= 2 && ticks.length <= 3);
+  for (const tick of ticks) {
+    assert.ok(tick >= 1.0001 && tick <= 1.0002, `${tick} is outside the range`);
+  }
+});
+
+// --- The explanations, in text --------------------------------------------
+// The hover tooltips stay, but they cannot be the only way to reach this: a
+// tooltip needs a pointer, and the viewport where the chart is smallest and
+// hardest to read has none.
+
+test('the notes carry both axis explanations', () => {
+  const html = chartNotesMarkup(wideSeries, null, null);
+  assert.match(html, /X-Axis/);
+  assert.match(html, /Y-Axis/);
+  assert.match(html, /the same figure as the slider above/);
+});
+
+test('the cliff explanation appears in the notes, not only in a tooltip', () => {
+  const html = chartNotesMarkup(wideSeries, cliffFixture, null);
+  assert.match(html, /Why the novated line flattens/);
+  assert.match(html, /\$91,661/);
+  assert.match(html, /lost outright/);
+});
+
+test('a note carries the glyph its badge draws, which is the key the two never had', () => {
+  const html = chartNotesMarkup(wideSeries, cliffFixture, null);
+  // The cliff is a warning and draws "!"; the entry point is information and
+  // draws "i". Both used to draw "i", told apart only by colour.
+  assert.match(html, /chart-notes__glyph--cliff" aria-hidden="true">!</);
+});
+
+test('a note with nothing to say is omitted rather than left blank', () => {
+  const html = chartNotesMarkup(wideSeries, null, null);
+  assert.ok(!/Why the novated line flattens/.test(html));
+  assert.ok(!/Why the car loan line starts late/.test(html));
+});
+
+test('the explanations are shared with the markers rather than written twice', () => {
+  // The same function feeds the badge tooltip and the note, so the two cannot
+  // drift apart the way two copies of this copy would.
+  assert.equal(cliffExplanation(null), null);
+  assert.match(cliffExplanation(cliffFixture), /FBT cliff at \$91,661/);
+  // The loan line starts at the left edge of wideSeries, so there is no entry
+  // point to introduce.
+  assert.equal(entryExplanation(wideSeries, { budget: 700 }), null);
+});
+
+test('the notes ship with the chart', () => {
+  withMatchMedia(true, () => {
+    const { root, getHtml } = fakeChartRoot();
+    renderChart(root, wideSeries, 800, cliffFixture);
+    assert.match(getHtml(), /chart-notes/);
+  });
+});

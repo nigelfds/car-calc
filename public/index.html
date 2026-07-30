@@ -70,8 +70,15 @@
           <div class="field__input">
             <span class="field__prefix" aria-hidden="true">$</span>
             <input type="number" id="grossSalary" name="grossSalary" data-field="grossSalary"
-              min="0" step="1000" value="100000" inputmode="numeric" />
+              min="0" step="1000" value="100000" inputmode="numeric" data-echo="grossSalary" />
           </div>
+          <!-- `type="number"` cannot show thousands separators, and "100000" is
+               both hard to read and easy to fat-finger by a factor of ten. The
+               echo below restates what was typed, formatted, so an extra zero is
+               obvious at a glance. Kept as an echo rather than switching to a
+               text input: that would mean stripping separators back out on every
+               keystroke, and would cost the numeric keypad on a phone. -->
+          <output class="field__echo" for="grossSalary" data-echo-for="grossSalary"></output>
         </div>
 
         <!-- The monthly budget lives in step 2, on the slider, and nowhere
@@ -98,9 +105,28 @@
           <div class="field__input">
             <span class="field__prefix" aria-hidden="true">$</span>
             <input type="number" id="savings" name="savings" data-field="savings"
-              min="0" step="500" value="0" inputmode="numeric" />
+              min="0" step="500" value="0" inputmode="numeric" data-echo="savings" />
           </div>
+          <output class="field__echo" for="savings" data-echo-for="savings"></output>
           <p class="field__hint">Buying outright needs this to cover the full drive-away price. Leave it at $0 if you would finance the car.</p>
+        </div>
+
+        <!-- Moved out of the collapsed "Rates and settings" panel and up here,
+             beside the savings field it kept being confused with. Savings is what
+             makes buying outright possible; this is what reduces the amount you
+             borrow. Someone with $20,000 meaning to put it down on a loan typed
+             it into savings and got an answer that ignored it, because the field
+             that would have used it was two disclosures away. -->
+        <div class="field">
+          <label for="deposit">Deposit on a car loan</label>
+          <div class="field__input">
+            <span class="field__prefix" aria-hidden="true">$</span>
+            <input type="number" id="deposit" name="deposit" data-field="deposit"
+              min="0" step="500" value="0" inputmode="numeric" data-echo="deposit" />
+          </div>
+          <output class="field__echo" for="deposit" data-echo-for="deposit"></output>
+          <p class="field__hint">Reduces how much you borrow, so it lowers the monthly repayment.
+            Not used by a novated lease or by paying cash.</p>
         </div>
 
         <div class="field">
@@ -161,8 +187,19 @@
           <p class="field__hint">Leave all unticked to consider every body type.</p>
         </fieldset>
 
+        <!-- Litres of boot space is not a unit anyone carries around. The dog
+             crate hint below was already an admission of that; these presets
+             answer the question in the terms people actually think in and write
+             the number for them. The box stays for anyone who does know their
+             figure, and shows whatever a preset put there. -->
         <div class="field">
           <label for="minBootLitres">Minimum boot space</label>
+          <div class="preset-row">
+            <button type="button" class="preset" data-preset-for="minBootLitres" data-preset-value="">Any</button>
+            <button type="button" class="preset" data-preset-for="minBootLitres" data-preset-value="300">Weekly shop <span class="preset__value">300L</span></button>
+            <button type="button" class="preset" data-preset-for="minBootLitres" data-preset-value="450">Pram and gear <span class="preset__value">450L</span></button>
+            <button type="button" class="preset" data-preset-for="minBootLitres" data-preset-value="550">Camping, dogs <span class="preset__value">550L</span></button>
+          </div>
           <div class="field__input">
             <input type="number" id="minBootLitres" name="minBootLitres" data-field="minBootLitres"
               min="0" step="10" inputmode="numeric" placeholder="any" />
@@ -183,6 +220,14 @@
 
         <div class="field">
           <label for="minRangeKm">Minimum range</label>
+          <!-- Same reasoning as the boot presets: people know what they drive,
+               not how many kilometres of rated range that needs. -->
+          <div class="preset-row">
+            <button type="button" class="preset" data-preset-for="minRangeKm" data-preset-value="">Any</button>
+            <button type="button" class="preset" data-preset-for="minRangeKm" data-preset-value="300">City only <span class="preset__value">300km</span></button>
+            <button type="button" class="preset" data-preset-for="minRangeKm" data-preset-value="450">Weekend trips <span class="preset__value">450km</span></button>
+            <button type="button" class="preset" data-preset-for="minRangeKm" data-preset-value="550">Long highway runs <span class="preset__value">550km</span></button>
+          </div>
           <div class="field__input">
             <input type="number" id="minRangeKm" name="minRangeKm" data-field="minRangeKm"
               min="0" step="25" inputmode="numeric" placeholder="any" />

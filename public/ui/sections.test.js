@@ -1,7 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { applyPreferences, renderInputs, bindFreeText } from './sections.js';
+import {
+  applyPreferences, renderInputs, bindFreeText, bindPresets, syncPresets, renderEchoes
+} from './sections.js';
 
 const base = {
   grossSalary: 100000, monthlyBudget: 900, termMonths: 60,
@@ -546,4 +548,98 @@ test('every checkbox in index.html is handled by renderInputs without throwing',
     renderInputs({ querySelectorAll: () => inputs }, () => state, () => {});
     for (const input of inputs) input.fire();
   });
+});
+
+// --- Presets ---------------------------------------------------------------
+// Litres of boot space and kilometres of range are not units people carry
+// around. The presets answer the question in the terms they do think in, and
+// write the number for them — through the same 'input' event a keystroke would
+// fire, so there is exactly one path into state.
+
+function fakePresetDom({ presetValue, inputValue = '' }) {
+  const events = [];
+  const input = {
+    value: inputValue,
+    dispatchEvent(event) { events.push(event.type); return true; }
+  };
+  const button = {
+    dataset: { presetFor: 'minBootLitres', presetValue },
+    classList: {
+      classes: new Set(),
+      toggle(name, on) { if (on) this.classes.add(name); else this.classes.delete(name); },
+      has(name) { return this.classes.has(name); }
+    },
+    attributes: {},
+    setAttribute(name, value) { this.attributes[name] = value; },
+    addEventListener(type, fn) { if (type === 'click') this.click = fn; }
+  };
+  const root = {
+    querySelectorAll: () => [button],
+    querySelector: sel => (sel === '#minBootLitres' ? input : null)
+  };
+  return { root, button, input, events };
+}
+
+test('a preset writes its value into the field it names', () => {
+  const { root, button, input, events } = fakePresetDom({ presetValue: '450' });
+  bindPresets(root);
+  button.click();
+  assert.equal(input.value, '450');
+  assert.deepEqual(events, ['input'], 'must go through the same event a keystroke fires');
+});
+
+// "Any" has to clear the filter by the same route a cleared box does — an empty
+// string, which is what makes minBootLitres mean "no minimum".
+test('the Any preset clears the field rather than writing a zero', () => {
+  const { root, button, input } = fakePresetDom({ presetValue: '', inputValue: '450' });
+  bindPresets(root);
+  button.click();
+  assert.equal(input.value, '');
+});
+
+test('the preset matching the current value is marked active and pressed', () => {
+  const { root, button } = fakePresetDom({ presetValue: '450', inputValue: '450' });
+  syncPresets(root);
+  assert.ok(button.classList.has('is-active'));
+  assert.equal(button.attributes['aria-pressed'], 'true');
+});
+
+test('a preset that does not match the current value is not marked', () => {
+  const { root, button } = fakePresetDom({ presetValue: '450', inputValue: '300' });
+  syncPresets(root);
+  assert.ok(!button.classList.has('is-active'));
+  assert.equal(button.attributes['aria-pressed'], 'false');
+});
+
+// The state can change from the box, a shared link or another preset, so the row
+// has to be able to go back to unmarked as well as forward to marked.
+test('the active mark is removed once the value moves off the preset', () => {
+  const { root, button, input } = fakePresetDom({ presetValue: '450', inputValue: '450' });
+  syncPresets(root);
+  assert.ok(button.classList.has('is-active'));
+  input.value = '600';
+  syncPresets(root);
+  assert.ok(!button.classList.has('is-active'));
+});
+
+// --- Formatted echoes ------------------------------------------------------
+// type="number" cannot show thousands separators, so "100000" was hard to read
+// and easy to mistype by a factor of ten.
+
+function fakeEchoDom(fields) {
+  const outputs = fields.map(field => ({ dataset: { echoFor: field }, textContent: 'stale' }));
+  return { root: { querySelectorAll: () => outputs }, outputs };
+}
+
+test('an echo restates the field value, formatted', () => {
+  const { root, outputs } = fakeEchoDom(['grossSalary']);
+  renderEchoes(root, { grossSalary: 100000 }, value => `$${value.toLocaleString('en-AU')}`);
+  assert.equal(outputs[0].textContent, '$100,000');
+});
+
+test('a zero or blank field echoes nothing rather than "$0"', () => {
+  const { root, outputs } = fakeEchoDom(['savings', 'deposit']);
+  renderEchoes(root, { savings: 0, deposit: null }, value => `$${value}`);
+  assert.equal(outputs[0].textContent, '');
+  assert.equal(outputs[1].textContent, '');
 });

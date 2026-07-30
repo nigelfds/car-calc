@@ -133,9 +133,52 @@ function valueToX(series, value, width) {
   return ((clamped - first) / span) * width;
 }
 
-function niceTicks(min, max, count) {
+// Round tick values, which this did not previously produce: it interpolated
+// between the data's own min and max, so a range of $32,606-$115,989 gave an
+// axis reading "$33k / $74k / $116k". Every one of those is a number the reader
+// has to decode before they can use it to estimate where a line sits, which is
+// the axis's only job.
+//
+// Steps are the conventional 1 / 2 / 2.5 / 5 series across neighbouring
+// magnitudes, and the chosen step is the smallest that keeps the tick count
+// within what was asked for — so the axis stays legible on a phone rather than
+// gaining gridlines as the range widens. Ticks fall inside [min, max] rather
+// than extending it: the lines are scaled to the true bounds, and stretching
+// the axis to the nearest round number would leave the plot padded with space
+// no data reaches.
+const TICK_MANTISSAS = [1, 2, 2.5, 5];
+
+function tickSteps(rawStep) {
+  const magnitude = 10 ** Math.floor(Math.log10(rawStep || 1));
+  const steps = [];
+  for (const scale of [magnitude / 10, magnitude, magnitude * 10, magnitude * 100]) {
+    for (const mantissa of TICK_MANTISSAS) steps.push(mantissa * scale);
+  }
+  return [...new Set(steps)].sort((a, b) => a - b);
+}
+
+function ticksAtStep(min, max, step) {
+  const ticks = [];
+  // A hair of tolerance on the top so a tick landing exactly on max survives
+  // floating-point drift rather than being dropped.
+  for (let tick = Math.ceil(min / step) * step; tick <= max + step * 1e-9; tick += step) {
+    ticks.push(Math.round(tick * 1e6) / 1e6);
+  }
+  return ticks;
+}
+
+export function niceTicks(min, max, count) {
   if (min === max) return [min];
-  return Array.from({ length: count }, (_, i) => min + ((max - min) * i) / (count - 1));
+  const rawStep = (max - min) / Math.max(count - 1, 1);
+
+  for (const step of tickSteps(rawStep)) {
+    const ticks = ticksAtStep(min, max, step);
+    if (ticks.length >= 2 && ticks.length <= count) return ticks;
+  }
+
+  // No round step fits — a range narrower than the smallest candidate step, or
+  // a single-tick fit. The endpoints are still more use than nothing.
+  return [min, max];
 }
 
 // Direct end-labels sit beside whichever line ends highest/lowest on
@@ -188,6 +231,14 @@ export function layoutCrossoverLabels(entries, options = {}) {
 // Returns '' when the marker would fall outside the charted budget range:
 // valueToX clamps, so it would otherwise be pinned to an axis end and read as
 // though it belonged there.
+// Both markers used to draw a lowercase "i", told apart only by colour — a red
+// circle and a blue one, meaning two unrelated things, with no key anywhere on
+// the page. Colour alone was never enough (it is the same CVD problem the line
+// dash patterns exist to solve), and two identical glyphs are not a key even in
+// full colour. The cliff is a warning and gets "!"; the entry point is
+// information and keeps "i".
+const MARKER_GLYPH = { cliff: '!', entry: 'i' };
+
 function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeight, badgeY = 8, chars }) {
   const first = series.points[0].budget;
   const last = series.points[series.points.length - 1].budget;
@@ -205,7 +256,7 @@ function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeig
       <line class="chart-marker__line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${badgeY + 6}" y2="${plotHeight}" />
       <circle class="chart-marker__badge" cx="${x.toFixed(1)}" cy="${badgeY}" r="7" />
       <text class="chart-marker__glyph" x="${x.toFixed(1)}" y="${badgeY}" text-anchor="middle"
-        dominant-baseline="central">i</text>
+        dominant-baseline="central">${MARKER_GLYPH[variant] ?? 'i'}</text>
       <!-- A <g> has no fill of its own, so without this the only hoverable
            pixels are a 7px circle and a 1px rule. Transparent, and kept to
            the badge so it never covers the plotted points behind it. -->
@@ -218,16 +269,25 @@ function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeig
 // the FBT exemption is a cliff, not a taper, so past a certain car price the
 // monthly cost roughly doubles and the lease simply stops being able to
 // reach anything dearer.
-function fbtCliffMarkup(series, cliff, plotWidth, plotHeight, chars) {
-  if (!cliff) return '';
-  // Kept tight on purpose: at disclaimer-sized text the box has to fit inside
-  // the plot, and a wall of small print is not much better than no note.
-  const explanation =
-    `FBT cliff at ${money(cliff.cliffPrice)}. A novated lease is FBT-exempt up to this price; ` +
-    `one dollar over and the exemption is lost outright, with no taper, and the monthly cost ` +
-    `roughly doubles. That is why the novated line flattens here: until your budget can ` +
+// Split out from the marker so the same words can also be printed below the
+// chart, where a reader with no pointer can get at them. This sentence explains
+// the most important shape on the chart — the plateau — and it used to be
+// reachable only by hovering a 12px circle.
+//
+// Kept tight on purpose: at disclaimer-sized text the tooltip box has to fit
+// inside the plot, and a wall of small print is not much better than no note.
+export function cliffExplanation(cliff) {
+  if (!cliff) return null;
+  return `FBT cliff at ${money(cliff.cliffPrice)}. A novated lease is FBT-exempt up to this ` +
+    `price; one dollar over and the exemption is lost outright, with no taper, and the monthly ` +
+    `cost roughly doubles. That is why the novated line flattens here: until your budget can ` +
     `absorb the unexempted cost, a lease cannot reach a dearer car however much the budget ` +
     `rises. Crossing it needs about ${money(cliff.budgetNeeded)}/mo.`;
+}
+
+function fbtCliffMarkup(series, cliff, plotWidth, plotHeight, chars) {
+  const explanation = cliffExplanation(cliff);
+  if (!explanation) return '';
 
   return chartMarker({
     series, budget: cliff.budgetAt, explanation,
@@ -245,27 +305,38 @@ function fbtCliffMarkup(series, cliff, plotWidth, plotHeight, chars) {
 // placing the badge at the threshold left it floating ~15px clear of the line
 // it was labelling. The precise threshold is still what the tooltip quotes —
 // it is the number the reader needs — but the badge points at the line.
-function entryMarkup(series, entry, plotWidth, plotHeight, chars) {
-  if (!entry) return '';
-
+// Returns the budget the marker belongs at, or null when there is nothing to
+// introduce — so the notes block below the chart can ask the same question the
+// marker does without duplicating the reasoning.
+function entryBudget(series, entry) {
+  if (!entry) return null;
   const firstPlotted = series.points.findIndex(point => point.loan !== null);
   // The loan never appears in this range, so there is no line to introduce.
-  if (firstPlotted < 0) return '';
+  if (firstPlotted < 0) return null;
   // Nothing to explain when the line starts at the left edge anyway.
-  if (firstPlotted === 0) return '';
+  if (firstPlotted === 0) return null;
+  return series.points[firstPlotted].budget;
+}
 
-  // Deliberately no car named. The line is drawn from a typical EV's running
-  // costs, so quoting one real car's monthly figure beside it invites a
-  // comparison between two numbers that are not measuring the same thing.
-  const explanation =
-    `The car loan line starts here. Below this budget a loan cannot cover even the cheapest ` +
-    `car on the market, so there is nothing to plot. A longer term or a bigger deposit would ` +
-    `lower the entry point and start the line sooner.`;
+// Deliberately no car named. The line is drawn from a typical EV's running
+// costs, so quoting one real car's monthly figure beside it invites a comparison
+// between two numbers that are not measuring the same thing.
+export function entryExplanation(series, entry) {
+  if (entryBudget(series, entry) === null) return null;
+  return `The car loan line starts here. Below this budget a loan cannot cover even the ` +
+    `cheapest car on the market, so there is nothing to plot. A longer term or a bigger ` +
+    `deposit would lower the entry point and start the line sooner.`;
+}
+
+function entryMarkup(series, entry, plotWidth, plotHeight, chars) {
+  const budget = entryBudget(series, entry);
+  const explanation = entryExplanation(series, entry);
+  if (budget === null || !explanation) return '';
 
   // Sits below the cliff badge so the two never overlap when they land close
   // together on the budget axis.
   return chartMarker({
-    series, budget: series.points[firstPlotted].budget, explanation,
+    series, budget, explanation,
     variant: 'entry', plotWidth, plotHeight, badgeY: 26, chars
   });
 }
@@ -414,6 +485,38 @@ function axisKeyMarkup() {
       <dd class="axis-key__label">${escapeAttr(label)}</dd>
       <span class="axis-key__tip" role="tooltip">${escapeAttr(explanation)}</span>
     </div>`).join('')}</dl>`;
+}
+
+// Everything the chart has to say, in text, below the chart.
+//
+// The hover tooltips stay — they are quick and well placed for a pointer — but
+// they can no longer be the only way to reach this. A tooltip needs a pointer to
+// hover with, and on the viewport where the chart is smallest and hardest to
+// read there is no pointer at all. The axis explanations and both marker
+// explanations were unreachable on every phone and tablet.
+//
+// A <details> rather than always-open prose: this is four paragraphs of
+// explanation under a chart most readers will simply look at, and the summary
+// says plainly what is inside. Each marker note is prefixed with the glyph its
+// badge draws, which is also the key those two badges never had.
+export function chartNotesMarkup(series, cliff, entry) {
+  const notes = [
+    ...AXIS_KEY.map(({ axis, label, explanation }) => ({
+      term: `${axis} — ${label}`, body: explanation, glyph: null
+    })),
+    { term: 'Why the novated line flattens', body: cliffExplanation(cliff), glyph: MARKER_GLYPH.cliff },
+    { term: 'Why the car loan line starts late', body: entryExplanation(series, entry), glyph: MARKER_GLYPH.entry }
+  ].filter(note => note.body);
+
+  return `<details class="chart-notes">
+      <summary class="chart-notes__summary">What this chart is telling you</summary>
+      <dl class="chart-notes__list">${notes.map(({ term, body, glyph }) => `
+        <dt class="chart-notes__term">${
+          glyph ? `<span class="chart-notes__glyph chart-notes__glyph--${glyph === MARKER_GLYPH.cliff ? 'cliff' : 'entry'}" aria-hidden="true">${glyph}</span>` : ''
+        }${escapeAttr(term)}</dt>
+        <dd class="chart-notes__body">${escapeAttr(body)}</dd>`).join('')}
+      </dl>
+    </details>`;
 }
 
 // Same behaviour the SVG notes had: the explainer appears on hover and follows
@@ -582,7 +685,8 @@ function renderLineChart(target, series, budgetMonthly, cliff, entry, compact = 
         ${budgetMarkup}
       </g>
     </svg>
-    ${axisKeyMarkup()}`;
+    ${axisKeyMarkup()}
+    ${chartNotesMarkup(series, cliff, entry)}`;
 
   // Must run after the markup lands, since they bind to the new nodes.
   bindTipTracking(target);

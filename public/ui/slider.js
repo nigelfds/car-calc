@@ -286,19 +286,16 @@ const RATE_FIELDS = [
     step: 1,
     allowEmpty: true,
     fallbackNote: "Defaults to the ATO's statutory minimum residual for your term. Leave blank unless your financier has quoted a different figure."
-  },
-  {
-    field: 'deposit',
-    label: 'Deposit on a car loan',
-    prefix: '$',
-    step: 500,
-    fallbackNote: 'Reduces how much you need to borrow for the direct-loan option. Not used by novated lease or cash.'
   }
+  // The loan deposit used to be the tenth field here. It has moved to step 1,
+  // beside "Savings you could spend outright", because those two were being
+  // confused with each other and only one of them was findable. It is also not
+  // what this panel is for: every other field here is a market rate with a
+  // citation, and a deposit is a decision.
 ];
 
 const FIELD_DEFAULTS = {
-  residualPctOverride: null,
-  deposit: 0
+  residualPctOverride: null
 };
 
 function fieldMarkup({ field, label, prefix, suffix, step, allowEmpty, fallbackNote }, state, rates) {
@@ -347,8 +344,7 @@ export function renderRatesPanel(root, state, onChange, rates = null) {
     petrolCentsPerLitre: rates?.petrolCentsPerLitre,
     otherRunningCostsAnnual: rates?.otherRunningCostsAnnual,
     opportunityRatePct: rates?.opportunityRatePct,
-    residualPctOverride: FIELD_DEFAULTS.residualPctOverride,
-    deposit: FIELD_DEFAULTS.deposit
+    residualPctOverride: FIELD_DEFAULTS.residualPctOverride
   };
 
   panel._ratesState = state;

@@ -7,7 +7,7 @@
 // them are currently unwired (see the note where maybeExplain used to be).
 
 import { defaultState, toQueryString, fromQueryString } from './state.js';
-import { renderInputs } from './sections.js';
+import { renderInputs, bindPresets, syncPresets, renderEchoes } from './sections.js';
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
 import {
@@ -240,6 +240,10 @@ function boot(root, dataset) {
   function render() {
     history.replaceState(null, '', location.pathname + toQueryString(state, defaults));
     syncFieldInputs(root, state);
+    // After syncFieldInputs, both of these: the presets read the inputs it has
+    // just written, and the echoes restate the state those inputs now show.
+    syncPresets(root);
+    renderEchoes(root, state, money);
     if (budgetOutput) budgetOutput.textContent = money(state.monthlyBudget);
 
     // The battery-share control is meaningless without a plug-in hybrid to
@@ -343,6 +347,10 @@ function boot(root, dataset) {
   // `state`; renderInputs must read it live, at event time, or a second
   // field edited after the first discards the first (C1).
   renderInputs(root, () => state, onFieldChange, defaults);
+  // Bound once, at boot, like renderInputs's own listeners. The buttons drive
+  // their inputs rather than state directly, so this needs nothing from the
+  // closure.
+  bindPresets(root);
 
   // Written once at boot: the dataset is fetched once and never changes
   // during a session, so this does not belong in render().

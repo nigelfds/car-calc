@@ -123,6 +123,54 @@ export function renderInputs(root, getState, onChange, defaults = {}) {
   }
 }
 
+// Preset buttons that fill a number field for the reader.
+//
+// Deliberately knows nothing about state. It writes the value into the input and
+// dispatches the same 'input' event a keystroke would, so renderInputs's own
+// listener does the rest — parsing, the touched set, the recompute. A second
+// path into state is how two sources of truth start, and the empty-string preset
+// ("Any") has to clear the filter by exactly the same route a cleared box does.
+export function bindPresets(root) {
+  for (const button of root.querySelectorAll('[data-preset-for]')) {
+    const input = root.querySelector(`#${button.dataset.presetFor}`);
+    if (!input) continue;
+
+    button.addEventListener('click', () => {
+      input.value = button.dataset.presetValue ?? '';
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  }
+}
+
+// Marks whichever preset matches the current value, so the row reads as the
+// state of the filter rather than as four buttons that do something. Called on
+// every render: the value can change from the box, a shared link or another
+// preset, and the row has to follow all three.
+export function syncPresets(root) {
+  for (const button of root.querySelectorAll('[data-preset-for]')) {
+    const input = root.querySelector(`#${button.dataset.presetFor}`);
+    if (!input) continue;
+    const current = input.value ?? '';
+    const isActive = String(button.dataset.presetValue ?? '') === String(current);
+    button.classList.toggle('is-active', isActive);
+    // Pressed rather than selected: these are toggle buttons, not a listbox.
+    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  }
+}
+
+// Restates a numeric field's value, formatted, beside the box. `type="number"`
+// cannot show thousands separators, so "100000" was both hard to read and easy
+// to mistype by a factor of ten.
+export function renderEchoes(root, state, format) {
+  for (const output of root.querySelectorAll('[data-echo-for]')) {
+    const field = output.dataset.echoFor;
+    const value = state[field];
+    // Nothing to echo for a blank or zero field: "$0" beside an empty box is
+    // noise, and the box already says 0 where that is the real answer.
+    output.textContent = typeof value === 'number' && value > 0 ? format(value) : '';
+  }
+}
+
 export function highlightChanged(root, changedFields) {
   for (const field of changedFields) {
     const input = root.querySelector(`[data-field="${field}"]`);

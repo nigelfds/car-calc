@@ -392,6 +392,62 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
+/* Restates a typed number, formatted, because type="number" cannot show
+   thousands separators. Quiet — it is a check on what you typed, not a second
+   label — and mono so the digits line up under the box's own. */
+.field__echo {
+  display: block;
+  margin-top: 0.2em;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+/* Presets that answer "how much boot?" in the terms people actually think in.
+   Above the box rather than below it: they are the expected way in, and the
+   number field is the escape hatch for anyone who knows their figure. */
+.preset-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.preset {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  padding: 0.3em 0.6em;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.preset:hover {
+  border-color: var(--ink-faint);
+  color: var(--ink);
+}
+
+/* The figure a preset stands for, carried on the button so the reader learns
+   the unit rather than being asked to guess it. */
+.preset__value {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  color: var(--ink-faint);
+}
+
+.preset.is-active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper-raised);
+}
+
+.preset.is-active .preset__value { color: var(--paper); }
+
 /* Full width suits a value you type into. A tick-box has an intrinsic size,
    and stretching it to the column width pushed its own label onto the next
    line — this rule tied with `.checkbox input { width: auto }` on specificity
@@ -600,7 +656,11 @@ input[type='date'],
 /* Same treatment, applied from the section down: one class on #afford / #cars
    (ui/app.js) reaches the chart's lease line and the shortlist's novated rows
    without either renderer needing to know about eligibility. */
-.novated-unavailable .line-lease,
+/* .line-novated, not .line-lease: the chart names its polylines after the option
+   key (`line-${option}`), while the colour tokens are named after the transit-map
+   metaphor. Two naming schemes for one concept, and picking the wrong one here
+   made the rule silently match nothing. */
+.novated-unavailable .line-novated,
 .novated-unavailable .line-legend__item--lease,
 .novated-unavailable .cost-row--novated {
   opacity: 0.45;
@@ -879,6 +939,65 @@ input[type='date'],
   opacity: 0.96;
   visibility: visible;
 }
+
+/* =========================================================================
+   Chart notes — the same explanations the hover tooltips carry, in text.
+   A tooltip needs a pointer, and the viewport where this chart is smallest and
+   hardest to read is the one with no pointer at all. Closed by default: four
+   paragraphs under a chart most readers will simply look at.
+   ========================================================================= */
+
+.chart-notes {
+  margin-top: var(--space-3);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.chart-notes__summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.chart-notes__list {
+  margin: var(--space-3) 0 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.chart-notes__term {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4em;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.chart-notes__body {
+  margin: 0.15em 0 0;
+  max-width: 62ch;
+}
+
+/* The glyph its badge draws on the chart, at the size the badge draws it — this
+   is the key those two markers never had. Both used to be a lowercase "i" in
+   different colours, so there was nothing to key. */
+.chart-notes__glyph {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.chart-notes__glyph--cliff { background: var(--warn); }
+.chart-notes__glyph--entry { background: var(--line-loan); }
 
 .crossover-chart .axis-label--crossover {
   fill: var(--ink-soft);
