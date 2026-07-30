@@ -9,7 +9,8 @@ unchanged so the leads can be scored against what was actually found.
 **Headline: the dataset holds about 37% of the battery-electric market. Roughly 68 families are
 missing, which is twelve batches — a wave larger than the PHEV one.**
 
-**Wave progress: batch 1 done (2026-07-30). 46 of ~111 families held, ~41%. Eleven batches left.**
+**Wave progress: batches 1 and 2 done (both 2026-07-30). 52 of ~111 families held, ~47%. Ten batches
+left.**
 
 ## Why this exists
 
@@ -178,14 +179,17 @@ families were most of the market.
 
 ## The headline number
 
-| | Families | After batch 1 |
-|---|---|---|
-| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below |
-| Of those, representable under the app's schema and body types | **~108** | **~107** |
-| Held by the dataset | **40** | **46** |
-| **Coverage** | **~37%** | **~41%** |
-| Missing and researchable | **~68** | **~61** |
-| At six families per batch | **~12 batches** | **11 batches left** |
+| | Families | After batch 1 | After batch 2 |
+|---|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** |
+| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** |
+| Held by the dataset | **40** | **46** | **52** |
+| **Coverage** | **~37%** | **~41%** | **~47%** |
+| Missing and researchable | **~68** | **~61** | **~55** |
+| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** |
+
+Batch 2 found nothing withdrawn and needed no back-out, so the on-sale and representable figures are
+unchanged. All six families were `SUV`, so `Sedan` and `Ute` are exactly where batch 1 left them.
 
 The representable figure counts people movers, per the body-type decisions below. Only four
 vehicles on sale are unrepresentable: three above the $250,000 ceiling and one two-seat roadster.
@@ -239,6 +243,12 @@ none of them represented at all:
 
 Cadillac deserves its own line: it is a BEV-only brand in Australia, all three families sit inside
 the price bounds, and it appears nowhere in the dataset.
+
+**Settled by batch 2 (2026-07-30):** three of these brands are now held. **Cadillac is complete** —
+Optiq, Lyriq and Vistiq all researched and written, so the BEV-only brand is fully represented.
+**Volkswagen** now holds both BEV families (ID.4, ID.5), leaving only the ID. Buzz in batch 12.
+**KGM** is complete across both waves — Musso EV in batch 1, Torres EVX in batch 2. Fourteen of the
+seventeen brands in this table are still absent.
 
 ## The two structural gaps — both verdicts are "nobody looked"
 
@@ -486,7 +496,11 @@ and record the finding.
 > has itself been wiped from LDV's Australian site. Per the research brief, a family the
 > manufacturer no longer lists is not on sale.
 
-### Batch 2 — absent volume brands
+### Batch 2 — absent volume brands — **DONE 2026-07-30**
+
+**All six landed: 9 variants. Volkswagen goes from zero BEV rows to four, and Cadillac — a BEV-only
+brand here — is now held in full. See the batch 2 record below.**
+
 | Family | Note |
 |---|---|
 | Volkswagen ID.4 | VW has zero BEV rows despite selling two families here |
@@ -689,6 +703,116 @@ straddle is wrong with it.
 profile was held by a live Chrome process and the headless fallback was declined. Build, tests and a
 fresh server boot all passed, but **no page-level confirmation was obtained for these six families.**
 Worth a look at the start of batch 2, since a green API with a broken page has happened here before.
+
+### Batch 2 — done 2026-07-30
+
+Six agents, one per family, all six written. 9 variants; dataset went to **35 brands, 87 families,
+216 variants** (138 of them battery-electric). Build 0 failures, 491 tests pass. No family was found
+withdrawn, and — unusually — **no price in this batch had to be backed out of a drive-away figure**.
+Every one of the six had a genuine list price, including the two the plan predicted would not.
+
+| Family | Variants and list prices |
+|---|---|
+| `vw-id4` | Pro $59,990 · GTX 4MOTION $69,990 |
+| `vw-id5` | Pro $62,990 · GTX 4Motion $72,990 |
+| `cadillac-optiq` | Sport AWD $80,000 |
+| `cadillac-lyriq` | Luxury AWD $90,000 · Sport AWD $90,000 |
+| `cadillac-vistiq` | Platinum AWD $116,000 |
+| `kgm-torres-evx` | 2WD $55,188 |
+
+**Nine things later batches need to know.**
+
+**1. Volkswagen Australia publishes a real primary spec document, and it can be read.** The
+ID.4/ID.5 MY25 spec brochure (publication `VWPIDMY25`) carries a technical-specification table with
+declared Wh/km, WLTP range, gross *and* useable battery, tare mass and luggage volumes. It is 10.4 MB
+and **WebFetch refuses it on size** — the way in is `curl` followed by inflating the PDF content
+streams directly, and the text renders letter-by-letter so searches need whitespace-tolerant
+matching. Two agents found it independently and it settled four disputed fields. Assume a similar
+brochure exists for other VW Group brands before trusting an aggregator.
+
+**2. A figure can be manufacturer-primary and still be the wrong model year.** This batch's only
+real cross-row conflict was towing, and it consumed two adjudication rounds. `1,200 kg` and
+`1,400 kg` are the **pre-facelift MY24–25** European ratings **at 8% gradient**; MY26 is **1,800 kg
+at 12% gradient** for both GTX bodies, which VW itself markets under a module headed *"erhöhte
+Anhängelast"* (increased trailer load). ADAC's catalogue pins the changeover: ID.4 GTX 4MOTION,
+production 10/2023–07/2025, 1,200 kg. The 1,800 kg attaches to the **4MOTION dual-motor drivetrain**,
+not to a grade badge, which is why it appears on the European Pro 4MOTION as well as the GTX — and
+why "Australia doesn't sell that grade" was not the disqualifier it looked like. Final state:
+ID.4 Pro 1,000 · ID.5 Pro 1,200 · both GTX 1,800.
+
+**3. Plug-to-wheels overhead consistency is NOT a valid cross-row test. Do not use it.** It looked
+like a good way to spot a bad consumption figure, and it is not: **VW Australia's own brochure
+implies 17.9% overhead on the ID.4 Pro and 12.5% on the ID.5 GTX, from the same table in the same
+publication** — a 5.4-point disagreement inside the primary source. The held MEB rows already span
+6.7% (Enyaq 60) to 18.5% (Q4 e-tron Sportback 45). A row sitting at either end is not evidence of
+anything.
+
+**4. "US spec presented as Australian data" is a distinct failure mode, and it hit three of three
+American-brand families in one batch.** Each shape was different, so the pattern is the lesson rather
+than any one instance:
+- *EPA range in place of WLTP* — the Optiq's US EPA figure is ~486 km against the Australian WLTP
+  425 km. Note the direction: **EPA can be HIGHER than WLTP**, so the too-good-to-be-true instinct
+  that catches NEDC does not catch this. Only the label catches it.
+- *A US tow rating on an Australian aggregator* — thebeep gave the Lyriq 1,588 kg (3,500 lb) where
+  CarsGuide's Australian review states it has **no tow rating here**. The row is `towKg: 0`.
+- *A US grade ladder inside an Australian database feed* — carsales' research pages list the Vistiq
+  as two Australian grades, "Premium Luxury" and "Platinum", **with an identical price span on both
+  rows**. That identical span is the tell that it is a feed artefact, not a second local grade.
+
+For any American brand: treat every unlabelled figure as US until proven local.
+
+**5. Australian Cadillacs are not the American cars.** GM re-specs them for ECE R100.03: the Vistiq
+takes **91 kWh useable** against the US car's ~102 kWh, and the Optiq is 75 useable / 85 gross. So a
+US pack figure here is not a gross-versus-useable trap, it is **a different vehicle**. Cadillac also
+confirmed WLTP figures are not published for the US-market Vistiq at all.
+
+**6. Grade counts held up everywhere, and one note was wrong in the safe direction.** Five of six
+families are single- or two-grade ranges and every count was confirmed on a manufacturer or
+manufacturer-adjacent listing. The Vistiq's "Platinum grade only" survived. The **Vistiq is a
+six-seater, not the seven-seater the dispatching prompt asserted** — the US seven-seat bench is not
+offered here, and one WebFetch summary claiming "7" was a summariser error against four sources. The
+error came from the prompt, not from a source; check the prompt's own claims too.
+
+**7. KGM's advertised price falling does not mean the list price fell.** The Torres EVX shows
+$53,690 drive-away against a $55,188 RRP: that is RRP **plus** metallic paint **minus** a $5,010
+time-limited factory bonus, and the RRP is unchanged since launch. Read the fine print before
+recording a cut. Also: the advertised $58,000 "drive-away" is a flat **national** figure quoted
+identically for Victoria and Sydney, which no per-state calculation produces — so it is not a valid
+figure to back a list price out of. The Torres correctly used the **passenger** divisor 1.042, not
+the Musso's ute 1.027.
+
+**8. Distrust CarExpert's spec database on platform pairs sharing a battery.** It lists
+**23.0 kWh/100km for both the Musso EV and the Torres EVX**, which share the 80.6 kWh pack, where KGM
+Australia's own figure for the Torres is 18.65. One car's number propagating onto its platform-mate is
+the mechanism. Same caution as the ID.4/ID.5 towing case: shared hardware invites shared figures.
+
+**9. Two housekeeping observations, neither acted on.** The Lyriq's two grades are **identical on
+every numeric field and both list at $90,000** — the restructure equalised them and they differ only
+in trim, so they will read as same-price twins in any ranking. And the `Sedan` count in this document
+says 18 variants where the built dataset measures **17** BEV sedan rows across 8 families; batch 2
+added no sedans, so the discrepancy predates it and wants reconciling by whoever next touches those
+rows.
+
+**The cross-row diff earned its place again, and differently from batch 1.** Batch 1's catch was a
+sourced-but-wrong boot figure visible only against its siblings. This batch's was a **sourced field
+where both agents had manufacturer evidence and one was reading a superseded model year** — the kind
+of conflict that cannot be seen from inside either row, since both passed the validator and both had
+a citation. It took two rounds of putting each agent's evidence to the other. Worth budgeting for:
+neither agent conceded on the first exchange, and the one that was wrong was the one arguing more
+specifically.
+
+**Judged fields, for anchoring later batches.** The three Cadillacs form a deliberate ladder rather
+than a house style — insurance 2500 / 2850 / 3000 by price, curves `[1, 0.66…]` / `[1, 0.64…]` /
+`[1, 0.66…]`, with the **Lyriq steepest because it alone carries the $32,000 cut's overhang**. The VW
+rows sit between the Skoda Enyaq's `0.75` and the Audi Q4's `0.70` at the Tiguan PHEV's `[1, 0.72…]`,
+with the ID.5 GTX one step steeper on reviewer consensus that it is the worse buy of the two grades.
+The Torres EVX copies the Musso EV's steep `[1, 0.66…]` on brand-level evidence.
+
+**One gate still not run.** The page-level browser render check remains outstanding — it was skipped
+in batch 1 at the user's instruction, and this session's dispatching prompt did not include it, so
+**no page-level confirmation exists for batch 1's or batch 2's families.** Build, tests and the
+validator all pass. Worth clearing before batch 3, since a green API with a broken page has happened
+on this project.
 
 ## How to run a batch — paste this into a new session
 
