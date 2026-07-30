@@ -6,11 +6,7 @@
 
 import { searchVehicles, SEARCH_LIMIT } from './vehicle-search.js';
 import { money } from './format.js';
-
-const escapeHtml = value =>
-  String(value).replace(/[&<>"']/g, ch => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[ch]);
+import { escapeHtml } from './escape.js';
 
 export function suggestionsMarkup(groups, activeId) {
   if (groups.length === 0) {
@@ -58,6 +54,11 @@ export function renderSuggestions(root, slotIndex, groups, activeId) {
 export function nextActiveId(ids, activeId, step) {
   if (ids.length === 0) return null;
   const current = ids.indexOf(activeId);
+  // "Nothing active yet" is not index -1 on a wrapping ring — that formula
+  // (current + step) % length puts ArrowUp from nothing at the second-to-last
+  // option, silently skipping the last. Standard combobox behaviour is for
+  // ArrowDown to land on the first option and ArrowUp to land on the last.
+  if (current === -1) return step === 1 ? ids[0] : ids[ids.length - 1];
   return ids[(current + step + ids.length) % ids.length];
 }
 

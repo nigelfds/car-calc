@@ -205,6 +205,36 @@ test('the bench names the car and flags that it appears in a callout', () => {
   assert.match(html, /compare-chip__dot/);
 });
 
+// Fix 5: the dot conveying "this car is mentioned below" was aria-hidden, and
+// then aria-label overrode the button's contents entirely — so the fact it
+// exists reached no screen-reader user. The accessible name has to carry the
+// same information as the visual dot, not just "currently off screen".
+test('the benched chip carries the mentioned-below fact in its accessible name, not just visually', () => {
+  const root = stubRoot();
+  const model = comparisonRows([ev5, sealion, cheap], tables);
+  renderBench(root, { vehicles: [ev5, sealion, cheap], benchIndex: 2, model });
+  const html = root.targets['compare-bench'].innerHTML;
+  const chip = html.split('data-bench-index="2"')[1].split('</button>')[0];
+  assert.match(chip, /aria-label="[^"]*appears in a note below[^"]*"/);
+});
+
+test('a benched chip with nothing to mention says only that it is off screen', () => {
+  const root = stubRoot();
+  // Three identical-on-paper clones: every direction-having row ties (so no
+  // winner, ever) and nothing about make/model/seats/body/powertrain differs,
+  // so no caveat rule fires either. Whichever one is benched, `mentioned` is
+  // false — this is the "nothing to report" case the dot must stay silent for.
+  const twin = (id, variant) => ({ ...ev5, id, variant });
+  const triplets = [twin('t1', 'A'), twin('t2', 'B'), twin('t3', 'C')];
+  const model = comparisonRows(triplets, tables);
+  renderBench(root, { vehicles: triplets, benchIndex: 0, model });
+  const html = root.targets['compare-bench'].innerHTML;
+  const chip = html.split('data-bench-index="0"')[1].split('</button>')[0];
+  assert.doesNotMatch(chip, /appears in a note below/);
+  assert.match(chip, /aria-label="Show Kia EV5, currently off screen"/);
+  assert.doesNotMatch(chip, /compare-chip__dot/);
+});
+
 test('the bench is empty when only two cars are being compared', () => {
   const root = stubRoot();
   const model = comparisonRows([ev5, sealion], tables);

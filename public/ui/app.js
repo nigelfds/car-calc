@@ -285,9 +285,7 @@ function boot(root, dataset) {
   function renderCompareBody() {
     const picked = pickedVehicles();
     const twoUp = typeof window !== 'undefined' && window.innerWidth <= COMPARE_TWO_UP_MAX_PX;
-    const bench = twoUp && picked.length === 3
-      ? Math.min(benchIndex, picked.length - 1)
-      : null;
+    const bench = twoUp && picked.length === 3 ? benchIndex : null;
 
     renderComparison(root, { vehicles: picked, families, tables, benchIndex: bench });
     renderBench(root, {

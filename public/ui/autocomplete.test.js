@@ -109,6 +109,16 @@ test('nextActiveId lands on the first option going down when nothing is active y
   assert.equal(nextActiveId(['a', 'b', 'c'], null, 1), 'a');
 });
 
+// Fix 6: the wrap-around formula treated "nothing active" as index -1 on the
+// ring, so ArrowUp from nothing landed on the second-to-last option — with
+// eight results, option 7 of 8, silently skipping the last. Standard combobox
+// behaviour is to land on the last option, mirroring ArrowDown landing on
+// the first.
+test('nextActiveId lands on the last option going up when nothing is active yet', () => {
+  assert.equal(nextActiveId(['a', 'b', 'c'], null, -1), 'c');
+  assert.equal(nextActiveId(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], undefined, -1), 'h');
+});
+
 test('nextActiveId with a single option always returns that option', () => {
   assert.equal(nextActiveId(['a'], null, 1), 'a');
   assert.equal(nextActiveId(['a'], null, -1), 'a');

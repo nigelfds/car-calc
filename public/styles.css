@@ -2083,11 +2083,11 @@ input[type='date'],
   font-style: italic;
 }
 
-/* The <tr> itself paints nothing — the colspan'd <td> above does all of it —
-   but it is named explicitly rather than left as a bare, unstyled selector:
+/* compare-caveat-row itself carries no rule here: the <tr> paints nothing —
+   the colspan'd <td> above does all of it. The class stays on the <tr> in
+   the markup (ui/compare-tab.js) anyway, as the named hook through which
    anything that ever needs to address "an annotation row" as a whole (both
-   kinds, one rule) has this to reach through. */
-.compare-caveat-row { background: transparent; }
+   kinds) can reach. */
 
 /* Prose — one section per car, always rendered for every filled slot
    (renderComparison keeps the benched car's prose in the DOM so bringing it

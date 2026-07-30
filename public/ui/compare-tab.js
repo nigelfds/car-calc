@@ -4,11 +4,7 @@
 
 import { comparisonRows } from '../../calc/spec-compare.js';
 import { money } from './format.js';
-
-const escapeHtml = value =>
-  String(value).replace(/[&<>"']/g, ch => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[ch]);
+import { escapeHtml } from './escape.js';
 
 const carName = v => `${v.make} ${v.model}`;
 
@@ -114,8 +110,12 @@ export function renderBench(root, { vehicles, benchIndex, model }) {
     </p>
     ${vehicles.map((vehicle, index) => {
       const benched = index === benchIndex;
+      // aria-label overrides an element's contents entirely, so the visual
+      // dot below (aria-hidden, and only ever painted on the benched chip)
+      // reaches no screen-reader user unless what it conveys — that this
+      // car is doing more than sitting out — is folded into the name itself.
       const label = benched
-        ? `Show ${carName(vehicle)}, currently off screen`
+        ? `Show ${carName(vehicle)}, currently off screen${mentioned ? ' — appears in a note below' : ''}`
         : `Hide ${carName(vehicle)}`;
       return `
       <button type="button" class="compare-chip${benched ? ' compare-chip--benched' : ''}"
