@@ -47,16 +47,23 @@ car**. The second tab, **Compare**, is a different tool, covered next.
 
 The second tab, **Compare**, answers a different question from the first: not what you can afford,
 but how two or three particular cars actually differ. It compares specifications only — it does not
-cost a car under a novated lease, a loan or cash, because that is the first tab's job. It follows
-that it reads none of your salary, budget, term, savings or interest rate, so a link to a comparison
-carries none of your income with it.
+cost a car under a novated lease, a loan or cash, because that is the first tab's job, and it reads
+none of your salary, budget, term, savings or interest rate. While this tab is showing, the URL
+itself carries only `tab` and `compare` — every step-1 field is left out of what gets written, not
+merely reset to a default, so a link to a comparison genuinely carries none of your income.
+Switching back to **Find a car** restores your entries from memory and they reappear in the URL;
+reloading or bookmarking a Compare link, though, loses whatever step-1 entries you hadn't shared
+another way — that's intended, since specs-only is the whole point of the tab, not a bug to route
+around. A link that already carries both (one saved before this existed, say) still opens correctly;
+only a fresh Compare link is built clean.
 
 Any of the dataset's 216 variants goes in any of the three slots, chosen from an autocomplete on
 each — there's no preference filtering and no restriction by body type, so a ute sits next to a
 hatchback as readily as two SUVs. The slots live in the URL as `?tab=compare&compare=id1,id2,id3`; a
-cleared slot serialises as an empty segment (`id1,,id3`) rather than being dropped, because slot
-position matters — that's what will let a future "send these to Compare" button on the first tab be
-nothing more than a link.
+cleared *interior* slot serialises as an empty segment (`id1,,id3`) rather than being dropped,
+because slot position matters — that's what will let a future "send these to Compare" button on the
+first tab be nothing more than a link. A cleared *trailing* slot is trimmed instead: `id1,id2,` would
+carry no information a shorter `id1,id2` doesn't already carry, so it's dropped rather than kept.
 
 The dataset has no missing values, so the hard part here is never a gap — it's that the same field
 can mean different things car to car. A plug-in hybrid's `rangeKm` is electric-only, with the whole
@@ -67,8 +74,12 @@ since plug-in hybrids lost that exemption on 1 April 2025. Each of these is call
 affects rather than smoothed over — and a row carrying one of these notes marks no winner at all. If
 the numbers can't be read straight across, neither can a "best".
 
-Below 700px, only two cars show at a time and the third waits on a chip below the table; tapping any
-chip swaps it in for whichever car is on screen in that position. The winner on every row is still
+At 700px and narrower, only two cars show at a time and the third sits benched, as a chip *above*
+the table. Chips render in slot order, not screen order, so tapping one does one of two things
+depending on which car it names: tapping the benched chip brings that car on screen and benches
+whichever of the two visible cars is second by index; tapping a visible chip benches that car
+directly and brings back whichever was off screen. Either way, every pair of the three cars stays
+reachable. The winner on every row is still
 worked out across all three cars, including the one off screen, so a row the benched car actually
 wins gets a note naming it and its number — the alternative would be a tool that quietly reports the
 best *visible* car.

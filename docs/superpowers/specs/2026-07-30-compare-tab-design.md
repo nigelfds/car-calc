@@ -15,6 +15,18 @@ cash, and it does not read salary, budget, term or any other step-1 input. That 
 tab self-contained, keeps a shared comparison link free of the reader's income, and keeps
 `calc/compare.js` (the money path) out of the change entirely.
 
+> **Correction (final whole-branch review, pre-merge, 2026-07-30):** the claim above — that
+> not *reading* step-1 inputs keeps a shared comparison link free of the reader's income —
+> was false as shipped. Not reading a field is a property of the *engine*; the *URL* is built
+> by `toQueryString` (`public/ui/state.js`), which serialised the whole state object
+> regardless of which tab was active. `?grossSalary=187500&savings=40000&tab=compare&compare=...`
+> was a perfectly reachable link. The fix (`toQueryString`) makes the claim true by gating
+> serialisation itself: while `state.tab === 'compare'`, only `tab` and `compare` are written
+> out, and every step-1 field is omitted outright rather than merely defaulted away. Inbound
+> parsing (`fromQueryString`) is untouched, so a legacy link carrying both still opens
+> correctly — only this tab's own outbound links are now clean. See
+> `.superpowers/sdd/2026-07-30-compare-tab/final-fixes-report.md` for the full writeup.
+
 Any car in the dataset can be compared against any other. There is no body-type
 restriction and no preference filtering: all 216 variants are selectable, and the only
 limit is what the data holds.
