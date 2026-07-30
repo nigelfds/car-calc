@@ -1,0 +1,27 @@
+{
+  "id": "mazda-6e",
+  "summary": "Mazda's return to the mid-size car segment is a China-built electric liftback that Australian reviewers rate as quiet, well-finished and unusually polished for the money, with a $49,990 entry price that undercuts every Tesla Model 3 and the BYD Seal. The 77kWh usable LFP pack's 560km WLTP range and 195kW peak DC charging are competitive, but local testers consistently criticise the Europe-tuned suspension as too soft, the steering as too light off-centre, and the near-total reliance on a 14.6-inch touchscreen as a step backwards from Mazda's usual ergonomics. Both grades sit far below the $75,000 FBT exemption threshold, so the only real decision is interior trim.",
+  "pros": [
+    "GT's $49,990 list price undercuts the cheapest Tesla Model 3 RWD by $4,910 and the entry BYD Seal by $3,000, while claiming 560km of WLTP range",
+    "195kW peak DC charging takes the LFP pack from 10-80 percent in around 24 minutes, well ahead of the 80kWh NMC version sold in continental Europe",
+    "High-voltage battery is covered for eight years or 160,000km, on top of the unconditional five-year, unlimited-kilometre vehicle warranty",
+    "Rear-wheel drive with near-even 47/53 weight distribution, and Chasing Cars recorded 459km of real-world range over hilly terrain against the 560km claim",
+    "Rated to tow 1,500kg braked, where most electric sedans in this price band are limited to 1,000kg or are not rated to tow at all"
+  ],
+  "cons": [
+    "337-litre boot to the parcel shelf is small for a mid-size liftback, against 682 litres in a Tesla Model 3",
+    "Almost everything except the windows, hazard lights and gear selector runs through the 14.6-inch touchscreen, including the wipers; reviewers report 30-45 minutes just to learn the menus",
+    "Australian reviewers rate the Europe-tuned damping too soft and the steering too light around straight ahead, and the mirror and indicator stalks are still laid out for left-hand drive",
+    "Brand-new nameplate with no Australian resale history, and Mazda's only previous EV here, the MX-30, sold in tiny numbers and depreciated heavily"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-mazda-6e-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-mazda-6e-atenza-review-quick-drive",
+    "https://www.chasingcars.com.au/reviews/large-cars/mazda-6e-2026-review/",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-6e-price-specs-release-date.html",
+    "https://www.mazda.com.au/mazda-news/mazda-6e-electric-australia-specs-pricing/",
+    "https://www.whichcar.com.au/reviews/2026-mazda-6e-review-wheels-verdict-bold-new-sedan",
+    "https://ev-database.org/uk/car/3466/Mazda-6e-78-kWh"
+  ],
+  "sourcedAt": "2026-07-30"
+}

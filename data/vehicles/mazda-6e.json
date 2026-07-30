@@ -1,0 +1,42 @@
+[
+  {
+    "id": "mazda-6e-gt",
+    "familyId": "mazda-6e",
+    "make": "Mazda",
+    "model": "6e",
+    "variant": "GT",
+    "bodyType": "Sedan",
+    "listPrice": 49990,
+    "batteryKwh": 77,
+    "rangeKm": 560,
+    "consumptionKwhPer100km": 15.9,
+    "bootLitresSeatsUp": 337,
+    "bootLitresSeatsDown": 1074,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1750,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "mazda-6e-atenza",
+    "familyId": "mazda-6e",
+    "make": "Mazda",
+    "model": "6e",
+    "variant": "Atenza",
+    "bodyType": "Sedan",
+    "listPrice": 52990,
+    "batteryKwh": 77,
+    "rangeKm": 560,
+    "consumptionKwhPer100km": 15.9,
+    "bootLitresSeatsUp": 337,
+    "bootLitresSeatsDown": 1074,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1850,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-30"
+  }
+]

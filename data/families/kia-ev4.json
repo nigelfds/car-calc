@@ -1,0 +1,27 @@
+{
+  "id": "kia-ev4",
+  "summary": "Kia's first electric sedan takes the EV3's E-GMP hardware and wraps it in a low, long four-door body, arriving at $49,990 before on-roads to sit just under the cheapest Tesla Model 3. Australian reviewers are near-unanimous on the ride and steering — several rate the chassis above cars costing far more — and on the frugality, with independent testing returning under 14kWh/100km. Where they part company is value: the Air is criticised as sparsely equipped and plasticky for the money, and the 612km battery cannot be had below $59,190 because there is no Air Long Range.",
+  "pros": [
+    "Air Standard Range lists at $49,990 before on-road costs, $4910 under the cheapest Tesla Model 3 and level with a BYD Seal",
+    "Long Range grades claim 612km WLTP from 81.4kWh, and testers recorded 13.7-13.9kWh/100km in the real world — better than the 14.9 claim",
+    "Ride and steering are the review consensus high point; CarExpert rated the passive damping better resolved than many luxury cars",
+    "Kia's 7-year/unlimited-km warranty is unconditional (no dealer-servicing strings), and 7 years of capped-price servicing totals $1929",
+    "490L boot opening out to 1435L with the rear seats folded, and 1000kg braked towing on both Long Range grades"
+  ],
+  "cons": [
+    "400V architecture peaks near 128kW, so a 10-80% DC stop takes about 31 minutes — well behind the 800V Ioniq 6 and EV6",
+    "Headroom is tight in both rows: a 185cm-plus reviewer sat close to the roof front and rear, a consequence of the low sedan roofline",
+    "No Air Long Range on the Australian price list, so the 612km battery costs a $9200 jump to the $59,190 Earth",
+    "Blind Spot View Monitor and the surround-view camera are GT-Line only, and the Air also goes without powered front seats or wireless phone charging",
+    "Reviewers flag hard plastics and a 150kW front-drive powertrain (7.4-7.8sec to 100km/h) that runs out of puff on uphill highway overtakes"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-kia-ev4-prices-new-ev-sedan-undercuts-tesla-model-3-in-australia",
+    "https://www.carexpert.com.au/car-reviews/2026-kia-ev4-review",
+    "https://www.carsguide.com.au/kia/ev4/price/2026",
+    "https://www.carsales.com.au/editorial/details/kia-ev4-2026-review-151298/",
+    "https://www.chasingcars.com.au/reviews/large-cars/kia-ev4-gt-line-2026-review/",
+    "https://www.carexpert.com.au/car-news/2026-kia-ev4-gt-sedan-revealed"
+  ],
+  "sourcedAt": "2026-07-30"
+}

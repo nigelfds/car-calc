@@ -1,0 +1,28 @@
+{
+  "id": "mercedes-cla-ev",
+  "summary": "The battery-electric CLA is the first car on Mercedes-Benz's MMA platform and the model that replaces the EQA and EQB as the brand's entry point into electric motoring here. Australian reviewers are near-unanimous that the efficiency and charging hardware are class-leading — an 800-volt system, 320kW DC peak and a 663km WLTP claim on the dual-motor grade — but equally consistent that the car is soft and remote to drive rather than sporting, and that the fastback roofline costs real rear-seat headroom. It reads as a car chosen for range, charging speed and a novated lease that stays inside the FBT exemption, not for driver engagement.",
+  "pros": [
+    "The 350 4MATIC claims 663km WLTP, comfortably ahead of the BMW i4 eDrive35's 448km at similar money",
+    "800-volt architecture peaks at 320kW DC, enough to add roughly 300km in about ten minutes — nothing else near this price charges as fast",
+    "Both electric grades list below the $91,661 fuel-efficient LCT threshold (the 350 4MATIC by just $361), so a novated lease keeps the FBT exemption",
+    "CarExpert matched the 14.4kWh/100km consumption claim on test and rated the ride 'almost pillow-like' for refinement",
+    "A 101-litre front boot supplements the 405-litre rear boot, and both grades are rated to tow braked (1500kg and 1800kg)"
+  ],
+  "cons": [
+    "Rear headroom is tight for anyone over 1.8m and the high battery floor leaves thighs unsupported — the four-door-coupe roofline costs real space",
+    "CarExpert's verdict is that it is 'a bit ordinary to drive', with muted steering feel and early understeer even in the 260kW 350 4MATIC",
+    "The 800-volt-only design cannot use older 400V-limited DC chargers, including many Australian 50kW units, without the factory DC-DC converter",
+    "Mercedes EV resale in Australia has been weak: the EQA and EQB this car replaces both needed repeated local price cuts to sell",
+    "Almost every physical control has gone, with MB.OS moving climate and drive functions onto the touchscreens"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-mercedes-benz-cla-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-cla-review-quick-drive",
+    "https://www.chasingcars.com.au/news/car-industry/mercedes-benz-cla-2026-electric-tesla-model-3-fighter-priced-for-australia/",
+    "https://evcentral.com.au/mercedes-benz-cla-ev-detailed-for-australia-pricing-equipment-and-range-for-all-new-award-winner-revealed/",
+    "https://www.carsales.com.au/editorial/details/2026-mercedes-benz-cla-hybrid-and-ev-range-priced-151981/",
+    "https://www.carsguide.com.au/car-news/new-mercedes-benz-cla-electric-car-boasts-more-than-650km-of-driving-range-and-price-tag",
+    "https://www.carexpert.com.au/car-news/2026-mercedes-benz-cla-shooting-brake-hybrid-ev-wagon-coming-to-australia"
+  ],
+  "sourcedAt": "2026-07-30"
+}

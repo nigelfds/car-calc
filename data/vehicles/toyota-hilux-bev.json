@@ -1,0 +1,58 @@
+[
+  {
+    "id": "toyota-hilux-bev-sr-pickup",
+    "familyId": "toyota-hilux-bev",
+    "make": "Toyota",
+    "model": "HiLux BEV",
+    "variant": "SR Pick-Up",
+    "bodyType": "Ute",
+    "listPrice": 76490,
+    "batteryKwh": 56.0,
+    "rangeKm": 245,
+    "consumptionKwhPer100km": 21.8,
+    "isNonPassengerForVicDuty": true,
+    "bootLitresSeatsUp": 1000,
+    "bootLitresSeatsDown": 1000,
+    "seats": 5,
+    "towKg": 2000,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2100,
+    "depreciationCurve": [
+      1,
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "toyota-hilux-bev-sr5-pickup",
+    "familyId": "toyota-hilux-bev",
+    "make": "Toyota",
+    "model": "HiLux BEV",
+    "variant": "SR5 Pick-Up",
+    "bodyType": "Ute",
+    "listPrice": 82990,
+    "batteryKwh": 56.0,
+    "rangeKm": 245,
+    "consumptionKwhPer100km": 21.8,
+    "isNonPassengerForVicDuty": true,
+    "bootLitresSeatsUp": 1000,
+    "bootLitresSeatsDown": 1000,
+    "seats": 5,
+    "towKg": 2000,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2250,
+    "depreciationCurve": [
+      1,
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
+    ],
+    "sourcedAt": "2026-07-30"
+  }
+]

@@ -1064,6 +1064,41 @@
     "sourcedAt": "2026-07-27"
   },
   {
+    "id": "kgm-musso-ev",
+    "summary": "The Musso EV is the first genuinely affordable battery-electric dual-cab sold in Australia, landing from $60,000 drive-away against the $92,990-plus LDV eT60, and Australian reviewers agree it drives far better than any ladder-frame ute because it is a monocoque with independent rear suspension rather than a converted diesel. That same architecture is the catch: braked towing stops at 1800kg where the Ranger PHEV and GWM Cannon Alpha PHEV both manage 3500kg, ground clearance is 181mm, and there is no low range, so reviewers read it as a tradie's or fleet runabout rather than a tow vehicle. Opinion splits on whether the money is well spent - CarsGuide scored it 7.4/10 and praised the SUV-like ride, while CarExpert found the interior hollower than the diesel Musso's and the performance short of its 152kW/339Nm claim.",
+    "pros": [
+      "Cheapest electric ute in Australia by a wide margin: $60,000 drive-away for the 2WD against $92,990 before on-roads for the LDV eT60, and it is line-ball with the petrol-burning BYD Shark 6 and Ford Ranger PHEV rather than carrying an EV premium",
+      "905kg payload on the 2WD (805kg AWD) beats the BYD Shark 6's 790kg and the GWM Cannon Alpha PHEV's 685kg, and the self-levelling rear shocks keep it sitting flat when loaded",
+      "Capped-price servicing totals $1,996 over seven years/140,000km - about $285 a year, roughly half what a diesel dual-cab costs to maintain",
+      "KGM's seven-year/unlimited-kilometre warranty is unconditional (you may service outside the dealer network if you keep the invoices) and the high-voltage battery is covered for 10 years/unlimited kilometres; only the extra roadside assistance is conditional on servicing at a KGM dealer",
+      "Reviewers consistently rate the ride and steering above every ladder-frame rival - the monocoque body, McPherson-strut front and multi-link rear make it quiet and composed on broken Melbourne roads in a way a leaf-sprung HiLux is not"
+    ],
+    "cons": [
+      "1800kg braked towing and a 180kg towball limit, against the 3500kg that the Ford Ranger PHEV, GWM Cannon Alpha PHEV and every mainstream diesel dual-cab offer - a 2.0-tonne caravan or a car trailer is simply out of the question",
+      "No ANCAP or Euro NCAP rating at all, so a fleet or salary-packaging buyer with a five-star purchasing policy cannot order one despite the eight airbags and full driver-assist suite",
+      "Not a genuine off-roader: 181mm of ground clearance (34mm less than the diesel Musso), no low-range transfer case, the battery pack slung under the body, and the tub is about 200mm shorter than a Ranger's",
+      "KGM sold 4116 cars in Australia in 2025, down 23.7 per cent, and the only precedent for an electric ute here - the LDV eT60 - is trading around 40-50 per cent of its new price after two to three years, so residual risk on this body style is real and unproven",
+      "KGM publishes drive-away pricing only and no list price, and CarExpert's tester recorded 21kWh/100km against the AWD's 26kWh/100km claim while CarsGuide saw 20kWh/100km urban against the 2WD's 23kWh/100km - useful in practice, but it means the official numbers cannot be taken at face value either way"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-kgm-musso-ev-price-and-specs-australias-cheapest-electric-ute-detailed",
+      "https://www.carexpert.com.au/car-reviews/2026-kgm-musso-ev-review",
+      "https://www.carexpert.com.au/car-news/2026-kgm-musso-ev-nine-things-we-like",
+      "https://www.carsguide.com.au/ev/kgm-musso-ev-2wd-100209",
+      "https://www.carsguide.com.au/kgm/musso-ev/price/2026",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-kgm-musso-ev-price-specs-release-date.html",
+      "https://www.mynrma.com.au/open-road/news/2025/kgm-musso-ev-ute-specs-and-pricing",
+      "https://thedriven.io/2026/05/26/kgm-musso-ev-review-a-great-alternative-for-most-fossil-fuelled-utes/",
+      "https://kgm.com.au/models/musso-ev",
+      "https://kgm.com.au/owners-and-service/warranty/warranty-terms",
+      "https://payload.therefinerydesign.com/api/media/file/KGM-Musso-EV-MY26-Specs-and-Features.pdf",
+      "https://ev-database.org/car/3447/KGM-Musso-EV-2WD",
+      "https://www.carexpert.com.au/car-news/vfacts-the-brands-with-the-biggest-sales-drops-in-australia-in-2025",
+      "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
     "id": "kia-ev3",
     "summary": "Kia's compact electric SUV pairs a genuinely spacious, well-finished cabin with suspension tuning that Australian reviewers rate as composed and comfortable over rough surfaces. Entry Air variants are seen as strong value under $50k with usable real-world range, but the flagship GT-Line drifts close to $70,000 on-road, where reviewers feel it should offer more standard safety kit such as a surround-view camera.",
     "pros": [
@@ -1085,6 +1120,33 @@
       "https://www.racv.com.au/royalauto/car-reviews/kia/2026-kia-ev3-review.html"
     ],
     "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "kia-ev4",
+    "summary": "Kia's first electric sedan takes the EV3's E-GMP hardware and wraps it in a low, long four-door body, arriving at $49,990 before on-roads to sit just under the cheapest Tesla Model 3. Australian reviewers are near-unanimous on the ride and steering — several rate the chassis above cars costing far more — and on the frugality, with independent testing returning under 14kWh/100km. Where they part company is value: the Air is criticised as sparsely equipped and plasticky for the money, and the 612km battery cannot be had below $59,190 because there is no Air Long Range.",
+    "pros": [
+      "Air Standard Range lists at $49,990 before on-road costs, $4910 under the cheapest Tesla Model 3 and level with a BYD Seal",
+      "Long Range grades claim 612km WLTP from 81.4kWh, and testers recorded 13.7-13.9kWh/100km in the real world — better than the 14.9 claim",
+      "Ride and steering are the review consensus high point; CarExpert rated the passive damping better resolved than many luxury cars",
+      "Kia's 7-year/unlimited-km warranty is unconditional (no dealer-servicing strings), and 7 years of capped-price servicing totals $1929",
+      "490L boot opening out to 1435L with the rear seats folded, and 1000kg braked towing on both Long Range grades"
+    ],
+    "cons": [
+      "400V architecture peaks near 128kW, so a 10-80% DC stop takes about 31 minutes — well behind the 800V Ioniq 6 and EV6",
+      "Headroom is tight in both rows: a 185cm-plus reviewer sat close to the roof front and rear, a consequence of the low sedan roofline",
+      "No Air Long Range on the Australian price list, so the 612km battery costs a $9200 jump to the $59,190 Earth",
+      "Blind Spot View Monitor and the surround-view camera are GT-Line only, and the Air also goes without powered front seats or wireless phone charging",
+      "Reviewers flag hard plastics and a 150kW front-drive powertrain (7.4-7.8sec to 100km/h) that runs out of puff on uphill highway overtakes"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-kia-ev4-prices-new-ev-sedan-undercuts-tesla-model-3-in-australia",
+      "https://www.carexpert.com.au/car-reviews/2026-kia-ev4-review",
+      "https://www.carsguide.com.au/kia/ev4/price/2026",
+      "https://www.carsales.com.au/editorial/details/kia-ev4-2026-review-151298/",
+      "https://www.chasingcars.com.au/reviews/large-cars/kia-ev4-gt-line-2026-review/",
+      "https://www.carexpert.com.au/car-news/2026-kia-ev4-gt-sedan-revealed"
+    ],
+    "sourcedAt": "2026-07-30"
   },
   {
     "id": "kia-ev5",
@@ -1322,6 +1384,33 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "mazda-6e",
+    "summary": "Mazda's return to the mid-size car segment is a China-built electric liftback that Australian reviewers rate as quiet, well-finished and unusually polished for the money, with a $49,990 entry price that undercuts every Tesla Model 3 and the BYD Seal. The 77kWh usable LFP pack's 560km WLTP range and 195kW peak DC charging are competitive, but local testers consistently criticise the Europe-tuned suspension as too soft, the steering as too light off-centre, and the near-total reliance on a 14.6-inch touchscreen as a step backwards from Mazda's usual ergonomics. Both grades sit far below the $75,000 FBT exemption threshold, so the only real decision is interior trim.",
+    "pros": [
+      "GT's $49,990 list price undercuts the cheapest Tesla Model 3 RWD by $4,910 and the entry BYD Seal by $3,000, while claiming 560km of WLTP range",
+      "195kW peak DC charging takes the LFP pack from 10-80 percent in around 24 minutes, well ahead of the 80kWh NMC version sold in continental Europe",
+      "High-voltage battery is covered for eight years or 160,000km, on top of the unconditional five-year, unlimited-kilometre vehicle warranty",
+      "Rear-wheel drive with near-even 47/53 weight distribution, and Chasing Cars recorded 459km of real-world range over hilly terrain against the 560km claim",
+      "Rated to tow 1,500kg braked, where most electric sedans in this price band are limited to 1,000kg or are not rated to tow at all"
+    ],
+    "cons": [
+      "337-litre boot to the parcel shelf is small for a mid-size liftback, against 682 litres in a Tesla Model 3",
+      "Almost everything except the windows, hazard lights and gear selector runs through the 14.6-inch touchscreen, including the wipers; reviewers report 30-45 minutes just to learn the menus",
+      "Australian reviewers rate the Europe-tuned damping too soft and the steering too light around straight ahead, and the mirror and indicator stalks are still laid out for left-hand drive",
+      "Brand-new nameplate with no Australian resale history, and Mazda's only previous EV here, the MX-30, sold in tiny numbers and depreciated heavily"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-mazda-6e-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-mazda-6e-atenza-review-quick-drive",
+      "https://www.chasingcars.com.au/reviews/large-cars/mazda-6e-2026-review/",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-6e-price-specs-release-date.html",
+      "https://www.mazda.com.au/mazda-news/mazda-6e-electric-australia-specs-pricing/",
+      "https://www.whichcar.com.au/reviews/2026-mazda-6e-review-wheels-verdict-bold-new-sedan",
+      "https://ev-database.org/uk/car/3466/Mazda-6e-78-kWh"
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
     "id": "mazda-cx-60-phev",
     "summary": "Mazda's P50e plug-in hybrid pairs a 2.5-litre turbo petrol engine with a 17.8kWh battery for a claimed 76km of EV-only range and brisk 5.8-second 0-100km/h performance, wrapped in Mazda's most upmarket cabin. Reviewers rate the interior materials and safety kit highly and note the boot doesn't shrink for the battery pack, but they consistently flag drivetrain roughness — jerky low-speed transmission behaviour, occasional 'tug-of-war' shunt between engine and motor, and creaks reviewers say feel unresolved for the price. With the FBT exemption for plug-in hybrids gone since April 2025, reviewers are also blunt that the economics only work for buyers who charge at home every night; leave it unplugged and fuel use climbs sharply.",
     "pros": [
@@ -1381,6 +1470,34 @@
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
     "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "mercedes-cla-ev",
+    "summary": "The battery-electric CLA is the first car on Mercedes-Benz's MMA platform and the model that replaces the EQA and EQB as the brand's entry point into electric motoring here. Australian reviewers are near-unanimous that the efficiency and charging hardware are class-leading — an 800-volt system, 320kW DC peak and a 663km WLTP claim on the dual-motor grade — but equally consistent that the car is soft and remote to drive rather than sporting, and that the fastback roofline costs real rear-seat headroom. It reads as a car chosen for range, charging speed and a novated lease that stays inside the FBT exemption, not for driver engagement.",
+    "pros": [
+      "The 350 4MATIC claims 663km WLTP, comfortably ahead of the BMW i4 eDrive35's 448km at similar money",
+      "800-volt architecture peaks at 320kW DC, enough to add roughly 300km in about ten minutes — nothing else near this price charges as fast",
+      "Both electric grades list below the $91,661 fuel-efficient LCT threshold (the 350 4MATIC by just $361), so a novated lease keeps the FBT exemption",
+      "CarExpert matched the 14.4kWh/100km consumption claim on test and rated the ride 'almost pillow-like' for refinement",
+      "A 101-litre front boot supplements the 405-litre rear boot, and both grades are rated to tow braked (1500kg and 1800kg)"
+    ],
+    "cons": [
+      "Rear headroom is tight for anyone over 1.8m and the high battery floor leaves thighs unsupported — the four-door-coupe roofline costs real space",
+      "CarExpert's verdict is that it is 'a bit ordinary to drive', with muted steering feel and early understeer even in the 260kW 350 4MATIC",
+      "The 800-volt-only design cannot use older 400V-limited DC chargers, including many Australian 50kW units, without the factory DC-DC converter",
+      "Mercedes EV resale in Australia has been weak: the EQA and EQB this car replaces both needed repeated local price cuts to sell",
+      "Almost every physical control has gone, with MB.OS moving climate and drive functions onto the touchscreens"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-mercedes-benz-cla-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-cla-review-quick-drive",
+      "https://www.chasingcars.com.au/news/car-industry/mercedes-benz-cla-2026-electric-tesla-model-3-fighter-priced-for-australia/",
+      "https://evcentral.com.au/mercedes-benz-cla-ev-detailed-for-australia-pricing-equipment-and-range-for-all-new-award-winner-revealed/",
+      "https://www.carsales.com.au/editorial/details/2026-mercedes-benz-cla-hybrid-and-ev-range-priced-151981/",
+      "https://www.carsguide.com.au/car-news/new-mercedes-benz-cla-electric-car-boasts-more-than-650km-of-driving-range-and-price-tag",
+      "https://www.carexpert.com.au/car-news/2026-mercedes-benz-cla-shooting-brake-hybrid-ev-wagon-coming-to-australia"
+    ],
+    "sourcedAt": "2026-07-30"
   },
   {
     "id": "mercedes-eqa",
@@ -1687,6 +1804,34 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "polestar-2",
+    "summary": "The Polestar 2 is a premium electric fastback that Australian reviewers consistently praise as a genuine driver's car — crisp steering, tidy body control and, in the rear-drive Long Range Single Motor, a 659km WLTP range that beats most rivals in this price band. Where opinion splits is liveability: the ride is judged disciplined by some and outright punishing by others, and nearly everyone marks down the cramped rear seat, a legacy of the combustion-derived platform it shares with the Volvo XC40. It is now a late-life car facing a clean-sheet replacement, which means heavy factory discounting today and correspondingly weak resale tomorrow.",
+    "pros": [
+      "659km WLTP range from the Long Range Single Motor — more than a Tesla Model 3 Long Range RWD or a BMW i4 eDrive35, from the cheapest car in the range",
+      "Rated a driver's car by CarExpert and Chasing Cars alike: crisp, direct steering and excellent body control that the softer Model 3 does not match",
+      "MY26 update lifted DC fast charging to 205kW on the 82kWh pack and fitted a much quicker Qualcomm infotainment processor, fixing the range's most-criticised software lag",
+      "Rated braked towing of 1500kg, which most electric sedans in this price band do not offer at all",
+      "5-year unlimited-kilometre warranty and 5-star ANCAP, with well-tuned driver-assist calibration reviewers do not complain about"
+    ],
+    "cons": [
+      "Ride is firm to the point of being abrupt over sharp bumps — Chasing Cars called it 'considerably firmer than you expect' for a premium car, and this is the single most repeated criticism across Australian reviews",
+      "Cramped rear seat: a high floor from the battery, an unsupportive bench, small windows and a wasted transmission tunnel from the shared combustion platform — a couple's car more than a family one",
+      "407-litre boot trails the BYD Seal and Tesla Model 3, and the panoramic roof has no blind",
+      "Costly options creep: a heat pump requires the $1500 Climate pack and a power tailgate the $4700 Plus pack, so a well-equipped car lands well above the list price",
+      "Late-life model with a clean-sheet next generation confirmed within about 12 months, and discounts of up to $13,000 already on offer — resale should be expected to be soft"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2027-polestar-2-entry-price-climbs-with-axing-of-base-grade",
+      "https://www.carexpert.com.au/car-news/2026-polestar-2-price-and-specs",
+      "https://www.carsguide.com.au/ev/polestar-2-100685",
+      "https://www.chasingcars.com.au/reviews/large-cars/polestar-2-review-australian-first-drive/",
+      "https://evcentral.com.au/cheapest-polestar-2-cut-from-aussie-line-up-last-year-it-was-being-updated-this-year-the-standard-range-single-motor-is-gone/",
+      "https://zecar.com/reviews/2027-polestar-2-pricing-specs-australia",
+      "https://ev-database.org/uk/car/3152/Polestar-2-Long-Range-Dual-Motor"
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
     "id": "polestar-4",
     "summary": "The Polestar 4 is a coupe-styled mid-size electric SUV that Australian reviewers rate highly for its involving, well-composed driving manners, spacious and upmarket cabin, and genuinely competitive pricing against premium rivals like the Porsche Macan Electric. Its standout talking point is the deletion of a conventional rear window in favour of a camera-fed digital mirror, a decision reviewers describe as a workable, even class-leading, trade for headroom but not a universally comfortable one. Value is undercut by a lengthy, pricey options list and a control layout that pushes nearly everything through the touchscreen.",
     "pros": [
@@ -1936,6 +2081,36 @@
       "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/bz4x-touring/file/20260507_bz4x_touring-_spec_table_gtp-009807.pdf"
     ],
     "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "toyota-hilux-bev",
+    "summary": "Australia's first battery-electric HiLux went on sale in May 2026 as a dual-cab only, dual-motor 144kW/468Nm ute in SR and SR5 pick-up form, and reviewers agree it is a genuine HiLux everywhere except the numbers that matter to a tradie: 245km of WLTP range, 2000kg braked towing and a 715kg payload. Where they part company is who it is for — CarExpert, Chasing Cars and RACV all read it as a depot-charged fleet and mine-site tool rather than a diesel replacement, while EV Central and WhichCar give it more credit as a first step that finally brings five-star safety and Toyota's dealer network to the electric-ute segment. Toyota itself expects only 500 sales in 2026, and fewer than ten of the first 300 orders went to private buyers.",
+    "pros": [
+      "The only electric ute in Australia with a five-star ANCAP rating (2025 datestamp), which included assessment of high-voltage battery integrity in the crash tests — the LDV eT60 and its ilk have nothing comparable.",
+      "Reviewers rate it the quietest and smoothest HiLux ever sold: the twin-motor drivetrain removes the 2.8-litre diesel's clatter entirely, and it holds full-time AWD capability that survived Toyota's own off-road demonstration loop.",
+      "Fleet-friendly charging for a ute — 10kW three-phase AC fills the pack in about 6.5 hours overnight at a depot, and 150kW DC does 10-80 per cent in roughly 30 minutes.",
+      "Both pick-up grades list below the $91,661 fuel-efficient LCT threshold and the 715kg payload keeps it under the one-tonne limit, so it qualifies as a car for the electric-car FBT exemption on a novated lease.",
+      "Toyota's 5-year/unlimited-km warranty stretches to 7 years on the driveline and the traction battery cover to 10 years — but only if every scheduled service and the annual battery health check are completed by a Toyota dealer."
+    ],
+    "cons": [
+      "245km WLTP range, and Australian testers averaged 23-24.5kWh/100km for about 220km in practice; a Ranger PHEV or Shark 6 covers 800km-plus before it needs anything.",
+      "2000kg braked towing against 3500kg for the diesel HiLux, the Ford Ranger PHEV, the GWM Cannon Alpha PHEV and the Shark 6 Performance — a 1.5-tonne cut in the headline number ute buyers shop on.",
+      "715kg payload versus 985kg for the equivalent diesel SR5, so a loaded tray plus five occupants can put it over GVM on a vehicle that already weighs about 2.45 tonnes.",
+      "Roughly $17,000 dearer than the equivalent diesel HiLux, and it gives up the low-range transfer case and rear diff lock while sitting 6mm lower on ground clearance.",
+      "Servicing every 6 months or 10,000km at about $450 a visit, near $2200 across five years — unusually short intervals for an EV, and reviewers still criticise the unladen ride as rough."
+    ],
+    "sources": [
+      "https://philgilberttoyota.dealer.toyota.com.au/explore/hilux-bev",
+      "https://www.carexpert.com.au/car-news/2026-toyota-hilux-bev-new-electric-ute-priced-for-australia",
+      "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+      "https://www.carexpert.com.au/car-news/2026-toyota-hilux-ev-to-offer-240km-range-1-6t-towing",
+      "https://www.chasingcars.com.au/reviews/utes/toyota-hilux-bev-2026-review",
+      "https://www.chasingcars.com.au/news/new-car-prices/toyota-hilux-ev-priced-for-australia-315km-capable-ute-priced-from-74990-with-just-500-sales-expected-in-2026/",
+      "https://www.racv.com.au/royalauto/car-reviews/toyota/2026-toyota-hilux-bev-review.html",
+      "https://evcentral.com.au/2026-toyota-hilux-bev-review-why-this-isnt-the-electric-ute-that-will-make-buyers-switch-away-from-diesel/",
+      "https://www.electrifying.com/reviews/toyota-reviews/hilux-bev/review"
+    ],
+    "sourcedAt": "2026-07-30"
   },
   {
     "id": "toyota-rav4-phev",

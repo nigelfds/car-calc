@@ -1,0 +1,35 @@
+{
+  "id": "kgm-musso-ev",
+  "summary": "The Musso EV is the first genuinely affordable battery-electric dual-cab sold in Australia, landing from $60,000 drive-away against the $92,990-plus LDV eT60, and Australian reviewers agree it drives far better than any ladder-frame ute because it is a monocoque with independent rear suspension rather than a converted diesel. That same architecture is the catch: braked towing stops at 1800kg where the Ranger PHEV and GWM Cannon Alpha PHEV both manage 3500kg, ground clearance is 181mm, and there is no low range, so reviewers read it as a tradie's or fleet runabout rather than a tow vehicle. Opinion splits on whether the money is well spent - CarsGuide scored it 7.4/10 and praised the SUV-like ride, while CarExpert found the interior hollower than the diesel Musso's and the performance short of its 152kW/339Nm claim.",
+  "pros": [
+    "Cheapest electric ute in Australia by a wide margin: $60,000 drive-away for the 2WD against $92,990 before on-roads for the LDV eT60, and it is line-ball with the petrol-burning BYD Shark 6 and Ford Ranger PHEV rather than carrying an EV premium",
+    "905kg payload on the 2WD (805kg AWD) beats the BYD Shark 6's 790kg and the GWM Cannon Alpha PHEV's 685kg, and the self-levelling rear shocks keep it sitting flat when loaded",
+    "Capped-price servicing totals $1,996 over seven years/140,000km - about $285 a year, roughly half what a diesel dual-cab costs to maintain",
+    "KGM's seven-year/unlimited-kilometre warranty is unconditional (you may service outside the dealer network if you keep the invoices) and the high-voltage battery is covered for 10 years/unlimited kilometres; only the extra roadside assistance is conditional on servicing at a KGM dealer",
+    "Reviewers consistently rate the ride and steering above every ladder-frame rival - the monocoque body, McPherson-strut front and multi-link rear make it quiet and composed on broken Melbourne roads in a way a leaf-sprung HiLux is not"
+  ],
+  "cons": [
+    "1800kg braked towing and a 180kg towball limit, against the 3500kg that the Ford Ranger PHEV, GWM Cannon Alpha PHEV and every mainstream diesel dual-cab offer - a 2.0-tonne caravan or a car trailer is simply out of the question",
+    "No ANCAP or Euro NCAP rating at all, so a fleet or salary-packaging buyer with a five-star purchasing policy cannot order one despite the eight airbags and full driver-assist suite",
+    "Not a genuine off-roader: 181mm of ground clearance (34mm less than the diesel Musso), no low-range transfer case, the battery pack slung under the body, and the tub is about 200mm shorter than a Ranger's",
+    "KGM sold 4116 cars in Australia in 2025, down 23.7 per cent, and the only precedent for an electric ute here - the LDV eT60 - is trading around 40-50 per cent of its new price after two to three years, so residual risk on this body style is real and unproven",
+    "KGM publishes drive-away pricing only and no list price, and CarExpert's tester recorded 21kWh/100km against the AWD's 26kWh/100km claim while CarsGuide saw 20kWh/100km urban against the 2WD's 23kWh/100km - useful in practice, but it means the official numbers cannot be taken at face value either way"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-kgm-musso-ev-price-and-specs-australias-cheapest-electric-ute-detailed",
+    "https://www.carexpert.com.au/car-reviews/2026-kgm-musso-ev-review",
+    "https://www.carexpert.com.au/car-news/2026-kgm-musso-ev-nine-things-we-like",
+    "https://www.carsguide.com.au/ev/kgm-musso-ev-2wd-100209",
+    "https://www.carsguide.com.au/kgm/musso-ev/price/2026",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-kgm-musso-ev-price-specs-release-date.html",
+    "https://www.mynrma.com.au/open-road/news/2025/kgm-musso-ev-ute-specs-and-pricing",
+    "https://thedriven.io/2026/05/26/kgm-musso-ev-review-a-great-alternative-for-most-fossil-fuelled-utes/",
+    "https://kgm.com.au/models/musso-ev",
+    "https://kgm.com.au/owners-and-service/warranty/warranty-terms",
+    "https://payload.therefinerydesign.com/api/media/file/KGM-Musso-EV-MY26-Specs-and-Features.pdf",
+    "https://ev-database.org/car/3447/KGM-Musso-EV-2WD",
+    "https://www.carexpert.com.au/car-news/vfacts-the-brands-with-the-biggest-sales-drops-in-australia-in-2025",
+    "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-30"
+}

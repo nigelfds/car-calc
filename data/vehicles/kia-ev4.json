@@ -1,0 +1,83 @@
+[
+  {
+    "id": "kia-ev4-air-standard",
+    "familyId": "kia-ev4",
+    "make": "Kia",
+    "model": "EV4",
+    "variant": "Air Standard Range",
+    "bodyType": "Sedan",
+    "listPrice": 49990,
+    "batteryKwh": 58.3,
+    "rangeKm": 456,
+    "consumptionKwhPer100km": 14.3,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1100,
+    "seats": 5,
+    "towKg": 500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1450,
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "kia-ev4-earth-long-range",
+    "familyId": "kia-ev4",
+    "make": "Kia",
+    "model": "EV4",
+    "variant": "Earth Long Range",
+    "bodyType": "Sedan",
+    "listPrice": 59190,
+    "batteryKwh": 81.4,
+    "rangeKm": 612,
+    "consumptionKwhPer100km": 14.9,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1100,
+    "seats": 5,
+    "towKg": 1000,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1650,
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-07-30"
+  },
+  {
+    "id": "kia-ev4-gt-line-long-range",
+    "familyId": "kia-ev4",
+    "make": "Kia",
+    "model": "EV4",
+    "variant": "GT-Line Long Range",
+    "bodyType": "Sedan",
+    "listPrice": 64690,
+    "batteryKwh": 81.4,
+    "rangeKm": 612,
+    "consumptionKwhPer100km": 14.9,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1100,
+    "seats": 5,
+    "towKg": 1000,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1800,
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-07-30"
+  }
+]
