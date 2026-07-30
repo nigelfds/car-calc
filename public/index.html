@@ -309,19 +309,36 @@
         <span class="section-heading__eyebrow">2</span> How much to spend?
       </h2>
 
-      <!-- "Novated lease" is the term this whole tool turns on, it is the option
-           that wins at most salaries, and the page used to assume the reader
-           already knew what it meant. All three are defined here, before any
-           number that depends on knowing the difference. -->
-      <p class="section-intro">Three ways to pay for the same car. A <strong>novated lease</strong>
-        runs through your employer: the payments come out of your salary before tax, and an
-        electric car under the luxury-car threshold is exempt from fringe benefits tax — that
-        exemption is where most of the saving comes from, and it needs an employer who offers
-        salary packaging. A <strong>car loan</strong> you arrange yourself and repay out of your
-        take-home pay. <strong>Cash</strong> means paying the whole drive-away price up front.</p>
-
       <div class="budget-slider">
-        <label for="budgetSlider">Monthly budget: <output id="budgetSliderValue" for="budgetSlider">$900</output></label>
+        <div class="budget-slider__head">
+          <label for="budgetSlider">Monthly budget:</label>
+
+          <!-- "Novated lease" is the term this whole tool turns on, it is the
+               option that wins at most salaries, and the page cannot assume the
+               reader knows what it means. It also cannot spend a paragraph saying
+               so above every number, so the definition sits behind this.
+
+               A <details> and not a hover tooltip: the same reasoning as the chart
+               notes (review item 16). A tooltip needs a pointer, and this has to
+               work on the phone where the paragraph was costing the most screen.
+               Click and keyboard both toggle it for free. -->
+          <details class="help">
+            <summary class="help__toggle">
+              <span aria-hidden="true">?</span>
+              <span class="visually-hidden">What are the three ways to pay?</span>
+            </summary>
+            <div class="help__body">
+              <p>Three ways to pay for the same car. A <strong>novated lease</strong>
+                runs through your employer: the payments come out of your salary before tax, and an
+                electric car under the luxury-car threshold is exempt from fringe benefits tax — that
+                exemption is where most of the saving comes from, and it needs an employer who offers
+                salary packaging. A <strong>car loan</strong> you arrange yourself and repay out of your
+                take-home pay. <strong>Cash</strong> means paying the whole drive-away price up front.</p>
+            </div>
+          </details>
+
+          <output id="budgetSliderValue" for="budgetSlider">$900</output>
+        </div>
         <!-- min/max here are just a sane pre-JS default; ui/app.js overwrites them at
              boot from BUDGET_RANGE so this can never drift from what the chart samples
              (see the I7 fix note in ui/app.js's boot()). -->

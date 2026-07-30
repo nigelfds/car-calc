@@ -774,20 +774,6 @@ input[type='date'],
   min-height: 3rem;
 }
 
-/* Explanatory copy at the head of a section: what the reader needs to know
-   before the numbers below mean anything. Measured rather than full-width — a
-   paragraph is easier to read at 60-odd characters than at whatever the column
-   happens to be. */
-.section-intro {
-  margin: 0 0 var(--space-4);
-  max-width: 62ch;
-  color: var(--ink-soft);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.section-intro strong { color: var(--ink); }
-
 /* The one range input the design calls "the slider" — drags it and the
    verdict/chart/shortlist below recompute locally (debounced, see
    ui/app.js), with no network call. */
@@ -795,19 +781,128 @@ input[type='date'],
   margin-bottom: var(--space-4);
 }
 
-.budget-slider label {
+/* Label, help toggle, then the live figure pushed to the far end. Was a single
+   flexed <label> with the output inside it; the toggle needs to sit beside the
+   words rather than inside the label, where clicking it would also focus the
+   slider. */
+/* The positioning context for the help panel, so it opens directly beneath the
+   row holding the "?" rather than below the whole slider block — anchored to the
+   slider it sat some 80px from its own trigger and clipped the hint underneath.
+   Being a block-level flex row, it is already the slider's full width, which is
+   what the panel spans. */
+.budget-slider__head {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--ink-soft);
+  align-items: center;
+  gap: 0.4em;
   margin-bottom: var(--space-2);
 }
 
+.budget-slider label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
 .budget-slider output {
+  margin-left: auto;
   font-family: var(--font-mono);
   font-weight: 600;
   color: var(--ink);
+}
+
+/* =========================================================================
+   Help disclosure — a "?" that opens a paragraph.
+   For copy that a reader needs once and never again: the three-ways-to-pay
+   definition was four lines of prose above the slider, read by everyone,
+   useful to a first-timer. Behind the toggle it costs one glyph.
+   ========================================================================= */
+
+.help {
+  /* Keeps the toggle from stretching in the flex row above. */
+  flex: 0 0 auto;
+  line-height: 1;
+}
+
+.help__toggle {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 1px solid var(--hairline);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  /* The default disclosure triangle would sit beside the "?" and read as a
+     second, unrelated mark. */
+  list-style: none;
+}
+
+.help__toggle::-webkit-details-marker { display: none; }
+
+/* The visible disc is 18px, because a larger one would overpower the 0.85rem
+   label beside it — but 18px is under the 24x24 minimum target size, and this is
+   a control people tap on a phone. Grows the hit area without growing the mark. */
+.help__toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+}
+
+.help__toggle:hover,
+.help[open] .help__toggle {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper-raised);
+}
+
+/* Spans the label row rather than the toggle, and overlays what follows instead
+   of pushing it down — opening an explanation should not move the numbers the
+   reader is looking at. */
+.help__body {
+  position: absolute;
+  z-index: 15;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper-raised);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.help__body p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.help__body strong { color: var(--ink); }
+
+/* Reachable by a screen reader, absent from the page. The "?" carries no meaning
+   on its own, so the toggle's real name lives in one of these. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .budget-slider input[type='range'] {
