@@ -20,6 +20,14 @@ const powertrainOf = v => v.powertrain ?? 'bev';
 const totalRangeOf = v =>
   powertrainOf(v) === 'phev' ? v.combinedRangeKm : v.rangeKm;
 
+// The ATO indexes this threshold annually, so it must be read from the
+// tables everywhere it appears in prose — never hardcoded — or a table
+// update silently leaves the Yes/No column right and the words beside it
+// wrong. toLocaleString (not money(), which lives in public/ and is
+// off-limits to calc/) is enough for a plain dollar figure with commas.
+const formatThreshold = tables =>
+  `$${Number(tables.lct.fuelEfficientThreshold).toLocaleString('en-AU')}`;
+
 export const ROW_GROUPS = [
   { key: 'price', label: 'Price' },
   { key: 'practicality', label: 'Practicality' },
@@ -52,7 +60,10 @@ const ROW_SPECS = [
     }, tables).total
   },
   {
-    group: 'price', key: 'underThreshold', label: 'Under the $91,661 threshold',
+    group: 'price', key: 'underThreshold',
+    // A function label, not a string: the threshold it names is read from
+    // tables, so the label must be resolved per call rather than fixed here.
+    label: tables => `Under the ${formatThreshold(tables)} threshold`,
     unit: '', format: 'text', direction: null,
     // A plain price test. It must NOT call fbtTreatment (calc/fbt.js), which
     // needs a lease start date — an input this tab deliberately does not have.
@@ -138,6 +149,9 @@ const ROW_SPECS = [
 //
 // Every rule below is derived from the data. None is written per car.
 
+// make/model only, no variant: safe because no nameplate in the dataset
+// mixes powertrain or body type across its own variants, so two vehicles in
+// a set with the same make/model are always alike enough to name together.
 const displayName = v => `${v.make} ${v.model}`;
 
 // "the Sealion 6 and the Ranger". Never more than three, so no cleverness.
@@ -197,9 +211,10 @@ const CAVEAT_RULES = [
     // would otherwise read "Yes" with no caveat, implying an exemption that
     // no plug-in hybrid has had since 1 April 2025.
     applies: vehicles => vehicles.some(isPhev),
-    text: vehicles => {
+    // Needs tables to read the threshold — the only rule that does.
+    text: (vehicles, rowKey, tables) => {
       const names = nameList(vehicles.filter(isPhev).map(displayName));
-      return `Under $91,661 means no luxury car tax. It does not mean a novated-lease ` +
+      return `Under ${formatThreshold(tables)} means no luxury car tax. It does not mean a novated-lease ` +
         `FBT exemption for ${names} — plug-in hybrids lost that on 1 April 2025.`;
     }
   },
@@ -234,11 +249,11 @@ const CAVEAT_RULES = [
   }
 ];
 
-function caveatsFor(rowKey, vehicles) {
+function caveatsFor(rowKey, vehicles, tables) {
   return CAVEAT_PRECEDENCE
     .map(id => CAVEAT_RULES.find(rule => rule.id === id))
     .filter(rule => rule.rows.includes(rowKey) && rule.applies(vehicles))
-    .map(rule => ({ id: rule.id, text: rule.text(vehicles, rowKey) }));
+    .map(rule => ({ id: rule.id, text: rule.text(vehicles, rowKey, tables) }));
 }
 
 // A winner needs a direction, real numbers, and an outright best. A tie means
@@ -272,10 +287,12 @@ export function comparisonRows(vehicles, tables) {
 
   const rows = specs.map(spec => {
     const values = vehicles.map(vehicle => spec.value(vehicle, tables));
-    const caveats = caveatsFor(spec.key, vehicles);
+    const caveats = caveatsFor(spec.key, vehicles, tables);
     return {
       key: spec.key,
-      label: spec.label,
+      // Most labels are a fixed string; underThreshold's names a value read
+      // from tables, so it is a function of tables instead.
+      label: typeof spec.label === 'function' ? spec.label(tables) : spec.label,
       unit: spec.unit,
       format: spec.format,
       values,

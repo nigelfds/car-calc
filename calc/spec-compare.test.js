@@ -174,6 +174,17 @@ test('an all-electric set leaves the threshold row alone', () => {
   assert.deepEqual(caveatIds(model, 'underThreshold'), []);
 });
 
+test('the threshold row label and the phev-present caveat both read the figure from tables, not a hardcoded one', () => {
+  // A local copy with a different threshold — never mutate the shared fixture.
+  const reindexedTables = { ...tables, lct: { ...tables.lct, fuelEfficientThreshold: 95000 } };
+  const model = comparisonRows([sealion, ranger], reindexedTables);
+  assert.match(rowByKey(model, 'underThreshold').label, /\$95,000/);
+  assert.doesNotMatch(rowByKey(model, 'underThreshold').label, /91,661/);
+  const [caveat] = rowByKey(model, 'underThreshold').caveats;
+  assert.match(caveat.text, /\$95,000/);
+  assert.doesNotMatch(caveat.text, /91,661/);
+});
+
 test('a ute against a non-ute caveats both boot rows', () => {
   const model = comparisonRows([ev5, ranger], tables);
   assert.ok(caveatIds(model, 'bootUp').includes('ute-vs-other'));
