@@ -214,6 +214,31 @@ test('caveats on one row come back in precedence order', () => {
   ]);
 });
 
+test('two trims of one nameplate are distinguishable in caveat prose, not named identically', () => {
+  // Two BYD Sealion 5 trims (both PHEV) against a BEV: mixed-powertrain fires,
+  // and without set-aware naming both trims read as "the BYD Sealion 5" —
+  // indistinguishable, and reachable via the autocomplete's own grouping.
+  const sealion5Dynamic = {
+    ...sealion, id: 'sl5-dyn', model: 'Sealion 5', variant: 'Dynamic', rangeKm: 62
+  };
+  const sealion5Premium = {
+    ...sealion, id: 'sl5-prem', model: 'Sealion 5', variant: 'Premium', rangeKm: 85
+  };
+  const model = comparisonRows([ev5, sealion5Dynamic, sealion5Premium], tables);
+  const [caveat] = rowByKey(model, 'totalRange').caveats;
+  assert.match(caveat.text, /Sealion 5 Dynamic/);
+  assert.match(caveat.text, /Sealion 5 Premium/);
+  assert.match(caveat.text, /62km/);
+  assert.match(caveat.text, /85km/);
+});
+
+test('a single trim against a different nameplate is still named without its variant', () => {
+  const model = comparisonRows([ev5, sealion], tables);
+  const [caveat] = rowByKey(model, 'totalRange').caveats;
+  assert.match(caveat.text, /Sealion 6/);
+  assert.doesNotMatch(caveat.text, /Dynamic ER/);
+});
+
 test('every caveat text is a non-empty sentence', () => {
   const model = comparisonRows([ev5, sealion, ranger], tables);
   const all = model.groups.flatMap(g => g.rows).flatMap(r => r.caveats);

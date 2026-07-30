@@ -9,8 +9,12 @@
 // money() is in public/ui/format.js, and importing it here would point calc/
 // at public/ — the one dependency direction this codebase does not have.
 
-import { driveAwayPrice } from './onroad.js';
+import { onRoadFor } from './onroad.js';
 
+// Duplicated, deliberately, from data/schema.js's own powertrainOf: calc/
+// stays free of any dependency on data/ (the boundary this codebase draws is
+// calc/ -> nothing upstream of it, mirroring calc/ -> public/), so this one
+// line is repeated rather than imported.
 const powertrainOf = v => v.powertrain ?? 'bev';
 
 // A PHEV's rangeKm is electric-only (43-183km across the dataset) where a
@@ -49,15 +53,10 @@ const ROW_SPECS = [
   {
     group: 'price', key: 'driveAway', label: 'Drive-away (Vic, est.)',
     unit: '', format: 'money', direction: 'lower',
-    // Every flag defaults the way data/schema.js says an absent one should:
-    // a row without them is a BEV, which is green and fuel-efficient and is
-    // not a goods vehicle.
-    value: (v, tables) => driveAwayPrice({
-      listPrice: v.listPrice,
-      isGreen: v.isGreenForVicDuty ?? true,
-      isFuelEfficient: v.isFuelEfficientForLct ?? true,
-      isNonPassenger: v.isNonPassengerForVicDuty ?? false
-    }, tables).total
+    // onRoadFor (calc/onroad.js) is the flag defaulting shared with
+    // calc/compare.js's own drive-away figure, so the Find tab and the
+    // Compare tab can never quietly disagree about the same car's price.
+    value: (v, tables) => onRoadFor(v, tables).total
   },
   {
     group: 'price', key: 'underThreshold',
@@ -151,8 +150,20 @@ const ROW_SPECS = [
 
 // make/model only, no variant: safe because no nameplate in the dataset
 // mixes powertrain or body type across its own variants, so two vehicles in
-// a set with the same make/model are always alike enough to name together.
-const displayName = v => `${v.make} ${v.model}`;
+// a set with the same make/model are always alike enough to name together —
+// EXCEPT when the set holds two trims of that one nameplate against a third
+// car. Then "the BYD Sealion 5 and the BYD Sealion 5" names the same car
+// twice, which is worse than verbose: it reads as a typo, not a comparison.
+// Set-aware, so the variant is appended only when another vehicle in this
+// same comparison shares both make and model — comparing the Sealion 5
+// against a Ranger still gets the short form.
+const displayName = (v, vehicles) => {
+  const base = `${v.make} ${v.model}`;
+  const sharesNameplate = vehicles.some(
+    other => other !== v && other.make === v.make && other.model === v.model
+  );
+  return sharesNameplate ? `${base} ${v.variant}` : base;
+};
 
 // "the Sealion 6 and the Ranger". Never more than three, so no cleverness.
 function nameList(names) {
@@ -178,7 +189,7 @@ const CAVEAT_RULES = [
     applies: vehicles => vehicles.some(isPhev) && vehicles.some(v => !isPhev(v)),
     text: (vehicles, rowKey) => {
       const phevs = vehicles.filter(isPhev);
-      const names = nameList(phevs.map(displayName));
+      const names = nameList(phevs.map(v => displayName(v, vehicles)));
       const isAre = phevs.length === 1 ? 'is' : 'are';
       const verbS = phevs.length === 1 ? 's' : '';
       // "is a plug-in hybrid" / "are plug-in hybrids" — the noun has to agree
@@ -186,7 +197,7 @@ const CAVEAT_RULES = [
       const hybridNoun = phevs.length === 1 ? 'a plug-in hybrid' : 'plug-in hybrids';
       if (rowKey === 'totalRange') {
         const detail = phevs
-          .map(v => `${displayName(v)} ${v.rangeKm}km`)
+          .map(v => `${displayName(v, vehicles)} ${v.rangeKm}km`)
           .join(', ');
         return `Not like for like — ${names} ${isAre} ${hybridNoun}, so this total ` +
           `assumes a full tank as well as a full battery. On battery alone: ${detail}.`;
@@ -213,7 +224,7 @@ const CAVEAT_RULES = [
     applies: vehicles => vehicles.some(isPhev),
     // Needs tables to read the threshold — the only rule that does.
     text: (vehicles, rowKey, tables) => {
-      const names = nameList(vehicles.filter(isPhev).map(displayName));
+      const names = nameList(vehicles.filter(isPhev).map(v => displayName(v, vehicles)));
       return `Under ${formatThreshold(tables)} means no luxury car tax. It does not mean a novated-lease ` +
         `FBT exemption for ${names} — plug-in hybrids lost that on 1 April 2025.`;
     }
@@ -224,7 +235,7 @@ const CAVEAT_RULES = [
     applies: vehicles => vehicles.some(isUte) && vehicles.some(v => !isUte(v)),
     text: vehicles => {
       const utes = vehicles.filter(isUte);
-      const names = nameList(utes.map(displayName));
+      const names = nameList(utes.map(v => displayName(v, vehicles)));
       const verb = utes.length === 1 ? 'measures' : 'measure';
       return `Not like for like — ${names} ${verb} an open tray, not an enclosed boot.`;
     }

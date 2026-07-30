@@ -1,4 +1,4 @@
-import { driveAwayPrice } from './onroad.js';
+import { onRoadFor } from './onroad.js';
 import { runningCosts } from './running-costs.js';
 import { resaleValue } from './resale.js';
 import { novatedQuote } from './novated.js';
@@ -7,19 +7,11 @@ import { upfrontQuote, forgoneReturn } from './upfront.js';
 import { resolvePhase } from './fbt.js';
 
 function vehicleContext(vehicle, inputs, tables) {
-  // The isGreen / isFuelEfficient flags have been on driveAwayPrice since the
-  // beginning with nothing ever passing them, because every car in the
-  // dataset was a BEV and every BEV qualifies for both. A PHEV may qualify
-  // for neither, so this is where they finally get passed. A row without them
-  // is a BEV (see data/schema.js) and keeps the true defaults.
-  const onRoad = driveAwayPrice({
-    listPrice: vehicle.listPrice,
-    isGreen: vehicle.isGreenForVicDuty ?? true,
-    isFuelEfficient: vehicle.isFuelEfficientForLct ?? true,
-    // A goods vehicle rather than a passenger car — a category the other two
-    // flags cannot express, since a ute is neither green nor tiered.
-    isNonPassenger: vehicle.isNonPassengerForVicDuty ?? false
-  }, tables);
+  // onRoadFor (calc/onroad.js) is the flag defaulting shared with
+  // calc/spec-compare.js's drive-away row, so the two tabs can never
+  // silently disagree about what an absent flag means for the same car. See
+  // its own comment for the history (a PHEV may qualify for neither).
+  const onRoad = onRoadFor(vehicle, tables);
   const running = runningCosts({
     vehicle,
     annualKm: inputs.annualKm,

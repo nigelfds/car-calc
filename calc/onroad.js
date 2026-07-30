@@ -50,3 +50,26 @@ export function driveAwayPrice({ listPrice, isGreen = true, isFuelEfficient = tr
     total: listPrice + stampDuty + registration
   };
 }
+
+// The isGreen / isFuelEfficient / isNonPassenger flags have been on
+// driveAwayPrice since the beginning with nothing ever passing them, because
+// every car in the dataset was a BEV and every BEV qualifies for both. A row
+// without them is a BEV (see data/schema.js) and keeps the true defaults: it
+// is green and fuel-efficient, and it is not a goods vehicle — a category the
+// other two flags cannot express, since a ute is neither green nor tiered.
+//
+// calc/compare.js (the Find tab's money path) and calc/spec-compare.js (the
+// Compare tab's spec table) both need exactly this defaulting for the same
+// vehicle shape, and used to encode it independently. Two independent copies
+// agree only until one of them doesn't: a fourth flag, or a default that
+// flips, would have made the two tabs' drive-away figures — a money-shaped
+// number — silently disagree for the same car. One function, called from
+// both, makes that impossible.
+export function onRoadFor(vehicle, tables) {
+  return driveAwayPrice({
+    listPrice: vehicle.listPrice,
+    isGreen: vehicle.isGreenForVicDuty ?? true,
+    isFuelEfficient: vehicle.isFuelEfficientForLct ?? true,
+    isNonPassenger: vehicle.isNonPassengerForVicDuty ?? false
+  }, tables);
+}
