@@ -84,8 +84,15 @@
         <!-- The monthly budget lives in step 2, on the slider, and nowhere
              else: step 1 is about you, step 2 is about what you can spend. -->
 
+        <!-- One control doing two jobs. "Term" named only the first of them, and
+             named it in the vocabulary of a finance contract rather than the
+             reader's: it sets how long you are paying, AND it is the window every
+             total on this page is computed over — including the cash column,
+             which has no finance term at all. The plain phrasing leads and the
+             domain word follows in brackets, so a reader holding a lease quote
+             still recognises which field this is. -->
         <div class="field">
-          <label for="termMonths">Term</label>
+          <label for="termMonths">How long you'd keep it (term)</label>
           <select id="termMonths" name="termMonths" data-field="termMonths">
             <option value="12">1 year</option>
             <option value="24">2 years</option>
@@ -93,6 +100,8 @@
             <option value="48">4 years</option>
             <option value="60" selected>5 years</option>
           </select>
+          <p class="field__hint">Sets the finance term, and the period every total on this page
+            covers.</p>
         </div>
 
         <div class="field">

@@ -7,8 +7,8 @@ diagnosis.
 
 Tick a box when it lands.
 
-**Done: 1, 2, 3, 5-14, 16-21, 23.** **Won't fix: 4** (see its entry).
-**Still open: 15, 22, 24-30.**
+**Done: 1, 2, 3, 5-14, 16-23.** **Won't fix: 4** (see its entry).
+**Still open: 15, 24-30.**
 
 ## How this was reviewed
 
@@ -492,7 +492,12 @@ know. Keep the underlying state fields unchanged so shared URLs still work.
 
 ### 22. "Term" is unqualified
 
-- [ ] **Effort** S · **Files** `public/index.html:73`
+- [x] **Done** — relabelled "How long you'd keep it (term)": the plain phrasing
+  leads, the domain word follows in brackets so a reader holding a lease quote
+  still recognises the field. A hint carries the second job the label cannot —
+  that this is also the window every total on the page is computed over,
+  including the cash column, which has no finance term at all.
+- **Effort** S · **Files** `public/index.html`
 
 It is both the lease/loan length and the window every total is computed over.
 "How long you'd keep it" carries both.
