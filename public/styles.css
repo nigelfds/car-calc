@@ -1278,6 +1278,14 @@ input[type='date'],
   color: var(--ink);
 }
 
+/* A requirement rather than a cost. Quieter than the figures around it: the
+   number is what this option would need, not what the reader would pay, and it
+   should not be read down the column alongside real totals. */
+.car-costs__lead--blocked {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
 /* Cash's running cost. Its own line rather than part of the headline: the two
    numbers are different kinds of money and reading them as one total is the
    mistake this row exists to prevent. */

@@ -1,6 +1,6 @@
 import { optionCosts, optionBlocker } from '../../calc/compare.js';
 import { maxAffordablePrice } from '../../calc/capacity.js';
-import { money, termLabel } from './format.js';
+import { money, termLabel, blockerText } from './format.js';
 import { OPTIONS, OPTION_NAME } from './labels.js';
 
 // Step 2 answers one question: how much car will each way of paying get me at
@@ -127,14 +127,8 @@ const escapeHtml = value =>
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
 
-// "out of reach" is the same three words whichever option is blocked, but
-// the fix isn't the same: raise the monthly budget for a lease or a loan,
-// or have the whole purchase price saved for cash. Name the lever.
-function blockerText(blocker) {
-  return blocker.kind === 'savings'
-    ? `needs ${money(blocker.needed)} saved`
-    : `needs ${money(blocker.needed)}/mo`;
-}
+// blockerText moved to ui/format.js when the shortlist's cost table needed the
+// same sentence — see its comment there.
 
 export function renderVerdict(root, verdict) {
   const panel = root.querySelector('#verdict');

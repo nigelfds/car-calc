@@ -8,9 +8,9 @@
 // works with no network) and callers (ui/app.js) are expected to filter
 // here, then rank, then slice, then pass the result to renderCards.
 
-import { money, termLabel } from './format.js';
+import { money, termLabel, blockerText } from './format.js';
 import { OPTIONS, OPTION_NAME_SHORT } from './labels.js';
-import { optionCosts, valueRatio } from '../../calc/compare.js';
+import { optionCosts, valueRatio, optionBlocker } from '../../calc/compare.js';
 
 export function filterVehicles(vehicles, filters) {
   return vehicles.filter(v => {
@@ -200,7 +200,17 @@ export function cardModel(vehicle, families, context = null) {
     // Carried onto the card so the cost table can say "over 5 years" rather
     // than "over the term" — the table has the numbers but not the period they
     // cover, and a total means little without it.
-    termMonths: context?.inputs?.termMonths ?? null
+    termMonths: context?.inputs?.termMonths ?? null,
+    // What it would take to unblock an option that cannot reach this car. In
+    // practice only cash is ever infeasible (calc/compare.js marks novated and
+    // loan feasible unconditionally), but this comes from the shared
+    // optionBlocker for all three rather than being special-cased to cash, so it
+    // stays correct if that ever changes.
+    blockers: costs
+      ? Object.fromEntries(
+        OPTIONS.map(option => [option, optionBlocker(costs[option], context?.monthlyBudget)])
+      )
+      : null
   };
 }
 
@@ -244,7 +254,15 @@ function costTableMarkup(card) {
         <td>
           ${entry.feasible
             ? `${lead}<span class="car-costs__total">${money(entry.tco)} total</span>`
-            : '<span class="car-costs__lead">out of reach</span>'}
+            // A bare "out of reach" cost three lines and told the reader nothing
+            // they could act on — and at the default $0 savings that was every
+            // cash row on every card. One line naming the lever instead: what
+            // this particular car would need saved, which is more use than the
+            // verdict panel's version because it is this car's drive-away price
+            // rather than a ceiling.
+            : `<span class="car-costs__lead car-costs__lead--blocked">${
+              blockerText(card.blockers?.[option]) || 'out of reach'
+            }</span>`}
           ${entry.feasible && ratio !== null
             ? `<span class="car-costs__ratio">keeps ${Math.round(ratio * 100)}c of every $1</span>`
             : ''}

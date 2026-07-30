@@ -7,8 +7,7 @@ diagnosis.
 
 Tick a box when it lands.
 
-**Done: 1-3, 5-28** (except 4). **Won't fix: 4, 29, 30** — see their entries.
-**Still open: 26.**
+**All 30 items resolved: 1-28 done, 4/29/30 won't-fix** — see their entries for why.
 
 ## How this was reviewed
 
@@ -577,7 +576,19 @@ they are what the answer depends on.
 
 ### 26. Cash reads "out of reach" in every card at the default $0 savings
 
-- [ ] **Effort** S · **Files** `public/ui/cars.js:131-149`
+- [x] **Done** — the row stays but collapses to one line naming the lever: "needs
+  $65,474 saved". `blockerText` moved from `ui/slider.js` to `ui/format.js`, since
+  the verdict panel and the cost table now need the same sentence.
+- **The row was kept deliberately.** A two-row table under three-option panels
+  invites "why is cash missing?", and cash is a real option for someone who would
+  part-fund the car. The alternative — dropping the row and adding a note under the
+  table — saves more space but loses the per-car figure.
+- **Note**: the figure is that car's drive-away price, not its sticker, and it is
+  more use than the verdict's version of the same sentence — the verdict answers
+  "what could I reach", this answers "what would this car take". Blockers come from
+  the shared `optionBlocker` for all three options rather than being special-cased
+  to cash, even though cash is the only one `calc/compare.js` can mark infeasible.
+- **Effort** S · **Files** `public/ui/cars.js`, `public/ui/format.js`, `public/ui/slider.js`
 
 Fifteen dead table rows across a five-card shortlist. Collapse the cash row to a
 single line when savings cannot reach anything, with the lever to change it
