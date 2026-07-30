@@ -124,9 +124,26 @@ const same = (a, b) =>
     ? a.length === b.length && a.every((v, i) => v === b[i])
     : a === b;
 
+// While the Compare tab is showing, only `tab` and `compare` are ever
+// written out — every Find-tab field (salary, budget, term, savings, rates,
+// preference filters) is omitted outright, not merely defaulted away. That
+// is what makes "a compare link carries none of your income" true: without
+// this gate, toQueryString serialises the whole state object regardless of
+// which tab is active, so ?grossSalary=187500&tab=compare&compare=... was a
+// perfectly reachable URL.
+//
+// This only changes what gets WRITTEN. fromQueryString below still reads
+// every field present in the query string no matter what `tab` says, so a
+// legacy or hand-built link that carries both keeps working — it is only
+// this tab's own outbound links that stay clean. And because state.js never
+// deletes the Find-tab fields from the in-memory state object, switching back
+// to the Find tab (which calls this function again with tab: 'find') writes
+// them straight back into the URL from what's already held in memory.
 export function toQueryString(state, defaults) {
   const params = new URLSearchParams();
+  const compareOnly = state.tab === 'compare';
   for (const [key, raw] of Object.entries(state)) {
+    if (compareOnly && key !== 'tab' && key !== 'compare') continue;
     const value = key === 'compare' ? normaliseCompare(raw) : raw;
     if (value === null || value === '' || same(value, defaults[key])) continue;
     params.set(key, Array.isArray(value) ? value.join(',') : String(value));
