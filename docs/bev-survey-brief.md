@@ -808,11 +808,40 @@ rows sit between the Skoda Enyaq's `0.75` and the Audi Q4's `0.70` at the Tiguan
 with the ID.5 GTX one step steeper on reviewer consensus that it is the worse buy of the two grades.
 The Torres EVX copies the Musso EV's steep `[1, 0.66…]` on brand-level evidence.
 
-**One gate still not run.** The page-level browser render check remains outstanding — it was skipped
-in batch 1 at the user's instruction, and this session's dispatching prompt did not include it, so
-**no page-level confirmation exists for batch 1's or batch 2's families.** Build, tests and the
-validator all pass. Worth clearing before batch 3, since a green API with a broken page has happened
-on this project.
+**The render check is now CLEARED for both batches — 2026-07-30.** All twelve families from batches
+1 and 2 were confirmed rendering in a real browser against a freshly booted server, with **zero
+console errors or warnings** across the whole session. Four things worth carrying forward:
+
+**1. The stale-server warning is real and it caught us.** The server already listening on port 3000
+was serving **207 variants and had `toyota-hilux-bev` but not `vw-id4`** — batch 1's data but not
+batch 2's. Every check before the restart would have been a false pass. `lsof -nP -iTCP:3000
+-sTCP:LISTEN` then kill and `npm start`, and re-confirm the count before believing anything.
+
+**2. The shortlist caps at ~5 cards and ~2 per band, so "load the page and look" does not exercise a
+new family.** The page must be *driven* to each one. The app reads its whole state from the query
+string (`public/ui/state.js`), which makes this cheap: `?bodyTypes=SUV&minBootLitres=543&minRangeKm=522&monthlyBudget=1000`.
+Only *minimum* filters exist, so a family can be isolated only from below — pick the boot and range
+floors that just exclude its rivals, then tune `monthlyBudget` until it lands in a band. The
+per-family URLs that worked are worth reusing next batch.
+
+**3. One family could not be surfaced in the shortlist at all, and it is not a defect.** The **KGM
+Torres EVX is Pareto-dominated** — the Leapmotor C10 is cheaper ($49,888 v $55,188) with more boot
+(581 L v 465 L) and more range (510 km v 462 km), and the XPeng G6 beats it too. No filter or budget
+selects it, because the ranking is right not to. Its card was instead confirmed by driving the app's
+own `cardModel`/`renderCards` through the live page with the real row: it renders as *"KGM Torres EVX
+2WD · 465L boot · 462km range · $55,188"* with no NaN or undefined. **Recorded honestly as a
+component-level render, not a shortlist appearance.** Expect this again for any family that is
+mid-pack on every axis.
+
+**4. A pre-existing app defect surfaced during the check — raising `savings` REMOVES cars.** Nothing
+to do with this batch's data (`git diff df0da91..HEAD` touches no `public/`, `calc/`, `server/` or
+`scripts/` file). At the default $900/mo the shortlist shrinks monotonically as savings rise:
+$0–120,000 → 5 cards, $135,000 → 3, $145,000 → 2, $200,000 → **0**, and the empty state then reads
+*"Raise the budget, or add savings to make buying outright an option"* while savings are already set.
+The threshold sits near the drive-away price of the dearest car in the dataset (~$140,000 on the
+$129,250 Kia EV9 GT), which points at the band logic being anchored on a cash ceiling that can climb
+out of the dataset. Distinct from review item 14, which is about *filter*-driven empties and is done.
+Not filed in `docs/ux-review.md` — that register belongs to the UX branch's workflow.
 
 ## How to run a batch — paste this into a new session
 
