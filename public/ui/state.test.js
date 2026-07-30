@@ -122,3 +122,94 @@ test('the default toggle stays out of the query string', () => {
   const defaults = defaultState(rates);
   assert.equal(toQueryString({ ...defaults }, defaults).includes('includePhev'), false);
 });
+
+import { normaliseCompare, TABS, MAX_COMPARE_SLOTS } from './state.js';
+
+test('an all-empty comparison normalises away entirely', () => {
+  assert.deepEqual(normaliseCompare(['', '', '']), []);
+  assert.deepEqual(normaliseCompare([]), []);
+  assert.deepEqual(normaliseCompare(undefined), []);
+});
+
+test('trailing empty slots are trimmed but interior ones are kept', () => {
+  assert.deepEqual(normaliseCompare(['a', '', '']), ['a']);
+  assert.deepEqual(normaliseCompare(['a', '', 'c']), ['a', '', 'c']);
+});
+
+test('no more than three slots survive', () => {
+  assert.deepEqual(normaliseCompare(['a', 'b', 'c', 'd']), ['a', 'b', 'c']);
+  assert.equal(MAX_COMPARE_SLOTS, 3);
+});
+
+test('an empty comparison is absent from the query string', () => {
+  const defaults = defaultState(rates);
+  assert.equal(toQueryString({ ...defaults, compare: ['', '', ''] }, defaults), '');
+});
+
+test('a gapped comparison keeps its slot positions through a round trip', () => {
+  const defaults = defaultState(rates);
+  const query = toQueryString({ ...defaults, tab: 'compare', compare: ['a', '', 'c'] }, defaults);
+  assert.match(query, /compare=a%2C%2Cc/);
+  const back = fromQueryString(query, defaults);
+  assert.deepEqual(back.compare, ['a', '', 'c']);
+  assert.equal(back.tab, 'compare');
+});
+
+test('an unknown tab falls back to the default rather than routing nowhere', () => {
+  const defaults = defaultState(rates);
+  assert.equal(fromQueryString('?tab=nonsense', defaults).tab, 'find');
+  assert.deepEqual(TABS, ['find', 'compare']);
+});
+
+// Fix 2: a compare link must carry none of the reader's income. Before this,
+// toQueryString serialised the whole state object regardless of which tab
+// was showing, so ?grossSalary=187500&tab=compare&compare=... was a
+// perfectly reachable URL — the design spec's and README's claim otherwise
+// was false.
+test('a compare-tab link omits a non-default salary, budget and every other Find-tab field', () => {
+  const defaults = defaultState(rates);
+  const state = {
+    ...defaults, tab: 'compare', compare: ['kia-ev5-air', 'tesla-model-y'],
+    grossSalary: 187500, monthlyBudget: 1500, savings: 40000, deposit: 5000,
+    bodyTypes: ['SUV'], includePhev: true
+  };
+  const query = toQueryString(state, defaults);
+  assert.equal(query, '?tab=compare&compare=kia-ev5-air%2Ctesla-model-y');
+  assert.ok(!query.includes('grossSalary'));
+  assert.ok(!query.includes('monthlyBudget'));
+  assert.ok(!query.includes('savings'));
+  assert.ok(!query.includes('bodyTypes'));
+});
+
+test('a find-tab link still carries a non-default salary', () => {
+  const defaults = defaultState(rates);
+  const state = { ...defaults, tab: 'find', grossSalary: 187500 };
+  const query = toQueryString(state, defaults);
+  assert.ok(query.includes('grossSalary=187500'), query);
+});
+
+test('a legacy link carrying both income and a compare tab still parses the income on read', () => {
+  // Inbound links must not break just because outbound serialisation now
+  // filters — fromQueryString reads every field present, whatever `tab` says.
+  const defaults = defaultState(rates);
+  const restored = fromQueryString(
+    '?grossSalary=187500&savings=40000&tab=compare&compare=kia-ev5-air,tesla-model-y', defaults
+  );
+  assert.equal(restored.grossSalary, 187500);
+  assert.equal(restored.savings, 40000);
+  assert.equal(restored.tab, 'compare');
+  assert.deepEqual(restored.compare, ['kia-ev5-air', 'tesla-model-y']);
+});
+
+test('switching back to the Find tab re-adds the fields a compare link had omitted', () => {
+  const defaults = defaultState(rates);
+  // The in-memory state never loses these fields — only the compare-tab
+  // serialisation omitted them from the URL. Switching `tab` back to 'find'
+  // and re-serialising the same state object restores them.
+  const compareState = { ...defaults, tab: 'compare', grossSalary: 187500 };
+  const compareQuery = toQueryString(compareState, defaults);
+  assert.ok(!compareQuery.includes('grossSalary'));
+  const findState = { ...compareState, tab: 'find' };
+  const findQuery = toQueryString(findState, defaults);
+  assert.ok(findQuery.includes('grossSalary=187500'), findQuery);
+});

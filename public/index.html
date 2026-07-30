@@ -49,9 +49,27 @@
       <span class="route-rule__seg route-rule__seg--loan"></span>
       <span class="route-rule__seg route-rule__seg--cash"></span>
     </div>
+
+    <!-- Header furniture, not a floating strip: the tablist is the header's
+         own terminating edge now (see .tablist's border-bottom in
+         styles.css), sitting right where site-header's border-bottom used
+         to be. The route-rule above stays the identity signature; this row
+         is wayfinding. -->
+    <div class="tablist" role="tablist" aria-label="How to explore the data">
+      <button class="tab-button" type="button" role="tab" data-tab="find"
+              id="tab-find" aria-controls="panel-find" aria-selected="true" tabindex="0">
+        Find a car
+      </button>
+      <button class="tab-button" type="button" role="tab" data-tab="compare"
+              id="tab-compare" aria-controls="panel-compare" aria-selected="false" tabindex="-1">
+        Compare
+      </button>
+    </div>
   </header>
 
-  <main class="sections">
+  <main>
+
+  <div class="tab-panel sections" role="tabpanel" data-tab="find" id="panel-find" aria-labelledby="tab-find">
 
     <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading" class="section-heading">
@@ -409,6 +427,25 @@
         <p class="skeleton-note">Matching cars will appear here once we know your budget and what you're after.</p>
       </div>
     </section>
+
+  </div>
+
+  <div class="tab-panel" role="tabpanel" data-tab="compare" id="panel-compare"
+       aria-labelledby="tab-compare" hidden>
+    <div class="sections" id="compare-panel">
+      <section id="compare" aria-labelledby="compare-heading">
+        <h2 id="compare-heading" class="section-heading">Compare cars</h2>
+        <p class="section-intro">
+          Pick up to three cars from the dataset. Specifications only — this tab does not
+          cost a car under a lease, a loan or cash, so nothing here depends on what you earn.
+        </p>
+        <div class="compare-slots" id="compare-slots"></div>
+        <div class="compare-bench" id="compare-bench"></div>
+        <div class="compare-table" id="compare-table"></div>
+        <div class="compare-prose" id="compare-prose"></div>
+      </section>
+    </div>
+  </div>
 
   </main>
 

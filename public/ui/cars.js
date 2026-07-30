@@ -11,6 +11,7 @@
 import { money, termLabel, blockerText } from './format.js';
 import { OPTIONS, OPTION_NAME_SHORT } from './labels.js';
 import { optionCosts, valueRatio, optionBlocker } from '../../calc/compare.js';
+import { escapeHtml } from './escape.js';
 
 export function filterVehicles(vehicles, filters) {
   return vehicles.filter(v => {
@@ -293,11 +294,6 @@ function costTableMarkup(card) {
         <tbody>${rows}</tbody>
       </table>${balloonNote}`;
 }
-
-const escapeHtml = value =>
-  String(value).replace(/[&<>"']/g, ch => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[ch]);
 
 export function renderCards(root, cards, emptyMessage) {
   const target = root.querySelector('#car-list');

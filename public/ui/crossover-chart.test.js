@@ -130,6 +130,12 @@ test('without matchMedia, renderChart falls back to document.documentElement.cli
   }
 });
 
+test('a hidden container is not painted, so a resize behind another tab cannot corrupt it', () => {
+  const target = { innerHTML: 'untouched', clientWidth: 0, getBoundingClientRect: () => ({ width: 0 }) };
+  renderChart({ querySelector: () => target }, series, 900, null, null);
+  assert.equal(target.innerHTML, 'untouched');
+});
+
 // ---------------------------------------------------------------------------
 // I7: the user's current budget must be marked on whichever rendering is
 // chosen — previously renderChart never received the budget at all.

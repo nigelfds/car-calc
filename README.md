@@ -20,7 +20,8 @@ Levy Surcharge. This tool does not model that.
 ## What it does
 
 The three steps do three different jobs, and the split is deliberate: **step 2 knows nothing about
-specific cars**, and step 3 does all the car work.
+specific cars**, and step 3 does all the car work. All three live under the first tab, **Find a
+car**. The second tab, **Compare**, is a different tool, covered next.
 
 1. **What you want** — salary, lease term, savings, annual kilometres and lease start date, plus
    what you want in a car: body type, minimum boot, seats and range.
@@ -41,6 +42,47 @@ specific cars**, and step 3 does all the car work.
    Each card also shows how much of every dollar survives as resale — the figure that separates
    two similarly-priced cars — and, for a novated lease, the balloon due at the end of the term
    and whether selling the car would clear it. No photography; car imagery is out of scope.
+
+## Comparing cars side by side
+
+The second tab, **Compare**, answers a different question from the first: not what you can afford,
+but how two or three particular cars actually differ. It compares specifications only — it does not
+cost a car under a novated lease, a loan or cash, because that is the first tab's job, and it reads
+none of your salary, budget, term, savings or interest rate. While this tab is showing, the URL
+itself carries only `tab` and `compare` — every step-1 field is left out of what gets written, not
+merely reset to a default, so a link to a comparison genuinely carries none of your income.
+Switching back to **Find a car** restores your entries from memory and they reappear in the URL;
+reloading or bookmarking a Compare link, though, loses whatever step-1 entries you hadn't shared
+another way — that's intended, since specs-only is the whole point of the tab, not a bug to route
+around. A link that already carries both (one saved before this existed, say) still opens correctly;
+only a fresh Compare link is built clean.
+
+Any of the dataset's 216 variants goes in any of the three slots, chosen from an autocomplete on
+each — there's no preference filtering and no restriction by body type, so a ute sits next to a
+hatchback as readily as two SUVs. The slots live in the URL as `?tab=compare&compare=id1,id2,id3`; a
+cleared *interior* slot serialises as an empty segment (`id1,,id3`) rather than being dropped,
+because slot position matters — that's what will let a future "send these to Compare" button on the
+first tab be nothing more than a link. A cleared *trailing* slot is trimmed instead: `id1,id2,` would
+carry no information a shorter `id1,id2` doesn't already carry, so it's dropped rather than kept.
+
+The dataset has no missing values, so the hard part here is never a gap — it's that the same field
+can mean different things car to car. A plug-in hybrid's `rangeKm` is electric-only, with the whole
+trip in `combinedRangeKm`; a BEV's `rangeKm` already is the whole trip. A ute's boot is an open tray,
+so its seats-down figure equals its seats-up one and folding seats buys it nothing. And being under
+the $91,661 threshold gets a BEV a novated-lease FBT exemption while buying a PHEV nothing at all,
+since plug-in hybrids lost that exemption on 1 April 2025. Each of these is called out on the row it
+affects rather than smoothed over — and a row carrying one of these notes marks no winner at all. If
+the numbers can't be read straight across, neither can a "best".
+
+At 700px and narrower, only two cars show at a time and the third sits benched, as a chip *above*
+the table. Chips render in slot order, not screen order, so tapping one does one of two things
+depending on which car it names: tapping the benched chip brings that car on screen and benches
+whichever of the two visible cars is second by index; tapping a visible chip benches that car
+directly and brings back whichever was off screen. Either way, every pair of the three cars stays
+reachable. The winner on every row is still
+worked out across all three cars, including the one off screen, so a row the benched car actually
+wins gets a note naming it and its number — the alternative would be a tool that quietly reports the
+best *visible* car.
 
 ## No model in the loop
 
@@ -76,10 +118,10 @@ npm test
 ```
 
 Runs the full suite on Node's built-in test runner (`node --test`) — no test framework
-dependency. 330 tests across the tax/FBT/loan/lease/capacity/resale calculators, the dataset
-validator, the server routes, and the browser-side UI modules (parsed and rendered the same way whether run
-under Node or loaded natively in the browser, since there's no bundler or build step — `calc/` is
-imported unchanged by both).
+dependency. 587 tests across the tax/FBT/loan/lease/capacity/resale/spec-comparison calculators,
+the dataset validator, the server routes, and the browser-side UI modules (parsed and rendered the
+same way whether run under Node or loaded natively in the browser, since there's no bundler or
+build step — `calc/` is imported unchanged by both).
 
 ### The pre-push hook
 
