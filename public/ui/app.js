@@ -269,14 +269,21 @@ function boot(root, dataset) {
     return slots;
   }
 
-  function renderCompareTab() {
+  function pickedVehicles() {
     const slots = compareSlots();
     // An id from a shared link that names no car in the dataset leaves its
     // slot empty rather than throwing — the dataset changes, links outlive it.
-    const picked = slots.map(id => vehicles.find(v => v.id === id) ?? null).filter(Boolean);
+    return slots.map(id => vehicles.find(v => v.id === id) ?? null).filter(Boolean);
+  }
 
-    renderSlots(root, { slots, vehicles });
-
+  // Renders the comparison table and bench for whichever cars are picked and
+  // whatever the viewport currently is. Split out from renderCompareTab below
+  // because this is the only part of the tab that depends on the viewport —
+  // a resize or rotation never changes which cars are picked, so it has no
+  // business rebuilding the slot inputs (see the resize listener, and
+  // renderCompareTab's own comment, for why that used to matter).
+  function renderCompareBody() {
+    const picked = pickedVehicles();
     const twoUp = typeof window !== 'undefined' && window.innerWidth <= COMPARE_TWO_UP_MAX_PX;
     const bench = twoUp && picked.length === 3
       ? Math.min(benchIndex, picked.length - 1)
@@ -286,8 +293,59 @@ function boot(root, dataset) {
     renderBench(root, {
       vehicles: picked,
       benchIndex: bench,
-      model: picked.length >= 2 ? comparisonRows(picked, tables) : { groups: [] }
+      // Only worth building when there is a bench to describe: renderBench
+      // (ui/compare-tab.js) returns before ever reading `model` whenever
+      // benchIndex is null, so a three-up desktop view — where bench is
+      // always null — would otherwise run comparisonRows a second time for
+      // nothing, on top of the one renderComparison runs internally.
+      model: bench !== null && picked.length >= 2 ? comparisonRows(picked, tables) : { groups: [] }
     });
+  }
+
+  // A slot's own <input> can hold a query the reader is still typing, and
+  // that text exists only in the DOM — state.compare carries a *committed*
+  // id per slot, never a draft. renderSlots has no way to know about an
+  // uncommitted query, and rebuilds every slot's markup from the committed
+  // ids alone, so a render triggered by something else — a sibling slot
+  // committing its own pick is the one path that actually happens today —
+  // would otherwise throw an unrelated, half-typed search away. Captured
+  // before the rebuild and restored after, so it survives.
+  function captureSlotDrafts() {
+    const drafts = new Map();
+    for (const input of root.querySelectorAll('.compare-slot__input')) {
+      if (!input.value) continue;
+      const slot = input.closest('[data-slot]');
+      if (!slot) continue;
+      drafts.set(Number(slot.dataset.slot), {
+        value: input.value,
+        focused: root.activeElement === input,
+        selectionStart: input.selectionStart,
+        selectionEnd: input.selectionEnd
+      });
+    }
+    return drafts;
+  }
+
+  function restoreSlotDrafts(drafts) {
+    for (const [index, draft] of drafts) {
+      const input = root.querySelector(`[data-slot="${index}"] .compare-slot__input`);
+      // Absent when that slot itself just committed a car in this same
+      // pass — a filled slot has no input to restore a draft into.
+      if (!input) continue;
+      input.value = draft.value;
+      if (draft.focused) {
+        input.focus();
+        input.setSelectionRange(draft.selectionStart, draft.selectionEnd);
+      }
+    }
+  }
+
+  function renderCompareTab() {
+    const slots = compareSlots();
+    const drafts = captureSlotDrafts();
+    renderSlots(root, { slots, vehicles });
+    restoreSlotDrafts(drafts);
+    renderCompareBody();
   }
 
   // The full recompute-and-repaint pass. Deliberately routed through
@@ -389,7 +447,12 @@ function boot(root, dataset) {
     renderShortlist(verdict);
 
     applyTab(root, state.tab);
-    renderCompareTab();
+    // Gated: this runs on every debounced budget-slider frame on the Find
+    // tab too, and rebuilding an 18-row x 3-column table nobody is looking
+    // at on every drag frame is exactly the kind of waste this file's other
+    // recompute paths are built to avoid (see the purchasingPowerSeries note
+    // above).
+    if (state.tab === 'compare') renderCompareTab();
   }
 
   const debouncedRender = debounce(render, RECOMPUTE_DEBOUNCE_MS);
@@ -443,17 +506,24 @@ function boot(root, dataset) {
     }
   });
 
-  // Tapping a benched chip swaps it with the right-hand visible column, which
-  // is predictable enough to need no extra affordance.
+  // Every chip is tappable and every tap does something: tapping the benched
+  // chip brings it back on screen and benches the right-hand (second, by
+  // index) of the two cars that were visible; tapping a visible chip benches
+  // it directly, bringing whichever car was benched on screen in its place.
+  // That makes every pair of the three cars reachable — a chip's own index
+  // is unaffected by which position on screen it happens to land in, since
+  // "visible" just means "every index except benchIndex", read out in a
+  // fixed left-to-right order. Never renderCompareTab(): swapping the bench
+  // never changes which cars are picked, so there is nothing here for the
+  // slot inputs to be rebuilt over (see renderCompareBody's own comment).
   root.querySelector('#compare-bench')?.addEventListener('click', event => {
     const chip = event.target.closest?.('[data-bench-index]');
     if (!chip) return;
     const tapped = Number(chip.dataset.benchIndex);
-    if (tapped === benchIndex) {
-      const rightHand = [0, 1, 2].filter(i => i !== benchIndex)[1];
-      benchIndex = rightHand;
-      renderCompareTab();
-    }
+    benchIndex = tapped === benchIndex
+      ? [0, 1, 2].filter(i => i !== benchIndex)[1]
+      : tapped;
+    renderCompareBody();
   });
 
   // The preference block is collapsed by default (item 25) — every filter in it
@@ -513,8 +583,16 @@ function boot(root, dataset) {
   const rerenderChartForViewport = debounce(() => {
     if (lastSeries) renderChart(root, lastSeries, state.monthlyBudget, lastCliff, lastEntry);
     // The comparison picks two-up or three-up from the viewport too, and like
-    // the chart it only re-runs on a state change without this.
-    renderCompareTab();
+    // the chart it only re-runs on a state change without this. Deliberately
+    // renderCompareBody(), never renderCompareTab(): a resize never changes
+    // which cars are picked, so it has no business rebuilding the slot
+    // inputs — doing that used to destroy whatever the reader was still
+    // typing into a slot the moment a resize fired, which on a phone is most
+    // resizes: focusing a slot input opens the on-screen keyboard, and that
+    // itself fires `resize`. Also gated on the tab actually showing, for the
+    // same reason render() gates the heavier compare-tab work below — no
+    // point repainting a hidden panel's table on every Find-tab resize.
+    if (state.tab === 'compare') renderCompareBody();
   }, RESIZE_DEBOUNCE_MS);
 
   if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {

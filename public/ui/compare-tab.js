@@ -100,17 +100,32 @@ export function renderBench(root, { vehicles, benchIndex, model }) {
     row.caveats.some(caveat => caveat.text.includes(carName(vehicles[benchIndex])))
   );
 
+  // Every chip is a real action, both ways: tapping the benched one brings
+  // it on screen, tapping a visible one sends it off (see app.js's click
+  // handler). There is no persistent on/off state for a single chip to
+  // report — pressing one doesn't toggle *that* chip, it changes which car
+  // this position on screen names — so aria-pressed does not belong here,
+  // and neither does aria-disabled: every chip does something now. The
+  // accessible name carries the action and the current state instead, since
+  // the bare car name said neither.
   target.innerHTML = `
     <p class="compare-bench__hint" id="compare-bench-hint">
-      Two fit on screen. Tap the third to swap it in.
+      Two cars show at a time. Tap a chip to bring it on screen or send it off.
     </p>
-    ${vehicles.map((vehicle, index) => `
-      <button type="button" class="compare-chip${index === benchIndex ? ' compare-chip--benched' : ''}"
-              data-bench-index="${index}" aria-describedby="compare-bench-hint">
+    ${vehicles.map((vehicle, index) => {
+      const benched = index === benchIndex;
+      const label = benched
+        ? `Show ${carName(vehicle)}, currently off screen`
+        : `Hide ${carName(vehicle)}`;
+      return `
+      <button type="button" class="compare-chip${benched ? ' compare-chip--benched' : ''}"
+              data-bench-index="${index}" aria-describedby="compare-bench-hint"
+              aria-label="${escapeHtml(label)}">
         ${escapeHtml(carName(vehicle))}${
-          index === benchIndex && mentioned ? '<span class="compare-chip__dot" aria-hidden="true"></span>' : ''
+          benched && mentioned ? '<span class="compare-chip__dot" aria-hidden="true"></span>' : ''
         }
-      </button>`).join('')}`;
+      </button>`;
+    }).join('')}`;
 }
 
 export function renderComparison(root, { vehicles, families, tables, benchIndex = null }) {
