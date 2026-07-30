@@ -139,14 +139,20 @@ export function renderVerdict(root, verdict) {
     <div class="detail">Each figure is the dearest car that way of paying reaches. The cars themselves are below.</div>
     <div class="totals">${OPTIONS.map(o => {
       const entry = verdict.options[o];
+      // The option's own modifier goes on every tile, not just the winner's:
+      // it names which way of paying the tile is, and the stylesheet decides
+      // what to do with that. Today only `.is-winner` reads it — to tint the
+      // tile in the winning option's colour rather than always the lease's —
+      // but a class that appears only on the winner is one the next rule that
+      // wants "which option is this" would have to re-derive.
       if (entry.maxSpend <= 0) {
-        return `<div class="total">
+        return `<div class="total total--${o}">
           <span>${labels[o]}</span>
           <strong>out of reach</strong>
           ${entry.blocker ? `<span class="total__blocker">${blockerText(entry.blocker)}</span>` : ''}
         </div>`;
       }
-      return `<div class="total${o === verdict.winner ? ' is-winner' : ''}">
+      return `<div class="total total--${o}${o === verdict.winner ? ' is-winner' : ''}">
         <span>${labels[o]}</span>
         <strong>${money(entry.maxSpend)}</strong>
         <ul class="total__parts">${

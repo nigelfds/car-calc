@@ -243,6 +243,27 @@ test('renderVerdict states the ceiling and the option that sets it', () => {
   assert.ok(html.includes('Novated lease'));
 });
 
+// The winner tile used to be tinted with the lease's orange whichever option
+// won, directly above a legend telling the reader that orange means novated
+// leasing and purple means cash. The colour now comes from a per-option
+// modifier the stylesheet keys off, so the class has to be on the tile.
+test('every tile carries its own option modifier, and the winner is marked', () => {
+  const funded = { ...inputs, savings: 60000 };
+  const v = verdictAt({ budgetMonthly: 400, inputs: funded, profile: capacityProfile }, tables);
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+
+  for (const option of ['novated', 'loan', 'upfront']) {
+    assert.ok(html.includes(`total--${option}`), `expected a tile for ${option}`);
+  }
+  // Cash wins on these inputs, so `is-winner` must land on the cash tile and
+  // nowhere else — the bug this guards against is a winner class that is
+  // right while the colour beside it is wrong.
+  assert.match(html, /class="total total--upfront is-winner"/);
+  assert.equal(html.match(/is-winner/g).length, 1);
+});
+
 // --- What each option commits you to -------------------------------------
 // All three tiles used to carry the identical sentence "most expensive car
 // this way of paying reaches", which told the reader nothing about the choice

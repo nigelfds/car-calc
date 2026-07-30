@@ -127,9 +127,17 @@ function boot(root, dataset) {
 
   const budgetOutput = root.querySelector('#budgetSliderValue');
 
+  // The bar carries the winning option's own colour as well as its name, so
+  // the modifier is rewritten on every render — including back off again when
+  // the winner changes or disappears, which is why this clears the other two
+  // rather than only adding the current one.
+  const SUMMARY_BAR_MODIFIERS = Object.keys(OPTION_PHRASE).map(o => `summary-bar--${o}`);
+
   function renderSummaryBar(verdict) {
+    const bar = root.querySelector('#summary-bar');
     const text = root.querySelector('#summary-bar .summary-bar__text');
     if (!text) return;
+    bar?.classList.remove(...SUMMARY_BAR_MODIFIERS);
     if (verdict.insufficientInput) {
       text.textContent = 'Enter your gross salary to see what you can afford';
       return;
@@ -139,6 +147,7 @@ function boot(root, dataset) {
       return;
     }
     const winner = verdict.options[verdict.winner];
+    bar?.classList.add(`summary-bar--${verdict.winner}`);
     text.textContent =
       `${OPTION_PHRASE[verdict.winner]} reaches up to ${money(winner.maxSpend)} of car`;
   }

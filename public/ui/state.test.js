@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { defaultState, toQueryString, fromQueryString } from './state.js';
+import { defaultState, defaultLeaseStart, toQueryString, fromQueryString } from './state.js';
 
 const rates = {
   loanRatePct: 6.5, leaseRatePct: 7.5, adminFeeAnnual: 1020,
@@ -13,6 +13,32 @@ test('default state draws its rates from rates.json', () => {
   assert.equal(s.loanRatePct, 6.5);
   assert.equal(s.leaseRatePct, 7.5);
   assert.equal(s.annualKm, 15000);
+});
+
+// The lease start date used to be the literal '2026-07-25' in both the markup
+// and defaultState, so it was stale the day after it was written and drifted
+// further every day after that. These pin the two properties that matter: it
+// is in the future, and it is derived from the day it is asked for.
+test('the default lease start date is a month ahead of today', () => {
+  const start = defaultLeaseStart(new Date(2026, 6, 29));
+  assert.equal(start, '2026-08-28');
+});
+
+test('the default lease start date rolls over the end of a year', () => {
+  assert.equal(defaultLeaseStart(new Date(2026, 11, 20)), '2027-01-19');
+});
+
+// Local date parts, not toISOString(): a Melbourne reader is 10-11 hours ahead
+// of UTC, so for most of the morning the UTC date is still yesterday's.
+test('the default lease start date uses the local date, not the UTC one', () => {
+  // 08:00 on 1 July in Melbourne is 22:00 on 30 June UTC.
+  const morningInMelbourne = new Date(2026, 6, 1, 8, 0, 0);
+  assert.equal(defaultLeaseStart(morningInMelbourne), '2026-07-31');
+});
+
+test('the default lease start date is never in the past', () => {
+  const today = new Date();
+  assert.ok(defaultLeaseStart() > today.toISOString().slice(0, 10));
 });
 
 test('a state at defaults serialises to an empty query string', () => {

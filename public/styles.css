@@ -312,6 +312,18 @@ input[type='date'],
   border-top: 1px solid var(--hairline);
 }
 
+/* The numeric group above gets its spacing from a grid gap; this group is a
+   plain flow of fields and had none, so each field's hint sat ~19px above the
+   *next* field's label against ~35px between fields elsewhere — close enough
+   that every hint read as a caption for the field below it rather than the one
+   it belongs to. The `:not(.field--choices)` is because the body-type fieldset
+   already carries a larger bottom margin of its own; without it that one gap
+   would be the sum of both. */
+.field-group--prefs .field:not(.field--choices) + .field,
+.phev-options .field + .field {
+  margin-top: var(--space-4);
+}
+
 .field-group__heading {
   margin: 0 0 var(--space-4);
   font-size: 0.95rem;
@@ -518,9 +530,19 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
+/* Each way of paying owns a hue — orange for a lease, blue for a loan, purple
+   for cash — and the legend directly below this panel says so. The winner tile
+   therefore has to be tinted in the *winning* option's hue: hardcoding the
+   lease colour here meant a cash win was highlighted in the colour the legend
+   forty pixels lower assigns to leasing. Carried as a pair of custom
+   properties per option so `.is-winner` stays one rule rather than three. */
+.verdict-panel .total--novated { --option-line: var(--line-lease); --option-tint: var(--line-lease-bg); }
+.verdict-panel .total--loan    { --option-line: var(--line-loan);  --option-tint: var(--line-loan-bg); }
+.verdict-panel .total--upfront { --option-line: var(--line-cash);  --option-tint: var(--line-cash-bg); }
+
 .verdict-panel .total.is-winner {
-  border-color: var(--line-lease);
-  background: var(--line-lease-bg);
+  border-color: var(--option-line, var(--line-lease));
+  background: var(--option-tint, var(--line-lease-bg));
 }
 
 .disclaimer {
@@ -1112,7 +1134,22 @@ input[type='date'],
   box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
 }
 
-.summary-bar__arrow { color: var(--line-lease); font-weight: 700; }
+/* Same rule as the verdict tiles: the bar names a winning option in words, so
+   its one piece of colour has to be that option's own. The modifier is written
+   by ui/app.js's renderSummaryBar.
+
+   The pale tints rather than the line colours, though: this bar's ground is
+   --ink, and --line-loan (#10558f) on #161b1f is two dark colours on top of
+   each other. The tints were mixed to sit against paper, but as a foreground
+   on near-black they are exactly what a small glyph needs, and they keep
+   enough hue to still read as orange/blue/purple. */
+.summary-bar--novated { --option-tint: var(--line-lease-bg); }
+.summary-bar--loan { --option-tint: var(--line-loan-bg); }
+.summary-bar--upfront { --option-tint: var(--line-cash-bg); }
+
+/* Fallback for the states that name no winner at all — no salary entered yet,
+   or nothing reachable — where the arrow belongs to no option. */
+.summary-bar__arrow { color: var(--option-tint, var(--paper)); font-weight: 700; }
 
 @media (min-width: 900px) {
   .summary-bar { display: none; }

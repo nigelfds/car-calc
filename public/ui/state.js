@@ -34,6 +34,22 @@ export const NUMERIC_FIELDS = new Set([
   'phevBatterySharePct', 'minElectricRangeKm', 'petrolCentsPerLitre'
 ]);
 
+// A written-down date is wrong the day after it is committed, and this one had
+// been: it shipped as 2026-07-25 and was three days in the past by the time
+// anyone noticed. Computed instead, and computed a month out rather than for
+// today — a lease does not start the afternoon you first read about one, there
+// is a quote, a credit approval and a dealer in between, and a start date in
+// the past is not a thing the user can act on.
+//
+// Built from local date parts rather than toISOString(): that is UTC, and would
+// hand a Melbourne reader yesterday's date for the first ten hours of every
+// day. `new Date(y, m, d + 30)` rolls month and year over by itself.
+export function defaultLeaseStart(today = new Date()) {
+  const start = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 30);
+  const pad = value => String(value).padStart(2, '0');
+  return `${start.getFullYear()}-${pad(start.getMonth() + 1)}-${pad(start.getDate())}`;
+}
+
 export function defaultState(rates) {
   return {
     grossSalary: 100000,
@@ -41,7 +57,7 @@ export function defaultState(rates) {
     termMonths: 60,
     savings: 0,
     annualKm: rates.defaultAnnualKm,
-    leaseStartDate: '2026-07-25',
+    leaseStartDate: defaultLeaseStart(),
     deposit: 0,
     leaseRatePct: rates.leaseRatePct,
     loanRatePct: rates.loanRatePct,
