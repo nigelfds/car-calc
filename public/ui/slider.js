@@ -168,6 +168,16 @@ export function renderVerdict(root, verdict) {
          inside the rendered panel, and a test asserts the panel is free of
          it.) -->
     <div class="winner winner--${verdict.winner}">
+      <!-- Until a salary has been entered, every figure below is computed from a
+           $100,000 default. Showing a live worked example rather than an empty
+           page is the right call — it is what makes the tool legible in the first
+           two seconds — but nothing distinguished that example from the reader's
+           own result, and a stranger's answer presented as yours is worse than no
+           answer. The touched set (ui/sections.js) already records which fields
+           have been edited, so this needs no new state.
+           (No backticks in this comment: it lives inside a template literal, and
+           one would end the string.) -->
+      ${verdict.isExample ? '<p class="winner__example">Example figures — enter your salary for your own</p>' : ''}
       <p class="winner__headline">${labels[verdict.winner]} reaches the most car — up to ${money(winner.maxSpend)}</p>
       <!-- The commitment, at the same weight as the ceiling rather than in
            footnote grey: the ceiling is what you could buy, this is what you

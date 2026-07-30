@@ -255,13 +255,25 @@ input[type='date'],
 @media (min-width: 900px) {
   .sections {
     display: grid;
-    /* Step 1 is a fixed rail — it is a form, and a form does not get better
-       with more width. Steps 2 and 3 split what is left evenly: step 3 used
-       to get 236px, which was narrower than the shortlist cards it holds,
-       while step 2 had room it did not need. */
-    grid-template-columns: 250px 1fr 1fr;
+    /* Two columns, not three. Step 1 stays a fixed rail — it is a form, and a
+       form does not get better with more width — and step 2 takes the rest.
+       Measured before changing: three columns gave steps 2 and 3 just 293px each
+       at a 900px container, narrower than a phone, and 483px at 1280px. The
+       chart needs 620px of container for its wide geometry, so under three
+       columns it was compact at every realistic desktop width; under two it goes
+       wide from a ~970px page up (the column loses 250px to the rail, 32px of
+       page padding, the 16px gap and 48px of its own padding, so 620 + 346).
+       Step 3 spans both columns below, where the shortlist can use the whole
+       width instead of a 293px slot — which also disposes of the ~400-500px of
+       dead column that sat beside it, since the two tall panels are no longer
+       trying to be the same height as a short form. */
+    grid-template-columns: 250px 1fr;
     gap: 1rem;
     align-items: start;
+  }
+
+  .sections > #cars {
+    grid-column: 1 / -1;
   }
 }
 
@@ -324,10 +336,29 @@ input[type='date'],
   margin-top: var(--space-4);
 }
 
+/* Also the <summary> of the collapsible preference block, so it carries the
+   pointer affordance and keeps the heading weight it had as an <h3>. */
 .field-group__heading {
   margin: 0 0 var(--space-4);
   font-size: 0.95rem;
   font-weight: 600;
+  cursor: pointer;
+}
+
+/* Says the block can be skipped, which is the whole reason it is collapsed. */
+.field-group__optional {
+  margin-left: 0.4em;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+/* A closed <details> has no need of the bottom margin its summary carries as a
+   heading; only an open one does. */
+.field-group--prefs:not([open]) .field-group__heading {
+  margin-bottom: 0;
 }
 
 .field--choices {
@@ -542,6 +573,18 @@ input[type='date'],
   background: var(--option-line, var(--line-lease));
 }
 
+/* Sits above the headline, in the warning colour but at footnote size: it has to
+   be noticed before the figure it qualifies is read, without competing with it.
+   Disappears the moment a salary is entered. */
+.verdict-panel .winner__example {
+  margin: 0 0 var(--space-1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--warn);
+}
+
 .verdict-panel .winner__headline {
   margin: 0;
   font-size: 1.3rem;
@@ -691,12 +734,17 @@ input[type='date'],
 
 .disclaimer__list li + li { margin-top: var(--space-2); }
 
+/* A <ul> since item 27: it is a list of three things, and that is what tells a
+   screen reader how many there are. list-style and padding-left are reset
+   because the coloured dots are the markers. */
 .line-legend {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
   margin: var(--space-5) 0 0;
   padding-top: var(--space-4);
+  padding-left: 0;
+  list-style: none;
   border-top: 1px solid var(--hairline);
 }
 
@@ -1164,6 +1212,23 @@ input[type='date'],
   gap: var(--space-3);
 }
 
+/* Step 3 spans the full page width from 900px (see the layout section), so the
+   shortlist becomes a grid rather than one long column of cards in a wide, mostly
+   empty panel. minmax so it reflows with the width instead of needing a
+   breakpoint per column count.
+
+   This has to sit AFTER the flex rule above, not in the layout section's media
+   query where it started: a media query adds no specificity, so `.car-list`
+   declared later in the file simply won — the grid never applied and the cards
+   stayed in a single column. */
+@media (min-width: 900px) {
+  .car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    align-items: start;
+  }
+}
+
 .car-card {
   padding: var(--space-3);
   border: 1px solid var(--hairline);
@@ -1344,7 +1409,14 @@ input[type='date'],
    Sticky mobile summary bar — visible only below 900px
    ========================================================================= */
 
+/* A <button> since item 28, so the scroll it performs has a keyboard path. The
+   first three declarations undo what being a button brings with it — a shrink-to
+   -fit box, a platform border, and centred text — none of which this full-width
+   bar wants. `font: inherit` is already handled by the base reset. */
 .summary-bar {
+  width: 100%;
+  border: none;
+  text-align: left;
   position: sticky;
   bottom: 0;
   left: 0;

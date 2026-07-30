@@ -181,9 +181,18 @@
 
       <!-- These four already drove the shortlist filter, but had no controls:
            the only way to set them was the free-text parse, so "an SUV with a
-           big boot" did nothing at all whenever that parse did not fire. -->
-      <div class="field-group field-group--prefs">
-        <h3 class="field-group__heading">What you want in a car</h3>
+           big boot" did nothing at all whenever that parse did not fire.
+
+           Collapsed since item 25. Every filter in here is optional and defaults
+           to "any", while the fields above it are what the answer actually depends
+           on — and on a phone this block was most of the ~1,150px a reader
+           scrolled through before reaching a single number. ui/app.js opens it on
+           load whenever any of these filters is set, so a shared link never hides
+           the filters that are shaping its own shortlist. -->
+      <details class="field-group field-group--prefs" id="prefs">
+        <summary class="field-group__heading">What you want in a car
+          <span class="field-group__optional">optional</span>
+        </summary>
 
         <fieldset class="field field--choices">
           <legend>Body type</legend>
@@ -292,7 +301,7 @@
               roughly doubles the fuel bill, though it moves the monthly figure much less.</p>
           </div>
         </div>
-      </div>
+      </details>
     </section>
 
     <section id="afford" aria-labelledby="afford-heading">
@@ -334,11 +343,17 @@
           or cash — gets you the most car for your budget.</p>
       </div>
 
-      <div class="line-legend" aria-hidden="true">
-        <span class="line-legend__item line-legend__item--lease"><span class="line-legend__dot line-legend__dot--lease"></span>Novated lease</span>
-        <span class="line-legend__item line-legend__item--loan"><span class="line-legend__dot line-legend__dot--loan"></span>Car loan</span>
-        <span class="line-legend__item line-legend__item--cash"><span class="line-legend__dot line-legend__dot--cash"></span>Cash</span>
-      </div>
+      <!-- The whole legend used to carry aria-hidden, which removed the only key
+           to the chart from every screen reader — and it is text, which is the
+           one form the chart's meaning survives in. The attribute now sits on the
+           colour swatches alone, where it belongs: a bare coloured dot has
+           nothing to announce, and "Novated lease" beside it says everything the
+           dot was standing in for. -->
+      <ul class="line-legend" aria-label="What each line on the chart means">
+        <li class="line-legend__item line-legend__item--lease"><span class="line-legend__dot line-legend__dot--lease" aria-hidden="true"></span>Novated lease</li>
+        <li class="line-legend__item line-legend__item--loan"><span class="line-legend__dot line-legend__dot--loan" aria-hidden="true"></span>Car loan</li>
+        <li class="line-legend__item line-legend__item--cash"><span class="line-legend__dot line-legend__dot--cash" aria-hidden="true"></span>Cash</li>
+      </ul>
 
       <div id="crossover" class="crossover-panel">
         <p class="skeleton-note">A chart will appear here showing how the cost of each option changes over time,
@@ -380,10 +395,17 @@
 
   </main>
 
-  <div id="summary-bar" class="summary-bar" role="status" aria-live="polite">
-    <span class="summary-bar__text">Fill in your details to see what you can afford</span>
+  <!-- A <button>, not a clickable <div>. It scrolls to step 2, and as a div with
+       tabIndex -1 there was no keyboard path to that at all.
+       role="status" moves to the inner span: the live region has to be the thing
+       whose text changes, and a button announcing itself on every recompute would
+       interrupt rather than inform. The button keeps its own accessible name via
+       aria-label, which does not change as the figure does. -->
+  <button type="button" id="summary-bar" class="summary-bar"
+    aria-label="Jump to what you can afford">
+    <span class="summary-bar__text" role="status" aria-live="polite">Fill in your details to see what you can afford</span>
     <span class="summary-bar__arrow" aria-hidden="true">→</span>
-  </div>
+  </button>
 
   <footer class="site-footer">
     <p>General information only — not personal financial advice.</p>

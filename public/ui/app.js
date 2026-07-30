@@ -42,6 +42,23 @@ const RESIZE_DEBOUNCE_MS = 150;
 // Sentence form — "A novated lease reaches up to $61,802 of car". From
 // ui/labels.js, alongside the other two shapes the page needs.
 
+// The fields inside the collapsible preference block. Listed rather than derived
+// so that adding a filter to the block without adding it here is a visible
+// omission rather than a silent one — the cost of missing it is a shared link
+// whose shortlist is being narrowed by a control the reader cannot see.
+const PREFERENCE_FIELDS = [
+  'bodyTypes', 'minBootLitres', 'minRangeKm', 'seats',
+  'includePhev', 'minElectricRangeKm', 'phevBatterySharePct'
+];
+
+// Arrays compare by contents; everything else by value. bodyTypes is the only
+// array among the preference fields, and `[] !== []` would open the disclosure on
+// every load without this.
+const same = (a, b) =>
+  Array.isArray(a) && Array.isArray(b)
+    ? a.length === b.length && a.every((value, i) => value === b[i])
+    : a === b;
+
 // C3: a missing/blank (sections.js deliberately writes '' rather than 0 —
 // see NUMERIC_FIELDS.has(field) && raw !== '' there) or non-positive salary
 // must never reach the calc engine. netIncome (calc/tax.js) floors taxable
@@ -269,11 +286,20 @@ function boot(root, dataset) {
     // isn't a real number yet — not called-then-discarded, so there is no
     // window where a bogus $-11,463 "novated lease is free" figure ever
     // reaches the DOM (see hasValidSalary's comment for why).
+    // Everything on the page is real arithmetic on a $100,000 default until the
+    // reader has told us otherwise. Read off `touched` rather than comparing the
+    // salary against the default value: someone who deliberately types 100000 has
+    // entered their salary, and their result should not be labelled an example.
+    const isExample = !(state.touched ?? []).includes('grossSalary');
+
     const verdict = salaryReady
-      ? verdictAt({
-        budgetMonthly: state.monthlyBudget, inputs, profile,
-        employerOffersNovated: state.employerOffersNovated
-      }, tables)
+      ? {
+        ...verdictAt({
+          budgetMonthly: state.monthlyBudget, inputs, profile,
+          employerOffersNovated: state.employerOffersNovated
+        }, tables),
+        isExample
+      }
       : { winner: null, maxSpend: 0, options: {}, insufficientInput: true };
     renderVerdict(root, verdict);
     renderSummaryBar(verdict);
@@ -351,6 +377,20 @@ function boot(root, dataset) {
   // their inputs rather than state directly, so this needs nothing from the
   // closure.
   bindPresets(root);
+
+  // The preference block is collapsed by default (item 25) — every filter in it
+  // is optional, and on a phone it was most of what stood between the reader and
+  // their first number. But a collapsed block must never hide a filter that is
+  // actively shaping the shortlist, which is exactly what a shared link does: open
+  // ?minBootLitres=550 and the reason four fifths of the fleet vanished would be
+  // behind a closed disclosure.
+  //
+  // Once, at boot, not in render(): after this the disclosure is the reader's to
+  // open and close, and reasserting it on every recompute would fight them.
+  const prefs = root.querySelector('#prefs');
+  if (prefs && PREFERENCE_FIELDS.some(field => !same(state[field], defaults[field]))) {
+    prefs.open = true;
+  }
 
   // Written once at boot: the dataset is fetched once and never changes
   // during a session, so this does not belong in render().
