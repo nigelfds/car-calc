@@ -160,9 +160,13 @@ input[type='date'],
    Header
    ========================================================================= */
 
+/* No border-bottom here: the tablist (the header's last child — see
+   index.html) supplies the header's terminating edge instead, via its own
+   border-bottom below, so the selected tab's underline can be the last
+   line before <main> rather than fighting a second hairline immediately
+   under it. */
 .site-header {
   background: var(--paper-raised);
-  border-bottom: 1px solid var(--hairline);
 }
 
 .site-header__inner {
@@ -1642,8 +1646,12 @@ input[type='date'],
 
 /* =========================================================================
    Tabs — "Find a car" / "Compare". Task 6 built the roving-tabindex
-   behaviour (ui/tabs.js) and the markup; neither tab had a stitch of CSS
-   until now.
+   behaviour (ui/tabs.js) and the markup. Originally styled as a bare strip
+   between </header> and <main>; moved into <header class="site-header">
+   (index.html) as header furniture instead — it now sits right after
+   .route-rule and supplies the header's own terminating edge, rather than
+   reading as scaffolding bolted on below a header that already looked
+   finished on its own.
    ========================================================================= */
 
 .tablist {
@@ -1651,13 +1659,29 @@ input[type='date'],
   gap: var(--space-2);
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-2) var(--space-4) 0;
+  /* No horizontal padding: .tab-button's own padding-left already supplies
+     a var(--space-4) inset. .site-header__inner and .sections share this
+     same max-width + `margin: 0 auto`, so their content also starts one
+     var(--space-4) in from the shared box edge — giving the tablist a
+     second var(--space-4) of its own, on top of the button's, is exactly
+     what put the first tab's label one --space-4 further in than the
+     wordmark above it and the cards below it. */
+  padding: var(--space-3) 0 0;
+  /* The header's terminating edge (.site-header no longer carries its own
+     border-bottom) — so the selected tab's underline below is the last
+     line before <main>, not a second hairline stacked under an existing
+     one. */
   border-bottom: 1px solid var(--hairline);
 }
 
 .tab-button {
   padding: var(--space-3) var(--space-4);
   border: none;
+  /* Invisible on the unselected/transparent-fill buttons, but gives the
+     selected tab's --paper fill (below) rounded top corners, so it reads
+     as a distinct tab shape poking up into the header rather than a flat
+     rectangle. */
+  border-radius: var(--radius) var(--radius) 0 0;
   /* Sits on the tablist's own hairline rather than adding a second one, so a
      selected tab's border below can replace it exactly rather than stacking
      on top of it. */
@@ -1674,9 +1698,15 @@ input[type='date'],
 
 /* Colour is not the identity channel here — a reader in greyscale, or one
    who cannot tell --ink from --ink-soft at a glance, still gets a heavier
-   weight and a solid underline. aria-selected (not a class) because
-   applyTab (ui/tabs.js) sets the attribute directly; this only reads it. */
+   weight, a solid underline, AND a filled shape: the selected tab's own
+   background switches from the header's --paper-raised to --paper — the
+   page body's own background colour — so it visually reads as part of the
+   page reaching up into the header, not just a coloured label. Three
+   non-colour channels for one state, on purpose. aria-selected (not a
+   class) because applyTab (ui/tabs.js) sets the attribute directly; this
+   only reads it. */
 .tab-button[aria-selected="true"] {
+  background: var(--paper);
   color: var(--ink);
   font-weight: 700;
   border-bottom-color: var(--ink);

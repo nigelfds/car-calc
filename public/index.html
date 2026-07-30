@@ -49,18 +49,23 @@
       <span class="route-rule__seg route-rule__seg--loan"></span>
       <span class="route-rule__seg route-rule__seg--cash"></span>
     </div>
-  </header>
 
-  <div class="tablist" role="tablist" aria-label="How to explore the data">
-    <button class="tab-button" type="button" role="tab" data-tab="find"
-            id="tab-find" aria-controls="panel-find" aria-selected="true" tabindex="0">
-      Find a car
-    </button>
-    <button class="tab-button" type="button" role="tab" data-tab="compare"
-            id="tab-compare" aria-controls="panel-compare" aria-selected="false" tabindex="-1">
-      Compare
-    </button>
-  </div>
+    <!-- Header furniture, not a floating strip: the tablist is the header's
+         own terminating edge now (see .tablist's border-bottom in
+         styles.css), sitting right where site-header's border-bottom used
+         to be. The route-rule above stays the identity signature; this row
+         is wayfinding. -->
+    <div class="tablist" role="tablist" aria-label="How to explore the data">
+      <button class="tab-button" type="button" role="tab" data-tab="find"
+              id="tab-find" aria-controls="panel-find" aria-selected="true" tabindex="0">
+        Find a car
+      </button>
+      <button class="tab-button" type="button" role="tab" data-tab="compare"
+              id="tab-compare" aria-controls="panel-compare" aria-selected="false" tabindex="-1">
+        Compare
+      </button>
+    </div>
+  </header>
 
   <main>
 
