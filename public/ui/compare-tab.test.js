@@ -152,6 +152,13 @@ test('the benched car is left out of the table', () => {
   assert.doesNotMatch(head, /Dolphin/);
   // Two car columns, not three.
   assert.equal((html.match(/compare-head--/g) ?? []).length, 2);
+  // The header check above says nothing about the <tbody>: a row loop that
+  // regressed to iterating all three vehicles (while the header stayed fixed)
+  // would slip a third, benched <td> onto every data row unnoticed. Anchor on
+  // `<td class="compare-cell` (not a bare /compare-cell/g) so a winning cell's
+  // extra "compare-cell--win" class doesn't get counted twice.
+  const warrantyRow = html.split('data-row="warrantyYears"')[1].split('data-row="')[0];
+  assert.equal((warrantyRow.match(/<td class="compare-cell/g) ?? []).length, 2);
 });
 
 test('a row the benched car wins says so, and names the number', () => {
@@ -181,8 +188,11 @@ test('a caveated row gets no off-screen note, because it has no winner to report
 test('desktop passes no bench and gets no notes at all', () => {
   const root = stubRoot();
   renderComparison(root, { vehicles: [ev5, sealion, cheap], families, tables, benchIndex: null });
-  assert.doesNotMatch(root.targets['compare-table'].innerHTML, /compare-offscreen/);
-  assert.match(root.targets['compare-table'].innerHTML, /Dolphin/);
+  const html = root.targets['compare-table'].innerHTML;
+  assert.doesNotMatch(html, /compare-offscreen/);
+  assert.match(html, /Dolphin/);
+  // All three cars get a column when there is no bench.
+  assert.equal((html.match(/compare-head--/g) ?? []).length, 3);
 });
 
 test('the bench names the car and flags that it appears in a callout', () => {
