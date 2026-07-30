@@ -2,7 +2,13 @@
 
 You are researching **one** EV family for the Australian (specifically Victorian) market and
 writing **exactly two files**. Project root: `/Users/nigel/projects/car-calc`.
-Research date to record: **2026-07-27**.
+
+**Research date to record: the date your dispatching prompt gives you.** Record that date in
+`sourcedAt` in both files — not a date from this document. This brief is reused across research
+waves, so any date hardcoded here is wrong for every wave but the first: it read `2026-07-27` from
+the first EV wave until BEV batch 1 ran on 2026-07-30, and every batch after that drifts further.
+If your prompt did not give you a date, stop and ask for one rather than guessing — `sourcedAt` is
+how a later session works out which rows predate a price change, and 2026 has been a price-war year.
 
 ## Hard boundaries
 
@@ -36,9 +42,35 @@ Research date to record: **2026-07-27**.
    `data/vehicles.json`** rather than inventing a scale, so the dataset stays internally
    consistent. Deviate from the default curve only on documented evidence (price cuts, discounting,
    tiny local volume, a warranty cut) and justify it in your report.
-6. **If the brand publishes only drive-away pricing** and no list price exists anywhere (Zeekr does
-   this), back the list price out of the drive-away figure using the app's own VIC model —
-   `list = (driveaway - 880) / 1.042` — verify it round-trips, and flag it clearly in your report.
+6. **If the brand publishes only drive-away pricing** and no list price exists anywhere (Zeekr and
+   KGM both do this), back the list price out of the drive-away figure using the app's own VIC
+   model, **and use the divisor that matches your body type**:
+
+   | Body type | Divisor | Why |
+   |---|---|---|
+   | `Sedan`, `Hatch`, `SUV` | `list = (driveaway - 880) / 1.042` | Green passenger car, $8.40 per $200 = 4.2% |
+   | **`Ute`** | `list = (driveaway - 880) / 1.027` | **Non-passenger, $5.40 per $200 = 2.7%** |
+
+   Victoria charges utes as goods vehicles whatever their emissions, so a ute is neither "green" nor
+   tiered. `vicStampDuty()` in `calc/onroad.js` tests `isNonPassenger` **before** it looks at price
+   or emissions, which is why the passenger divisor is simply the wrong arithmetic for a ute — it is
+   not a rounding difference. Using 1.042 on the KGM Musso EV undershot list by $851–$909 a row.
+
+   **Then verify the round-trip rather than trusting either constant.** Call the real function
+   against the real tables and confirm you land back on the advertised figure:
+
+   ```bash
+   node --input-type=module -e "
+   import {driveAwayPrice} from './calc/onroad.js';
+   import fs from 'fs';
+   const tables = JSON.parse(fs.readFileSync('data/tax-tables.json','utf8'));
+   console.log(driveAwayPrice({listPrice: YOUR_BACKED_OUT_PRICE, isNonPassenger: true}, tables).total);
+   "
+   ```
+
+   Drop `isNonPassenger` for a passenger car. If it does not come back within a dollar or two of the
+   advertised drive-away price, your divisor or your assumption about what the price includes is
+   wrong. Flag any backed-out price clearly in your report — it is an estimate, not a sourced figure.
 
 ## If the car is not on sale
 
@@ -74,7 +106,7 @@ on the configurator.
     "warrantyYears": 7,
     "insuranceAnnual": 1800,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "<the research date from your prompt>"
   }
 ]
 ```
@@ -103,7 +135,9 @@ Field rules — every one of these is enforced by `data/schema.js`, and a violat
   BYD 6, Tesla 5. `calc/rank.js` scores this field as `warrantyYears / 10` and headlines the
   winner as a reason, so a conditional number here buys the car an advantage it hasn't earned.
   Put the conditional offer in the family `pros` as prose instead, stating the condition.
-- `towKg` is the **braked** towing capacity; use `0` if not rated to tow.
+- `towKg` is the **braked** towing capacity; use `0` if not rated to tow. Take it from the
+  manufacturer's **technical spec sheet, not the marketing page** — KGM's Musso EV marketing claims
+  "up to 2.3 tonne" against its own spec sheet's 1,800 kg.
 - `insuranceAnnual` is your estimate of a Melbourne comprehensive premium (must be 500–6000).
 - `depreciationCurve` must start at `1`, decline monotonically, and stay within 0–1. Default for
   mainstream EVs is `[1, 0.78, 0.68, 0.6, 0.53, 0.47]`. Adjust only for families with notably
@@ -111,6 +145,29 @@ Field rules — every one of these is enforced by `data/schema.js`, and a violat
 - Numeric bounds: `listPrice` 15000–250000, `batteryKwh` 15–200, `rangeKm` 100–1000,
   `consumptionKwhPer100km` 8–35, `bootLitresSeatsUp` 100–1200, `bootLitresSeatsDown` 200–3000,
   `seats` 2–9, `towKg` 0–3500, `warrantyYears` 1–10.
+
+### If your family is a `Ute`, three extra conventions apply
+
+The dataset's utes are consistent on all three, and the stamp-duty divisor above depends on the
+first one being set.
+
+- **Set `isNonPassengerForVicDuty: true` on every row.** It is an optional boolean in
+  `data/schema.js`, consumed by `calc/compare.js`, and it is what makes Victoria charge the row as a
+  goods vehicle at 2.7% instead of 4.2%. Omit it and the ute is billed as a passenger car — which is
+  a real bug that was already fixed once in `calc/onroad.js`; see the comment there. Every existing
+  ute family sets it.
+- **Set `bootLitresSeatsUp` equal to `bootLitresSeatsDown`**, both to the tub volume. A ute has no
+  fold-down seats affecting load space, so a ratio between the two would be meaningless. If no litre
+  figure is published, multiply the tub dimensions out, and **say in your report that you did** —
+  that estimate ignores wheel-arch intrusion and reads high by 10–20%.
+- **Never set `isGreenForVicDuty` on a battery-electric ute — it will fail the build.** It is in
+  `PHEV_ONLY_FIELDS` in `data/schema.js`, and any row that sets it without `powertrain: "phev"` is
+  rejected with "only belong on a plug-in hybrid". The held PHEV utes set it to `false`; copying that
+  onto a BEV row is a build failure, not a style difference. Leaving it out is also correct on the
+  merits: it defaults to true, and `isNonPassenger` short-circuits before it is ever read.
+
+Cab-chassis and panel-van variants are **out of scope** — the project has no honest body type for
+them. Dual-cab pickups are in. Say which variants you excluded on this ground.
 
 ## `data/families/<familyId>.json` — a single OBJECT
 
@@ -121,7 +178,7 @@ Field rules — every one of these is enforced by `data/schema.js`, and a violat
   "pros": ["...", "...", "..."],
   "cons": ["...", "..."],
   "sources": ["https://...", "https://..."],
-  "sourcedAt": "2026-07-27"
+  "sourcedAt": "<the research date from your prompt>"
 }
 ```
 
