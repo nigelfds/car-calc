@@ -49,6 +49,34 @@
   --font-text: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 
+  /* The type scale. Six steps, and nothing outside them.
+
+     This page had accumulated 24 distinct font sizes across 60 declarations —
+     0.66, 0.68, 0.7, 0.72, 0.75, 0.78, 0.8, 0.82, 0.85rem all in play at once,
+     which is nine ways of saying "smaller than body" and no way of telling them
+     apart. A single car card used eight of them. Sizes that close together do
+     not read as hierarchy, they read as drift.
+     Six steps at roughly a 1.15 ratio, on the 16px root (rem tracks the root
+     element, so setting body below does not move them):
+       display  24px  the wordmark, and nothing else
+       xl       20px  the one headline that carries the answer
+       lg       17px  section headings, card titles, the verdict's three figures
+       md       15px  body: prose, inputs, the figure a reader acts on
+       sm       13px  labels, secondary lines, notes, most of the interface
+       xs       11px  eyebrows, captions, units, provenance
+     Where two things share a step, weight and colour separate them — a label at
+     500/ink-soft against its hint at 400/ink-faint. That is a firmer hierarchy
+     than a 1px size difference nobody can see.
+     The four sizes inside .crossover-chart are deliberately NOT on this scale:
+     they are SVG viewBox units scaled by the chart's own transform, and two are
+     paired with hand-measured character widths in ui/crossover-chart.js. */
+  --text-display: 1.5rem;
+  --text-xl: 1.25rem;
+  --text-lg: 1.0625rem;
+  --text-md: 0.9375rem;
+  --text-sm: 0.8125rem;
+  --text-xs: 0.6875rem;
+
   /* Rhythm */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -76,7 +104,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-text);
-  font-size: 16px;
+  font-size: var(--text-md);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -157,7 +185,7 @@ input[type='date'],
 .site-header__stats {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   color: var(--ink-faint);
   text-align: right;
 }
@@ -171,7 +199,7 @@ input[type='date'],
   align-items: center;
   gap: var(--space-3);
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--text-display);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
@@ -214,7 +242,7 @@ input[type='date'],
 .site-header__subhead {
   margin: var(--space-1) 0 0;
   color: var(--ink-soft);
-  font-size: 0.95rem;
+  font-size: var(--text-md);
   max-width: 46ch;
 }
 
@@ -255,13 +283,25 @@ input[type='date'],
 @media (min-width: 900px) {
   .sections {
     display: grid;
-    /* Step 1 is a fixed rail — it is a form, and a form does not get better
-       with more width. Steps 2 and 3 split what is left evenly: step 3 used
-       to get 236px, which was narrower than the shortlist cards it holds,
-       while step 2 had room it did not need. */
-    grid-template-columns: 250px 1fr 1fr;
+    /* Two columns, not three. Step 1 stays a fixed rail — it is a form, and a
+       form does not get better with more width — and step 2 takes the rest.
+       Measured before changing: three columns gave steps 2 and 3 just 293px each
+       at a 900px container, narrower than a phone, and 483px at 1280px. The
+       chart needs 620px of container for its wide geometry, so under three
+       columns it was compact at every realistic desktop width; under two it goes
+       wide from a ~970px page up (the column loses 250px to the rail, 32px of
+       page padding, the 16px gap and 48px of its own padding, so 620 + 346).
+       Step 3 spans both columns below, where the shortlist can use the whole
+       width instead of a 293px slot — which also disposes of the ~400-500px of
+       dead column that sat beside it, since the two tall panels are no longer
+       trying to be the same height as a short form. */
+    grid-template-columns: 250px 1fr;
     gap: 1rem;
     align-items: start;
+  }
+
+  .sections > #cars {
+    grid-column: 1 / -1;
   }
 }
 
@@ -273,7 +313,7 @@ input[type='date'],
   align-items: center;
   gap: var(--space-3);
   margin: 0 0 var(--space-4);
-  font-size: 1.1rem;
+  font-size: var(--text-lg);
   font-weight: 600;
 }
 
@@ -289,7 +329,7 @@ input[type='date'],
   width: 1.7em;
   height: 1.7em;
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: var(--text-md);
   font-weight: 600;
   line-height: 1;
   color: var(--paper-raised);
@@ -324,10 +364,29 @@ input[type='date'],
   margin-top: var(--space-4);
 }
 
+/* Also the <summary> of the collapsible preference block, so it carries the
+   pointer affordance and keeps the heading weight it had as an <h3>. */
 .field-group__heading {
   margin: 0 0 var(--space-4);
-  font-size: 0.95rem;
+  font-size: var(--text-md);
   font-weight: 600;
+  cursor: pointer;
+}
+
+/* Says the block can be skipped, which is the whole reason it is collapsed. */
+.field-group__optional {
+  margin-left: 0.4em;
+  font-size: var(--text-xs);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+/* A closed <details> has no need of the bottom margin its summary carries as a
+   heading; only an open one does. */
+.field-group--prefs:not([open]) .field-group__heading {
+  margin-bottom: 0;
 }
 
 .field--choices {
@@ -338,7 +397,7 @@ input[type='date'],
 
 .field--choices legend {
   padding: 0;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--ink-soft);
   margin-bottom: var(--space-2);
@@ -354,7 +413,7 @@ input[type='date'],
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--ink);
   cursor: pointer;
 }
@@ -379,7 +438,7 @@ input[type='date'],
    (0,1,1 against 0,1,0) and stacked every tick-box above its text. */
 .field label:not(.checkbox) {
   display: block;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--ink-soft);
   margin-bottom: var(--space-1);
@@ -387,7 +446,7 @@ input[type='date'],
 
 .field__hint {
   margin: var(--space-1) 0 0;
-  font-size: 0.75rem;
+  font-size: var(--text-sm);
   line-height: 1.4;
   color: var(--ink-faint);
 }
@@ -399,7 +458,7 @@ input[type='date'],
   display: block;
   margin-top: 0.2em;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   color: var(--ink-faint);
 }
 
@@ -422,7 +481,7 @@ input[type='date'],
   border-radius: 999px;
   background: var(--paper);
   color: var(--ink-soft);
-  font-size: 0.75rem;
+  font-size: var(--text-sm);
   line-height: 1.3;
   cursor: pointer;
 }
@@ -436,7 +495,7 @@ input[type='date'],
    the unit rather than being asked to guess it. */
 .preset__value {
   font-family: var(--font-mono);
-  font-size: 0.95em;
+  font-size: var(--text-xs);
   color: var(--ink-faint);
 }
 
@@ -460,7 +519,7 @@ input[type='date'],
   border-radius: 6px;
   background: var(--paper);
   color: var(--ink);
-  font-size: 0.95rem;
+  font-size: var(--text-md);
 }
 
 .field select { font-family: var(--font-text); }
@@ -493,7 +552,7 @@ input[type='date'],
 .field__prefix, .field__suffix {
   color: var(--ink-faint);
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 /* Indented under the toggle that reveals it, so the relationship is visible
@@ -542,9 +601,21 @@ input[type='date'],
   background: var(--option-line, var(--line-lease));
 }
 
+/* Sits above the headline, in the warning colour but at footnote size: it has to
+   be noticed before the figure it qualifies is read, without competing with it.
+   Disappears the moment a salary is entered. */
+.verdict-panel .winner__example {
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--warn);
+}
+
 .verdict-panel .winner__headline {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: var(--text-xl);
   font-weight: 700;
   line-height: 1.25;
 }
@@ -554,7 +625,7 @@ input[type='date'],
    legible at a glance rather than found. */
 .verdict-panel .winner__commitment {
   margin: var(--space-1) 0 0;
-  font-size: 1rem;
+  font-size: var(--text-md);
   font-weight: 500;
   color: var(--ink-soft);
 }
@@ -581,13 +652,13 @@ input[type='date'],
 }
 
 .verdict-panel .total span {
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   color: var(--ink-soft);
 }
 
 .verdict-panel .total strong {
   font-family: var(--font-mono);
-  font-size: 1.05rem;
+  font-size: var(--text-lg);
 }
 
 /* What this way of paying commits you to, beyond the ceiling above. Three
@@ -602,7 +673,7 @@ input[type='date'],
 }
 
 .verdict-panel .total__parts li {
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   line-height: 1.4;
   color: var(--ink-soft);
 }
@@ -612,14 +683,14 @@ input[type='date'],
    0.75rem grey it was the smallest text in the panel while being the fact most
    likely to change someone's mind. */
 .verdict-panel .total.is-winner .total__parts li {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--ink);
 }
 
 /* The lever that would unblock an out-of-reach option. Quieter than the
    option label above it — it is a footnote to "out of reach", not a heading. */
 .verdict-panel .total__blocker {
-  font-size: 0.7rem;
+  font-size: var(--text-xs);
   font-family: var(--font-mono);
   color: var(--ink-faint);
 }
@@ -672,7 +743,7 @@ input[type='date'],
   background: var(--paper);
   border-left: 3px solid var(--ink-faint);
   border-radius: 0 6px 6px 0;
-  font-size: 0.82rem;
+  font-size: var(--text-sm);
   line-height: 1.55;
   color: var(--ink-soft);
 }
@@ -691,12 +762,17 @@ input[type='date'],
 
 .disclaimer__list li + li { margin-top: var(--space-2); }
 
+/* A <ul> since item 27: it is a list of three things, and that is what tells a
+   screen reader how many there are. list-style and padding-left are reset
+   because the coloured dots are the markers. */
 .line-legend {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
   margin: var(--space-5) 0 0;
   padding-top: var(--space-4);
+  padding-left: 0;
+  list-style: none;
   border-top: 1px solid var(--hairline);
 }
 
@@ -704,7 +780,7 @@ input[type='date'],
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   color: var(--ink-soft);
 }
 
@@ -726,20 +802,6 @@ input[type='date'],
   min-height: 3rem;
 }
 
-/* Explanatory copy at the head of a section: what the reader needs to know
-   before the numbers below mean anything. Measured rather than full-width — a
-   paragraph is easier to read at 60-odd characters than at whatever the column
-   happens to be. */
-.section-intro {
-  margin: 0 0 var(--space-4);
-  max-width: 62ch;
-  color: var(--ink-soft);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.section-intro strong { color: var(--ink); }
-
 /* The one range input the design calls "the slider" — drags it and the
    verdict/chart/shortlist below recompute locally (debounced, see
    ui/app.js), with no network call. */
@@ -747,19 +809,128 @@ input[type='date'],
   margin-bottom: var(--space-4);
 }
 
-.budget-slider label {
+/* Label, help toggle, then the live figure pushed to the far end. Was a single
+   flexed <label> with the output inside it; the toggle needs to sit beside the
+   words rather than inside the label, where clicking it would also focus the
+   slider. */
+/* The positioning context for the help panel, so it opens directly beneath the
+   row holding the "?" rather than below the whole slider block — anchored to the
+   slider it sat some 80px from its own trigger and clipped the hint underneath.
+   Being a block-level flex row, it is already the slider's full width, which is
+   what the panel spans. */
+.budget-slider__head {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--ink-soft);
+  align-items: center;
+  gap: 0.4em;
   margin-bottom: var(--space-2);
 }
 
+.budget-slider label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
 .budget-slider output {
+  margin-left: auto;
   font-family: var(--font-mono);
   font-weight: 600;
   color: var(--ink);
+}
+
+/* =========================================================================
+   Help disclosure — a "?" that opens a paragraph.
+   For copy that a reader needs once and never again: the three-ways-to-pay
+   definition was four lines of prose above the slider, read by everyone,
+   useful to a first-timer. Behind the toggle it costs one glyph.
+   ========================================================================= */
+
+.help {
+  /* Keeps the toggle from stretching in the flex row above. */
+  flex: 0 0 auto;
+  line-height: 1;
+}
+
+.help__toggle {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 1px solid var(--hairline);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: pointer;
+  /* The default disclosure triangle would sit beside the "?" and read as a
+     second, unrelated mark. */
+  list-style: none;
+}
+
+.help__toggle::-webkit-details-marker { display: none; }
+
+/* The visible disc is 18px, because a larger one would overpower the 0.85rem
+   label beside it — but 18px is under the 24x24 minimum target size, and this is
+   a control people tap on a phone. Grows the hit area without growing the mark. */
+.help__toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+}
+
+.help__toggle:hover,
+.help[open] .help__toggle {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper-raised);
+}
+
+/* Spans the label row rather than the toggle, and overlays what follows instead
+   of pushing it down — opening an explanation should not move the numbers the
+   reader is looking at. */
+.help__body {
+  position: absolute;
+  z-index: 15;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper-raised);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.help__body p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+
+.help__body strong { color: var(--ink); }
+
+/* Reachable by a screen reader, absent from the page. The "?" carries no meaning
+   on its own, so the toggle's real name lives in one of these. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .budget-slider input[type='range'] {
@@ -895,7 +1066,7 @@ input[type='date'],
   margin: var(--space-3) 0 0;
   display: grid;
   gap: 0.2em;
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   line-height: 1.4;
   color: var(--ink-soft);
 }
@@ -928,7 +1099,7 @@ input[type='date'],
   border-radius: 4px;
   background: var(--ink);
   color: #fff;
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   line-height: 1.45;
   opacity: 0;
   visibility: hidden;
@@ -949,14 +1120,14 @@ input[type='date'],
 
 .chart-notes {
   margin-top: var(--space-3);
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   line-height: 1.5;
   color: var(--ink-soft);
 }
 
 .chart-notes__summary {
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--ink);
 }
@@ -991,7 +1162,7 @@ input[type='date'],
   height: 1.25em;
   border-radius: 50%;
   font-family: var(--font-mono);
-  font-size: 0.75em;
+  font-size: var(--text-xs);
   font-weight: 700;
   color: #fff;
 }
@@ -1071,7 +1242,7 @@ input[type='date'],
    SVG. A thin light stripe plus a small triangular flag at the top reads
 .rates-panel__intro {
   margin: 0 0 var(--space-4);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--ink-soft);
 }
 
@@ -1091,7 +1262,7 @@ input[type='date'],
 .rates-disclosure__summary {
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: var(--text-md);
   color: var(--ink);
   list-style: none;
   display: flex;
@@ -1125,7 +1296,7 @@ input[type='date'],
 
 .rate-field__provenance {
   margin: var(--space-1) 0 0;
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
   line-height: 1.45;
   color: var(--ink-faint);
 }
@@ -1135,7 +1306,7 @@ input[type='date'],
   border: none;
   background: none;
   padding: 0;
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--line-loan);
   cursor: pointer;
@@ -1150,7 +1321,7 @@ input[type='date'],
 .skeleton-note {
   margin: 0;
   color: var(--ink-faint);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   line-height: 1.5;
 }
 
@@ -1162,6 +1333,23 @@ input[type='date'],
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+}
+
+/* Step 3 spans the full page width from 900px (see the layout section), so the
+   shortlist becomes a grid rather than one long column of cards in a wide, mostly
+   empty panel. minmax so it reflows with the width instead of needing a
+   breakpoint per column count.
+
+   This has to sit AFTER the flex rule above, not in the layout section's media
+   query where it started: a media query adds no specificity, so `.car-list`
+   declared later in the file simply won — the grid never applied and the cards
+   stayed in a single column. */
+@media (min-width: 900px) {
+  .car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    align-items: start;
+  }
 }
 
 .car-card {
@@ -1176,13 +1364,13 @@ input[type='date'],
   width: 100%;
   margin-top: var(--space-2);
   border-collapse: collapse;
-  font-size: 0.75rem;
+  font-size: var(--text-sm);
 }
 
 .car-costs caption {
   text-align: left;
   color: var(--ink-faint);
-  font-size: 0.68rem;
+  font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding-bottom: var(--space-1);
@@ -1209,8 +1397,16 @@ input[type='date'],
 .car-costs__lead {
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: var(--text-md);
   color: var(--ink);
+}
+
+/* A requirement rather than a cost. Quieter than the figures around it: the
+   number is what this option would need, not what the reader would pay, and it
+   should not be read down the column alongside real totals. */
+.car-costs__lead--blocked {
+  font-size: var(--text-sm);
+  color: var(--ink-faint);
 }
 
 /* Cash's running cost. Its own line rather than part of the headline: the two
@@ -1238,7 +1434,7 @@ input[type='date'],
   margin-top: 0.15em;
   text-transform: none;
   letter-spacing: 0;
-  font-size: 0.7rem;
+  font-size: var(--text-xs);
 }
 
 .car-costs tr.is-winner th,
@@ -1252,7 +1448,7 @@ input[type='date'],
 .car-costs__ratio {
   display: block;
   color: var(--ink-faint);
-  font-size: 0.66rem;
+  font-size: var(--text-xs);
   line-height: 1.3;
 }
 
@@ -1260,7 +1456,7 @@ input[type='date'],
    the monthly affordability test accounts for it. */
 .car-balloon {
   margin: var(--space-2) 0 0;
-  font-size: 0.7rem;
+  font-size: var(--text-sm);
   line-height: 1.4;
   color: var(--ink-soft);
 }
@@ -1274,7 +1470,7 @@ input[type='date'],
    this is the only place a real monthly cost above the budget surfaces. */
 .cost-row__warn {
   display: block;
-  font-size: 0.7rem;
+  font-size: var(--text-xs);
   color: var(--warn);
   font-weight: 500;
 }
@@ -1283,7 +1479,7 @@ input[type='date'],
    the novated figures just above it, not the car itself. */
 .car-phev-note {
   margin: var(--space-2) 0 0;
-  font-size: 0.72rem;
+  font-size: var(--text-sm);
   line-height: 1.4;
   color: var(--warn);
 }
@@ -1293,7 +1489,7 @@ input[type='date'],
 .car-card__band {
   margin: 0 0 var(--space-1);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: var(--text-xs);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ink-faint);
@@ -1317,34 +1513,73 @@ input[type='date'],
 
 .car-body h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--text-lg);
 }
 
 .car-specs {
   margin: 0.2em 0 0;
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: var(--text-sm);
   color: var(--ink-soft);
 }
 
 .car-reason {
   margin: 0.3em 0 0;
-  font-size: 0.82rem;
+  font-size: var(--text-sm);
   color: var(--ink-faint);
 }
 
 .car-other-trims {
   margin: 0.2em 0 0;
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
   color: var(--ink-faint);
   font-style: italic;
+}
+
+/* The review disclosure had no size of its own, so it inherited the body — which
+   made "Why this one" the largest text on the card after its title, above the
+   figures the card exists to show. It is a way in to more detail, not a heading. */
+.car-body details {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.car-body details summary {
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.car-body details p {
+  margin: var(--space-2) 0 0;
+  color: var(--ink-soft);
+}
+
+.car-body .pros,
+.car-body .cons,
+.car-body .sources {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.1em;
+  color: var(--ink-soft);
+}
+
+.car-body .sources {
+  padding-left: 0;
+  font-size: var(--text-xs);
+  list-style: none;
 }
 
 /* =========================================================================
    Sticky mobile summary bar — visible only below 900px
    ========================================================================= */
 
+/* A <button> since item 28, so the scroll it performs has a keyboard path. The
+   first three declarations undo what being a button brings with it — a shrink-to
+   -fit box, a platform border, and centred text — none of which this full-width
+   bar wants. `font: inherit` is already handled by the base reset. */
 .summary-bar {
+  width: 100%;
+  border: none;
+  text-align: left;
   position: sticky;
   bottom: 0;
   left: 0;
@@ -1356,7 +1591,7 @@ input[type='date'],
   padding: var(--space-3) var(--space-4);
   background: var(--ink);
   color: var(--paper-raised);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   cursor: pointer;
   box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
@@ -1392,7 +1627,7 @@ input[type='date'],
   margin: 0 auto;
   padding: var(--space-5) var(--space-4) var(--space-6);
   color: var(--ink-soft);
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   text-align: center;
 }
 

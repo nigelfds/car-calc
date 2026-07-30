@@ -243,6 +243,28 @@ test('renderVerdict states the ceiling and the option that sets it', () => {
   assert.ok(html.includes('Novated lease'));
 });
 
+// --- The example state -----------------------------------------------------
+// The page shows a fully worked answer from a $100,000 default before anything is
+// typed, which is what makes it legible in the first two seconds. Nothing
+// distinguished that from the reader's own result.
+
+test('the verdict is badged as an example when the caller says so', () => {
+  const v = { ...verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables), isExample: true };
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+  assert.match(html, /Example figures/);
+  assert.match(html, /enter your salary for your own/);
+});
+
+test('no example badge once the reader has entered a salary', () => {
+  const v = { ...verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables), isExample: false };
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+  assert.ok(!/Example figures/.test(html));
+});
+
 // --- An option the reader cannot actually use -------------------------------
 // A novated lease runs through an employer's payroll. Sole traders, most casuals
 // and plenty of small employers have no scheme, and the tool recommended one to

@@ -1,6 +1,6 @@
 import { optionCosts, optionBlocker } from '../../calc/compare.js';
 import { maxAffordablePrice } from '../../calc/capacity.js';
-import { money, termLabel } from './format.js';
+import { money, termLabel, blockerText } from './format.js';
 import { OPTIONS, OPTION_NAME } from './labels.js';
 
 // Step 2 answers one question: how much car will each way of paying get me at
@@ -127,14 +127,8 @@ const escapeHtml = value =>
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[ch]);
 
-// "out of reach" is the same three words whichever option is blocked, but
-// the fix isn't the same: raise the monthly budget for a lease or a loan,
-// or have the whole purchase price saved for cash. Name the lever.
-function blockerText(blocker) {
-  return blocker.kind === 'savings'
-    ? `needs ${money(blocker.needed)} saved`
-    : `needs ${money(blocker.needed)}/mo`;
-}
+// blockerText moved to ui/format.js when the shortlist's cost table needed the
+// same sentence — see its comment there.
 
 export function renderVerdict(root, verdict) {
   const panel = root.querySelector('#verdict');
@@ -168,6 +162,16 @@ export function renderVerdict(root, verdict) {
          inside the rendered panel, and a test asserts the panel is free of
          it.) -->
     <div class="winner winner--${verdict.winner}">
+      <!-- Until a salary has been entered, every figure below is computed from a
+           $100,000 default. Showing a live worked example rather than an empty
+           page is the right call — it is what makes the tool legible in the first
+           two seconds — but nothing distinguished that example from the reader's
+           own result, and a stranger's answer presented as yours is worse than no
+           answer. The touched set (ui/sections.js) already records which fields
+           have been edited, so this needs no new state.
+           (No backticks in this comment: it lives inside a template literal, and
+           one would end the string.) -->
+      ${verdict.isExample ? '<p class="winner__example">Example figures — enter your salary for your own</p>' : ''}
       <p class="winner__headline">${labels[verdict.winner]} reaches the most car — up to ${money(winner.maxSpend)}</p>
       <!-- The commitment, at the same weight as the ceiling rather than in
            footnote grey: the ceiling is what you could buy, this is what you

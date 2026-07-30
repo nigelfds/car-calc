@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { money, shortMoney, termLabel } from './format.js';
+import { money, shortMoney, termLabel, blockerText } from './format.js';
 
 test('a positive amount renders with a leading dollar sign', () => {
   assert.equal(money(1234), '$1,234');
@@ -19,6 +19,26 @@ test('rounds to the nearest whole dollar before formatting', () => {
 
 test('zero has no sign', () => {
   assert.equal(money(0), '$0');
+});
+
+// --- Naming the lever ------------------------------------------------------
+// "Out of reach" is the same three words whichever option is blocked, but the fix
+// differs: a lease or a loan needs a bigger monthly budget, cash needs the whole
+// price in savings. Shared by the verdict panel and the shortlist's cost table.
+
+test('a savings blocker asks for the amount, not a monthly figure', () => {
+  assert.equal(blockerText({ kind: 'savings', needed: 61990 }), 'needs $61,990 saved');
+});
+
+test('a budget blocker asks for it per month', () => {
+  assert.equal(blockerText({ kind: 'budget', needed: 1670 }), 'needs $1,670/mo');
+});
+
+// Callers render this straight into markup, so a null blocker — an option that is
+// not blocked at all — has to produce nothing rather than "undefined".
+test('no blocker produces no text', () => {
+  assert.equal(blockerText(null), '');
+  assert.equal(blockerText(undefined), '');
 });
 
 // --- Terms, said the way a reader would ------------------------------------

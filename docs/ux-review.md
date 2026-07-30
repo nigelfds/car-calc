@@ -7,8 +7,7 @@ diagnosis.
 
 Tick a box when it lands.
 
-**Done: 1, 2, 3, 5-14, 16-23.** **Won't fix: 4** (see its entry).
-**Still open: 15, 24-30.**
+**All 30 items resolved: 1-28 done, 4/29/30 won't-fix** — see their entries for why.
 
 ## How this was reviewed
 
@@ -365,7 +364,11 @@ actually works.
 
 ### 15. Defaults render a complete answer indistinguishable from the reader's own
 
-- [ ] **Effort** S · **Files** `public/ui/{app,slider}.js`
+- [x] **Done** — the verdict carries "Example figures — enter your salary for your
+  own" until `grossSalary` is in `touched`. Read off `touched` rather than
+  comparing the salary to the default: someone who deliberately types 100000 has
+  entered their salary and should not be told they are looking at an example.
+- **Effort** S · **Files** `public/ui/{app,slider}.js`, `public/styles.css`
 
 **Symptom** $100,000 and $900/mo produce a full, confident verdict and shortlist
 before anything is typed. Showing a live example is the right call; nothing
@@ -525,7 +528,22 @@ restores the raw model value.
 
 ### 24. The three-column grid is cramped at 900px and wasteful at 1280px
 
-- [ ] **Effort** M · **Files** `public/styles.css:255-266`
+- [x] **Done** — two columns from 900px (250px rail plus step 2), with step 3
+  spanning both below and its shortlist as a `repeat(auto-fill, minmax(320px,
+  1fr))` grid.
+- **Re-measured before changing, and the original note understated it.** Three
+  columns gave steps 2 and 3 **293px each** at a 900px page — narrower than a
+  phone — and 483px at 1280px. Since the chart needs a 620px container for its
+  wide geometry, it was compact at *every* realistic desktop width. Dead space was
+  399px and 451px beside steps 1 and 2 at 1280px, not the ~600px recorded.
+- **After**: cards 365px in 3 columns at 1280px, step 3 down from 2,065px to
+  926px, the chart wide from a ~970px page up, and the whole page 2,606px against
+  2,446px before — 160px taller for a chart that is finally legible and cards that
+  are not phone-width.
+- **Possible follow-up**: past ~1450px there is room for 250 + 620 + 500, so three
+  columns could return with a wide chart. Skipped as a third breakpoint for a
+  viewport few readers have.
+- **Effort** M · **Files** `public/styles.css`
 
 **Symptom** `250px 1fr 1fr` from 900px gives steps 2 and 3 about 310px each at
 the breakpoint — the chart is in its compact rendering and the cards run a
@@ -540,7 +558,17 @@ renderings after changing it.
 
 ### 25. Mobile is 4,779px tall, with ~1,150px before the first answer
 
-- [ ] **Effort** M · **Files** `public/index.html:121-213`
+- [x] **Done** — "What you want in a car" is a `<details>`, closed by default and
+  labelled *optional*. Step 1 went from 1,744px to 881px on a phone and the page
+  from 5,955px to 5,429px. (It had grown past the 4,779px in this heading as items
+  10, 21 and 23 added controls, so the saving is against the larger figure.)
+- **Note**: a collapsed block must never hide a filter that is shaping the
+  shortlist, which is exactly what a shared `?minBootLitres=550` link would do.
+  `ui/app.js` opens the disclosure at boot when any preference field differs from
+  its default — once, not in `render()`, so it never fights a reader who closes it.
+  `PREFERENCE_FIELDS` is listed explicitly so adding a filter without adding it
+  there is a visible omission.
+- **Effort** M · **Files** `public/index.html`, `public/ui/app.js`, `public/styles.css`
 
 **Fix** Consider collapsing "What you want in a car" behind a disclosure — all
 four filters are optional and default to "any". Keep the financial fields open;
@@ -548,7 +576,19 @@ they are what the answer depends on.
 
 ### 26. Cash reads "out of reach" in every card at the default $0 savings
 
-- [ ] **Effort** S · **Files** `public/ui/cars.js:131-149`
+- [x] **Done** — the row stays but collapses to one line naming the lever: "needs
+  $65,474 saved". `blockerText` moved from `ui/slider.js` to `ui/format.js`, since
+  the verdict panel and the cost table now need the same sentence.
+- **The row was kept deliberately.** A two-row table under three-option panels
+  invites "why is cash missing?", and cash is a real option for someone who would
+  part-fund the car. The alternative — dropping the row and adding a note under the
+  table — saves more space but loses the per-car figure.
+- **Note**: the figure is that car's drive-away price, not its sticker, and it is
+  more use than the verdict's version of the same sentence — the verdict answers
+  "what could I reach", this answers "what would this car take". Blockers come from
+  the shared `optionBlocker` for all three options rather than being special-cased
+  to cash, even though cash is the only one `calc/compare.js` can mark infeasible.
+- **Effort** S · **Files** `public/ui/cars.js`, `public/ui/format.js`, `public/ui/slider.js`
 
 Fifteen dead table rows across a five-card shortlist. Collapse the cash row to a
 single line when savings cannot reach anything, with the lever to change it
@@ -560,14 +600,22 @@ single line when savings cannot reach anything, with the lever to change it
 
 ### 27. The chart legend is hidden from screen readers
 
-- [ ] **Effort** S · **Files** `public/index.html:235`
+- [x] **Done** — `aria-hidden` moved off the legend and onto the colour swatches
+  alone, where it belongs: a bare dot has nothing to announce, the text beside it
+  says everything the dot stands in for. Also now a `<ul>` with an `aria-label`,
+  so a reader is told it is a list of three and what the list is for.
+- **Effort** S · **Files** `public/index.html`, `public/styles.css`
 
 `aria-hidden="true"` on `.line-legend` removes the only key to the chart. It is
 text; let it be read. The colour dots can keep the attribute individually.
 
 ### 28. The summary bar is a clickable div with no keyboard path
 
-- [ ] **Effort** S · **Files** `public/index.html:281`, `public/ui/app.js:342`
+- [x] **Done** — a real `<button>` (verified `tabIndex 0`), with `aria-label`
+  giving it a stable name. `role="status"`/`aria-live` moved onto the inner text
+  span: the live region has to be the element whose text changes, and a button
+  re-announcing itself on every recompute would interrupt rather than inform.
+- **Effort** S · **Files** `public/index.html`, `public/styles.css`
 
 Confirmed live: `DIV`, `tabIndex -1`, with a click handler that scrolls to step
 2. Make it a `<button>` and keep the live region as a child, so the announcement
@@ -579,7 +627,10 @@ behaviour survives.
 
 ### 29. Disclaimer bullets are unranked
 
-- [ ] **Effort** S · **Files** `public/index.html:252-262`
+- **Won't fix.** Owner's call. Worth noting if it is ever revisited: reordering
+  compliance copy is cheap, but the RFBA/HELP bullet is the one that can cost a
+  reader real money, and it currently sits third of four at 0.82rem grey.
+- **Effort** S · **Files** `public/index.html`
 
 Four bullets at 0.82rem grey give the RFBA/HELP warning — genuinely material,
 and it can cost someone thousands — the same weight as a note about NEDC range
@@ -588,7 +639,12 @@ RFBA and let the range caveat sit last.
 
 ### 30. No dark mode
 
-- [ ] **Effort** M · **Files** `public/styles.css`
+- **Won't fix.** Owner's call. The `:root` token block would make the mechanics
+  straightforward, but the three option hues and the chart would each need
+  re-checking for contrast on a dark ground — the palette note at the top of
+  styles.css records how carefully those three were separated, and that work
+  would have to be redone rather than adapted.
+- **Effort** M · **Files** `public/styles.css`
 
 `prefers-color-scheme` appears nowhere; only `prefers-reduced-motion` is handled
 (:122). The `:root` token block is already the hard part of the work — the chart

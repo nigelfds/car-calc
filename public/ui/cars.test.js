@@ -362,6 +362,57 @@ test('cash leads with what it wants up front, not with a monthly figure', () => 
   assert.match(html, /car-costs__aside">then \$[\d,]+\/mo to run</);
 });
 
+// --- A blocked row names its lever -----------------------------------------
+// "Out of reach" cost three lines and said nothing actionable, and at the default
+// $0 savings that was the cash row on every card in the shortlist.
+
+test('a cash row that cannot reach the car says what it would need saved', () => {
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const broke = cardModel(vehicleFixture, [], {
+    inputs: { ...costInputs, savings: 0 }, tables: costTables, monthlyBudget: 900
+  });
+  renderCards({ querySelector: () => target }, [{ ...broke, winningOption: 'novated' }]);
+
+  assert.match(html, /needs \$[\d,]+ saved/);
+  assert.ok(!html.includes('out of reach'), 'the bare phrase told the reader nothing');
+});
+
+// The figure is this car's own drive-away price, which is more use than the
+// verdict panel's ceiling — that one answers "what could I reach", this one
+// answers "what would this car cost me".
+test('the figure a blocked cash row names is that car drive-away price', () => {
+  const broke = cardModel(vehicleFixture, [], {
+    inputs: { ...costInputs, savings: 0 }, tables: costTables, monthlyBudget: 900
+  });
+  assert.equal(broke.blockers.upfront.kind, 'savings');
+  assert.equal(broke.blockers.upfront.needed, broke.costs.upfront.detail.driveAway);
+});
+
+// Only cash can be infeasible today, but the blockers come from the shared helper
+// for all three rather than being special-cased, so this pins that the other two
+// are not reported as blocked when they are simply expensive.
+test('a lease and a loan are not reported as blocked when they are merely dear', () => {
+  const card = cardModel(vehicleFixture, [], {
+    inputs: { ...costInputs, savings: 0 }, tables: costTables, monthlyBudget: 900
+  });
+  for (const option of ['novated', 'loan']) {
+    const blocker = card.blockers[option];
+    assert.ok(blocker === null || blocker.kind === 'budget', `${option}: ${JSON.stringify(blocker)}`);
+  }
+});
+
+test('a card costed with savings enough to buy outright shows cash a real figure', () => {
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const funded = cardModel(vehicleFixture, [], {
+    inputs: { ...costInputs, savings: 200000 }, tables: costTables, monthlyBudget: 900
+  });
+  renderCards({ querySelector: () => target }, [{ ...funded, winningOption: 'novated' }]);
+  assert.match(html, /up front/);
+  assert.ok(!/needs \$[\d,]+ saved/.test(html));
+});
+
 test('the caption says what period the totals cover, and that they are net of resale', () => {
   const html = renderOne();
   assert.match(html, /Totals are over 5 years, after resale/);

@@ -9,6 +9,23 @@ export function money(value) {
   return `${sign}$${Math.abs(rounded).toLocaleString('en-AU')}`;
 }
 
+// Which lever would unblock an option that cannot reach a car, in words.
+//
+// "Out of reach" is the same three words whichever option is blocked, but the fix
+// is not the same: a lease or a loan needs a bigger monthly budget, while cash
+// needs the whole drive-away price sitting in savings. Name the lever.
+//
+// Lives here, beside money(), because both the verdict panel and the shortlist's
+// cost table need the same sentence — the shortlist used to print a bare "out of
+// reach" on every cash row, which at the default $0 savings was fifteen rows
+// across five cards that said nothing actionable.
+export function blockerText(blocker) {
+  if (!blocker) return '';
+  return blocker.kind === 'savings'
+    ? `needs ${money(blocker.needed)} saved`
+    : `needs ${money(blocker.needed)}/mo`;
+}
+
 // A term as a reader would say it. Lives here rather than in either caller
 // because both the verdict (the commitment behind the ceiling) and the
 // shortlist's cost table (the period its totals cover) need the same words, and
