@@ -1639,3 +1639,486 @@ input[type='date'],
   margin-top: var(--space-2);
   color: var(--ink-faint);
 }
+
+/* =========================================================================
+   Tabs — "Find a car" / "Compare". Task 6 built the roving-tabindex
+   behaviour (ui/tabs.js) and the markup; neither tab had a stitch of CSS
+   until now.
+   ========================================================================= */
+
+.tablist {
+  display: flex;
+  gap: var(--space-2);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4) 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.tab-button {
+  padding: var(--space-3) var(--space-4);
+  border: none;
+  /* Sits on the tablist's own hairline rather than adding a second one, so a
+     selected tab's border below can replace it exactly rather than stacking
+     on top of it. */
+  margin-bottom: -1px;
+  border-bottom: 3px solid transparent;
+  background: none;
+  font-size: var(--text-md);
+  font-weight: 500;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.tab-button:hover { color: var(--ink); }
+
+/* Colour is not the identity channel here — a reader in greyscale, or one
+   who cannot tell --ink from --ink-soft at a glance, still gets a heavier
+   weight and a solid underline. aria-selected (not a class) because
+   applyTab (ui/tabs.js) sets the attribute directly; this only reads it. */
+.tab-button[aria-selected="true"] {
+  color: var(--ink);
+  font-weight: 700;
+  border-bottom-color: var(--ink);
+}
+
+/* The hiding bug: #panel-find carries `class="tab-panel sections"`, and
+   .sections sets `display: flex` (and `display: grid` from 900px). An
+   author-origin declaration always beats the user-agent `[hidden] {
+   display: none }` rule, at any specificity, so plain `.sections` alone
+   never actually hid the Find panel — it stayed laid out, stacked above
+   whichever panel was "showing". #panel-compare never had the problem
+   because it carries only `tab-panel` and wraps its own content in a
+   separate `.sections` div (`#compare-panel`, below).
+   `.sections` alone is one class in specificity terms (0,1,0);
+   `.tab-panel[hidden]` combines a class and an attribute selector (0,2,0),
+   which outranks it regardless of source order — and regardless of how
+   many more display-setting classes a future panel picks up, since it
+   would need two of them at once to tie. Same fix pattern as
+   `.phev-options[hidden]` above, generalised from one class to any. */
+.tab-panel[hidden] { display: none; }
+
+/* =========================================================================
+   Compare tab — Tasks 5-9 built the behaviour; this is its only styling.
+   ========================================================================= */
+
+/* #compare-panel reuses `.sections` for the max-width/padding/gap it shares
+   with the Find tab's own wrapper — but the Find tab's `.sections` grid
+   (900px+, see the Layout section above) was built for *three* section
+   children (a 250px rail, a 1fr column, and a full-width row), sized and
+   spanned accordingly. #compare-panel holds exactly one section. Left
+   alone, that section would simply land in the grid's first cell — the
+   250px rail — and the whole tab would run in a phone-width column on a
+   1280px screen. An id selector (1,0,0) always outranks a class (0,1,0), so
+   `#compare-panel` overrides `.sections` here regardless of viewport,
+   dropping the grid back to a plain block — and the one child section is
+   free to lay itself out using its own full width. */
+@media (min-width: 900px) {
+  #compare-panel { display: block; }
+}
+
+/* Slots — up to three search boxes, one per car. Stacked on a phone; three
+   across from the same 701px point the row-count breakpoint below uses, so
+   the whole tab settles into its "mobile" shape at one width rather than
+   several. */
+.compare-slots {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 701px) {
+  .compare-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* The positioning context for its suggestion listbox (.ac__list, below) —
+   the dropdown belongs to this card, not to the page. */
+.compare-slot {
+  position: relative;
+  padding: var(--space-3);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+}
+
+.compare-slot--filled {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.compare-slot__label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+/* Matches `.field input` (Section 1) exactly — a search box is still a text
+   field, and the two should not read as different controls. */
+.compare-slot__input {
+  width: 100%;
+  padding: 0.5em 0.7em;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: var(--text-md);
+}
+
+.compare-slot__input:focus { background: var(--paper-raised); }
+
+.compare-slot__name {
+  margin: 0;
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.compare-slot__variant {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.compare-slot__clear {
+  align-self: flex-start;
+  margin-top: var(--space-2);
+  padding: 0.3em 0.7em;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
+.compare-slot__clear:hover {
+  border-color: var(--ink-faint);
+  color: var(--ink);
+}
+
+/* Suggestions — the listbox for one slot's combobox. Absolutely positioned
+   under its input, above everything below it on the page (the table can
+   otherwise sit right underneath a short slot card). z-index 20 matches
+   .axis-key__tip elsewhere in this file — the same "floats over the page"
+   tier, reused rather than inventing a new one. */
+.ac__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin-top: var(--space-1);
+  /* A scroll cap: SEARCH_LIMIT (ui/vehicle-search.js) allows up to eight
+     results, and eight full rows would push the bench and table around
+     every time someone typed. The list scrolls internally instead. */
+  max-height: 16rem;
+  overflow-y: auto;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  background: var(--paper-raised);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.ac__group + .ac__group { border-top: 1px solid var(--hairline); }
+
+/* Visually subordinate to the options it groups — a caption, not a second
+   tier of result. Same treatment as .car-costs caption and
+   .field-group__optional: uppercase, letter-spaced, faint, smallest step. */
+.ac__group-label {
+  margin: 0;
+  padding: var(--space-2) var(--space-2) var(--space-1);
+  background: var(--paper);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+.ac__option {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.ac__option:hover,
+.ac__option[aria-selected="true"] {
+  background: var(--paper);
+}
+
+/* The virtual-focus marker for the arrow-key-driven option (tracked by
+   aria-activedescendant, not real DOM focus — see bindAutocomplete's own
+   comment on why aria-activedescendant exists at all). Weight, not colour
+   alone, carries "this is the one Enter would pick". */
+.ac__option[aria-selected="true"] { font-weight: 600; }
+
+/* The variant name is the part of the option a reader scans for; .ac__meta
+   (body type, price, PHEV tag) is the supporting detail beside it. */
+.ac__variant { font-weight: 500; }
+
+.ac__meta {
+  flex: 0 0 auto;
+  font-size: var(--text-xs);
+  color: var(--ink-faint);
+}
+
+.ac__empty {
+  margin: 0;
+  padding: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-faint);
+}
+
+/* Bench — pill chips above the table, one per car, shown only once three are
+   picked. Matches .preset's pill treatment (Section 1) rather than
+   inventing a second button shape for the same idea. */
+.compare-bench {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* renderBench (ui/compare-tab.js) sets this container's innerHTML to '' —
+   not `hidden` — whenever there is no bench to show. Without :empty the
+   margin above would still open a gap for a chip row that isn't there. */
+.compare-bench:empty { display: none; margin-bottom: 0; }
+
+.compare-bench__hint {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--ink-faint);
+}
+
+.compare-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.8em;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.compare-chip:hover { border-color: var(--ink-faint); }
+
+/* The car currently off screen. Dashed border plus dimmed text — two
+   non-colour channels — rather than a colour swap, so "this one is benched"
+   survives greyscale the same way the table's winner marker has to. */
+.compare-chip--benched {
+  border-style: dashed;
+  color: var(--ink-faint);
+}
+
+/* Warns that the benched car appears in a callout below — same family of
+   fact as .compare-caveat, so it borrows the same accent rather than
+   introducing a second "pay attention" colour. */
+.compare-chip__dot {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: var(--warn);
+}
+
+/* Table. Row-label column fixed, the car columns splitting whatever is
+   left — table-layout: fixed does that on its own once one column has an
+   explicit width, but only reads that width from the FIRST row (the CSS2.1
+   fixed-layout algorithm), which is why the width sits on the header row's
+   cell rather than on .compare-row__label. Wrapped in its own scrolling
+   container (below) as a last resort, but width: 100% plus the fixed
+   layout is what keeps it from ever needing to. */
+.compare-table {
+  margin-top: var(--space-4);
+  /* Never the page body: if three money columns and a label ever don't fit
+     a narrow viewport, this is where the scrollbar has to appear instead. */
+  overflow-x: auto;
+}
+
+.compare-grid {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: var(--text-sm);
+}
+
+.compare-grid thead th:first-child { width: 6.5rem; }
+
+.compare-head {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.compare-head__variant {
+  display: block;
+  font-weight: 400;
+  font-size: var(--text-xs);
+  color: var(--ink-faint);
+}
+
+.compare-group__label {
+  padding: var(--space-3) var(--space-2) var(--space-1);
+  background: var(--paper);
+  text-align: left;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+.compare-row__label {
+  padding: var(--space-2) var(--space-3) var(--space-2) 0;
+  border-top: 1px solid var(--hairline);
+  text-align: left;
+  vertical-align: top;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.compare-cell {
+  padding: var(--space-2) var(--space-3);
+  border-top: 1px solid var(--hairline);
+  text-align: right;
+  vertical-align: top;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+/* The best value in the row. Weight plus a glyph — not a colour swap — so
+   this survives greyscale exactly like the selected tab has to; a chequered
+   background alone would vanish under the colour-filter check in the
+   verification steps. */
+.compare-cell--win {
+  font-weight: 700;
+  background: rgba(22, 27, 31, 0.045); /* --ink, tinted, matching the
+    rgba(0,0,0,…) shadows already used elsewhere in this file rather than a
+    new named colour */
+}
+
+.compare-cell--win::before {
+  content: '✓';
+  margin-right: 0.35em;
+  color: var(--ink-soft);
+}
+
+/* Caveats and the off-screen note share this row shape (see the comment on
+   caveatMarkup in ui/compare-tab.js — compare-caveat-row is load-bearing for
+   both), but the two callouts say different things and must not be
+   mistaken for one another:
+     .compare-caveat    — this row can't be read straight across (amber,
+                           the same --warn pairing the rest of the app uses
+                           for "pay attention", never introduced for this
+                           feature alone).
+     .compare-offscreen — the benched car would have won this row (neutral
+                           grey, and italic, so the distinction survives
+                           even in greyscale where the tint alone would not).
+   Both span the full row via colspan, set by ui/compare-tab.js. */
+.compare-caveat,
+.compare-offscreen {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+.compare-caveat {
+  border-left: 3px solid var(--warn);
+  background: var(--warn-bg);
+  color: var(--ink-soft);
+}
+
+.compare-offscreen {
+  border-left: 3px dashed var(--ink-faint);
+  background: var(--paper);
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+/* The <tr> itself paints nothing — the colspan'd <td> above does all of it —
+   but it is named explicitly rather than left as a bare, unstyled selector:
+   anything that ever needs to address "an annotation row" as a whole (both
+   kinds, one rule) has this to reach through. */
+.compare-caveat-row { background: transparent; }
+
+/* Prose — one section per car, always rendered for every filled slot
+   (renderComparison keeps the benched car's prose in the DOM so bringing it
+   back on screen doesn't need a re-render of anything but the table and
+   bench). Side by side once there's room; stacked on a phone.
+
+   701px matches COMPARE_TWO_UP_MAX_PX in ui/app.js — that constant decides
+   whether the table itself is showing two cars or three, and this has to
+   agree or the prose below the table would be arguing with it about how
+   many cars are actually on screen. Change one, change the other. */
+.compare-prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+@media (min-width: 701px) {
+  .compare-prose {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+}
+
+/* The car ui/app.js has benched below 701px. Its prose stays in the DOM (see
+   above) so tapping its chip can bring it straight back with no re-render;
+   until then it costs nothing on screen. */
+.compare-prose__car[data-benched="true"] { display: none; }
+
+.compare-prose__car {
+  padding: var(--space-4);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+}
+
+.compare-prose__car h3 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-lg);
+}
+
+.compare-prose__car > p {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.compare-pros,
+.compare-cons {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.1em;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.compare-prose__car details {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.compare-prose__car summary {
+  cursor: pointer;
+  color: var(--ink-soft);
+}
