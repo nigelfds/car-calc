@@ -62,8 +62,9 @@
     </button>
   </div>
 
-  <div class="tab-panel" role="tabpanel" data-tab="find" id="panel-find" aria-labelledby="tab-find">
-  <main class="sections">
+  <main>
+
+  <div class="tab-panel sections" role="tabpanel" data-tab="find" id="panel-find" aria-labelledby="tab-find">
 
     <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading" class="section-heading">
@@ -422,12 +423,11 @@
       </div>
     </section>
 
-  </main>
   </div>
 
   <div class="tab-panel" role="tabpanel" data-tab="compare" id="panel-compare"
        aria-labelledby="tab-compare" hidden>
-    <main class="sections" id="compare-panel">
+    <div class="sections" id="compare-panel">
       <section id="compare" aria-labelledby="compare-heading">
         <h2 id="compare-heading" class="section-heading">Compare cars</h2>
         <p class="section-intro">
@@ -439,8 +439,10 @@
         <div class="compare-table" id="compare-table"></div>
         <div class="compare-prose" id="compare-prose"></div>
       </section>
-    </main>
+    </div>
   </div>
+
+  </main>
 
   <!-- A <button>, not a clickable <div>. It scrolls to step 2, and as a div with
        tabIndex -1 there was no keyboard path to that at all.
