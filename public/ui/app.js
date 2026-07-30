@@ -10,13 +10,16 @@ import { defaultState, toQueryString, fromQueryString } from './state.js';
 import { renderInputs } from './sections.js';
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
-import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
+import {
+  filterVehicles, cardModel, renderCards, datasetStats, diagnoseEmptyFilters
+} from './cars.js';
 import { rankVehicles, bracketAroundPrice } from '../../calc/rank.js';
 import { fbtCliff } from '../../calc/compare.js';
 import {
   optionEntryPoint, representativeProfile, purchasingPowerSeries, cheapestPrice
 } from '../../calc/capacity.js';
 import { money } from './format.js';
+import { OPTION_PHRASE } from './labels.js';
 
 // purchasingPowerSeries measures ~2.4ms for these 25 points — it bisects 40
 // probe prices per option rather than costing all 114 real cars at every
@@ -36,7 +39,8 @@ const RECOMPUTE_DEBOUNCE_MS = 80;
 // there's no drag-smoothness reason to keep this one at 80ms.
 const RESIZE_DEBOUNCE_MS = 150;
 
-const OPTION_PHRASE = { novated: 'A novated lease', loan: 'A car loan', upfront: 'Paying cash' };
+// Sentence form — "A novated lease reaches up to $61,802 of car". From
+// ui/labels.js, alongside the other two shapes the page needs.
 
 // C3: a missing/blank (sections.js deliberately writes '' rather than 0 —
 // see NUMERIC_FIELDS.has(field) && raw !== '' there) or non-positive salary
@@ -194,21 +198,37 @@ function boot(root, dataset) {
         : null
     }));
 
-    // An empty list has distinct causes and distinct fixes, and "relax a
-    // preference" is the wrong advice when the preference is fine and the
-    // toggle is what is hiding everything. Every ute in the dataset is a
-    // plug-in hybrid, so ticking Ute alone matches nothing at all — the
-    // filters look broken when they are working exactly as asked. Tested
-    // rather than assumed: this re-runs the filter with plug-in hybrids
-    // included and only says so if that would genuinely help, which keeps it
-    // correct for whatever body type turns out to be PHEV-only next.
-    const phevWouldHelp = matches.length === 0 && !state.includePhev &&
-      filterVehicles(vehicles, { ...state, includePhev: true }).length > 0;
+    // An empty list has distinct causes and distinct fixes, and "try relaxing
+    // one" left the reader to bisect five filters by hand. diagnoseEmptyFilters
+    // (ui/cars.js) drops each active filter in turn and reports the one that
+    // alone brings the list back, with the value that would work — computed
+    // from the data rather than guessed, so it stays right as the dataset
+    // changes.
+    //
+    // The plug-in hybrid toggle is one of the filters it considers, and it keeps
+    // its own wording: every ute in the dataset is a PHEV, so ticking Ute alone
+    // matches nothing, and "ease the exclusion of plug-in hybrids" is a worse
+    // sentence than naming the checkbox the reader has to tick.
+    const diagnosis = matches.length === 0
+      ? diagnoseEmptyFilters(vehicles, state)
+      : null;
+
+    function noMatchMessage() {
+      if (!diagnosis) {
+        return 'No car in the dataset matches these preferences, and no single change brings ' +
+          'the list back — try easing two of them.';
+      }
+      if (diagnosis.field === 'includePhev') {
+        return 'Every car matching these preferences is a plug-in hybrid. Tick "Include plug-in hybrids" in step 1 to see them.';
+      }
+      const cars = `${diagnosis.count} ${diagnosis.count === 1 ? 'car' : 'cars'}`;
+      return diagnosis.suggestion
+        ? `Nothing matches all of these. Easing the ${diagnosis.label} to ${diagnosis.suggestion} gives you ${cars}.`
+        : `Nothing matches all of these. Easing the ${diagnosis.label} gives you ${cars}.`;
+    }
 
     const emptyMessage = matches.length === 0
-      ? (phevWouldHelp
-        ? 'Every car matching these preferences is a plug-in hybrid. Tick "Include plug-in hybrids" in step 1 to see them.'
-        : 'No car in the dataset matches these preferences. Try relaxing one.')
+      ? noMatchMessage()
       : `Nothing in the dataset is reachable on ${money(state.monthlyBudget)}/mo. Raise the budget, or add savings to make buying outright an option.`;
     renderCards(root, cards, emptyMessage);
   }
@@ -227,6 +247,17 @@ function boot(root, dataset) {
     const phevOptions = root.querySelector('#phev-options');
     if (phevOptions) phevOptions.hidden = !state.includePhev;
 
+    // A lease the reader cannot get is still worth plotting — it says what the
+    // option would reach, which is the sort of thing that informs a payroll
+    // conversation — but it must not read as an available answer. One class on
+    // the section, and the chart's lease line and the shortlist's novated rows
+    // both dim (see styles.css). Cheaper and less fragile than teaching two
+    // renderers to draw a "greyed" variant of themselves.
+    root.querySelector('#afford')?.classList
+      .toggle('novated-unavailable', !state.employerOffersNovated);
+    root.querySelector('#cars')?.classList
+      .toggle('novated-unavailable', !state.employerOffersNovated);
+
     const inputs = buildInputs(state);
     const salaryReady = hasValidSalary(state);
 
@@ -235,7 +266,10 @@ function boot(root, dataset) {
     // window where a bogus $-11,463 "novated lease is free" figure ever
     // reaches the DOM (see hasValidSalary's comment for why).
     const verdict = salaryReady
-      ? verdictAt({ budgetMonthly: state.monthlyBudget, inputs, profile }, tables)
+      ? verdictAt({
+        budgetMonthly: state.monthlyBudget, inputs, profile,
+        employerOffersNovated: state.employerOffersNovated
+      }, tables)
       : { winner: null, maxSpend: 0, options: {}, insufficientInput: true };
     renderVerdict(root, verdict);
     renderSummaryBar(verdict);

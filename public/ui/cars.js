@@ -8,7 +8,8 @@
 // works with no network) and callers (ui/app.js) are expected to filter
 // here, then rank, then slice, then pass the result to renderCards.
 
-import { money } from './format.js';
+import { money, termLabel } from './format.js';
+import { OPTIONS, OPTION_NAME_SHORT } from './labels.js';
 import { optionCosts, valueRatio } from '../../calc/compare.js';
 
 export function filterVehicles(vehicles, filters) {
@@ -34,6 +35,84 @@ export function filterVehicles(vehicles, filters) {
     if (filters.seats && v.seats < filters.seats) return false;
     return true;
   });
+}
+
+// Which preference is doing the excluding, and what it would have to become.
+//
+// "No car matches these preferences. Try relaxing one." left the reader to
+// bisect five filters by hand. filterVehicles is pure and runs in well under a
+// millisecond over 124 rows, so the honest answer is simply computable: drop
+// each active filter in turn, and see which one alone brings the list back.
+//
+// `relaxed` is what switching the filter off looks like for that field — an
+// empty array for the multi-select, null for the numeric minimums, and `true`
+// for the plug-in hybrid toggle, which excludes rather than restricts and so is
+// relaxed by turning it ON.
+//
+// `available` reads the value the filter tests against, mirroring
+// filterVehicles' own logic — including that "minimum range" means combined
+// range for a plug-in hybrid, which is the trap a second implementation here
+// would fall into.
+const RELAXABLE = [
+  { field: 'bodyTypes', label: 'body type', relaxed: [] },
+  {
+    field: 'minBootLitres', label: 'boot minimum', relaxed: null,
+    format: value => `${value}L`, available: v => v.bootLitresSeatsUp
+  },
+  {
+    field: 'minRangeKm', label: 'range minimum', relaxed: null,
+    format: value => `${value}km`,
+    available: v => (v.powertrain === 'phev' ? (v.combinedRangeKm ?? v.rangeKm) : v.rangeKm)
+  },
+  {
+    field: 'minElectricRangeKm', label: 'electric-range minimum', relaxed: null,
+    format: value => `${value}km`, available: v => v.rangeKm
+  },
+  {
+    field: 'seats', label: 'seat minimum', relaxed: null,
+    format: value => `${value} seats`, available: v => v.seats
+  },
+  { field: 'includePhev', label: 'the exclusion of plug-in hybrids', relaxed: true }
+];
+
+// A filter only counts as binding if it is actually switched on. includePhev is
+// the odd one out: its restrictive state is `false`.
+function isActive(spec, filters) {
+  const value = filters[spec.field];
+  if (spec.field === 'includePhev') return value === false;
+  if (Array.isArray(value)) return value.length > 0;
+  return Boolean(value);
+}
+
+export function diagnoseEmptyFilters(vehicles, filters) {
+  if (filterVehicles(vehicles, filters).length > 0) return null;
+
+  const candidates = [];
+  for (const spec of RELAXABLE) {
+    if (!isActive(spec, filters)) continue;
+    const relaxed = { ...filters, [spec.field]: spec.relaxed };
+    const matches = filterVehicles(vehicles, relaxed);
+    if (matches.length === 0) continue;
+
+    // The value that would work: with everything else still applied, the best
+    // any remaining car can offer. Reported rather than a round number, because
+    // "try about 500" is a guess and "480L gives you 6 cars" is an answer.
+    const achievable = spec.available
+      ? Math.max(...matches.map(spec.available).filter(Number.isFinite))
+      : null;
+
+    candidates.push({
+      field: spec.field,
+      label: spec.label,
+      count: matches.length,
+      suggestion: achievable !== null && spec.format ? spec.format(achievable) : null
+    });
+  }
+
+  if (candidates.length === 0) return null;
+  // The relaxation that opens the list widest. Where two filters are each
+  // individually binding, this is the one that costs the reader least.
+  return candidates.sort((a, b) => b.count - a.count)[0];
 }
 
 // Header provenance: how much data is behind the answers, and how fresh it
@@ -117,27 +196,55 @@ export function cardModel(vehicle, families, context = null) {
     powertrain,
     phevIneligible,
     phevExemptByDate,
-    novatedOverBudget
+    novatedOverBudget,
+    // Carried onto the card so the cost table can say "over 5 years" rather
+    // than "over the term" — the table has the numbers but not the period they
+    // cover, and a total means little without it.
+    termMonths: context?.inputs?.termMonths ?? null
   };
 }
 
-const COST_LABEL = { novated: 'Novated', loan: 'Loan', upfront: 'Cash' };
+// The short forms, from the one place the option names live. Short because the
+// table sits in a narrow column, not because the shortlist calls these three
+// things something different from the rest of the page.
+const COST_LABEL = OPTION_NAME_SHORT;
 
-// Three totals for one car, plus how much of each dollar survives as resale.
-// The ratio is the tiebreaker the totals cannot give you: two cards $600 apart
-// on sticker can be 13c apart on what they retain.
+// What each way of paying costs, monthly first.
+//
+// The whole page above this table is denominated in dollars per month — the
+// slider, the verdict, the summary bar, the chart's x axis — and this table
+// used to answer in term totals only, so a reader could not check a card
+// against the budget they had just set. The monthly figure leads now and the
+// total sits under it.
+//
+// Cash is deliberately not parallel with the other two. Its `monthlyCost` is
+// running costs alone (calc/upfront.js's netMonthlyRunningCost — there is no
+// repayment to add), so giving it a "$103/mo" headline beside a lease's
+// "$712/mo" would say cash is seven times cheaper, when the difference is that
+// sixty thousand dollars left the bank on day one. The honest headline for cash
+// is the money it wants up front, with the running cost second.
 function costTableMarkup(card) {
   if (!card.costs) return '';
-  const rows = ['novated', 'loan', 'upfront'].map(option => {
+  const rows = OPTIONS.map(option => {
     const entry = card.costs[option];
     const ratio = valueRatio(entry);
-    // Two columns, not three: the shortlist lives in a ~236px column and a
-    // third column crushed the figures into each other. The ratio sits under
-    // its own total instead.
-    return `<tr${option === card.winningOption ? ' class="is-winner"' : ''}>
+    // Two columns, not three: the shortlist lives in a narrow column and a
+    // third column crushed the figures into each other. Everything after the
+    // headline figure stacks underneath it instead.
+    const lead = option === 'upfront'
+      ? `<span class="car-costs__lead">${money(entry.detail.driveAway)} up front</span>
+         <span class="car-costs__aside">then ${money(entry.monthlyCost)}/mo to run</span>`
+      : `<span class="car-costs__lead">${money(entry.monthlyCost)}/mo</span>`;
+
+    // The option's own class on the row, so a stylesheet can find "the novated
+    // row" by name. It used to be reachable only as `tr:first-child`, which is
+    // true today and silently wrong the first time OPTIONS is reordered.
+    return `<tr class="cost-row cost-row--${option}${option === card.winningOption ? ' is-winner' : ''}">
         <th scope="row">${COST_LABEL[option]}</th>
         <td>
-          <span class="car-costs__total">${entry.feasible ? money(entry.tco) : 'out of reach'}</span>
+          ${entry.feasible
+            ? `${lead}<span class="car-costs__total">${money(entry.tco)} total</span>`
+            : '<span class="car-costs__lead">out of reach</span>'}
           ${entry.feasible && ratio !== null
             ? `<span class="car-costs__ratio">keeps ${Math.round(ratio * 100)}c of every $1</span>`
             : ''}
@@ -157,8 +264,14 @@ function costTableMarkup(card) {
         }.</p>`
     : '';
 
+  // The caption carries the two qualifiers that used to be missing, once,
+  // rather than repeating them on three rows: what period the totals cover, and
+  // that they are net of what the car is worth at the end. Without the second,
+  // a $43,404 total under a $61,990 car reads as an arithmetic error.
   return `<table class="car-costs">
-        <caption>Total cost over the term</caption>
+        <caption>What each way of paying costs
+          <span class="car-costs__caption-note">Totals are over ${termLabel(card.termMonths)}, after resale</span>
+        </caption>
         <tbody>${rows}</tbody>
       </table>${balloonNote}`;
 }

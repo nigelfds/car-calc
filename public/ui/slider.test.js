@@ -243,6 +243,78 @@ test('renderVerdict states the ceiling and the option that sets it', () => {
   assert.ok(html.includes('Novated lease'));
 });
 
+// --- An option the reader cannot actually use -------------------------------
+// A novated lease runs through an employer's payroll. Sole traders, most casuals
+// and plenty of small employers have no scheme, and the tool recommended one to
+// all of them without asking.
+
+test('a lease cannot win when the employer offers no packaging', () => {
+  const available = verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables);
+  assert.equal(available.winner, 'novated', 'precondition: a lease wins on these inputs');
+
+  const v = verdictAt(
+    { budgetMonthly: 1200, inputs, profile: capacityProfile, employerOffersNovated: false }, tables
+  );
+  assert.notEqual(v.winner, 'novated');
+  assert.ok(['loan', 'upfront'].includes(v.winner), 'one of the other two must win');
+  assert.equal(v.maxSpend, v.options[v.winner].maxSpend, 'the headline follows the new winner');
+});
+
+// Unavailable is not unaffordable. The ceiling is still computed and still
+// reported — it says what a lease would reach, which is what informs a
+// conversation with a payroll team — it simply cannot be the recommendation.
+test('an unavailable lease keeps its real ceiling rather than being zeroed', () => {
+  const v = verdictAt(
+    { budgetMonthly: 1200, inputs, profile: capacityProfile, employerOffersNovated: false }, tables
+  );
+  assert.equal(v.options.novated.unavailable, true);
+  assert.ok(v.options.novated.maxSpend > 0, 'the figure is real, the access is not');
+  assert.equal(v.options.novated.blocker, null, 'no budget change would fix this');
+});
+
+test('the other two options are never marked unavailable', () => {
+  const v = verdictAt(
+    { budgetMonthly: 1200, inputs, profile: capacityProfile, employerOffersNovated: false }, tables
+  );
+  assert.equal(v.options.loan.unavailable, false);
+  assert.equal(v.options.upfront.unavailable, false);
+});
+
+test('an unavailable lease says what it needs, not what it costs', () => {
+  const v = verdictAt(
+    { budgetMonthly: 1200, inputs, profile: capacityProfile, employerOffersNovated: false }, tables
+  );
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+  assert.match(html, /is-unavailable/);
+  assert.match(html, /needs an employer who offers salary packaging/);
+  assert.ok(!/winner--novated/.test(html), 'a lease must not be headlined as the winner');
+});
+
+// Eligibility defaults to available, so an existing shared link that predates
+// the field keeps behaving exactly as it did.
+test('a lease is available unless the caller says otherwise', () => {
+  const v = verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables);
+  assert.equal(v.options.novated.unavailable, false);
+});
+
+// The headline used to be "🏆 Novated lease — up to $61,802" and nothing else:
+// a price ceiling, read as affordability, with the trophy implying the tool had
+// recommended it. The commitment now sits beside the ceiling at comparable
+// weight, and the colour does the "this one reaches furthest" job.
+test('the winner states the commitment beside the ceiling, and carries no trophy', () => {
+  const v = verdictAt({ budgetMonthly: 1200, inputs, profile: capacityProfile }, tables);
+  let html = '';
+  const panel = { set innerHTML(value) { html = value; }, get innerHTML() { return html; } };
+  renderVerdict({ querySelector: sel => (sel === '#verdict' ? panel : null) }, v);
+
+  assert.match(html, /up to \$[\d,]+/, 'expected the ceiling');
+  assert.match(html, /on \$1,200 a month for 4 years/, 'expected the commitment behind it');
+  assert.ok(!html.includes('🏆'), 'the trophy implied a recommendation this tool cannot make');
+  assert.match(html, /winner winner--novated/, 'the option colour carries the winner signal now');
+});
+
 // The winner tile used to be tinted with the lease's orange whichever option
 // won, directly above a legend telling the reader that orange means novated
 // leasing and purple means cash. The colour now comes from a per-option

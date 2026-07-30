@@ -3,7 +3,7 @@ const STRING_FIELDS = new Set(['leaseStartDate', 'freeText']);
 // Declared for the same reason as NUMERIC_FIELDS below: fromQueryString sends
 // anything unlisted through Number(), and Number('false') is NaN — the toggle
 // would silently reset every time a shared link was opened.
-const BOOLEAN_FIELDS = new Set(['includePhev']);
+const BOOLEAN_FIELDS = new Set(['includePhev', 'employerOffersNovated']);
 
 // Declared explicitly rather than inferred from defaultState()'s runtime
 // values: minBootLitres, minRangeKm and seats default to null (no filter
@@ -72,6 +72,13 @@ export function defaultState(rates) {
     // never burns petrol, so this rate is inert for the rest of the fleet.
     petrolCentsPerLitre: rates.petrolCentsPerLitre,
     residualPctOverride: null,
+    // A novated lease needs an employer who offers salary packaging. Sole
+    // traders, most casuals and plenty of small employers have no such scheme,
+    // and the page used to recommend a lease to all of them without ever
+    // asking. Defaulted true because it is the common case among the people
+    // this tool is for, and because defaulting it false would hide the option
+    // that most often wins from someone who does in fact have it.
+    employerOffersNovated: true,
     bodyTypes: [],
     minBootLitres: null,
     minRangeKm: null,

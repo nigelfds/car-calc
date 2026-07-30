@@ -1,7 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { filterVehicles, cardModel, renderCards, datasetStats } from './cars.js';
+import {
+  filterVehicles, cardModel, renderCards, datasetStats, diagnoseEmptyFilters
+} from './cars.js';
 import { valueRatio } from '../../calc/compare.js';
 import { rankVehicles } from '../../calc/rank.js';
 
@@ -27,6 +29,67 @@ test('filters combine', () => {
 
 test('an empty filter returns everything', () => {
   assert.equal(filterVehicles(fleet, {}).length, 2);
+});
+
+// --- Which filter is doing the excluding -----------------------------------
+// "Try relaxing one" left the reader to bisect five filters by hand. The
+// diagnosis drops each active filter in turn and reports the one that alone
+// brings the list back, with a value read off the data rather than guessed.
+
+test('nothing to diagnose while the list has cars in it', () => {
+  assert.equal(diagnoseEmptyFilters(fleet, { bodyTypes: ['SUV'] }), null);
+});
+
+test('the binding filter is named, with the value that would work', () => {
+  // Nothing has a 600L boot; the roomiest is the EV5 at 513L.
+  const d = diagnoseEmptyFilters(fleet, { minBootLitres: 600 });
+  assert.equal(d.field, 'minBootLitres');
+  assert.equal(d.suggestion, '513L');
+  assert.equal(d.count, 2);
+});
+
+// The suggestion has to be reachable with the OTHER filters still applied, not
+// across the whole fleet — otherwise it names a value that still returns nothing.
+test('the suggested value respects the filters that are staying', () => {
+  const d = diagnoseEmptyFilters(fleet, { bodyTypes: ['Hatch'], minBootLitres: 600 });
+  assert.equal(d.field, 'minBootLitres');
+  // The Hatch's 345L, not the SUV's 513L, because Hatch is still selected.
+  assert.equal(d.suggestion, '345L');
+  assert.equal(d.count, 1);
+});
+
+test('a body type nothing satisfies is named as the body type', () => {
+  const d = diagnoseEmptyFilters(fleet, { bodyTypes: ['Ute'] });
+  assert.equal(d.field, 'bodyTypes');
+  assert.equal(d.count, 2);
+});
+
+// Two jointly-binding filters have no single fix, and saying "ease one" would be
+// wrong. The caller falls back to advice that admits it.
+test('no candidate is returned when no single filter unblocks the list', () => {
+  const d = diagnoseEmptyFilters(fleet, { bodyTypes: ['Ute'], minBootLitres: 600 });
+  assert.equal(d, null);
+});
+
+// Where two filters are each individually binding, the one reported is the
+// relaxation that opens the list widest — the change that costs the reader
+// least. Needs a fixture where the two relaxations differ in what they return,
+// which the two-car fleet above cannot produce.
+test('the relaxation that opens the list widest is the one reported', () => {
+  const wider = [
+    ...fleet,
+    { id: 'c', bodyType: 'SUV', bootLitresSeatsUp: 400, rangeKm: 500, seats: 7 },
+    { id: 'd', bodyType: 'SUV', bootLitresSeatsUp: 520, rangeKm: 450, seats: 5 }
+  ];
+  // Boot >= 500 and seats >= 7 together match nothing: the two roomy cars seat
+  // five, and the seven-seater has a 400L boot.
+  const d = diagnoseEmptyFilters(wider, { minBootLitres: 500, seats: 7 });
+  // Dropping the seat minimum returns two cars (a at 513L, d at 520L); dropping
+  // the boot minimum returns only the seven-seater. So the seat minimum is the
+  // one worth naming.
+  assert.equal(d.field, 'seats');
+  assert.equal(d.count, 2);
+  assert.equal(d.suggestion, '5 seats');
 });
 
 // --- Plug-in hybrids in the filter -----------------------------------------
@@ -269,6 +332,43 @@ test('renderCards prints all three totals and marks the winning option', () => {
   assert.ok(/is-winner/.test(html), 'the winning option must be marked');
   assert.ok(/keeps \d+c/.test(html), 'expected the value-retained figure per option');
 });
+
+// --- Monthly first ---------------------------------------------------------
+// Everything above the shortlist is denominated in dollars per month. The cost
+// table used to answer in term totals only, so a reader could not check a card
+// against the budget they had just set.
+
+const renderOne = (overrides = {}) => {
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const card = cardModel(vehicleFixture, [], { inputs: costInputs, tables: costTables });
+  renderCards({ querySelector: () => target }, [{ ...card, winningOption: 'novated', ...overrides }]);
+  return html;
+};
+
+test('the financed options lead with a monthly figure', () => {
+  const html = renderOne();
+  // Two of the three rows carry a "/mo" headline; cash's monthly appears only
+  // as its secondary running-cost line, which the next test pins down.
+  assert.ok(/car-costs__lead">\$[\d,]+\/mo</.test(html), 'expected a $X/mo headline');
+});
+
+test('cash leads with what it wants up front, not with a monthly figure', () => {
+  const html = renderOne();
+  // The trap: cash's monthlyCost is running costs alone, so a "$103/mo"
+  // headline beside a lease's "$712/mo" would read as cash being seven times
+  // cheaper, when the difference is the outlay on day one.
+  assert.match(html, /car-costs__lead">\$[\d,]+ up front</);
+  assert.match(html, /car-costs__aside">then \$[\d,]+\/mo to run</);
+});
+
+test('the caption says what period the totals cover, and that they are net of resale', () => {
+  const html = renderOne();
+  assert.match(html, /Totals are over 5 years, after resale/);
+});
+
+// termLabel itself is tested in format.test.js, where it now lives — a 30-month
+// fixture here would only exercise the engine rejecting the term.
 
 // --- The lease balloon, back where a car price exists ---------------------
 // Step 2 used to disclose the residual, but it no longer names a car, so

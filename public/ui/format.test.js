@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { money, shortMoney } from './format.js';
+import { money, shortMoney, termLabel } from './format.js';
 
 test('a positive amount renders with a leading dollar sign', () => {
   assert.equal(money(1234), '$1,234');
@@ -19,6 +19,33 @@ test('rounds to the nearest whole dollar before formatting', () => {
 
 test('zero has no sign', () => {
   assert.equal(money(0), '$0');
+});
+
+// --- Terms, said the way a reader would ------------------------------------
+// Shared by the verdict (the commitment behind the ceiling) and the shortlist's
+// cost table (the period its totals cover), which is why it lives here rather
+// than in either one.
+
+test('a whole-year term reads as years', () => {
+  assert.equal(termLabel(60), '5 years');
+  assert.equal(termLabel(48), '4 years');
+});
+
+test('a one-year term is singular', () => {
+  assert.equal(termLabel(12), '1 year');
+});
+
+// A guard, not a path: the ATO defines statutory residuals only for whole-year
+// terms and calc/novated.js throws on anything else, so this cannot be reached
+// through the app today. It is here so a future term option degrades to
+// something readable rather than "5.5 years".
+test('a term that is not whole years falls back to months', () => {
+  assert.equal(termLabel(30), '30 months');
+});
+
+test('no term at all reads as the term', () => {
+  assert.equal(termLabel(null), 'the term');
+  assert.equal(termLabel(0), 'the term');
 });
 
 // --- Compact money, for a narrow axis --------------------------------------

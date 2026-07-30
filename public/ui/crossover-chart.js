@@ -16,16 +16,12 @@
 // monthly budget, so its cost doesn't move as the slider does. That's
 // correct, not a bug.
 
-const OPTIONS = ['novated', 'loan', 'upfront'];
-
-// Matches the colour legend already on the page (public/index.html's
-// .line-legend) and the CSS custom properties in styles.css — lease, loan,
-// cash. Kept as one map so this file never invents its own palette.
-const OPTION_LABEL = {
-  novated: 'Novated lease',
-  loan: 'Car loan',
-  upfront: 'Cash'
-};
+// Names and order both come from ui/labels.js now — this file used to carry its
+// own copy of the map, which is how "Car loan" here and "Direct loan" in the
+// verdict managed to disagree. Aliased on import because everything below
+// already reads OPTION_LABEL, and the colour legend it matches
+// (public/index.html's .line-legend) is unchanged.
+import { OPTIONS, OPTION_NAME as OPTION_LABEL } from './labels.js';
 
 // Colour distinguishes the three lines, but colour alone can't be relied on
 // for CVD readers, so every option also gets its own stroke pattern —

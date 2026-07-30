@@ -469,9 +469,38 @@ input[type='date'],
   min-height: 4rem;
 }
 
-.verdict-panel .winner {
+/* The winner block. The option's colour arrives as a rule above the headline —
+   the route-rule motif from the header, one segment wide — which is what
+   replaced the trophy emoji. Same --option-line the tiles below use, so a cash
+   win is purple here and purple there. */
+.verdict-panel .winner--novated { --option-line: var(--line-lease); }
+.verdict-panel .winner--loan { --option-line: var(--line-loan); }
+.verdict-panel .winner--upfront { --option-line: var(--line-cash); }
+
+.verdict-panel .winner::before {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-bottom: var(--space-2);
+  background: var(--option-line, var(--line-lease));
+}
+
+.verdict-panel .winner__headline {
+  margin: 0;
   font-size: 1.3rem;
   font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Not footnote grey. The complaint this answers is that a ceiling on its own
+   reads as affordability, so the thing that makes it a commitment has to be
+   legible at a glance rather than found. */
+.verdict-panel .winner__commitment {
+  margin: var(--space-1) 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink-soft);
 }
 
 .verdict-panel .detail {
@@ -522,6 +551,15 @@ input[type='date'],
   color: var(--ink-soft);
 }
 
+/* The winning option's obligation, promoted. On a lease this line is the
+   balloon payment — a five-figure bill due on the last day of the term — and at
+   0.75rem grey it was the smallest text in the panel while being the fact most
+   likely to change someone's mind. */
+.verdict-panel .total.is-winner .total__parts li {
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
 /* The lever that would unblock an out-of-reach option. Quieter than the
    option label above it — it is a footnote to "out of reach", not a heading. */
 .verdict-panel .total__blocker {
@@ -543,6 +581,29 @@ input[type='date'],
 .verdict-panel .total.is-winner {
   border-color: var(--option-line, var(--line-lease));
   background: var(--option-tint, var(--line-lease-bg));
+}
+
+/* An option the reader has told us they cannot use. Dimmed rather than removed:
+   the figures are real and knowing what a lease would have reached is worth
+   something, but it must not compete with the options actually on the table.
+   Deliberately not `display: none` — a missing third option looks like a bug. */
+.verdict-panel .total.is-unavailable {
+  opacity: 0.55;
+}
+
+.verdict-panel .total.is-unavailable strong {
+  font-weight: 400;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+/* Same treatment, applied from the section down: one class on #afford / #cars
+   (ui/app.js) reaches the chart's lease line and the shortlist's novated rows
+   without either renderer needing to know about eligibility. */
+.novated-unavailable .line-lease,
+.novated-unavailable .line-legend__item--lease,
+.novated-unavailable .cost-row--novated {
+  opacity: 0.45;
 }
 
 .disclaimer {
@@ -604,6 +665,20 @@ input[type='date'],
   border-top: 1px solid var(--hairline);
   min-height: 3rem;
 }
+
+/* Explanatory copy at the head of a section: what the reader needs to know
+   before the numbers below mean anything. Measured rather than full-width — a
+   paragraph is easier to read at 60-odd characters than at whatever the column
+   happens to be. */
+.section-intro {
+  margin: 0 0 var(--space-4);
+  max-width: 62ch;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.section-intro strong { color: var(--ink); }
 
 /* The one range input the design calls "the slider" — drags it and the
    verdict/chart/shortlist below recompute locally (debounced, see
@@ -1008,9 +1083,43 @@ input[type='date'],
   padding: 0.2em 0;
 }
 
+/* The headline figure for the row: a monthly cost for the two financed
+   options, the up-front outlay for cash. This is the mono treatment the term
+   total used to have — the table now leads with the number the reader can
+   check against the budget slider, and the total supports it. */
+.car-costs__lead {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+/* Cash's running cost. Its own line rather than part of the headline: the two
+   numbers are different kinds of money and reading them as one total is the
+   mistake this row exists to prevent. */
+.car-costs__aside {
+  display: block;
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+}
+
+/* Demoted from the headline. Still mono — it is a figure people compare across
+   cards — but no longer the first thing the eye lands on. */
 .car-costs__total {
   display: block;
   font-family: var(--font-mono);
+  color: var(--ink-soft);
+}
+
+/* The period and the after-resale qualifier, said once for the whole table.
+   Not uppercased with the rest of the caption: it is a sentence, and small
+   caps at 0.68rem is where legibility goes to die. */
+.car-costs__caption-note {
+  display: block;
+  margin-top: 0.15em;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.7rem;
 }
 
 .car-costs tr.is-winner th,

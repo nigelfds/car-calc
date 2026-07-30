@@ -1,8 +1,7 @@
 import { optionCosts, optionBlocker } from '../../calc/compare.js';
 import { maxAffordablePrice } from '../../calc/capacity.js';
-import { money } from './format.js';
-
-const OPTIONS = ['novated', 'loan', 'upfront'];
+import { money, termLabel } from './format.js';
+import { OPTIONS, OPTION_NAME } from './labels.js';
 
 // Step 2 answers one question: how much car will each way of paying get me at
 // this budget? No car is named here — that is step 3's job.
@@ -39,12 +38,24 @@ function optionDetail(option, detail, inputs) {
   return [`${money(detail.opportunityCost)} of savings returns given up over the term`];
 }
 
-export function verdictAt({ budgetMonthly, inputs, profile }, tables) {
+// `employerOffersNovated` is deliberately a sibling of `inputs` rather than a
+// member of it: `inputs` is the calc engine's contract (calc/compare.js), and
+// whether a particular reader's employer runs a packaging scheme is not a fact
+// about the money. The engine still costs a lease exactly as before — this only
+// decides whether the answer is one this reader can act on.
+export function verdictAt(
+  { budgetMonthly, inputs, profile, employerOffersNovated = true }, tables
+) {
   const options = {};
   let best = null;
 
   for (const option of OPTIONS) {
     const maxSpend = maxAffordablePrice({ budgetMonthly, option, inputs, profile }, tables);
+    // Unavailable is not the same as unaffordable, and must not be reported as
+    // it: the figures are real, they are simply out of this reader's reach for
+    // a reason no budget change will fix. So the ceiling is kept and the option
+    // is barred from winning, rather than zeroed and handed a blocker.
+    const unavailable = option === 'novated' && !employerOffersNovated;
     // Price the detail at this option's OWN ceiling rather than the shared
     // probe: the balloon on an $86,643 lease is not the balloon on the
     // $42,236 the loan reaches, and quoting one for the other would be worse
@@ -57,13 +68,26 @@ export function verdictAt({ budgetMonthly, inputs, profile }, tables) {
     options[option] = {
       option,
       maxSpend,
+      unavailable,
       parts: maxSpend > 0 ? optionDetail(option, costs.detail, inputs) : [],
       blocker: maxSpend > 0 ? null : optionBlocker(costs, budgetMonthly)
     };
-    if (maxSpend > 0 && (best === null || maxSpend > options[best].maxSpend)) best = option;
+    if (!unavailable && maxSpend > 0 && (best === null || maxSpend > options[best].maxSpend)) {
+      best = option;
+    }
   }
 
-  return { winner: best, maxSpend: best ? options[best].maxSpend : 0, options };
+  // budgetMonthly and termMonths ride along so renderVerdict can state the
+  // commitment beside the ceiling. A ceiling on its own reads as "you can
+  // afford a $61,802 car"; the same number next to "on $900 a month for 5
+  // years" reads as what it is, which is 60 payments and a balloon.
+  return {
+    winner: best,
+    maxSpend: best ? options[best].maxSpend : 0,
+    budgetMonthly,
+    termMonths: inputs.termMonths,
+    options
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -129,10 +153,27 @@ export function renderVerdict(root, verdict) {
   }
 
   const winner = verdict.options[verdict.winner];
-  const labels = { novated: 'Novated lease', loan: 'Direct loan', upfront: 'Buy upfront' };
+  // Was a local map reading "Novated lease / Direct loan / Buy upfront" — two
+  // of those three names appeared nowhere else on the page.
+  const labels = OPTION_NAME;
 
   panel.innerHTML = `
-    <div class="winner">🏆 ${labels[verdict.winner]} — up to ${money(winner.maxSpend)}</div>
+    <!-- The trophy emoji that used to open this line is gone. It was the only
+         emoji on the page, and a trophy means "the right answer for you" —
+         the reading the disclaimer below spends a paragraph disowning, since
+         this tool knows nothing about the reader's circumstances. The winning
+         option's own colour, as a rule above the headline, says which one
+         reaches furthest without claiming it is the one to take.
+         (Deliberately not spelled with the glyph here: this comment ships
+         inside the rendered panel, and a test asserts the panel is free of
+         it.) -->
+    <div class="winner winner--${verdict.winner}">
+      <p class="winner__headline">${labels[verdict.winner]} reaches the most car — up to ${money(winner.maxSpend)}</p>
+      <!-- The commitment, at the same weight as the ceiling rather than in
+           footnote grey: the ceiling is what you could buy, this is what you
+           would be signed up to for the next several years. -->
+      <p class="winner__commitment">on ${money(verdict.budgetMonthly)} a month for ${termLabel(verdict.termMonths)}</p>
+    </div>
     <!-- Said once, here, rather than repeated under all three figures: they
          are all the same kind of number, and the space under each is better
          spent on what makes that option different. -->
@@ -145,6 +186,20 @@ export function renderVerdict(root, verdict) {
       // tile in the winning option's colour rather than always the lease's —
       // but a class that appears only on the winner is one the next rule that
       // wants "which option is this" would have to re-derive.
+      //
+      // Checked before the affordability branches below, because "your employer
+      // does not offer this" is a different answer from "your budget does not
+      // reach it" and the lever that would fix one does nothing for the other.
+      // The ceiling is still shown, greyed: it is what the option would reach if
+      // it were open to this reader, which is worth knowing before a job change
+      // or a conversation with a payroll team.
+      if (entry.unavailable) {
+        return `<div class="total total--${o} is-unavailable">
+          <span>${labels[o]}</span>
+          <strong>${money(entry.maxSpend)}</strong>
+          <span class="total__blocker">needs an employer who offers salary packaging</span>
+        </div>`;
+      }
       if (entry.maxSpend <= 0) {
         return `<div class="total total--${o}">
           <span>${labels[o]}</span>

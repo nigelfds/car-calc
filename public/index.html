@@ -90,7 +90,7 @@
 
         <div class="field">
           <!-- Not a deposit: this is the cash you could put in outright, and
-               it is the only thing that makes "Buy upfront" reachable, since
+               it is the only thing that makes "Cash" reachable, since
                that option needs the whole drive-away price. The separate
                "Deposit on a car loan" field in the rates panel is what
                reduces loan principal. -->
@@ -124,6 +124,23 @@
                because a date hardcoded in the markup is stale the next day. -->
           <input type="date" id="leaseStartDate" name="leaseStartDate" data-field="leaseStartDate"
             min="2025-04-01" />
+        </div>
+
+        <!-- A novated lease is not something you can simply choose: it is run
+             through your employer's payroll, and sole traders, most casuals and
+             plenty of small employers have no scheme to run it through. The tool
+             recommended one to all of them without ever asking. Ticked by
+             default because it is the common case among the people this is for,
+             and because starting it unticked would hide the option that most
+             often wins from someone who does have it. -->
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox" id="employerOffersNovated" data-field="employerOffersNovated" checked />
+            My employer offers novated leasing
+          </label>
+          <p class="field__hint">Untick this and a lease is still costed and plotted, but it
+            won't be recommended. Ask your payroll or HR team if you're not sure — many employers
+            have a scheme without advertising it.</p>
         </div>
       </div>
 
@@ -229,6 +246,17 @@
         <span class="section-heading__eyebrow">2</span> How much to spend?
       </h2>
 
+      <!-- "Novated lease" is the term this whole tool turns on, it is the option
+           that wins at most salaries, and the page used to assume the reader
+           already knew what it meant. All three are defined here, before any
+           number that depends on knowing the difference. -->
+      <p class="section-intro">Three ways to pay for the same car. A <strong>novated lease</strong>
+        runs through your employer: the payments come out of your salary before tax, and an
+        electric car under the luxury-car threshold is exempt from fringe benefits tax — that
+        exemption is where most of the saving comes from, and it needs an employer who offers
+        salary packaging. A <strong>car loan</strong> you arrange yourself and repay out of your
+        take-home pay. <strong>Cash</strong> means paying the whole drive-away price up front.</p>
+
       <div class="budget-slider">
         <label for="budgetSlider">Monthly budget: <output id="budgetSliderValue" for="budgetSlider">$900</output></label>
         <!-- min/max here are just a sane pre-JS default; ui/app.js overwrites them at
@@ -236,6 +264,15 @@
              (see the I7 fix note in ui/app.js's boot()). -->
         <input type="range" id="budgetSlider" name="budgetSlider" data-field="monthlyBudget"
           min="300" max="2700" step="25" value="900" />
+        <!-- What "monthly" means on this page, said where the unit is set rather
+             than beside each figure that uses it. Without this, a reader checking
+             a $780/mo loan against a dealer's repayment quote concludes the site
+             is $200 high — the difference being that a packaged lease bundles
+             running costs, so the other two are shown the same way to stay
+             comparable (calc/compare.js folds them into all three). -->
+        <p class="field__hint">Everything the car costs you each month: finance or lease payments
+          plus charging, registration, servicing and tyres. A lease quote bundles these, so the
+          loan and cash figures include them too.</p>
       </div>
 
       <div id="verdict" class="verdict-panel">
@@ -244,9 +281,9 @@
       </div>
 
       <div class="line-legend" aria-hidden="true">
-        <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--lease"></span>Novated lease</span>
-        <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--loan"></span>Car loan</span>
-        <span class="line-legend__item"><span class="line-legend__dot line-legend__dot--cash"></span>Cash</span>
+        <span class="line-legend__item line-legend__item--lease"><span class="line-legend__dot line-legend__dot--lease"></span>Novated lease</span>
+        <span class="line-legend__item line-legend__item--loan"><span class="line-legend__dot line-legend__dot--loan"></span>Car loan</span>
+        <span class="line-legend__item line-legend__item--cash"><span class="line-legend__dot line-legend__dot--cash"></span>Cash</span>
       </div>
 
       <div id="crossover" class="crossover-panel">

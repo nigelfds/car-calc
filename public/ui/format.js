@@ -9,6 +9,24 @@ export function money(value) {
   return `${sign}$${Math.abs(rounded).toLocaleString('en-AU')}`;
 }
 
+// A term as a reader would say it. Lives here rather than in either caller
+// because both the verdict (the commitment behind the ceiling) and the
+// shortlist's cost table (the period its totals cover) need the same words, and
+// two copies of this is how "5 years" and "60 months" end up on one screen.
+//
+// The months branch is a guard rather than a path: residualAmount
+// (calc/novated.js) throws on any term the ATO defines no statutory residual
+// for, and clamp.js snaps a shared link's term to a supported one first, so
+// only whole years reach here today.
+export function termLabel(months) {
+  if (!months) return 'the term';
+  if (months % 12 === 0) {
+    const years = months / 12;
+    return `${years} year${years === 1 ? '' : 's'}`;
+  }
+  return `${months} months`;
+}
+
 // Axis-sized currency. A phone leaves the chart roughly 310 units of plot
 // width, and "$115,989" costs a fifth of that in the left margin before a
 // single line is drawn. Only used where space is the binding constraint —

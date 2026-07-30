@@ -41,6 +41,24 @@ test('the default lease start date is never in the past', () => {
   assert.ok(defaultLeaseStart() > today.toISOString().slice(0, 10));
 });
 
+// Eligibility is a boolean that defaults to TRUE, which is the case the generic
+// numeric path gets wrong: Number('false') is NaN, so without the field being
+// declared in BOOLEAN_FIELDS a shared link would silently re-enable a lease for
+// someone who had told the tool they cannot get one.
+test('an unticked employer flag survives a shared link', () => {
+  const defaults = defaultState(rates);
+  const noScheme = { ...defaults, employerOffersNovated: false };
+  const query = toQueryString(noScheme, defaults);
+  assert.ok(query.includes('employerOffersNovated=false'), query);
+  assert.equal(fromQueryString(query, defaults).employerOffersNovated, false);
+});
+
+test('the employer flag defaults to available, so links made before it existed are unchanged', () => {
+  const defaults = defaultState(rates);
+  assert.equal(defaults.employerOffersNovated, true);
+  assert.equal(fromQueryString('?grossSalary=145000', defaults).employerOffersNovated, true);
+});
+
 test('a state at defaults serialises to an empty query string', () => {
   const defaults = defaultState(rates);
   assert.equal(toQueryString(defaults, defaults), '');
