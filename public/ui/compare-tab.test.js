@@ -95,7 +95,10 @@ test('at most two caveats render on one row', () => {
   renderComparison(root, { vehicles: [ranger, sixSeat], families, tables, benchIndex: null });
   const html = root.targets['compare-table'].innerHTML;
   const bootDown = html.split('data-row="bootDown"')[1].split('data-row="')[0];
-  assert.ok((bootDown.match(/compare-caveat/g) ?? []).length <= 2);
+  // Count rendered caveats via data-caveat="..." rather than /compare-caveat/,
+  // which also substring-matches the wrapping <tr>'s compare-caveat-row class
+  // (shared with Task 8's off-screen band row) and would double-count.
+  assert.ok((bootDown.match(/data-caveat="/g) ?? []).length <= 2);
 });
 
 test('pros and cons come from the family record', () => {
@@ -126,5 +129,10 @@ test('rendered car names are escaped', () => {
   const root = stubRoot();
   const nasty = { ...ev5, model: '<script>x</script>' };
   renderComparison(root, { vehicles: [nasty, sealion], families, tables, benchIndex: null });
-  assert.doesNotMatch(root.targets['compare-table'].innerHTML, /<script>/);
+  const html = root.targets['compare-table'].innerHTML;
+  assert.doesNotMatch(html, /<script>/);
+  // Absence alone would also pass if the value were silently dropped —
+  // assert the escaped form actually made it through, as autocomplete.test.js
+  // does for the same class of input.
+  assert.match(html, /&lt;script&gt;/);
 });

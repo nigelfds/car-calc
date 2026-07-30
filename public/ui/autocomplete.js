@@ -78,6 +78,16 @@ export function bindAutocomplete(root, { getVehicles, onSelect }) {
 
   const inputFor = slotIndex => root.querySelector(`[data-slot="${slotIndex}"] .compare-slot__input`);
 
+  // A combobox's aria-expanded must track whether its listbox is actually
+  // open — nothing did that before this fix, so a screen reader announced a
+  // collapsed combobox while suggestions sat visible on screen. Every path
+  // that changes the listbox's `hidden` state funnels its result through
+  // here, the same way close() is the single funnel for ending a dropdown
+  // session.
+  const setExpanded = (slotIndex, expanded) => {
+    inputFor(slotIndex)?.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  };
+
   const optionIds = slotIndex => {
     const list = root.querySelector(`#compare-listbox-${slotIndex}`);
     return [...(list?.querySelectorAll('[data-vehicle-id]') ?? [])]
@@ -102,6 +112,8 @@ export function bindAutocomplete(root, { getVehicles, onSelect }) {
     // Every path that ends the active option (Escape, a commit, a clear)
     // funnels through close(), so clearing it here covers all of them.
     inputFor(slotIndex)?.removeAttribute('aria-activedescendant');
+    // close() always collapses the box, so aria-expanded follows unconditionally.
+    setExpanded(slotIndex, false);
   };
 
   const commit = (slotIndex, vehicleId) => {
@@ -125,6 +137,7 @@ export function bindAutocomplete(root, { getVehicles, onSelect }) {
     renderSuggestions(root, slotIndex, groups, null);
     const list = root.querySelector(`#compare-listbox-${slotIndex}`);
     if (list) list.hidden = input.value.trim() === '';
+    setExpanded(slotIndex, Boolean(list && !list.hidden));
   });
 
   panel.addEventListener('keydown', event => {
@@ -151,6 +164,8 @@ export function bindAutocomplete(root, { getVehicles, onSelect }) {
       root, slotIndex, searchVehicles(getVehicles(), input.value, SEARCH_LIMIT), next
     );
     input.setAttribute('aria-activedescendant', `opt-${next}`);
+    const list = root.querySelector(`#compare-listbox-${slotIndex}`);
+    setExpanded(slotIndex, Boolean(list && !list.hidden));
   });
 
   panel.addEventListener('click', event => {

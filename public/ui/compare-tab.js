@@ -59,13 +59,11 @@ function caveatMarkup(caveats, columns) {
   // At most two. bootDown can attract three rules at once, and three amber
   // bands under one row is a wall rather than an explanation — the precedence
   // order in calc/spec-compare.js puts the most specific wording first.
-  // No class on the <tr> itself: a class starting with "compare-caveat" here
-  // would double-count against the td's own "compare-caveat" class in any
-  // substring search (as the "at most two caveats" test does), inflating a
-  // 2-caveat row to 4 matches. The full-width td is enough for Task 10 to
-  // style the row (colspan already makes it span the table).
+  // compare-caveat-row on the <tr> is load-bearing beyond this task: Task 8's
+  // off-screen note is another full-width band row and Task 10 styles both
+  // through this shared class, so a caveat row must carry it too.
   return caveats.slice(0, 2).map(caveat => `
-    <tr>
+    <tr class="compare-caveat-row">
       <td class="compare-caveat" colspan="${columns + 1}" data-caveat="${escapeHtml(caveat.id)}">
         ${escapeHtml(caveat.text)}
       </td>
