@@ -1,7 +1,15 @@
 # BEV market survey — brief
 
-**Prepared 2026-07-29. Not yet run.** The preparing session had spent its 200/200 WebSearch budget,
-and a survey is nothing but searching, so this is a job for a fresh session.
+**Prepared 2026-07-29. RUN 2026-07-29 — see [Findings](#findings) at the foot of this document.**
+The preparing session had spent its 200/200 WebSearch budget, and a survey is nothing but searching,
+so this was a job for a fresh session. That session ran it with five parallel surveyors split by
+brand group. Everything above this line is the brief as written before the survey; it is kept
+unchanged so the leads can be scored against what was actually found.
+
+**Headline: the dataset holds about 37% of the battery-electric market. Roughly 68 families are
+missing, which is twelve batches — a wave larger than the PHEV one.**
+
+**Wave progress: batch 1 done (2026-07-30). 46 of ~111 families held, ~41%. Eleven batches left.**
 
 ## Why this exists
 
@@ -154,3 +162,710 @@ relieved, and check how the surveying agents established coverage. The PHEV surv
 it counted the market independently and then diffed — not that it checked whether the existing list
 looked reasonable. A list always looks reasonable to the person holding it. That is precisely how
 the RAV4 went missing.
+
+---
+
+# Findings
+
+**Surveyed 2026-07-29.** Five parallel general-purpose agents, split by brand group: German and
+European premium; Chinese; Korean and Japanese; American, British, French, Italian and Indian; and
+one body-type cross-cut on the two structural gaps. Each was told to establish every brand's range
+independently from a brand-level source and *then* diff against the 40, rather than checking whether
+the 40 looked reasonable. No data files were written. Roughly 240 tool calls across the five.
+
+The caution at the top of this document does not apply. The survey did not come back saying the 40
+families were most of the market.
+
+## The headline number
+
+| | Families | After batch 1 |
+|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below |
+| Of those, representable under the app's schema and body types | **~108** | **~107** |
+| Held by the dataset | **40** | **46** |
+| **Coverage** | **~37%** | **~41%** |
+| Missing and researchable | **~68** | **~61** |
+| At six families per batch | **~12 batches** | **11 batches left** |
+
+The representable figure counts people movers, per the body-type decisions below. Only four
+vehicles on sale are unrepresentable: three above the $250,000 ceiling and one two-seat roadster.
+
+Per slice, showing the diff was not evenly distributed:
+
+| Slice | On sale | Held | Missing | Coverage |
+|---|---|---|---|---|
+| German + European premium | ~47 | 12 | 32 | 26% |
+| Chinese | 30 | 13 | 17 (13 representable) | 43% |
+| Korean + Japanese | 23 | 11 | 12 | 48% |
+| American / British / French / Italian / Indian | ~12 | 5 | 6 | 42% |
+
+The PHEV survey found 23 of ~50, or 46%. This is worse, and it matters more — battery-electric
+coverage is the product, not an extension of it.
+
+## The RAV4-shaped finding
+
+**Toyota HiLux BEV.** Battery-electric double-cab pickup, $76,490 (SR) to $82,990 (SR5), on sale
+since May 2026. Toyota's first battery-electric ute, on the nameplate that has led or near-led the
+Australian sales charts for a decade. The dataset has **zero** battery-electric utes.
+
+It is the same failure pattern as the RAV4 PHEV, on the same brand, found the same way: not by
+checking the existing list, but by counting the market. Source:
+[CarExpert](https://www.carexpert.com.au/car-news/2026-toyota-hilux-bev-new-electric-ute-priced-for-australia).
+
+## Whole brands absent from the dataset that sell BEVs here today
+
+This is the finding the brand-by-brand method was designed to produce. Eleven brands, 24 families,
+none of them represented at all:
+
+| Brand | Families on sale | Cheapest |
+|---|---|---|
+| **Porsche** | Taycan, Macan Electric, Cayenne Electric | $124,100 |
+| **Volkswagen** | ID.4, ID.5 | $59,990 |
+| **Cadillac** | Optiq, Lyriq, Vistiq — **sells only BEVs in Australia** | ~$80,000 |
+| **Genesis** | GV60, GV70 Electrified, G80 Electrified | $88,300 |
+| **GAC / Aion** | Aion UT, Aion V | $31,990 |
+| **Smart** | #1, #3 | $49,990 |
+| **KGM** (ex-SsangYong) | Torres EVX, Musso EV (ute) | ~$58,000 d/a |
+| **Lotus** | Eletre, Emeya | $189,900 |
+| **GWM** | Ora 5 | $33,990 |
+| **Lexus** | RZ | $84,500 |
+| **Mazda** | 6e | $49,990 |
+| **Suzuki** | e Vitara | ~$46,990 |
+| **Cupra** | Tavascan | $55,490 |
+| **Alfa Romeo** | Junior Elettrica | $57,900 |
+| **Maserati** | Grecale Folgore | ~$207,500 |
+| **Forthing** | Taikon 5 BEV | $38,990 |
+| **Jaecoo** | J5 EV | $35,990 |
+
+Cadillac deserves its own line: it is a BEV-only brand in Australia, all three families sit inside
+the price bounds, and it appears nowhere in the dataset.
+
+## The two structural gaps — both verdicts are "nobody looked"
+
+### `Ute` — the cell is empty because nobody looked. Confidence: high.
+
+Three battery-electric dual-cab utes are orderable by a private buyer today, with a fourth in
+runout. CarExpert's own July 2026 round-up lists all three; this was one article away from being
+found.
+
+| Model | Price | Note |
+|---|---|---|
+| KGM Musso EV | $60,000–$64,000 d/a | Dual-cab only. On sale since 1 Dec 2025, explicitly priced for private buyers |
+| Toyota HiLux BEV | $76,490–$82,990 | Double-cab pickup. Cab-chassis variant out of scope, pickup variants in |
+| LDV eT60 | $92,990 | ~~Runout, verify.~~ **VERIFIED NOT ON SALE, 2026-07-30 — batch 1. Do not re-check.** See the batch 1 record |
+
+The Deepal E07 was surveyed as a fourth candidate — a transformable body that CarExpert files under
+electric utes and Chasing Cars files under mid-size SUVs. **It has been decided as an `SUV`**, so it
+does not fill this cell.
+
+The gap is therefore narrower than it first looked: **two confirmed families, and a third only if a
+dealer confirms the eT60.** But "Toyota sells a battery-electric HiLux and the app cannot show a
+single electric ute" is exactly the miss this survey existed to catch, and two families are enough
+to make the `Ute` filter honest where zero is not.
+
+**Settled by batch 1: it is two families, not three.** Both were researched and written; the eT60
+was verified off the list. `Ute` now holds 5 battery-electric rows.
+
+### `Sedan` — the cell is thin because nobody looked, and it is the larger gap. Confidence: high.
+
+The dataset holds 4 BEV sedan families (Model 3, Seal, Ioniq 6, i4) out of roughly 15 on sale —
+about **26%**. Eleven missing, spanning $49,990 to $219,900, and including the two cheapest cars in
+the segment:
+
+**Batch 1 took four of the eleven** (Kia EV4, Mazda 6e, Polestar 2, Mercedes CLA EV), so `Sedan` now
+holds **8 of ~15 families, about 53%** — 18 variants. Seven still missing, all of them premium:
+Volvo ES90 · Genesis G80 Electrified · BMW i5 · Porsche Taycan · Audi e-tron GT · Mercedes-Benz EQS
+Sedan · Mercedes-Benz EQE Sedan. The two cheapest cars in the segment are now both in.
+
+Mazda 6e · Kia EV4 · Polestar 2 · Mercedes-Benz CLA EV · Volvo ES90 · Genesis G80 Electrified ·
+BMW i5 · Porsche Taycan · Audi e-tron GT · Mercedes-Benz EQS Sedan · Mercedes-Benz EQE Sedan
+
+Kia EV4 and Mazda 6e both undercut the Model 3. Polestar 2, Genesis G80, Taycan and e-tron GT have
+been on sale here for *years* and were simply never in the recalled list — the body-type cross-cut
+earned its slot by finding those four, which a brand sweep alone might have rationalised away.
+
+**Settled: `Sedan` includes four-door liftbacks and fastbacks.** So Mazda 6e, Polestar 2, Volvo
+ES90, Audi e-tron GT and Porsche Taycan are all `Sedan`, consistent with the BMW i4 Gran Coupé the
+dataset already holds. All eleven missing families stand.
+
+**Still open, and it costs one batch slot:** is the Mercedes EQE Sedan still orderable in Australia?
+Mercedes is dropping it globally during 2026. Verify before spending the slot.
+
+## Body-type decisions
+
+Three calls the survey surfaced, now made. They are recorded here because they are the kind of
+decision that silently reverses itself two waves later if nobody wrote it down.
+
+| Question | Decision |
+|---|---|
+| Does `Sedan` cover four-door liftbacks and fastbacks? | **Yes.** Matches the held BMW i4 Gran Coupé |
+| Is the Deepal E07 a `Ute` or an `SUV`? | **`SUV`** |
+| Where do people movers go, given there is no such body type? | **`SUV`, for now** |
+
+The people-mover decision is the one with numbers attached: it moves the XPeng X9, Zeekr 009, LDV
+MIFA 9, Volkswagen ID. Buzz and Mercedes-Benz EQV out of "unrepresentable" and into the research
+backlog, taking it from ~63 families to ~68 and adding a twelfth batch.
+
+"For now" is doing real work in that decision. Five people movers filed as SUVs will compare badly
+against actual SUVs on anything shape-dependent — boot litres especially, where a MIFA 9 in
+seats-up configuration is not measuring the same thing as an Atto 3. If the wave finds that jars,
+the honest fix is a `People Mover` body type, not a re-shuffle. Batch 12 is deliberately the last
+research batch so that decision can be made with the data in hand rather than before it.
+
+The panel-van exclusion is unchanged: the ID. Buzz Cargo and any cab-chassis or delivery variant
+stay out. Only the passenger versions are in scope.
+
+## Unrepresentable
+
+`server/schema.js:9` defines exactly four body types: `SUV | Sedan | Hatch | Ute`. There is no
+`Coupe`, no `People Mover`, no `Wagon`.
+
+With people movers filed as `SUV`, only four vehicles on sale in Australia cannot be represented.
+
+**Over $250,000 (schema rejects):**
+
+| Vehicle | Price |
+|---|---|
+| BMW i7 | $306,900–$364,390 |
+| Maserati GranTurismo Folgore | ~$450,000 |
+| Maserati GranCabrio Folgore | ≥ GranTurismo; also a convertible |
+
+**No honest body type:**
+
+| Vehicle | Price | Why |
+|---|---|---|
+| MG Cyberster | $99,900–$115,000 | Two-seat roadster. No `Coupe` or `Convertible` body type, and it is not an SUV by any reading |
+
+**Reclassified into scope by the body-type decisions above** — these were surveyed as
+unrepresentable and are now batch 12:
+
+| Vehicle | Price | Now |
+|---|---|---|
+| XPeng X9 | $89,900–$109,900 | `SUV` |
+| Zeekr 009 | $115,900–$139,900 | `SUV` |
+| LDV MIFA 9 | $106,000–$131,000 | `SUV` |
+| Volkswagen ID. Buzz | $75,990–$104,990 (passenger only; Cargo excluded) | `SUV` |
+| Mercedes-Benz EQV | — | `SUV` — **verify it is still on sale**, sourcing was thin |
+| Deepal E07 | $64,900–$73,900 | `SUV`, not `Ute` |
+
+**Wagons (excluded by scope, recorded so they are not re-found):** BMW i5 Touring · BYD Seal 6 EV
+Touring · Toyota bZ4X Touring · Zeekr 7GT (pre-launch) · Denza Z9 GT (shooting brake, verify body).
+
+**Commercial / conversion / fleet, all excluded:** Peugeot E-Expert and E-Partner · Ford E-Transit
+and E-Transit Custom · Renault Kangoo E-Tech · LDV eDeliver 9 · Skywell EC11 · Farizon vans ·
+Ford F-150 Lightning Pro (AUSEV converted; **AUSEV entered receivership March 2026**, residual stock
+only) · Chevrolet Silverado EV (Autogroup International RHD conversion, no list price) · Tembo
+Tusker-D (mining/fleet, private availability disputed).
+
+**Nothing found under $15,000.** The market floor is the BYD Atto 1 at $23,990.
+
+## Confirmed absent — checked, sell no BEV in Australia
+
+Recording these is the point; it stops the next survey re-checking them.
+
+**Sell cars here, but no battery-electric passenger car:** Mitsubishi · Honda · Isuzu · Peugeot
+(BEV range is now vans only) · Chevrolet/GMSV · GMC · Ram · Mahindra · Ineos · Land Rover / Range
+Rover · Jetour · JAC · Foton · Denza (PHEV only here) · SEAT (never sold here since 1999).
+
+**Not in the Australian market at all:** Citroen (ceased new orders 1 Nov 2024) · Fiat and Abarth
+(500e/595e sold through, not reordered) · Chrysler · Dodge · Daihatsu · Infiniti · Rivian · Lucid ·
+NIO · Xiaomi · Hongqi · Changan (own badge) · Dongfeng (own badge) · Seres · Riddara/Radar · Tata ·
+DS · Opel · Vauxhall.
+
+**Jaguar sells no new cars of any kind in Australia.** Petrol sales ended 31 Dec 2025; showrooms
+carry Approved Used only. I-Pace is out of production.
+
+**Explicitly ruled out by the manufacturer for Australia — do not re-check:**
+Ford Ranger BEV (Ford AU says the battery tech is not up to it; PHEV instead) · Riddara RD6 BEV
+(Australian version will be PHEV-only) · Audi A6 / S6 e-tron (**Audi Australia cancelled the local
+launch**) · Volkswagen ID.7 ("not for the Australian market") · standard Renault 5 E-Tech (fails
+ADR 34 centre-rear top tether; Renault declined the ~$4.9m fix) · Tesla Model S and Model X
+(withdrawn 2020–23, now globally discontinued) · Tesla Cybertruck (orders closed outside North
+America) · Ford Puma Gen-E (cancelled for Australia) · Cupra Born (discontinued locally, not
+returning) · Volvo EC40 (axed locally).
+
+## Pre-launch — announced, not orderable
+
+For a later re-check pass. Nearest first.
+
+| Model | Expected | Indicative price |
+|---|---|---|
+| Leapmotor B05 | End Aug 2026 — **weeks away** | $35,990–$38,990 d/a |
+| Mazda CX-6e | Sept 2026 showrooms; pre-orderable now | $53,990–$56,990 |
+| Deepal S05 | "Final stages" as of late July 2026 | ~$40k–$45k |
+| Honda Super-One | 2H 2026 — would be Honda's first BEV here | ~$33,000–$38,900 (leaked) |
+| Smart #5 | Oct–Dec 2026 | from low $60,000s |
+| XPeng G9L | Q4 2026 deliveries | $76,800–$84,800 |
+| Mercedes-Benz GLC with EQ Technology | Late 2026 | TBA |
+| Denza Z9 GT | Q3 2026 | $100k+ |
+| Volvo EX60 | Late 2026 – early 2027 | TBA |
+| Alpine A390 | Late 2026 – early 2027 — brand's Australian return | TBA |
+| NIO Firefly | H2 2026 | >$40k |
+| Hongqi range | H2 2026 | TBA |
+| Skywell BE11 | Paused for an 800V facelift; unconfirmed | $48,990–$52,990 (2025) |
+| MG U9 EV (ute) | Late 2026, unconfirmed | TBA |
+| Hyundai Ioniq 3 | Q1 2027 | ~$40,000 |
+| Toyota C-HR BEV | Mid-2027 | ~$57,390–$66,000 |
+| Isuzu D-Max EV (ute) | Unconfirmed by Isuzu Ute Australia | ~$95k–$115k |
+| Mahindra BE 6 / XEV 9e | ~2027 | TBA |
+| Xiaomi SU7 | 2027 | TBA |
+| Skoda Epiq | End 2027 | ~$34,000 |
+| **Nissan Leaf (3rd gen)** | **Delayed indefinitely (March 2026)** | — |
+| LDV eTerron 9 (ute) | **Possibly shelved** — wiped from LDV's Australian site | — |
+| Kia Tasman EV | Sources conflict badly (2026 vs 2030); Kia "still mulling" | — |
+
+## The 40 held families are current — but the price data is not
+
+No held family is discontinued. Two problems surfaced instead, and both are maintenance work rather
+than research:
+
+**1. One family is misnamed.** `chery/omoda-e5` is now sold as the **Chery E5** — Omoda has been
+split off as a separate sub-brand. The `familyId`, make and model are all stale.
+
+**2. Prices across the dataset are stale by up to $14,500,** because 2026 has been a price-war year:
+
+| Family | Change |
+|---|---|
+| Hyundai Kona Electric, Ioniq 5, Ioniq 6, Inster | Cut hard in 2026 — Kona now $46,000–$63,000, Ioniq 5 $68,200–$83,700, Inster $38,990 d/a |
+| Volvo EX30, EX40 | Cut $7,000–$11,300 |
+| BMW iX1 | Cut ~$8,000, now from $77,900 |
+| Renault Megane E-Tech | Cut ~$10,000 |
+| XPeng G6 | Cut $3,000, now $54,800–$59,800 |
+| Cadillac Lyriq | Cut $32,000 permanently (not held, but shows the market) |
+
+**3. Four held families have grown variants** the dataset will not have:
+
+| Family | Added |
+|---|---|
+| Hyundai Ioniq 6 | **Ioniq 6 N**, $115,000, 478kW |
+| BMW i4 | **M60 xDrive**, $139,900 |
+| MG 4 | **Urban** entry grade, $31,990 d/a; whole range restructured Apr 2026 |
+| Kia EV9 | **GT** grade added (range now Air/Earth/GT-Line/GT) |
+
+**4. One held family needs its powertrain confirmed:** `leapmotor/c10` is sold here as both a BEV
+and a REEV. Confirm the dataset holds the battery-electric one.
+
+**5. Two held families are on borrowed time:** Mercedes EQA and EQB are being replaced by the
+CLA/GLC EQ generation, and the Mini Cooper Electric is in run-out with stock quoted only "until the
+end of the year".
+
+## Proposed batch plan — 12 batches, six families each
+
+Same constraint as the PHEV wave: **one batch per session**, because six families at 20–35 searches
+each is 120–210 searches against a 200-call budget. Every family below is a **lead, not a fact** —
+the same rule as `docs/phev-research-wave.md`. If a family is not on sale at the research date,
+write no files and report the finding with evidence.
+
+Sequencing principle: structural gaps first, then absent brands with volume, then depth at brands
+already held, then the top end. The app is more wrong when it can show a buyer *no* electric ute
+than when it is missing a third Porsche.
+
+### Batch 1 — the structural gaps — **DONE 2026-07-30**
+Fills the empty `Ute` cell and the cheap end of `Sedan`. Highest value in the wave.
+
+**All six landed: 15 variants. `Ute` went from zero battery-electric rows to five; `Sedan` from 4
+BEV families to 8. The eT60 verification came back negative — see the batch 1 record below.**
+
+| Family | Note |
+|---|---|
+| Toyota HiLux BEV | `Ute`. Pickup variants only — the cab-chassis is out of scope. HiLux also sells as diesel; price the BEV only |
+| KGM Musso EV | `Ute`. Prices are quoted drive-away — convert |
+| Kia EV4 | `Sedan`. Australia gets the sedan; the hatch is not confirmed here |
+| Mazda 6e | `Sedan` — liftback, and liftbacks are sedans. Mazda AU's own site calls it a "hatchback"; ignore that |
+| Polestar 2 | `Sedan`. Base Standard Range was axed for MY27, so the price floor moved to $66,400 |
+| Mercedes-Benz CLA EV | `Sedan`. The CLA also sells as a hybrid — price the EQ Technology BEV only |
+
+**Also verify in this batch, without spending a slot:** the LDV eT60. It is the only remaining ute
+lead and a dealer call settles it. If it is orderable, it is a third `Ute`; if not, write no files
+and record the finding.
+
+> **Settled 2026-07-30: NOT on sale, no files written.** LDV Australia's own model page returns HTTP
+> 404 and the eT60 is absent from their current lineup (T60 MAX, Terron 9, D90, MIFA 9, eDeliver
+> vans). Third-party aggregators still carry price pages, but drive-away only at $99,343 with no
+> list price anywhere. Fewer than 100 sales in two years, and the eTerron 9 that was to replace it
+> has itself been wiped from LDV's Australian site. Per the research brief, a family the
+> manufacturer no longer lists is not on sale.
+
+### Batch 2 — absent volume brands
+| Family | Note |
+|---|---|
+| Volkswagen ID.4 | VW has zero BEV rows despite selling two families here |
+| Volkswagen ID.5 | Coupe-liftback body of the ID.4 — `SUV` |
+| Cadillac Optiq | Cadillac is BEV-only in Australia and wholly absent |
+| Cadillac Lyriq | Took a permanent $32,000 cut — use current pricing |
+| Cadillac Vistiq | Platinum grade only |
+| KGM Torres EVX | Prices quoted drive-away. Pairs with the Musso EV researched in batch 1 |
+
+### Batch 3 — the cheap Chinese end
+| Family | Note |
+|---|---|
+| BYD Atto 2 | |
+| BYD Atto 1 | $23,990 — the market floor, and the app's cheapest possible BEV |
+| Geely EX2 | Orders opened days before the survey; re-confirm on-sale status |
+| GAC Aion UT | Whole brand absent |
+| GAC Aion V | |
+| GWM Ora 5 | Replaced the axed Ora hatch. Do not research the old hatch |
+
+### Batch 4 — MG's missing range, plus Chinese remainder
+| Family | Note |
+|---|---|
+| MG S6 EV | MG is the biggest single-brand hole: 4 of 6 families absent |
+| MG IM5 | `Sedan`. The whole IM sub-brand is unrecorded |
+| MG IM6 | |
+| Leapmotor B10 | Confirm BEV, not REEV |
+| Forthing Taikon 5 | BEV variants only — the range mixes BEV and EREV |
+| Jaecoo J5 EV | |
+
+### Batch 5 — Korean and Japanese mainstream
+| Family | Note |
+|---|---|
+| Hyundai Ioniq 9 | |
+| Hyundai Elexio | |
+| Lexus RZ | Lexus wholly absent. Prices cut by up to $42,000 in 2026 |
+| Subaru Uncharted | Single variant |
+| Subaru Trailseeker | **Wagon-boundary call** — Subaru and CarExpert say SUV, WhichCar says off-road wagon |
+| Suzuki e Vitara | Intro pricing expired 1 Jul 2026; current prices are $2–3k higher |
+
+### Batch 6 — BMW's missing range, plus European mainstream
+| Family | Note |
+|---|---|
+| BMW iX3 | Neue Klasse. Entry iX3 40 arrives Q4 2026 — price the grades on sale now |
+| BMW iX2 | |
+| BMW iX | |
+| BMW i5 | Sedan only. The Touring is a wagon and is out |
+| Renault Scenic E-Tech | New family at a brand already held |
+| Alfa Romeo Junior Elettrica | Single variant, $57,900 |
+
+### Batch 7 — Mercedes-Benz
+| Family | Note |
+|---|---|
+| Mercedes-Benz EQS Sedan | Refreshed EQS starts Q4 2026; the family is in transition |
+| Mercedes-Benz EQS SUV | |
+| Mercedes-Benz EQE SUV | Being dropped globally during 2026 — confirm on-sale first |
+| Mercedes-Benz EQE Sedan | **Verify orderable before spending the slot.** Same global drop |
+| Mercedes-Benz G 580 with EQ Technology | $249,000 — **$1,000 under the schema ceiling.** Verify the price before writing; a small rise makes it unrepresentable |
+| Skoda Enyaq Coupe | Body extension of a held family, not a new family. Cheap slot to fill out the batch |
+
+### Batch 8 — Audi, Cupra, Mini, Smart
+| Family | Note |
+|---|---|
+| Audi Q6 e-tron | Includes Sportback body |
+| Audi Q8 e-tron | **Verify orderable.** Production ended Feb 2025; local listings may be run-out stock |
+| Cupra Tavascan | Cupra's only BEV — the Born is discontinued here |
+| Mini Aceman | |
+| Mini Countryman Electric | E and SE All4 |
+| Smart #1 | Whole brand absent |
+
+### Batch 9 — premium SUVs and Genesis
+| Family | Note |
+|---|---|
+| Smart #3 | |
+| Volvo EX90 | |
+| Volvo ES90 | Sedan |
+| Polestar 3 | |
+| Genesis GV60 | Includes the GV60 Magma performance grade |
+| Genesis GV70 Electrified | Reported reduced to a single grade — verify |
+
+### Batch 10 — the top end
+Every family here needs variant-level pricing, because several span the $250,000 ceiling: the
+cheapest variant qualifies, the flagship does not.
+
+| Family | Note |
+|---|---|
+| Porsche Taycan | Sedan, 8 variants. Base $175,100; Turbo GT ~$442k is unrepresentable — split at the ceiling |
+| Porsche Macan Electric | |
+| Porsche Cayenne Electric | **Verify orderable today** — first deliveries were Q3 2026 |
+| Audi e-tron GT | Sedan. S / RS / RS Performance |
+| Genesis G80 Electrified | Sedan. **Weakest single source in the survey** — confirmed only via a Genesis AU model listing, and dead in North America. Verify before committing the slot |
+| Polestar 5 | Sedan GT |
+
+### Batch 11 — the tail, plus the maintenance backlog
+Not six new families — this batch is deliberately mixed, because the tail is thin and the
+maintenance debt is real.
+
+| Item | Note |
+|---|---|
+| Lotus Eletre | Top R variant is quoted at both $279,990 and $315,000; base $189,900 qualifies |
+| Lotus Emeya | `Sedan` |
+| Maserati Grecale Folgore | **Verify orderable, not run-out.** Maserati has retrenched hard on EVs and told dealers to discount Folgore stock ~43% |
+| Maintenance sweep | Rename `omoda-e5` → Chery E5; add Ioniq 6 N, BMW i4 M60, MG4 Urban, Kia EV9 GT; re-price Hyundai, Volvo, BMW iX1, Renault, XPeng G6; confirm Leapmotor C10 is the BEV |
+
+### Batch 12 — people movers, filed as `SUV`
+Last of the research batches, deliberately. Every family here is only in scope because of the
+body-type decision above, so running it last means the decision can be revisited with real data —
+if these compare badly against actual SUVs on boot space and shape, the fix is a `People Mover`
+body type, and it is cheaper to find that out at the end than to have salted it through the wave.
+
+| Family | Note |
+|---|---|
+| Deepal E07 | `SUV`, not `Ute`. Also verify the March 2026 ADR 34/03 stop-sale was lifted |
+| XPeng X9 | |
+| Zeekr 009 | |
+| LDV MIFA 9 | |
+| Volkswagen ID. Buzz | Passenger versions only — Cargo is a panel van and stays out |
+| Mercedes-Benz EQV | **Verify it is still on sale.** Thinnest sourcing of the six |
+
+### Batch 13 — the re-check pass (see below)
+Run after the wave. Leapmotor B05, Mazda CX-6e, Deepal S05, Honda Super-One and Smart #5 all land
+inside the wave's own timeframe, so several will be on sale before the wave finishes. Re-run the
+brand sweep for the pre-launch table above.
+
+## Batch records
+
+### Batch 1 — done 2026-07-30
+
+Six agents, one per family, all six written. 15 variants; dataset went to 34 brands, 81 families,
+207 variants. Build 0 failures, 482 tests pass. Commit `fd53d87`.
+
+| Family | Variants and list prices |
+|---|---|
+| `toyota-hilux-bev` | SR Pick-Up $76,490 · SR5 Pick-Up $82,990 |
+| `kgm-musso-ev` | 2WD $57,566 · 2WD Black Edge $59,513 · AWD $61,461 (all **backed out** of drive-away) |
+| `kia-ev4` | Air SR $49,990 · Earth LR $59,190 · GT-Line LR $64,690 |
+| `mazda-6e` | GT $49,990 · Atenza $52,990 |
+| `polestar-2` | LR Single $66,400 · LR Dual $71,400 · LR Dual Performance $85,080 |
+| `mercedes-cla-ev` | 200 EQ $72,200 · 350 4MATIC EQ $91,300 |
+
+**Six things later batches need to know.**
+
+**1. The brief's drive-away back-out formula is wrong for utes. Verified in code, not argued.**
+`docs/ev-family-research-brief.md` gives `list = (driveaway - 880) / 1.042`. That is the *green
+passenger* rate. `calc/onroad.js:23-28` tests `isNonPassenger` **first**, at $5.40 per $200 (2.7%),
+not $8.40 (4.2%) — a ute is a goods vehicle whatever its emissions. On the Musso EV, 1.042
+undershoots by $851–$909 per row and does not round-trip. **Utes: divide by 1.027. Passenger cars:
+1.042, unchanged.** Always round-trip through `driveAwayPrice()` against the real tax tables rather
+than trusting either constant. Batch 2's **KGM Torres EVX is a passenger SUV, so it uses 1.042** —
+do not carry the ute divisor across just because it is the same brand.
+
+**2. The grade-count failure mode has not gone away, and it now has a third shape.** Batch 1 caught
+three, none of which was a wrong badge:
+- *A grade that does not exist here.* The EV4's Air/Earth/GT-Line ladder looks like the EV3's
+  four-row SR/LR matrix. There is no **Air Long Range** on the Australian list. Assuming platform
+  siblings share a grade matrix is now a proven way to invent a car.
+- *A range structure that does not cross the border.* The Mazda 6e's European two-battery mapping
+  (Takumi 68.8 kWh LFP / Takumi Plus 80 kWh NMC) does not exist here — Australia gets one 78 kWh LFP
+  pack across both grades. Two cars, not four.
+- *A badge that exists twice on different powertrains.* There is a **petrol** CLA 200 at $68,100 and
+  an **electric** CLA 200 at $72,200. Matching on the badge alone picks the wrong car. Expect this
+  wherever a family sells combustion and BEV side by side — batch 7's Mercedes rows and batch 2's
+  VW rows are the obvious exposures.
+
+**3. NEDC is still the dominant defect, and it can collide numerically with the WLTP figure.**
+Toyota Australia publishes **NEDC only** for the HiLux BEV: 315 km pick-up, 245 km cab-chassis. The
+pick-up's true WLTP figure is **245 km** — the same number as the cab-chassis NEDC figure. Taking
+Toyota's headline would have overstated range by 29%, and a checker comparing "245" against "245"
+would have felt confirmed. **Matching numbers are not corroboration unless the standard and the
+variant both match.** Every other batch 1 family was WLTP throughout.
+
+**4. Sedan boot figures are mostly unpublished, and the convention now has a shape.** No Australian
+outlet publishes a seats-down volume for the EV4 fastback, the CLA sedan or several held cars. The
+dataset's seats-up-to-down ratios cluster by body: **notchbacks 2.2–2.4** (CLA 2.22, EV4 2.24, Seal
+2.38), **liftbacks 2.7–3.2** (Polestar 2 2.70, i4 2.74, Seal 6 2.79, Mazda 6e 3.19), with the Model
+3 an outlier at 1.39 on an unusually large 682 L seats-up figure. Use the ratio band for the body
+shape and cap against any published sibling. This killed a sourced-but-wrong 1435 L on the EV4 —
+single-sourced, and it would have given a notchback a higher ratio than every liftback held.
+
+**5. Utes have their own field conventions. Follow them.** `isNonPassengerForVicDuty: true`
+(schema-optional, consumed by `calc/compare.js:21`), `bootLitresSeatsUp == bootLitresSeatsDown` set
+to tub volume, and `towKg` braked from the manufacturer's technical sheet rather than the marketing
+page — KGM's marketing claims 2.3 t against its own spec sheet's 1,800 kg. Leave
+`isGreenForVicDuty` unset on a BEV ute: the default is true, and `isNonPassenger` short-circuits
+before it is read, so it has no numeric effect either way.
+
+**6. Cross-row diffing earned its place, and the validator cannot do it.** Every one of the 15 rows
+passed independently. The EV4 boot error was only visible against the other sedans. The tightest
+consumption deviation in the batch is Polestar 2 Single Motor at **19.0%** against a 25% ceiling —
+note the validator divides by the **stated** figure, not the implied one (`data/schema.js:154`), so
+compute it that way when judging headroom.
+
+**Two things to watch that batch 1 could not settle.** The CLA 350 4MATIC lists at $91,300, clearing
+the $91,661 LCT/FBT threshold by **$361** — the tightest margin in the dataset, and any factory
+option ordered with the car destroys the exemption. And the Polestar 2's $85,080 Performance row is
+kept as a variant on the strength of separate WLTP homologation, against one source calling it an
+$8,980 option; it is the row that creates that family's $75,000 straddle, so if it is wrong the
+straddle is wrong with it.
+
+**One gate not run.** The browser render check was skipped at the user's instruction — the Playwright
+profile was held by a live Chrome process and the headless fallback was declined. Build, tests and a
+fresh server boot all passed, but **no page-level confirmation was obtained for these six families.**
+Worth a look at the start of batch 2, since a green API with a broken page has happened here before.
+
+## How to run a batch — paste this into a new session
+
+One batch per session. **Change the batch number on the first line. That is the only edit** —
+everything after it says "this batch" and resolves from that one number, and the date resolves
+itself.
+
+```
+Run batch N of the BEV research wave for car-calc.
+
+The batch number on the line above is the only thing to edit in this prompt.
+Everything below refers to "this batch" and resolves from it.
+
+Read the Findings section of docs/bev-survey-brief.md for this batch's family table,
+its notes and its stop conditions, and docs/ev-family-research-brief.md for the
+binding field rules. Do not re-derive what they record and do not re-litigate
+decisions they settle.
+
+RESEARCH DATE: use today's real date, which you already know from your environment —
+do not ask for it and do not copy one out of a document.
+docs/ev-family-research-brief.md has 2026-07-27 hardcoded near the top and that is
+stale. Pass today's date to every agent explicitly and have them record that, not
+the brief's.
+
+Three body-type decisions are BINDING, already made, not open:
+  - `Sedan` includes four-door liftbacks and fastbacks (as the held BMW i4 Gran
+    Coupe already is).
+  - The Deepal E07 is an `SUV`, not a `Ute`.
+  - People movers are filed as `SUV` for now. Passenger versions only — panel-van
+    and cargo variants stay out of scope entirely.
+There is no Coupe, Wagon or People Mover body type. The enum is SUV | Sedan | Hatch
+| Ute (server/schema.js:9).
+
+Before dispatching:
+  - Confirm `node scripts/build-dataset.js` reports 0 failures.
+  - If this batch names a stop condition or a verification, settle it FIRST. It may
+    remove families from the batch. The ones that have them: batch 7 verifies the
+    G 580 is still under $250,000, batch 12 verifies the Mercedes EQV is on sale.
+    (Batch 1's LDV eT60 check is DONE and came back negative. Do not re-check it.)
+  - Every price in the survey is a LEAD, NOT A FACT, and many were quoted
+    drive-away. Establish list price independently.
+  - Read the "Batch records" section for what earlier batches learned. Batch 1
+    corrected the brief's own drive-away back-out formula for utes, and logged
+    three new shapes of the grade-count failure.
+
+Then dispatch one general-purpose subagent per family, all in a single message so
+they run in parallel. Each agent gets: its family name and proposed familyId, its
+row's note from the table verbatim, the path to docs/ev-family-research-brief.md
+introduced as "read this first, it is binding", the research date, any sibling
+already in the dataset to anchor insuranceAnnual and depreciationCurve against, and
+the hard boundaries — write only its own two files under data/families/ and
+data/vehicles/, never an aggregate file, never another family's files, never
+data/schema.js, and run no git commands.
+
+Restate these four in every agent prompt. Each has already caught something:
+  1. `listPrice` is the manufacturer list price, NEVER drive-away. For the Chinese
+     brands and KGM, drive-away is the default quoted figure and the survey's own
+     numbers are drive-away for the Musso EV, Torres EVX, Ora 5, S6 EV, Jaecoo J5
+     and Leapmotor B10. Where no list price exists anywhere, back it out with the
+     app's VIC model — list = (driveaway - 880) / 1.042 — and flag it.
+  2. Grade names are leads. Thirteen of twenty-two failed verification across the
+     PHEV wave, and since batch 5 the failures have been wrong grade COUNTS rather
+     than wrong badges, which silently merges or invents cars. Count the grades on
+     the configurator; do not match names.
+  3. Treat every Australian range figure as NEDC until proven WLTP. This is the
+     PHEV wave's confirmed dominant defect, and it is worse for the Chinese brands.
+     Record which standard each figure came from.
+  4. `batteryKwh` is USABLE, not gross.
+
+Require every agent to report: the grade names it EXCLUDED and why, which standard
+each range figure came from, which of batteryKwh / rangeKm / consumptionKwhPer100km
+it sourced versus derived, whether the price it found was list or drive-away, and
+its least-confident figure named outright.
+
+When they return:
+  - Diff the JUDGED fields across any families in this batch sharing a platform or
+    powertrain. The validator cannot see across rows — every one of the four VW
+    Group PHEV rows passed independently while giving the heavier car more range
+    than the lighter one. Sourced fields agree; it is the judged ones that diverge.
+  - node scripts/build-dataset.js  (must end "0 failures")
+  - npm test
+  - Restart any dev server. It caches the dataset at boot and will otherwise serve
+    stale rows — this has caught three sessions already. Check with
+    `lsof -nP -iTCP:3000 -sTCP:LISTEN`, not `ps | grep`, and confirm the page
+    header's variant count matches the build output.
+  - Load the page in a browser and confirm the new families render. BEVs show by
+    default, so do NOT set ?includePhev=true — that flag is for the other dataset.
+    Do not substitute an API check for this; a green API and a broken page have
+    happened on this project.
+  - Commit the data with a message naming each agent's low-confidence figures. That
+    disclosure is the only record of which figures are soft.
+  - Update the Findings section of docs/bev-survey-brief.md: mark this batch done,
+    refresh the coverage table and the headline percentage, and record anything
+    later batches should know.
+
+Stop after this batch. The search budget covers one batch per session, and a family
+that runs out of searches half way through is worse than no family.
+
+A batch that writes three families and reports three evidenced "not on sale" has
+done its job. Families that cannot be entered honestly should not be entered.
+```
+
+### If you run batches in parallel across sessions
+
+The search budget is per-session, so parallel sessions genuinely multiply throughput. Three rules:
+
+- **Branch per session.** `.githooks/pre-push` exists because pushing to main auto-deploys to
+  Heroku production with no CI gate.
+- **Commit only per-family files.** `data/families.json` and `data/vehicles.json` are generated
+  artefacts rebuilt from a full directory scan. Never hand-merge them — take either side and re-run
+  `node scripts/build-dataset.js`.
+- **Keep platform siblings in the same wave**, and diff judged fields at each merge. Three clusters
+  are split across batches: Hyundai/Kia/Genesis E-GMP (batches 1, 5, 9), VW Group MEB/PPE
+  (batches 2, 8, 10, 12), and the Chinese families (batches 3, 4, 12). Batches 6 (all BMW), 7 (all
+  Mercedes) and 10 (Taycan and e-tron GT share the J1 platform) are self-contained.
+
+Batch 1 should run alone and first — it sets the ute and liftback-sedan conventions. Batch 11 should
+run alone, because it renames `omoda-e5` and so changes filenames. Batch 12 runs last by design.
+
+**Batch 1 is done and did set those conventions** — see the Batch records section. The remaining
+batches can now run in parallel across sessions on the rules recorded there, with the platform-
+cluster caveat above still applying.
+
+## What the survey got wrong about its own leads
+
+Worth recording, because it scores the recalled-list method a second time.
+
+**Leads that were right:** Porsche, Genesis, Lexus, Cupra, Smart, Cadillac, Alfa Romeo, Lotus,
+Maserati, Mahindra — and the range gaps at Polestar, Volvo, BMW, Mercedes, Audi, Hyundai, Kia,
+XPeng, Zeekr, Leapmotor, Deepal, BYD.
+
+**Leads that were wrong:** Peugeot (sells no BEV passenger car here — vans only) · Fiat and Abarth
+(500e/595e sold through and not reordered) · Jaguar (sells no new cars at all) · Nissan's new Leaf
+(delayed indefinitely) · Audi A6 e-tron (cancelled for Australia) · Riddara/Radar (Australian
+version will be PHEV-only) · Jaecoo (right brand, but the lead list had it as absent when it sells
+the J5 EV) · Foton and JAC as ute candidates (both diesel/PHEV here, no BEV).
+
+**Found by nobody's lead list** — the entries the brand-by-brand sweep produced that no amount of
+checking the 40 would have surfaced: **Toyota HiLux BEV**, **Cadillac** (whole brand, BEV-only),
+**KGM Musso EV** and **Torres EVX** (whole brand, including a ute), **GAC/Aion** (whole brand),
+**Mazda 6e**, **Suzuki e Vitara**, **Volkswagen ID.4/ID.5**, **Forthing**, **GWM Ora 5**,
+**Subaru Uncharted** and **Trailseeker**, **Hyundai Elexio**, **Mercedes CLA EV**, **Volvo ES90**.
+
+That is fifteen-plus families and five whole brands invisible to list-checking. The brief's
+instruction to work brand by brand rather than model by model is the reason they are here.
+
+## Confidence, stated plainly
+
+**High** on the brand-level question — which brands sell BEVs in Australia, and roughly how many
+families each. Every slice established ranges from brand-level sources and diffed afterwards. That
+is what the headline number rests on, and it is the number that decides the wave size.
+
+**Medium at best on prices.** Treat every figure in this document as a span to be re-established
+during family research, never as data. Several are drive-away rather than list. Mercedes EQE/EQS SUV
+pricing was internally inconsistent across sources.
+
+**Weak spots, flagged rather than smoothed over:**
+
+- **No surveyor reached a manufacturer's own Australian site for most brands.** Audi returned 503,
+  Mercedes-Benz timed out, Peugeot, Hyundai and Toyota returned 403/404. Almost everything here is
+  sourced from Australian motoring media, primarily CarExpert. That is strong evidence for "does
+  this brand sell this model here" and weaker for exact current pricing and range changes in the
+  last 4–6 weeks.
+- **Genesis G80 Electrified** — the weakest single entry. Verify before researching.
+- **Peugeot's "no BEV" verdict** rests on two press sources, not the live configurator, and
+  Peugeot's Australian distribution is mid-handover from Inchcape to Stellantis. Worth one manual
+  check.
+- **Deepal E07** — a March 2026 stop-sale over an ADR 34/03 child-anchorage failure is documented;
+  the resumption of deliveries is not confirmed from a primary source.
+- **Maserati Grecale Folgore, Audi Q8 e-tron, Porsche Cayenne Electric, LDV eT60** — all four are
+  on the on-sale/run-out/just-launched boundary and were flagged as unconfirmed.
+- **Skywell BE11 and Forthing Taikon 5** — placed on opposite sides of the pre-launch line with low
+  confidence in both calls.
+- **DS, Opel, Vauxhall, Tata and Munro** are recorded as absent on general market knowledge without
+  a citable Australian source. Almost certainly correct, formally unsourced.
+
+**One methodological caveat to carry into the wave.** Chinese brand ranges churn fast enough that
+two families here (Geely EX2, Leapmotor B05) sit within weeks of their on-sale date, and one a
+recalled list would confidently have included (GWM Ora hatch) has already been axed. This plan
+should be re-checked at the point of research, not treated as durable for the length of the wave.
