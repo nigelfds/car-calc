@@ -51,6 +51,18 @@
     </div>
   </header>
 
+  <div class="tablist" role="tablist" aria-label="How to explore the data">
+    <button class="tab-button" type="button" role="tab" data-tab="find"
+            id="tab-find" aria-controls="panel-find" aria-selected="true" tabindex="0">
+      Find a car
+    </button>
+    <button class="tab-button" type="button" role="tab" data-tab="compare"
+            id="tab-compare" aria-controls="panel-compare" aria-selected="false" tabindex="-1">
+      Compare
+    </button>
+  </div>
+
+  <div class="tab-panel" role="tabpanel" data-tab="find" id="panel-find" aria-labelledby="tab-find">
   <main class="sections">
 
     <section id="about" aria-labelledby="about-heading">
@@ -411,6 +423,24 @@
     </section>
 
   </main>
+  </div>
+
+  <div class="tab-panel" role="tabpanel" data-tab="compare" id="panel-compare"
+       aria-labelledby="tab-compare" hidden>
+    <main class="sections" id="compare-panel">
+      <section id="compare" aria-labelledby="compare-heading">
+        <h2 id="compare-heading" class="section-heading">Compare cars</h2>
+        <p class="section-intro">
+          Pick up to three cars from the dataset. Specifications only — this tab does not
+          cost a car under a lease, a loan or cash, so nothing here depends on what you earn.
+        </p>
+        <div class="compare-slots" id="compare-slots"></div>
+        <div class="compare-bench" id="compare-bench"></div>
+        <div class="compare-table" id="compare-table"></div>
+        <div class="compare-prose" id="compare-prose"></div>
+      </section>
+    </main>
+  </div>
 
   <!-- A <button>, not a clickable <div>. It scrolls to step 2, and as a div with
        tabIndex -1 there was no keyboard path to that at all.
