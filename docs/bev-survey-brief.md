@@ -9,8 +9,8 @@ unchanged so the leads can be scored against what was actually found.
 **Headline: the dataset holds about 37% of the battery-electric market. Roughly 68 families are
 missing, which is twelve batches — a wave larger than the PHEV one.**
 
-**Wave progress: batches 1, 2 and 3 done (1 and 2 on 2026-07-30, batch 3 on 2026-07-31). 58 of ~111
-families held, ~52%. Nine batches left.**
+**Wave progress: batches 1, 2, 3 and 4 done (1 and 2 on 2026-07-30, batches 3 and 4 on 2026-07-31).
+64 of ~111 families held, ~58%. Eight batches left.**
 
 ## Why this exists
 
@@ -179,14 +179,14 @@ families were most of the market.
 
 ## The headline number
 
-| | Families | After batch 1 | After batch 2 | After batch 3 |
-|---|---|---|---|---|
-| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** |
-| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** |
-| Held by the dataset | **40** | **46** | **52** | **58** |
-| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** |
-| Missing and researchable | **~68** | **~61** | **~55** | **~49** |
-| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** |
+| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 |
+|---|---|---|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** |
+| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** |
+| Held by the dataset | **40** | **46** | **52** | **58** | **64** |
+| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** |
+| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** |
+| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** |
 
 Batch 2 found nothing withdrawn and needed no back-out, so the on-sale and representable figures are
 unchanged. All six families were `SUV`, so `Sedan` and `Ute` are exactly where batch 1 left them.
@@ -194,6 +194,13 @@ unchanged. All six families were `SUV`, so `Sedan` and `Ute` are exactly where b
 Batch 3 also found nothing withdrawn — all six were orderable, including the Geely EX2 whose on-sale
 status was the batch's stop condition. Three `Hatch` and three `SUV`, so `Sedan` and `Ute` are again
 untouched. **The wave has now passed the halfway mark.**
+
+Batch 4 likewise found nothing withdrawn — all six orderable, including the Forthing Taikon 5, which
+the survey had flagged as a low-confidence pre-launch call and which is in fact on sale. Five `SUV`
+and one `Sedan` (the MG IM5), so `Ute` is untouched and `Sedan` gains its first family since batch 1.
+**Measured after batch 4: 163 battery-electric variants across 64 families — SUV 122/46, Sedan 20/9,
+Hatch 16/7, Ute 5/2.** That measurement also settles the discrepancy batch 2 flagged and could not
+resolve: the `Sedan` count now reconciles exactly, at 20 variants across 9 families.
 
 The representable figure counts people movers, per the body-type decisions below. Only four
 vehicles on sale are unrepresentable: three above the $250,000 ceiling and one two-seat roadster.
@@ -259,6 +266,21 @@ to fully represented in one batch. **GWM is complete on BEVs** — the Ora 5 is 
 electric family, the old Ora hatch it replaced being discontinued. **Twelve of the seventeen brands
 in this table are still absent.**
 
+**Settled by batch 4 (2026-07-31):** two more, both complete. **Forthing is complete** — the Taikon 5
+is its only Australian family, and only its two battery-electric grades are in scope. **Jaecoo is
+complete on BEVs** — the J5 EV is its sole battery-electric model, the rest of the range being petrol
+and super-hybrid. The dataset now holds 37 brands. **Nine of the seventeen brands in this table
+remain absent:** Porsche, Genesis, Smart, Lotus, Lexus, Suzuki, Cupra, Alfa Romeo and Maserati.
+
+That is nine, not the ten a reader would get by subtracting batch 4's two from the "twelve" recorded
+above. The batch 3 figure was off by one: it did not count **Mazda**, whose 6e was researched in
+batch 1, so eleven were absent after batch 3, not twelve. Corrected here rather than left to
+propagate.
+
+Batch 4 also closed the wave's largest single-brand hole. **MG went from 2 BEV families to 5** —
+`mg-4` and `mg-s5` joined by `mg-s6`, `mg-im5` and `mg-im6` — and the **IM sub-brand, previously
+unrecorded in any form, is now held in full**.
+
 ## The two structural gaps — both verdicts are "nobody looked"
 
 ### `Ute` — the cell is empty because nobody looked. Confidence: high.
@@ -291,8 +313,11 @@ The dataset holds 4 BEV sedan families (Model 3, Seal, Ioniq 6, i4) out of rough
 about **26%**. Eleven missing, spanning $49,990 to $219,900, and including the two cheapest cars in
 the segment:
 
-**Batch 1 took four of the eleven** (Kia EV4, Mazda 6e, Polestar 2, Mercedes CLA EV), so `Sedan` now
-holds **8 of ~15 families, about 53%** — 18 variants. Seven still missing, all of them premium:
+**Batch 1 took four of the eleven** (Kia EV4, Mazda 6e, Polestar 2, Mercedes CLA EV), and **batch 4
+added a family the survey never listed — the MG IM5**, so `Sedan` now holds **9 families, 20
+variants** (measured, not asserted). The IM5 is a genuine addition to the segment count rather than a
+reallocation, so the denominator moves too: about 9 of ~16, roughly 56%. Seven of the survey's
+original eleven are still missing, all of them premium:
 Volvo ES90 · Genesis G80 Electrified · BMW i5 · Porsche Taycan · Audi e-tron GT · Mercedes-Benz EQS
 Sedan · Mercedes-Benz EQE Sedan. The two cheapest cars in the segment are now both in.
 
@@ -579,7 +604,13 @@ stop condition passed — it is orderable. See the batch 3 record below.**
 | GAC Aion V | |
 | GWM Ora 5 | Replaced the axed Ora hatch. Do not research the old hatch |
 
-### Batch 4 — MG's missing range, plus Chinese remainder
+### Batch 4 — MG's missing range, plus Chinese remainder — **DONE 2026-07-31**
+
+**All six landed: 13 variants. MG goes from 2 BEV families to 5 and the IM sub-brand is now held in
+full; Forthing and Jaecoo both go from zero BEV rows to complete. The Forthing Taikon 5's on-sale
+status — the survey's own low-confidence call — was settled before dispatch and it is on sale. See
+the batch 4 record below.**
+
 | Family | Note |
 |---|---|
 | MG S6 EV | MG is the biggest single-brand hole: 4 of 6 families absent |
@@ -1040,6 +1071,159 @@ affordable. Batch 2 had to fall back to a component-level render for the Pareto-
 no such fallback was needed here.
 
 
+### Batch 4 — done 2026-07-31
+
+Six agents, one per family, all six written. 13 variants; dataset went to **37 brands, 99 families,
+241 variants** (163 of them battery-electric). Build 0 failures, 596 tests pass. Commit `2b2a177`.
+Nothing was found withdrawn. **The browser render check was NOT RUN** — see the gate note at the end
+of this record.
+
+| Family | Variants and list prices |
+|---|---|
+| `mg-s6` | Essence RWD $47,130 · Essence AWD $53,848 (both **backed out** of drive-away) |
+| `mg-im5` | Premium $57,687 · Platinum $64,405 · Performance $74,002 (all **backed out**) |
+| `mg-im6` | Premium $57,687 · Platinum $64,405 · Performance AWD $74,002 (all **backed out**) |
+| `leapmotor-b10` | Style $37,888 · Design LR $40,888 |
+| `forthing-taikon-5` | BEV Luxury $36,574 · BEV Exclusive $39,933 (both **backed out**) |
+| `jaecoo-j5-ev` | EV Summit $35,990 |
+
+**Eleven of thirteen rows carry a backed-out price** — by far the worst ratio of the wave, against
+batch 2's zero. Four of the six families are brands that publish no Australian list price at all.
+
+**Nine things later batches need to know.**
+
+**1. The stop condition in the pasted prompt was STALE, and a reader following it literally would
+have wasted a slot.** The prompt block below still named the Geely EX2 — batch 3's condition, already
+settled. Batch 4's actual open verification was the **Forthing Taikon 5**, flagged not in the batch
+table but in the "Confidence, stated plainly" section as one of two families "placed on opposite
+sides of the pre-launch line with low confidence in both calls". It settled in one search: on sale
+since June 2026. **The batch tables are not the only place a stop condition lives — read the
+confidence section too.** The prompt block has been corrected below.
+
+**2. A same-price badge collision across powertrains is the new worst case, and it hit twice.**
+Batch 1 logged the petrol-versus-electric CLA 200 at *different* prices, which a price check
+separates. This batch found two families where it does not:
+- **Leapmotor prices the B10 REEV identically to the BEV, badge for badge** — Style $37,888 and
+  Design $40,888 exist in both powertrains at the same figure. Matching on badge *and* price is a
+  coin flip. The separators are drivetrain-dependent specs: CarsGuide lists towing 0 kg (BEV) versus
+  750 kg (REEV) and boot 490/1475 versus 420/1415.
+- **Forthing sells Luxury and Exclusive in both BEV and range-extender form.** The separator is
+  structural rather than numeric: Forthing Australia serves them from two distinct model pages
+  (`/taikon-5-electric/` and `/taikon-5-range-extender-hybrid/`), each with its own spec sheet.
+**Match on the powertrain page or a drivetrain-dependent spec, never on the badge, and never on the
+badge plus price.**
+
+**3. Certification filings and configurators disagree, and the filing is not availability.** The MG
+S6 appears in Australian government certification documents with a third RWD grade on a ~55 kWh pack
+that is on no configurator and has no price or on-sale date. This is a **fifth shape of the
+grade-count failure**, and it is the mirror of batch 3's: there, an aggregator carried an unlaunched
+grade *with* a price; here, a primary-looking government source carries one *without*. Both invent a
+car. Australia gets the 77 kWh pack only, in two grades.
+
+**4. A reconstruction that fits to the cent is a formula, not a corroboration.** This batch's central
+conflict was IM5-versus-IM6 on whether $60,990/$67,990/$77,990 are list or drive-away. The IM5 agent's
+opening argument was that CarExpert's Sydney drive-away figures reconstruct from those numbers using
+NSW duty plus a flat ~$3,010, within $20 on all three grades. Under challenge it re-derived the
+residual as **exactly $3,017 on all three grades, to the cent** — and correctly concluded that such
+precision proves only that it had reverse-engineered CarExpert's own pipeline (`MSRP field + state
+duty + constant`). **Recovering a pipeline's output from its own input tests consistency, not the
+input's correctness.** The disputed quantity was the input. This is a distinct defect from batch 3's
+circular reasoning: there the agent adopted a figure and then used the gap it created as evidence;
+here the arithmetic was flawless and still proved nothing.
+
+**5. What actually settled it, for reuse.** Three things, in order of strength:
+- **The manufacturer's own configurator, read for its heading rather than its number.** MG serves
+  $57,990/$64,990/$74,990 under "Drive Away Price for NSW delivery with Private registration",
+  disclosing $3,000 cashback. Ex-cashback that is $60,990/$67,990/$77,990 **drive-away**.
+- **An impossibility check.** A $57,990 NSW drive-away on a $60,990 list cannot exist — NSW duty
+  alone is $2,150, so the floor is ~$64,000.
+- **A magnitude sanity check nobody had run.** CarExpert quotes the Performance's Sydney drive-away
+  at $84,007 where MG sells it at $74,990 drive-away — a $9,017 gap, i.e. on-roads added to a price
+  that already contained them.
+**Words beat database fields.** Every source stating a basis in prose — Exhaust Notes ("At $77,990
+drive away"), NRMA ("all quoted as drive-away prices"), GoAuto ("*National driveaway price"),
+carsales ("Indicative drive away price") — said drive-away. The only contrary evidence was CarExpert's
+and CarsGuide's *MSRP database fields*, which the brief already tells you to treat as estimates.
+
+**6. Both agents converged, and the batch 2 heuristic held.** The IM5 agent conceded and rewrote all
+three rows; the IM6 agent refused to concede and produced the configurator evidence. They finished on
+identical figures. Batch 2 observed that "the one arguing more specifically was the one that was
+wrong" — true again: the $20-precision reconstruction was the more specific argument and the wrong
+one. **Budget two rounds for this; neither conceded on the first exchange, and the round that
+resolved it also produced better evidence than either had at the start.**
+
+**7. MG prices the IM5 and IM6 identically in Australia.** $57,687 / $64,405 / $74,002 across both
+bodies. A sedan and an SUV on one price ladder looks like an error and is not — it is why the
+positioning inversion the diff first flagged (the SUV appearing $3,303 *cheaper* than the sedan)
+dissolved once both rows used the same basis. **A price gap between platform siblings can be an
+artefact of only one of them being backed out.**
+
+**8. The backed-out IM prices are biased HIGH, and the brief's model cannot fix it.** MG's advertised
+drive-away bundles 12 months CTP and *maximum dealer delivery charge*, neither of which exists in
+`calc/onroad.js`. So true MSRP probably sits **$1,500–2,000 below** the recorded $57,687/$64,405/
+$74,002. Both agents identified this independently and both kept the prescribed VIC round-trip
+values, because substituting requires inventing a basket that cannot be cited. No conclusion moves —
+all six IM rows stay under both FBT thresholds either way — but **the wave's back-out formula
+systematically over-states list wherever the advertised drive-away includes dealer delivery or CTP.**
+Worth a decision in batch 11's maintenance sweep rather than per-family improvisation.
+
+**9. Plug-to-wheels overhead is now MEASURED, which retires batch 2's qualitative warning.** Batch 2
+said overhead consistency "is NOT a valid cross-row test". Across the 163 held BEV rows the
+distribution is **p10 0.0%, median 12.4%, p90 19.9%, with 18 rows negative** — including
+`tesla-model-3-rwd`, `hyundai-ioniq-5-rwd`, `xpeng-g6`, `zeekr-7x` and batch 1's own
+`toyota-hilux-bev`. **The dataset has no house convention, so a row's overhead is evidence of
+nothing on its own.** A hypothesis that three of this batch's families were wrong because they sat at
+0% was raised and *refuted* by that measurement before any agent was asked to change anything.
+
+What the measurement does *not* excuse is method divergence inside a platform pair. `calc/running-costs.js:28`
+multiplies this field by a retail electricity tariff — money paid at the plug — so the declared WLTP
+combined figure is the right input. The IM6 had derived all three grades as usable ÷ range (0%
+overhead) while the IM5 used declared plug-side figures (12.6–17.4%), which would have made the IM6
+read cheaper to run than its own platform-mate for reasons of arithmetic. The IM6 re-sourced.
+
+**One conflict left unresolved, deliberately, and it is the batch's softest spot.** After that fix
+the two Performance grades — same 96.5 kWh pack, same drivetrain — carry declared figures implying
+**12.6% (IM5, 18.9) and 22.5% (IM6, 23.4)** overhead. Scaling the IM5's by the range ratio predicts
+21.5, not 23.4: an 8.8% gap that cannot be right on a common basis. Both are sourced to named
+Australian outlets, both sit inside the validator, and forcing one to move would have manufactured a
+resolution the evidence does not support. **Recorded as a known defect rather than smoothed over.**
+Whoever next touches either row should establish which figure is a declared WLTP claim and which is a
+road-test observation — the IM5 agent noted carsales reports *observed* 20.6 against declared 18.9 for
+the IM5, so the distinction is live in exactly this source.
+
+**Judged fields, for anchoring later batches.** Both IM families take the steep `[1, 0.7, 0.58, 0.49,
+0.42, 0.36]` GAC curve on a documented case — unproven premium sub-brand, zero Australian resale
+history, cuts of $2,000–$3,000 within twelve months of launch, and a $3,000 cashback running now.
+Insurance splits by body: IM5 2000/2200/2800 anchored on Polestar 2, IM6 2200/2400/2900 on Zeekr 7X,
+both well clear of the MG-badged rows (MG4 1250–1650, S5 1500–1600) as a car at twice the price should
+be. `mg-s6` takes the S5's `[1, 0.73, …]` rather than the MG 4's mainstream default. `leapmotor-b10`
+copies the C10's `[1, 0.72, …]` unchanged; `forthing-taikon-5` and `jaecoo-j5-ev` both take
+`[1, 0.7, …]` — Forthing on 14 dealers, no capped-price servicing and no ANCAP rating, Jaecoo from its
+held siblings. Insurance across the cheap end runs monotonically with price and joins the held ladder
+cleanly: Jaecoo 1500 → Forthing 1550/1600 → Leapmotor B10 1550/1600 → MG S6 1650/1850.
+
+**Warranty: IM is not MG.** `warrantyYears: 5`, not 7. MG's own warranty page excludes IM; the
+7-year term is conditional on servicing inside the MG/IM dealer network within 30 days / 2,000 km.
+Both agents established this independently and agreed. **Jaecoo is 8 years unconditional** and the
+BEV does not differ from the held J7/J8 SHS rows. Forthing is 7 unconditional. Leapmotor is 6, cut
+from 7 for MY25, matching the held C10.
+
+**Two range-standard notes.** Leapmotor's headline Australian figures are **NEDC** — 442 km and
+516 km — and the WLTP pair is 361/434; CarsGuide, RACQ, NRMA and carsales carry the WLTP numbers.
+And **CarExpert's IM6 record is CLTC-contaminated in a WLTP field**: it lists the Premium's range as
+505 km labelled WLTP, where carsales shows "WLTP: 450 km / Manufacturer: 505 km". Note 505 km is also
+the *Performance's* genuine WLTP figure, so this is batch 1's numeric-collision trap again, inside a
+single source's own database.
+
+**Gate not run: the browser render check.** The Playwright profile was held by a live Chrome process,
+the Chrome extension was declined, and the user then instructed that the check be skipped. Build,
+tests and a fresh server boot all passed, and the freshly booted server was confirmed serving
+**241 rows / 99 families** with all six families and their corrected prices — but that is an API-level
+check, and **no page-level confirmation was obtained for these six families.** The stale-server
+warning fired for the third batch running: a server from a previous session was listening on port 3000
+and was killed before anything was believed. Batch 1 left the same gate open and batch 2 cleared both;
+worth doing the same at the start of batch 5, especially for `mg-im5`, the batch's only `Sedan`.
+
 ## How to run a batch — paste this into a new session
 
 One batch per session. **Change the batch number on the first line. That is the only edit** —
@@ -1075,14 +1259,24 @@ There is no Coupe, Wagon or People Mover body type. The enum is SUV | Sedan | Ha
 Before dispatching:
   - Confirm `node scripts/build-dataset.js` reports 0 failures.
   - If this batch names a stop condition or a verification, settle it FIRST. It may
-    remove families from the batch. The ones that have them: batch 7 verifies the
-    G 580 is still under $250,000, batch 12 verifies the Mercedes EQV is on sale.
-    (Batch 1's LDV eT60 check is DONE and came back negative. Do not re-check it.)
+    remove families from the batch. LOOK IN TWO PLACES: the batch table, and the
+    "Confidence, stated plainly" section, which is where batch 4's live one
+    (Forthing Taikon 5) was recorded rather than in the table. Still open:
+    batch 7 verifies the G 580 is still under $250,000 and that the EQE Sedan is
+    orderable, batch 12 verifies the Mercedes EQV is on sale, batch 9 verifies the
+    Genesis GV70 Electrified grade count, batch 10 verifies the Porsche Cayenne
+    Electric and the Genesis G80. DONE, do not re-check: the LDV eT60 (batch 1,
+    negative), the Geely EX2 (batch 3, orderable) and the Forthing Taikon 5
+    (batch 4, on sale).
   - Every price in the survey is a LEAD, NOT A FACT, and many were quoted
     drive-away. Establish list price independently.
   - Read the "Batch records" section for what earlier batches learned. Batch 1
-    corrected the brief's own drive-away back-out formula for utes, and logged
-    three new shapes of the grade-count failure.
+    corrected the drive-away back-out divisor for utes and logged three shapes of
+    the grade-count failure; batch 2 logged the model-year fault line and why
+    overhead-consistency is not a valid cross-row test; batch 3 logged the three
+    drive-away trap shapes and the implied-consumption test; batch 4 logged the
+    same-price badge collision and why an exact price reconstruction proves
+    nothing.
 
 Then dispatch one general-purpose subagent per family, all in a single message so
 they run in parallel. Each agent gets: its family name and proposed familyId, its
@@ -1095,18 +1289,39 @@ data/schema.js, and run no git commands.
 
 Restate these four in every agent prompt. Each has already caught something:
   1. `listPrice` is the manufacturer list price, NEVER drive-away. For the Chinese
-     brands and KGM, drive-away is the default quoted figure and the survey's own
-     numbers are drive-away for the Musso EV, Torres EVX, Ora 5, S6 EV, Jaecoo J5
-     and Leapmotor B10. Where no list price exists anywhere, back it out with the
-     app's VIC model — list = (driveaway - 880) / 1.042 — and flag it.
+     brands and KGM, drive-away is the default quoted figure. Where no list price
+     exists anywhere, back it out with the app's VIC model using the divisor that
+     matches the body type — passenger cars (driveaway - 880) / 1.042, utes
+     (driveaway - 880) / 1.027 — then round-trip through driveAwayPrice() against
+     the real tax tables rather than trusting either constant, and flag the result
+     as an estimate. Check what the drive-away INCLUDES: a flat NATIONAL figure
+     quoted identically for two states is not a per-state calculation, and one
+     bundling CTP or dealer delivery makes the back-out over-state list. Check the
+     DIRECTION of any discrepancy — a "drive-away" figure below the computed
+     drive-away is a list price mislabelled; above, it is genuine. Treat a
+     RedBook/Glass's-derived "MSRP" as an estimate, not a source. Prose beats
+     database fields: a source saying "before on-road costs" in words outranks an
+     MSRP column.
   2. Grade names are leads. Thirteen of twenty-two failed verification across the
-     PHEV wave, and since batch 5 the failures have been wrong grade COUNTS rather
-     than wrong badges, which silently merges or invents cars. Count the grades on
-     the configurator; do not match names.
+     PHEV wave, and the failures are wrong grade COUNTS rather than wrong badges,
+     which silently merges or invents cars. Count the grades on the configurator;
+     do not match names. A single-grade claim is a lead too. Five shapes seen so
+     far: a grade that exists overseas but not here; a battery structure that does
+     not cross the border; a badge on two powertrains — sometimes AT THE SAME
+     PRICE, so match on the powertrain page or a drivetrain-dependent spec, never
+     on badge or badge-plus-price; an aggregator carrying an unlaunched grade WITH
+     a price; and a government certification filing carrying one WITHOUT a price.
   3. Treat every Australian range figure as NEDC until proven WLTP. This is the
-     PHEV wave's confirmed dominant defect, and it is worse for the Chinese brands.
-     Record which standard each figure came from.
-  4. `batteryKwh` is USABLE, not gross.
+     confirmed dominant defect, and it is worse for the Chinese brands. Record
+     which standard each figure came from. Matching numbers are copies, not
+     corroboration, unless the standard AND the variant both match. When sourcing
+     cannot separate them, use implied-consumption arithmetic: battery / range
+     should imply a plausible figure for the car's size; a CLTC or NEDC number
+     will imply an absurd one.
+  4. `batteryKwh` is USABLE, not gross. Check the figure belongs to the pack the
+     Australian car actually gets — a superseded or foreign-market pack is not a
+     gross-versus-usable problem, it is a different car. For a Chinese-brand BEV,
+     assume the pack lineup differs from the home market until shown otherwise.
 
 Require every agent to report: the grade names it EXCLUDED and why, which standard
 each range figure came from, which of batteryKwh / rangeKm / consumptionKwhPer100km
@@ -1162,12 +1377,17 @@ run alone, because it renames `omoda-e5` and so changes filenames. Batch 12 runs
 batches can now run in parallel across sessions on the rules recorded there, with the platform-
 cluster caveat above still applying.
 
-**Batch 3 is also done, which matters for batch 4** — the two are the Chinese-families cluster, and
-batch 3 set the conventions batch 4 should follow rather than re-derive: the three drive-away trap
-shapes, the "aggregator MSRP is an estimate, not a source" rule, the implied-consumption arithmetic
-for separating WLTP from CLTC, and the finding that aggregators list unlaunched grades *with prices*.
-Batch 4's MG, Leapmotor, Forthing and Jaecoo rows are exposed to all four. Note also that batch 4's
-Jaecoo J5 and Leapmotor B10 were both flagged in the survey as drive-away-quoted.
+**Batches 3 and 4 are both done, which closes the Chinese-families cluster** apart from batch 12's
+people movers. Between them they established the conventions those remaining rows should follow
+rather than re-derive: the three drive-away trap shapes and the direction test (batch 3), the
+implied-consumption arithmetic for separating WLTP from CLTC (batch 3), the "aggregator MSRP is an
+estimate, not a source" rule (batch 3), and the same-price badge collision across powertrains
+(batch 4). Batch 12's Deepal E07, XPeng X9, Zeekr 009 and LDV MIFA 9 are exposed to all of them.
+
+**Batch 4 also leaves one cross-batch decision open** — see item 8 of its record. The back-out
+formula over-states list wherever the advertised drive-away bundles dealer delivery or CTP, which is
+now known to affect all six MG IM rows by an estimated $1,500–2,000. That is a wave-level question,
+not a per-family one, and batch 11's maintenance sweep is the right place to settle it.
 
 ## What the survey got wrong about its own leads
 
@@ -1218,7 +1438,9 @@ pricing was internally inconsistent across sources.
 - **Maserati Grecale Folgore, Audi Q8 e-tron, Porsche Cayenne Electric, LDV eT60** — all four are
   on the on-sale/run-out/just-launched boundary and were flagged as unconfirmed.
 - **Skywell BE11 and Forthing Taikon 5** — placed on opposite sides of the pre-launch line with low
-  confidence in both calls.
+  confidence in both calls. **The Forthing half is now settled (batch 4, 2026-07-31): it is on sale,
+  since June 2026, and the survey's "on sale" call was right.** Its four grades are two BEV and two
+  range-extender; only the BEV pair is in scope. Skywell remains unverified.
 - **DS, Opel, Vauxhall, Tata and Munro** are recorded as absent on general market knowledge without
   a citable Australian source. Almost certainly correct, formally unsourced.
 
