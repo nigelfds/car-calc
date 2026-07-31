@@ -9,8 +9,8 @@ unchanged so the leads can be scored against what was actually found.
 **Headline: the dataset holds about 37% of the battery-electric market. Roughly 68 families are
 missing, which is twelve batches — a wave larger than the PHEV one.**
 
-**Wave progress: batches 1, 2, 3, 4 and 5 done (1 and 2 on 2026-07-30, batches 3, 4 and 5 on
-2026-07-31). 70 of ~111 families held, ~63%. Seven batches left.**
+**Wave progress: batches 1, 2, 3, 4, 5 and 6 done (1 and 2 on 2026-07-30, batches 3, 4, 5 and 6 on
+2026-07-31). 76 of ~111 families held, ~68%. Six batches left.**
 
 ## Why this exists
 
@@ -179,14 +179,14 @@ families were most of the market.
 
 ## The headline number
 
-| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 |
-|---|---|---|---|---|---|---|
-| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** |
-| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** |
-| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** |
-| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** |
-| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** |
-| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** |
+| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 | After batch 6 |
+|---|---|---|---|---|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** | **~111** |
+| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** | **~107** |
+| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** | **76** |
+| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** | **~68%** |
+| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** | **~31** |
+| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** | **6 batches left** |
 
 Batch 2 found nothing withdrawn and needed no back-out, so the on-sale and representable figures are
 unchanged. All six families were `SUV`, so `Sedan` and `Ute` are exactly where batch 1 left them.
@@ -206,6 +206,15 @@ Batch 5 also found nothing withdrawn — all six orderable, including the three 
 before dispatch (Hyundai Elexio, Subaru Uncharted, Subaru Trailseeker). All six are `SUV`, so
 `Sedan` and `Ute` are untouched for the second batch running. **Measured after batch 5: 174
 battery-electric variants across 70 families — SUV 133/52, Sedan 20/9, Hatch 16/7, Ute 5/2.**
+
+Batch 6 also found nothing withdrawn — all six orderable, including the two settled before dispatch
+(the Neue Klasse BMW iX3 and the Renault Scenic E-Tech, whose Australian launch had slipped twice in
+reporting). Five `SUV` and one `Sedan` family contributing two rows (the BMW i5), so `Ute` is
+untouched for a third batch running. **Measured after batch 6: 183 battery-electric variants across
+76 families — SUV 140/57, Sedan 22/10, Hatch 16/7, Ute 5/2.** Note the brand count moves 38 → 39 on
+Alfa Romeo alone: BMW and Renault were both already held, so five of the batch's six families are
+depth at brands the dataset already had. **This is the first batch of the wave that added no new
+brand-level coverage to speak of, which is what the back half of the plan looks like.**
 
 The representable figure counts people movers, per the body-type decisions below. Only four
 vehicles on sale are unrepresentable: three above the $250,000 ceiling and one two-seat roadster.
@@ -288,6 +297,12 @@ complete on BEVs** — the RZ is its only battery-electric family, the rest of t
 and hybrid. The dataset now holds 38 brands. **Seven of the seventeen brands in this table remain
 absent:** Porsche, Genesis, Smart, Lotus, Cupra, Alfa Romeo and Maserati.
 
+**Settled by batch 6 (2026-07-31): one more. Alfa Romeo** goes from no row of any kind to its whole
+battery-electric range — the Junior Elettrica is its only BEV family here, the Veloce being ruled
+out for Australia and the Sport Speciale being a mild hybrid. The dataset now holds **39 brands**.
+**Six of the seventeen brands in this table remain absent:** Porsche, Genesis, Smart, Lotus, Cupra
+and Maserati.
+
 **One correction to this table itself, in the same shape as the Mazda one above.** It is headed
 "whole brands absent from the dataset", and **Lexus was never absent from the dataset** — it has
 held `lexus-nx-phev` and `lexus-rx-phev` since the PHEV wave. What was absent was Lexus's
@@ -331,12 +346,12 @@ The dataset holds 4 BEV sedan families (Model 3, Seal, Ioniq 6, i4) out of rough
 about **26%**. Eleven missing, spanning $49,990 to $219,900, and including the two cheapest cars in
 the segment:
 
-**Batch 1 took four of the eleven** (Kia EV4, Mazda 6e, Polestar 2, Mercedes CLA EV), and **batch 4
-added a family the survey never listed — the MG IM5**, so `Sedan` now holds **9 families, 20
-variants** (measured, not asserted). The IM5 is a genuine addition to the segment count rather than a
-reallocation, so the denominator moves too: about 9 of ~16, roughly 56%. Seven of the survey's
-original eleven are still missing, all of them premium:
-Volvo ES90 · Genesis G80 Electrified · BMW i5 · Porsche Taycan · Audi e-tron GT · Mercedes-Benz EQS
+**Batch 1 took four of the eleven** (Kia EV4, Mazda 6e, Polestar 2, Mercedes CLA EV), **batch 4
+added a family the survey never listed — the MG IM5**, and **batch 6 took the BMW i5**, so `Sedan`
+now holds **10 families, 22 variants** (measured, not asserted). The IM5 is a genuine addition to the
+segment count rather than a reallocation, so the denominator moves too: about 10 of ~16, roughly
+63%. Six of the survey's original eleven are still missing, all of them premium:
+Volvo ES90 · Genesis G80 Electrified · Porsche Taycan · Audi e-tron GT · Mercedes-Benz EQS
 Sedan · Mercedes-Benz EQE Sedan. The two cheapest cars in the segment are now both in.
 
 Mazda 6e · Kia EV4 · Polestar 2 · Mercedes-Benz CLA EV · Volvo ES90 · Genesis G80 Electrified ·
@@ -524,7 +539,7 @@ split off as a separate sub-brand. The `familyId`, make and model are all stale.
 > | Ioniq 6 N | `N` $115,000, 487km — the family's **only** row | Already held. See the note below — this one is wrong in both directions |
 > | MG 4 Urban | `Urban 43` and `Urban 54`, alongside `Essence 64` and `XPower` | Already held |
 > | Kia EV9 GT | `GT AWD`, alongside Air RWD / Earth AWD / GT-Line AWD | Already held |
-> | BMW i4 M60 xDrive | Not held — `eDrive35` $88,900 is the only row | **Unresolved, needs a real check** |
+> | BMW i4 M60 xDrive | Not held — `eDrive35` $88,900 is the only row | **RESOLVED 2026-07-31, batch 6: not on sale in Australia. The held record was right; no row to add** |
 >
 > **The Ioniq 6 note is stale in both directions.** It reads as though the dataset holds the
 > mainstream grades and is missing the N. The reverse is true: the N is the only row, because
@@ -534,7 +549,11 @@ split off as a separate sub-brand. The `familyId`, make and model are all stale.
 > electric car pulled from sale". So there is nothing to add here, and adding the base grades would
 > invent cars nobody can order — the failure mode the research brief warns about hardest.
 >
-> **The i4 M60 needs settling before a slot is spent on it,** because two records disagree.
+> **Settled 2026-07-31 by batch 6: there is no Australian i4 M60, and the held record was right.**
+> The paragraph below is kept as written because it is a good statement of the doubt, but the doubt
+> is now closed — see batch 11's maintenance row and the batch 6 record.
+>
+> **The i4 M60 needed settling before a slot was spent on it,** because two records disagreed.
 > `data/families/bmw-i4.json` (sourced 2026-07-26) says BMW "pared the local range back to this
 > single grade for 2026, dropping the eDrive40 and M50", citing EV Central's "BMW i4 range trimmed in
 > Australia… more expensive models follow ICE 4 Series out the door". A $139,900 M60 arriving *after*
@@ -664,7 +683,13 @@ See the batch 5 record below.**
 | Subaru Trailseeker | **Wagon-boundary call** — Subaru and CarExpert say SUV, WhichCar says off-road wagon |
 | Suzuki e Vitara | Intro pricing expired 1 Jul 2026; current prices are $2–3k higher |
 
-### Batch 6 — BMW's missing range, plus European mainstream
+### Batch 6 — BMW's missing range, plus European mainstream — **DONE 2026-07-31**
+
+**All six landed: 9 variants. Alfa Romeo goes from zero rows of any kind to complete on BEVs, and
+BMW goes from 2 BEV families to 6. Every price is a genuine list price — no back-out anywhere in the
+batch. The batch's whole story is a four-way cross-row conflict over which range figure an Australian
+BMW should carry; see the batch 6 record below.**
+
 | Family | Note |
 |---|---|
 | BMW iX3 | Neue Klasse. Entry iX3 40 arrives Q4 2026 — price the grades on sale now |
@@ -726,7 +751,7 @@ maintenance debt is real.
 | Lotus Eletre | Top R variant is quoted at both $279,990 and $315,000; base $189,900 qualifies |
 | Lotus Emeya | `Sedan` |
 | Maserati Grecale Folgore | **Verify orderable, not run-out.** Maserati has retrenched hard on EVs and told dealers to discount Folgore stock ~43% |
-| Maintenance sweep | **Shrunk 2026-07-30 — see the checks under "the price data is not current".** Still to do: rename `omoda-e5` → Chery E5; settle whether the BMW i4 M60 is orderable at all (two records disagree) and add it only if it is; re-price XPeng G6. **Already done, do not redo:** Ioniq 6 N, MG4 Urban and Kia EV9 GT are all held; Leapmotor C10 is confirmed BEV; Kona ($46,000–$63,000) and Ioniq 5 ($68,200–$83,700) already match this survey's own "now" figures exactly. **Still worth checking:** the Inster, where this survey quotes $38,990 *drive-away* against a held list of $39,000 — a drive-away figure is not a list price, and that one backs out to about $36,574, so either the held row is $2,400 high or the survey is quoting a grade the dataset does not hold. Volvo, BMW iX1 and Renault re-pricing is unverified either way |
+| Maintenance sweep | **Shrunk 2026-07-30, and again 2026-07-31 by batch 6.** Still to do: rename `omoda-e5` → Chery E5; re-price XPeng G6; **correct `bmw-ix1`'s `batteryKwh` 65.2 → 64.8 (see the batch 6 record — its platform-mate `bmw-ix2` moved to 64.8 on Australian sources, and the held iX1 rests on the one source that disagrees with BMW official, EV Database and CarExpert alike)**. **DONE by batch 6, do not re-check: the BMW i4 M60 is NOT orderable in Australia** — no Australian source carries the badge, carsales' 2026 i4 research page lists eDrive35 only, and EV Central's "range trimmed" piece corroborates the held family record exactly. The survey's $139,900 M60 claim was an overseas badge matched against the Australian range, which is the failure mode the wave warns about hardest. The held `bmw-i4` row needed no change. **Already done, do not redo:** Ioniq 6 N, MG4 Urban and Kia EV9 GT are all held; Leapmotor C10 is confirmed BEV; Kona ($46,000–$63,000) and Ioniq 5 ($68,200–$83,700) already match this survey's own "now" figures exactly. **Still worth checking:** the Inster, where this survey quotes $38,990 *drive-away* against a held list of $39,000 — a drive-away figure is not a list price, and that one backs out to about $36,574, so either the held row is $2,400 high or the survey is quoting a grade the dataset does not hold. Volvo, BMW iX1 and Renault re-pricing is unverified either way |
 | **e-TNGA `batteryKwh` correction — ADDED BY BATCH 5, evidenced, do not re-derive** | **Five held rows record a GROSS pack figure in a field the schema defines as USABLE.** `toyota-bz4x` (2WD, AWD, Touring AWD) and `subaru-solterra` (AWD, AWD Touring) all carry `batteryKwh: 74.7`. Toyota's European newsroom states, for the bZ4X Touring, *"a maximum gross capacity of 74.7 kWh (**71 kWh net**)"*, and Toyota USA's 2026 bZ release calls 74.7 a *"total capacity"* in those words. The correct usable figure for that pack is **71.0** — a 5.2% overstatement. Batch 5 corrected its own three families to 71.0 and did not touch these. **Do not blind-swap all five.** The `toyota-bz4x` **2WD** row needs a model-year check first: the superseded MY25 pack is a different unit at **73.1 nominal / 69.0 usable**, and 73.1 is a *nominal* figure that has already been mistaken for a usable one once during this adjudication. Sources: `https://newsroom.toyota.eu/the-new-toyota-bz4x-touring-an-suv-for-electrified-adventures/`, `https://pressroom.toyota.com/toyota-bz-all-electric-suv-adds-range-charging-and-exterior-updates-for-2026/` |
 
 ### Batch 12 — people movers, filed as `SUV`
@@ -1430,6 +1455,190 @@ heading renders as **"Hyundai Elexio Elexio"**. It is honest to the source — H
 grade after the model — and inventing a "Standard" badge would be worse. Recorded in case the card
 template ever wants to suppress a variant string that repeats the model.
 
+### Batch 6 — done 2026-07-31
+
+Six agents, one per family, all six written. 9 variants; dataset went to **39 brands, 111 families,
+261 variants** (183 of them battery-electric). Build 0 failures, 596 tests pass. Commit `f274a06`.
+Nothing was found withdrawn. **All six families confirmed rendering in a real browser.**
+
+| Family | Variants and list prices |
+|---|---|
+| `bmw-ix3` | 50 xDrive $109,900 |
+| `bmw-ix` | xDrive45 M Sport $142,900 |
+| `bmw-ix2` | xDrive30 M Sport $79,900 |
+| `bmw-i5` | eDrive40 M Sport $155,900 · M60 xDrive $215,900 |
+| `renault-scenic-e-tech` | Techno EV60 $55,990 · Techno LR EV87 $59,990 · Esprit Alpine EV87 $65,990 |
+| `alfa-romeo-junior-elettrica` | Elettrica $58,990 |
+
+**Zero backed-out prices — the first such batch since batch 2**, and the reverse of batch 4's
+eleven-of-thirteen. Every one of the six brands publishes a real Australian list price in prose.
+
+**Nine things later batches need to know.**
+
+**1. The batch's central conflict was a RANGE-STANDARD split, and it is the most valuable thing here.**
+Four BMW agents split two-two: `bmw-ix` (522 km) and `bmw-ix2` (395 km) took Australian-certified
+figures and explicitly rejected the manufacturer's higher WLTP numbers; `bmw-i5` (582/516 km) and
+`bmw-ix3` (805 km) took manufacturer "up to" WLTP figures. Every row passed the validator
+independently. **`rangeKm` is scored in `calc/rank.js`, so a mixed basis inside one brand is a
+ranking fault the validator cannot see.** Two rounds of putting each agent's evidence to the others
+produced a rule the wave should now follow:
+
+> **Use the figure certified for the Australian-market specification where one exists; fall back to
+> the manufacturer's WLTP figure where none does; and label which you used.**
+
+**2. "ADR versus WLTP" is a RED HERRING, and the batch proved it three ways.** The real axis is
+**Australian-certified configuration versus global best-case configuration**. Evidence, in order of
+strength:
+- **BMW Australia's own site footnotes its range and consumption figures as "in accordance with
+  ADR 81/02" while headlining the same number as "up to 550 km (WLTP)".** One number, both labels.
+- **BMW's own band arithmetic closes exactly.** The iX xDrive45 is quoted 490–602 km WLTP paired
+  with 21.8–17.8 kWh/100km. On the 94.8 kWh usable pack: 94.8/490 × 1.13 = 21.8, and
+  94.8/602 × 1.13 = 17.8. It is **one WLTP test swept across wheel options**, not two standards.
+- The counter-example that keeps this honest: carsales lists the iX2 at **449 km (WLTP) and 395 km
+  (ADR) on the same page for the same car** — a 12% gap. So the labels are not reliably
+  interchangeable either; they are unreliable proxies for the configuration question.
+
+**3. A general guard worth more than this batch, because it operationalises the brief's NEDC rule.**
+ADR 81/02 lets a manufacturer submit **either NEDC- or WLTP-derived** figures — it is the
+manufacturer's choice, adopted from UN Regulation 101. WLTP only becomes mandatory under **ADR
+81/03, in force 1 July 2026 for new models and 1 July 2028 for all vehicles**. So an "ADR" label
+alone proves nothing. The test:
+
+> **If the Australian-certified figure is HIGHER than the manufacturer's WLTP best case, it is an
+> NEDC submission — reject it. If it is LOWER, it is WLTP-derived local-spec data — use it.**
+
+All four BMWs pass (522<602, 395<477, 503<506), which is itself the proof BMW submits WLTP. Apply
+this per brand, not once: for the Chinese brands an ADR figure sitting *above* WLTP is exactly what
+a genuine NEDC submission looks like.
+
+**4. The "more specific argument was the wrong one" heuristic held for a FOURTH time, and this
+instance is the cleanest yet.** The `bmw-i5` agent contradicted its dispatch brief, reassigning a
+506 km figure to the Touring on the reasoning that "carsales' family span is 506–582, so 506 must be
+the heavier wagon". The span's real top is **550**, not 582 — it had anchored on a European number,
+which pushed the whole inference off. 506 km *is* the M60 sedan and the brief was right. Worse, its
+corroborating consumption-ratio check **could never have discriminated 506 from 516**, because both
+pair with the same 18.0 figure; it reported as confirmation a test with no resolution. **A
+cross-check that cannot come out the other way is not a cross-check.** Same shape as batch 5's
+gross-versus-usable arithmetic and batch 4's to-the-cent price reconstruction.
+
+**5. Aggregator contamination by DEAD grades hit three BMW families independently, and the tell is a
+second field.** CarsGuide's 2026 model-year pages carry superseded badges as current MSRPs: the iX
+page lists four variants of which **three are pre-facelift**; the iX3 page lists two dead **G08**
+grades alongside the live Neue Klasse car; the iX2 page carries pre-cut prices. Batch 3 logged
+aggregators carrying *unlaunched* grades with prices — **this is the mirror: DEAD grades with
+prices**, and it is harder to spot because the car genuinely was on sale here. What separated them:
+- On the iX3, **CarsGuide's own towing page gives the live car 2,000 kg and the two dead grades
+  750 kg** — the G08's rating. A second field disagreeing with the first is the tell.
+- On the iX, **CarsGuide's own review prose** says the xDrive45 M Sport is "the sole entry-level
+  variant currently available", contradicting its own spec panel. **Prose beat the fields again.**
+- On the iX2, arithmetic: $87,600 − $7,700 (the announced cut) = $79,900 exactly.
+
+**6. A price that is stale rather than mislabelled is a distinct failure, and the manufacturer's own
+calculator is the way to kill it.** The Alfa Junior had **three** candidate prices: $55,900
+(CarExpert), $57,900 (the plan note, a Stellantis press release, and CarsGuide) and the truth,
+**$58,990**. Neither of the first two was a drive-away figure — the wave's usual defect — and neither
+was wrong when written. $57,900 was the July 2025 **launch** price; $55,900 traced to a CarExpert
+page whose own same-dated companion article said "pricing is yet to be announced". What settled it:
+**driving Alfa's own price calculator (the Stellantis VPC iframe behind `alfaromeo.com.au/selector-pricing`)
+with a Melbourne postcode**, which returns an itemised breakdown — vehicle price, dealer delivery,
+paint, rego, CTP, stamp duty. Two independent confirmations that the breakdown is real: its **$2,604
+stamp duty reconciles to the dollar** against VIC's 4.2% green-passenger rate on price-plus-delivery,
+and the Ibrida grades show the **same +$1,090 Series 0 → Series 1 uplift** ($45,900 → $46,990) that
+takes $57,900 to $58,990. **Stellantis brands (Alfa Romeo, Jeep, Fiat) all serve this calculator —
+batch 11's Maserati should use it.** Note it also exposes dealer delivery explicitly, which is the
+term batches 4 and 5 flagged as missing from `calc/onroad.js`.
+
+**7. A row can mix two model years of the SAME car and pass everything.** The `bmw-ix2` row initially
+carried a **post-update battery (65.2 kWh)** with a **pre-update range (395 km)** — the SiC-inverter
+update BMW says is worth ~40 km. Both figures were defensible alone; together they described two
+different cars. The agent had taken its weakest source (zecar, whose stated pre-update baseline of
+64.6 matches no other source) over the Australian record on battery, while correctly refusing that
+same source on range. Resolved to **64.8 kWh**, so all three of battery, range and consumption now
+come from one source family for one vehicle. **When a mid-cycle hardware update lands mid-model-year,
+check that every field belongs to the same side of it.** Consequence for batch 11: **the held
+`bmw-ix1` carries 65.2 from that same weak source and is probably wrong.**
+
+**8. "No local figure exists" is a real answer, and it is the fallback the rule is for — but check
+twice before claiming it.** `bmw-ix3` reported no Australian figure and used 805 km. Challenged, it
+found 805 was the top of a **678–805 km band** belonging to a European base car **without** the
+M Sport pack that Australia fits as standard; the Australian car's standard-fit 20-inch Style 1048 M
+wheel corresponds to **793 km**. Its consumption figure was the best-case end of its own band too —
+**the two numbers were mutually consistent precisely because both were flattering**, which is the
+same trap as batch 5's gross-battery case. Moved to 793/15.3, with `consumptionKwhPer100km` now
+declared **DERIVED** (scaled to match the configuration) rather than sourced. The haircut is only
+1.5% here against 13% on the iX and 17% on the iX2, because the Australian iX3 sits at the
+*favourable* end of its wheel band by default — **a conservative correction is not automatically
+transferable between siblings.**
+
+**9. A verification agent's honest "I will not call this" is worth paying for.** The pre-dispatch
+check settled five BMW questions and refused the sixth, saying the iX2 grade count was the one thing
+it would not proceed on without a configurator. That refusal was correct and it was the batch's real
+open question: the **iX2 eDrive20 is discontinued** (EV Central: "The iX2 eDrive20 has also been
+discontinued"; The Driven: "Gone are the eDrive20 variants of the iX1 and iX2"), so the family is one
+grade, not two. **Two cheap verification agents settled everything for ~70 searches and no slot was
+wasted** — the third batch running where pre-dispatch verification paid for itself.
+
+**Judged fields, for anchoring later batches.** Insurance runs monotonically with price across the
+whole BMW cluster and joins the held iX1 cleanly: iX1 2100 → iX2 2200 → iX1 M Sport 2300 → i4 2300 →
+iX3 2800 → iX 3200 → i5 eDrive40 3300 → **i5 M60 4500, the dataset's highest**. Depreciation
+steepens monotonically with price across the same cluster — iX2 `[1, 0.75, …]`, iX3 `[1, 0.72, …]`,
+iX `[1, 0.64, …]`, i5 `[1, 0.64, …]` and `[1, 0.61, …]`, **the dataset's steepest** — on a documented
+case rather than a house style: large executive EVs are the weakest residual segment here, and LCT is
+~$19,300 of the i5 eDrive40's price and ~$37,300 of the M60's, none of which survives to the used
+market. **The iX2 deliberately diverges from its own platform-mate**, taking a steeper curve than the
+held iX1's default on an 8.8% list cut and the loss of its entry grade, where the iX1 *gained* a
+grade in the same announcement — the same lower-volume-coupe-body case the dataset already recognises
+for the ID.5 against the ID.4. `renault-scenic-e-tech` sits between the mainstream default and the
+held Megane's very steep `[1, 0.68, …]`, the agent reasoning explicitly that the Megane's steepness
+is documented as a $10,000 cut plus repeated campaigns and **that specific history does not yet apply
+to the Scenic**, which launched in March 2026 with no cut. `alfa-romeo-junior-elettrica` takes the
+`jeep-avenger`'s `[1, 0.68, …]` unchanged — same Stellantis platform, same pack, and Alfa runs eight
+Australian dealers with no plans to expand.
+
+**Warranty is 5 across all six families**, and for once no conditional term had to be stripped:
+BMW 5 unlimited-km, Renault 5 (capped at 100,000 km on Renault's own site, against media claiming
+unlimited — the unconditional *term* is 5 either way), Alfa Romeo 5 unlimited-km with no
+dealer-servicing condition attached.
+
+**Battery figures, all settled by finding a source stating BOTH gross and usable for the same
+vehicle** — never by arithmetic, per batch 5's rule: iX3 **113.4 gross / 108.7 usable** (and zecar
+inverts the two, printing "gross 108.7, usable 108"); iX **100.6 gross / 94.8 usable**, where **both
+CarExpert and carsales label 94.8 as "gross" and are wrong against BMW's own press release**; i5
+**84.4 nominal / 81.2 usable**, with the 84/83.9 figures on three Australian outlets all gross;
+Scenic **65 gross / 60 usable** and **92 gross / 87 usable**, so Renault's EV60/EV87 badges are the
+*usable* figure; Alfa **54 gross / 51 usable**, agreeing with the held Jeep Avenger exactly.
+
+**Render check: CLEARED.** Confirmed against a freshly booted server whose header read *39 brands ·
+111 models · 261 variants*, matching the build exactly. **The stale-server warning fired for a fifth
+time** — a server from a previous session was listening on port 3000 and was killed before anything
+was believed. Zero console errors or warnings from `localhost:3000`.
+
+Four of six reached the shortlist, two by component render:
+
+| Family | How confirmed |
+|---|---|
+| `bmw-ix3` | Shortlist — `?bodyTypes=SUV&minRangeKm=793&minBootLitres=520&monthlyBudget=2200` |
+| `bmw-ix` | Shortlist — `?bodyTypes=SUV&minRangeKm=522&minBootLitres=500&monthlyBudget=3200` (surfaces the iX3 too) |
+| `bmw-i5` | Shortlist — `?bodyTypes=Sedan&minRangeKm=550&minBootLitres=490&monthlyBudget=3400` |
+| `renault-scenic-e-tech` | Shortlist — `?bodyTypes=SUV&minRangeKm=625&minBootLitres=545&monthlyBudget=1100` |
+| `bmw-ix2` | Component render — dominated by the Tesla Model Y Premium RWD, $21,000 cheaper with more range and a 329 L bigger boot |
+| `alfa-romeo-junior-elettrica` | Component render — dominated by the BYD Atto 3 Premium at $13,000 less with more range and boot |
+
+**The isolation technique that worked here, and it is the opposite of batch 3's.** Batch 3 isolated
+cheap cars by *lowering* `monthlyBudget`. This batch's cars are premium, so the lever was a
+**range floor set just above the field**: 793 km isolates the iX3 alone out of 183 BEV rows, and
+625 km isolates the Scenic pair. Where a family is mid-pack on range it is un-surfaceable from below
+and the component render is the honest fallback — **both fallbacks here are genuine Pareto
+dominance, i.e. a correct ranking outcome, not a data fault.**
+
+**A note on running six browsing agents at once.** They share one Playwright browser and steal tab
+focus from each other: the Renault agent had an `evaluate` call execute against `alfaromeo.com.au`
+mid-session and re-verified on the correct origin before relying on the result. It caught it; a less
+careful agent would not have. **Treat any browser-derived claim from a parallel batch with that in
+mind**, and note the shared browser also means `browser_console_messages` with `all: true` returns
+every agent's third-party ad-tracker noise — filter to the app's own origin before concluding
+anything about the page.
+
 ## How to run a batch — paste this into a new session
 
 One batch per session. **Change the batch number on the first line. That is the only edit** —
@@ -1473,11 +1682,16 @@ Before dispatching:
     Genesis GV70 Electrified grade count, batch 10 verifies the Porsche Cayenne
     Electric and the Genesis G80. DONE, do not re-check: the LDV eT60 (batch 1,
     negative), the Geely EX2 (batch 3, orderable), the Forthing Taikon 5
-    (batch 4, on sale), and the Hyundai Elexio, Subaru Uncharted and Subaru
-    Trailseeker (batch 5, all orderable, Trailseeker settled as `SUV`).
-    Two cheap verification agents settled batch 5's three for ~25 searches
-    before any slot was spent — do that rather than folding the check into a
-    family agent, because a negative removes the family entirely.
+    (batch 4, on sale), the Hyundai Elexio, Subaru Uncharted and Subaru
+    Trailseeker (batch 5, all orderable, Trailseeker settled as `SUV`), and the
+    Neue Klasse BMW iX3 and Renault Scenic E-Tech (batch 6, both orderable) —
+    plus the BMW i4 M60, which batch 6 settled as NOT on sale in Australia.
+    Two cheap verification agents settled batch 5's three for ~25 searches and
+    batch 6's six for ~70, before any slot was spent — do that rather than
+    folding the check into a family agent, because a negative removes the
+    family entirely. A verification agent that refuses to call one of its
+    questions is doing its job: batch 6's declined the iX2 grade count, and
+    that was the batch's one genuinely open question.
   - Treat the batch table's own per-family NOTE as a lead too, not just its
     prices. Batch 5's note said the Suzuki e Vitara's introductory pricing
     expired 1 July; it had been extended to 1 August and was still live, and
@@ -1539,6 +1753,22 @@ Restate these four in every agent prompt. Each has already caught something:
      cannot separate them, use implied-consumption arithmetic: battery / range
      should imply a plausible figure for the car's size; a CLTC or NEDC number
      will imply an absurd one.
+     THE RULE, settled by batch 6 across four BMW rows: use the figure certified
+     for the AUSTRALIAN-MARKET SPECIFICATION where one exists; fall back to the
+     manufacturer's WLTP figure where none does; label which you used. The axis
+     that matters is Australian-certified spec versus GLOBAL BEST-CASE
+     configuration, NOT "ADR versus WLTP" — BMW Australia applies both labels to
+     one number, while carsales shows 449 WLTP and 395 ADR for the same iX2. A
+     manufacturer "up to" figure is the best-case wheel/pack option and over-
+     states the local car by 1-17%. Guard against the opposite error with the
+     DIRECTION test: ADR 81/02 lets a maker submit either NEDC- or WLTP-derived
+     data (WLTP is mandatory only under ADR 81/03, from 1 July 2026 for new
+     models), so an Australian figure HIGHER than the manufacturer's WLTP best
+     case is an NEDC submission — reject it; LOWER means WLTP-derived local-spec
+     data — use it. Apply that per brand, not once. And if range and consumption
+     both came from the same end of a quoted band, they will agree with each
+     other whether or not they describe the local car — mutual consistency
+     between two flattering figures is not evidence.
   4. `batteryKwh` is USABLE, not gross. Check the figure belongs to the pack the
      Australian car actually gets — a superseded or foreign-market pack is not a
      gross-versus-usable problem, it is a different car. For a Chinese-brand BEV,
@@ -1601,6 +1831,14 @@ The search budget is per-session, so parallel sessions genuinely multiply throug
   (batches 2, 8, 10, 12), and the Chinese families (batches 3, 4, 12). Batches 6 (all BMW), 7 (all
   Mercedes) and 10 (Taycan and e-tron GT share the J1 platform) are self-contained.
 
+**Batch 6 is done, and being self-contained is exactly what made it work** — four BMW families in
+one batch is what surfaced the range-standard split, because the same question was being answered
+four different ways by agents who could be put to each other. Split across two sessions it would
+have produced two internally-consistent halves that disagreed, and nothing would have caught it.
+**The lesson generalises to batch 7 (six Mercedes) and batch 10:** a single-brand batch is the
+cheapest place to find a house-level sourcing fault, so budget for the adjudication round rather
+than treating six same-brand agents as six independent jobs.
+
 Batch 1 should run alone and first — it sets the ute and liftback-sedan conventions. Batch 11 should
 run alone, because it renames `omoda-e5` and so changes filenames. Batch 12 runs last by design.
 
@@ -1653,6 +1891,16 @@ China-developed Hyundai that a recalled list would never have produced — is a 
 family with a local brochure and a live campaign. **Nothing the brand sweep found in this slice has
 yet turned out to be a phantom**, which is a second, independent score for the brand-by-brand method
 over the recalled list.
+
+**Batch 6 scored the survey's lead list rather than its blind spots, and the list was right on all
+six.** Alfa Romeo was listed as a wholly absent brand and is; the "BMW holds only part of its range"
+lead named i5, iX, iX2 and iX3 and all four are on sale; the Renault Scenic E-Tech was the one
+family in the batch a recalled list might plausibly have produced. **But the survey was wrong about
+one thing it was confident on — the BMW i4 M60 at $139,900, which does not exist in Australia.** It
+is the survey's own recorded example of matching an overseas badge against the Australian range, and
+it survived five batches as an open maintenance item before batch 6 killed it. Worth noting the
+asymmetry: the brand-by-brand method has not yet produced a phantom *brand* or *family*, but it did
+produce a phantom *variant*.
 
 That is fifteen-plus families and five whole brands invisible to list-checking. The brief's
 instruction to work brand by brand rather than model by model is the reason they are here.
