@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mini-aceman-se-favoured",
+    "familyId": "mini-aceman",
+    "make": "Mini",
+    "model": "Aceman",
+    "variant": "SE Favoured",
+    "bodyType": "SUV",
+    "listPrice": 60990,
+    "batteryKwh": 49.2,
+    "rangeKm": 406,
+    "consumptionKwhPer100km": 14.4,
+    "bootLitresSeatsUp": 300,
+    "bootLitresSeatsDown": 1005,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2000,
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-08-01"
+  },
+  {
+    "id": "mini-aceman-jcw-e-favoured",
+    "familyId": "mini-aceman",
+    "make": "Mini",
+    "model": "Aceman",
+    "variant": "JCW E Favoured",
+    "bodyType": "SUV",
+    "listPrice": 65990,
+    "batteryKwh": 49.2,
+    "rangeKm": 355,
+    "consumptionKwhPer100km": 16.4,
+    "bootLitresSeatsUp": 300,
+    "bootLitresSeatsDown": 1005,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2350,
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-08-01"
+  }
+]
