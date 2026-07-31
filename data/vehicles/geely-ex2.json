@@ -1,0 +1,42 @@
+[
+  {
+    "id": "geely-ex2-complete",
+    "familyId": "geely-ex2",
+    "make": "Geely",
+    "model": "EX2",
+    "variant": "Complete",
+    "bodyType": "Hatch",
+    "listPrice": 26490,
+    "batteryKwh": 35.35,
+    "rangeKm": 252,
+    "consumptionKwhPer100km": 15.9,
+    "bootLitresSeatsUp": 375,
+    "bootLitresSeatsDown": 1320,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1150,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "geely-ex2-inspire",
+    "familyId": "geely-ex2",
+    "make": "Geely",
+    "model": "EX2",
+    "variant": "Inspire",
+    "bodyType": "Hatch",
+    "listPrice": 30990,
+    "batteryKwh": 47.14,
+    "rangeKm": 345,
+    "consumptionKwhPer100km": 15.5,
+    "bootLitresSeatsUp": 375,
+    "bootLitresSeatsDown": 1320,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1250,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  }
+]

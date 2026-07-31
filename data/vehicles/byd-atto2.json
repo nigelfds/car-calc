@@ -1,0 +1,42 @@
+[
+  {
+    "id": "byd-atto2-dynamic",
+    "familyId": "byd-atto2",
+    "make": "BYD",
+    "model": "Atto 2",
+    "variant": "Dynamic",
+    "bodyType": "SUV",
+    "listPrice": 31990,
+    "batteryKwh": 51.13,
+    "rangeKm": 345,
+    "consumptionKwhPer100km": 17.1,
+    "bootLitresSeatsUp": 380,
+    "bootLitresSeatsDown": 1320,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1300,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "byd-atto2-premium",
+    "familyId": "byd-atto2",
+    "make": "BYD",
+    "model": "Atto 2",
+    "variant": "Premium",
+    "bodyType": "SUV",
+    "listPrice": 35990,
+    "batteryKwh": 51.13,
+    "rangeKm": 345,
+    "consumptionKwhPer100km": 17.1,
+    "bootLitresSeatsUp": 380,
+    "bootLitresSeatsDown": 1320,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1400,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  }
+]

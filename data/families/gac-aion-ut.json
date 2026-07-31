@@ -1,0 +1,30 @@
+{
+  "id": "gac-aion-ut",
+  "summary": "GAC's first small car for Australia undercuts the BYD Dolphin Premium and MG 4 Essence while offering more battery, more power and far more rear legroom than either, and Australian reviewers consistently rate its ride comfort and cabin packaging above its price. The disagreement is over the software and the ownership case: CarExpert and EV Central found the touchscreen-only controls buggy and the driver-assist warnings intrusive, while CarsGuide and Chasing Cars were more forgiving and focused on the value. Everyone flags the same unknowns — a brand with no Australian resale history, roughly 30 dealers, no capped-price servicing and no ANCAP rating yet.",
+  "pros": [
+    "60kWh (58kWh usable) LFP pack and 430km WLTP range beat the BYD Dolphin Premium's 427km for $1000 less list price",
+    "150kW/210Nm and a 7.3-second 0-100km/h make it quicker than every rival under $40,000, including the MG 4 Essence 64",
+    "2750mm wheelbase and 905mm of rear legroom give it back-seat space a Toyota Corolla hatch cannot match, despite being 105mm shorter",
+    "Eight-year/unlimited-kilometre warranty is unconditional and two years longer than BYD's six or MG's seven",
+    "11kW AC charging as standard, against 7kW on the BYD Dolphin"
+  ],
+  "cons": [
+    "No ANCAP rating as at July 2026 — testing is deferred until the local eCall system goes live, so buyers are taking GAC's five-star target on trust",
+    "Climate and audio are buried in the 14.6-inch touchscreen with almost no physical controls, and reviewers report menu lag and outright bugs",
+    "87kW DC peak is slow for a 60kWh pack: about 40 minutes for 10-80 per cent, where an MG 4 64 manages a similar job faster",
+    "No capped-price servicing programme; GAC quotes $199-$640 a visit at dealer discretion and about $1607 over five years",
+    "Roughly 30 dealers nationally and no Australian resale track record, so residual values and parts supply are unproven"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2026-gac-aion-ut-luxury-review",
+    "https://www.carexpert.com.au/car-news/2026-gac-aion-ut-pricing-ev-hatch-now-arriving-with-special-drive-away-offers",
+    "https://www.carsguide.com.au/ev/gac-aion-ut-101212",
+    "https://www.carsguide.com.au/gac/aion-ut/price/2026",
+    "https://www.chasingcars.com.au/reviews/small-cars/gac-aion-ut-2026-review/",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-gac-aion-ut-price-specs-release-date.html",
+    "https://evcentral.com.au/2026-gac-aion-ut-review-cheap-electric-city-car-brings-big-space-and-solid-driving-manners-but-what-about-the-ownership-experience/",
+    "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
+    "https://www.gacgroup.com/en-au/hatchback/aion-ut"
+  ],
+  "sourcedAt": "2026-07-31"
+}

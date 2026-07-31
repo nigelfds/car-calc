@@ -1,0 +1,42 @@
+[
+  {
+    "id": "byd-atto1-essential",
+    "familyId": "byd-atto1",
+    "make": "BYD",
+    "model": "Atto 1",
+    "variant": "Essential",
+    "bodyType": "Hatch",
+    "listPrice": 23990,
+    "batteryKwh": 30,
+    "rangeKm": 220,
+    "consumptionKwhPer100km": 15.5,
+    "bootLitresSeatsUp": 308,
+    "bootLitresSeatsDown": 1037,
+    "seats": 4,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1100,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "byd-atto1-premium",
+    "familyId": "byd-atto1",
+    "make": "BYD",
+    "model": "Atto 1",
+    "variant": "Premium",
+    "bodyType": "Hatch",
+    "listPrice": 27990,
+    "batteryKwh": 43.2,
+    "rangeKm": 310,
+    "consumptionKwhPer100km": 16,
+    "bootLitresSeatsUp": 308,
+    "bootLitresSeatsDown": 1037,
+    "seats": 4,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1200,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  }
+]

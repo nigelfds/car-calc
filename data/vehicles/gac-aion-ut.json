@@ -1,0 +1,42 @@
+[
+  {
+    "id": "gac-aion-ut-premium",
+    "familyId": "gac-aion-ut",
+    "make": "GAC",
+    "model": "Aion UT",
+    "variant": "Premium",
+    "bodyType": "Hatch",
+    "listPrice": 31990,
+    "batteryKwh": 58,
+    "rangeKm": 430,
+    "consumptionKwhPer100km": 16.4,
+    "bootLitresSeatsUp": 321,
+    "bootLitresSeatsDown": 689,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 8,
+    "insuranceAnnual": 1350,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "gac-aion-ut-luxury",
+    "familyId": "gac-aion-ut",
+    "make": "GAC",
+    "model": "Aion UT",
+    "variant": "Luxury",
+    "bodyType": "Hatch",
+    "listPrice": 35990,
+    "batteryKwh": 58,
+    "rangeKm": 430,
+    "consumptionKwhPer100km": 16.4,
+    "bootLitresSeatsUp": 321,
+    "bootLitresSeatsDown": 689,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 8,
+    "insuranceAnnual": 1450,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-31"
+  }
+]

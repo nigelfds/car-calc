@@ -171,6 +171,67 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "byd-atto1",
+    "summary": "The Atto 1 is a 3,990mm four-seat city hatch that broke Australia's sub-$25,000 barrier for a new battery-electric car, and it carries a five-star ANCAP rating rather than the safety compromise that price usually implies. Reviewers agree it is comfortable, nimble and better finished than its price suggests, and that the 220km Essential is a second-car proposition rather than a household's only vehicle. Where they split is whether the $4,000 step to the 310km Premium is essential or merely nice: some rate the base car complete, others call the Essential's range and 65kW motor the limit of the concept.",
+    "pros": [
+      "At $23,990 before on-road costs the Essential is the cheapest new EV on sale in Australia, roughly $6,000 under the BYD Dolphin Essential and the MG 4 Urban 43.",
+      "Five-star ANCAP (2025, carried over from the European Dolphin Surf on confirmed identical spec) with six airbags, AEB, lane support and speed-sign recognition standard on both grades.",
+      "The Premium's 115kW/220Nm makes it genuinely quick for a city car at a claimed 9.1s to 100km/h, and it accepts 85kW DC charging where rivals at this price often cap out around 50kW.",
+      "Soft, long-travel suspension over a 2,500mm wheelbase in a 3,990mm body gives an unusually settled urban ride plus a turning circle that suits multi-storey car parks.",
+      "BYD's 6-year/150,000km vehicle warranty and 8-year/160,000km battery cover apply with no dealer-servicing condition attached."
+    ],
+    "cons": [
+      "Only four seats: the rear bench is a 50/50-split two-place unit, so unlike the five-seat MG 4 or BYD Dolphin it cannot carry a fifth occupant at all.",
+      "The Essential's 220km WLTP range is the shortest of any EV on sale here and shrinks sharply at 100km/h, which makes the $4,000 Premium upgrade close to compulsory for anyone leaving the suburbs.",
+      "Australian reviewers repeatedly criticise the driver-monitoring and speed-warning chimes, which revert to on at every start and need several touchscreen taps to silence.",
+      "Almost all secondary controls live in the rotating touchscreen with few physical shortcuts, and the car ships with a repair kit rather than a spare wheel.",
+      "It gets noticeably noisy above about 80km/h, and the soft suspension that flatters it around town turns bouncy on coarse higher-speed roads."
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-byd-atto-1-price-and-specs-australias-cheapest-ev-undercuts-many-ice-rivals",
+      "https://www.carexpert.com.au/car-reviews/2026-byd-atto-1-review",
+      "https://www.carsguide.com.au/ev/byd-atto-1-premium-101427",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-atto-1-price-specs-release-date.html",
+      "https://www.mynrma.com.au/open-road/news/2025/2026-byd-atto-1-atto-2-pricing-revealed",
+      "https://www.ancap.com.au/safety-ratings/byd/atto-1/2d8d6c",
+      "https://www.carsales.com.au/research/byd/atto-1/",
+      "https://evcentral.com.au/2025-byd-atto-1-premium-australias-cheapest-ev-is-also-a-decent-city-car-with-clever-design-and-real-driving-character-but-will-anyone-buy-it/"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "byd-atto2",
+    "summary": "The Atto 2 is BYD's smallest SUV in Australia and, from $31,990 before on-road costs, the cheapest electric SUV on sale here — a point almost every local reviewer leads with. Testers consistently find it comfortable, quiet and easy to live with, and note real-world efficiency that beats the claim, but they are equally consistent that its 51.13kWh battery and 82kW DC charging peak make it a city and suburbs car rather than a country-trip one. Opinion splits on whether the soft, light-steering setup reads as relaxed or as vague, and the missing ANCAP rating is the recurring reservation.",
+    "pros": [
+      "Cheapest electric SUV in Australia at $31,990 before on-road costs, undercutting the Chery E5 and Jaecoo J5 EV by roughly $4,000-$5,000 in Dynamic form",
+      "Real-world efficiency beats the 17.1kWh/100km claim — CarExpert recorded 13.7, Chasing Cars 14.2 and RACV 12-13.9kWh/100km, so the 345km WLTP figure holds up in suburban use",
+      "Both grades get the full active-safety set as standard, including AEB with pedestrian and cyclist detection, blind-spot monitoring, rear cross-traffic alert and adaptive cruise",
+      "Six-year/150,000km vehicle warranty is unconditional — no dealer-servicing strings — plus eight years/160,000km on the Blade battery",
+      "Premium's $4,000 walk-up is unusually well filled: 12.8-inch rotating screen, panoramic roof, 360-degree camera, heated and ventilated power driver's seat and eight speakers"
+    ],
+    "cons": [
+      "No ANCAP rating at all, and BYD has no plans to have it locally tested; reviewers note it lacks a driver monitoring system, which rules out five stars under current criteria",
+      "82kW DC charging peak means roughly 38-40 minutes for 10-80 per cent — slow enough that CarsGuide, CarExpert and Chasing Cars all flag it as the car's main road-trip limitation",
+      "Australia gets only the 51.13kWh battery; the 64.8kWh long-range version sold in Europe is not offered here, so 345km WLTP is the ceiling",
+      "No spare wheel on either grade — CarsGuide called this \"unacceptable in Australia\"",
+      "Soft suspension and very light, low-feedback steering leave it wallowy at speed, and several testers had to repeatedly switch off oversensitive lane-keeping and speed alerts"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-byd-atto-2-review",
+      "https://www.carexpert.com.au/car-reviews/2026-byd-atto-2-premium-review",
+      "https://www.carexpert.com.au/car-news/2026-byd-atto-2-full-specs-detailed-for-budget-electric-small-suv",
+      "https://www.chasingcars.com.au/reviews/small-suvs/byd-atto-2-2026-review/",
+      "https://www.carsguide.com.au/car-reviews/byd-atto-2-premium-101318",
+      "https://www.carsguide.com.au/byd/atto-2/towing-capacity/2026",
+      "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-2-review.html",
+      "https://www.carsales.com.au/editorial/details/byd-atto-2-2026-review-152323/",
+      "https://evcentral.com.au/2026-byd-atto-2-dynamic-review-cheap-and-surprisingly-cheerful-compact-electric-suv-makes-ice-rivals-redundant/",
+      "https://bydautomotive.com.au/atto-2",
+      "https://zecar.com/reviews/2026-byd-atto-2-price-specs-australia-cheapest-electric-suv"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "byd-atto3",
     "summary": "The Atto 3 is the car that made BYD a volume brand in Australia, and after successive price cuts it remains one of the cheapest electric SUVs on sale, with a genuinely spacious cabin and a tow rating most rivals at the price cannot match. Australian reviewers are broadly positive but not unanimous: Chasing Cars found the chassis fluent and nicely balanced, while CarsGuide scored its driving dynamics a flat 6/10, and everyone flags coarse-surface road noise and the deliberately weird interior as the things buyers must forgive. It is showing its age on charging hardware, and the same aggressive discounting that makes it good value new has punished resale for earlier owners.",
     "pros": [
@@ -782,6 +843,92 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "gac-aion-ut",
+    "summary": "GAC's first small car for Australia undercuts the BYD Dolphin Premium and MG 4 Essence while offering more battery, more power and far more rear legroom than either, and Australian reviewers consistently rate its ride comfort and cabin packaging above its price. The disagreement is over the software and the ownership case: CarExpert and EV Central found the touchscreen-only controls buggy and the driver-assist warnings intrusive, while CarsGuide and Chasing Cars were more forgiving and focused on the value. Everyone flags the same unknowns — a brand with no Australian resale history, roughly 30 dealers, no capped-price servicing and no ANCAP rating yet.",
+    "pros": [
+      "60kWh (58kWh usable) LFP pack and 430km WLTP range beat the BYD Dolphin Premium's 427km for $1000 less list price",
+      "150kW/210Nm and a 7.3-second 0-100km/h make it quicker than every rival under $40,000, including the MG 4 Essence 64",
+      "2750mm wheelbase and 905mm of rear legroom give it back-seat space a Toyota Corolla hatch cannot match, despite being 105mm shorter",
+      "Eight-year/unlimited-kilometre warranty is unconditional and two years longer than BYD's six or MG's seven",
+      "11kW AC charging as standard, against 7kW on the BYD Dolphin"
+    ],
+    "cons": [
+      "No ANCAP rating as at July 2026 — testing is deferred until the local eCall system goes live, so buyers are taking GAC's five-star target on trust",
+      "Climate and audio are buried in the 14.6-inch touchscreen with almost no physical controls, and reviewers report menu lag and outright bugs",
+      "87kW DC peak is slow for a 60kWh pack: about 40 minutes for 10-80 per cent, where an MG 4 64 manages a similar job faster",
+      "No capped-price servicing programme; GAC quotes $199-$640 a visit at dealer discretion and about $1607 over five years",
+      "Roughly 30 dealers nationally and no Australian resale track record, so residual values and parts supply are unproven"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-gac-aion-ut-luxury-review",
+      "https://www.carexpert.com.au/car-news/2026-gac-aion-ut-pricing-ev-hatch-now-arriving-with-special-drive-away-offers",
+      "https://www.carsguide.com.au/ev/gac-aion-ut-101212",
+      "https://www.carsguide.com.au/gac/aion-ut/price/2026",
+      "https://www.chasingcars.com.au/reviews/small-cars/gac-aion-ut-2026-review/",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-gac-aion-ut-price-specs-release-date.html",
+      "https://evcentral.com.au/2026-gac-aion-ut-review-cheap-electric-city-car-brings-big-space-and-solid-driving-manners-but-what-about-the-ownership-experience/",
+      "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
+      "https://www.gacgroup.com/en-au/hatchback/aion-ut"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "gac-aion-v",
+    "summary": "The Aion V is the first electric SUV from GAC, which launched in Australia in December 2025, and it undercuts most mid-size rivals while quoting a longer 510km WLTP range than the Geely EX5 or BYD Atto 3. Reviewers rate the cabin quality, quietness and standard equipment highly and find the ride comfortable if unexciting, but consistently criticise the touchscreen-only controls and the intrusive driver-monitoring and speed-sign systems. Both grades share one 150kW front-drive powertrain and a 75.26kWh LFP battery, so the choice between them is purely about trim rather than range or performance.",
+    "pros": [
+      "510km WLTP range from a 75.26kWh LFP pack, ahead of the Geely EX5 (475km) and BYD Atto 3 (420km) at similar money",
+      "180kW DC charging with a claimed 24-minute 10-80 per cent, roughly double the Geely EX5's peak rate",
+      "8-year/unlimited-km vehicle warranty and 8-year/200,000km battery warranty for private buyers, longer than BYD's 6 years or Geely's 7 (commercial use drops to 5 years/150,000km)",
+      "Heat pump, V2L, panoramic sunroof, surround-view camera and heated/ventilated front seats are standard on the $42,590 base Premium",
+      "5-star ANCAP rating (2025 datestamp, valid to December 2031) applying to both grades"
+    ],
+    "cons": [
+      "No towing rating published in Australia at all, against 1500kg braked for a BYD Sealion 7 or Leapmotor C10",
+      "Everything runs through the 14.6-inch touchscreen, with no volume dial and mirror adjustment buried in menus",
+      "Driver-monitoring and speed-limit warnings are intrusive and reset to on at every start, a recurring complaint across Australian reviews",
+      "Highway consumption climbs past 25kWh/100km against the 16.7kWh/100km WLTP claim, so the 510km figure is urban-biased",
+      "Brand-new to Australia with about 19 dealers as at March 2026 and no capped-price servicing scheme, leaving resale and running costs unproven"
+    ],
+    "sources": [
+      "https://www.gacgroup.com/en-au/price/aion-v/2024",
+      "https://www.gacgroup.com/en-au/configuration/aion-v/2024",
+      "https://www.carexpert.com.au/car-news/2026-gac-aion-v-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-gac-aion-v-review-quick-drive",
+      "https://www.carsguide.com.au/family/gac-aion-v-luxury-101340",
+      "https://www.mynrma.com.au/open-road/car-reviews/gac/2026-gac-aion-v-review",
+      "https://evcentral.com.au/2025-gac-aion-v-review-new-chinese-suv-sizes-up-byd-mg-and-even-toyota-with-long-range-and-budget-price/",
+      "https://www.carsguide.com.au/gac/aion-v/towing-capacity/2026"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "geely-ex2",
+    "summary": "The EX2 is Geely's second Australian model and its cheapest, a rear-wheel-drive electric light hatch that opened for order in July 2026 at $26,490 before on-road costs. Reviewers rate the packaging highly for the money — 375 litres of boot plus a 70-litre frunk, genuine rear legroom and a cabin that reads above its price — but early drives split on the chassis, with Chasing Cars criticising body control and tyre grip while CarExpert found it agile and fun around town. The bigger caveats are objective: the base car's 252km WLTP range and 14.2-second 0-100km/h, and no ANCAP result at the research date.",
+    "pros": [
+      "Second-cheapest new EV in Australia at $26,490 plus on-road costs, undercut only by the BYD Atto 1 Essential at $23,990",
+      "375-litre boot plus a 70-litre frunk beats the Hyundai Inster's 280 litres from a 4,135mm-long body",
+      "Rear-wheel drive with multi-link independent rear suspension, rare in a light hatch where the BYD Dolphin and MG 4 Urban rivals are front-drive or pricier",
+      "Seven-year unlimited-kilometre vehicle warranty with eight years on the high-voltage battery, matching the Geely EX5",
+      "Launch offer running 12 July to 31 August 2026 adds a 7kW home charger (installation excluded) and a free premium paint upgrade"
+    ],
+    "cons": [
+      "The 60kW Complete takes a claimed 14.2 seconds to 100km/h, which reviewers flag as marginal for freeway merging; the 85kW Inspire is still 11.5s",
+      "252km WLTP on the Complete is the shortest range of any EV in this price band — the Inspire's 345km costs $4,500 more",
+      "DC charging peaks at just 60kW (Complete) and 80kW (Inspire), and AC at 6.6kW, so it is a poor road-trip car",
+      "No ANCAP or Euro NCAP crash rating published as at July 2026, unlike the five-star Geely EX5",
+      "Chasing Cars' pre-launch drive found poor body control under brakes and through corners plus noisy, low-grip tyres, a criticism CarExpert's short local drive did not reproduce"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-geely-ex2-review-quick-drive",
+      "https://www.chasingcars.com.au/reviews/small-suvs/geely-ex2-2026-review-international-first-drive/",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-geely-ex2-price-specs-release-date.html",
+      "https://www.carsales.com.au/editorial/details/2026-geely-ex2-priced-for-australia-152473/",
+      "https://www.geely.com.au/build/geely-ex2"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "geely-ex5",
     "summary": "The EX5 is Geely's first model for the Australian market, a mid-size front-wheel-drive electric SUV pitched on comfort and value below better-known rivals like the Tesla Model Y. Reviewers consistently praise its quiet, cushioned ride and roomy, lounge-like rear seating, but mark it down for a smaller-than-expected boot, touchscreen-only climate controls, and driving dynamics that favour softness over sharpness. A mid-2026 update brought a larger 68.39kWh battery lifting range to 475km (Complete) and 450km (Inspire), addressing the main complaint about the original 2025 launch cars.",
     "pros": [
@@ -944,6 +1091,36 @@
       "https://www.ato.gov.au/tax-rates-and-codes/luxury-car-tax-rate-and-thresholds"
     ],
     "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "gwm-ora-5",
+    "summary": "The Ora 5 is GWM's replacement for the axed Ora hatch: a 4.47m front-drive electric small SUV sold here in two grades, both with the same 150kW motor and 58.3kWh LFP battery. Reviewers agree it is a lot of electric car for the money and unusually quiet at highway speed, and note the rare inclusion of a space-saver spare, but they split sharply on the suspension, which CarExpert calls too firm and Chasing Cars calls floaty yet busy. The consistent criticisms are over-eager driver-monitoring alerts, a touchscreen that swallows the regen and drive-mode controls, and a claimed efficiency figure real-world testing does not reach.",
+    "pros": [
+      "435km WLTC range from a 58.3kWh usable battery for an under-$35,000 list price, against 345km for the BYD Atto 2 it is aimed at",
+      "Seven-year unlimited-kilometre warranty (eight on the battery) with capped-price servicing at $195 a visit, $1,365 across the seven years",
+      "Carries a space-saver spare wheel, still uncommon in this class, plus 6kW vehicle-to-load and 120kW DC charging for 10-80% in about 30 minutes",
+      "362-litre boot expanding to 1,060 litres with the 60/40 rear seats folded, and a 750kg braked tow rating where the MG 4 manages 500kg and the BYD Dolphin none at all",
+      "Both grades ride on the same 18-inch wheels and battery, so the $3,000 step to Ultra buys equipment (panoramic roof, powered tailgate, heated and ventilated seats, dual-zone climate) without costing range"
+    ],
+    "cons": [
+      "The claimed 15.5kWh/100km is optimistic: CarExpert observed about 18kWh/100km in mixed driving, which cuts real range to roughly 325km",
+      "Driver-monitoring and seatbelt warnings misfire repeatedly, and regenerative braking strength is adjustable only through the 14.6-inch touchscreen with almost no physical controls",
+      "Ride quality is the main point of reviewer disagreement - firm and bump-sensitive to CarExpert, floaty with mild rear-end instability at speed to Chasing Cars - and neither rates it as settled",
+      "Unrated by ANCAP at the time of writing, with testing still under way",
+      "GWM publishes no list price at all - only a Victorian drive-away figure ($33,990 Lux, $36,990 Ultra) - so the list prices shown here are backed out of those figures and are estimates, not sourced numbers; the outgoing Ora hatch it replaces was also withdrawn after weak local sales, so expect softer resale than a BYD or MG equivalent"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-gwm-ora-5-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-gwm-ora-5-suv-review-quick-drive",
+      "https://www.chasingcars.com.au/reviews/small-suvs/gwm-ora-5-2026-review/",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-gwm-ora-5-price-specs-release-date.html",
+      "https://www.carsguide.com.au/gwm/ora-5/price/2026",
+      "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+      "https://www.gwmanz.com/au/news/gwm-unveils-the-all-new-ora-5-suv-priced-from-just-33-990-driveaway/",
+      "https://thedriven.io/2026/07/09/gwm-ora-5-first-drive-a-new-electric-suv-at-an-affordable-price/",
+      "https://www.carsales.com.au/research/gwm/ora-5/"
+    ],
+    "sourcedAt": "2026-07-31"
   },
   {
     "id": "hyundai-inster",

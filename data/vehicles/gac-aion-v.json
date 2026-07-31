@@ -1,0 +1,42 @@
+[
+  {
+    "id": "gac-aion-v-premium",
+    "familyId": "gac-aion-v",
+    "make": "GAC",
+    "model": "Aion V",
+    "variant": "Premium",
+    "bodyType": "SUV",
+    "listPrice": 42590,
+    "batteryKwh": 75.26,
+    "rangeKm": 510,
+    "consumptionKwhPer100km": 16.7,
+    "bootLitresSeatsUp": 427,
+    "bootLitresSeatsDown": 978,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 8,
+    "insuranceAnnual": 1650,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "gac-aion-v-luxury",
+    "familyId": "gac-aion-v",
+    "make": "GAC",
+    "model": "Aion V",
+    "variant": "Luxury",
+    "bodyType": "SUV",
+    "listPrice": 44590,
+    "batteryKwh": 75.26,
+    "rangeKm": 510,
+    "consumptionKwhPer100km": 16.7,
+    "bootLitresSeatsUp": 427,
+    "bootLitresSeatsDown": 978,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 8,
+    "insuranceAnnual": 1700,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-31"
+  }
+]
