@@ -9,8 +9,8 @@ unchanged so the leads can be scored against what was actually found.
 **Headline: the dataset holds about 37% of the battery-electric market. Roughly 68 families are
 missing, which is twelve batches — a wave larger than the PHEV one.**
 
-**Wave progress: batches 1, 2, 3 and 4 done (1 and 2 on 2026-07-30, batches 3 and 4 on 2026-07-31).
-64 of ~111 families held, ~58%. Eight batches left.**
+**Wave progress: batches 1, 2, 3, 4 and 5 done (1 and 2 on 2026-07-30, batches 3, 4 and 5 on
+2026-07-31). 70 of ~111 families held, ~63%. Seven batches left.**
 
 ## Why this exists
 
@@ -179,14 +179,14 @@ families were most of the market.
 
 ## The headline number
 
-| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 |
-|---|---|---|---|---|---|
-| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** |
-| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** |
-| Held by the dataset | **40** | **46** | **52** | **58** | **64** |
-| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** |
-| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** |
-| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** |
+| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 |
+|---|---|---|---|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** |
+| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** |
+| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** |
+| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** |
+| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** |
+| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** |
 
 Batch 2 found nothing withdrawn and needed no back-out, so the on-sale and representable figures are
 unchanged. All six families were `SUV`, so `Sedan` and `Ute` are exactly where batch 1 left them.
@@ -201,6 +201,11 @@ and one `Sedan` (the MG IM5), so `Ute` is untouched and `Sedan` gains its first 
 **Measured after batch 4: 163 battery-electric variants across 64 families — SUV 122/46, Sedan 20/9,
 Hatch 16/7, Ute 5/2.** That measurement also settles the discrepancy batch 2 flagged and could not
 resolve: the `Sedan` count now reconciles exactly, at 20 variants across 9 families.
+
+Batch 5 also found nothing withdrawn — all six orderable, including the three the batch settled
+before dispatch (Hyundai Elexio, Subaru Uncharted, Subaru Trailseeker). All six are `SUV`, so
+`Sedan` and `Ute` are untouched for the second batch running. **Measured after batch 5: 174
+battery-electric variants across 70 families — SUV 133/52, Sedan 20/9, Hatch 16/7, Ute 5/2.**
 
 The representable figure counts people movers, per the body-type decisions below. Only four
 vehicles on sale are unrepresentable: three above the $250,000 ceiling and one two-seat roadster.
@@ -277,6 +282,19 @@ above. The batch 3 figure was off by one: it did not count **Mazda**, whose 6e w
 batch 1, so eleven were absent after batch 3, not twelve. Corrected here rather than left to
 propagate.
 
+**Settled by batch 5 (2026-07-31):** two more, both complete on BEVs. **Suzuki** goes from no row of
+any kind to its whole battery-electric range — the e Vitara is its only BEV family here. **Lexus is
+complete on BEVs** — the RZ is its only battery-electric family, the rest of the range being petrol
+and hybrid. The dataset now holds 38 brands. **Seven of the seventeen brands in this table remain
+absent:** Porsche, Genesis, Smart, Lotus, Cupra, Alfa Romeo and Maserati.
+
+**One correction to this table itself, in the same shape as the Mazda one above.** It is headed
+"whole brands absent from the dataset", and **Lexus was never absent from the dataset** — it has
+held `lexus-nx-phev` and `lexus-rx-phev` since the PHEV wave. What was absent was Lexus's
+*battery-electric* range. The table conflates "sells a BEV we do not hold" with "brand we do not
+hold", and it has now mis-stated that twice. The brand count moves by one this batch, not two:
+37 → 38, because only Suzuki is genuinely new.
+
 Batch 4 also closed the wave's largest single-brand hole. **MG went from 2 BEV families to 5** —
 `mg-4` and `mg-s5` joined by `mg-s6`, `mg-im5` and `mg-im6` — and the **IM sub-brand, previously
 unrecorded in any form, is now held in full**.
@@ -345,6 +363,17 @@ decision that silently reverses itself two waves later if nobody wrote it down.
 | Does `Sedan` cover four-door liftbacks and fastbacks? | **Yes.** Matches the held BMW i4 Gran Coupé |
 | Is the Deepal E07 a `Ute` or an `SUV`? | **`SUV`** |
 | Where do people movers go, given there is no such body type? | **`SUV`, for now** |
+| Is the Subaru Trailseeker an `SUV` or a wagon (and so out of scope)? | **`SUV`** — settled 2026-07-31, batch 5 |
+
+The Trailseeker call, since it was the one decision that could have removed a family from the wave
+entirely. Subaru's page `<title>` calls it a "Large All-Terrain Electric **Wagon** with SUV
+Capability" and its EV showroom card says "Large All-Electric Wagon" — but its main showroom copy
+says "**This is an SUV**", it stands 1,675 mm tall on 211 mm of ground clearance, its twin is the
+Toyota bZ4X Touring, and the three Australian outlets that maintain formal body-type taxonomies
+(CarExpert, CarsGuide, Chasing Cars) all file it as an SUV. The wagon label appears in prose and
+headlines; the SUV label appears in the fields. **Fields beat prose for a taxonomy question** — note
+this is the opposite of the pricing rule, where prose beats database fields, because there the prose
+carries the basis and the field is a bare number.
 
 The people-mover decision is the one with numbers attached: it moves the XPeng X9, Zeekr 009, LDV
 MIFA 9, Volkswagen ID. Buzz and Mercedes-Benz EQV out of "unrepresentable" and into the research
@@ -620,7 +649,12 @@ the batch 4 record below.**
 | Forthing Taikon 5 | BEV variants only — the range mixes BEV and EREV |
 | Jaecoo J5 EV | |
 
-### Batch 5 — Korean and Japanese mainstream
+### Batch 5 — Korean and Japanese mainstream — **DONE 2026-07-31**
+
+**All six landed: 11 variants. Suzuki goes from no row of any kind to complete, and Lexus from zero
+BEV rows to complete. The Trailseeker's wagon-boundary call was settled as `SUV` before dispatch.
+See the batch 5 record below.**
+
 | Family | Note |
 |---|---|
 | Hyundai Ioniq 9 | |
@@ -693,6 +727,7 @@ maintenance debt is real.
 | Lotus Emeya | `Sedan` |
 | Maserati Grecale Folgore | **Verify orderable, not run-out.** Maserati has retrenched hard on EVs and told dealers to discount Folgore stock ~43% |
 | Maintenance sweep | **Shrunk 2026-07-30 — see the checks under "the price data is not current".** Still to do: rename `omoda-e5` → Chery E5; settle whether the BMW i4 M60 is orderable at all (two records disagree) and add it only if it is; re-price XPeng G6. **Already done, do not redo:** Ioniq 6 N, MG4 Urban and Kia EV9 GT are all held; Leapmotor C10 is confirmed BEV; Kona ($46,000–$63,000) and Ioniq 5 ($68,200–$83,700) already match this survey's own "now" figures exactly. **Still worth checking:** the Inster, where this survey quotes $38,990 *drive-away* against a held list of $39,000 — a drive-away figure is not a list price, and that one backs out to about $36,574, so either the held row is $2,400 high or the survey is quoting a grade the dataset does not hold. Volvo, BMW iX1 and Renault re-pricing is unverified either way |
+| **e-TNGA `batteryKwh` correction — ADDED BY BATCH 5, evidenced, do not re-derive** | **Five held rows record a GROSS pack figure in a field the schema defines as USABLE.** `toyota-bz4x` (2WD, AWD, Touring AWD) and `subaru-solterra` (AWD, AWD Touring) all carry `batteryKwh: 74.7`. Toyota's European newsroom states, for the bZ4X Touring, *"a maximum gross capacity of 74.7 kWh (**71 kWh net**)"*, and Toyota USA's 2026 bZ release calls 74.7 a *"total capacity"* in those words. The correct usable figure for that pack is **71.0** — a 5.2% overstatement. Batch 5 corrected its own three families to 71.0 and did not touch these. **Do not blind-swap all five.** The `toyota-bz4x` **2WD** row needs a model-year check first: the superseded MY25 pack is a different unit at **73.1 nominal / 69.0 usable**, and 73.1 is a *nominal* figure that has already been mistaken for a usable one once during this adjudication. Sources: `https://newsroom.toyota.eu/the-new-toyota-bz4x-touring-an-suv-for-electrified-adventures/`, `https://pressroom.toyota.com/toyota-bz-all-electric-suv-adds-range-charging-and-exterior-updates-for-2026/` |
 
 ### Batch 12 — people movers, filed as `SUV`
 Last of the research batches, deliberately. Every family here is only in scope because of the
@@ -1224,6 +1259,177 @@ warning fired for the third batch running: a server from a previous session was 
 and was killed before anything was believed. Batch 1 left the same gate open and batch 2 cleared both;
 worth doing the same at the start of batch 5, especially for `mg-im5`, the batch's only `Sedan`.
 
+### Batch 5 — done 2026-07-31
+
+Six agents, one per family, all six written. 11 variants; dataset went to **38 brands, 105 families,
+252 variants** (174 of them battery-electric). Build 0 failures, 596 tests pass. Commit `e742fb5`.
+Nothing was found withdrawn. **All six families were confirmed rendering in a real browser** — and
+so were batch 4's six, clearing the gate that batch left open.
+
+| Family | Variants and list prices |
+|---|---|
+| `hyundai-ioniq-9` | Calligraphy AWD $119,750 |
+| `hyundai-elexio` | Elexio $58,990 · Elite $61,990 |
+| `lexus-rz` | 500e Luxury AWD $84,500 · 500e Sports Luxury AWD $91,000 · 550e F Sport AWD $105,000 |
+| `subaru-uncharted` | AWD $59,990 |
+| `subaru-trailseeker` | AWD $63,990 · AWD Touring $69,990 |
+| `suzuki-e-vitara` | Motion $47,131 · Ultra ALLGRIP-e AWD $55,768 (both **backed out**) |
+
+**Only two of eleven rows are backed out** — the reverse of batch 4's eleven-of-thirteen. Four of the
+six families had a genuine published list price, and the two Subarus, the Lexus and both Hyundais all
+state "plus on-road costs" in prose.
+
+**Three verifications were settled BEFORE dispatch, and all three came back positive.** The prompt's
+stop-condition text was stale again (it still named the Geely EX2, batch 3's condition — the same
+fault batch 4 logged). Batch 5's real ones were the Trailseeker's body-type call and the on-sale
+status of the Elexio, Uncharted and Trailseeker. Two cheap verification agents settled all of them
+for about 25 searches, and no slot was wasted.
+
+**Nine things later batches need to know.**
+
+**1. A SIXTH shape of the grade-count failure: a legally separate state distributor.** The Suzuki
+e Vitara has a third grade — **Ultra FWD, $54,990 drive-away** — that is real, priced and orderable,
+but **only from Suzuki Queensland**, a separate distributor covering Queensland and the Northern
+Rivers of NSW. Suzuki Australia's own site states it "does not operate in Northern NSW or
+Queensland". carsales and CarsGuide **merge both distributors' price lists into one national ladder**
+and show four rows. A Victorian buyer can order two. This is nastier than the five earlier shapes
+because the phantom grade is genuinely on sale *somewhere in Australia* — availability is not
+national, and "is it on sale in Australia" turns out to be the wrong question. **Ask whether it is
+orderable in Victoria.** Suzuki is the only brand in the wave known to be split this way, but nobody
+has checked whether others are.
+
+**2. The batch table's own note was WRONG, and following it would have corrupted two rows.** The
+table said e Vitara "intro pricing expired 1 Jul 2026". Suzuki's live footnote reads *"available…
+for the first 100 customers who place an order before **1 August 2026**"* — extended, still running
+at the research date, and expiring the day after. Taking the $46,990 headline would have baked a
+one-day promotion capped at 100 cars into the dataset. Batch 4 logged that the *prompt's* claims need
+checking; this extends it to the plan's own per-family notes. **The notes are leads, exactly like the
+prices they describe.**
+
+**3. The cross-row diff caught its biggest error yet, and it was a SOURCED field agreed on by three
+independent agents.** All three e-TNGA agents recorded the shared pack as **74.7 kWh usable**, and so
+do five held rows. It is **74.7 gross / 71.0 usable**. What settled it was Toyota's European newsroom
+stating both figures in a single sentence for a single vehicle — *"a maximum gross capacity of
+74.7 kWh (71 kWh net)"* — and Toyota USA calling 74.7 a *"total capacity"*. Two agents found this
+independently within one round. The mechanism is worth naming: **Subaru Australia and Lexus publish
+the field as "Battery Capacity (kWh)" with no qualifier, where Toyota's own table for the same
+corporate parts bin labels it "Capacity (gross, kWh)".** An unlabelled number from a Toyota-family
+brand should be assumed gross.
+
+**4. Implied-consumption arithmetic CANNOT separate a gross/usable difference, and batch 3's rule
+needs this caveat.** The Trailseeker agent originally defended 74.7-as-usable because it implied a
+~10% plug-to-wheels overhead where 71 implied ~15%, and judged 15% too high. Both sit inside the
+normal 8–15% band, so the test never had the resolution. It conceded the point outright: with
+Toyota's *stated* 71 kWh net and *stated* consumption, the real overhead is 12–14% — exactly what it
+had dismissed as implausible. **Batch 3's implied-consumption test works for separating WLTP from
+CLTC/NEDC, where the numbers differ by 30–40%. It does not work on a 5% capacity question.** Find the
+label instead.
+
+**5. The discriminator between two packs was rated VOLTAGE, not cell count.** The Uncharted is a
+C-HR+ twin, which suggested it might use the 77 kWh pack (where 74.7 genuinely *is* the usable
+figure) rather than the 74.7-gross one — the same number playing opposite roles in adjacent families.
+Cell count could not separate them: **Toyota puts 104 cells in both packs.** Rated voltage did —
+384.8 V for the C-HR+ 77 kWh pack against 391 V on Subaru Australia's Uncharted page, matching the
+bZ4X/Solterra unit. Subaru's US press kit confirms 74.7 kWh across all Uncharted trims, so Europe's
+77 kWh car is the regional outlier. **When two packs share a headline number, check voltage.**
+
+**6. Batch 4's "the more specific argument was the wrong one" heuristic held for a third time.** The
+Trailseeker agent's arithmetic was the more specific case and was wrong; the Lexus agent's borrowed
+ratio was cruder, landed at 70.0 against a true 71.0, and was nearly right. Both conceded in one
+round this time rather than two — because the round produced a primary source neither had at the
+start, which is the same pattern batch 4 recorded. **Budget for the round, not for the argument.**
+
+**7. An aggregator flagged its own entry as unconfirmed and it was still believed.** The Uncharted's
+original 74.7-usable figure rested on evdbau, which marks that entry *"upcoming model — any specs
+listed are unconfirmed"*, publishes an invented "78 kWh nominal" no manufacturer states, and gets the
+car's boot volumes wrong by 200 L. The agent found and reported the disclaimer only under challenge.
+**Read the aggregator's own caveats before citing it** — this is a cheaper check than any of the
+arithmetic above.
+
+**8. Two option-promoted-to-grade traps in one batch, on the same brand.** Subaru's own site renders
+"Uncharted AWD with Panoramic Glass Roof, $66,680" as a second priced tile (it is a $1,200 option),
+and CarsGuide lists "Uncharted AWD Roof Two Tone Pack, $62,390" (exactly $59,990 + the $2,400
+option). Hyundai's Ioniq 9 produced the same shape: aggregators show a "Calligraphy E4 Dsm (6 Seat)"
+at $124,750, which decomposes exactly as $119,750 + $2,000 six-seat + $3,000 digital side mirrors —
+the spec sheet's only optional feature. **Three instances, one batch. When a second "grade" differs
+from the first by a round number, price the difference as an option before believing it.**
+
+**9. Suzuki's back-out is biased high, and it is the same defect batch 4 flagged for the MG IM rows.**
+Suzuki publishes drive-away only, as a **flat national figure** whose fine print bundles dealer
+delivery — which `calc/onroad.js` does not model. Both rows round-trip to within a dollar
+($49,990.50 / $58,990.26) but true MSRP is probably **$1,500–$2,500 lower**. That now affects eight
+rows across two batches. Batch 11's maintenance sweep is still the right place to settle whether the
+wave wants a dealer-delivery term.
+
+**Judged fields, for anchoring later batches.** Insurance runs monotonically with price across the
+whole Subaru cohort and interleaves correctly with the held Solterra: Uncharted 1600 → Solterra 1650
+→ Trailseeker 1720 → Solterra Touring 1800 → Trailseeker Touring 1880. Both new Subarus take the
+Solterra's `[1, 0.74, …]` unchanged; the Trailseeker agent explicitly declined to steepen further on
+its $4,000 cut, reasoning that the Solterra's two cuts in six months are the stronger discounting
+record and a car should not fall faster than its own platform-mate. **`lexus-rz` is the batch's one
+large deviation** — `[1, 0.68, …]` / `[1, 0.67, …]` / `[1, 0.65, …]`, far steeper than the Lexus PHEV
+band of 0.77→0.72, on a 30%+ RRP collapse in a single model year that Lexus itself attributed to weak
+sales. Those land alongside comparably-priced premium BEVs already held (Mercedes EQB 0.68, Audi Q4
+55 0.67) rather than alongside the Lexus PHEVs. `hyundai-elexio` takes the Kona's `[1, 0.74, …]` on
+two factory drive-away campaigns inside its first two quarters, while `hyundai-ioniq-9` keeps the
+mainstream default — a deliberate split inside one brand, evidence-led in both directions.
+
+**Warranty is 5 across all six families**, which is unusual and worth stating so nobody reads it as
+copying: Hyundai 5 (the 7 is conditional on dealer servicing), Lexus/Toyota 5 (the 7-year driveline
+is conditional), Subaru 5 unconditional, and **Suzuki 5 genuinely unconditional — it advertises no
+longer conditional term at all**, which makes it the only brand here whose advertised number and
+schema number agree. One search snippet claiming a "seven-year" Suzuki warranty could not be
+corroborated on either distributor's site and was treated as an error.
+
+**Two price-basis notes.** The Ioniq 9's six-seat configuration is a **$2,000 option, not a variant**
+— Hyundai AU's spec sheet has one grade column with "7 Seat / 6 Seat" as a sub-header, a dealer feed
+lists four buildable configurations all named Calligraphy, and three Australian outlets state $121,750
+in prose against the aggregators' $124,750. And the Elexio has **three price bases in circulation
+simultaneously** — MRLP $58,990/$61,990, Hyundai's own campaign drive-aways ($55,990 to 30 Sep 2026),
+and CarExpert's computed Sydney drive-aways ($64,057/$67,207). The campaign figures sit $5,484–$6,358
+*below* the computed drive-away, which by batch 3's direction test makes them genuine discounts
+rather than mislabelled list prices.
+
+**Render check: CLEARED for batch 5 AND for batch 4.** Confirmed against a freshly booted server
+whose header read *37 brands · 99 models · 241 variants* for the batch 4 pass and *38 brands ·
+105 models · 252 variants* after, both matching the build exactly. **The stale-server warning fired
+for a fourth time** — nothing was listening at the start, but the server booted for the batch 4 check
+was still holding that dataset and had to be killed before batch 5 could be believed. Zero console
+errors from `localhost:3000` on any app page.
+
+Three of batch 5's six reached the shortlist; three are **Pareto-dominated and were confirmed by
+component-level render**, the fallback batch 2 established for the Torres EVX. That is a worse ratio
+than batch 3's six-of-six, and the reason is structural rather than a data fault: this batch is
+mid-pack premium rather than cheap, so lowering `monthlyBudget` — batch 3's technique — does not
+isolate anything.
+
+| Family | How confirmed |
+|---|---|
+| `hyundai-ioniq-9` | Shortlist — `?seats=7&minBootLitres=330&monthlyBudget=2700` |
+| `hyundai-elexio` | Shortlist — `?bodyTypes=SUV&minBootLitres=400&minRangeKm=520&monthlyBudget=850` |
+| `subaru-trailseeker` | Shortlist — `?bodyTypes=SUV&minBootLitres=605&minRangeKm=530` |
+| `lexus-rz` | Component render — out-ranked by cheaper cars with more range at every budget |
+| `subaru-uncharted` | Component render — **dominated by its own batch-mate**, the Elexio being $1,000 cheaper with 103 L more boot and 40 km more range |
+| `suzuki-e-vitara` | Component render — dominated by the BYD Atto 2 at $15,141 less |
+
+The query-string key for the seats filter is **`seats`, not `minSeats`** (`public/ui/state.js:33`);
+an unrecognised key is silently dropped from the URL, which reads as a filter that did nothing.
+
+**A pre-existing app defect reproduced, and it is worth a fix.** When the filtered set contains
+**only cars that no payment method can reach**, `public/ui/crossover-chart.js:674` emits six console
+errors — `<line> attribute y1: Expected length, "NaN"` and similar. Reproduced with
+`?seats=7&minBootLitres=335`, which matches the Ioniq 9 alone at $119,750, against a novated line
+capped at the $91,661 FBT cliff and a loan reaching $115,954 at the top of the slider. It is
+budget-independent and it is **not** caused by this batch's data: `git diff` touches no `public/`,
+`calc/`, `server/` or `scripts/` file, and a single-car set that *is* reachable renders cleanly. Same
+underlying state as batch 2's item 4 — that record's empty-state message was confirmed again here,
+still reading *"add savings to make buying outright an option"* while savings were set to $200,000.
+
+**One cosmetic observation, not acted on.** The Elexio's base grade is named "Elexio", so its card
+heading renders as **"Hyundai Elexio Elexio"**. It is honest to the source — Hyundai names the base
+grade after the model — and inventing a "Standard" badge would be worse. Recorded in case the card
+template ever wants to suppress a variant string that repeats the model.
+
 ## How to run a batch — paste this into a new session
 
 One batch per session. **Change the batch number on the first line. That is the only edit** —
@@ -1266,8 +1472,16 @@ Before dispatching:
     orderable, batch 12 verifies the Mercedes EQV is on sale, batch 9 verifies the
     Genesis GV70 Electrified grade count, batch 10 verifies the Porsche Cayenne
     Electric and the Genesis G80. DONE, do not re-check: the LDV eT60 (batch 1,
-    negative), the Geely EX2 (batch 3, orderable) and the Forthing Taikon 5
-    (batch 4, on sale).
+    negative), the Geely EX2 (batch 3, orderable), the Forthing Taikon 5
+    (batch 4, on sale), and the Hyundai Elexio, Subaru Uncharted and Subaru
+    Trailseeker (batch 5, all orderable, Trailseeker settled as `SUV`).
+    Two cheap verification agents settled batch 5's three for ~25 searches
+    before any slot was spent — do that rather than folding the check into a
+    family agent, because a negative removes the family entirely.
+  - Treat the batch table's own per-family NOTE as a lead too, not just its
+    prices. Batch 5's note said the Suzuki e Vitara's introductory pricing
+    expired 1 July; it had been extended to 1 August and was still live, and
+    following the note would have recorded a one-day promotion as list.
   - Every price in the survey is a LEAD, NOT A FACT, and many were quoted
     drive-away. Establish list price independently.
   - Read the "Batch records" section for what earlier batches learned. Batch 1
@@ -1289,8 +1503,9 @@ data/schema.js, and run no git commands.
 
 Restate these four in every agent prompt. Each has already caught something:
   1. `listPrice` is the manufacturer list price, NEVER drive-away. For the Chinese
-     brands and KGM, drive-away is the default quoted figure. Where no list price
-     exists anywhere, back it out with the app's VIC model using the divisor that
+     brands and KGM, drive-away is the default quoted figure — and Suzuki, which
+     publishes no list price anywhere. Where no list price exists, back it out
+     with the app's VIC model using the divisor that
      matches the body type — passenger cars (driveaway - 880) / 1.042, utes
      (driveaway - 880) / 1.027 — then round-trip through driveAwayPrice() against
      the real tax tables rather than trusting either constant, and flag the result
@@ -1305,12 +1520,18 @@ Restate these four in every agent prompt. Each has already caught something:
   2. Grade names are leads. Thirteen of twenty-two failed verification across the
      PHEV wave, and the failures are wrong grade COUNTS rather than wrong badges,
      which silently merges or invents cars. Count the grades on the configurator;
-     do not match names. A single-grade claim is a lead too. Five shapes seen so
+     do not match names. A single-grade claim is a lead too. Six shapes seen so
      far: a grade that exists overseas but not here; a battery structure that does
      not cross the border; a badge on two powertrains — sometimes AT THE SAME
      PRICE, so match on the powertrain page or a drivetrain-dependent spec, never
      on badge or badge-plus-price; an aggregator carrying an unlaunched grade WITH
-     a price; and a government certification filing carrying one WITHOUT a price.
+     a price; a government certification filing carrying one WITHOUT a price; and
+     a grade sold only by a legally SEPARATE STATE DISTRIBUTOR (Suzuki
+     Queensland), which aggregators merge into one national ladder — so ask
+     whether a grade is orderable in VICTORIA, not in Australia. Separately,
+     price any "extra grade" that differs by a round number as an OPTION before
+     believing it: three option-promoted-to-grade traps appeared in batch 5
+     alone, two of them on the manufacturer's own site.
   3. Treat every Australian range figure as NEDC until proven WLTP. This is the
      confirmed dominant defect, and it is worse for the Chinese brands. Record
      which standard each figure came from. Matching numbers are copies, not
@@ -1322,6 +1543,16 @@ Restate these four in every agent prompt. Each has already caught something:
      Australian car actually gets — a superseded or foreign-market pack is not a
      gross-versus-usable problem, it is a different car. For a Chinese-brand BEV,
      assume the pack lineup differs from the home market until shown otherwise.
+     An UNLABELLED capacity from a Toyota-family brand (Toyota, Lexus, Subaru) is
+     GROSS: their own tables read "Capacity (gross, kWh)" where the Australian
+     pages drop the qualifier, and this put a gross figure into eight rows across
+     three families before the cross-row diff caught it. Implied-consumption
+     arithmetic CANNOT settle a gross-versus-usable question — a 5% capacity
+     difference sits inside the 8–15% plug-to-wheels band, so it separates WLTP
+     from CLTC but not gross from usable. Find a source stating BOTH figures for
+     the SAME vehicle. Where two packs share a headline number, cell count may not
+     discriminate (Toyota uses 104 cells in two different packs); rated voltage
+     did.
 
 Require every agent to report: the grade names it EXCLUDED and why, which standard
 each range figure came from, which of batteryKwh / rangeKm / consumptionKwhPer100km
@@ -1377,6 +1608,13 @@ run alone, because it renames `omoda-e5` and so changes filenames. Batch 12 runs
 batches can now run in parallel across sessions on the rules recorded there, with the platform-
 cluster caveat above still applying.
 
+**Batch 5 closes the Toyota/Subaru e-TNGA cluster**, which was never listed as one of the three
+split clusters above but turned out to be the batch's whole story: `lexus-rz`, `subaru-uncharted` and
+`subaru-trailseeker` all share a pack with the held `toyota-bz4x` and `subaru-solterra`. The
+gross-versus-usable correction it produced is recorded in batch 11's maintenance row, and the two
+held families still carry the uncorrected figure. **Add e-TNGA to the cluster list**: it is
+batches 5 and 11, and nothing else in the wave touches it.
+
 **Batches 3 and 4 are both done, which closes the Chinese-families cluster** apart from batch 12's
 people movers. Between them they established the conventions those remaining rows should follow
 rather than re-derive: the three drive-away trap shapes and the direction test (batch 3), the
@@ -1408,6 +1646,13 @@ checking the 40 would have surfaced: **Toyota HiLux BEV**, **Cadillac** (whole b
 **KGM Musso EV** and **Torres EVX** (whole brand, including a ute), **GAC/Aion** (whole brand),
 **Mazda 6e**, **Suzuki e Vitara**, **Volkswagen ID.4/ID.5**, **Forthing**, **GWM Ora 5**,
 **Subaru Uncharted** and **Trailseeker**, **Hyundai Elexio**, **Mercedes CLA EV**, **Volvo ES90**.
+
+**Batch 5 scored four of those and the survey was right on all four.** Suzuki e Vitara, Subaru
+Uncharted, Subaru Trailseeker and Hyundai Elexio were all on sale and orderable, and the Elexio — a
+China-developed Hyundai that a recalled list would never have produced — is a genuine two-grade
+family with a local brochure and a live campaign. **Nothing the brand sweep found in this slice has
+yet turned out to be a phantom**, which is a second, independent score for the brand-by-brand method
+over the recalled list.
 
 That is fifteen-plus families and five whole brands invisible to list-checking. The brief's
 instruction to work brand by brand rather than model by model is the reason they are here.
