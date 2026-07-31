@@ -322,6 +322,13 @@
       </details>
     </section>
 
+    <!-- Steps 2 and 3 share one column wrapper so that on desktop the shortlist
+         hangs off the bottom of step 2 rather than off the bottom of the whole
+         first row. Step 1 is a form whose height swings by hundreds of pixels as
+         its <details> open, and while it sat in the same grid row, every one of
+         those pixels pushed step 3 further down the page. See styles.css. -->
+    <div class="sections__flow">
+
     <section id="afford" aria-labelledby="afford-heading">
       <h2 id="afford-heading" class="section-heading">
         <span class="section-heading__eyebrow">2</span> How much to spend?
@@ -427,6 +434,8 @@
         <p class="skeleton-note">Matching cars will appear here once we know your budget and what you're after.</p>
       </div>
     </section>
+
+    </div>
 
   </div>
 

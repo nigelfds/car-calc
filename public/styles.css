@@ -277,11 +277,24 @@ input[type='date'],
   gap: var(--space-5);
 }
 
-.sections > section {
+.sections > section,
+.sections__flow > section {
   background: var(--paper-raised);
   border: 1px solid var(--hairline);
   border-radius: var(--radius);
   padding: var(--space-5);
+}
+
+/* Steps 2 and 3, stacked. On mobile this is a transparent pass-through: the
+   wrapper repeats .sections' own column + gap, so the three cards read as one
+   evenly spaced stack exactly as before. It earns its keep at 900px, below. */
+.sections__flow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  /* Grid items floor at min-content width; without this the chart's wide
+     geometry inside step 2 could push the column past its 1fr share. */
+  min-width: 0;
 }
 
 @media (min-width: 900px) {
@@ -304,8 +317,16 @@ input[type='date'],
     align-items: start;
   }
 
-  .sections > #cars {
-    grid-column: 1 / -1;
+  /* Step 3 used to span both columns on its own grid row, which meant it began
+     below the taller of steps 1 and 2 — and step 1 is the one that grows, by
+     several hundred pixels, every time the reader opens one of its <details>.
+     Expanding the options pushed the shortlist off the fold even though step 2,
+     the thing it belongs under, had not moved at all. Wrapping 2 and 3 in
+     .sections__flow takes step 3 out of the grid's row sizing entirely: the
+     wrapper is the single column-2 item, and inside it the shortlist simply
+     follows step 2's bottom edge at the same width, whatever step 1 does. */
+  .sections__flow {
+    gap: 1rem;
   }
 }
 
