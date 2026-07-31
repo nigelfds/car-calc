@@ -9,8 +9,8 @@ unchanged so the leads can be scored against what was actually found.
 **Headline: the dataset holds about 37% of the battery-electric market. Roughly 68 families are
 missing, which is twelve batches — a wave larger than the PHEV one.**
 
-**Wave progress: batches 1 and 2 done (both 2026-07-30). 52 of ~111 families held, ~47%. Ten batches
-left.**
+**Wave progress: batches 1, 2 and 3 done (1 and 2 on 2026-07-30, batch 3 on 2026-07-31). 58 of ~111
+families held, ~52%. Nine batches left.**
 
 ## Why this exists
 
@@ -179,17 +179,21 @@ families were most of the market.
 
 ## The headline number
 
-| | Families | After batch 1 | After batch 2 |
-|---|---|---|---|
-| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** |
-| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** |
-| Held by the dataset | **40** | **46** | **52** |
-| **Coverage** | **~37%** | **~41%** | **~47%** |
-| Missing and researchable | **~68** | **~61** | **~55** |
-| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** |
+| | Families | After batch 1 | After batch 2 | After batch 3 |
+|---|---|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** |
+| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** |
+| Held by the dataset | **40** | **46** | **52** | **58** |
+| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** |
+| Missing and researchable | **~68** | **~61** | **~55** | **~49** |
+| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** |
 
 Batch 2 found nothing withdrawn and needed no back-out, so the on-sale and representable figures are
 unchanged. All six families were `SUV`, so `Sedan` and `Ute` are exactly where batch 1 left them.
+
+Batch 3 also found nothing withdrawn — all six were orderable, including the Geely EX2 whose on-sale
+status was the batch's stop condition. Three `Hatch` and three `SUV`, so `Sedan` and `Ute` are again
+untouched. **The wave has now passed the halfway mark.**
 
 The representable figure counts people movers, per the body-type decisions below. Only four
 vehicles on sale are unrepresentable: three above the $250,000 ceiling and one two-seat roadster.
@@ -247,8 +251,13 @@ the price bounds, and it appears nowhere in the dataset.
 **Settled by batch 2 (2026-07-30):** three of these brands are now held. **Cadillac is complete** —
 Optiq, Lyriq and Vistiq all researched and written, so the BEV-only brand is fully represented.
 **Volkswagen** now holds both BEV families (ID.4, ID.5), leaving only the ID. Buzz in batch 12.
-**KGM** is complete across both waves — Musso EV in batch 1, Torres EVX in batch 2. Fourteen of the
-seventeen brands in this table are still absent.
+**KGM** is complete across both waves — Musso EV in batch 1, Torres EVX in batch 2.
+
+**Settled by batch 3 (2026-07-31):** two more brands are now held, both complete. **GAC/Aion is
+complete** — Aion UT and Aion V are its whole BEV range here, and the brand went from wholly absent
+to fully represented in one batch. **GWM is complete on BEVs** — the Ora 5 is its only battery-
+electric family, the old Ora hatch it replaced being discontinued. **Twelve of the seventeen brands
+in this table are still absent.**
 
 ## The two structural gaps — both verdicts are "nobody looked"
 
@@ -556,7 +565,11 @@ brand here — is now held in full. See the batch 2 record below.**
 | Cadillac Vistiq | Platinum grade only |
 | KGM Torres EVX | Prices quoted drive-away. Pairs with the Musso EV researched in batch 1 |
 
-### Batch 3 — the cheap Chinese end
+### Batch 3 — the cheap Chinese end — **DONE 2026-07-31**
+
+**All six landed: 12 variants. GAC and GWM both go from zero BEV rows to complete. The Geely EX2
+stop condition passed — it is orderable. See the batch 3 record below.**
+
 | Family | Note |
 |---|---|
 | BYD Atto 2 | |
@@ -889,6 +902,144 @@ $129,250 Kia EV9 GT), which points at the band logic being anchored on a cash ce
 out of the dataset. Distinct from review item 14, which is about *filter*-driven empties and is done.
 Not filed in `docs/ux-review.md` — that register belongs to the UX branch's workflow.
 
+### Batch 3 — done 2026-07-31
+
+Six agents, one per family, all six written. 12 variants; dataset went to **36 brands, 93 families,
+228 variants**. Build 0 failures, 596 tests pass. Commit `50cfa71`. Nothing was found withdrawn, and
+**every one of the six families rendered in the shortlist** — no Pareto-dominated fallback was needed
+this time.
+
+| Family | Variants and list prices |
+|---|---|
+| `byd-atto1` | Essential $23,990 · Premium $27,990 |
+| `byd-atto2` | Dynamic $31,990 · Premium $35,990 |
+| `geely-ex2` | Complete $26,490 · Inspire $30,990 |
+| `gac-aion-ut` | Premium $31,990 · Luxury $35,990 |
+| `gac-aion-v` | Premium $42,590 · Luxury $44,590 |
+| `gwm-ora-5` | Lux $31,775 · Ultra $34,655 (both **backed out** of drive-away) |
+
+**The whole batch straddles neither FBT threshold.** Nothing here comes within $30,000 of $75,000, so
+for six families the recommendation never flips on tax. The `byd-atto1` Essential at $23,990 is now
+the dataset's cheapest row, displacing the MG 4 Urban 43 by $5,850.
+
+**Seven things later batches need to know.**
+
+**1. The drive-away trap has three distinct shapes and all three appeared in one batch.** Batch 1 and
+2 each caught one; this batch caught three, and only one resembled the earlier cases:
+- *A promotional drive-away numerically IDENTICAL to the list price.* GAC's own site headlines
+  "Drive Away Price: from $31,990" for the Aion UT, which is exactly its list price, because the
+  promotion is free on-roads. Taking the headline would have been **coincidentally right on one grade
+  and wrong in kind** — and would have silently broken the moment the promo ended.
+- *A correct list price under a wrong label.* A BYD dealer configurator shows the Atto 1's
+  $23,990/$27,990 beneath a column headed "Drive Away Price Incl. on road costs and registration".
+  The label is a generic template artefact. The tell is direction: real drive-away figures in
+  circulation were *higher* ($25,760–$27,023), and a round-trip confirmed it.
+- *A bonus dressed as pricing.* Geely's 12 Jul – 31 Aug 2026 launch offer is a charger and paint,
+  not a discount, and correctly did not move `listPrice`.
+
+The general rule that falls out: **check the DIRECTION of the discrepancy, not just its size.** A
+figure labelled drive-away that sits below the computed drive-away is a list price mislabelled; one
+that sits above is genuine.
+
+**2. Aggregator "MSRP" is not a manufacturer RRP, and this cost a correction.** The GWM Ora 5 agent
+recorded $32,490/$35,490 as sourced MSRPs from CarsGuide. That page states its figures derive from
+**Glass's Information Services third-party pricing data**, and it is *unstable* — it now shows the
+Lux at **$30,490**, not $32,490. CarExpert and CarsGuide both publish drive-away only; GWM Australia
+publishes a Victorian drive-away and no list price anywhere. So this was the brief's back-out case
+after all: $33,990/$36,990 give **$31,775/$34,655**, both round-tripping to within a dollar.
+**Treat a RedBook/Glass's-derived figure as an estimate, not a source** — and note it can be a
+plausible, well-shaped number ($X,490 matched GWM's own price ladder exactly), which is what made it
+convincing.
+
+**3. A reviewing session must check the agent's REASONING, not only its evidence.** The Ora 5 agent
+argued the advertised drive-away sat *below* list-plus-on-roads and inferred a promotional campaign,
+citing batch 2's Torres EVX as precedent. That reasoning was **circular**: the gap existed only
+because of the RedBook figure the agent had itself adopted, and unlike the Torres there was no
+independent evidence of a factory bonus. Both batch 1 and batch 2 caught bad *data* by cross-row
+diffing; this one was caught by reading an argument. Budget for that separately — the row passed the
+validator, had citations, and diffed cleanly against every sibling.
+
+**4. Numerically colliding range figures struck twice more, in opposite directions.** Batch 1 logged
+the HiLux's 245-versus-245 collision. This batch:
+- *A true WLTP figure that collides with an unrelated CLTC one.* The Aion V's Australian **510 km
+  WLTP** happens to equal a Chinese **510 km CLTC** figure quoted on a *smaller* pack. It was
+  separated by arithmetic, not by sourcing: 510 km on 75.26 kWh implies ~14.8 kWh/100 km at the
+  wheels, which is right; a CLTC 510 km on that pack would imply ~22, which is absurd for a 4.6 m FWD
+  SUV.
+- *The reassuring direction, which is also a check.* The EX2's Australian WLTP figures (252/345 km)
+  are **lower** than the Chinese CLTC ones (310/410 km) despite the Australian car having **bigger**
+  packs. Lower range on a bigger pack is the signature of a stricter standard, and is positive
+  evidence the figure is genuinely WLTP.
+
+**Use the implied-consumption arithmetic to separate standards.** It is the only test that works when
+the numbers themselves match.
+
+**5. Aggregators carry unlaunched grades WITH prices, which look exactly like real rows.** carsales
+and CarsGuide both list Ora 5 **Hatch** variants with specific prices ($31,990/$34,990 d/a and
+$30,490/$33,490), and GWM has announced neither pricing nor an on-sale date for the hatch. Taking
+them would have produced a plausible four-row family instead of the correct two. This is a *fourth*
+shape of the grade-count failure and it is nastier than the others, because a price is normally the
+strongest evidence that a grade is real. **A price on an aggregator is not evidence of availability.**
+Batch 2's Vistiq case (identical price spans on two rows) was the same family of defect; the tell
+here was the absence of any manufacturer announcement rather than anything in the data itself.
+
+**6. Foreign-market packs appeared in four of six families and were correctly rejected each time.**
+The Atto 2's European 64.8 kWh Comfort grade; a 45.1 kWh European pack figure being served as the
+Australian Atto 2's; the Atto 1's European "Boost" middle grade (Australia gets only the two
+endpoints); the Aion UT's 34.8/44/50.27 kWh Chinese variants; and the EX2's Chinese 30.12/40.16 kWh
+packs, which are *smaller* than the Australian car's. The pattern is now well enough established to
+state plainly: **for a Chinese-brand BEV, assume the pack lineup differs from the home market until
+shown otherwise.** Rule 4's framing — a foreign pack is a different car, not a gross/usable problem —
+earned its place four times in one batch.
+
+**7. `batteryKwh` usable-versus-gross is this batch's systemic soft spot.** Three of six agents named
+a battery figure as their least-confident number (`gac-aion-ut` 58, `gac-aion-v` 75.26, and the Atto
+2's 51.13). The cause is structural rather than sloppy: **BYD publishes a single unqualified number
+for Blade packs, and GAC publishes one unqualified "Battery Capacity (kWh)"**, so the usable/gross
+split can only be inferred from third-party databases that sometimes disagree. Every affected row
+reconciles against its WLTP range either way, so nothing is wrong — but if a future batch finds a
+manufacturer spec sheet stating usable capacity for either brand, these are the rows to revisit.
+
+**One judged-field note, for anchoring later batches.** The two GAC families were researched by
+independent agents that never communicated, and both arrived at `make: "GAC"` / `model: "Aion <X>"`,
+the same curve `[1, 0.7, 0.58, 0.49, 0.42, 0.36]`, and the same documented rationale — zero Australian
+resale history, ~19 dealers, no capped-price servicing. That convergence is worth more than either
+agent's argument alone. The GWM Ora 5 sits one notch shallower at `[1, 0.7, 0.59, 0.51, 0.44, 0.38]`
+on the strength of an established local network, and both BYDs and the EX2 take their existing brand
+cluster curves unchanged (`[1, 0.74, …]` for BYD, matching the held `geely-ex5`'s 0.75 band for the
+EX2). Insurance runs monotonically with price across the whole batch and joins cleanly onto the held
+BYD ladder: Atto 1 1100/1200 → Dolphin 1250 → Atto 2 1300/1400 → Dolphin Premium 1400 → Atto 3 1500.
+
+**The cross-row diff found nothing this time, and that is a result rather than a gap.** Batch 1 caught
+a sourced-but-wrong boot figure; batch 2 caught a superseded model year. Here the six families share
+no platform and only two share a brand, and the two BYDs independently agreed on method — both took
+the **homologated WLTP combined** consumption rather than the battery÷range arithmetic several
+outlets print, landing at 13–15% plug-to-wheels overhead. Per batch 2's finding that overhead
+consistency is not a valid cross-row test, that agreement was read as method agreement, not as
+corroboration of the numbers.
+
+**Render check: CLEARED, and every family reached the shortlist.** Confirmed against a freshly booted
+server whose header read *36 brands · 93 models · 228 variants*, matching the build exactly. **The
+stale-server warning caught us again** — a server from a previous session was already listening on
+port 3000 and was killed before any check was believed. Zero console errors or warnings from the app
+across the whole session. The per-family URLs that worked, worth reusing:
+
+| Family | URL query |
+|---|---|
+| `gac-aion-ut` | `?bodyTypes=Hatch&minRangeKm=430&monthlyBudget=650` |
+| `geely-ex2` | `?bodyTypes=Hatch&minBootLitres=370&monthlyBudget=600` |
+| `byd-atto1` | `?bodyTypes=Hatch&monthlyBudget=520` |
+| `gwm-ora-5` | `?bodyTypes=SUV&minRangeKm=435&minBootLitres=360&monthlyBudget=620` |
+| `byd-atto2` | `?bodyTypes=SUV&minBootLitres=375&minRangeKm=340&monthlyBudget=620` |
+| `gac-aion-v` | `?bodyTypes=SUV&minRangeKm=505&minBootLitres=420&monthlyBudget=730` |
+
+The technique that made this cheap: **cheap cars isolate by lowering `monthlyBudget`, not by
+filtering.** Every family in this batch is near the bottom of the price range, so dropping the budget
+to $520–$730 evicted the pricier rivals that were out-ranking them while leaving the target
+affordable. Batch 2 had to fall back to a component-level render for the Pareto-dominated Torres EVX;
+no such fallback was needed here.
+
+
 ## How to run a batch — paste this into a new session
 
 One batch per session. **Change the batch number on the first line. That is the only edit** —
@@ -1010,6 +1161,13 @@ run alone, because it renames `omoda-e5` and so changes filenames. Batch 12 runs
 **Batch 1 is done and did set those conventions** — see the Batch records section. The remaining
 batches can now run in parallel across sessions on the rules recorded there, with the platform-
 cluster caveat above still applying.
+
+**Batch 3 is also done, which matters for batch 4** — the two are the Chinese-families cluster, and
+batch 3 set the conventions batch 4 should follow rather than re-derive: the three drive-away trap
+shapes, the "aggregator MSRP is an estimate, not a source" rule, the implied-consumption arithmetic
+for separating WLTP from CLTC, and the finding that aggregators list unlaunched grades *with prices*.
+Batch 4's MG, Leapmotor, Forthing and Jaecoo rows are exposed to all four. Note also that batch 4's
+Jaecoo J5 and Leapmotor B10 were both flagged in the survey as drive-away-quoted.
 
 ## What the survey got wrong about its own leads
 
