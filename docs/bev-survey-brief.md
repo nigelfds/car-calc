@@ -179,14 +179,18 @@ families were most of the market.
 
 ## The headline number
 
-| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 | After batch 6 |
-|---|---|---|---|---|---|---|---|
-| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** | **~111** |
-| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** | **~107** |
-| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** | **76** |
-| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** | **~68%** |
-| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** | **~31** |
-| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** | **6 batches left** |
+| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 | After batch 6 | After batch 8 |
+|---|---|---|---|---|---|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** | **~111** | **~110** — the Q8 e-tron came off |
+| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** | **~107** | **~106** |
+| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** | **76** | **81** |
+| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** | **~68%** | **~76%** |
+| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** | **~31** | **~25** |
+| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** | **6 batches left** | **5 batches left** |
+
+**Batch 8 ran out of order, before batch 7**, which is the only earlier batch still outstanding. Nothing in
+batch 7 is affected — it is wholly Mercedes-Benz plus a Skoda body extension, and batch 8 shares no brand
+with it. The "5 batches left" figure counts batches 7, 9, 10, 11 and 12.
 
 Batch 2 found nothing withdrawn and needed no back-out, so the on-sale and representable figures are
 unchanged. All six families were `SUV`, so `Sedan` and `Ute` are exactly where batch 1 left them.
@@ -215,6 +219,13 @@ untouched for a third batch running. **Measured after batch 6: 183 battery-elect
 Alfa Romeo alone: BMW and Renault were both already held, so five of the batch's six families are
 depth at brands the dataset already had. **This is the first batch of the wave that added no new
 brand-level coverage to speak of, which is what the back half of the plan looks like.**
+
+Batch 8 is **the first batch of the wave to find a family withdrawn**: the Audi Q8 e-tron is confirmed off
+the Australian range, so the on-sale and representable figures move for the first time since batch 1. Five
+of its six families landed. All five are `SUV`, so `Ute` is untouched for a **fourth** batch running and
+`Sedan` for a second. **Measured after batch 8: 202 battery-electric variants across 81 families — SUV
+159/62, Sedan 22/10, Hatch 16/7, Ute 5/2.** Like batch 6, this is mostly depth rather than reach: only
+Smart is a new brand (39 → 40), and Audi, Cupra and Mini were all already held.
 
 The representable figure counts people movers, per the body-type decisions below. Only four
 vehicles on sale are unrepresentable: three above the $250,000 ceiling and one two-seat roadster.
@@ -302,6 +313,16 @@ battery-electric range — the Junior Elettrica is its only BEV family here, the
 out for Australia and the Sport Speciale being a mild hybrid. The dataset now holds **39 brands**.
 **Six of the seventeen brands in this table remain absent:** Porsche, Genesis, Smart, Lotus, Cupra
 and Maserati.
+
+**Settled by batch 8 (2026-08-01): two more, both complete on BEVs. Smart** goes from no row of any kind to
+its whole Australian battery-electric range bar the #3 (batch 9), taking the dataset to **40 brands**.
+**Cupra is complete on BEVs** — the Tavascan is its only battery-electric family here, the Born having been
+withdrawn. Note Cupra is the **Lexus** shape of entry, not the Suzuki shape: it was never absent from the
+dataset, having held `cupra-formentor-phev` since the PHEV wave, so only Smart moves the brand count. This
+table has now mis-stated that distinction three times; it is headed "whole brands absent" but lists brands
+whose *battery-electric* range is absent. **Four of the seventeen brands in this table remain absent:**
+Porsche, Genesis, Lotus and Maserati. Batch 8 also deepened two brands already held — Audi went from one
+BEV family to two, Mini from one to three.
 
 **One correction to this table itself, in the same shape as the Mazda one above.** It is headed
 "whole brands absent from the dataset", and **Lexus was never absent from the dataset** — it has
@@ -709,15 +730,33 @@ BMW should carry; see the batch 6 record below.**
 | Mercedes-Benz G 580 with EQ Technology | $249,000 — **$1,000 under the schema ceiling.** Verify the price before writing; a small rise makes it unrepresentable |
 | Skoda Enyaq Coupe | Body extension of a held family, not a new family. Cheap slot to fill out the batch |
 
-### Batch 8 — Audi, Cupra, Mini, Smart
+### Batch 8 — Audi, Cupra, Mini, Smart — **DONE 2026-08-01** (run out of order, before batch 7)
+
+**Five of six landed: 19 variants. The Audi Q8 e-tron verification came back NEGATIVE — it is off the
+Australian range, the first family the wave has found withdrawn since batch 1. Smart goes from zero rows to
+a whole brand; Cupra from zero BEV rows to complete. See the batch 8 record below.**
+
 | Family | Note |
 |---|---|
 | Audi Q6 e-tron | Includes Sportback body |
-| Audi Q8 e-tron | **Verify orderable.** Production ended Feb 2025; local listings may be run-out stock |
+| ~~Audi Q8 e-tron~~ | **VERIFIED NOT ON SALE, 2026-08-01 — batch 8. Do not re-check.** See the note below |
 | Cupra Tavascan | Cupra's only BEV — the Born is discontinued here |
 | Mini Aceman | |
 | Mini Countryman Electric | E and SE All4 |
 | Smart #1 | Whole brand absent |
+
+> **Settled 2026-08-01: the Audi Q8 e-tron is NOT on sale, no files written.** Audi Australia's own model
+> page states *"The Audi Q8 e-tron is no longer available to order"* and offers only a "View pre-owned
+> stock" call to action; requesting the `/configurator/` path redirects to the plain model page. The car is
+> absent from the live configurator, whose e-tron entries are Q4, Q4 Sportback, Q6, SQ6, Q6 Sportback, SQ6
+> Sportback and the three e-tron GTs. CarExpert records 4 sales YTD 2026 against 65 in 2025. Third-party
+> pages still carry a "2026 price list" of $140,090–$166,090; per the batch 3 rule that an aggregator price
+> is not evidence of availability, those are stale.
+>
+> **Free finding, same agent, same slot: the Audi A6 e-tron will never launch here.** Audi Australia is
+> quoted directly — *"we have decided not to introduce the A6 e-tron or S6 e-tron model to the Australian
+> market at this time"* (CarExpert, Nov 2025). It is named in the "brands present but possibly holding only
+> part of their range" lead list near the top of this document. **Do not add it to any backlog.**
 
 ### Batch 9 — premium SUVs and Genesis
 | Family | Note |
@@ -1639,6 +1678,206 @@ mind**, and note the shared browser also means `browser_console_messages` with `
 every agent's third-party ad-tracker noise — filter to the app's own origin before concluding
 anything about the page.
 
+### Batch 8 — done 2026-08-01
+
+Run **out of order**, before batch 7, which is now the only earlier batch outstanding. Six agents
+dispatched: one cheap verification agent and five family agents. **Five families written, 19 variants**;
+dataset went to **40 brands, 116 families, 280 variants** (202 of them battery-electric). Build 0 failures,
+596 tests pass. **One family was found withdrawn — the first since batch 1.**
+
+| Family | Variants and list prices |
+|---|---|
+| `audi-q6-e-tron` | Q6 e-tron $99,900 · performance $115,500 · quattro $122,500 · SQ6 $151,400 · Sportback $99,900 · Sportback quattro $127,500 · SQ6 Sportback $156,400 |
+| `cupra-tavascan` | Endurance $60,990 · VZ $74,490 |
+| `mini-aceman` | SE Favoured $60,990 · JCW E Favoured $65,990 |
+| `mini-countryman-electric` | E Classic $68,990 · E Favoured $71,990 · SE All4 Classic $73,990 · SE All4 Favoured $76,990 · SE All4 JCW Sport $79,990 |
+| `smart-1` | Pro+ $49,990 · Premium $53,900 · BRABUS $63,900 |
+| ~~`audi-q8-e-tron`~~ | **Not on sale — no files written.** See the stop-condition note in the batch 8 plan entry above |
+
+**Zero rows are backed out.** Every one of the five families had a genuine published list price, matching
+batch 2 and reversing batch 4's eleven-of-thirteen.
+
+**Nine things later batches need to know.**
+
+**1. The stop condition in the pasted prompt was STALE for the fourth batch running.** It still named the
+Geely EX2 — batch 3's condition, settled 2026-07-31. Batches 4 and 5 both logged this exact fault and it is
+still there. Batch 8's real condition was in the batch table (Audi Q8 e-tron, "verify orderable") *and* in
+the "Confidence, stated plainly" section. **It came back negative and saved a slot** — the first time in the
+wave a pre-dispatch verification has removed a family rather than confirming one. About 18 tool calls to
+avoid spending a full family slot on a car nobody can buy.
+
+**2. An adjudication round reversed a family's headline finding, and the agent had FABRICATED a citation.**
+The Tavascan agent's first report recorded a 30 June 2026 price list (V $55,490 / Endurance $66,490 / VZ
+$75,490) with the VZ clearing $75,000 by $490 — a straddle, the most decision-changing thing this dataset
+records. Challenged on the grade count, it reversed completely:
+- **Cupra Australia publishes no prices anywhere on its own web estate** — not the model page, not
+  `versions-and-equipment`, not the brochure (extracted in full with Ghostscript: zero dollar figures). So
+  **both** price lists were aggregator-borne, destroying its own "manufacturer's list versus aggregator lag"
+  framing. Neither list could be adjudicated by the manufacturer.
+- Cupra's own `versions-and-equipment` page lists exactly **two** grades, tagged `my25`. No V, no LFP pack.
+- **"All grades are available to order now" is the journalist's own words**, in Chasing Cars' own voice, no
+  quoted spokesperson, no linked release. Every other outlet uses future tense; CarsGuide states outright
+  *"No confirmation provided regarding order status."* WhichCar: *"announced ahead of August release."*
+- **The agent disclosed, unprompted, that a quote it had cited in its first report was search-engine
+  synthesis it could not trace to any article** — and that it had been load-bearing.
+A new failure shape, and worse than the six already on record, because the fabricated citation was the only
+thing standing between a correct row and an invented variant. **Ask an agent to attribute its key quote to a
+URL, not just to an outlet.** Final state: two grades, `cupra-tavascan-v` dropped, and **the family
+straddles nothing** — the VZ sits $510 *under* $75,000, the reverse of the first report.
+
+**3. Falling back a model year made every derived figure sourced.** The same reversal moved the correct
+reference document to the MY25.5 brochure, which *does* publish consumption. Three derived figures became
+sourced (Endurance 16.6, VZ 17.4, from Cupra's own Wh/km table). **A wrong model-year call had been
+manufacturing derivation work.** Worth checking whenever an agent reports deriving a figure because "the
+manufacturer has not published a spec sheet for the updated range".
+
+**4. Batch 4's "the more specific argument was the wrong one" heuristic held for a FOURTH time**, and batch
+2's "budget two rounds" did not — this conceded in a single exchange. The round that resolved it again
+produced better evidence than either side had at the start, and the agent named its own error before being
+shown it.
+
+**5. `1,200 kg` on an MEB dual-motor car is NOT automatically the model-year fault.** The Tavascan VZ was
+challenged on batch 2's finding — 1,200 kg is the pre-facelift MY24–25 rating at 8% gradient, 1,800 kg is
+MY26 at 12% for the 4MOTION drivetrain, and the held `vw-id5` GTX carries 1,800. It **survived**: ADAC
+catalogues this car as *"CUPRA Tavascan (77 kWh) Endurance (06/24 – 05/26)"*, a production window closing
+May 2026, so 1,200 kg is correct **for the run-out car the rows now describe**. Recording 1,800 would have
+been the model-year fault in reverse. **The challenge was right and the answer was still "no change" — the
+two resolved together**, because fixing the price list fixed the model year underneath the tow rating.
+Recorded as checked; do not re-litigate.
+
+**6. Audi Australia prices two different bodies identically, and it is not a feed artefact.** The Q6 e-tron
+and Q6 Sportback e-tron both list at **$99,900**. Batch 2 established that an identical price span on two
+rows is the tell for a carsales feed artefact (the Vistiq case). Not here: the held `audi-q4-e-tron` already
+carries the 55 quattro and Sportback 55 quattro at an identical $97,936. **Check the brand's held rows
+before calling an identical price a data fault.**
+
+**7. A configurator's model list is not a grade ladder.** Audi's build tool shows four Q6 entries (Q6, SQ6,
+Q6 Sportback, SQ6 Sportback); the Australian range is **seven** grades, because "Q6 e-tron" hides a
+three-deep trim ladder (base / performance / quattro) and the Sportback a two-deep one. Counting tiles would
+have merged four cars into two. A **seventh shape of the grade-count failure**, and the inverse of the usual
+one — the configurator under-counts rather than an aggregator over-counting. The agent also correctly
+**excluded a Q6 Sportback performance** that exists in the Green Vehicle Guide certification database but is
+not sold here, which is batch 4's certification-filing shape again.
+
+**8. The Green Vehicle Guide is a first-class Australian source and it beat the launch press by 13%.** The
+Q6's ADR-certified WLTP figures are 558 km (performance) and 542 km (quattro) against the **641 and 625 km**
+European numbers CarExpert and Chasing Cars printed at the local launch — Audi Australia was still "in
+discussions to obtain figures specific to the Australian specifications" at the time. Every Q6 range and
+consumption figure comes from that database, which settles the standard question outright rather than by
+inference. **For any European brand, prefer the Green Vehicle Guide over launch coverage.** It also produced
+a counter-intuitive result that is real, not a transposition: the SQ6 out-ranges the Q6 quattro (566 v 542),
+corroborated independently in the Sportback pair (585 v 569).
+
+**9. Every one of the five families is Pareto-dominated, and one by its own platform-mate.** Only the Audi
+reached the shortlist. The Tavascan Endurance is the sharpest case: the held **Skoda Enyaq 85 Sportline is
+the identical $60,990** with more boot (585 v 540), more range (547 v 531) and a 7-year warranty against
+Cupra's 5. Two VW Group cars on one platform, one strictly better at the same money. A ranking outcome, not
+a data fault — but batch 3's "lower the budget to isolate a cheap car" technique fails here for the same
+structural reason batch 5 found.
+
+**Judged fields, for anchoring later batches.** `audi-q6-e-tron` runs insurance 2800–4300, strictly above
+the held Q4 ladder's 2250–2700 and keeping the Q4's own +$50 Sportback step, with **three** curves rather
+than one: `[1, 0.68, …]` on the two base cars (above the FBT threshold, so they lose the novated demand that
+supports the Q4 45's residual), `[1, 0.65, …]` on the mid grades (Audi introduced the $99,900 base in March
+2025 with near-identical equipment, undercutting the $115,500 performance by $15,600 — direct evidence
+against that grade's residual), and `[1, 0.62, …]` on the two SQ6s. `smart-1` takes the **Zeekr X's**
+`[1, 0.68, …]` rather than a midpoint against its other SEA-platform sibling the Volvo EX30, argued on a
+documented discounting cadence: six clearance campaigns in twelve months in the distributor's own sitemap, a
+CarExpert story headlined *"Smart offers over $10,000 off runout electric SUVs"*, then an RRP cut of
+$4,000–$5,000. Used values anchor to transaction prices, and a brand that has never sold at list cannot hold
+a Volvo residual. `cupra-tavascan` sits between the held Formentor PHEV's `[1, 0.67, …]` and the ID.5's
+`[1, 0.72, …]`, deliberately shallower than the Formentor because that car took two hits the Tavascan has
+not (losing FBT exemption on 1 April 2025, and a $20k+ run-out cut).
+
+**The two Mini families diverge on both judged fields, and the divergence is evidenced rather than
+inconsistent.** `mini-aceman` copies the held Cooper's `[1, 0.71, …]` exactly; `mini-countryman-electric`
+sits a notch shallower at `[1, 0.73, …]`, between the Cooper and the held `bmw-ix1`'s `[1, 0.78, …]`. The
+evidence points opposite ways at model level: Mini **cut the entry Aceman E by $11,500 (23%) and killed it**
+within months of launch, while the Countryman's entry price **rose $4,000** at its March 2026 update.
+Insurance is likewise non-monotonic across the brand — the Aceman JCW E is 2350 at $65,990 where the
+Countryman SE All4 JCW Sport is 2250 at $79,990 — and that too is correct rather than sloppy: **"JCW E" is a
+model grade (190 kW, its own WLTP homologation) where "JCW Sport" is a trim pack on an unchanged 230 kW
+drivetrain.** The two agents loaded different things and both were right about what they loaded. The
+Aceman's 2350 is also consistent with the held Cooper JCW E's 2300, which set that level before this batch.
+
+**A maintenance item the cross-row diff turned up, not acted on.** The Countryman Electric and the held
+`bmw-ix1` share a pack, and the Countryman's March 2026 update took it to **65.2 kWh net** (from 64.8) with
+range rising to 501/467 km. The held iX1 rows carry 65.2 kWh but **426/400 km**, sourced 2026-07-27. Either
+the iX1 is a pre-update record or the two cars genuinely differ by ~75 km on one pack. Batch 6 has since
+researched BMW's remaining range without touching `bmw-ix1`, so **this now belongs to batch 11's maintenance
+sweep** — and it is worth checking the batch 6 BMW rows for the same update at the same time.
+
+**Two body-type calls, both made on fields rather than prose, both `SUV`.** The **Mini Aceman** was the live
+one — it sits between the held Cooper (`Hatch`, 4 seats, 210 L) and the Countryman, and carsales' body-style
+field says "Hatch" while CarsGuide is internally split. It went `SUV` on CarExpert's segment field ("Small
+SUV"), Chasing Cars' own taxonomy path (`/reviews/small-suvs/`), WhichCar's title, and the practical point
+that CarsGuide's named rivals for it are the Zeekr X, Volvo EX30 and Alfa Romeo Junior — all `SUV` here. A
+buyer filtering SUV expects it next to an EX30, not next to an MG 4. The **Smart #1** was not close: smart's
+own site calls it "our urban SUV" and pointedly calls the #3 an "SUV coupe".
+
+**Warranty: two traps, both caught.** **Smart's own warranty page claims 3 years/60,000 km** — an
+un-localised European template that links to `uk.smart.com` legal and quotes a Pulse grade Australia does
+not get. The localised Australian text gives **5 years/150,000 km**, and the dealer-servicing string
+attaches only to the 8-year battery cover, so 5 is unconditional. Mini is 5 unconditional across both new
+families (the 8-year high-voltage cover is separate and lives in `pros` as prose). All five families land on
+`warrantyYears: 5`.
+
+**Least-confident figures, disclosed by the agents.** `audi-q6-e-tron`: whether the base is $99,900 or
+$99,990 — three sources say the former, two the latter, and Audi's own price panel would not hydrate; the
+$90 changes no threshold outcome. `mini-countryman-electric`: the range-and-consumption pairs for the three
+trims Mini publishes no per-trim split for (E Favoured, SE All4 Favoured, SE All4 JCW Sport) are **derived**
+by placing each inside Mini's own published equipment/tyre band by wheel size — the JCW Sport's 421 km/17.4
+is the softest number in the batch. `mini-aceman`: the JCW E's 16.4 kWh/100km rests on a single Australian
+source. `smart-1`: the BRABUS's insurance at 2300, which has no source and two anchors pulling opposite
+ways. `cupra-tavascan`: the grade-count call itself, held at about 70/30 — see item 2.
+
+**Render check: CLEARED, but only one family reached the shortlist.** Run twice — first on the research
+branch, then **re-run in full on `main` with batch 6 present**, against a freshly booted server whose header
+read *40 brands · 116 models · 280 variants*, matching that build exactly. **The stale-server warning fired
+for a fifth batch running**, twice in one session: once for a server from a previous session, and once for
+the branch server still holding the smaller dataset. Both were killed before anything was believed. Zero
+console errors or warnings across the whole session.
+
+| Family | How confirmed |
+|---|---|
+| `audi-q6-e-tron` | **Shortlist** — `?bodyTypes=SUV&minBootLitres=511&minRangeKm=584&monthlyBudget=3200` surfaces the SQ6 Sportback as the "if you stretched" card |
+| `cupra-tavascan` | Component render — dominated by the held Skoda Enyaq 85 Sportline at the identical $60,990 |
+| `mini-aceman` | Component render — ranks ~100th of 128 in any SUV pool it enters |
+| `mini-countryman-electric` | Component render — ranks ~43rd of 50 even on its own tightest boot/range floors |
+| `smart-1` | Component render — dominated by the GAC Aion V Premium at $42,590 with more boot and 70 km more range |
+
+All 12 non-shortlisted rows were driven through the app's own `cardModel`/`renderCards` on the live page
+with the real data and render correctly — e.g. *"Smart #1 Pro+ · 313L boot · 420km range · $49,990"* — with
+no NaN, undefined or `[object Object]` anywhere. **Recorded honestly as component-level renders, not
+shortlist appearances**, per the fallback batch 2 established for the Torres EVX.
+
+**The re-run on `main` mattered and is the version to trust.** The first pass ran on the research branch,
+whose dataset was missing batch 6 — including the BMW iX, i5 and iX3, the Audi's closest price rivals. On
+the full `main` dataset the **Audi SQ6 Sportback still reaches the shortlist**, now sharing it with the
+`bmw-ix3` 50 xDrive, so the claim survives the harder pool rather than resting on batch 6's absence. All
+twelve component renders were re-confirmed on `main` as well. Do not trust a render check run on a branch
+whose dataset is behind `main`; re-run it after the rebuild.
+
+**A cheaper way to decide this, worth reusing.** Rather than guessing budgets in the browser, the filter
+space was searched offline against the app's own `calc/rank.js`, sweeping every body-type / boot / range /
+seats combination the family's own rows can produce and reporting where the family lands in the ranked pool.
+That established, before any browser work, that four of five could not be surfaced and that the SQ6
+Sportback could. It also explains *why* the obvious technique fails: `rank.js` raises the boot weight to 3.0
+and range to 2.5 **when the user states those filters** (`calc/rank.js:19-24`), so filtering on boot or
+range to isolate a car actively promotes whichever rival is bigger — the filter and the ranking pull against
+each other.
+
+**A branch hazard that nearly corrupted this batch, and will recur.** Batch 8 was researched on the
+`feature/car-images` branch, which had been cut **before batch 6 landed on `main`**. Its dataset was
+therefore six families and nine variants short, and `data/vehicles.json` / `data/families.json` are
+**generated** files that `scripts/build-dataset.js` rewrites wholesale. Committing that branch's build output
+onto `main` would have silently deleted all six batch 6 families, and committing its `docs/bev-survey-brief.md`
+would have wiped batch 6's entire record — both would have passed the build and the tests, because the
+aggregates were internally consistent with the smaller input. It was caught by diffing `main..feature` before
+committing rather than by any gate. **Research batches belong on `main`, or the aggregates and this document
+must be rebuilt on `main` before the commit.** Every coverage number in this record is measured on `main`
+with batch 6 present.
+
 ## How to run a batch — paste this into a new session
 
 One batch per session. **Change the batch number on the first line. That is the only edit** —
@@ -1685,7 +1924,10 @@ Before dispatching:
     (batch 4, on sale), the Hyundai Elexio, Subaru Uncharted and Subaru
     Trailseeker (batch 5, all orderable, Trailseeker settled as `SUV`), and the
     Neue Klasse BMW iX3 and Renault Scenic E-Tech (batch 6, both orderable) —
-    plus the BMW i4 M60, which batch 6 settled as NOT on sale in Australia.
+    plus the BMW i4 M60, which batch 6 settled as NOT on sale in Australia,
+    and the Audi Q8 e-tron (batch 8, NEGATIVE — off the range), plus the Audi
+    A6 e-tron, confirmed cancelled for Australia and not to be added to any
+    backlog.
     Two cheap verification agents settled batch 5's three for ~25 searches and
     batch 6's six for ~70, before any slot was spent — do that rather than
     folding the check into a family agent, because a negative removes the
@@ -1929,7 +2171,11 @@ pricing was internally inconsistent across sources.
 - **Deepal E07** — a March 2026 stop-sale over an ADR 34/03 child-anchorage failure is documented;
   the resumption of deliveries is not confirmed from a primary source.
 - **Maserati Grecale Folgore, Audi Q8 e-tron, Porsche Cayenne Electric, LDV eT60** — all four are
-  on the on-sale/run-out/just-launched boundary and were flagged as unconfirmed.
+  on the on-sale/run-out/just-launched boundary and were flagged as unconfirmed. **Two are now
+  settled and both were NEGATIVE: the LDV eT60 (batch 1, 2026-07-30) and the Audi Q8 e-tron
+  (batch 8, 2026-08-01 — Audi's own page reads "no longer available to order").** That is two for
+  two against this flag, so treat the remaining pair — Maserati Grecale Folgore and Porsche Cayenne
+  Electric — as more likely off than on, and verify both before spending a slot.
 - **Skywell BE11 and Forthing Taikon 5** — placed on opposite sides of the pre-launch line with low
   confidence in both calls. **The Forthing half is now settled (batch 4, 2026-07-31): it is on sale,
   since June 2026, and the survey's "on sale" call was right.** Its four grades are two BEV and two
