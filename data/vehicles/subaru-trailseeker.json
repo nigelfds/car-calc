@@ -1,0 +1,42 @@
+[
+  {
+    "id": "subaru-trailseeker-awd",
+    "familyId": "subaru-trailseeker",
+    "make": "Subaru",
+    "model": "Trailseeker",
+    "variant": "AWD",
+    "bodyType": "SUV",
+    "listPrice": 63990,
+    "batteryKwh": 71,
+    "rangeKm": 533,
+    "consumptionKwhPer100km": 15.4,
+    "bootLitresSeatsUp": 609,
+    "bootLitresSeatsDown": 1694,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1720,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "subaru-trailseeker-awd-touring",
+    "familyId": "subaru-trailseeker",
+    "make": "Subaru",
+    "model": "Trailseeker",
+    "variant": "AWD Touring",
+    "bodyType": "SUV",
+    "listPrice": 69990,
+    "batteryKwh": 71,
+    "rangeKm": 488,
+    "consumptionKwhPer100km": 16.8,
+    "bootLitresSeatsUp": 595,
+    "bootLitresSeatsDown": 1680,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1880,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  }
+]

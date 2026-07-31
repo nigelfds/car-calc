@@ -1,0 +1,27 @@
+{
+  "id": "hyundai-ioniq-9",
+  "summary": "Hyundai sells its three-row electric SUV in Australia as a single loaded Calligraphy grade, and reviewers agree it is the most convincing long-distance family EV on the market — 600km WLTP, 233kW DC charging and a third row adults actually fit in. The disagreement is entirely about price and polish: at $119,750 before on-roads it is the dearest car Hyundai has ever sold here, several thousand above a comparably equipped Kia EV9, and testers split over whether the firm 21-inch ride and a cabin borrowed from much cheaper Hyundais justify it. Real-world efficiency reports vary widely, from about 12.7kWh/100km around town to 23.4kWh/100km on country touring.",
+  "pros": [
+    "600km WLTP range from the 110.3kWh pack is the longest claim of any three-row EV sold here — about 80km more than a Kia EV9 Earth and 95km more than an EV9 GT-Line",
+    "800V E-GMP charging takes 10-80 per cent in about 24 minutes, and Australian testers have measured over 200kW against the 233kW peak",
+    "Rated to tow 2500kg braked with trailer pre-wiring and Trailer Stability Assist standard, matching the EV9 and beating most large EVs",
+    "Third row seats adults rather than children — a 175cm CarsGuide tester fit comfortably — with its own climate zone, reclining backrests and USB-C outlets",
+    "One grade means no upselling: Nappa leather, 14-speaker Bose, heat pump, head-up display, surround-view and Highway Driving Assist 2 are all standard"
+  ],
+  "cons": [
+    "At $119,750 plus on-road costs it clears both the $75,000 and $91,661 FBT caps, so there is no novated-lease exemption, and a Kia EV9 Earth covers the same brief for $13,250 less",
+    "Hyundai's unconditional cover is five years/unlimited km — the advertised seven years lapses unless every service is done inside the Hyundai dealer network, where Kia's seven years has no such condition",
+    "Only one battery and one drivetrain are offered, with no cheaper rear-drive entry point; the six-seat layout ($2,000) and digital side mirrors ($3,000) are options, not lower-priced grades",
+    "338 litres behind the third row is modest for a 5.06m, 2.7-tonne vehicle, and there is no spare wheel at any price — only a tyre mobility kit"
+  ],
+  "sources": [
+    "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-Sheet.pdf",
+    "https://www.chasingcars.com.au/reviews/large-suvs/hyundai-ioniq-9-calligraphy-2025-australian-first-drive/",
+    "https://www.carsguide.com.au/ev/hyundai-ioniq-9-99256",
+    "https://www.carsales.com.au/editorial/details/hyundai-ioniq-9-calligraphy-2025-review-150105/",
+    "https://evcentral.com.au/hyundai-ioniq-9-pricing-and-spec-announced-electric-family-suv-will-be-offered-in-australia-as-one-expensive-model/",
+    "https://thedriven.io/2025/07/16/ioniq-9-hyundai-announces-pricing-for-its-biggest-and-most-expensive-ev-to-date/",
+    "https://www.carexpert.com.au/hyundai/ioniq-9/pricing"
+  ],
+  "sourcedAt": "2026-07-31"
+}

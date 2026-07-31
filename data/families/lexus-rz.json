@@ -1,0 +1,34 @@
+{
+  "id": "lexus-rz",
+  "summary": "The RZ is Lexus Australia's only battery-electric model, a five-seat mid-size SUV on the Toyota e-TNGA platform it shares with the bZ4X, and the 2026 update cut list prices by $36,559 to $42,059 a grade while adding power, a bigger battery and 22kW AC charging. Reviewers agree the repositioning transformed the car's value case — CarExpert calls the cuts the difference between an also-ran and a genuine contender, EV Central scored it 4/5 — and praise the ride, steering and cabin quality. The persistent criticism is range: 437-460km WLTP is short for the money when the BMW iX3, Volvo EX60 and Mercedes-Benz GLC EV are arriving with 700-800km claims, and road roar and thin front cabin storage draw complaints too.",
+  "pros": [
+    "The 2026 update is a permanent RRP reduction, not a run-out campaign: the entry RZ500e Luxury fell from $121,059 to $84,500 and the Sports Luxury from $133,059 to $91,000, which puts both under the $91,661 fuel-efficient LCT threshold and so inside the FBT exemption for a novated lease — the outgoing car sat well above it",
+    "AC charging doubled to 22kW, so an owner with three-phase power refills the pack in about three and a half hours rather than seven; DC peak is 150kW for a 10-80 per cent stop of roughly 30 minutes, and the pack now has its own water-cooling circuit",
+    "Lexus Australia's five-year unlimited-kilometre warranty is unconditional, the drive battery is covered separately for eight years/160,000km, and capped-price servicing is $395 per visit at 12-month/15,000km intervals — Toyota's longer seven-year driveline term applies only if every service is completed on schedule within the dealer network",
+    "Rated to tow 1500kg braked, double the 750kg of the Toyota bZ4X 2WD and more than most mid-size electric SUVs at the price, and the 522-litre boot expands to 1451 litres with the rear seats down",
+    "The RZ550e F Sport is the first car sold new in Australia with a steering yoke and steer-by-wire; lock-to-lock is about 400 degrees total, which CarExpert found genuinely easier for parking and manoeuvring once recalibrated"
+  ],
+  "cons": [
+    "Range is the range's defining weakness: 460km WLTP for the RZ500e and 437km for the RZ550e F Sport, where the incoming BMW iX3 and Volvo EX60 claim around 800km and the Mercedes-Benz GLC EV 713km — CarsGuide and CarExpert both list sub-500km range as their headline dislike",
+    "The RZ550e F Sport at $105,000 sits above the $91,661 fuel-efficient LCT threshold, so it attracts luxury car tax and is not eligible for the FBT exemption on a novated lease, while the $91,000 Sports Luxury clears the threshold by just $661 — the yoke costs a buyer the tax break, not just the money",
+    "The predecessor's list price was cut by up to $42,059 in a single model-year change after what Lexus itself attributed to very low sales, which is a severe signal for residual values on both the outgoing car and the new one",
+    "There is no glovebox — EV Central notes it has been replaced by a passenger-side knee warmer — front cabin storage is limited, and there is no spare wheel of any kind, only a repair kit",
+    "The F Sport's Interactive Manual Drive simulates eight gears with synthesised engine noise that CarExpert called 'more grating than engaging' and switched off, and CarsGuide described as 'cringe-worthy'; road roar over coarse-chip surfaces is a consistent complaint across Australian reviews"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-lexus-rz-price-and-specs-electric-suv-prices-slashed-by-up-to-42000",
+    "https://www.carexpert.com.au/car-reviews/2026-lexus-rz-review-quick-drive",
+    "https://www.carsguide.com.au/car-news/more-than-35000-price-cut-for-updated-2026-lexus-rz-as-it-tackles-bmw-ix-genesis-gv60-and",
+    "https://www.carsguide.com.au/ev/lexus-rz-101813",
+    "https://www.carsguide.com.au/lexus/rz500e/2026",
+    "https://evcentral.com.au/2026-lexus-rz-review-at-42k-less-than-its-predecessor-the-lexus-ev-looks-sharp-against-bmw-audi-tesla-and-volvo/",
+    "https://www.carsales.com.au/research/lexus/rz/2026/rz500e-sports-luxury/",
+    "https://thebeep.com.au/car-news/2026-lexus-rz-price-australia",
+    "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+    "https://ev-database.org/car/3295/Lexus-RZ-550e-F-SPORT",
+    "https://ev-database.org/car/3294/Lexus-RZ-500e",
+    "https://www.whichcar.com.au/news/lexus-rz-600e-f-sport-performance",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-31"
+}

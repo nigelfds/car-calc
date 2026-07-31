@@ -1,0 +1,42 @@
+[
+  {
+    "id": "suzuki-e-vitara-motion",
+    "familyId": "suzuki-e-vitara",
+    "make": "Suzuki",
+    "model": "e Vitara",
+    "variant": "Motion",
+    "bodyType": "SUV",
+    "listPrice": 47131,
+    "batteryKwh": 47.8,
+    "rangeKm": 344,
+    "consumptionKwhPer100km": 14.9,
+    "bootLitresSeatsUp": 238,
+    "bootLitresSeatsDown": 562,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1450,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "suzuki-e-vitara-ultra",
+    "familyId": "suzuki-e-vitara",
+    "make": "Suzuki",
+    "model": "e Vitara",
+    "variant": "Ultra ALLGRIP-e AWD",
+    "bodyType": "SUV",
+    "listPrice": 55768,
+    "batteryKwh": 59.8,
+    "rangeKm": 395,
+    "consumptionKwhPer100km": 16.6,
+    "bootLitresSeatsUp": 238,
+    "bootLitresSeatsDown": 562,
+    "seats": 5,
+    "towKg": 750,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1600,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  }
+]

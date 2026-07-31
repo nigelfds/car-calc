@@ -1,0 +1,30 @@
+{
+  "id": "hyundai-elexio",
+  "summary": "The Elexio is Hyundai's China-built mid-size electric SUV, mechanically close to the Kia EV5 but sold only as a single 160kW front-driver on an 88.1kWh LFP pack in two grades, $58,990 and $61,990 before on-road costs. Australian reviewers consistently rate its locally tuned ride and steering above the EV5's, and the 562km/546km WLTP claims are among the longest at the price, but they are equally consistent that the 38-minute 10-80% DC charge and the button-free 27-inch screen are the weak points. Where opinion splits is value: some call it well-priced against a Tesla Model Y, others note a BYD Sealion 7 or Geely EX5 does the same job for less, which is why Hyundai has been running drive-away campaigns since launch.",
+  "pros": [
+    "562km WLTP on the base grade's 18-inch wheels and 546km on the Elite's 20s, longer than the Kia EV5 Air Long Range's 555km claim from the same 88.1kWh pack",
+    "Australian-tuned suspension: Chasing Cars and CarExpert both rate its body control and highway composure clearly above the mechanically related Kia EV5",
+    "506L boot expanding to 1,540L, 1,250kg braked towing and a 4kW three-pin V2L outlet, so it tows and camps like the EV5 rather than a Kona Electric (rated 0kg)",
+    "24-month/30,000km service intervals with capped-price servicing quoted at about $1,897 over four years, roughly $475 a year",
+    "Warranty is 5 years/unlimited km unconditionally, extending to 7 years/unlimited km only if every scheduled service is completed within the Hyundai dealer network; the high-voltage battery is covered 8 years/160,000km either way"
+  ],
+  "cons": [
+    "400V architecture peaking at 150kW takes 38 minutes for 10-80%, against roughly half that in Hyundai's own 800V Ioniq 5, and AC charging is capped at 10kW",
+    "Tested consumption runs 20-20.8kWh/100km against the 18.2kWh/100km ADR/WLTP claim, and Chasing Cars measured a real-world 424km rather than the Elite's 546km",
+    "27-inch screen with no physical switchgear for climate or drive modes, and reviewers report the head-up display disappears behind polarised sunglasses",
+    "Front-wheel drive only at 160kW/310Nm and 8.9s to 100km/h, with no AWD grade to answer the Kia EV5 Earth or GT-Line",
+    "No spare wheel, tyre mobility kit only, and Hyundai was already discounting to $55,990/$59,990 drive-away within months of launch, which points to soft early resale"
+  ],
+  "sources": [
+    "https://www.hyundai.com/au/en/cars/eco/elexio",
+    "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+    "https://www.carexpert.com.au/car-reviews/2026-hyundai-elexio-review",
+    "https://www.carexpert.com.au/car-news/2026-hyundai-elexio-new-base-model-priced-for-australia",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/hyundai-elexio-elite-2026-review/",
+    "https://www.carsguide.com.au/ev/hyundai-elexio-100920",
+    "https://www.carsguide.com.au/hyundai/elexio/price/2026",
+    "https://evcentral.com.au/2026-hyundai-elexio-review-hyundai-calls-on-china-to-help-it-invigorate-its-ev-sales-in-australia-should-you-be-tempted/",
+    "https://zecar.com/reviews/hyundai-elexio-pricing-features-specifications"
+  ],
+  "sourcedAt": "2026-07-31"
+}

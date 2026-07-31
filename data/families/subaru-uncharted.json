@@ -1,0 +1,28 @@
+{
+  "id": "subaru-uncharted",
+  "summary": "Subaru's third and cheapest EV is the electric twin of the Toyota C-HR+ and lands in Australia as a single, fully-loaded dual-motor AWD grade at $59,990 before on-roads, with 252kW, a 74.7kWh gross (71kWh usable) battery and 522km of WLTP range. Australian coverage so far is launch pricing and specification analysis rather than road tests - no local drive review had been published at the time of writing - and the consensus argument is about value: it is quick, generously equipped and the only genuine all-wheel-drive small electric SUV near the price, but a Kia EV3 starts more than $12,000 below it. Overseas first drives praise the ride and body control while flagging the fastback roofline's cost to rear headroom and boot space.",
+  "pros": [
+    "Only one grade and it is the loaded one: 20-inch alloys, 14-inch touchscreen, 10-speaker Harman Kardon audio, heated front and rear outboard seats, heated wheel, power tailgate, 360-degree camera and 1500W V2L are all standard",
+    "252kW dual-motor Symmetrical AWD for a 5.0-second 0-100km/h, with 211mm of ground clearance and dual-mode X-Mode - no front-drive-only rival at the price offers both",
+    "22kW three-phase AC charging (0-100% in about four hours) alongside 150kW DC, where most small electric SUVs cap AC at 7-11kW",
+    "Uses the same 74.7kWh gross battery pack and 252kW output as the larger Solterra AWD in a lighter, quicker body for $2,000 less list price",
+    "Five-star ANCAP rating published June 2026 (88% adult, 86% child occupant protection), carried across from Euro NCAP testing of the Toyota C-HR+ and bZ4X"
+  ],
+  "cons": [
+    "Subaru Australia's own specification sheet lists no braked or unbraked towing rating at all, where the Solterra and Trailseeker are both rated to 1,500kg",
+    "403 litres behind the rear seat and 1,089 litres folded is small for the money, and the fastback roofline costs rear headroom - the panoramic roof cuts the to-ceiling figure further, from 1,323 to 1,304 litres",
+    "$59,990 is top-of-segment for a small electric SUV: a Kia EV3 opens at $47,600, and Subaru's own recommended drive-away is about $65,400-$65,600 depending on postcode",
+    "Subaru cut Solterra prices twice and Trailseeker prices by $4,000 on the very day the Uncharted was priced, which is an uncomfortable precedent for early-buyer resale",
+    "16.0kWh/100km WLTP is only average efficiency for a compact SUV, and the 20-inch wheels are the sole fitment - there is no smaller-wheel, longer-range configuration as offered overseas"
+  ],
+  "sources": [
+    "https://www.subaru.com.au/uncharted/2026/specs",
+    "https://www.carexpert.com.au/car-news/2026-subaru-uncharted-price-and-specs",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-subaru-uncharted-price-specs-release-date.html",
+    "https://www.chasingcars.com.au/news/future-cars/2026-subaru-uncharted-confirmed-for-australia-as-electric-toyota-c-hr-twin-and-crosstrek-sibling/",
+    "https://www.carsales.com.au/editorial/details/2026-subaru-uncharted-confirmed-for-australia-151681/",
+    "https://thedriven.io/2026/05/14/subaru-launches-new-uncharted-electric-suv-in-australia-cuts-prices-on-solterra-and-trailseeker/",
+    "https://www.ancap.com.au/safety-ratings/subaru/uncharted/ab0a6e"
+  ],
+  "sourcedAt": "2026-07-31"
+}

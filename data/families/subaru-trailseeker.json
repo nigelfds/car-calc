@@ -1,0 +1,27 @@
+{
+  "id": "subaru-trailseeker",
+  "summary": "The Trailseeker is a longer, boxier take on the Solterra that Subaru pitches as an electric Outback: 280kW, 4.5 seconds to 100km/h and 211mm of ground clearance, with a 609-litre boot and a 1,500kg braked tow rating. Australian reviewers rate the drivetrain and comfort highly - CarsGuide gave it 8.1/10 - but consistently mark it down for efficiency, noting it travels less far than the smaller Solterra on the same battery. Opinion splits on whether it earns its price: Chasing Cars argues Subaru stopped short of real off-road hardware and that a petrol Outback makes more sense for most buyers, while CarsGuide sees the $63,990 base AWD as the pick of the two grades.",
+  "pros": [
+    "Subaru's fastest production car sold here - 280kW and 0-100km/h in 4.5 seconds, quicker than a Tesla Model Y Long Range",
+    "211mm ground clearance with dual-mode X-Mode, plus a 1,500kg braked tow rating that most mid-size EVs cannot match",
+    "609L boot (595L on the Touring) expanding to about 1,694L - larger than the Solterra's 410L and the bZ4X's 452L",
+    "Capped-price servicing at roughly $197 a visit over 5 years/75,000km, and 22kW three-phase AC charging on both grades",
+    "Subaru cut both grades by $4,000 on 14 May 2026, so the Touring lands at $69,990 and the whole range stays under the $75,000 FBT threshold"
+  ],
+  "cons": [
+    "Range is the weak point: 533km WLTP on the base AWD and only 488km on the Touring's 20-inch wheels, less than the smaller Solterra gets from the same pack (74.7kWh gross, 71kWh usable)",
+    "150kW peak DC charging is slow for the money - 10-80% takes about 30 minutes when rivals at this price do it in 20",
+    "No spare wheel on either grade, only a puncture repair kit, which undercuts the all-terrain positioning",
+    "A $4,000 price cut within a month of launch, on top of two Solterra cuts in six months, points to soft resale for Subaru's EVs",
+    "5-year/unlimited-km warranty trails Kia's 7 and BYD's 6, and there are no over-the-air updates or connected-car services"
+  ],
+  "sources": [
+    "https://www.subaru.com.au/trailseeker/2026/specs",
+    "https://www.carsguide.com.au/ev/subaru-trailseeker-101907",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/subaru-trailseeker-2026-review/",
+    "https://www.carexpert.com.au/car-news/2026-subaru-trailseeker-price-and-specs",
+    "https://zecar.com/reviews/subaru-solterra-trailseeker-price-cut-may-2026",
+    "https://newsroom.toyota.eu/the-new-toyota-bz4x-touring-an-suv-for-electrified-adventures/"
+  ],
+  "sourcedAt": "2026-07-31"
+}

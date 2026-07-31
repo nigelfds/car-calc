@@ -1,0 +1,22 @@
+[
+  {
+    "id": "hyundai-ioniq-9-calligraphy-awd",
+    "familyId": "hyundai-ioniq-9",
+    "make": "Hyundai",
+    "model": "Ioniq 9",
+    "variant": "Calligraphy AWD",
+    "bodyType": "SUV",
+    "listPrice": 119750,
+    "batteryKwh": 107,
+    "rangeKm": 600,
+    "consumptionKwhPer100km": 20.6,
+    "bootLitresSeatsUp": 338,
+    "bootLitresSeatsDown": 2410,
+    "seats": 7,
+    "towKg": 2500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2700,
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-07-31"
+  }
+]

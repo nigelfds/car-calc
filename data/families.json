@@ -1155,6 +1155,36 @@
     "sourcedAt": "2026-07-31"
   },
   {
+    "id": "hyundai-elexio",
+    "summary": "The Elexio is Hyundai's China-built mid-size electric SUV, mechanically close to the Kia EV5 but sold only as a single 160kW front-driver on an 88.1kWh LFP pack in two grades, $58,990 and $61,990 before on-road costs. Australian reviewers consistently rate its locally tuned ride and steering above the EV5's, and the 562km/546km WLTP claims are among the longest at the price, but they are equally consistent that the 38-minute 10-80% DC charge and the button-free 27-inch screen are the weak points. Where opinion splits is value: some call it well-priced against a Tesla Model Y, others note a BYD Sealion 7 or Geely EX5 does the same job for less, which is why Hyundai has been running drive-away campaigns since launch.",
+    "pros": [
+      "562km WLTP on the base grade's 18-inch wheels and 546km on the Elite's 20s, longer than the Kia EV5 Air Long Range's 555km claim from the same 88.1kWh pack",
+      "Australian-tuned suspension: Chasing Cars and CarExpert both rate its body control and highway composure clearly above the mechanically related Kia EV5",
+      "506L boot expanding to 1,540L, 1,250kg braked towing and a 4kW three-pin V2L outlet, so it tows and camps like the EV5 rather than a Kona Electric (rated 0kg)",
+      "24-month/30,000km service intervals with capped-price servicing quoted at about $1,897 over four years, roughly $475 a year",
+      "Warranty is 5 years/unlimited km unconditionally, extending to 7 years/unlimited km only if every scheduled service is completed within the Hyundai dealer network; the high-voltage battery is covered 8 years/160,000km either way"
+    ],
+    "cons": [
+      "400V architecture peaking at 150kW takes 38 minutes for 10-80%, against roughly half that in Hyundai's own 800V Ioniq 5, and AC charging is capped at 10kW",
+      "Tested consumption runs 20-20.8kWh/100km against the 18.2kWh/100km ADR/WLTP claim, and Chasing Cars measured a real-world 424km rather than the Elite's 546km",
+      "27-inch screen with no physical switchgear for climate or drive modes, and reviewers report the head-up display disappears behind polarised sunglasses",
+      "Front-wheel drive only at 160kW/310Nm and 8.9s to 100km/h, with no AWD grade to answer the Kia EV5 Earth or GT-Line",
+      "No spare wheel, tyre mobility kit only, and Hyundai was already discounting to $55,990/$59,990 drive-away within months of launch, which points to soft early resale"
+    ],
+    "sources": [
+      "https://www.hyundai.com/au/en/cars/eco/elexio",
+      "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+      "https://www.carexpert.com.au/car-reviews/2026-hyundai-elexio-review",
+      "https://www.carexpert.com.au/car-news/2026-hyundai-elexio-new-base-model-priced-for-australia",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/hyundai-elexio-elite-2026-review/",
+      "https://www.carsguide.com.au/ev/hyundai-elexio-100920",
+      "https://www.carsguide.com.au/hyundai/elexio/price/2026",
+      "https://evcentral.com.au/2026-hyundai-elexio-review-hyundai-calls-on-china-to-help-it-invigorate-its-ev-sales-in-australia-should-you-be-tempted/",
+      "https://zecar.com/reviews/hyundai-elexio-pricing-features-specifications"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "hyundai-inster",
     "summary": "Australian reviewers consistently praise the Inster's cleverly packaged, unexpectedly roomy cabin and its agile, fun-to-drive character in city conditions, with several noting it feels bigger inside than its tiny footprint suggests. The main point of criticism across CarsGuide, Zecar and Carscoops is value: at its current pricing the Inster sits noticeably above key budget-EV rivals like the BYD Dolphin and GWM Ora, undercutting its case as an affordable city runabout. Interior plastics are widely described as hard and budget-grade, and the rear bench is limited to two occupants rather than three.",
     "pros": [
@@ -1231,6 +1261,33 @@
       "https://www.carexpert.com.au/car-news/hyundai-slashes-prices-across-its-ev-range"
     ],
     "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "hyundai-ioniq-9",
+    "summary": "Hyundai sells its three-row electric SUV in Australia as a single loaded Calligraphy grade, and reviewers agree it is the most convincing long-distance family EV on the market — 600km WLTP, 233kW DC charging and a third row adults actually fit in. The disagreement is entirely about price and polish: at $119,750 before on-roads it is the dearest car Hyundai has ever sold here, several thousand above a comparably equipped Kia EV9, and testers split over whether the firm 21-inch ride and a cabin borrowed from much cheaper Hyundais justify it. Real-world efficiency reports vary widely, from about 12.7kWh/100km around town to 23.4kWh/100km on country touring.",
+    "pros": [
+      "600km WLTP range from the 110.3kWh pack is the longest claim of any three-row EV sold here — about 80km more than a Kia EV9 Earth and 95km more than an EV9 GT-Line",
+      "800V E-GMP charging takes 10-80 per cent in about 24 minutes, and Australian testers have measured over 200kW against the 233kW peak",
+      "Rated to tow 2500kg braked with trailer pre-wiring and Trailer Stability Assist standard, matching the EV9 and beating most large EVs",
+      "Third row seats adults rather than children — a 175cm CarsGuide tester fit comfortably — with its own climate zone, reclining backrests and USB-C outlets",
+      "One grade means no upselling: Nappa leather, 14-speaker Bose, heat pump, head-up display, surround-view and Highway Driving Assist 2 are all standard"
+    ],
+    "cons": [
+      "At $119,750 plus on-road costs it clears both the $75,000 and $91,661 FBT caps, so there is no novated-lease exemption, and a Kia EV9 Earth covers the same brief for $13,250 less",
+      "Hyundai's unconditional cover is five years/unlimited km — the advertised seven years lapses unless every service is done inside the Hyundai dealer network, where Kia's seven years has no such condition",
+      "Only one battery and one drivetrain are offered, with no cheaper rear-drive entry point; the six-seat layout ($2,000) and digital side mirrors ($3,000) are options, not lower-priced grades",
+      "338 litres behind the third row is modest for a 5.06m, 2.7-tonne vehicle, and there is no spare wheel at any price — only a tyre mobility kit"
+    ],
+    "sources": [
+      "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-Sheet.pdf",
+      "https://www.chasingcars.com.au/reviews/large-suvs/hyundai-ioniq-9-calligraphy-2025-australian-first-drive/",
+      "https://www.carsguide.com.au/ev/hyundai-ioniq-9-99256",
+      "https://www.carsales.com.au/editorial/details/hyundai-ioniq-9-calligraphy-2025-review-150105/",
+      "https://evcentral.com.au/hyundai-ioniq-9-pricing-and-spec-announced-electric-family-suv-will-be-offered-in-australia-as-one-expensive-model/",
+      "https://thedriven.io/2025/07/16/ioniq-9-hyundai-announces-pricing-for-its-biggest-and-most-expensive-ev-to-date/",
+      "https://www.carexpert.com.au/hyundai/ioniq-9/pricing"
+    ],
+    "sourcedAt": "2026-07-31"
   },
   {
     "id": "hyundai-kona-electric",
@@ -1777,6 +1834,40 @@
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
     "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "lexus-rz",
+    "summary": "The RZ is Lexus Australia's only battery-electric model, a five-seat mid-size SUV on the Toyota e-TNGA platform it shares with the bZ4X, and the 2026 update cut list prices by $36,559 to $42,059 a grade while adding power, a bigger battery and 22kW AC charging. Reviewers agree the repositioning transformed the car's value case — CarExpert calls the cuts the difference between an also-ran and a genuine contender, EV Central scored it 4/5 — and praise the ride, steering and cabin quality. The persistent criticism is range: 437-460km WLTP is short for the money when the BMW iX3, Volvo EX60 and Mercedes-Benz GLC EV are arriving with 700-800km claims, and road roar and thin front cabin storage draw complaints too.",
+    "pros": [
+      "The 2026 update is a permanent RRP reduction, not a run-out campaign: the entry RZ500e Luxury fell from $121,059 to $84,500 and the Sports Luxury from $133,059 to $91,000, which puts both under the $91,661 fuel-efficient LCT threshold and so inside the FBT exemption for a novated lease — the outgoing car sat well above it",
+      "AC charging doubled to 22kW, so an owner with three-phase power refills the pack in about three and a half hours rather than seven; DC peak is 150kW for a 10-80 per cent stop of roughly 30 minutes, and the pack now has its own water-cooling circuit",
+      "Lexus Australia's five-year unlimited-kilometre warranty is unconditional, the drive battery is covered separately for eight years/160,000km, and capped-price servicing is $395 per visit at 12-month/15,000km intervals — Toyota's longer seven-year driveline term applies only if every service is completed on schedule within the dealer network",
+      "Rated to tow 1500kg braked, double the 750kg of the Toyota bZ4X 2WD and more than most mid-size electric SUVs at the price, and the 522-litre boot expands to 1451 litres with the rear seats down",
+      "The RZ550e F Sport is the first car sold new in Australia with a steering yoke and steer-by-wire; lock-to-lock is about 400 degrees total, which CarExpert found genuinely easier for parking and manoeuvring once recalibrated"
+    ],
+    "cons": [
+      "Range is the range's defining weakness: 460km WLTP for the RZ500e and 437km for the RZ550e F Sport, where the incoming BMW iX3 and Volvo EX60 claim around 800km and the Mercedes-Benz GLC EV 713km — CarsGuide and CarExpert both list sub-500km range as their headline dislike",
+      "The RZ550e F Sport at $105,000 sits above the $91,661 fuel-efficient LCT threshold, so it attracts luxury car tax and is not eligible for the FBT exemption on a novated lease, while the $91,000 Sports Luxury clears the threshold by just $661 — the yoke costs a buyer the tax break, not just the money",
+      "The predecessor's list price was cut by up to $42,059 in a single model-year change after what Lexus itself attributed to very low sales, which is a severe signal for residual values on both the outgoing car and the new one",
+      "There is no glovebox — EV Central notes it has been replaced by a passenger-side knee warmer — front cabin storage is limited, and there is no spare wheel of any kind, only a repair kit",
+      "The F Sport's Interactive Manual Drive simulates eight gears with synthesised engine noise that CarExpert called 'more grating than engaging' and switched off, and CarsGuide described as 'cringe-worthy'; road roar over coarse-chip surfaces is a consistent complaint across Australian reviews"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-lexus-rz-price-and-specs-electric-suv-prices-slashed-by-up-to-42000",
+      "https://www.carexpert.com.au/car-reviews/2026-lexus-rz-review-quick-drive",
+      "https://www.carsguide.com.au/car-news/more-than-35000-price-cut-for-updated-2026-lexus-rz-as-it-tackles-bmw-ix-genesis-gv60-and",
+      "https://www.carsguide.com.au/ev/lexus-rz-101813",
+      "https://www.carsguide.com.au/lexus/rz500e/2026",
+      "https://evcentral.com.au/2026-lexus-rz-review-at-42k-less-than-its-predecessor-the-lexus-ev-looks-sharp-against-bmw-audi-tesla-and-volvo/",
+      "https://www.carsales.com.au/research/lexus/rz/2026/rz500e-sports-luxury/",
+      "https://thebeep.com.au/car-news/2026-lexus-rz-price-australia",
+      "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+      "https://ev-database.org/car/3295/Lexus-RZ-550e-F-SPORT",
+      "https://ev-database.org/car/3294/Lexus-RZ-500e",
+      "https://www.whichcar.com.au/news/lexus-rz-600e-f-sport-performance",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-31"
   },
   {
     "id": "mazda-6e",
@@ -2501,6 +2592,92 @@
       "https://www.whichcar.com.au/news/2026-subaru-solterra-electric-mid-size-suv-lands-in-australia"
     ],
     "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "subaru-trailseeker",
+    "summary": "The Trailseeker is a longer, boxier take on the Solterra that Subaru pitches as an electric Outback: 280kW, 4.5 seconds to 100km/h and 211mm of ground clearance, with a 609-litre boot and a 1,500kg braked tow rating. Australian reviewers rate the drivetrain and comfort highly - CarsGuide gave it 8.1/10 - but consistently mark it down for efficiency, noting it travels less far than the smaller Solterra on the same battery. Opinion splits on whether it earns its price: Chasing Cars argues Subaru stopped short of real off-road hardware and that a petrol Outback makes more sense for most buyers, while CarsGuide sees the $63,990 base AWD as the pick of the two grades.",
+    "pros": [
+      "Subaru's fastest production car sold here - 280kW and 0-100km/h in 4.5 seconds, quicker than a Tesla Model Y Long Range",
+      "211mm ground clearance with dual-mode X-Mode, plus a 1,500kg braked tow rating that most mid-size EVs cannot match",
+      "609L boot (595L on the Touring) expanding to about 1,694L - larger than the Solterra's 410L and the bZ4X's 452L",
+      "Capped-price servicing at roughly $197 a visit over 5 years/75,000km, and 22kW three-phase AC charging on both grades",
+      "Subaru cut both grades by $4,000 on 14 May 2026, so the Touring lands at $69,990 and the whole range stays under the $75,000 FBT threshold"
+    ],
+    "cons": [
+      "Range is the weak point: 533km WLTP on the base AWD and only 488km on the Touring's 20-inch wheels, less than the smaller Solterra gets from the same pack (74.7kWh gross, 71kWh usable)",
+      "150kW peak DC charging is slow for the money - 10-80% takes about 30 minutes when rivals at this price do it in 20",
+      "No spare wheel on either grade, only a puncture repair kit, which undercuts the all-terrain positioning",
+      "A $4,000 price cut within a month of launch, on top of two Solterra cuts in six months, points to soft resale for Subaru's EVs",
+      "5-year/unlimited-km warranty trails Kia's 7 and BYD's 6, and there are no over-the-air updates or connected-car services"
+    ],
+    "sources": [
+      "https://www.subaru.com.au/trailseeker/2026/specs",
+      "https://www.carsguide.com.au/ev/subaru-trailseeker-101907",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/subaru-trailseeker-2026-review/",
+      "https://www.carexpert.com.au/car-news/2026-subaru-trailseeker-price-and-specs",
+      "https://zecar.com/reviews/subaru-solterra-trailseeker-price-cut-may-2026",
+      "https://newsroom.toyota.eu/the-new-toyota-bz4x-touring-an-suv-for-electrified-adventures/"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "subaru-uncharted",
+    "summary": "Subaru's third and cheapest EV is the electric twin of the Toyota C-HR+ and lands in Australia as a single, fully-loaded dual-motor AWD grade at $59,990 before on-roads, with 252kW, a 74.7kWh gross (71kWh usable) battery and 522km of WLTP range. Australian coverage so far is launch pricing and specification analysis rather than road tests - no local drive review had been published at the time of writing - and the consensus argument is about value: it is quick, generously equipped and the only genuine all-wheel-drive small electric SUV near the price, but a Kia EV3 starts more than $12,000 below it. Overseas first drives praise the ride and body control while flagging the fastback roofline's cost to rear headroom and boot space.",
+    "pros": [
+      "Only one grade and it is the loaded one: 20-inch alloys, 14-inch touchscreen, 10-speaker Harman Kardon audio, heated front and rear outboard seats, heated wheel, power tailgate, 360-degree camera and 1500W V2L are all standard",
+      "252kW dual-motor Symmetrical AWD for a 5.0-second 0-100km/h, with 211mm of ground clearance and dual-mode X-Mode - no front-drive-only rival at the price offers both",
+      "22kW three-phase AC charging (0-100% in about four hours) alongside 150kW DC, where most small electric SUVs cap AC at 7-11kW",
+      "Uses the same 74.7kWh gross battery pack and 252kW output as the larger Solterra AWD in a lighter, quicker body for $2,000 less list price",
+      "Five-star ANCAP rating published June 2026 (88% adult, 86% child occupant protection), carried across from Euro NCAP testing of the Toyota C-HR+ and bZ4X"
+    ],
+    "cons": [
+      "Subaru Australia's own specification sheet lists no braked or unbraked towing rating at all, where the Solterra and Trailseeker are both rated to 1,500kg",
+      "403 litres behind the rear seat and 1,089 litres folded is small for the money, and the fastback roofline costs rear headroom - the panoramic roof cuts the to-ceiling figure further, from 1,323 to 1,304 litres",
+      "$59,990 is top-of-segment for a small electric SUV: a Kia EV3 opens at $47,600, and Subaru's own recommended drive-away is about $65,400-$65,600 depending on postcode",
+      "Subaru cut Solterra prices twice and Trailseeker prices by $4,000 on the very day the Uncharted was priced, which is an uncomfortable precedent for early-buyer resale",
+      "16.0kWh/100km WLTP is only average efficiency for a compact SUV, and the 20-inch wheels are the sole fitment - there is no smaller-wheel, longer-range configuration as offered overseas"
+    ],
+    "sources": [
+      "https://www.subaru.com.au/uncharted/2026/specs",
+      "https://www.carexpert.com.au/car-news/2026-subaru-uncharted-price-and-specs",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-subaru-uncharted-price-specs-release-date.html",
+      "https://www.chasingcars.com.au/news/future-cars/2026-subaru-uncharted-confirmed-for-australia-as-electric-toyota-c-hr-twin-and-crosstrek-sibling/",
+      "https://www.carsales.com.au/editorial/details/2026-subaru-uncharted-confirmed-for-australia-151681/",
+      "https://thedriven.io/2026/05/14/subaru-launches-new-uncharted-electric-suv-in-australia-cuts-prices-on-solterra-and-trailseeker/",
+      "https://www.ancap.com.au/safety-ratings/subaru/uncharted/ab0a6e"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "suzuki-e-vitara",
+    "summary": "Suzuki's first battery-electric car in Australia is a 4.28m small SUV built in India on a BYD-supplied LFP battery, sold in Victoria as the 49kWh front-drive Motion and the 61kWh dual-motor Ultra. Reviewers broadly agree it drives well and feels a class above its price inside, and broadly agree it is priced above what its 344-395km WLTP range and 70kW DC charging justify against BYD, MG and Kia rivals. Suzuki publishes drive-away pricing only and no list price, and the launch figures rose $2,000-$3,000 once the 100-car introductory allocation ended.",
+    "pros": [
+      "Five years/unlimited kilometres of warranty with no servicing conditions attached — Suzuki Australia advertises no longer conditional term, unlike MG, Nissan or Hyundai, so the headline number is the number you actually get; the traction battery is separately covered for 8 years/160,000km.",
+      "The Ultra's ALLGRIP-e dual-motor all-wheel drive makes 135kW/307Nm and runs 0-100km/h in 7.4 seconds; the BYD Atto 2, MG S5 EV and Kia EV3 rivals it is cross-shopped against are front-drive only.",
+      "The rear bench slides and reclines, so boot space moves between 238 litres with maximum rear legroom and 306 litres with the bench forward, and 562 litres with the seats folded — you choose legroom or luggage per trip.",
+      "Capped-price servicing is covered by Suzuki's 5-year/100,000km Genuine Service Program at 12-month/20,000km intervals, and a Type 2 AC charging cable Suzuki values at over $1,000 is standard on both grades.",
+      "Suzuki has one of the larger established dealer and parts networks in regional Australia, which is a real difference from the newer Chinese brands the e Vitara is priced against."
+    ],
+    "cons": [
+      "At $49,990 and $58,990 drive-away post-introductory, it is roughly $10,000 dearer than a BYD Atto 2 and above the MG S5 EV and Kia EV3 while offering less range than any of them — CarExpert and EV Central both make price the central criticism.",
+      "CarsGuide measured about 295km in the Ultra against its 395km WLTP claim, a shortfall near 100km, and recorded 17.9kWh/100km against the 16.5kWh/100km official figure.",
+      "DC charging peaks around 70kW for a 45-minute 10-80% stop on both battery sizes — slow for 2026 — and there is no vehicle-to-load outlet.",
+      "Four stars from ANCAP in 2026, with 77% adult occupant protection and no head-protecting centre airbag; most direct rivals hold five stars.",
+      "Victorian buyers get two grades only. The 61kWh front-drive Ultra — the longest-range e Vitara at 426km WLTP, at $54,990 drive-away — is sold solely by the separate Suzuki Queensland distributor covering Queensland and the Northern Rivers of NSW, and cannot be ordered here."
+    ],
+    "sources": [
+      "https://www.suzuki.com.au/vehicles/electric/e-vitara/",
+      "https://www.carexpert.com.au/car-news/2026-suzuki-e-vitara-priced-from-46990-drive-away-over-10k-more-than-byd-atto-2",
+      "https://www.carexpert.com.au/car-reviews/2026-suzuki-e-vitara-review-quick-drive-1",
+      "https://www.carsguide.com.au/ev/suzuki-e-vitara-ultra-101977",
+      "https://www.carsguide.com.au/ev/suzuki-e-vitara-101075",
+      "https://www.carsguide.com.au/car-news/2026-suzuki-e-vitara-compact-electric-suv-price-announced-for-australia-as-it-prepares-to",
+      "https://www.carsales.com.au/research/suzuki/e-vitara/",
+      "https://evcentral.com.au/suzuki-e-vitara-priced-small-electric-suv-arrives-under-47k-but-rises-are-coming/",
+      "https://thedriven.io/2026/04/08/suzuki-gets-four-star-ancap-safety-rating-for-its-first-ev-in-australia/",
+      "https://ev-database.org/uk/car/3213/Suzuki-e-VITARA-61-kWh-4WD-AllGrip"
+    ],
+    "sourcedAt": "2026-07-31"
   },
   {
     "id": "tesla-model-3",
