@@ -1,0 +1,42 @@
+[
+  {
+    "id": "mg-s6-essence-rwd",
+    "familyId": "mg-s6",
+    "make": "MG",
+    "model": "S6 EV",
+    "variant": "Essence RWD",
+    "bodyType": "SUV",
+    "listPrice": 47130,
+    "batteryKwh": 74.3,
+    "rangeKm": 530,
+    "consumptionKwhPer100km": 14.0,
+    "bootLitresSeatsUp": 581,
+    "bootLitresSeatsDown": 1690,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1650,
+    "depreciationCurve": [1, 0.73, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "mg-s6-essence-awd",
+    "familyId": "mg-s6",
+    "make": "MG",
+    "model": "S6 EV",
+    "variant": "Essence AWD",
+    "bodyType": "SUV",
+    "listPrice": 53848,
+    "batteryKwh": 74.3,
+    "rangeKm": 485,
+    "consumptionKwhPer100km": 15.3,
+    "bootLitresSeatsUp": 581,
+    "bootLitresSeatsDown": 1690,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1850,
+    "depreciationCurve": [1, 0.73, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-07-31"
+  }
+]

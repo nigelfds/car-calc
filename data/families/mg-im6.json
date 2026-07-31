@@ -1,0 +1,35 @@
+{
+  "id": "mg-im6",
+  "summary": "The IM6 is the SUV half of the IM sub-brand that MG Australia sells through its own dealers as 'IM presented by MG' — a 4.9-metre, 2.3-tonne electric crossover whose specification-per-dollar Australian reviewers consistently call extraordinary, with 800V charging, air suspension and four-wheel steering at XPeng G6 and Zeekr 7X money. The consensus splits sharply on whether it drives like the money: CarExpert and the NRMA rate the cabin, comfort and equipment highly, while Chasing Cars scored the Performance 5.5/10 for a lumpy air-sprung ride, disconnected steering and intrusive driver aids. Reviewers converge again on ownership: real-world consumption of 22-27kWh/100km against WLTP claims, a five-year unconditional warranty well short of the MG-badged cars, and no Australian resale history yet.",
+  "pros": [
+    "800V architecture on Platinum and Performance takes up to 396kW DC for a claimed 30-80 per cent in 15.2 minutes — roughly triple the peak rate of a Tesla Model Y or XPeng G6; the 400V Premium is capped at 153kW and about 20 minutes",
+    "665L boot and 1640L folded on Premium and Platinum (646L/1621L on the Performance) plus a 32L frunk, comfortably ahead of the XPeng G6's 571L and the Zeekr 7X's 539L",
+    "The Performance's 572kW/802Nm dual-motor drivetrain claims 0-100km/h in 3.4 seconds at $77,990 drive-away, undercutting a Tesla Model Y Performance by roughly $17,000",
+    "Rear-axle steering with up to 12 degrees of angle gives a 10.18m turning circle, and Advanced Air Suspension with continuous damping is standard on the Performance and a $4,990 factory option on Premium and Platinum",
+    "Warranty extends to 7 years/unlimited km if every scheduled service is completed inside MG's dealer network, and the high-voltage battery is covered 8 years/160,000km however the car is serviced"
+  ],
+  "cons": [
+    "IM does not get MG's headline 10-year warranty: the unconditional term is 5 years/unlimited km (7 only with in-network servicing), behind the 7 years on MG's own cars, Kia and Chery, and the NRMA notes not every MG dealer is set up to service IM",
+    "Thirsty even on paper: the Performance's declared WLTP consumption is 23.4kWh/100km, against roughly 17.5kWh for a Zeekr 7X Performance and 14.5kWh for a Tesla Model Y Performance, and testers did worse again — CarExpert averaged 24.1kWh/100km and carsales 27kWh/100km, putting realistic touring range nearer 400km than the claimed 505km",
+    "Chasing Cars scored the Performance 5.5/10, describing the air-sprung ride as 'knobbly or lumpy' over ordinary urban surfaces and the steering as short on feedback despite the hardware",
+    "Rear vision is poor enough that CarExpert calls the mirror setup 'one of the worst', and the driver-assist warnings reset to on at every restart with no explanation of what triggered them",
+    "Ownership risk is unpriced: no spare tyre, servicing every 12 months/20,000km averaging $585.80 across the first five visits, and a brand with no Australian resale record that has already cut Platinum and Performance by $2,000-$3,000 each inside 12 months and is running $3,000 cashback on top"
+  ],
+  "sources": [
+    "https://mgmotor.com.au/vehicles/im6",
+    "https://mgmotor.com.au/configurator/im6",
+    "https://mgmotor.com.au/explore/warranty",
+    "https://www.carexpert.com.au/car-news/2025-mg-im6-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2025-im6-review",
+    "https://www.carexpert.com.au/car-news/im-presented-by-mg-motor-model-range-guide",
+    "https://www.chasingcars.com.au/reviews/large-suvs/mg-im6-performance-2025-review/",
+    "https://www.carsguide.com.au/ev/mg-im6-performance-99379",
+    "https://www.carsguide.com.au/mg/im6/price/2026",
+    "https://www.carsales.com.au/editorial/details/im-presented-by-mg-im6-performance-2026-review-151767/",
+    "https://www.carsales.com.au/research/mg/im6/2026/platinum/",
+    "https://www.mynrma.com.au/open-road/car-reviews/mg/2025-im5-and-im6-review",
+    "https://zecar.com/reviews/mg-july-2026-ev-phev-deals-finance-cashback",
+    "https://ev-database.org/uk/car/3248/MG-IM6-Performance"
+  ],
+  "sourcedAt": "2026-07-31"
+}

@@ -843,6 +843,38 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "forthing-taikon-5",
+    "summary": "The Taikon 5 is the first model from Forthing, a Dongfeng sub-brand distributed in Australia by Ateco, and it landed in June 2026 as the cheapest mid-size electric SUV on sale here. The battery-electric grades share one 150kW front-drive powertrain and a 64.4kWh LFP pack rated at 427km WLTP, so the Luxury-to-Exclusive step buys trim rather than range; a range-extender version of the same body is sold alongside them and is excluded here. No Australian outlet had road-tested it at the research date, and the New Zealand launch reviews that exist split over whether the electric version's softer, less resolved ride is a fair trade for its sharper acceleration and low price.",
+    "pros": [
+      "Cheapest mid-size electric SUV in Australia at launch: $38,990 drive-away for the BEV Luxury, roughly $6,000 under a GAC Aion V Premium and $8,000 under a Leapmotor C10 Style on a comparable drive-away basis",
+      "1500kg braked towing on both BEV grades per Forthing's own June 2026 spec sheet, matching a Leapmotor C10 where the similarly priced GAC Aion V has no published towing rating at all",
+      "541-litre boot expanding to 1480 litres, against 427/978 litres for a GAC Aion V and 300/1079 litres for a Chery E5",
+      "Unconditional seven-year/200,000km vehicle warranty with no dealer-servicing strings, plus an eight-year/200,000km battery warranty guaranteeing at least 70 per cent capacity; roadside assistance extends to five years but only if every scheduled service is done at a Forthing service centre",
+      "Base Luxury already includes a 14.6-inch screen, wireless CarPlay and Android Auto, 10-way power driver's seat with ventilation and massage, 19-inch alloys, 3.5kW V2L, AEB, adaptive cruise and blind-spot monitoring"
+    ],
+    "cons": [
+      "Unrated by ANCAP at launch, and the car ships without driver-attention monitoring or e-call, which rules out a five-star result under the current protocol",
+      "80kW peak DC charging is slow for the segment, giving 30-80 per cent in about 30 minutes against roughly 24 minutes for 10-80 per cent on a 180kW GAC Aion V",
+      "Only 14 Forthing dealers nationally (three in Victoria) and no capped-price servicing programme announced, so servicing costs and resale are entirely unproven",
+      "Forthing Australia publishes drive-away pricing only, and the campaign is restricted to new stock vehicles with no options while stock lasts, so there is no published list price for this car anywhere",
+      "No energy-consumption figure is published in Australia at all, and the 427km WLTP claim sits 27km above the 400km WLTP figure Forthing quotes for the identical 64.4kWh car in New Zealand"
+    ],
+    "sources": [
+      "https://www.forthing.com.au/new-vehicles/taikon-5-electric/",
+      "https://www.forthing.com.au/warranty/",
+      "https://www.forthing.com.au/find-a-dealer/",
+      "https://www.carexpert.com.au/car-news/2026-forthing-taikon-5-price-and-specs",
+      "https://www.carsguide.com.au/car-news/2026-forthing-taikon-5-pricing-and-specs-revealed-as-new-rival-to-the-jaecoo-j5-ev-and-byd",
+      "https://www.chasingcars.com.au/news/new-car-prices/forthing-taikon-5-2026-price-beating-byd-sealion-6-rival-detailed-in-both-plug-in-and-bev-guise-ahead-of-aussie-debut/",
+      "https://thedriven.io/2026/06/18/new-chinese-brand-forthing-launches-first-electric-suv-in-australia-pitched-at-under-40000/",
+      "https://zecar.com/reviews/forthing-taikon-5-price-specs-australia",
+      "https://www.carsales.com.au/forthing/taikon-5/",
+      "https://www.aa.co.nz/cars/car-reviews/forthing-taikon/",
+      "https://www.drivencarguide.co.nz/reviews/forthing-taikon-first-drive-is-this-is-what-a-forward-thinking-astronaut-would-drive/"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "gac-aion-ut",
     "summary": "GAC's first small car for Australia undercuts the BYD Dolphin Premium and MG 4 Essence while offering more battery, more power and far more rear legroom than either, and Australian reviewers consistently rate its ride comfort and cabin packaging above its price. The disagreement is over the software and the ownership case: CarExpert and EV Central found the touchscreen-only controls buggy and the driver-assist warnings intrusive, while CarsGuide and Chasing Cars were more forgiving and focused on the value. Everyone flags the same unknowns — a brand with no Australian resale history, roughly 30 dealers, no capped-price servicing and no ANCAP rating yet.",
     "pros": [
@@ -1225,6 +1257,37 @@
     "sourcedAt": "2026-07-26"
   },
   {
+    "id": "jaecoo-j5-ev",
+    "summary": "The Jaecoo J5 EV is the battery-electric member of Chery's Jaecoo J5 small-SUV line, sold in Australia in a single fully-loaded EV Summit grade alongside separate petrol and hybrid J5s that share the body but not the drivetrain. Australian reviewers rate it as one of the cheapest ways into a well-equipped electric SUV, praising the 130kW DC charging, the eight-year warranty and a $1,520 eight-year servicing bill, while splitting sharply over how it drives. Testers who liked the neutral suspension tune still found real-world consumption in the mid-to-high teens, which puts genuine range nearer 350km than the 402km WLTP claim.",
+    "pros": [
+      "Cheapest end of the electric small-SUV class at $35,990 before on-road costs, and Jaecoo has run a flat $36,990 national drive-away offer continuously since launch — which is around $1,400 less than the Victorian on-roads would otherwise cost",
+      "130kW DC peak charging and 10.3kW three-phase AC, both well ahead of the 80kW-class Chery E5 it shares a 58.9kWh LFP pack with",
+      "Eight-year unlimited-kilometre vehicle warranty and a separate eight-year unlimited-kilometre high-voltage battery warranty, with eight years of capped-price servicing totalling $1,520; roadside assistance also runs to eight years but only if renewed at each scheduled service at an authorised Jaecoo dealer",
+      "Rated to tow 1,250kg braked on the manufacturer's own spec sheet — double the 750kg most cheap Chinese electric SUVs, including the Chery E5, BYD Atto 2 and GWM Ora 5, are limited to",
+      "Unusually complete equipment for the money: powered and heated/ventilated front seats, 360-degree camera, powered tailgate, glass roof, 50W wireless charging and a 13.2-inch screen, all standard on the only grade"
+    ],
+    "cons": [
+      "Real-world consumption of mid-to-high teens kWh/100km against a 14.3kWh/100km claim leaves usable range around 350km, roughly 50km short of the WLTP figure",
+      "Front-drive chassis struggles to deploy 155kW/288Nm: reviewers report wheelspin and pronounced torque steer under moderate throttle, plus very light steering and an inconsistent brake pedal with a delay in the regenerative blending",
+      "Ride is criticised as sharp over coarse or broken bitumen despite the otherwise neutral tune, and the 235/55 R18 tyres carry a repair kit rather than a spare — the closely related Chery E5 gets a spare",
+      "No ANCAP rating as at July 2026; Jaecoo says it expects five stars but the car is untested, unlike the BYD Atto 2 and Kia EV3 it is cross-shopped against",
+      "Jaecoo is a 2025-vintage nameplate in Australia with no resale, parts or reliability record, and the permanent drive-away discounting works against used values"
+    ],
+    "sources": [
+      "https://www.omodajaecoo.com.au/models/jaecoo-j5-bev",
+      "https://www.omodajaecoo.com.au/buying/offers",
+      "https://www.omodajaecoo.com.au/sites/default/files/2026-05/Spec25_Jaecoo_J5_Spec_Sheet_AU_BEV_v101_compressed_compressed.pdf",
+      "https://www.carexpert.com.au/car-news/2026-jaecoo-j5-ev-price-and-specs-small-suv-undercuts-rivals-by-thousands",
+      "https://www.carexpert.com.au/car-reviews/2026-jaecoo-j5-ev-review",
+      "https://www.carsguide.com.au/ev/jaecoo-j5-ev-100610",
+      "https://www.carsales.com.au/editorial/details/jaecoo-j5-ev-2026-review-151877/",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-jaecoo-j5-ev-price-specs-release-date.html",
+      "https://www.mynrma.com.au/open-road/car-reviews/jaecoo/2026-jaecoo-j5-ev-review",
+      "https://thedriven.io/2026/05/03/omoda-jaecoo-extends-amazing-j5-ev-36990-driveaway-price-to-eofy/"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "jaecoo-j7-shs",
     "summary": "The J7 SHS is Chery's Jaecoo sub-brand undercutting the plug-in hybrid mid-size SUV class on equipment-per-dollar, and Australian reviewers are near-unanimous that the powertrain is the best part of the car: 90km of WLTP electric range from an 18.3kWh battery, a claimed 1200km combined range and an eight-year unlimited-kilometre warranty that carries no dealer-servicing condition. Where they disagree is the chassis — CarExpert and EV Central call the ride acceptable for the money, while CarsGuide, carsales and Chasing Cars mark it down for numb steering, loose body control and a fidgety, noisy ride on coarse Australian surfaces. Nobody rates it class-leading to drive, and the 340-litre boot, the missing braked tow rating and a service network of roughly 50 sites are the recurring practical objections.",
     "pros": [
@@ -1583,6 +1646,38 @@
       "https://sro.vic.gov.au/exemptions-and-reductions-motor-vehicle-duty"
     ],
     "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "leapmotor-b10",
+    "summary": "The B10 is Leapmotor's small electric SUV, sold in Australia from $37,888 list in two pure-battery grades that undercut the BYD Atto 3, Geely EX5 and Kia EV3. Australian reviewers are unusually united on the chassis — carsales scored it 81/100 and CarsGuide 7.4/10, both crediting the rear-drive layout and Maserati-influenced suspension tune with more composure than anything else at the price, and CarPlay and Android Auto fix the omission that dogged the related C10. Where they part company is how much the rough edges cost it: the standard Linglong tyres, the intrusive lane-keep system and the touchscreen-only controls drew criticism from every outlet, and the B10 is also sold here as a range-extender under the same two badges, so a buyer has to check which powertrain a quote refers to.",
+    "pros": [
+      "Cheapest way into a new electric SUV in Australia at $37,888 list, several thousand under a BYD Atto 3 Essential and a Geely EX5 Complete, with a 14.6-inch screen, panoramic roof, wireless charging and 360-degree cameras standard on the base Style",
+      "Rear-wheel drive with Maserati-influenced suspension tuning — carsales rated it 'one of the best value and most engaging small electric SUVs' at 81/100 and CarsGuide gave 7.4/10, both singling out ride and handling as ahead of the class",
+      "Apple CarPlay and Android Auto are fitted, unlike the Leapmotor C10, which still has neither on any grade",
+      "The $40,888 Design LR steps up to a 67.1kWh pack, 434km WLTP and 168kW DC charging (30-80% in about 18 minutes) against the Style's 56.2kWh and 140kW, for $3,000",
+      "Eight years of capped-price servicing at roughly $370 per visit on 12-month/20,000km intervals, plus eight years of roadside assistance and a five-star ANCAP rating"
+    ],
+    "cons": [
+      "Not rated to tow at all — braked capacity is 0kg on both electric grades, where the B10 range-extender is rated to 750kg and the larger Leapmotor C10 manages 1,500kg",
+      "Standard Linglong eco tyres were criticised by RACQ, carsales and CarsGuide alike for squealing and losing grip early under brakes, which reviewers say squanders the chassis the car is otherwise praised for",
+      "Lane-keep assist is intrusive enough that multiple Australian reviewers disable it every drive, and there are no physical controls — mirrors, vents and most functions live in the touchscreen",
+      "Six-year/150,000km warranty is unconditional but trails the seven years offered by Kia, MG, Geely and Chery in the same price bracket, after Leapmotor cut the term from seven years for MY25",
+      "Resale is the open risk: Leapmotor has around 20 Australian dealers, almost no local resale history, and launched the B10 on a $38,990 national drive-away offer that sat below the true on-road cost"
+    ],
+    "sources": [
+      "https://www.carsguide.com.au/ev/leapmotor-b10-100848",
+      "https://www.carsguide.com.au/ev/leapmotor-b10-style-100861",
+      "https://www.racq.com.au/articles/car-reviews/leapmotor-b10-design-long-range-my26-review",
+      "https://www.mynrma.com.au/open-road/car-reviews/leapmotor/2026-leapmotor-b10-review",
+      "https://www.carsales.com.au/editorial/details/leapmotor-b10-2026-review-151612/",
+      "https://www.carexpert.com.au/car-reviews/2026-leapmotor-b10-review",
+      "https://www.carexpert.com.au/car-news/2026-leapmotor-b10-becomes-australias-cheapest-electric-suv",
+      "https://www.carexpert.com.au/car-news/2026-leapmotor-b10-hybrid-ev-prices-chinese-brands-smallest-ev-in-australia-gets-a-petrol-engine",
+      "https://www.carexpert.com.au/car-news/leapmotor-b10-gets-bigger-battery-800v-tech-and-more-range",
+      "https://www.carexpert.com.au/car-news/leapmotor-winds-back-warranty-for-its-tesla-model-y-rival",
+      "https://www.carsguide.com.au/leapmotor/b10/towing-capacity/2026"
+    ],
+    "sourcedAt": "2026-07-31"
   },
   {
     "id": "leapmotor-c10",
@@ -1946,6 +2041,84 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "mg-im5",
+    "summary": "The IM5 is the sedan half of 'IM Presented by MG', a premium sub-brand sold through MG's own dealer network — a 4931mm five-seat liftback that undercuts the Tesla Model 3 and Polestar 2 on kilowatts, standard equipment and charging speed. Australian reviewers do not argue about the hardware: 800V charging up to 396kW on the Platinum and Performance, a 655km WLTP Platinum, rear-axle steering and a 3.2-second flagship are unusual at $60,990 to $77,990 drive-away, which is the only basis MG quotes for the IM range. They disagree sharply about whether it earns its premium billing, with Chasing Cars and carsales calling the cabin 'premium-lite' over cheap lower plastics and a knees-up rear seat while WhichCar and The Driven rate the chassis, refinement and self-parking as genuinely competitive; the reservation they share is real-world consumption near 20.6kWh/100km against an 18.9kWh/100km claim, and an unconditional warranty of only five years.",
+    "pros": [
+      "Platinum and Performance run an 800V SiC architecture with a 396kW DC charging peak, giving a 30-80 per cent top-up in about 15 minutes against roughly 25 minutes for a Tesla Model 3 and 30-plus for a BYD Seal",
+      "Warranty runs to seven years/unlimited km provided every scheduled service is completed inside the IM/MG dealer network within 30 days and 2000km of the due interval — five years/unlimited km applies otherwise — plus an eight-year/160,000km high-voltage battery warranty and five-year cover on the air suspension and four-wheel steering",
+      "Performance's 572kW/802Nm dual-motor AWD hits 100km/h in 3.2 seconds for $77,990 drive-away — about $74,000 before on-road costs, undercutting the $80,900 Tesla Model 3 Performance by roughly $6,900 list-to-list while adding air suspension, four-wheel steering and a 20-speaker stereo as standard",
+      "Five-star ANCAP (2025) across the range with 89 per cent adult and 91 per cent child occupant protection, and 1500kg braked towing — 500kg more than a Tesla Model 3 and equal to a Polestar 2",
+      "Every grade gets the 26.3-inch display, panoramic roof, rear-axle steering with a 9.98m turning circle, heated front seats and 6.6kW vehicle-to-load, so the entry Premium at $60,990 drive-away is not stripped out to make the price"
+    ],
+    "cons": [
+      "The unconditional warranty is five years, not the seven MG's own badges carry — the seven-year term is forfeited the moment a service is done outside the dealer network or falls outside the 30-day/2000km window",
+      "Real-world consumption lands well above the claim: carsales measured 20.6kWh/100km against the Performance's 18.9kWh/100km WLTP figure, returning about 485km rather than 575km, and The Driven recorded 21.1kWh/100km on the highway",
+      "A high battery floor leaves rear passengers sitting knees-up with what Chasing Cars calls 'non-existent toe room', and the letterbox rear window makes over-the-shoulder vision poor in a car 4931mm long",
+      "Cabin quality is the consistent criticism — cheap lower-door and lower-console plastics, no glovebox at all, and a 10.5-inch central touchscreen mounted too low to use without looking away from the road",
+      "No Australian resale history exists for the IM sub-brand, and MG dealers were already advertising $3,000 cashback on the Platinum within twelve months of the July 2025 launch, so this dataset assumes depreciation steeper than the mainstream EV default"
+    ],
+    "sources": [
+      "https://mgmotor.com.au/im5",
+      "https://mgmotor.com.au/explore/warranty",
+      "https://mgmotor.com.au/brochures/MG_IM5_Brochure.pdf",
+      "https://mgim5.mgmotor.com.au/assets/MG_IM5_Specs_v6.pdf",
+      "https://www.carexpert.com.au/car-news/2025-mg-im5-price-and-specs",
+      "https://www.carsales.com.au/editorial/details/mgs-luxury-im-motors-im5-and-im6-priced-149624/",
+      "https://www.newpioneermg.com.au/specials/im-5-platinum/5431/",
+      "https://www.westernmg.com.au/offers/43886",
+      "https://zecar.com/reviews/im5-im6-eofy-deal-save-3000-500-accessories-bonus-2026",
+      "https://www.carexpert.com.au/car-news/im-presented-by-mg-motor-model-range-guide",
+      "https://www.carsguide.com.au/mg/im5/price/2026",
+      "https://www.carsguide.com.au/ev/mg-im5-performance-99344",
+      "https://www.mynrma.com.au/open-road/car-reviews/mg/2026-mg-im5-review",
+      "https://www.chasingcars.com.au/reviews/large-cars/mg-im5-performance-2025-review/",
+      "https://www.carsales.com.au/editorial/details/mg-im5-performance-2025-review-150679/",
+      "https://www.exhaustnotes.com.au/2026-mg-im5-performance-car-review/",
+      "https://evcentral.com.au/2025-im5-and-im6-presented-by-mg-lands-in-australia-our-first-very-brief-drive-of-an-ambitious-chinese-ev-brand-aimed-at-audi-bmw-tesla-and-byd/",
+      "https://www.whichcar.com.au/news/ancap-delivers-safety-verdicts-mg-im5-im6-renault-duster",
+      "https://www.ancap.com.au/media-and-gallery/media-releases/ancap-confirms-ratings-for-im-6-im-5-and-renault-duster",
+      "https://ev-database.org/uk/car/3244/MG-IM5-Standard-Range",
+      "https://ev-database.org/uk/car/3246/MG-IM5-Performance",
+      "https://thedriven.io/2025/10/01/im5-performance-review-mgs-compelling-electric-rocket-that-self-parks-better-than-a-tesla/"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "mg-im6",
+    "summary": "The IM6 is the SUV half of the IM sub-brand that MG Australia sells through its own dealers as 'IM presented by MG' — a 4.9-metre, 2.3-tonne electric crossover whose specification-per-dollar Australian reviewers consistently call extraordinary, with 800V charging, air suspension and four-wheel steering at XPeng G6 and Zeekr 7X money. The consensus splits sharply on whether it drives like the money: CarExpert and the NRMA rate the cabin, comfort and equipment highly, while Chasing Cars scored the Performance 5.5/10 for a lumpy air-sprung ride, disconnected steering and intrusive driver aids. Reviewers converge again on ownership: real-world consumption of 22-27kWh/100km against WLTP claims, a five-year unconditional warranty well short of the MG-badged cars, and no Australian resale history yet.",
+    "pros": [
+      "800V architecture on Platinum and Performance takes up to 396kW DC for a claimed 30-80 per cent in 15.2 minutes — roughly triple the peak rate of a Tesla Model Y or XPeng G6; the 400V Premium is capped at 153kW and about 20 minutes",
+      "665L boot and 1640L folded on Premium and Platinum (646L/1621L on the Performance) plus a 32L frunk, comfortably ahead of the XPeng G6's 571L and the Zeekr 7X's 539L",
+      "The Performance's 572kW/802Nm dual-motor drivetrain claims 0-100km/h in 3.4 seconds at $77,990 drive-away, undercutting a Tesla Model Y Performance by roughly $17,000",
+      "Rear-axle steering with up to 12 degrees of angle gives a 10.18m turning circle, and Advanced Air Suspension with continuous damping is standard on the Performance and a $4,990 factory option on Premium and Platinum",
+      "Warranty extends to 7 years/unlimited km if every scheduled service is completed inside MG's dealer network, and the high-voltage battery is covered 8 years/160,000km however the car is serviced"
+    ],
+    "cons": [
+      "IM does not get MG's headline 10-year warranty: the unconditional term is 5 years/unlimited km (7 only with in-network servicing), behind the 7 years on MG's own cars, Kia and Chery, and the NRMA notes not every MG dealer is set up to service IM",
+      "Thirsty even on paper: the Performance's declared WLTP consumption is 23.4kWh/100km, against roughly 17.5kWh for a Zeekr 7X Performance and 14.5kWh for a Tesla Model Y Performance, and testers did worse again — CarExpert averaged 24.1kWh/100km and carsales 27kWh/100km, putting realistic touring range nearer 400km than the claimed 505km",
+      "Chasing Cars scored the Performance 5.5/10, describing the air-sprung ride as 'knobbly or lumpy' over ordinary urban surfaces and the steering as short on feedback despite the hardware",
+      "Rear vision is poor enough that CarExpert calls the mirror setup 'one of the worst', and the driver-assist warnings reset to on at every restart with no explanation of what triggered them",
+      "Ownership risk is unpriced: no spare tyre, servicing every 12 months/20,000km averaging $585.80 across the first five visits, and a brand with no Australian resale record that has already cut Platinum and Performance by $2,000-$3,000 each inside 12 months and is running $3,000 cashback on top"
+    ],
+    "sources": [
+      "https://mgmotor.com.au/vehicles/im6",
+      "https://mgmotor.com.au/configurator/im6",
+      "https://mgmotor.com.au/explore/warranty",
+      "https://www.carexpert.com.au/car-news/2025-mg-im6-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2025-im6-review",
+      "https://www.carexpert.com.au/car-news/im-presented-by-mg-motor-model-range-guide",
+      "https://www.chasingcars.com.au/reviews/large-suvs/mg-im6-performance-2025-review/",
+      "https://www.carsguide.com.au/ev/mg-im6-performance-99379",
+      "https://www.carsguide.com.au/mg/im6/price/2026",
+      "https://www.carsales.com.au/editorial/details/im-presented-by-mg-im6-performance-2026-review-151767/",
+      "https://www.carsales.com.au/research/mg/im6/2026/platinum/",
+      "https://www.mynrma.com.au/open-road/car-reviews/mg/2025-im5-and-im6-review",
+      "https://zecar.com/reviews/mg-july-2026-ev-phev-deals-finance-cashback",
+      "https://ev-database.org/uk/car/3248/MG-IM6-Performance"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "mg-s5",
     "summary": "The MG S5 EV is the ZS EV's rear-drive replacement and is widely described by Australian reviewers as MG's most convincing model to date: a conventional, well-resolved small-to-mid electric SUV with a 453-litre boot, five-star ANCAP and pricing that sits under the Kia EV3. Reviewers agree the 62kWh car is the one to buy — the 49kWh Essence's 335km WLTP range draws consistent criticism as thin for the money — and the MY26 update added 25kW and 25km of range to the 62 at an unchanged $47,990. Opinion splits on the chassis: CarExpert and Chasing Cars rate the body control and steering response highly, while CarsGuide finds the steering too light and the styling derivative, and several testers note a ride that turns brittle over sharp-edged bumps.",
     "pros": [
@@ -1977,6 +2150,35 @@
       "https://zecar.com/electric-vehicles/mg/mgs5/2025/essence-62"
     ],
     "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "mg-s6",
+    "summary": "MG's mid-size electric SUV undercuts the Tesla Model Y and BYD Sealion 7 by several thousand dollars while claiming more WLTP range than either, and reviewers broadly agree it is the value pick of the segment. The disagreement is over the ride: every Australian test criticises a firm, busy low-speed tune, but opinions split on whether it settles acceptably above 50km/h. The dual-motor version is the weaker buy, adding $7000 for pace few family buyers need and giving up 45km of range.",
+    "pros": [
+      "530km WLTP range from the rear-drive version beats the Tesla Model Y RWD and BYD Sealion 7 Premium on paper, and does it from a car priced thousands below both.",
+      "MG's unconditional cover is seven years/unlimited kilometres, and it extends to 10 years or 250,000km only if every scheduled service is done inside the MG dealer network — miss one and it reverts to seven.",
+      "Keeps physical climate and volume controls rather than burying them in the touchscreen, a point CarExpert, carsales and Chasing Cars each singled out.",
+      "581 litres of boot with the seats up (1690 folded) plus an 86-litre frunk on the RWD, with rear legroom reviewers rated as class-leading for six-footers.",
+      "Rated to tow 1500kg braked, where the smaller MG S5 EV manages only 750kg."
+    ],
+    "cons": [
+      "144kW peak DC charging and a 38-minute 10-80 per cent stop are slower than the Sealion 7 and Model Y, and it is the criticism every reviewer makes.",
+      "Low-speed ride is firm bordering on harsh over patchy surfaces; carsales also reported cabin rattles and resonances in a car with just 500km on it.",
+      "No over-the-air software updates, and the 12.9-inch touchscreen is laggy on start-up.",
+      "The driver-assist alerts, including a speed-sign warning that fires at 1km/h over, must be switched off again at every start.",
+      "The $56,990 drive-away AWD is poor value against the RWD — $7000 more for 45km less range — and battery cover is only seven years/160,000km, short of the segment norm."
+    ],
+    "sources": [
+      "https://mgmotor.com.au/mgs6-ev",
+      "https://www.carexpert.com.au/car-news/2026-mg-s6-ev-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-mg-s6-ev-review",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/mg-s6-ev-essence-awd-2026-review/",
+      "https://www.carsales.com.au/editorial/details/mg-s6-ev-essence-awd-2026-review-152180/",
+      "https://www.carsguide.com.au/ev/mg-s6-ev-101791",
+      "https://evcentral.com.au/mg-s6-ev-aussie-price-and-specs-announced-new-tesla-model-y-rivals-offers-more-than-500km-of-range-for-under-50k/",
+      "https://ev-database.org/car/3418/MG-MGS6-EV-RWD-77-kWh"
+    ],
+    "sourcedAt": "2026-07-31"
   },
   {
     "id": "mini-cooper-electric",

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "leapmotor-b10-style",
+    "familyId": "leapmotor-b10",
+    "make": "Leapmotor",
+    "model": "B10",
+    "variant": "Style",
+    "bodyType": "SUV",
+    "listPrice": 37888,
+    "batteryKwh": 56.2,
+    "rangeKm": 361,
+    "consumptionKwhPer100km": 17.2,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1475,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1550,
+    "depreciationCurve": [1, 0.72, 0.59, 0.5, 0.43, 0.37],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "leapmotor-b10-design-lr",
+    "familyId": "leapmotor-b10",
+    "make": "Leapmotor",
+    "model": "B10",
+    "variant": "Design LR",
+    "bodyType": "SUV",
+    "listPrice": 40888,
+    "batteryKwh": 67.1,
+    "rangeKm": 434,
+    "consumptionKwhPer100km": 17.3,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1475,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1600,
+    "depreciationCurve": [1, 0.72, 0.59, 0.5, 0.43, 0.37],
+    "sourcedAt": "2026-07-31"
+  }
+]

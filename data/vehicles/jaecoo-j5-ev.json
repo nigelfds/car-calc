@@ -1,0 +1,22 @@
+[
+  {
+    "id": "jaecoo-j5-ev-summit",
+    "familyId": "jaecoo-j5-ev",
+    "make": "Jaecoo",
+    "model": "J5",
+    "variant": "EV Summit",
+    "bodyType": "SUV",
+    "listPrice": 35990,
+    "batteryKwh": 58.9,
+    "rangeKm": 402,
+    "consumptionKwhPer100km": 14.3,
+    "bootLitresSeatsUp": 384,
+    "bootLitresSeatsDown": 1180,
+    "seats": 5,
+    "towKg": 1250,
+    "warrantyYears": 8,
+    "insuranceAnnual": 1500,
+    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "sourcedAt": "2026-07-31"
+  }
+]

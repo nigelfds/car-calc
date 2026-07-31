@@ -1,0 +1,43 @@
+{
+  "id": "mg-im5",
+  "summary": "The IM5 is the sedan half of 'IM Presented by MG', a premium sub-brand sold through MG's own dealer network — a 4931mm five-seat liftback that undercuts the Tesla Model 3 and Polestar 2 on kilowatts, standard equipment and charging speed. Australian reviewers do not argue about the hardware: 800V charging up to 396kW on the Platinum and Performance, a 655km WLTP Platinum, rear-axle steering and a 3.2-second flagship are unusual at $60,990 to $77,990 drive-away, which is the only basis MG quotes for the IM range. They disagree sharply about whether it earns its premium billing, with Chasing Cars and carsales calling the cabin 'premium-lite' over cheap lower plastics and a knees-up rear seat while WhichCar and The Driven rate the chassis, refinement and self-parking as genuinely competitive; the reservation they share is real-world consumption near 20.6kWh/100km against an 18.9kWh/100km claim, and an unconditional warranty of only five years.",
+  "pros": [
+    "Platinum and Performance run an 800V SiC architecture with a 396kW DC charging peak, giving a 30-80 per cent top-up in about 15 minutes against roughly 25 minutes for a Tesla Model 3 and 30-plus for a BYD Seal",
+    "Warranty runs to seven years/unlimited km provided every scheduled service is completed inside the IM/MG dealer network within 30 days and 2000km of the due interval — five years/unlimited km applies otherwise — plus an eight-year/160,000km high-voltage battery warranty and five-year cover on the air suspension and four-wheel steering",
+    "Performance's 572kW/802Nm dual-motor AWD hits 100km/h in 3.2 seconds for $77,990 drive-away — about $74,000 before on-road costs, undercutting the $80,900 Tesla Model 3 Performance by roughly $6,900 list-to-list while adding air suspension, four-wheel steering and a 20-speaker stereo as standard",
+    "Five-star ANCAP (2025) across the range with 89 per cent adult and 91 per cent child occupant protection, and 1500kg braked towing — 500kg more than a Tesla Model 3 and equal to a Polestar 2",
+    "Every grade gets the 26.3-inch display, panoramic roof, rear-axle steering with a 9.98m turning circle, heated front seats and 6.6kW vehicle-to-load, so the entry Premium at $60,990 drive-away is not stripped out to make the price"
+  ],
+  "cons": [
+    "The unconditional warranty is five years, not the seven MG's own badges carry — the seven-year term is forfeited the moment a service is done outside the dealer network or falls outside the 30-day/2000km window",
+    "Real-world consumption lands well above the claim: carsales measured 20.6kWh/100km against the Performance's 18.9kWh/100km WLTP figure, returning about 485km rather than 575km, and The Driven recorded 21.1kWh/100km on the highway",
+    "A high battery floor leaves rear passengers sitting knees-up with what Chasing Cars calls 'non-existent toe room', and the letterbox rear window makes over-the-shoulder vision poor in a car 4931mm long",
+    "Cabin quality is the consistent criticism — cheap lower-door and lower-console plastics, no glovebox at all, and a 10.5-inch central touchscreen mounted too low to use without looking away from the road",
+    "No Australian resale history exists for the IM sub-brand, and MG dealers were already advertising $3,000 cashback on the Platinum within twelve months of the July 2025 launch, so this dataset assumes depreciation steeper than the mainstream EV default"
+  ],
+  "sources": [
+    "https://mgmotor.com.au/im5",
+    "https://mgmotor.com.au/explore/warranty",
+    "https://mgmotor.com.au/brochures/MG_IM5_Brochure.pdf",
+    "https://mgim5.mgmotor.com.au/assets/MG_IM5_Specs_v6.pdf",
+    "https://www.carexpert.com.au/car-news/2025-mg-im5-price-and-specs",
+    "https://www.carsales.com.au/editorial/details/mgs-luxury-im-motors-im5-and-im6-priced-149624/",
+    "https://www.newpioneermg.com.au/specials/im-5-platinum/5431/",
+    "https://www.westernmg.com.au/offers/43886",
+    "https://zecar.com/reviews/im5-im6-eofy-deal-save-3000-500-accessories-bonus-2026",
+    "https://www.carexpert.com.au/car-news/im-presented-by-mg-motor-model-range-guide",
+    "https://www.carsguide.com.au/mg/im5/price/2026",
+    "https://www.carsguide.com.au/ev/mg-im5-performance-99344",
+    "https://www.mynrma.com.au/open-road/car-reviews/mg/2026-mg-im5-review",
+    "https://www.chasingcars.com.au/reviews/large-cars/mg-im5-performance-2025-review/",
+    "https://www.carsales.com.au/editorial/details/mg-im5-performance-2025-review-150679/",
+    "https://www.exhaustnotes.com.au/2026-mg-im5-performance-car-review/",
+    "https://evcentral.com.au/2025-im5-and-im6-presented-by-mg-lands-in-australia-our-first-very-brief-drive-of-an-ambitious-chinese-ev-brand-aimed-at-audi-bmw-tesla-and-byd/",
+    "https://www.whichcar.com.au/news/ancap-delivers-safety-verdicts-mg-im5-im6-renault-duster",
+    "https://www.ancap.com.au/media-and-gallery/media-releases/ancap-confirms-ratings-for-im-6-im-5-and-renault-duster",
+    "https://ev-database.org/uk/car/3244/MG-IM5-Standard-Range",
+    "https://ev-database.org/uk/car/3246/MG-IM5-Performance",
+    "https://thedriven.io/2025/10/01/im5-performance-review-mgs-compelling-electric-rocket-that-self-parks-better-than-a-tesla/"
+  ],
+  "sourcedAt": "2026-07-31"
+}
