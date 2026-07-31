@@ -1,0 +1,27 @@
+{
+  "id": "bmw-i5",
+  "summary": "Australian reviewers rate the electric 5 Series as the most convincing large executive EV to drive, with CarExpert marking both the eDrive40 and the M60 xDrive \"Very Good\" for a chassis that stays composed and quiet where rivals feel inert. The disagreement is entirely about money and range: at $155,900 to $215,900 before on-roads the i5 asks Mercedes EQE and Porsche Taycan money, and reviewers consistently record real-world consumption well above the claim, so the 550km and 506km certified figures are not what buyers see. The M60's $60,000 premium buys an M5-rivalling 3.8-second car, but it also cuts range and is the harder case to argue on value.",
+  "pros": [
+    "Rear-drive eDrive40 is certified at 550km from an 81.2kWh usable pack, and the 442kW M60 still manages 506km rather than the sub-450km a performance EV usually concedes",
+    "205kW DC charging gives a 10-80 per cent top-up in about 30 minutes, and BMW includes a five-year Chargefox subscription",
+    "CarExpert rates the ride/handling balance above the EQE's, calling perceived build quality \"head and shoulders above\" Mercedes-Benz",
+    "M60 xDrive delivers 442kW/820Nm and 0-100km/h in 3.8 seconds, effectively an electric M5 for $4000 less than the M60 Touring",
+    "Standard 17-speaker Bowers & Wilkins audio, panoramic glass roof and Merino leather on both grades, not option-boxed"
+  ],
+  "cons": [
+    "Real-world efficiency badly undershoots the claim — CarExpert logged 18.6kWh/100km in the eDrive40 against a 16.6kWh/100km claim, and 21.3kWh/100km in the M60 against 18.0",
+    "CarExpert's own reviewer notes the petrol 520i carries comparable standard equipment for far less, making the $155,900 entry hard to justify",
+    "Option packages inflate the price fast: the Comfort Package alone adds $5700 to a car already over $150,000",
+    "M60 xDrive rides low enough to scrape its undercarriage on ordinary driveways, and rear legroom is tight for taller adults despite the size",
+    "Large luxury EVs hold value poorly in Australia, and roughly $19,000 (eDrive40) to $37,000 (M60) of the list price is Luxury Car Tax that is not recovered at resale"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2024-bmw-i5-edrive40-review",
+    "https://www.carexpert.com.au/car-reviews/2024-bmw-i5-m60-xdrive-review",
+    "https://www.carsguide.com.au/bmw/i5",
+    "https://www.carsales.com.au/research/bmw/i5/",
+    "https://www.carsales.com.au/editorial/details/bmw-i5-m60-xdrive-touring-2025-review-150097/",
+    "https://ev-database.org/uk/car/3112/BMW-i5-eDrive40-Saloon"
+  ],
+  "sourcedAt": "2026-07-31"
+}

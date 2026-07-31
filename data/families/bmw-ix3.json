@@ -1,0 +1,29 @@
+{
+  "id": "bmw-ix3",
+  "summary": "The second-generation iX3 is the first Neue Klasse BMW, built on a dedicated 800V platform with a Gen6 cylindrical-cell battery, and Australian reviewers have been close to unanimous that it is the new benchmark premium electric SUV — steering, braking feel and regeneration are singled out as the best of any EV they have driven. Its range claim is the longest of any new vehicle on sale in Australia — 793km WLTP as the local car is actually specified, against the 805km headline BMW quotes for a European base car without the M Sport pack Australia fits as standard — and at $109,900 before on-roads it undercuts the Porsche Macan, Audi Q6 e-tron and Polestar 3 rather than matching them. The disagreement is over the tech-first cabin: the 43-inch Panoramic Vision strip impresses everyone, but reviewers split on whether burying climate and steering-wheel adjustment in a screen-heavy iDrive is livable, and several flagged rear-seat harshness on passive dampers as an open question for Australian roads.",
+  "pros": [
+    "793km WLTP on the standard-fit 20-inch wheels is the longest range of any new vehicle on sale in Australia — Polestar 3 claims 706km and the Audi Q6 e-tron 542km — and the no-cost alternative 20-inch aero wheel lifts it to 802km",
+    "800V architecture charges at up to 400kW, adding a claimed 372km in 10 minutes and 10-80 per cent in about 21 minutes",
+    "Undercuts the premium electric SUVs it is benchmarked against by thousands: rivals from Porsche, Audi and Polestar sit in the $120,000-$140,000 band",
+    "345kW/645Nm dual-motor drivetrain does 0-100km/h in 4.9 seconds, and reviewers rate the steering feel and near-98-per-cent regenerative braking as the best in any EV they have driven",
+    "2000kg braked tow rating and a 520L boot plus a 58L frunk — the first BMW EV with front storage"
+  ],
+  "cons": [
+    "One grade only at launch: the $109,900 50 xDrive. The $89,900 rear-drive iX3 40 is announced but not orderable until Q4 2026, so early buyers pay a $20,000 premium for a variant that will shortly stop being the entry point",
+    "Air-conditioning and even steering-wheel adjustment are screen-only, and reviewers called the Panoramic iDrive laggy, illogically nested and steep enough to need a lengthy instructional briefing",
+    "Rear-seat ride was described as harsh over sharp inputs, and there is no driver-adjustable damper option — a live risk on Australian roads given launch cars were assessed on smooth Spanish tarmac",
+    "No spare tyre of any kind, only run-flats; one launch car was stranded by a puncture",
+    "Real-world consumption of 17.3-18kWh/100km in testing implies roughly 600-650km rather than the near-800km lab claim, the optional 22-inch wheels cut the WLTP figure to 737km, and BMW's five-year warranty trails the seven years Kia offers on the EV9"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-bmw-ix3-price-and-specs",
+    "https://www.carexpert.com.au/car-news/2026-bmw-ix3-ev-dips-under-dollar90000-with-new-base-model",
+    "https://www.carexpert.com.au/car-reviews/2026-bmw-ix3-review-quick-drive",
+    "https://www.carsales.com.au/editorial/details/bmw-ix3-50-xdrive-2026-review-150980/",
+    "https://evcentral.com.au/2026-bmw-ix3-50-xdrive-review-the-best-car-of-2025-neue-klasse-stakes-its-claim/",
+    "https://www.carsguide.com.au/ev/bmw-ix3-100263",
+    "https://zecar.com/reviews/2026-bmw-ix3-price-specs-australia",
+    "https://www.batterydesign.net/bmw-ix3-neue-klasse-battery/"
+  ],
+  "sourcedAt": "2026-07-31"
+}

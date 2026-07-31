@@ -1,0 +1,22 @@
+[
+  {
+    "id": "alfa-romeo-junior-elettrica",
+    "familyId": "alfa-romeo-junior-elettrica",
+    "make": "Alfa Romeo",
+    "model": "Junior",
+    "variant": "Elettrica",
+    "bodyType": "SUV",
+    "listPrice": 58990,
+    "batteryKwh": 51,
+    "rangeKm": 407,
+    "consumptionKwhPer100km": 15.2,
+    "bootLitresSeatsUp": 400,
+    "bootLitresSeatsDown": 1265,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1900,
+    "depreciationCurve": [1, 0.68, 0.56, 0.47, 0.4, 0.34],
+    "sourcedAt": "2026-07-31"
+  }
+]

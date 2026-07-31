@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bmw-ix3-50-xdrive",
+    "familyId": "bmw-ix3",
+    "make": "BMW",
+    "model": "iX3",
+    "variant": "50 xDrive",
+    "bodyType": "SUV",
+    "listPrice": 109900,
+    "batteryKwh": 108.7,
+    "rangeKm": 793,
+    "consumptionKwhPer100km": 15.3,
+    "bootLitresSeatsUp": 520,
+    "bootLitresSeatsDown": 1750,
+    "seats": 5,
+    "towKg": 2000,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2800,
+    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
+    "sourcedAt": "2026-07-31"
+  }
+]

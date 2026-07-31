@@ -1,0 +1,32 @@
+{
+  "id": "renault-scenic-e-tech",
+  "summary": "The Scenic E-Tech is Renault's mid-size electric SUV, built on the same CMF-EV platform as the Megane E-Tech and sold in Australia in three front-wheel-drive grades from $55,990 to $65,990 before on-road costs. Australian reviewers rate it near the top of its class for ride comfort, rear-seat space and cabin quality -- Chasing Cars scored the Esprit Alpine 8.0/10 and singled out its damping and adult-sized rear seat -- and the 87kWh grades' 625km WLTP claim is the longest in the segment under $70,000. The disagreement is over whether that is enough against cheaper Chinese rivals, given a 130-150kW charging peak that is only average, soft brake feel, and a five-year/100,000km warranty that is the shortest of any mainstream EV brand here.",
+  "pros": [
+    "The 87kWh grades claim 625km WLTP, more than the Kia EV3 Earth (563km), Skoda Elroq 85 (529km) and Tesla Model Y Long Range AWD (600km), and Chasing Cars still saw 518km in real-world testing",
+    "Genuinely usable as a family car in a way most rivals in the price band are not: 545 litres of boot (1,670 with the 40/20/40 rear seats folded), a rear bench Chasing Cars rated a 'real highlight' for full-size adults, and a 1,100kg braked tow rating against the Megane E-Tech's 900kg",
+    "Ride and refinement are the standout: reviewers describe the damping as smooth and sophisticated over urban bumps, a clear step away from the Megane E-Tech's much-criticised firmness on its 20-inch wheels",
+    "Android Automotive with built-in Google Maps and Google Assistant, plus ADAS calibration that Australian reviewers say works quietly rather than beeping constantly -- a specific complaint they level at most Chinese rivals in this class",
+    "The $4,000 step from Techno EV60 to Techno Long Range EV87 buys 27kWh more usable battery, 195km more range and 35kW more power, which most reviewers call the pick of the range over the $65,990 Esprit Alpine"
+  ],
+  "cons": [
+    "Warranty is five years/100,000km per Renault Australia's own disclaimer, not the unlimited-kilometre cover Kia (seven years), Skoda (seven years) and Tesla offer -- a 20,000km-a-year driver is out of cover before year five ends",
+    "DC charging peaks at 130kW (EV60) and 150kW (EV87) on a 400-volt architecture, giving a 10-80% top-up of about 37 minutes -- slower than the 800-volt Kia EV3 and Hyundai Ioniq 5 despite the far bigger pack",
+    "Brake pedal feel is the most consistent criticism: CarExpert called the travel spongey and hard to modulate progressively, and reviewers also report noticeable road noise from the Michelin tyres and a low-resolution 360-degree camera",
+    "At $65,990 before on-roads the Esprit Alpine is knocking on Tesla Model Y money without ventilated seats or a sunroof, and it adds 20-inch wheels that firm up the ride the cheaper Techno grades get right",
+    "Renault is a small-volume brand here distributed by Ateco, service pricing was still unconfirmed at launch, and the sister Megane E-Tech has already been cut $10,000 from its launch price -- a resale risk this car inherits"
+  ],
+  "sources": [
+    "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
+    "https://www.renault.com.au/vehicles/scenic-e-tech/",
+    "https://www.renault.com.au/build-and-price/scenic-e-tech/",
+    "https://www.renault.com.au/special-offers/",
+    "https://www.carexpert.com.au/car-news/2026-renault-scenic-e-tech-price-and-specs-french-ev-offers-600km-range-for-under-dollar60k",
+    "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/renault-scenic-e-tech-esprit-alpine-ev87-2026-review/",
+    "https://www.carsguide.com.au/renault/scenic-e-tech/2026",
+    "https://www.carsguide.com.au/renault/scenic-e-tech/price/2026",
+    "https://www.carsales.com.au/research/renault/scenic-e-tech/",
+    "https://evcentral.com.au/2026-renault-scenic-e-tech-review-french-electric-suv-brings-european-polish-to-australia-but-can-it-justify-the-price/"
+  ],
+  "sourcedAt": "2026-07-31"
+}
