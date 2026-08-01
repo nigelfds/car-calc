@@ -191,6 +191,9 @@ export function cardModel(vehicle, families, context = null) {
     pros: family?.pros ?? [],
     cons: family?.cons ?? [],
     sources: family?.sources ?? [],
+    // One image per family, shared by every variant — the trims differ in price
+    // and range, not in what the car looks like.
+    image: family?.image ?? null,
     costs,
     balloon,
     balloonCovered,
@@ -315,6 +318,13 @@ export function renderCards(root, cards, emptyMessage) {
   target.innerHTML = cards.map(card => {
     return `
     <article class="car-card${card.band ? ` car-card--${card.band}` : ''}" data-id="${escapeHtml(card.id)}">
+      ${card.image ? `
+      <figure class="car-figure">
+        <img src="images/cars/${escapeHtml(card.image.file)}"
+             alt="${escapeHtml(`${card.make} ${card.model}`)}"
+             title="${escapeHtml(`${card.image.author} · ${card.image.licence}`)}"
+             width="900" height="600" loading="lazy">
+      </figure>` : ''}
       <div class="car-body">
         ${card.bandLabel ? `<p class="car-card__band">${escapeHtml(card.bandLabel)}</p>` : ''}
         <h3>${escapeHtml(card.make)} ${escapeHtml(card.model)} ${escapeHtml(card.variant ?? '')}</h3>

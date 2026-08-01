@@ -170,15 +170,14 @@ test('a card without a family still renders', () => {
   assert.equal(card.make, 'BYD');
 });
 
-// Car imagery is gone from the UI: no photography, and no body-type
-// silhouette standing in for it. A family may still carry an `images` array
-// in the data (the schema keeps it optional), but the card model must not
-// surface it, or a future renderer will silently start painting cars again.
-test('the card model does not carry an image, even when the family has one', () => {
-  const withImages = [{ ...families[0], images: ['https://press/a.jpg'] }];
-  const card = cardModel(fleet[0], withImages);
-  assert.equal(card.image, undefined);
-  assert.ok(!('image' in card), 'cardModel must not expose an image field');
+// `images` (plural) is a legacy schema field for review-source URLs, distinct
+// from the curated `image` (singular) object the image pipeline joins onto a
+// family. A family carrying only the legacy field must not have that mistaken
+// for a curated photo to show.
+test('the legacy images array does not count as a curated image', () => {
+  const withLegacyImages = [{ ...families[0], images: ['https://press/a.jpg'] }];
+  const card = cardModel(fleet[0], withLegacyImages);
+  assert.equal(card.image, null);
 });
 
 // --- Dataset stats in the header -----------------------------------------
@@ -575,4 +574,57 @@ test('the toggle is only the answer when it would genuinely change the result', 
   assert.equal(wouldHelp({ bodyTypes: ['Ute'] }), true, 'utes are all PHEV — the toggle is the fix');
   assert.equal(wouldHelp({ bodyTypes: ['Sedan'] }), false, 'no sedan of any powertrain — relaxing is the fix');
   assert.equal(wouldHelp({ bodyTypes: ['Ute'], includePhev: true }), false, 'already on');
+});
+
+// --- The photograph across the top of the card -----------------------------
+// A silhouette used to stand in for a photo and was removed for costing a
+// fixed width on every card. A full-bleed photo across the top costs height
+// instead, which a card has spare, so this does not reopen that trade-off.
+
+test('cardModel carries the family image through', () => {
+  const withImage = [{ ...families[0], image: { file: 'a.webp', author: 'P', licence: 'CC BY 4.0' } }];
+  assert.equal(cardModel(fleet[0], withImage).image.file, 'a.webp');
+});
+
+test('a family with no image yields no image on the card', () => {
+  assert.equal(cardModel(fleet[1], families).image, null);
+});
+
+test('renderCards emits a figure pointing at the image when there is one', () => {
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const card = { ...cardModel(fleet[0], [{ ...families[0], image: { file: 'a.webp', author: 'P', licence: 'CC BY 4.0' } }]), bandLabel: 'At your budget' };
+  renderCards({ querySelector: () => target }, [card], '');
+  assert.match(html, /images\/cars\/a\.webp/);
+  // Explicit dimensions, or the card reflows as each image arrives.
+  assert.match(html, /width="900"/);
+  assert.match(html, /height="600"/);
+  assert.match(html, /loading="lazy"/);
+});
+
+test('the alt text names the car, not the photographer', () => {
+  // alt describes the image; attribution belongs in title and on the credits page.
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const card = { ...cardModel(fleet[0], [{ ...families[0], image: { file: 'a.webp', author: 'Alexander Migl', licence: 'CC BY 4.0' } }]), bandLabel: 'x' };
+  renderCards({ querySelector: () => target }, [card], '');
+  assert.match(html, /alt="Kia EV5[^"]*"/);
+  assert.doesNotMatch(html, /alt="[^"]*Alexander Migl/);
+});
+
+test('a card without an image renders no figure and no broken img', () => {
+  // This is the normal state until the research waves finish, not an edge case.
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  renderCards({ querySelector: () => target }, [{ ...cardModel(fleet[1], families), bandLabel: 'x' }], '');
+  assert.doesNotMatch(html, /<img/);
+  assert.doesNotMatch(html, /car-figure/);
+});
+
+test('the image file name is escaped', () => {
+  let html = '';
+  const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
+  const card = { ...cardModel(fleet[0], [{ ...families[0], image: { file: 'a".webp', author: '<b>P</b>', licence: 'CC BY 4.0' } }]), bandLabel: 'x' };
+  renderCards({ querySelector: () => target }, [card], '');
+  assert.doesNotMatch(html, /<b>P<\/b>/);
 });
