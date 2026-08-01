@@ -627,4 +627,8 @@ test('the image file name is escaped', () => {
   const card = { ...cardModel(fleet[0], [{ ...families[0], image: { file: 'a".webp', author: '<b>P</b>', licence: 'CC BY 4.0' } }]), bandLabel: 'x' };
   renderCards({ querySelector: () => target }, [card], '');
   assert.doesNotMatch(html, /<b>P<\/b>/);
+  // The fixture's quote in `file` is an attribute-breakout attempt against
+  // src="..." specifically — pin that it lands neutralised there, not just
+  // that the unrelated author markup failed to appear somewhere in the page.
+  assert.match(html, /src="images\/cars\/a&quot;\.webp"/);
 });

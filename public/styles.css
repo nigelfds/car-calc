@@ -1379,7 +1379,7 @@ input[type='date'],
 
 .car-card {
   border: 1px solid var(--hairline);
-  border-radius: var(--radius);
+  border-radius: 8px;
   /* The figure below is full-bleed to the card's edges; overflow clips its
      square corners against the card's own rounded ones. */
   overflow: hidden;
@@ -1392,9 +1392,11 @@ input[type='date'],
    of text. */
 .car-figure {
   margin: 0;
-  /* Matches the card's own corner radius on the top two corners only, so the
-     image sits flush inside the border rather than floating in a rounded box. */
-  border-radius: var(--radius) var(--radius) 0 0;
+  /* Deliberately the same literal 8px as .car-card's own border-radius above,
+     not var(--radius) (10px) — matching the card's actual corners is the
+     point, and .car-card does not use that token. The 8px-vs-token
+     inconsistency predates this feature and is a separate cleanup. */
+  border-radius: 8px 8px 0 0;
   overflow: hidden;
   background: var(--paper);
   aspect-ratio: 3 / 2;
