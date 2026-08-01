@@ -1,0 +1,29 @@
+{
+  "id": "mini-countryman-electric",
+  "summary": "Mini's largest model is also its most practical EV, and Australian reviewers broadly treat it as a BMW iX1 in a more entertaining suit: near-identical hardware and a 230kW dual-motor drivetrain in SE All4 form, but sharper steering, less body roll and a list price $10,000-$15,000 below the BMW. The March 2026 technical update raised usable battery capacity to 65.2kWh and WLTP range to 501km for the front-drive E and 467km for the SE All4, which answers the biggest criticism levelled at the launch cars. Where reviewers still divide is the circular OLED interface and the roughly 130kW DC charging peak, both of which draw complaints at this price, and whether the SE All4's extra motor justifies stepping over the $75,000 FBT line.",
+  "pros": [
+    "Same 66.5kWh/65.2kWh-usable pack and 230kW dual-motor drivetrain as the BMW iX1 xDrive30, for $10,000-$15,000 less on list price",
+    "March 2026 silicon-carbide inverter update lifted WLTP range from 462km to up to 501km (E) and 433km to up to 467km (SE All4) with no change to the pack's physical size",
+    "Rated to tow 1200kg braked as the SE All4 (750kg for the front-drive E), where the Mini Cooper Electric and many small electric SUVs are rated at zero",
+    "Six-year capped-price servicing quoted by CarExpert at $1,753 all up, cheap for a European-badged EV",
+    "Five-year unlimited-kilometre warranty is unconditional, with separate eight-year/100,000km high-voltage battery cover"
+  ],
+  "cons": [
+    "SE All4 Favoured ($76,990) and JCW Sport ($79,990) list above the $75,000 FBT exemption cap that the SE All4 Classic clears by only $1,010, so a novated lease can cost more for the higher trim than the price gap suggests",
+    "DC charging peaks at about 130kW and takes roughly 29-34 minutes for 10-80 per cent, slow against similarly priced rivals",
+    "CarExpert recorded 18.9kWh/100km on test in the SE All4, giving under 400km real-world, and the JCW Sport's 20-inch wheels push Mini's own WLTP figure to the worst end of its 15.7-17.4kWh/100km band",
+    "Apple CarPlay appears as a small pop-up box on the 9.4-inch circular OLED rather than filling it, and climate control is touch-only and fiddly on the move",
+    "460L boot is 45L smaller than the petrol Countryman's and front-cabin storage is poor, with an armrest that looks like it hides a bin but does not"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-mini-countryman-prices-small-suv-gets-mild-hybrid-power-longer-range-evs",
+    "https://www.carsales.com.au/editorial/details/prices-up-for-2026-mini-countryman-range-152240/",
+    "https://evcentral.com.au/significant-changes-for-mini-countryman-ev-in-australia-range-and-price-boosted/",
+    "https://www.carexpert.com.au/car-reviews/2025-mini-countryman-electric-review",
+    "https://www.carexpert.com.au/car-reviews/2024-mini-countryman-se-all4-review",
+    "https://www.carsguide.com.au/ev/mini-countryman-electric-92438",
+    "https://www.press.bmwgroup.com/global/article/detail/T0455156EN/even-more-freedom:-the-mini-countryman-e-with-a-purely-electric-range-of-up-to-500-kilometres",
+    "https://www.carsales.com.au/research/mini/countryman/2026/e-classic/"
+  ],
+  "sourcedAt": "2026-08-01"
+}

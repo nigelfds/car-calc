@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bmw-ix2-xdrive30-m-sport",
+    "familyId": "bmw-ix2",
+    "make": "BMW",
+    "model": "iX2",
+    "variant": "xDrive30 M Sport",
+    "bodyType": "SUV",
+    "listPrice": 79900,
+    "batteryKwh": 64.8,
+    "rangeKm": 395,
+    "consumptionKwhPer100km": 18.5,
+    "bootLitresSeatsUp": 525,
+    "bootLitresSeatsDown": 1400,
+    "seats": 5,
+    "towKg": 1200,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2200,
+    "depreciationCurve": [1, 0.75, 0.65, 0.57, 0.5, 0.44],
+    "sourcedAt": "2026-07-31"
+  }
+]

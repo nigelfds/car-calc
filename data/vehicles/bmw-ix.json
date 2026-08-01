@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bmw-ix-xdrive45-m-sport",
+    "familyId": "bmw-ix",
+    "make": "BMW",
+    "model": "iX",
+    "variant": "xDrive45 M Sport",
+    "bodyType": "SUV",
+    "listPrice": 142900,
+    "batteryKwh": 94.8,
+    "rangeKm": 522,
+    "consumptionKwhPer100km": 21.8,
+    "bootLitresSeatsUp": 500,
+    "bootLitresSeatsDown": 1750,
+    "seats": 5,
+    "towKg": 2500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 3200,
+    "depreciationCurve": [1, 0.64, 0.52, 0.43, 0.36, 0.3],
+    "sourcedAt": "2026-07-31"
+  }
+]

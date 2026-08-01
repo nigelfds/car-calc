@@ -1,0 +1,31 @@
+{
+  "id": "audi-q6-e-tron",
+  "summary": "The Q6 e-tron is Audi's first car on the 800-volt PPE platform it shares with the Porsche Macan Electric, sold here as a boxy SUV and a lower-roofed Sportback that Audi and the Australian outlets both file as an SUV. Reviewers rate the cabin, the screens and the charging hardware as a clear step above the cheaper MEB-based Q4, but consistently mark the ride down as firm and busy on the entry grades that cannot be optioned with air suspension. The commercial catch is that Audi Australia's own certified range figures land well below the European numbers quoted at launch, and every grade lists above the $91,661 fuel-efficient threshold, so nothing in the range attracts the novated-lease FBT exemption.",
+  "pros": [
+    "800V architecture charges at 225kW on the entry grade and 270kW on quattro and SQ6 grades, 10-80 per cent in a claimed 21 minutes, against 175kW in the Audi Q4 e-tron",
+    "Braked towing of 2000kg on RWD grades and 2400kg on quattro and SQ6 grades, double the Q4 e-tron's 1000-1200kg and well clear of a Tesla Model Y's 1588kg",
+    "526L boot and 1529L with the 40:20:40 bench down in the SUV, plus a 64L frunk that swallows the charging cables",
+    "The Sportback body is the efficiency pick and costs nothing extra in entry form: 173Wh/km and 493km certified against 182Wh/km and 466km for the SUV, at the same $99,900 list price",
+    "Five-year unlimited-kilometre warranty, an eight-year/160,000km battery warranty, six years of roadside assistance and a capped six-year service plan at $2,080"
+  ],
+  "cons": [
+    "The cheapest grade lists at $99,900, so every variant clears the $91,661 fuel-efficient LCT/FBT threshold - unlike the Q4 e-tron 45, no Q6 is eligible for the novated-lease FBT exemption and all attract luxury car tax",
+    "Australia's certified WLTP figures are far below the European numbers used at launch: the performance grade is homologated here at 558km, not the 641km quoted in Audi's own launch material, and the quattro at 542km rather than 625km",
+    "Chasing Cars calls the entry RWD grade's ride 'very firm, tightly controlled' and notes the $4,900 adaptive air suspension that fixes it cannot be ordered on that grade at all",
+    "Audi added the $99,900 entry grade in March 2025, undercutting the launch Q6 e-tron performance by $15,600 for near-identical equipment, which has hurt residuals on the earlier car",
+    "Choosing the Sportback body costs 15L of boot with the seats up and 156L with them down, and $5,000 extra on the quattro and SQ6 grades"
+  ],
+  "sources": [
+    "https://www.audi.com.au/en/models/q6-e-tron/q6-e-tron/",
+    "https://www.audi.com.au/en/models/q6-e-tron/q6-sportback-e-tron/",
+    "https://www.greenvehicleguide.gov.au/Vehicle/Search",
+    "https://www.carexpert.com.au/car-news/2025-audi-q6-e-tron-ev-new-entry-model-dips-under-100000",
+    "https://www.carexpert.com.au/car-news/2026-audi-q6-and-sq6-sportback-price-and-specs",
+    "https://www.carexpert.com.au/car-news/2025-audi-q6-e-tron-and-sq6-e-tron-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-audi-q6-sportback-e-tron-review-quick-drive",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/audi-q6-e-tron-rwd-2026-review/",
+    "https://www.carsguide.com.au/ev/audi-q6-e-tron-sportback-100145",
+    "https://www.carsguide.com.au/audi/q6-e-tron/price/2026"
+  ],
+  "sourcedAt": "2026-08-01"
+}

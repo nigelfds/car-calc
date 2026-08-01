@@ -1,5 +1,40 @@
 [
   {
+    "id": "alfa-romeo-junior-elettrica",
+    "summary": "The Junior Elettrica is Alfa Romeo's first battery-electric car and the only pure-EV grade in the Junior range here, a single front-drive spec using the same 115kW motor and 51kWh usable Stellantis pack as its platform twin the Jeep Avenger, but with an Italian chassis tune and a $58,990 list price. Australian reviewers are near-unanimous that the Junior steers and rides better than almost anything else this size — the same testers call the pricing hard to defend against a Volvo EX30 or Kia EV3, and the Elettrica asks about $13,000 more than the Ibrida hybrid that makes up most of the model's sales. Opinion splits on whether the badge, the driving character and $232-a-year servicing offset a 400-litre boot, a cramped rear seat, no crash-test rating at all and a national network of only eight dealers.",
+    "pros": [
+      "Cheapest electric car in Australia to service by a wide margin: Alfa's own schedule averages $232.32 a year over five years at 12-month/15,000km intervals, against $621.17 a year for the Ibrida hybrid version of the same car.",
+      "Reviewers rate the chassis the best part of the car — CarsGuide scored the Junior 9/10 for driving and called the steering 'communicative and direct', where the mechanically related Jeep Avenger is criticised for over-light steering.",
+      "Charging is competitive for a 51kWh car: 100kW DC takes 20-80 per cent in 27 minutes and an 11kW three-phase AC charger fills it in 5 hours 45 minutes, so a home three-phase supply is genuinely usable.",
+      "At $58,990 list and $65,649 drive-away in Melbourne it sits comfortably under the $75,000 FBT threshold, so a novated lease keeps the full exemption — and Alfa's own calculator itemises the $2,995 dealer delivery rather than burying it.",
+      "Five-year, unlimited-kilometre warranty with no dealer-servicing condition attached, unlike the platform-mate Jeep Avenger whose five years is capped at 100,000km."
+    ],
+    "cons": [
+      "No crash-test rating exists at all — neither ANCAP nor Euro NCAP has assessed the Junior, so a buyer is choosing on six airbags and a feature list against five-star-rated rivals like the Volvo EX30 and Kia EV3.",
+      "Not rated to tow anything: 0kg braked and unbraked, where the Junior Ibrida hybrid is rated at 1,100kg braked and a Chery E5 at 750kg.",
+      "The battery costs you boot and rear space: 400 litres behind the second row versus 415 in the Ibrida, reviewers describe the rear seat as 'even tighter' with minimal headroom and awkward door openings, and there is no spare wheel, only a repair kit.",
+      "Ownership risk is real — Alfa Romeo Australia runs just eight dealers nationally and has said it has no plans to expand, on brand volume of a few hundred cars a year, and the same 51kWh Stellantis drivetrain in the Jeep Avenger has been discounted to $40,000 drive-away from $49,990 list.",
+      "The 207kW Elettrica Veloce sold in Europe has been explicitly ruled out for Australia, so the only battery-electric Junior on offer is the 115kW/260Nm car that takes 9.0 seconds to 100km/h and tops out at 150km/h."
+    ],
+    "sources": [
+      "https://www.alfaromeo.com.au/selector-pricing",
+      "https://www.alfaromeo.com.au/models/junior",
+      "https://www.alfaromeo.com.au/warranty",
+      "https://www.media.stellantis.com/au-en/alfa-romeo/press/design-meet-performance-the-all-new-alfa-romeo-junior-starting-at-45-900-msrp",
+      "https://www.carexpert.com.au/car-reviews/2026-alfa-romeo-junior-ibrida-review",
+      "https://www.carsguide.com.au/urban/alfa-romeo-junior-lbrida-mhev-99777",
+      "https://www.carsguide.com.au/alfa-romeo/junior/range",
+      "https://www.carsguide.com.au/alfa-romeo/junior/price/2026",
+      "https://www.carsguide.com.au/car-news/hot-italian-ev-not-for-oz-99784",
+      "https://www.carexpert.com.au/alfa-romeo/junior/2026-elettrica-suv-fwd-electric-jsgowamm20250402",
+      "https://www.carexpert.com.au/car-news/alfa-romeo-comfortable-with-its-tiny-dealer-network",
+      "https://www.carsales.com.au/research/alfa-romeo/junior/",
+      "https://www.chasingcars.com.au/news/new-car-prices/alfa-romeo-junior-hybrid-and-ev-2026-finally-arrives-to-take-on-the-mini-aceman-and-lexus-lbx/",
+      "https://ev-database.org/car/2184/Alfa-Romeo-Junior-Elettrica-54-kWh"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "audi-q4-e-tron",
     "summary": "The Q4 e-tron is Audi's MEB-platform medium electric SUV, sold in Australia as a conventional SUV and a lower-roofed Sportback, each in rear-drive 45 and quattro 55 form. Australian reviewers rate the cabin quality, driving position and packaging highly and note it carries more usable space than its compact footprint suggests, but they are lukewarm about its handling and point out it costs meaningfully more than the mechanically related Volkswagen Group EVs. The critical decision inside the range is the price step: the 45 grades sit under the $91,661 luxury-car-tax and FBT threshold while both 55 quattro grades clear it, which changes the ownership maths far more than the extra performance does.",
     "pros": [
@@ -62,6 +97,37 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "audi-q6-e-tron",
+    "summary": "The Q6 e-tron is Audi's first car on the 800-volt PPE platform it shares with the Porsche Macan Electric, sold here as a boxy SUV and a lower-roofed Sportback that Audi and the Australian outlets both file as an SUV. Reviewers rate the cabin, the screens and the charging hardware as a clear step above the cheaper MEB-based Q4, but consistently mark the ride down as firm and busy on the entry grades that cannot be optioned with air suspension. The commercial catch is that Audi Australia's own certified range figures land well below the European numbers quoted at launch, and every grade lists above the $91,661 fuel-efficient threshold, so nothing in the range attracts the novated-lease FBT exemption.",
+    "pros": [
+      "800V architecture charges at 225kW on the entry grade and 270kW on quattro and SQ6 grades, 10-80 per cent in a claimed 21 minutes, against 175kW in the Audi Q4 e-tron",
+      "Braked towing of 2000kg on RWD grades and 2400kg on quattro and SQ6 grades, double the Q4 e-tron's 1000-1200kg and well clear of a Tesla Model Y's 1588kg",
+      "526L boot and 1529L with the 40:20:40 bench down in the SUV, plus a 64L frunk that swallows the charging cables",
+      "The Sportback body is the efficiency pick and costs nothing extra in entry form: 173Wh/km and 493km certified against 182Wh/km and 466km for the SUV, at the same $99,900 list price",
+      "Five-year unlimited-kilometre warranty, an eight-year/160,000km battery warranty, six years of roadside assistance and a capped six-year service plan at $2,080"
+    ],
+    "cons": [
+      "The cheapest grade lists at $99,900, so every variant clears the $91,661 fuel-efficient LCT/FBT threshold - unlike the Q4 e-tron 45, no Q6 is eligible for the novated-lease FBT exemption and all attract luxury car tax",
+      "Australia's certified WLTP figures are far below the European numbers used at launch: the performance grade is homologated here at 558km, not the 641km quoted in Audi's own launch material, and the quattro at 542km rather than 625km",
+      "Chasing Cars calls the entry RWD grade's ride 'very firm, tightly controlled' and notes the $4,900 adaptive air suspension that fixes it cannot be ordered on that grade at all",
+      "Audi added the $99,900 entry grade in March 2025, undercutting the launch Q6 e-tron performance by $15,600 for near-identical equipment, which has hurt residuals on the earlier car",
+      "Choosing the Sportback body costs 15L of boot with the seats up and 156L with them down, and $5,000 extra on the quattro and SQ6 grades"
+    ],
+    "sources": [
+      "https://www.audi.com.au/en/models/q6-e-tron/q6-e-tron/",
+      "https://www.audi.com.au/en/models/q6-e-tron/q6-sportback-e-tron/",
+      "https://www.greenvehicleguide.gov.au/Vehicle/Search",
+      "https://www.carexpert.com.au/car-news/2025-audi-q6-e-tron-ev-new-entry-model-dips-under-100000",
+      "https://www.carexpert.com.au/car-news/2026-audi-q6-and-sq6-sportback-price-and-specs",
+      "https://www.carexpert.com.au/car-news/2025-audi-q6-e-tron-and-sq6-e-tron-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-audi-q6-sportback-e-tron-review-quick-drive",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/audi-q6-e-tron-rwd-2026-review/",
+      "https://www.carsguide.com.au/ev/audi-q6-e-tron-sportback-100145",
+      "https://www.carsguide.com.au/audi/q6-e-tron/price/2026"
+    ],
+    "sourcedAt": "2026-08-01"
+  },
+  {
     "id": "bmw-i4",
     "summary": "Reviewer consensus across CarExpert, CarsGuide and EV Central is that the BMW i4 eDrive35 remains genuinely engaging and comfortable to drive, even as BMW pared the local range back to this single grade for 2026, dropping the eDrive40 and M50 and readying the model for replacement by the Neue Klasse i3. CarsGuide scored the driving experience 10/10, but reviewers consistently flag pricing that undercuts few direct rivals, real-world range well short of the claimed figure, and cabin materials that feel a step below what BMW buyers expect. CarExpert's overall verdict of \"Good\" reflects a competent EV being overtaken by newer rivals on range and technology.",
     "pros": [
@@ -85,6 +151,60 @@
     "sourcedAt": "2026-07-26"
   },
   {
+    "id": "bmw-i5",
+    "summary": "Australian reviewers rate the electric 5 Series as the most convincing large executive EV to drive, with CarExpert marking both the eDrive40 and the M60 xDrive \"Very Good\" for a chassis that stays composed and quiet where rivals feel inert. The disagreement is entirely about money and range: at $155,900 to $215,900 before on-roads the i5 asks Mercedes EQE and Porsche Taycan money, and reviewers consistently record real-world consumption well above the claim, so the 550km and 506km certified figures are not what buyers see. The M60's $60,000 premium buys an M5-rivalling 3.8-second car, but it also cuts range and is the harder case to argue on value.",
+    "pros": [
+      "Rear-drive eDrive40 is certified at 550km from an 81.2kWh usable pack, and the 442kW M60 still manages 506km rather than the sub-450km a performance EV usually concedes",
+      "205kW DC charging gives a 10-80 per cent top-up in about 30 minutes, and BMW includes a five-year Chargefox subscription",
+      "CarExpert rates the ride/handling balance above the EQE's, calling perceived build quality \"head and shoulders above\" Mercedes-Benz",
+      "M60 xDrive delivers 442kW/820Nm and 0-100km/h in 3.8 seconds, effectively an electric M5 for $4000 less than the M60 Touring",
+      "Standard 17-speaker Bowers & Wilkins audio, panoramic glass roof and Merino leather on both grades, not option-boxed"
+    ],
+    "cons": [
+      "Real-world efficiency badly undershoots the claim — CarExpert logged 18.6kWh/100km in the eDrive40 against a 16.6kWh/100km claim, and 21.3kWh/100km in the M60 against 18.0",
+      "CarExpert's own reviewer notes the petrol 520i carries comparable standard equipment for far less, making the $155,900 entry hard to justify",
+      "Option packages inflate the price fast: the Comfort Package alone adds $5700 to a car already over $150,000",
+      "M60 xDrive rides low enough to scrape its undercarriage on ordinary driveways, and rear legroom is tight for taller adults despite the size",
+      "Large luxury EVs hold value poorly in Australia, and roughly $19,000 (eDrive40) to $37,000 (M60) of the list price is Luxury Car Tax that is not recovered at resale"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2024-bmw-i5-edrive40-review",
+      "https://www.carexpert.com.au/car-reviews/2024-bmw-i5-m60-xdrive-review",
+      "https://www.carsguide.com.au/bmw/i5",
+      "https://www.carsales.com.au/research/bmw/i5/",
+      "https://www.carsales.com.au/editorial/details/bmw-i5-m60-xdrive-touring-2025-review-150097/",
+      "https://ev-database.org/uk/car/3112/BMW-i5-eDrive40-Saloon"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "bmw-ix",
+    "summary": "The facelifted iX is BMW's flagship electric SUV and, since the mid-2025 update, Australia gets exactly one grade: the xDrive45 M Sport at $142,900 before on-road costs. Reviewers are near-unanimous that the bigger 94.8kWh usable pack fixes the old xDrive40's biggest weakness, and that the ride, refinement and cabin quality are a class above the mainstream large EVs, but they split on whether the styling and the screen-led interior justify the money against an Audi Q6 e-tron, Polestar 3 or Cadillac Lyriq. The bigger caveat for buyers is money rather than metal: heavy new-car discounting and soft premium-EV residuals mean this is a car to negotiate hard on and hold for a long time.",
+    "pros": [
+      "The 94.8kWh usable pack lifts the claimed range to 602km WLTP best case (522km on the Australian car's standard 22-inch wheels), against just 425km for the xDrive40 it replaced",
+      "2500kg braked towing is unusually strong for a large EV SUV and more than double the BMW iX1's 1200kg, with a 500L boot growing to 1750L",
+      "22kW three-phase AC charging is rare at any price and lets the big pack refill overnight on a home three-phase supply; DC peaks at 175kW for 10-80% in about 34 minutes",
+      "300kW/700Nm dual-motor all-wheel drive for a 5.1-second 0-100km/h, with the air-sprung ride and hush that Australian reviewers consistently rate above the Tesla Model X and Polestar 3",
+      "Dealers advertise drive-away deals well under the $149,800 a $142,900 list price implies in Victoria, so the sticker is genuinely negotiable"
+    ],
+    "cons": [
+      "Australia gets the xDrive45 M Sport only - the longer-range xDrive60 and the M70 performance flagship are sold in Europe and the US but not offered here, so there is no way to buy more range or more speed",
+      "The 602km headline is the best-case end of BMW's own 490-602km WLTP band; the Australian-spec car is certified at 522km, and carsales measured about 450km at constant highway speed",
+      "Depreciation on large premium EVs is punishing - independent US data puts the iX at 62-69% lost over five years, and one-year-old EVs in Australia are averaging 25% falls",
+      "Almost everything routes through the touchscreen, and reviewers single out the awkward door handles, the missing blind on the panoramic roof and the polarising front end",
+      "At $142,900 it clears the Luxury Car Tax and sits far above both the $75,000 and $91,661 FBT exemption thresholds, so a novated lease gets no FBT relief"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2025-bmw-ix-price-and-specs",
+      "https://www.carsales.com.au/editorial/details/bmw-ix-xdrive45-m-sport-2025-review-150500/",
+      "https://www.carsguide.com.au/ev/bmw-ix-xdrive45-99598",
+      "https://www.carsales.com.au/research/bmw/ix/2026/xdrive45-m-sport/",
+      "https://www.carexpert.com.au/bmw/ix/2026/price-and-specs",
+      "https://www.press.bmwgroup.com/global/article/detail/T0447642EN/the-new-bmw-ix?language=en"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "bmw-ix1",
     "summary": "Australian reviewers rate the iX1 as one of the best small electric SUVs on sale, praising BMW's typically composed ride and precise steering alongside a genuinely upscale, well-finished cabin with quality materials and slick infotainment. It carries a clear price premium over mainstream EV rivals, and its roughly 400-450km real-world range trails segment leaders like the Tesla Model Y, but reviewers feel the driving experience and interior finish justify the extra spend for buyers prioritising refinement and brand prestige over outright value. CarExpert has named it its Best EV Small SUV in consecutive years, reflecting a broad consensus that BMW has successfully electrified its smallest SUV.",
     "pros": [
@@ -106,6 +226,63 @@
       "https://zecar.com/reviews/bmw-ix1-ix2-price-cut-range-boost-2026"
     ],
     "sourcedAt": "2026-07-26"
+  },
+  {
+    "id": "bmw-ix2",
+    "summary": "The iX2 is the coupe-roofed version of BMW's iX1 electric small SUV, sharing its 230kW dual-motor drivetrain and 64.8kWh usable pack but trading a little rear headroom for a sleeker tail and a slightly bigger 525-litre boot. Australian reviewers consistently rate the powertrain, cabin quality and body control highly while calling out the 395km ADR range as short for the money, and a ride that is firmer than the iX1's on the standard 19-inch M wheels. A $7,700 price cut in March 2026 dropped it to $79,900 and simultaneously deleted the front-drive eDrive20, so the range is now a single dual-motor grade.",
+    "pros": [
+      "230kW/494Nm dual-motor all-wheel drive gets it to 100km/h in 5.6 seconds, quicker than a Volvo EX40 Twin Motor and most of the segment",
+      "525-litre boot is roughly 35L larger than the iX1's despite the coupe roofline, expanding to 1400L",
+      "$7,700 cut in March 2026 brought it to $79,900 before on-roads, only $2,000 above the iX1 xDrive30 and now below the LCT threshold for fuel-efficient vehicles",
+      "Adaptive M suspension and a boost paddle give it genuinely engaging body control that reviewers rank above the Mercedes-Benz EQA",
+      "1200kg braked towing capacity with the optional bar, which several small electric SUVs cannot match"
+    ],
+    "cons": [
+      "395km ADR range is short for an $80k EV — CarExpert measured 19.1kWh/100km against the 18.5kWh/100km claim, implying closer to 350km in mixed driving",
+      "Firmer, busier ride than the iX1, and reviewers report the 20-inch wheel option makes it noticeably worse over sharp bumps",
+      "Sloping roofline costs rear headroom, and the raised battery floor leaves taller adults sitting knees-up",
+      "Now a one-grade range — the cheaper front-drive eDrive20 was discontinued in Australia in 2026, so there is no lower entry point",
+      "Buyers of the pre-cut $87,600 car lost close to 9 per cent of list overnight, which weighs on used values"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/bmw-electric-suv-prices-slashed",
+      "https://www.carexpert.com.au/car-reviews/2024-bmw-ix2-xdrive30-review",
+      "https://www.carsales.com.au/editorial/details/bmw-ix2-xdrive30-2025-review-148759/",
+      "https://evcentral.com.au/bmw-chops-ev-pricing-ix1-and-ix2-are-now-cheaper-new-entry-level-ix1-added/",
+      "https://thedriven.io/2026/03/31/bmw-cuts-prices-of-fully-electric-ix1-and-ix2-models/",
+      "https://zecar.com/reviews/bmw-ix1-ix2-price-cut-range-boost-2026",
+      "https://www.carexpert.com.au/bmw/ix2/2026-m-sport-suv-4x4-electric-jsfwff5o20260331"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "bmw-ix3",
+    "summary": "The second-generation iX3 is the first Neue Klasse BMW, built on a dedicated 800V platform with a Gen6 cylindrical-cell battery, and Australian reviewers have been close to unanimous that it is the new benchmark premium electric SUV — steering, braking feel and regeneration are singled out as the best of any EV they have driven. Its range claim is the longest of any new vehicle on sale in Australia — 793km WLTP as the local car is actually specified, against the 805km headline BMW quotes for a European base car without the M Sport pack Australia fits as standard — and at $109,900 before on-roads it undercuts the Porsche Macan, Audi Q6 e-tron and Polestar 3 rather than matching them. The disagreement is over the tech-first cabin: the 43-inch Panoramic Vision strip impresses everyone, but reviewers split on whether burying climate and steering-wheel adjustment in a screen-heavy iDrive is livable, and several flagged rear-seat harshness on passive dampers as an open question for Australian roads.",
+    "pros": [
+      "793km WLTP on the standard-fit 20-inch wheels is the longest range of any new vehicle on sale in Australia — Polestar 3 claims 706km and the Audi Q6 e-tron 542km — and the no-cost alternative 20-inch aero wheel lifts it to 802km",
+      "800V architecture charges at up to 400kW, adding a claimed 372km in 10 minutes and 10-80 per cent in about 21 minutes",
+      "Undercuts the premium electric SUVs it is benchmarked against by thousands: rivals from Porsche, Audi and Polestar sit in the $120,000-$140,000 band",
+      "345kW/645Nm dual-motor drivetrain does 0-100km/h in 4.9 seconds, and reviewers rate the steering feel and near-98-per-cent regenerative braking as the best in any EV they have driven",
+      "2000kg braked tow rating and a 520L boot plus a 58L frunk — the first BMW EV with front storage"
+    ],
+    "cons": [
+      "One grade only at launch: the $109,900 50 xDrive. The $89,900 rear-drive iX3 40 is announced but not orderable until Q4 2026, so early buyers pay a $20,000 premium for a variant that will shortly stop being the entry point",
+      "Air-conditioning and even steering-wheel adjustment are screen-only, and reviewers called the Panoramic iDrive laggy, illogically nested and steep enough to need a lengthy instructional briefing",
+      "Rear-seat ride was described as harsh over sharp inputs, and there is no driver-adjustable damper option — a live risk on Australian roads given launch cars were assessed on smooth Spanish tarmac",
+      "No spare tyre of any kind, only run-flats; one launch car was stranded by a puncture",
+      "Real-world consumption of 17.3-18kWh/100km in testing implies roughly 600-650km rather than the near-800km lab claim, the optional 22-inch wheels cut the WLTP figure to 737km, and BMW's five-year warranty trails the seven years Kia offers on the EV9"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-bmw-ix3-price-and-specs",
+      "https://www.carexpert.com.au/car-news/2026-bmw-ix3-ev-dips-under-dollar90000-with-new-base-model",
+      "https://www.carexpert.com.au/car-reviews/2026-bmw-ix3-review-quick-drive",
+      "https://www.carsales.com.au/editorial/details/bmw-ix3-50-xdrive-2026-review-150980/",
+      "https://evcentral.com.au/2026-bmw-ix3-50-xdrive-review-the-best-car-of-2025-neue-klasse-stakes-its-claim/",
+      "https://www.carsguide.com.au/ev/bmw-ix3-100263",
+      "https://zecar.com/reviews/2026-bmw-ix3-price-specs-australia",
+      "https://www.batterydesign.net/bmw-ix3-neue-klasse-battery/"
+    ],
+    "sourcedAt": "2026-07-31"
   },
   {
     "id": "bmw-x1-phev",
@@ -756,6 +933,41 @@
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
     "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "cupra-tavascan",
+    "summary": "The Tavascan is Cupra's only battery-electric model in Australia now that the Born has been withdrawn, and it is a coupe-roofed mid-size SUV built on the same MEB platform as the Volkswagen ID.5 and Skoda Enyaq. Australian reviewers consistently rate the chassis above its rivals — Chasing Cars and CarsGuide both single out the steering and body control as sharper than a Tesla Model Y or BYD Sealion 7 — while criticising the haptic controls, the 135kW DC charging peak and the complete absence of connected services. Buyers should note this two-grade range is in run-out: Cupra announced an updated line-up on 30 June 2026, arriving from late August, which adds a cheaper entry grade and repositions the VZ above the $75,000 FBT cap.",
+    "pros": [
+      "Reviewers rate the chassis the best in the segment: Chasing Cars called the Endurance's chassis 'agile and adjustable' with crisp steering, and CarsGuide judged the ride a genuine step above the Tesla Model Y and BYD Sealion 7 it is priced against",
+      "Both grades sit under the $75,000 FBT-exemption cap for novated leases, the VZ by just $510 — and the replacement VZ announced for late August 2026 is priced at $75,490, which forfeits that concession, so the run-out car is materially cheaper to salary-package",
+      "540 litres seats-up and 1,550 litres seats-down with a power tailgate and kick sensor, and a completely flat rear floor that makes the middle seat genuinely usable for an adult",
+      "Five-year unlimited-kilometre warranty is factory-backed and unconditional — it is not tied to servicing inside the Cupra network — with the high-voltage battery separately covered for 8 years/160,000km including a 70 per cent capacity floor",
+      "The 250kW VZ runs 0-100km/h in 5.5 seconds and adds DCC adaptive dampers, a fixed panoramic roof and matrix high beam over the 210kW Endurance, none of which the base car can be optioned with"
+    ],
+    "cons": [
+      "This range is superseded from late August 2026 by an updated line-up with a 10.25-inch driver display, physical steering wheel buttons and a $55,490 entry grade — the run-out car means older cabin tech and an immediate resale hit",
+      "135kW DC peak is slow for 2026: a Kia EV5 or Zeekr 7X at similar money refills faster, and Chasing Cars called the 28-minute 10-80 per cent claim disappointing for a 77kWh pack",
+      "No vehicle-to-load, no head-up display and no connected services at all — no smartphone app, no remote preconditioning and no over-the-air updates, features that cars $15,000 cheaper now include",
+      "Cupra is a marginal brand here — just 257 Tavascans delivered in Australia to the end of May 2026, the same as the Skoda Elroq it shares a platform with — so parts, specialist repairers and resale all carry small-volume risk",
+      "Chasing Cars measured 18.3kWh/100km in the real world for about 421km against the 531km WLTP claim, and criticised the grainy handover between regenerative braking and the rear drum brakes"
+    ],
+    "sources": [
+      "https://www.cupraofficial.com.au/cars/tavascan",
+      "https://www.cupraofficial.com.au/cars/tavascan/versions-and-equipment",
+      "https://www.cupraofficial.com.au/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-my25-5-brochure-mar-2026.pdf",
+      "https://www.cupraofficial.com.au/owners/warranty",
+      "https://www.carsguide.com.au/cupra/tavascan/price/2026",
+      "https://www.carexpert.com.au/cupra/tavascan/pricing",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/cupra-tavascan-endurance-2025-review/",
+      "https://www.carsguide.com.au/ev/cupra-tavascan-97320",
+      "https://www.carexpert.com.au/car-reviews/2025-cupra-tavascan-review-2",
+      "https://www.carsguide.com.au/car-news/australia-gets-cheaper-2027-cupra-tavascan-as-the-electric-mid-size-suv-continues-to-rival",
+      "https://www.carexpert.com.au/car-news/cupra-launching-its-cheapest-ev-yet-in-australia-undercutting-tesla-model-y",
+      "https://www.vesr.gov.au/vehicle/cupra-tavascan-endurance-210kw-suv-2025",
+      "https://ev-database.org/car/3610/CUPRA-Tavascan-250-kW---77-kWh-VZ",
+      "https://www.carexpert.com.au/car-news/cupras-first-ev-wont-return-to-australia-any-time-soon"
+    ],
+    "sourcedAt": "2026-08-01"
   },
   {
     "id": "deepal-s07",
@@ -2272,6 +2484,36 @@
     "sourcedAt": "2026-07-31"
   },
   {
+    "id": "mini-aceman",
+    "summary": "The Aceman is Mini's five-seat electric crossover, slotted between the Cooper hatch and the Countryman, and Australian reviewers broadly agree it delivers the brand's go-kart handling in a shape that finally has usable back seats — Chasing Cars scored the SE 8.0 and made it its 2025 Premium Small Car of the Year. The recurring objection is price against size: $60,990 before on-roads buys a 4.07-metre car when a larger Volvo EX30 opens at $49,990, and Mini deleted the cheaper Aceman E from the local range in 2025 after discounting it heavily, leaving the SE as the entry point. Opinion splits on the ride, which is firm on the standard 19-inch wheels, and on whether the JCW E's extra 30kW justifies $5,000 and a 51km range penalty.",
+    "pros": [
+      "Sharply tuned front-drive chassis that reviewers rate as genuinely fun — Chasing Cars called the SE a 'tenacious corner carver' and scored it 8.0/10, well clear of a BYD Atto 2 or Zeekr X on driver appeal",
+      "Far more usable than the Mini Cooper Electric it shares a platform with: five seats and a 300-litre boot expanding to 1005 litres, against the Cooper's four seats and 210 litres",
+      "406km WLTP from the SE's 49.2kWh usable pack is competitive for a 4070mm car, and Chasing Cars still recorded 351km in real-world Australian testing",
+      "Both variants clear the $75,000 FBT exemption cap with room to spare — even the $65,990 JCW E has almost $9,000 of headroom, so a novated lease keeps the full exemption",
+      "High-voltage battery covered for 8 years/160,000km on top of the 5-year unlimited-kilometre vehicle warranty"
+    ],
+    "cons": [
+      "Expensive for the metal: $60,990 for the SE against $49,990 for a longer-range Volvo EX30 and $46,080 for a Zeekr X, both roomier cars",
+      "95kW peak DC charging is modest — around 31 minutes for 10-80 per cent, where rivals at this money manage well over 150kW",
+      "Firm damping on the standard 19-inch wheels is the most consistent criticism in Australian reviews; CarExpert flagged ride quality at speed and Chasing Cars found it harsh in town",
+      "Rear-seat space and outward vision are compromised for a five-seater — CarsGuide notes tight rear legroom and a large B-pillar blind spot, and tyre noise is 'far from best in class'",
+      "Resale risk is real: Mini cut the entry Aceman E by $11,500 to $51,990 drive-away and then deleted it within months of launch, and Mini's total EV volume here is tiny at 159 Aceman sales in Q1 2026"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/mini/aceman/2026",
+      "https://www.carexpert.com.au/car-reviews/2025-mini-aceman-review-2",
+      "https://www.carexpert.com.au/car-news/when-mini-will-run-out-of-its-cheapest-evs-in-australia",
+      "https://www.chasingcars.com.au/reviews/small-suvs/mini-aceman-se-2025-review/",
+      "https://www.carsguide.com.au/urban/mini-aceman-se-101563",
+      "https://www.carsguide.com.au/ev/mini-aceman-97115",
+      "https://www.carsales.com.au/editorial/details/mini-aceman-jcw-2026-review-151835/",
+      "https://www.carsales.com.au/research/mini/aceman/",
+      "https://zecar.com/electric-vehicles/mini/acemen/2024/se"
+    ],
+    "sourcedAt": "2026-08-01"
+  },
+  {
     "id": "mini-cooper-electric",
     "summary": "Mini's third-generation electric Cooper hatch is, by broad Australian reviewer consensus, the most entertaining EV in its price bracket — CarsGuide scored the driving experience a perfect 10 and Chasing Cars called it one of the most enjoyable electric cars on sale here — but the same reviewers keep landing on the same objection: it is a very small, very expensive car. Mini Australia deleted the cheaper Cooper E in 2025, so the range now opens at $58,990 before on-road costs for the 400km Cooper SE, roughly $20,000 above an equivalently sized MG 4. Opinion splits hardest on the ride: some testers treat the taut, fidgety damping as part of the go-kart appeal, others find it wearing on suburban roads, and the JCW E does without the adaptive dampers the petrol JCW gets.",
     "pros": [
@@ -2299,6 +2541,35 @@
       "https://www.carsales.com.au/research/mini/cooper/"
     ],
     "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "mini-countryman-electric",
+    "summary": "Mini's largest model is also its most practical EV, and Australian reviewers broadly treat it as a BMW iX1 in a more entertaining suit: near-identical hardware and a 230kW dual-motor drivetrain in SE All4 form, but sharper steering, less body roll and a list price $10,000-$15,000 below the BMW. The March 2026 technical update raised usable battery capacity to 65.2kWh and WLTP range to 501km for the front-drive E and 467km for the SE All4, which answers the biggest criticism levelled at the launch cars. Where reviewers still divide is the circular OLED interface and the roughly 130kW DC charging peak, both of which draw complaints at this price, and whether the SE All4's extra motor justifies stepping over the $75,000 FBT line.",
+    "pros": [
+      "Same 66.5kWh/65.2kWh-usable pack and 230kW dual-motor drivetrain as the BMW iX1 xDrive30, for $10,000-$15,000 less on list price",
+      "March 2026 silicon-carbide inverter update lifted WLTP range from 462km to up to 501km (E) and 433km to up to 467km (SE All4) with no change to the pack's physical size",
+      "Rated to tow 1200kg braked as the SE All4 (750kg for the front-drive E), where the Mini Cooper Electric and many small electric SUVs are rated at zero",
+      "Six-year capped-price servicing quoted by CarExpert at $1,753 all up, cheap for a European-badged EV",
+      "Five-year unlimited-kilometre warranty is unconditional, with separate eight-year/100,000km high-voltage battery cover"
+    ],
+    "cons": [
+      "SE All4 Favoured ($76,990) and JCW Sport ($79,990) list above the $75,000 FBT exemption cap that the SE All4 Classic clears by only $1,010, so a novated lease can cost more for the higher trim than the price gap suggests",
+      "DC charging peaks at about 130kW and takes roughly 29-34 minutes for 10-80 per cent, slow against similarly priced rivals",
+      "CarExpert recorded 18.9kWh/100km on test in the SE All4, giving under 400km real-world, and the JCW Sport's 20-inch wheels push Mini's own WLTP figure to the worst end of its 15.7-17.4kWh/100km band",
+      "Apple CarPlay appears as a small pop-up box on the 9.4-inch circular OLED rather than filling it, and climate control is touch-only and fiddly on the move",
+      "460L boot is 45L smaller than the petrol Countryman's and front-cabin storage is poor, with an armrest that looks like it hides a bin but does not"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-mini-countryman-prices-small-suv-gets-mild-hybrid-power-longer-range-evs",
+      "https://www.carsales.com.au/editorial/details/prices-up-for-2026-mini-countryman-range-152240/",
+      "https://evcentral.com.au/significant-changes-for-mini-countryman-ev-in-australia-range-and-price-boosted/",
+      "https://www.carexpert.com.au/car-reviews/2025-mini-countryman-electric-review",
+      "https://www.carexpert.com.au/car-reviews/2024-mini-countryman-se-all4-review",
+      "https://www.carsguide.com.au/ev/mini-countryman-electric-92438",
+      "https://www.press.bmwgroup.com/global/article/detail/T0455156EN/even-more-freedom:-the-mini-countryman-e-with-a-purely-electric-range-of-up-to-500-kilometres",
+      "https://www.carsales.com.au/research/mini/countryman/2026/e-classic/"
+    ],
+    "sourcedAt": "2026-08-01"
   },
   {
     "id": "mitsubishi-outlander-phev",
@@ -2480,6 +2751,38 @@
     "sourcedAt": "2026-07-27"
   },
   {
+    "id": "renault-scenic-e-tech",
+    "summary": "The Scenic E-Tech is Renault's mid-size electric SUV, built on the same CMF-EV platform as the Megane E-Tech and sold in Australia in three front-wheel-drive grades from $55,990 to $65,990 before on-road costs. Australian reviewers rate it near the top of its class for ride comfort, rear-seat space and cabin quality -- Chasing Cars scored the Esprit Alpine 8.0/10 and singled out its damping and adult-sized rear seat -- and the 87kWh grades' 625km WLTP claim is the longest in the segment under $70,000. The disagreement is over whether that is enough against cheaper Chinese rivals, given a 130-150kW charging peak that is only average, soft brake feel, and a five-year/100,000km warranty that is the shortest of any mainstream EV brand here.",
+    "pros": [
+      "The 87kWh grades claim 625km WLTP, more than the Kia EV3 Earth (563km), Skoda Elroq 85 (529km) and Tesla Model Y Long Range AWD (600km), and Chasing Cars still saw 518km in real-world testing",
+      "Genuinely usable as a family car in a way most rivals in the price band are not: 545 litres of boot (1,670 with the 40/20/40 rear seats folded), a rear bench Chasing Cars rated a 'real highlight' for full-size adults, and a 1,100kg braked tow rating against the Megane E-Tech's 900kg",
+      "Ride and refinement are the standout: reviewers describe the damping as smooth and sophisticated over urban bumps, a clear step away from the Megane E-Tech's much-criticised firmness on its 20-inch wheels",
+      "Android Automotive with built-in Google Maps and Google Assistant, plus ADAS calibration that Australian reviewers say works quietly rather than beeping constantly -- a specific complaint they level at most Chinese rivals in this class",
+      "The $4,000 step from Techno EV60 to Techno Long Range EV87 buys 27kWh more usable battery, 195km more range and 35kW more power, which most reviewers call the pick of the range over the $65,990 Esprit Alpine"
+    ],
+    "cons": [
+      "Warranty is five years/100,000km per Renault Australia's own disclaimer, not the unlimited-kilometre cover Kia (seven years), Skoda (seven years) and Tesla offer -- a 20,000km-a-year driver is out of cover before year five ends",
+      "DC charging peaks at 130kW (EV60) and 150kW (EV87) on a 400-volt architecture, giving a 10-80% top-up of about 37 minutes -- slower than the 800-volt Kia EV3 and Hyundai Ioniq 5 despite the far bigger pack",
+      "Brake pedal feel is the most consistent criticism: CarExpert called the travel spongey and hard to modulate progressively, and reviewers also report noticeable road noise from the Michelin tyres and a low-resolution 360-degree camera",
+      "At $65,990 before on-roads the Esprit Alpine is knocking on Tesla Model Y money without ventilated seats or a sunroof, and it adds 20-inch wheels that firm up the ride the cheaper Techno grades get right",
+      "Renault is a small-volume brand here distributed by Ateco, service pricing was still unconfirmed at launch, and the sister Megane E-Tech has already been cut $10,000 from its launch price -- a resale risk this car inherits"
+    ],
+    "sources": [
+      "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
+      "https://www.renault.com.au/vehicles/scenic-e-tech/",
+      "https://www.renault.com.au/build-and-price/scenic-e-tech/",
+      "https://www.renault.com.au/special-offers/",
+      "https://www.carexpert.com.au/car-news/2026-renault-scenic-e-tech-price-and-specs-french-ev-offers-600km-range-for-under-dollar60k",
+      "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/renault-scenic-e-tech-esprit-alpine-ev87-2026-review/",
+      "https://www.carsguide.com.au/renault/scenic-e-tech/2026",
+      "https://www.carsguide.com.au/renault/scenic-e-tech/price/2026",
+      "https://www.carsales.com.au/research/renault/scenic-e-tech/",
+      "https://evcentral.com.au/2026-renault-scenic-e-tech-review-french-electric-suv-brings-european-polish-to-australia-but-can-it-justify-the-price/"
+    ],
+    "sourcedAt": "2026-07-31"
+  },
+  {
     "id": "skoda-elroq",
     "summary": "Skoda's compact electric SUV undercuts every other European EV on price in Australia and reviewers consistently rate its efficiency, DC charging speed and conventional, button-rich cabin as class-leading. The split verdict is on ride and range: Australian testers find the fixed-rate suspension too firm for patchy suburban tarmac, and the entry 60 Select's sub-400km WLTP claim asks buyers to pay $7,000 more for the 85 Select to get genuine touring range. Cheap prepaid servicing and a seven-year warranty offset an equipment list that still omits surround-view cameras, sat-nav and a connected app.",
     "pros": [
@@ -2567,6 +2870,35 @@
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
     "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "smart-1",
+    "summary": "The smart #1 is a 4.27m electric crossover built on Geely's SEA platform and styled by Mercedes-Benz, sold in Australia by LSH Auto out of just three Mercedes-Benz showrooms in Sydney, Melbourne and Brisbane. Australian reviewers consistently rate the driving experience above its price -- a well-damped ride, quick 200kW rear-drive response and a rear seat that slides 15cm and genuinely fits adults -- and it now undercuts a Volvo EX30 on list price. Where opinion turns hostile is the software: nearly every function lives behind a 12.8-inch screen guarded by a fox avatar, and CarExpert singled out the speed-sign warnings and driver-monitoring camera as among the most intrusive it has tested.",
+    "pros": [
+      "Undercuts its SEA-platform sibling the Volvo EX30 (from $49,990) while giving 200kW and 343Nm to the EX30 Plus's 200kW, and undercuts a BMW iX1 by roughly $29,000",
+      "150kW DC charging takes 10-80 per cent in under 30 minutes, and the Premium and BRABUS add 22kW three-phase AC -- a real advantage over the Pro+'s 7.4kW single-phase for anyone on a three-phase home supply",
+      "Rear bench slides 15cm and folds to 976 litres, so a 4.27m car carries adults in the back with legroom rivals like the Zeekr X cannot match",
+      "Rated to tow 1,600kg braked -- the same as an EX30 and unusual for a sub-$50,000 EV of this size",
+      "Five-star ANCAP rating, with a heat pump standard on Premium and BRABUS"
+    ],
+    "cons": [
+      "Climate, mirrors and most vehicle settings are buried in the 12.8-inch touchscreen behind an animated fox avatar; CarExpert found menu navigation deliberately obfuscated and could not reduce the adaptive cruise to plain cruise control",
+      "Driver-assist calibration draws repeated complaints: the speed-sign reader misread a 110km/h zone as 70km/h and chimed continuously, and the driver-monitoring camera flagged ordinary glances as distraction",
+      "Only three dealerships nationally (Sydney, Melbourne, Brisbane) -- there is no smart service point in WA, SA, Tasmania, the ACT or the NT, which also narrows the resale market outside those three cities",
+      "Servicing is expensive for an EV: smart's own capped-price schedule runs $1,998 (Pro+) to $2,231 (BRABUS) over five years, with a $666-$701 single visit in years three and four",
+      "Residuals are an open question -- list prices were cut about $4,000-$5,000 within two years of the August 2024 launch, on top of near-continuous clearance campaigns, and the brand has no modern Australian resale history to price against"
+    ],
+    "sources": [
+      "https://au.smart.com/en/configurator/",
+      "https://au.smart.com/en/hashtag-one/",
+      "https://au.smart.com/en/service/",
+      "https://www.carexpert.com.au/car-reviews/2025-smart-1-premium-review",
+      "https://www.carsguide.com.au/ev/smart-1-94672",
+      "https://www.lshauto.com.au/news-events/smart-1-and-3-evs-launch-in-australia",
+      "https://www.carexpert.com.au/car-news/australias-best-new-car-warranties-in-2026",
+      "https://thebeep.com.au/cars/smart/1"
+    ],
+    "sourcedAt": "2026-08-01"
   },
   {
     "id": "subaru-solterra",

@@ -1,0 +1,27 @@
+{
+  "id": "bmw-ix",
+  "summary": "The facelifted iX is BMW's flagship electric SUV and, since the mid-2025 update, Australia gets exactly one grade: the xDrive45 M Sport at $142,900 before on-road costs. Reviewers are near-unanimous that the bigger 94.8kWh usable pack fixes the old xDrive40's biggest weakness, and that the ride, refinement and cabin quality are a class above the mainstream large EVs, but they split on whether the styling and the screen-led interior justify the money against an Audi Q6 e-tron, Polestar 3 or Cadillac Lyriq. The bigger caveat for buyers is money rather than metal: heavy new-car discounting and soft premium-EV residuals mean this is a car to negotiate hard on and hold for a long time.",
+  "pros": [
+    "The 94.8kWh usable pack lifts the claimed range to 602km WLTP best case (522km on the Australian car's standard 22-inch wheels), against just 425km for the xDrive40 it replaced",
+    "2500kg braked towing is unusually strong for a large EV SUV and more than double the BMW iX1's 1200kg, with a 500L boot growing to 1750L",
+    "22kW three-phase AC charging is rare at any price and lets the big pack refill overnight on a home three-phase supply; DC peaks at 175kW for 10-80% in about 34 minutes",
+    "300kW/700Nm dual-motor all-wheel drive for a 5.1-second 0-100km/h, with the air-sprung ride and hush that Australian reviewers consistently rate above the Tesla Model X and Polestar 3",
+    "Dealers advertise drive-away deals well under the $149,800 a $142,900 list price implies in Victoria, so the sticker is genuinely negotiable"
+  ],
+  "cons": [
+    "Australia gets the xDrive45 M Sport only - the longer-range xDrive60 and the M70 performance flagship are sold in Europe and the US but not offered here, so there is no way to buy more range or more speed",
+    "The 602km headline is the best-case end of BMW's own 490-602km WLTP band; the Australian-spec car is certified at 522km, and carsales measured about 450km at constant highway speed",
+    "Depreciation on large premium EVs is punishing - independent US data puts the iX at 62-69% lost over five years, and one-year-old EVs in Australia are averaging 25% falls",
+    "Almost everything routes through the touchscreen, and reviewers single out the awkward door handles, the missing blind on the panoramic roof and the polarising front end",
+    "At $142,900 it clears the Luxury Car Tax and sits far above both the $75,000 and $91,661 FBT exemption thresholds, so a novated lease gets no FBT relief"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2025-bmw-ix-price-and-specs",
+    "https://www.carsales.com.au/editorial/details/bmw-ix-xdrive45-m-sport-2025-review-150500/",
+    "https://www.carsguide.com.au/ev/bmw-ix-xdrive45-99598",
+    "https://www.carsales.com.au/research/bmw/ix/2026/xdrive45-m-sport/",
+    "https://www.carexpert.com.au/bmw/ix/2026/price-and-specs",
+    "https://www.press.bmwgroup.com/global/article/detail/T0447642EN/the-new-bmw-ix?language=en"
+  ],
+  "sourcedAt": "2026-07-31"
+}
