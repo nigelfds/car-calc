@@ -54,7 +54,14 @@ function parseArgs(argv) {
       const raw = argv[++i];
       const eq = raw ? raw.indexOf('=') : -1;
       if (eq <= 0) throw new Error(`--alias must be id="Name", got: ${raw}`);
-      opts.aliases[raw.slice(0, eq).trim()] = raw.slice(eq + 1).trim();
+      const id = raw.slice(0, eq).trim();
+      const name = raw.slice(eq + 1).trim();
+      // An empty value would otherwise be treated as "alias supplied" by the
+      // truthiness check at the search-query step but as "no alias" by the
+      // ones further down that also check truthiness — an inconsistency
+      // that only shows up once such a value is actually in play.
+      if (!name) throw new Error(`--alias value for ${id} must not be empty`);
+      opts.aliases[id] = name;
     } else {
       throw new Error(`unknown argument: ${arg}`);
     }
@@ -96,6 +103,20 @@ function deriveFamilies(families, vehicles) {
 const sortedByKey = obj => Object.fromEntries(Object.keys(obj).sort().map(k => [k, obj[k]]));
 
 const aliasResolveCommand = id => `node scripts/curate-images.js --alias ${id}="<the car's other name>"`;
+
+// Aliases are stored make-inclusive ("BYD Song Plus") because that's how a
+// human naturally writes down "what this car is badged as" — but classify()
+// deliberately checks the model only, not the make (see classify.js's own
+// comment: requiring the make caused false flags on files legitimately
+// titled "Ora 5 001.jpg" and "MERCEDES-EQ EQB China"). Substituting the
+// alias whole would silently re-impose the make requirement on exactly the
+// path where a human has already done the hard part of naming the car, so
+// strip a leading make before using the alias as the model to check for.
+// Both "BYD Song Plus" and "Song Plus" work: the make prefix is optional.
+function aliasModelFor(alias, make) {
+  const prefix = `${make.trim()} `.toLowerCase();
+  return alias.toLowerCase().startsWith(prefix) ? alias.slice(prefix.length).trim() : alias.trim();
+}
 
 // -- main -----------------------------------------------------------------
 
@@ -163,14 +184,28 @@ async function main() {
     try {
       const query = alias ?? `${family.make} ${family.model}`;
       const hits = await searchFiles(query, { limit: 5 });
-      const candidateTitle = hits[0];
 
       // When an alias is supplied, the family's real (Australian) model name
       // is exactly what will NOT appear in the Commons title — that's the
       // whole reason an alias was needed. So the model the classifier checks
-      // for is the alias itself: the same containment check, applied to the
-      // name we now believe the file is filed under.
-      const classifyFamily = alias ? { ...family, model: alias } : family;
+      // for is derived from the alias (make prefix stripped, since classify
+      // deliberately checks the model only — see aliasModelFor above).
+      const classifyFamily = alias ? { ...family, model: aliasModelFor(alias, family.make) } : family;
+
+      // Unaliased families still classify strictly the top hit only — that
+      // is the conservative behaviour the 74/25 auto/flag split was measured
+      // against. But when a human has already supplied an alias, they have
+      // asserted the identity; trusting Commons' relevance ranking to also
+      // put the right file first is a second, unrelated bet. If it doesn't
+      // land, the one sanctioned way to resolve a flag (supply a true fact)
+      // becomes unreachable for that family no matter what correct text is
+      // given — worse than the inconvenience of a wrong top hit. Scanning
+      // costs no extra requests; all five hits are already in hand.
+      let candidateIndex = alias
+        ? hits.findIndex(title => classify({ family: classifyFamily, candidateTitle: title, families: derivedFamilies }).verdict === 'auto')
+        : 0;
+      if (candidateIndex === -1) candidateIndex = 0; // nothing matched; fall back to reporting on the top hit as before
+      const candidateTitle = hits[candidateIndex];
       const verdict = classify({ family: classifyFamily, candidateTitle, families: derivedFamilies });
 
       if (verdict.verdict !== 'auto') {
@@ -204,6 +239,11 @@ async function main() {
       // resolved and should get the quiet treatment. Only a family that the
       // heuristic accepted entirely on its own, with nobody involved, should
       // get the loud "unreviewed" treatment.
+      // Record the rank when the accepted hit wasn't the top one — the
+      // contact sheet is the documented backstop, and a reviewer should be
+      // able to see that an entry was picked from candidate 3 of 5 rather
+      // than assume every accepted image was the obvious first result.
+      const rankNote = candidateIndex > 0 ? ` (candidate ${candidateIndex + 1} of ${hits.length})` : '';
       contactEntries.push({
         familyId: family.id,
         name: `${family.make} ${family.model}`,
@@ -211,7 +251,7 @@ async function main() {
         author: record.author,
         licence: record.licence,
         verdict: alias ? 'manual' : 'auto',
-        why: alias ? `resolved via alias — searched as "${alias}"` : verdict.why
+        why: alias ? `resolved via alias${rankNote} — searched as "${alias}"` : verdict.why
       });
     } catch (err) {
       failed.push({ family, errors: [err.message] });
