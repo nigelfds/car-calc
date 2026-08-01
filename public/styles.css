@@ -1698,6 +1698,13 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
+/* Same reasoning as .site-footer__colophon above: without its own
+   margin-top this paragraph sits flush against the colophon line rather
+   than reading as a third, separate line. */
+.site-footer p.site-footer__credits {
+  margin-top: var(--space-2);
+}
+
 /* =========================================================================
    Tabs — "Find a car" / "Compare". Task 6 built the roving-tabindex
    behaviour (ui/tabs.js) and the markup. Originally styled as a bare strip
@@ -2219,4 +2226,85 @@ input[type='date'],
 .compare-prose__car summary {
   cursor: pointer;
   color: var(--ink-soft);
+}
+
+/* =========================================================================
+   Credits page (public/credits.html) — the licence-attribution list for the
+   Wikimedia Commons photographs. Everything else on that page (the header,
+   the wordmark, .section-heading, .skeleton-note) reuses rules that already
+   exist above; these are the only new ones, and only this page uses them.
+   All values are existing tokens — no new colour, size or spacing is
+   introduced here.
+   ========================================================================= */
+
+.credits-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Same card look as .sections > section on the main page (paper-raised
+   panel, hairline border, one radius) but written as its own rule rather
+   than reusing .sections: that class switches to a fixed 250px + 1fr grid
+   at 900px (sized for the calculator's three-section layout), which would
+   crush this page's single section into the narrow rail column. */
+.credits-panel {
+  background: var(--paper-raised);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+.credits-intro {
+  max-width: 60ch;
+  margin: 0 0 var(--space-4);
+  color: var(--ink-soft);
+}
+
+.credits-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.credit-item {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.credit-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.credit-item__car {
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.credit-item__meta {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.credit-item__note {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-faint);
+  font-size: var(--text-xs);
+}
+
+.credits-empty {
+  color: var(--ink-faint);
+}
+
+.credits-back {
+  margin: 0;
 }

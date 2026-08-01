@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image credits — What's the best EV I could get?</title>
+  <meta name="description" content="Attribution for the Wikimedia Commons photographs used across the Melbourne EV affordability calculator." />
+  <!-- Same mark as index.html — identical data URI so the two pages read as
+       one site rather than the favicon flicking between two icons as a
+       reader moves between them. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161b1f'/%3E%3Crect x='6' y='8' width='20' height='4' rx='2' fill='%23b96a1e'/%3E%3Crect x='6' y='14' width='20' height='4' rx='2' fill='%2310558f'/%3E%3Crect x='6' y='20' width='20' height='4' rx='2' fill='%238f59d1'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Just the wordmark, not the full site-header furniture (stats, tabs,
+       route-rule): those all belong to the calculator's own state, and this
+       page has none of it. Enough that the page doesn't look orphaned,
+       without dragging in controls that point at nothing here. -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="site-header__titles">
+        <p class="wordmark">
+          <span class="wordmark__logo" aria-hidden="true"><img src="logo.png" alt="" /></span>
+          <span class="wordmark__text">What's the best EV I could get<span class="wordmark__mark">?</span></span>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="credits-main">
+    <section class="credits-panel" aria-labelledby="credits-heading">
+      <h1 id="credits-heading" class="section-heading">Image credits</h1>
+      <p class="credits-intro">
+        The car photographs on this site are drawn from Wikimedia Commons, under
+        licences that permit reuse provided the photographer is credited. Every
+        photo has also been cropped to a consistent 3:2 frame — a change some of
+        these licences require us to say plainly, which is what the note on each
+        entry below does.
+      </p>
+
+      <!-- Static fallback for a reader with JavaScript disabled: the site is
+           entirely JS-driven already (no part of index.html works without it
+           either), so a blank list here is the same trade-off the rest of the
+           app makes, not a new one. This just says so, rather than leaving
+           silence where the credits would otherwise be. -->
+      <noscript>
+        <p class="skeleton-note">This page looks up image credits from the live
+          dataset, which needs JavaScript enabled.</p>
+      </noscript>
+
+      <ul id="credits-list" class="credits-list"></ul>
+    </section>
+
+    <p class="credits-back"><a href="index.html">&larr; Back to the calculator</a></p>
+  </main>
+
+  <script type="module">
+    import { escapeHtml } from './ui/escape.js';
+
+    // One import, from the module every other renderer already uses to keep
+    // interpolated strings — author names here, straight from Wikimedia
+    // metadata — out of innerHTML unescaped.
+
+    // Same single /api/dataset fetch ui/app.js makes at boot (see that
+    // file's opening comment). Deriving the list from the live dataset
+    // rather than a generated file means this page cannot drift from what
+    // the site actually ships.
+    fetch('/api/dataset')
+      .then(res => res.json())
+      .then(renderCredits)
+      // A failed fetch must still leave a real sentence on the page, not a
+      // silently empty list — the empty-list rendering already covers that
+      // case, so reusing it here means one code path for "nothing to show"
+      // whether that's an empty dataset or a network error.
+      .catch(err => {
+        console.error('Could not load /api/dataset', err);
+        renderCredits({ vehicles: [], families: [] });
+      });
+
+    function renderCredits({ vehicles, families }) {
+      const list = document.getElementById('credits-list');
+      if (!list) return;
+
+      const credited = families
+        .filter(family => family.image)
+        .map(family => ({ carName: nameFor(family, vehicles), image: family.image }))
+        .sort((a, b) => a.carName.localeCompare(b.carName));
+
+      if (credited.length === 0) {
+        // The normal state at merge: data/car-images.json ships as {} until
+        // the curation waves land, so every family is imageless. A reader
+        // should see a plain sentence saying so, never an empty <ul> that
+        // reads as a loading state stuck forever.
+        const li = document.createElement('li');
+        li.className = 'credits-empty';
+        li.textContent = 'No image credits yet.';
+        list.replaceChildren(li);
+        return;
+      }
+
+      list.innerHTML = credited.map(creditItem).join('');
+    }
+
+    // One photo per family, shared by every trim (see ui/cars.js) — make and
+    // model are the same across every vehicle in a family, so the first
+    // match is enough to name it. Falls back to the family id on the
+    // (implausible) chance a family with an image has no vehicles at all,
+    // rather than throwing.
+    function nameFor(family, vehicles) {
+      const vehicle = vehicles.find(v => v.familyId === family.id);
+      return vehicle ? `${vehicle.make} ${vehicle.model}` : family.id;
+    }
+
+    // Built as an escaped string in the same style as ui/cars.js and
+    // ui/compare-tab.js: every value here originates in Wikimedia metadata
+    // or hand-entered curation, none of it trusted.
+    function creditItem({ carName, image }) {
+      return `
+        <li class="credit-item">
+          <p class="credit-item__car">${escapeHtml(carName)}</p>
+          <p class="credit-item__meta">Photo by ${escapeHtml(image.author)} &middot; ${escapeHtml(image.licence)}</p>
+          <p class="credit-item__note"><a href="${escapeHtml(image.source)}">View the original on Wikimedia Commons</a>${
+            image.note ? ` &middot; ${escapeHtml(image.note)}` : ''
+          }</p>
+        </li>`;
+    }
+  </script>
+</body>
+</html>
