@@ -73,13 +73,26 @@
       .then(res => res.json())
       .then(renderCredits)
       // A failed fetch must still leave a real sentence on the page, not a
-      // silently empty list — the empty-list rendering already covers that
-      // case, so reusing it here means one code path for "nothing to show"
-      // whether that's an empty dataset or a network error.
+      // silently empty list. Distinct wording from the legitimate empty
+      // state below: telling a reader on a real outage "no image credits
+      // yet" would be false, not merely unhelpful — that sentence means
+      // curation hasn't started, not that the network failed.
       .catch(err => {
         console.error('Could not load /api/dataset', err);
-        renderCredits({ vehicles: [], families: [] });
+        showMessage('Could not load image credits — try reloading the page.');
       });
+
+    // Both the legitimate empty state and the fetch-failure state are one
+    // line of plain text in the list, not an empty <ul> (which reads as a
+    // loading state stuck forever) and not a JS error.
+    function showMessage(text) {
+      const list = document.getElementById('credits-list');
+      if (!list) return;
+      const li = document.createElement('li');
+      li.className = 'credits-empty';
+      li.textContent = text;
+      list.replaceChildren(li);
+    }
 
     function renderCredits({ vehicles, families }) {
       const list = document.getElementById('credits-list');
@@ -92,13 +105,8 @@
 
       if (credited.length === 0) {
         // The normal state at merge: data/car-images.json ships as {} until
-        // the curation waves land, so every family is imageless. A reader
-        // should see a plain sentence saying so, never an empty <ul> that
-        // reads as a loading state stuck forever.
-        const li = document.createElement('li');
-        li.className = 'credits-empty';
-        li.textContent = 'No image credits yet.';
-        list.replaceChildren(li);
+        // the curation waves land, so every family is imageless.
+        showMessage('No image credits yet.');
         return;
       }
 
@@ -115,15 +123,34 @@
       return vehicle ? `${vehicle.make} ${vehicle.model}` : family.id;
     }
 
+    // escapeHtml stops attribute breakout (quotes, angle brackets) but says
+    // nothing about scheme — a source of "javascript:alert(1)" contains
+    // none of the five characters it escapes and would pass straight
+    // through into a clickable href. data/image-schema.js already anchors
+    // `source` to an https commons.wikimedia.org URL before it can reach
+    // data/families.json, but that validation lives in a different module,
+    // written for a different purpose, guarding a value that originates as
+    // arbitrary user-uploaded Wikimedia metadata — too thin a thread for
+    // this page to lean on forever. Render-time guard, not URL parsing: the
+    // bar is just "https://".
+    const isSafeUrl = url => typeof url === 'string' && url.startsWith('https://');
+
     // Built as an escaped string in the same style as ui/cars.js and
     // ui/compare-tab.js: every value here originates in Wikimedia metadata
     // or hand-entered curation, none of it trusted.
     function creditItem({ carName, image }) {
+      // A credit with no working link still discharges the attribution
+      // obligation; a link that runs code does not — so an unsafe or
+      // missing source drops the hyperlink rather than being repaired or
+      // silently rendered as one.
+      const link = isSafeUrl(image.source)
+        ? `<a href="${escapeHtml(image.source)}">View the original on Wikimedia Commons</a>`
+        : 'Original on Wikimedia Commons (link unavailable)';
       return `
         <li class="credit-item">
           <p class="credit-item__car">${escapeHtml(carName)}</p>
           <p class="credit-item__meta">Photo by ${escapeHtml(image.author)} &middot; ${escapeHtml(image.licence)}</p>
-          <p class="credit-item__note"><a href="${escapeHtml(image.source)}">View the original on Wikimedia Commons</a>${
+          <p class="credit-item__note">${link}${
             image.note ? ` &middot; ${escapeHtml(image.note)}` : ''
           }</p>
         </li>`;
