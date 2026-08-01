@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "curate": "node scripts/curate-images.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.3",
