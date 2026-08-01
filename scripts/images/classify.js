@@ -5,8 +5,9 @@
 // markets, so the Australian name is often not the name the photograph is filed
 // under. A Sealion 6 is filed as a Song Plus, an EX5 as a Galaxy E5. Most such
 // hits are the right car — but not all, and nothing in the filename says which.
-// A survey of the live dataset turned up an ID.5 offered for the ID.4, a 1959
-// Morris Mini for the Mini Cooper, and a Seal U for the Seal.
+// A survey of the live dataset turned up an ID.5 offered for the ID.4 and a
+// 1959 Morris Mini for the Mini Cooper — both caught here, because the model
+// term this function requires is simply absent from those titles.
 //
 // That is the failure docs/phev-research-wave.md describes for REEVs mis-filed
 // as PHEVs: "wrong in a way the schema cannot catch". A photograph of the wrong
@@ -14,6 +15,14 @@
 //
 // So the bias is deliberate and one-directional: a false flag costs the reader
 // twenty seconds, a false auto-accept ships the wrong car.
+//
+// A known limit: the sibling-clash check below only protects against confusion
+// with a family we hold in our own dataset (Seal against Seal 6, say). The
+// Seal U — sold here as the Sealion 6 — is a real, different car, but we hold
+// no "Seal U" family, so there is no sibling for the clash rule to find, and a
+// Seal U hit offered for the Seal auto-accepts. Nothing computed from families
+// we hold can flag a car we don't hold. The contact sheet review after each
+// curation run is the backstop for this class of miss, not this function.
 
 // Fold the three ways the same name is written differently across Commons:
 // diacritics (Škoda / Skoda), glued letter-digit pairs (MG4 / MG 4) and
