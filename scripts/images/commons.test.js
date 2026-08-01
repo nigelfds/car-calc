@@ -36,6 +36,18 @@ test('every request identifies the client', async () => {
   assert.ok(USER_AGENT.includes('car-calc'));
 });
 
+test('fileMetadata also identifies the client', async () => {
+  const { fetchImpl, calls } = stub({
+    query: { pages: { 1: { imageinfo: [{
+      url: 'https://u/x.jpg',
+      descriptionurl: 'https://commons.wikimedia.org/wiki/File:x.jpg',
+      extmetadata: { Artist: { value: 'P' }, LicenseShortName: { value: 'CC0' } }
+    }] } } }
+  });
+  await fileMetadata('x.jpg', { fetchImpl });
+  assert.equal(calls[0].options.headers['User-Agent'], USER_AGENT);
+});
+
 test('fileMetadata extracts the download URL, author and licence', async () => {
   const { fetchImpl } = stub({
     query: { pages: { 123: { imageinfo: [{
