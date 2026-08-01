@@ -3,14 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": "22.x" },
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "test": "node --test",
     "start": "node server/index.js"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
     "express": "^5",
-    "zod": "^3",
-    "@anthropic-ai/sdk": "^0.24.3"
+    "zod": "^3"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3"
   }
 }
