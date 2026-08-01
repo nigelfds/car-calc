@@ -148,12 +148,21 @@ export function renderComparison(root, { vehicles, families, tables, benchIndex 
     .filter(entry => entry.index !== benchIndex);
   const columns = shown.length;
 
+  // The header maps over `shown`, which carries vehicles rather than families,
+  // so the image is resolved by familyId against the families already passed in.
+  const imageFor = vehicle => families.find(f => f.id === vehicle.familyId)?.image ?? null;
+
   const head = `
     <thead>
       <tr>
         <th scope="col"><span class="visually-hidden">Specification</span></th>
         ${shown.map(({ vehicle, index }) => `
           <th scope="col" class="compare-head compare-head--${index}">
+            ${imageFor(vehicle) ? `<img class="compare-head__img"
+              src="images/cars/${escapeHtml(imageFor(vehicle).file)}"
+              alt="${escapeHtml(carName(vehicle))}"
+              title="${escapeHtml(`${imageFor(vehicle).author} · ${imageFor(vehicle).licence}`)}"
+              width="900" height="600" loading="lazy">` : ''}
             ${escapeHtml(carName(vehicle))}
             <span class="compare-head__variant">${escapeHtml(vehicle.variant ?? '')}</span>
           </th>`).join('')}

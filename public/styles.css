@@ -2057,6 +2057,20 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
+/* var(--radius), not the literal 8px .car-figure matches: that literal exists
+   only to match .car-card's own border (see the note above .car-figure) and
+   there is no such card corner here — a plain <th> in a table gets the
+   general-purpose token instead. */
+.compare-head__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: var(--space-2);
+}
+
 .compare-group__label {
   padding: var(--space-3) var(--space-2) var(--space-1);
   background: var(--paper);
