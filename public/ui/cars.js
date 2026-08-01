@@ -311,10 +311,16 @@ export function renderCards(root, cards, emptyMessage) {
     return;
   }
 
-  // No car imagery at all: photography was always out of scope, and the
-  // body-type silhouette that stood in for it was costing a fixed 3.5rem of
-  // every card's width to convey one fact ("it's an SUV") that the specs line
-  // and the filters already carry. The space goes to the text instead.
+  // One freely-licensed photograph per family, shared across every variant of
+  // it, cropped to a single consistent frame. It runs full-bleed across the
+  // top of the card rather than beside the text, because height is what a
+  // card has spare and width is not. This is not a reversal of the earlier
+  // decision to drop the body-type silhouette — that silhouette was removed
+  // for costing a fixed 3.5rem of every card's *width* to convey one fact the
+  // specs line already carried; a top-of-card photograph costs *height*
+  // instead, which is a genuinely different trade, not the same one undone.
+  // A family with no image yet renders exactly as it did with neither: no
+  // broken icon, no placeholder box.
   target.innerHTML = cards.map(card => {
     return `
     <article class="car-card${card.band ? ` car-card--${card.band}` : ''}" data-id="${escapeHtml(card.id)}">

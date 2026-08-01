@@ -56,7 +56,8 @@ in the filename says which is which. The survey turned up three outright wrong t
 Super Hybrid → a 19th-century horticulture journal**.
 
 There is also a same-brand trap: searching **BYD Seal** returns **BYD Seal U** first, which
-is a different vehicle — the Seal U is the Sealion 6 in some markets.
+is a different vehicle — the Seal U is the Sealion 6 in some markets. (§5 originally claimed
+the classifier's sibling rule catches this; it does not — see the correction there.)
 
 This is the failure mode `docs/phev-research-wave.md` describes for REEVs mis-filed as
 PHEVs: *"wrong in a way the schema cannot catch."* A photograph of the wrong car above a
@@ -163,6 +164,33 @@ zeros (`Sealion 07` → `Sealion 7`).
 **Flag for the human** when the model is absent from the title (a probable market alias),
 when a sibling family matches more specifically (the Seal/Seal U trap), or when there are no
 candidates at all.
+
+> **Correction (documentation pass, 2026-08-01):** the claim above — that the
+> sibling rule flags the Seal/Seal U case — is false, and it was false from the moment this
+> spec was written. It was caught twice during implementation, not once: Task 3 found it
+> first, tracing `classify.js` against the real dataset and discovering that the given test
+> fixture only passed because it invented a `byd-seal-u` family that does not actually exist in
+> `data/families/*.json` — the Seal U is sold in Australia as the **Sealion 6**, so it has no
+> family of its own to be a sibling of anything. Task 7's live `--dry-run` then reproduced this
+> for real against live Commons data: classifying `byd-seal` against the top hit for the query
+> `BYD Seal`, titled `BYD Seal U IAA 2023 1X7A0045.jpg`. The model term `seal` is present, so
+> the model-presence check passes. `siblingsOf('byd-seal', families)` resolves to `byd-seal-6`
+> only (model `"Seal 6"`) — there is no `byd-seal-u` sibling to find, because we hold no such
+> family. The clash check then asks whether the candidate title contains `"seal 6"` as a whole
+> term; it does not, it contains `"seal u"`. No clash fires, and `classify()` correctly, and
+> unavoidably, returns `auto`. The downloaded crop confirms it: a visible "SEAL U" badge on the
+> car this shipped as the Seal.
+>
+> What the sibling rule actually protects against is confusion between families **we already
+> hold** — Seal against our own Sealion 6, ID.4 against a same-make sibling if one existed. It
+> is computed entirely from the dataset in scope, so structurally it cannot flag a car we hold
+> no record of at all, no matter how real or how differently badged that car is. That is not a
+> bug to fix; nothing in the string data distinguishes a genuine market-name variant from a
+> harmless one without an external fact the classifier doesn't have. The **contact sheet**
+> (§5, below) is the backstop for exactly this class of miss — the Seal/Seal U entry shows up
+> in it, loudly, as `auto — unreviewed`, precisely so a human catches by eye what the rule
+> structurally cannot. `scripts/images/classify.js`'s header comment documents this limitation
+> plainly; this spec should have said the same thing from the start.
 
 Measured against 99 families, this split **74 automatic and 25 flagged**. The heuristic is
 deliberately biased toward flagging: a false flag costs twenty seconds, a false auto-accept
