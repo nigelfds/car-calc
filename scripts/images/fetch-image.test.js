@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import { cropToCard, downloadAndCrop } from './fetch-image.js';
 import { IMAGE_DIMENSIONS } from '../../data/image-schema.js';
-import { readFileSync, rmSync, mkdtempSync } from 'node:fs';
+import { readFileSync, rmSync, mkdtempSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 
@@ -56,8 +56,28 @@ test('downloadAndCrop writes a cropped webp to the destination', async () => {
 test('a failed download throws and writes nothing', async () => {
   const dir = mkdtempSync(join(tmpdir(), 'carimg-'));
   try {
+    const dest = join(dir, 'x.webp');
     const fetchImpl = async () => ({ ok: false, status: 404 });
-    await assert.rejects(() => downloadAndCrop('https://u/x.jpg', join(dir, 'x.webp'), { fetchImpl }), /404/);
+    await assert.rejects(() => downloadAndCrop('https://u/x.jpg', dest, { fetchImpl }), /404/);
+    // The point of writing last: a partial or zero-length file here would pass
+    // build-dataset.js's existence check and ship as a broken image.
+    assert.equal(existsSync(dest), false);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('a download that succeeds but fails to crop throws and writes nothing', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'carimg-'));
+  try {
+    const dest = join(dir, 'x.webp');
+    // A body that is not a decodable image at all: sharp rejects while
+    // building the pipeline, before writeFile is ever reached, so this
+    // exercises the crop-before-write half of the ordering rather than the
+    // fetch-before-crop half covered above.
+    const fetchImpl = async () => ({ ok: true, arrayBuffer: async () => new TextEncoder().encode('not an image').buffer });
+    await assert.rejects(() => downloadAndCrop('https://u/x.jpg', dest, { fetchImpl }));
+    assert.equal(existsSync(dest), false);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
