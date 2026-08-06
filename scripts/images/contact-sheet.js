@@ -52,14 +52,28 @@ const STYLE = `
     border-left: 6px solid transparent;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   }
+  figure a { display: block; }
   figure img {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    /* Every committed crop is 900x600 (3:2). A 4:3 frame here used to clip
+       ~5.5% off each side with object-fit: cover — exactly where badging
+       lives — so the reviewer wasn't looking at what actually ships. */
+    aspect-ratio: 3 / 2;
     object-fit: cover;
     background: #d1d5db;
   }
   figcaption { padding: 0.6rem 0.75rem; font-size: 0.85rem; line-height: 1.4; }
+  .family-id { font-weight: 400; color: #6b7280; font-size: 0.8em; }
+  .candidate {
+    display: block;
+    color: #6b7280;
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    margin-top: 0.3rem;
+    word-break: break-word;
+  }
+  .source { display: inline-block; margin-top: 0.2rem; color: #2563eb; }
   .badge {
     display: inline-block;
     font-size: 0.65rem;
@@ -90,6 +104,9 @@ const STYLE = `
     figure { background: #1f2937; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
     .subtitle { color: #9ca3af; }
     .credit { color: #9ca3af; }
+    .family-id { color: #9ca3af; }
+    .candidate { color: #9ca3af; }
+    .source { color: #60a5fa; }
     .why { color: #6b7280; }
     .empty { color: #d1d5db; }
   }
@@ -100,12 +117,19 @@ const BADGES = { auto: 'auto — unreviewed', manual: 'manual — resolved' };
 function figureFor(entry) {
   const verdictClass = `verdict--${escapeHtml(entry.verdict)}`;
   const badge = BADGES[entry.verdict] ?? entry.verdict;
+  const src = `images/cars/${escapeHtml(entry.file)}`;
+  // The <img> is wrapped in a link to its own file so a suspicious thumbnail
+  // can be opened full-size, and the Commons title/source are carried
+  // through as the most legible signal that a candidate is the wrong car —
+  // see this file's header comment for why that matters.
   return `      <figure class="${verdictClass}">
-        <img src="images/cars/${escapeHtml(entry.file)}" alt="${escapeHtml(entry.name)}" loading="lazy">
+        <a href="${src}"><img src="${src}" alt="${escapeHtml(entry.name)}" loading="lazy"></a>
         <figcaption>
           <span class="badge">${escapeHtml(badge)}</span>
-          <span class="name">${escapeHtml(entry.name)}</span>
+          <span class="name">${escapeHtml(entry.name)} <span class="family-id">${escapeHtml(entry.familyId)}</span></span>
           <span class="credit">${escapeHtml(entry.author)} &middot; ${escapeHtml(entry.licence)}</span>
+          <span class="candidate">${escapeHtml(entry.candidateTitle)}</span>
+          <a class="source" href="${escapeHtml(entry.source)}" target="_blank" rel="noopener noreferrer">Commons source ↗</a>
           <span class="why">${escapeHtml(entry.why)}</span>
         </figcaption>
       </figure>`;
