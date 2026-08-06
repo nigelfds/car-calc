@@ -191,6 +191,9 @@ export function cardModel(vehicle, families, context = null) {
     pros: family?.pros ?? [],
     cons: family?.cons ?? [],
     sources: family?.sources ?? [],
+    // One image per family, shared by every variant — the trims differ in price
+    // and range, not in what the car looks like.
+    image: family?.image ?? null,
     costs,
     balloon,
     balloonCovered,
@@ -308,13 +311,30 @@ export function renderCards(root, cards, emptyMessage) {
     return;
   }
 
-  // No car imagery at all: photography was always out of scope, and the
-  // body-type silhouette that stood in for it was costing a fixed 3.5rem of
-  // every card's width to convey one fact ("it's an SUV") that the specs line
-  // and the filters already carry. The space goes to the text instead.
+  // One freely-licensed photograph per family, shared across every variant of
+  // it, cropped to a single consistent frame. It runs full-bleed across the
+  // top of the card rather than beside the text, because height is what a
+  // card has spare and width is not. This is not a reversal of the earlier
+  // decision to drop the body-type silhouette — that silhouette was removed
+  // for costing a fixed 3.5rem of every card's *width* to convey one fact the
+  // specs line already carried; a top-of-card photograph costs *height*
+  // instead, which is a genuinely different trade, not the same one undone.
+  // A family with no image yet renders exactly as it did with neither: no
+  // broken icon, no placeholder box.
   target.innerHTML = cards.map(card => {
     return `
     <article class="car-card${card.band ? ` car-card--${card.band}` : ''}" data-id="${escapeHtml(card.id)}">
+      ${card.image ? `
+      <figure class="car-figure">
+        <!-- alt="": the <h3> immediately below carries make, model AND
+             variant, a superset of what the alt text could say — a
+             non-empty alt here would just have a screen reader repeat the
+             heading a moment before it's read. -->
+        <img src="images/cars/${escapeHtml(card.image.file)}"
+             alt=""
+             title="${escapeHtml(`${card.image.author} · ${card.image.licence}`)}"
+             width="900" height="600" loading="lazy">
+      </figure>` : ''}
       <div class="car-body">
         ${card.bandLabel ? `<p class="car-card__band">${escapeHtml(card.bandLabel)}</p>` : ''}
         <h3>${escapeHtml(card.make)} ${escapeHtml(card.model)} ${escapeHtml(card.variant ?? '')}</h3>

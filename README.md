@@ -41,7 +41,13 @@ car**. The second tab, **Compare**, is a different tool, covered next.
    three funding options, which is a fair comparison because all three price the *same* car.
    Each card also shows how much of every dollar survives as resale — the figure that separates
    two similarly-priced cars — and, for a novated lease, the balloon due at the end of the term
-   and whether selling the car would clear it. No photography; car imagery is out of scope.
+   and whether selling the car would clear it. Each card also carries one photograph of the
+   family, shared across every variant of it — sourced from Wikimedia Commons under a free
+   licence, cropped to a consistent 3:2 frame, credited on `/credits.html` — curated by
+   `npm run curate`, which matches safe candidates automatically and flags the rest for a
+   human to name under an alias. Curation is bulk-run after the ongoing research waves finish,
+   so `data/car-images.json` ships empty at merge and every card renders with no photograph
+   until then.
 
 ## Comparing cars side by side
 
@@ -118,8 +124,9 @@ npm test
 ```
 
 Runs the full suite on Node's built-in test runner (`node --test`) — no test framework
-dependency. 587 tests across the tax/FBT/loan/lease/capacity/resale/spec-comparison calculators,
-the dataset validator, the server routes, and the browser-side UI modules (parsed and rendered the
+dependency. 656 tests across the tax/FBT/loan/lease/capacity/resale/spec-comparison calculators,
+the dataset validator, the server routes, the image pipeline (classifier, record validator,
+dimensions), and the browser-side UI modules (parsed and rendered the
 same way whether run under Node or loaded natively in the browser, since there's no bundler or
 build step — `calc/` is imported unchanged by both).
 
@@ -155,6 +162,36 @@ This validates every row against `data/schema.js` (plausibility bounds on price,
 consumption, boot space, warranty and so on) and only overwrites the aggregate files if every row
 passes — a bad edit leaves the previously-published dataset untouched rather than shipping broken
 data.
+
+### Car images
+
+`data/car-images.json` and `data/model-aliases.json` are keyed by family id but deliberately
+**not** part of `data/families/*.json`. Research batches own the family files, and land
+continuously; if the image record lived inside a family file, a batch rewriting that family
+would silently drop the image block, `build-dataset.js` would regenerate the aggregates
+without it, and the photograph would vanish from the site with no error and no failed
+validation. Keeping images in their own file means a research batch simply cannot touch them.
+
+Images are curated with:
+
+```bash
+npm run curate
+```
+
+which searches Wikimedia Commons for each family missing an image and classifies the top hit:
+safe matches are accepted automatically, and anything ambiguous — the model name absent from
+the title, a same-make sibling family that matches the title more specifically, or no
+candidate at all — is flagged for a human to resolve, usually by supplying the car's market
+alias (`--alias byd-sealion-6="BYD Song Plus"`) rather than an image, since most flags are a
+naming problem, not a picking one.
+
+**Known limitation:** the sibling check that flags same-make confusion (BYD Seal vs. Seal 6)
+can only compare against families already in the dataset. It cannot catch a market variant we
+hold no record of at all — the BYD Seal U, sold in Australia as the Sealion 6, has no
+`byd-seal-u` family to clash against, so a Seal U photograph offered for the Seal auto-accepts
+clean. The contact sheet that `npm run curate` writes after every run is the backstop for
+exactly this class of miss: it renders every crop with its caption so a wrongly badged car can
+be caught by eye in under a minute, and it is not optional to skip.
 
 ## Where the default rates came from
 

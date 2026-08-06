@@ -1378,9 +1378,42 @@ input[type='date'],
 }
 
 .car-card {
-  padding: var(--space-3);
   border: 1px solid var(--hairline);
   border-radius: 8px;
+  /* The figure below is full-bleed to the card's edges; overflow clips its
+     square corners against the card's own rounded ones. */
+  overflow: hidden;
+}
+
+/* Full-bleed across the top of the card, not beside the text: a card has
+   height to spare and not width, which is the same reasoning that removed
+   the old body-type silhouette (see renderCards) but points the other way
+   for a photograph sized to fill a lane rather than sit inline with a line
+   of text. */
+.car-figure {
+  margin: 0;
+  /* Deliberately the same literal 8px as .car-card's own border-radius above,
+     not var(--radius) (10px) — matching the card's actual corners is the
+     point, and .car-card does not use that token. The 8px-vs-token
+     inconsistency predates this feature and is a separate cleanup. */
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  background: var(--paper);
+  aspect-ratio: 3 / 2;
+}
+
+.car-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-body {
+  /* Was on .car-card itself, which would inset the figure above by the same
+     amount and break the full-bleed effect. The card's own edge stays bare;
+     only the text content gets breathing room. */
+  padding: var(--space-3);
 }
 
 /* Three totals for one car: the comparison step 2 cannot make, because there
@@ -1663,6 +1696,13 @@ input[type='date'],
 .site-footer p.site-footer__colophon {
   margin-top: var(--space-2);
   color: var(--ink-faint);
+}
+
+/* Same reasoning as .site-footer__colophon above: without its own
+   margin-top this paragraph sits flush against the colophon line rather
+   than reading as a third, separate line. */
+.site-footer p.site-footer__credits {
+  margin-top: var(--space-2);
 }
 
 /* =========================================================================
@@ -2024,6 +2064,20 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
+/* var(--radius), not the literal 8px .car-figure matches: that literal exists
+   only to match .car-card's own border (see the note above .car-figure) and
+   there is no such card corner here — a plain <th> in a table gets the
+   general-purpose token instead. */
+.compare-head__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: var(--space-2);
+}
+
 .compare-group__label {
   padding: var(--space-3) var(--space-2) var(--space-1);
   background: var(--paper);
@@ -2172,4 +2226,85 @@ input[type='date'],
 .compare-prose__car summary {
   cursor: pointer;
   color: var(--ink-soft);
+}
+
+/* =========================================================================
+   Credits page (public/credits.html) — the licence-attribution list for the
+   Wikimedia Commons photographs. Everything else on that page (the header,
+   the wordmark, .section-heading, .skeleton-note) reuses rules that already
+   exist above; these are the only new ones, and only this page uses them.
+   All values are existing tokens — no new colour, size or spacing is
+   introduced here.
+   ========================================================================= */
+
+.credits-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Same card look as .sections > section on the main page (paper-raised
+   panel, hairline border, one radius) but written as its own rule rather
+   than reusing .sections: that class switches to a fixed 250px + 1fr grid
+   at 900px (sized for the calculator's three-section layout), which would
+   crush this page's single section into the narrow rail column. */
+.credits-panel {
+  background: var(--paper-raised);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+.credits-intro {
+  max-width: 60ch;
+  margin: 0 0 var(--space-4);
+  color: var(--ink-soft);
+}
+
+.credits-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.credit-item {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.credit-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.credit-item__car {
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.credit-item__meta {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.credit-item__note {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-faint);
+  font-size: var(--text-xs);
+}
+
+.credits-empty {
+  color: var(--ink-faint);
+}
+
+.credits-back {
+  margin: 0;
 }
