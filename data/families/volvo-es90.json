@@ -1,0 +1,29 @@
+{
+  "id": "volvo-es90",
+  "summary": "The ES90 is Volvo's first electric passenger car for Australia, a five-metre liftback that Australian reviewers agree is priced to embarrass the segment: it opens roughly $46,000 below a Mercedes-Benz EQE 300 and $67,000 below a BMW i5 while matching them on claimed range. Testers rate the cabin, refinement and driver-assistance calibration highly and the driving experience merely competent, with the steer-by-wire rack and the Ultra's 22-inch wheels drawing the most comment. What reviewers disagree on is whether anyone will buy it, because it is a big non-SUV in an SUV market, it carries no ANCAP rating yet, and its own EX90 sibling does nearly everything it does with a 655-litre boot.",
+  "pros": [
+    "The Plus opens at $88,880 before on-road costs, which is $46,320 under a Mercedes-Benz EQE 300 ($135,200) and $67,020 under a BMW i5 eDrive40 ($155,900), and it lands under the $91,661 luxury-car tax and electric-car FBT exemption threshold that both German rivals clear by a wide margin",
+    "Volvo's first 800-volt car: 554km of range from an 88kWh usable pack, with a 10-80 per cent DC recharge quoted at 22 minutes on a 300kW charger and up to 300km of range added in 10 minutes, against roughly half an hour for the 400-volt BMW i5",
+    "Rated to tow 1,600kg braked, more than a BMW i5's 1,500kg and far more than the large electric sedans that carry no tow rating at all",
+    "The liftback tailgate is the practical argument for the shape: 424 litres expands to 1,427 litres with the second row folded, against 785 litres for a BMW i5's boot-lid sedan, plus a 27-litre front compartment for charge cables",
+    "CarsGuide scored the safety package 9/10 and called Volvo's driver-assistance integration industry best practice, noting the systems 'only work if you need them in an emergency' rather than beeping constantly - and MY2026 cars drop the roof-mounted lidar pod after Volvo split with the supplier, keeping five radars, seven cameras and 12 ultrasonic sensors"
+  ],
+  "cons": [
+    "No ANCAP or Euro NCAP rating at the research date, which is an awkward gap for a car sold on Volvo's safety reputation; the case for it rests on the related EX90's rating rather than a test of this body",
+    "The Ultra at $107,990 sits $16,329 over the $91,661 threshold, so it attracts luxury car tax and loses the electric-car FBT exemption the Plus keeps - and the $19,110 step buys 22-inch wheels, active air suspension, pixel LED headlights and a 25-speaker Bowers & Wilkins system, not a metre more range",
+    "Australia gets only the 245kW single-motor rear-drive car; the 500kW Twin Motor and the larger 106kWh battery sold in Europe are unconfirmed here, so there is no long-range or performance grade to step up to",
+    "Steer-by-wire needs acclimatising - CarsGuide found it 'literally feels like an old computer game steering wheel set-up, with very little resistance' during parking manoeuvres - and lane-keeping assist 'has a tendency to move in the lane slightly too much'",
+    "Volvo runs only about 28 dealer and service points nationally and had not published capped-price servicing for its EVs when the ES90 launched, so everything beyond electricity and tyres is an unquantified running cost"
+  ],
+  "sources": [
+    "https://www.volvocars.com/au/cars/es90-electric/specifications/",
+    "https://www.greenvehicleguide.gov.au/Vehicle/ViewMatchingVariants?vehicleDisplayId=37085",
+    "https://www.carexpert.com.au/car-news/2026-volvo-es90-price-and-specs",
+    "https://www.carexpert.com.au/car-news/2026-volvo-es90-genre-busting-luxury-ev-priced-for-australia",
+    "https://www.chasingcars.com.au/news/new-car-prices/volvo-es90-2026-pricing-and-features-bmw-i5-and-mercedes-benz-eqe-rival-lands-in-australia/",
+    "https://www.carsguide.com.au/ev/volvo-es90-ultra-single-motor-101281",
+    "https://www.carsales.com.au/research/volvo/es90/",
+    "https://ev-database.org/car/3128/Volvo-ES90-Single-Motor"
+  ],
+  "sourcedAt": "2026-08-06"
+}

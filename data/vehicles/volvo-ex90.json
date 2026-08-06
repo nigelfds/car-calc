@@ -1,0 +1,42 @@
+[
+  {
+    "id": "volvo-ex90-plus-twin-motor",
+    "familyId": "volvo-ex90",
+    "make": "Volvo",
+    "model": "EX90",
+    "variant": "Plus Twin Motor",
+    "bodyType": "SUV",
+    "listPrice": 124990,
+    "batteryKwh": 102,
+    "rangeKm": 521,
+    "consumptionKwhPer100km": 22.8,
+    "bootLitresSeatsUp": 324,
+    "bootLitresSeatsDown": 2135,
+    "seats": 7,
+    "towKg": 2200,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2900,
+    "depreciationCurve": [1, 0.66, 0.54, 0.45, 0.38, 0.32],
+    "sourcedAt": "2026-08-06"
+  },
+  {
+    "id": "volvo-ex90-ultra-twin-motor-performance",
+    "familyId": "volvo-ex90",
+    "make": "Volvo",
+    "model": "EX90",
+    "variant": "Ultra Twin Motor Performance",
+    "bodyType": "SUV",
+    "listPrice": 134990,
+    "batteryKwh": 102,
+    "rangeKm": 521,
+    "consumptionKwhPer100km": 22.8,
+    "bootLitresSeatsUp": 324,
+    "bootLitresSeatsDown": 2135,
+    "seats": 7,
+    "towKg": 2200,
+    "warrantyYears": 5,
+    "insuranceAnnual": 3150,
+    "depreciationCurve": [1, 0.66, 0.54, 0.45, 0.38, 0.32],
+    "sourcedAt": "2026-08-06"
+  }
+]

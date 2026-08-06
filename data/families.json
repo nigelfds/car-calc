@@ -1238,6 +1238,66 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "genesis-gv60",
+    "summary": "The GV60 is Genesis's E-GMP-based electric SUV, and the 2027 update swaps the old 77.4kWh pack for an 84kWh one while cutting the entry price by roughly $15,000 so the Advanced RWD lands under the luxury car tax threshold. Australian reviewers rate its cabin materials, noise suppression and low-speed ride among the best in the class, but consistently argue it is still priced above what an emerging luxury brand can command against the Hyundai and Kia relatives that share its hardware. The 448kW Magma adds genuine performance-car pace and heads the two-grade range, though it costs $15,000 more than a mechanically similar Ioniq 5 N and neither GV60 grade is rated to tow.",
+    "pros": [
+      "At $88,300 before on-road costs the Advanced RWD sits below the $91,661 fuel-efficient luxury car tax threshold, so no LCT is embedded in its price — a roughly $15,000 cut on the superseded Luxury grade",
+      "The 84kWh 800V pack claims 561km WLTP in the Advanced and a 10-80 per cent DC charge in 18 minutes on a 350kW charger, with 400V/800V compatibility and V2L",
+      "Ownership costs are covered: five years of complimentary scheduled servicing at 15,000km/12-month intervals, roadside assistance for up to 10 years, and an 8-year/160,000km high-voltage battery warranty on top of the 5-year/unlimited-km vehicle cover",
+      "CarExpert rates the low-speed ride and suppression of wind, tyre and suspension noise as among the best of any EV, with soft-touch materials almost everywhere in the cabin",
+      "The Magma's dual-motor 448kW/740Nm drivetrain (478kW/790Nm in Boost) claims 0-100km/h in 3.4 seconds with an e-LSD, Drift Mode and a simulated gearshift system"
+    ],
+    "cons": [
+      "Neither grade is rated to tow — both the Advanced RWD and the Magma are listed at 0kg braked, where the superseded AWD grades were rated to 1600kg",
+      "432 litres behind the rear seats (400 in the Magma) is small for a mid-size SUV costing $88,000-plus, there is no spare wheel, and no internal V2L socket",
+      "The Magma asks $15,000 more than a mechanically near-identical Hyundai Ioniq 5 N, and CarExpert measured 25.6kWh/100km against the 21.5kWh/100km claim — roughly 330km of real-world range",
+      "Genesis runs only about nine Australian retail sites, all in NSW, VIC, QLD and WA, with nothing in SA, TAS, ACT or NT, which limits servicing access and thins the used-buyer pool",
+      "Body control loosens over bigger compressions on country roads, and CarExpert still judges the Advanced roughly $20,000 too expensive to be competitive against Chinese and Hyundai-group rivals"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2027-genesis-gv60-prices-hot-478kw-ev-on-sale-now",
+      "https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-review",
+      "https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-magma-review",
+      "https://www.carsguide.com.au/ev/genesis-gv60-magma-102229",
+      "https://thedriven.io/2026/07/30/updated-genesis-gv60-the-sensible-one-and-the-478kw-one/",
+      "https://thebeep.com.au/car-news/2027-genesis-gv60-price-australia",
+      "https://www.carsguide.com.au/genesis/gv60/towing-capacity/2026",
+      "https://www.genesis.com/au/en/terms-of-use/warranty.html",
+      "https://www.carexpert.com.au/car-news/genesis-expands-australian-retail-network-as-magma-gets-ready-to-flow-into-showrooms",
+      "https://ev-database.org/uk/car/3236/Genesis-GV60-Performance"
+    ],
+    "sourcedAt": "2026-08-06"
+  },
+  {
+    "id": "genesis-gv70-electrified",
+    "summary": "Australian reviewers rate the Electrified GV70 as one of the most convincingly luxurious mid-size electric SUVs on sale, with a quiet, richly trimmed cabin, 800V charging at up to 350kW and 360kW of dual-motor pace in Boost mode. The trade-off is efficiency and packaging: 462km of WLTP range and a 503-litre boot both trail the Audi Q6 e-tron and BMW iX3 it is priced against, and testers describe the suspension tune as comfortable and quiet but soft rather than sharp. It is sold as a single $132,800 grade at fixed national agency pricing through a retail network of roughly nine sites that reaches only New South Wales, Victoria, Queensland and Western Australia.",
+    "pros": [
+      "Genesis Australia's 5-year/unlimited-kilometre warranty is genuinely unconditional — its own terms allow servicing by 'a Genesis outlet, authorised Genesis repairer or suitably qualified motor vehicle repairer' — and the high-voltage battery is separately covered for 8 years/160,000km",
+      "Five years or 75,000km of scheduled servicing is included in the purchase price, which few rivals at this price match",
+      "800V architecture charges at up to 350kW DC, taking 10-80 per cent in about 19 minutes, and adds 3.6kW vehicle-to-load outlets both inside and outside the car",
+      "Rated to tow 1,800kg braked with a 159kg towball limit, and carries a 22-litre front boot for cables on top of the 503-litre rear one",
+      "320kW/605Nm rising to 360kW/700Nm in Boost mode gives a 4.4-second 0-100km/h from the only grade offered, with no options list to navigate"
+    ],
+    "cons": [
+      "462km of WLTP range and a claimed 20.0kWh/100km both trail the $122,500 Audi Q6 e-tron and the BMW iX3; CarsGuide recorded 21.0kWh/100km on test",
+      "The 503-litre boot is the smallest of its named rivals and 39 litres down on the petrol GV70's 542 litres",
+      "One grade only at $132,800 with no cheaper entry point — that is above both the $91,661 fuel-efficient luxury car tax threshold and the $75,000 FBT exemption cap, so novated-lease buyers get no EV FBT exemption",
+      "Genesis retails from around nine sites across NSW, Victoria, Queensland and WA only, leaving buyers in South Australia, Tasmania, the ACT and the Northern Territory with no local studio for sales or service",
+      "Reviewers call the suspension 'spongey in corners' — it prioritises glide over body control, where the German rivals are sharper"
+    ],
+    "sources": [
+      "https://www.carsguide.com.au/ev/genesis-gv70-electrified-performance-99419",
+      "https://www.carexpert.com.au/car-news/2025-genesis-electrified-gv70-mid-size-electric-suv-detailed-for-australia",
+      "https://www.carsguide.com.au/genesis/gv70/price/2026",
+      "https://www.genesis.com/content/dam/genesis/au/en/documents/gv70ev/GENESIS_Specification_Sheet_Eletrified_GV70.pdf",
+      "https://www.genesis.com/au/en/terms-of-use/warranty.html",
+      "https://www.carexpert.com.au/car-news/genesis-expands-australian-retail-network-as-magma-gets-ready-to-flow-into-showrooms",
+      "https://ev-database.org/car/3237/Genesis-GV70-Electrified",
+      "https://www.carexpert.com.au/car-reviews/2023-genesis-electrified-gv70-review-first-drive"
+    ],
+    "sourcedAt": "2026-08-06"
+  },
+  {
     "id": "gwm-cannon-alpha-phev",
     "summary": "Australian reviewers rate the Cannon Alpha PHEV as the most electric-capable dual-cab ute on sale here, pairing a 37.11kWh battery with a class-benchmark 3500kg braked tow rating that no other plug-in ute matches. They are equally unanimous that the 2810kg kerb weight blunts it, leaving a 685kg payload and body control that wallows next to a conventional diesel dual-cab. Verdicts split hard on whether the size and equipment justify the money — CarsGuide scores it 8.5 and calls it a genuine HiLux alternative, Chasing Cars gives it 6.5 for unpredictable throttle response and the full-size spare standing up in the tub — but every reviewer agrees the running-cost case collapses for a buyer who cannot charge at home.",
     "pros": [
@@ -2696,6 +2756,35 @@
     "sourcedAt": "2026-07-30"
   },
   {
+    "id": "polestar-3",
+    "summary": "The Polestar 3 is a large five-seat electric SUV that shares its SPA2 underpinnings with the Volvo EX90 but is tuned to feel considerably more athletic, and the March 2026 update moved it to an 800-volt architecture with much faster charging and, on two of three variants, a lower price. Australian reviewers are close to unanimous on the ride, body control and cabin quality, and rate the rear seat as one of the roomiest in the class. Disagreement centres on practicality and interaction: the boot is modest for the car's 4.9m footprint, there is no third-row option, and almost every secondary control has been pushed into the touchscreen.",
+    "pros": [
+      "800-volt architecture charges at up to 350kW (310kW on the Rear Motor), taking 10-80 per cent to 22 minutes — more than 25 per cent quicker than the 250kW car it replaced",
+      "The MY26 update made the previously $9,000 Plus Pack and the Pilot Pack standard on every variant while cutting the Rear Motor's price $1,720 to $116,700 and the Dual Motor's $1,600 to $131,100",
+      "Ride and body control rated 'exceptional' by carsales, and Chasing Cars found the rear-drive chassis genuinely lively despite a 2.3-tonne kerb weight",
+      "Palatial rear legroom plus a 25-speaker Bowers & Wilkins system that CarExpert called among the best it has experienced",
+      "5-year unlimited-kilometre warranty with long 24-month/30,000km service intervals, about $2,251 for six years of capped-price servicing"
+    ],
+    "cons": [
+      "484 litres to the seat backs (including a 90-litre underfloor bin) is small for a 4.9m SUV, and unlike the Volvo EX90 it shares a platform with there is no six- or seven-seat option — five seats only",
+      "Steering column adjustment, mirrors and climate all live behind touchscreen menus, with no physical climate controls",
+      "The Rear Motor cannot be optioned with air suspension at any price, and Chasing Cars described its passive steel-sprung ride as 'knobbly' around town",
+      "AC charging is capped at 11kW, so a 0-100 per cent home charge takes about 10 hours where some rivals accept 22kW",
+      "Every variant is well above the $91,661 FBT-exempt luxury cap, so novated-lease buyers get none of the EV FBT exemption that a Kia EV5 or Tesla Model Y attracts"
+    ],
+    "sources": [
+      "https://www.polestar.com/au/polestar-3/specifications/",
+      "https://www.carexpert.com.au/car-reviews/2026-polestar-3-review",
+      "https://www.carsales.com.au/editorial/details/polestar-3-2026-review-152586/",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/polestar-3-long-range-single-motor-2025-review/",
+      "https://www.carsguide.com.au/car-news/game-changing-update-for-electric-suv-800-volt-ev-charging-headlines-updates-for-2026",
+      "https://www.goauto.com.au/new-models/polestar/3/polestar-3-update-pricing-announced/2026-03-07/98657.html",
+      "https://ev-database.org/uk/car/3327/Polestar-3-Dual-Motor",
+      "https://thedriven.io/2026/03/05/new-polestar-3-comes-with-improved-charging-architecture-priced-from-116700/"
+    ],
+    "sourcedAt": "2026-08-06"
+  },
+  {
     "id": "polestar-4",
     "summary": "The Polestar 4 is a coupe-styled mid-size electric SUV that Australian reviewers rate highly for its involving, well-composed driving manners, spacious and upmarket cabin, and genuinely competitive pricing against premium rivals like the Porsche Macan Electric. Its standout talking point is the deletion of a conventional rear window in favour of a camera-fed digital mirror, a decision reviewers describe as a workable, even class-leading, trade for headroom but not a universally comfortable one. Value is undercut by a lengthy, pricey options list and a control layout that pushes nearly everything through the touchscreen.",
     "pros": [
@@ -2899,6 +2988,40 @@
       "https://thebeep.com.au/cars/smart/1"
     ],
     "sourcedAt": "2026-08-01"
+  },
+  {
+    "id": "smart-3",
+    "summary": "The smart #3 is the coupe-roofed, 4.40m sister car to the smart #1, sharing that car's Geely SEA platform, 66kWh NMC pack and 200kW rear motor but stretching 130mm longer and sitting lower. Australian reviewers rate it as a quiet, well-damped semi-premium cruiser rather than the sports SUV the styling and the 3.7-second BRABUS suggest -- CarExpert's verdict is that it 'isn't a performance car' and 'is no corner carver', while praising the suspension and cabin isolation. The reservations are structural rather than dynamic: three showrooms nationally, a heavily discounted first two years on the market, and a 12.8-inch screen that swallows most vehicle functions.",
+    "pros": [
+      "Costs $2,910 more than a smart #1 Pro+ for 15km more WLTP range (435km vs 420km), a 370-litre boot against the #1's 313 litres, and 130mm more length -- the practical pick of the two smart SUVs",
+      "Undercuts its SEA-platform cousin the Volvo EX30 while matching its 1,600kg braked towing rating, which is unusual for an electric SUV of this size",
+      "Premium and BRABUS add 22kW three-phase AC charging over the Pro+'s 7.4kW, cutting a 10-80 per cent AC top-up to under three hours; all three grades take 150kW DC for a sub-30-minute 10-80 per cent",
+      "Five-star ANCAP rating under the 2023 protocols (90 per cent adult, 85 per cent child occupant protection), applying to every #3 sold here since September 2024",
+      "The high-voltage battery carries a separate 8-year/150,000km warranty with a 70 per cent state-of-health guarantee, on top of the unconditional 5-year/150,000km vehicle cover -- but the battery cover requires servicing every 20,000km or 12 months at a smart-appointed dealer"
+    ],
+    "cons": [
+      "LSH Auto Australia runs just three showrooms -- Alexandria NSW, South Melbourne VIC and one in Brisbane -- so there is no smart sales or service point in WA, SA, Tasmania, the ACT or the NT, and clearance offers have been restricted to those three states",
+      "List prices were cut $5,000 across every grade within two years of the 2024 launch ($57,900/$61,900/$70,900 down to $52,900/$56,900/$65,900), on top of runout campaigns that put a Pro+ at $50,990 drive-away -- a saving CarExpert put at up to $11,500",
+      "Capped-price servicing runs four years/80,000km and totals $2,445 (Pro+) to $3,120 (BRABUS), which is expensive for an EV with 20,000km intervals",
+      "The coupe roofline costs rear headroom and rear visibility, and the boot is shallow with a high load lip; folding the 60/40 bench leaves a sloping floor rather than a flat one",
+      "Almost every vehicle function lives in the 12.8-inch touchscreen, and CarExpert found smart's claimed single-pedal e-Pedal mode 'fell just short' of actually stopping the car"
+    ],
+    "sources": [
+      "https://au.smart.com/en/hashtag-three/",
+      "https://au.smart.com/en/configurator/?model_id=21",
+      "https://au.smart.com/en/service/",
+      "https://au.smart.com/en/terms-conditions/",
+      "https://au.smart.com/en/location/",
+      "https://www.carexpert.com.au/car-reviews/2025-smart-3-review",
+      "https://www.carexpert.com.au/smart/3/2026",
+      "https://www.carexpert.com.au/car-news/smart-offers-over-10000-off-runout-electric-suvs",
+      "https://www.carsguide.com.au/ev/smart-3-94731",
+      "https://www.carsguide.com.au/smart/3/2026",
+      "https://www.chasingcars.com.au/news/future-cars/smart-1-and-3-2024-australian-pricing-and-specifications/",
+      "https://www.carsguide.com.au/car-news/new-chinese-electric-cars-achieve-five-star-ancap-safety-rating-2025-smart-1-and-smart-3",
+      "https://nz.smart.com/app/uploads/2025/02/smart-3-spec-sheet.pdf"
+    ],
+    "sourcedAt": "2026-08-06"
   },
   {
     "id": "subaru-solterra",
@@ -3153,6 +3276,35 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "volvo-es90",
+    "summary": "The ES90 is Volvo's first electric passenger car for Australia, a five-metre liftback that Australian reviewers agree is priced to embarrass the segment: it opens roughly $46,000 below a Mercedes-Benz EQE 300 and $67,000 below a BMW i5 while matching them on claimed range. Testers rate the cabin, refinement and driver-assistance calibration highly and the driving experience merely competent, with the steer-by-wire rack and the Ultra's 22-inch wheels drawing the most comment. What reviewers disagree on is whether anyone will buy it, because it is a big non-SUV in an SUV market, it carries no ANCAP rating yet, and its own EX90 sibling does nearly everything it does with a 655-litre boot.",
+    "pros": [
+      "The Plus opens at $88,880 before on-road costs, which is $46,320 under a Mercedes-Benz EQE 300 ($135,200) and $67,020 under a BMW i5 eDrive40 ($155,900), and it lands under the $91,661 luxury-car tax and electric-car FBT exemption threshold that both German rivals clear by a wide margin",
+      "Volvo's first 800-volt car: 554km of range from an 88kWh usable pack, with a 10-80 per cent DC recharge quoted at 22 minutes on a 300kW charger and up to 300km of range added in 10 minutes, against roughly half an hour for the 400-volt BMW i5",
+      "Rated to tow 1,600kg braked, more than a BMW i5's 1,500kg and far more than the large electric sedans that carry no tow rating at all",
+      "The liftback tailgate is the practical argument for the shape: 424 litres expands to 1,427 litres with the second row folded, against 785 litres for a BMW i5's boot-lid sedan, plus a 27-litre front compartment for charge cables",
+      "CarsGuide scored the safety package 9/10 and called Volvo's driver-assistance integration industry best practice, noting the systems 'only work if you need them in an emergency' rather than beeping constantly - and MY2026 cars drop the roof-mounted lidar pod after Volvo split with the supplier, keeping five radars, seven cameras and 12 ultrasonic sensors"
+    ],
+    "cons": [
+      "No ANCAP or Euro NCAP rating at the research date, which is an awkward gap for a car sold on Volvo's safety reputation; the case for it rests on the related EX90's rating rather than a test of this body",
+      "The Ultra at $107,990 sits $16,329 over the $91,661 threshold, so it attracts luxury car tax and loses the electric-car FBT exemption the Plus keeps - and the $19,110 step buys 22-inch wheels, active air suspension, pixel LED headlights and a 25-speaker Bowers & Wilkins system, not a metre more range",
+      "Australia gets only the 245kW single-motor rear-drive car; the 500kW Twin Motor and the larger 106kWh battery sold in Europe are unconfirmed here, so there is no long-range or performance grade to step up to",
+      "Steer-by-wire needs acclimatising - CarsGuide found it 'literally feels like an old computer game steering wheel set-up, with very little resistance' during parking manoeuvres - and lane-keeping assist 'has a tendency to move in the lane slightly too much'",
+      "Volvo runs only about 28 dealer and service points nationally and had not published capped-price servicing for its EVs when the ES90 launched, so everything beyond electricity and tyres is an unquantified running cost"
+    ],
+    "sources": [
+      "https://www.volvocars.com/au/cars/es90-electric/specifications/",
+      "https://www.greenvehicleguide.gov.au/Vehicle/ViewMatchingVariants?vehicleDisplayId=37085",
+      "https://www.carexpert.com.au/car-news/2026-volvo-es90-price-and-specs",
+      "https://www.carexpert.com.au/car-news/2026-volvo-es90-genre-busting-luxury-ev-priced-for-australia",
+      "https://www.chasingcars.com.au/news/new-car-prices/volvo-es90-2026-pricing-and-features-bmw-i5-and-mercedes-benz-eqe-rival-lands-in-australia/",
+      "https://www.carsguide.com.au/ev/volvo-es90-ultra-single-motor-101281",
+      "https://www.carsales.com.au/research/volvo/es90/",
+      "https://ev-database.org/car/3128/Volvo-ES90-Single-Motor"
+    ],
+    "sourcedAt": "2026-08-06"
+  },
+  {
     "id": "volvo-ex30",
     "summary": "The EX30 is Volvo's compact electric SUV, praised by Australian reviewers for punchy, agile handling, a well-damped ride and a distinctive, upmarket cabin featuring wool-blend seat trim. Sharp price cuts through 2026 have pushed the single-motor Plus below $50,000 before on-roads, making it one of the more attainable premium-badged EVs on the market, and it carries a five-star ANCAP safety rating. It is let down for family duty by a tight rear seat and modest boot, and reviewers are split on whether that's a fair trade-off for its style and driving manners.",
     "pros": [
@@ -3203,6 +3355,38 @@
       "https://zecar.com/reviews/volvo-ex30-ex40-price-cuts-australia-2026"
     ],
     "sourcedAt": "2026-07-27"
+  },
+  {
+    "id": "volvo-ex90",
+    "summary": "The EX90 is Volvo's electric flagship and, alongside the six-seat Cadillac Vistiq, the only luxury-badged three-row battery SUV on sale in Australia. Australian reviewers are close to unanimous on the cabin, the quietness and the safety case -- ANCAP tested it in 2025 and it returned the highest adult occupant protection score of any vehicle rated that year -- while splitting over the ride, which is terse on the passive Plus and floaty-then-bouncy on the Ultra's air springs. The MY26 rebuild onto an 800-volt architecture with a 106kWh pack and 350kW DC charging fixed the launch car's biggest weakness, but at $124,990 and $134,990 before on-road costs the range clears the $91,661 FBT threshold by a wide margin and Volvo is about to reopen it $18,000 lower with a single-motor base grade.",
+    "pros": [
+      "ANCAP rated the EX90 five stars on 2025 test protocols with 92 per cent adult occupant protection -- the highest score of any vehicle ANCAP rated in 2025 -- plus 94 per cent child occupant protection, 82 per cent vulnerable road user and 84 per cent safety assist",
+      "Ownership costs are close to nil beyond tyres and electricity for five years: a 5-year/unlimited-kilometre unconditional warranty, 8 years of drive-battery cover, 5 years roadside assistance, and scheduled servicing to 5 years/150,000km included in the purchase price at $0",
+      "The MY26 switch from 400 to 800 volts lifted DC fast-charging from 250kW to a 350kW peak, and Volvo Australia quotes 10-80 per cent in about 24 minutes -- a Cadillac Vistiq, its only luxury three-row electric rival here, peaks at 130kW",
+      "Rated to tow 2,200kg braked and genuinely seats seven adults on individual sliding second-row seats, in a segment where the Audi and BMW alternatives at this money are five-seaters and a Mercedes-Benz EQS SUV starts at $197,200 before on-road costs",
+      "Volvo quotes a 0.29 drag coefficient and Australian testers single out the cabin as one of the quietest they have measured, with CarExpert rating its Pilot Assist and lane-keeping calibration ahead of the Polestar and Zeekr cars that share the same Geely software stack"
+    ],
+    "cons": [
+      "Neither grade comes near the electric-car FBT exemption: the cheapest EX90 is $124,990 before on-road costs, roughly $33,000 above the $91,661 fuel-efficient luxury car tax threshold, and about $10,000 of that sticker is luxury car tax",
+      "Volvo replaces the entry Plus Twin Motor with a $106,990 Plus Single Motor in September/October 2026, an $18,000 cut to the range's opening price within months, on top of a MY26 change from 400V to 800V that leaves every launch car on the slower architecture -- both point to weak early resale",
+      "Australia gets the EX90 as a seven-seater only, with no six-seat captain's-chair layout of the kind offered on the Kia EV9 GT and Cadillac Vistiq, and only 324 litres behind the third row",
+      "Reviewers agree the primary ride never settles: CarExpert found the passively sprung Plus on 20-inch wheels 'a little busy and jittery' over pockmarked roads, and CarsGuide found the Ultra's twin-chamber air suspension 'bouncy over bigger bumps, especially over the rear axle'",
+      "At 2,764kg and a claimed 22.8kWh/100km it is thirstier than a Hyundai Ioniq 9 or Kia EV9 on the same duty cycle, and its 521km WLTP range is well short of the 570km the pre-update launch cars advertised"
+    ],
+    "sources": [
+      "https://www.volvocars.com/au/cars/ex90-electric/specifications/",
+      "https://www.volvocars.com/au/build/ex90-electric/",
+      "https://www.volvocars.com/au/cars/ex90-electric/",
+      "https://www.carexpert.com.au/car-reviews/2025-volvo-ex90-review-2",
+      "https://www.carexpert.com.au/car-news/2027-volvo-ex90-ev-base-price-slashed-by-dollar18000",
+      "https://www.carsguide.com.au/ev/volvo-ex90-97334",
+      "https://www.carsguide.com.au/car-news/flagship-suv-gets-big-boost-99687",
+      "https://www.whichcar.com.au/news/volvo-ex90-australian-price-revealed-undercuts-rivals",
+      "https://www.ancap.com.au/safety-ratings/volvo/ex90",
+      "https://www.volvocars.com/au/l/warranty/",
+      "https://ev-database.org/uk/car/3324/Volvo-EX90-Twin-Motor"
+    ],
+    "sourcedAt": "2026-08-06"
   },
   {
     "id": "volvo-xc60-phev",

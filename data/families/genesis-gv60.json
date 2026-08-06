@@ -1,0 +1,31 @@
+{
+  "id": "genesis-gv60",
+  "summary": "The GV60 is Genesis's E-GMP-based electric SUV, and the 2027 update swaps the old 77.4kWh pack for an 84kWh one while cutting the entry price by roughly $15,000 so the Advanced RWD lands under the luxury car tax threshold. Australian reviewers rate its cabin materials, noise suppression and low-speed ride among the best in the class, but consistently argue it is still priced above what an emerging luxury brand can command against the Hyundai and Kia relatives that share its hardware. The 448kW Magma adds genuine performance-car pace and heads the two-grade range, though it costs $15,000 more than a mechanically similar Ioniq 5 N and neither GV60 grade is rated to tow.",
+  "pros": [
+    "At $88,300 before on-road costs the Advanced RWD sits below the $91,661 fuel-efficient luxury car tax threshold, so no LCT is embedded in its price — a roughly $15,000 cut on the superseded Luxury grade",
+    "The 84kWh 800V pack claims 561km WLTP in the Advanced and a 10-80 per cent DC charge in 18 minutes on a 350kW charger, with 400V/800V compatibility and V2L",
+    "Ownership costs are covered: five years of complimentary scheduled servicing at 15,000km/12-month intervals, roadside assistance for up to 10 years, and an 8-year/160,000km high-voltage battery warranty on top of the 5-year/unlimited-km vehicle cover",
+    "CarExpert rates the low-speed ride and suppression of wind, tyre and suspension noise as among the best of any EV, with soft-touch materials almost everywhere in the cabin",
+    "The Magma's dual-motor 448kW/740Nm drivetrain (478kW/790Nm in Boost) claims 0-100km/h in 3.4 seconds with an e-LSD, Drift Mode and a simulated gearshift system"
+  ],
+  "cons": [
+    "Neither grade is rated to tow — both the Advanced RWD and the Magma are listed at 0kg braked, where the superseded AWD grades were rated to 1600kg",
+    "432 litres behind the rear seats (400 in the Magma) is small for a mid-size SUV costing $88,000-plus, there is no spare wheel, and no internal V2L socket",
+    "The Magma asks $15,000 more than a mechanically near-identical Hyundai Ioniq 5 N, and CarExpert measured 25.6kWh/100km against the 21.5kWh/100km claim — roughly 330km of real-world range",
+    "Genesis runs only about nine Australian retail sites, all in NSW, VIC, QLD and WA, with nothing in SA, TAS, ACT or NT, which limits servicing access and thins the used-buyer pool",
+    "Body control loosens over bigger compressions on country roads, and CarExpert still judges the Advanced roughly $20,000 too expensive to be competitive against Chinese and Hyundai-group rivals"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2027-genesis-gv60-prices-hot-478kw-ev-on-sale-now",
+    "https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-review",
+    "https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-magma-review",
+    "https://www.carsguide.com.au/ev/genesis-gv60-magma-102229",
+    "https://thedriven.io/2026/07/30/updated-genesis-gv60-the-sensible-one-and-the-478kw-one/",
+    "https://thebeep.com.au/car-news/2027-genesis-gv60-price-australia",
+    "https://www.carsguide.com.au/genesis/gv60/towing-capacity/2026",
+    "https://www.genesis.com/au/en/terms-of-use/warranty.html",
+    "https://www.carexpert.com.au/car-news/genesis-expands-australian-retail-network-as-magma-gets-ready-to-flow-into-showrooms",
+    "https://ev-database.org/uk/car/3236/Genesis-GV60-Performance"
+  ],
+  "sourcedAt": "2026-08-06"
+}

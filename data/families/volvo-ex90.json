@@ -1,0 +1,32 @@
+{
+  "id": "volvo-ex90",
+  "summary": "The EX90 is Volvo's electric flagship and, alongside the six-seat Cadillac Vistiq, the only luxury-badged three-row battery SUV on sale in Australia. Australian reviewers are close to unanimous on the cabin, the quietness and the safety case -- ANCAP tested it in 2025 and it returned the highest adult occupant protection score of any vehicle rated that year -- while splitting over the ride, which is terse on the passive Plus and floaty-then-bouncy on the Ultra's air springs. The MY26 rebuild onto an 800-volt architecture with a 106kWh pack and 350kW DC charging fixed the launch car's biggest weakness, but at $124,990 and $134,990 before on-road costs the range clears the $91,661 FBT threshold by a wide margin and Volvo is about to reopen it $18,000 lower with a single-motor base grade.",
+  "pros": [
+    "ANCAP rated the EX90 five stars on 2025 test protocols with 92 per cent adult occupant protection -- the highest score of any vehicle ANCAP rated in 2025 -- plus 94 per cent child occupant protection, 82 per cent vulnerable road user and 84 per cent safety assist",
+    "Ownership costs are close to nil beyond tyres and electricity for five years: a 5-year/unlimited-kilometre unconditional warranty, 8 years of drive-battery cover, 5 years roadside assistance, and scheduled servicing to 5 years/150,000km included in the purchase price at $0",
+    "The MY26 switch from 400 to 800 volts lifted DC fast-charging from 250kW to a 350kW peak, and Volvo Australia quotes 10-80 per cent in about 24 minutes -- a Cadillac Vistiq, its only luxury three-row electric rival here, peaks at 130kW",
+    "Rated to tow 2,200kg braked and genuinely seats seven adults on individual sliding second-row seats, in a segment where the Audi and BMW alternatives at this money are five-seaters and a Mercedes-Benz EQS SUV starts at $197,200 before on-road costs",
+    "Volvo quotes a 0.29 drag coefficient and Australian testers single out the cabin as one of the quietest they have measured, with CarExpert rating its Pilot Assist and lane-keeping calibration ahead of the Polestar and Zeekr cars that share the same Geely software stack"
+  ],
+  "cons": [
+    "Neither grade comes near the electric-car FBT exemption: the cheapest EX90 is $124,990 before on-road costs, roughly $33,000 above the $91,661 fuel-efficient luxury car tax threshold, and about $10,000 of that sticker is luxury car tax",
+    "Volvo replaces the entry Plus Twin Motor with a $106,990 Plus Single Motor in September/October 2026, an $18,000 cut to the range's opening price within months, on top of a MY26 change from 400V to 800V that leaves every launch car on the slower architecture -- both point to weak early resale",
+    "Australia gets the EX90 as a seven-seater only, with no six-seat captain's-chair layout of the kind offered on the Kia EV9 GT and Cadillac Vistiq, and only 324 litres behind the third row",
+    "Reviewers agree the primary ride never settles: CarExpert found the passively sprung Plus on 20-inch wheels 'a little busy and jittery' over pockmarked roads, and CarsGuide found the Ultra's twin-chamber air suspension 'bouncy over bigger bumps, especially over the rear axle'",
+    "At 2,764kg and a claimed 22.8kWh/100km it is thirstier than a Hyundai Ioniq 9 or Kia EV9 on the same duty cycle, and its 521km WLTP range is well short of the 570km the pre-update launch cars advertised"
+  ],
+  "sources": [
+    "https://www.volvocars.com/au/cars/ex90-electric/specifications/",
+    "https://www.volvocars.com/au/build/ex90-electric/",
+    "https://www.volvocars.com/au/cars/ex90-electric/",
+    "https://www.carexpert.com.au/car-reviews/2025-volvo-ex90-review-2",
+    "https://www.carexpert.com.au/car-news/2027-volvo-ex90-ev-base-price-slashed-by-dollar18000",
+    "https://www.carsguide.com.au/ev/volvo-ex90-97334",
+    "https://www.carsguide.com.au/car-news/flagship-suv-gets-big-boost-99687",
+    "https://www.whichcar.com.au/news/volvo-ex90-australian-price-revealed-undercuts-rivals",
+    "https://www.ancap.com.au/safety-ratings/volvo/ex90",
+    "https://www.volvocars.com/au/l/warranty/",
+    "https://ev-database.org/uk/car/3324/Volvo-EX90-Twin-Motor"
+  ],
+  "sourcedAt": "2026-08-06"
+}

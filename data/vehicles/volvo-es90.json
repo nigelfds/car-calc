@@ -1,0 +1,42 @@
+[
+  {
+    "id": "volvo-es90-plus-single-motor",
+    "familyId": "volvo-es90",
+    "make": "Volvo",
+    "model": "ES90",
+    "variant": "Plus Single Motor",
+    "bodyType": "Sedan",
+    "listPrice": 88880,
+    "batteryKwh": 88,
+    "rangeKm": 554,
+    "consumptionKwhPer100km": 18.5,
+    "bootLitresSeatsUp": 424,
+    "bootLitresSeatsDown": 1427,
+    "seats": 5,
+    "towKg": 1600,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2400,
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.34],
+    "sourcedAt": "2026-08-06"
+  },
+  {
+    "id": "volvo-es90-ultra-single-motor",
+    "familyId": "volvo-es90",
+    "make": "Volvo",
+    "model": "ES90",
+    "variant": "Ultra Single Motor",
+    "bodyType": "Sedan",
+    "listPrice": 107990,
+    "batteryKwh": 88,
+    "rangeKm": 554,
+    "consumptionKwhPer100km": 18.5,
+    "bootLitresSeatsUp": 424,
+    "bootLitresSeatsDown": 1427,
+    "seats": 5,
+    "towKg": 1600,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2750,
+    "depreciationCurve": [1, 0.64, 0.52, 0.43, 0.36, 0.31],
+    "sourcedAt": "2026-08-06"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "genesis-gv60-advanced-rwd",
+    "familyId": "genesis-gv60",
+    "make": "Genesis",
+    "model": "GV60",
+    "variant": "Advanced RWD",
+    "bodyType": "SUV",
+    "listPrice": 88300,
+    "batteryKwh": 80,
+    "rangeKm": 561,
+    "consumptionKwhPer100km": 16.8,
+    "bootLitresSeatsUp": 432,
+    "bootLitresSeatsDown": 1460,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2300,
+    "depreciationCurve": [1, 0.66, 0.54, 0.45, 0.38, 0.32],
+    "sourcedAt": "2026-08-06"
+  },
+  {
+    "id": "genesis-gv60-magma-awd",
+    "familyId": "genesis-gv60",
+    "make": "Genesis",
+    "model": "GV60",
+    "variant": "Magma AWD",
+    "bodyType": "SUV",
+    "listPrice": 130000,
+    "batteryKwh": 80,
+    "rangeKm": 425,
+    "consumptionKwhPer100km": 21.5,
+    "bootLitresSeatsUp": 400,
+    "bootLitresSeatsDown": 1350,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 3300,
+    "depreciationCurve": [1, 0.64, 0.52, 0.43, 0.36, 0.3],
+    "sourcedAt": "2026-08-06"
+  }
+]
