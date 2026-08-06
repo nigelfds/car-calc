@@ -45,7 +45,9 @@ car**. The second tab, **Compare**, is a different tool, covered next.
    family, shared across every variant of it — sourced from Wikimedia Commons under a free
    licence, cropped to a consistent 3:2 frame, credited on `/credits.html` — curated by
    `npm run curate`, which matches safe candidates automatically and flags the rest for a
-   human to name under an alias.
+   human to name under an alias. Curation is bulk-run after the ongoing research waves finish,
+   so `data/car-images.json` ships empty at merge and every card renders with no photograph
+   until then.
 
 ## Comparing cars side by side
 
