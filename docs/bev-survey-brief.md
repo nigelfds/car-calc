@@ -179,18 +179,30 @@ families were most of the market.
 
 ## The headline number
 
-| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 | After batch 6 | After batch 8 |
-|---|---|---|---|---|---|---|---|---|
-| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** | **~111** | **~110** — the Q8 e-tron came off |
-| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** | **~107** | **~106** |
-| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** | **76** | **81** |
-| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** | **~68%** | **~76%** |
-| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** | **~31** | **~25** |
-| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** | **6 batches left** | **5 batches left** |
+| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 | After batch 6 | After batch 8 | After batch 7 |
+|---|---|---|---|---|---|---|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** | **~111** | **~110** — the Q8 e-tron came off | **~106** — **four Mercedes came off at once** |
+| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** | **~107** | **~106** | **~101** — the G 580 also crossed the ceiling |
+| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** | **76** | **81** | **87** |
+| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** | **~68%** | **~76%** | **~86%** |
+| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** | **~31** | **~25** | **~14** |
+| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** | **6 batches left** | **5 batches left** | **3 batches left** |
 
-**Batch 8 ran out of order, before batch 7**, which is the only earlier batch still outstanding. Nothing in
-batch 7 is affected — it is wholly Mercedes-Benz plus a Skoda body extension, and batch 8 shares no brand
-with it. The "5 batches left" figure counts batches 7, 9, 10, 11 and 12.
+**Batch 8 ran out of order, before batch 7.** Batch 7 has since run and **ABSORBED batch 9** — see below.
+**There is no batch 9 any more.** The "3 batches left" figure counts batches 10, 11 and 12, plus the
+batch 13 re-check pass.
+
+**Batch 7 is the largest single movement in the wave, and most of it is the denominator rather than the
+numerator.** It was run as eleven families (the five Mercedes of the old batch 7, plus the six premium
+SUVs and Genesis of the old batch 9, less the Skoda Enyaq Coupe which was already held). Six were
+written and **five were reported rather than written** — four found not on sale and one found
+unrepresentable on price. Coverage moves 76% → 86% on a numerator that gained six and a denominator
+that lost five.
+
+That denominator movement is real, not bookkeeping: **Mercedes-Benz Australia has de-configured its
+entire EQ flagship range.** The EQE Sedan, EQE SUV, EQS Sedan and EQS SUV are all gone from the
+configurator, and the G 580 — the one EQ flagship still orderable — now lists above the schema's
+$250,000 ceiling. Mercedes contributed **zero of five** families to this batch.
 
 Batch 2 found nothing withdrawn and needed no back-out, so the on-sale and representable figures are
 unchanged. All six families were `SUV`, so `Sedan` and `Ute` are exactly where batch 1 left them.
@@ -227,8 +239,16 @@ of its six families landed. All five are `SUV`, so `Ute` is untouched for a **fo
 159/62, Sedan 22/10, Hatch 16/7, Ute 5/2.** Like batch 6, this is mostly depth rather than reach: only
 Smart is a new brand (39 → 40), and Audi, Cupra and Mini were all already held.
 
-The representable figure counts people movers, per the body-type decisions below. Only four
-vehicles on sale are unrepresentable: three above the $250,000 ceiling and one two-seat roadster.
+Batch 7 is **the batch that found four families withdrawn at once**, against one each in batches 1 and 8.
+Six of its eleven families landed. Five `SUV` and one `Sedan` — the Volvo ES90, which is `Sedan`'s first
+new family since batch 6 — so **`Ute` is untouched for a fifth batch running**. **Measured after batch 7:
+215 battery-electric variants across 87 families — SUV 170/67, Sedan 24/11, Hatch 16/7, Ute 5/2.**
+Genesis takes the brand count 40 → 41; Volvo, Polestar and Smart were all already held, so like batches 6
+and 8 this is mostly depth rather than reach.
+
+The representable figure counts people movers, per the body-type decisions below. **Five** vehicles on
+sale are now unrepresentable: **four** above the $250,000 ceiling — the Mercedes-Benz G 580 joined them
+in batch 7 — and one two-seat roadster.
 
 Per slice, showing the diff was not evenly distributed:
 
@@ -315,7 +335,8 @@ out for Australia and the Sport Speciale being a mild hybrid. The dataset now ho
 and Maserati.
 
 **Settled by batch 8 (2026-08-01): two more, both complete on BEVs. Smart** goes from no row of any kind to
-its whole Australian battery-electric range bar the #3 (batch 9), taking the dataset to **40 brands**.
+its whole Australian battery-electric range bar the #3 (then batch 9, since absorbed into batch 7, which
+wrote it), taking the dataset to **40 brands**.
 **Cupra is complete on BEVs** — the Tavascan is its only battery-electric family here, the Born having been
 withdrawn. Note Cupra is the **Lexus** shape of entry, not the Suzuki shape: it was never absent from the
 dataset, having held `cupra-formentor-phev` since the PHEV wave, so only Smart moves the brand count. This
@@ -323,6 +344,22 @@ table has now mis-stated that distinction three times; it is headed "whole brand
 whose *battery-electric* range is absent. **Four of the seventeen brands in this table remain absent:**
 Porsche, Genesis, Lotus and Maserati. Batch 8 also deepened two brands already held — Audi went from one
 BEV family to two, Mini from one to three.
+
+**Settled by batch 7 (2026-08-06): one more. Genesis** goes from no row of any kind to its whole
+Australian battery-electric SUV range — GV60 (Advanced RWD and the Magma) and GV70 Electrified — taking
+the dataset to **41 brands**. Only the **G80 Electrified** remains, and it is batch 10's, where its
+on-sale status is still the survey's weakest single entry. **Three of the seventeen brands in this table
+remain absent: Porsche, Lotus and Maserati** — and all three are batch 10 or 11, so this table is now one
+batch from being closed out. **Smart is complete**, the #3 having joined the #1 that batch 8 wrote. Batch 7
+also deepened two brands already held — Volvo went from two BEV families to four, Polestar from two to
+three.
+
+**Mercedes-Benz needs its own line, and it moves the wrong way.** The dataset holds three Mercedes BEV
+families (CLA EV, EQA, EQB) and batch 7 established that it cannot hold more: the EQE Sedan, EQE SUV, EQS
+Sedan and EQS SUV are all off the Australian configurator, and the G 580 is above the schema ceiling.
+**Mercedes-Benz's Australian battery-electric range is now smaller than the dataset's coverage of it
+implied** — the survey counted five researchable Mercedes families and there are none. The refreshed EQS
+is due Q4 2026 and is a batch 13 re-check item, not a backlog item.
 
 **One correction to this table itself, in the same shape as the Mazda one above.** It is headed
 "whole brands absent from the dataset", and **Lexus was never absent from the dataset** — it has
@@ -386,8 +423,20 @@ earned its slot by finding those four, which a brand sweep alone might have rati
 ES90, Audi e-tron GT and Porsche Taycan are all `Sedan`, consistent with the BMW i4 Gran Coupé the
 dataset already holds. All eleven missing families stand.
 
-**Still open, and it costs one batch slot:** is the Mercedes EQE Sedan still orderable in Australia?
-Mercedes is dropping it globally during 2026. Verify before spending the slot.
+**Settled by batch 7 (2026-08-06), and the gap is now nearly closed — but two of the eleven turned out
+not to exist.** Batch 7 took the **Volvo ES90**, so `Sedan` holds **11 families, 24 variants** (measured).
+It also established that **the Mercedes-Benz EQS Sedan and EQE Sedan are both off the Australian market** —
+so they leave the missing list by being deleted from it, not by being researched, and the denominator
+falls with them. `Sedan` is therefore about **11 of ~14, roughly 79%**, up from 63%.
+
+**Three of the survey's original eleven remain, all batch 10, all premium:** Genesis G80 Electrified ·
+Porsche Taycan · Audi e-tron GT. Note the survey's own count was optimistic in a way this batch exposed:
+two of the eleven it listed were cars nobody could buy.
+
+**The ES90 is also the batch's only FBT straddle**, and the only one in either wave to sit on the
+$91,661 boundary rather than $75,000: Plus $88,880 keeps the exemption and pays no LCT, Ultra $107,990
+clears the threshold and loses both. That is the case the app exists to catch, and `Sedan` is where it
+turned up.
 
 ## Body-type decisions
 
@@ -429,7 +478,7 @@ stay out. Only the passenger versions are in scope.
 `server/schema.js:9` defines exactly four body types: `SUV | Sedan | Hatch | Ute`. There is no
 `Coupe`, no `People Mover`, no `Wagon`.
 
-With people movers filed as `SUV`, only four vehicles on sale in Australia cannot be represented.
+With people movers filed as `SUV`, five vehicles on sale in Australia cannot be represented.
 
 **Over $250,000 (schema rejects):**
 
@@ -438,6 +487,11 @@ With people movers filed as `SUV`, only four vehicles on sale in Australia canno
 | BMW i7 | $306,900–$364,390 |
 | Maserati GranTurismo Folgore | ~$450,000 |
 | Maserati GranCabrio Folgore | ≥ GranTurismo; also a convertible |
+| **Mercedes-Benz G 580 with EQ Technology** | **$252,700 — crossed the ceiling during the wave. Added by batch 7, 2026-08-06. See the batch 7 record: it launched at $249,900 and rose. Re-check in batch 13 — a cut of $2,701 makes it representable again** |
+
+The G 580 is the **first family the wave has lost to the ceiling rather than to withdrawal**, and it is
+the reason the "representable" row falls further than the "on sale" row. It is also the only entry here
+that could plausibly come back.
 
 **No honest body type:**
 
@@ -720,15 +774,42 @@ BMW should carry; see the batch 6 record below.**
 | Renault Scenic E-Tech | New family at a brand already held |
 | Alfa Romeo Junior Elettrica | Single variant, $57,900 |
 
-### Batch 7 — Mercedes-Benz
+### Batch 7 — Mercedes-Benz, premium SUVs and Genesis — **DONE 2026-08-06** · **ABSORBED BATCH 9**
+
+**Run as ELEVEN families, not six** — the five Mercedes of the original batch 7 plus the six of the
+original batch 9. **Six landed: 13 variants. Five were reported rather than written** — four not on sale,
+one unrepresentable on price. Dataset went to **41 brands, 122 families, 293 variants**. **Genesis goes
+from zero rows to a whole brand; Smart is completed; Volvo goes from two BEV families to four and
+Polestar from two to three.** Zero backed-out prices. **Mercedes contributed nothing: its entire EQ
+flagship range is de-configured.** See the batch 7 record below.
+
 | Family | Note |
 |---|---|
-| Mercedes-Benz EQS Sedan | Refreshed EQS starts Q4 2026; the family is in transition |
-| Mercedes-Benz EQS SUV | |
-| Mercedes-Benz EQE SUV | Being dropped globally during 2026 — confirm on-sale first |
-| Mercedes-Benz EQE Sedan | **Verify orderable before spending the slot.** Same global drop |
-| Mercedes-Benz G 580 with EQ Technology | $249,000 — **$1,000 under the schema ceiling.** Verify the price before writing; a small rise makes it unrepresentable |
-| Skoda Enyaq Coupe | Body extension of a held family, not a new family. Cheap slot to fill out the batch |
+| ~~Mercedes-Benz EQS Sedan~~ | **VERIFIED NOT ORDERABLE, 2026-08-06 — batch 7. Do not re-check before Q4 2026.** V297 de-configured, run-out stock cleared; refreshed EQS unpriced, deliveries Q4 2026 |
+| ~~Mercedes-Benz EQS SUV~~ | **VERIFIED NOT ON SALE, 2026-08-06 — batch 7. Do not re-check.** |
+| ~~Mercedes-Benz EQE SUV~~ | **VERIFIED NOT ON SALE, 2026-08-06 — batch 7. Do not re-check.** |
+| ~~Mercedes-Benz EQE Sedan~~ | **VERIFIED NOT ON SALE, 2026-08-06 — batch 7. Do not re-check.** |
+| ~~Mercedes-Benz G 580 with EQ Technology~~ | **ON SALE but UNREPRESENTABLE, 2026-08-06 — batch 7.** Current list $252,700, above the $250,000 ceiling. The plan's "$249,000" was wrong: launch RRP was **$249,900**, a $100 margin, and it rose. Re-check in batch 13 |
+| ~~Skoda Enyaq Coupe~~ | **DROPPED BEFORE DISPATCH — the note was STALE and the car is ALREADY HELD.** `skoda-enyaq` carries "Coupe 85 Sportline" $66,990 and "Coupe RS" $77,590. Researching it would have duplicated a held family |
+| Volvo EX90 | **WRITTEN** — Plus Twin Motor $124,990 · Ultra Twin Motor Performance $134,990 |
+| Volvo ES90 | **WRITTEN** — `Sedan`. Plus Single Motor $88,880 · Ultra Single Motor $107,990. **Straddles $91,661** |
+| Polestar 3 | **WRITTEN** — Rear Motor $116,700 · Dual Motor $131,100 · Performance $146,700 |
+| Genesis GV60 | **WRITTEN** — Advanced RWD $88,300 · Magma AWD $130,000. The Magma **is** sold here |
+| Genesis GV70 Electrified | **WRITTEN** — Signature Performance AWD $132,800. One grade, but **nothing was "reduced"** — see the record |
+| Smart #3 | **WRITTEN** — Pro+ $52,900 · Premium $56,900 · BRABUS $65,900 |
+
+> **Settled 2026-08-06: FOUR Mercedes families are off the Australian market, no files written.**
+> "EQE" returns zero occurrences across Mercedes-Benz Australia's all-models listing, electric-models
+> listing and configurator, all of which carry EQA, EQB, CLA Electric and G-Class Electric. The EQS is
+> present in the nav only as **"EQS New Electric — Coming soon"**, resolving to `models/saloon/new/eqs.html`
+> with no *Build & Price*. The mechanism is documented: CarExpert, 12 Aug 2025 — *"Mercedes-Benz removed
+> the ability to configure a new EQE and EQS from its website last year, and while the model pages for
+> these vehicles are still active, they stopped appearing in the vehicle range menu in March"*, and
+> *"Now, the EQE SUV and EQS SUV can no longer be configured via the website"*
+> (`https://www.carexpert.com.au/car-news/mercedes-benz-evs-discounted-by-up-to-almost-70000`). A Wayback
+> snapshot of 2026-02-10 shows all three SUV bodies still in the nav, dating the removal. Run-out stock
+> was cleared at $64,278–$66,405 off. **The orphaned model pages still render full marketing copy — that
+> is what makes this trap dangerous.**
 
 ### Batch 8 — Audi, Cupra, Mini, Smart — **DONE 2026-08-01** (run out of order, before batch 7)
 
@@ -758,15 +839,21 @@ a whole brand; Cupra from zero BEV rows to complete. See the batch 8 record belo
 > market at this time"* (CarExpert, Nov 2025). It is named in the "brands present but possibly holding only
 > part of their range" lead list near the top of this document. **Do not add it to any backlog.**
 
-### Batch 9 — premium SUVs and Genesis
-| Family | Note |
+### ~~Batch 9 — premium SUVs and Genesis~~ — **ABSORBED INTO BATCH 7, 2026-08-06. THERE IS NO BATCH 9.**
+
+All six families were researched as part of batch 7, which ran as eleven families because that session
+had a larger web-search allowance. All six landed. **Do not schedule a batch 9; the plan runs
+7 → 10 → 11 → 12 → 13.** Kept as a stub rather than deleted so a reader following an older copy of the
+plan finds out where the families went instead of concluding they were skipped.
+
+| Family | Outcome |
 |---|---|
-| Smart #3 | |
-| Volvo EX90 | |
-| Volvo ES90 | Sedan |
-| Polestar 3 | |
-| Genesis GV60 | Includes the GV60 Magma performance grade |
-| Genesis GV70 Electrified | Reported reduced to a single grade — verify |
+| Smart #3 | Written by batch 7 |
+| Volvo EX90 | Written by batch 7 |
+| Volvo ES90 | Written by batch 7 — `Sedan` |
+| Polestar 3 | Written by batch 7 |
+| Genesis GV60 | Written by batch 7 — the Magma is sold here, verified |
+| Genesis GV70 Electrified | Written by batch 7 — one grade, but the "reduced" premise was false |
 
 ### Batch 10 — the top end
 Every family here needs variant-level pricing, because several span the $250,000 ceiling: the
@@ -791,6 +878,8 @@ maintenance debt is real.
 | Lotus Emeya | `Sedan` |
 | Maserati Grecale Folgore | **Verify orderable, not run-out.** Maserati has retrenched hard on EVs and told dealers to discount Folgore stock ~43% |
 | Maintenance sweep | **Shrunk 2026-07-30, and again 2026-07-31 by batch 6.** Still to do: rename `omoda-e5` → Chery E5; re-price XPeng G6; **correct `bmw-ix1`'s `batteryKwh` 65.2 → 64.8 (see the batch 6 record — its platform-mate `bmw-ix2` moved to 64.8 on Australian sources, and the held iX1 rests on the one source that disagrees with BMW official, EV Database and CarExpert alike)**. **DONE by batch 6, do not re-check: the BMW i4 M60 is NOT orderable in Australia** — no Australian source carries the badge, carsales' 2026 i4 research page lists eDrive35 only, and EV Central's "range trimmed" piece corroborates the held family record exactly. The survey's $139,900 M60 claim was an overseas badge matched against the Australian range, which is the failure mode the wave warns about hardest. The held `bmw-i4` row needed no change. **Already done, do not redo:** Ioniq 6 N, MG4 Urban and Kia EV9 GT are all held; Leapmotor C10 is confirmed BEV; Kona ($46,000–$63,000) and Ioniq 5 ($68,200–$83,700) already match this survey's own "now" figures exactly. **Still worth checking:** the Inster, where this survey quotes $38,990 *drive-away* against a held list of $39,000 — a drive-away figure is not a list price, and that one backs out to about $36,574, so either the held row is $2,400 high or the survey is quoting a grade the dataset does not hold. Volvo, BMW iX1 and Renault re-pricing is unverified either way |
+| **`hyundai-ioniq-5` `batteryKwh` — ADDED BY BATCH 7, four rows, NOT resolved** | All four held Ioniq 5 rows carry **`batteryKwh: 84`**, which is the figure Hyundai advertises unqualified. **Two batch 7 agents independently recorded 80 usable against 84 nominal for the same 4th-gen E-GMP pack**, from different EV Database records for different cars (`genesis-gv60`, `genesis-gv70-electrified`), and both flagged the Ioniq 5 discrepancy unprompted. That convergence is why this is here. **Do not blind-swap.** This is the same shape as batch 5's e-TNGA finding — a gross figure in a field the schema defines as usable — but it is NOT yet settled: per batch 5's rule the question must be closed by a source stating BOTH figures **for the Ioniq 5 specifically**, not by arithmetic (a 5% capacity difference sits inside the plug-to-wheels band and cannot be separated by implied consumption), and one competing source gives **78.0** rather than 80.0 for this pack. Note `kia-ev9` is already correct — it carries Kia's published usable figures, 76.1 and 99.8. Check `hyundai-ioniq-6` and `hyundai-kona-electric` for the same defect at the same time |
+| **`mercedes-g580` — ADDED BY BATCH 7, a re-check not a fix** | Not a defect: the family is correctly absent. It is on sale but lists at **$252,700**, $2,700 above the schema's `listPrice` ceiling. **A price cut of $2,701 makes it representable.** Batch 13's re-check pass should test it. Everything needed to write the row in one pass is in the batch 7 record: one grade, `batteryKwh` 116 net, `rangeKm` 473 WLTP (**reject the 567 km NEDC figure that dominates Australian launch coverage**), suggested insurance ~5400 and curve ~`[1, 0.6, 0.48, 0.4, 0.34, 0.29]`. Its `consumptionKwhPer100km` was never established from an Australian source — try the Green Vehicle Guide by direct ID, per the batch 7 record |
 | **e-TNGA `batteryKwh` correction — ADDED BY BATCH 5, ~~five rows~~ FOUR OF FIVE APPLIED 2026-07-31, one left** | **DONE: `subaru-solterra` (AWD, AWD Touring) and `toyota-bz4x` (AWD, Touring AWD) now carry 71.0.** Build 0 failures, 596 tests pass; the widest consumption deviation after the change is 14.2% against the validator's 25% ceiling. **STILL OPEN: `toyota-bz4x-2wd` only** — it was deliberately left at 74.7 and needs the model-year check described below before it moves. The original note is kept in full because that check is still live. Five held rows recorded a GROSS pack figure in a field the schema defines as USABLE: `toyota-bz4x` (2WD, AWD, Touring AWD) and `subaru-solterra` (AWD, AWD Touring) all carried `batteryKwh: 74.7`. Toyota's European newsroom states, for the bZ4X Touring, *"a maximum gross capacity of 74.7 kWh (**71 kWh net**)"*, and Toyota USA's 2026 bZ release calls 74.7 a *"total capacity"* in those words. The correct usable figure for that pack is **71.0** — a 5.2% overstatement. Batch 5 corrected its own three families to 71.0 and did not touch these. **Do not blind-swap all five.** The `toyota-bz4x` **2WD** row needs a model-year check first: the superseded MY25 pack is a different unit at **73.1 nominal / 69.0 usable**, and 73.1 is a *nominal* figure that has already been mistaken for a usable one once during this adjudication. Sources: `https://newsroom.toyota.eu/the-new-toyota-bz4x-touring-an-suv-for-electrified-adventures/`, `https://pressroom.toyota.com/toyota-bz-all-electric-suv-adds-range-charging-and-exterior-updates-for-2026/` |
 
 ### Batch 12 — people movers, filed as `SUV`
@@ -1878,6 +1967,216 @@ committing rather than by any gate. **Research batches belong on `main`, or the 
 must be rebuilt on `main` before the commit.** Every coverage number in this record is measured on `main`
 with batch 6 present.
 
+### Batch 7 — done 2026-08-06 · **absorbed batch 9**
+
+Run as **eleven families** rather than six, because the session had a larger web-search allowance, and it
+**absorbed the whole of batch 9**. Ten agents: two cheap verification agents, seven family agents, one
+second-attempt price agent, plus a two-way adjudication round. **Six families written, 13 variants**;
+dataset went to **41 brands, 122 families, 293 variants** (215 of them battery-electric). Build 0 failures,
+674 tests pass. Commit `5b2dfaf`. **Zero backed-out prices** — every written family had a genuine published
+list price, matching batches 2, 6 and 8.
+
+| Family | Variants and list prices |
+|---|---|
+| `volvo-ex90` | Plus Twin Motor $124,990 · Ultra Twin Motor Performance $134,990 |
+| `volvo-es90` | Plus Single Motor $88,880 · Ultra Single Motor $107,990 |
+| `polestar-3` | Rear Motor $116,700 · Dual Motor $131,100 · Performance $146,700 |
+| `genesis-gv60` | Advanced RWD $88,300 · Magma AWD $130,000 |
+| `genesis-gv70-electrified` | Signature Performance AWD $132,800 |
+| `smart-3` | Pro+ $52,900 · Premium $56,900 · BRABUS $65,900 |
+| ~~`mercedes-eqs-sedan`~~ ~~`mercedes-eqs-suv`~~ ~~`mercedes-eqe-sedan`~~ ~~`mercedes-eqe-suv`~~ | **Not on sale — no files written.** See the batch 7 plan entry |
+| ~~`mercedes-g580`~~ | **On sale but unrepresentable at $252,700 — no files written.** |
+
+**This is the first batch of the wave where the verification agents were worth more than the family
+agents.** Five of eleven families never needed researching, and four of those five were removed by about
+50 tool calls of dedicated verification. **The on-sale/run-out flag is now FOUR FOR FOUR NEGATIVE** across
+the wave (LDV eT60, Audi Q8 e-tron, Mercedes EQE Sedan, Mercedes EQE SUV) — and batch 7 found two more
+families off that had never been flagged at all.
+
+**Ten things later batches need to know.**
+
+**1. A STALE PROMO MODULE AND A "COMING SOON" NAV ENTRY BOTH READ AS AVAILABILITY, AND THE COORDINATOR'S
+OWN VERIFICATION AGENT FELL FOR BOTH.** This is the batch's most important finding and it is about method,
+not about Mercedes. The verification agent reported the EQS Sedan and EQS SUV as on sale because it found
+them in the nav and in `electric.html`. Both readings were wrong, in different ways:
+- `electric.html` and `suv.html` are **legacy landing pages carrying a stale EQS SUV promo module — and a
+  stale EQE SUV module beside it.** They are the only place on the site an EQS SUV still appears.
+- Every current "EQS" string resolves to `models/saloon/**new**/eqs.html`, labelled **"Coming soon"** with
+  only a *Learn more* link. The nav entry is the *forthcoming* car.
+
+> **THE RULE, and it generalises past Mercedes: on a manufacturer site, presence in the nav or the model
+> grid is NOT evidence of availability. Only a live *Build & Price* / configurator entry is.** The
+> Audi Q8 e-tron case (batch 8) was the same shape and was caught by a page that said "no longer available
+> to order"; here nothing said so, and the orphaned pages render full marketing copy.
+
+**2. Both family agents caught their coordinator's error by RE-DERIVING rather than trusting the brief.**
+The EQS SUV agent was told "the EQS SUV IS on sale" as inherited fact and disproved it; the EQS Sedan agent
+was told the same and disproved it independently, from a different direction — one worked catalogue
+structure and Wayback, the other found the dated CarExpert article explaining the mechanism. **Neither
+would have been caught by diffing the agents against each other, because both were given the same wrong
+premise.** Budget for agents contradicting the dispatch prompt, and treat a claim that traces back to the
+coordinator with the same suspicion as one from an aggregator. Batch 2 logged that the *prompt's* claims
+need checking; this is that failure actually occurring, from the coordinator's own verification step.
+
+**3. A FALSIFICATION TEST THAT CANNOT COME OUT THE OTHER WAY IS NOT A TEST — fifth instance, and the first
+where the flawed test was the *rehabilitation* of a source rather than an attack on one.** The first G 580
+agent rejected CarsGuide's $252,700 as Glass's-derived, having "proved" Glass's does not carry Mercedes's
+list price: CarsGuide's 2025 G580 page shows $218,240–$250,800 rather than the known $249,900. But
+**$249,900 sits INSIDE that band.** The page never contradicted the RRP; it displays a range there. The
+second agent found the structural reason — CarsGuide shows a **single figure** for the current model year
+and a **range** for superseded years — and independently corroborated $252,700 against a broker's `RRP`
+column keyed to the same `N465` series code. **The "more specific argument was the wrong one" heuristic
+holds for a FIFTH time**, and again the resolving round produced better evidence than either side had.
+
+**4. Mercedes-Benz Australia serves NO price through any channel, and this is now verified rather than
+assumed.** The overview page (50 KB rendered) and the model grid (768 KB rendered) contain zero `$`
+figures. Mercedes's own vehicle-data GraphQL API (VISS, `eu.api.oneweb.mercedes-benz.com/viss/graphql`)
+resolves the car correctly — `"name": "G 580 with EQ Technology"` — and returns
+**`basePrice: {value: "0", currencyISO: "AUD"}`**. Stock prices via `stockId` return `null`. Also:
+`mercedes-benz.com.au` **hard-blocks this sandbox** (WebFetch times out at 60 s; curl fails
+`INTERNAL_ERROR`); the only way in is the **`r.jina.ai` text proxy**, which echoes `URL Source:` so you can
+confirm what you fetched. Batch 12's EQV will hit all of this.
+
+**5. THE GREEN VEHICLE GUIDE IS NOT DOWN — ITS SEARCH IS. Three agents wrote it off today.** Its search
+form returns HTTP 500 on programmatic POSTs, but records are directly reachable at
+**`https://www.greenvehicleguide.gov.au/Vehicle/ViewMatchingVariants?vehicleDisplayId=<id>`**. The ES90
+agent found this by sampling the ID space (ES90 = 37085, EX90 = 37760). This matters because GVG is the
+source this project ranks *above* launch coverage for European brands, and it paid out immediately: it
+**upgraded the EX90's range and consumption from "manufacturer WLTP fallback" to ADR-certified** (521 km /
+228 Wh/km, both variants), which also resolved that agent's own second-least-confident item — it had
+worried that recording identical figures for both grades was a compromise, and GVG certifies both at the
+same numbers. **Try the direct ID route before declaring GVG unavailable.**
+
+**6. Volvo's configurator says "Manufacturer's Recommended Drive Away Price" and serves a LIST price.**
+The headline reads $117,299 drive-away, but the breakdown beneath it is a single line —
+*"Manufacturer's Recommended List Price (incl GST) $117,299"* — and the arithmetic closes exactly:
+`117,299 + (117,299 − 91,661) × (10/11) × 0.33 = 124,990.40`, the $124,990 the press quotes as "plus
+on-road costs". **So the configurator serves the PRE-LCT RRP and the advertised figure is the same number
+with LCT embedded**, which is what `listPrice` must be (`calc/onroad.js` reports LCT for information and
+never adds it). Contrast **Genesis, which is the genuine trap**: its configurator *displays* drive-away,
+disclosed only in a `[D1]` footnote — *"an estimated indicative driveaway price… includes the
+manufacturer's vehicle list price, the cost of any selected options, luxury car tax (if applicable),
+12 month's registration"*. **Two premium brands, two configurators, opposite bases. Read the disclaimer
+every time.**
+
+**7. A manufacturer's own data feed can be wrong, and two agents caught it on the same brand.** Genesis
+Australia's `GV60Magma_2027.json` states **470 km**; the correct figure is 425 km. Killed by batch 3's
+implied-consumption test: 21.5 kWh/100km × 470 km = 101 kWh of wall energy against an **84 kWh gross**
+pack — physically impossible. Separately, the feed's `vehicleMlp` field is **not** an RRP: on the GV60 it
+is exactly `actualMlp / 1.1`, a GST-stripped pricing-engine input, which is what resolved the
+$132,718-versus-$132,800 question on the GV70 Electrified in favour of $132,800. **Reading a manufacturer's
+ordering feed is stronger than counting configurator tiles — but the feed still has fields that are not
+what they look like.**
+
+**8. Two agents independently recorded `batteryKwh: 80` usable against an unqualified 84, and both
+independently flagged that the held `hyundai-ioniq-5` rows carry 84 for the same E-GMP pack.** Different
+cars, different EV Database pages, no contact. That convergence is corroboration in the batch 3 GAC shape.
+**The held `hyundai-ioniq-5` question is NOT settled and belongs to batch 11's maintenance sweep** — it is
+the same defect shape as batch 5's e-TNGA finding (five rows carrying a gross figure in a usable field),
+but resolving it needs a source stating both figures for the Ioniq 5 specifically, and one agent's
+competing source says 78.0 rather than 80.0. `kia-ev9` already carries Kia's published usable figures
+(76.1 / 99.8) and is fine.
+
+**9. The platform-twin exposure was real and it survived challenge.** Polestar 3 and Volvo EX90 share a
+platform and a factory and agree on exactly two numbers — `towKg` 2200 and `batteryKwh` 102. The Polestar
+agent challenged the EX90's 102 unprompted, noting the widely-published EX90 figure is 111 gross / 107
+usable. Checked directly rather than argued: EV Database's **MY26-27** EX90 record gives **106.0 nominal /
+102.0 useable at 800 V**, so both cars genuinely moved to the same CATL pack and the 111 kWh figure is the
+superseded MY24-25 400 V car. **Per batch 5, implied-consumption arithmetic could not have settled this —
+102 versus 107 is a 5% question and both imply plausible overheads. The label settled it.** Also worth
+noting: **both Volvo agents independently judged Volvo AU's "(NEDC)" consumption label to be stale template
+text** and overrode it on the direction test, and GVG later confirmed both were right.
+
+**10. `Sedan` gained a family and LOST TWO FROM ITS DENOMINATOR.** The Volvo ES90 landed, but the Mercedes
+EQS Sedan and EQE Sedan were both found off the market — so two of the survey's eleven missing sedans were
+cars nobody could buy. `Sedan` moves from 10/~16 (63%) to **11/~14 (79%)**. The ES90 is also **the wave's
+only $91,661 straddle**: Plus $88,880 keeps the FBT exemption and pays no LCT, Ultra $107,990 loses both.
+
+**The cross-row diff earned its place on the JUDGED fields this time, not the sourced ones.** The two
+Genesis agents — the brand's first entry, so no held row to anchor on — diverged on depreciation: 0.70
+across both GV60 rows against 0.64 on the GV70 Electrified, leaving **two Genesis EVs $2,800 apart carrying
+curves 6 points apart**. Neither could see it alone, and the GV70 agent's pre-emptive resolution ("if they
+used 0.78, that's the divergence to fix") was a bad prediction made without reading a file it could have
+read. **One adjudication round settled it**, and again produced evidence neither had at the start:
+- The held **`cadillac-lyriq`** ($90,000, `[1, 0.64, …]`) is the same case — a new-to-Australia premium
+  marque, tiny network, agency retail. The dataset had already ruled on this and ruled 0.64.
+- **0.70 does not occur anywhere in the dataset above $120,000.** Across all 20 held rows at or above that
+  price the year-one values are 0.61–0.68, except Lexus (0.72–0.74) and the Hyundai/Kia mainstream 0.78.
+- **Premium families in this dataset tier internally by price** (`audi-q6-e-tron` runs 0.68/0.65/0.62);
+  flat-across-family is the *mainstream* pattern. The GV60 agent had picked a premium-band number with a
+  mainstream-band structure and withdrew its `hyundai-ioniq-5` analogy.
+Final: GV60 Advanced 0.66 / GV60 Magma 0.64 / GV70 Electrified 0.64 — price-ordered and coherent. **The
+GV60 agent moved but explicitly refused the GV70 agent's reasoning**, because the "servicing not
+transferable to a second owner" claim traces only to **US** Genesis material with no Australian URL, and
+Genesis Australia's warranty in fact permits servicing by *"a suitably qualified motor vehicle repairer"* —
+which softens the four-state-absence argument both had leaned on.
+
+**Judged fields, for anchoring later batches.** `warrantyYears: 5` across all six families, established
+independently against four manufacturers' own documents — **Genesis 5 unconditional, NOT Kia's 7** (its
+warranty document permits independent servicing, and a claimed "10-year EV warranty" could not be traced
+to any URL); Volvo 5 unlimited-km; Polestar 5; smart 5 (the 3-year figure on smart's own page remains an
+un-localised European template — do not record 3). Insurance runs monotonically with price inside every
+family and joins the held ladder cleanly: smart-3 1850/1950/2350 → volvo-es90 2400/2750 → genesis-gv60
+2300 → polestar-3 3000/3200/3600 → volvo-ex90 2900/3150 → genesis-gv70 3100 → genesis-gv60 Magma 3300.
+**Two deliberate non-monotonic pairs, both defended and both accepted:** the GV60 Magma at 3300 sits above
+the dearer GV70 Electrified at 3100 on a 478 kW-versus-360 kW performance loading — the held
+`hyundai-ioniq-5 N` (2750 at $115,000) versus `hyundai-ioniq-9` (2700 at $119,750) is the same shape
+already in the dataset; and the Polestar 3 Rear Motor at 3000/$116,700 sits above the EX90 Plus at
+2900/$124,990, the two agents having reasoned from the same regressive-rate pattern to 2.57% and 2.32%.
+Neither moves a recommendation — `insuranceAnnual` is not scored by `calc/rank.js`, it feeds running costs.
+`volvo-es90` is the only family to tier its curve on a documented threshold rather than price feel: 0.67
+Plus / 0.64 Ultra, split exactly at $91,661 because the Ultra's LCT does not survive to the used market.
+
+**A methodological improvement worth reusing: model `bracketAroundPrice`, not just rank position.** Batch 8
+established sweeping the filter space offline against `calc/rank.js`. Raw rank position is not the right
+predicate — the shortlist fills **three price bands with the best car in each**, one trim per family per
+band, so a poorly-ranked car surfaces when it owns a band outright. Modelling that changed the answer for
+two of six families: raw rank said `volvo-es90` (7th of 8) and `genesis-gv70-electrified` (57th of 57)
+were un-surfaceable, and the bracket model found both reachable. **The GV70 then confirmed in the browser
+at `?monthlyBudget=3180` with no filters at all.**
+
+**But "reachable in the model" is not "reachable by a user", and the ES90 is the counter-example.** The
+model put it in the at-budget band at an anchor of ~$93,324 — a window roughly 0.6% wide, where it enters
+the band and the Polestar 4 drops out. The page derives that anchor from `verdict.maxSpend`, and stepping
+`monthlyBudget` through 2150/2200/2225/2250 jumps straight over it. **Recorded as a component render.**
+Whoever extends this technique should treat the offline result as *necessary but not sufficient*: it
+proves un-reachability soundly, and reachability only up to the granularity of the budget→anchor mapping.
+
+**Render check: CLEARED, zero console errors or warnings across the whole session.** Confirmed against a
+freshly booted server whose header read *41 brands · 122 models · 293 variants*, matching the build
+exactly. **The stale-server warning did NOT fire for the first time in six batches** — nothing was
+listening on port 3000 at the start.
+
+| Family | How confirmed |
+|---|---|
+| `volvo-ex90` | **Shortlist** — `?seats=7&monthlyBudget=2700`, stretch band |
+| `polestar-3` | **Shortlist** — `?monthlyBudget=2600` (Rear Motor, stretch) and `?monthlyBudget=3100` (Dual Motor, **at budget**), no filters either time |
+| `genesis-gv70-electrified` | **Shortlist** — `?monthlyBudget=3180`, at budget, no filters |
+| `volvo-es90` | Component render — see the anchor-granularity note above |
+| `genesis-gv60` | Component render — not reachable in any band under any filter/anchor combination |
+| `smart-3` | Component render — dominated; best placement 69th of 110 |
+
+All seven non-shortlisted rows were driven through the app's own `cardModel`/`renderCards` on the live page
+with the real data — e.g. *"Volvo ES90 Plus Single Motor · 424L boot · 554km range · $88,880"* — with no
+NaN, undefined or `[object Object]`. Note `cardModel(vehicle, families, context)` takes **three** arguments
+and the second is the families array, not a context object.
+
+**A browser hazard that cost three agents a route, and it is NOT batch 6's.** Batch 6 recorded parallel
+agents *stealing tab focus*. In this session Playwright was a **hard single-instance lock** — a second
+agent gets `Browser is already in use for …/mcp-chrome-<hash>` and simply loses that route, silently. Three
+agents lost the Mercedes configurator to it, including both G 580 attempts, and the lock outlived every one
+of them: an **orphaned Playwright Chrome was still holding the profile 1h42m later**, identified via the
+profile's `SingletonLock` symlink pointing at its PID. It had to be killed before the render check could
+run. **Check `SingletonLock` in the MCP profile directory before assuming the browser is unavailable, and
+distinguish the Playwright-spawned Chrome (automation flags) from the user's own Chrome — do not kill the
+latter.** Practical consequence: **do not dispatch more than one browser-dependent agent at a time.**
+
+**Two prompt/plan claims that were WRONG, continuing the pattern batches 4, 5 and 8 logged.** The batch
+table said the Skoda Enyaq Coupe was a "cheap slot to fill out the batch" — it was **already held**, and
+researching it would have duplicated a family. And the G 580's "$249,000, $1,000 under the ceiling" was
+wrong on both numbers: the launch RRP was **$249,900**, a **$100** margin. A $100 margin survives no
+routine adjustment, and it did not.
+
 ## How to run a batch — paste this into a new session
 
 One batch per session. **Change the batch number on the first line. That is the only edit** —
@@ -1916,18 +2215,24 @@ Before dispatching:
     remove families from the batch. LOOK IN TWO PLACES: the batch table, and the
     "Confidence, stated plainly" section, which is where batch 4's live one
     (Forthing Taikon 5) was recorded rather than in the table. Still open:
-    batch 7 verifies the G 580 is still under $250,000 and that the EQE Sedan is
-    orderable, batch 12 verifies the Mercedes EQV is on sale, batch 9 verifies the
-    Genesis GV70 Electrified grade count, batch 10 verifies the Porsche Cayenne
-    Electric and the Genesis G80. DONE, do not re-check: the LDV eT60 (batch 1,
-    negative), the Geely EX2 (batch 3, orderable), the Forthing Taikon 5
-    (batch 4, on sale), the Hyundai Elexio, Subaru Uncharted and Subaru
-    Trailseeker (batch 5, all orderable, Trailseeker settled as `SUV`), and the
-    Neue Klasse BMW iX3 and Renault Scenic E-Tech (batch 6, both orderable) —
-    plus the BMW i4 M60, which batch 6 settled as NOT on sale in Australia,
-    and the Audi Q8 e-tron (batch 8, NEGATIVE — off the range), plus the Audi
-    A6 e-tron, confirmed cancelled for Australia and not to be added to any
-    backlog.
+    batch 12 verifies the Mercedes EQV is on sale, batch 10 verifies the Porsche
+    Cayenne Electric and the Genesis G80. THERE IS NO BATCH 9 — batch 7 absorbed
+    it. DONE, do not re-check: the LDV eT60 (batch 1, negative), the Geely EX2
+    (batch 3, orderable), the Forthing Taikon 5 (batch 4, on sale), the Hyundai
+    Elexio, Subaru Uncharted and Subaru Trailseeker (batch 5, all orderable,
+    Trailseeker settled as `SUV`), and the Neue Klasse BMW iX3 and Renault
+    Scenic E-Tech (batch 6, both orderable) — plus the BMW i4 M60, which batch 6
+    settled as NOT on sale in Australia, and the Audi Q8 e-tron (batch 8,
+    NEGATIVE — off the range), plus the Audi A6 e-tron, confirmed cancelled for
+    Australia and not to be added to any backlog. Batch 7 settled six more:
+    the Genesis GV60 grade count (2, and the Magma IS sold here), the Genesis
+    GV70 Electrified grade count (1 — and the "reduced to a single grade"
+    premise was FALSE, it has always been one), and FOUR NEGATIVES — the
+    Mercedes EQE Sedan, EQE SUV, EQS Sedan and EQS SUV are all off the
+    Australian configurator. Do not re-check any of those before Q4 2026, when
+    the refreshed EQS is due. The Mercedes G 580 is ON SALE but UNREPRESENTABLE
+    at $252,700, above the $250,000 ceiling — batch 13 re-check, not a backlog
+    item.
     Two cheap verification agents settled batch 5's three for ~25 searches and
     batch 6's six for ~70, before any slot was spent — do that rather than
     folding the check into a family agent, because a negative removes the
@@ -1946,10 +2251,22 @@ Before dispatching:
     overhead-consistency is not a valid cross-row test; batch 3 logged the three
     drive-away trap shapes and the implied-consumption test; batch 4 logged the
     same-price badge collision and why an exact price reconstruction proves
-    nothing.
+    nothing; batch 5 logged the gross-versus-usable battery defect and that
+    implied-consumption arithmetic CANNOT settle it; batch 6 logged the range
+    figure a car is actually sold with; batch 8 logged the fabricated citation
+    and the configurator that under-counts; batch 7 logged that presence in a
+    manufacturer's NAV OR MODEL GRID IS NOT EVIDENCE OF AVAILABILITY — only a
+    live Build & Price entry is — and that a falsification test whose result
+    was never in doubt is not a test.
 
 Then dispatch one general-purpose subagent per family, all in a single message so
-they run in parallel. Each agent gets: its family name and proposed familyId, its
+they run in parallel — EXCEPT that no more than ONE agent should depend on the
+browser at a time. Batch 7 found Playwright to be a hard single-instance lock in
+this environment: a second agent gets "Browser is already in use" and silently
+loses that route, and an orphaned instance held the profile for over an hour
+after the agent that opened it had finished. Check the profile's SingletonLock
+symlink before concluding the browser is unavailable.
+Each agent gets: its family name and proposed familyId, its
 row's note from the table verbatim, the path to docs/ev-family-research-brief.md
 introduced as "read this first, it is binding", the research date, any sibling
 already in the dataset to anchor insuranceAnnual and depreciationCurve against, and
@@ -2173,9 +2490,18 @@ pricing was internally inconsistent across sources.
 - **Maserati Grecale Folgore, Audi Q8 e-tron, Porsche Cayenne Electric, LDV eT60** — all four are
   on the on-sale/run-out/just-launched boundary and were flagged as unconfirmed. **Two are now
   settled and both were NEGATIVE: the LDV eT60 (batch 1, 2026-07-30) and the Audi Q8 e-tron
-  (batch 8, 2026-08-01 — Audi's own page reads "no longer available to order").** That is two for
-  two against this flag, so treat the remaining pair — Maserati Grecale Folgore and Porsche Cayenne
-  Electric — as more likely off than on, and verify both before spending a slot.
+  (batch 8, 2026-08-01 — Audi's own page reads "no longer available to order").** **Batch 7 added
+  two more negatives on the same flag: the Mercedes EQE Sedan and EQE SUV, both flagged "being
+  dropped globally during 2026 — confirm on sale first", both confirmed off (2026-08-06).** That is
+  **four for four** against this flag. Treat the remaining pair — Maserati Grecale Folgore and
+  Porsche Cayenne Electric — as more likely off than on, and verify both before spending a slot.
+- **The flag under-counts, and batch 7 is the evidence.** The two Mercedes families it caught were
+  flagged; the **EQS Sedan and EQS SUV were not flagged at all** and were also off. The EQS Sedan's
+  note said only "the family is in transition" and the EQS SUV had no note. So a family with no
+  flag is not thereby a family that is on sale — the survey's "on sale" figures were collected in
+  July 2026 from media rather than configurators, and **any family whose availability was never
+  checked against a live *Build & Price* entry is unverified, not verified-positive.** This applies
+  to most of the remaining backlog.
 - **Skywell BE11 and Forthing Taikon 5** — placed on opposite sides of the pre-launch line with low
   confidence in both calls. **The Forthing half is now settled (batch 4, 2026-07-31): it is on sale,
   since June 2026, and the survey's "on sale" call was right.** Its four grades are two BEV and two
