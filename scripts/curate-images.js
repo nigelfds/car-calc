@@ -14,7 +14,8 @@
 // elsewhere, not a promise that a human glanced at a thumbnail.
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
 import { searchFiles, fileMetadata } from './images/commons.js';
 import { classify } from './images/classify.js';
@@ -22,9 +23,14 @@ import { downloadAndCrop } from './images/fetch-image.js';
 import { contactSheet } from './images/contact-sheet.js';
 import { validateImageRecord } from '../data/image-schema.js';
 
-const dataDir = new URL('../data/', import.meta.url).pathname;
-const publicDir = new URL('../public/', import.meta.url).pathname;
-const rootDir = new URL('../', import.meta.url).pathname;
+// fileURLToPath, not new URL(...).pathname — the latter percent-encodes
+// spaces rather than decoding them, so a checkout under a path containing a
+// space would resolve every join() built on these to a directory that does
+// not exist. See server/index.js for the same precedent.
+const here = dirname(fileURLToPath(import.meta.url));
+const rootDir = join(here, '..');
+const dataDir = join(rootDir, 'data');
+const publicDir = join(rootDir, 'public');
 
 const FAMILIES_PATH = join(dataDir, 'families.json');
 const VEHICLES_PATH = join(dataDir, 'vehicles.json');
@@ -102,7 +108,11 @@ function deriveFamilies(families, vehicles) {
 
 const sortedByKey = obj => Object.fromEntries(Object.keys(obj).sort().map(k => [k, obj[k]]));
 
-const aliasResolveCommand = id => `node scripts/curate-images.js --alias ${id}="<the car's other name>"`;
+// --dry-run must round-trip into the printed remedy, or the operator's copy-
+// pasted "fix" is a real run against the one flag that's supposed to be safe
+// to resolve without touching anything.
+const aliasResolveCommand = (id, dryRun) =>
+  `node scripts/curate-images.js --alias ${id}="<the car's other name>"${dryRun ? ' --dry-run' : ''}`;
 
 // Aliases are stored make-inclusive ("BYD Song Plus") because that's how a
 // human naturally writes down "what this car is badged as" — but classify()
@@ -136,6 +146,22 @@ async function main() {
   const existingAliases = readJson(MODEL_ALIASES_PATH);
 
   const derivedFamilies = deriveFamilies(families, vehicles);
+  const knownIds = new Set(derivedFamilies.map(f => f.id));
+
+  // Unlike --only (which only warns), an unresolvable --alias must stop the
+  // run: it is the sole sanctioned way to resolve a classifier flag, and a
+  // typo'd id here would otherwise be sorted, persisted to
+  // data/model-aliases.json and committed while never actually applying —
+  // the operator believing the flag is resolved when it is not.
+  try {
+    for (const id of Object.keys(opts.aliases)) {
+      if (!knownIds.has(id)) throw new Error(`--alias names ${id}, which is not a known family (check data/vehicles.json)`);
+    }
+  } catch (err) {
+    console.error(`usage error: ${err.message}`);
+    process.exit(1);
+    return;
+  }
 
   // Step 2: apply --alias first, and persist immediately if this is a real
   // run. An alias is a durable fact about the car ("this is badged as the
@@ -162,7 +188,6 @@ async function main() {
   // filtered by --only, capped by --limit.
   let queue = derivedFamilies.filter(f => !(f.id in existingImages));
   if (opts.only) {
-    const knownIds = new Set(derivedFamilies.map(f => f.id));
     for (const id of opts.only) {
       if (!knownIds.has(id)) console.warn(`WARN --only names ${id}, which is not a known family (check data/vehicles.json)`);
       else if (id in existingImages) console.warn(`WARN --only names ${id}, which already has an image — skipping`);
@@ -248,6 +273,12 @@ async function main() {
         familyId: family.id,
         name: `${family.make} ${family.model}`,
         file,
+        // The Commons title and a link back to it are the single most
+        // legible signal a reviewer has that the car is wrong — the BYD
+        // Seal U auto-accepted for the Seal was caught by opening the file,
+        // not by anything the sheet showed at the time.
+        candidateTitle,
+        source: record.source,
         author: record.author,
         licence: record.licence,
         verdict: alias ? 'manual' : 'auto',
@@ -275,7 +306,7 @@ async function main() {
     for (const f of flagged) {
       const candidate = f.candidateTitle ? ` (top candidate: "${f.candidateTitle}")` : '';
       console.log(`  ${f.family.id}: ${f.why}${candidate}`);
-      console.log(`    ${aliasResolveCommand(f.family.id)}`);
+      console.log(`    ${aliasResolveCommand(f.family.id, opts.dryRun)}`);
     }
   }
 

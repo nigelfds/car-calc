@@ -8,12 +8,18 @@
 // A failed validation pass leaves the existing aggregate files untouched.
 
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
 import { validateVehicle, validateFamily } from '../data/schema.js';
 import { validateImageRecord } from '../data/image-schema.js';
 
-const dataDir = new URL('../data/', import.meta.url).pathname;
-const publicDir = new URL('../public/', import.meta.url).pathname;
+// fileURLToPath, not new URL(...).pathname — the latter percent-encodes
+// spaces (and other reserved characters) rather than decoding them, so a
+// checkout under a path containing a space silently breaks both this guard
+// and every join() built on it. See server/index.js for the same precedent.
+const here = dirname(fileURLToPath(import.meta.url));
+const dataDir = join(here, '..', 'data');
+const publicDir = join(here, '..', 'public');
 const readAll = folder => {
   const dir = join(dataDir, folder);
   if (!existsSync(dir)) return [];
@@ -54,7 +60,7 @@ export function joinImages(families, images) {
   return { joined, errors };
 }
 
-if (process.argv[1] === new URL(import.meta.url).pathname) {
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const families = readAll('families');
   const vehicles = readAll('vehicles');
   const familyIds = new Set(families.map(f => f.id));
