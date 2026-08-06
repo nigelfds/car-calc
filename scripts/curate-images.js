@@ -13,7 +13,7 @@
 // alias, a checkable statement of fact about what the car is badged as
 // elsewhere, not a promise that a human glanced at a thumbnail.
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, renameSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
@@ -22,6 +22,7 @@ import { classify } from './images/classify.js';
 import { downloadAndCrop } from './images/fetch-image.js';
 import { contactSheet } from './images/contact-sheet.js';
 import { validateImageRecord } from '../data/image-schema.js';
+import { CAR_IMAGE_DIR } from '../public/ui/image-constants.js';
 
 // fileURLToPath, not new URL(...).pathname — the latter percent-encodes
 // spaces rather than decoding them, so a checkout under a path containing a
@@ -180,7 +181,7 @@ async function main() {
   // Where this run's output goes. Dry-run writes to a scratch directory that
   // mirrors the real layout (images alongside the contact sheet) so the
   // contact sheet's relative image paths resolve identically in both modes.
-  const imagesDir = opts.dryRun ? join(rootDir, '.image-dryrun', 'images', 'cars') : join(publicDir, 'images', 'cars');
+  const imagesDir = opts.dryRun ? join(rootDir, '.image-dryrun', CAR_IMAGE_DIR) : join(publicDir, CAR_IMAGE_DIR);
   const contactSheetPath = opts.dryRun ? join(rootDir, '.image-dryrun', 'contact-sheet.html') : join(publicDir, 'contact-sheet.html');
   mkdirSync(imagesDir, { recursive: true });
 
@@ -293,7 +294,15 @@ async function main() {
   // contact sheet (always — it's how both modes get reviewed).
   if (!opts.dryRun && Object.keys(acceptedRecords).length > 0) {
     const merged = sortedByKey({ ...existingImages, ...acceptedRecords });
-    writeFileSync(CAR_IMAGES_PATH, JSON.stringify(merged, null, 2) + '\n');
+    // Write to a sibling temp file and rename over the target. A run that
+    // dies partway through a direct write leaves truncated JSON in
+    // data/car-images.json, and the previous accepted images — the whole
+    // point of merging with existingImages — are gone with it. rename is
+    // atomic within a filesystem, and the temp file is a sibling precisely
+    // so it stays on the same one.
+    const temp = `${CAR_IMAGES_PATH}.tmp`;
+    writeFileSync(temp, JSON.stringify(merged, null, 2) + '\n');
+    renameSync(temp, CAR_IMAGES_PATH);
   }
   writeFileSync(contactSheetPath, contactSheet(contactEntries, { title: 'Car image curation review' }));
 
@@ -319,4 +328,11 @@ async function main() {
   if (opts.dryRun) console.log('Dry run — data/ and public/images/ were not touched.');
 }
 
-main();
+// Without the catch, a rejection from main() — a Commons request that fails
+// outright, an unwritable directory — surfaces as an unhandled rejection and
+// exits non-zero, but with a warning banner rather than the error, and the
+// exit code is Node's rather than one we chose.
+main().catch(err => {
+  console.error(`\ncurate-images failed: ${err.message}`);
+  process.exitCode = 1;
+});

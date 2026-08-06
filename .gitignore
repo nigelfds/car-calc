@@ -8,3 +8,7 @@ node_modules/
 npm-debug.log*
 .image-dryrun/
 public/contact-sheet.html
+# Left behind only by a curate-images run that died between writing the temp
+# manifest and renaming it over data/car-images.json. Ignored so the debris
+# from a failed run can't be committed as though it were the manifest.
+data/car-images.json.tmp

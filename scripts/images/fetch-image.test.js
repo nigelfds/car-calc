@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import { cropToCard, downloadAndCrop } from './fetch-image.js';
-import { IMAGE_DIMENSIONS } from '../../data/image-schema.js';
+import { IMAGE_DIMENSIONS } from '../../public/ui/image-constants.js';
 import { readFileSync, rmSync, mkdtempSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';

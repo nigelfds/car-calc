@@ -12,6 +12,7 @@ import { money, termLabel, blockerText } from './format.js';
 import { OPTIONS, OPTION_NAME_SHORT } from './labels.js';
 import { optionCosts, valueRatio, optionBlocker } from '../../calc/compare.js';
 import { escapeHtml } from './escape.js';
+import { IMAGE_DIMENSIONS, CAR_IMAGE_DIR } from './image-constants.js';
 
 export function filterVehicles(vehicles, filters) {
   return vehicles.filter(v => {
@@ -321,19 +322,20 @@ export function renderCards(root, cards, emptyMessage) {
   // instead, which is a genuinely different trade, not the same one undone.
   // A family with no image yet renders exactly as it did with neither: no
   // broken icon, no placeholder box.
+  //
+  // The image carries alt="" deliberately. The <h3> directly beneath it holds
+  // make, model AND variant — a superset of anything the alt could say — so a
+  // non-empty alt would only make a screen reader announce the heading twice.
+  // The photographer and licence go in title, and in full on the credits page.
   target.innerHTML = cards.map(card => {
     return `
     <article class="car-card${card.band ? ` car-card--${card.band}` : ''}" data-id="${escapeHtml(card.id)}">
       ${card.image ? `
       <figure class="car-figure">
-        <!-- alt="": the <h3> immediately below carries make, model AND
-             variant, a superset of what the alt text could say — a
-             non-empty alt here would just have a screen reader repeat the
-             heading a moment before it's read. -->
-        <img src="images/cars/${escapeHtml(card.image.file)}"
+        <img src="${CAR_IMAGE_DIR}/${escapeHtml(card.image.file)}"
              alt=""
              title="${escapeHtml(`${card.image.author} · ${card.image.licence}`)}"
-             width="900" height="600" loading="lazy">
+             width="${IMAGE_DIMENSIONS.width}" height="${IMAGE_DIMENSIONS.height}" loading="lazy">
       </figure>` : ''}
       <div class="car-body">
         ${card.bandLabel ? `<p class="car-card__band">${escapeHtml(card.bandLabel)}</p>` : ''}

@@ -69,6 +69,18 @@ test('the Commons source renders as a link back to Commons', () => {
   assert.match(html, /<a class="source" href="https:\/\/commons\.wikimedia\.org\/wiki\/File:Kia_EV5_GT-Line_2024_01\.jpg"/);
 });
 
+test('a source that is not an https URL renders as text, never as a live link', () => {
+  // Escaping is not enough on its own here: `javascript:alert(1)` contains
+  // none of the five characters escapeHtml touches, so it would survive
+  // intact and become a clickable link on a page the curator is opening
+  // precisely to click through untrusted entries.
+  for (const source of ['javascript:alert(1)', 'data:text/html,<script>alert(1)</script>', '', undefined]) {
+    const html = contactSheet([{ ...entries[0], source }], { title: 'Review' });
+    assert.doesNotMatch(html, /<a class="source"/, String(source));
+    assert.match(html, /Commons source unavailable/, String(source));
+  }
+});
+
 test('the candidate title and source are escaped like every other field', () => {
   const nasty = { ...entries[0], candidateTitle: '<script>alert(2)</script>', source: 'https://commons.wikimedia.org/wiki/File:"><script>alert(3)</script>' };
   const html = contactSheet([nasty], { title: 'Review' });
