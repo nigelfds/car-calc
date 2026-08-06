@@ -1379,7 +1379,7 @@ input[type='date'],
 
 .car-card {
   border: 1px solid var(--hairline);
-  border-radius: 8px;
+  border-radius: var(--radius);
   /* The figure below is full-bleed to the card's edges; overflow clips its
      square corners against the card's own rounded ones. */
   overflow: hidden;
@@ -1392,11 +1392,11 @@ input[type='date'],
    of text. */
 .car-figure {
   margin: 0;
-  /* Deliberately the same literal 8px as .car-card's own border-radius above,
-     not var(--radius) (10px) — matching the card's actual corners is the
-     point, and .car-card does not use that token. The 8px-vs-token
-     inconsistency predates this feature and is a separate cleanup. */
-  border-radius: 8px 8px 0 0;
+  /* Matches .car-card's corners, which is the whole requirement — the figure
+     is full-bleed to the card's top edge, so a mismatch shows as a sliver of
+     card behind the image. Both are var(--radius) now; the card carried a
+     literal 8px against the token's 10px until the two were harmonised. */
+  border-radius: var(--radius) var(--radius) 0 0;
   overflow: hidden;
   background: var(--paper);
   aspect-ratio: 3 / 2;
@@ -2064,10 +2064,9 @@ input[type='date'],
   color: var(--ink-faint);
 }
 
-/* var(--radius), not the literal 8px .car-figure matches: that literal exists
-   only to match .car-card's own border (see the note above .car-figure) and
-   there is no such card corner here — a plain <th> in a table gets the
-   general-purpose token instead. */
+/* Rounded on all four corners, unlike .car-figure: this image sits inside a
+   plain <th> with padding around it rather than full-bleed against a card
+   edge, so there is no top edge for it to meet. */
 .compare-head__img {
   display: block;
   width: 100%;

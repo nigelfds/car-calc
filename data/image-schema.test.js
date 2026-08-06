@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validateImageRecord, IMAGE_DIMENSIONS } from './image-schema.js';
+import { validateImageRecord } from './image-schema.js';
 
 const valid = {
   file: 'byd-sealion-6.webp',
@@ -53,6 +53,5 @@ test('errors name every problem, not just the first', () => {
   assert.ok(result.errors.length >= 3, result.errors.join('; '));
 });
 
-test('the canonical dimensions are exported for the crop and the tests to share', () => {
-  assert.deepEqual(IMAGE_DIMENSIONS, { width: 900, height: 600 });
-});
+// The dimensions assertion moved to public/ui/image-constants.test.js along
+// with the constant itself — this file validates record shape, not pixels.

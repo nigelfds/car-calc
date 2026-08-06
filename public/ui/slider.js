@@ -2,6 +2,7 @@ import { optionCosts, optionBlocker } from '../../calc/compare.js';
 import { maxAffordablePrice } from '../../calc/capacity.js';
 import { money, termLabel, blockerText } from './format.js';
 import { OPTIONS, OPTION_NAME } from './labels.js';
+import { escapeHtml } from './escape.js';
 
 // Step 2 answers one question: how much car will each way of paying get me at
 // this budget? No car is named here — that is step 3's job.
@@ -121,11 +122,6 @@ export function debounce(fn, waitMs = 80) {
     }, waitMs);
   };
 }
-
-const escapeHtml = value =>
-  String(value).replace(/[&<>"']/g, ch => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[ch]);
 
 // blockerText moved to ui/format.js when the shortlist's cost table needed the
 // same sentence — see its comment there.

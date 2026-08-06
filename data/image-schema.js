@@ -7,10 +7,11 @@
 // separate cadence, so it gets a separate validator that only
 // scripts/build-dataset.js calls.
 
-// One shared constant so the crop, the validator and the tests cannot disagree
-// about what "consistent" means. Identical framing across every family is the
-// whole reason the grid reads as designed rather than scraped.
-export const IMAGE_DIMENSIONS = { width: 900, height: 600 };
+// IMAGE_DIMENSIONS used to live here, but nothing in this file ever used it —
+// it was declared beside a validator that validates record shape, not pixels.
+// It now sits in public/ui/image-constants.js, the one directory both the
+// browser and the Node scripts can import from, so the renderers share it too
+// rather than hardcoding the same numbers.
 
 // Lowercase slug plus .webp, anchored. The anchoring matters: the value is
 // interpolated into a filesystem path, and "../escape.webp" must not pass.

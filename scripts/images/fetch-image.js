@@ -9,7 +9,7 @@
 import sharp from 'sharp';
 import { writeFile } from 'node:fs/promises';
 import { USER_AGENT } from './commons.js';
-import { IMAGE_DIMENSIONS } from '../../data/image-schema.js';
+import { IMAGE_DIMENSIONS } from '../../public/ui/image-constants.js';
 
 export async function cropToCard(buffer) {
   return sharp(buffer)

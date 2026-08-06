@@ -5,6 +5,7 @@
 import { comparisonRows } from '../../calc/spec-compare.js';
 import { money } from './format.js';
 import { escapeHtml } from './escape.js';
+import { IMAGE_DIMENSIONS, CAR_IMAGE_DIR } from './image-constants.js';
 
 const carName = v => `${v.make} ${v.model}`;
 
@@ -150,6 +151,11 @@ export function renderComparison(root, { vehicles, families, tables, benchIndex 
 
   // The header maps over `shown`, which carries vehicles rather than families,
   // so the image is resolved by familyId against the families already passed in.
+  //
+  // The image carries alt="" deliberately: the car's name sits directly beneath
+  // it as visible text in the same <th>, and in table-navigation mode a screen
+  // reader announces the column header before every cell in that column — a
+  // non-empty alt would repeat the name once per row of the table.
   const imageFor = vehicle => families.find(f => f.id === vehicle.familyId)?.image ?? null;
 
   const head = `
@@ -158,15 +164,11 @@ export function renderComparison(root, { vehicles, families, tables, benchIndex 
         <th scope="col"><span class="visually-hidden">Specification</span></th>
         ${shown.map(({ vehicle, index }) => `
           <th scope="col" class="compare-head compare-head--${index}">
-            ${imageFor(vehicle) ? `<!-- alt="": the car name sits right below as visible text in this
-                 same <th>, and in table-navigation mode a screen reader
-                 announces the header for every cell down the column — a
-                 non-empty alt here would repeat once per row of the table. -->
-            <img class="compare-head__img"
-              src="images/cars/${escapeHtml(imageFor(vehicle).file)}"
+            ${imageFor(vehicle) ? `<img class="compare-head__img"
+              src="${CAR_IMAGE_DIR}/${escapeHtml(imageFor(vehicle).file)}"
               alt=""
               title="${escapeHtml(`${imageFor(vehicle).author} · ${imageFor(vehicle).licence}`)}"
-              width="900" height="600" loading="lazy">` : ''}
+              width="${IMAGE_DIMENSIONS.width}" height="${IMAGE_DIMENSIONS.height}" loading="lazy">` : ''}
             ${escapeHtml(carName(vehicle))}
             <span class="compare-head__variant">${escapeHtml(vehicle.variant ?? '')}</span>
           </th>`).join('')}

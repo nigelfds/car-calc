@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { validateVehicle, validateFamily } from '../data/schema.js';
 import { validateImageRecord } from '../data/image-schema.js';
+import { CAR_IMAGE_DIR } from '../public/ui/image-constants.js';
 
 // fileURLToPath, not new URL(...).pathname — the latter percent-encodes
 // spaces (and other reserved characters) rather than decoding them, so a
@@ -96,8 +97,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   // Every referenced file must actually be on disk. Without this a record can
   // validate, join cleanly, and still render a broken image in the browser.
   for (const [familyId, record] of Object.entries(images)) {
-    const file = join(publicDir, 'images', 'cars', record.file ?? '');
-    if (record.file && !existsSync(file)) fail(`image ${familyId}: ${record.file} is not in public/images/cars`);
+    const file = join(publicDir, CAR_IMAGE_DIR, record.file ?? '');
+    if (record.file && !existsSync(file)) fail(`image ${familyId}: ${record.file} is not in public/${CAR_IMAGE_DIR}`);
   }
 
   if (failures === 0) {

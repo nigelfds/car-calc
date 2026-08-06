@@ -13,16 +13,14 @@
 // resolved by a human) get the quieter one. That's the whole point of the
 // page, not decoration.
 
-// Duplicated from public/ui/escape.js rather than imported: this file runs
-// as offline Node tooling that writes a static file to disk, not as part of
-// the shipped browser app. Importing app-side UI code into the curation
-// pipeline would couple two things that should be free to change
-// independently — same five characters escaped, same rule, kept separate.
-function escapeHtml(value) {
-  return String(value).replace(/[&<>"']/g, ch => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[ch]);
-}
+// Imported rather than duplicated. This was once a private copy, on the
+// argument that offline tooling shouldn't couple to app-side UI code — but
+// escape.js is a zero-dependency pure string function that already runs in
+// both the browser and the Node test runner, which is precisely why it was
+// extracted. Its own header says the point was that the escaping rule "can
+// only be gotten right, or wrong, once", and a fourth copy made that false.
+import { escapeHtml } from '../../public/ui/escape.js';
+import { CAR_IMAGE_DIR } from '../../public/ui/image-constants.js';
 
 // Inline and self-contained: this page is opened directly off disk (the real
 // public/ tree or a dry-run scratch directory), so it cannot depend on the
@@ -114,10 +112,19 @@ const STYLE = `
 
 const BADGES = { auto: 'auto — unreviewed', manual: 'manual — resolved' };
 
+// escapeHtml neutralises the characters that would break out of an attribute,
+// but says nothing about URL schemes: `javascript:alert(1)` contains none of
+// them and would become a live link. Nothing reaching this function through
+// curate-images.js can carry such a value — validateImageRecord anchors
+// `source` to a Commons File: URL first — but this page shouldn't depend on a
+// validator in another module for that, and the credits page already makes
+// exactly this check. Same bar, same reason.
+const isSafeUrl = url => typeof url === 'string' && url.startsWith('https://');
+
 function figureFor(entry) {
   const verdictClass = `verdict--${escapeHtml(entry.verdict)}`;
   const badge = BADGES[entry.verdict] ?? entry.verdict;
-  const src = `images/cars/${escapeHtml(entry.file)}`;
+  const src = `${CAR_IMAGE_DIR}/${escapeHtml(entry.file)}`;
   // The <img> is wrapped in a link to its own file so a suspicious thumbnail
   // can be opened full-size, and the Commons title/source are carried
   // through as the most legible signal that a candidate is the wrong car —
@@ -129,7 +136,9 @@ function figureFor(entry) {
           <span class="name">${escapeHtml(entry.name)} <span class="family-id">${escapeHtml(entry.familyId)}</span></span>
           <span class="credit">${escapeHtml(entry.author)} &middot; ${escapeHtml(entry.licence)}</span>
           <span class="candidate">${escapeHtml(entry.candidateTitle)}</span>
-          <a class="source" href="${escapeHtml(entry.source)}" target="_blank" rel="noopener noreferrer">Commons source ↗</a>
+          ${isSafeUrl(entry.source)
+            ? `<a class="source" href="${escapeHtml(entry.source)}" target="_blank" rel="noopener noreferrer">Commons source ↗</a>`
+            : '<span class="source">Commons source unavailable</span>'}
           <span class="why">${escapeHtml(entry.why)}</span>
         </figcaption>
       </figure>`;

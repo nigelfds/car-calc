@@ -34,6 +34,11 @@ const OPTION_DASH = {
 };
 
 import { money, shortMoney } from './format.js';
+// Was a private copy named escapeAttr, on the theory that SVG attributes were
+// a different job from HTML text. They are not: half its call sites here were
+// element content, and the five characters are the same five. Renamed to
+// match the shared function it always was.
+import { escapeHtml } from './escape.js';
 
 function bounds(series) {
   const values = series.points
@@ -252,7 +257,7 @@ function chartMarker({ series, budget, explanation, variant, plotWidth, plotHeig
   //
   // aria-label carries the same text for screen readers. No tabindex: this
   // is an annotation, not a control, so it stays out of the tab order.
-  return `<g class="chart-marker chart-marker--${variant}" role="img" aria-label="${escapeAttr(explanation)}">
+  return `<g class="chart-marker chart-marker--${variant}" role="img" aria-label="${escapeHtml(explanation)}">
       <line class="chart-marker__line" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${badgeY + 6}" y2="${plotHeight}" />
       <circle class="chart-marker__badge" cx="${x.toFixed(1)}" cy="${badgeY}" r="7" />
       <text class="chart-marker__glyph" x="${x.toFixed(1)}" y="${badgeY}" text-anchor="middle"
@@ -372,7 +377,7 @@ export function tipMarkup(explanation, { anchorX, plotWidth, boxY, chars = TIP_C
   const fallbackX = Math.min(Math.max(anchorX - boxWidth / 2, 0), Math.max(0, plotWidth - boxWidth));
 
   const tspans = lines.map((line, i) =>
-    `<tspan x="${TIP_PADDING}" dy="${i === 0 ? 0 : TIP_LINE_HEIGHT}">${escapeAttr(line)}</tspan>`
+    `<tspan x="${TIP_PADDING}" dy="${i === 0 ? 0 : TIP_LINE_HEIGHT}">${escapeHtml(line)}</tspan>`
   ).join('');
 
   return `<g class="chart-tip" aria-hidden="true"
@@ -445,11 +450,6 @@ export function wrapText(text, maxChars) {
   return lines;
 }
 
-const escapeAttr = value =>
-  String(value).replace(/[&<>"']/g, ch => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[ch]);
-
 // The two axis titles used to live inside the SVG — one along the bottom, one
 // rotated up the left margin (or squeezed above the plot when compact). Both
 // now sit in an HTML key below the chart, named outright as "X-Axis:" and
@@ -482,8 +482,8 @@ function axisKeyMarkup() {
   return `<dl class="axis-key">${AXIS_KEY.map(({ axis, label, explanation }) => `
     <div class="axis-key__row">
       <dt class="axis-key__axis">${axis}:</dt>
-      <dd class="axis-key__label">${escapeAttr(label)}</dd>
-      <span class="axis-key__tip" role="tooltip">${escapeAttr(explanation)}</span>
+      <dd class="axis-key__label">${escapeHtml(label)}</dd>
+      <span class="axis-key__tip" role="tooltip">${escapeHtml(explanation)}</span>
     </div>`).join('')}</dl>`;
 }
 
@@ -513,8 +513,8 @@ export function chartNotesMarkup(series, cliff, entry) {
       <dl class="chart-notes__list">${notes.map(({ term, body, glyph }) => `
         <dt class="chart-notes__term">${
           glyph ? `<span class="chart-notes__glyph chart-notes__glyph--${glyph === MARKER_GLYPH.cliff ? 'cliff' : 'entry'}" aria-hidden="true">${glyph}</span>` : ''
-        }${escapeAttr(term)}</dt>
-        <dd class="chart-notes__body">${escapeAttr(body)}</dd>`).join('')}
+        }${escapeHtml(term)}</dt>
+        <dd class="chart-notes__body">${escapeHtml(body)}</dd>`).join('')}
       </dl>
     </details>`;
 }
