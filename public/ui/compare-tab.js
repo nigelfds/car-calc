@@ -158,9 +158,13 @@ export function renderComparison(root, { vehicles, families, tables, benchIndex 
         <th scope="col"><span class="visually-hidden">Specification</span></th>
         ${shown.map(({ vehicle, index }) => `
           <th scope="col" class="compare-head compare-head--${index}">
-            ${imageFor(vehicle) ? `<img class="compare-head__img"
+            ${imageFor(vehicle) ? `<!-- alt="": the car name sits right below as visible text in this
+                 same <th>, and in table-navigation mode a screen reader
+                 announces the header for every cell down the column — a
+                 non-empty alt here would repeat once per row of the table. -->
+            <img class="compare-head__img"
               src="images/cars/${escapeHtml(imageFor(vehicle).file)}"
-              alt="${escapeHtml(carName(vehicle))}"
+              alt=""
               title="${escapeHtml(`${imageFor(vehicle).author} · ${imageFor(vehicle).licence}`)}"
               width="900" height="600" loading="lazy">` : ''}
             ${escapeHtml(carName(vehicle))}

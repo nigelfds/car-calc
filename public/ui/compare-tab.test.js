@@ -251,6 +251,18 @@ test('a column header carries its family image', () => {
   assert.match(html, /loading="lazy"/);
 });
 
+// The car name is already visible text in the same <th>, and in table-nav
+// mode a screen reader repeats the column header for every cell down the
+// column — a non-empty alt here would repeat once per row of the table.
+test('the header image is decorative, since the car name is already visible text in the same header cell', () => {
+  const root = stubRoot();
+  const withImage = [{ id: 'f-ev5', summary: 'x', pros: [], cons: [], sources: [], image: { file: 'ev5.webp', author: 'Alexander Migl', licence: 'CC BY 4.0' } }];
+  renderComparison(root, { vehicles: [ev5, sealion], families: withImage, tables, benchIndex: null });
+  const html = root.targets['compare-table'].innerHTML;
+  assert.match(html, /<img[^>]*\salt=""/);
+  assert.doesNotMatch(html, /alt="[^"]*Alexander Migl/);
+});
+
 test('a car whose family has no image gets a header with no img', () => {
   const root = stubRoot();
   renderComparison(root, { vehicles: [ev5, sealion], families, tables, benchIndex: null });

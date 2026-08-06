@@ -326,8 +326,12 @@ export function renderCards(root, cards, emptyMessage) {
     <article class="car-card${card.band ? ` car-card--${card.band}` : ''}" data-id="${escapeHtml(card.id)}">
       ${card.image ? `
       <figure class="car-figure">
+        <!-- alt="": the <h3> immediately below carries make, model AND
+             variant, a superset of what the alt text could say — a
+             non-empty alt here would just have a screen reader repeat the
+             heading a moment before it's read. -->
         <img src="images/cars/${escapeHtml(card.image.file)}"
-             alt="${escapeHtml(`${card.make} ${card.model}`)}"
+             alt=""
              title="${escapeHtml(`${card.image.author} · ${card.image.licence}`)}"
              width="900" height="600" loading="lazy">
       </figure>` : ''}

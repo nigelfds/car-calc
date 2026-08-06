@@ -602,13 +602,16 @@ test('renderCards emits a figure pointing at the image when there is one', () =>
   assert.match(html, /loading="lazy"/);
 });
 
-test('the alt text names the car, not the photographer', () => {
-  // alt describes the image; attribution belongs in title and on the credits page.
+test('the card image is decorative, since the adjacent heading already names the car', () => {
+  // The <h3> right below carries make, model AND variant — a superset of
+  // what the alt could say — so a non-empty alt would just have a screen
+  // reader repeat it a moment later. Attribution belongs in title and on
+  // the credits page either way, never in alt.
   let html = '';
   const target = { set innerHTML(v) { html = v; }, get innerHTML() { return html; } };
   const card = { ...cardModel(fleet[0], [{ ...families[0], image: { file: 'a.webp', author: 'Alexander Migl', licence: 'CC BY 4.0' } }]), bandLabel: 'x' };
   renderCards({ querySelector: () => target }, [card], '');
-  assert.match(html, /alt="Kia EV5[^"]*"/);
+  assert.match(html, /<img[^>]*\salt=""/);
   assert.doesNotMatch(html, /alt="[^"]*Alexander Migl/);
 });
 
