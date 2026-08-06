@@ -94,6 +94,81 @@ test('no candidate at all is flagged with its own reason', () => {
   assert.match(v.why, /no candidate/i);
 });
 
+// The three families in the live dataset whose variants disagree about the
+// model string — every name below is copied from data/vehicles.json, not
+// invented. Verify with:
+//   node -e "…group data/vehicles.json by familyId, distinct r.model…"
+const multiModel = [
+  { id: 'audi-q6-e-tron', make: 'Audi', model: 'Q6 e-tron', models: ['Q6 e-tron', 'Q6 Sportback e-tron', 'SQ6 e-tron', 'SQ6 Sportback e-tron'] },
+  { id: 'audi-q5-phev', make: 'Audi', model: 'Q5', models: ['Q5', 'Q5 Sportback'] },
+  { id: 'hyundai-ioniq-5', make: 'Hyundai', model: 'Ioniq 5', models: ['Ioniq 5', 'Ioniq 5 N'] }
+];
+const multiVerdict = (id, title) => classify({
+  family: multiModel.find(f => f.id === id),
+  candidateTitle: title,
+  families: multiModel
+});
+
+test('a model name carried only by a later variant is matched, not treated as an alias', () => {
+  // Before this, only the FIRST variant's model was ever checked, so a
+  // photograph of an SQ6 — a car this family holds — read as a market alias.
+  assert.equal(multiVerdict('audi-q6-e-tron', 'Audi SQ6 e-tron DSC 9276.jpg').verdict, 'auto');
+  assert.equal(multiVerdict('audi-q5-phev', 'Audi Q5 Sportback GU DSC 9270.jpg').verdict, 'auto');
+});
+
+test('a family with several names is still flagged when the title names none of them', () => {
+  const v = multiVerdict('audi-q6-e-tron', 'Audi A6 Avant e-tron 2024.jpg');
+  assert.equal(v.verdict, 'manual');
+  assert.match(v.why, /alias/i);
+});
+
+test('the clash rule measures against the name that matched, not the shortest one', () => {
+  // Ioniq 5 matches on its long name "Ioniq 5 N". Comparing a sibling against
+  // the family's SHORT name would make a multi-name family ambiguous with
+  // itself — every longer name it holds would outrank its own shortest.
+  assert.equal(multiVerdict('hyundai-ioniq-5', 'Hyundai Ioniq 5 N 2024 001.jpg').verdict, 'auto');
+});
+
+test('a body-style word infixed into the model is NOT handled by matching model names', () => {
+  // The audi-q4-e-tron case, recorded because it looks like the tests above
+  // but is not fixed by them. All four of that family's variants carry the
+  // model "Q4 e-tron"; the Sportback lives in the VARIANT field ("Sportback
+  // 45 e-tron"), so the family derives exactly one model name and Commons'
+  // "Audi Q4 Sportback e-tron" still fails contiguous containment.
+  //
+  // It flags, a human resolves it, and that is the designed fallback — but
+  // this test exists so nobody reads the ones above as covering it.
+  const family = { id: 'audi-q4-e-tron', make: 'Audi', model: 'Q4 e-tron', models: ['Q4 e-tron'] };
+  const v = classify({ family, candidateTitle: 'Audi Q4 Sportback e-tron IAA 2021 1X7A0159.jpg', families: [family] });
+  assert.equal(v.verdict, 'manual');
+});
+
+test('a genuinely more specific sibling still wins over a multi-name family', () => {
+  // The sibling rule must survive the change: Seal against Seal 6, but with
+  // the family carrying several names.
+  const withModels = [
+    { id: 'byd-seal', make: 'BYD', model: 'Seal', models: ['Seal', 'Seal Premium'] },
+    { id: 'byd-seal-6', make: 'BYD', model: 'Seal 6', models: ['Seal 6'] }
+  ];
+  const v = classify({
+    family: withModels[0],
+    candidateTitle: 'BYD Seal 6 DM-i Shanghai Auto Show 2024 001.jpg',
+    families: withModels
+  });
+  assert.equal(v.verdict, 'manual');
+  assert.match(v.why, /ambiguous/i);
+});
+
+test('a family with no models array falls back to its single model', () => {
+  // Every existing caller and fixture passes only `model`; that path must
+  // keep working unchanged.
+  assert.equal(classify({
+    family: { id: 'kia-ev5', make: 'Kia', model: 'EV5' },
+    candidateTitle: 'Kia EV5 Air 2WD 001.jpg',
+    families: [{ id: 'kia-ev5', make: 'Kia', model: 'EV5' }]
+  }).verdict, 'auto');
+});
+
 test('why is always a non-empty explanation', () => {
   for (const [id, title] of [['byd-atto3', 'BYD Atto 3 x.jpg'], ['byd-seal', 'BYD Seal U x.jpg'], ['kia-ev5', '']]) {
     assert.ok(verdict(id, title).why.length > 0);

@@ -84,23 +84,35 @@ function parseArgs(argv) {
 
 // A family's make/model live on its vehicles, not on the family record
 // itself, because a family can carry several variants (trims) that all share
-// one photograph. "First variant in data/vehicles.json" is arbitrary but
-// deterministic — any variant's make/model names the same car for our
-// purposes, and the file's order doesn't change between runs.
+// one photograph.
+//
+// `model` is the first variant's — arbitrary but deterministic, and it is the
+// name the Commons search is built from, so it should be the plainest one.
+// `models` is every distinct name across the family's variants, because they
+// do not always agree: the Audi Q6 e-tron family spans "Q6 e-tron", "Q6
+// Sportback e-tron", "SQ6 e-tron" and "SQ6 Sportback e-tron". The classifier
+// matches against all of them so a photograph of a body style the family
+// genuinely contains is not mistaken for a market alias — see classify.js.
 function deriveFamilies(families, vehicles) {
-  const firstVariantByFamily = new Map();
+  const variantsByFamily = new Map();
   for (const v of vehicles) {
-    if (!firstVariantByFamily.has(v.familyId)) firstVariantByFamily.set(v.familyId, v);
+    if (!variantsByFamily.has(v.familyId)) variantsByFamily.set(v.familyId, []);
+    variantsByFamily.get(v.familyId).push(v);
   }
 
   const derived = [];
   for (const family of families) {
-    const variant = firstVariantByFamily.get(family.id);
-    if (!variant) {
+    const variants = variantsByFamily.get(family.id) ?? [];
+    if (variants.length === 0) {
       console.warn(`WARN skipping ${family.id}: no variants in data/vehicles.json, nothing to search on`);
       continue;
     }
-    derived.push({ id: family.id, make: variant.make, model: variant.model });
+    derived.push({
+      id: family.id,
+      make: variants[0].make,
+      model: variants[0].model,
+      models: [...new Set(variants.map(v => v.model))]
+    });
   }
   return derived;
 }
@@ -216,7 +228,13 @@ async function main() {
       // whole reason an alias was needed. So the model the classifier checks
       // for is derived from the alias (make prefix stripped, since classify
       // deliberately checks the model only — see aliasModelFor above).
-      const classifyFamily = alias ? { ...family, model: aliasModelFor(alias, family.make) } : family;
+      // `models` is replaced, not merely extended, so an alias still means
+      // exactly what it says: check for THIS name. Leaving the family's own
+      // variant names alongside it would quietly widen the alias path into
+      // "the alias or any name we already knew", which is not what the
+      // operator asserted.
+      const aliasModel = alias ? aliasModelFor(alias, family.make) : null;
+      const classifyFamily = alias ? { ...family, model: aliasModel, models: [aliasModel] } : family;
 
       // Unaliased families still classify strictly the top hit only — that
       // is the conservative behaviour the 74/25 auto/flag split was measured
