@@ -9,8 +9,10 @@ unchanged so the leads can be scored against what was actually found.
 **Headline: the dataset holds about 37% of the battery-electric market. Roughly 68 families are
 missing, which is twelve batches — a wave larger than the PHEV one.**
 
-**Wave progress: batches 1, 2, 3, 4, 5 and 6 done (1 and 2 on 2026-07-30, batches 3, 4, 5 and 6 on
-2026-07-31). 76 of ~111 families held, ~68%. Six batches left.**
+**Wave progress: batches 1–8 and 11 done (1 and 2 on 2026-07-30; 3, 4, 5 and 6 on 2026-07-31; 8 on
+2026-08-01; 7 on 2026-08-06; 11 on 2026-08-08). Batch 7 absorbed batch 9, so there is no batch 9.
+90 of ~101 representable families held, ~89%. TWO batches left — 10 (the top end) and 12 (people
+movers) — plus the batch 13 re-check pass.**
 
 ## Why this exists
 
@@ -179,18 +181,25 @@ families were most of the market.
 
 ## The headline number
 
-| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 | After batch 6 | After batch 8 | After batch 7 |
-|---|---|---|---|---|---|---|---|---|---|
-| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** | **~111** | **~110** — the Q8 e-tron came off | **~106** — **four Mercedes came off at once** |
-| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** | **~107** | **~106** | **~101** — the G 580 also crossed the ceiling |
-| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** | **76** | **81** | **87** |
-| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** | **~68%** | **~76%** | **~86%** |
-| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** | **~31** | **~25** | **~14** |
-| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** | **6 batches left** | **5 batches left** | **3 batches left** |
+| | Families | After batch 1 | After batch 2 | After batch 3 | After batch 4 | After batch 5 | After batch 6 | After batch 8 | After batch 7 | After batch 11 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Battery-electric families on sale new in Australia today | **~112** | **~111** — the eT60 came off, see below | **~111** | **~111** | **~111** | **~111** | **~111** | **~110** — the Q8 e-tron came off | **~106** — **four Mercedes came off at once** | **~106** — **nothing came off; all three tail families are on sale** |
+| Of those, representable under the app's schema and body types | **~108** | **~107** | **~107** | **~107** | **~107** | **~107** | **~107** | **~106** | **~101** — the G 580 also crossed the ceiling | **~101** |
+| Held by the dataset | **40** | **46** | **52** | **58** | **64** | **70** | **76** | **81** | **87** | **90** |
+| **Coverage** | **~37%** | **~41%** | **~47%** | **~52%** | **~58%** | **~63%** | **~68%** | **~76%** | **~86%** | **~89%** |
+| Missing and researchable | **~68** | **~61** | **~55** | **~49** | **~43** | **~37** | **~31** | **~25** | **~14** | **~11** |
+| At six families per batch | **~12 batches** | **11 batches left** | **10 batches left** | **9 batches left** | **8 batches left** | **7 batches left** | **6 batches left** | **5 batches left** | **3 batches left** | **2 batches left** |
 
 **Batch 8 ran out of order, before batch 7.** Batch 7 has since run and **ABSORBED batch 9** — see below.
-**There is no batch 9 any more.** The "3 batches left" figure counts batches 10, 11 and 12, plus the
+**There is no batch 9 any more.** The "2 batches left" figure counts batches 10 and 12, plus the
 batch 13 re-check pass.
+
+**Batch 11 is the wave's first MAINTENANCE batch, and it moved the numerator least and the dataset's
+correctness most.** Three families landed, so coverage moves 86% → 89%. The batch's actual work was
+33 changed rows across 10 held families — a gross-for-usable battery defect on nine E-GMP rows plus
+four Kia EV9 rows, and 24 consumption figures that were derived rather than declared. **The on-sale
+flag came back POSITIVE three times out of three for the first time in the wave**, after six
+consecutive negatives.
 
 **Batch 7 is the largest single movement in the wave, and most of it is the denominator rather than the
 numerator.** It was run as eleven families (the five Mercedes of the old batch 7, plus the six premium
@@ -354,6 +363,20 @@ batch from being closed out. **Smart is complete**, the #3 having joined the #1 
 also deepened two brands already held — Volvo went from two BEV families to four, Polestar from two to
 three.
 
+**Settled by batch 11 (2026-08-08): two more, and this table is now one brand from closed. Lotus** goes
+from no row of any kind to two families — Eletre (Base and S; the R is above the ceiling) and Emeya —
+and **Maserati** goes from no row of any kind to the Grecale Folgore, its only battery-electric family
+here. The dataset now holds **43 brands**. **One of the seventeen brands in this table remains absent:
+Porsche**, and it is batch 10's, so that batch closes this table out entirely.
+
+Both were expected to come back "not on sale" and did not. **The on-sale flag had been negative six
+times out of six across the wave; batch 11 ran it three times and it came back positive three times.**
+The Maserati verification is the notable one, because the prior was strongest against it: Maserati has
+retrenched hard on EVs globally and is discounting Folgore stock. It is nonetheless orderable, verified
+through Maserati Australia's own Victorian price calculator and a working configurator — and the ~43%
+discount bulletin driving the expectation turned out to be **United States dealer guidance, not
+Australian**, which is the kind of read-across this wave has repeatedly punished.
+
 **Mercedes-Benz needs its own line, and it moves the wrong way.** The dataset holds three Mercedes BEV
 families (CLA EV, EQA, EQB) and batch 7 established that it cannot hold more: the EQE Sedan, EQE SUV, EQS
 Sedan and EQS SUV are all off the Australian configurator, and the G 580 is above the schema ceiling.
@@ -433,6 +456,11 @@ falls with them. `Sedan` is therefore about **11 of ~14, roughly 79%**, up from 
 Porsche Taycan · Audi e-tron GT. Note the survey's own count was optimistic in a way this batch exposed:
 two of the eleven it listed were cars nobody could buy.
 
+**Batch 11 (2026-08-08) added a twelfth `Sedan` family the survey never listed at all — the Lotus Emeya.**
+`Sedan` now holds **12 families, 25 variants** (measured). The Emeya is a genuine addition to the segment
+count rather than a reallocation, so the denominator moves with it: about **12 of ~15, roughly 80%**. The
+three batch 10 families above are unchanged.
+
 **The ES90 is also the batch's only FBT straddle**, and the only one in either wave to sit on the
 $91,661 boundary rather than $75,000: Plus $88,880 keeps the exemption and pays no LCT, Ultra $107,990
 clears the threshold and loses both. That is the case the app exists to catch, and `Sedan` is where it
@@ -488,6 +516,8 @@ With people movers filed as `SUV`, five vehicles on sale in Australia cannot be 
 | Maserati GranTurismo Folgore | ~$450,000 |
 | Maserati GranCabrio Folgore | ≥ GranTurismo; also a convertible |
 | **Mercedes-Benz G 580 with EQ Technology** | **$252,700 — crossed the ceiling during the wave. Added by batch 7, 2026-08-06. See the batch 7 record: it launched at $249,900 and rose. Re-check in batch 13 — a cut of $2,701 makes it representable again** |
+| **Lotus Eletre R** | **$279,990 — added by batch 11, 2026-08-08. A VARIANT above the ceiling, not a family: the Eletre Base ($189,990) and S ($229,990) are both held, so the family IS represented and only the flagship is not. The $315,000 figure still circulating is stale pre-MY25 launch pricing** |
+| **Lotus Emeya 900 Sport / 900 Sport Carbon** | **No Australian price published anywhere — Lotus AU ships blank price fields in its own CMS. UK pricing implies roughly $272k–$294k, which is inference, not a sourced Australian figure. Recorded as unrepresentable on the balance of evidence, not as a priced fact** |
 
 The G 580 is the **first family the wave has lost to the ceiling rather than to withdrawal**, and it is
 the reason the "representable" row falls further than the "on sale" row. It is also the only entry here
@@ -868,7 +898,14 @@ cheapest variant qualifies, the flagship does not.
 | Genesis G80 Electrified | Sedan. **Weakest single source in the survey** — confirmed only via a Genesis AU model listing, and dead in North America. Verify before committing the slot |
 | Polestar 5 | Sedan GT |
 
-### Batch 11 — the maintenance sweep, plus the tail — **RESTRUCTURED 2026-08-08**
+### Batch 11 — the maintenance sweep, plus the tail — **DONE 2026-08-08** · restructured the same day
+
+> **RUN AND COMPLETE. See the batch 11 record for what closed and what did not.** Headline: the E-GMP
+> gross-for-usable defect is **CLOSED and applied to nine rows**; an adjudication round then found the
+> **same defect on `kia-ev9`, falsifying this document's own premise** that the EV9 was the counter-
+> example proving Kia publishes usable capacity — it does not, in any market. 24 of the 26 derived
+> consumption figures were re-sourced; **6 could not be and are documented open**. All three tail
+> families are on sale and were written. The entry below is kept as written for scoring.
 
 **This batch now leads with maintenance and treats the tail as the filler, reversing its original
 shape.** It was written as "the tail, plus the maintenance backlog" when the wave was at 37% coverage
@@ -891,6 +928,9 @@ pack and a coincidental number — separate it out rather than sweeping it in.**
 **contradicts itself on one platform**: the three Genesis rows batch 7 wrote carry **80** for the same
 4th-gen pack, so the batch that found the problem also introduced the inconsistency. `kia-ev9` already
 carries Kia's *published usable* figures (76.1 / 99.8), which is evidence Kia publishes usable and the
+<!-- FALSIFIED 2026-08-08 by batch 11's adjudication round: 76.1 and 99.8 are GROSS. Kia publishes
+     usable in NO market. The EV9 had the same defect, not the counter-example to it. See below. -->
+
 EV6's 84 is the gross number. **Not yet verified: whether 80 is right.** What is established is that
 the dataset is internally inconsistent and that the pattern matches batch 5's confirmed e-TNGA defect.
 
@@ -932,14 +972,42 @@ side.
 | Lotus Emeya | `Sedan` |
 | Maserati Grecale Folgore | **Verify orderable, not run-out.** Maserati has retrenched hard on EVs and told dealers to discount Folgore stock ~43%. **The on-sale/run-out flag is now negative six times out of six across the wave** — expect this to come off |
 
-**The standing maintenance items, unchanged.** These are the backlog the sweep has been accumulating
+**The standing maintenance items.** These are the backlog the sweep has been accumulating
 since batch 1; the two streams above are additions to it, not replacements for it. Everything marked
 DONE is recorded so nobody redoes it.
+
+> **WHAT BATCH 11 CLOSED, 2026-08-08 — do not redo any of it:**
+> - **The E-GMP `batteryKwh` question is CLOSED.** 84 is gross, 80 is usable, applied to all nine
+>   E-GMP rows. Settled by Kia's own 697 V × 120.6 Ah = 84.06 kWh, ADAC's explicit "(Brutto)" label,
+>   and CarsGuide stating both figures for a named EV6. **Not** by implied-consumption arithmetic.
+> - **`kia-ev9` had the SAME defect** — 76.1 → 73.0 and 99.8 → 96.0. See the correction note below.
+> - **`tesla-model-y-l-premium-awd` was NOT swept in.** Unrelated pack, coincidental number, three
+>   incompatible sources, nothing met the standard. Left at 84, flagged low-confidence.
+> - **`hyundai-kona-electric` is CONFIRMED ALREADY CORRECT** (48.6 / 64.8 are usable). Do not re-check.
+> - **The Genesis 80 figures are CONFIRMED.** Batch 7's two agents were right.
+> - **24 of the 26 derived consumption figures re-sourced**, plus 4 more rows found wrong in the same
+>   sources (three Inster grades and the Model 3 Performance).
+>
+> **WHAT REMAINS OPEN after batch 11:**
+> - **18 Hyundai/Kia rows have an UNVERIFIED `batteryKwh`** and are the natural batch 13 item:
+>   `kia-ev3` (58.3 / 81.4), `kia-ev4` (58.3 / 81.4), `kia-ev5` (64.2 / 88.1), `hyundai-ioniq-9` (107),
+>   `hyundai-elexio` (88.1). Top Gear states the practice is brand-wide across Kia, Hyundai **and**
+>   Genesis — but **the Kona is a proven exception**, so this must be settled per-pack, not swept by
+>   brand. The per-cell test that closed the EV9 (headline kWh ÷ cell count ≈ 218.7 Wh for the SK On
+>   pouch cell) is the cheapest way in.
+> - **6 consumption figures could not be re-sourced and are still derived:** `forthing-taikon-5`
+>   (both rows — Forthing publishes no consumption figure anywhere and is absent from GVG),
+>   `mg-s6` (both rows — MG Australia declares **NEDC only**), `zeekr-x` (both rows — CarExpert
+>   reads "TBC"). A documented gap, deliberately not filled with an invented number.
+> - **`hyundai-inster` `$39,000` list price** — still unverified, see the row below. Batch 11 corrected
+>   the Inster's consumption but did **not** touch its pricing.
+> - **`chery/omoda-e5` → Chery E5 rename** — untouched, still open.
+> - **XPeng G6 re-pricing and `bmw-ix1` 65.2 → 64.8** — untouched, still open.
 
 | Item | Note |
 |---|---|
 | Maintenance sweep | **Shrunk 2026-07-30, and again 2026-07-31 by batch 6.** Still to do: rename `omoda-e5` → Chery E5; re-price XPeng G6; **correct `bmw-ix1`'s `batteryKwh` 65.2 → 64.8 (see the batch 6 record — its platform-mate `bmw-ix2` moved to 64.8 on Australian sources, and the held iX1 rests on the one source that disagrees with BMW official, EV Database and CarExpert alike)**. **DONE by batch 6, do not re-check: the BMW i4 M60 is NOT orderable in Australia** — no Australian source carries the badge, carsales' 2026 i4 research page lists eDrive35 only, and EV Central's "range trimmed" piece corroborates the held family record exactly. The survey's $139,900 M60 claim was an overseas badge matched against the Australian range, which is the failure mode the wave warns about hardest. The held `bmw-i4` row needed no change. **Already done, do not redo:** Ioniq 6 N, MG4 Urban and Kia EV9 GT are all held; Leapmotor C10 is confirmed BEV; Kona ($46,000–$63,000) and Ioniq 5 ($68,200–$83,700) already match this survey's own "now" figures exactly. **Still worth checking:** the Inster, where this survey quotes $38,990 *drive-away* against a held list of $39,000 — a drive-away figure is not a list price, and that one backs out to about $36,574, so either the held row is $2,400 high or the survey is quoting a grade the dataset does not hold. Volvo, BMW iX1 and Renault re-pricing is unverified either way |
-| **`hyundai-ioniq-5` `batteryKwh` — ADDED BY BATCH 7, NOT resolved. ~~four rows~~ SCOPE CORRECTED 2026-08-08 TO TEN ROWS — see stream 1 above, which supersedes the row count in this cell and adds `kia-ev6`** | All four held Ioniq 5 rows carry **`batteryKwh: 84`**, which is the figure Hyundai advertises unqualified. **Two batch 7 agents independently recorded 80 usable against 84 nominal for the same 4th-gen E-GMP pack**, from different EV Database records for different cars (`genesis-gv60`, `genesis-gv70-electrified`), and both flagged the Ioniq 5 discrepancy unprompted. That convergence is why this is here. **Do not blind-swap.** This is the same shape as batch 5's e-TNGA finding — a gross figure in a field the schema defines as usable — but it is NOT yet settled: per batch 5's rule the question must be closed by a source stating BOTH figures **for the Ioniq 5 specifically**, not by arithmetic (a 5% capacity difference sits inside the plug-to-wheels band and cannot be separated by implied consumption), and one competing source gives **78.0** rather than 80.0 for this pack. Note `kia-ev9` is already correct — it carries Kia's published usable figures, 76.1 and 99.8. Check `hyundai-ioniq-6` and `hyundai-kona-electric` for the same defect at the same time |
+| **`hyundai-ioniq-5` `batteryKwh` — ADDED BY BATCH 7, NOT resolved. ~~four rows~~ SCOPE CORRECTED 2026-08-08 TO TEN ROWS — see stream 1 above, which supersedes the row count in this cell and adds `kia-ev6`** | All four held Ioniq 5 rows carry **`batteryKwh: 84`**, which is the figure Hyundai advertises unqualified. **Two batch 7 agents independently recorded 80 usable against 84 nominal for the same 4th-gen E-GMP pack**, from different EV Database records for different cars (`genesis-gv60`, `genesis-gv70-electrified`), and both flagged the Ioniq 5 discrepancy unprompted. That convergence is why this is here. **Do not blind-swap.** This is the same shape as batch 5's e-TNGA finding — a gross figure in a field the schema defines as usable — but it is NOT yet settled: per batch 5's rule the question must be closed by a source stating BOTH figures **for the Ioniq 5 specifically**, not by arithmetic (a 5% capacity difference sits inside the plug-to-wheels band and cannot be separated by implied consumption), and one competing source gives **78.0** rather than 80.0 for this pack. ~~Note `kia-ev9` is already correct — it carries Kia's published usable figures, 76.1 and 99.8.~~ **THAT SENTENCE IS FALSE and batch 11 falsified it: the EV9's 76.1 and 99.8 are GROSS too, and it was carrying the same defect. It was never the counter-example.** Check `hyundai-ioniq-6` and `hyundai-kona-electric` for the same defect at the same time. **ALL RESOLVED 2026-08-08 — see the batch 11 record. The competing 78.0 could not be traced to any source; every source found says 80.** |
 | **`mercedes-g580` — ADDED BY BATCH 7, a re-check not a fix** | Not a defect: the family is correctly absent. It is on sale but lists at **$252,700**, $2,700 above the schema's `listPrice` ceiling. **A price cut of $2,701 makes it representable.** Batch 13's re-check pass should test it. Everything needed to write the row in one pass is in the batch 7 record: one grade, `batteryKwh` 116 net, `rangeKm` 473 WLTP (**reject the 567 km NEDC figure that dominates Australian launch coverage**), suggested insurance ~5400 and curve ~`[1, 0.6, 0.48, 0.4, 0.34, 0.29]`. Its `consumptionKwhPer100km` was never established from an Australian source — try the Green Vehicle Guide by direct ID, per the batch 7 record |
 | **e-TNGA `batteryKwh` correction — ADDED BY BATCH 5, ~~five rows~~ FOUR OF FIVE APPLIED 2026-07-31, one left** | **DONE: `subaru-solterra` (AWD, AWD Touring) and `toyota-bz4x` (AWD, Touring AWD) now carry 71.0.** Build 0 failures, 596 tests pass; the widest consumption deviation after the change is 14.2% against the validator's 25% ceiling. **STILL OPEN: `toyota-bz4x-2wd` only** — it was deliberately left at 74.7 and needs the model-year check described below before it moves. The original note is kept in full because that check is still live. Five held rows recorded a GROSS pack figure in a field the schema defines as USABLE: `toyota-bz4x` (2WD, AWD, Touring AWD) and `subaru-solterra` (AWD, AWD Touring) all carried `batteryKwh: 74.7`. Toyota's European newsroom states, for the bZ4X Touring, *"a maximum gross capacity of 74.7 kWh (**71 kWh net**)"*, and Toyota USA's 2026 bZ release calls 74.7 a *"total capacity"* in those words. The correct usable figure for that pack is **71.0** — a 5.2% overstatement. Batch 5 corrected its own three families to 71.0 and did not touch these. **Do not blind-swap all five.** The `toyota-bz4x` **2WD** row needs a model-year check first: the superseded MY25 pack is a different unit at **73.1 nominal / 69.0 usable**, and 73.1 is a *nominal* figure that has already been mistaken for a usable one once during this adjudication. Sources: `https://newsroom.toyota.eu/the-new-toyota-bz4x-touring-an-suv-for-electrified-adventures/`, `https://pressroom.toyota.com/toyota-bz-all-electric-suv-adds-range-charging-and-exterior-updates-for-2026/` |
 
@@ -962,6 +1030,24 @@ body type, and it is cheaper to find that out at the end than to have salted it 
 Run after the wave. Leapmotor B05, Mazda CX-6e, Deepal S05, Honda Super-One and Smart #5 all land
 inside the wave's own timeframe, so several will be on sale before the wave finishes. Re-run the
 brand sweep for the pre-launch table above.
+
+**Batch 11 hands batch 13 four concrete items, in priority order:**
+
+1. **The 18 unverified Hyundai/Kia `batteryKwh` rows** — `kia-ev3`, `kia-ev4`, `kia-ev5`,
+   `hyundai-ioniq-9`, `hyundai-elexio`. Batch 11 proved Kia and Hyundai publish **gross** on the
+   E-GMP and EV9 packs, but also proved **the Kona is an exception**, so this cannot be swept by
+   brand — settle it per-pack. Cheapest test: headline kWh ÷ cell count. The SK On pouch cell used
+   across the corrected packs is **≈218.7 Wh nominal**; a headline that divides cleanly to that,
+   or that equals nominal voltage × rated Ah, is gross.
+2. **The 6 consumption figures that could not be re-sourced** — `forthing-taikon-5` ×2, `mg-s6` ×2,
+   `zeekr-x` ×2. Re-check whether any Australian declaration has since been published. Do not fill
+   them with a derived or NEDC figure.
+3. **`mercedes-g580` at $252,700** — unchanged from batch 7. A cut of $2,701 makes it representable,
+   and everything needed to write the row in one pass is in the batch 7 record.
+4. **`lotus-emeya`'s $177,990** — the batch's weakest single price, resting on one listicle sentence.
+   Two independent corroboration routes were tried and both came back silent; Lotus Australia ships
+   blank price fields in its own CMS. If any Australian price for the Emeya surfaces, re-check this
+   row first. Its four unpriced trims are the other half of the same gap.
 
 ## Batch records
 
@@ -2135,8 +2221,14 @@ cars, different EV Database pages, no contact. That convergence is corroboration
 **The held `hyundai-ioniq-5` question is NOT settled and belongs to batch 11's maintenance sweep** — it is
 the same defect shape as batch 5's e-TNGA finding (five rows carrying a gross figure in a usable field),
 but resolving it needs a source stating both figures for the Ioniq 5 specifically, and one agent's
-competing source says 78.0 rather than 80.0. `kia-ev9` already carries Kia's published usable figures
-(76.1 / 99.8) and is fine.
+competing source says 78.0 rather than 80.0. ~~`kia-ev9` already carries Kia's published usable figures
+(76.1 / 99.8) and is fine.~~
+
+> **SETTLED 2026-08-08 BY BATCH 11. Both batch 7 agents were right about the 80.** The question closed
+> on Kia's own 697 V × 120.6 Ah = 84.06 kWh — nameplate energy by construction — plus ADAC's explicit
+> "(Brutto)" field and CarsGuide stating both figures for a named EV6. **The 78.0 could not be traced
+> to any source.** And the struck sentence above was wrong: **`kia-ev9` was carrying the same defect,
+> not proving the absence of one.** Kia publishes gross in every market checked, including Australia.
 
 **9. The platform-twin exposure was real and it survived challenge.** Polestar 3 and Volvo EX90 share a
 platform and a factory and agree on exactly two numbers — `towKg` 2200 and `batteryKwh` 102. The Polestar
@@ -2237,6 +2329,136 @@ table said the Skoda Enyaq Coupe was a "cheap slot to fill out the batch" — it
 researching it would have duplicated a family. And the G 580's "$249,000, $1,000 under the ceiling" was
 wrong on both numbers: the launch RRP was **$249,900**, a **$100** margin. A $100 margin survives no
 routine adjustment, and it did not.
+
+### Batch 11 — done 2026-08-08 · **the wave's first maintenance batch**
+
+Run as **three streams plus one adjudication round**, not six family agents: two maintenance agents editing
+existing rows, three tail agents (one per family), one price-corroboration round on the Emeya, and one
+adjudication agent on `kia-ev9`. **Three families written, 4 variants; 33 rows changed in total**, of which
+**29 were corrections to already-held rows**. Dataset went to **43 brands, 125 families, 297 variants**
+(219 battery-electric across 90 families). Build 0 failures, 682 tests pass. Commit `f8f2d2b`.
+**Widest consumption deviation across the 33 changed rows: 20.2%** (the new Maserati row) against the
+validator's 25% ceiling.
+
+| Family | Variants and list prices |
+|---|---|
+| `lotus-eletre` | Base $189,990 · S $229,990 — **R excluded at $279,990**, above the ceiling |
+| `lotus-emeya` | 600 $177,990 — `Sedan`. One row; four further trims have no traceable AU price |
+| `maserati-grecale-folgore` | Folgore $207,500 |
+
+**This is the first batch where the deliverable was correctness rather than coverage, and it is the
+first batch to overturn one of this document's own recorded premises.**
+
+**Ten things later batches need to know.**
+
+**1. THE E-GMP `batteryKwh` QUESTION IS CLOSED, AND IT CLOSED ON CHEMISTRY, NOT ON A REVIEW.** 84 is the
+gross figure; 80 is usable. The decisive evidence was **Kia's own UK specification table: 697 V nominal ×
+120.6 Ah = 84.06 kWh**. A headline capacity that is exactly voltage × amp-hours *is* rated nameplate
+energy by construction — it cannot be a usable figure. ADAC's structured field labels the same number
+**"(Brutto)"**, and CarsGuide states 84 gross and 80 usable for a named EV6 in one article, meeting
+batch 5's both-figures-one-source bar. **Note what did NOT close it:** no manufacturer publishes the
+usable figure for this pack anywhere, so the batch 5 shape of evidence (the maker stating both) does not
+exist here and the bar had to be met by third parties instead. The competing **78.0 could not be traced
+to any source at all**.
+
+> **THE GENERALISABLE RULE: when a headline kWh equals nominal voltage × rated amp-hours, it is gross.**
+> This is the first tool in the wave that separates gross from usable *deductively*. Batch 5 established
+> that implied-consumption arithmetic cannot do it — a ~5% capacity difference sits inside the
+> plug-to-wheels band. V × Ah sits outside that objection entirely, and it is cheap: two numbers off a
+> manufacturer spec page.
+
+**2. THE BATCH FALSIFIED THIS DOCUMENT'S OWN PREMISE, AND THE PREMISE WAS LOAD-BEARING.** The brief
+dispatched stream 1 with "`kia-ev9` is already correct — it carries Kia's published usable figures 76.1
+and 99.8, which is evidence Kia does publish usable somewhere". **Every part of that is false.** The
+agent that fixed the EV6 challenged it unprompted; a fresh adjudication agent then confirmed the EV9 was
+carrying the *same* defect. The killer argument was a **per-cell identity neither earlier agent had**:
+
+| Pack | Headline kWh | Cells | Wh/cell |
+|---|---|---|---|
+| Ioniq 5 / EV6 / GV60 | 84 | 384 | **218.75** |
+| EV9 Air | 76.1 | 348 | **218.68** |
+| EV9 Earth / GT-Line / GT | 99.8 | 456 | **218.86** |
+
+A 0.08% spread. All three are cell-count × the same SK On pouch cell's nameplate energy. Since 84 is
+settled gross, so are 76.1 and 99.8. **Kia publishes gross in every market checked, Australia included.**
+
+**3. "THE MORE SPECIFIC ARGUMENT WAS THE WRONG ONE" DID NOT HOLD THIS TIME — SIXTH TEST, FIRST MISS.**
+Batches 2, 4, 5, 7 and 8 all found the more specific claim was the wrong one, and the dispatch prompt
+warned the adjudicator not to defer to the newer, more detailed position. It deferred anyway, and it was
+right to: it tested Position A properly and found its two real sources **self-refuting**. Green NCAP's
+datasheet reads *"Usable (net) 99.8 kWh · Installed (gross) 99.8 kWh"* — no NMC pack has a zero buffer;
+they had one number and filled both slots. ADAC's *Autotest* PDF says Kia gives no gross figure, and is
+contradicted by ADAC's own catalogue field. **The heuristic is a prior, not a rule. What actually
+decided it was that one side's sources fell apart on inspection and the other's did not.**
+
+**4. A DERIVED CONSUMPTION FIGURE UNDERSTATES RUNNING COSTS BY $59–$135 A YEAR, MEASURED.** 26 rows
+carried `consumptionKwhPer100km` equal to `batteryKwh / rangeKm * 100` — a wheels-side figure in a field
+that `calc/running-costs.js:28` multiplies by a retail plug tariff. Re-sourced to declared WLTP, the
+electricity line rises **+$59 (Ioniq 5 RWD) to +$135 (Zeekr 7X RWD)** per year at 15,000 km and 30c/kWh.
+The recovered plug-to-wheels overheads run **+10.9% to +20.3%, median +15.4%** — squarely on batch 4's
+measured distribution (p10 0.0, median 12.4, p90 19.9), which is corroboration that the new figures are
+right rather than merely bigger.
+
+**5. `Ute` IS UNTOUCHED FOR A SIXTH BATCH RUNNING.** Measured after batch 11: **219 battery-electric
+variants across 90 families — SUV 173/69, Sedan 25/12, Hatch 16/7, Ute 5/2.** Two `SUV` families and one
+`Sedan` added.
+
+**6. SIX ROWS COULD NOT BE RE-SOURCED, AND THAT IS THE REPORTED RESULT, NOT A GAP IN THE WORK.**
+`forthing-taikon-5` (both rows) — Forthing publishes no consumption figure and is absent from GVG's make
+list entirely. `mg-s6` (both rows) — **MG Australia declares NEDC only**, and the WLTP figures in
+circulation trace back to EV Database's *derived* value, so using them would have re-introduced the exact
+defect being fixed. `zeekr-x` (both rows) — CarExpert's spec box reads "TBC" and the circulating figure is
+usable-battery ÷ range. **All six were left alone.** Batch 4's rule held: 0% overhead is at the bottom of
+the measured band, not outside it, so these are unresolved, not known-wrong.
+
+**7. THE GREEN VEHICLE GUIDE'S SEARCH IS REACHABLE PROGRAMMATICALLY — batch 7's "search returns 500" note
+is only true of the naive POST.** The working recipe: `POST /Vehicle/GetNamesForSelectList` with
+`startYear/endYear/manufacturerId/showCurrentOnly` returns make and model JSON (make ids: BYD 111,
+Hyundai 39, Kia 41, MG 59, Tesla 93, XPENG 115, Zeekr 113, Polestar 110, Volvo 53); then `GET
+/Vehicle/Search` with a cookie jar, scrape `__RequestVerificationToken`, and `POST /Vehicle/Search` with
+`VehicleSearchParameterList[4].*` fields for a full results table including **the Test Cycle column**.
+**Must POST to the apex host** — the `www.` host 301s and the redirect turns the POST into a 411. This
+turned batch 7's "sample the ID space" into direct lookup and resolved 7 rows on its own. **The Test
+Cycle column matters:** GVG carries NEDC records too (Zeekr 7X id 37671 and BYD Dolphin Premium id 37766
+are both NEDC), so GVG is not automatically a WLTP source — check the column.
+
+**8. PLAYWRIGHT FOCUS-STEALING RECURRED AND WAS SEVERE — batch 6 logged it, batch 7 restated it, and it
+nearly corrupted a row this time.** A parallel agent navigated the Maserati agent's tab to
+`lotuscars.com` twice, once *between* a navigate and its evaluate. It was caught only because that agent
+had put an origin guard inside every evaluate:
+
+```js
+if (!/maserati\.com\/au/.test(location.href)) return { WRONG_PAGE: location.href };
+```
+
+**Without the guard this batch would have written Lotus Emeya specs into a Maserati row.** Make the guard
+standard for any wave running parallel browser agents, and prefer WebFetch/WebSearch where they suffice.
+
+**9. A MANUFACTURER'S OWN SITE CAN SERVE A STALE GRADE WALK ALONGSIDE A CURRENT ONE.** Lotus Australia's
+`/emeya/specifications` serves the superseded three-grade *Emeya / S / R* structure with July-2024 range
+bands, while `/emeya/models` on the same site carries the current five-trim **600 / 600 GT SE / 600 Sport
+SE / 900 Sport / 900 Sport Carbon** walk. The Eletre agent used `/specifications` and got *Base / S / R*;
+the Emeya agent found the trap and flagged it. **Checked directly rather than argued: `/eletre/models`
+carries the same 600/900 restructure, so the Eletre's grade names came from the stale page too.** They
+were kept anyway, and deliberately — **CarsGuide's 2026 Eletre price page names Base / S / R at exactly
+the written prices**, so the Australian retail channel still uses that naming and those are real sourced
+Australian prices. The two Lotus families therefore use different naming conventions in the dataset, each
+following its own best Australian evidence. Recorded so nobody "fixes" one to match the other.
+
+**10. THE TAIL IS UNREACHABLE, AND THIS WAS MEASURED RATHER THAN ASSUMED.** All four tail rows were
+searched against `calc/rank.js` across **648 filter combinations** (body type × seats × priority × price
+cap × minimum range) and **none appears in any top-five**. They are Pareto-dominated exactly as the
+restructured plan predicted. The render check for them was therefore component-level
+(`cardModel`/`renderCards`), not a shortlist check; the browser check proper was run against the *changed*
+families, confirming the XPeng G6 renders in the shortlist and that running costs moved up in the page's
+own JS context against live-served data. **Stating which kind of check ran matters more than claiming a
+uniform one.**
+
+**Two prompt claims that were wrong, continuing the pattern batches 4, 5, 7 and 8 logged.** The plan said
+the Eletre's "base $189,900 qualifies" — the figure is **$189,990**, traceable to CarsGuide and to
+CarExpert's price table, and $189,900 appears only in CarExpert's auto-generated FAQ block. And the
+`kia-ev9` premise in item 2. **A third near-miss:** the plan's expectation that Maserati would come off
+the market was well-argued and wrong.
 
 ## How to run a batch — paste this into a new session
 
