@@ -7,7 +7,7 @@
     "variant": "Air RWD",
     "bodyType": "SUV",
     "listPrice": 72660,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 582,
     "consumptionKwhPer100km": 15.9,
     "bootLitresSeatsUp": 480,
@@ -17,7 +17,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1750,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev6-gt-line-rwd",
@@ -27,7 +27,7 @@
     "variant": "GT-Line RWD",
     "bodyType": "SUV",
     "listPrice": 79660,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 560,
     "consumptionKwhPer100km": 16.9,
     "bootLitresSeatsUp": 480,
@@ -37,7 +37,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 2000,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev6-gt-line-awd",
@@ -47,7 +47,7 @@
     "variant": "GT-Line AWD",
     "bodyType": "SUV",
     "listPrice": 87660,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 522,
     "consumptionKwhPer100km": 17.7,
     "bootLitresSeatsUp": 480,
@@ -57,7 +57,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 2200,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev6-gt-awd",
@@ -67,7 +67,7 @@
     "variant": "GT AWD",
     "bodyType": "SUV",
     "listPrice": 99660,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 450,
     "consumptionKwhPer100km": 20.9,
     "bootLitresSeatsUp": 480,
@@ -77,6 +77,6 @@
     "warrantyYears": 7,
     "insuranceAnnual": 2600,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   }
 ]

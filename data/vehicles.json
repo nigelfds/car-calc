@@ -839,7 +839,7 @@
     "listPrice": 29990,
     "batteryKwh": 44.9,
     "rangeKm": 340,
-    "consumptionKwhPer100km": 13.2,
+    "consumptionKwhPer100km": 15.2,
     "bootLitresSeatsUp": 345,
     "bootLitresSeatsDown": 1310,
     "seats": 5,
@@ -854,7 +854,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "byd-dolphin-premium",
@@ -866,7 +866,7 @@
     "listPrice": 36990,
     "batteryKwh": 60.5,
     "rangeKm": 427,
-    "consumptionKwhPer100km": 14.2,
+    "consumptionKwhPer100km": 15.9,
     "bootLitresSeatsUp": 345,
     "bootLitresSeatsDown": 1310,
     "seats": 5,
@@ -881,7 +881,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "byd-seal-6-essential",
@@ -2725,7 +2725,7 @@
     "listPrice": 45000,
     "batteryKwh": 46,
     "rangeKm": 360,
-    "consumptionKwhPer100km": 14.7,
+    "consumptionKwhPer100km": 15.1,
     "bootLitresSeatsUp": 280,
     "bootLitresSeatsDown": 1059,
     "seats": 4,
@@ -2740,7 +2740,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-inster-cross-roof-basket",
@@ -2752,7 +2752,7 @@
     "listPrice": 45000,
     "batteryKwh": 46,
     "rangeKm": 293,
-    "consumptionKwhPer100km": 15.7,
+    "consumptionKwhPer100km": 18.8,
     "bootLitresSeatsUp": 280,
     "bootLitresSeatsDown": 1059,
     "seats": 4,
@@ -2767,7 +2767,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-inster-extended-range",
@@ -2779,7 +2779,7 @@
     "listPrice": 42500,
     "batteryKwh": 46,
     "rangeKm": 360,
-    "consumptionKwhPer100km": 14.7,
+    "consumptionKwhPer100km": 15.1,
     "bootLitresSeatsUp": 280,
     "bootLitresSeatsDown": 1059,
     "seats": 4,
@@ -2794,7 +2794,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-inster-standard-range",
@@ -2806,7 +2806,7 @@
     "listPrice": 39000,
     "batteryKwh": 39,
     "rangeKm": 327,
-    "consumptionKwhPer100km": 15.6,
+    "consumptionKwhPer100km": 14.3,
     "bootLitresSeatsUp": 280,
     "bootLitresSeatsDown": 1059,
     "seats": 4,
@@ -2821,7 +2821,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-5-elite-rwd",
@@ -2831,9 +2831,9 @@
     "variant": "Elite RWD",
     "bodyType": "SUV",
     "listPrice": 73200,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 530,
-    "consumptionKwhPer100km": 15.8,
+    "consumptionKwhPer100km": 17,
     "bootLitresSeatsUp": 527,
     "bootLitresSeatsDown": 1587,
     "seats": 5,
@@ -2848,7 +2848,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-5-n",
@@ -2858,9 +2858,9 @@
     "variant": "N",
     "bodyType": "SUV",
     "listPrice": 115000,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 448,
-    "consumptionKwhPer100km": 18.75,
+    "consumptionKwhPer100km": 21.2,
     "bootLitresSeatsUp": 480,
     "bootLitresSeatsDown": 1540,
     "seats": 5,
@@ -2875,7 +2875,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-5-n-line-premium-awd",
@@ -2885,9 +2885,9 @@
     "variant": "N Line Premium AWD",
     "bodyType": "SUV",
     "listPrice": 83700,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 495,
-    "consumptionKwhPer100km": 17,
+    "consumptionKwhPer100km": 18.1,
     "bootLitresSeatsUp": 520,
     "bootLitresSeatsDown": 1580,
     "seats": 5,
@@ -2902,7 +2902,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-5-rwd",
@@ -2912,9 +2912,9 @@
     "variant": "RWD",
     "bodyType": "SUV",
     "listPrice": 68200,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 570,
-    "consumptionKwhPer100km": 14.7,
+    "consumptionKwhPer100km": 16,
     "bootLitresSeatsUp": 527,
     "bootLitresSeatsDown": 1587,
     "seats": 5,
@@ -2929,7 +2929,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-6-n",
@@ -2939,7 +2939,7 @@
     "variant": "N",
     "bodyType": "Sedan",
     "listPrice": 115000,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 487,
     "consumptionKwhPer100km": 18.7,
     "bootLitresSeatsUp": 371,
@@ -2956,7 +2956,7 @@
       0.46,
       0.4
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-9-calligraphy-awd",
@@ -3740,7 +3740,7 @@
     "variant": "Air RWD",
     "bodyType": "SUV",
     "listPrice": 72660,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 582,
     "consumptionKwhPer100km": 15.9,
     "bootLitresSeatsUp": 480,
@@ -3757,7 +3757,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev6-gt-awd",
@@ -3767,7 +3767,7 @@
     "variant": "GT AWD",
     "bodyType": "SUV",
     "listPrice": 99660,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 450,
     "consumptionKwhPer100km": 20.9,
     "bootLitresSeatsUp": 480,
@@ -3784,7 +3784,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev6-gt-line-awd",
@@ -3794,7 +3794,7 @@
     "variant": "GT-Line AWD",
     "bodyType": "SUV",
     "listPrice": 87660,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 522,
     "consumptionKwhPer100km": 17.7,
     "bootLitresSeatsUp": 480,
@@ -3811,7 +3811,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev6-gt-line-rwd",
@@ -3821,7 +3821,7 @@
     "variant": "GT-Line RWD",
     "bodyType": "SUV",
     "listPrice": 79660,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 560,
     "consumptionKwhPer100km": 16.9,
     "bootLitresSeatsUp": 480,
@@ -3838,7 +3838,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev9-air-rwd",
@@ -3848,9 +3848,9 @@
     "variant": "Air RWD",
     "bodyType": "SUV",
     "listPrice": 97000,
-    "batteryKwh": 76.1,
+    "batteryKwh": 73,
     "rangeKm": 443,
-    "consumptionKwhPer100km": 17.2,
+    "consumptionKwhPer100km": 19.5,
     "bootLitresSeatsUp": 333,
     "bootLitresSeatsDown": 2318,
     "seats": 7,
@@ -3865,7 +3865,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev9-earth-awd",
@@ -3875,9 +3875,9 @@
     "variant": "Earth AWD",
     "bodyType": "SUV",
     "listPrice": 106500,
-    "batteryKwh": 99.8,
-    "rangeKm": 521,
-    "consumptionKwhPer100km": 19.2,
+    "batteryKwh": 96,
+    "rangeKm": 512,
+    "consumptionKwhPer100km": 22.3,
     "bootLitresSeatsUp": 333,
     "bootLitresSeatsDown": 2318,
     "seats": 7,
@@ -3892,7 +3892,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev9-gt-awd",
@@ -3902,9 +3902,9 @@
     "variant": "GT AWD",
     "bodyType": "SUV",
     "listPrice": 129250,
-    "batteryKwh": 99.8,
+    "batteryKwh": 96,
     "rangeKm": 510,
-    "consumptionKwhPer100km": 19.6,
+    "consumptionKwhPer100km": 21.7,
     "bootLitresSeatsUp": 333,
     "bootLitresSeatsDown": 2318,
     "seats": 6,
@@ -3919,7 +3919,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-ev9-gt-line-awd",
@@ -3929,9 +3929,9 @@
     "variant": "GT-Line AWD",
     "bodyType": "SUV",
     "listPrice": 121000,
-    "batteryKwh": 99.8,
+    "batteryKwh": 96,
     "rangeKm": 505,
-    "consumptionKwhPer100km": 19.8,
+    "consumptionKwhPer100km": 22.8,
     "bootLitresSeatsUp": 333,
     "bootLitresSeatsDown": 2318,
     "seats": 7,
@@ -3946,7 +3946,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "kia-sorento-phev-gt-line-awd",
@@ -4483,6 +4483,114 @@
       0.33
     ],
     "sourcedAt": "2026-07-31"
+  },
+  {
+    "id": "lotus-eletre-base",
+    "familyId": "lotus-eletre",
+    "make": "Lotus",
+    "model": "Eletre",
+    "variant": "Base",
+    "bodyType": "SUV",
+    "listPrice": 189990,
+    "batteryKwh": 109,
+    "rangeKm": 600,
+    "consumptionKwhPer100km": 21.4,
+    "bootLitresSeatsUp": 688,
+    "bootLitresSeatsDown": 1532,
+    "seats": 5,
+    "towKg": 2250,
+    "warrantyYears": 5,
+    "insuranceAnnual": 4600,
+    "depreciationCurve": [
+      1,
+      0.55,
+      0.43,
+      0.35,
+      0.29,
+      0.24
+    ],
+    "sourcedAt": "2026-08-08"
+  },
+  {
+    "id": "lotus-eletre-s",
+    "familyId": "lotus-eletre",
+    "make": "Lotus",
+    "model": "Eletre",
+    "variant": "S",
+    "bodyType": "SUV",
+    "listPrice": 229990,
+    "batteryKwh": 109,
+    "rangeKm": 535,
+    "consumptionKwhPer100km": 21.4,
+    "bootLitresSeatsUp": 688,
+    "bootLitresSeatsDown": 1532,
+    "seats": 5,
+    "towKg": 2250,
+    "warrantyYears": 5,
+    "insuranceAnnual": 5100,
+    "depreciationCurve": [
+      1,
+      0.53,
+      0.41,
+      0.33,
+      0.27,
+      0.22
+    ],
+    "sourcedAt": "2026-08-08"
+  },
+  {
+    "id": "lotus-emeya-600",
+    "familyId": "lotus-emeya",
+    "make": "Lotus",
+    "model": "Emeya",
+    "variant": "600",
+    "bodyType": "Sedan",
+    "listPrice": 177990,
+    "batteryKwh": 98.9,
+    "rangeKm": 580,
+    "consumptionKwhPer100km": 18.7,
+    "bootLitresSeatsUp": 509,
+    "bootLitresSeatsDown": 1388,
+    "seats": 5,
+    "towKg": 2250,
+    "warrantyYears": 5,
+    "insuranceAnnual": 4600,
+    "depreciationCurve": [
+      1,
+      0.55,
+      0.42,
+      0.33,
+      0.26,
+      0.21
+    ],
+    "sourcedAt": "2026-08-08"
+  },
+  {
+    "id": "maserati-grecale-folgore-folgore",
+    "familyId": "maserati-grecale-folgore",
+    "make": "Maserati",
+    "model": "Grecale",
+    "variant": "Folgore",
+    "bodyType": "SUV",
+    "listPrice": 207500,
+    "batteryKwh": 96,
+    "rangeKm": 501,
+    "consumptionKwhPer100km": 24,
+    "bootLitresSeatsUp": 535,
+    "bootLitresSeatsDown": 1070,
+    "seats": 5,
+    "towKg": 1800,
+    "warrantyYears": 3,
+    "insuranceAnnual": 5200,
+    "depreciationCurve": [
+      1,
+      0.54,
+      0.42,
+      0.33,
+      0.27,
+      0.22
+    ],
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "mazda-6e-atenza",
@@ -7051,7 +7159,7 @@
     "listPrice": 80900,
     "batteryKwh": 79,
     "rangeKm": 571,
-    "consumptionKwhPer100km": 14.4,
+    "consumptionKwhPer100km": 16.5,
     "bootLitresSeatsUp": 682,
     "bootLitresSeatsDown": 950,
     "seats": 5,
@@ -7066,7 +7174,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "tesla-model-3-rwd",
@@ -7078,7 +7186,7 @@
     "listPrice": 54900,
     "batteryKwh": 62.5,
     "rangeKm": 520,
-    "consumptionKwhPer100km": 12,
+    "consumptionKwhPer100km": 13.8,
     "bootLitresSeatsUp": 682,
     "bootLitresSeatsDown": 950,
     "seats": 5,
@@ -7093,7 +7201,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "tesla-model-y-l-premium-awd",
@@ -8053,7 +8161,7 @@
     "listPrice": 56800,
     "batteryKwh": 80.8,
     "rangeKm": 525,
-    "consumptionKwhPer100km": 15.4,
+    "consumptionKwhPer100km": 17.9,
     "bootLitresSeatsUp": 571,
     "bootLitresSeatsDown": 1374,
     "seats": 5,
@@ -8068,7 +8176,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "xpeng-g6-performance",
@@ -8080,7 +8188,7 @@
     "listPrice": 63800,
     "batteryKwh": 80.8,
     "rangeKm": 510,
-    "consumptionKwhPer100km": 15.8,
+    "consumptionKwhPer100km": 18.4,
     "bootLitresSeatsUp": 571,
     "bootLitresSeatsDown": 1374,
     "seats": 5,
@@ -8095,7 +8203,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "xpeng-g6-performance-black-edition",
@@ -8107,7 +8215,7 @@
     "listPrice": 66800,
     "batteryKwh": 80.8,
     "rangeKm": 510,
-    "consumptionKwhPer100km": 15.8,
+    "consumptionKwhPer100km": 18.4,
     "bootLitresSeatsUp": 571,
     "bootLitresSeatsDown": 1374,
     "seats": 5,
@@ -8122,7 +8230,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "xpeng-g6-standard-range",
@@ -8134,7 +8242,7 @@
     "listPrice": 51800,
     "batteryKwh": 68.5,
     "rangeKm": 480,
-    "consumptionKwhPer100km": 14.3,
+    "consumptionKwhPer100km": 16.6,
     "bootLitresSeatsUp": 571,
     "bootLitresSeatsDown": 1374,
     "seats": 5,
@@ -8149,7 +8257,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "zeekr-7x-long-range-rwd",
@@ -8161,7 +8269,7 @@
     "listPrice": 63900,
     "batteryKwh": 95,
     "rangeKm": 615,
-    "consumptionKwhPer100km": 15.4,
+    "consumptionKwhPer100km": 17.7,
     "bootLitresSeatsUp": 539,
     "bootLitresSeatsDown": 1978,
     "seats": 5,
@@ -8176,7 +8284,7 @@
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "zeekr-7x-performance-awd",
@@ -8188,7 +8296,7 @@
     "listPrice": 72900,
     "batteryKwh": 95,
     "rangeKm": 543,
-    "consumptionKwhPer100km": 17.5,
+    "consumptionKwhPer100km": 19.9,
     "bootLitresSeatsUp": 539,
     "bootLitresSeatsDown": 1978,
     "seats": 5,
@@ -8203,7 +8311,7 @@
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "zeekr-7x-performance-black-special-edition",
@@ -8215,7 +8323,7 @@
     "listPrice": 75900,
     "batteryKwh": 95,
     "rangeKm": 543,
-    "consumptionKwhPer100km": 17.5,
+    "consumptionKwhPer100km": 19.9,
     "bootLitresSeatsUp": 539,
     "bootLitresSeatsDown": 1978,
     "seats": 5,
@@ -8230,7 +8338,7 @@
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "zeekr-7x-rwd",
@@ -8242,7 +8350,7 @@
     "listPrice": 57900,
     "batteryKwh": 71,
     "rangeKm": 480,
-    "consumptionKwhPer100km": 14.8,
+    "consumptionKwhPer100km": 17.8,
     "bootLitresSeatsUp": 539,
     "bootLitresSeatsDown": 1978,
     "seats": 5,
@@ -8257,7 +8365,7 @@
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "zeekr-x-performance-awd",

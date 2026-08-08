@@ -7,9 +7,9 @@
     "variant": "RWD",
     "bodyType": "SUV",
     "listPrice": 68200,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 570,
-    "consumptionKwhPer100km": 14.7,
+    "consumptionKwhPer100km": 16.0,
     "bootLitresSeatsUp": 527,
     "bootLitresSeatsDown": 1587,
     "seats": 5,
@@ -17,7 +17,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1550,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-5-elite-rwd",
@@ -27,9 +27,9 @@
     "variant": "Elite RWD",
     "bodyType": "SUV",
     "listPrice": 73200,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 530,
-    "consumptionKwhPer100km": 15.8,
+    "consumptionKwhPer100km": 17.0,
     "bootLitresSeatsUp": 527,
     "bootLitresSeatsDown": 1587,
     "seats": 5,
@@ -37,7 +37,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1700,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-5-n-line-premium-awd",
@@ -47,9 +47,9 @@
     "variant": "N Line Premium AWD",
     "bodyType": "SUV",
     "listPrice": 83700,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 495,
-    "consumptionKwhPer100km": 17.0,
+    "consumptionKwhPer100km": 18.1,
     "bootLitresSeatsUp": 520,
     "bootLitresSeatsDown": 1580,
     "seats": 5,
@@ -57,7 +57,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 2000,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-ioniq-5-n",
@@ -67,9 +67,9 @@
     "variant": "N",
     "bodyType": "SUV",
     "listPrice": 115000,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 448,
-    "consumptionKwhPer100km": 18.75,
+    "consumptionKwhPer100km": 21.2,
     "bootLitresSeatsUp": 480,
     "bootLitresSeatsDown": 1540,
     "seats": 5,
@@ -77,6 +77,6 @@
     "warrantyYears": 5,
     "insuranceAnnual": 2750,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   }
 ]

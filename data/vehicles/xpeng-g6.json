@@ -9,7 +9,7 @@
     "listPrice": 51800,
     "batteryKwh": 68.5,
     "rangeKm": 480,
-    "consumptionKwhPer100km": 14.3,
+    "consumptionKwhPer100km": 16.6,
     "bootLitresSeatsUp": 571,
     "bootLitresSeatsDown": 1374,
     "seats": 5,
@@ -17,7 +17,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1750,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "xpeng-g6-long-range",
@@ -29,7 +29,7 @@
     "listPrice": 56800,
     "batteryKwh": 80.8,
     "rangeKm": 525,
-    "consumptionKwhPer100km": 15.4,
+    "consumptionKwhPer100km": 17.9,
     "bootLitresSeatsUp": 571,
     "bootLitresSeatsDown": 1374,
     "seats": 5,
@@ -37,7 +37,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1900,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "xpeng-g6-performance",
@@ -49,7 +49,7 @@
     "listPrice": 63800,
     "batteryKwh": 80.8,
     "rangeKm": 510,
-    "consumptionKwhPer100km": 15.8,
+    "consumptionKwhPer100km": 18.4,
     "bootLitresSeatsUp": 571,
     "bootLitresSeatsDown": 1374,
     "seats": 5,
@@ -57,7 +57,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 2100,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "xpeng-g6-performance-black-edition",
@@ -69,7 +69,7 @@
     "listPrice": 66800,
     "batteryKwh": 80.8,
     "rangeKm": 510,
-    "consumptionKwhPer100km": 15.8,
+    "consumptionKwhPer100km": 18.4,
     "bootLitresSeatsUp": 571,
     "bootLitresSeatsDown": 1374,
     "seats": 5,
@@ -77,6 +77,6 @@
     "warrantyYears": 7,
     "insuranceAnnual": 2200,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   }
 ]

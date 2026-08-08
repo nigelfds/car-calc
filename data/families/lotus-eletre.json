@@ -1,0 +1,30 @@
+{
+  "id": "lotus-eletre",
+  "summary": "Lotus's first SUV is a 2.5-tonne, 450kW-to-675kW electric hyper-SUV that Australian reviewers rate genuinely well — CarExpert called it \"really, ridiculously good\" and praised air suspension that stays composed on coarse country roads — but CarsGuide scored it only 7.2 out of 10 and flagged limited cabin practicality and a driving character that no longer resembles a Lotus. A MY25 factory price cut of $49,010 to $35,010 a variant transformed the value case, dropping the entry car from $239,000 to $189,990, and it is that repricing rather than the engineering that reviewers now credit for making it competitive. The unresolved risk is ownership rather than the car: Lotus sold 12 Eletres in Australia in 2024, nine in 2025 and three to date in 2026, through a five-showroom network, so parts, resale and service depth are all unproven.",
+  "pros": [
+    "Cut by $49,010 in MY25 — the entry Eletre fell from $239,000 to $189,990 before on-roads, undercutting a BMW iX M60 and Lamborghini Urus while offering 450kW and 4.5sec to 100km/h",
+    "800V architecture takes 350kW DC for a 10-80 per cent charge in about 20 minutes, well ahead of the 400V Audi SQ8 e-tron and Mercedes-AMG EQE SUV it is cross-shopped against",
+    "688-litre boot expanding to 1,532 litres and a 2,250kg braked tow rating, which is more than the BMW iX or Polestar 3 will pull",
+    "CarExpert rates the Unreal Engine 5 infotainment as \"one of the best infotainment experiences available\", ahead of Tesla's, backed by a 23-speaker 2,160W KEF system on the S",
+    "Two-year/30,000km service intervals with only cabin filter and brake fluid as mandatory replacements, so scheduled maintenance is unusually light for the price bracket"
+  ],
+  "cons": [
+    "CarExpert recorded 340km from a full charge in hard driving against a 490km WLTP claim on the R, so the 600km and 535km figures on these grades will not survive highway use",
+    "Lotus has no capped-price servicing in Australia and distributes through only five Simply Sports Cars showrooms, so warranty and repair access is thin outside the capitals",
+    "Resale is the weakest part of the case: 24 Eletres were sold new in Australia across 2024 and 2025 combined, and the MY25 price cut wiped up to $49,010 off MY24 cars overnight",
+    "Standard brakes are judged inadequate for the performance — CarExpert recommends the $32,199 carbon-ceramic upgrade, and options escalate a car that already carries heavy unrecoverable Luxury Car Tax",
+    "The flagship Eletre R at $279,990 sits above this calculator's modelling ceiling, and neither S nor base qualifies for the FBT exemption, so novated leasing offers no relief on any grade"
+  ],
+  "sources": [
+    "https://www.lotuscars.com/en-AU/eletre/specifications",
+    "https://www.carexpert.com.au/car-news/2025-lotus-eletre-price-and-specs-massive-price-cuts-for-electric-suv",
+    "https://www.carsguide.com.au/lotus/eletre/price/2026",
+    "https://www.carexpert.com.au/car-reviews/2024-lotus-eletre-review",
+    "https://www.carexpert.com.au/car-reviews/2025-lotus-eletre-review-quick-drive",
+    "https://www.carsguide.com.au/ev/lotus-eletre-95066",
+    "https://www.carexpert.com.au/lotus/eletre/2026",
+    "https://www.goauto.com.au/new-models/lotus/eletre/australian-lotus-eletre-pricing-announced/2023-09-12/91937.html",
+    "https://ev-database.org/uk/car/1768/Lotus-Eletre-R"
+  ],
+  "sourcedAt": "2026-08-08"
+}

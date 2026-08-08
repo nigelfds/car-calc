@@ -1,0 +1,22 @@
+[
+  {
+    "id": "maserati-grecale-folgore-folgore",
+    "familyId": "maserati-grecale-folgore",
+    "make": "Maserati",
+    "model": "Grecale",
+    "variant": "Folgore",
+    "bodyType": "SUV",
+    "listPrice": 207500,
+    "batteryKwh": 96,
+    "rangeKm": 501,
+    "consumptionKwhPer100km": 24,
+    "bootLitresSeatsUp": 535,
+    "bootLitresSeatsDown": 1070,
+    "seats": 5,
+    "towKg": 1800,
+    "warrantyYears": 3,
+    "insuranceAnnual": 5200,
+    "depreciationCurve": [1, 0.54, 0.42, 0.33, 0.27, 0.22],
+    "sourcedAt": "2026-08-08"
+  }
+]

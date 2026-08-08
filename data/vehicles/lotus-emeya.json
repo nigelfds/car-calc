@@ -1,0 +1,22 @@
+[
+  {
+    "id": "lotus-emeya-600",
+    "familyId": "lotus-emeya",
+    "make": "Lotus",
+    "model": "Emeya",
+    "variant": "600",
+    "bodyType": "Sedan",
+    "listPrice": 177990,
+    "batteryKwh": 98.9,
+    "rangeKm": 580,
+    "consumptionKwhPer100km": 18.7,
+    "bootLitresSeatsUp": 509,
+    "bootLitresSeatsDown": 1388,
+    "seats": 5,
+    "towKg": 2250,
+    "warrantyYears": 5,
+    "insuranceAnnual": 4600,
+    "depreciationCurve": [1, 0.55, 0.42, 0.33, 0.26, 0.21],
+    "sourcedAt": "2026-08-08"
+  }
+]

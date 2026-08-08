@@ -9,7 +9,7 @@
     "listPrice": 39000,
     "batteryKwh": 39,
     "rangeKm": 327,
-    "consumptionKwhPer100km": 15.6,
+    "consumptionKwhPer100km": 14.3,
     "bootLitresSeatsUp": 280,
     "bootLitresSeatsDown": 1059,
     "seats": 4,
@@ -17,7 +17,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1300,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-inster-extended-range",
@@ -29,7 +29,7 @@
     "listPrice": 42500,
     "batteryKwh": 46,
     "rangeKm": 360,
-    "consumptionKwhPer100km": 14.7,
+    "consumptionKwhPer100km": 15.1,
     "bootLitresSeatsUp": 280,
     "bootLitresSeatsDown": 1059,
     "seats": 4,
@@ -37,7 +37,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1350,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-inster-cross",
@@ -49,7 +49,7 @@
     "listPrice": 45000,
     "batteryKwh": 46,
     "rangeKm": 360,
-    "consumptionKwhPer100km": 14.7,
+    "consumptionKwhPer100km": 15.1,
     "bootLitresSeatsUp": 280,
     "bootLitresSeatsDown": 1059,
     "seats": 4,
@@ -57,7 +57,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1400,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "hyundai-inster-cross-roof-basket",
@@ -69,7 +69,7 @@
     "listPrice": 45000,
     "batteryKwh": 46,
     "rangeKm": 293,
-    "consumptionKwhPer100km": 15.7,
+    "consumptionKwhPer100km": 18.8,
     "bootLitresSeatsUp": 280,
     "bootLitresSeatsDown": 1059,
     "seats": 4,
@@ -77,6 +77,6 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1400,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   }
 ]

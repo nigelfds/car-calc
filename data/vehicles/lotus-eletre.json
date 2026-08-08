@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lotus-eletre-base",
+    "familyId": "lotus-eletre",
+    "make": "Lotus",
+    "model": "Eletre",
+    "variant": "Base",
+    "bodyType": "SUV",
+    "listPrice": 189990,
+    "batteryKwh": 109,
+    "rangeKm": 600,
+    "consumptionKwhPer100km": 21.4,
+    "bootLitresSeatsUp": 688,
+    "bootLitresSeatsDown": 1532,
+    "seats": 5,
+    "towKg": 2250,
+    "warrantyYears": 5,
+    "insuranceAnnual": 4600,
+    "depreciationCurve": [1, 0.55, 0.43, 0.35, 0.29, 0.24],
+    "sourcedAt": "2026-08-08"
+  },
+  {
+    "id": "lotus-eletre-s",
+    "familyId": "lotus-eletre",
+    "make": "Lotus",
+    "model": "Eletre",
+    "variant": "S",
+    "bodyType": "SUV",
+    "listPrice": 229990,
+    "batteryKwh": 109,
+    "rangeKm": 535,
+    "consumptionKwhPer100km": 21.4,
+    "bootLitresSeatsUp": 688,
+    "bootLitresSeatsDown": 1532,
+    "seats": 5,
+    "towKg": 2250,
+    "warrantyYears": 5,
+    "insuranceAnnual": 5100,
+    "depreciationCurve": [1, 0.53, 0.41, 0.33, 0.27, 0.22],
+    "sourcedAt": "2026-08-08"
+  }
+]

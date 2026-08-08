@@ -9,7 +9,7 @@
     "listPrice": 54900,
     "batteryKwh": 62.5,
     "rangeKm": 520,
-    "consumptionKwhPer100km": 12.0,
+    "consumptionKwhPer100km": 13.8,
     "bootLitresSeatsUp": 682,
     "bootLitresSeatsDown": 950,
     "seats": 5,
@@ -17,7 +17,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 2600,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "tesla-model-3-long-range-rwd",
@@ -49,7 +49,7 @@
     "listPrice": 80900,
     "batteryKwh": 79,
     "rangeKm": 571,
-    "consumptionKwhPer100km": 14.4,
+    "consumptionKwhPer100km": 16.5,
     "bootLitresSeatsUp": 682,
     "bootLitresSeatsDown": 950,
     "seats": 5,
@@ -57,6 +57,6 @@
     "warrantyYears": 5,
     "insuranceAnnual": 3200,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-08-08"
   }
 ]

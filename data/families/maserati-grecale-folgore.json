@@ -1,0 +1,30 @@
+{
+  "id": "maserati-grecale-folgore",
+  "summary": "The Grecale Folgore is Maserati's first electric SUV and the fourth grade in an Australian Grecale range that is otherwise petrol and mild-hybrid, at $207,500 before on-road costs against $119,900 for the entry GT. Reviewers agree on the cabin and the pace — 410kW/820Nm and 4.1 seconds make it comfortably quicker than an entry Porsche Macan Electric — but split hard on whether the engineering justifies the money, with CarExpert calling it \"oddly compromised\" for its stiff ride, torque steer and 400V charging in a class that has moved to 800V. The bigger caution for an Australian buyer is commercial rather than dynamic: Maserati delivered just 101 cars nationally in the first half of 2026, and the car sold here is the pre-facelift version, with the longer-range MY26 update not due until early 2027.",
+  "pros": [
+    "410kW/820Nm and 0-100km/h in 4.1 seconds — CarExpert notes it has more power and torque than the entry Macan 4 Electric and is a full 1.5 seconds quicker to 100km/h",
+    "501km WLTP from a 96kWh usable pack, which is more certified range than a Genesis GV70 Electrified (462km) or a Polestar 3 Performance (593km is the exception, not the rule at this power level)",
+    "22kW AC onboard charging is double the 11kW almost every rival fits, so a three-phase home or destination charger refills it roughly twice as fast overnight",
+    "Rated to tow 1800kg braked, where most performance EV SUVs at this price are rated well under that or not at all",
+    "Maserati includes a home wallbox with the car, and the Econyl regenerated-nylon interior and 12.3-inch infotainment come standard rather than as option boxes"
+  ],
+  "cons": [
+    "400V architecture caps DC charging at 150kW and takes 29 minutes for 20-80 per cent, where the 800V Porsche Macan Electric, Hyundai Ioniq 5 and Kia EV6 do 10-80 per cent in 22 minutes or less",
+    "CarExpert's Australian review records a \"stiff and brittle\" ride and torque steer on uneven surfaces, concluding the car feels \"oddly compromised\" next to the Porsche Macan Electric",
+    "Three-year warranty is the unconditional term — half of Kia's and BYD's, and two years short of the five that BMW, Mercedes-Benz and Genesis give as standard at this price",
+    "Maserati sold 101 vehicles in Australia across the whole range in the first half of 2026, down 33.1 per cent, so the dealer and service network is tiny and resale support is thin",
+    "Australia gets the pre-facelift car: the MY26 update that lifts range to 580km and adds an AWD-disconnect and battery preconditioning is not expected here until early 2027, dating the car a buyer signs for now"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2024-maserati-grecale-folgore-review",
+    "https://www.carexpert.com.au/maserati/grecale/2025--jsgsos8s20250617",
+    "https://www.carexpert.com.au/car-news/the-biggest-winners-and-losers-on-the-australian-new-vehicle-sales-charts-so-far-in-2026",
+    "https://www.carexpert.com.au/car-news/maseratis-refreshed-lineup-brings-more-v6-power-more-ev-range",
+    "https://www.carsales.com.au/editorial/details/maserati-expands-grecale-suv-lineup-152285/",
+    "https://www.maserati.com/au/en/models/grecale/grecale-folgore",
+    "https://www.maserati.com/au/en/shopping-tools/configurator",
+    "https://ev-database.org/car/1843/Maserati-Grecale-Folgore",
+    "https://www.arenaev.com/maserati_grecale_folgore_review-news-3857.php"
+  ],
+  "sourcedAt": "2026-08-08"
+}

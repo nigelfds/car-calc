@@ -7,7 +7,7 @@
     "variant": "N",
     "bodyType": "Sedan",
     "listPrice": 115000,
-    "batteryKwh": 84,
+    "batteryKwh": 80,
     "rangeKm": 487,
     "consumptionKwhPer100km": 18.7,
     "bootLitresSeatsUp": 371,
@@ -24,6 +24,6 @@
       0.46,
       0.4
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-08-08"
   }
 ]

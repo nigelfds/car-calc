@@ -32,7 +32,14 @@
       "https://www.chasingcars.com.au/news/new-car-prices/alfa-romeo-junior-hybrid-and-ev-2026-finally-arrives-to-take-on-the-mini-aceman-and-lexus-lbx/",
       "https://ev-database.org/car/2184/Alfa-Romeo-Junior-Elettrica-54-kWh"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "alfa-romeo-junior-elettrica.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_Junior_IMG_0474_(cropped).jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "audi-q4-e-tron",
@@ -94,7 +101,14 @@
       "https://www.auto-data.net/en/audi-q5-iii-gu-2.0-tfsi-367hp-e-hybrid-quattro-ultra-s-tronic-54561",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "audi-q5-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Audi_Q5_Sportback_GU_DSC_9270.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "audi-q6-e-tron",
@@ -125,7 +139,14 @@
       "https://www.carsguide.com.au/ev/audi-q6-e-tron-sportback-100145",
       "https://www.carsguide.com.au/audi/q6-e-tron/price/2026"
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-08-01",
+    "image": {
+      "file": "audi-q6-e-tron.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_Sportback_DSC_9276.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "bmw-i4",
@@ -148,7 +169,14 @@
       "https://www.carsguide.com.au/bmw/i-series/i4",
       "https://evcentral.com.au/bmw-i4-range-trimmed-in-australia-popular-lct-busting-edrive35-updated-but-more-expensive-models-follow-ice-4-series-out-the-door/"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "bmw-i4.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BMW_i4_IAA_2021_1X7A0307.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "bmw-i5",
@@ -202,7 +230,14 @@
       "https://www.carexpert.com.au/bmw/ix/2026/price-and-specs",
       "https://www.press.bmwgroup.com/global/article/detail/T0447642EN/the-new-bmw-ix?language=en"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "bmw-ix.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BMW_iX_IAA_2021_1X7A0204.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "bmw-ix1",
@@ -225,7 +260,14 @@
       "https://www.carexpert.com.au/car-news/2026-carexpert-choice-winner-best-ev-small-suv",
       "https://zecar.com/reviews/bmw-ix1-ix2-price-cut-range-boost-2026"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "bmw-ix1.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BMW_iX1_1X7A6827.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "bmw-ix2",
@@ -282,7 +324,14 @@
       "https://zecar.com/reviews/2026-bmw-ix3-price-specs-australia",
       "https://www.batterydesign.net/bmw-ix3-neue-klasse-battery/"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "bmw-ix3.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BMW_iX3_NA5_IAA_2025_DSC_1684.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "bmw-x1-phev",
@@ -314,7 +363,14 @@
       "https://www.bmw.com.au/en/models/x-series/x1/bmw-x1.html",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "bmw-x1-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2018_BMW_X1_sDrive18i_xLine_1.5_Front.jpg",
+      "author": "Vauxford",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "bmw-x3-phev",
@@ -345,7 +401,14 @@
       "https://www.bmwblog.com/2024/06/18/2025-bmw-x3-plug-in-hybrid-specs/",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "bmw-x3-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BMW_G45_X3_M50_DSC_8805.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "byd-atto1",
@@ -374,7 +437,14 @@
       "https://www.carsales.com.au/research/byd/atto-1/",
       "https://evcentral.com.au/2025-byd-atto-1-premium-australias-cheapest-ev-is-also-a-decent-city-car-with-clever-design-and-real-driving-character-but-will-anyone-buy-it/"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "byd-atto1.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_Surf_IMG_3808.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as BYD Dolphin Surf."
+    }
   },
   {
     "id": "byd-atto2",
@@ -406,7 +476,14 @@
       "https://bydautomotive.com.au/atto-2",
       "https://zecar.com/reviews/2026-byd-atto-2-price-specs-australia-cheapest-electric-suv"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "byd-atto2.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BYD_Atto_2_DSC_8763.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "byd-atto3",
@@ -438,7 +515,14 @@
       "https://bydautomotive.com.au/atto-3",
       "https://evdepreciation.com/byd-atto-3-depreciation-australia-2025-review/"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "byd-atto3.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BYD_Atto_3_1X7A6495.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "byd-dolphin",
@@ -466,7 +550,14 @@
       "https://zecar.com/electric-vehicles/byd/dolphin/2023/premium",
       "https://www.carexpert.com.au/car-news/byd-importer-puts-electric-car-depreciation-in-the-spotlight"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "byd-dolphin.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_IAA_2023_1X7A0634.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "byd-seal",
@@ -488,7 +579,14 @@
       "https://www.carsguide.com.au/byd/seal/boot-space",
       "https://www.carexpert.com.au/car-news/byd-importer-puts-electric-car-depreciation-in-the-spotlight"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "byd-seal.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BYD_Seal_U_IAA_2023_1X7A0045.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "byd-seal-6",
@@ -522,7 +620,14 @@
       "https://www.autocar.co.uk/car-review/byd/seal-6",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "byd-seal-6.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BYD_Seal_6_DM-i_Touring_IAA_2025_DSC_2249.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "byd-sealion-5",
@@ -557,7 +662,14 @@
       "https://bydukmedia.com/en/models/byd-sealion-5-dm-i.html",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "byd-sealion-5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_05_DM-i_facelift_001.jpg",
+      "author": "KitsuneDP",
+      "licence": "CC0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "byd-sealion-6",
@@ -588,7 +700,14 @@
       "https://bydautomotive.com.au/sealion-6",
       "https://www.goauto.com.au/car-reviews/byd/sealion-6/2025-byd-sealion-essential-review/2025-07-31/96977.html"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "byd-sealion-6.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%91%D1%83%D1%85%D0%B0%D1%80%D0%B0,_BYD_Song_Plus_%D0%BD%D0%B0_%D0%A0%D1%83%D1%88%D0%BD%D0%BE%D0%B8-%D0%9D%D0%B0%D0%BC%D0%B0%D0%B7%D0%B3%D0%BE%D1%85%D0%B5.jpg",
+      "author": "Nikolai Bulykin",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as BYD Song Plus."
+    }
   },
   {
     "id": "byd-sealion-7",
@@ -614,7 +733,14 @@
       "https://bydautomotive.com.au/sealion-7",
       "https://www.greenvehicleguide.gov.au/Vehicle/ViewVehicle?vehicleDisplayIdList=34397%3A34398"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "byd-sealion-7.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_07_EV_DSC_8264.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "byd-sealion-8",
@@ -677,7 +803,14 @@
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
       "https://en.wikipedia.org/wiki/BYD_Shark_6"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "byd-shark-6.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2024_BYD_Shark_6_DMO_front_view.png",
+      "author": "iMoD Official",
+      "licence": "CC BY 3.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "cadillac-lyriq",
@@ -708,7 +841,14 @@
       "https://www.carsales.com.au/editorial/details/cadillac-lyriq-2025-review-147540/",
       "https://www.carexpert.com.au/car-news/cadillac-to-expand-ev-dealer-network-across-australia-and-new-zealand"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "cadillac-lyriq.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Lyriq,_Frankfurt_(PANA1089).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "cadillac-optiq",
@@ -737,7 +877,14 @@
       "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and",
       "https://thedriven.io/2026/06/05/cadillac-is-back-with-a-very-different-electric-pitch-for-australian-buyers/"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "cadillac-optiq.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Optiq_Auto_Zuerich_2025_DSC_3328.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "cadillac-vistiq",
@@ -764,7 +911,14 @@
       "https://www.carsales.com.au/editorial/details/2026-cadillac-vistiq-priced-for-oz-151515/",
       "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "cadillac-vistiq.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Vistiq_Auto_Zuerich_2025_DSC_3016.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "chery-omoda-e5",
@@ -790,7 +944,14 @@
       "https://www.theautoexec.com/australasia/drive/2025/09/01/2026-chery-e5-price-and-specs-electric-suv-gets-smaller-battery-same-driving-range/",
       "https://thebeep.com.au/cars/chery/e5"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "chery-omoda-e5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Chery_E5.jpg",
+      "author": "Rutger van der Maar",
+      "licence": "CC BY 2.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "chery-tiggo-7-phev",
@@ -827,7 +988,14 @@
       "https://cherymotor.com.au/news/cherys-tiggo-7-tiggo-8-awarded-five-star-ancap-rating",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "chery-tiggo-7-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_7_Back_IMG_0391.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "chery-tiggo-8-phev",
@@ -901,7 +1069,14 @@
       "https://data.carnewschina.com/database/chery/chery-tiggo-9-c-dm/2026/params",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "chery-tiggo-9-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_9_001.jpg",
+      "author": "JustAnotherCarDesigner",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "cupra-formentor-phev",
@@ -932,7 +1107,14 @@
       "https://www.carexpert.com.au/car-news/the-biggest-winners-and-losers-on-the-australian-new-vehicle-sales-charts-so-far-in-2026",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "cupra-formentor-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cupra_Formentor_VZ5_1X7A6987.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "cupra-tavascan",
@@ -967,7 +1149,14 @@
       "https://ev-database.org/car/3610/CUPRA-Tavascan-250-kW---77-kWh-VZ",
       "https://www.carexpert.com.au/car-news/cupras-first-ev-wont-return-to-australia-any-time-soon"
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-08-01",
+    "image": {
+      "file": "cupra-tavascan.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cupra_Tavascan_at_IAA_2019_IMG_0790.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "deepal-s07",
@@ -991,7 +1180,14 @@
       "https://www.carsguide.com.au/ev/deepal-s07-99411",
       "https://www.deepal.com.au/vehicles/deepal/s07/"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "deepal-s07.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Deepal_S07_IAA_2025_DSC_1897.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "ford-mustang-mach-e",
@@ -1019,7 +1215,14 @@
       "https://www.carsales.com.au/research/ford/mustang-mach-e/",
       "https://www.ford.com.au/price/MustangMach-E"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "ford-mustang-mach-e.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ford_Mustang_Mach-E_GT_IAA_2021_1X7A0176.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "ford-ranger-phev",
@@ -1052,7 +1255,14 @@
       "https://media.ford.com/content/fordmedia/feu/en/news/2025/11/26/ford-expands-and-enhances-ranger-line-up.html",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "ford-ranger-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ford_Ranger_(T6,_P703)_Wildtrak_IMG_7320.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "forthing-taikon-5",
@@ -1114,7 +1324,14 @@
       "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
       "https://www.gacgroup.com/en-au/hatchback/aion-ut"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "gac-aion-ut.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:GAC_Aion_UT_EV_Car_at_Universitas_Widyatama.jpg",
+      "author": "MRWikiTankenTai",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "gac-aion-v",
@@ -1143,7 +1360,14 @@
       "https://evcentral.com.au/2025-gac-aion-v-review-new-chinese-suv-sizes-up-byd-mg-and-even-toyota-with-long-range-and-budget-price/",
       "https://www.carsguide.com.au/gac/aion-v/towing-capacity/2026"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "gac-aion-v.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:GAC_Aion_V_(second_generation)_IAA_2025_DSC_1406.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "geely-ex2",
@@ -1170,7 +1394,14 @@
       "https://www.carsales.com.au/editorial/details/2026-geely-ex2-priced-for-australia-152473/",
       "https://www.geely.com.au/build/geely-ex2"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "geely-ex2.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Geely_Xingyuan_001.jpg",
+      "author": "JustAnotherCarDesigner",
+      "licence": "CC0",
+      "note": "Cropped and resized. Searched as Geely Xingyuan."
+    }
   },
   {
     "id": "geely-ex5",
@@ -1196,7 +1427,14 @@
       "https://thebeep.com.au/car-reviews/2026-geely-ex5-review",
       "https://www.carsguide.com.au/geely/ex5/towing-capacity/2026"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "geely-ex5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Geely_Galaxy_E5_001.jpg",
+      "author": "JustAnotherCarDesigner",
+      "licence": "CC0",
+      "note": "Cropped and resized. Searched as Geely Galaxy E5."
+    }
   },
   {
     "id": "geely-starray-em-i",
@@ -1266,7 +1504,14 @@
       "https://www.carexpert.com.au/car-news/genesis-expands-australian-retail-network-as-magma-gets-ready-to-flow-into-showrooms",
       "https://ev-database.org/uk/car/3236/Genesis-GV60-Performance"
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-08-06",
+    "image": {
+      "file": "genesis-gv60.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Genesis_GV60_Auto_Zuerich_2023_1X7A1130.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "genesis-gv70-electrified",
@@ -1394,7 +1639,14 @@
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
       "https://www.ato.gov.au/tax-rates-and-codes/luxury-car-tax-rate-and-thresholds"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "gwm-haval-h6-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:GWM_Haval_H6_HEV_IMG_5005.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "gwm-ora-5",
@@ -1424,7 +1676,14 @@
       "https://thedriven.io/2026/07/09/gwm-ora-5-first-drive-a-new-electric-suv-at-an-affordable-price/",
       "https://www.carsales.com.au/research/gwm/ora-5/"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "gwm-ora-5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ora_5_001.jpg",
+      "author": "JustAnotherCarDesigner",
+      "licence": "CC0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "hyundai-elexio",
@@ -1454,7 +1713,14 @@
       "https://evcentral.com.au/2026-hyundai-elexio-review-hyundai-calls-on-china-to-help-it-invigorate-its-ev-sales-in-australia-should-you-be-tempted/",
       "https://zecar.com/reviews/hyundai-elexio-pricing-features-specifications"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "hyundai-elexio.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Elexio_003.jpg",
+      "author": "JustAnotherCarDesigner",
+      "licence": "CC0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "hyundai-inster",
@@ -1479,7 +1745,14 @@
       "https://www.carexpert.com.au/car-news/2026-hyundai-inster-pricing-hiked-amid-ev-sales-surge",
       "https://www.hyundai.com/au/en/cars/eco/inster"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "hyundai-inster.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Inster,_Auto_2024,_Zurich_(PANA1030).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "hyundai-ioniq-5",
@@ -1504,7 +1777,14 @@
       "https://www.carsguide.com.au/hyundai/ioniq-5",
       "https://www.carsales.com.au/research/hyundai/ioniq-5/2026/n-line-premium/"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "hyundai-ioniq-5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_IAA_2021_1X7A0189.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "hyundai-ioniq-6",
@@ -1532,7 +1812,14 @@
       "https://www.carsguide.com.au/hyundai/ioniq-6/price/2026",
       "https://www.carexpert.com.au/car-news/hyundai-slashes-prices-across-its-ev-range"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "hyundai-ioniq-6.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Hyundai_IONIQ_6_N_CE1_N_Black_Onetone_(10).jpg",
+      "author": "Damian B Oh",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "hyundai-ioniq-9",
@@ -1614,7 +1901,14 @@
       "https://www.mynrma.com.au/open-road/car-reviews/jaecoo/2026-jaecoo-j5-ev-review",
       "https://thedriven.io/2026/05/03/omoda-jaecoo-extends-amazing-j5-ev-36990-driveaway-price-to-eofy/"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "jaecoo-j5-ev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2025_Jaecoo_5_EV_Max_(Thailand)_rear_view.png",
+      "author": "iMoD Official",
+      "licence": "CC BY 3.0",
+      "note": "Cropped and resized. Searched as Jaecoo 5."
+    }
   },
   {
     "id": "jaecoo-j7-shs",
@@ -1688,7 +1982,14 @@
       "https://www.electrifying.com/reviews/jaecoo/8-1/review",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "jaecoo-j8-shs.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2024_Jaecoo_J8_grey_rear.jpg",
+      "author": "gleb",
+      "licence": "CC BY 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "jeep-avenger",
@@ -1717,7 +2018,14 @@
       "https://www.jeep.com.au/avenger.html",
       "https://www.euroncap.com/assessments/jeep/avenger/1063/"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "jeep-avenger.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Jeep_Avenger_1X7A0818.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "kgm-musso-ev",
@@ -1752,7 +2060,14 @@
       "https://www.carexpert.com.au/car-news/vfacts-the-brands-with-the-biggest-sales-drops-in-australia-in-2025",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "kgm-musso-ev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:KGM_Musso_EV_Auto_Zuerich_2025_DSC_3556.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "kgm-torres-evx",
@@ -1788,7 +2103,14 @@
       "https://ev-database.org/car/3389/KGM-Torres-EVX-806-kWh",
       "https://ev-database.org/car/2189/KGM-Torres-EVX"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "kgm-torres-evx.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:SsangYong_Torres_Automesse_Ludwigsburg_2024_IMG_1442.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as SsangYong Torres."
+    }
   },
   {
     "id": "kia-ev3",
@@ -1811,7 +2133,14 @@
       "https://www.chasingcars.com.au/reviews/small-suvs/kia-ev3-earth-long-term-review/",
       "https://www.racv.com.au/royalauto/car-reviews/kia/2026-kia-ev3-review.html"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "kia-ev3.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Kia_EV3_GT-Line_Automesse_Ludwigsburg_2024_IMG_1674.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "kia-ev4",
@@ -1838,7 +2167,14 @@
       "https://www.chasingcars.com.au/reviews/large-cars/kia-ev4-gt-line-2026-review/",
       "https://www.carexpert.com.au/car-news/2026-kia-ev4-gt-sedan-revealed"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "kia-ev4.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Kia_EV4_GT-Line_Automesse_Ludwigsburg_2025_DSC_2535.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "kia-ev5",
@@ -1866,7 +2202,14 @@
       "https://www.chasingcars.com.au/news/future-cars/kia-ev5-2025-australian-pricing-and-specifications/",
       "https://www.whichcar.com.au/reviews/2025-kia-ev5-all-you-need-to-know"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "kia-ev5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Kia_EV5_003.jpg",
+      "author": "JustAnotherCarDesigner",
+      "licence": "CC0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "kia-ev6",
@@ -1890,7 +2233,14 @@
       "https://www.chasingcars.com.au/reviews/sports-suvs/kia-ev6-gt-line-rwd-2026-review/",
       "https://www.carsguide.com.au/ev/kia-ev6-gt-line-rwd-101173"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "kia-ev6.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Kia_EV6_GT_IMG_8171.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "kia-ev9",
@@ -1913,7 +2263,14 @@
       "https://www.carexpert.com.au/kia/ev9",
       "https://www.carsguide.com.au/kia/ev9"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "kia-ev9.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Kia_EV9_1X7A2472.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "kia-sorento-phev",
@@ -1946,7 +2303,14 @@
       "https://www.kia.com/au/shopping-tools/build-and-price.trim.sorento-plug-in-hybrid.html",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "kia-sorento-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2024_Kia_Sorento_(MQ4)_Ditzingen_Mobil_IMG_9803.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "land-rover-defender-phev",
@@ -1974,7 +2338,14 @@
       "https://www.vesr.gov.au/vehicle/land-rover-defender-le-110-p400e-electric-hybrid-awd-5-seats-suv-2024-2025",
       "https://sro.vic.gov.au/exemptions-and-reductions-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "land-rover-defender-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_110_Station_Wagon_2016_-_rear.jpg",
+      "author": "DeFacto",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "leapmotor-b10",
@@ -2006,7 +2377,14 @@
       "https://www.carexpert.com.au/car-news/leapmotor-winds-back-warranty-for-its-tesla-model-y-rival",
       "https://www.carsguide.com.au/leapmotor/b10/towing-capacity/2026"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "leapmotor-b10.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_B10_IAA_2025_DSC_2069.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "leapmotor-c10",
@@ -2036,7 +2414,14 @@
       "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
       "https://www.ancap.com.au/safety-ratings/leapmotor/c10/00117b"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "leapmotor-c10.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_C10_IAA_2023_1X7A0248.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "lexus-nx-phev",
@@ -2072,7 +2457,14 @@
       "https://media.lexus.co.uk/lexus-technology-leadership-gives-the-all-new-nx-450h-class-leading-potential/",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "lexus-nx-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lexus_LF-NX_IAA_2013.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "lexus-rx-phev",
@@ -2105,7 +2497,14 @@
       "https://www.parkers.co.uk/lexus/rx/suv-2022/450h-25-takumi-5dr-e-cvt/specs/",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "lexus-rx-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lexus_RX_450h%2B_(AALH16)_1X7A1930.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "lexus-rz",
@@ -2139,7 +2538,127 @@
       "https://www.whichcar.com.au/news/lexus-rz-600e-f-sport-performance",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "lexus-rz.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lexus_RZ_450e_(XEBM15)_IMG_0680.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
+  },
+  {
+    "id": "lotus-eletre",
+    "summary": "Lotus's first SUV is a 2.5-tonne, 450kW-to-675kW electric hyper-SUV that Australian reviewers rate genuinely well — CarExpert called it \"really, ridiculously good\" and praised air suspension that stays composed on coarse country roads — but CarsGuide scored it only 7.2 out of 10 and flagged limited cabin practicality and a driving character that no longer resembles a Lotus. A MY25 factory price cut of $49,010 to $35,010 a variant transformed the value case, dropping the entry car from $239,000 to $189,990, and it is that repricing rather than the engineering that reviewers now credit for making it competitive. The unresolved risk is ownership rather than the car: Lotus sold 12 Eletres in Australia in 2024, nine in 2025 and three to date in 2026, through a five-showroom network, so parts, resale and service depth are all unproven.",
+    "pros": [
+      "Cut by $49,010 in MY25 — the entry Eletre fell from $239,000 to $189,990 before on-roads, undercutting a BMW iX M60 and Lamborghini Urus while offering 450kW and 4.5sec to 100km/h",
+      "800V architecture takes 350kW DC for a 10-80 per cent charge in about 20 minutes, well ahead of the 400V Audi SQ8 e-tron and Mercedes-AMG EQE SUV it is cross-shopped against",
+      "688-litre boot expanding to 1,532 litres and a 2,250kg braked tow rating, which is more than the BMW iX or Polestar 3 will pull",
+      "CarExpert rates the Unreal Engine 5 infotainment as \"one of the best infotainment experiences available\", ahead of Tesla's, backed by a 23-speaker 2,160W KEF system on the S",
+      "Two-year/30,000km service intervals with only cabin filter and brake fluid as mandatory replacements, so scheduled maintenance is unusually light for the price bracket"
+    ],
+    "cons": [
+      "CarExpert recorded 340km from a full charge in hard driving against a 490km WLTP claim on the R, so the 600km and 535km figures on these grades will not survive highway use",
+      "Lotus has no capped-price servicing in Australia and distributes through only five Simply Sports Cars showrooms, so warranty and repair access is thin outside the capitals",
+      "Resale is the weakest part of the case: 24 Eletres were sold new in Australia across 2024 and 2025 combined, and the MY25 price cut wiped up to $49,010 off MY24 cars overnight",
+      "Standard brakes are judged inadequate for the performance — CarExpert recommends the $32,199 carbon-ceramic upgrade, and options escalate a car that already carries heavy unrecoverable Luxury Car Tax",
+      "The flagship Eletre R at $279,990 sits above this calculator's modelling ceiling, and neither S nor base qualifies for the FBT exemption, so novated leasing offers no relief on any grade"
+    ],
+    "sources": [
+      "https://www.lotuscars.com/en-AU/eletre/specifications",
+      "https://www.carexpert.com.au/car-news/2025-lotus-eletre-price-and-specs-massive-price-cuts-for-electric-suv",
+      "https://www.carsguide.com.au/lotus/eletre/price/2026",
+      "https://www.carexpert.com.au/car-reviews/2024-lotus-eletre-review",
+      "https://www.carexpert.com.au/car-reviews/2025-lotus-eletre-review-quick-drive",
+      "https://www.carsguide.com.au/ev/lotus-eletre-95066",
+      "https://www.carexpert.com.au/lotus/eletre/2026",
+      "https://www.goauto.com.au/new-models/lotus/eletre/australian-lotus-eletre-pricing-announced/2023-09-12/91937.html",
+      "https://ev-database.org/uk/car/1768/Lotus-Eletre-R"
+    ],
+    "sourcedAt": "2026-08-08",
+    "image": {
+      "file": "lotus-eletre.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lotus_Eletre_IAA_2023_1X7A0668.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
+  },
+  {
+    "id": "lotus-emeya",
+    "summary": "The Emeya is Lotus's electric four-door hyper-GT, and Australian reviewers agree it is a genuinely resolved luxury EV — CarExpert praises air suspension that \"breathes nicely with the road\" rather than feeling floaty, and CarsGuide rates the chassis agile enough to hold its own against a Porsche Taycan while offering far more rear legroom. Where they part company is on whether it is still a Lotus: at 2480-2575kg CarsGuide argues it \"abandons Lotus' lightweight principles\" and that the heaviness dulls its edge. The bigger buyer risk is commercial rather than dynamic — Australia bought 5 in 2024, 3 in 2025 and none year-to-date in 2026, making it the slowest-selling car you can actually walk in and order.",
+    "pros": [
+      "Wheelbase is roughly 200mm longer than a Porsche Taycan's, so rear legroom is genuinely adult-sized where the Taycan and Audi e-tron GT are cramped",
+      "800V architecture charges at up to 350kW for a 10-80 per cent top-up in about 14 minutes, comfortably quicker than a Taycan on the same charger",
+      "Liftback tailgate gives 509 litres behind the rear seats and 1388 litres folded, plus a 34-litre frunk — far more usable than the sedan-booted e-tron GT",
+      "Unconditional five-year/150,000km vehicle warranty with eight years/200,000km on the battery, no dealer-servicing strings attached",
+      "Entry 600 grade is certified at 580km combined WLTP from a 98.9kWh usable pack, ahead of the 506km BMW i5 M60 at a similar price"
+    ],
+    "cons": [
+      "Australian volume is effectively nil — 5 sales in 2024, 3 in 2025 and zero year-to-date in 2026 — so there is almost no used-buyer base and resale risk is severe",
+      "Only five Lotus retailers nationally (Brisbane, Sydney, Melbourne, Adelaide, Perth), meaning no franchised service or warranty support outside a capital city",
+      "Documented heavy discounting: Carscoops reported in May 2026 that UK dealers were taking roughly 36 per cent off a $189K-equivalent Emeya, and the Australian entry price has already been cut from $189,990 to $177,990",
+      "Kerb weight of 2480-2575kg is close to a large SUV, and CarsGuide judges that the mass blunts the agility the badge implies",
+      "Lotus Australia publishes no prices on its website or configurator, so the grade walk above the entry 600 cannot be compared without visiting a retailer"
+    ],
+    "sources": [
+      "https://www.lotuscars.com/en-AU/emeya/models",
+      "https://www.carexpert.com.au/car-news/2025-lotus-emeya-electric-taycan-rival-priced-for-australia",
+      "https://www.carexpert.com.au/car-reviews/2025-lotus-emeya-review-quick-drive",
+      "https://www.carexpert.com.au/lotus/emeya/pricing",
+      "https://www.carexpert.com.au/lotus/emeya/2025-r-jsggfssw20240812",
+      "https://www.carsguide.com.au/ev/lotus-emeya-95486",
+      "https://www.carsguide.com.au/car-news/two-and-a-half-tonne-sports-cars-2025-lotus-emeya-hyper-gt-australian-pricing-confirmed",
+      "https://www.carsales.com.au/research/lotus/emeya/",
+      "https://manofmany.com/auto/cars/slowest-selling-cars-australia",
+      "https://www.carscoops.com/2026/05/lotus-emeya-discounts-uk/",
+      "https://ev-database.org/car/3214/Lotus-Emeya-600"
+    ],
+    "sourcedAt": "2026-08-08",
+    "image": {
+      "file": "lotus-emeya.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lotus_Emeya_Auto_Zuerich_2024_DSC_6171.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
+  },
+  {
+    "id": "maserati-grecale-folgore",
+    "summary": "The Grecale Folgore is Maserati's first electric SUV and the fourth grade in an Australian Grecale range that is otherwise petrol and mild-hybrid, at $207,500 before on-road costs against $119,900 for the entry GT. Reviewers agree on the cabin and the pace — 410kW/820Nm and 4.1 seconds make it comfortably quicker than an entry Porsche Macan Electric — but split hard on whether the engineering justifies the money, with CarExpert calling it \"oddly compromised\" for its stiff ride, torque steer and 400V charging in a class that has moved to 800V. The bigger caution for an Australian buyer is commercial rather than dynamic: Maserati delivered just 101 cars nationally in the first half of 2026, and the car sold here is the pre-facelift version, with the longer-range MY26 update not due until early 2027.",
+    "pros": [
+      "410kW/820Nm and 0-100km/h in 4.1 seconds — CarExpert notes it has more power and torque than the entry Macan 4 Electric and is a full 1.5 seconds quicker to 100km/h",
+      "501km WLTP from a 96kWh usable pack, which is more certified range than a Genesis GV70 Electrified (462km) or a Polestar 3 Performance (593km is the exception, not the rule at this power level)",
+      "22kW AC onboard charging is double the 11kW almost every rival fits, so a three-phase home or destination charger refills it roughly twice as fast overnight",
+      "Rated to tow 1800kg braked, where most performance EV SUVs at this price are rated well under that or not at all",
+      "Maserati includes a home wallbox with the car, and the Econyl regenerated-nylon interior and 12.3-inch infotainment come standard rather than as option boxes"
+    ],
+    "cons": [
+      "400V architecture caps DC charging at 150kW and takes 29 minutes for 20-80 per cent, where the 800V Porsche Macan Electric, Hyundai Ioniq 5 and Kia EV6 do 10-80 per cent in 22 minutes or less",
+      "CarExpert's Australian review records a \"stiff and brittle\" ride and torque steer on uneven surfaces, concluding the car feels \"oddly compromised\" next to the Porsche Macan Electric",
+      "Three-year warranty is the unconditional term — half of Kia's and BYD's, and two years short of the five that BMW, Mercedes-Benz and Genesis give as standard at this price",
+      "Maserati sold 101 vehicles in Australia across the whole range in the first half of 2026, down 33.1 per cent, so the dealer and service network is tiny and resale support is thin",
+      "Australia gets the pre-facelift car: the MY26 update that lifts range to 580km and adds an AWD-disconnect and battery preconditioning is not expected here until early 2027, dating the car a buyer signs for now"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2024-maserati-grecale-folgore-review",
+      "https://www.carexpert.com.au/maserati/grecale/2025--jsgsos8s20250617",
+      "https://www.carexpert.com.au/car-news/the-biggest-winners-and-losers-on-the-australian-new-vehicle-sales-charts-so-far-in-2026",
+      "https://www.carexpert.com.au/car-news/maseratis-refreshed-lineup-brings-more-v6-power-more-ev-range",
+      "https://www.carsales.com.au/editorial/details/maserati-expands-grecale-suv-lineup-152285/",
+      "https://www.maserati.com/au/en/models/grecale/grecale-folgore",
+      "https://www.maserati.com/au/en/shopping-tools/configurator",
+      "https://ev-database.org/car/1843/Maserati-Grecale-Folgore",
+      "https://www.arenaev.com/maserati_grecale_folgore_review-news-3857.php"
+    ],
+    "sourcedAt": "2026-08-08",
+    "image": {
+      "file": "maserati-grecale-folgore.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Maserati_Grecale_GT_1X7A6371.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mazda-6e",
@@ -2166,7 +2685,14 @@
       "https://www.whichcar.com.au/reviews/2026-mazda-6e-review-wheels-verdict-bold-new-sedan",
       "https://ev-database.org/uk/car/3466/Mazda-6e-78-kWh"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "mazda-6e.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mazda_EZ-6_004.jpg",
+      "author": "JustAnotherCarDesigner",
+      "licence": "CC0",
+      "note": "Cropped and resized. Searched as Mazda EZ-6."
+    }
   },
   {
     "id": "mazda-cx-60-phev",
@@ -2194,7 +2720,14 @@
       "https://www.mazda.com.au/mazda-news/mazda-cx-60-phev-guide/",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "mazda-cx-60-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-60_PHEV_1X7A0369.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mazda-cx-80-phev",
@@ -2227,7 +2760,14 @@
       "https://www.ancap.com.au/safety-ratings/mazda/cx-80",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "mazda-cx-80-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-80_PHEV_DSC_6068.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mercedes-cla-ev",
@@ -2255,7 +2795,14 @@
       "https://www.carsguide.com.au/car-news/new-mercedes-benz-cla-electric-car-boasts-more-than-650km-of-driving-range-and-price-tag",
       "https://www.carexpert.com.au/car-news/2026-mercedes-benz-cla-shooting-brake-hybrid-ev-wagon-coming-to-australia"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "mercedes-cla-ev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_CLA_Shooting_Break,_GIMS_2019,_Le_Grand-Saconnex_(GIMS0613).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mercedes-eqa",
@@ -2278,7 +2825,14 @@
       "https://www.carexpert.com.au/mercedes-benz/eqa/2026-base-model-jsakkkgo20250123",
       "https://www.carsguide.com.au/car-news/special-luxe-electric-cars-confirmed-2026-mercedes-benz-eqa-and-eqb-250-city-edition"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "mercedes-eqa.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_EQA,_IAA_2017,_Frankfurt_(1Y7A2961).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mercedes-eqb",
@@ -2309,7 +2863,14 @@
       "https://www.exhaustnotes.com.au/mercedes-benz-launches-eqa-and-eqb-250-city-edition/",
       "https://ev-database.org/car/1988/Mercedes-Benz-EQB-250plus"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "mercedes-eqb.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:MERCEDES-EQ_EQB_China.jpg",
+      "author": "Dinkun Chen",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mercedes-glc-phev",
@@ -2343,7 +2904,14 @@
       "https://www.vesr.gov.au/vehicle/mercedes-benz-glc-class-glc300e-4matic-wagon-auto-2021-2026",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "mercedes-glc-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_GLC_Coupe_IAA_2015.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mg-4",
@@ -2371,7 +2939,14 @@
       "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mg4-ev-price-specs-release-date.html",
       "https://www.carexpert.com.au/car-news/2026-mg-4-ev-urban-price-and-specs"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "mg-4.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:MG4_EV_Automesse_Ludwigsburg_2022_1X7A5920.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mg-hs-phev",
@@ -2401,7 +2976,14 @@
       "https://mgmotor.com.au/offers",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "mg-hs-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:MG_HS_(second_generation)_DSC_7229.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as MG HS."
+    }
   },
   {
     "id": "mg-im5",
@@ -2444,7 +3026,14 @@
       "https://ev-database.org/uk/car/3246/MG-IM5-Performance",
       "https://thedriven.io/2025/10/01/im5-performance-review-mgs-compelling-electric-rocket-that-self-parks-better-than-a-tesla/"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "mg-im5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:IM_L6_GIMS_2024_1X7A2395.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as IM L6."
+    }
   },
   {
     "id": "mg-im6",
@@ -2479,7 +3068,14 @@
       "https://zecar.com/reviews/mg-july-2026-ev-phev-deals-finance-cashback",
       "https://ev-database.org/uk/car/3248/MG-IM6-Performance"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "mg-im6.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:IM_LS6_GIMS_2024_1X7A2054.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as IM LS6."
+    }
   },
   {
     "id": "mg-s5",
@@ -2512,7 +3108,14 @@
       "https://mgmotor.com.au/explore/warranty",
       "https://zecar.com/electric-vehicles/mg/mgs5/2025/essence-62"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "mg-s5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:MGS5_EV_DSC_2698.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as MGS5."
+    }
   },
   {
     "id": "mg-s6",
@@ -2541,7 +3144,14 @@
       "https://evcentral.com.au/mg-s6-ev-aussie-price-and-specs-announced-new-tesla-model-y-rivals-offers-more-than-500km-of-range-for-under-50k/",
       "https://ev-database.org/car/3418/MG-MGS6-EV-RWD-77-kWh"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "mg-s6.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:MG_S6_EV_IMG_5225.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mini-aceman",
@@ -2571,7 +3181,14 @@
       "https://www.carsales.com.au/research/mini/aceman/",
       "https://zecar.com/electric-vehicles/mini/acemen/2024/se"
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-08-01",
+    "image": {
+      "file": "mini-aceman.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_DSC_7115.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mini-cooper-electric",
@@ -2629,7 +3246,14 @@
       "https://www.press.bmwgroup.com/global/article/detail/T0455156EN/even-more-freedom:-the-mini-countryman-e-with-a-purely-electric-range-of-up-to-500-kilometres",
       "https://www.carsales.com.au/research/mini/countryman/2026/e-classic/"
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-08-01",
+    "image": {
+      "file": "mini-countryman-electric.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mini_Countryman_(U25)_IMG_9537.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mitsubishi-outlander-phev",
@@ -2663,7 +3287,14 @@
       "https://www.ancap.com.au/safety-ratings/mitsubishi/outlander",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "mitsubishi-outlander-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mitsubishi_Outlander_PHEV,_Auto_2025,_Zurich_(20251029-P1074527).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "nissan-ariya",
@@ -2690,7 +3321,14 @@
       "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
       "https://zecar.com/reviews/nissan-ariya-deals-australia-2026"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "nissan-ariya.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Nissan_Ariya_Automesse_Ludwigsburg_2022_1X7A5877.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "omoda-9-shs",
@@ -2753,7 +3391,14 @@
       "https://zecar.com/reviews/2027-polestar-2-pricing-specs-australia",
       "https://ev-database.org/uk/car/3152/Polestar-2-Long-Range-Dual-Motor"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "polestar-2.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Polestar_2,_GIMS_2019,_Le_Grand-Saconnex_(GIMS0552).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "polestar-3",
@@ -2782,7 +3427,14 @@
       "https://ev-database.org/uk/car/3327/Polestar-3-Dual-Motor",
       "https://thedriven.io/2026/03/05/new-polestar-3-comes-with-improved-charging-architecture-priced-from-116700/"
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-08-06",
+    "image": {
+      "file": "polestar-3.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Polestar_3_IAA_2023_1X7A0703.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "polestar-4",
@@ -2808,7 +3460,14 @@
       "https://thedriven.io/2025/04/09/i-love-the-polestar-4-but-the-rear-view-camera-made-my-wife-carsick/",
       "https://www.carexpert.com.au/car-news/2026-polestar-4-price-and-specs"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "polestar-4.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Polestar_4.jpg",
+      "author": "ArildV",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "renault-megane-e-tech",
@@ -2837,7 +3496,14 @@
       "https://thedriven.io/2026/04/01/renault-prices-electric-megane-e-tech-at-50k-drive-away-for-limited-time/",
       "https://www.renault.com.au/vehicles/megane-e-tech/"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "renault-megane-e-tech.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Renault_Megane_E-Tech_IAA_2021_1X7A0073.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "renault-scenic-e-tech",
@@ -2869,7 +3535,14 @@
       "https://www.carsales.com.au/research/renault/scenic-e-tech/",
       "https://evcentral.com.au/2026-renault-scenic-e-tech-review-french-electric-suv-brings-european-polish-to-australia-but-can-it-justify-the-price/"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "renault-scenic-e-tech.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Renault_Sc%C3%A9nic_E-Tech_IAA_2023_1X7A0344.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "skoda-elroq",
@@ -2896,7 +3569,14 @@
       "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
       "https://www.skoda.com.au/models/elroq-family/elroq-85-select"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "skoda-elroq.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Elroq_Auto_Zuerich_2024_DSC_6550.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "skoda-enyaq",
@@ -2926,7 +3606,14 @@
       "https://www.skoda.com.au/models/enyaq-family/enyaq-suv-sportline",
       "https://www.skoda.com.au/models/enyaq-family/enyaq-coupe-sportline"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "skoda-enyaq.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Skoda_Enyaq_Sportline_1X7A0316.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "skoda-kodiaq-phev",
@@ -2958,7 +3645,14 @@
       "https://www.ancap.com.au/safety-ratings/skoda/kodiaq/cd78ac",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "skoda-kodiaq-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Kodiaq_II_IMG_9433.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "smart-1",
@@ -2987,7 +3681,14 @@
       "https://www.carexpert.com.au/car-news/australias-best-new-car-warranties-in-2026",
       "https://thebeep.com.au/cars/smart/1"
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-08-01",
+    "image": {
+      "file": "smart-1.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Smart_Hashtag_1_IMG_7328.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "smart-3",
@@ -3021,7 +3722,14 @@
       "https://www.carsguide.com.au/car-news/new-chinese-electric-cars-achieve-five-star-ancap-safety-rating-2025-smart-1-and-smart-3",
       "https://nz.smart.com/app/uploads/2025/02/smart-3-spec-sheet.pdf"
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-08-06",
+    "image": {
+      "file": "smart-3.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Smart_3,_BAS_24,_Brussels_(P1170547-RR).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "subaru-solterra",
@@ -3046,7 +3754,14 @@
       "https://thebeep.com.au/car-news/2026-subaru-solterra-trailseeker-price-cut-australia",
       "https://www.whichcar.com.au/news/2026-subaru-solterra-electric-mid-size-suv-lands-in-australia"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "subaru-solterra.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Subaru_Solterra_ST-E_Auto_Zuerich_2023_1X7A1257.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "subaru-trailseeker",
@@ -3073,7 +3788,14 @@
       "https://zecar.com/reviews/subaru-solterra-trailseeker-price-cut-may-2026",
       "https://newsroom.toyota.eu/the-new-toyota-bz4x-touring-an-suv-for-electrified-adventures/"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "subaru-trailseeker.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Trailseeker_ET-HS_rear.jpg",
+      "author": "TTTNIS",
+      "licence": "CC0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "subaru-uncharted",
@@ -3154,7 +3876,14 @@
       "https://www.carsguide.com.au/ev/tesla-model-3-premium-long-range-rwd-100750",
       "https://www.carexpert.com.au/car-news/2026-tesla-model-3-now-australias-longest-range-ev"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "tesla-model-3.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3,_EMS_2024,_Essen_(P1032260).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "tesla-model-y",
@@ -3184,7 +3913,14 @@
       "https://manofmany.com/auto/cars/2026-tesla-model-y-performance-review",
       "https://thedriven.io/2026/01/09/tesla-ups-warranty-to-5-year-unlimited-km-in-australia-a-world-first/"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "tesla-model-y.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_1X7A6211.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "toyota-bz4x",
@@ -3214,7 +3950,14 @@
       "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/bz4x/files/20260619-bz4x_spec_table_gtp-010030.pdf",
       "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/bz4x-touring/file/20260507_bz4x_touring-_spec_table_gtp-009807.pdf"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "toyota-bz4x.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "toyota-hilux-bev",
@@ -3244,7 +3987,14 @@
       "https://evcentral.com.au/2026-toyota-hilux-bev-review-why-this-isnt-the-electric-ute-that-will-make-buyers-switch-away-from-diesel/",
       "https://www.electrifying.com/reviews/toyota-reviews/hilux-bev/review"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "toyota-hilux-bev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2026_Toyota_Hilux_BEV.jpg",
+      "author": "TTTNIS",
+      "licence": "CC0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "toyota-rav4-phev",
@@ -3273,7 +4023,14 @@
       "https://babydrive.com.au/reviews/suvs/2026-toyota-rav4-phev-review/",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "toyota-rav4-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Toyota_RAV4_(XA10)_IMG_1260.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "volvo-es90",
@@ -3302,7 +4059,14 @@
       "https://www.carsales.com.au/research/volvo/es90/",
       "https://ev-database.org/car/3128/Volvo-ES90-Single-Motor"
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-08-06",
+    "image": {
+      "file": "volvo-es90.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Volvo_ES90_IAA_2025_DSC_1357.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "volvo-ex30",
@@ -3325,7 +4089,14 @@
       "https://thedriven.io/2026/04/03/volvo-slashes-prices-of-electric-suvs-by-more-than-10000-ahead-of-new-model-release/",
       "https://www.carexpert.com.au/car-news/volvo-slashes-pricing-of-ex30-and-ex40-electric-suvs"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "volvo-ex30.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Volvo_EX30_Auto_Zuerich_2023_1X7A0949.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "volvo-ex40",
@@ -3354,7 +4125,14 @@
       "https://www.carsguide.com.au/volvo/ex40",
       "https://zecar.com/reviews/volvo-ex30-ex40-price-cuts-australia-2026"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "volvo-ex40.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Volvo_XC40_Recharge_Facelift_IMG_8127.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as Volvo XC40 Recharge."
+    }
   },
   {
     "id": "volvo-ex90",
@@ -3386,7 +4164,14 @@
       "https://www.volvocars.com/au/l/warranty/",
       "https://ev-database.org/uk/car/3324/Volvo-EX90-Twin-Motor"
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-08-06",
+    "image": {
+      "file": "volvo-ex90.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Volvo_EX90_DSC_7810.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "volvo-xc60-phev",
@@ -3417,7 +4202,14 @@
       "https://www.carsguide.com.au/ev/volvo-xc60-recharge-87822",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "volvo-xc60-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Volvo_XC60_(SPA)_FL_1X7A6406.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "volvo-xc90-phev",
@@ -3450,7 +4242,14 @@
       "https://www.volvocars.com/ie/cars/xc90-hybrid/specifications/",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "volvo-xc90-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2025_Volvo_XC90_II_DSC_7420.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "vw-id4",
@@ -3517,7 +4316,14 @@
       "https://www.volkswagen.com.au/en/models/id5.html",
       "https://www.volkswagen.com.au/en/models/id5-gtx.html"
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-07-30",
+    "image": {
+      "file": "vw-id5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_ID.5_Leonberg_2022_1X7A0459.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "vw-tayron-phev",
@@ -3550,7 +4356,14 @@
       "https://www.volkswagen.com.au/en/owners-service/warranty.html",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "vw-tayron-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_Tayron_II_DSC_7806.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "vw-tiguan-phev",
@@ -3583,7 +4396,14 @@
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
       "https://www.volkswagen.com.au/en/owners-service/warranty.html"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "vw-tiguan-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_Tiguan_R_1X7A0362.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "xpeng-g6",
@@ -3607,7 +4427,14 @@
       "https://www.evee.com.au/blog/2026-xpeng-g6-australia-price-specs-and-range/",
       "https://xpeng.com.au/g6-warranty"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-07-26",
+    "image": {
+      "file": "xpeng-g6.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:XPeng_G6_(2025)_IAA_2025_DSC_2057.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "zeekr-7x",
@@ -3638,7 +4465,14 @@
       "https://zecar.com/electric-vehicles/zeekr/7x/2025",
       "https://www.carexpert.com.au/zeekr/7x/2026/price-and-specs"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "zeekr-7x.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_005_(cropped).jpg",
+      "author": "JustAnotherCarDesigner",
+      "licence": "CC0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "zeekr-x",
@@ -3669,6 +4503,13 @@
       "https://ev-database.org/car/3585/Zeekr-X-Long-Range-RWD",
       "https://ev-database.org/car/3586/Zeekr-X-Privilege-AWD"
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-07-27",
+    "image": {
+      "file": "zeekr-x.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Zeekr_X,_Almaty_(LRM_20240331_124050).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA",
+      "note": "Cropped and resized."
+    }
   }
 ]
