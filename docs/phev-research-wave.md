@@ -55,7 +55,17 @@ the dataset had only researched SUVs and utes.
 
 ## Budget: one batch per session
 
-This is the binding constraint, and it is why the batches are six.
+> **Amended 2026-08-08 — the six-family cap is no longer binding.** The session search
+> ceiling has been raised, and batches 7 and 8 have been **merged into a single batch 7 of
+> eleven families**. The reasoning below is kept because it is still the right reasoning —
+> the batch size is a function of the search budget, not of anything about the families —
+> but the arithmetic now supports eleven rather than six. The BEV wave did the same merge
+> (its batches 7 and 9) and it worked: eleven families, one session, no family half-researched.
+> **Everything else in this section still holds, especially "if a batch runs short, stop
+> anyway".** A larger ceiling raises the cap; it does not make a half-researched family
+> acceptable.
+
+This is the binding constraint, and it is why the batches were six.
 
 The first wave's two families cost roughly 50 tool calls each, a large share of them searches. At a
 conservative 20–35 searches per family, **six families is 120–210 searches against a 200-call
@@ -473,10 +483,32 @@ grades on the configurator, do not just match the names.
 | VW Tayron eHybrid | `vw-tayron-phev` | Seven-seat Tiguan sibling; confirm seat count per variant. |
 | Skoda Kodiaq PHEV | `skoda-kodiaq-phev` | **Skoda Australia dropped the "iV" suffix** — local badging is just "PHEV", so anything keyed to "Kodiaq iV" will never match the configurator. |
 
-## Batch 7 — off-roaders
+## Batch 7 — off-roaders and premium — **MERGED WITH BATCH 8, RESTRUCTURED 2026-08-08**
 
-Five families, so there is headroom. **The Denza question must be settled first and may remove two
-of them.**
+**Eleven families in one batch, not five plus six.** The session search ceiling has been raised, so
+the old six-family cap no longer binds; see the amended budget section above. There is no batch 8
+any more — its six families are stream 2 below, and its heading is retained only as a pointer.
+
+**Run the two verifications FIRST, with cheap dedicated agents, before any family work.** Both can
+remove work from the batch, and one of them can remove two families outright:
+
+1. **The Denza architecture check** — are the B5 and B8 true PHEVs, or range-extenders? Detail below.
+   A negative removes two of the eleven.
+2. **The JAC Hunter PHEV on-sale check** — pulled forward from batch 9 on 2026-08-08, because its
+   entry there reads "showrooms **August 2026**", which is now. At $49,988 it would be **Australia's
+   cheapest PHEV ute**, and the PHEV `Ute` cell holds only three families. It is the one item in the
+   batch 9 re-check pass with a live, dated reason to be checked now rather than later. If it is on
+   sale, research it as a twelfth family; if not, record the evidenced negative and leave it.
+
+**Why this batch leads the remaining wave.** Stream 2 carries the `Sedan` work. The PHEV `Sedan`
+cell holds exactly one family (`byd-seal-6`), and this document already describes it as "opened
+rather than filled". The Mercedes C 350e is a sedan, and under the binding liftback/fastback rule so
+is the Audi A5 e-hybrid — so this batch can take that cell from one family to three. That is the
+same structural argument that made batch 1 the highest-value batch of the BEV wave.
+
+### Stream 1 — off-roaders (the original batch 7)
+
+Five families. **The Denza question must be settled first and may remove two of them.**
 
 | Family | `familyId` | Expected plug-in grade — confirm, don't assume |
 |---|---|---|
@@ -511,10 +543,12 @@ Power mode. So:
 Skoda Superb PHEV was originally listed here and is **permanently out**: wagon-only in Australia,
 and wagons are out of scope.
 
-## Batch 8 — premium
+### Stream 2 — premium (the former batch 8, absorbed 2026-08-08)
 
-Note the first **sedan** in the wave. The empty PHEV `Sedan` cell is an artefact of nobody looking,
-not a fact about the market, and batches 5 and 8 are what fix it.
+Note the **sedans**. The near-empty PHEV `Sedan` cell is an artefact of nobody looking, not a fact
+about the market, and batches 5 and this stream are what fix it. `mercedes-c-350e-phev` is a sedan
+outright; `audi-a5-phev` is a liftback, and **liftbacks and fastbacks are `Sedan`** — that decision
+is binding and settled, so do not re-litigate it or file the A5 as a hatch.
 
 | Family | `familyId` | Expected plug-in grade — confirm, don't assume |
 |---|---|---|
@@ -525,7 +559,13 @@ not a fact about the market, and batches 5 and 8 are what fix it.
 | Alfa Romeo Tonale | `alfa-romeo-tonale-phev` | Tonale also sells as a mild hybrid — plug-in only. |
 | Audi A5 e-hybrid | `audi-a5-phev` | Anchor against `audi-q5-phev` already in the dataset. Note **TFSI e is a retired badge** — batch 4 found the Q5 is now "e-hybrid". |
 
-## Batch 9 — the re-check pass
+## Batch 9 — the re-check pass — **THINNED 2026-08-08**
+
+**Now five candidates, not six** — the JAC Hunter was pulled forward into batch 7, being the only one
+with a live dated reason to be checked now. With batches 7 and 8 merged, this is the **last batch of
+the PHEV wave**, and it is a verification pass rather than research: expect to spend most of it
+writing evidenced negatives. Note the BEV wave's on-sale/run-out flag has come back negative six
+times out of six, so calibrate expectations accordingly and treat a negative as the batch working.
 
 Run this last, and expect most of it to produce nothing. These were pre-launch or borderline at the
 time of the batch-4 survey, so the job is to establish whether each is now on sale and research only
@@ -534,7 +574,7 @@ has done its job** — and the reports are what stop batch 10 re-checking the sa
 
 | Family | `familyId` | Status at survey |
 |---|---|---|
-| JAC Hunter PHEV | `jac-hunter-phev` | $49,988, reservable, showrooms August 2026. Would be Australia's cheapest PHEV ute. |
+| ~~JAC Hunter PHEV~~ | `jac-hunter-phev` | **PULLED FORWARD INTO BATCH 7 on 2026-08-08** — its "showrooms August 2026" date has arrived, and at $49,988 it would be Australia's cheapest PHEV ute against a `Ute` cell holding only three families. Do not re-check it here; batch 7 either wrote it or recorded an evidenced negative |
 | Omoda 7 PHEV | `omoda-7-phev` | Pre-launch. |
 | Chery Stockman PHEV | `chery-stockman-phev` | Diesel PHEV ute, pre-launch. |
 | GWM Haval Jolion Max PHEV | `gwm-haval-jolion-phev` | Pre-launch. |
