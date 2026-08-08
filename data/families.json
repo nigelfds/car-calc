@@ -295,7 +295,14 @@
       "https://zecar.com/reviews/bmw-ix1-ix2-price-cut-range-boost-2026",
       "https://www.carexpert.com.au/bmw/ix2/2026-m-sport-suv-4x4-electric-jsfwff5o20260331"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-07-31",
+    "image": {
+      "file": "bmw-ix2.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:BMW_iX2_xDrive30_IMG_1811.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized. Searched as BMW iX2."
+    }
   },
   {
     "id": "bmw-ix3",
@@ -1573,7 +1580,14 @@
       "https://www.gwmanz.com/au/models/ute/cannon-alpha/",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "gwm-cannon-alpha-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2024_GWM_Poer_Sahar_PHEV_front_view.png",
+      "author": "iMoD Official",
+      "licence": "CC BY 3.0",
+      "note": "Cropped and resized. Searched as GWM Poer Sahar."
+    }
   },
   {
     "id": "gwm-haval-h6-gt-phev",
@@ -1607,7 +1621,14 @@
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
       "https://www.ato.gov.au/tax-rates-and-codes/luxury-car-tax-rate-and-thresholds"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-07-28",
+    "image": {
+      "file": "gwm-haval-h6-gt-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Haval_H6_GT_Turbo_Deluxe_2024.jpg",
+      "author": "RL GNZLZ",
+      "licence": "CC BY-SA 2.0",
+      "note": "Cropped and resized. Searched as Haval H6 GT."
+    }
   },
   {
     "id": "gwm-haval-h6-phev",
