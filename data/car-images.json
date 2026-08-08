@@ -1,1 +1,744 @@
-{}
+{
+  "alfa-romeo-junior-elettrica": {
+    "file": "alfa-romeo-junior-elettrica.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_Junior_IMG_0474_(cropped).jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "audi-q5-phev": {
+    "file": "audi-q5-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_Q5_Sportback_GU_DSC_9270.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "audi-q6-e-tron": {
+    "file": "audi-q6-e-tron.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_Sportback_DSC_9276.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "bmw-i4": {
+    "file": "bmw-i4.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_i4_IAA_2021_1X7A0307.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "bmw-ix": {
+    "file": "bmw-ix.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_iX_IAA_2021_1X7A0204.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "bmw-ix1": {
+    "file": "bmw-ix1.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_iX1_1X7A6827.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "bmw-ix3": {
+    "file": "bmw-ix3.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_iX3_NA5_IAA_2025_DSC_1684.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "bmw-x1-phev": {
+    "file": "bmw-x1-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_BMW_X1_sDrive18i_xLine_1.5_Front.jpg",
+    "author": "Vauxford",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "bmw-x3-phev": {
+    "file": "bmw-x3-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_G45_X3_M50_DSC_8805.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "byd-atto1": {
+    "file": "byd-atto1.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_Surf_IMG_3808.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as BYD Dolphin Surf."
+  },
+  "byd-atto2": {
+    "file": "byd-atto2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Atto_2_DSC_8763.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "byd-atto3": {
+    "file": "byd-atto3.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Atto_3_1X7A6495.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "byd-dolphin": {
+    "file": "byd-dolphin.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_IAA_2023_1X7A0634.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "byd-seal": {
+    "file": "byd-seal.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Seal_U_IAA_2023_1X7A0045.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "byd-seal-6": {
+    "file": "byd-seal-6.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Seal_6_DM-i_Touring_IAA_2025_DSC_2249.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "byd-sealion-5": {
+    "file": "byd-sealion-5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_05_DM-i_facelift_001.jpg",
+    "author": "KitsuneDP",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "byd-sealion-6": {
+    "file": "byd-sealion-6.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%91%D1%83%D1%85%D0%B0%D1%80%D0%B0,_BYD_Song_Plus_%D0%BD%D0%B0_%D0%A0%D1%83%D1%88%D0%BD%D0%BE%D0%B8-%D0%9D%D0%B0%D0%BC%D0%B0%D0%B7%D0%B3%D0%BE%D1%85%D0%B5.jpg",
+    "author": "Nikolai Bulykin",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as BYD Song Plus."
+  },
+  "byd-sealion-7": {
+    "file": "byd-sealion-7.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_07_EV_DSC_8264.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "byd-shark-6": {
+    "file": "byd-shark-6.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_BYD_Shark_6_DMO_front_view.png",
+    "author": "iMoD Official",
+    "licence": "CC BY 3.0",
+    "note": "Cropped and resized."
+  },
+  "cadillac-lyriq": {
+    "file": "cadillac-lyriq.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Lyriq,_Frankfurt_(PANA1089).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA",
+    "note": "Cropped and resized."
+  },
+  "cadillac-optiq": {
+    "file": "cadillac-optiq.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Optiq_Auto_Zuerich_2025_DSC_3328.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "cadillac-vistiq": {
+    "file": "cadillac-vistiq.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Vistiq_Auto_Zuerich_2025_DSC_3016.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "chery-omoda-e5": {
+    "file": "chery-omoda-e5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Chery_E5.jpg",
+    "author": "Rutger van der Maar",
+    "licence": "CC BY 2.0",
+    "note": "Cropped and resized."
+  },
+  "chery-tiggo-7-phev": {
+    "file": "chery-tiggo-7-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_7_Back_IMG_0391.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "chery-tiggo-9-phev": {
+    "file": "chery-tiggo-9-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_9_001.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "cupra-formentor-phev": {
+    "file": "cupra-formentor-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cupra_Formentor_VZ5_1X7A6987.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "cupra-tavascan": {
+    "file": "cupra-tavascan.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cupra_Tavascan_at_IAA_2019_IMG_0790.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "deepal-s07": {
+    "file": "deepal-s07.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Deepal_S07_IAA_2025_DSC_1897.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "ford-mustang-mach-e": {
+    "file": "ford-mustang-mach-e.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Ford_Mustang_Mach-E_GT_IAA_2021_1X7A0176.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "ford-ranger-phev": {
+    "file": "ford-ranger-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Ford_Ranger_(T6,_P703)_Wildtrak_IMG_7320.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "gac-aion-ut": {
+    "file": "gac-aion-ut.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:GAC_Aion_UT_EV_Car_at_Universitas_Widyatama.jpg",
+    "author": "MRWikiTankenTai",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "gac-aion-v": {
+    "file": "gac-aion-v.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:GAC_Aion_V_(second_generation)_IAA_2025_DSC_1406.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "geely-ex2": {
+    "file": "geely-ex2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Geely_Xingyuan_001.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized. Searched as Geely Xingyuan."
+  },
+  "geely-ex5": {
+    "file": "geely-ex5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Geely_Galaxy_E5_001.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized. Searched as Geely Galaxy E5."
+  },
+  "genesis-gv60": {
+    "file": "genesis-gv60.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Genesis_GV60_Auto_Zuerich_2023_1X7A1130.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "gwm-haval-h6-phev": {
+    "file": "gwm-haval-h6-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:GWM_Haval_H6_HEV_IMG_5005.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "gwm-ora-5": {
+    "file": "gwm-ora-5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Ora_5_001.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "hyundai-elexio": {
+    "file": "hyundai-elexio.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Elexio_003.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "hyundai-inster": {
+    "file": "hyundai-inster.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Inster,_Auto_2024,_Zurich_(PANA1030).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA",
+    "note": "Cropped and resized."
+  },
+  "hyundai-ioniq-5": {
+    "file": "hyundai-ioniq-5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_IAA_2021_1X7A0189.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "hyundai-ioniq-6": {
+    "file": "hyundai-ioniq-6.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_IONIQ_6_N_CE1_N_Black_Onetone_(10).jpg",
+    "author": "Damian B Oh",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "jaecoo-j5-ev": {
+    "file": "jaecoo-j5-ev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Jaecoo_5_EV_Max_(Thailand)_rear_view.png",
+    "author": "iMoD Official",
+    "licence": "CC BY 3.0",
+    "note": "Cropped and resized. Searched as Jaecoo 5."
+  },
+  "jaecoo-j8-shs": {
+    "file": "jaecoo-j8-shs.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Jaecoo_J8_grey_rear.jpg",
+    "author": "gleb",
+    "licence": "CC BY 4.0",
+    "note": "Cropped and resized."
+  },
+  "jeep-avenger": {
+    "file": "jeep-avenger.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeep_Avenger_1X7A0818.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "kgm-musso-ev": {
+    "file": "kgm-musso-ev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:KGM_Musso_EV_Auto_Zuerich_2025_DSC_3556.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "kgm-torres-evx": {
+    "file": "kgm-torres-evx.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:SsangYong_Torres_Automesse_Ludwigsburg_2024_IMG_1442.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as SsangYong Torres."
+  },
+  "kia-ev3": {
+    "file": "kia-ev3.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kia_EV3_GT-Line_Automesse_Ludwigsburg_2024_IMG_1674.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "kia-ev4": {
+    "file": "kia-ev4.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kia_EV4_GT-Line_Automesse_Ludwigsburg_2025_DSC_2535.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "kia-ev5": {
+    "file": "kia-ev5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kia_EV5_003.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "kia-ev6": {
+    "file": "kia-ev6.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kia_EV6_GT_IMG_8171.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "kia-ev9": {
+    "file": "kia-ev9.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kia_EV9_1X7A2472.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "kia-sorento-phev": {
+    "file": "kia-sorento-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Kia_Sorento_(MQ4)_Ditzingen_Mobil_IMG_9803.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "land-rover-defender-phev": {
+    "file": "land-rover-defender-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_110_Station_Wagon_2016_-_rear.jpg",
+    "author": "DeFacto",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "leapmotor-b10": {
+    "file": "leapmotor-b10.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_B10_IAA_2025_DSC_2069.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "leapmotor-c10": {
+    "file": "leapmotor-c10.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_C10_IAA_2023_1X7A0248.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "lexus-nx-phev": {
+    "file": "lexus-nx-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Lexus_LF-NX_IAA_2013.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "lexus-rx-phev": {
+    "file": "lexus-rx-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Lexus_RX_450h%2B_(AALH16)_1X7A1930.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "lexus-rz": {
+    "file": "lexus-rz.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Lexus_RZ_450e_(XEBM15)_IMG_0680.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "lotus-eletre": {
+    "file": "lotus-eletre.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Lotus_Eletre_IAA_2023_1X7A0668.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "lotus-emeya": {
+    "file": "lotus-emeya.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Lotus_Emeya_Auto_Zuerich_2024_DSC_6171.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "maserati-grecale-folgore": {
+    "file": "maserati-grecale-folgore.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Maserati_Grecale_GT_1X7A6371.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mazda-6e": {
+    "file": "mazda-6e.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_EZ-6_004.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized. Searched as Mazda EZ-6."
+  },
+  "mazda-cx-60-phev": {
+    "file": "mazda-cx-60-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-60_PHEV_1X7A0369.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mazda-cx-80-phev": {
+    "file": "mazda-cx-80-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-80_PHEV_DSC_6068.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mercedes-cla-ev": {
+    "file": "mercedes-cla-ev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_CLA_Shooting_Break,_GIMS_2019,_Le_Grand-Saconnex_(GIMS0613).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mercedes-eqa": {
+    "file": "mercedes-eqa.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_EQA,_IAA_2017,_Frankfurt_(1Y7A2961).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mercedes-eqb": {
+    "file": "mercedes-eqb.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:MERCEDES-EQ_EQB_China.jpg",
+    "author": "Dinkun Chen",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mercedes-glc-phev": {
+    "file": "mercedes-glc-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_GLC_Coupe_IAA_2015.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mg-4": {
+    "file": "mg-4.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:MG4_EV_Automesse_Ludwigsburg_2022_1X7A5920.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mg-im5": {
+    "file": "mg-im5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:IM_L6_GIMS_2024_1X7A2395.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as IM L6."
+  },
+  "mg-im6": {
+    "file": "mg-im6.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:IM_LS6_GIMS_2024_1X7A2054.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as IM LS6."
+  },
+  "mg-s5": {
+    "file": "mg-s5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:MGS5_EV_DSC_2698.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as MGS5."
+  },
+  "mg-s6": {
+    "file": "mg-s6.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:MG_S6_EV_IMG_5225.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mini-aceman": {
+    "file": "mini-aceman.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_DSC_7115.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mini-countryman-electric": {
+    "file": "mini-countryman-electric.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mini_Countryman_(U25)_IMG_9537.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mitsubishi-outlander-phev": {
+    "file": "mitsubishi-outlander-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mitsubishi_Outlander_PHEV,_Auto_2025,_Zurich_(20251029-P1074527).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA",
+    "note": "Cropped and resized."
+  },
+  "nissan-ariya": {
+    "file": "nissan-ariya.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Nissan_Ariya_Automesse_Ludwigsburg_2022_1X7A5877.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "polestar-2": {
+    "file": "polestar-2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Polestar_2,_GIMS_2019,_Le_Grand-Saconnex_(GIMS0552).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "polestar-3": {
+    "file": "polestar-3.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Polestar_3_IAA_2023_1X7A0703.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "polestar-4": {
+    "file": "polestar-4.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Polestar_4.jpg",
+    "author": "ArildV",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "renault-megane-e-tech": {
+    "file": "renault-megane-e-tech.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_Megane_E-Tech_IAA_2021_1X7A0073.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "renault-scenic-e-tech": {
+    "file": "renault-scenic-e-tech.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_Sc%C3%A9nic_E-Tech_IAA_2023_1X7A0344.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "skoda-elroq": {
+    "file": "skoda-elroq.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Elroq_Auto_Zuerich_2024_DSC_6550.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "skoda-enyaq": {
+    "file": "skoda-enyaq.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Skoda_Enyaq_Sportline_1X7A0316.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "skoda-kodiaq-phev": {
+    "file": "skoda-kodiaq-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Kodiaq_II_IMG_9433.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "smart-1": {
+    "file": "smart-1.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Smart_Hashtag_1_IMG_7328.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "smart-3": {
+    "file": "smart-3.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Smart_3,_BAS_24,_Brussels_(P1170547-RR).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "subaru-solterra": {
+    "file": "subaru-solterra.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Subaru_Solterra_ST-E_Auto_Zuerich_2023_1X7A1257.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "subaru-trailseeker": {
+    "file": "subaru-trailseeker.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Trailseeker_ET-HS_rear.jpg",
+    "author": "TTTNIS",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "tesla-model-3": {
+    "file": "tesla-model-3.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3,_EMS_2024,_Essen_(P1032260).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA",
+    "note": "Cropped and resized."
+  },
+  "tesla-model-y": {
+    "file": "tesla-model-y.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_1X7A6211.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "toyota-bz4x": {
+    "file": "toyota-bz4x.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "toyota-hilux-bev": {
+    "file": "toyota-hilux-bev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2026_Toyota_Hilux_BEV.jpg",
+    "author": "TTTNIS",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "toyota-rav4-phev": {
+    "file": "toyota-rav4-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Toyota_RAV4_(XA10)_IMG_1260.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "volvo-es90": {
+    "file": "volvo-es90.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volvo_ES90_IAA_2025_DSC_1357.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "volvo-ex30": {
+    "file": "volvo-ex30.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volvo_EX30_Auto_Zuerich_2023_1X7A0949.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "volvo-ex40": {
+    "file": "volvo-ex40.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volvo_XC40_Recharge_Facelift_IMG_8127.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as Volvo XC40 Recharge."
+  },
+  "volvo-ex90": {
+    "file": "volvo-ex90.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volvo_EX90_DSC_7810.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "volvo-xc60-phev": {
+    "file": "volvo-xc60-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volvo_XC60_(SPA)_FL_1X7A6406.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "volvo-xc90-phev": {
+    "file": "volvo-xc90-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Volvo_XC90_II_DSC_7420.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "vw-id5": {
+    "file": "vw-id5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_ID.5_Leonberg_2022_1X7A0459.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "vw-tayron-phev": {
+    "file": "vw-tayron-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_Tayron_II_DSC_7806.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "vw-tiguan-phev": {
+    "file": "vw-tiguan-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_Tiguan_R_1X7A0362.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "xpeng-g6": {
+    "file": "xpeng-g6.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:XPeng_G6_(2025)_IAA_2025_DSC_2057.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "zeekr-7x": {
+    "file": "zeekr-7x.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_005_(cropped).jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "zeekr-x": {
+    "file": "zeekr-x.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Zeekr_X,_Almaty_(LRM_20240331_124050).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA",
+    "note": "Cropped and resized."
+  }
+}

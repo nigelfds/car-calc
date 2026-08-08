@@ -39,6 +39,45 @@ test('only recognised free licences are accepted', () => {
   assert.equal(validateImageRecord({ ...valid, licence: 'All rights reserved' }).valid, false);
 });
 
+test('every version of CC BY and CC BY-SA is accepted, versioned or not', () => {
+  // A full run lost six cars — the Tesla Model 3 among them — to an allowlist
+  // that stopped at 3.0/4.0 while Commons returned "CC BY 2.0" and a bare
+  // "CC BY-SA". Every version of both is free; the version was never the
+  // thing worth checking.
+  for (const licence of ['CC BY', 'CC BY 1.0', 'CC BY 2.0', 'CC BY 2.5', 'CC BY 3.0', 'CC BY 4.0']) {
+    assert.equal(validateImageRecord({ ...valid, licence }).valid, true, licence);
+  }
+  for (const licence of ['CC BY-SA', 'CC BY-SA 1.0', 'CC BY-SA 2.0', 'CC BY-SA 2.5', 'CC BY-SA 3.0']) {
+    assert.equal(validateImageRecord({ ...valid, licence }).valid, true, licence);
+  }
+});
+
+test('non-commercial and no-derivatives licences are still rejected', () => {
+  // Both exclusions are load-bearing, and neither is about attribution. NC
+  // forbids commercial use; ND forbids derivative works, and every image here
+  // is cropped to 3:2 — an ND image is unusable however carefully it is
+  // credited. These must not match on their "CC BY" prefix.
+  for (const licence of ['CC BY-NC 4.0', 'CC BY-ND 4.0', 'CC BY-NC-SA 4.0', 'CC BY-NC-ND 3.0']) {
+    assert.equal(validateImageRecord({ ...valid, licence }).valid, false, licence);
+  }
+});
+
+test('a licence that merely starts with a free one is rejected', () => {
+  // The anchor, tested directly: without it, anything prefixed "CC BY" passes.
+  for (const licence of ['CC BY 4.0 with exceptions', 'Not CC BY 4.0', 'CC BY 4.0 (press use only)']) {
+    assert.equal(validateImageRecord({ ...valid, licence }).valid, false, licence);
+  }
+});
+
+test('an unversioned share-alike licence still requires the modification note', () => {
+  // REQUIRES_MODIFICATION_NOTE matches on "BY-SA" anywhere, so widening the
+  // allowlist must not have opened a path where a share-alike image is
+  // committed without recording that it was cropped.
+  const noNote = { ...valid, licence: 'CC BY-SA' };
+  delete noNote.note;
+  assert.equal(validateImageRecord(noNote).valid, false);
+});
+
 test('a share-alike licence requires the modification to be noted', () => {
   // CC BY-SA obliges us to indicate that the work was changed, and every image
   // here is cropped. A record without that note is not compliant.

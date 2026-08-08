@@ -29,6 +29,50 @@ test('searchFiles restricts results to the File namespace', async () => {
   assert.match(calls[0].url, /srnamespace=6/);
 });
 
+test('searchFiles asks the search server for raster images only', async () => {
+  const { fetchImpl, calls } = stub({ query: { search: [] } });
+  await searchFiles('Kia EV5', { fetchImpl });
+  // The keyword rides inside srsearch, so it arrives percent-encoded.
+  assert.match(decodeURIComponent(calls[0].url), /srsearch=Kia EV5 filetype:bitmap/);
+});
+
+test('searchFiles drops any non-image the search still returns', async () => {
+  // The real failure: Commons searches document CONTENTS, so "MG HS Super
+  // Hybrid" matched text inside OCR'd books and returned five PDFs, led by an
+  // 1874 journal of horticulture. sharp cannot decode a PDF, so one reaching
+  // the cropper fails with a much less obvious error than this filter gives.
+  const { fetchImpl } = stub({
+    query: {
+      search: [
+        { title: 'File:The Journal of horticulture (IA journalofhorticu1874lond).pdf' },
+        { title: 'File:MG HS (second generation) DSC 7229.jpg' },
+        { title: 'File:Some diagram.svg' },
+        { title: 'File:An interview.ogv' },
+        { title: 'File:2024 MG HS 3.png' }
+      ]
+    }
+  });
+  assert.deepEqual(
+    await searchFiles('MG HS Super Hybrid', { fetchImpl }),
+    ['MG HS (second generation) DSC 7229.jpg', '2024 MG HS 3.png']
+  );
+});
+
+test('searchFiles accepts the raster extensions Commons actually serves', async () => {
+  const titles = ['a.jpg', 'b.jpeg', 'c.png', 'd.gif', 'e.tif', 'f.tiff', 'g.webp', 'h.JPG'];
+  const { fetchImpl } = stub({ query: { search: titles.map(t => ({ title: `File:${t}` })) } });
+  assert.deepEqual(await searchFiles('x', { fetchImpl }), titles);
+});
+
+test('a search returning only non-images yields no candidate at all', async () => {
+  // Better than a wrong one: curate-images reports "no candidate returned for
+  // this family", which is the truth and sends it to manual review.
+  const { fetchImpl } = stub({
+    query: { search: [{ title: 'File:book.pdf' }, { title: 'File:scan.djvu' }] }
+  });
+  assert.deepEqual(await searchFiles('MG HS Super Hybrid', { fetchImpl }), []);
+});
+
 test('every request identifies the client', async () => {
   const { fetchImpl, calls } = stub({ query: { search: [] } });
   await searchFiles('Kia EV5', { fetchImpl });
