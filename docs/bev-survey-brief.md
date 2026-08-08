@@ -868,17 +868,78 @@ cheapest variant qualifies, the flagship does not.
 | Genesis G80 Electrified | Sedan. **Weakest single source in the survey** — confirmed only via a Genesis AU model listing, and dead in North America. Verify before committing the slot |
 | Polestar 5 | Sedan GT |
 
-### Batch 11 — the tail, plus the maintenance backlog
-Not six new families — this batch is deliberately mixed, because the tail is thin and the
-maintenance debt is real.
+### Batch 11 — the maintenance sweep, plus the tail — **RESTRUCTURED 2026-08-08**
+
+**This batch now leads with maintenance and treats the tail as the filler, reversing its original
+shape.** It was written as "the tail, plus the maintenance backlog" when the wave was at 37% coverage
+and new families were the scarce thing. At ~86% coverage the scarce thing is correctness: the tail is
+three families, all above $189,900, all above both FBT thresholds, and all near-certain to be
+Pareto-dominated and unreachable in the shortlist. The maintenance half fixes running-cost figures on
+the Ioniq 5, EV6, EV9, Model 3, G6 and 7X — cars that sit across the $75,000 and $91,661 thresholds
+where the recommendation actually flips. **Run it as three agents on the three streams below, not as
+six family agents.**
+
+Two findings from the 2026-08-08 review that the original entry did not have. Both were measured
+against the built dataset, not inferred, and they become streams 1 and 2:
+
+**Stream 1 — the E-GMP battery question, and it is TEN rows, not four.** The entry below (added by batch 7) names four
+Ioniq 5 rows and says to check the Ioniq 6 and Kona too. It misses **`kia-ev6`, which carries
+`batteryKwh: 84` across all four of its rows.** Full list of rows at exactly 84:
+`hyundai-ioniq-5` (elite-rwd, n, n-line-premium-awd, rwd) · `hyundai-ioniq-6-n` · `kia-ev6`
+(air-rwd, gt-awd, gt-line-awd, gt-line-rwd) · **`tesla-model-y-l-premium-awd`, which is an unrelated
+pack and a coincidental number — separate it out rather than sweeping it in.** Note the dataset now
+**contradicts itself on one platform**: the three Genesis rows batch 7 wrote carry **80** for the same
+4th-gen pack, so the batch that found the problem also introduced the inconsistency. `kia-ev9` already
+carries Kia's *published usable* figures (76.1 / 99.8), which is evidence Kia publishes usable and the
+EV6's 84 is the gross number. **Not yet verified: whether 80 is right.** What is established is that
+the dataset is internally inconsistent and that the pattern matches batch 5's confirmed e-TNGA defect.
+
+**Stream 2 — a second, previously unrecorded defect: 26 of 215 BEV rows have a DERIVED consumption figure.**
+In each, `consumptionKwhPer100km` equals `batteryKwh / rangeKm * 100` to within 0.06 — i.e. a
+wheels-side figure at 0% plug-to-wheels overhead, not the declared plug-side WLTP combined figure.
+This matters because **`calc/running-costs.js:28` multiplies this field by a retail electricity
+tariff**, which is money paid at the plug, so a wheels-side figure systematically **understates
+running costs** — the exact quantity this app exists to compute. Batch 4 caught this inside one family
+(the IM6) and made the agent re-source; nobody has checked it across the held rows. Batch 4's measured
+distribution across the wave is p10 0.0%, median 12.4%, p90 19.9%, so 0% is at the very bottom of the
+band rather than impossible — which is why these need re-sourcing rather than blind correction.
+
+| Family | Rows | Variants |
+|---|---|---|
+| `byd-dolphin` | 2 | essential, premium |
+| `forthing-taikon-5` | 2 | bev-exclusive, bev-luxury |
+| `hyundai-inster` | 1 | cross-roof-basket |
+| `hyundai-ioniq-5` | 4 | elite-rwd, n, n-line-premium-awd, rwd |
+| `kia-ev9` | 4 | air-rwd, earth-awd, gt-awd, gt-line-awd |
+| `mg-s6` | 2 | essence-awd, essence-rwd |
+| `tesla-model-3` | 1 | rwd |
+| `xpeng-g6` | 4 | long-range, performance, performance-black-edition, standard-range |
+| `zeekr-7x` | 4 | long-range-rwd, performance-awd, performance-black-special-edition, rwd |
+| `zeekr-x` | 2 | performance-awd, rwd |
+
+**The four `hyundai-ioniq-5` rows appear on BOTH lists**, so that family is compounding two errors and
+is the single highest-value target in the sweep. **Sequencing constraint: the battery fix and the
+consumption fix must land TOGETHER**, because the validator tests stated consumption against
+`batteryKwh / rangeKm * 100` with a 25% tolerance (`data/schema.js:154`), and moving capacity ~5%
+while leaving a derived consumption figure in place drags a row toward that ceiling from the wrong
+side.
+
+**Stream 3 — the tail.** Unchanged in content, demoted in priority.
 
 | Item | Note |
 |---|---|
 | Lotus Eletre | Top R variant is quoted at both $279,990 and $315,000; base $189,900 qualifies |
 | Lotus Emeya | `Sedan` |
-| Maserati Grecale Folgore | **Verify orderable, not run-out.** Maserati has retrenched hard on EVs and told dealers to discount Folgore stock ~43% |
+| Maserati Grecale Folgore | **Verify orderable, not run-out.** Maserati has retrenched hard on EVs and told dealers to discount Folgore stock ~43%. **The on-sale/run-out flag is now negative six times out of six across the wave** — expect this to come off |
+
+**The standing maintenance items, unchanged.** These are the backlog the sweep has been accumulating
+since batch 1; the two streams above are additions to it, not replacements for it. Everything marked
+DONE is recorded so nobody redoes it.
+
+| Item | Note |
+|---|---|
 | Maintenance sweep | **Shrunk 2026-07-30, and again 2026-07-31 by batch 6.** Still to do: rename `omoda-e5` → Chery E5; re-price XPeng G6; **correct `bmw-ix1`'s `batteryKwh` 65.2 → 64.8 (see the batch 6 record — its platform-mate `bmw-ix2` moved to 64.8 on Australian sources, and the held iX1 rests on the one source that disagrees with BMW official, EV Database and CarExpert alike)**. **DONE by batch 6, do not re-check: the BMW i4 M60 is NOT orderable in Australia** — no Australian source carries the badge, carsales' 2026 i4 research page lists eDrive35 only, and EV Central's "range trimmed" piece corroborates the held family record exactly. The survey's $139,900 M60 claim was an overseas badge matched against the Australian range, which is the failure mode the wave warns about hardest. The held `bmw-i4` row needed no change. **Already done, do not redo:** Ioniq 6 N, MG4 Urban and Kia EV9 GT are all held; Leapmotor C10 is confirmed BEV; Kona ($46,000–$63,000) and Ioniq 5 ($68,200–$83,700) already match this survey's own "now" figures exactly. **Still worth checking:** the Inster, where this survey quotes $38,990 *drive-away* against a held list of $39,000 — a drive-away figure is not a list price, and that one backs out to about $36,574, so either the held row is $2,400 high or the survey is quoting a grade the dataset does not hold. Volvo, BMW iX1 and Renault re-pricing is unverified either way |
-| **`hyundai-ioniq-5` `batteryKwh` — ADDED BY BATCH 7, four rows, NOT resolved** | All four held Ioniq 5 rows carry **`batteryKwh: 84`**, which is the figure Hyundai advertises unqualified. **Two batch 7 agents independently recorded 80 usable against 84 nominal for the same 4th-gen E-GMP pack**, from different EV Database records for different cars (`genesis-gv60`, `genesis-gv70-electrified`), and both flagged the Ioniq 5 discrepancy unprompted. That convergence is why this is here. **Do not blind-swap.** This is the same shape as batch 5's e-TNGA finding — a gross figure in a field the schema defines as usable — but it is NOT yet settled: per batch 5's rule the question must be closed by a source stating BOTH figures **for the Ioniq 5 specifically**, not by arithmetic (a 5% capacity difference sits inside the plug-to-wheels band and cannot be separated by implied consumption), and one competing source gives **78.0** rather than 80.0 for this pack. Note `kia-ev9` is already correct — it carries Kia's published usable figures, 76.1 and 99.8. Check `hyundai-ioniq-6` and `hyundai-kona-electric` for the same defect at the same time |
+| **`hyundai-ioniq-5` `batteryKwh` — ADDED BY BATCH 7, NOT resolved. ~~four rows~~ SCOPE CORRECTED 2026-08-08 TO TEN ROWS — see stream 1 above, which supersedes the row count in this cell and adds `kia-ev6`** | All four held Ioniq 5 rows carry **`batteryKwh: 84`**, which is the figure Hyundai advertises unqualified. **Two batch 7 agents independently recorded 80 usable against 84 nominal for the same 4th-gen E-GMP pack**, from different EV Database records for different cars (`genesis-gv60`, `genesis-gv70-electrified`), and both flagged the Ioniq 5 discrepancy unprompted. That convergence is why this is here. **Do not blind-swap.** This is the same shape as batch 5's e-TNGA finding — a gross figure in a field the schema defines as usable — but it is NOT yet settled: per batch 5's rule the question must be closed by a source stating BOTH figures **for the Ioniq 5 specifically**, not by arithmetic (a 5% capacity difference sits inside the plug-to-wheels band and cannot be separated by implied consumption), and one competing source gives **78.0** rather than 80.0 for this pack. Note `kia-ev9` is already correct — it carries Kia's published usable figures, 76.1 and 99.8. Check `hyundai-ioniq-6` and `hyundai-kona-electric` for the same defect at the same time |
 | **`mercedes-g580` — ADDED BY BATCH 7, a re-check not a fix** | Not a defect: the family is correctly absent. It is on sale but lists at **$252,700**, $2,700 above the schema's `listPrice` ceiling. **A price cut of $2,701 makes it representable.** Batch 13's re-check pass should test it. Everything needed to write the row in one pass is in the batch 7 record: one grade, `batteryKwh` 116 net, `rangeKm` 473 WLTP (**reject the 567 km NEDC figure that dominates Australian launch coverage**), suggested insurance ~5400 and curve ~`[1, 0.6, 0.48, 0.4, 0.34, 0.29]`. Its `consumptionKwhPer100km` was never established from an Australian source — try the Green Vehicle Guide by direct ID, per the batch 7 record |
 | **e-TNGA `batteryKwh` correction — ADDED BY BATCH 5, ~~five rows~~ FOUR OF FIVE APPLIED 2026-07-31, one left** | **DONE: `subaru-solterra` (AWD, AWD Touring) and `toyota-bz4x` (AWD, Touring AWD) now carry 71.0.** Build 0 failures, 596 tests pass; the widest consumption deviation after the change is 14.2% against the validator's 25% ceiling. **STILL OPEN: `toyota-bz4x-2wd` only** — it was deliberately left at 74.7 and needs the model-year check described below before it moves. The original note is kept in full because that check is still live. Five held rows recorded a GROSS pack figure in a field the schema defines as USABLE: `toyota-bz4x` (2WD, AWD, Touring AWD) and `subaru-solterra` (AWD, AWD Touring) all carried `batteryKwh: 74.7`. Toyota's European newsroom states, for the bZ4X Touring, *"a maximum gross capacity of 74.7 kWh (**71 kWh net**)"*, and Toyota USA's 2026 bZ release calls 74.7 a *"total capacity"* in those words. The correct usable figure for that pack is **71.0** — a 5.2% overstatement. Batch 5 corrected its own three families to 71.0 and did not touch these. **Do not blind-swap all five.** The `toyota-bz4x` **2WD** row needs a model-year check first: the superseded MY25 pack is a different unit at **73.1 nominal / 69.0 usable**, and 73.1 is a *nominal* figure that has already been mistaken for a usable one once during this adjudication. Sources: `https://newsroom.toyota.eu/the-new-toyota-bz4x-touring-an-suv-for-electrified-adventures/`, `https://pressroom.toyota.com/toyota-bz-all-electric-suv-adds-range-charging-and-exterior-updates-for-2026/` |
 
