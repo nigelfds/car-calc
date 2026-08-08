@@ -42,6 +42,75 @@
     }
   },
   {
+    "id": "alfa-romeo-tonale-phev",
+    "summary": "The Veloce Ibrida Plug-In Q4 is the only plug-in grade in Alfa Romeo Australia's Tonale range — the other two cars sold here, the $64,990 Veloce Ibrida and the $68,990 Ibrida Sport Speciale, are 1.5-litre mild hybrids with no plug at all. The facelifted range landed here in July 2026 with the plug-in unchanged mechanically: a 1.3-litre turbo driving the front wheels, a 94kW motor driving the rears for a genuine electric all-wheel-drive layout, 198kW combined and 59km of WLTP electric range from a 15.5kWh (gross) pack. Australian testers like the way it steers and are impressed by what regular charging does to the fuel bill — CarsGuide's long-termer covered 673 of 934km on electricity for 2.6L/100km — but they are equally consistent that a flat battery turns it into a 1,811kg SUV pulling 6.1-7.0L/100km with, in OnlineAuto's words, performance that 'falls off a cliff'. The harder problem is the $14,000 it asks over the mild hybrid, on a car Australia bought 132 of in all of 2025.",
+    "pros": [
+      "The only Tonale with a plug and the only one with all-wheel drive: a 94kW rear axle motor gives it e-AWD with no propshaft, 198kW combined and 0-100km/h in 6.6 seconds, where the $64,990 Veloce Ibrida mild hybrid is a 128kW front-driver.",
+      "Australian real-world testing shows the plug-in maths genuinely works for a charger-owning commuter — CarsGuide's long-term car averaged 2.6L/100km over 934km while charging two or three times a week, running 673 of those kilometres on electricity, and OnlineAuto recorded 1.8L/100km on a charged 60km loop.",
+      "Five-year, unlimited-kilometre warranty with no dealer-servicing condition attached — Alfa Romeo Australia's standard term since April 2022, not an offer conditional on servicing inside the network — plus a separate eight-year/160,000km high-voltage battery warranty and five years of roadside assistance.",
+      "Capped-price servicing is remarkably cheap for a premium European SUV: the first three services are quoted at $244.84, $231.92 and $244.84 at 12-month/15,000km intervals, in the same range as Alfa's Junior rather than a German rival.",
+      "At $78,990 before on-road costs it sits under the $80,809 ordinary luxury car tax threshold — and its 1.7L/100km label figure puts it under the $91,661 fuel-efficient threshold with room to spare — so no LCT applies, and 39g/km CO2 gets Victoria's green-vehicle stamp duty rate rather than the standard scale."
+    ],
+    "cons": [
+      "It is $3,990 over the $75,000 cap that applies from 1 April 2027 — and academic in any case, because plug-in hybrids lost the FBT exemption outright on 1 April 2025, so a novated lease gets no exemption and no 25 per cent discount on this car at any point.",
+      "59km of WLTP electric range is the weakest number in the segment: a Cupra Formentor VZe claims 114km from 20kWh and a Mitsubishi Outlander PHEV 86km, and the Tonale's 15.5kWh gross pack only charges at 7.4kW AC with no DC capability at all, so there is no useful top-up on the road.",
+      "Once the battery is flat the 1.7L/100km label figure is meaningless — Australian testers measured 7.0L/100km and 6.1L/100km over two months of irregular charging and 6.2L/100km on a flat-battery loop, and OnlineAuto reports performance that 'falls off a cliff', so a buyer without home charging is paying a $14,000 premium over the mild hybrid to go slower and use more fuel.",
+      "The battery costs 125 litres of boot — 385 litres against 500 in the mild-hybrid Tonale, and 1,430 against 1,550 with the second row folded — and braked towing is only 1,250kg, below the Cupra Formentor VZe's 1,500kg and well below the BMW X1 xDrive25e's 1,700kg.",
+      "Resale risk is the worst in this comparison set and it is evidenced, not assumed: Alfa Romeo sold 132 Tonales in Australia across all of 2025 and 33 in 2026 to date, supports them through eight dealers it has said it will not expand, and a 2024 Tonale has already shed 54 per cent of its value in two years — 75th-100th percentile depreciation among 2024 SUVs. Italian metalworker unions report Tonale production ending in November 2027 as Pomigliano is retooled, which would leave this an orphan model within two years of purchase."
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-alfa-romeo-tonale-price-and-specs",
+      "https://www.carsales.com.au/editorial/details/2026-alfa-romeo-tonale-updated-152430/",
+      "https://www.alfaromeo.com.au/models/tonale-plug-in-hybrid",
+      "https://www.alfaromeo.com.au/models/tonale",
+      "https://www.alfaromeo.com.au/warranty",
+      "https://www.carexpert.com.au/car-reviews/2026-alfa-romeo-tonale-review",
+      "https://www.carexpert.com.au/car-news/alfa-romeo-moves-to-five-year-warranty-in-australia",
+      "https://www.carexpert.com.au/car-news/alfa-romeo-comfortable-with-its-tiny-dealer-network",
+      "https://www.carsguide.com.au/ev/alfa-romeo-tonale-veloce-phev-long-term-part-3-93587",
+      "https://www.carsguide.com.au/alfa-romeo/tonale/boot-space",
+      "https://www.onlineauto.com.au/car-reviews/2025-alfa-romeo-tonale-veloce-phev-review",
+      "https://evcentral.com.au/2026-alfa-romeo-tonale-phev-review-italian-brand-promises-a-small-suv-antidote-to-computers-with-four-wheels/",
+      "https://www.media.stellantis.com/em-en/alfa-romeo/press/the-new-tonale-plug-in-hybrid-q4-alfa-romeo-s-efficient-sportiness-makes-its-debut",
+      "https://www.carscoops.com/2026/06/alfa-romeo-tonale-discontinuation/",
+      "https://caredge.com/alfa-romeo/tonale/depreciation",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+    ],
+    "sourcedAt": "2026-08-08"
+  },
+  {
+    "id": "audi-a5-phev",
+    "summary": "The A5 e-hybrid quattro puts Audi's new-generation plug-in hardware — the same 270kW/500Nm and 25.9kWh gross (20.7kWh usable) pack as the Q5 e-hybrid — into a liftback body at $89,900, exactly what Audi charges for the 200kW TFSI quattro petrol and $8,300 less than the Mercedes-Benz C350e that is now its only direct rival since BMW withdrew the 330e locally. Being lighter and lower than the Q5 buys it 97km of WLTP electric range against the SUV's 82km and a better 7.3L/100km with the battery flat, and at $89,900 it slips under the $91,661 fuel-efficient luxury car tax threshold the Mercedes misses. Reviewers rate the pace, the range and the price parity, but are consistent about what the pack costs: 331 litres of boot against 445 in the petrol A5, a cabin of piano black with rattles reported on a launch car, and sport suspension on 20-inch wheels with no adaptive option.",
+    "pros": [
+      "$89,900 is the identical list price to the 200kW TFSI quattro petrol A5 Sedan for 70kW more and a 5.1-second 0-100km/h, and the 2.6L/100km combined figure clears the 3.5L/100km fuel-efficient test — so the car is judged against the $91,661 LCT threshold rather than the $80,809 one and pays no luxury car tax at all, worth roughly $2,700",
+      "97km of WLTP electric range from a 20.7kWh usable (25.9kWh gross) battery — 15km more than the heavier Q5 e-hybrid manages on the same hardware, and a genuine WLTP number against the Mercedes-Benz C350e's 104km NEDC claim, so a 30-45km Melbourne commute runs on electricity with margin either side",
+      "$8,300 cheaper than the $98,200 Mercedes-Benz C350e while making 270kW/500Nm to the Mercedes' 230kW/550Nm and matching the S5 for outputs; with the BMW 330e withdrawn from Australia the Mercedes is the only direct alternative, and it sits above the fuel-efficient LCT threshold where the Audi sits below",
+      "60g/km certified combined CO2 is half Victoria's 120g/km green passenger car threshold, so it pays $8.40 per $200 of duty instead of the $10.40 per $200 an $89,900 petrol A5 attracts — about $900 saved at the point of registration",
+      "11kW three-phase AC charging fills the pack 0-100 per cent in about 2.5 hours, and the five-year unlimited-kilometre vehicle warranty is backed by eight years or 160,000km on the high-voltage battery"
+    ],
+    "cons": [
+      "The battery under the boot floor costs 114 litres: 331L seats-up and 1175L folded against 445L and 1299L in the petrol A5 Sedan, a 26 per cent loss that is the single most-cited complaint in the Australian launch reviews and the reason the pack is worth checking against a pram or a set of golf clubs before signing",
+      "The 2.6L/100km label figure only holds if every trip starts charged — Audi's own WLTP figure with the battery discharged is 7.3L/100km for this 270kW, 20-inch specification and Chasing Cars measured 7.6L/100km in mixed driving, so a buyer who cannot charge at home is running a 2,095kg quattro on 95 RON",
+      "Charging is AC-only at 11kW with no DC fast-charge hardware, so a flat battery on a road trip stays flat until you find a destination charger — and the 46-litre tank, down from 56 in the petrol car, gives back some of the touring range the plug-in gains",
+      "PHEVs lost the FBT exemption on 1 April 2025 and $89,900 is well clear of the $75,000 2027 FBT phase cap, so the novated-lease concessions that once carried the plug-in premium do not apply and the case rests entirely on home charging",
+      "The cabin draws consistent criticism: extensive gloss-black trim and hard plastics low down, ventilated seats a $2,200 option, and a Chasing Cars launch car that had already developed rattles; the sport suspension on 245/35 R20 tyres has no adaptive alternative and CarExpert called the steering numb"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-audi-a5-e-hybrid-review-quick-drive",
+      "https://www.carexpert.com.au/car-news/2026-audi-a5-achieves-price-parity-between-phev-and-ice",
+      "https://www.carsguide.com.au/ev/audi-a5-e-hybrid-100170",
+      "https://www.chasingcars.com.au/reviews/large-cars/audi-a5-avant-e-hybrid-2026-review/",
+      "https://www.carsales.com.au/research/audi/a5/2026/",
+      "https://www.audi.com/en/a5-e-hybrid-quattro-1016/technical-data",
+      "https://www.audi.ie/en/models/a5/a5-saloon-e-hybrid/",
+      "https://www.audi.com/en/press-releases/new-audi-a5-e-hybrids-combine-dynamics-efficiency-and-long-electric-range-16582",
+      "https://www.auto-data.net/en/audi-a5-sedan-b10-2.0-tfsi-367hp-e-hybrid-quattro-ultra-s-tronic-54001",
+      "https://www.carexpert.com.au/car-news/2025-mercedes-benz-c350e-priced-for-australia-phev-sedan-has-100km-of-range",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
     "id": "audi-q4-e-tron",
     "summary": "The Q4 e-tron is Audi's MEB-platform medium electric SUV, sold in Australia as a conventional SUV and a lower-roofed Sportback, each in rear-drive 45 and quattro 55 form. Australian reviewers rate the cabin quality, driving position and packaging highly and note it carries more usable space than its compact footprint suggests, but they are lukewarm about its handling and point out it costs meaningfully more than the mechanically related Volkswagen Group EVs. The critical decision inside the range is the price step: the 45 grades sit under the $91,661 luxury-car-tax and FBT threshold while both 55 quattro grades clear it, which changes the ownership maths far more than the extra performance does.",
     "pros": [
@@ -416,6 +485,42 @@
       "licence": "CC BY-SA 4.0",
       "note": "Cropped and resized."
     }
+  },
+  {
+    "id": "bmw-x5-phev",
+    "summary": "The xDrive50e M Sport is the only plug-in hybrid in BMW Australia's X5 range, pairing the 3.0-litre turbo straight-six with a 145kW motor and a 25.7kWh usable battery for 360kW/700Nm and 94km of WLTP electric range — more than any other plug-in hybrid in its price bracket, and enough to run a typical Melbourne commute on grid power alone. Reviewers are consistent that this is the X5 to have if you can charge it: the powertrain is the smoothest and the second-most-powerful in the range, the ride is plush, and the 2700kg towing rating matches the diesel exactly. The catch is what happens when the battery is flat — BMW's own WLTP charge-sustaining figure is 9.6-10.5L/100km, worse than the cheaper xDrive40i petrol's claim — and that at $154,900 the car sits above every tax threshold the FBT and LCT rules define, so the concessions that once carried plug-in hybrids are gone.",
+    "pros": [
+      "94km of WLTP electric range from a 25.7kWh usable pack (29.5kWh gross) — 25 per cent more capacity than the xDrive45e it replaced, and more electric range than the BMW X3 30e's 85km, the Volvo XC90 T8's 69km or the Land Rover Defender P300e's 48km",
+      "41g/km combined CO2 is far inside Victoria's 120g/km green passenger car limit, so duty is charged at the flat $8.40 per $200 green rate rather than the $18.00 per $200 tier a petrol X5 over $150,000 pays — worth roughly $7,400 at this price, the largest single duty saving of any car in the dataset",
+      "1.9L/100km on the combined cycle clears the Luxury Car Tax fuel-efficient test of 3.5L/100km, so LCT is levied above the $91,661 threshold instead of the $80,809 one — about $3,580 less tax embedded in the list price than an equivalent diesel or petrol X5",
+      "360kW and 700Nm makes it the second-most-powerful X5 behind the $177,900 M60i V8 and comfortably quicker than the $143,900 xDrive40i petrol, while its 2700kg braked tow rating is identical to the xDrive30d diesel — the plug-in gives away no capability to the cars it costs more than",
+      "11kW three-phase AC charging fills the pack in about two and a half hours, and the five-year unlimited-kilometre warranty is unconditional and not tied to servicing inside the BMW network, with the high-voltage battery separately covered for six years or 100,000km"
+    ],
+    "cons": [
+      "The 1.9L/100km label collapses the moment the battery is flat: BMW's own WLTP charge-sustaining figure is 9.6-10.5L/100km and Auto Express measured 25.9mpg (about 10.9L/100km) on petrol alone, which is worse than the cheaper xDrive40i petrol's own 9.3L/100km claim — a buyer who cannot charge at home is paying $11,000 more to use more fuel",
+      "The battery costs 150 litres of boot — 500L seats-up against 650L in every other X5, and 1720L folded against 1870L — and the plug-in is five seats only with no third-row option, where a seven-seat Volvo XC90 T8 sits $34,000 cheaper at $120,990",
+      "Plug-in hybrids lost the FBT exemption on 1 April 2025, and at $154,900 the xDrive50e is more than double the $75,000 FBT cap and far above both the $80,809 ordinary and $91,661 fuel-efficient LCT thresholds — the novated-lease arithmetic that used to justify a car like this no longer applies at all",
+      "Charging is AC-only at 11kW with no DC fast-charge capability of any kind, so a flat battery is an overnight or a two-and-a-half-hour wallbox stop and cannot be usefully recovered mid-journey — and there is no vehicle-to-load or vehicle-to-home output",
+      "This is a run-out car bought at full list: BMW has revealed the fifth-generation X5 with Australian timing locked in, petrol and diesel arriving in the fourth quarter of 2026 and the replacement 50e xDrive — with up to 102km of WLTP range — by mid-2027, which is a hard deadline on this generation's residual value"
+    ],
+    "sources": [
+      "https://www.carsguide.com.au/bmw/x-models/x5/price/2026",
+      "https://www.carsguide.com.au/bmw/x-models/price/2026/x5-xdrive50e-m-sport",
+      "https://www.carsales.com.au/research/bmw/x5/2025/xdrive50e-m-sport/",
+      "https://www.carsales.com.au/research/bmw/x5/",
+      "https://www.carexpert.com.au/bmw/x5/2026/price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2025-bmw-x5-review",
+      "https://www.carexpert.com.au/car-news/2027-bmw-x5-and-ix5-ev-new-generation-suv-range-revealed-australian-timing-locked-in",
+      "https://thebeep.com.au/cars/bmw/x5",
+      "https://www.whichcar.com.au/features/plug-in-hybrids-longest-electric-driving-range",
+      "https://www.parkers.co.uk/bmw/x5/review/mpg-running-costs/",
+      "https://www.autoexpress.co.uk/bmw/x5/94980/new-bmw-x5-xdrive50e-review-plug-hybrid-power-enhances-already-solid-suv-package",
+      "https://vogelsang-automobile.de/bmw-x5-xdrive50e/",
+      "https://www.bmwblog.com/2025/12/07/bmw-x5-xdrive50e-review-range-charging-performance/",
+      "https://www.encycarpedia.com/bmw/23-x5-xdrive50e-suv",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
   },
   {
     "id": "byd-atto1",
@@ -1166,6 +1271,38 @@
     }
   },
   {
+    "id": "cupra-terramar-phev",
+    "summary": "The Terramar VZe is the only plug-in grade in Cupra's new mid-size SUV range and, at $77,990 before on-roads, the most expensive way in Australia to buy the Volkswagen Group's 1.5-litre eHybrid drivetrain — the mechanically near-identical VW Tiguan and Tayron 200TSI eHybrid undercut it by $3,440 and $1,440 with more boot space, and the smaller Cupra Formentor VZe by $9,000. Reviewers agree the hardware delivers: 110km of WLTP electric range from a 19.7kWh usable battery, 50kW DC charging that almost no plug-in hybrid offers, and adaptive DCC Pro dampers that CarExpert found 'surprisingly comfy' on a Melbourne–Canberra run where it saw 92km of indicated electric range. Where they push back is value and detail — CarsGuide scored it 6.8 out of 10 largely on a price that sits $25,000 above a BYD Sealion 6 Premium, and CarExpert singled out an 'awful' brake pedal and strong torque steer from the front-drive layout.",
+    "pros": [
+      "110km of WLTP electric range from a 19.7kWh usable battery is among the longest of any plug-in SUV on sale here — Mitsubishi Outlander PHEV claims 86km, BYD Sealion 6 81km and Mazda CX-60 PHEV 76km — and CarExpert saw 92km indicated in Australian driving",
+      "50kW DC fast charging (10-80 per cent in about 26 minutes) alongside 11kW AC is rare on a plug-in hybrid: neither the Outlander PHEV nor the Sealion 6 can take DC at all",
+      "2,000kg braked towing is the highest rating on this drivetrain in the dataset — the VW Tiguan and Tayron 150TSI eHybrid manage 1,800kg and the Cupra Formentor VZe only 1,500kg — and it is paired with 200kW/400Nm and a 7.3sec 0-100km/h claim",
+      "The five-year unlimited-kilometre warranty is factory-backed and not conditional on servicing inside the Cupra network, the high-voltage battery is separately covered for 8 years/160,000km, and five-year capped-price servicing is quoted upfront at $2,590",
+      "Five-star ANCAP with 89 per cent adult occupant protection and 78 per cent safety assist, and at $77,990 it sits under the $80,809 ordinary LCT threshold while 11g/km CO2 clears Victoria's 120g/km green passenger car test, so no luxury car tax applies and stamp duty is charged at the flat green rate"
+    ],
+    "cons": [
+      "$77,990 buys the same 1.5-litre eHybrid drivetrain Volkswagen sells for $74,550 in the Tiguan 200TSI eHybrid and $76,550 in the larger, roomier Tayron — CarsGuide scored its value 6.8 out of 10 against a $52,990 BYD Sealion 6 Premium and a $50,990 drive-away GWM Haval H6 GT",
+      "The battery costs it a fifth of the boot — 400 litres against 508 litres in the petrol Terramar — and it deletes the underfloor storage and the spare wheel, leaving a puncture repair kit; CarsGuide also found rear legroom tight for a 168cm passenger",
+      "The 0.5L/100km label figure only survives if you plug in every night: CarExpert averaged 5.3 and 5.9L/100km on a Melbourne–Canberra return with the battery flat for most of it, which implies roughly 7L/100km on petrol alone from the 45-litre tank, so the running-cost case collapses for a buyer without home charging",
+      "CarExpert criticised an 'awful' brake pedal that needs excessive pressure and travel and triggered ABS unexpectedly in ordinary braking, plus torque steer that 'comes on strong' from the front-wheel-drive layout — the one Terramar that cannot be had with all-wheel drive",
+      "Plug-in hybrids lost the FBT exemption on 1 April 2025, Cupra Australia runs only 14 service centres nationally, and the brand has a documented history of deep run-out discounting — it cut more than $20,000 off the previous Formentor PHEV — so resale risk on the range-topping price is real"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2026-cupra-terramar-vze-review",
+      "https://www.carsguide.com.au/ev/cupra-terramar-vze-101284",
+      "https://www.chasingcars.com.au/news/new-car-prices/cupra-terramar-vze-2026-sporty-plug-in-hybrid-arrives-ahead-of-vw-tiguan-skoda-kodiaq-to-tackle-byd-sealion-6/",
+      "https://www.mynrma.com.au/open-road/news/2025/cupra-terramar-vze-phev-pricing",
+      "https://www.cupraofficial.com.au/cars/terramar",
+      "https://www.cupraofficial.com.au/owners/warranty",
+      "https://www.seat-cupra-mediacenter.com/content/dam/seat-media-center/models-all-brands/cupra-models/cupra-terramar/technical-data/Techninal-Data-CUPRA-Terramar.pdf",
+      "https://www.parkers.co.uk/cupra/terramar/review/practicality/",
+      "https://www.electrifying.com/reviews/cupra-reviews/terramar-e-hybrid/review",
+      "https://www.auto-data.net/en/cupra-terramar-1.5-tsi-272hp-e-hybrid-dsg-52623",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+    ],
+    "sourcedAt": "2026-08-08"
+  },
+  {
     "id": "deepal-s07",
     "summary": "The S07 is Australia's first Deepal model, a mid-size electric SUV sold in a single RWD grade and visibly benchmarked against the Tesla Model Y. CarExpert's 2025 review called it competently executed but derivative, marked down for a bouncy ride, a wide turning circle and overreactive driver-assist alerts, while praising its equipment list and quiet cabin. CarsGuide's follow-up in 2026 found Deepal had used over-the-air updates to fix several of those early complaints, lifting its verdict to 7.4/10 and noting the car is a more convincing daily proposition now than at launch, even if it remains an unexciting drive with slower DC charging than key rivals.",
     "pros": [
@@ -1195,6 +1332,80 @@
       "licence": "CC BY-SA 4.0",
       "note": "Cropped and resized."
     }
+  },
+  {
+    "id": "denza-b5",
+    "summary": "Denza's first Australian model is a body-on-frame plug-in 4x4 that reviewers consistently rate as more capable and far better equipped than its $74,990-$79,990 pricing suggests, with CarsGuide scoring it 7.8 and 4x4 Australia calling the Leopard better sorted than the larger B8. The recurring reservation is mass: at 2897-3007kg it rolls in corners and rides busily, its 490-600kg payload and 3000kg tow rating trail the diesel wagons it targets, and the 1.5-litre petrol engine only clutches to the front axle above about 80km/h, which leads CarExpert to describe its behaviour as closer to a range-extender than a conventional plug-in hybrid. Reviewers are also unanimous that the case rests on charging it — with a flat battery the trip computer settles near 11L/100km, not the 1.9L/100km on the label.",
+    "pros": [
+      "90km of electric range on the WLTC cycle rather than the NEDC figure most Chinese-derived plug-ins quote here — Chasing Cars measured 88km in urban running — and it is the rare PHEV with 100kW DC fast charging alongside 11kW AC, so the battery can be refilled on the road rather than only overnight",
+      "Real off-road hardware at the price: front and rear electronically locking differentials, low-range gearing, and 220-310mm of ground clearance via the Leopard's Disus-P hydraulic active suspension, in a body-on-frame 4x4 that undercuts a Land Rover Defender P300e plug-in by more than $50,000",
+      "400kW and 760Nm through a motor on each axle gives a claimed 4.8s 0-100km/h and 3000kg braked towing, with a manufacturer-quoted 850km combined WLTC range from the 83-litre tank",
+      "Five-star ANCAP under the current 2023-25 criteria (86% adult occupant, 95% child occupant), rated in December 2025 and valid to December 2031 — a full-criteria result rather than a carried-over older rating",
+      "Six-year/150,000km vehicle warranty with no dealer-servicing condition attached, an eight-year/160,000km battery warranty, and capped-price servicing quoted at $3542 across the first five years on 12-month/20,000km intervals"
+    ],
+    "cons": [
+      "The 1.9L/100km label figure only holds while the battery lasts: Denza's own charge-sustaining number is 10.9L/100km on WLTC (9.5L/100km on the more lenient NEDC), EV Central's trip computer showed 11.7L/100km with the pack depleted and Chasing Cars saw 14.0L/100km driven hard, so a buyer without home charging is running a three-tonne petrol SUV",
+      "Payload is 600kg for the base car and just 490kg for the 3007kg Leopard, which five adults and luggage will exhaust before any towball download is added — and every Australian reviewer flags the weight in the way it drives, with CarsGuide citing a busy ride and lots of body roll and the NRMA describing off-road progress as beating the earth into submission",
+      "3000kg braked towing sits 500kg under the diesel wagons and plug-in utes this car is cross-shopped against, and under the Denza B8's own 3500kg rating — 4x4 Australia and CarExpert both call the tow rating underdone for the segment",
+      "Denza is a brand-new marque in Australia with no residual-value history, a handful of metropolitan dealers and unproven long-term reliability — Chasing Cars names residuals and durability as the open questions, and the complex hydraulic suspension on the Leopard adds a repair risk used buyers will discount for",
+      "Advertised pricing is before on-road costs but the cars are widely quoted drive-away — roughly $81,500 for the base B5 and $86,700 for the Leopard in Victoria — so the $74,990 headline is about $6,500 short of what it takes to register one"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-denza-b5-price-and-specs",
+      "https://www.carsguide.com.au/ev/denza-b5-100852",
+      "https://www.carsguide.com.au/denza/b5/price/2026",
+      "https://www.chasingcars.com.au/reviews/large-suvs/denza-b5-leopard-2026-review/",
+      "https://www.carsales.com.au/editorial/details/denza-b5-leopard-2026-review-151471/",
+      "https://www.4x4australia.com.au/reviews/2026-denza-b5-and-b8-review",
+      "https://evcentral.com.au/2026-denza-b5-leopard-review-toyota-should-be-worried-this-plug-in-hybrid-could-redefine-the-australian-4x4-wagon-market/",
+      "https://www.mynrma.com.au/open-road/car-reviews/denza/2026-denza-b5-local-review",
+      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-denza-b5-b8-price-specs-release-date.html",
+      "https://www.cars24.com.au/car-news/2026-denza-b5-prices-specs-revealed/",
+      "https://www.denza.com/au/car/b5",
+      "https://www.denzasydney.com.au/pages/warranty",
+      "https://www.greenvehicleguide.gov.au/Vehicle/ViewVehicle?vehicleDisplayIdList=37303:37302",
+      "https://www.ancap.com.au/safety-ratings/denza/b5/d50378",
+      "https://www.byduae.ae/en/articles/dmo/",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+    ],
+    "sourcedAt": "2026-08-08"
+  },
+  {
+    "id": "denza-b8",
+    "summary": "Denza is BYD's premium marque and the B8 — the export rebadge of China's Fangchengbao Bao 8 — is its full-size three-row plug-in 4WD, launched here in February 2026 at $91,000 before on-roads. Australian reviewers agree it massively undercuts the Toyota LandCruiser, Lexus GX and Land Rover Defender it targets while arriving with equipment those cars charge options money for, and they split hard on whether a 3290kg 425kW family wagon is a car anyone needed: CarsGuide scores it 7.5 and calls the price ultra-sharp, carsales 79/100, EV Central 4/5, while Chasing Cars gives 6.5 for a busy, unpredictable ride and CarExpert rates it 'good' but explicitly tells buyers to take the smaller B5 instead. Every review lands on the same physical fact — at just under 3.3 tonnes kerb against a 3992kg GVM there is only 702kg of payload for a seven-seater, and no reviewer thinks the DiSus-P air suspension hides the mass on-road. Off-road the hardware is genuine (310mm clearance, 890mm wading, rear locker standard and a front locker on the 6S) but 4x4 Australia notes there is no transfer case and no mechanical low range, so it leans on electronics and diff locks where a LandCruiser leans on gearing. The powertrain is a true plug-in hybrid, not a range-extender: the 2.0-litre turbo petrol clutches to the front axle through the EHS assembly and BYD's DMO system lists engine direct drive alongside EV, series and idle-generation modes, with the rear axle electric-only. The running-cost case is the sharpest in the segment for a buyer who charges nightly and collapses for one who does not — 100km of WLTC electric range, then 11.4L/100km once the battery drops under 25 per cent, the thirstiest charge-sustaining figure of any plug-in hybrid in this dataset.",
+    "pros": [
+      "Prices a LandCruiser-sized, LandCruiser-capable three-row 4WD at $91,000-$97,990 before on-roads with air suspension, cross-axle lockers, nappa leather and (on the 6S) heated, cooled and massaging captain's chairs standard — CarExpert, CarsGuide, carsales and RACV all independently call the equipment-for-money the car's strongest single argument",
+      "100km of WLTC electric range from a 36.8kWh LFP blade pack and 905km of WLTC combined range on a 91-litre tank, so a buyer with home charging can do a metropolitan week without burning petrol and still cross the country at the weekend",
+      "3500kg braked towing with the towbar, hitch and wiring fitted at the factory, plus 310mm ground clearance, 890mm wading depth and a rear differential lock standard (front locker added on the 6S) — the tow rating matches a diesel LandCruiser rather than the 2500kg most plug-in SUVs manage",
+      "Its 2.0L/100km ADR 81/02 combined label clears the 3.5L/100km luxury car tax fuel-efficient test comfortably, which at these prices is worth real money: the 7S at $91,000 lands under the $91,661 fuel-efficient threshold and attracts no LCT at all, and the 6S pays on only $6,329 of its price instead of $17,181",
+      "Six-year/150,000km vehicle warranty with an eight-year/160,000km battery warranty and three years roadside assistance, and five years of capped-price servicing at $3,420 (12 months/20,000km intervals) — CarExpert notes that undercuts a LandCruiser's $4,500"
+    ],
+    "cons": [
+      "The 2.0L/100km window sticker is a laboratory fiction once the battery is flat: Denza's own charge-sustaining claim is 11.36L/100km on WLTC, and independent Australian testers returned about 10L/100km (CarExpert, HEV mode), 10.5L/100km (EV Central) and 11.1L/100km on the highway with the battery under 25 per cent (Chasing Cars). A buyer who cannot charge at home is running a 3.3-tonne petrol wagon",
+      "Kerb weight is 3290kg against a 3992kg GVM, leaving roughly 702kg of payload — thin for a seven-seat tourer once passengers, fuel and gear are aboard — and every reviewer criticises the body control: Chasing Cars calls the ride busy and the suspension unpredictable, CarExpert calls the car bloated and hard to control at speed and recommends the smaller B5 instead",
+      "Only 147 litres of boot with all three rows in use, which is less than a small hatchback, so the seven-seat and six-seat layouts are effectively either-or with luggage; folding the third row releases 920 litres (7S) or 902 litres (6S)",
+      "Denza Australia's window sticker quotes the superseded NEDC cycle (115km range, 2.0L/100km, 1040km combined) while its own WLTC figures are materially worse (100km, 3.9L/100km, 905km) — a buyer comparing the B8 against a WLTP-rated European rival on the advertised numbers is comparing two different tests",
+      "Denza is brand new to Australia with a handful of dealers, no residual history and no independent reliability record; RACV specifically flags long-term durability and regional support, and a debut luxury nameplate at $91,000-plus is the classic hard-depreciating case here"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-news/2026-denza-b8-price-and-specs",
+      "https://www.carexpert.com.au/car-reviews/2026-denza-b8-review",
+      "https://www.carexpert.com.au/denza/b8/2026-7s-2l-suv-4x4-electric-jsk5fmks20251208",
+      "https://www.carexpert.com.au/denza/b8/2026-6s-2l-suv-4x4-electric-jsk5fmko20251208",
+      "https://www.carexpert.com.au/denza/b8/2026/features-and-specs",
+      "https://www.carsguide.com.au/ev/denza-b8-100883",
+      "https://www.carsguide.com.au/denza/b8/price/2026",
+      "https://www.chasingcars.com.au/reviews/large-suvs/denza-b8-2026-review/",
+      "https://www.carsales.com.au/editorial/details/denza-b8-2026-review-151513/",
+      "https://evcentral.com.au/2026-denza-b8-6s-review-the-toyota-landcruiser-is-about-to-be-tested-more-seriously-than-ever-by-this-full-size-chinese-phev-4x4-wagon/",
+      "https://www.racv.com.au/royalauto/car-reviews/denza/2026-denza-b8-review.html",
+      "https://www.4x4australia.com.au/reviews/2026-denza-b5-and-b8-review",
+      "https://www.carexpert.com.au/car-news/2026-denza-b5-price-and-specs",
+      "https://www.byduae.ae/en/articles/dmo/",
+      "https://auto.sina.cn/review/2024-10-18/detail-incsymyt8600647.d.html",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+    ],
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "ford-mustang-mach-e",
@@ -1705,6 +1916,81 @@
       "licence": "CC0",
       "note": "Cropped and resized."
     }
+  },
+  {
+    "id": "gwm-tank-300-phev",
+    "summary": "The Tank 300 Hi4-T is the plug-in version of GWM's boxy body-on-frame off-roader, and Australian reviewers agree it is the cheapest way into a genuinely capable plug-in 4x4 — a 37.11kWh battery, a mechanical transfer case with front and rear locking diffs, and a 3000kg braked tow rating for about $56,000, where the only other plug-in SUV rated to tow 3000kg here costs more than twice as much. They also agree on where it falls down: the drivetrain calibration is the most-criticised thing about the car, with CarsGuide calling the throttle response 'awful' and carsales and EV Central both describing hesitation between petrol and electric power. Scores land in a narrow band — Chasing Cars 8.0/10, carsales 76/100 — and every reviewer makes the same caveat, that the running-cost case rests entirely on charging at home, because once the battery is flat this is a 2.6-tonne petrol 4x4 drinking 10 to 12L/100km.",
+    "pros": [
+      "A 3000kg braked tow rating with a genuine mechanical transfer case and front and rear locking differentials, at $55,990 — the only other plug-in hybrid SUV on sale in Australia rated to 3000kg is the Land Rover Defender 110 P300e, which starts at over $131,000, and every cheaper plug-in SUV tops out at 1500-2500kg",
+      "The 37.11kWh pack is the largest in any plug-in hybrid SUV under $60,000 here, claiming 115km of electric range, and independent testers got closer to the claim than usual: Chasing Cars saw 85-95km and EV Central about 90km, enough to cover a typical commute on the plug alone",
+      "300kW and 750Nm for a claimed 6.3sec 0-100km/h, plus 50kW DC fast charging on CCS2 (30-80 per cent in about 24 minutes) and 6kW vehicle-to-load — DC charging is rare at this price and lets the pack be usefully topped up on a trip rather than only overnight",
+      "7-year/unlimited-km unconditional warranty with no dealer-servicing condition attached, plus separate 8-year/unlimited-km cover on the drive battery",
+      "Undercuts the Denza B5, its nearest plug-in off-road rival, by roughly $19,000 ($74,990), which is why reviewers repeatedly describe it as the cheapest serious plug-in hybrid four-wheel drive on sale in Australia"
+    ],
+    "cons": [
+      "The 1.9L/100km label figure is meaningless once the battery is flat: GWM's own low-charge figure is 8.3L/100km, and testers did worse again — CarsGuide recorded 11.0L/100km around town and 8.5L/100km in the country, Chasing Cars about 10L/100km in town, and EV Central over 12L/100km on the freeway. A buyer who cannot charge at home is running a 2.6-tonne petrol four-wheel drive",
+      "Electric range is quoted on the superseded NEDC cycle only and no WLTP figure exists for this car — GWM does not sell the Tank 300 in the UK or continental Europe, so the Hi4-T has never been type-approved there and there is no European number to fall back on. Read 115km as an optimistic upper bound against the 85-95km testers actually returned",
+      "Practicality is thin for a 4.76m off-roader: 360L behind the second row (1520L folded) is less than the coupe-rooflined Haval H6 GT PHEV manages, payload is only 610kg, and the 3000kg tow rating sits 500kg below GWM's own Cannon Alpha PHEV ute and a diesel Ford Everest or Toyota Prado",
+      "Drivability is the consistent complaint across every Australian review: CarsGuide calls the throttle calibration 'awful' with a hesitant initial response followed by a surge, carsales notes laggy powertrain response and a jittery ride, EV Central describes hesitation handing over between power sources, and Chasing Cars reports cabin creaks and a lumpy on-road ride. The part-time four-wheel-drive system also cannot be used on sealed roads",
+      "Pricing is campaign-driven rather than stable — GWM launched both grades at $55,990 and $59,990 drive-away and then added $2,000 on 1 June 2026, taking the drive-away figures to $57,990 and $61,990 — and the Chinese-market Tank 300L facelift with a 59.6kWh pack and roughly double the electric range is already public, which would date this car sharply if it reaches Australia"
+    ],
+    "sources": [
+      "https://www.gwmanz.com/au/models/suv/tank-300/",
+      "https://www.gwmanz.com/au/news/gwm-confirms-pricing-and-grades-for-the-all-new-tank-300-hi4-t-phev/",
+      "https://www.carexpert.com.au/car-news/2026-gwm-tank-300-price-and-specs",
+      "https://www.carexpert.com.au/car-news/2026-gwm-tank-300-hi4-t-phev-priced-significantly-undercuts-denza-b5",
+      "https://www.carexpert.com.au/car-news/2027-gwm-tank-300l-detailed-as-longer-phev-only-off-roader-not-yet-confirmed-for-australia",
+      "https://www.carsguide.com.au/adventure/gwm-tank-300-hi4-t-phev-101525",
+      "https://www.carsguide.com.au/gwm/tank-300/price/2026",
+      "https://www.carsales.com.au/editorial/details/gwm-tank-300-hi4-t-phev-ultra-2026-review-151918/",
+      "https://www.carsales.com.au/editorial/details/plug-in-hybrid-2026-gwm-tank-300-hi4-t-priced-151312/",
+      "https://www.carsales.com.au/research/gwm/tank-300/",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/gwm-tank-300-ultra-phev-2026-review/",
+      "https://www.chasingcars.com.au/news/future-cars/gwm-tank-300-phev-2026-off-road-suv-features-105km-ev-driving-range-priced-from-55990-drive-away-to-rival-denza-b5/",
+      "https://evcentral.com.au/gwm-tank-300-plug-in-full-spec-and-technical-details-confirmed-including-115km-ev-range/",
+      "https://evcentral.com.au/2026-gwm-tank-300-hi4-t-phev-review-plug-in-hybrid-system-takes-the-off-road-fight-to-denza-toyota-and-ford/",
+      "https://unsealed4x4.com.au/gwm-tank-300-hi4-t-phev-pricing-confirmed/",
+      "https://gwmcars.co.uk/",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+    ],
+    "sourcedAt": "2026-07-28"
+  },
+  {
+    "id": "gwm-tank-500-phev",
+    "summary": "The Tank 500 Hi4-T is the plug-in version of GWM's Prado-sized ladder-frame 4WD and it sells as a single Ultra grade alongside three conventional-hybrid Tank 500s. Australian reviewers agree it is the most genuinely off-road-capable plug-in hybrid on sale here - dual-range mechanical 4WD, three locking differentials, 3000kg braked towing and 6kW vehicle-to-load - and agree just as consistently that the 37.11kWh pack costs it the third row, dropping a seven-seat nameplate to five seats and 640L of boot. Scores land mid-field (CarsGuide 7.0, EV Central 3.5) and the recurring complaint is that the real numbers do not follow the claims: 10.0-10.2L/100km once the battery is flat against a 2.1L/100km label, and a measured 36-37kWh/100km in EV mode against a 120km NEDC range claim.",
+    "pros": [
+      "The only plug-in hybrid in Australia with real off-road hardware: a dual-range transfer case with centre diff lock plus front and rear electronic lockers, 800mm wading depth and 213mm clearance, where the plug-in seven-seaters it is cross-shopped against - Mazda CX-80, Kia Sorento PHEV - are on-road crossovers with no low range at all",
+      "3000kg braked towing at full GVM (GCM is 6430kg against a 3430kg GVM, so the tow rating does not cannibalise the load rating) plus 6kW vehicle-to-load off the traction battery, which runs a caravan and a campsite from the same car",
+      "A 37.11kWh nickel-manganese-cobalt pack claiming 120km of electric-only range and 50kW DC fast charging on CCS2 (30-80 per cent in 24 minutes) - most plug-in hybrids at any price cannot DC charge at all, and the Mazda CX-80 and Kia Sorento carry 17.8kWh and 13.8kWh packs",
+      "7-year/unlimited-km warranty with no dealer-servicing condition attached, backed by 8-year/unlimited-km cover on the drive battery, 7 years roadside assistance and 7 years of capped-price servicing",
+      "300kW/750Nm and a claimed 6.9sec 0-100km/h for roughly the money of a mid-spec Toyota Prado or Ford Everest, both of which are four-cylinder diesels well under half the power"
+    ],
+    "cons": [
+      "The third row is deleted to fit the battery, and GWM's own spec sheet proves it: the hybrid grades are 7 seats with 795L behind the second row and 98L behind the third, while the Ultra Plug-In Hybrid is 5 seats with 640L and a blank cell where the third-row figure should be - so the seven-seat Tank 500 badge does not buy you a seven-seater",
+      "The 2.1L/100km combined label is meaningless once the battery is flat: GWM's own low-charge figure is 8.4L/100km, CarsGuide measured 10.2L/100km and Chasing Cars about 10.0L/100km, so a buyer who cannot charge at home is running a 2.8-tonne petrol 4WD on 91 octane",
+      "Electric range is quoted on the superseded NEDC cycle and no WLTP figure exists anywhere, because GWM does not sell the Tank brand in the UK or Europe - and the measured 36-37kWh/100km EV consumption returned by Chasing Cars and EV Central implies about 100km from the 37.11kWh pack rather than the claimed 120km",
+      "At 2820kg kerb the plug-in carries 215kg more than the hybrid and its payload falls from 790kg to 610kg, so a 3000kg caravan's typical 300kg ball weight consumes half of what is left; reviewers also single out body roll, an adaptive cruise system that brakes far too early and sign recognition that misread school-zone limits",
+      "GWM has already discounted it twice - $79,990 drive-away at launch in late 2025, $77,990 early-bird, and $76,990 by mid-2026 - and the Tank 500's five-star ANCAP result was awarded to the 2024 hybrid, with GWM saying at the plug-in's launch that it was still working with ANCAP on whether the heavier PHEV is covered"
+    ],
+    "sources": [
+      "https://www.gwmanz.com/au/models/suv/tank-500/",
+      "https://assets.gwmanz.com/f/256395/x/3a24c99c20/tank-500-brochure-au-web.pdf",
+      "https://www.carexpert.com.au/car-reviews/2026-gwm-tank-500-hi4-t-phev-review-quick-drive",
+      "https://www.carexpert.com.au/car-reviews/2025-gwm-tank-500-hi4-t-phev-review",
+      "https://www.carexpert.com.au/car-news/2026-gwm-tank-500-plug-in-hybrid-pricing-revealed",
+      "https://www.carexpert.com.au/car-news/gwm-tank-500-phev-gets-aussie-chassis-tuning-and-more-tech-for-the-same-price",
+      "https://www.carsguide.com.au/adventure/gwm-tank-500-ultra-phev-100440",
+      "https://www.carsguide.com.au/gwm/tank-500/price/2026/hi4-t-ultra-phev",
+      "https://www.chasingcars.com.au/reviews/large-suvs/gwm-tank-500-ultra-hi4-t-phev-2026-review/",
+      "https://evcentral.com.au/2026-gwm-tank-500-ultra-phev-review-plug-in-4x4-gets-dirty-against-rival-denza-b5-and-old-school-toyota-prado/",
+      "https://www.carsales.com.au/research/gwm/tank-500/2026/ultra-hi4-t-phev/",
+      "https://rvdaily.com.au/gwm-tank-500-hi4-t-phev-caravan-towing/",
+      "https://gwmcars.co.uk/models/",
+      "https://en.wikipedia.org/wiki/GWM_Tank_500",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+      "https://www.ato.gov.au/tax-rates-and-codes/luxury-car-tax-rate-and-thresholds"
+    ],
+    "sourcedAt": "2026-07-28"
   },
   {
     "id": "hyundai-elexio",
@@ -2791,6 +3077,42 @@
     }
   },
   {
+    "id": "mercedes-c-350e-phev",
+    "summary": "The C 350e is the plug-in hybrid grade of Mercedes-Benz Australia's C-Class sedan range, sold as a single specification at $98,200 — exactly the same list price as the mild-hybrid C 300 it comfortably out-accelerates. Its 19.53kWh usable battery is good for 115km of WLTP electric range, more than the heavier GLC 350e SUV on the same 230kW powertrain manages from a larger pack, and Australian reviewers are consistent that the calibration, the near-silent EV mode and the 11kW AC charging make it a genuine electric car for commuting. The criticisms are equally consistent: the battery takes the boot from 455 litres to 315, DC fast charging is a $1500 option rather than standard, and at $98,200 the car sits above both Luxury Car Tax thresholds and above the FBT cap with no plug-in hybrid exemption left to offset it.",
+    "pros": [
+      "115km of WLTP electric range from a 19.53kWh usable battery is the longest of any plug-in hybrid sedan on sale in Australia — more than double the BYD Seal 6's 55km WLTP, and more than the GLC 350e SUV's 107km on the same powertrain because the sedan is roughly 250kg lighter and far slipperier, so a typical Melbourne commute never starts the engine",
+      "It lists at $98,200 before on-road costs, exactly the same as the mild-hybrid C 300 petrol, so the plug-in hardware costs nothing over a car it beats on outputs — 230kW/550Nm against the C 300's 190kW/400Nm, and 0-100km/h in 6.1 seconds",
+      "Charges properly for a plug-in hybrid: 11kW three-phase AC takes about two hours flat to full, and the optional 55kW DC fast charging ($1500) does 10-80 per cent in around 20 minutes, which almost no plug-in hybrid at this price offers at all",
+      "Braked towing is rated at 1800kg, unusually high for a plug-in hybrid sedan and only 600kg short of the GLC 350e SUV, so the battery has not cost it usefulness as a tow car",
+      "Mercedes-Benz Australia's five-year, unlimited-kilometre warranty is unconditional and is not tied to servicing inside the dealer network"
+    ],
+    "cons": [
+      "The battery costs the boot 140 litres: 315L against 455L in the petrol and mild-hybrid C-Class, which is less than the Audi A5's 331L and nowhere near a BMW i4's 470L, and Mercedes publishes no seats-folded figure for the plug-in saloon at all — the 40:20:40 rear seat does fold and load-through is possible, but you are buying a materially smaller boot than the badge implies",
+      "The 1.5L/100km combined label is meaningless once the battery is flat: Mercedes' own charge-sustaining figure is 7.6L/100km on 95 RON premium, so a buyer who cannot charge at home is running a two-tonne petrol sedan and the whole case for the car collapses",
+      "At $98,200 it sits above both Luxury Car Tax thresholds — the ordinary $80,809 and the fuel-efficient $91,661 it qualifies for on its 1.5L/100km combined figure — and well above the $75,000 FBT cap, and since the FBT exemption for plug-in hybrids ended on 1 April 2025 there is no novated-lease advantage left to offset that",
+      "Servicing is expensive: Chasing Cars quotes $6890 for a five-year plan, and DC fast charging is a $1500 option rather than standard equipment, so the car that makes the strongest public-charging case among plug-in hybrids charges at 11kW unless you pay for it",
+      "Mercedes-Benz Australia publishes the electric range as 104km under the NEDC-based ADR cycle rather than WLTP, and at least one Australian reviewer put the real-world figure closer to 80km — the 115km WLTP figure recorded here comes from European homologation for the same 18-inch specification"
+    ],
+    "sources": [
+      "https://www.chasingcars.com.au/reviews/large-cars/mercedes-benz-c-350e-2026-review/",
+      "https://www.carsguide.com.au/ev/mercedes-benz-c350e-99839",
+      "https://www.carexpert.com.au/car-news/2025-mercedes-benz-c350e-priced-for-australia-phev-sedan-has-100km-of-range",
+      "https://www.carexpert.com.au/car-news/2025-mercedes-benz-c350e-plug-in-hybrid-sedan-confirmed-for-australia",
+      "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-c-class-review",
+      "https://www.carsales.com.au/research/mercedes-benz/c-class/2026/c350-e/",
+      "https://www.carsales.com.au/editorial/details/mercedes-benz-c350e-2025-review-150610/",
+      "https://www.carsguide.com.au/mercedes-benz/c350-e/towing-capacity",
+      "https://www.carsguide.com.au/mercedes-benz/c-class/boot-space",
+      "https://www.electrifying.com/reviews/mercedes/c300e/review",
+      "https://www.carbuyer.co.uk/mercedes/c-class/practicality",
+      "https://www.auto-data.net/en/mercedes-benz-c-class-w206-c-300e-313hp-plug-in-hybrid-9g-tronic-44914",
+      "https://group.mercedes-benz.com/sustainability/environment-climate/decarbonisation/environmental-check/c-300-e-plug-in-hybrid.html",
+      "https://jesmb.de/6473/",
+      "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-08-08"
+  },
+  {
     "id": "mercedes-cla-ev",
     "summary": "The battery-electric CLA is the first car on Mercedes-Benz's MMA platform and the model that replaces the EQA and EQB as the brand's entry point into electric motoring here. Australian reviewers are near-unanimous that the efficiency and charging hardware are class-leading — an 800-volt system, 320kW DC peak and a 663km WLTP claim on the dual-motor grade — but equally consistent that the car is soft and remote to drive rather than sporting, and that the fastback roofline costs real rear-seat headroom. It reads as a car chosen for range, charging speed and a novated lease that stays inside the FBT exemption, not for driver engagement.",
     "pros": [
@@ -2892,6 +3214,42 @@
       "licence": "CC BY-SA 4.0",
       "note": "Cropped and resized."
     }
+  },
+  {
+    "id": "mercedes-gla-phev",
+    "summary": "The GLA 250 e is Mercedes-Benz Australia's cheapest plug-in hybrid and the only plug-in grade in a GLA range that is otherwise 48-volt mild-hybrid petrol — it pairs the GLA 200's 120kW 1.3-litre four with a motor inside the eight-speed dual-clutch for 160kW/450Nm and 65km of WLTP electric range from an 11.5kWh usable battery. At $78,000 before on-road costs it undercuts the petrol GLA 250 4MATIC it out-torques, sits below the $80,809 luxury car tax threshold entirely, and is a genuinely different and much smaller-hearted machine from the $99,900 GLC 350e despite the shared badge. The compromises are concentrated in long-distance use: a 35-litre tank and a 1.3-litre engine that Parkers measured at 36mpg on a motorway cruise give it roughly 550km of combined range, the least of any premium plug-in SUV in this dataset, and the battery takes 50 litres out of the boot.",
+    "pros": [
+      "65km of electric range is genuine WLTP, not the NEDC figure Mercedes Australia has been caught publishing elsewhere — it sits inside Mercedes' own European 63-70km WLTP band for the facelifted GLA 250 e and matches the UK car's 39 miles, so unlike the GLC 350e's much-quoted 132km this number survives the check, and it covers a typical Melbourne commute on grid power",
+      "At $78,000 before on-road costs it lists $2,500 BELOW the petrol GLA 250 4MATIC ($80,500) while making more torque (160kW/450Nm against 165kW/350Nm), and it sits $2,809 under the $80,809 ordinary luxury car tax threshold so no LCT is payable at all — its 1.2L/100km combined label also qualifies it for the $91,661 fuel-efficient threshold, leaving roughly $13,600 of options headroom before LCT could ever start",
+      "28g/km of CO2 on the combined cycle is far inside Victoria's 120g/km green passenger car limit, so stamp duty is charged at the flat green rate rather than the ordinary tiers",
+      "1800kg braked towing is strong for a compact plug-in: the BMW X1 xDrive25e manages 1700kg, the Cupra Formentor VZe 1500kg, and many small PHEVs are not rated to tow at all",
+      "Mercedes-Benz Australia's five-year, unlimited-kilometre warranty is unconditional and not tied to servicing inside the dealer network, and the $78,000 price includes metallic paint, a panoramic sunroof, 18-inch alloys, heated front seats and a 360-degree camera as standard"
+    ],
+    "cons": [
+      "The 1.2L/100km label collapses the moment the battery is flat: Parkers recorded 36mpg (7.9L/100km) from the 1.3-litre four on a motorway cruise and called it thirstier than a VW Tiguan eHybrid, while DrivingElectric puts real-world charge-sustaining economy at 40-50mpg (5.7-7.1L/100km) — a buyer without home charging is running a 1.8-tonne premium SUV on premium unleaded",
+      "The battery under the boot floor cuts luggage space from 435 litres in the front-drive petrol GLA to 385, the smallest boot in the range — and carsales and other Australian spec pages still print the petrol car's 445-litre figure against the plug-in, so the number most buyers will see is the wrong one",
+      "A 35-litre fuel tank, down from the petrol GLA's, leaves roughly 550km of combined range at a realistic 7.2L/100km — well short of the GLC 350e's 900km and the BMW X1 xDrive25e's 780km, so it needs refuelling as often as it needs recharging",
+      "Charging is AC-only and slow: 3.7kW is standard and takes most of a working day from flat, the 11kW three-phase upgrade is an $800 option, and there is no DC capability at all, so the electric range cannot be usefully topped up away from home",
+      "At $78,000 it is above the $75,000 FBT cap and PHEVs lost the FBT exemption entirely on 1 April 2025, so there is no novated-lease advantage left — and Mercedes servicing is expensive, with a five-year pre-paid plan on the GLA 250 quoted at $6,185 on 12-month/25,000km intervals"
+    ],
+    "sources": [
+      "https://www.carsguide.com.au/car-news/hybrid-power-back-on-the-menu-at-mercedes",
+      "https://www.carexpert.com.au/car-news/2025-mercedes-benz-gla250e-brands-cheapest-phev-priced-for-australia",
+      "https://www.racq.com.au/articles/car-updates/mercedes-benz-launches-gla-250-e-plug-in-hybrid-suv",
+      "https://www.carsales.com.au/research/mercedes-benz/gla-class/2026/gla250-e-with-eq-hybrid-technology/",
+      "https://www.carsales.com.au/research/mercedes-benz/gla-class/",
+      "https://www.carsguide.com.au/mercedes-benz/gla-class/price/2026",
+      "https://www.carsguide.com.au/mercedes-benz/gla-class/gla250/",
+      "https://www.carexpert.com.au/car-reviews/2025-mercedes-benz-gla-review",
+      "https://www.carexpert.com.au/mercedes-benz/gla/2026/price-and-specs",
+      "https://thebeep.com.au/cars/mercedes-benz/gla-suv",
+      "https://www.drivingelectric.com/mercedes-benz/gla/practicality",
+      "https://www.parkers.co.uk/mercedes-benz/gla-class/review/mpg-running-costs/",
+      "https://www.electrifying.com/reviews/mercedes-reviews/gla-250e-phev/review",
+      "https://www.auto-data.net/en/mercedes-benz-gla-h247-facelift-2023-gla-250e-218hp-plug-in-hybrid-8g-dct-50035",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-08-08"
   },
   {
     "id": "mercedes-glc-phev",
@@ -3489,6 +3847,40 @@
       "licence": "CC BY-SA 4.0",
       "note": "Cropped and resized."
     }
+  },
+  {
+    "id": "porsche-cayenne-phev",
+    "summary": "Porsche sells two plug-in Cayennes in Australia below the Turbo — the 346kW E-Hybrid and the 382kW S E-Hybrid — each in standard SUV and Coupé bodies, all sharing a 3.0-litre V6, a 25.9kWh gross (21.8kWh usable) battery and 11kW AC charging. Reviewers are consistent that this is the sensible Cayenne: the electric range is now enough to commute on (Porsche Australia quotes 86km on the ECE cycle, the European WLTP figure is 69-76km, and CarExpert covered 211 of 277 test kilometres on electricity for 4.1L/100km), and the chassis is the best in the class. The reservations are equally consistent — a three-year warranty that trails every German rival's five, a boot 145 litres smaller than the petrol Cayenne's, and a car that drinks close to 10L/100km once the battery is flat, which is where the case collapses for anyone who cannot charge at home.",
+    "pros": [
+      "21.8kWh usable of a 25.9kWh pack and 11kW three-phase AC charging (about 2.5 hours to full) delivers a WLTP combined electric range of 69-76km — CarExpert's test covered 211 of 277km on electricity alone and settled at 4.1L/100km, so a typical Melbourne commute runs on grid power",
+      "44g/km combined CO2 sits far under Victoria's 120g/km green passenger car threshold, so duty is charged at the flat $8.40 per $200 rather than the $18.00 per $200 top tier a $150,000-plus petrol Cayenne pays — roughly $7,900 saved at the E-Hybrid's $164,800 list price",
+      "The 1.9L/100km ADR combined figure (2.0 for the S E-Hybrid) is under the 3.5L/100km fuel-efficient LCT test, lifting the LCT-free threshold from $80,809 to $91,661 and saving about $3,600 in luxury car tax against an otherwise identical non-qualifying model",
+      "3500kg braked towing beats every premium plug-in SUV rival in this dataset — BMW's X3 30e manages 2000kg, the Mercedes GLC 350e 2400kg and the Land Rover Defender P300e 3000kg — and the S E-Hybrid's 382kW/750Nm makes it quicker than most of them while doing it",
+      "High-voltage battery is covered for eight years or 160,000km, well beyond the three-year vehicle warranty, and the plug-in models keep the Cayenne's air suspension, torque vectoring and 4.7-4.9s 0-100km/h without the GTS's V8 fuel bill"
+    ],
+    "cons": [
+      "Porsche's own WLTP charge-sustaining figure is 9.8-10.5L/100km — the 1.9L/100km label number assumes you start every trip full, and a buyer without home charging is running a 2425kg V6 SUV on premium unleaded at roughly five times the advertised rate",
+      "Three years/unlimited kilometres is the unconditional warranty, two years short of Audi, BMW, Mercedes-Benz and Volkswagen, and CarExpert calls it 'falling behind the pack' on a car costing $164,800 before on-road costs",
+      "The battery costs 145 litres of boot: 627L in the E-Hybrid SUV against 772L in the petrol Cayenne, and the Coupé body drops to 434L — less than the Mercedes GLC 350e's 590L and the BMW X3 30e's 460L, for $6,600 more than the SUV in the Coupé's case",
+      "Porsche Australia quotes electric range on the ECE cycle (86km E-Hybrid, 88km S E-Hybrid) where the European WLTP combined figure is 69-76km, and CarExpert measured about 70km in real use — plan on the WLTP number, and note there is no DC fast charging at all, only 11kW AC",
+      "PHEVs lost the FBT exemption on 1 April 2025 and every variant here sits $70,000-$100,000 above both LCT thresholds, so LCT is still payable on everything over $91,661 and the novated-lease argument that once carried this car is gone"
+    ],
+    "sources": [
+      "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+      "https://www.carsguide.com.au/car-reviews/porsche-cayenne-e-hybrid-91680",
+      "https://www.carexpert.com.au/car-news/porsche-cayenne-and-taycan-black-editions-revealed",
+      "https://www.carexpert.com.au/porsche/cayenne/2026/price-and-specs",
+      "https://www.carexpert.com.au/porsche/cayenne/2026--jsgwaww520250710",
+      "https://www.carsales.com.au/research/porsche/cayenne/2026/s-e-hybrid/",
+      "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+      "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+      "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+      "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+      "https://www.porsche.com/international/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+      "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    ],
+    "sourcedAt": "2026-07-28"
   },
   {
     "id": "renault-megane-e-tech",

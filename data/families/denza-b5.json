@@ -1,0 +1,37 @@
+{
+  "id": "denza-b5",
+  "summary": "Denza's first Australian model is a body-on-frame plug-in 4x4 that reviewers consistently rate as more capable and far better equipped than its $74,990-$79,990 pricing suggests, with CarsGuide scoring it 7.8 and 4x4 Australia calling the Leopard better sorted than the larger B8. The recurring reservation is mass: at 2897-3007kg it rolls in corners and rides busily, its 490-600kg payload and 3000kg tow rating trail the diesel wagons it targets, and the 1.5-litre petrol engine only clutches to the front axle above about 80km/h, which leads CarExpert to describe its behaviour as closer to a range-extender than a conventional plug-in hybrid. Reviewers are also unanimous that the case rests on charging it — with a flat battery the trip computer settles near 11L/100km, not the 1.9L/100km on the label.",
+  "pros": [
+    "90km of electric range on the WLTC cycle rather than the NEDC figure most Chinese-derived plug-ins quote here — Chasing Cars measured 88km in urban running — and it is the rare PHEV with 100kW DC fast charging alongside 11kW AC, so the battery can be refilled on the road rather than only overnight",
+    "Real off-road hardware at the price: front and rear electronically locking differentials, low-range gearing, and 220-310mm of ground clearance via the Leopard's Disus-P hydraulic active suspension, in a body-on-frame 4x4 that undercuts a Land Rover Defender P300e plug-in by more than $50,000",
+    "400kW and 760Nm through a motor on each axle gives a claimed 4.8s 0-100km/h and 3000kg braked towing, with a manufacturer-quoted 850km combined WLTC range from the 83-litre tank",
+    "Five-star ANCAP under the current 2023-25 criteria (86% adult occupant, 95% child occupant), rated in December 2025 and valid to December 2031 — a full-criteria result rather than a carried-over older rating",
+    "Six-year/150,000km vehicle warranty with no dealer-servicing condition attached, an eight-year/160,000km battery warranty, and capped-price servicing quoted at $3542 across the first five years on 12-month/20,000km intervals"
+  ],
+  "cons": [
+    "The 1.9L/100km label figure only holds while the battery lasts: Denza's own charge-sustaining number is 10.9L/100km on WLTC (9.5L/100km on the more lenient NEDC), EV Central's trip computer showed 11.7L/100km with the pack depleted and Chasing Cars saw 14.0L/100km driven hard, so a buyer without home charging is running a three-tonne petrol SUV",
+    "Payload is 600kg for the base car and just 490kg for the 3007kg Leopard, which five adults and luggage will exhaust before any towball download is added — and every Australian reviewer flags the weight in the way it drives, with CarsGuide citing a busy ride and lots of body roll and the NRMA describing off-road progress as beating the earth into submission",
+    "3000kg braked towing sits 500kg under the diesel wagons and plug-in utes this car is cross-shopped against, and under the Denza B8's own 3500kg rating — 4x4 Australia and CarExpert both call the tow rating underdone for the segment",
+    "Denza is a brand-new marque in Australia with no residual-value history, a handful of metropolitan dealers and unproven long-term reliability — Chasing Cars names residuals and durability as the open questions, and the complex hydraulic suspension on the Leopard adds a repair risk used buyers will discount for",
+    "Advertised pricing is before on-road costs but the cars are widely quoted drive-away — roughly $81,500 for the base B5 and $86,700 for the Leopard in Victoria — so the $74,990 headline is about $6,500 short of what it takes to register one"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-denza-b5-price-and-specs",
+    "https://www.carsguide.com.au/ev/denza-b5-100852",
+    "https://www.carsguide.com.au/denza/b5/price/2026",
+    "https://www.chasingcars.com.au/reviews/large-suvs/denza-b5-leopard-2026-review/",
+    "https://www.carsales.com.au/editorial/details/denza-b5-leopard-2026-review-151471/",
+    "https://www.4x4australia.com.au/reviews/2026-denza-b5-and-b8-review",
+    "https://evcentral.com.au/2026-denza-b5-leopard-review-toyota-should-be-worried-this-plug-in-hybrid-could-redefine-the-australian-4x4-wagon-market/",
+    "https://www.mynrma.com.au/open-road/car-reviews/denza/2026-denza-b5-local-review",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-denza-b5-b8-price-specs-release-date.html",
+    "https://www.cars24.com.au/car-news/2026-denza-b5-prices-specs-revealed/",
+    "https://www.denza.com/au/car/b5",
+    "https://www.denzasydney.com.au/pages/warranty",
+    "https://www.greenvehicleguide.gov.au/Vehicle/ViewVehicle?vehicleDisplayIdList=37303:37302",
+    "https://www.ancap.com.au/safety-ratings/denza/b5/d50378",
+    "https://www.byduae.ae/en/articles/dmo/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-08-08"
+}

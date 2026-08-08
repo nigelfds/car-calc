@@ -1,0 +1,34 @@
+[
+  {
+    "id": "gwm-tank-500-phev-ultra-hi4t",
+    "familyId": "gwm-tank-500-phev",
+    "make": "GWM",
+    "model": "Tank 500",
+    "variant": "Ultra Hi4-T PHEV",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 78490,
+    "batteryKwh": 37.11,
+    "rangeKm": 120,
+    "consumptionKwhPer100km": 30.9,
+    "combinedRangeKm": 953,
+    "fuelConsumptionL100km": 8.4,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 640,
+    "bootLitresSeatsDown": 1400,
+    "seats": 5,
+    "towKg": 3000,
+    "warrantyYears": 7,
+    "insuranceAnnual": 2200,
+    "depreciationCurve": [
+      1,
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-07-28"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "bmw-x5-phev-xdrive50e-m-sport",
+    "familyId": "bmw-x5-phev",
+    "make": "BMW",
+    "model": "X5",
+    "variant": "xDrive50e M Sport",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 154900,
+    "batteryKwh": 25.7,
+    "rangeKm": 94,
+    "consumptionKwhPer100km": 27.3,
+    "combinedRangeKm": 751,
+    "fuelConsumptionL100km": 10.5,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 500,
+    "bootLitresSeatsDown": 1720,
+    "seats": 5,
+    "towKg": 2700,
+    "warrantyYears": 5,
+    "insuranceAnnual": 3300,
+    "depreciationCurve": [
+      1,
+      0.64,
+      0.53,
+      0.44,
+      0.37,
+      0.31
+    ],
+    "sourcedAt": "2026-07-28"
+  }
+]

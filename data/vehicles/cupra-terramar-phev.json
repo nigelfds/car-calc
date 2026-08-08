@@ -1,0 +1,27 @@
+[
+  {
+    "id": "cupra-terramar-phev-vze",
+    "familyId": "cupra-terramar-phev",
+    "make": "Cupra",
+    "model": "Terramar",
+    "variant": "VZe",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 77990,
+    "batteryKwh": 19.7,
+    "rangeKm": 110,
+    "consumptionKwhPer100km": 18.6,
+    "combinedRangeKm": 753,
+    "fuelConsumptionL100km": 7.0,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 400,
+    "bootLitresSeatsDown": 1404,
+    "seats": 5,
+    "towKg": 2000,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2050,
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
+    "sourcedAt": "2026-08-08"
+  }
+]

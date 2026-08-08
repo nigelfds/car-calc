@@ -1,0 +1,34 @@
+{
+  "id": "porsche-cayenne-phev",
+  "summary": "Porsche sells two plug-in Cayennes in Australia below the Turbo — the 346kW E-Hybrid and the 382kW S E-Hybrid — each in standard SUV and Coupé bodies, all sharing a 3.0-litre V6, a 25.9kWh gross (21.8kWh usable) battery and 11kW AC charging. Reviewers are consistent that this is the sensible Cayenne: the electric range is now enough to commute on (Porsche Australia quotes 86km on the ECE cycle, the European WLTP figure is 69-76km, and CarExpert covered 211 of 277 test kilometres on electricity for 4.1L/100km), and the chassis is the best in the class. The reservations are equally consistent — a three-year warranty that trails every German rival's five, a boot 145 litres smaller than the petrol Cayenne's, and a car that drinks close to 10L/100km once the battery is flat, which is where the case collapses for anyone who cannot charge at home.",
+  "pros": [
+    "21.8kWh usable of a 25.9kWh pack and 11kW three-phase AC charging (about 2.5 hours to full) delivers a WLTP combined electric range of 69-76km — CarExpert's test covered 211 of 277km on electricity alone and settled at 4.1L/100km, so a typical Melbourne commute runs on grid power",
+    "44g/km combined CO2 sits far under Victoria's 120g/km green passenger car threshold, so duty is charged at the flat $8.40 per $200 rather than the $18.00 per $200 top tier a $150,000-plus petrol Cayenne pays — roughly $7,900 saved at the E-Hybrid's $164,800 list price",
+    "The 1.9L/100km ADR combined figure (2.0 for the S E-Hybrid) is under the 3.5L/100km fuel-efficient LCT test, lifting the LCT-free threshold from $80,809 to $91,661 and saving about $3,600 in luxury car tax against an otherwise identical non-qualifying model",
+    "3500kg braked towing beats every premium plug-in SUV rival in this dataset — BMW's X3 30e manages 2000kg, the Mercedes GLC 350e 2400kg and the Land Rover Defender P300e 3000kg — and the S E-Hybrid's 382kW/750Nm makes it quicker than most of them while doing it",
+    "High-voltage battery is covered for eight years or 160,000km, well beyond the three-year vehicle warranty, and the plug-in models keep the Cayenne's air suspension, torque vectoring and 4.7-4.9s 0-100km/h without the GTS's V8 fuel bill"
+  ],
+  "cons": [
+    "Porsche's own WLTP charge-sustaining figure is 9.8-10.5L/100km — the 1.9L/100km label number assumes you start every trip full, and a buyer without home charging is running a 2425kg V6 SUV on premium unleaded at roughly five times the advertised rate",
+    "Three years/unlimited kilometres is the unconditional warranty, two years short of Audi, BMW, Mercedes-Benz and Volkswagen, and CarExpert calls it 'falling behind the pack' on a car costing $164,800 before on-road costs",
+    "The battery costs 145 litres of boot: 627L in the E-Hybrid SUV against 772L in the petrol Cayenne, and the Coupé body drops to 434L — less than the Mercedes GLC 350e's 590L and the BMW X3 30e's 460L, for $6,600 more than the SUV in the Coupé's case",
+    "Porsche Australia quotes electric range on the ECE cycle (86km E-Hybrid, 88km S E-Hybrid) where the European WLTP combined figure is 69-76km, and CarExpert measured about 70km in real use — plan on the WLTP number, and note there is no DC fast charging at all, only 11kW AC",
+    "PHEVs lost the FBT exemption on 1 April 2025 and every variant here sits $70,000-$100,000 above both LCT thresholds, so LCT is still payable on everything over $91,661 and the novated-lease argument that once carried this car is gone"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+    "https://www.carsguide.com.au/car-reviews/porsche-cayenne-e-hybrid-91680",
+    "https://www.carexpert.com.au/car-news/porsche-cayenne-and-taycan-black-editions-revealed",
+    "https://www.carexpert.com.au/porsche/cayenne/2026/price-and-specs",
+    "https://www.carexpert.com.au/porsche/cayenne/2026--jsgwaww520250710",
+    "https://www.carsales.com.au/research/porsche/cayenne/2026/s-e-hybrid/",
+    "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+    "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+    "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+    "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+    "https://www.porsche.com/international/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+    "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+  ],
+  "sourcedAt": "2026-07-28"
+}

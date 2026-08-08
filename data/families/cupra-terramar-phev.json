@@ -1,0 +1,32 @@
+{
+  "id": "cupra-terramar-phev",
+  "summary": "The Terramar VZe is the only plug-in grade in Cupra's new mid-size SUV range and, at $77,990 before on-roads, the most expensive way in Australia to buy the Volkswagen Group's 1.5-litre eHybrid drivetrain — the mechanically near-identical VW Tiguan and Tayron 200TSI eHybrid undercut it by $3,440 and $1,440 with more boot space, and the smaller Cupra Formentor VZe by $9,000. Reviewers agree the hardware delivers: 110km of WLTP electric range from a 19.7kWh usable battery, 50kW DC charging that almost no plug-in hybrid offers, and adaptive DCC Pro dampers that CarExpert found 'surprisingly comfy' on a Melbourne–Canberra run where it saw 92km of indicated electric range. Where they push back is value and detail — CarsGuide scored it 6.8 out of 10 largely on a price that sits $25,000 above a BYD Sealion 6 Premium, and CarExpert singled out an 'awful' brake pedal and strong torque steer from the front-drive layout.",
+  "pros": [
+    "110km of WLTP electric range from a 19.7kWh usable battery is among the longest of any plug-in SUV on sale here — Mitsubishi Outlander PHEV claims 86km, BYD Sealion 6 81km and Mazda CX-60 PHEV 76km — and CarExpert saw 92km indicated in Australian driving",
+    "50kW DC fast charging (10-80 per cent in about 26 minutes) alongside 11kW AC is rare on a plug-in hybrid: neither the Outlander PHEV nor the Sealion 6 can take DC at all",
+    "2,000kg braked towing is the highest rating on this drivetrain in the dataset — the VW Tiguan and Tayron 150TSI eHybrid manage 1,800kg and the Cupra Formentor VZe only 1,500kg — and it is paired with 200kW/400Nm and a 7.3sec 0-100km/h claim",
+    "The five-year unlimited-kilometre warranty is factory-backed and not conditional on servicing inside the Cupra network, the high-voltage battery is separately covered for 8 years/160,000km, and five-year capped-price servicing is quoted upfront at $2,590",
+    "Five-star ANCAP with 89 per cent adult occupant protection and 78 per cent safety assist, and at $77,990 it sits under the $80,809 ordinary LCT threshold while 11g/km CO2 clears Victoria's 120g/km green passenger car test, so no luxury car tax applies and stamp duty is charged at the flat green rate"
+  ],
+  "cons": [
+    "$77,990 buys the same 1.5-litre eHybrid drivetrain Volkswagen sells for $74,550 in the Tiguan 200TSI eHybrid and $76,550 in the larger, roomier Tayron — CarsGuide scored its value 6.8 out of 10 against a $52,990 BYD Sealion 6 Premium and a $50,990 drive-away GWM Haval H6 GT",
+    "The battery costs it a fifth of the boot — 400 litres against 508 litres in the petrol Terramar — and it deletes the underfloor storage and the spare wheel, leaving a puncture repair kit; CarsGuide also found rear legroom tight for a 168cm passenger",
+    "The 0.5L/100km label figure only survives if you plug in every night: CarExpert averaged 5.3 and 5.9L/100km on a Melbourne–Canberra return with the battery flat for most of it, which implies roughly 7L/100km on petrol alone from the 45-litre tank, so the running-cost case collapses for a buyer without home charging",
+    "CarExpert criticised an 'awful' brake pedal that needs excessive pressure and travel and triggered ABS unexpectedly in ordinary braking, plus torque steer that 'comes on strong' from the front-wheel-drive layout — the one Terramar that cannot be had with all-wheel drive",
+    "Plug-in hybrids lost the FBT exemption on 1 April 2025, Cupra Australia runs only 14 service centres nationally, and the brand has a documented history of deep run-out discounting — it cut more than $20,000 off the previous Formentor PHEV — so resale risk on the range-topping price is real"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-reviews/2026-cupra-terramar-vze-review",
+    "https://www.carsguide.com.au/ev/cupra-terramar-vze-101284",
+    "https://www.chasingcars.com.au/news/new-car-prices/cupra-terramar-vze-2026-sporty-plug-in-hybrid-arrives-ahead-of-vw-tiguan-skoda-kodiaq-to-tackle-byd-sealion-6/",
+    "https://www.mynrma.com.au/open-road/news/2025/cupra-terramar-vze-phev-pricing",
+    "https://www.cupraofficial.com.au/cars/terramar",
+    "https://www.cupraofficial.com.au/owners/warranty",
+    "https://www.seat-cupra-mediacenter.com/content/dam/seat-media-center/models-all-brands/cupra-models/cupra-terramar/technical-data/Techninal-Data-CUPRA-Terramar.pdf",
+    "https://www.parkers.co.uk/cupra/terramar/review/practicality/",
+    "https://www.electrifying.com/reviews/cupra-reviews/terramar-e-hybrid/review",
+    "https://www.auto-data.net/en/cupra-terramar-1.5-tsi-272hp-e-hybrid-dsg-52623",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-08-08"
+}

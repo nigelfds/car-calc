@@ -1,0 +1,27 @@
+[
+  {
+    "id": "audi-a5-phev-e-hybrid-quattro",
+    "familyId": "audi-a5-phev",
+    "make": "Audi",
+    "model": "A5",
+    "variant": "e-hybrid quattro 270kW",
+    "bodyType": "Sedan",
+    "powertrain": "phev",
+    "listPrice": 89900,
+    "batteryKwh": 20.7,
+    "rangeKm": 97,
+    "consumptionKwhPer100km": 21.3,
+    "combinedRangeKm": 727,
+    "fuelConsumptionL100km": 7.3,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 331,
+    "bootLitresSeatsDown": 1175,
+    "seats": 5,
+    "towKg": 1900,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2350,
+    "depreciationCurve": [1, 0.66, 0.54, 0.46, 0.39, 0.33],
+    "sourcedAt": "2026-07-28"
+  }
+]

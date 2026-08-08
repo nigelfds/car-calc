@@ -1,0 +1,27 @@
+[
+  {
+    "id": "mercedes-c-350e-phev-350e",
+    "familyId": "mercedes-c-350e-phev",
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "variant": "350e",
+    "bodyType": "Sedan",
+    "powertrain": "phev",
+    "listPrice": 98200,
+    "batteryKwh": 19.53,
+    "rangeKm": 115,
+    "consumptionKwhPer100km": 17.0,
+    "combinedRangeKm": 773,
+    "fuelConsumptionL100km": 7.6,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 315,
+    "bootLitresSeatsDown": 500,
+    "seats": 5,
+    "towKg": 1800,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2450,
+    "depreciationCurve": [1, 0.65, 0.54, 0.46, 0.39, 0.33],
+    "sourcedAt": "2026-08-08"
+  }
+]
