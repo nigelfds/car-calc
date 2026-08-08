@@ -41,6 +41,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "bmw-ix2": {
+    "file": "bmw-ix2.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_iX2_xDrive30_IMG_1811.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as BMW iX2."
+  },
   "bmw-ix3": {
     "file": "bmw-ix3.webp",
     "source": "https://commons.wikimedia.org/wiki/File:BMW_iX3_NA5_IAA_2025_DSC_1684.jpg",
@@ -243,6 +250,20 @@
     "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
+  },
+  "gwm-cannon-alpha-phev": {
+    "file": "gwm-cannon-alpha-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_GWM_Poer_Sahar_PHEV_front_view.png",
+    "author": "iMoD Official",
+    "licence": "CC BY 3.0",
+    "note": "Cropped and resized. Searched as GWM Poer Sahar."
+  },
+  "gwm-haval-h6-gt-phev": {
+    "file": "gwm-haval-h6-gt-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Haval_H6_GT_Turbo_Deluxe_2024.jpg",
+    "author": "RL GNZLZ",
+    "licence": "CC BY-SA 2.0",
+    "note": "Cropped and resized. Searched as Haval H6 GT."
   },
   "gwm-haval-h6-phev": {
     "file": "gwm-haval-h6-phev.webp",
