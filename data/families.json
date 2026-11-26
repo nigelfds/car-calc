@@ -218,36 +218,6 @@
     }
   },
   {
-    "id": "bmw-i4",
-    "summary": "Reviewer consensus across CarExpert, CarsGuide and EV Central is that the BMW i4 eDrive35 remains genuinely engaging and comfortable to drive, even as BMW pared the local range back to this single grade for 2026, dropping the eDrive40 and M50 and readying the model for replacement by the Neue Klasse i3. CarsGuide scored the driving experience 10/10, but reviewers consistently flag pricing that undercuts few direct rivals, real-world range well short of the claimed figure, and cabin materials that feel a step below what BMW buyers expect. CarExpert's overall verdict of \"Good\" reflects a competent EV being overtaken by newer rivals on range and technology.",
-    "pros": [
-      "Engaging, car-like driving dynamics with precise steering and confident handling praised across reviews",
-      "Comfortable, well-damped ride and a notably quiet, refined cabin at speed",
-      "Strong multimedia system with 12.3-inch digital cluster and 14.9-inch curved touchscreen",
-      "Fast DC charging (180kW, 32 minutes 10-80%) and now standard M Sport styling"
-    ],
-    "cons": [
-      "Real-world range (reviewers observed roughly 370km) falls well short of the claimed 448km",
-      "Expensive for what it offers, undercutting few direct rivals despite being the sole remaining variant",
-      "Interior materials feel plasticky and lack the polish reviewers expect of a BMW",
-      "Shorter warranty than some rivals, and the model is being phased out ahead of the incoming i3"
-    ],
-    "sources": [
-      "https://www.carexpert.com.au/car-reviews/2026-bmw-i4-review",
-      "https://www.carsguide.com.au/luxury/bmw-i4-edrive35-101633",
-      "https://www.carsguide.com.au/bmw/i-series/i4",
-      "https://evcentral.com.au/bmw-i4-range-trimmed-in-australia-popular-lct-busting-edrive35-updated-but-more-expensive-models-follow-ice-4-series-out-the-door/"
-    ],
-    "sourcedAt": "2026-07-26",
-    "image": {
-      "file": "bmw-i4.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:BMW_i4_IAA_2021_1X7A0307.jpg",
-      "author": "Alexander Migl",
-      "licence": "CC BY-SA 4.0",
-      "note": "Cropped and resized."
-    }
-  },
-  {
     "id": "bmw-i5",
     "summary": "Australian reviewers rate the electric 5 Series as the most convincing large executive EV to drive, with CarExpert marking both the eDrive40 and the M60 xDrive \"Very Good\" for a chassis that stays composed and quiet where rivals feel inert. The disagreement is entirely about money and range: at $155,900 to $215,900 before on-roads the i5 asks Mercedes EQE and Porsche Taycan money, and reviewers consistently record real-world consumption well above the claim, so the 550km and 506km certified figures are not what buyers see. The M60's $60,000 premium buys an M5-rivalling 3.8-second car, but it also cuts range and is the harder case to argue on value.",
     "pros": [
@@ -485,42 +455,6 @@
       "licence": "CC BY-SA 4.0",
       "note": "Cropped and resized."
     }
-  },
-  {
-    "id": "bmw-x5-phev",
-    "summary": "The xDrive50e M Sport is the only plug-in hybrid in BMW Australia's X5 range, pairing the 3.0-litre turbo straight-six with a 145kW motor and a 25.7kWh usable battery for 360kW/700Nm and 94km of WLTP electric range — more than any other plug-in hybrid in its price bracket, and enough to run a typical Melbourne commute on grid power alone. Reviewers are consistent that this is the X5 to have if you can charge it: the powertrain is the smoothest and the second-most-powerful in the range, the ride is plush, and the 2700kg towing rating matches the diesel exactly. The catch is what happens when the battery is flat — BMW's own WLTP charge-sustaining figure is 9.6-10.5L/100km, worse than the cheaper xDrive40i petrol's claim — and that at $154,900 the car sits above every tax threshold the FBT and LCT rules define, so the concessions that once carried plug-in hybrids are gone.",
-    "pros": [
-      "94km of WLTP electric range from a 25.7kWh usable pack (29.5kWh gross) — 25 per cent more capacity than the xDrive45e it replaced, and more electric range than the BMW X3 30e's 85km, the Volvo XC90 T8's 69km or the Land Rover Defender P300e's 48km",
-      "41g/km combined CO2 is far inside Victoria's 120g/km green passenger car limit, so duty is charged at the flat $8.40 per $200 green rate rather than the $18.00 per $200 tier a petrol X5 over $150,000 pays — worth roughly $7,400 at this price, the largest single duty saving of any car in the dataset",
-      "1.9L/100km on the combined cycle clears the Luxury Car Tax fuel-efficient test of 3.5L/100km, so LCT is levied above the $91,661 threshold instead of the $80,809 one — about $3,580 less tax embedded in the list price than an equivalent diesel or petrol X5",
-      "360kW and 700Nm makes it the second-most-powerful X5 behind the $177,900 M60i V8 and comfortably quicker than the $143,900 xDrive40i petrol, while its 2700kg braked tow rating is identical to the xDrive30d diesel — the plug-in gives away no capability to the cars it costs more than",
-      "11kW three-phase AC charging fills the pack in about two and a half hours, and the five-year unlimited-kilometre warranty is unconditional and not tied to servicing inside the BMW network, with the high-voltage battery separately covered for six years or 100,000km"
-    ],
-    "cons": [
-      "The 1.9L/100km label collapses the moment the battery is flat: BMW's own WLTP charge-sustaining figure is 9.6-10.5L/100km and Auto Express measured 25.9mpg (about 10.9L/100km) on petrol alone, which is worse than the cheaper xDrive40i petrol's own 9.3L/100km claim — a buyer who cannot charge at home is paying $11,000 more to use more fuel",
-      "The battery costs 150 litres of boot — 500L seats-up against 650L in every other X5, and 1720L folded against 1870L — and the plug-in is five seats only with no third-row option, where a seven-seat Volvo XC90 T8 sits $34,000 cheaper at $120,990",
-      "Plug-in hybrids lost the FBT exemption on 1 April 2025, and at $154,900 the xDrive50e is more than double the $75,000 FBT cap and far above both the $80,809 ordinary and $91,661 fuel-efficient LCT thresholds — the novated-lease arithmetic that used to justify a car like this no longer applies at all",
-      "Charging is AC-only at 11kW with no DC fast-charge capability of any kind, so a flat battery is an overnight or a two-and-a-half-hour wallbox stop and cannot be usefully recovered mid-journey — and there is no vehicle-to-load or vehicle-to-home output",
-      "This is a run-out car bought at full list: BMW has revealed the fifth-generation X5 with Australian timing locked in, petrol and diesel arriving in the fourth quarter of 2026 and the replacement 50e xDrive — with up to 102km of WLTP range — by mid-2027, which is a hard deadline on this generation's residual value"
-    ],
-    "sources": [
-      "https://www.carsguide.com.au/bmw/x-models/x5/price/2026",
-      "https://www.carsguide.com.au/bmw/x-models/price/2026/x5-xdrive50e-m-sport",
-      "https://www.carsales.com.au/research/bmw/x5/2025/xdrive50e-m-sport/",
-      "https://www.carsales.com.au/research/bmw/x5/",
-      "https://www.carexpert.com.au/bmw/x5/2026/price-and-specs",
-      "https://www.carexpert.com.au/car-reviews/2025-bmw-x5-review",
-      "https://www.carexpert.com.au/car-news/2027-bmw-x5-and-ix5-ev-new-generation-suv-range-revealed-australian-timing-locked-in",
-      "https://thebeep.com.au/cars/bmw/x5",
-      "https://www.whichcar.com.au/features/plug-in-hybrids-longest-electric-driving-range",
-      "https://www.parkers.co.uk/bmw/x5/review/mpg-running-costs/",
-      "https://www.autoexpress.co.uk/bmw/x5/94980/new-bmw-x5-xdrive50e-review-plug-hybrid-power-enhances-already-solid-suv-package",
-      "https://vogelsang-automobile.de/bmw-x5-xdrive50e/",
-      "https://www.bmwblog.com/2025/12/07/bmw-x5-xdrive50e-review-range-charging-performance/",
-      "https://www.encycarpedia.com/bmw/23-x5-xdrive50e-suv",
-      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
-    ],
-    "sourcedAt": "2026-07-28"
   },
   {
     "id": "byd-atto1",
@@ -1034,7 +968,7 @@
     }
   },
   {
-    "id": "chery-omoda-e5",
+    "id": "chery-e5",
     "summary": "The Chery E5 (rebranded from Omoda E5 during 2025, with the Omoda name now being reserved for a separate model line launching later) is one of the cheapest new electric SUVs on sale in Australia, a small front-wheel-drive EV pitched squarely on price and standard equipment rather than dynamic polish. Australian reviewers consistently praise its value proposition, long warranty and cheap servicing, well-equipped cabin, but mark it down for unsettled ride quality, an over-cautious safety-assist calibration, and a boot that trails class rivals. For MY26 the range was simplified to a single Ultimate grade with a smaller but more efficient battery, holding range steady at 430km WLTP while sharpening the price further.",
     "pros": [
       "One of the cheapest new electric SUVs on sale in Australia, undercutting most EV rivals",
@@ -1059,7 +993,7 @@
     ],
     "sourcedAt": "2026-07-26",
     "image": {
-      "file": "chery-omoda-e5.webp",
+      "file": "chery-e5.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Chery_E5.jpg",
       "author": "Rutger van der Maar",
       "licence": "CC BY 2.0",
@@ -3239,44 +3173,6 @@
       "file": "mercedes-eqa.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_EQA,_IAA_2017,_Frankfurt_(1Y7A2961).jpg",
       "author": "Matti Blume",
-      "licence": "CC BY-SA 4.0",
-      "note": "Cropped and resized."
-    }
-  },
-  {
-    "id": "mercedes-eqb",
-    "summary": "The EQB is a battery-electric version of Mercedes-Benz's boxy GLB small SUV, and its point of difference in Australia is a standard third row in a car under 4.7 metres long. Reviewers are consistent that it rides and insulates like a Mercedes and that the packaging is clever, but equally consistent that the third row is a 5+2 for children, that 100kW DC charging and roughly 350km of real-world range are behind the class in 2026, and that the money buys less car than the badge suggests. It is now a run-out model, with the GLB Electric replacing it locally in the final quarter of 2026.",
-    "pros": [
-      "One of the very few seven-seat EVs on sale here under the $91,661 fuel-efficient LCT cap, and the third row is standard on all three variants rather than the $2,900 option it once was",
-      "Rides pliantly and quietly even on the standard 20-inch wheels, with sound insulation Australian reviewers rate as a clear step above mainstream electric SUVs",
-      "Second row slides through 140mm of travel, so third-row legroom can be traded against boot space rather than being fixed",
-      "Compact 4,684mm length and 210mm ground clearance make it far easier to park and garage than a Kia EV9, which needs a $97,000 entry price for the same seat count",
-      "Advertised price includes a three-year service plan package and 12 months of Chargefox public charging, which offsets Mercedes-Benz's high standalone servicing costs"
-    ],
-    "cons": [
-      "Only 130 litres of boot space with all seven seats in use, which CarExpert put behind a Volkswagen Tiguan Allspace in every seating configuration",
-      "The third row is explicitly a 5+2: Mercedes-Benz specifies occupants under 1.65m tall, and headroom runs out for adults",
-      "DC charging peaks at just 100kW, around half what a Kia EV9 or Tesla Model Y will take, so long-trip stops are noticeably longer",
-      "CarExpert measured 19.1kWh/100km in mixed driving against the 536km WLTP claim, cutting realistic range to roughly 350km",
-      "Out of production since January 2026 and superseded locally by the GLB Electric in Q4 2026, which leaves resale exposed; at $90,000 the 250+ also has only $1,661 of headroom under the FBT-exemption cap, so one option pack can cost a novated-lease buyer the exemption"
-    ],
-    "sources": [
-      "https://www.carexpert.com.au/car-reviews/2023-mercedes-benz-eqb-250-review",
-      "https://www.carsguide.com.au/ev/mercedes-eq-eqb-350-88555",
-      "https://www.carexpert.com.au/car-news/mercedes-benz-eqa-and-eqb-250-electric-suvs-bring-lowest-prices-yet",
-      "https://www.carsguide.com.au/car-news/special-luxe-electric-cars-confirmed-2026-mercedes-benz-eqa-and-eqb-250-city-edition",
-      "https://www.carsguide.com.au/mercedes-benz/eqb250/2026",
-      "https://www.carexpert.com.au/mercedes-benz/eqb/2026/specs",
-      "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-glb-electric-review-quick-drive",
-      "https://www.carsauce.com/car-news/mercedes-benz-eqa-and-eqb-night-editions-announced",
-      "https://www.exhaustnotes.com.au/mercedes-benz-launches-eqa-and-eqb-250-city-edition/",
-      "https://ev-database.org/car/1988/Mercedes-Benz-EQB-250plus"
-    ],
-    "sourcedAt": "2026-07-27",
-    "image": {
-      "file": "mercedes-eqb.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:MERCEDES-EQ_EQB_China.jpg",
-      "author": "Dinkun Chen",
       "licence": "CC BY-SA 4.0",
       "note": "Cropped and resized."
     }

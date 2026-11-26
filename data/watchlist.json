@@ -651,14 +651,14 @@
       "note": "~12 km electric range, under the 30 km rangeKm floor."
     },
     {
-      "name": "Wagons: BMW i5 Touring, BYD Seal 6 EV Touring, Toyota bZ4X Touring, Audi A5 Avant e-hybrid",
+      "name": "Wagons: BMW i5 Touring, BYD Seal 6 EV Touring, Audi A5 Avant e-hybrid",
       "make": "various",
       "powertrain": "any",
       "scope": "model",
       "status": "out-of-scope",
       "checkedAt": "2026-08-08",
       "recheckAfter": "2027-07-01",
-      "note": "Wagons are excluded by decision."
+      "note": "Wagons are excluded by decision. The Toyota bZ4X Touring (and its twin, the Subaru Trailseeker) are held as SUVs by owner decision 2026-11-26."
     },
     {
       "name": "Commercial vans and conversions",
@@ -1299,6 +1299,39 @@
       "checkedAt": "2026-07-30",
       "recheckAfter": "2027-07-01",
       "note": "No new cars sold in Australia at survey."
+    },
+    {
+      "name": "BMW i4",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "not-on-sale",
+      "familyId": "bmw-i4",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-11-26",
+      "note": "Gone from BMW AU line-up; replaced by the new i3 sedan (sweep 2026-11-26). Family removed."
+    },
+    {
+      "name": "Mercedes-Benz EQB",
+      "make": "Mercedes-Benz",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "not-on-sale",
+      "familyId": "mercedes-eqb",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-11-26",
+      "note": "Replaced by the electric GLB (sweep 2026-11-26). Family removed."
+    },
+    {
+      "name": "BMW X5 50e (new generation)",
+      "make": "BMW",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "pre-launch",
+      "familyId": "bmw-x5-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "Old X5 50e is run-out stock only; family removed 2026-11-26. New X5 50e due Q2 2027: research as new under the same id."
     }
   ]
 }

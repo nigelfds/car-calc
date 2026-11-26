@@ -20,13 +20,6 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
-  "bmw-i4": {
-    "file": "bmw-i4.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:BMW_i4_IAA_2021_1X7A0307.jpg",
-    "author": "Alexander Migl",
-    "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
-  },
   "bmw-ix": {
     "file": "bmw-ix.webp",
     "source": "https://commons.wikimedia.org/wiki/File:BMW_iX_IAA_2021_1X7A0204.jpg",
@@ -160,8 +153,8 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
-  "chery-omoda-e5": {
-    "file": "chery-omoda-e5.webp",
+  "chery-e5": {
+    "file": "chery-e5.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Chery_E5.jpg",
     "author": "Rutger van der Maar",
     "licence": "CC BY 2.0",
@@ -479,13 +472,6 @@
     "file": "mercedes-eqa.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_EQA,_IAA_2017,_Frankfurt_(1Y7A2961).jpg",
     "author": "Matti Blume",
-    "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
-  },
-  "mercedes-eqb": {
-    "file": "mercedes-eqb.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:MERCEDES-EQ_EQB_China.jpg",
-    "author": "Dinkun Chen",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
