@@ -7,12 +7,12 @@
     "variant": "xDrive25e",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 79500,
+    "listPrice": 79900,
     "batteryKwh": 14.2,
-    "rangeKm": 80,
-    "consumptionKwhPer100km": 17.8,
-    "combinedRangeKm": 781,
-    "fuelConsumptionL100km": 6.7,
+    "rangeKm": 78,
+    "consumptionKwhPer100km": 18.2,
+    "combinedRangeKm": 848,
+    "fuelConsumptionL100km": 6.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 490,
@@ -21,7 +21,14 @@
     "towKg": 1700,
     "warrantyYears": 5,
     "insuranceAnnual": 2150,
-    "depreciationCurve": [1, 0.75, 0.64, 0.56, 0.49, 0.43],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

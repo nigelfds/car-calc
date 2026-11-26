@@ -1,0 +1,174 @@
+{
+  "familyId": "volvo-ex40",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "volvo-ex40-single-motor-ultra": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-rwd-electric-jsf5fogs20260701",
+        "note": "CarExpert 2027 EX40 Ultra Single Motor listed, released 3 Jul 2026; CarsGuide 2027 price page lists Ultra Single Motor $69,990 and Ultra Twin Motor $74,990. volvocars.com/au build page returned 403 to automated reads this run"
+      },
+      "listPrice": {
+        "value": 69990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-rwd-electric-jsf5fogs20260701",
+        "note": "CarExpert 2027 variant page: 'prices starting at $69,990' before on-road costs (drive-away shown separately, Sydney basis). Same figure as CarExpert 31 Mar 2026 price-cut article ('now opens at $69,990 before on-road costs', $7,000 cut across the range) and CarsGuide 2027 MSRP. Volvo's own page unreadable (403)"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3159/Volvo-EX40-Single-Motor-ER",
+        "note": "usable 79.0 kWh, nominal 82.0 kWh on the same page (MY26-27); CarExpert 2027 page also gives 82 gross / 79 usable"
+      },
+      "rangeKm": {
+        "value": 520,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-rwd-electric-jsf5fogs20260701",
+        "note": "CarExpert 2027 AU page: 520 km WLTP combined on 20-inch wheels; equals EV Database WLTP TEH 520 km (TEL is the higher best case), so the high-spec end matching the AU 20-inch Ultra"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3159/Volvo-EX40-Single-Motor-ER",
+        "note": "EV Database WLTP rated TEH 184 Wh/km (incl. charging losses), same end as rangeKm; CarExpert 2027 page also 18.4 kWh/100km. Battery/range = 15.2, inside the 25% tolerance"
+      },
+      "bootLitresSeatsUp": {
+        "value": 410,
+        "basis": "sourced",
+        "url": "https://www.cinch.co.uk/used-cars/volvo/ex40/review",
+        "note": "Cinch: 410 L 'measured up to the windows' (536 L to the roof); EV Database cargo 410 L. CarExpert's 413/419 L 'to the lower window' are database permutations. Frunk 31 L not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 851,
+        "basis": "sourced",
+        "url": "https://www.cinch.co.uk/used-cars/volvo/ex40/review",
+        "note": "Cinch: 851 L seats folded measured to the windows (belt line); Volvo's 1,286 L (EV Database cargo max) is to the roof. Held 1,400 had no traceable source and is replaced to meet the belt-line convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-rwd-electric-jsf5fogs20260701"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3159/Volvo-EX40-Single-Motor-ER",
+        "note": "EV Database braked 1,500 kg for the Single Motor ER (held figure, Volvo spec). CarExpert 2027 RWD page shows 1,800 kg, rejected as a copy of the Twin Motor figure in its spec grid"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-rwd-electric-jsf5fogs20260701",
+        "note": "60 months/unlimited km vehicle warranty; battery 96 months/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "kept held; anchored between kia-ev5-gt-line-awd ($71,770, 2050) and volvo-ex30-cross-country-ultra ($62,990, 1950), below bmw-ix1-xdrive30 ($77,900, 2100)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "One Volvo BEV curve per brand by owner instruction: matches volvo-ex90 [1,0.66,0.54,0.45,0.38,0.32]. Evidence for steep loss on EX40: $7,000 cut across the range in March 2026 after an earlier cut, sales down ~40% in 2025, and a MY27.5 facelift due in 2027 (CarExpert 11 Sep 2026). Held curve was [1,0.7,0.58,0.49,0.42,0.36]"
+      }
+    },
+    "volvo-ex40-twin-motor-ultra": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-4x4-electric-jsfmwwag20260701",
+        "note": "CarExpert 2027 EX40 Ultra Twin Motor listed, released 3 Jul 2026; CarsGuide 2027 price page lists Ultra Single Motor $69,990 and Ultra Twin Motor $74,990. volvocars.com/au build page returned 403 to automated reads this run"
+      },
+      "listPrice": {
+        "value": 74990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-4x4-electric-jsfmwwag20260701",
+        "note": "CarExpert 2027 variant page: 'prices starting at $74,990' before on-road costs (drive-away shown separately, Sydney basis). Same figure as CarExpert 31 Mar 2026 price-cut article ('now opens at $69,990 before on-road costs', $7,000 cut across the range) and CarsGuide 2027 MSRP. Volvo's own page unreadable (403)"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3161/Volvo-EX40-Twin-Motor-Performance",
+        "note": "usable 79.0 kWh, nominal 82.0 kWh on the same page (MY26-27); CarExpert 2027 page also gives 82 gross / 79 usable"
+      },
+      "rangeKm": {
+        "value": 485,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-4x4-electric-jsfmwwag20260701",
+        "note": "CarExpert 2027 AU page: 485 km WLTP combined on 20-inch wheels; equals EV Database WLTP TEH 485 km (TEL is the higher best case), so the high-spec end matching the AU 20-inch Ultra"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3161/Volvo-EX40-Twin-Motor-Performance",
+        "note": "EV Database WLTP rated TEH 194 Wh/km (incl. charging losses), same end as rangeKm; CarExpert 2027 page also 19.4 kWh/100km. Battery/range = 16.3, inside the 25% tolerance"
+      },
+      "bootLitresSeatsUp": {
+        "value": 410,
+        "basis": "sourced",
+        "url": "https://www.cinch.co.uk/used-cars/volvo/ex40/review",
+        "note": "Cinch: 410 L 'measured up to the windows' (536 L to the roof); EV Database cargo 410 L. CarExpert's 413/419 L 'to the lower window' are database permutations. Frunk 31 L not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 851,
+        "basis": "sourced",
+        "url": "https://www.cinch.co.uk/used-cars/volvo/ex40/review",
+        "note": "Cinch: 851 L seats folded measured to the windows (belt line); Volvo's 1,286 L (EV Database cargo max) is to the roof. Held 1,400 had no traceable source and is replaced to meet the belt-line convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-4x4-electric-jsfmwwag20260701"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3161/Volvo-EX40-Twin-Motor-Performance",
+        "note": "EV Database braked 1,800 kg; CarExpert 2027 AWD page also 1,800 kg braked / 750 kg unbraked"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex40/2027-ultra-suv-4x4-electric-jsfmwwag20260701",
+        "note": "60 months/unlimited km vehicle warranty; battery 96 months/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "kept held; 300 kW twin-motor performance car priced just under bmw-ix1-xdrive30 ($77,900, 2100), rated a step above it for power"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "One Volvo BEV curve per brand by owner instruction: matches volvo-ex90 [1,0.66,0.54,0.45,0.38,0.32]. Evidence for steep loss on EX40: $7,000 cut across the range in March 2026 after an earlier cut, sales down ~40% in 2025, and a MY27.5 facelift due in 2027 (CarExpert 11 Sep 2026). Held curve was [1,0.7,0.58,0.49,0.42,0.36]"
+      }
+    }
+  },
+  "lowConfidence": [
+    "volvo-ex40-single-motor-ultra.towKg: 1,500 kg from EV Database; CarExpert AU page says 1,800 kg and Volvo AU spec page was unreadable (403)",
+    "volvo-ex40-single-motor-ultra.bootLitresSeatsDown: 851 L belt-line figure from one UK review (Cinch); Volvo publishes only 1,286 L to the roof",
+    "volvo-ex40-twin-motor-ultra.bootLitresSeatsDown: as single motor, one UK review source for the belt-line figure",
+    "volvo-ex40-single-motor-ultra.listPrice: Volvo's own configurator unreadable (403); price from CarExpert/CarsGuide 'before on-road costs'",
+    "volvo-ex40-twin-motor-ultra.listPrice: Volvo's own configurator unreadable (403); price from CarExpert/CarsGuide 'before on-road costs'",
+    "volvo-ex40-twin-motor-ultra.insuranceAnnual: judged",
+    "volvo-ex40-single-motor-ultra.insuranceAnnual: judged",
+    "volvo-ex40-single-motor-ultra.depreciationCurve: judged, brand curve matched to volvo-ex90",
+    "volvo-ex40-twin-motor-ultra.depreciationCurve: judged, brand curve matched to volvo-ex90"
+  ]
+}

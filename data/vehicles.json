@@ -358,7 +358,7 @@
     "listPrice": 155900,
     "batteryKwh": 81.2,
     "rangeKm": 550,
-    "consumptionKwhPer100km": 16.6,
+    "consumptionKwhPer100km": 16.8,
     "bootLitresSeatsUp": 490,
     "bootLitresSeatsDown": 785,
     "seats": 5,
@@ -367,13 +367,13 @@
     "insuranceAnnual": 3300,
     "depreciationCurve": [
       1,
-      0.64,
-      0.52,
-      0.43,
-      0.36,
-      0.31
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "bmw-i5-m60-xdrive",
@@ -394,13 +394,13 @@
     "insuranceAnnual": 4500,
     "depreciationCurve": [
       1,
+      0.72,
       0.61,
-      0.49,
-      0.4,
-      0.33,
-      0.28
+      0.53,
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "bmw-ix-xdrive45-m-sport",
@@ -412,7 +412,7 @@
     "listPrice": 142900,
     "batteryKwh": 94.8,
     "rangeKm": 522,
-    "consumptionKwhPer100km": 21.8,
+    "consumptionKwhPer100km": 20.9,
     "bootLitresSeatsUp": 500,
     "bootLitresSeatsDown": 1750,
     "seats": 5,
@@ -421,40 +421,13 @@
     "insuranceAnnual": 3200,
     "depreciationCurve": [
       1,
-      0.64,
-      0.52,
-      0.43,
-      0.36,
-      0.3
-    ],
-    "sourcedAt": "2026-07-31"
-  },
-  {
-    "id": "bmw-ix1-xdrive30",
-    "familyId": "bmw-ix1",
-    "make": "BMW",
-    "model": "iX1",
-    "variant": "xDrive30",
-    "bodyType": "SUV",
-    "listPrice": 77900,
-    "batteryKwh": 65.2,
-    "rangeKm": 426,
-    "consumptionKwhPer100km": 17.2,
-    "bootLitresSeatsUp": 490,
-    "bootLitresSeatsDown": 1495,
-    "seats": 5,
-    "towKg": 1200,
-    "warrantyYears": 5,
-    "insuranceAnnual": 2100,
-    "depreciationCurve": [
-      1,
-      0.78,
-      0.68,
-      0.6,
+      0.72,
+      0.61,
       0.53,
-      0.47
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "bmw-ix1-xdrive30-m-sport",
@@ -463,25 +436,52 @@
     "model": "iX1",
     "variant": "xDrive30 M Sport",
     "bodyType": "SUV",
-    "listPrice": 86800,
+    "listPrice": 77900,
     "batteryKwh": 65.2,
-    "rangeKm": 400,
-    "consumptionKwhPer100km": 18.3,
+    "rangeKm": 426,
+    "consumptionKwhPer100km": 17.3,
     "bootLitresSeatsUp": 490,
     "bootLitresSeatsDown": 1495,
     "seats": 5,
     "towKg": 1200,
     "warrantyYears": 5,
-    "insuranceAnnual": 2300,
+    "insuranceAnnual": 2100,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
+      0.72,
+      0.61,
       0.53,
-      0.47
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "bmw-ix1-xdrive30-sport-collection",
+    "familyId": "bmw-ix1",
+    "make": "BMW",
+    "model": "iX1",
+    "variant": "xDrive30 Sport Collection",
+    "bodyType": "SUV",
+    "listPrice": 75835,
+    "batteryKwh": 65.2,
+    "rangeKm": 426,
+    "consumptionKwhPer100km": 17.3,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1495,
+    "seats": 5,
+    "towKg": 1200,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2100,
+    "depreciationCurve": [
+      1,
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "bmw-ix2-xdrive30-m-sport",
@@ -491,9 +491,9 @@
     "variant": "xDrive30 M Sport",
     "bodyType": "SUV",
     "listPrice": 79900,
-    "batteryKwh": 64.8,
-    "rangeKm": 395,
-    "consumptionKwhPer100km": 18.5,
+    "batteryKwh": 65.2,
+    "rangeKm": 476,
+    "consumptionKwhPer100km": 15.4,
     "bootLitresSeatsUp": 525,
     "bootLitresSeatsDown": 1400,
     "seats": 5,
@@ -502,13 +502,13 @@
     "insuranceAnnual": 2200,
     "depreciationCurve": [
       1,
-      0.75,
-      0.65,
-      0.57,
-      0.5,
-      0.44
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "bmw-ix3-50-xdrive",
@@ -545,12 +545,12 @@
     "variant": "xDrive25e",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 79500,
+    "listPrice": 79900,
     "batteryKwh": 14.2,
-    "rangeKm": 80,
-    "consumptionKwhPer100km": 17.8,
-    "combinedRangeKm": 781,
-    "fuelConsumptionL100km": 6.7,
+    "rangeKm": 78,
+    "consumptionKwhPer100km": 18.2,
+    "combinedRangeKm": 848,
+    "fuelConsumptionL100km": 6.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 490,
@@ -561,13 +561,13 @@
     "insuranceAnnual": 2150,
     "depreciationCurve": [
       1,
-      0.75,
-      0.64,
-      0.56,
-      0.49,
-      0.43
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "bmw-x3-phev-30e-xdrive",
@@ -577,12 +577,12 @@
     "variant": "30e xDrive",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 104800,
+    "listPrice": 107700,
     "batteryKwh": 19.7,
-    "rangeKm": 85,
-    "consumptionKwhPer100km": 23.2,
-    "combinedRangeKm": 743,
-    "fuelConsumptionL100km": 7.6,
+    "rangeKm": 86,
+    "consumptionKwhPer100km": 22.9,
+    "combinedRangeKm": 735,
+    "fuelConsumptionL100km": 7.7,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 460,
@@ -593,13 +593,13 @@
     "insuranceAnnual": 2600,
     "depreciationCurve": [
       1,
-      0.7,
-      0.58,
-      0.49,
-      0.42,
-      0.36
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-atto1-essential",
@@ -4569,29 +4569,29 @@
     "variant": "450h+ F Sport AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 96000,
+    "listPrice": 96090,
     "batteryKwh": 16,
-    "rangeKm": 70,
-    "consumptionKwhPer100km": 22.9,
-    "combinedRangeKm": 1002,
-    "fuelConsumptionL100km": 5.9,
+    "rangeKm": 72,
+    "consumptionKwhPer100km": 22.2,
+    "combinedRangeKm": 931,
+    "fuelConsumptionL100km": 6.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 520,
-    "bootLitresSeatsDown": 1410,
+    "bootLitresSeatsDown": 1141,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 5,
     "insuranceAnnual": 2350,
     "depreciationCurve": [
       1,
-      0.75,
-      0.65,
-      0.57,
-      0.5,
-      0.44
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lexus-nx-phev-450h-plus-luxury",
@@ -4601,29 +4601,29 @@
     "variant": "450h+ Luxury AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 84500,
+    "listPrice": 84630,
     "batteryKwh": 16,
-    "rangeKm": 74,
-    "consumptionKwhPer100km": 22.9,
-    "combinedRangeKm": 1006,
-    "fuelConsumptionL100km": 5.9,
+    "rangeKm": 72,
+    "consumptionKwhPer100km": 22.2,
+    "combinedRangeKm": 931,
+    "fuelConsumptionL100km": 6.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 520,
-    "bootLitresSeatsDown": 1410,
+    "bootLitresSeatsDown": 1141,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 5,
     "insuranceAnnual": 2100,
     "depreciationCurve": [
       1,
-      0.77,
-      0.67,
-      0.59,
-      0.52,
-      0.46
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lexus-rx-phev-450h-plus-luxury",
@@ -4636,12 +4636,12 @@
     "listPrice": 105350,
     "batteryKwh": 16,
     "rangeKm": 67,
-    "consumptionKwhPer100km": 25.2,
-    "combinedRangeKm": 888,
-    "fuelConsumptionL100km": 6.7,
+    "consumptionKwhPer100km": 23.9,
+    "combinedRangeKm": 853,
+    "fuelConsumptionL100km": 7,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
-    "bootLitresSeatsUp": 612,
+    "bootLitresSeatsUp": 461,
     "bootLitresSeatsDown": 1678,
     "seats": 5,
     "towKg": 1500,
@@ -4649,13 +4649,13 @@
     "insuranceAnnual": 2550,
     "depreciationCurve": [
       1,
-      0.74,
-      0.64,
-      0.56,
-      0.49,
-      0.43
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lexus-rx-phev-450h-plus-sports-luxury",
@@ -4668,26 +4668,26 @@
     "listPrice": 123650,
     "batteryKwh": 16,
     "rangeKm": 67,
-    "consumptionKwhPer100km": 25.2,
-    "combinedRangeKm": 888,
-    "fuelConsumptionL100km": 6.7,
+    "consumptionKwhPer100km": 23.9,
+    "combinedRangeKm": 853,
+    "fuelConsumptionL100km": 7,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
-    "bootLitresSeatsUp": 612,
+    "bootLitresSeatsUp": 461,
     "bootLitresSeatsDown": 1678,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
-    "insuranceAnnual": 2850,
+    "insuranceAnnual": 2750,
     "depreciationCurve": [
       1,
-      0.72,
-      0.62,
-      0.54,
-      0.47,
-      0.41
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lexus-rz-500e-luxury",
@@ -4708,13 +4708,13 @@
     "insuranceAnnual": 2100,
     "depreciationCurve": [
       1,
+      0.78,
       0.68,
-      0.57,
-      0.49,
-      0.42,
-      0.36
+      0.6,
+      0.53,
+      0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lexus-rz-500e-sports-luxury",
@@ -4735,13 +4735,13 @@
     "insuranceAnnual": 2250,
     "depreciationCurve": [
       1,
-      0.67,
-      0.56,
-      0.48,
-      0.41,
-      0.35
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lexus-rz-550e-f-sport",
@@ -4750,7 +4750,7 @@
     "model": "RZ",
     "variant": "550e F Sport AWD",
     "bodyType": "SUV",
-    "listPrice": 105000,
+    "listPrice": 104920,
     "batteryKwh": 72,
     "rangeKm": 437,
     "consumptionKwhPer100km": 18.8,
@@ -4762,13 +4762,13 @@
     "insuranceAnnual": 2550,
     "depreciationCurve": [
       1,
-      0.65,
-      0.54,
-      0.46,
-      0.39,
-      0.33
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lotus-eletre-base",
@@ -5319,12 +5319,12 @@
     "variant": "350e",
     "bodyType": "Sedan",
     "powertrain": "phev",
-    "listPrice": 98200,
-    "batteryKwh": 19.53,
-    "rangeKm": 115,
-    "consumptionKwhPer100km": 17,
-    "combinedRangeKm": 773,
-    "fuelConsumptionL100km": 7.6,
+    "listPrice": 99418,
+    "batteryKwh": 19.5,
+    "rangeKm": 116,
+    "consumptionKwhPer100km": 16.8,
+    "combinedRangeKm": 874,
+    "fuelConsumptionL100km": 6.6,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 315,
@@ -5335,13 +5335,13 @@
     "insuranceAnnual": 2450,
     "depreciationCurve": [
       1,
-      0.65,
-      0.54,
-      0.46,
-      0.39,
-      0.33
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mercedes-cla-ev-200-eq",
@@ -5355,20 +5355,20 @@
     "rangeKm": 470,
     "consumptionKwhPer100km": 14.4,
     "bootLitresSeatsUp": 405,
-    "bootLitresSeatsDown": 900,
+    "bootLitresSeatsDown": 666,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
-      0.72,
-      0.61,
-      0.53,
-      0.46,
-      0.4
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mercedes-cla-ev-350-4matic-eq",
@@ -5382,20 +5382,20 @@
     "rangeKm": 663,
     "consumptionKwhPer100km": 14.9,
     "bootLitresSeatsUp": 405,
-    "bootLitresSeatsDown": 900,
+    "bootLitresSeatsDown": 666,
     "seats": 5,
     "towKg": 1800,
     "warrantyYears": 5,
     "insuranceAnnual": 2500,
     "depreciationCurve": [
       1,
-      0.72,
-      0.61,
-      0.53,
-      0.46,
-      0.4
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mercedes-eqa-250-plus",
@@ -5432,16 +5432,16 @@
     "variant": "250 e with EQ Hybrid Technology",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 78000,
+    "listPrice": 78800,
     "batteryKwh": 11.5,
     "rangeKm": 65,
     "consumptionKwhPer100km": 17.7,
-    "combinedRangeKm": 551,
-    "fuelConsumptionL100km": 7.2,
+    "combinedRangeKm": 595,
+    "fuelConsumptionL100km": 6.6,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 385,
-    "bootLitresSeatsDown": 1385,
+    "bootLitresSeatsDown": 1285,
     "seats": 5,
     "towKg": 1800,
     "warrantyYears": 5,
@@ -5449,12 +5449,12 @@
     "depreciationCurve": [
       1,
       0.7,
-      0.59,
-      0.51,
-      0.44,
-      0.38
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mercedes-glc-phev-350e-4matic",
@@ -5465,28 +5465,28 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 99900,
-    "batteryKwh": 25.28,
+    "batteryKwh": 25.3,
     "rangeKm": 107,
     "consumptionKwhPer100km": 23.6,
-    "combinedRangeKm": 902,
+    "combinedRangeKm": 735,
     "fuelConsumptionL100km": 7.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
-    "bootLitresSeatsUp": 590,
-    "bootLitresSeatsDown": 1650,
+    "bootLitresSeatsUp": 470,
+    "bootLitresSeatsDown": 1530,
     "seats": 5,
     "towKg": 2400,
     "warrantyYears": 5,
     "insuranceAnnual": 2500,
     "depreciationCurve": [
       1,
-      0.68,
-      0.57,
+      0.7,
+      0.58,
       0.49,
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-4-essence-64",
@@ -5944,7 +5944,7 @@
     "bootLitresSeatsUp": 300,
     "bootLitresSeatsDown": 1005,
     "seats": 5,
-    "towKg": 0,
+    "towKg": 750,
     "warrantyYears": 5,
     "insuranceAnnual": 2350,
     "depreciationCurve": [
@@ -5955,7 +5955,7 @@
       0.43,
       0.38
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-aceman-se-favoured",
@@ -5967,11 +5967,11 @@
     "listPrice": 60990,
     "batteryKwh": 49.2,
     "rangeKm": 406,
-    "consumptionKwhPer100km": 14.4,
+    "consumptionKwhPer100km": 13.8,
     "bootLitresSeatsUp": 300,
     "bootLitresSeatsDown": 1005,
     "seats": 5,
-    "towKg": 0,
+    "towKg": 750,
     "warrantyYears": 5,
     "insuranceAnnual": 2000,
     "depreciationCurve": [
@@ -5982,7 +5982,7 @@
       0.43,
       0.38
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-cooper-electric-jcw-e-favoured",
@@ -6009,7 +6009,7 @@
       0.43,
       0.38
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-cooper-electric-se-favoured",
@@ -6036,7 +6036,7 @@
       0.43,
       0.38
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-cooper-electric-se-paul-smith-edition",
@@ -6063,7 +6063,7 @@
       0.43,
       0.38
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-e-classic",
@@ -6084,13 +6084,13 @@
     "insuranceAnnual": 2000,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.53,
-      0.46,
-      0.4
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-e-favoured",
@@ -6111,13 +6111,13 @@
     "insuranceAnnual": 2050,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.53,
-      0.46,
-      0.4
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-se-all4-classic",
@@ -6138,13 +6138,13 @@
     "insuranceAnnual": 2100,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.53,
-      0.46,
-      0.4
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-se-all4-favoured",
@@ -6165,13 +6165,13 @@
     "insuranceAnnual": 2150,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.53,
-      0.46,
-      0.4
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-se-all4-jcw-sport",
@@ -6192,13 +6192,13 @@
     "insuranceAnnual": 2250,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.53,
-      0.46,
-      0.4
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mitsubishi-outlander-phev-aspire",
@@ -6493,7 +6493,7 @@
       0.39,
       0.33
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "polestar-2-long-range-dual-motor-performance",
@@ -6520,7 +6520,7 @@
       0.39,
       0.33
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "polestar-2-long-range-single-motor",
@@ -6547,7 +6547,7 @@
       0.39,
       0.33
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "polestar-3-dual-motor",
@@ -7496,8 +7496,8 @@
     "batteryKwh": 71,
     "rangeKm": 566,
     "consumptionKwhPer100km": 14.6,
-    "bootLitresSeatsUp": 410,
-    "bootLitresSeatsDown": 2005,
+    "bootLitresSeatsUp": 421,
+    "bootLitresSeatsDown": 1050,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
@@ -7510,7 +7510,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "subaru-solterra-awd-touring",
@@ -7524,7 +7524,7 @@
     "rangeKm": 517,
     "consumptionKwhPer100km": 16,
     "bootLitresSeatsUp": 410,
-    "bootLitresSeatsDown": 2005,
+    "bootLitresSeatsDown": 1050,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
@@ -7537,7 +7537,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "subaru-trailseeker-awd",
@@ -7551,7 +7551,7 @@
     "rangeKm": 533,
     "consumptionKwhPer100km": 15.4,
     "bootLitresSeatsUp": 609,
-    "bootLitresSeatsDown": 1694,
+    "bootLitresSeatsDown": 1230,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
@@ -7564,7 +7564,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "subaru-trailseeker-awd-touring",
@@ -7578,7 +7578,7 @@
     "rangeKm": 488,
     "consumptionKwhPer100km": 16.8,
     "bootLitresSeatsUp": 595,
-    "bootLitresSeatsDown": 1680,
+    "bootLitresSeatsDown": 1216,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
@@ -7591,7 +7591,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "subaru-uncharted-awd",
@@ -7609,7 +7609,7 @@
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
-    "insuranceAnnual": 1600,
+    "insuranceAnnual": 1640,
     "depreciationCurve": [
       1,
       0.74,
@@ -7618,7 +7618,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "suzuki-e-vitara-motion",
@@ -7981,7 +7981,7 @@
     "listPrice": 76490,
     "batteryKwh": 56,
     "rangeKm": 245,
-    "consumptionKwhPer100km": 21.8,
+    "consumptionKwhPer100km": 22.9,
     "isNonPassengerForVicDuty": true,
     "bootLitresSeatsUp": 1000,
     "bootLitresSeatsDown": 1000,
@@ -7991,13 +7991,13 @@
     "insuranceAnnual": 2100,
     "depreciationCurve": [
       1,
-      0.72,
-      0.61,
-      0.53,
-      0.46,
-      0.4
+      0.75,
+      0.65,
+      0.57,
+      0.5,
+      0.44
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-hilux-bev-sr5-pickup",
@@ -8009,7 +8009,7 @@
     "listPrice": 82990,
     "batteryKwh": 56,
     "rangeKm": 245,
-    "consumptionKwhPer100km": 21.8,
+    "consumptionKwhPer100km": 22.9,
     "isNonPassengerForVicDuty": true,
     "bootLitresSeatsUp": 1000,
     "bootLitresSeatsDown": 1000,
@@ -8019,13 +8019,13 @@
     "insuranceAnnual": 2250,
     "depreciationCurve": [
       1,
-      0.72,
-      0.61,
-      0.53,
-      0.46,
-      0.4
+      0.75,
+      0.65,
+      0.57,
+      0.5,
+      0.44
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-rav4-phev-gr-sport-awd",
@@ -8039,25 +8039,25 @@
     "batteryKwh": 20.1,
     "rangeKm": 113,
     "consumptionKwhPer100km": 17.8,
-    "combinedRangeKm": 1030,
-    "fuelConsumptionL100km": 6,
+    "combinedRangeKm": 1151,
+    "fuelConsumptionL100km": 5.3,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 655,
-    "bootLitresSeatsDown": 1780,
+    "bootLitresSeatsDown": 1189,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1820,
     "depreciationCurve": [
       1,
-      0.76,
-      0.66,
-      0.58,
-      0.51,
-      0.45
+      0.75,
+      0.65,
+      0.57,
+      0.5,
+      0.44
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-rav4-phev-xse-2wd",
@@ -8071,25 +8071,25 @@
     "batteryKwh": 20.1,
     "rangeKm": 121,
     "consumptionKwhPer100km": 16.6,
-    "combinedRangeKm": 1038,
-    "fuelConsumptionL100km": 6,
+    "combinedRangeKm": 1179,
+    "fuelConsumptionL100km": 5.2,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 655,
-    "bootLitresSeatsDown": 1780,
+    "bootLitresSeatsDown": 1189,
     "seats": 5,
     "towKg": 800,
     "warrantyYears": 5,
     "insuranceAnnual": 1650,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
-      0.53,
-      0.47
+      0.75,
+      0.65,
+      0.57,
+      0.5,
+      0.44
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-rav4-phev-xse-awd",
@@ -8103,25 +8103,25 @@
     "batteryKwh": 20.1,
     "rangeKm": 113,
     "consumptionKwhPer100km": 17.8,
-    "combinedRangeKm": 1030,
-    "fuelConsumptionL100km": 6,
+    "combinedRangeKm": 1151,
+    "fuelConsumptionL100km": 5.3,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 655,
-    "bootLitresSeatsDown": 1780,
+    "bootLitresSeatsDown": 1189,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1720,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
-      0.53,
-      0.47
+      0.75,
+      0.65,
+      0.57,
+      0.5,
+      0.44
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-es90-plus-single-motor",
@@ -8134,7 +8134,7 @@
     "batteryKwh": 88,
     "rangeKm": 554,
     "consumptionKwhPer100km": 18.5,
-    "bootLitresSeatsUp": 424,
+    "bootLitresSeatsUp": 446,
     "bootLitresSeatsDown": 1427,
     "seats": 5,
     "towKg": 1600,
@@ -8142,13 +8142,13 @@
     "insuranceAnnual": 2400,
     "depreciationCurve": [
       1,
-      0.67,
-      0.55,
-      0.46,
-      0.39,
-      0.34
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-es90-ultra-single-motor",
@@ -8161,7 +8161,7 @@
     "batteryKwh": 88,
     "rangeKm": 554,
     "consumptionKwhPer100km": 18.5,
-    "bootLitresSeatsUp": 424,
+    "bootLitresSeatsUp": 446,
     "bootLitresSeatsDown": 1427,
     "seats": 5,
     "towKg": 1600,
@@ -8169,13 +8169,13 @@
     "insuranceAnnual": 2750,
     "depreciationCurve": [
       1,
-      0.64,
-      0.52,
-      0.43,
-      0.36,
-      0.31
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-ex30-cross-country-ultra",
@@ -8185,24 +8185,24 @@
     "variant": "Cross Country Ultra (Twin Motor AWD)",
     "bodyType": "SUV",
     "listPrice": 62990,
-    "batteryKwh": 64,
+    "batteryKwh": 65,
     "rangeKm": 417,
-    "consumptionKwhPer100km": 15,
+    "consumptionKwhPer100km": 19.1,
     "bootLitresSeatsUp": 318,
     "bootLitresSeatsDown": 904,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
-    "insuranceAnnual": 1950,
+    "insuranceAnnual": 2300,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
-      0.53,
-      0.47
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-ex30-single-plus",
@@ -8212,24 +8212,24 @@
     "variant": "Single Motor Extended Range Plus",
     "bodyType": "SUV",
     "listPrice": 49990,
-    "batteryKwh": 64,
-    "rangeKm": 480,
-    "consumptionKwhPer100km": 15.7,
+    "batteryKwh": 65,
+    "rangeKm": 462,
+    "consumptionKwhPer100km": 17.5,
     "bootLitresSeatsUp": 318,
     "bootLitresSeatsDown": 904,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
-    "insuranceAnnual": 1650,
+    "insuranceAnnual": 1800,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
-      0.53,
-      0.47
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-ex30-single-ultra",
@@ -8239,24 +8239,24 @@
     "variant": "Single Motor Extended Range Ultra",
     "bodyType": "SUV",
     "listPrice": 54990,
-    "batteryKwh": 64,
-    "rangeKm": 480,
-    "consumptionKwhPer100km": 15.7,
+    "batteryKwh": 65,
+    "rangeKm": 462,
+    "consumptionKwhPer100km": 17.5,
     "bootLitresSeatsUp": 318,
     "bootLitresSeatsDown": 904,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
-    "insuranceAnnual": 1750,
+    "insuranceAnnual": 1900,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
-      0.53,
-      0.47
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-ex40-single-motor-ultra",
@@ -8270,20 +8270,20 @@
     "rangeKm": 520,
     "consumptionKwhPer100km": 18.4,
     "bootLitresSeatsUp": 410,
-    "bootLitresSeatsDown": 1400,
+    "bootLitresSeatsDown": 851,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 2000,
     "depreciationCurve": [
       1,
-      0.7,
-      0.58,
-      0.49,
-      0.42,
-      0.36
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-ex40-twin-motor-ultra",
@@ -8297,20 +8297,20 @@
     "rangeKm": 485,
     "consumptionKwhPer100km": 19.4,
     "bootLitresSeatsUp": 410,
-    "bootLitresSeatsDown": 1400,
+    "bootLitresSeatsDown": 851,
     "seats": 5,
     "towKg": 1800,
     "warrantyYears": 5,
     "insuranceAnnual": 2150,
     "depreciationCurve": [
       1,
-      0.7,
-      0.58,
-      0.49,
-      0.42,
-      0.36
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-ex90-plus-single-motor",
@@ -8390,11 +8390,11 @@
     "insuranceAnnual": 2250,
     "depreciationCurve": [
       1,
-      0.7,
-      0.59,
-      0.51,
-      0.44,
-      0.38
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -8422,11 +8422,11 @@
     "insuranceAnnual": 2400,
     "depreciationCurve": [
       1,
-      0.7,
-      0.59,
-      0.51,
-      0.44,
-      0.38
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -8440,10 +8440,10 @@
     "powertrain": "phev",
     "listPrice": 120990,
     "batteryKwh": 14.7,
-    "rangeKm": 69,
-    "consumptionKwhPer100km": 20.3,
-    "combinedRangeKm": 991,
-    "fuelConsumptionL100km": 7.7,
+    "rangeKm": 71,
+    "consumptionKwhPer100km": 20.7,
+    "combinedRangeKm": 981,
+    "fuelConsumptionL100km": 7.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 262,
@@ -8454,13 +8454,13 @@
     "insuranceAnnual": 2700,
     "depreciationCurve": [
       1,
-      0.68,
-      0.57,
-      0.49,
-      0.42,
-      0.36
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-xc90-phev-ultra-t8",
@@ -8472,10 +8472,10 @@
     "powertrain": "phev",
     "listPrice": 130990,
     "batteryKwh": 14.7,
-    "rangeKm": 69,
-    "consumptionKwhPer100km": 20.3,
-    "combinedRangeKm": 991,
-    "fuelConsumptionL100km": 7.7,
+    "rangeKm": 71,
+    "consumptionKwhPer100km": 20.7,
+    "combinedRangeKm": 981,
+    "fuelConsumptionL100km": 7.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 262,
@@ -8487,12 +8487,12 @@
     "depreciationCurve": [
       1,
       0.66,
-      0.55,
-      0.47,
-      0.4,
-      0.34
+      0.54,
+      0.45,
+      0.38,
+      0.32
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "vw-id4-gtx",

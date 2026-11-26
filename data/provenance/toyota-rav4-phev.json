@@ -1,0 +1,315 @@
+{
+  "familyId": "toyota-rav4-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "toyota-rav4-phev-xse-2wd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/rav4/2026-xse-2-5l-suv-fwd-electric-jsk5k8kw20251111",
+        "note": "toyota.com.au configurator not fetchable (403 at the sweep; Toyota AU news page 403 again today). CarExpert 2026 spec page lists this grade with a current before-on-roads and drive-away price; CarExpert 29 Sep 2026 news lists XSE FWD, XSE AWD and GR Sport AWD as the PHEV grades currently on sale; Toyota dealer page https://www.sunshinetoyota.com.au/models/rav4 lists XSE PHEV 2WD/AWD and GR Sport PHEV AWD. GXL 2WD PHEV due Q1 2027, unpriced, not orderable."
+      },
+      "listPrice": {
+        "value": 58840,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/rav4/2026-xse-2-5l-suv-fwd-electric-jsk5k8kw20251111",
+        "note": "'before on-road costs' in words on the CarExpert spec page (drive-away shown $63,900 (Sydney basis)); same figure 'before on-road costs' in CarExpert news 11 Nov 2025 (https://www.carexpert.com.au/car-news/2026-toyota-rav4-price-and-specs) and 29 Sep 2026 (https://www.carexpert.com.au/car-news/cheaper-toyota-rav4-phev-coming-to-australia-in-2027), GoAuto 'Pricing excludes on-road costs', RACV 'plus on-road costs' with Victorian drive-away $65,158. App's computed Vic drive-away $62,191. No later change found; CarsGuide 12 Aug 2026 reports Toyota planning staged price rises into 2027 for RAV4 Hybrid/bZ4X/HiLux, PHEV not named."
+      },
+      "batteryKwh": {
+        "value": 20.1,
+        "basis": "judged",
+        "note": "Usable not published anywhere found. 22.7 kWh is gross: ADAC lists it as 'Batteriekapazität brutto' with netto blank; Toyota UK tech specs give 22.7 kWh, 104 cells, 391 V (Toyota rule: unlabelled Toyota capacity is gross). Held 20.1 kept (88.5% of gross), in line with Toyota's ~88% usable share on the previous 18.1 kWh pack and sibling lexus-nx-phev (16.0 of 18.1). Same pack on all grades."
+      },
+      "rangeKm": {
+        "value": 121,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://goauto.com.au/new-models/toyota/rav4/phev/2026-06-03/99425.html",
+        "note": "Toyota Australia's WLTP figure: GoAuto quotes 154 km NEDC / 121 km WLTP for the XSE 2WD; RACV and CarsGuide quote 121 km. The AU spec sheet's ADR figure is NEDC (154 km, https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf), higher than WLTP, so rejected. European WLTP on the same 20-inch wheel is higher (137 km, ADAC); Toyota AU's lower WLTP figure used."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.6,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 20.1/121x100 = 16.61. No published EV-mode figure for the AU car; ADAC's 'Stromverbrauch' (12.2 kWh/100km) is a WLTP weighted quantity and was not used."
+      },
+      "bootLitresSeatsUp": {
+        "value": 655,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/toyota-rav4-phev-102110",
+        "note": "655 L VDA for the PHEV (705 L for the hybrid), CarsGuide; CarExpert GR Sport review quotes Toyota's 655 L. VDA to the cargo cover. Toyota UK quotes 672 L 'rear seats in place' (UK car without the AU space-saver spare); ADAC lists 446 L, basis unclear."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1189,
+        "basis": "sourced",
+        "url": "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/260413-RAV4-Tech-Specs.pdf",
+        "note": "Toyota UK PHEV tech specs: 'rear seats folded, up to tonneau cover' 1,189 L (to roof 1,690 L). Owner convention is to the cover / belt line. Held 1780 was a to-the-roof style figure. UK car's seats-up is 17 L larger than AU (no space-saver), so the AU folded figure may be slightly lower."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table: seating capacity 5 (May 2026)."
+      },
+      "towKg": {
+        "value": 800,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table braked towing: Plug-in Hybrid 2WD 800 kg, AWD 1500 kg (UK AWD is 2,000 kg; AU sheet governs)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/toyota/2026-toyota-rav4-phev-review.html",
+        "note": "5 years / unlimited km (RACV; CarExpert GR Sport review). Traction battery up to 10 years service-activated, not counted."
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "Held judgement kept, prices unchanged. Anchors: mitsubishi-outlander-phev-es $1650 at $58,990 and aspire $1750 at $66,790; vw-tiguan-phev-150tsi-elegance $1750 at $64,590; toyota-bz4x-2wd $1620 at $55,990 and awd $1780 at $67,990. Stepped by grade price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Toyota brand convention (owner rule: one curve per brand, check toyota-bz4x): same curve as toyota-bz4x rows refreshed 2026-11-26. Held rows used the mainstream default on XSE and 0.76/0.45 on GR Sport. RAV4 nameplate resale is historically strong, so this likely understates PHEV residuals."
+      },
+      "combinedRangeKm": {
+        "value": 1179,
+        "basis": "derived",
+        "note": "rangeKm 121 + 55 L tank / 5.2 L/100km x 100 (1057.7) = 1179. Tank 55 L from Toyota AU spec table and CarExpert spec page."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.2,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/toyota/rav4/xa6/350628/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,2 l/100km for the 2.5 Plug-in Hybrid Style FWD (200 kW) on 235/50R20, the AU wheel/tyre (CarExpert spec page). Same basis as siblings kia-sorento-phev, vw-tiguan-phev, mitsubishi-outlander-phev. Australian real-world flat-battery: CarExpert 5.6 (GR Sport), RACV 6.0. Held 6.0 was the RACV real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table ADR 81/02 combined 0.7 L/100km for both PHEV drivelines, at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CarExpert spec page (https://www.carexpert.com.au/toyota/rav4/2026-xse-2-5l-suv-fwd-electric-jsk5k8kw20251111) gives 16 g/km combined."
+      }
+    },
+    "toyota-rav4-phev-xse-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/rav4/2026-xse-2-5l-suv-4x4-electric-jsk5k8ko20251111",
+        "note": "toyota.com.au configurator not fetchable (403 at the sweep; Toyota AU news page 403 again today). CarExpert 2026 spec page lists this grade with a current before-on-roads and drive-away price; CarExpert 29 Sep 2026 news lists XSE FWD, XSE AWD and GR Sport AWD as the PHEV grades currently on sale; Toyota dealer page https://www.sunshinetoyota.com.au/models/rav4 lists XSE PHEV 2WD/AWD and GR Sport PHEV AWD. GXL 2WD PHEV due Q1 2027, unpriced, not orderable."
+      },
+      "listPrice": {
+        "value": 63340,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/rav4/2026-xse-2-5l-suv-4x4-electric-jsk5k8ko20251111",
+        "note": "'before on-road costs' in words on the CarExpert spec page (drive-away shown $68,625 (Sydney basis)); same figure 'before on-road costs' in CarExpert news 11 Nov 2025 (https://www.carexpert.com.au/car-news/2026-toyota-rav4-price-and-specs) and 29 Sep 2026 (https://www.carexpert.com.au/car-news/cheaper-toyota-rav4-phev-coming-to-australia-in-2027), GoAuto 'Pricing excludes on-road costs', RACV 'plus on-road costs' with Victorian drive-away $69,851. App's computed Vic drive-away $66,880. No later change found; CarsGuide 12 Aug 2026 reports Toyota planning staged price rises into 2027 for RAV4 Hybrid/bZ4X/HiLux, PHEV not named."
+      },
+      "batteryKwh": {
+        "value": 20.1,
+        "basis": "judged",
+        "note": "Usable not published anywhere found. 22.7 kWh is gross: ADAC lists it as 'Batteriekapazität brutto' with netto blank; Toyota UK tech specs give 22.7 kWh, 104 cells, 391 V (Toyota rule: unlabelled Toyota capacity is gross). Held 20.1 kept (88.5% of gross), in line with Toyota's ~88% usable share on the previous 18.1 kWh pack and sibling lexus-nx-phev (16.0 of 18.1). Same pack on all grades."
+      },
+      "rangeKm": {
+        "value": 113,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://goauto.com.au/new-models/toyota/rav4/phev/2026-06-03/99425.html",
+        "note": "Toyota Australia's WLTP figure: GoAuto quotes 144 km NEDC / 113 km WLTP for the AWD grades; CarExpert GR Sport review 113 km WLTP. The AU spec sheet's ADR figure is NEDC (144 km, https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf), higher than WLTP, so rejected. European WLTP on the same 20-inch wheel is higher (133 km, ADAC); Toyota AU's lower WLTP figure used."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 20.1/113x100 = 17.79. No published EV-mode figure for the AU car; ADAC's 'Stromverbrauch' (12.7 kWh/100km) is a WLTP weighted quantity and was not used."
+      },
+      "bootLitresSeatsUp": {
+        "value": 655,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/toyota-rav4-phev-102110",
+        "note": "655 L VDA for the PHEV (705 L for the hybrid), CarsGuide; CarExpert GR Sport review quotes Toyota's 655 L. VDA to the cargo cover. Toyota UK quotes 672 L 'rear seats in place' (UK car without the AU space-saver spare); ADAC lists 446 L, basis unclear."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1189,
+        "basis": "sourced",
+        "url": "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/260413-RAV4-Tech-Specs.pdf",
+        "note": "Toyota UK PHEV tech specs: 'rear seats folded, up to tonneau cover' 1,189 L (to roof 1,690 L). Owner convention is to the cover / belt line. Held 1780 was a to-the-roof style figure. UK car's seats-up is 17 L larger than AU (no space-saver), so the AU folded figure may be slightly lower."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table: seating capacity 5 (May 2026)."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table braked towing: Plug-in Hybrid 2WD 800 kg, AWD 1500 kg (UK AWD is 2,000 kg; AU sheet governs)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/toyota/2026-toyota-rav4-phev-review.html",
+        "note": "5 years / unlimited km (RACV; CarExpert GR Sport review). Traction battery up to 10 years service-activated, not counted."
+      },
+      "insuranceAnnual": {
+        "value": 1720,
+        "basis": "judged",
+        "note": "Held judgement kept, prices unchanged. Anchors: mitsubishi-outlander-phev-es $1650 at $58,990 and aspire $1750 at $66,790; vw-tiguan-phev-150tsi-elegance $1750 at $64,590; toyota-bz4x-2wd $1620 at $55,990 and awd $1780 at $67,990. Stepped by grade price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Toyota brand convention (owner rule: one curve per brand, check toyota-bz4x): same curve as toyota-bz4x rows refreshed 2026-11-26. Held rows used the mainstream default on XSE and 0.76/0.45 on GR Sport. RAV4 nameplate resale is historically strong, so this likely understates PHEV residuals."
+      },
+      "combinedRangeKm": {
+        "value": 1151,
+        "basis": "derived",
+        "note": "rangeKm 113 + 55 L tank / 5.3 L/100km x 100 (1037.7) = 1151. Tank 55 L from Toyota AU spec table and CarExpert spec page."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.3,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/toyota/rav4/xa6/350623/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,3 l/100km for the 2.5 Plug-in Hybrid Style AWD-i (227 kW) on 235/50R20, the AU wheel/tyre (CarExpert spec page). Same basis as siblings kia-sorento-phev, vw-tiguan-phev, mitsubishi-outlander-phev. Australian real-world flat-battery: CarExpert 5.6 (GR Sport), RACV 6.0. Held 6.0 was the RACV real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table ADR 81/02 combined 0.7 L/100km for both PHEV drivelines, at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CarExpert spec page (https://www.carexpert.com.au/toyota/rav4/2026-xse-2-5l-suv-4x4-electric-jsk5k8ko20251111) gives 17 g/km combined."
+      }
+    },
+    "toyota-rav4-phev-gr-sport-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/rav4/2026-gr-sport-2-5l-suv-4x4-electric-jsk5k8ks20251111",
+        "note": "toyota.com.au configurator not fetchable (403 at the sweep; Toyota AU news page 403 again today). CarExpert 2026 spec page lists this grade with a current before-on-roads and drive-away price; CarExpert 29 Sep 2026 news lists XSE FWD, XSE AWD and GR Sport AWD as the PHEV grades currently on sale; Toyota dealer page https://www.sunshinetoyota.com.au/models/rav4 lists XSE PHEV 2WD/AWD and GR Sport PHEV AWD. GXL 2WD PHEV due Q1 2027, unpriced, not orderable."
+      },
+      "listPrice": {
+        "value": 66340,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/rav4/2026-gr-sport-2-5l-suv-4x4-electric-jsk5k8ks20251111",
+        "note": "'before on-road costs' in words on the CarExpert spec page (drive-away shown $71,775); same figure 'before on-road costs' in CarExpert news 11 Nov 2025 (https://www.carexpert.com.au/car-news/2026-toyota-rav4-price-and-specs) and 29 Sep 2026 (https://www.carexpert.com.au/car-news/cheaper-toyota-rav4-phev-coming-to-australia-in-2027), GoAuto 'Pricing excludes on-road costs', RACV 'plus on-road costs' with Victorian drive-away $72,269. App's computed Vic drive-away $70,006. No later change found; CarsGuide 12 Aug 2026 reports Toyota planning staged price rises into 2027 for RAV4 Hybrid/bZ4X/HiLux, PHEV not named."
+      },
+      "batteryKwh": {
+        "value": 20.1,
+        "basis": "judged",
+        "note": "Usable not published anywhere found. 22.7 kWh is gross: ADAC lists it as 'Batteriekapazität brutto' with netto blank; Toyota UK tech specs give 22.7 kWh, 104 cells, 391 V (Toyota rule: unlabelled Toyota capacity is gross). Held 20.1 kept (88.5% of gross), in line with Toyota's ~88% usable share on the previous 18.1 kWh pack and sibling lexus-nx-phev (16.0 of 18.1). Same pack on all grades."
+      },
+      "rangeKm": {
+        "value": 113,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://goauto.com.au/new-models/toyota/rav4/phev/2026-06-03/99425.html",
+        "note": "Toyota Australia's WLTP figure: GoAuto quotes 144 km NEDC / 113 km WLTP for the AWD grades; CarExpert GR Sport review 113 km WLTP. The AU spec sheet's ADR figure is NEDC (144 km, https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf), higher than WLTP, so rejected. European WLTP on the same 20-inch wheel is higher (133 km, ADAC); Toyota AU's lower WLTP figure used."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 20.1/113x100 = 17.79. No published EV-mode figure for the AU car; ADAC's 'Stromverbrauch' (12.7 kWh/100km) is a WLTP weighted quantity and was not used."
+      },
+      "bootLitresSeatsUp": {
+        "value": 655,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/toyota-rav4-phev-102110",
+        "note": "655 L VDA for the PHEV (705 L for the hybrid), CarsGuide; CarExpert GR Sport review quotes Toyota's 655 L. VDA to the cargo cover. Toyota UK quotes 672 L 'rear seats in place' (UK car without the AU space-saver spare); ADAC lists 446 L, basis unclear."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1189,
+        "basis": "sourced",
+        "url": "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/260413-RAV4-Tech-Specs.pdf",
+        "note": "Toyota UK PHEV tech specs: 'rear seats folded, up to tonneau cover' 1,189 L (to roof 1,690 L). Owner convention is to the cover / belt line. Held 1780 was a to-the-roof style figure. UK car's seats-up is 17 L larger than AU (no space-saver), so the AU folded figure may be slightly lower."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table: seating capacity 5 (May 2026)."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table braked towing: Plug-in Hybrid 2WD 800 kg, AWD 1500 kg (UK AWD is 2,000 kg; AU sheet governs). CarExpert GR Sport review 1,500 kg."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/toyota/2026-toyota-rav4-phev-review.html",
+        "note": "5 years / unlimited km (RACV; CarExpert GR Sport review). Traction battery up to 10 years service-activated, not counted."
+      },
+      "insuranceAnnual": {
+        "value": 1820,
+        "basis": "judged",
+        "note": "Held judgement kept, prices unchanged. Anchors: mitsubishi-outlander-phev-es $1650 at $58,990 and aspire $1750 at $66,790; vw-tiguan-phev-150tsi-elegance $1750 at $64,590; toyota-bz4x-2wd $1620 at $55,990 and awd $1780 at $67,990. Stepped by grade price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Toyota brand convention (owner rule: one curve per brand, check toyota-bz4x): same curve as toyota-bz4x rows refreshed 2026-11-26. Held rows used the mainstream default on XSE and 0.76/0.45 on GR Sport. RAV4 nameplate resale is historically strong, so this likely understates PHEV residuals."
+      },
+      "combinedRangeKm": {
+        "value": 1151,
+        "basis": "derived",
+        "note": "rangeKm 113 + 55 L tank / 5.3 L/100km x 100 (1037.7) = 1151. Tank 55 L from Toyota AU spec table and CarExpert spec page."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.3,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/toyota/rav4/xa6/350623/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,3 l/100km for the 2.5 Plug-in Hybrid Style AWD-i (227 kW) on 235/50R20, the AU wheel/tyre (CarExpert spec page). Same basis as siblings kia-sorento-phev, vw-tiguan-phev, mitsubishi-outlander-phev. Australian real-world flat-battery: CarExpert 5.6 (GR Sport), RACV 6.0. Held 6.0 was the RACV real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.toyota.com.au/-/media/toyota/main-site/vehicle-hubs/rav4/files/20260512_gto009809_rav4_spec_table.pdf",
+        "note": "Toyota AU spec table ADR 81/02 combined 0.7 L/100km for both PHEV drivelines, at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CarExpert spec page (https://www.carexpert.com.au/toyota/rav4/2026-gr-sport-2-5l-suv-4x4-electric-jsk5k8ks20251111) gives 17 g/km combined."
+      }
+    }
+  },
+  "lowConfidence": [
+    "toyota-rav4-phev-*.batteryKwh: usable 20.1 judged (88.5% of the 22.7 kWh gross); no usable figure published anywhere found",
+    "toyota-rav4-phev-*.depreciationCurve: judged Toyota brand curve shared with toyota-bz4x; RAV4 resale is historically stronger than bZ4X, so likely pessimistic. toyota-hilux-bev rows (not refreshed) still use [1, 0.72, 0.61, 0.53, 0.46, 0.4], so the brand is not yet on one curve",
+    "toyota-rav4-phev-*.bootLitresSeatsDown: 1,189 L is Toyota UK's to-tonneau folded figure on a 672 L seats-up basis, not the AU 655 L (space-saver) basis; no AU folded figure to the cover found",
+    "toyota-rav4-phev-*.availability: Toyota AU configurator returned 403; orderability taken from CarExpert spec pages, CarExpert 29 Sep 2026 news and a Toyota dealer page",
+    "toyota-rav4-phev-*.rangeKm: Toyota AU's WLTP 121/113 km sits below Europe's WLTP 137/133 km on the same wheel; AU figure used, the gap is unexplained",
+    "toyota-rav4-phev-*.insuranceAnnual: judged, anchored to Outlander PHEV, Tiguan PHEV and bZ4X rows"
+  ]
+}

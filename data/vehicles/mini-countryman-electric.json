@@ -16,8 +16,15 @@
     "towKg": 750,
     "warrantyYears": 5,
     "insuranceAnnual": 2000,
-    "depreciationCurve": [1, 0.73, 0.62, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-08-01"
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-e-favoured",
@@ -36,8 +43,15 @@
     "towKg": 750,
     "warrantyYears": 5,
     "insuranceAnnual": 2050,
-    "depreciationCurve": [1, 0.73, 0.62, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-08-01"
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-se-all4-classic",
@@ -56,8 +70,15 @@
     "towKg": 1200,
     "warrantyYears": 5,
     "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.73, 0.62, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-08-01"
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-se-all4-favoured",
@@ -76,8 +97,15 @@
     "towKg": 1200,
     "warrantyYears": 5,
     "insuranceAnnual": 2150,
-    "depreciationCurve": [1, 0.73, 0.62, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-08-01"
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-countryman-electric-se-all4-jcw-sport",
@@ -96,7 +124,14 @@
     "towKg": 1200,
     "warrantyYears": 5,
     "insuranceAnnual": 2250,
-    "depreciationCurve": [1, 0.73, 0.62, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-08-01"
+    "depreciationCurve": [
+      1,
+      0.71,
+      0.59,
+      0.5,
+      0.43,
+      0.38
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

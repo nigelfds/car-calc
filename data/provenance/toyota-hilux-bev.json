@@ -1,0 +1,171 @@
+{
+  "familyId": "toyota-hilux-bev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "toyota-hilux-bev-sr-pickup": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://philgilberttoyota.dealer.toyota.com.au/explore/hilux-bev",
+        "note": "Toyota dealer site lists SR Pick-Up and SR5 Pick-Up double-cab (plus SR cab-chassis, excluded); toyota.com.au Build & Price returned 403"
+      },
+      "listPrice": {
+        "value": 76490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-toyota-hilux-bev-new-electric-ute-priced-for-australia",
+        "note": "CarExpert pricing table: $76,490 'before on-road costs'; RACV review (17 Jul 2026) agrees, 'plus ORCs'; CarsGuide car page RRP $76,490. toyota.com.au 403, configurator not opened; no price change reported since launch"
+      },
+      "batteryKwh": {
+        "value": 56.0,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/toyota-hilux",
+        "note": "usable 56 kWh; gross 59.2 kWh on same page (Toyota UK tech profile: 59.2 kWh, 80 cells). ev-database.org page 404 in this run; its search snippet gives 54.0 usable"
+      },
+      "rangeKm": {
+        "value": 245,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "Australian pick-up WLTP claim 245 km; Toyota AU 315 km is NEDC (RACV spec table), rejected by direction test. NZ WLTP 270 km on evdb.nz differs"
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm × 100 = 56/245×100 = 22.86. CarExpert quotes 20.2 kWh/100km claimed, likely the label paired with the 315 km NEDC figure; testers saw 23.2-27.8"
+      },
+      "bootLitresSeatsUp": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "tub volume ~1000 L (CarExpert, approximate); ute convention: both fields equal tub volume"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "tub volume ~1000 L, same as seats-up per ute convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "dual-cab, five seats"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://philgilberttoyota.dealer.toyota.com.au/explore/hilux-bev",
+        "note": "Toyota dealer site: 2000kg braked; CarsGuide, RACV and CarExpert agree (GCM 4670 kg)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "5 years/unlimited km unconditional; battery 5 years extendable to 10 with annual check; 8yr/160,000km capacity guarantee per CarsGuide/RACV (in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "held value kept; anchored above ford-ranger-phev-wildtrak (1950 at $67,303), byd-shark-6-performance (1950 at $62,900) and kgm-musso-ev-awd (1950 at $61,014) for a $76-83k ute with a 2.45 t kerb weight"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Toyota brand convention [1, 0.75, 0.65, 0.57, 0.5, 0.44] matching toyota-bz4x (refreshed 2026-11-26), per owner rule of one curve per brand; held curve was [1, 0.72, 0.61, 0.53, 0.46, 0.4]"
+      }
+    },
+    "toyota-hilux-bev-sr5-pickup": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://philgilberttoyota.dealer.toyota.com.au/explore/hilux-bev",
+        "note": "Toyota dealer site lists SR Pick-Up and SR5 Pick-Up double-cab (plus SR cab-chassis, excluded); toyota.com.au Build & Price returned 403"
+      },
+      "listPrice": {
+        "value": 82990,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/tradies/toyota-hilux-bev-sr5-dual-cab-pick-up-102707",
+        "note": "CarsGuide SR5 review 23 Sep 2026: $82,990 'before on-road costs'; matches CarExpert launch table and RACV 'plus ORCs'. toyota.com.au 403, configurator not opened"
+      },
+      "batteryKwh": {
+        "value": 56.0,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/toyota-hilux",
+        "note": "usable 56 kWh; gross 59.2 kWh on same page (Toyota UK tech profile: 59.2 kWh, 80 cells). ev-database.org page 404 in this run; its search snippet gives 54.0 usable"
+      },
+      "rangeKm": {
+        "value": 245,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "Australian pick-up WLTP claim 245 km; Toyota AU 315 km is NEDC (RACV spec table), rejected by direction test. NZ WLTP 270 km on evdb.nz differs"
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm × 100 = 56/245×100 = 22.86. CarExpert quotes 20.2 kWh/100km claimed, likely the label paired with the 315 km NEDC figure; testers saw 23.2-27.8"
+      },
+      "bootLitresSeatsUp": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "tub volume ~1000 L (CarExpert, approximate); ute convention: both fields equal tub volume"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "tub volume ~1000 L, same as seats-up per ute convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "dual-cab, five seats"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://philgilberttoyota.dealer.toyota.com.au/explore/hilux-bev",
+        "note": "Toyota dealer site: 2000kg braked; CarsGuide, RACV and CarExpert agree (GCM 4670 kg)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-hilux-bev-review-quick-drive",
+        "note": "5 years/unlimited km unconditional; battery 5 years extendable to 10 with annual check; 8yr/160,000km capacity guarantee per CarsGuide/RACV (in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 2250,
+        "basis": "judged",
+        "note": "held value kept; anchored above ford-ranger-phev-wildtrak (1950 at $67,303), byd-shark-6-performance (1950 at $62,900) and kgm-musso-ev-awd (1950 at $61,014) for a $76-83k ute with a 2.45 t kerb weight"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Toyota brand convention [1, 0.75, 0.65, 0.57, 0.5, 0.44] matching toyota-bz4x (refreshed 2026-11-26), per owner rule of one curve per brand; held curve was [1, 0.72, 0.61, 0.53, 0.46, 0.4]"
+      }
+    }
+  },
+  "lowConfidence": [
+    "toyota-hilux-bev-*.batteryKwh: usable 56 from evdb.nz only; ev-database.org could not be opened and its snippet says 54.0; Toyota publishes only 59.2 gross",
+    "toyota-hilux-bev-*.listPrice: Toyota configurator returned 403; prices from launch/review coverage (latest CarsGuide 23 Sep 2026), no evidence of a change since",
+    "toyota-hilux-bev-*.depreciationCurve: brand convention applied to a low-volume, fleet-heavy EV ute that may depreciate faster",
+    "toyota-hilux-bev-*.insuranceAnnual: judged, held values",
+    "toyota-hilux-bev-*.bootLitresSeatsUp/Down: CarExpert's 1000 L is described as approximate",
+    "toyota-hilux-bev-*.rangeKm: 245 km WLTP from a review; NZ WLTP listing gives 270 km"
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "familyId": "volvo-ex30",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "volvo-ex30-single-plus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-plus-suv-rwd-electric-jsfokff820260605",
+        "note": "CarExpert 2027 (MY27) price & specs page, released to the Australian market 5 June 2026; CarsGuide lists 2027 range $49,990-$62,990; volvocars.com/au returned 403 to automated reads"
+      },
+      "listPrice": {
+        "value": 49990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-plus-suv-rwd-electric-jsfokff820260605",
+        "note": "'prices starting at $49,990 before on-road costs' in words on the MY27 page. Unchanged from the 1 April 2026 cut (CarExpert 31 Mar 2026, before on-road costs). CarExpert Sydney drive-away $54,607 (+$4,617), consistent with this list. Volvo's own page 403"
+      },
+      "batteryKwh": {
+        "value": 65,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "EV Database MY27: 69.0 kWh nominal, 65.0 kWh usable. CarExpert 2027 page says 69 gross / 64 usable"
+      },
+      "rangeKm": {
+        "value": 462,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "WLTP TEH 462 km (TEL 489) on EV Database MY27 P5 Long Range; CarExpert 2027 page gives '462 km WLTP combined' for the AU car on 19-inch 245/45 R19. Held 480 km was the MY24-26 'up to' figure"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-plus-suv-rwd-electric-jsfokff820260605",
+        "note": "CarExpert 2027 page WLTP combined; equals EV Database TEH rated consumption for the same variant"
+      },
+      "bootLitresSeatsUp": {
+        "value": 318,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "EV Database 'Cargo Volume 318 L'; CarExpert 2027 page 318 L; 7 L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 904,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "EV Database 'Cargo Volume Max 904 L'; CarExpert 2027 page 904 L. CarExpert review quotes 1,000 L behind front seats, likely to the roof"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "'Seats 5 people'"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-plus-suv-rwd-electric-jsfokff820260605",
+        "note": "1,600 kg braked / 750 kg unbraked on the CarExpert 2027 spec page; EV Database agrees"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-plus-suv-rwd-electric-jsfokff820260605",
+        "note": "5 years/unlimited km vehicle; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "matched to platform twin smart-1-pro-plus ($49,900, 1800); held 1650 sat below its twin with no evidence for the gap"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Matches the Volvo brand curve on volvo-ex90 (owner convention: one curve per brand). Evidence for a steep curve on EX30 itself: Volvo cut list prices $10,000-$11,300 (Plus/Ultra) and $7,000 (Cross Country) from 1 April 2026 (CarExpert 31 Mar 2026), eroding used values of earlier cars"
+      }
+    },
+    "volvo-ex30-single-ultra": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-rwd-electric-jsfokffa20260605",
+        "note": "CarExpert 2027 (MY27) price & specs page, released to the Australian market 5 June 2026; CarsGuide lists 2027 range $49,990-$62,990; volvocars.com/au returned 403 to automated reads"
+      },
+      "listPrice": {
+        "value": 54990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-rwd-electric-jsfokffa20260605",
+        "note": "'prices starting at $54,990 before on-road costs' in words on the MY27 Ultra page. Matches the 1 April 2026 cut (CarExpert 31 Mar 2026; The Driven 3 Apr 2026 '$54,990 before on-roads'). CarExpert Sydney drive-away $59,857 (+$4,867)"
+      },
+      "batteryKwh": {
+        "value": 65,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "EV Database MY27: 69.0 kWh nominal, 65.0 kWh usable. CarExpert 2027 page says 69 gross / 64 usable"
+      },
+      "rangeKm": {
+        "value": 462,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "WLTP TEH 462 km on EV Database MY27 P5 Long Range; CarExpert 2027 Ultra page '462 km WLTP combined', 19-inch 245/45 R19"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-rwd-electric-jsfokffa20260605",
+        "note": "CarExpert 2027 page WLTP combined; equals EV Database TEH rated consumption for the same variant"
+      },
+      "bootLitresSeatsUp": {
+        "value": 318,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "EV Database 'Cargo Volume 318 L'; CarExpert 2027 page 318 L; 7 L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 904,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "EV Database 'Cargo Volume Max 904 L'; CarExpert 2027 page 904 L. CarExpert review quotes 1,000 L behind front seats, likely to the roof"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "'Seats 5 people'"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-rwd-electric-jsfokffa20260605",
+        "note": "1,600 kg braked / 750 kg unbraked on the CarExpert 2027 spec page; EV Database agrees"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-rwd-electric-jsfokffa20260605",
+        "note": "5 years/unlimited km vehicle; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "matched to smart-1-premium ($53,900, 1900), same SEA platform"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Matches the Volvo brand curve on volvo-ex90 (owner convention: one curve per brand). Evidence for a steep curve on EX30 itself: Volvo cut list prices $10,000-$11,300 (Plus/Ultra) and $7,000 (Cross Country) from 1 April 2026 (CarExpert 31 Mar 2026), eroding used values of earlier cars"
+      }
+    },
+    "volvo-ex30-cross-country-ultra": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-4x4-electric-jsgwmwok20260605",
+        "note": "CarExpert 2027 (MY27) price & specs page, released to the Australian market 5 June 2026; CarsGuide lists 2027 range $49,990-$62,990; volvocars.com/au returned 403 to automated reads"
+      },
+      "listPrice": {
+        "value": 62990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-4x4-electric-jsgwmwok20260605",
+        "note": "'prices starting at $62,990 before on-road costs' in words on the MY27 AWD Ultra page (the only AWD EX30 = Cross Country: 190 mm clearance, 235/50 R19). Matches the 1 April 2026 cut (CarExpert 31 Mar 2026; The Driven 'before on-roads'). CarExpert Sydney drive-away $68,257 (+$5,267)"
+      },
+      "batteryKwh": {
+        "value": 65,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3483/Volvo-EX30-Cross-Country-P8-AWD",
+        "note": "EV Database MY27 Cross Country P8 AWD: 69.0 kWh nominal, 65.0 kWh usable. CarExpert 2027 page says 69 gross / 64 usable"
+      },
+      "rangeKm": {
+        "value": 417,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3483/Volvo-EX30-Cross-Country-P8-AWD",
+        "note": "WLTP TEH 417 km (TEL 437) on EV Database MY27 Cross Country P8 AWD; CarExpert 2027 page '417 km WLTP combined'. Older AU claim 427 km was the MY26 TEL figure"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.1,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-4x4-electric-jsgwmwok20260605",
+        "note": "CarExpert 2027 page WLTP combined; equals EV Database TEH rated consumption for the same variant"
+      },
+      "bootLitresSeatsUp": {
+        "value": 318,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "EV Database 'Cargo Volume 318 L'; CarExpert 2027 page 318 L; 7 L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 904,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "EV Database 'Cargo Volume Max 904 L'; CarExpert 2027 page 904 L. CarExpert review quotes 1,000 L behind front seats, likely to the roof"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3480/Volvo-EX30-P5-Long-Range",
+        "note": "'Seats 5 people'"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-4x4-electric-jsgwmwok20260605",
+        "note": "1,600 kg braked / 750 kg unbraked on the CarExpert 2027 spec page; EV Database agrees"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/ex30/2027-ultra-suv-4x4-electric-jsgwmwok20260605",
+        "note": "5 years/unlimited km vehicle; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2300,
+        "basis": "judged",
+        "note": "matched to smart-1-brabus ($63,900, 2300), same 315 kW twin-motor SEA powertrain; held 1950 had no anchor"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Matches the Volvo brand curve on volvo-ex90 (owner convention: one curve per brand). Evidence for a steep curve on EX30 itself: Volvo cut list prices $10,000-$11,300 (Plus/Ultra) and $7,000 (Cross Country) from 1 April 2026 (CarExpert 31 Mar 2026), eroding used values of earlier cars"
+      }
+    }
+  },
+  "lowConfidence": [
+    "volvo-ex30-cross-country-ultra.availability: the CarExpert MY27 AWD page is titled 'Ultra' and never says 'Cross Country'; identified by being the only AWD grade, its $62,990 price, 190 mm clearance and 235/50 R19 tyres; Volvo configurator blocked (403)",
+    "volvo-ex30-single-plus.availability: Volvo AU configurator blocked (403); grade count of three rests on CarExpert MY27 pages, CarsGuide range and GoAuto (Feb 2026: no Cross Country Plus or single-motor Cross Country for Australia)",
+    "volvo-ex30-single-plus.batteryKwh: EV Database 65 kWh usable vs CarExpert 64 kWh usable; applies to all three rows",
+    "volvo-ex30-single-ultra.rangeKm: WLTP TEH 462 km used; Ultra wheel size on MY27 AU car given as 19-inch by CarExpert only (earlier Ultras rode on 20s)",
+    "volvo-ex30-cross-country-ultra.rangeKm: TEH 417 km used against a TEL of 437 km; AU wheel/tyre fitment from CarExpert data only",
+    "volvo-ex30-single-plus.insuranceAnnual: judged",
+    "volvo-ex30-single-ultra.insuranceAnnual: judged",
+    "volvo-ex30-cross-country-ultra.insuranceAnnual: judged",
+    "volvo-ex30-single-plus.depreciationCurve: judged, Volvo brand curve from volvo-ex90 (applies to all three rows)"
+  ]
+}

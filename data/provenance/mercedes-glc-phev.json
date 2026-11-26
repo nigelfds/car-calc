@@ -1,0 +1,119 @@
+{
+  "familyId": "mercedes-glc-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mercedes-glc-phev-350e-4matic": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/cars/mercedes-benz/glc-plug-in-hybrid/",
+        "note": "mercedes-benz.com.au configurator returns 403 to automated reads, so not read directly. EV Central (pricing/specs updated 21 Nov 2026) lists the GLC 350 e 4MATIC as the only GLC PHEV grade; CarsGuide 2026 GLC towing table lists one '350 E 4Matic' and no coupe; Chasing Cars notes 'no coupe option'; CarExpert's GLC price table has GLC300 Coupe but no 350e Coupe."
+      },
+      "listPrice": {
+        "value": 99900,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/cars/mercedes-benz/glc-plug-in-hybrid/",
+        "note": "EV Central (updated 21 Nov 2026): $99,900 plus on-road costs. 'Before on-road costs' in words at https://www.chasingcars.com.au/reviews/midsize-suvs/mercedes-benz-glc-350e-2026-plug-in-hybrid-review/ and https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-glc-review. Cross-check: app's Victorian drive-away for $99,900 = $104,976; Chasing Cars quotes ~$105,039 on-road ($63 gap); carsales indicative drive-away $104,596-$110,215. No price change since launch found."
+      },
+      "batteryKwh": {
+        "value": 25.3,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/glc/254/341596/",
+        "note": "usable: ADAC lists Batterie netto 25.3 kWh, brutto 31.2 kWh for the 230 kW GLC 300 e (EU name of the AU 350e). AU sources give 25.28/25.3 unlabelled."
+      },
+      "rangeKm": {
+        "value": 107,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-glc-review",
+        "note": "CarExpert review: 107 km claimed WLTP (tested 103 km); Chasing Cars also 107 km WLTP. CarExpert's launch news and two NZ reviews say 112 km WLTP. carsales 'ADR' 132 km and CarsGuide 132 km are NEDC (above the EU WLTP best case of 127-130 km on ADAC/Mercedes data), rejected per the direction test. 107 is below the EU 19-inch figure (127 km), consistent with a local WLTP spec."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.6,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 25.3 / 107 x 100 = 23.64. CarExpert measured 24.2 kWh/100km in EV mode."
+      },
+      "combinedRangeKm": {
+        "value": 735,
+        "basis": "derived",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/glc/254/341596/",
+        "note": "107 km WLTP electric + 49 L tank / 7.8 L/100km x 100 = 107 + 628 = 735. Tank 49 L from ADAC for the PHEV; CarExpert and carsales give 62 L, judged the petrol GLC's tank (held 902 used 62 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.8,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/midsize-suvs/mercedes-benz-glc-350e-2026-plug-in-hybrid-review/",
+        "note": "Chasing Cars: claimed 7.8 L/100km with a flat battery (CarsGuide also cites 7.8 depleted). ADAC lists WLTP 'Batterie leer' 7.6 L/100km for the EU 19-inch car. AU testers: 7.3 (Chasing Cars), 8.8 (CarExpert). Siblings: audi-q5-phev 7.8, bmw-x3-phev 7.6."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/mercedes-benz/glc-class/2026/glc350-e/5c8afe3a-5792-4ae2-9196-c094199fbb5f/",
+        "note": "combined label 1.2 L/100km (also CarExpert, CarsGuide) <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; carsales lists 28 g/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 470,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/glc/254/341596/",
+        "note": "ADAC/Mercedes EU data 470 L (VDA, to the cover) for the PHEV; Motoring NZ and Driven NZ both 470 L, '150 litres less' than the GLC 300's 620. Chasing Cars/NRMA's 590 L and CarsGuide's 490 L conflict and are not reconcilable with a 150 L loss; CarExpert's 620 L is the petrol GLC (trap). Held 590 replaced."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1530,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/glc/254/341596/",
+        "note": "ADAC 1530 L folded, labelled 'dachhoch' (to the roof); no to-the-belt-line figure published. Overstates against the cover convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/mercedes-benz/glc-class/2026/glc350-e/5c8afe3a-5792-4ae2-9196-c094199fbb5f/",
+        "note": "carsales: SUV, 5 doors, 5 seats"
+      },
+      "towKg": {
+        "value": 2400,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/mercedes-benz/glc-class/towing-capacity/2026",
+        "note": "CarsGuide 2026 table: 350 E 4Matic 2400 kg braked; carsales 2400/750; CarExpert spec table 2400 (but its range-wide section says 2000). ADAC EU 300 e lists 2000 kg (12%). Mercedes AU spec sheet not reachable (403)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/midsize-suvs/mercedes-benz-glc-350e-2026-plug-in-hybrid-review/",
+        "note": "five-year unlimited-km warranty (also CarExpert)"
+      },
+      "insuranceAnnual": {
+        "value": 2500,
+        "basis": "judged",
+        "note": "anchored to audi-q5-phev ($96,818: 2450; Sportback $100,318: 2500), volvo-xc60-phev ultra ($101,990: 2400), bmw-x3-phev ($104,800: 2600)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "owner convention: one curve per brand, matching mercedes-eqa. Held curve was [1,0.68,0.57,0.49,0.42,0.36]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mercedes-glc-phev-350e-4matic.bootLitresSeatsUp: 470 L from EU/NZ data against 590 L in Chasing Cars/NRMA and 490 L in CarsGuide; Mercedes AU spec unreachable",
+    "mercedes-glc-phev-350e-4matic.bootLitresSeatsDown: 1530 L is to the roof (ADAC 'dachhoch'); no to-the-belt-line figure",
+    "mercedes-glc-phev-350e-4matic.combinedRangeKm: tank 49 L (ADAC EU) vs 62 L quoted by CarExpert/carsales; at 62 L it would be 902",
+    "mercedes-glc-phev-350e-4matic.towKg: AU aggregators 2400 kg vs ADAC EU 2000 kg; manufacturer AU sheet not read",
+    "mercedes-glc-phev-350e-4matic.rangeKm: 107 km (CarExpert review, Chasing Cars) vs 112 km WLTP (CarExpert launch news, NZ reviews)",
+    "mercedes-glc-phev-350e-4matic.listPrice: no manufacturer page read (403); EV Central Nov 2026 and launch reviews agree on $99,900",
+    "mercedes-glc-phev-350e-4matic.insuranceAnnual: judged",
+    "mercedes-glc-phev-350e-4matic.depreciationCurve: judged, brand convention"
+  ]
+}

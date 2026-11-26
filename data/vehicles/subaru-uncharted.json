@@ -15,8 +15,8 @@
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
-    "insuranceAnnual": 1600,
+    "insuranceAnnual": 1640,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   }
 ]

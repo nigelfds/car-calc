@@ -13,7 +13,7 @@
         "value": 92990,
         "basis": "sourced",
         "url": "https://www.carexpert.com.au/volvo/xc60/2026-plus-dark-jsfsa5a520250623",
-        "note": "'prices starting at $92,990' before on-road costs (CarExpert variant page; CarExpert review 9 Jan 2026 and MY26 launch news say 'before on-road costs' in words); CarsGuide 2027 MSRP $92,990; CarExpert Sydney drive-away $99,757 consistent. Chasing Cars (22 Sep 2026) gives 'from $92,683 before on-roads' \u2014 unexplained $307 difference, not adopted"
+        "note": "'prices starting at $92,990' before on-road costs (CarExpert variant page; CarExpert review 9 Jan 2026 and MY26 launch news say 'before on-road costs' in words); CarsGuide 2027 MSRP $92,990; CarExpert Sydney drive-away $99,757 consistent. Chasing Cars (22 Sep 2026) gives 'from $92,683 before on-roads' — unexplained $307 difference, not adopted"
       },
       "batteryKwh": {
         "value": 14.9,
@@ -26,7 +26,7 @@
         "basis": "sourced",
         "standard": "WLTP",
         "url": "https://www.cars.co.za/motoring-news/volvo-xc60-t8-phev-2026-review/334255/",
-        "note": "Volvo claim 'up to 81 km' WLTP for the 18.8 kWh T8 (cars.co.za, Feb 2026); CarExpert AU spec pages for both grades give 81 km. Rejected: carsales 89 km '(ADR)' and EV Central/CarExpert-news 89 km 'WLTP' \u2014 higher than the manufacturer's WLTP best case, so per the direction test not the comparable quantity. Held 79 km (UK 49.1 mi) not re-openable: volvocars.com refused by proxy (403)"
+        "note": "Volvo claim 'up to 81 km' WLTP for the 18.8 kWh T8 (cars.co.za, Feb 2026); CarExpert AU spec pages for both grades give 81 km. Rejected: carsales 89 km '(ADR)' and EV Central/CarExpert-news 89 km 'WLTP' — higher than the manufacturer's WLTP best case, so per the direction test not the comparable quantity. Held 79 km (UK 49.1 mi) not re-openable: volvocars.com refused by proxy (403)"
       },
       "consumptionKwhPer100km": {
         "value": 18.4,
@@ -93,14 +93,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.7,
-          0.59,
-          0.51,
-          0.44,
-          0.38
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
         ],
         "basis": "judged",
-        "note": "Held Volvo PHEV curve kept, steeper than mainstream: luxury PHEV that lost the FBT exemption (Apr 2025), and this 18.8 kWh car is run-out stock ahead of a long-range replacement with more than double the electric range due Q2 2027 (Chasing Cars, 22 Sep 2026), which orphans it. Between volvo-ex40 [1,0.7,..0.36] and volvo-xc90-phev [1,0.68,..0.36]; Volvo has no single brand convention in the dataset"
+        "note": "judged: one Volvo brand curve, matched to volvo-ex90"
       }
     },
     "volvo-xc60-phev-ultra-t8": {
@@ -126,7 +126,7 @@
         "basis": "sourced",
         "standard": "WLTP",
         "url": "https://www.cars.co.za/motoring-news/volvo-xc60-t8-phev-2026-review/334255/",
-        "note": "Volvo claim 'up to 81 km' WLTP for the 18.8 kWh T8 (cars.co.za, Feb 2026); CarExpert AU spec pages for both grades give 81 km. Rejected: carsales 89 km '(ADR)' and EV Central/CarExpert-news 89 km 'WLTP' \u2014 higher than the manufacturer's WLTP best case, so per the direction test not the comparable quantity. Held 79 km (UK 49.1 mi) not re-openable: volvocars.com refused by proxy (403)"
+        "note": "Volvo claim 'up to 81 km' WLTP for the 18.8 kWh T8 (cars.co.za, Feb 2026); CarExpert AU spec pages for both grades give 81 km. Rejected: carsales 89 km '(ADR)' and EV Central/CarExpert-news 89 km 'WLTP' — higher than the manufacturer's WLTP best case, so per the direction test not the comparable quantity. Held 79 km (UK 49.1 mi) not re-openable: volvocars.com refused by proxy (403)"
       },
       "consumptionKwhPer100km": {
         "value": 18.4,
@@ -193,14 +193,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.7,
-          0.59,
-          0.51,
-          0.44,
-          0.38
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
         ],
         "basis": "judged",
-        "note": "Held Volvo PHEV curve kept, steeper than mainstream: luxury PHEV that lost the FBT exemption (Apr 2025), and this 18.8 kWh car is run-out stock ahead of a long-range replacement with more than double the electric range due Q2 2027 (Chasing Cars, 22 Sep 2026), which orphans it. Between volvo-ex40 [1,0.7,..0.36] and volvo-xc90-phev [1,0.68,..0.36]; Volvo has no single brand convention in the dataset"
+        "note": "judged: one Volvo brand curve, matched to volvo-ex90"
       }
     }
   },
@@ -215,7 +215,7 @@
     "volvo-xc60-phev-ultra-t8.listPrice: aggregator/review sources only, Volvo price list unreachable",
     "volvo-xc60-phev-plus-t8.insuranceAnnual: judged",
     "volvo-xc60-phev-ultra-t8.insuranceAnnual: judged",
-    "volvo-xc60-phev-plus-t8.depreciationCurve: judged, non-mainstream",
-    "volvo-xc60-phev-ultra-t8.depreciationCurve: judged, non-mainstream"
+    "volvo-xc60-phev-plus-t8.depreciationCurve: judged: one Volvo brand curve, matched to volvo-ex90",
+    "volvo-xc60-phev-ultra-t8.depreciationCurve: judged: one Volvo brand curve, matched to volvo-ex90"
   ]
 }

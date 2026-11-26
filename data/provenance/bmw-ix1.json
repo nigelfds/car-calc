@@ -1,0 +1,50 @@
+{
+  "familyId": "bmw-ix1",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "bmw-ix1-xdrive30-m-sport": {
+      "availability": { "basis": "sourced", "url": "https://www.carsales.com.au/research/bmw/ix1/2026/xdrive30-m-sport/dbe8ff0d-0cb9-4906-8581-c4d9bbeda915/", "note": "MY26 (March 2026) U11 xDrive30 M Sport, $77,900, 19-inch standard; the xDrive30 xLine and eDrive20 xLine entries exist only as July 2025 specs (eDrive20 discontinued per thedriven 31 Mar 2026). Still listed by The Beep review updated 14 Oct 2026. BMW AU configurator returned 503 on every attempt this run (a curl check was refused by permission check), so not opened." },
+      "listPrice": { "value": 77900, "basis": "sourced", "url": "https://www.carexpert.com.au/car-news/bmw-electric-suv-prices-slashed", "note": "CarExpert 1 Apr 2026: iX1 xDrive30 AWD '$77,900 before on-road costs', cut $8,900. Same figure 'plus on-road costs' in The Beep review updated 14 Oct 2026 (https://thebeep.com.au/car-reviews/2026-bmw-ix1-review). Cross-check: app's Vic drive-away for 77,900 = $82,052 vs carsales indicative drive-away floor $81,984 ($68 gap)." },
+      "batteryKwh": { "value": 65.2, "basis": "sourced", "url": "https://ev-database.org/car/3459/BMW-iX1-xDrive30", "note": "EV Database MY26: 65.2 kWh usable, 66.5 kWh nominal. ADAC (03/26) gives 65.0 net / 66.5 gross; zecar 31 Mar 2026 also 65.2 usable." },
+      "rangeKm": { "value": 426, "basis": "sourced", "standard": "WLTP", "url": "https://ev-database.org/car/3459/BMW-iX1-xDrive30", "note": "WLTP TEH (worst case) for MY26 xDrive30; TEL 469. Auto Express UK gives 427 km on 245/40 R20 (https://www.autoexpress.co.uk/bmw/ix1/prices-specs/101102/230kw-xdrive30-m-sport-65kwh-5dr-auto-tech+pro), so TEH is the 20-inch figure; AU car ships on 19-inch, so this understates by up to ~10%. carsales' 400 km ADR figure appears carried from the 2025 spec (The Beep pairs it with the old 440 km WLTP); no MY26 AU-certified figure found." },
+      "consumptionKwhPer100km": { "value": 17.3, "basis": "sourced", "url": "https://ev-database.org/car/3459/BMW-iX1-xDrive30", "note": "WLTP TEH 173 Wh/km, same end of the band as rangeKm; Auto Express 20-inch also 17.3. battery/range = 15.3 (11.6% off, within tolerance; WLTP includes charging losses)." },
+      "bootLitresSeatsUp": { "value": 490, "basis": "sourced", "url": "https://ev-database.org/car/3459/BMW-iX1-xDrive30", "note": "490 L, 0 L frunk; ADAC and The Beep also 490 L." },
+      "bootLitresSeatsDown": { "value": 1495, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/u11/348802/", "note": "ADAC labels 1,495 L as 'dachhoch' (to the roof) with seats folded; no to-the-belt-line figure found in reviews, so the folded figure overstates the cargo-cover convention." },
+      "seats": { "value": 5, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/u11/348800/" },
+      "towKg": { "value": 1200, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/u11/348802/", "note": "Anhängelast gebremst (12%) 1,200 kg, xDrive30 M Sport ab 03/26; carsales AU spec and EV Database also 1,200 kg braked." },
+      "warrantyYears": { "value": 5, "basis": "sourced", "url": "https://thebeep.com.au/car-reviews/2026-bmw-ix1-review", "note": "5 years unlimited km; high-voltage battery 8 years/160,000 km." },
+      "insuranceAnnual": { "value": 2100, "basis": "judged", "note": "kept at held 2100; anchored to bmw-ix2-xdrive30-m-sport ($79,900, 2200), volvo-ex40 ($69,990-74,990, 2000-2150) and mercedes-eqa-250-plus ($86,700, 2250)." },
+      "depreciationCurve": { "value": [1, 0.72, 0.61, 0.53, 0.46, 0.4], "basis": "judged", "note": "BMW brand curve, matched to bmw-ix3 by owner convention (one curve per brand); held row used the mainstream default. The $8,900 list cut in April 2026 and a drive-away Sport Collection priced below the base car's drive-away support a steeper-than-mainstream curve." }
+    },
+    "bmw-ix1-xdrive30-sport-collection": {
+      "availability": { "basis": "sourced", "url": "https://thebeep.com.au/car-reviews/2026-bmw-ix1-review", "note": "The Beep review (updated 14 Oct 2026) lists the limited Sport Collection at $79,900 drive-away. Launched 31 Mar 2026 (CarExpert, thedriven, cars24). A web-search snippet of BMW AU's Sport Collection page gave a delivery deadline of 31.03.27, but that page returned 503 and was not opened." },
+      "listPrice": { "value": 75835, "basis": "backed-out", "url": "https://www.carexpert.com.au/car-news/bmw-electric-suv-prices-slashed", "note": "From $79,900 national drive-away (CarExpert 1 Apr 2026; same at https://thebeep.com.au/car-reviews/2026-bmw-ix1-review). (79,900 − 880) / 1.042 = 75,835; round trip through calc/onroad.js driveAwayPrice = $79,900.07. No independent check available: no before-on-roads figure is published, and the figure is a flat national price that (per BMW's MRDP wording seen in a search snippet only) includes CTP and dealer delivery, so the real list is likely $1,000-2,000 lower. The drive-away is below the base car's ($82,052), so it is a campaign price on a limited edition." },
+      "batteryKwh": { "value": 65.2, "basis": "sourced", "url": "https://ev-database.org/car/3459/BMW-iX1-xDrive30", "note": "same xDrive30 drivetrain (230kW/494Nm, CarExpert); 65.2 usable / 66.5 nominal." },
+      "rangeKm": { "value": 426, "basis": "sourced", "standard": "WLTP", "url": "https://ev-database.org/car/3459/BMW-iX1-xDrive30", "note": "WLTP TEH (20-inch worst case); Sport Collection ships on 19-inch 871 M wheels (CarExpert), so understates by up to ~10%. No AU-certified MY26 figure." },
+      "consumptionKwhPer100km": { "value": 17.3, "basis": "sourced", "url": "https://ev-database.org/car/3459/BMW-iX1-xDrive30", "note": "WLTP TEH 173 Wh/km, same end as rangeKm." },
+      "bootLitresSeatsUp": { "value": 490, "basis": "sourced", "url": "https://ev-database.org/car/3459/BMW-iX1-xDrive30" },
+      "bootLitresSeatsDown": { "value": 1495, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/u11/348802/", "note": "to the roof ('dachhoch'); no belt-line figure published." },
+      "seats": { "value": 5, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/u11/348802/" },
+      "towKg": { "value": 1200, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/u11/348802/", "note": "M Sportpaket, 1,200 kg braked; Sport Collection is an equipment bundle on the same car." },
+      "warrantyYears": { "value": 5, "basis": "sourced", "url": "https://thebeep.com.au/car-reviews/2026-bmw-ix1-review" },
+      "insuranceAnnual": { "value": 2100, "basis": "judged", "note": "same as bmw-ix1-xdrive30-m-sport: similar insured value (lower notional list, more equipment); anchored to bmw-ix2-xdrive30-m-sport (2200) and volvo-ex40 rows." },
+      "depreciationCurve": { "value": [1, 0.72, 0.61, 0.53, 0.46, 0.4], "basis": "judged", "note": "BMW brand curve matched to bmw-ix3 (owner convention)." }
+    }
+  },
+  "lowConfidence": [
+    "bmw-ix1-xdrive30-sport-collection.listPrice: backed out of a flat national drive-away that includes CTP and dealer delivery; true list likely $1,000-2,000 lower, which could put it under the $75,000 FBT cap",
+    "bmw-ix1-xdrive30-sport-collection.availability: limited edition; current orderability rests on The Beep (updated 14 Oct 2026) and a search snippet of BMW AU's offer page (deliveries by 31.03.27); BMW AU site returned 503",
+    "bmw-ix1-xdrive30-m-sport.availability: BMW AU configurator not opened (503); grade line-up rests on carsales MY26 spec and launch news",
+    "bmw-ix1-xdrive30-m-sport.rangeKm: WLTP 20-inch worst case; AU car on 19-inch, no AU-certified MY26 figure",
+    "bmw-ix1-xdrive30-sport-collection.rangeKm: same as above",
+    "bmw-ix1-xdrive30-m-sport.consumptionKwhPer100km: same source and caveat as rangeKm",
+    "bmw-ix1-xdrive30-sport-collection.consumptionKwhPer100km: same source and caveat as rangeKm",
+    "bmw-ix1-xdrive30-m-sport.bootLitresSeatsDown: to-the-roof figure, convention is belt line",
+    "bmw-ix1-xdrive30-sport-collection.bootLitresSeatsDown: to-the-roof figure, convention is belt line",
+    "bmw-ix1-xdrive30-m-sport.insuranceAnnual: judged",
+    "bmw-ix1-xdrive30-sport-collection.insuranceAnnual: judged",
+    "bmw-ix1-xdrive30-m-sport.depreciationCurve: judged (brand convention)",
+    "bmw-ix1-xdrive30-sport-collection.depreciationCurve: judged (brand convention)"
+  ]
+}

@@ -1,23 +1,27 @@
 {
   "id": "bmw-ix1",
-  "summary": "Australian reviewers rate the iX1 as one of the best small electric SUVs on sale, praising BMW's typically composed ride and precise steering alongside a genuinely upscale, well-finished cabin with quality materials and slick infotainment. It carries a clear price premium over mainstream EV rivals, and its roughly 400-450km real-world range trails segment leaders like the Tesla Model Y, but reviewers feel the driving experience and interior finish justify the extra spend for buyers prioritising refinement and brand prestige over outright value. CarExpert has named it its Best EV Small SUV in consecutive years, reflecting a broad consensus that BMW has successfully electrified its smallest SUV.",
+  "summary": "Australian reviewers rate the iX1 as one of the best small electric SUVs on sale, praising BMW's typically composed ride and precise steering alongside a genuinely upscale, well-finished cabin with quality materials and slick infotainment. Since BMW's April 2026 update the range is thin: the eDrive20 and xLine are gone, leaving one dual-motor xDrive30 M Sport at $77,900 before on-road costs (cut by $8,900) plus a limited-run, Alpine White-only Sport Collection at $79,900 drive-away. It still costs more than mainstream rivals such as the Kia EV3, and its 426km WLTP range (on the 20-inch worst case; Australian cars ride on 19s) and 130kW charging trail the segment leaders, but reviewers feel the driving experience and interior finish justify the spend for buyers prioritising refinement over outright value.",
   "pros": [
     "Composed, well-damped ride and precise steering that reviewers say outclasses cheaper EV rivals",
     "Upscale, well-finished interior with quality materials and an intuitive, slick infotainment system",
-    "Surprisingly spacious cabin for a compact SUV, with rear seat space rivalling the front",
-    "Back-to-back CarExpert Choice Award winner for Best EV Small SUV"
+    "After the April 2026 cut the $77,900 xDrive30 M Sport undercuts BMW's own iX2 ($79,900) and the Mercedes-Benz EQA 250+ ($86,700) while bringing dual-motor AWD and 230kW as standard",
+    "Back-to-back CarExpert Choice Award winner for Best EV Small SUV (2025 and 2026)"
   ],
   "cons": [
-    "Premium pricing sits well above mainstream small EV SUVs and undercuts few direct rivals",
-    "Real-world range (reviewers report high-17s to high-18s kWh/100km) trails key rivals such as the Tesla Model Y",
+    "Still priced above mainstream small EV SUVs: CarExpert notes the entry iX1 costs more than the flagship Kia EV3 and MG S5 EV",
+    "Real-world consumption in the high teens of kWh/100km and 130kW peak DC charging trail key rivals such as the Tesla Model Y",
     "490L boot is smaller than the petrol X1's due to the rear-mounted motor and battery pack",
-    "Expensive scheduled servicing over a typical ownership period"
+    "Expensive scheduled servicing over a typical ownership period, especially BMW's Plus service plan"
   ],
   "sources": [
-    "https://www.carexpert.com.au/car-reviews/2024-bmw-ix1-review",
-    "https://www.carsguide.com.au/bmw/ix1",
+    "https://www.carexpert.com.au/car-news/bmw-electric-suv-prices-slashed",
+    "https://thedriven.io/2026/03/31/bmw-cuts-prices-of-fully-electric-ix1-and-ix2-models/",
+    "https://thebeep.com.au/car-reviews/2026-bmw-ix1-review",
+    "https://www.carsguide.com.au/car-news/2026-bmw-ix1-and-ix2-suvs-get-8000-price-drops-to-battle-mercedes-benz-eqa-and-volvo-ex40",
     "https://www.carexpert.com.au/car-news/2026-carexpert-choice-winner-best-ev-small-suv",
-    "https://zecar.com/reviews/bmw-ix1-ix2-price-cut-range-boost-2026"
+    "https://zecar.com/reviews/bmw-ix1-ix2-price-cut-range-boost-2026",
+    "https://ev-database.org/car/3459/BMW-iX1-xDrive30",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/u11/348802/"
   ],
-  "sourcedAt": "2026-07-26"
+  "sourcedAt": "2026-11-26"
 }

@@ -1431,6 +1431,158 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-02-01",
       "note": "No MY27; dealer stock only (MY26 Pro, MY25 GTX). Remove the family when VW Offers & Pricing drops the ID.5 carlines."
+    },
+    {
+      "name": "Volvo XC90 T8 long-range (MY27)",
+      "make": "Volvo",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "volvo-xc90-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "Larger-battery XC90 T8 expected Q2 2027. Add or replace grades when priced and orderable."
+    },
+    {
+      "name": "Mercedes-AMG CLA 45 (electric)",
+      "make": "Mercedes-Benz",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "mercedes-cla-ev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "AMG electric CLA not yet priced or orderable in Australia."
+    },
+    {
+      "name": "Mercedes-AMG GLC63 S E Performance",
+      "make": "Mercedes-Benz",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "unrepresentable",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-07-01",
+      "note": "PHEV with about 6 kWh battery and about 12 km electric range, under the battery and range floors. SUV $194,000, Coupe $200,700."
+    },
+    {
+      "name": "Mercedes-Benz C-Class C 300 e (updated)",
+      "make": "Mercedes-Benz",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "mercedes-c-350e-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Updated C-Class due 1H 2027; current C350e is run-out. Replace the row when the new PHEV is priced; check the C350e is still orderable."
+    },
+    {
+      "name": "Mercedes-Benz GLA 250 e run-out",
+      "make": "Mercedes-Benz",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "mercedes-gla-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "All-new GLA due 1H 2027 as EV or mild hybrid only, no plug-in. Remove the family when the 250 e leaves the configurator."
+    },
+    {
+      "name": "BMW iX run-out",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "bmw-ix",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "iX5 60 xDrive due about mid-2027 as successor. Recheck for an AU run-out or removal."
+    },
+    {
+      "name": "BMW iX1 xDrive30 Sport Collection",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "bmw-ix1",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-31",
+      "note": "Limited edition, list backed out of $79,900 drive-away (may be under $75,000). Deliveries end 31 Mar 2027; remove the row then if not extended."
+    },
+    {
+      "name": "Volvo EX40 MY27.5 facelift",
+      "make": "Volvo",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "volvo-ex40",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Facelift with same powertrains confirmed for 2027, no AU price yet."
+    },
+    {
+      "name": "Lexus RZ600e F Sport Performance",
+      "make": "Lexus",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "lexus-rz",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-26",
+      "note": "Limited to 9 AU cars, expression of interest only, $135,000 before on-road costs. Add only if it becomes orderable at a dealer."
+    },
+    {
+      "name": "Lexus NX 450h+ facelift",
+      "make": "Lexus",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "lexus-nx-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Facelift due 1H 2027 with about 23 kWh battery, over 100 km WLTP and DC charging. Update rows when priced."
+    },
+    {
+      "name": "Toyota RAV4 GXL 2WD PHEV",
+      "make": "Toyota",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "toyota-rav4-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "New entry PHEV grade due Q1 2027, unpriced (outlet estimate $53,990 is not a price)."
+    },
+    {
+      "name": "Polestar 2 run-out",
+      "make": "Polestar",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "polestar-2",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "Production ended Oct 2026; stock offer to 31 Dec 2026, deliveries by 31 Jan 2027. Move to not-on-sale if the configurator closes."
+    },
+    {
+      "name": "Polestar 2 (next generation)",
+      "make": "Polestar",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-06-01",
+      "note": "All-new successor; production about mid-2027, AU arrival expected late 2027."
+    },
+    {
+      "name": "MINI Cooper E",
+      "make": "Mini",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "mini-cooper-electric",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Listed as currently unavailable; CarsGuide 2027 page still shows $53,990. mini.com.au returned 503; recheck whether it has returned."
     }
   ]
 }

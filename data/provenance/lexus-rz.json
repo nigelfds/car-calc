@@ -1,0 +1,249 @@
+{
+  "familyId": "lexus-rz",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "lexus-rz-500e-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-luxury-suv-4x4-electric-jsfmkaga20260409",
+        "note": "lexus.com.au returned 403, so the configurator could not be opened. CarExpert 2026 spec page lists the Luxury at $84,500 before on-road costs; CarsGuide 2027 price page lists RZ500e Luxury $84,500 MSRP"
+      },
+      "listPrice": {
+        "value": 84500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-luxury-suv-4x4-electric-jsfmkaga20260409",
+        "note": "CarExpert spec page 'prices starting at $84,500' before on-road costs; CarExpert news 'priced at $84,500 before on-road costs'; CarsGuide 2027 MSRP $84,500 'excludes stamp duty, other government charges'; CarsGuide review 'before on-road costs'. Sept-2026 CarExpert/Chasing Cars RZ600e articles still quote $84,500. Unchanged from held"
+      },
+      "batteryKwh": {
+        "value": 71,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3401/Toyota-bZ4X-Touring-AWD-747-kWh",
+        "note": "usable 71.0 kWh of 74.7 kWh nominal on EV Database's page for the same e-TNGA 74.7 kWh pack (bZ4X MY26). AU RZ500e is the 74.7 kWh pack: CarExpert spec page 74.69 kWh, 104 cells, 391 V (unlabelled = gross per Lexus rule); CarsGuide '75kWh'. EV Database's European RZ 500e (3294) uses the 77/72 kWh pack, which Australia fits only to the 550e"
+      },
+      "rangeKm": {
+        "value": 460,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-luxury-suv-4x4-electric-jsfmkaga20260409",
+        "note": "WLTP combined, 20-inch wheels (235/45 R20 / 255/45 R20). Direction test: Lexus UK RZ 500e 20-inch WLTP 283 mi (455 km) on a 77 kWh pack; AU 460 is in line, not an NEDC inflation"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-lexus-rz-review-quick-drive",
+        "note": "CarExpert quick-drive review: RZ500e claimed 18kWh/100km. battery/range = 15.4, 15% off, within tolerance (claim is likely grid-side)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 522,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-luxury-suv-4x4-electric-jsfmkaga20260409",
+        "note": "VDA, 'rear seat up to lower window' (CarExpert spec); Lexus UK tech sheet: VDA, includes the under-floor storage area (where the soft cover stows). To-the-window line, i.e. cover convention; includes underfloor well. CarsGuide review also 522 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1451,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-luxury-suv-4x4-electric-jsfmkaga20260409",
+        "note": "VDA, rear seats down; EV Database 1,451 L max; no frunk"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-luxury-suv-4x4-electric-jsfmkaga20260409"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-luxury-suv-4x4-electric-jsfmkaga20260409",
+        "note": "1,500 kg braked, 750 kg unbraked on the AU spec page"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-luxury-suv-4x4-electric-jsfmkaga20260409",
+        "note": "60 months / unlimited km whole vehicle, unconditional; battery 8 years/160,000 km (in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "held; anchored to lexus-nx-phev-450h-plus-luxury ($2,100 at the same $84,500) and genesis-gv60-advanced-rwd ($2,300 at $88,300)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "judged: one Lexus brand curve (mainstream default, set by lexus-nx-phev and lexus-rx-phev; RX resale guide supports it)"
+      }
+    },
+    "lexus-rz-500e-sports-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-sports-luxury-suv-4x4-electric-jsfmkag820260409",
+        "note": "lexus.com.au returned 403. CarExpert 2026 spec page lists the Sports Luxury at $91,000; CarsGuide 2027 price page lists RZ500e Sports Luxury $91,000 MSRP"
+      },
+      "listPrice": {
+        "value": 91000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-lexus-rz-price-and-specs-electric-suv-prices-slashed-by-up-to-42000",
+        "note": "CarExpert news 'priced at $91,000 plus on-roads'; CarExpert spec page starting price $91,000 (driveaway $97,668 Sydney shown separately); CarsGuide 2027 MSRP $91,000; Chasing Cars (Sept 2026) $91,000 before on-road costs. $661 under $91,661"
+      },
+      "batteryKwh": {
+        "value": 71,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3401/Toyota-bZ4X-Touring-AWD-747-kWh",
+        "note": "usable 71.0 of 74.7 kWh nominal, same pack as bZ4X MY26 (EV Database). CarExpert Sports Luxury spec page: 74.69 kWh, 104 prismatic NMC cells, 391 V"
+      },
+      "rangeKm": {
+        "value": 460,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-sports-luxury-suv-4x4-electric-jsfmkag820260409",
+        "note": "WLTP combined, 20-inch two-tone alloys 235/45 R20 / 255/45 R20"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-lexus-rz-review-quick-drive",
+        "note": "CarExpert quick-drive review: RZ500e claimed 18kWh/100km (both RZ500e grades)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 522,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-sports-luxury-suv-4x4-electric-jsfmkag820260409",
+        "note": "VDA, 'rear seat up to lower window' (CarExpert spec); Lexus UK tech sheet: VDA, includes the under-floor storage area (where the soft cover stows). To-the-window line, i.e. cover convention; includes underfloor well. CarsGuide review also 522 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1451,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-sports-luxury-suv-4x4-electric-jsfmkag820260409",
+        "note": "VDA, rear seats down; EV Database 1,451 L max; no frunk"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-sports-luxury-suv-4x4-electric-jsfmkag820260409"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-sports-luxury-suv-4x4-electric-jsfmkag820260409",
+        "note": "1,500 kg braked, 750 kg unbraked on the AU spec page"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-sports-luxury-suv-4x4-electric-jsfmkag820260409",
+        "note": "60 months / unlimited km whole vehicle, unconditional; battery 8 years/160,000 km (in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 2250,
+        "basis": "judged",
+        "note": "held; between lexus-rz-500e-luxury ($2,100 at $84,500) and lexus-rx-phev-450h-plus-luxury ($2,550 at $105,350); genesis-gv60-advanced-rwd $2,300 at $88,300"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "judged: one Lexus brand curve (mainstream default, set by lexus-nx-phev and lexus-rx-phev; RX resale guide supports it)"
+      }
+    },
+    "lexus-rz-550e-f-sport": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-f-sport-suv-4x4-electric-jskafa5f20260409",
+        "note": "lexus.com.au returned 403. CarExpert 2026 spec page lists the F Sport; CarsGuide 2027 price page lists RZ550e F Sport $104,920 MSRP (Two-Tone $109,120 is a paint option)"
+      },
+      "listPrice": {
+        "value": 104920,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/lexus/rz550e/price/2027",
+        "note": "CarsGuide 2027 MSRP $104,920, 'excludes costs such as stamp duty, other government charges and options'; CarExpert RZ600e news (29 Sep 2026) 'RZ550e F Sport at $104,920 before on-road costs'; Chasing Cars (30 Sep 2026) $104,920 'before on-road costs'; The Beep and EV Central (Oct 2026) $104,920. Launch-era sources (CarExpert spec page, CarsGuide news Apr 2026, EV Central review) say $105,000; the later figure from three outlets plus CarsGuide's MSRP table is taken as current. Manufacturer page unreachable (403). Held $105,000"
+      },
+      "batteryKwh": {
+        "value": 72,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3295/Lexus-RZ-550e-F-SPORT",
+        "note": "usable 72.0 kWh of 77.0 kWh nominal (EV Database RZ 550e F SPORT MY26). AU F Sport is the 77 kWh pack: CarExpert spec page 76.96 kWh, 104 cells, 384.8 V; CarExpert news 77kWh"
+      },
+      "rangeKm": {
+        "value": 437,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-f-sport-suv-4x4-electric-jskafa5f20260409",
+        "note": "WLTP combined, 20-inch wheels 235/45 R20 / 255/45 R20. Below EV Database European WLTP TEL 462 km, so not an NEDC inflation"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-lexus-rz-review-quick-drive",
+        "note": "CarExpert quick-drive review: RZ550e claimed 18.8kWh/100km (18.4 tested). battery/range = 16.5, 14% off"
+      },
+      "bootLitresSeatsUp": {
+        "value": 522,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-f-sport-suv-4x4-electric-jskafa5f20260409",
+        "note": "VDA, 'rear seat up to lower window' (CarExpert spec); Lexus UK tech sheet: VDA, includes the under-floor storage area (where the soft cover stows). To-the-window line, i.e. cover convention; includes underfloor well. CarsGuide review also 522 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1451,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-f-sport-suv-4x4-electric-jskafa5f20260409",
+        "note": "VDA, rear seats down; EV Database 1,451 L max; no frunk"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-f-sport-suv-4x4-electric-jskafa5f20260409"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-f-sport-suv-4x4-electric-jskafa5f20260409",
+        "note": "1,500 kg braked, 750 kg unbraked on the AU spec page; note Lexus UK lists the RZ 550e as 'no towing' and EV Database has no figure, but Australian specs and the CarExpert review say 1,500 kg across the range"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/rz/2026-f-sport-suv-4x4-electric-jskafa5f20260409",
+        "note": "60 months / unlimited km whole vehicle, unconditional; battery 8 years/160,000 km (in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 2550,
+        "basis": "judged",
+        "note": "held; anchored to lexus-rx-phev-450h-plus-luxury ($2,550 at $105,350)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "judged: one Lexus brand curve (mainstream default, set by lexus-nx-phev and lexus-rx-phev; RX resale guide supports it)"
+      }
+    }
+  },
+  "lowConfidence": [
+    "lexus-rz-550e-f-sport.listPrice: $104,920 from Sept-Oct 2026 outlets and CarsGuide's 2027 MSRP table; CarExpert's own spec page and launch coverage still say $105,000 and lexus.com.au (403) could not settle it. Above $91,661 either way",
+    "lexus-rz-*.depreciationCurve: judged: one Lexus brand curve (mainstream default, set by lexus-nx-phev and lexus-rx-phev; RX resale guide supports it)",
+    "lexus-rz-500e-*.batteryKwh: usable 71.0 taken from EV Database's bZ4X page for the same 74.7 kWh e-TNGA pack; no source gives usable for the AU RZ500e directly",
+    "lexus-rz-550e-f-sport.towKg: 1,500 kg on the AU spec page, but Lexus UK rates the RZ 550e 'no towing'",
+    "lexus-rz-*.bootLitresSeatsUp: 522 L VDA to the window line but includes the under-floor well, so may overstate against the to-the-cover convention",
+    "lexus-rz-*.insuranceAnnual: judged, held values re-anchored"
+  ]
+}

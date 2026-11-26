@@ -1,0 +1,256 @@
+{
+  "familyId": "polestar-2",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "polestar-2-long-range-single-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/configure/polestar-2/",
+        "note": "Configurator lists Long range Single motor (220 kW) as orderable pre-configured stock; production ended Oct 2026, offer on MY26/MY27 stock ordered to 31 Dec 2026"
+      },
+      "listPrice": {
+        "value": 66400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-polestar-2-entry-price-climbs-with-axing-of-base-grade",
+        "note": "Long range Single motor $66,400 'before on-road costs' (MY27, article 14 Apr 2026); zecar same figure, 'manufacturer list prices ... excluding ... on-road costs'. Polestar AU shows only a drive-away campaign ($73,900 WA for a Plus pack + premium paint car, '$5,000 off MSRP'), no list price, so no back-out done"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3151/Polestar-2-Long-Range-Single-Motor",
+        "note": "usable 79.0, nominal 82.0 on the same page (MY26 entry); Polestar AU spec says '82 kWh'; Chasing Cars also gives 79 kWh usable. MY27 battery unchanged per CarExpert"
+      },
+      "rangeKm": {
+        "value": 659,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU spec page WLTP 659 km on 19-inch Aero wheels (standard)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.8,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU WLTP 14.8-15.8 kWh/100km, low end paired with 659 km on 19-inch; EV Database 238 Wh/mi (14.8 kWh/100km) agrees"
+      },
+      "bootLitresSeatsUp": {
+        "value": 407,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "'407 litres, including under floor'; seats-up load height is to the parcel shelf (45 cm). 41 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1097,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "'1,097 litres, including under floor'; measurement height unlabelled (may be to roof rather than belt line); no to-belt-line figure found (Cinch/Parkers give 405/1,095 also unlabelled)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3151/Polestar-2-Long-Range-Single-Motor"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU 'Towing power up to 1500 kg' all variants; EV Database braked 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/",
+        "note": "5-year vehicle warranty; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2050,
+        "basis": "judged",
+        "note": "held value kept; anchored below volvo-ex40-single-motor-ultra ($69,990, 2000) +50 for performance/brand, and below polestar-4-long-range-single-motor ($73,900, 2300)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "Polestar brand convention, identical to polestar-4 and polestar-3; evidence of soft residuals: production ended Oct 2026, run-out discounting ($5,000 off drive-away to 31 Dec 2026, up to $13,000 earlier in 2026), all-new successor due 2027"
+      }
+    },
+    "polestar-2-long-range-dual-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/configure/polestar-2/",
+        "note": "Configurator lists Long range Dual motor (310 kW) as orderable pre-configured stock; production ended Oct 2026"
+      },
+      "listPrice": {
+        "value": 71400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-polestar-2-entry-price-climbs-with-axing-of-base-grade",
+        "note": "Long range Dual motor $71,400 'before on-road costs' (MY27, 14 Apr 2026); zecar and The Beep agree; no list price on Polestar AU (drive-away campaign only)"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3152/Polestar-2-Long-Range-Dual-Motor",
+        "note": "usable 79.0, nominal 82.0 on the same page (MY26 entry); Polestar AU spec says '82 kWh'; Chasing Cars also gives 79 kWh usable. MY27 battery unchanged per CarExpert"
+      },
+      "rangeKm": {
+        "value": 596,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU spec page WLTP 596 km on 19-inch Aero wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.8,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU WLTP 15.8-17.2 kWh/100km, low end paired with 596 km on 19-inch"
+      },
+      "bootLitresSeatsUp": {
+        "value": 407,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "'407 litres, including under floor'; seats-up load height is to the parcel shelf (45 cm). 41 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1097,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "'1,097 litres, including under floor'; measurement height unlabelled (may be to roof rather than belt line); no to-belt-line figure found (Cinch/Parkers give 405/1,095 also unlabelled)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3152/Polestar-2-Long-Range-Dual-Motor"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU 'Towing power up to 1500 kg' all variants; EV Database braked 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/",
+        "note": "5-year vehicle warranty; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "held value kept; anchored to volvo-ex40-twin-motor-ultra ($74,990, 2150) and below polestar-4-long-range-single-motor ($73,900, 2300)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "Polestar brand convention, identical to polestar-4 and polestar-3; evidence of soft residuals: production ended Oct 2026, run-out discounting ($5,000 off drive-away to 31 Dec 2026, up to $13,000 earlier in 2026), all-new successor due 2027"
+      }
+    },
+    "polestar-2-long-range-dual-motor-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/configure/polestar-2/",
+        "note": "Configurator offers the Performance pack only on Long range Dual motor (Öhlins, Brembo, 20-inch, performance software, 350 kW); kept as its own row because it changes power and WLTP range; stock availability of this spec not confirmable"
+      },
+      "listPrice": {
+        "value": 85080,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-polestar-2-entry-price-climbs-with-axing-of-base-grade",
+        "note": "'Long range Dual motor with Performance pack' $85,080 'before on-road costs' (MY27, 14 Apr 2026), = $71,400 + $8,980 Performance pack + $4,700 Plus pack (CarsGuide option prices); zecar and The Beep agree"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3152/Polestar-2-Long-Range-Dual-Motor",
+        "note": "usable 79.0, nominal 82.0 on the same page (MY26 entry); Polestar AU spec says '82 kWh'; Chasing Cars also gives 79 kWh usable. MY27 battery unchanged per CarExpert"
+      },
+      "rangeKm": {
+        "value": 568,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU spec page WLTP 'up to 568 km' with Performance pack on 20-inch Performance wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU WLTP 16.8-17.2 kWh/100km for Performance pack, low end paired with 568 km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 407,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "'407 litres, including under floor'; seats-up load height is to the parcel shelf (45 cm). 41 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1097,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "'1,097 litres, including under floor'; measurement height unlabelled (may be to roof rather than belt line); no to-belt-line figure found (Cinch/Parkers give 405/1,095 also unlabelled)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3152/Polestar-2-Long-Range-Dual-Motor"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/specifications/",
+        "note": "Polestar AU 'Towing power up to 1500 kg' all variants; EV Database braked 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-2/",
+        "note": "5-year vehicle warranty; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2600,
+        "basis": "judged",
+        "note": "held value kept; anchored to tesla-model-3-performance ($80,900, 3150) discounted for lower power, and polestar-4-long-range-dual-motor ($81,750, 2550)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "Polestar brand convention, identical to polestar-4 and polestar-3; evidence of soft residuals: production ended Oct 2026, run-out discounting ($5,000 off drive-away to 31 Dec 2026, up to $13,000 earlier in 2026), all-new successor due 2027"
+      }
+    }
+  },
+  "lowConfidence": [
+    "polestar-2-long-range-dual-motor-performance.availability: Performance pack is a configurator option on Dual motor (polestar-4 treats its pack as an option, not a row); held as a row here, and run-out stock with this pack not confirmed",
+    "polestar-2-long-range-single-motor.listPrice: Polestar AU publishes only a drive-away campaign; list from CarExpert/zecar/The Beep April 2026 MY27 pricing, not re-confirmed by the manufacturer",
+    "polestar-2-long-range-dual-motor.listPrice: as above, list from April 2026 press pricing; manufacturer shows drive-away only",
+    "polestar-2-long-range-dual-motor-performance.listPrice: as above",
+    "polestar-2-long-range-single-motor.bootLitresSeatsDown: 1,097 L measurement height unlabelled, possibly to the roof (same on all rows)",
+    "polestar-2-long-range-dual-motor.bootLitresSeatsDown: as above",
+    "polestar-2-long-range-dual-motor-performance.bootLitresSeatsDown: as above",
+    "polestar-2-long-range-dual-motor-performance.insuranceAnnual: judged premium",
+    "polestar-2-long-range-dual-motor.insuranceAnnual: judged premium",
+    "polestar-2-long-range-single-motor.insuranceAnnual: judged premium",
+    "polestar-2-long-range-single-motor.depreciationCurve: brand-convention curve, no measured residual data",
+    "polestar-2-long-range-dual-motor.depreciationCurve: brand-convention curve",
+    "polestar-2-long-range-dual-motor-performance.depreciationCurve: brand-convention curve"
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "familyId": "subaru-solterra",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "subaru-solterra-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra",
+        "note": "MY27 (AUSOL2027) model page embeds variant 'Solterra AWD' with isActive true and a manufacturersListPrice; Build Your Own CTA links /configure/configure/AUSOL2027. CarExpert MY27 page: released to the Australian market 3 Oct 2026"
+      },
+      "listPrice": {
+        "value": 61990,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra",
+        "note": "Subaru AU page data 'manufacturersListPrice':61990.00 for MY27 AUEW2EKBV (displayed price is postcode RDP drive-away; the MLP field is the list). Same figure in CarExpert 14 May 2026 price-cut table headed 'New price before on-road costs' (https://www.carexpert.com.au/car-news/subaru-cuts-ev-pricing-again-with-thousands-slashed-off-solterra-trailseeker), down $2,000. CarsGuide 2027 price page and CarExpert spec-page boilerplate still show the pre-cut 63990 - stale aggregator data; manufacturer preferred per owner convention"
+      },
+      "batteryKwh": {
+        "value": 71.0,
+        "basis": "sourced",
+        "url": "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/260513-bZ4X-Touring-Press-Pack.pdf",
+        "note": "usable: Toyota UK press pack for the same e-TNGA pack, '104 cells and a maximum gross capacity of 74.7kWh (71kWh net)'. Subaru AU specs: Li-ion, 104 cells, 391 V, 74.7 kWh unlabelled (gross per Subaru rule). EV Database ev-database.org/car/3401 also 74.7 nominal / 71.0 usable; EV Database has no 74.7 kWh Solterra page (Europe gets the 73.1/69.0 pack, car 3434)"
+      },
+      "rangeKm": {
+        "value": 566,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.subaru.com.au/solterra/specs",
+        "note": "Subaru AU specs '+Electric driving range (WLTP) (km)': 566, ADR 81/02, 18-inch 235/60 R18. Direction test: identical to toyota-bz4x-awd's 517 km on 20-inch (same drivetrain); below the bZ4X FWD 591 km and EV Database Touring AWD TEL 528 km, so not NEDC-inflated"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.6,
+        "basis": "derived",
+        "note": "16.0 kWh/100km (twin toyota-bz4x-awd / Solterra Touring, 160 Wh/km WLTP on 20-inch) x 517/566 to scale to the 18-inch range; implied 71.0/566 = 12.5. CarExpert MY27 spec page's 181 Wh/km (same on both grades) rejected: 44% above battery/range and identical across a 49 km range gap, likely carried from the 2023 car"
+      },
+      "bootLitresSeatsUp": {
+        "value": 421,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra/specs",
+        "note": "Subaru AU specs 'Cargo volume - rear seat up/down (litres)': 421; CarExpert MY27 spec page 'Rear seat up; to lower window: 421 L' (https://www.carexpert.com.au/subaru/solterra/2027-suv-4x4-electric-jsfwwa8k20261014). Cover convention. Held row had 410 on both grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1050,
+        "basis": "sourced",
+        "url": "https://marquenews.com.au/prices-down-power-and-equipment-boost-subaru-solterra/",
+        "note": "Marque News (22 Mar 2026): 'expanding to around 1050 litres with the rear seatbacks folded', not split by grade. Replaces held 2005 from the CarExpert review table, which matches Subaru's Touring tare weight (2005 kg; AWD 1980 kg, which CarExpert lists as the AWD 'folded' figure) and exceeds the US EPA to-roof 63.5 cu ft (1,798 L), so is a weight transcribed as volume. Cross-check: EPA ratio 63.5/23.8 x 421 = 1,123 L, same order. Subaru AU publishes no folded figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra/specs",
+        "note": "Seating capacity 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra/specs",
+        "note": "With trailer brakes (max) 1500 kg; without 750 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra",
+        "note": "5 Year/Unlimited Km warranty, unconditional. CarExpert: battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "held; anchored with toyota-bz4x-2wd ($1,620 at $55,990) and subaru-uncharted-awd ($1,600 at $59,990) below and subaru-trailseeker-awd ($1,720 at $63,990) above; price unchanged since held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "One Subaru curve (owner convention): [1, 0.74, 0.63, 0.55, 0.48, 0.42], the curve on every held Subaru row (Solterra, Trailseeker, Uncharted). Below mainstream default on documented evidence: two RRP cuts in six months (Nov 2025 -$6,000/-$7,000, May 2026 -$2,000) hitting earlier-stock residuals, thin local volume; sits just under the Toyota twin's 0.75 for Subaru's smaller network"
+      }
+    },
+    "subaru-solterra-awd-touring": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra",
+        "note": "MY27 (AUSOL2027) model page embeds variant 'Solterra AWD Touring' with isActive true and a manufacturersListPrice; Build Your Own CTA links /configure/configure/AUSOL2027. CarExpert MY27 page: released to the Australian market 3 Oct 2026"
+      },
+      "listPrice": {
+        "value": 67990,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra",
+        "note": "Subaru AU page data 'manufacturersListPrice':67990.00 for MY27 AUEW2EKCV (displayed price is postcode RDP drive-away; the MLP field is the list). Same figure in CarExpert 14 May 2026 price-cut table headed 'New price before on-road costs' (https://www.carexpert.com.au/car-news/subaru-cuts-ev-pricing-again-with-thousands-slashed-off-solterra-trailseeker), down $2,000. CarsGuide 2027 price page and CarExpert spec-page boilerplate still show the pre-cut 69990 - stale aggregator data; manufacturer preferred per owner convention"
+      },
+      "batteryKwh": {
+        "value": 71.0,
+        "basis": "sourced",
+        "url": "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/260513-bZ4X-Touring-Press-Pack.pdf",
+        "note": "usable: Toyota UK press pack for the same e-TNGA pack, '104 cells and a maximum gross capacity of 74.7kWh (71kWh net)'. Subaru AU specs: Li-ion, 104 cells, 391 V, 74.7 kWh unlabelled (gross per Subaru rule). EV Database ev-database.org/car/3401 also 74.7 nominal / 71.0 usable; EV Database has no 74.7 kWh Solterra page (Europe gets the 73.1/69.0 pack, car 3434)"
+      },
+      "rangeKm": {
+        "value": 517,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.subaru.com.au/solterra/specs",
+        "note": "Subaru AU specs '+Electric driving range (WLTP) (km)': 517, ADR 81/02, 20-inch 235/50 R20. Direction test: identical to toyota-bz4x-awd's 517 km on 20-inch (same drivetrain); below the bZ4X FWD 591 km and EV Database Touring AWD TEL 528 km, so not NEDC-inflated"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.0,
+        "basis": "judged",
+        "note": "Taken from the mechanically identical toyota-bz4x-awd (same 74.7 kWh pack, 252 kW twin-motor, 20-inch, 517 km WLTP), whose CarExpert spec page quotes 160 Wh/km WLTP. No Subaru-published figure; CarExpert MY27 Solterra page's 181 Wh/km rejected (identical on both grades, 57% above 71/517 = 13.7)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 410,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra/specs",
+        "note": "Subaru AU specs 'Cargo volume - rear seat up/down (litres)': 410; CarExpert MY27 spec page 'Rear seat up; to lower window: 410 L' (https://www.carexpert.com.au/subaru/solterra/2027-touring-suv-4x4-electric-jsfwwa8m20261014). Cover convention. Held row had 410 on both grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1050,
+        "basis": "sourced",
+        "url": "https://marquenews.com.au/prices-down-power-and-equipment-boost-subaru-solterra/",
+        "note": "Marque News (22 Mar 2026): 'expanding to around 1050 litres with the rear seatbacks folded', not split by grade. Replaces held 2005 from the CarExpert review table, which matches Subaru's Touring tare weight (2005 kg; AWD 1980 kg, which CarExpert lists as the AWD 'folded' figure) and exceeds the US EPA to-roof 63.5 cu ft (1,798 L), so is a weight transcribed as volume. Cross-check: EPA ratio 63.5/23.8 x 421 = 1,123 L, same order. Subaru AU publishes no folded figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra/specs",
+        "note": "Seating capacity 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra/specs",
+        "note": "With trailer brakes (max) 1500 kg; without 750 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/solterra",
+        "note": "5 Year/Unlimited Km warranty, unconditional. CarExpert: battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "held; matches twin toyota-bz4x-awd ($1,780 at the same $67,990) and sits below subaru-trailseeker-awd-touring ($1,880 at $69,990); price unchanged since held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "One Subaru curve (owner convention): [1, 0.74, 0.63, 0.55, 0.48, 0.42], the curve on every held Subaru row (Solterra, Trailseeker, Uncharted). Below mainstream default on documented evidence: two RRP cuts in six months (Nov 2025 -$6,000/-$7,000, May 2026 -$2,000) hitting earlier-stock residuals, thin local volume; sits just under the Toyota twin's 0.75 for Subaru's smaller network"
+      }
+    }
+  },
+  "lowConfidence": [
+    "subaru-solterra-*.bootLitresSeatsDown: 1050 is one Australian outlet's 'around 1050 litres', not split by grade and not labelled by method; no Subaru folded figure. Held 2005 was a kerb/tare weight. Sibling toyota-bz4x carries an unverified 1410 for the same body - the two now disagree by 360 L",
+    "subaru-solterra-awd-touring.consumptionKwhPer100km: judged from the bZ4X AWD twin's 160 Wh/km; no Solterra-specific figure that survives the cross-check",
+    "subaru-solterra-awd.consumptionKwhPer100km: derived by scaling the twin's 160 Wh/km by range ratio",
+    "subaru-solterra-*.batteryKwh: usable 71.0 from Toyota UK / EV Database for the same 104-cell 74.7 kWh pack, not a Subaru figure",
+    "subaru-solterra-*.listPrice: Subaru's own MLP field (page data) and CarExpert's May 2026 'before on-road costs' table agree; CarsGuide and CarExpert spec-page boilerplate still show $63,990/$69,990. Could not query Subaru's Victorian RDP to round-trip",
+    "subaru-solterra-*.insuranceAnnual: judged",
+    "subaru-solterra-*.depreciationCurve: judged Subaru convention"
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "familyId": "lexus-rx-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "lexus-rx-phev-450h-plus-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/cars/lexus/rx-450h/",
+        "note": "lexus.com.au (model page and newsroom) returned HTTP 403 to fetches on 2026-11-26, so the configurator could not be read. EV Central's RX 450h+ page ('Pricing and specifications last updated 21 November 2026') lists exactly two grades, Luxury and Sports Luxury; CarsGuide's RX450h+ price page (https://www.carsguide.com.au/lexus/rx450h-/price, Glass's data) carries 2027 model-year entries spanning the same two grades; CarExpert (5 Dec 2025) and GoAuto (Jan 2026) give the same two-grade line-up. Matches the held count. Caveat: Lexus Australia said RX production at Miyata was suspended from 28 July 2026 after the Japan earthquake (CarsGuide, 31 Jul 2026); no later restart statement found."
+      },
+      "listPrice": {
+        "value": 105350,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-lexus-rx-gets-tech-upgrades-more-affordable-phev",
+        "note": "CarExpert 5 Dec 2025 MY26 price table: \"priced at $105,350 before on-road costs\"; GoAuto Jan 2026 (https://goauto.com.au/new-models/lexus/rx/phev/2026-01-05/98159.html) \"plus on-road costs\" / \"Pricing excludes on-road costs\" gives the same figure from Lexus's release table; carsales research (https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-luxury/20c4166f-89f5-43da-8aa4-3b24ea79c39f/) 'price when new' agrees. Owner convention: manufacturer's price preferred. Conflict: CarsGuide/Glass's (MY2026 and MY2027) and EV Central (updated 21 Nov 2026, 'list and exclude on-road costs', marked 'price estimated') show $105,450, $100 higher; no Lexus announcement of a rise found and lexus.com.au was unreachable."
+      },
+      "batteryKwh": {
+        "value": 16,
+        "basis": "judged",
+        "url": "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/241009-RX-Tech-Specs.pdf",
+        "note": "18.1 kWh is gross (Lexus UK tech spec \"Capacity (kWh) 18.1\", 96 cells; ADAC \"Batteriekapazität (Brutto) 18,1\"). Usable is unpublished; 16.0 kWh (~88%) judged, matching sibling lexus-nx-phev on the same 18.1 kWh pack."
+      },
+      "rangeKm": {
+        "value": 67,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/rx/al3/347835/",
+        "note": "ADAC catalogue, RX 450h+ (Modellstart 10/25) on 19-inch (235/60R19): \"Reichweite WLTP (elektrisch) 67 km\". The 19- and 21-inch EU entries both read 67 km, matching the AU Luxury (19-inch) and Sports Luxury (21-inch) wheels. Lexus AU's 85 km is NEDC (CarExpert: \"on the NEDC cycle\") and fails the direction test; Lexus EU's \"up to 69 km\" is a best case."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 16.0 / 67 x 100 = 23.9. ADAC's 12.2 kWh/100km '2. Antrieb' figure is utility-factor-weighted, a different quantity, and not used."
+      },
+      "combinedRangeKm": {
+        "value": 853,
+        "basis": "derived",
+        "note": "WLTP electric 67 km + 55 L tank / 7.0 L/100km x 100 (785.7 km) = 852.7, rounded 853. Tank 55 L: ADAC \"Tankgröße 55,0 l\", Lexus UK tech spec, carsales AU research."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/rx/al3/347835/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer) 7,0 l/100 km' (WLTP charge-sustaining). Corroborated by ADAC Autotest (Oct 2025) 7.1 L/100km battery-empty and EV Central's Australian test '6.5-7L/100km ... purely in that hybrid mode'. Replaces held 6.7 (US EPA hybrid-mode figure)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-luxury/20c4166f-89f5-43da-8aa4-3b24ea79c39f/",
+        "note": "Australian ADR 81/02 combined label 1.3 L/100km (carsales research; CarExpert Dec 2025), below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 of 120 g/km or less; AU label CO2 29 g/km (https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-luxury/20c4166f-89f5-43da-8aa4-3b24ea79c39f/)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 461,
+        "basis": "sourced",
+        "url": "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/241009-RX-Tech-Specs.pdf",
+        "note": "Lexus UK tech spec 'Rear seats up, loaded to tonneau cover' (VDA) 461 L, per the owner's cargo-cover convention; 612 L in the same table is 'loaded to roof', the figure Lexus AU and CarsGuide quote. ADAC 'Kofferraumvolumen normal 461 l'. Held 612 was the to-roof figure."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1678,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/rx/al3/347835/",
+        "note": "ADAC 'Kofferraumvolumen dachhoch mit umgeklappter Rücksitzbank 1678 l': to the roof. No belt-line folded figure published; to-roof folded matches sibling mazda-cx-80-phev's basis."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-luxury/20c4166f-89f5-43da-8aa4-3b24ea79c39f/",
+        "note": "carsales research: 5 seats; Lexus UK tech spec seating capacity 5."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-luxury/20c4166f-89f5-43da-8aa4-3b24ea79c39f/",
+        "note": "carsales research (AU spec): braked towing 1,500 kg; CarExpert 2026 RX review and CarsGuide spec page also 1500 kg. The EU rating is 2,000 kg (Lexus UK tech spec); the AU rating is used."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-luxury/20c4166f-89f5-43da-8aa4-3b24ea79c39f/",
+        "note": "carsales research: 5 years from first registration, unlimited km. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 2550,
+        "basis": "judged",
+        "note": "Held judgement kept (price unchanged). Anchors: mercedes-glc-phev $99,900 -> $2,500; lexus-nx-phev F Sport $96,000 -> $2,350; volvo-xc90-phev Plus T8 $120,990 -> $2,700."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand, all Lexus rows on one curve. Mainstream default chosen as the Lexus curve: held RX rows (0.74/0.72 at year 1), lexus-nx-phev (0.77/0.75) and lexus-rz (0.68-0.65) were all on different curves. Evidence against a steeper curve: carsales private-buy guide for a 2025 RX450h+ Luxury $92,900-96,100 against $105,350 new. lexus-nx-phev and lexus-rz need aligning to the same curve."
+      }
+    },
+    "lexus-rx-phev-450h-plus-sports-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/cars/lexus/rx-450h/",
+        "note": "lexus.com.au (model page and newsroom) returned HTTP 403 to fetches on 2026-11-26, so the configurator could not be read. EV Central's RX 450h+ page ('Pricing and specifications last updated 21 November 2026') lists exactly two grades, Luxury and Sports Luxury; CarsGuide's RX450h+ price page (https://www.carsguide.com.au/lexus/rx450h-/price, Glass's data) carries 2027 model-year entries spanning the same two grades; CarExpert (5 Dec 2025) and GoAuto (Jan 2026) give the same two-grade line-up. Matches the held count. Caveat: Lexus Australia said RX production at Miyata was suspended from 28 July 2026 after the Japan earthquake (CarsGuide, 31 Jul 2026); no later restart statement found."
+      },
+      "listPrice": {
+        "value": 123650,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-lexus-rx-gets-tech-upgrades-more-affordable-phev",
+        "note": "CarExpert 5 Dec 2025 MY26 price table: $123,650 (+$150), prices before on-road costs; GoAuto Jan 2026 (https://goauto.com.au/new-models/lexus/rx/phev/2026-01-05/98159.html) \"plus on-road costs\" / \"Pricing excludes on-road costs\" gives the same figure from Lexus's release table; carsales research (https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-sports-luxury/c58ff0db-2fec-4662-9b03-00b6fb291474/) 'price when new' agrees. Owner convention: manufacturer's price preferred. Conflict: CarsGuide/Glass's (MY2026 and MY2027) and EV Central (updated 21 Nov 2026, 'list and exclude on-road costs', marked 'price estimated') show $123,750, $100 higher; no Lexus announcement of a rise found and lexus.com.au was unreachable."
+      },
+      "batteryKwh": {
+        "value": 16,
+        "basis": "judged",
+        "url": "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/241009-RX-Tech-Specs.pdf",
+        "note": "18.1 kWh is gross (Lexus UK tech spec \"Capacity (kWh) 18.1\", 96 cells; ADAC \"Batteriekapazität (Brutto) 18,1\"). Usable is unpublished; 16.0 kWh (~88%) judged, matching sibling lexus-nx-phev on the same 18.1 kWh pack."
+      },
+      "rangeKm": {
+        "value": 67,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/rx/al3/347839/",
+        "note": "ADAC catalogue, RX 450h+ (Modellstart 10/25) on 21-inch (235/50R21): \"Reichweite WLTP (elektrisch) 67 km\". The 19- and 21-inch EU entries both read 67 km, matching the AU Luxury (19-inch) and Sports Luxury (21-inch) wheels. Lexus AU's 85 km is NEDC (CarExpert: \"on the NEDC cycle\") and fails the direction test; Lexus EU's \"up to 69 km\" is a best case."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 16.0 / 67 x 100 = 23.9. ADAC's 12.2 kWh/100km '2. Antrieb' figure is utility-factor-weighted, a different quantity, and not used."
+      },
+      "combinedRangeKm": {
+        "value": 853,
+        "basis": "derived",
+        "note": "WLTP electric 67 km + 55 L tank / 7.0 L/100km x 100 (785.7 km) = 852.7, rounded 853. Tank 55 L: ADAC \"Tankgröße 55,0 l\", Lexus UK tech spec, carsales AU research."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/rx/al3/347839/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer) 7,0 l/100 km' (WLTP charge-sustaining). Corroborated by ADAC Autotest (Oct 2025) 7.1 L/100km battery-empty and EV Central's Australian test '6.5-7L/100km ... purely in that hybrid mode'. Replaces held 6.7 (US EPA hybrid-mode figure)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-sports-luxury/c58ff0db-2fec-4662-9b03-00b6fb291474/",
+        "note": "Australian ADR 81/02 combined label 1.3 L/100km (carsales research; CarExpert Dec 2025), below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 of 120 g/km or less; AU label CO2 29 g/km (https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-sports-luxury/c58ff0db-2fec-4662-9b03-00b6fb291474/)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 461,
+        "basis": "sourced",
+        "url": "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/241009-RX-Tech-Specs.pdf",
+        "note": "Lexus UK tech spec 'Rear seats up, loaded to tonneau cover' (VDA) 461 L, per the owner's cargo-cover convention; 612 L in the same table is 'loaded to roof', the figure Lexus AU and CarsGuide quote. ADAC 'Kofferraumvolumen normal 461 l'. Held 612 was the to-roof figure."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1678,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/rx/al3/347839/",
+        "note": "ADAC 'Kofferraumvolumen dachhoch mit umgeklappter Rücksitzbank 1678 l': to the roof. No belt-line folded figure published; to-roof folded matches sibling mazda-cx-80-phev's basis."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-sports-luxury/c58ff0db-2fec-4662-9b03-00b6fb291474/",
+        "note": "carsales research: 5 seats; Lexus UK tech spec seating capacity 5."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-sports-luxury/c58ff0db-2fec-4662-9b03-00b6fb291474/",
+        "note": "carsales research (AU spec): braked towing 1,500 kg; CarExpert 2026 RX review and CarsGuide spec page also 1500 kg. The EU rating is 2,000 kg (Lexus UK tech spec); the AU rating is used."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/lexus/rx/2025/rx450h-plus-sports-luxury/c58ff0db-2fec-4662-9b03-00b6fb291474/",
+        "note": "carsales research: 5 years from first registration, unlimited km. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 2750,
+        "basis": "judged",
+        "note": "Lowered from held $2,850 to sit between volvo-xc90-phev Plus T8 ($120,990 -> $2,700) and Ultra T8 ($130,990 -> $2,850), which bracket this $123,650 list."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand, all Lexus rows on one curve. Mainstream default chosen as the Lexus curve: held RX rows (0.74/0.72 at year 1), lexus-nx-phev (0.77/0.75) and lexus-rz (0.68-0.65) were all on different curves. Evidence against a steeper curve: carsales private-buy guide for a 2025 RX450h+ Luxury $92,900-96,100 against $105,350 new. lexus-nx-phev and lexus-rz need aligning to the same curve."
+      }
+    }
+  },
+  "lowConfidence": [
+    "lexus-rx-phev-*.depreciationCurve: brand curve set here to the mainstream default; lexus-nx-phev (refreshed in parallel) and lexus-rz may land on a different curve and need reconciling",
+    "lexus-rx-phev-*.listPrice: manufacturer price $105,350 / $123,650 last confirmed Dec 2025-Jan 2026 (CarExpert, GoAuto); lexus.com.au 403; CarsGuide/Glass's and EV Central (21 Nov 2026) show $100 more on both grades, a possible unannounced rise",
+    "lexus-rx-phev-*.availability: configurator unreadable (403); count from EV Central and CarsGuide listings; RX production suspended from 28 Jul 2026 after the Japan earthquake, no restart statement found",
+    "lexus-rx-phev-*.batteryKwh: 16.0 kWh usable judged from 18.1 gross, aligned to lexus-nx-phev; no source states usable",
+    "lexus-rx-phev-*.bootLitresSeatsDown: 1678 L is to the roof; no belt-line folded figure published",
+    "lexus-rx-phev-*.insuranceAnnual: judged"
+  ]
+}

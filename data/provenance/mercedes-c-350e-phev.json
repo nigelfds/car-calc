@@ -1,0 +1,116 @@
+{
+  "familyId": "mercedes-c-350e-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mercedes-c-350e-phev-350e": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/14861463/mercedes-benz/c350-e/sedan",
+        "note": "new 2026 C350 E sedan listing marked 'New: Available to order' (RRP $99,500 / $99,418). mercedes-benz.com.au configurator returns 403 to this agent, so the manufacturer page could not be opened. CarExpert 18 Aug 2026 confirms the updated C-Class arrives 1H 2027; current W206 is run-out stock/orders."
+      },
+      "listPrice": {
+        "value": 99418,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/mercedes-benz/c350-e/price/2026",
+        "note": "CarsGuide MSRP for the 2026 C350 E, 'excludes costs such as stamp duty, other government charges and options'; same $99,418 in Chasing Cars' price box (https://www.chasingcars.com.au/reviews/large-cars/mercedes-benz-c-350e-2026-review/). Launch price $98,200 before on-road costs (CarExpert) rose to $99,500 (C300 at $99,500 before on-roads, CarExpert 25 Feb 2026, C350e priced identically); the 1 Jul 2026 LCT threshold rise trims the LCT component by 0.33×(91,661−91,387)/1.1 ≈ $82 → $99,418, consistent with C300 $99,500 → $99,428 (ordinary threshold, ≈$72) in CarExpert 18 Aug 2026. Manufacturer site 403."
+      },
+      "batteryKwh": {
+        "value": 19.5,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/c-klasse/206/340084",
+        "note": "ADAC catalogue (manufacturer data) for C 300 e RWD 230kW from 04/25: 25.4 kWh gross / 19.5 kWh net; CarExpert spec table also '19.5kWh (usable)'"
+      },
+      "rangeKm": {
+        "value": 116,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/c-klasse/206/340084",
+        "note": "WLTP electric 116 km, C 300 e AMG Line Advanced Plus RWD on 18-inch (225/45R18 / 255/40R18), the same 230kW RWD 18-inch AMG Line spec as the Australian C350e. AU figure is 104 km NEDC (ADR 81/02), rejected per range standard rule."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm × 100 = 19.5/116×100 = 16.81. ADAC's 14.6 kWh/100km is the combined (utility-factor weighted) figure, not EV-mode, so not used."
+      },
+      "combinedRangeKm": {
+        "value": 874,
+        "basis": "derived",
+        "note": "116 + 50 L tank (ADAC; CarExpert spec table 50L) / 6.6 × 100 = 116 + 757.6 = 873.6"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.6,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/c-klasse/206/340084",
+        "note": "ADAC 'Verbrauch bei leerer Batterie' WLTP 6.6 L/100km for the RWD 230kW 18-inch car (04/25-on). Mercedes-Benz Australia's own quoted battery-empty figure is 7.6 L/100km (CarsGuide review, https://www.carsguide.com.au/ev/mercedes-benz-c350e-99839), standard unstated; the 4MATIC European car is 7.1. Siblings: audi-a5-phev 7.3, bmw-x3-phev 7.6, mercedes-glc-phev 7.8 — lighter RWD sedan below them is consistent."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/mercedes-benz-c350e-99839",
+        "note": "claimed combined label 1.5 L/100km ≤ 3.5 (also CarExpert review)"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined tailpipe CO2 ≤ 120 g/km; ADAC lists 47 g/km WLTP combined, AU label 1.5 L/100km ≈ 35 g/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 315,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/c-klasse/206/340084",
+        "note": "315 L (VDA, to the cover); also CarExpert, Chasing Cars, carbuyer.co.uk, jesmb.de (455 L non-PHEV)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 500,
+        "basis": "judged",
+        "note": "no seats-folded figure published for the saloon (ADAC, carbuyer, jesmb.de checked). 315 × ~1.6, the folded/up ratio of trunk sedans in the dataset (bmw-i5 785/490 = 1.60, tesla-model-3 977/594 = 1.64); held judged value kept"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/c-klasse/206/340084",
+        "note": "five seats"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/c-klasse/206/340084",
+        "note": "Anhängelast gebremst 1800 kg (12%); CarsGuide towing page lists 1800 kg braked for 2025 and 2026 C350 E (https://www.carsguide.com.au/mercedes-benz/c350-e/towing-capacity)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-c-class-review",
+        "note": "five-year, unlimited-kilometre warranty in Australia; not conditional on dealer servicing"
+      },
+      "insuranceAnnual": {
+        "value": 2450,
+        "basis": "judged",
+        "note": "kept at held value; anchored to audi-a5-phev-e-hybrid-quattro ($89,900, 2350) and mercedes-glc-phev-350e-4matic ($99,900, 2500)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "owner convention 2026-11-26: one curve per brand, matching mercedes-eqa (refreshed today). Previously [1,0.65,0.54,0.46,0.39,0.33]; run-out of the W206 ahead of the 1H 2027 update argues for the steeper side, but brand convention governs."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mercedes-c-350e-phev-350e.availability: manufacturer configurator 403; orderability rests on a CarsGuide new-car 'available to order' listing and the absence of any discontinuation report. Run-out model, update due 1H 2027",
+    "mercedes-c-350e-phev-350e.listPrice: $99,418 from CarsGuide/Chasing Cars MSRP boxes, not opened on Mercedes' own site; reconciles with CarExpert's C300 $99,428 via the July 2026 LCT threshold change, but no source states the C350e figure 'before on-road costs' in a dated news item",
+    "mercedes-c-350e-phev-350e.bootLitresSeatsDown: unpublished; judged from trunk-sedan ratio",
+    "mercedes-c-350e-phev-350e.fuelConsumptionL100km: ADAC WLTP 6.6 vs Mercedes AU-quoted 7.6 (via CarsGuide); used the WLTP figure",
+    "mercedes-c-350e-phev-350e.rangeKm: 116 km is the European 04/25-on WLTP figure; earlier European data gave 115 and AU car is certified 104 km NEDC",
+    "mercedes-c-350e-phev-350e.insuranceAnnual: judged",
+    "mercedes-c-350e-phev-350e.depreciationCurve: brand convention, not model-specific evidence"
+  ]
+}

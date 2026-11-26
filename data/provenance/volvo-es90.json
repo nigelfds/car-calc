@@ -1,0 +1,175 @@
+{
+  "familyId": "volvo-es90",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "volvo-es90-plus-single-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/volvo/es90/price/2027",
+        "note": "CarsGuide 2027 ES90 price page lists only Plus Single Motor and Ultra Single Motor (no Twin Motor). CarExpert 2027 spec page: released 3 Jul 2026. volvocars.com/au returned 403 to automated reads, configurator not read"
+      },
+      "listPrice": {
+        "value": 88880,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-volvo-es90-review",
+        "note": "CarExpert 2027 ES90 review (8 Nov 2026): '$88,880 before on-road costs' in words; CarExpert price-and-specs table 'Price before on-road costs' agrees; CarsGuide 2027 MSRP table agrees. Unchanged from held MY26 price"
+      },
+      "batteryKwh": {
+        "value": 88,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3128/Volvo-ES90-Single-Motor",
+        "note": "Useable 88.0 kWh, nominal 92.0 kWh on the same page (MY26-27); CarExpert 2027 spec pages also 'Useable battery 88 kWh' (92 max). CarExpert review's 92 kWh is the gross figure"
+      },
+      "rangeKm": {
+        "value": 554,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/volvo/es90/2027-plus-hatchback-rwd-electric-jsgwmamo20260701",
+        "note": "CarExpert 2027 Plus spec page 'Combined km: 554 km' WLTP; equals EV Database WLTP TEH 554 km (TEL 667 km is the EU best case), so not an NEDC figure. Australian Plus rides on 20-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/es90/2027-plus-hatchback-rwd-electric-jsgwmamo20260701",
+        "note": "CarExpert spec page 'Combined: 18.5 kWh/100km'; equals EV Database WLTP rated TEH 185 Wh/km, which includes charging losses (same convention as volvo-ex90). Battery/range = 15.9, 16% off, inside the 25% check"
+      },
+      "bootLitresSeatsUp": {
+        "value": 446,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/es90/2027-plus-hatchback-rwd-electric-jsgwmamo20260701",
+        "note": "'Rear seat up; to lower window: 446 L' (to the window line, i.e. cargo-cover convention); CarExpert price-and-specs and EV Database also 446 L. Frunk (27 L CarExpert / 22 L EV Database) not added. Held figure was 424 L, which CarsGuide's review and some Volvo Middle East pages still quote"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1427,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-volvo-es90-price-and-specs",
+        "note": "CarExpert price-and-specs: 1427 L rear seats folded; CarExpert 2027 review agrees. EV Database gives 1256 L max (different method)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/es90/2027-plus-hatchback-rwd-electric-jsgwmamo20260701",
+        "note": "Seating capacity 5 (2+3)"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-volvo-es90-price-and-specs",
+        "note": "1600 kg braked; EV Database and CarExpert 2027 review agree"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-volvo-es90-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty, 8-year/160,000 km battery; CarExpert 2027 review agrees. CarExpert spec pages' Redbook '36 month, 100,000 km' rejected as a database default"
+      },
+      "insuranceAnnual": {
+        "value": 2400,
+        "basis": "judged",
+        "note": "held value kept; anchored below volvo-ex90-plus-single-motor ($106,990, 2700) and above polestar-4 rows (2300/2550)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Matched to the volvo-ex90 curve (one curve per brand, owner convention); EX90 evidence: $18,000 entry-price cut within a year and MY26 400V->800V switch. Replaces held ES90 curves [1,0.67..0.34] (Plus) and [1,0.64..0.31] (Ultra); close to polestar-3 [1,0.66..0.33]"
+      }
+    },
+    "volvo-es90-ultra-single-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/volvo/es90/price/2027",
+        "note": "CarsGuide 2027 ES90 price page lists only Plus Single Motor and Ultra Single Motor (no Twin Motor). CarExpert 2027 spec page: released 3 Jul 2026. volvocars.com/au returned 403 to automated reads, configurator not read"
+      },
+      "listPrice": {
+        "value": 107990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-volvo-es90-review",
+        "note": "CarExpert 2027 ES90 review (8 Nov 2026): '$107,990 before on-road costs' in words; CarExpert price-and-specs table 'Price before on-road costs' agrees; CarsGuide 2027 MSRP table agrees (CarsGuide review spec table has a $107,900 typo). Unchanged from held MY26 price"
+      },
+      "batteryKwh": {
+        "value": 88,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3128/Volvo-ES90-Single-Motor",
+        "note": "Useable 88.0 kWh, nominal 92.0 kWh on the same page (MY26-27); CarExpert 2027 spec pages also 'Useable battery 88 kWh' (92 max). CarExpert review's 92 kWh is the gross figure"
+      },
+      "rangeKm": {
+        "value": 554,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/volvo/es90/2027-ultra-hatchback-rwd-electric-jsgwmamm20260701",
+        "note": "CarExpert 2027 Ultra spec page 'Combined km: 554 km' WLTP; equals EV Database WLTP TEH 554 km (TEL 667 km is the EU best case), so not an NEDC figure. Australian Ultra rides on 22-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/es90/2027-ultra-hatchback-rwd-electric-jsgwmamm20260701",
+        "note": "CarExpert spec page 'Combined: 18.5 kWh/100km'; equals EV Database WLTP rated TEH 185 Wh/km, which includes charging losses (same convention as volvo-ex90). Battery/range = 15.9, 16% off, inside the 25% check"
+      },
+      "bootLitresSeatsUp": {
+        "value": 446,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/es90/2027-ultra-hatchback-rwd-electric-jsgwmamm20260701",
+        "note": "'Rear seat up; to lower window: 446 L' (to the window line, i.e. cargo-cover convention); CarExpert price-and-specs and EV Database also 446 L. Frunk (27 L CarExpert / 22 L EV Database) not added. Held figure was 424 L, which CarsGuide's review and some Volvo Middle East pages still quote"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1427,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-volvo-es90-price-and-specs",
+        "note": "CarExpert price-and-specs: 1427 L rear seats folded; CarExpert 2027 review agrees. EV Database gives 1256 L max (different method)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/es90/2027-ultra-hatchback-rwd-electric-jsgwmamm20260701",
+        "note": "Seating capacity 5 (2+3)"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-volvo-es90-price-and-specs",
+        "note": "1600 kg braked; EV Database and CarExpert 2027 review agree"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-volvo-es90-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty, 8-year/160,000 km battery; CarExpert 2027 review agrees. CarExpert spec pages' Redbook '36 month, 100,000 km' rejected as a database default"
+      },
+      "insuranceAnnual": {
+        "value": 2750,
+        "basis": "judged",
+        "note": "held value kept; sits with volvo-ex90-plus-single-motor ($106,990, 2700), below polestar-3-rear-motor ($116,700, 3000); 22-inch wheels and air suspension justify the step over the EX90 Plus"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Matched to the volvo-ex90 curve (one curve per brand, owner convention); EX90 evidence: $18,000 entry-price cut within a year and MY26 400V->800V switch. Replaces held ES90 curves [1,0.67..0.34] (Plus) and [1,0.64..0.31] (Ultra); close to polestar-3 [1,0.66..0.33]"
+      }
+    }
+  },
+  "lowConfidence": [
+    "volvo-es90-plus-single-motor.bootLitresSeatsUp: 446 L (CarExpert, EV Database, reportedly Volvo AU) vs held/CarsGuide 424 L; volvocars.com/au not readable (403) to settle it",
+    "volvo-es90-ultra-single-motor.bootLitresSeatsUp: same 446 vs 424 L conflict",
+    "volvo-es90-plus-single-motor.availability: configurator blocked (403); orderability rests on CarsGuide 2027 price page, CarExpert 2027 spec pages and an 8 Nov 2026 review",
+    "volvo-es90-ultra-single-motor.rangeKm: 554 km is the WLTP TEH figure quoted for both grades; no Ultra-on-22s-specific figure found",
+    "volvo-es90-plus-single-motor.insuranceAnnual: judged",
+    "volvo-es90-ultra-single-motor.insuranceAnnual: judged",
+    "volvo-es90-plus-single-motor.depreciationCurve: judged, matched to volvo-ex90 brand curve",
+    "volvo-es90-ultra-single-motor.depreciationCurve: judged, matched to volvo-ex90 brand curve"
+  ]
+}

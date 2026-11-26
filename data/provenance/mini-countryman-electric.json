@@ -1,0 +1,401 @@
+{
+  "familyId": "mini-countryman-electric",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mini-countryman-electric-e-classic": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/countryman/2026/price-and-specs",
+        "note": "mini.com.au returned HTTP 503 on the research date; grade listed on CarExpert's 2026 price-and-specs page and in CarExpert's 27 Aug 2026 review (five electric grades, E Core deleted per EV Central)"
+      },
+      "listPrice": {
+        "value": 68990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "CarExpert 2026 review (27 Aug 2026) and launch news (12 Jun 2026, table headed 'Price before on-road costs'); EV Central 17 Jun 2026 agrees 'before on-road costs'. CarExpert price-and-specs Sydney drive-away figures step by $3,150 per $3,000 list step, consistent. MINI's own page unreachable (503)."
+      },
+      "batteryKwh": {
+        "value": 65.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "usable; EV Database lists 66.5 gross / 65.2 usable; BMW Group release states net 65.2 kWh"
+      },
+      "rangeKm": {
+        "value": 501,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "WLTP TEL (best case) for MY26 after March 2026 SiC-inverter update; Classic grade on smallest wheel. CarExpert/EV Central quote the same 'up to' figure"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.7,
+        "basis": "sourced",
+        "url": "https://newsroom.bmwgroup.com/global/even-more-freedom-the-mini-countryman-e-with-a-purely-electric-range-of-up-to-500-kilometres",
+        "note": "lower end of BMW Group WLTP combined band (E 14.7-16.4; SE ALL4 15.7-17.4 kWh/100km, from March 2026)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "460 L seats up; also CarExpert 2026 review. MINI quotes VDA to cover; no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1450,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "1,450 L max; also CarExpert 2026 review and BMW Group release ('up to 1.450 liters'); convention of folded figure (to belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "EV Database braked 750 kg (European tech data). CarExpert 2026 review's JATO table says 1,500 kg range-wide; not used, aggregator and contradicts the drivetrain split. MINI AU spec sheet unreachable"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "5 years unlimited km, unconditional; battery 8 yr/100,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "held value kept; anchored to bmw-ix1-xdrive30 ($2,100 at $77,900) and mini-aceman rows ($2,000-$2,350 at $60,990-$65,990), stepping with price and the JCW badge"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "one curve per brand (owner convention): moved from the held Countryman curve [1,0.73,0.62,0.53,0.46,0.4] to the curve held on mini-aceman and mini-cooper-electric, so all MINI rows share it; below mainstream for thin volume and premium-EV discounting"
+      }
+    },
+    "mini-countryman-electric-e-favoured": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/countryman/2026/price-and-specs",
+        "note": "mini.com.au returned HTTP 503 on the research date; grade listed on CarExpert's 2026 price-and-specs page and in CarExpert's 27 Aug 2026 review (five electric grades, E Core deleted per EV Central)"
+      },
+      "listPrice": {
+        "value": 71990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "CarExpert 2026 review (27 Aug 2026) and launch news (12 Jun 2026, table headed 'Price before on-road costs'); EV Central 17 Jun 2026 agrees 'before on-road costs'. CarExpert price-and-specs Sydney drive-away figures step by $3,150 per $3,000 list step, consistent. MINI's own page unreachable (503)."
+      },
+      "batteryKwh": {
+        "value": 65.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "usable; EV Database lists 66.5 gross / 65.2 usable; BMW Group release states net 65.2 kWh"
+      },
+      "rangeKm": {
+        "value": 466,
+        "basis": "judged",
+        "note": "no per-grade WLTP published for AU grades; scaled from the WLTP best case 501 km by 14.7/15.8 consumption ratio for the larger wheels of this grade. EV Database TEH (worst case) is 454 km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.8,
+        "basis": "judged",
+        "url": "https://newsroom.bmwgroup.com/global/even-more-freedom-the-mini-countryman-e-with-a-purely-electric-range-of-up-to-500-kilometres",
+        "note": "placed within BMW Group WLTP band 14.7-16.4 kWh/100km by wheel size; Favoured grade on larger wheels, mid-band"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "460 L seats up; also CarExpert 2026 review. MINI quotes VDA to cover; no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1450,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "1,450 L max; also CarExpert 2026 review and BMW Group release ('up to 1.450 liters'); convention of folded figure (to belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3456/Mini-Countryman-E",
+        "note": "EV Database braked 750 kg (European tech data). CarExpert 2026 review's JATO table says 1,500 kg range-wide; not used, aggregator and contradicts the drivetrain split. MINI AU spec sheet unreachable"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "5 years unlimited km, unconditional; battery 8 yr/100,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2050,
+        "basis": "judged",
+        "note": "held value kept; anchored to bmw-ix1-xdrive30 ($2,100 at $77,900) and mini-aceman rows ($2,000-$2,350 at $60,990-$65,990), stepping with price and the JCW badge"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "one curve per brand (owner convention): moved from the held Countryman curve [1,0.73,0.62,0.53,0.46,0.4] to the curve held on mini-aceman and mini-cooper-electric, so all MINI rows share it; below mainstream for thin volume and premium-EV discounting"
+      }
+    },
+    "mini-countryman-electric-se-all4-classic": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/countryman/2026/price-and-specs",
+        "note": "mini.com.au returned HTTP 503 on the research date; grade listed on CarExpert's 2026 price-and-specs page and in CarExpert's 27 Aug 2026 review (five electric grades, E Core deleted per EV Central)"
+      },
+      "listPrice": {
+        "value": 73990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "CarExpert 2026 review (27 Aug 2026) and launch news (12 Jun 2026, table headed 'Price before on-road costs'); EV Central 17 Jun 2026 agrees 'before on-road costs'. CarExpert price-and-specs Sydney drive-away figures step by $3,150 per $3,000 list step, consistent. MINI's own page unreachable (503)."
+      },
+      "batteryKwh": {
+        "value": 65.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "usable; EV Database lists 66.5 gross / 65.2 usable; BMW Group release states net 65.2 kWh"
+      },
+      "rangeKm": {
+        "value": 467,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "WLTP TEL (best case) for MY26 after March 2026 SiC-inverter update; Classic grade on smallest wheel. CarExpert/EV Central quote the same 'up to' figure"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.7,
+        "basis": "sourced",
+        "url": "https://newsroom.bmwgroup.com/global/even-more-freedom-the-mini-countryman-e-with-a-purely-electric-range-of-up-to-500-kilometres",
+        "note": "lower end of BMW Group WLTP combined band (E 14.7-16.4; SE ALL4 15.7-17.4 kWh/100km, from March 2026)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "460 L seats up; also CarExpert 2026 review. MINI quotes VDA to cover; no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1450,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "1,450 L max; also CarExpert 2026 review and BMW Group release ('up to 1.450 liters'); convention of folded figure (to belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4"
+      },
+      "towKg": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "EV Database braked 1200 kg (European tech data). CarExpert 2026 review's JATO table says 1,500 kg range-wide; not used, aggregator and contradicts the drivetrain split. MINI AU spec sheet unreachable"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "5 years unlimited km, unconditional; battery 8 yr/100,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "held value kept; anchored to bmw-ix1-xdrive30 ($2,100 at $77,900) and mini-aceman rows ($2,000-$2,350 at $60,990-$65,990), stepping with price and the JCW badge"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "one curve per brand (owner convention): moved from the held Countryman curve [1,0.73,0.62,0.53,0.46,0.4] to the curve held on mini-aceman and mini-cooper-electric, so all MINI rows share it; below mainstream for thin volume and premium-EV discounting"
+      }
+    },
+    "mini-countryman-electric-se-all4-favoured": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/countryman/2026/price-and-specs",
+        "note": "mini.com.au returned HTTP 503 on the research date; grade listed on CarExpert's 2026 price-and-specs page and in CarExpert's 27 Aug 2026 review (five electric grades, E Core deleted per EV Central)"
+      },
+      "listPrice": {
+        "value": 76990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "CarExpert 2026 review (27 Aug 2026) and launch news (12 Jun 2026, table headed 'Price before on-road costs'); EV Central 17 Jun 2026 agrees 'before on-road costs'. CarExpert price-and-specs Sydney drive-away figures step by $3,150 per $3,000 list step, consistent. MINI's own page unreachable (503)."
+      },
+      "batteryKwh": {
+        "value": 65.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "usable; EV Database lists 66.5 gross / 65.2 usable; BMW Group release states net 65.2 kWh"
+      },
+      "rangeKm": {
+        "value": 442,
+        "basis": "judged",
+        "note": "no per-grade WLTP published for AU grades; scaled from the WLTP best case 467 km by 15.7/16.6 consumption ratio for the larger wheels of this grade. EV Database TEH (worst case) is 391 km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.6,
+        "basis": "judged",
+        "url": "https://newsroom.bmwgroup.com/global/even-more-freedom-the-mini-countryman-e-with-a-purely-electric-range-of-up-to-500-kilometres",
+        "note": "placed within BMW Group WLTP band 15.7-17.4 kWh/100km by wheel size; Favoured grade on larger wheels, mid-band"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "460 L seats up; also CarExpert 2026 review. MINI quotes VDA to cover; no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1450,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "1,450 L max; also CarExpert 2026 review and BMW Group release ('up to 1.450 liters'); convention of folded figure (to belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4"
+      },
+      "towKg": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "EV Database braked 1200 kg (European tech data). CarExpert 2026 review's JATO table says 1,500 kg range-wide; not used, aggregator and contradicts the drivetrain split. MINI AU spec sheet unreachable"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "5 years unlimited km, unconditional; battery 8 yr/100,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "held value kept; anchored to bmw-ix1-xdrive30 ($2,100 at $77,900) and mini-aceman rows ($2,000-$2,350 at $60,990-$65,990), stepping with price and the JCW badge"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "one curve per brand (owner convention): moved from the held Countryman curve [1,0.73,0.62,0.53,0.46,0.4] to the curve held on mini-aceman and mini-cooper-electric, so all MINI rows share it; below mainstream for thin volume and premium-EV discounting"
+      }
+    },
+    "mini-countryman-electric-se-all4-jcw-sport": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/countryman/2026/price-and-specs",
+        "note": "mini.com.au returned HTTP 503 on the research date; grade listed on CarExpert's 2026 price-and-specs page and in CarExpert's 27 Aug 2026 review (five electric grades, E Core deleted per EV Central)"
+      },
+      "listPrice": {
+        "value": 79990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "CarExpert 2026 review (27 Aug 2026) and launch news (12 Jun 2026, table headed 'Price before on-road costs'); EV Central 17 Jun 2026 agrees 'before on-road costs'. CarExpert price-and-specs Sydney drive-away figures step by $3,150 per $3,000 list step, consistent. MINI's own page unreachable (503)."
+      },
+      "batteryKwh": {
+        "value": 65.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "usable; EV Database lists 66.5 gross / 65.2 usable; BMW Group release states net 65.2 kWh"
+      },
+      "rangeKm": {
+        "value": 421,
+        "basis": "judged",
+        "note": "no per-grade WLTP published for AU grades; scaled from the WLTP best case 467 km by 15.7/17.4 consumption ratio for the larger wheels of this grade. EV Database TEH (worst case) is 391 km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.4,
+        "basis": "judged",
+        "url": "https://newsroom.bmwgroup.com/global/even-more-freedom-the-mini-countryman-e-with-a-purely-electric-range-of-up-to-500-kilometres",
+        "note": "placed within BMW Group WLTP band 15.7-17.4 kWh/100km by wheel size; JCW Sport on 20-inch wheels at the top of the band"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "460 L seats up; also CarExpert 2026 review. MINI quotes VDA to cover; no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1450,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "1,450 L max; also CarExpert 2026 review and BMW Group release ('up to 1.450 liters'); convention of folded figure (to belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4"
+      },
+      "towKg": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3457/Mini-Countryman-SE-ALL4",
+        "note": "EV Database braked 1200 kg (European tech data). CarExpert 2026 review's JATO table says 1,500 kg range-wide; not used, aggregator and contradicts the drivetrain split. MINI AU spec sheet unreachable"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mini-countryman-electric-review",
+        "note": "5 years unlimited km, unconditional; battery 8 yr/100,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2250,
+        "basis": "judged",
+        "note": "held value kept; anchored to bmw-ix1-xdrive30 ($2,100 at $77,900) and mini-aceman rows ($2,000-$2,350 at $60,990-$65,990), stepping with price and the JCW badge"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "one curve per brand (owner convention): moved from the held Countryman curve [1,0.73,0.62,0.53,0.46,0.4] to the curve held on mini-aceman and mini-cooper-electric, so all MINI rows share it; below mainstream for thin volume and premium-EV discounting"
+      }
+    }
+  },
+  "lowConfidence": [
+    "mini-countryman-electric-se-all4-favoured.rangeKm: judged by wheel-size scaling, no per-grade WLTP published",
+    "mini-countryman-electric-e-favoured.rangeKm: judged by wheel-size scaling, no per-grade WLTP published",
+    "mini-countryman-electric-se-all4-jcw-sport.rangeKm: judged from top of WLTP consumption band; EV Database TEH is 391 km",
+    "mini-countryman-electric-e-favoured.consumptionKwhPer100km / se-all4-favoured / se-all4-jcw-sport: placed within band by judgement",
+    "all rows.listPrice: MINI's own site returned 503; prices from CarExpert (Aug 2026) and EV Central (Jun 2026) 'before on-road costs', not confirmed on the manufacturer page on the research date",
+    "all rows.towKg: EV Database 750/1200 kg vs CarExpert JATO 1,500 kg; MINI AU spec sheet unreachable",
+    "all rows.depreciationCurve: brand curve chosen to match mini-aceman/mini-cooper-electric, which are being refreshed in parallel",
+    "all rows.insuranceAnnual: judged"
+  ]
+}

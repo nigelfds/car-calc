@@ -1,0 +1,174 @@
+{
+  "familyId": "subaru-trailseeker",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "subaru-trailseeker-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker",
+        "note": "Subaru AU Trailseeker page serves two MY27 variants (AWD, eraCode AUHD2WNBV) with manufacturersListPrice and isActive true; colour availability dated 22 Sep 2026; CarExpert lists the same two 2027 grades"
+      },
+      "listPrice": {
+        "value": 63990,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker",
+        "note": "Subaru AU page data: manufacturersListPrice 63990.00, isDriveAway false, year 2027 (the displayed price is a postcode RDP). Same figure 'before on-road costs' in words on CarsGuide (https://www.carsguide.com.au/ev/subaru-trailseeker-101907) and CarExpert (May 2026 $4,000 cut article); unchanged since 14 May 2026 cut"
+      },
+      "batteryKwh": {
+        "value": 71,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3506/Subaru-E-Outback-AWD",
+        "note": "Useable 71.0 kWh, nominal 74.7 kWh (Trailseeker is sold as the e-Outback in Europe; same 74.7 kWh pack, 1,500 kg tow). Subaru AU quotes 74.7 kWh unlabelled = gross. Matches toyota-bz4x twin (EV Database 3401)"
+      },
+      "rangeKm": {
+        "value": 533,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "Subaru AU MY27 spec: 'Electric driving range (WLTP) (km)' 533 on 18-inch wheels. EV Database e-Outback TEL/TEH 526/477 km: AU figure sits 1-2% above the EU band, within homologation variation, not an NEDC-scale gap"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/subaru/trailseeker/2027-suv-4x4-electric-jskaaskg20260826",
+        "note": "154 Wh/km WLTP combined; EV Database rated 153 (TEL) Wh/km; 71/533 = 13.3 implied (plug-to-wheel loss)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 609,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "Subaru AU 'Cargo volume - rear seat up/down' 609/1230 (1694 to ceiling); CarExpert: manufacturer's measure to the lower window = cargo-cover convention"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1230,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "1230 to the belt line per Subaru AU; replaces held 1694, which was the to-ceiling figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "Seating capacity 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "Subaru AU spec: with trailer brakes (max) 1500, without 750, ball load 150"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "5 Year/Unlimited Km Warranty; separate 8 yr/160,000 km HV battery"
+      },
+      "insuranceAnnual": {
+        "value": 1720,
+        "basis": "judged",
+        "note": "held; between subaru-solterra-awd ($1,650 at $61,990) and toyota-bz4x-awd ($1,780 at $67,990), scaled to $63,990 and 280 kW"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Held Subaru brand curve [1,0.74,0.63,0.55,0.48,0.42], kept per owner convention (all Subaru rows on one curve). Evidence for staying below mainstream: $4,000 cut on both grades a month before launch (May 2026) on top of Solterra cuts; no new evidence to move it"
+      }
+    },
+    "subaru-trailseeker-awd-touring": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker",
+        "note": "Subaru AU Trailseeker page serves two MY27 variants (AWD Touring, eraCode AUHD2WNCV) with manufacturersListPrice and isActive true; colour availability dated 22 Sep 2026; CarExpert lists the same two 2027 grades"
+      },
+      "listPrice": {
+        "value": 69990,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker",
+        "note": "Subaru AU page data: manufacturersListPrice 69990.00, isDriveAway false, year 2027 (the displayed price is a postcode RDP). Same figure 'before on-road costs' in words on CarsGuide (https://www.carsguide.com.au/ev/subaru-trailseeker-101907) and CarExpert (May 2026 $4,000 cut article); unchanged since 14 May 2026 cut"
+      },
+      "batteryKwh": {
+        "value": 71,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3506/Subaru-E-Outback-AWD",
+        "note": "Useable 71.0 kWh, nominal 74.7 kWh (Trailseeker is sold as the e-Outback in Europe; same 74.7 kWh pack, 1,500 kg tow). Subaru AU quotes 74.7 kWh unlabelled = gross. Matches toyota-bz4x twin (EV Database 3401)"
+      },
+      "rangeKm": {
+        "value": 488,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "Subaru AU MY27 spec: 'Electric driving range (WLTP) (km)' 488 on 20-inch wheels. EV Database e-Outback TEL/TEH 526/477 km: AU figure sits 1-2% above the EU band, within homologation variation, not an NEDC-scale gap"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/subaru/trailseeker/2027/touring/features-and-specs",
+        "note": "168 Wh/km WLTP combined; EV Database rated 166 (TEH) Wh/km; 71/488 = 14.5 implied (plug-to-wheel loss)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 595,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "Subaru AU 'Cargo volume - rear seat up/down' 595/1216 (1680 to ceiling); CarExpert: manufacturer's measure to the lower window = cargo-cover convention"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1216,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "1216 to the belt line per Subaru AU; replaces held 1680, which was the to-ceiling figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "Seating capacity 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "Subaru AU spec: with trailer brakes (max) 1500, without 750, ball load 150"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/trailseeker/specs",
+        "note": "5 Year/Unlimited Km Warranty; separate 8 yr/160,000 km HV battery"
+      },
+      "insuranceAnnual": {
+        "value": 1880,
+        "basis": "judged",
+        "note": "held; between subaru-solterra-awd-touring ($1,800 at $67,990) and toyota-bz4x-touring ($1,850 at $69,990, same body); kept $30 above the bZ4X Touring for the 280 kW output"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Held Subaru brand curve [1,0.74,0.63,0.55,0.48,0.42], kept per owner convention (all Subaru rows on one curve). Evidence for staying below mainstream: $4,000 cut on both grades a month before launch (May 2026) on top of Solterra cuts; no new evidence to move it"
+      }
+    }
+  },
+  "lowConfidence": [
+    "subaru-trailseeker-awd-touring.insuranceAnnual: judged, anchored to Solterra Touring and bZ4X Touring",
+    "subaru-trailseeker-awd.insuranceAnnual: judged, anchored to Solterra AWD and bZ4X AWD",
+    "subaru-trailseeker-awd.depreciationCurve: held Subaru brand curve, no market resale data yet for a car launched mid-2026",
+    "subaru-trailseeker-awd-touring.depreciationCurve: held Subaru brand curve, no market resale data yet",
+    "subaru-trailseeker-awd.rangeKm: Subaru AU WLTP 533 km sits ~1% above EV Database's EU e-Outback TEL 526 km; accepted as WLTP, not an NEDC-scale gap",
+    "subaru-trailseeker-awd.listPrice: manufacturer list price read from the Subaru AU page's embedded data (manufacturersListPrice, isDriveAway false); the visible page shows only postcode RDP, 'before on-road costs' wording is from CarsGuide/CarExpert",
+    "subaru-trailseeker-awd-touring.listPrice: as for the AWD"
+  ]
+}

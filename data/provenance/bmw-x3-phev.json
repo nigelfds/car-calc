@@ -1,0 +1,108 @@
+{
+  "familyId": "bmw-x3-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "bmw-x3-phev-30e-xdrive": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/x3/2026-2l-suv-4x4-electric-jsgkmskw20260701",
+        "note": "CarExpert MY26 variant page: 30e (2.0L petrol + electric) 'released to the Australian market on 3rd July 2026', MLRP $107,700. CarExpert's 2026 X3 listing shows one PHEV variant alongside 20 xDrive, 20d and M50; CarsGuide 2026 price page lists no other PHEV grade. BMW AU site returned 503 to WebFetch twice; a curl probe was refused by a permission check and not retried."
+      },
+      "listPrice": {
+        "value": 107700,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/x3/2026-2l-suv-4x4-electric-jsgkmskw20260701",
+        "note": "CarExpert MLRP 'prices starting at $107,700' (before on-road costs; driveaway shown separately as $115,203 Sydney). Agrees with CarsGuide 2026 MSRP $107,700 excl. stamp duty/government charges (https://www.carsguide.com.au/bmw/x-models/price/2026/x3-30e-xdrive-phev) and EV Central $107,700 plus on-roads (marked estimated, updated 21 Nov 2026). Up $2,900 from held $104,800. Manufacturer's own price not reachable (bmw.com.au 503)."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.autoexpress.co.uk/bmw/x3/prices-specs/106296/30e-xdrive-m-sport-5dr-auto",
+        "note": "usable: 22.7 kWh gross / 19.7 kWh usable (Auto Express UK); ADAC 08/25+ entry lists 19.7 net; CarExpert AU 22.1 max / 19.7 usable"
+      },
+      "rangeKm": {
+        "value": 86,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/x3/g45/340934/",
+        "note": "ADAC WLTP electric range for current build (from 08/25) 30e M Sportpaket xDrive; same 86 km on the plain and M Sportpaket Pro entries. ADAC lists 245/50R19; the AU MY26 car ships on staggered 20-inch (CarExpert), so the local car may sit lower in BMW's 81-90 km band. AU 'up to 91km ADR' (CarExpert review, CarsGuide) equals the 2024 19-inch WLTP best case (Auto Express 91 km on 19-inch) and is rejected as a best-case figure. Held 85."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm × 100 = 19.7 / 86 × 100 = 22.9. Cross-check: ADAC Ecotest 22.5 kWh/100km; 11/24 ADAC entry WLTP 22.3 kWh/100km. ADAC's 16.2 on the 08/25 entry is a weighted figure, not used."
+      },
+      "combinedRangeKm": {
+        "value": 735,
+        "basis": "derived",
+        "note": "86 + 50 L / 7.7 × 100 = 86 + 649 = 735. Tank 50 L (ADAC 340934; CarExpert AU 50 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/x3/g45/340934/",
+        "note": "WLTP charge-sustaining ('Verbrauch bei entladener Batterie') 7.7 L/100km, 08/25+ M Sportpaket. Earlier build 7.2 (ADAC 335995); Auto Express 37.2 mpg CS (7.6); ADAC Ecotest hybrid mode 8.1. Held 7.6."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-bmw-x3-review-2",
+        "note": "Australian combined label 1.6 L/100km claimed (CarExpert; CarsGuide review also 1.6) <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km. CarExpert MY26 page: 38 g/km combined."
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/x3/2026-2l-suv-4x4-electric-jsgkmskw20260701",
+        "note": "'460 L seats up, to window line' = cargo-cover convention; PHEV figure (petrol X3 570 L). ADAC and Auto Express agree."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/x3/g45/340934/",
+        "note": "1600 L folded (BMW figure via ADAC, Auto Express, CarExpert). ADAC files it as 'dachhoch' (to the roof) and publishes no belt-line folded figure; no review to-cover figure found. Kept as BMW's figure, matching how siblings bmw-x1-phev and mercedes-glc-phev use maker folded figures."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/x3/2026-2l-suv-4x4-electric-jsgkmskw20260701",
+        "note": "two front plus rear seating capacity 3"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/x3/2026-2l-suv-4x4-electric-jsgkmskw20260701",
+        "note": "2,000 kg braked / 750 unbraked (CarExpert AU MY26); ADAC 2,000 kg braked (12%)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/x3/2026-2l-suv-4x4-electric-jsgkmskw20260701",
+        "note": "60 months, unlimited km; battery 72 months / 100,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2600,
+        "basis": "judged",
+        "note": "held value kept; anchored between mercedes-glc-phev ($99,900, 2500), volvo-xc60-phev-ultra-t8 ($101,990, 2400), audi-q5-phev-sportback ($100,318, 2500) and bmw-ix3-50-xdrive ($112,500, 2900)"
+      },
+      "depreciationCurve": {
+        "value": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
+        "basis": "judged",
+        "note": "owner convention: one depreciation curve per brand, matched to bmw-ix3 (2026-11-26). Replaces held steeper [1,0.7,0.58,0.49,0.42,0.36]; no BMW-specific evidence found to keep a separate PHEV curve, and the MY26 change was a list rise, not cuts."
+      }
+    }
+  },
+  "lowConfidence": [
+    "bmw-x3-phev-30e-xdrive.rangeKm: 86 km WLTP is ADAC's 19-inch figure; the AU car ships on staggered 20-inch tyres and may sit nearer the 81 km floor of BMW's band; no 20-inch WLTP figure found",
+    "bmw-x3-phev-30e-xdrive.listPrice: $107,700 from CarExpert MLRP and CarsGuide MSRP; BMW AU Build & Price unreachable (503), so the manufacturer's own figure was not seen",
+    "bmw-x3-phev-30e-xdrive.bootLitresSeatsDown: 1600 L is BMW's folded figure, filed by ADAC as roof-high; no belt-line figure published",
+    "bmw-x3-phev-30e-xdrive.insuranceAnnual: judged, held 2600 kept despite $2,900 list rise",
+    "bmw-x3-phev-30e-xdrive.depreciationCurve: judged, brand convention (bmw-ix3)"
+  ]
+}
