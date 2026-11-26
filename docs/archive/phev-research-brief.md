@@ -1,6 +1,6 @@
 # PHEV family research brief — car-calc dataset
 
-> **Superseded 2026-11-26 by `.claude/skills/research-car-family/`**, which merges this brief
+> **Archived 2026-11-26, superseded by `.claude/skills/research-car-family/`**, which merges this brief
 > with its BEV/PHEV sibling and the lessons from the wave logs, and adds per-figure provenance.
 > Dispatch research agents with the skill. This file is kept as history and is no longer updated.
 

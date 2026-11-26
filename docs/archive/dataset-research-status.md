@@ -1,5 +1,9 @@
 # EV dataset research status — handoff note
 
+> **Archived 2026-11-26.** The dataset refresh now runs from `.claude/skills/refresh-dataset/` and
+> `.claude/skills/research-car-family/`. Open items from this log (backlog, pre-launch, not on sale,
+> unrepresentable) were moved to `data/watchlist.json`. Kept as history; no longer updated.
+
 **Last updated: 2026-07-27.** Written so a new session can pick this up cold.
 
 The per-family research spec is `docs/ev-family-research-brief.md`. It is the accumulated

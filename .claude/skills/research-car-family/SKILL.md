@@ -46,14 +46,18 @@ family's three current files (provenance may not exist yet) and its siblings' ve
 
 ### 2. Establish what is orderable
 
-Open the manufacturer's Australian **Build & Price / configurator** and count the grades a Victorian
+Look your model up in `data/watchlist.json` first: its note records what earlier checks found
+(withdrawn grades, expected launch, known traps). Then open the manufacturer's Australian
+**Build & Price / configurator** and count the grades a Victorian
 buyer can order today. Availability means a live configurator entry with a price; a model on the
 nav menu, a register-interest page or an aggregator listing is a lead. Price round-number "extra
 grades" as options before believing them. Check one launch review agrees on the count.
 
 - Not orderable (discontinued, run-out with no configurator entry, register-interest only, never
   launched here) → write nothing, in `update` mode delete nothing, and report it as **not on sale**
-  with the evidence and any expected date. The orchestrator removes held families.
+  with the evidence, any expected date, and a suggested watchlist status (`pre-launch`,
+  `not-on-sale`, `unrepresentable`, `out-of-scope`) and recheck date. The orchestrator removes held
+  families and keeps the watchlist.
 - A held grade has gone → delete that row and say so in the family summary if the range is now thin.
 - A new grade → add a row.
 
@@ -120,5 +124,6 @@ DERIVED  which of batteryKwh / rangeKm / consumptionKwhPer100km were sourced vs 
 BACKED-OUT  any price backed out of drive-away, with the round-trip figure
 PROSE  sentences rewritten in update mode, or "new prose"
 LOW CONFIDENCE  every figure you judged rather than sourced, least-confident first
+WATCHLIST  suggested entries for anything not written (status, expected date, recheck date)
 BUILD  provenance check passed; build shows no FAIL for this family
 ```

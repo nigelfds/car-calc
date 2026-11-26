@@ -63,7 +63,7 @@ another way — that's intended, since specs-only is the whole point of the tab,
 around. A link that already carries both (one saved before this existed, say) still opens correctly;
 only a fresh Compare link is built clean.
 
-Any of the dataset's 216 variants goes in any of the three slots, chosen from an autocomplete on
+Any of the dataset's 314 variants goes in any of the three slots, chosen from an autocomplete on
 each — there's no preference filtering and no restriction by body type, so a ute sits next to a
 hatchback as readily as two SUVs. The slots live in the URL as `?tab=compare&compare=id1,id2,id3`; a
 cleared *interior* slot serialises as an empty segment (`id1,,id3`) rather than being dropped,
@@ -164,6 +164,12 @@ passes — a bad edit leaves the previously-published dataset untouched rather t
 data.
 
 ### Research agents
+
+A full refresh runs from the project skill `.claude/skills/refresh-dataset/`: a brand-by-brand
+market sweep, research agents in batches, removals and renames, image curation, and one pull request
+with a change report. `data/watchlist.json` records models already checked and not held (backlog,
+pre-launch, not on sale, too expensive, out of scope) with a recheck date, so a sweep does not repeat
+settled work. The research logs from the July–August 2026 build are in `docs/archive/`.
 
 The per-family research procedure lives in the project skill
 `.claude/skills/research-car-family/`: what to source, from where, the traps earlier research waves
