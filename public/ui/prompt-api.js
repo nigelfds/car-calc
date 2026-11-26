@@ -1,6 +1,6 @@
 // Chrome's built-in Prompt API, on-device. Desktop Chrome only, and only once
 // the model has downloaded — so this is strictly an enhancement. Every failure
-// path returns null and the caller falls back to the server.
+// path returns null and the caller asks the user to fill the fields in instead.
 
 import { clampParsed } from '../../calc/clamp.js';
 
@@ -44,8 +44,8 @@ export async function parseOnDevice(text) {
       initialPrompts: [{ role: 'system', content: SYSTEM }]
     });
     const raw = await session.prompt(text, { responseConstraint: PARSE_SCHEMA });
-    // Bound the same way the server bounds tier 2, so the two tiers never
-    // disagree on what counts as a valid salary, budget, boot, range or term.
+    // Bound to sane ranges so a model can never set an out-of-range salary,
+    // budget, boot, range or term.
     return clampParsed(JSON.parse(raw));
   } catch {
     return null;

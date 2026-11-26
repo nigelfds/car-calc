@@ -192,10 +192,10 @@ function withTimeout(promise, ms) {
   return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
 }
 
-// 10s matches the timeout server/claude.js applies to the Claude call itself.
-const DEFAULT_TIER_TIMEOUT_MS = 10000;
+// Long enough for a warm on-device model, short enough not to strand the button.
+const DEFAULT_PARSE_TIMEOUT_MS = 10000;
 
-export function bindFreeText(root, getState, { onParsed, timeoutMs = DEFAULT_TIER_TIMEOUT_MS }) {
+export function bindFreeText(root, getState, { onParsed, timeoutMs = DEFAULT_PARSE_TIMEOUT_MS }) {
   const textarea = root.querySelector('#free-text');
   const button = root.querySelector('#parse-button');
   const status = root.querySelector('#parse-status');
@@ -208,33 +208,13 @@ export function bindFreeText(root, getState, { onParsed, timeoutMs = DEFAULT_TIE
     button.disabled = true;
 
     try {
-      // Tier 1: on-device, in Chrome. Nothing leaves the machine. A stalled
-      // model must not leave the button disabled forever, so this races a
-      // timeout and falls through to tier 2 rather than waiting indefinitely.
-      let preferences = await withTimeout(parseOnDevice(text), timeoutMs);
-      if (preferences === TIMED_OUT) preferences = null;
-      let clarifyingQuestion = null;
-
-      // Tier 2: the server, on Haiku. Every other browser lands here. Also
-      // capped, via AbortController, so a hung request can't strand the button.
-      if (!preferences) {
-        const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), timeoutMs);
-        try {
-          const response = await fetch('/api/parse', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ text }),
-            signal: controller.signal
-          });
-          const body = await response.json();
-          // Tolerate an error response with no preferences key (e.g. a 4xx
-          // body of just { error }) instead of leaning on the outer catch.
-          preferences = body?.preferences ?? null;
-          clarifyingQuestion = body?.clarifyingQuestion ?? null;
-        } finally {
-          clearTimeout(timer);
-        }
+      // On-device, in Chrome. Nothing leaves the machine. A stalled model
+      // must not leave the button disabled forever, so this races a timeout.
+      // There is no server fallback: other browsers get the manual fields.
+      const preferences = await withTimeout(parseOnDevice(text), timeoutMs);
+      if (preferences === TIMED_OUT) {
+        status.textContent = "That's taking too long — fill the fields in below instead.";
+        return;
       }
 
       if (!preferences) {
@@ -244,17 +224,10 @@ export function bindFreeText(root, getState, { onParsed, timeoutMs = DEFAULT_TIE
 
       const { state, changedFields } = applyPreferences(getState(), preferences);
       highlightChanged(root, changedFields);
-      status.textContent = clarifyingQuestion
-        ? clarifyingQuestion
-        : `Filled in ${changedFields.length} field${changedFields.length === 1 ? '' : 's'} from your description.`;
+      status.textContent = `Filled in ${changedFields.length} field${changedFields.length === 1 ? '' : 's'} from your description.`;
       onParsed(state);
-    } catch (err) {
-      // Every tier timed out or failed outright — recover with a status
-      // message that says so, rather than a generic one, when we know it's a
-      // timeout (an aborted fetch surfaces here as an AbortError).
-      status.textContent = err?.name === 'AbortError'
-        ? "That's taking too long — fill the fields in below instead."
-        : 'Could not read that — fill the fields in below instead.';
+    } catch {
+      status.textContent = 'Could not read that — fill the fields in below instead.';
     } finally {
       button.disabled = false;
     }

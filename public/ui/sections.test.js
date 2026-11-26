@@ -261,23 +261,20 @@ test('firing input on two different fields in sequence keeps both edits and accu
   assert.deepEqual(received.touched, ['grossSalary', 'monthlyBudget'], 'touched accumulates both fields');
 });
 
-// --- bindFreeText: timeouts on both tiers ---
+// --- bindFreeText: on-device only, with a timeout ---
 
-async function withGlobals({ LanguageModel, fetch: fetchImpl }, fn) {
+async function withLanguageModel(LanguageModel, fn) {
   const hadLM = 'LanguageModel' in globalThis;
   const originalLM = globalThis.LanguageModel;
-  const originalFetch = globalThis.fetch;
 
   if (LanguageModel === undefined) delete globalThis.LanguageModel;
   else globalThis.LanguageModel = LanguageModel;
-  globalThis.fetch = fetchImpl;
 
   try {
     return await fn();
   } finally {
     if (hadLM) globalThis.LanguageModel = originalLM;
     else delete globalThis.LanguageModel;
-    globalThis.fetch = originalFetch;
   }
 }
 
@@ -300,81 +297,60 @@ const neverResolvingSession = {
   create: async () => ({ prompt: () => new Promise(() => {}), destroy() {} })
 };
 
-test('a stalled on-device model times out and falls through to the server tier', async () => {
-  const { root, button, status, click } = fakeFreeTextRoot('I earn 145k, want an SUV');
-
-  await withGlobals(
-    {
-      LanguageModel: neverResolvingSession,
-      fetch: async () => ({
-        json: async () => ({ preferences: { grossSalary: 145000 }, clarifyingQuestion: null })
-      })
-    },
-    async () => {
-      let parsedState;
-      bindFreeText(root, () => ({ grossSalary: 100000, touched: [] }), {
-        onParsed: s => { parsedState = s; },
-        timeoutMs: 20
-      });
-      await click();
-
-      assert.equal(button.disabled, false, 'button must be re-enabled');
-      assert.equal(parsedState.grossSalary, 145000, 'tier 2 result was applied');
-      assert.ok(!status.textContent.includes('too long'));
-    }
-  );
+const answeringSession = answer => ({
+  availability: async () => 'available',
+  create: async () => ({ prompt: async () => JSON.stringify(answer), destroy() {} })
 });
 
-test('a stalled server request times out, re-enables the button and reports it', async () => {
+test('an on-device parse is applied to the form', async () => {
   const { root, button, status, click } = fakeFreeTextRoot('I earn 145k, want an SUV');
 
-  await withGlobals(
-    {
-      LanguageModel: neverResolvingSession,
-      fetch: (url, opts) => new Promise((resolve, reject) => {
-        opts.signal.addEventListener('abort', () => {
-          const err = new Error('The operation was aborted');
-          err.name = 'AbortError';
-          reject(err);
-        });
-      })
-    },
-    async () => {
-      let onParsedCalled = false;
-      bindFreeText(root, () => ({ grossSalary: 100000, touched: [] }), {
-        onParsed: () => { onParsedCalled = true; },
-        timeoutMs: 20
-      });
-      await click();
+  await withLanguageModel(answeringSession({ grossSalary: 145000 }), async () => {
+    let parsedState;
+    bindFreeText(root, () => ({ grossSalary: 100000, touched: [] }), {
+      onParsed: s => { parsedState = s; },
+      timeoutMs: 1000
+    });
+    await click();
 
-      assert.equal(button.disabled, false, 'button must be re-enabled after every tier times out');
-      assert.equal(onParsedCalled, false);
-      assert.match(status.textContent, /too long/);
-    }
-  );
+    assert.equal(button.disabled, false);
+    assert.equal(parsedState.grossSalary, 145000);
+    assert.match(status.textContent, /Filled in/);
+  });
 });
 
-test('a server response with no preferences key is tolerated without throwing', async () => {
+test('a stalled on-device model times out, re-enables the button and reports it', async () => {
+  const { root, button, status, click } = fakeFreeTextRoot('I earn 145k, want an SUV');
+
+  await withLanguageModel(neverResolvingSession, async () => {
+    let onParsedCalled = false;
+    bindFreeText(root, () => ({ grossSalary: 100000, touched: [] }), {
+      onParsed: () => { onParsedCalled = true; },
+      timeoutMs: 20
+    });
+    await click();
+
+    assert.equal(button.disabled, false, 'button must be re-enabled after a timeout');
+    assert.equal(onParsedCalled, false);
+    assert.match(status.textContent, /too long/);
+  });
+});
+
+test('with no on-device model the user is told to fill the fields in', async () => {
   const { root, button, status, click } = fakeFreeTextRoot('mumble mumble');
 
-  await withGlobals(
-    {
-      LanguageModel: undefined,
-      fetch: async () => ({ json: async () => ({ error: 'AI unavailable' }) })
-    },
-    async () => {
-      let onParsedCalled = false;
-      bindFreeText(root, () => ({ grossSalary: 100000, touched: [] }), {
-        onParsed: () => { onParsedCalled = true; },
-        timeoutMs: 20
-      });
-      await click();
+  await withLanguageModel(undefined, async () => {
+    let onParsedCalled = false;
+    bindFreeText(root, () => ({ grossSalary: 100000, touched: [] }), {
+      onParsed: () => { onParsedCalled = true; },
+      timeoutMs: 20
+    });
+    await click();
 
-      assert.equal(button.disabled, false);
-      assert.equal(onParsedCalled, false);
-      assert.match(status.textContent, /Could not read/);
-    }
-  );
+    assert.equal(button.disabled, false);
+    assert.equal(onParsedCalled, false);
+    assert.match(status.textContent, /Could not read/);
+  });
 });
 
 // --- Checkbox support: the body-type filter -------------------------------

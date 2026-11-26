@@ -1,7 +1,6 @@
 // Bounds a raw parsed-preferences object to sane ranges and snaps termMonths to
-// a supported ATO lease term. Shared by both parsing tiers (server/Haiku and
-// the on-device Chrome Prompt API) so a sentence never produces a valid result
-// on one tier and an out-of-range one on the other.
+// a supported ATO lease term. Used by the on-device Chrome Prompt API parse
+// (public/ui/prompt-api.js) so a model never hands the form an out-of-range value.
 //
 // Pure core: no fetch, no Date.now(), no randomness, no I/O, no zod.
 

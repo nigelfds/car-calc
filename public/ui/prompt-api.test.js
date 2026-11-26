@@ -101,7 +101,7 @@ test('a throwing destroy() does not break the "never throws" guarantee', async (
   });
 });
 
-test('the on-device result is bounded the same way the server bounds tier 2', async () => {
+test('the on-device result is bounded to sane ranges', async () => {
   const raw = { grossSalary: 99000000, monthlyBudget: 1, termMonths: 50, seats: 20 };
   const stub = {
     availability: async () => 'available',

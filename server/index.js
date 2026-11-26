@@ -3,8 +3,6 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { loadDataset } from '../data/schema.js';
-import parseRoute from './routes/parse.js';
-import explainRoute from './routes/explain.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const readJson = name =>
@@ -31,16 +29,13 @@ app.use(express.static(join(here, '..', 'public')));
 // them out of the mounted directory.
 app.use('/calc', (req, res, next) => (req.path.endsWith('.test.js') ? res.sendStatus(404) : next()));
 app.use('/calc', express.static(join(here, '..', 'calc')));
-app.use('/api/parse', parseRoute);
-app.use('/api/explain', explainRoute);
 
 app.get('/api/dataset', (req, res) => {
   res.json({
     vehicles: dataset.vehicles,
     families: dataset.families,
     rates: readJson('rates.json'),
-    tables: readJson('tax-tables.json'),
-    aiEnabled: Boolean(process.env.ANTHROPIC_API_KEY)
+    tables: readJson('tax-tables.json')
   });
 });
 
