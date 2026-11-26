@@ -95,12 +95,15 @@ best *visible* car.
 Nothing in the app calls a model. The free-text "describe your situation" box and the
 plain-English verdict explanation are currently unwired, so after the single `/api/dataset` fetch
 at boot there are no network calls at all — every number, the ranking and the shortlist are
-computed locally and deterministically, and `ANTHROPIC_API_KEY` is not needed for anything.
+computed locally and deterministically. The server has no model routes and no Anthropic
+dependency.
 
-The parsing machinery is still present and still tested (`public/ui/sections.js`,
-`public/ui/prompt-api.js`, `/api/parse`, `/api/explain`) so it can be reconnected. Note that if
-the explanation is rewired it needs a caller written against the current verdict shape: it used
-to read a vehicle from the verdict, and step 2 no longer names one.
+The on-device half of the free-text parser (Chrome's built-in Prompt API, in
+`public/ui/sections.js` and `public/ui/prompt-api.js`) is still present and tested so it can be
+reconnected. The server fallback (`/api/parse`) and the verdict explanation (`/api/explain`) were
+removed along with the Anthropic SDK; they are in git history if wanted. Rewiring the explanation
+needs a caller written against the current verdict shape: it used to read a vehicle from the
+verdict, and step 2 no longer names one.
 
 ## Local setup
 
@@ -109,9 +112,6 @@ Requires Node 22 (pinned in `.nvmrc`).
 ```bash
 nvm use
 npm install
-cp .env.example .env
-# ANTHROPIC_API_KEY is not needed: nothing in the UI calls a model right now.
-# The routes that would use it are still there and still tested.
 npm start
 ```
 
@@ -214,15 +214,14 @@ rates move, so check them against a real quote before relying on the numbers her
 
 No bundler, no framework, no build step — native ES modules throughout, so the pure calculation
 core (`calc/`) is imported completely unchanged by both the Node test runner and the browser.
-Express (`server/`) serves the static frontend (`public/`), the dataset, and three thin API
-routes: `/api/parse` (tier 2/3 of the free-text parser, currently unwired), `/api/explain` (the plain-English verdict
-explanation), and `/api/dataset` (vehicles, families, rates and tax tables, fetched once at boot).
+Express (`server/`) serves the static frontend (`public/`), the dataset, and two thin API
+routes: `/api/dataset` (vehicles, families, rates and tax tables, fetched once at boot) and
+`/api/health`.
 Purchasing power (`calc/capacity.js`) and shortlist ranking (`calc/rank.js`) are deterministic
 functions that never call a model — the same inputs always produce the same order, for free, offline.
 
 ## Deployment
 
 A `Procfile` is included for Heroku (`web: node server/index.js`). Deployment itself is a
-separate, deliberate step. `ANTHROPIC_API_KEY` is not required while the parse and explanation are
-unwired; set it in the target environment's config if you reconnect them later. The app runs
-without it either way.
+separate, deliberate step. The app needs no API keys or other secrets. If `ANTHROPIC_API_KEY` is
+still set in the Heroku config from earlier, it is now unused and can be removed.

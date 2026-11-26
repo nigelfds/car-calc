@@ -79,8 +79,9 @@
       <!-- The free-text box and its "fill in the form for me" parse are
            removed for now: the fields below cover the same ground directly,
            and the parse only ever worked when a model was reachable. The
-           parsing code (ui/sections.js, ui/prompt-api.js, /api/parse) is
-           untouched and still tested, so it can be wired back in. -->
+           on-device parsing code (ui/sections.js, ui/prompt-api.js) is
+           still present and tested, so it can be wired back in. The server
+           fallback (/api/parse) has been removed. -->
 
       <div class="field-group field-group--numeric">
         <div class="field">

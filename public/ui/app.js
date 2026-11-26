@@ -466,11 +466,11 @@ function boot(root, dataset) {
   }
 
   // The plain-English verdict explanation is gone with the free-text box that
-  // triggered it — /api/explain only ever ran after a successful parse. It had
-  // also broken silently in the capacity rework: it read lastVerdict.vehicle,
-  // and the verdict no longer names a car. The server route and its tests are
-  // untouched, so rewiring it means writing a caller against the new shape
-  // rather than resurrecting this one.
+  // triggered it. It had also broken silently in the capacity rework: it read
+  // lastVerdict.vehicle, and the verdict no longer names a car. Its server
+  // route (/api/explain) and the Anthropic SDK have since been removed too, so
+  // bringing it back means a new route and a caller written against the
+  // current verdict shape — see git history for the old one.
 
   // A getter, not `state` itself — see renderInputs's own doc comment
   // (ui/sections.js). onFieldChange below reassigns this closure's local
