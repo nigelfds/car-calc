@@ -1,0 +1,421 @@
+{
+  "familyId": "skoda-enyaq",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "skoda-enyaq-60-select": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/models/enyaq-family/enyaq-select",
+        "note": "Skoda AU model page lists Select 60 with a 'from' MRDP and a Build your own link to the configurator; MY27 spec sheet (July 2026) covers it"
+      },
+      "listPrice": {
+        "value": 51990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
+        "note": "CarExpert MY27 price table headed 'Price before on-road costs' (10 Jul 2026). Skoda AU publishes only MRDP; no Skoda-published list price found. Spec sheet and model page MRDP $55,990 to 31/12/26; app computes $55,054 from $51,990, so MRDP is $936 above (consistent). CarExpert 2027 Select price page also states $51,990 'before on-road costs' (https://www.carexpert.com.au/skoda/enyaq/2027-select-suv-rwd-electric-jsgwsofm20260601)"
+      },
+      "batteryKwh": {
+        "value": 58,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'High Voltage Battery Capacity (Gross / Nett)' 61 kWh / 58 kWh, nett figure; LFP"
+      },
+      "rangeKm": {
+        "value": 431,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Range - Combined' (WLTP), standard 19-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.9,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Energy Consumption Wh/km - Combined' 159.2 Wh/km (WLTP), rounded to 0.1 kWh/100km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 585,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats up; CarExpert describes this figure as 'to the lower window' (cargo cover line); 21L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1710,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats down"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "two-row five-seat; 60/40 folding rear seats and outer rear ISOFIX per spec sheet"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Braked (kg)' 1000 with Skoda Genuine tow bar"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/own/warranty",
+        "note": "7 Year/Unlimited Kilometre Warranty for all new Skoda cars; page states no servicing condition"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "held value kept; between skoda-elroq-85-select ($55,990, 1750) and kia-ev5-air-standard-range ($56,770, 1700); above skoda-elroq-60-select ($48,990, 1600)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Skoda brand convention, identical to skoda-elroq rows; below mainstream default for thin local EV volume and persistent drive-away offers sitting below list plus on-roads"
+      }
+    },
+    "skoda-enyaq-85-sportline": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/models/enyaq-family/enyaq-suv-sportline",
+        "note": "Skoda AU model page lists Sportline 85 with a 'from' MRDP and a Build your own link to the configurator; MY27 spec sheet (July 2026) covers it"
+      },
+      "listPrice": {
+        "value": 60990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
+        "note": "CarExpert MY27 price table headed 'Price before on-road costs' (10 Jul 2026). Skoda AU publishes only MRDP; no Skoda-published list price found. Spec sheet and model page MRDP $64,990 to 31/12/26; app computes $64,432 from $60,990, so MRDP is $558 above (consistent)"
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'High Voltage Battery Capacity (Gross / Nett)' 82 kWh / 77 kWh, nett figure; NMC"
+      },
+      "rangeKm": {
+        "value": 551,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Range - Combined' (WLTP), standard 20-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.2,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Energy Consumption Wh/km - Combined' 161.6 Wh/km (WLTP), rounded to 0.1 kWh/100km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 585,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats up; CarExpert describes this figure as 'to the lower window' (cargo cover line); 21L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1710,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats down"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "two-row five-seat; 60/40 folding rear seats and outer rear ISOFIX per spec sheet"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Braked (kg)' 2000 with Skoda Genuine tow bar; up from held 1000 kg (MY26). CarExpert 2027 Sportline pages also show 2,000 kg braked"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/own/warranty",
+        "note": "7 Year/Unlimited Kilometre Warranty for all new Skoda cars; page states no servicing condition"
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "held value kept; matches vw-id4-pro ($60,990, 1850) on the same platform and price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Skoda brand convention, identical to skoda-elroq rows; below mainstream default for thin local EV volume and persistent drive-away offers sitting below list plus on-roads"
+      }
+    },
+    "skoda-enyaq-coupe-85-sportline": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/models/enyaq-family/enyaq-coupe-sportline",
+        "note": "Skoda AU model page lists Coupe Sportline 85 with a 'from' MRDP and a Build your own link to the configurator; MY27 spec sheet (July 2026) covers it"
+      },
+      "listPrice": {
+        "value": 66990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
+        "note": "CarExpert MY27 price table headed 'Price before on-road costs' (10 Jul 2026). Skoda AU publishes only MRDP; no Skoda-published list price found. CarExpert 2027 Coupe Sportline price page also states $66,990 before on-road costs (https://www.carexpert.com.au/skoda/enyaq/2027-sportline-suv-rwd-electric-jsggwmff20260601). Skoda MRDPs disagree: model page $70,990 (app computes $70,684, $306 below), spec sheet $68,990 (a subsidised offer below computed)"
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'High Voltage Battery Capacity (Gross / Nett)' 82 kWh / 77 kWh, nett figure; NMC"
+      },
+      "rangeKm": {
+        "value": 565,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Range - Combined' (WLTP), standard 21-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Energy Consumption Wh/km - Combined' 156.9 Wh/km (WLTP), rounded to 0.1 kWh/100km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 570,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats up; CarExpert describes this figure as 'to the lower window' (cargo cover line); 21L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1610,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats down"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "two-row five-seat; 60/40 folding rear seats and outer rear ISOFIX per spec sheet"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Braked (kg)' 2000 with Skoda Genuine tow bar; up from held 1000 kg (MY26). CarExpert 2027 Sportline pages also show 2,000 kg braked"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/own/warranty",
+        "note": "7 Year/Unlimited Kilometre Warranty for all new Skoda cars; page states no servicing condition"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "held value kept; between kia-ev5-earth-awd ($64,770, 1900) and vw-id4-gtx ($70,990, 2000)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Skoda brand convention, identical to skoda-elroq rows; below mainstream default for thin local EV volume and persistent drive-away offers sitting below list plus on-roads"
+      }
+    },
+    "skoda-enyaq-rs": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/models/enyaq-family/enyaq-suv-rs",
+        "note": "Skoda AU model page lists RS with a 'from' MRDP and a Build your own link to the configurator; MY27 spec sheet (July 2026) covers it"
+      },
+      "listPrice": {
+        "value": 76590,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
+        "note": "CarExpert MY27 price table headed 'Price before on-road costs' (10 Jul 2026). Skoda AU publishes only MRDP; no Skoda-published list price found. Spec sheet and model page MRDP $79,990 to 31/12/26, $697 below the app's computed $80,687, so a subsidised offer, not evidence against the list"
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'High Voltage Battery Capacity (Gross / Nett)' 82 kWh / 77 kWh, nett figure; NMC; held RS row had 79 kWh (MY26 84 kWh gross pack), MY27 RS uses the 82/77 pack"
+      },
+      "rangeKm": {
+        "value": 546,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Range - Combined' (WLTP), standard 21-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.5,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Energy Consumption Wh/km - Combined' 164.8 Wh/km (WLTP), rounded to 0.1 kWh/100km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 585,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats up; CarExpert describes this figure as 'to the lower window' (cargo cover line); 21L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1710,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats down"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "two-row five-seat; 60/40 folding rear seats and outer rear ISOFIX per spec sheet"
+      },
+      "towKg": {
+        "value": 2200,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Braked (kg)' 2200 with Skoda Genuine tow bar; up from held 1200 kg (MY26). CarExpert 2027 Sportline pages also show 2,000 kg braked"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/own/warranty",
+        "note": "7 Year/Unlimited Kilometre Warranty for all new Skoda cars; page states no servicing condition"
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "held value kept; above kia-ev5-gt-line-awd ($71,770, 2050) and vw-id4-gtx ($70,990, 2000) for a pricier 250kW dual-motor car"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Skoda brand convention, identical to skoda-elroq rows; below mainstream default for thin local EV volume and persistent drive-away offers sitting below list plus on-roads"
+      }
+    },
+    "skoda-enyaq-coupe-rs": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/models/enyaq-family/enyaq-coupe-rs",
+        "note": "Skoda AU model page lists Coupe RS with a 'from' MRDP and a Build your own link to the configurator; MY27 spec sheet (July 2026) covers it"
+      },
+      "listPrice": {
+        "value": 77590,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
+        "note": "CarExpert MY27 price table headed 'Price before on-road costs' (10 Jul 2026). Skoda AU publishes only MRDP; no Skoda-published list price found. Spec sheet and model page MRDP $80,990 to 31/12/26, $739 below the app's computed $81,729, so a subsidised offer"
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'High Voltage Battery Capacity (Gross / Nett)' 82 kWh / 77 kWh, nett figure; NMC; held RS row had 79 kWh (MY26 84 kWh gross pack), MY27 RS uses the 82/77 pack"
+      },
+      "rangeKm": {
+        "value": 557,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Range - Combined' (WLTP), standard 21-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.1,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Energy Consumption Wh/km - Combined' 161.2 Wh/km (WLTP), rounded to 0.1 kWh/100km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 570,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats up; CarExpert describes this figure as 'to the lower window' (cargo cover line); 21L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1610,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "VDA, rear seats down"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "two-row five-seat; 60/40 folding rear seats and outer rear ISOFIX per spec sheet"
+      },
+      "towKg": {
+        "value": 2200,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/a80686f0-e0c0-4e7a-96d8-8fe8edacd172",
+        "note": "MY27 AU spec sheet 'Braked (kg)' 2200 with Skoda Genuine tow bar; up from held 1200 kg (MY26). CarExpert 2027 Sportline pages also show 2,000 kg braked"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/own/warranty",
+        "note": "7 Year/Unlimited Kilometre Warranty for all new Skoda cars; page states no servicing condition"
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "held value kept; $50 above skoda-enyaq-rs for the $1,000 dearer Coupe body"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Skoda brand convention, identical to skoda-elroq rows; below mainstream default for thin local EV volume and persistent drive-away offers sitting below list plus on-roads"
+      }
+    }
+  },
+  "lowConfidence": [
+    "skoda-enyaq-rs.listPrice: Skoda AU publishes only MRDP ($79,990, below the app's computed $80,687); $76,590 list rests on CarExpert's July 2026 MY27 table, not confirmed by a Skoda-published list price on the research date",
+    "skoda-enyaq-coupe-rs.listPrice: same basis; $77,590 from CarExpert's MY27 table; Skoda MRDP $80,990 sits below computed drive-away",
+    "skoda-enyaq-coupe-85-sportline.listPrice: Skoda's own MRDP is inconsistent ($70,990 model page vs $68,990 spec sheet); $66,990 from CarExpert's MY27 table and 2027 variant page",
+    "skoda-enyaq-85-sportline.listPrice: $60,990 from CarExpert's MY27 table; Skoda MRDP $64,990 consistent but not proof",
+    "skoda-enyaq-60-select.listPrice: $51,990 from CarExpert's MY27 table and 2027 Select page; Skoda MRDP $55,990 consistent but not proof",
+    "skoda-enyaq-rs.towKg: 2200 kg from MY27 AU spec sheet, nearly double the held 1200 kg; no second source for the RS figure",
+    "skoda-enyaq-coupe-rs.towKg: same, 2200 kg spec sheet only",
+    "skoda-enyaq-60-select.insuranceAnnual: judged, held value kept, anchored to vw-id4 / kia-ev5 / skoda-elroq rows",
+    "skoda-enyaq-85-sportline.insuranceAnnual: judged, held value kept, anchored to vw-id4 / kia-ev5 / skoda-elroq rows",
+    "skoda-enyaq-coupe-85-sportline.insuranceAnnual: judged, held value kept, anchored to vw-id4 / kia-ev5 / skoda-elroq rows",
+    "skoda-enyaq-rs.insuranceAnnual: judged, held value kept, anchored to vw-id4 / kia-ev5 / skoda-elroq rows",
+    "skoda-enyaq-coupe-rs.insuranceAnnual: judged, held value kept, anchored to vw-id4 / kia-ev5 / skoda-elroq rows",
+    "skoda-enyaq-60-select.depreciationCurve: judged Skoda brand convention",
+    "skoda-enyaq-85-sportline.depreciationCurve: judged Skoda brand convention",
+    "skoda-enyaq-coupe-85-sportline.depreciationCurve: judged Skoda brand convention",
+    "skoda-enyaq-rs.depreciationCurve: judged Skoda brand convention",
+    "skoda-enyaq-coupe-rs.depreciationCurve: judged Skoda brand convention"
+  ]
+}

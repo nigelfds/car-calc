@@ -1,0 +1,247 @@
+{
+  "familyId": "smart-1",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "smart-1-pro-plus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=11",
+        "note": "Pro+ listed with a price on the smart AU #1 configurator, 2026-11-26"
+      },
+      "listPrice": {
+        "value": 49900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=11",
+        "note": "configurator grade card: \"from $49,900 + ORC\"; same on the configurator landing page. Owner decision: smart AU price wins where sources disagree"
+      },
+      "batteryKwh": {
+        "value": 62,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1667/Smart-1-Proplus",
+        "note": "usable 62.0 / nominal 66.0 kWh (EV Database, Pro+); smart AU states all #1 lines use the same 66 kWh pack, so usable applied to all grades; CarExpert also 62 usable / 66 max"
+      },
+      "rangeKm": {
+        "value": 420,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=11",
+        "note": "\"Range WLTP Combined\" on the grade card, 19-inch wheel the AU grade ships on; no AU-certified figure found"
+      },
+      "bootLitresSeatsDown": {
+        "value": 986,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1667/Smart-1-Proplus",
+        "note": "max with rear seats folded, frunk (15 L) not added; CarExpert also 986"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs",
+        "note": "braked 1,600 kg, unbraked 750 kg; smart AU configurator also \"1600 kg towing weight\""
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs",
+        "note": "5yr/150,000km vehicle; battery 8yr/150,000km"
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "held value kept; anchored to smart-3 rows (1850/1950/2350 at $52.9k-$65.9k), smart-5 (2150 at $58.9k) and kia-ev3 / byd-atto3 rows"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention, identical to smart-5 and smart-3 (list cuts of $4,000-$5,000 since launch, runout discounting, three-dealer network)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1667/Smart-1-Proplus",
+        "note": "WLTP rated 170 Wh/km (EV Database; CarExpert same); usable/range gives 14.8, rated figure includes charging losses"
+      },
+      "bootLitresSeatsUp": {
+        "value": 323,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs",
+        "note": "323 L seats up \"to lower window\" (cargo cover); EV Database 323 L; frunk 15 L not added"
+      }
+    },
+    "smart-1-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=12",
+        "note": "Premium listed with a price on the smart AU #1 configurator, 2026-11-26"
+      },
+      "listPrice": {
+        "value": 53900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=12",
+        "note": "configurator grade card: \"from $53,900 + ORC\"; same on the configurator landing page. Owner decision: smart AU price wins where sources disagree"
+      },
+      "batteryKwh": {
+        "value": 62,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1667/Smart-1-Proplus",
+        "note": "usable 62.0 / nominal 66.0 kWh (EV Database, Pro+); smart AU states all #1 lines use the same 66 kWh pack, so usable applied to all grades; CarExpert also 62 usable / 66 max"
+      },
+      "rangeKm": {
+        "value": 440,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=12",
+        "note": "\"Range WLTP Combined\" on the grade card, 19-inch wheel the AU grade ships on; no AU-certified figure found"
+      },
+      "bootLitresSeatsDown": {
+        "value": 986,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/media/2025-smart-1-premium-review",
+        "note": "max with rear seats folded, frunk (15 L) not added; CarExpert also 986"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs",
+        "note": "braked 1,600 kg, unbraked 750 kg; smart AU configurator also \"1600 kg towing weight\""
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs",
+        "note": "5yr/150,000km vehicle; battery 8yr/150,000km"
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "held value kept; anchored to smart-3 rows (1850/1950/2350 at $52.9k-$65.9k), smart-5 (2150 at $58.9k) and kia-ev3 / byd-atto3 rows"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention, identical to smart-5 and smart-3 (list cuts of $4,000-$5,000 since launch, runout discounting, three-dealer network)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=12",
+        "note": "\"Electric consumption ... kWh/100km (WLTP mixed cycle)\" on the smart AU configurator page for this grade"
+      },
+      "bootLitresSeatsUp": {
+        "value": 313,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/media/2025-smart-1-premium-review",
+        "note": "\"313L seats up\" in smart AU Premium review spec box; Premium loses 10 L to the Beats subwoofer vs Pro+ 323 L; frunk not added"
+      }
+    },
+    "smart-1-brabus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=13",
+        "note": "BRABUS (AWD) listed with a price on the smart AU #1 configurator, 2026-11-26"
+      },
+      "listPrice": {
+        "value": 63900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=13",
+        "note": "configurator grade card: \"from $63,900 + ORC\"; same on the configurator landing page. Owner decision: smart AU price wins where sources disagree"
+      },
+      "batteryKwh": {
+        "value": 62,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1667/Smart-1-Proplus",
+        "note": "usable 62.0 / nominal 66.0 kWh (EV Database, Pro+); smart AU states all #1 lines use the same 66 kWh pack, so usable applied to all grades; CarExpert also 62 usable / 66 max"
+      },
+      "rangeKm": {
+        "value": 400,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=13",
+        "note": "\"Range WLTP Combined\" on the grade card, 19-inch wheel the AU grade ships on; no AU-certified figure found"
+      },
+      "bootLitresSeatsDown": {
+        "value": 986,
+        "basis": "judged",
+        "note": "Premium/Pro+ folded figure 986 L applied; no BRABUS-specific figure found"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs",
+        "note": "braked 1,600 kg, unbraked 750 kg; smart AU configurator also \"1600 kg towing weight\""
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/smart/1/pro/features-and-specs",
+        "note": "5yr/150,000km vehicle; battery 8yr/150,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2300,
+        "basis": "judged",
+        "note": "held value kept; anchored to smart-3 rows (1850/1950/2350 at $52.9k-$65.9k), smart-5 (2150 at $58.9k) and kia-ev3 / byd-atto3 rows; BRABUS loaded for 315kW AWD"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention, identical to smart-5 and smart-3 (list cuts of $4,000-$5,000 since launch, runout discounting, three-dealer network)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.2,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=13",
+        "note": "\"Electric consumption ... kWh/100km (WLTP mixed cycle)\" on the smart AU configurator page for this grade"
+      },
+      "bootLitresSeatsUp": {
+        "value": 313,
+        "basis": "judged",
+        "note": "BRABUS carries the same Beats audio as Premium, so the Premium 313 L figure (smart AU Premium review) is applied; no BRABUS-specific figure found"
+      }
+    }
+  },
+  "lowConfidence": [
+    "smart-1-brabus.bootLitresSeatsUp / bootLitresSeatsDown: judged from the Premium (same Beats subwoofer), no BRABUS figure published",
+    "smart-1-premium.bootLitresSeatsDown / smart-1-brabus.bootLitresSeatsDown: 986 L may not reflect the 10 L subwoofer loss (previous data held 976); smart AU review spec box says 986",
+    "smart-1-premium.batteryKwh / smart-1-brabus.batteryKwh: usable 62 sourced for Pro+ only; same 66 kWh pack per smart AU",
+    "smart-1-*.insuranceAnnual: judged, anchored to smart-3/smart-5",
+    "smart-1-*.depreciationCurve: judged brand convention",
+    "smart-1-*.rangeKm: smart AU pages are internally inconsistent (440/400 repeated across sections); grade-card figures 420/440/400 used, Pro+ 420 matches EV Database WLTP"
+  ]
+}

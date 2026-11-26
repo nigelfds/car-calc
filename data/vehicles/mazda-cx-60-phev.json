@@ -21,14 +21,7 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1700,
-    "depreciationCurve": [
-      1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
-    ],
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -53,14 +46,7 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1750,
-    "depreciationCurve": [
-      1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
-    ],
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -85,14 +71,7 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1800,
-    "depreciationCurve": [
-      1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
-    ],
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -117,14 +96,7 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1900,
-    "depreciationCurve": [
-      1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
-    ],
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -149,14 +121,7 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [
-      1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
-    ],
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -181,14 +146,7 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 2000,
-    "depreciationCurve": [
-      1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
-    ],
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -213,14 +171,7 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 2000,
-    "depreciationCurve": [
-      1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
-    ],
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
     "sourcedAt": "2026-11-26"
   }
 ]

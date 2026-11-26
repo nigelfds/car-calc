@@ -1,32 +1,36 @@
 {
   "id": "audi-a5-phev",
-  "summary": "The A5 e-hybrid quattro puts Audi's new-generation plug-in hardware — the same 270kW/500Nm and 25.9kWh gross (20.7kWh usable) pack as the Q5 e-hybrid — into a liftback body at $89,900, exactly what Audi charges for the 200kW TFSI quattro petrol and $8,300 less than the Mercedes-Benz C350e that is now its only direct rival since BMW withdrew the 330e locally. Being lighter and lower than the Q5 buys it 97km of WLTP electric range against the SUV's 82km and a better 7.3L/100km with the battery flat, and at $89,900 it slips under the $91,661 fuel-efficient luxury car tax threshold the Mercedes misses. Reviewers rate the pace, the range and the price parity, but are consistent about what the pack costs: 331 litres of boot against 445 in the petrol A5, a cabin of piano black with rattles reported on a launch car, and sport suspension on 20-inch wheels with no adaptive option.",
+  "summary": "The A5 e-hybrid quattro puts Audi's new-generation plug-in hardware — the same 270kW/500Nm and 25.9kWh gross (20.7kWh usable) pack as the Q5 e-hybrid — into a liftback body at $89,900, and for 2027 it is the A5 Audi is pushing: the 150kW petrol has been dropped and the 200kW TFSI quattro it matches on price is now customer-order only. Being lighter and lower than the Q5 buys it 97km of WLTP electric range against the SUV's 82km and 7.3L/100km with the battery flat, and at $89,900 it slips under the $91,661 fuel-efficient luxury car tax threshold; the family now also includes the $179,827 RS 5 Sedan, a 470kW V6 plug-in with a 22kWh usable pack and 78km of WLTP range that misses the 3.5L/100km test and pays full luxury car tax. Reviewers rate the pace, the range and the price parity, but are consistent about what the pack costs: 331 litres of boot against 445 in the petrol A5, a cabin of piano black with rattles reported on a launch car, and sport suspension on 20-inch wheels with no adaptive option.",
   "pros": [
-    "$89,900 is the identical list price to the 200kW TFSI quattro petrol A5 Sedan for 70kW more and a 5.1-second 0-100km/h, and the 2.6L/100km combined figure clears the 3.5L/100km fuel-efficient test — so the car is judged against the $91,661 LCT threshold rather than the $80,809 one and pays no luxury car tax at all, worth roughly $2,700",
-    "97km of WLTP electric range from a 20.7kWh usable (25.9kWh gross) battery — 15km more than the heavier Q5 e-hybrid manages on the same hardware, and a genuine WLTP number against the Mercedes-Benz C350e's 104km NEDC claim, so a 30-45km Melbourne commute runs on electricity with margin either side",
+    "$89,900 is the identical list price to the 200kW TFSI quattro petrol A5 Sedan (now customer-order only) for 70kW more and a 5.1-second 0-100km/h, and the 2.6L/100km combined figure clears the 3.5L/100km fuel-efficient test — so the car is judged against the $91,661 LCT threshold rather than the $80,809 one and pays no luxury car tax at all, worth roughly $2,700",
+    "97km of WLTP electric range from a 20.7kWh usable (25.9kWh gross) battery — 15km more than the heavier Q5 e-hybrid's 82km on the same hardware, so a 30-45km Melbourne commute runs on electricity with margin either side",
     "$8,300 cheaper than the $98,200 Mercedes-Benz C350e while making 270kW/500Nm to the Mercedes' 230kW/550Nm and matching the S5 for outputs; with the BMW 330e withdrawn from Australia the Mercedes is the only direct alternative, and it sits above the fuel-efficient LCT threshold where the Audi sits below",
-    "60g/km certified combined CO2 is half Victoria's 120g/km green passenger car threshold, so it pays $8.40 per $200 of duty instead of the $10.40 per $200 an $89,900 petrol A5 attracts — about $900 saved at the point of registration",
+    "60g/km certified combined CO2 is half Victoria's 120g/km green passenger car threshold, so it pays $8.40 per $200 of duty instead of the $10.40 per $200 an $89,900 petrol A5 attracts — about $900 saved at the point of registration; the RS 5's 86-98g/km band also qualifies, which at $179,827 saves far more against the 18.00-per-$200 top tier",
     "11kW three-phase AC charging fills the pack 0-100 per cent in about 2.5 hours, and the five-year unlimited-kilometre vehicle warranty is backed by eight years or 160,000km on the high-voltage battery"
   ],
   "cons": [
-    "The battery under the boot floor costs 114 litres: 331L seats-up and 1175L folded against 445L and 1299L in the petrol A5 Sedan, a 26 per cent loss that is the single most-cited complaint in the Australian launch reviews and the reason the pack is worth checking against a pram or a set of golf clubs before signing",
-    "The 2.6L/100km label figure only holds if every trip starts charged — Audi's own WLTP figure with the battery discharged is 7.3L/100km for this 270kW, 20-inch specification and Chasing Cars measured 7.6L/100km in mixed driving, so a buyer who cannot charge at home is running a 2,095kg quattro on 95 RON",
+    "The battery under the boot floor costs 114 litres: 331L seats-up and 1175L folded against 445L in the petrol A5 Sedan, a 26 per cent loss that is the single most-cited complaint in the Australian launch reviews and the reason the pack is worth checking against a pram or a set of golf clubs before signing; the RS 5 Sedan is no better at 331L/1170L",
+    "The 2.6L/100km label figure only holds if every trip starts charged — Audi's own WLTP figure with the battery discharged is up to 7.3L/100km for this 270kW, 20-inch specification and Chasing Cars measured 7.6L/100km in mixed driving, so a buyer who cannot charge at home is running a 2,095kg quattro on 95 RON; the 2,355kg RS 5 is rated at up to 10.0L/100km with the battery flat",
     "Charging is AC-only at 11kW with no DC fast-charge hardware, so a flat battery on a road trip stays flat until you find a destination charger — and the 46-litre tank, down from 56 in the petrol car, gives back some of the touring range the plug-in gains",
-    "PHEVs lost the FBT exemption on 1 April 2025 and $89,900 is well clear of the $75,000 2027 FBT phase cap, so the novated-lease concessions that once carried the plug-in premium do not apply and the case rests entirely on home charging",
-    "The cabin draws consistent criticism: extensive gloss-black trim and hard plastics low down, ventilated seats a $2,200 option, and a Chasing Cars launch car that had already developed rattles; the sport suspension on 245/35 R20 tyres has no adaptive alternative and CarExpert called the steering numb"
+    "PHEVs lost the FBT exemption on 1 April 2025 and $89,900 is well clear of the $75,000 2027 FBT phase cap, so the novated-lease concessions that once carried the plug-in premium do not apply and the case rests on home charging; the RS 5's 4.2L/100km label fails the 3.5L/100km test, so it pays luxury car tax from the $80,809 threshold",
+    "The cabin draws consistent criticism: extensive gloss-black trim and hard plastics low down, ventilated seats a $2,200 option, and a CarsGuide launch car that had already developed rattles and creaks; the sport suspension on 20-inch wheels has no adaptive alternative and CarExpert called the steering numb"
   ],
   "sources": [
     "https://www.carexpert.com.au/car-reviews/2026-audi-a5-e-hybrid-review-quick-drive",
-    "https://www.carexpert.com.au/car-news/2026-audi-a5-achieves-price-parity-between-phev-and-ice",
+    "https://www.carexpert.com.au/car-news/2027-audi-a5-unplugs-ice-variants-as-phev-demand-surges",
+    "https://www.cars24.com.au/car-news/2027-audi-a5-range-drop-petrol-variants-australia/",
+    "https://carexpert.com.au/car-news/2025-audi-a5-e-hybrid-revealed-to-take-on-3-series-c-class-phevs",
     "https://www.carsguide.com.au/ev/audi-a5-e-hybrid-100170",
     "https://www.chasingcars.com.au/reviews/large-cars/audi-a5-avant-e-hybrid-2026-review/",
-    "https://www.carsales.com.au/research/audi/a5/2026/",
-    "https://www.audi.com/en/a5-e-hybrid-quattro-1016/technical-data",
-    "https://www.audi.ie/en/models/a5/a5-saloon-e-hybrid/",
+    "https://magazine.audi.com.au/article/the-best-of-both-worlds",
+    "https://magazine.audi.com.au/article/rs-5-arriving-in-2026",
+    "https://www.carexpert.com.au/car-news/2026-audi-rs5-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2027-audi-rs5-review",
+    "https://www.audi.com/en/audi-a5-sedan-e-hybrid-quattro-16585",
+    "https://www.audi.com/en/audi-rs-5-sedan-16991",
     "https://www.audi.com/en/press-releases/new-audi-a5-e-hybrids-combine-dynamics-efficiency-and-long-electric-range-16582",
-    "https://www.auto-data.net/en/audi-a5-sedan-b10-2.0-tfsi-367hp-e-hybrid-quattro-ultra-s-tronic-54001",
-    "https://www.carexpert.com.au/car-news/2025-mercedes-benz-c350e-priced-for-australia-phev-sedan-has-100km-of-range",
+    "https://www.carsales.com.au/research/audi/a5/2026/e-hybrid-s-line/83567289-7d2a-4f0f-a3cc-2e304bd3ee8d/",
     "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
   ],
-  "sourcedAt": "2026-07-28"
+  "sourcedAt": "2026-11-26"
 }

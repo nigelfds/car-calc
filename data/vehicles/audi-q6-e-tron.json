@@ -16,14 +16,7 @@
     "towKg": 2000,
     "warrantyYears": 5,
     "insuranceAnnual": 2600,
-    "depreciationCurve": [
-      1,
-      0.68,
-      0.56,
-      0.47,
-      0.4,
-      0.34
-    ],
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -43,14 +36,7 @@
     "towKg": 2000,
     "warrantyYears": 5,
     "insuranceAnnual": 2650,
-    "depreciationCurve": [
-      1,
-      0.68,
-      0.56,
-      0.47,
-      0.4,
-      0.34
-    ],
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -70,14 +56,7 @@
     "towKg": 2400,
     "warrantyYears": 5,
     "insuranceAnnual": 3500,
-    "depreciationCurve": [
-      1,
-      0.62,
-      0.5,
-      0.41,
-      0.34,
-      0.29
-    ],
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -97,14 +76,7 @@
     "towKg": 2400,
     "warrantyYears": 5,
     "insuranceAnnual": 3600,
-    "depreciationCurve": [
-      1,
-      0.62,
-      0.5,
-      0.41,
-      0.34,
-      0.29
-    ],
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
     "sourcedAt": "2026-11-26"
   }
 ]

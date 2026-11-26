@@ -72,14 +72,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.68,
-          0.56,
-          0.47,
-          0.4,
-          0.34
+          0.67,
+          0.55,
+          0.46,
+          0.39,
+          0.33
         ],
         "basis": "judged",
-        "note": "Kept the held Q6 RWD curve (Audi brand convention, steeper than Q4 [1,0.70,...] for thin volume and the 2025-26 price cuts). The MY27 $9,918 cut resets the new price lower; no evidence yet on MY27 residuals."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "audi-q6-e-tron-sportback-rwd": {
@@ -151,14 +151,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.68,
-          0.56,
-          0.47,
-          0.4,
-          0.34
+          0.67,
+          0.55,
+          0.46,
+          0.39,
+          0.33
         ],
         "basis": "judged",
-        "note": "Kept the held Q6 RWD curve (Audi brand convention, steeper than Q4 [1,0.70,...] for thin volume and the 2025-26 price cuts). The MY27 $9,918 cut resets the new price lower; no evidence yet on MY27 residuals."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "audi-q6-e-tron-sq6": {
@@ -230,14 +230,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.62,
-          0.5,
-          0.41,
-          0.34,
-          0.29
+          0.67,
+          0.55,
+          0.46,
+          0.39,
+          0.33
         ],
         "basis": "judged",
-        "note": "Kept the held SQ6 curve; steepest in the Audi set for a $130k+ performance EV with a $21,418 MY27 list cut eroding earlier cars. Anchor genesis-gv70-electrified [1,0.64,...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "audi-q6-e-tron-sq6-sportback": {
@@ -309,14 +309,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.62,
-          0.5,
-          0.41,
-          0.34,
-          0.29
+          0.67,
+          0.55,
+          0.46,
+          0.39,
+          0.33
         ],
         "basis": "judged",
-        "note": "Kept the held SQ6 curve; steepest in the Audi set for a $130k+ performance EV with a $21,418 MY27 list cut eroding earlier cars. Anchor genesis-gv70-electrified [1,0.64,...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     }
   },
@@ -327,7 +327,7 @@
     "audi-q6-e-tron-rwd.rangeKm: CarExpert database WLTP 462 km, matching EVDB TEH; Audi has not confirmed MY27 range",
     "audi-q6-e-tron-*.availability: audi.com.au configurator returned 403; orderability rests on launch reports saying 'available to order now'",
     "audi-q6-e-tron-*.insuranceAnnual: judged",
-    "audi-q6-e-tron-*.depreciationCurve: judged, held curves kept",
+    "audi-q6-e-tron-*.depreciationCurve: judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry",
     "audi-q6-e-tron-rwd.bootLitresSeatsDown: 1517 L (EVDB, CarExpert SQ6) vs held 1529 and CarExpert Base 1593"
   ]
 }

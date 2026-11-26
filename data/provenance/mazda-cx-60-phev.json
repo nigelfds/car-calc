@@ -16,7 +16,7 @@
         "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $61,970 (RDP) vs app drive-away $59,899, gap $2,071. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
       },
       "batteryKwh": {
-        "value": 14.0,
+        "value": 14,
         "basis": "judged",
         "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
       },
@@ -93,14 +93,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.73,
-          0.62,
-          0.54,
-          0.47,
-          0.41
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "note": "Kept the held curve, below the mainstream default. Evidence: the $7,150 list price cut in July 2026 erodes the resale value of earlier cars, and CarExpert reports drive-away deals well under list. Mazda PHEV convention: mazda-cx-80-phev holds a similar steep curve [1, 0.71, ...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "mazda-cx-60-phev-evolve": {
@@ -116,7 +116,7 @@
         "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $65,617 (special offer) vs app drive-away $65,109, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
       },
       "batteryKwh": {
-        "value": 14.0,
+        "value": 14,
         "basis": "judged",
         "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
       },
@@ -193,14 +193,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.73,
-          0.62,
-          0.54,
-          0.47,
-          0.41
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "note": "Kept the held curve, below the mainstream default. Evidence: the $7,150 list price cut in July 2026 erodes the resale value of earlier cars, and CarExpert reports drive-away deals well under list. Mazda PHEV convention: mazda-cx-80-phev holds a similar steep curve [1, 0.71, ...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "mazda-cx-60-phev-touring": {
@@ -216,7 +216,7 @@
         "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $68,743 (special offer) vs app drive-away $68,235, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
       },
       "batteryKwh": {
-        "value": 14.0,
+        "value": 14,
         "basis": "judged",
         "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
       },
@@ -293,14 +293,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.73,
-          0.62,
-          0.54,
-          0.47,
-          0.41
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "note": "Kept the held curve, below the mainstream default. Evidence: the $7,150 list price cut in July 2026 erodes the resale value of earlier cars, and CarExpert reports drive-away deals well under list. Mazda PHEV convention: mazda-cx-80-phev holds a similar steep curve [1, 0.71, ...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "mazda-cx-60-phev-gt": {
@@ -316,7 +316,7 @@
         "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $76,558 (RDP) vs app drive-away $74,487, gap $2,071. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
       },
       "batteryKwh": {
-        "value": 14.0,
+        "value": 14,
         "basis": "judged",
         "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
       },
@@ -393,14 +393,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.73,
-          0.62,
-          0.54,
-          0.47,
-          0.41
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "note": "Kept the held curve, below the mainstream default. Evidence: the $7,150 list price cut in July 2026 erodes the resale value of earlier cars, and CarExpert reports drive-away deals well under list. Mazda PHEV convention: mazda-cx-80-phev holds a similar steep curve [1, 0.71, ...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "mazda-cx-60-phev-azami": {
@@ -416,7 +416,7 @@
         "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $79,371 (special offer) vs app drive-away $78,863, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
       },
       "batteryKwh": {
-        "value": 14.0,
+        "value": 14,
         "basis": "judged",
         "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
       },
@@ -493,14 +493,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.73,
-          0.62,
-          0.54,
-          0.47,
-          0.41
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "note": "Kept the held curve, below the mainstream default. Evidence: the $7,150 list price cut in July 2026 erodes the resale value of earlier cars, and CarExpert reports drive-away deals well under list. Mazda PHEV convention: mazda-cx-80-phev holds a similar steep curve [1, 0.71, ...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "mazda-cx-60-phev-azami-sp": {
@@ -516,7 +516,7 @@
         "note": "GoAuto 23 Jul 2026 price table, 'Pricing excludes on-road costs' (prints -$5150 for the Azami lines, an arithmetic slip: the new figures match CarExpert's July table, which also lists this line at $76,840 'excludes on-road costs'). CarExpert's Aug 2026 table omits SP/Takumi and lists them as $2,000 Azami packages, consistent with $74,840 + $2,000. Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $81,455 (special offer, Azami with $2,000 package interior) vs app drive-away $80,947, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
       },
       "batteryKwh": {
-        "value": 14.0,
+        "value": 14,
         "basis": "judged",
         "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
       },
@@ -593,14 +593,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.73,
-          0.62,
-          0.54,
-          0.47,
-          0.41
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "note": "Kept the held curve, below the mainstream default. Evidence: the $7,150 list price cut in July 2026 erodes the resale value of earlier cars, and CarExpert reports drive-away deals well under list. Mazda PHEV convention: mazda-cx-80-phev holds a similar steep curve [1, 0.71, ...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "mazda-cx-60-phev-azami-takumi": {
@@ -616,7 +616,7 @@
         "note": "GoAuto 23 Jul 2026 price table, 'Pricing excludes on-road costs' (prints -$5150 for the Azami lines, an arithmetic slip: the new figures match CarExpert's July table, which also lists this line at $76,840 'excludes on-road costs'). CarExpert's Aug 2026 table omits SP/Takumi and lists them as $2,000 Azami packages, consistent with $74,840 + $2,000. Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $81,455 (special offer, Azami with $2,000 package interior) vs app drive-away $80,947, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
       },
       "batteryKwh": {
-        "value": 14.0,
+        "value": 14,
         "basis": "judged",
         "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
       },
@@ -693,14 +693,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.73,
-          0.62,
-          0.54,
-          0.47,
-          0.41
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "note": "Kept the held curve, below the mainstream default. Evidence: the $7,150 list price cut in July 2026 erodes the resale value of earlier cars, and CarExpert reports drive-away deals well under list. Mazda PHEV convention: mazda-cx-80-phev holds a similar steep curve [1, 0.71, ...]."
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     }
   },
@@ -711,6 +711,6 @@
     "mazda-cx-60-phev-azami-sp.listPrice / azami-takumi.listPrice: $76,840 from GoAuto and CarExpert's July table plus Azami + $2,000 package; CarExpert's Aug table omits them",
     "mazda-cx-60-phev-pure/evolve/touring.rangeKm: the current-WLTP 63 km is from a 20-inch car; the 18-inch car was 64 km under the previous certification",
     "mazda-cx-60-phev-*.insuranceAnnual: judged",
-    "mazda-cx-60-phev-*.depreciationCurve: judged"
+    "mazda-cx-60-phev-*.depreciationCurve: judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
   ]
 }

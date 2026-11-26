@@ -3,7 +3,7 @@
 - [x] Step 0: preflight (build 0 failures, tests green, branch from main at a84056e)
 - [x] Step 1: market sweep, see sweep.md. Waiting for the person to confirm the work list.
 - [ ] Step 2: plan batches
-- [~] Steps 3-4: research and integrate. Trial (10), wave 1 (26) and wave 2 (26) done; wave 3 paused at 14 of 26 (12 to rerun); see trial.md, wave-1.md, wave-2.md, wave-3.md.
+- [~] Steps 3-4: research and integrate. Trial (10), wave 1 (26) and wave 2 (26) done; wave 3 (26, 12 rerun after a pause); see trial.md, wave-1.md, wave-2.md, wave-3.md.
 - [ ] Step 5: watchlist, rates, tax tables. Known watchlist fixes from the sweep: Denza, Mitsubishi
       and Land Rover now sell BEVs; Nissan has a PHEV coming; LDV MIFA 9 and Isuzu D-Max EV are off.
 - [ ] Steps 6-8: images, app check, PR

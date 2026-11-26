@@ -16,8 +16,15 @@
     "towKg": 0,
     "warrantyYears": 7,
     "insuranceAnnual": 1600,
-    "depreciationCurve": [1, 0.75, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.75,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "geely-ex5-inspire",
@@ -36,7 +43,14 @@
     "towKg": 0,
     "warrantyYears": 7,
     "insuranceAnnual": 1700,
-    "depreciationCurve": [1, 0.75, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.75,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

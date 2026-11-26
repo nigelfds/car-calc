@@ -79,7 +79,7 @@
           0.34
         ],
         "basis": "judged",
-        "note": "Cupra brand convention held for the Endurance (steeper than mainstream default: thin local volume, sub-brand resale risk, $5,500 entry-price cut in June 2026 hits used values); V uses the same curve"
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "cupra-tavascan-endurance": {
@@ -158,7 +158,7 @@
           0.34
         ],
         "basis": "judged",
-        "note": "held Cupra curve kept: thin local volume and marginal brand; June 2026 range reshuffle and new cheaper V weigh on used values"
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     },
     "cupra-tavascan-vz": {
@@ -230,19 +230,19 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.66,
-          0.54,
-          0.45,
-          0.38,
-          0.32
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
         ],
         "basis": "judged",
-        "note": "held Cupra VZ curve kept: slightly steeper than Endurance as the flagship premium erodes faster, consistent with held data"
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
       }
     }
   },
   "lowConfidence": [
-    "cupra-tavascan-v.depreciationCurve: no used-market data for the new V; Endurance curve applied",
+    "cupra-tavascan-v.depreciationCurve: judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry",
     "cupra-tavascan-v.insuranceAnnual: judged, anchored to Skoda Elroq 85 Select",
     "cupra-tavascan-endurance.insuranceAnnual: judged, anchored to Enyaq Coupe 85 Sportline / ID.5 Pro",
     "cupra-tavascan-vz.insuranceAnnual: judged, anchored to Enyaq RS / ID.5 GTX",

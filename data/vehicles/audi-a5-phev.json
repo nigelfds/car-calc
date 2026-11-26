@@ -18,10 +18,35 @@
     "bootLitresSeatsUp": 331,
     "bootLitresSeatsDown": 1175,
     "seats": 5,
-    "towKg": 1900,
+    "towKg": 1700,
     "warrantyYears": 5,
     "insuranceAnnual": 2350,
-    "depreciationCurve": [1, 0.66, 0.54, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "audi-a5-phev-rs5-sedan",
+    "familyId": "audi-a5-phev",
+    "make": "Audi",
+    "model": "RS 5",
+    "variant": "Sedan quattro 470kW",
+    "bodyType": "Sedan",
+    "powertrain": "phev",
+    "listPrice": 179827,
+    "batteryKwh": 22,
+    "rangeKm": 78,
+    "consumptionKwhPer100km": 28.2,
+    "combinedRangeKm": 558,
+    "fuelConsumptionL100km": 10,
+    "isFuelEfficientForLct": false,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 331,
+    "bootLitresSeatsDown": 1170,
+    "seats": 5,
+    "towKg": 1900,
+    "warrantyYears": 5,
+    "insuranceAnnual": 4100,
+    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
+    "sourcedAt": "2026-11-26"
   }
 ]

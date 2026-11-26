@@ -11,8 +11,8 @@
     "batteryKwh": 19.7,
     "rangeKm": 117,
     "consumptionKwhPer100km": 16.8,
-    "combinedRangeKm": 760,
-    "fuelConsumptionL100km": 7.0,
+    "combinedRangeKm": 893,
+    "fuelConsumptionL100km": 5.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 490,
@@ -21,8 +21,15 @@
     "towKg": 1800,
     "warrantyYears": 5,
     "insuranceAnnual": 1750,
-    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "vw-tiguan-phev-200tsi-r-line",
@@ -34,10 +41,10 @@
     "powertrain": "phev",
     "listPrice": 74550,
     "batteryKwh": 19.7,
-    "rangeKm": 113,
-    "consumptionKwhPer100km": 17.4,
-    "combinedRangeKm": 756,
-    "fuelConsumptionL100km": 7.0,
+    "rangeKm": 115,
+    "consumptionKwhPer100km": 17.1,
+    "combinedRangeKm": 891,
+    "fuelConsumptionL100km": 5.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 490,
@@ -46,7 +53,14 @@
     "towKg": 2000,
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

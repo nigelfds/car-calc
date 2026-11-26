@@ -1,0 +1,114 @@
+{
+  "familyId": "cupra-terramar-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "cupra-terramar-phev-vze": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/cars/terramar",
+        "note": "Cupra AU Terramar page lists six grades (S, V, VZ, VZ Tribe Edition Black, VZ Tribe Edition Green, VZe); VZe is the only PHEV and links to Configure now. Prices load by region in script and were not readable."
+      },
+      "listPrice": {
+        "value": 77990,
+        "basis": "sourced",
+        "url": "https://web2.goauto.com.au/new-models/cupra/terramar/cupra-sharpens-terramar-deals/2026-08-11/100071.html",
+        "note": "GoAuto 11 Aug 2026 MY26 offer table: VZe $77,990 +ORC (no drive-away deal on VZe; offers ended 30 Sep 2026). CarsGuide and CarExpert review: 'from $77,990 before on-road costs'; Chasing Cars '$77,990 RRP', VIC drive-away $83,490. App drive-away for $77,990 is $82,146, below the advertised VIC $83,490 (gap $1,344, consistent with dealer delivery), so $77,990 is a list price. Manufacturer price not directly readable (script-loaded)."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/terramar/1generation/346748/",
+        "note": "usable; ADAC Batteriekapazitaet (Brutto) 25,8 / (Netto) 19,7 kWh for Terramar 1.5 e-HYBRID VZ (200 kW). Cupra technical data '25,8 (~20 net)'; electrifying.com '19.7kWh (25.8kWh total)'."
+      },
+      "rangeKm": {
+        "value": 109,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.cupra.com/en-au/cars/terramar",
+        "note": "Cupra AU: '109km Electric Vehicle Range' / 'Electric range up to 109 km', footnote 2: derived from ADR 81/02 testing incl. WLTP where applicable. Below the European WLTP band 112-121 km (Cupra technical data) and 118 km for the 20-inch VZ Tribe (ADAC 346748), so WLTP-derived local spec. Launch reviews (CarExpert, Chasing Cars) quoted 110 km WLTP; held value was 110."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.1,
+        "basis": "derived",
+        "note": "batteryKwh 19.7 / rangeKm 109 x 100 = 18.07. Cross-check: European WLTP EV-mode band 17.5-19.0 kWh/100km (Cupra technical data)."
+      },
+      "combinedRangeKm": {
+        "value": 898,
+        "basis": "derived",
+        "note": "rangeKm 109 + 45 L tank / 5.7 L/100km x 100 (789.5) = 898. Tank 45 L from Cupra technical data and CarExpert review. Cupra's own WLTP total range is 830-910 km."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/terramar/1generation/346748/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,7 L/100km for Terramar 1.5 e-HYBRID VZ Tribe Edition on 255/40R20 (AU VZe is on 20-inch); 19-inch VZ (ADAC 336903) also 5,7. Cupra technical data charge-sustaining band 5,7-6,1. Same basis as vw-tayron-phev (5.9, heavier car). CarExpert observed 5.3/5.9 with battery mostly flat. Held 7.0 was judged."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/cars/terramar",
+        "note": "Cupra AU label 'Fuel consumption 1.8L/100 km' (ADR 81/02), at or below 3.5. Launch label was 0.5 L/100km (CarExpert)."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green = combined tailpipe CO2 120 g/km or less. Cupra technical data WLTP 9-12 g/km; AU 1.8 L/100km label implies about 42 g/km. Either way well under 120."
+      },
+      "bootLitresSeatsUp": {
+        "value": 400,
+        "basis": "sourced",
+        "url": "https://www.seat-cupra-mediacenter.com/content/dam/seat-media-center/models-all-brands/cupra-models/cupra-terramar/technical-data/Techninal-Data-CUPRA-Terramar.pdf",
+        "note": "Cupra technical data e-HYBRID 'Boot capacity (l) 400 (95th percentile in rear seat)', 490 with rear seat forward; petrol 508. CarExpert and CarsGuide AU reviews: 400 L. VDA to the cover."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1404,
+        "basis": "carried",
+        "note": "held 2026-08-08 figure; Parkers gives 1,404 L folded for the eHybrid (seen in search result, page paywalled HTTP 402 this run). Not in Cupra technical data or ADAC. Model year and battery unchanged."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-cupra-terramar-vze-review",
+        "note": "five-seat SUV; CarExpert review describes the second-row bench"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-cupra-terramar-vze-review",
+        "note": "CarExpert AU review 2000 kg braked; Cupra technical data e-HYBRID 2.000 kg at 8% and 12%. CarExpert spec page's 2,200 kg is the 2.0 TSI petrol figure (aggregator error)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/owners/warranty",
+        "note": "'5-year unlimited-kilometre warranty across the entire CUPRA range'; no servicing condition stated"
+      },
+      "insuranceAnnual": {
+        "value": 2050,
+        "basis": "judged",
+        "note": "held value kept; anchored to vw-tayron-phev 200TSI R-Line ($76,550) 2000, vw-tiguan-phev 200TSI R-Line ($74,550) 1950 and cupra-formentor-phev VZe 1950; Terramar is the dearest of the four"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "Cupra brand convention per owner rule (one curve per brand), matching cupra-tavascan V and Endurance rows: steeper than mainstream for thin local volume, sub-brand resale risk and Cupra's history of deep run-out discounting. Held curve was [1,0.67,0.55,0.46,0.39,0.33]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "cupra-terramar-phev-vze.bootLitresSeatsDown: carried 1,404 L; Parkers source paywalled this run, no manufacturer folded figure found",
+    "cupra-terramar-phev-vze.listPrice: manufacturer price is script-loaded and unreadable; $77,990 +ORC from GoAuto (Aug 2026) and AU reviews",
+    "cupra-terramar-phev-vze.fuelConsumptionL100km: ADAC battery-empty WLTP for the European 20-inch car, not an AU figure",
+    "cupra-terramar-phev-vze.insuranceAnnual: judged from VW Group siblings",
+    "cupra-terramar-phev-vze.depreciationCurve: judged Cupra brand curve"
+  ]
+}

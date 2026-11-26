@@ -77,18 +77,50 @@
     "bootLitresSeatsUp": 331,
     "bootLitresSeatsDown": 1175,
     "seats": 5,
-    "towKg": 1900,
+    "towKg": 1700,
     "warrantyYears": 5,
     "insuranceAnnual": 2350,
     "depreciationCurve": [
       1,
-      0.66,
-      0.54,
+      0.67,
+      0.55,
       0.46,
       0.39,
       0.33
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "audi-a5-phev-rs5-sedan",
+    "familyId": "audi-a5-phev",
+    "make": "Audi",
+    "model": "RS 5",
+    "variant": "Sedan quattro 470kW",
+    "bodyType": "Sedan",
+    "powertrain": "phev",
+    "listPrice": 179827,
+    "batteryKwh": 22,
+    "rangeKm": 78,
+    "consumptionKwhPer100km": 28.2,
+    "combinedRangeKm": 558,
+    "fuelConsumptionL100km": 10,
+    "isFuelEfficientForLct": false,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 331,
+    "bootLitresSeatsDown": 1170,
+    "seats": 5,
+    "towKg": 1900,
+    "warrantyYears": 5,
+    "insuranceAnnual": 4100,
+    "depreciationCurve": [
+      1,
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "audi-q4-e-tron-55-quattro",
@@ -152,7 +184,7 @@
     "variant": "e-hybrid quattro 270kW",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 96900,
+    "listPrice": 96818,
     "batteryKwh": 20.7,
     "rangeKm": 82,
     "consumptionKwhPer100km": 25.2,
@@ -168,13 +200,13 @@
     "insuranceAnnual": 2450,
     "depreciationCurve": [
       1,
-      0.68,
-      0.56,
-      0.48,
-      0.41,
-      0.35
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "audi-q5-phev-sportback-e-hybrid-quattro",
@@ -184,7 +216,7 @@
     "variant": "e-hybrid quattro 270kW",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 100400,
+    "listPrice": 100318,
     "batteryKwh": 20.7,
     "rangeKm": 82,
     "consumptionKwhPer100km": 25.2,
@@ -202,11 +234,11 @@
       1,
       0.67,
       0.55,
-      0.47,
-      0.4,
-      0.34
+      0.46,
+      0.39,
+      0.33
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "audi-q6-e-tron-rwd",
@@ -227,11 +259,11 @@
     "insuranceAnnual": 2600,
     "depreciationCurve": [
       1,
-      0.68,
-      0.56,
-      0.47,
-      0.4,
-      0.34
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -254,11 +286,11 @@
     "insuranceAnnual": 2650,
     "depreciationCurve": [
       1,
-      0.68,
-      0.56,
-      0.47,
-      0.4,
-      0.34
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -281,11 +313,11 @@
     "insuranceAnnual": 3500,
     "depreciationCurve": [
       1,
-      0.62,
-      0.5,
-      0.41,
-      0.34,
-      0.29
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -308,11 +340,11 @@
     "insuranceAnnual": 3600,
     "depreciationCurve": [
       1,
-      0.62,
-      0.5,
-      0.41,
-      0.34,
-      0.29
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -1610,28 +1642,28 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 68990,
-    "batteryKwh": 20,
+    "batteryKwh": 19.7,
     "rangeKm": 114,
-    "consumptionKwhPer100km": 17.5,
-    "combinedRangeKm": 729,
-    "fuelConsumptionL100km": 6.5,
+    "consumptionKwhPer100km": 17.3,
+    "combinedRangeKm": 828,
+    "fuelConsumptionL100km": 5.6,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 345,
     "bootLitresSeatsDown": 1311,
     "seats": 5,
-    "towKg": 1500,
+    "towKg": 1700,
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
-      0.67,
-      0.55,
-      0.46,
-      0.39,
-      0.33
+      0.68,
+      0.56,
+      0.47,
+      0.4,
+      0.34
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "cupra-tavascan-endurance",
@@ -1706,11 +1738,11 @@
     "insuranceAnnual": 2150,
     "depreciationCurve": [
       1,
-      0.66,
-      0.54,
-      0.45,
-      0.38,
-      0.32
+      0.68,
+      0.56,
+      0.47,
+      0.4,
+      0.34
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -1724,10 +1756,10 @@
     "powertrain": "phev",
     "listPrice": 77990,
     "batteryKwh": 19.7,
-    "rangeKm": 110,
-    "consumptionKwhPer100km": 18.6,
-    "combinedRangeKm": 753,
-    "fuelConsumptionL100km": 7,
+    "rangeKm": 109,
+    "consumptionKwhPer100km": 18.1,
+    "combinedRangeKm": 898,
+    "fuelConsumptionL100km": 5.7,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 400,
@@ -1738,13 +1770,13 @@
     "insuranceAnnual": 2050,
     "depreciationCurve": [
       1,
-      0.67,
-      0.55,
-      0.46,
-      0.39,
-      0.33
+      0.68,
+      0.56,
+      0.47,
+      0.4,
+      0.34
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "deepal-s07-rwd",
@@ -2262,13 +2294,13 @@
     "insuranceAnnual": 1150,
     "depreciationCurve": [
       1,
-      0.74,
+      0.75,
       0.63,
       0.55,
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "geely-ex2-inspire",
@@ -2289,13 +2321,13 @@
     "insuranceAnnual": 1250,
     "depreciationCurve": [
       1,
-      0.74,
+      0.75,
       0.63,
       0.55,
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "geely-ex5-complete",
@@ -2322,7 +2354,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "geely-ex5-inspire",
@@ -2349,7 +2381,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "geely-starray-em-i-complete",
@@ -4897,11 +4929,11 @@
     "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -4929,11 +4961,11 @@
     "insuranceAnnual": 2000,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -4961,11 +4993,11 @@
     "insuranceAnnual": 2000,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -4993,11 +5025,11 @@
     "insuranceAnnual": 1750,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -5025,11 +5057,11 @@
     "insuranceAnnual": 1900,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -5057,11 +5089,11 @@
     "insuranceAnnual": 1700,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -5089,11 +5121,11 @@
     "insuranceAnnual": 1800,
     "depreciationCurve": [
       1,
-      0.73,
-      0.62,
-      0.54,
-      0.47,
-      0.41
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
     "sourcedAt": "2026-11-26"
   },
@@ -5160,11 +5192,11 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 80300,
-    "batteryKwh": 17.8,
-    "rangeKm": 61,
-    "consumptionKwhPer100km": 29.2,
-    "combinedRangeKm": 1061,
-    "fuelConsumptionL100km": 7,
+    "batteryKwh": 14,
+    "rangeKm": 60,
+    "consumptionKwhPer100km": 23.3,
+    "combinedRangeKm": 935,
+    "fuelConsumptionL100km": 8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 258,
@@ -5175,13 +5207,13 @@
     "insuranceAnnual": 2050,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.52,
-      0.45,
-      0.39
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mazda-cx-80-phev-azami-sp",
@@ -5192,11 +5224,11 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 85300,
-    "batteryKwh": 17.8,
-    "rangeKm": 61,
-    "consumptionKwhPer100km": 29.2,
-    "combinedRangeKm": 1061,
-    "fuelConsumptionL100km": 7,
+    "batteryKwh": 14,
+    "rangeKm": 60,
+    "consumptionKwhPer100km": 23.3,
+    "combinedRangeKm": 935,
+    "fuelConsumptionL100km": 8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 258,
@@ -5207,13 +5239,13 @@
     "insuranceAnnual": 2150,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.52,
-      0.45,
-      0.39
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mazda-cx-80-phev-gt",
@@ -5224,11 +5256,11 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 75100,
-    "batteryKwh": 17.8,
-    "rangeKm": 61,
-    "consumptionKwhPer100km": 29.2,
-    "combinedRangeKm": 1061,
-    "fuelConsumptionL100km": 7,
+    "batteryKwh": 14,
+    "rangeKm": 60,
+    "consumptionKwhPer100km": 23.3,
+    "combinedRangeKm": 935,
+    "fuelConsumptionL100km": 8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 258,
@@ -5239,13 +5271,13 @@
     "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.52,
-      0.45,
-      0.39
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mazda-cx-80-phev-touring",
@@ -5256,11 +5288,11 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 68100,
-    "batteryKwh": 17.8,
-    "rangeKm": 61,
-    "consumptionKwhPer100km": 29.2,
-    "combinedRangeKm": 1061,
-    "fuelConsumptionL100km": 7,
+    "batteryKwh": 14,
+    "rangeKm": 60,
+    "consumptionKwhPer100km": 23.3,
+    "combinedRangeKm": 935,
+    "fuelConsumptionL100km": 8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 258,
@@ -5271,13 +5303,13 @@
     "insuranceAnnual": 1850,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.52,
-      0.45,
-      0.39
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mercedes-c-350e-phev-350e",
@@ -7052,8 +7084,8 @@
     "bodyType": "SUV",
     "listPrice": 51990,
     "batteryKwh": 58,
-    "rangeKm": 410,
-    "consumptionKwhPer100km": 15.1,
+    "rangeKm": 431,
+    "consumptionKwhPer100km": 15.9,
     "bootLitresSeatsUp": 585,
     "bootLitresSeatsDown": 1710,
     "seats": 5,
@@ -7068,7 +7100,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "skoda-enyaq-85-sportline",
@@ -7079,12 +7111,12 @@
     "bodyType": "SUV",
     "listPrice": 60990,
     "batteryKwh": 77,
-    "rangeKm": 547,
-    "consumptionKwhPer100km": 15.9,
+    "rangeKm": 551,
+    "consumptionKwhPer100km": 16.2,
     "bootLitresSeatsUp": 585,
     "bootLitresSeatsDown": 1710,
     "seats": 5,
-    "towKg": 1000,
+    "towKg": 2000,
     "warrantyYears": 7,
     "insuranceAnnual": 1850,
     "depreciationCurve": [
@@ -7095,7 +7127,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "skoda-enyaq-coupe-85-sportline",
@@ -7106,12 +7138,12 @@
     "bodyType": "SUV",
     "listPrice": 66990,
     "batteryKwh": 77,
-    "rangeKm": 561,
-    "consumptionKwhPer100km": 15.9,
+    "rangeKm": 565,
+    "consumptionKwhPer100km": 15.7,
     "bootLitresSeatsUp": 570,
     "bootLitresSeatsDown": 1610,
     "seats": 5,
-    "towKg": 1000,
+    "towKg": 2000,
     "warrantyYears": 7,
     "insuranceAnnual": 1950,
     "depreciationCurve": [
@@ -7122,7 +7154,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "skoda-enyaq-coupe-rs",
@@ -7132,13 +7164,13 @@
     "variant": "Coupe RS",
     "bodyType": "SUV",
     "listPrice": 77590,
-    "batteryKwh": 79,
-    "rangeKm": 530,
-    "consumptionKwhPer100km": 16.3,
+    "batteryKwh": 77,
+    "rangeKm": 557,
+    "consumptionKwhPer100km": 16.1,
     "bootLitresSeatsUp": 570,
     "bootLitresSeatsDown": 1610,
     "seats": 5,
-    "towKg": 1200,
+    "towKg": 2200,
     "warrantyYears": 7,
     "insuranceAnnual": 2200,
     "depreciationCurve": [
@@ -7149,7 +7181,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "skoda-enyaq-rs",
@@ -7159,13 +7191,13 @@
     "variant": "RS",
     "bodyType": "SUV",
     "listPrice": 76590,
-    "batteryKwh": 79,
-    "rangeKm": 523,
+    "batteryKwh": 77,
+    "rangeKm": 546,
     "consumptionKwhPer100km": 16.5,
     "bootLitresSeatsUp": 585,
     "bootLitresSeatsDown": 1710,
     "seats": 5,
-    "towKg": 1200,
+    "towKg": 2200,
     "warrantyYears": 7,
     "insuranceAnnual": 2150,
     "depreciationCurve": [
@@ -7176,7 +7208,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "skoda-kodiaq-phev-select",
@@ -7190,8 +7222,8 @@
     "batteryKwh": 19.7,
     "rangeKm": 110,
     "consumptionKwhPer100km": 17.9,
-    "combinedRangeKm": 753,
-    "fuelConsumptionL100km": 7,
+    "combinedRangeKm": 873,
+    "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 745,
@@ -7199,16 +7231,16 @@
     "seats": 5,
     "towKg": 1800,
     "warrantyYears": 7,
-    "insuranceAnnual": 1900,
+    "insuranceAnnual": 1800,
     "depreciationCurve": [
       1,
-      0.67,
-      0.55,
-      0.46,
-      0.39,
-      0.33
+      0.75,
+      0.65,
+      0.57,
+      0.5,
+      0.44
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-1-brabus",
@@ -7222,7 +7254,7 @@
     "rangeKm": 400,
     "consumptionKwhPer100km": 18.2,
     "bootLitresSeatsUp": 313,
-    "bootLitresSeatsDown": 976,
+    "bootLitresSeatsDown": 986,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
@@ -7235,7 +7267,7 @@
       0.41,
       0.35
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-1-premium",
@@ -7249,7 +7281,7 @@
     "rangeKm": 440,
     "consumptionKwhPer100km": 16.8,
     "bootLitresSeatsUp": 313,
-    "bootLitresSeatsDown": 976,
+    "bootLitresSeatsDown": 986,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
@@ -7262,7 +7294,7 @@
       0.41,
       0.35
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-1-pro-plus",
@@ -7271,12 +7303,12 @@
     "model": "#1",
     "variant": "Pro+",
     "bodyType": "SUV",
-    "listPrice": 49990,
+    "listPrice": 49900,
     "batteryKwh": 62,
     "rangeKm": 420,
-    "consumptionKwhPer100km": 17.4,
-    "bootLitresSeatsUp": 313,
-    "bootLitresSeatsDown": 976,
+    "consumptionKwhPer100km": 17,
+    "bootLitresSeatsUp": 323,
+    "bootLitresSeatsDown": 986,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
@@ -7289,7 +7321,7 @@
       0.41,
       0.35
     ],
-    "sourcedAt": "2026-08-01"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-3-brabus",
@@ -7316,7 +7348,7 @@
       0.41,
       0.35
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-3-premium",
@@ -7343,7 +7375,7 @@
       0.41,
       0.35
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-3-pro-plus",
@@ -7370,7 +7402,7 @@
       0.41,
       0.35
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-5-brabus",
@@ -8646,8 +8678,8 @@
     "batteryKwh": 19.7,
     "rangeKm": 117,
     "consumptionKwhPer100km": 16.8,
-    "combinedRangeKm": 760,
-    "fuelConsumptionL100km": 7,
+    "combinedRangeKm": 893,
+    "fuelConsumptionL100km": 5.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 490,
@@ -8664,7 +8696,7 @@
       0.46,
       0.4
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "vw-tiguan-phev-200tsi-r-line",
@@ -8676,10 +8708,10 @@
     "powertrain": "phev",
     "listPrice": 74550,
     "batteryKwh": 19.7,
-    "rangeKm": 113,
-    "consumptionKwhPer100km": 17.4,
-    "combinedRangeKm": 756,
-    "fuelConsumptionL100km": 7,
+    "rangeKm": 115,
+    "consumptionKwhPer100km": 17.1,
+    "combinedRangeKm": 891,
+    "fuelConsumptionL100km": 5.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 490,
@@ -8696,7 +8728,7 @@
       0.46,
       0.4
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "xpeng-g6-long-range",

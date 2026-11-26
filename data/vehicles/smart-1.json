@@ -6,18 +6,25 @@
     "model": "#1",
     "variant": "Pro+",
     "bodyType": "SUV",
-    "listPrice": 49990,
+    "listPrice": 49900,
     "batteryKwh": 62,
     "rangeKm": 420,
-    "consumptionKwhPer100km": 17.4,
-    "bootLitresSeatsUp": 313,
-    "bootLitresSeatsDown": 976,
+    "consumptionKwhPer100km": 17.0,
+    "bootLitresSeatsUp": 323,
+    "bootLitresSeatsDown": 986,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 1800,
-    "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
-    "sourcedAt": "2026-08-01"
+    "depreciationCurve": [
+      1,
+      0.68,
+      0.57,
+      0.48,
+      0.41,
+      0.35
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-1-premium",
@@ -31,13 +38,20 @@
     "rangeKm": 440,
     "consumptionKwhPer100km": 16.8,
     "bootLitresSeatsUp": 313,
-    "bootLitresSeatsDown": 976,
+    "bootLitresSeatsDown": 986,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 1900,
-    "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
-    "sourcedAt": "2026-08-01"
+    "depreciationCurve": [
+      1,
+      0.68,
+      0.57,
+      0.48,
+      0.41,
+      0.35
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-1-brabus",
@@ -51,12 +65,19 @@
     "rangeKm": 400,
     "consumptionKwhPer100km": 18.2,
     "bootLitresSeatsUp": 313,
-    "bootLitresSeatsDown": 976,
+    "bootLitresSeatsDown": 986,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 2300,
-    "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
-    "sourcedAt": "2026-08-01"
+    "depreciationCurve": [
+      1,
+      0.68,
+      0.57,
+      0.48,
+      0.41,
+      0.35
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]
