@@ -408,12 +408,12 @@
       "name": "Renault Megane E-Tech facelift",
       "make": "Renault",
       "powertrain": "bev",
-      "scope": "variant",
+      "scope": "model",
       "status": "pre-launch",
       "familyId": "renault-megane-e-tech",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2027-01-01",
-      "note": "H1 2027: more range and faster DC charging."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "Family removed 2026-11-26: Techno EV60 run-out (POA), MY27 Esprit Alpine deposit/register-interest only on renault.com.au. Press: sole grade, $55,990 before ORC (CarExpert/The Driven/EV Central 28 Oct 2026), deliveries H1 2027. Re-add with new id renault-megane-e-tech-esprit-alpine when priced in the configurator."
     },
     {
       "name": "Hyundai Ioniq 6 standard grades",
@@ -443,10 +443,10 @@
       "powertrain": "bev",
       "scope": "variant",
       "status": "backlog",
-      "familyId": "kia-ev3",
-      "checkedAt": "2026-08-08",
+      "familyId": "kia-ev4",
+      "checkedAt": "2026-11-26",
       "recheckAfter": "2026-11-26",
-      "note": "14 rows in kia-ev3, kia-ev4, hyundai-ioniq-9, hyundai-elexio may carry gross kWh. Settle per pack. kia-ev5 settled 2026-11-26 (88.1 gross, 84 usable)."
+      "note": "Rows in kia-ev4, hyundai-ioniq-9, hyundai-elexio may carry gross kWh. Settle per pack. Settled 2026-11-26: kia-ev3 (58.3/81.4 gross -> 55/78 usable; kia-ev4 uses the same packs), kia-ev5 (88.1 gross -> 84 usable)."
     },
     {
       "name": "Kia EV5 2027 facelift",
@@ -1332,6 +1332,116 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-04-01",
       "note": "Old X5 50e is run-out stock only; family removed 2026-11-26. New X5 50e due Q2 2027: research as new under the same id."
+    },
+    {
+      "name": "Maserati Grecale Folgore",
+      "make": "Maserati",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "familyId": "maserati-grecale-folgore",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Family removed 2026-11-26: MY2025 Folgore absent from MY2026 AU line-up (CarExpert, CarsGuide, carsales list GT/Modena/Trofeo only); maserati.com/au 403. Refreshed Folgore expected H1 2027. Last held list $207,500."
+    },
+    {
+      "name": "BMW iX3 40 (RWD)",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "bmw-ix3",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2026-12-15",
+      "note": "$89,900 before ORC (CarExpert 6 Nov 2026), deliveries Q4 2026; orderability unconfirmed (bmw.com.au 503). Near the $91,661 threshold. Add as bmw-ix3-40 when on the configurator."
+    },
+    {
+      "name": "BMW iX3 M60",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "bmw-ix3",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Australian launch unconfirmed, expected 2027."
+    },
+    {
+      "name": "Audi Q4 e-tron RWD 150kW (MY27)",
+      "make": "Audi",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "audi-q4-e-tron",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "SUV and Sportback $71,650 MLP; ordering details later, H1 2027 arrival. 59 kWh net, EU WLTP 440/451 km. New ids audi-q4-e-tron-rwd / -sportback-rwd."
+    },
+    {
+      "name": "Zeekr 7X Black Edition Package",
+      "make": "Zeekr",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "zeekr-7x",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-31",
+      "note": "MY27 Black Edition is an option pack on Performance AWD, price unannounced; CarsGuide lists $75,990 Black Edition line. Confirm whether it is a separate price line."
+    },
+    {
+      "name": "Deepal S07 update",
+      "make": "Deepal",
+      "powertrain": "any",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "deepal-s07",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "Held S07 is run-out stock (while stocks last). Updated S07 (possibly REEV) teased Oct 2026. Move to not-on-sale if stock clears."
+    },
+    {
+      "name": "Chery New E5 (MY27)",
+      "make": "Chery",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "chery-e5",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "Facelift of the same car, coming soon, unpriced. Same family and id when it launches."
+    },
+    {
+      "name": "Volvo XC60 PHEV long-range (MY27)",
+      "make": "Volvo",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "volvo-xc60-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "MY26 T8 in run-out; long-range T8 (~189 km WLTP AU spec) due Q2 2027."
+    },
+    {
+      "name": "Mercedes-Benz EQA run-out",
+      "make": "Mercedes-Benz",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "mercedes-eqa",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Run-out; replaced by electric GLA (mid-2027). Remove the family when it leaves the configurator."
+    },
+    {
+      "name": "VW ID.5 run-out",
+      "make": "Volkswagen",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "vw-id5",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "No MY27; dealer stock only (MY26 Pro, MY25 GTX). Remove the family when VW Offers & Pricing drops the ID.5 carlines."
     }
   ]
 }

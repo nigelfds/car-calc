@@ -8,10 +8,10 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 92990,
-    "batteryKwh": 14.7,
-    "rangeKm": 79,
-    "consumptionKwhPer100km": 18.2,
-    "combinedRangeKm": 924,
+    "batteryKwh": 14.9,
+    "rangeKm": 81,
+    "consumptionKwhPer100km": 18.4,
+    "combinedRangeKm": 926,
     "fuelConsumptionL100km": 8.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -29,7 +29,7 @@
       0.44,
       0.38
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-xc60-phev-ultra-t8",
@@ -40,10 +40,10 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 101990,
-    "batteryKwh": 14.7,
-    "rangeKm": 79,
-    "consumptionKwhPer100km": 18.2,
-    "combinedRangeKm": 924,
+    "batteryKwh": 14.9,
+    "rangeKm": 81,
+    "consumptionKwhPer100km": 18.4,
+    "combinedRangeKm": 926,
     "fuelConsumptionL100km": 8.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -61,6 +61,6 @@
       0.44,
       0.38
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   }
 ]

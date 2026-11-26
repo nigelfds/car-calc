@@ -10,14 +10,16 @@
         "note": "Tesla AU configurator (tesla.com/en_au) returned HTTP 403 to automated fetches; CarExpert 1 Oct 2026 lists the MY2027 grade as orderable with deliveries from Oct 2026; CarExpert 2027 model page lists the same four grades"
       },
       "bootLitresSeatsUp": {
-        "value": 682,
-        "basis": "derived",
-        "note": "594 L rear boot + 88 L frunk, both from https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs (Tesla convention in this dataset counts the frunk, as tesla-model-y)"
+        "value": 594,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs",
+        "note": "Rear boot only; the 88 L frunk is not added, per the owner boot convention (2026-11-26)."
       },
       "bootLitresSeatsDown": {
-        "value": 1065,
-        "basis": "derived",
-        "note": "977 L rear max (seats folded) + 88 L frunk from EV Database (https://ev-database.org/car/3740/Tesla-Model-3-RWD; same body on all grades). Replaces unsourced held 950."
+        "value": 977,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3740/Tesla-Model-3-RWD",
+        "note": "Rear max with seats folded, frunk not added. Same body on all grades."
       },
       "seats": {
         "value": 5,
@@ -52,7 +54,7 @@
         "value": 45900,
         "basis": "sourced",
         "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
-        "note": "CarExpert table 'Price before on-road costs'; CarsGuide (https://www.carsguide.com.au/car-news/popular-tesla-now-9000-cheaper-new-2026-tesla-model-3-rwd-undercuts-byd-seal-kia-ev4-and) same $45,900 'before on-road costs'. The Driven quoted $45,990 'before on-road costs' \u2014 outlier, two outlets agree on $45,900. CarExpert intro also says 'from $45,900 before on-road costs'."
+        "note": "CarExpert table 'Price before on-road costs'; CarsGuide (https://www.carsguide.com.au/car-news/popular-tesla-now-9000-cheaper-new-2026-tesla-model-3-rwd-undercuts-byd-seal-kia-ev4-and) same $45,900 'before on-road costs'. The Driven quoted $45,990 'before on-road costs' — outlier, two outlets agree on $45,900. CarExpert intro also says 'from $45,900 before on-road costs'."
       },
       "batteryKwh": {
         "value": 60,
@@ -87,14 +89,16 @@
         "note": "Tesla AU configurator (tesla.com/en_au) returned HTTP 403 to automated fetches; CarExpert 1 Oct 2026 lists the MY2027 grade as orderable with deliveries from Oct 2026; CarExpert 2027 model page lists the same four grades"
       },
       "bootLitresSeatsUp": {
-        "value": 682,
-        "basis": "derived",
-        "note": "594 L rear boot + 88 L frunk, both from https://www.carexpert.com.au/tesla/model-3/2027/premium-rear-wheel-drive/features-and-specs (Tesla convention in this dataset counts the frunk, as tesla-model-y)"
+        "value": 594,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs",
+        "note": "Rear boot only; the 88 L frunk is not added, per the owner boot convention (2026-11-26)."
       },
       "bootLitresSeatsDown": {
-        "value": 1065,
-        "basis": "derived",
-        "note": "977 L rear max (seats folded) + 88 L frunk from EV Database (https://ev-database.org/car/3740/Tesla-Model-3-RWD; same body on all grades). Replaces unsourced held 950."
+        "value": 977,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3740/Tesla-Model-3-RWD",
+        "note": "Rear max with seats folded, frunk not added. Same body on all grades."
       },
       "seats": {
         "value": 5,
@@ -164,14 +168,16 @@
         "note": "Tesla AU configurator (tesla.com/en_au) returned HTTP 403 to automated fetches; CarExpert 1 Oct 2026 lists the MY2027 grade as orderable with deliveries from Oct 2026; CarExpert 2027 model page lists the same four grades"
       },
       "bootLitresSeatsUp": {
-        "value": 682,
-        "basis": "derived",
-        "note": "594 L rear boot + 88 L frunk, both from https://www.carexpert.com.au/tesla/model-3/2027/premium-long-range-rear-wheel-drive/features-and-specs (Tesla convention in this dataset counts the frunk, as tesla-model-y)"
+        "value": 594,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs",
+        "note": "Rear boot only; the 88 L frunk is not added, per the owner boot convention (2026-11-26)."
       },
       "bootLitresSeatsDown": {
-        "value": 1065,
-        "basis": "derived",
-        "note": "977 L rear max (seats folded) + 88 L frunk from EV Database (https://ev-database.org/car/3740/Tesla-Model-3-RWD; same body on all grades). Replaces unsourced held 950."
+        "value": 977,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3740/Tesla-Model-3-RWD",
+        "note": "Rear max with seats folded, frunk not added. Same body on all grades."
       },
       "seats": {
         "value": 5,
@@ -241,14 +247,16 @@
         "note": "Tesla AU configurator (tesla.com/en_au) returned HTTP 403 to automated fetches; CarExpert 1 Oct 2026 lists the MY2027 grade as orderable with deliveries from Oct 2026; CarExpert 2027 model page lists the same four grades"
       },
       "bootLitresSeatsUp": {
-        "value": 682,
-        "basis": "derived",
-        "note": "594 L rear boot + 88 L frunk, both from https://www.carexpert.com.au/tesla/model-3/2027/performance/features-and-specs (Tesla convention in this dataset counts the frunk, as tesla-model-y)"
+        "value": 594,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs",
+        "note": "Rear boot only; the 88 L frunk is not added, per the owner boot convention (2026-11-26)."
       },
       "bootLitresSeatsDown": {
-        "value": 1065,
-        "basis": "derived",
-        "note": "977 L rear max (seats folded) + 88 L frunk from EV Database (https://ev-database.org/car/3740/Tesla-Model-3-RWD; same body on all grades). Replaces unsourced held 950."
+        "value": 977,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3740/Tesla-Model-3-RWD",
+        "note": "Rear max with seats folded, frunk not added. Same body on all grades."
       },
       "seats": {
         "value": 5,

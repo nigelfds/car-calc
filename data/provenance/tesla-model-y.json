@@ -1,0 +1,332 @@
+{
+  "familyId": "tesla-model-y",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "tesla-model-y-premium-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027",
+        "note": "tesla.com/en_au not fetched (403 in the sweep and Model 3 refresh). CarExpert MY2027 model page lists exactly four grades (Premium RWD, Premium Long Range, L Premium Long Range, Performance) with live drive-away quotes; MY27 orders opened 1 Oct 2026 (CarExpert, Chasing Cars, cars24). CarsGuide 2027 price page also carries stale Launch Series lines, treated as database permutations"
+      },
+      "towKg": {
+        "value": 1588,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "Gross trailer weight braked 1,588 kg, unbraked 750 kg (CarExpert MY2027 spec page)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "Whole vehicle 60 months / unlimited km; battery and drive unit 8 years / 160,000-192,000 km by pack"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Tesla brand convention, matches tesla-model-3 (refreshed 2026-11-26). Off the mainstream default on documented evidence: repeated Australian list cuts (Performance -$4,500 on 1 Oct 2026 per CarExpert, Model 3 entry -$9,000 the same day) pressure used values"
+      },
+      "listPrice": {
+        "value": 58900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-tesla-model-y-performance-gets-dollar4500-price-cut-amid-move-to-chinese-sourcing",
+        "note": "CarExpert 1 Oct 2026: Premium RWD $58,900 'before on-road costs', no MY27 price change; cars24 same 'from $58,900 before on-road costs'; CarsGuide 2027 MSRP $58,900. CarExpert Sydney drive-away $63,963"
+      },
+      "batteryKwh": {
+        "value": 60,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3103/Tesla-Model-Y-RWD",
+        "note": "usable 60.0 (EVDB estimate), nominal 64.0, CATL LFP; CarExpert MY2027 spec shows 60 kWh"
+      },
+      "rangeKm": {
+        "value": 466,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "WLTP combined, 19-inch wheels (CarExpert MY2027 spec). EU RWD rated 500 km on EVDB; AU figure is lower, so used"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "WLTP combined 153 Wh/km; 60/466 = 12.9 implied (charging losses included in WLTP figure). Held 14 was derived"
+      },
+      "insuranceAnnual": {
+        "value": 2300,
+        "basis": "judged",
+        "note": "held value kept; tesla-model-3 Premium RWD 2400 ($54,900) and kia-ev5 Air Long Range 1800 ($61,170) bracket it"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "two front seats plus rear seating capacity 3"
+      },
+      "bootLitresSeatsUp": {
+        "value": 680,
+        "basis": "sourced",
+        "url": "https://www.fiches-auto.fr/essai-model-y/test-756-2035-vie-a-bord.php",
+        "note": "680 L rear 'sous plage arri\u00e8re VDA' (Premium, 2025 Juniper body, same on all five-seat grades), frunk 117 L not added. Tesla's 854 L is to the roof (What Car footnote). Replaces held 854"
+      },
+      "bootLitresSeatsDown": {
+        "value": 955,
+        "basis": "derived",
+        "note": "ADAC Autotest (2025 Model Y) measured 850 L folded to the lower window line ('bis zur Fensterunterkante') plus 105 L underfloor = 955 L. https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6542-tesla-model-y-maximum-range/tesla-model-y-maximum-range.pdf . Tesla's 2,022 L (CarExpert spec) is to the roof. Replaces held 2022"
+      }
+    },
+    "tesla-model-y-premium-long-range-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027",
+        "note": "tesla.com/en_au not fetched (403 in the sweep and Model 3 refresh). CarExpert MY2027 model page lists exactly four grades (Premium RWD, Premium Long Range, L Premium Long Range, Performance) with live drive-away quotes; MY27 orders opened 1 Oct 2026 (CarExpert, Chasing Cars, cars24). CarsGuide 2027 price page also carries stale Launch Series lines, treated as database permutations"
+      },
+      "towKg": {
+        "value": 1588,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-long-range/features-and-specs",
+        "note": "Gross trailer weight braked 1,588 kg, unbraked 750 kg (CarExpert MY2027 spec page)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-long-range/features-and-specs",
+        "note": "Whole vehicle 60 months / unlimited km; battery and drive unit 8 years / 160,000-192,000 km by pack"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Tesla brand convention, matches tesla-model-3 (refreshed 2026-11-26). Off the mainstream default on documented evidence: repeated Australian list cuts (Performance -$4,500 on 1 Oct 2026 per CarExpert, Model 3 entry -$9,000 the same day) pressure used values"
+      },
+      "listPrice": {
+        "value": 68900,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/tesla/model-y/price/2027",
+        "note": "CarsGuide 2027 price page $68,900, footnote: MSRP excluding stamp duty and government charges; Chasing Cars 1 Oct 2026 $68,900 'no price change' (no basis wording); CarExpert 1 Oct 2026 says no price changes for other MY27 grades. CarExpert Sydney drive-away $74,463, a $5,563 on-road gap consistent with the RWD's $5,063"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3742/Tesla-Model-Y-Premium-AWD",
+        "note": "usable 79.0, nominal 82.0, LG 5M NMC (EU Premium AWD, WLTP 600 km TEH = AU figure); CarExpert MY2027 spec 79 kWh. CarsGuide July 2025 estimated 82 usable; not used"
+      },
+      "rangeKm": {
+        "value": 600,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-long-range/features-and-specs",
+        "note": "WLTP combined, 19-inch wheels; EVDB 3742 TEH 600 km agrees"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-long-range/features-and-specs",
+        "note": "WLTP combined 158 Wh/km (EVDB TEH 156); 79/600 = 13.2 implied. Held 13.5 was derived"
+      },
+      "insuranceAnnual": {
+        "value": 2550,
+        "basis": "judged",
+        "note": "held value kept; matches tesla-model-3 Premium Long Range RWD 2550 ($61,900); kia-ev5 GT-Line 2050 ($71,770)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/premium-long-range/features-and-specs",
+        "note": "two front seats plus rear seating capacity 3"
+      },
+      "bootLitresSeatsUp": {
+        "value": 680,
+        "basis": "sourced",
+        "url": "https://www.fiches-auto.fr/essai-model-y/test-756-2035-vie-a-bord.php",
+        "note": "680 L rear 'sous plage arri\u00e8re VDA' (Premium, 2025 Juniper body, same on all five-seat grades), frunk 117 L not added. Tesla's 854 L is to the roof (What Car footnote). Replaces held 854"
+      },
+      "bootLitresSeatsDown": {
+        "value": 955,
+        "basis": "derived",
+        "note": "ADAC Autotest (2025 Model Y) measured 850 L folded to the lower window line ('bis zur Fensterunterkante') plus 105 L underfloor = 955 L. https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6542-tesla-model-y-maximum-range/tesla-model-y-maximum-range.pdf . Tesla's 2,022 L (CarExpert spec) is to the roof. Replaces held 2022"
+      }
+    },
+    "tesla-model-y-l-premium-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027",
+        "note": "tesla.com/en_au not fetched (403 in the sweep and Model 3 refresh). CarExpert MY2027 model page lists exactly four grades (Premium RWD, Premium Long Range, L Premium Long Range, Performance) with live drive-away quotes; MY27 orders opened 1 Oct 2026 (CarExpert, Chasing Cars, cars24). CarsGuide 2027 price page also carries stale Launch Series lines, treated as database permutations"
+      },
+      "towKg": {
+        "value": 1588,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/l-premium-long-range/features-and-specs",
+        "note": "Gross trailer weight braked 1,588 kg, unbraked 750 kg (CarExpert MY2027 spec page)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/l-premium-long-range/features-and-specs",
+        "note": "Whole vehicle 60 months / unlimited km; battery and drive unit 8 years / 160,000-192,000 km by pack"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Tesla brand convention, matches tesla-model-3 (refreshed 2026-11-26). Off the mainstream default on documented evidence: repeated Australian list cuts (Performance -$4,500 on 1 Oct 2026 per CarExpert, Model 3 entry -$9,000 the same day) pressure used values"
+      },
+      "listPrice": {
+        "value": 74900,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/tesla/model-y/price/2027",
+        "note": "CarsGuide 2027 price page $74,900 (MSRP excluding stamp duty and government charges); Chasing Cars 1 Oct 2026 $74,900 unchanged; CarExpert Mar 2026 launch $74,900 'before on-road costs' (https://www.carexpert.com.au/car-news/2026-tesla-model-y-l-price-and-specs); The Driven June 2026 '$74,900, plus on-road costs'. CarExpert Sydney drive-away $80,763"
+      },
+      "batteryKwh": {
+        "value": 84,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/tesla-model-y-l-101209",
+        "note": "CarsGuide review text '84Wh (useable)' (kWh typo); The Driven spec table '88 kWh gross, 82-86 kWh usable' (https://thedriven.io/2026/06/19/review-model-y-l-is-the-plushest-and-most-versatile-tesla-yet-finally-with-v2l/); CarsGuide table 82; CarExpert MY2027 spec 79 (apparently copied from Long Range). Tesla does not publish; 84 is the midpoint"
+      },
+      "rangeKm": {
+        "value": 681,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/l-premium-long-range/features-and-specs",
+        "note": "WLTP combined, 19-inch wheels; CarsGuide and The Driven same. China CLTC rose for MY27 but no AU change reported"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/l-premium-long-range/features-and-specs",
+        "note": "WLTP combined 146 Wh/km; 84/681 = 12.3 implied. Held 13 was derived"
+      },
+      "seats": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-tesla-model-y-l-price-and-specs",
+        "note": "2+2+2, captain chairs in row two"
+      },
+      "bootLitresSeatsUp": {
+        "value": 420,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/l-premium-long-range/features-and-specs",
+        "note": "420 L behind the third row, 'Rear seat up; to lower window' (CarExpert MY2027 spec); CarsGuide and The Driven same. Frunk 116 L not added. Replaces held 536"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1144,
+        "basis": "judged",
+        "note": "Belt-line folded figure unpublished; Tesla quotes 2,423 L to the roof with rows two and three folded (CarExpert spec). Scaled by the five-seat Model Y ratio of belt-line to roof folded volume, 955/2022: 2423 x 0.472 = 1144. Replaces held 2423"
+      },
+      "insuranceAnnual": {
+        "value": 2700,
+        "basis": "judged",
+        "note": "held value kept; between Premium Long Range 2550 ($68,900) and Performance 3200 ($84,900)"
+      }
+    },
+    "tesla-model-y-performance-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027",
+        "note": "tesla.com/en_au not fetched (403 in the sweep and Model 3 refresh). CarExpert MY2027 model page lists exactly four grades (Premium RWD, Premium Long Range, L Premium Long Range, Performance) with live drive-away quotes; MY27 orders opened 1 Oct 2026 (CarExpert, Chasing Cars, cars24). CarsGuide 2027 price page also carries stale Launch Series lines, treated as database permutations"
+      },
+      "towKg": {
+        "value": 1588,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/performance/features-and-specs",
+        "note": "Gross trailer weight braked 1,588 kg, unbraked 750 kg (CarExpert MY2027 spec page)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/performance/features-and-specs",
+        "note": "Whole vehicle 60 months / unlimited km; battery and drive unit 8 years / 160,000-192,000 km by pack"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Tesla brand convention, matches tesla-model-3 (refreshed 2026-11-26). Off the mainstream default on documented evidence: repeated Australian list cuts (Performance -$4,500 on 1 Oct 2026 per CarExpert, Model 3 entry -$9,000 the same day) pressure used values"
+      },
+      "listPrice": {
+        "value": 84900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-tesla-model-y-performance-gets-dollar4500-price-cut-amid-move-to-chinese-sourcing",
+        "note": "CarExpert 1 Oct 2026: '$84,900 before on-road costs (previously $89,400)'; carsauce 'from $84,900 before on-road costs' (https://carsauce.com/news/2027-tesla-model-y-performance-price-power-share-australia); cars24 same; CarsGuide 2027 MSRP $84,900. The Driven gives the old price as $89,900, outlier. Paint now an extra-cost option ($1,500-2,600 previously included). CarExpert Sydney drive-away $91,263"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3269/Tesla-Model-Y-Performance",
+        "note": "usable 79.0, nominal 82.0 LG 5M NMC (Berlin-built MY26 car). MY27 is Shanghai-built; CarExpert MY2027 spec shows 84.7 kWh, possibly the Shanghai pack gross figure. Usable for the Shanghai car unconfirmed"
+      },
+      "rangeKm": {
+        "value": 580,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/performance/features-and-specs",
+        "note": "WLTP combined, 21-inch wheels; EVDB 3269 same"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.2,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/performance/features-and-specs",
+        "note": "WLTP combined 162 Wh/km; EVDB 3269 same; 79/580 = 13.6 implied. Held 14.5 was derived"
+      },
+      "insuranceAnnual": {
+        "value": 3200,
+        "basis": "judged",
+        "note": "held 3300 cut $100 with the $4,500 list cut; tesla-model-3 Performance 3150 ($80,900)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-y/2027/performance/features-and-specs",
+        "note": "two front seats plus rear seating capacity 3"
+      },
+      "bootLitresSeatsUp": {
+        "value": 680,
+        "basis": "sourced",
+        "url": "https://www.fiches-auto.fr/essai-model-y/test-756-2035-vie-a-bord.php",
+        "note": "680 L rear 'sous plage arri\u00e8re VDA' (Premium, 2025 Juniper body, same on all five-seat grades), frunk 117 L not added. Tesla's 854 L is to the roof (What Car footnote). Replaces held 854"
+      },
+      "bootLitresSeatsDown": {
+        "value": 955,
+        "basis": "derived",
+        "note": "ADAC Autotest (2025 Model Y) measured 850 L folded to the lower window line ('bis zur Fensterunterkante') plus 105 L underfloor = 955 L. https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6542-tesla-model-y-maximum-range/tesla-model-y-maximum-range.pdf . Tesla's 2,022 L (CarExpert spec) is to the roof. Replaces held 2022"
+      }
+    }
+  },
+  "lowConfidence": [
+    "tesla-model-y-l-premium-awd.bootLitresSeatsDown: judged 1144, scaled from the five-seat ratio; only a to-the-roof 2,423 L is published",
+    "tesla-model-y-premium-rwd.bootLitresSeatsDown: 955 mixes ADAC belt-line method (850 + 105 underfloor) with a VDA seats-up figure from another outlet; same on Long Range and Performance",
+    "tesla-model-y-premium-rwd.bootLitresSeatsUp: 680 VDA from one French road test (fiches-auto); same on Long Range and Performance",
+    "tesla-model-y-performance-awd.batteryKwh: 79 usable is the Berlin car; MY27 is Shanghai-built and CarExpert shows 84.7 kWh",
+    "tesla-model-y-l-premium-awd.batteryKwh: sources range 79-86 usable; Tesla does not publish",
+    "tesla-model-y-premium-long-range-awd.listPrice: no MY27 source says before on-road costs in words for this grade; CarsGuide MSRP footnote plus CarExpert no-change statement",
+    "tesla-model-y-l-premium-awd.listPrice: MY27 wording only via CarsGuide MSRP footnote; launch-time sources say before/plus on-road costs",
+    "tesla-model-y-performance-awd.listPrice: The Driven puts the old price at $89,900, others $89,400; new $84,900 agreed by four outlets",
+    "tesla-model-y-premium-rwd.listPrice: outlets only; Tesla AU configurator not reachable",
+    "tesla-model-y-premium-rwd.insuranceAnnual: judged; all rows judged against tesla-model-3",
+    "tesla-model-y-premium-rwd.depreciationCurve: judged Tesla brand curve, all rows"
+  ]
+}

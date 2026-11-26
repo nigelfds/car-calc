@@ -1,0 +1,409 @@
+{
+  "familyId": "kia-ev3",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "kia-ev3-air-standard": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev3.html",
+        "note": "'Air - Standard Range' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away estimate only), not read"
+      },
+      "listPrice": {
+        "value": 47600,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev3/price/2027",
+        "note": "CarsGuide 2027 EV3 price page 'Air Fwd Sr' $47,600 MSRP, 'excludes costs such as stamp duty, other government charges and options', fetched 2026-11-26; CarExpert MY27 news (9 Jul 2026) table 'Price before on-road costs' gives the same figure"
+      },
+      "batteryKwh": {
+        "value": 55.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3637/Kia-EV3-Standard-Range",
+        "note": "EV Database MY27 useable 55.0 kWh, nominal 58.3 kWh on the same page. Kia AU MY27 spec sheet prints 58.3 kWh / 158.2 Ah = nominal V x Ah, i.e. gross; held 58.3 was gross"
+      },
+      "rangeKm": {
+        "value": 436,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 Mechanical & Feature List, WLTP AER combined"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3637/Kia-EV3-Standard-Range",
+        "note": "EV Database MY27 WLTP rated consumption (incl. charging losses) TEL 149 Wh/km at 436 km, the same 436 km Kia AU certifies for the 17-inch Air SR. Kia AU sheet's 2WD figures (125/132/135 Wh/km) rejected: below usable/range for SR and inconsistent with its own AWD 158 and EV Database rated figures, so a different quantity"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Cargo Area Rear (5 seats up) 460 L VDA, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1251,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3637/Kia-EV3-Standard-Range",
+        "note": "EV Database 'Cargo Volume Max' 1,251 L (same body all grades); Kia AU sheet gives no folded figure; held 1250 rounded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Seat Capacity 5, all grades"
+      },
+      "towKg": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet braked towing: Air SR 500, 2WD LR 1,000, GT-Line AWD 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev3-review",
+        "note": "7 years unlimited km for private buyers; battery 7 yr/150,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "kept held 1450; level with kia-ev4-air-standard (1450, $49,990), above hyundai-kona-electric-extended-range (1450 at $50,000) band"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default, same convention as kia-ev4 and kia-ev5; list prices unchanged since July 2026, no evidence to deviate"
+      }
+    },
+    "kia-ev3-air-long-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev3.html",
+        "note": "'Air - Long Range' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away estimate only), not read"
+      },
+      "listPrice": {
+        "value": 53315,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev3/price/2027",
+        "note": "CarsGuide 2027 EV3 price page 'Air Fwd Lr' $53,315 MSRP, 'excludes costs such as stamp duty, other government charges and options', fetched 2026-11-26; CarExpert MY27 news (9 Jul 2026) table 'Price before on-road costs' gives the same figure"
+      },
+      "batteryKwh": {
+        "value": 78.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3638/Kia-EV3-Long-Range",
+        "note": "EV Database MY27 useable 78.0 kWh, nominal 81.4 kWh on the same page. Kia AU MY27 spec sheet prints 81.4 kWh / 237.3 Ah = nominal V x Ah, i.e. gross; held 81.4 was gross"
+      },
+      "rangeKm": {
+        "value": 604,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 Mechanical & Feature List, WLTP AER combined"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3638/Kia-EV3-Long-Range",
+        "note": "EV Database MY27 WLTP rated consumption (incl. charging losses) TEL 149 Wh/km at 605 km; Kia AU 604 km for the 17-inch Air LR. Kia AU sheet's 2WD figures (125/132/135 Wh/km) rejected: below usable/range for SR and inconsistent with its own AWD 158 and EV Database rated figures, so a different quantity"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Cargo Area Rear (5 seats up) 460 L VDA, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1251,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3637/Kia-EV3-Standard-Range",
+        "note": "EV Database 'Cargo Volume Max' 1,251 L (same body all grades); Kia AU sheet gives no folded figure; held 1250 rounded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Seat Capacity 5, all grades"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet braked towing: Air SR 500, 2WD LR 1,000, GT-Line AWD 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev3-review",
+        "note": "7 years unlimited km for private buyers; battery 7 yr/150,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "kept held 1550; between kia-ev4-air-standard (1450) and kia-ev4-earth-long-range (1650, $59,190)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default, same convention as kia-ev4 and kia-ev5; list prices unchanged since July 2026, no evidence to deviate"
+      }
+    },
+    "kia-ev3-earth-long-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev3.html",
+        "note": "'Earth' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away estimate only), not read"
+      },
+      "listPrice": {
+        "value": 58600,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev3/price/2027",
+        "note": "CarsGuide 2027 EV3 price page 'Earth Fwd Lr' $58,600 MSRP, 'excludes costs such as stamp duty, other government charges and options', fetched 2026-11-26; CarExpert MY27 news (9 Jul 2026) table 'Price before on-road costs' gives the same figure"
+      },
+      "batteryKwh": {
+        "value": 78.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3638/Kia-EV3-Long-Range",
+        "note": "EV Database MY27 useable 78.0 kWh, nominal 81.4 kWh on the same page. Kia AU MY27 spec sheet prints 81.4 kWh / 237.3 Ah = nominal V x Ah, i.e. gross; held 81.4 was gross"
+      },
+      "rangeKm": {
+        "value": 563,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 Mechanical & Feature List, WLTP AER combined"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3638/Kia-EV3-Long-Range",
+        "note": "EV Database MY27 WLTP rated consumption (incl. charging losses) TEH 162 Wh/km at 563 km, matching Kia AU's 563 km for the 19-inch Earth. Kia AU sheet's 2WD figures (125/132/135 Wh/km) rejected: below usable/range for SR and inconsistent with its own AWD 158 and EV Database rated figures, so a different quantity"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Cargo Area Rear (5 seats up) 460 L VDA, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1251,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3637/Kia-EV3-Standard-Range",
+        "note": "EV Database 'Cargo Volume Max' 1,251 L (same body all grades); Kia AU sheet gives no folded figure; held 1250 rounded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Seat Capacity 5, all grades"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet braked towing: Air SR 500, 2WD LR 1,000, GT-Line AWD 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev3-review",
+        "note": "7 years unlimited km for private buyers; battery 7 yr/150,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "kept held 1700; anchored to kia-ev4-earth-long-range (1650, $59,190) and kia-ev5-air-standard-range (1700)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default, same convention as kia-ev4 and kia-ev5; list prices unchanged since July 2026, no evidence to deviate"
+      }
+    },
+    "kia-ev3-gt-line-long-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev3.html",
+        "note": "'GT-Line FWD' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away estimate only), not read"
+      },
+      "listPrice": {
+        "value": 63950,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev3/price/2027",
+        "note": "CarsGuide 2027 EV3 price page 'Gt-Line Fwd Lr' $63,950 MSRP, 'excludes costs such as stamp duty, other government charges and options', fetched 2026-11-26; CarExpert MY27 news (9 Jul 2026) table 'Price before on-road costs' gives the same figure"
+      },
+      "batteryKwh": {
+        "value": 78.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3638/Kia-EV3-Long-Range",
+        "note": "EV Database MY27 useable 78.0 kWh, nominal 81.4 kWh on the same page. Kia AU MY27 spec sheet prints 81.4 kWh / 237.3 Ah = nominal V x Ah, i.e. gross; held 81.4 was gross"
+      },
+      "rangeKm": {
+        "value": 563,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 Mechanical & Feature List, WLTP AER combined"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3638/Kia-EV3-Long-Range",
+        "note": "EV Database MY27 WLTP rated consumption (incl. charging losses) TEH 162 Wh/km at 563 km, matching Kia AU's MY27 563 km for the 19-inch GT-Line 2WD. Kia AU sheet's 2WD figures (125/132/135 Wh/km) rejected: below usable/range for SR and inconsistent with its own AWD 158 and EV Database rated figures, so a different quantity"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Cargo Area Rear (5 seats up) 460 L VDA, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1251,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3637/Kia-EV3-Standard-Range",
+        "note": "EV Database 'Cargo Volume Max' 1,251 L (same body all grades); Kia AU sheet gives no folded figure; held 1250 rounded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Seat Capacity 5, all grades"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet braked towing: Air SR 500, 2WD LR 1,000, GT-Line AWD 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev3-review",
+        "note": "7 years unlimited km for private buyers; battery 7 yr/150,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "kept held 1850; anchored to kia-ev4-gt-line-long-range (1800, $64,690) and hyundai-kona-electric-premium-n-line (1850, $63,000)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default, same convention as kia-ev4 and kia-ev5; list prices unchanged since July 2026, no evidence to deviate"
+      }
+    },
+    "kia-ev3-gt-line-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev3.html",
+        "note": "'GT-Line AWD' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away estimate only), not read"
+      },
+      "listPrice": {
+        "value": 66490,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev3/price/2027",
+        "note": "CarsGuide 2027 EV3 price page 'Gt-Line Awd Lr' $66,490 MSRP, 'excludes costs such as stamp duty, other government charges and options', fetched 2026-11-26; CarExpert MY27 news (9 Jul 2026) table 'Price before on-road costs' gives the same figure; Chasing Cars (10 Jul 2026) 'from $66,490 before on-road costs'"
+      },
+      "batteryKwh": {
+        "value": 78.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3639/Kia-EV3-Long-Range-AWD",
+        "note": "EV Database MY27 useable 78.0 kWh, nominal 81.4 kWh on the same page. Kia AU MY27 spec sheet prints 81.4 kWh / 237.3 Ah = nominal V x Ah, i.e. gross; held 81.4 was gross"
+      },
+      "rangeKm": {
+        "value": 559,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 Mechanical & Feature List, WLTP AER combined"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.8,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet WLTP Energy Consumption Combined 158 Wh/km for GT-Line AWD LR; equals EV Database rated (incl. charging losses) TEL 158 Wh/km. Kia AU sheet's 2WD figures (125/132/135 Wh/km) rejected: below usable/range for SR and inconsistent with its own AWD 158 and EV Database rated figures, so a different quantity"
+      },
+      "bootLitresSeatsUp": {
+        "value": 460,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Cargo Area Rear (5 seats up) 460 L VDA, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1251,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3637/Kia-EV3-Standard-Range",
+        "note": "EV Database 'Cargo Volume Max' 1,251 L (same body all grades); Kia AU sheet gives no folded figure; held 1250 rounded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Seat Capacity 5, all grades"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet braked towing: Air SR 500, 2WD LR 1,000, GT-Line AWD 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev3-review",
+        "note": "7 years unlimited km for private buyers; battery 7 yr/150,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "GT-Line FWD 1850 plus ~$100 for +$2,540 list and dual-motor performance; below kia-ev5-gt-line-awd (2050, $71,770)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default, same convention as kia-ev4 and kia-ev5; list prices unchanged since July 2026, no evidence to deviate"
+      }
+    }
+  },
+  "lowConfidence": [
+    "kia-ev3-gt-line-awd.consumptionKwhPer100km: Kia AU sheet prints a 2WD consumption row that is a different quantity from its AWD figure; 15.8 taken from the AWD cell, corroborated only by EV Database TEL",
+    "kia-ev3-air-standard.consumptionKwhPer100km / kia-ev3-air-long-range / kia-ev3-earth-long-range / kia-ev3-gt-line-long-range: rated (incl. charging losses) figures from EV Database, not Kia AU, matched to Kia AU range by wheel/TEL-TEH end",
+    "kia-ev3-gt-line-awd.listPrice: CarExpert/Chasing Cars and CarsGuide agree on $66,490 but Kia AU configurator is postcode-gated, so not read from Kia directly",
+    "kia-ev3-gt-line-awd.insuranceAnnual: judged, new row with no held anchor of its own",
+    "kia-ev3-*.batteryKwh: usable 55.0/78.0 from EV Database only; no Kia source states usable"
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "familyId": "audi-q6-e-tron",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "audi-q6-e-tron-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://zecar.com/reviews/audi-q6-e-tron-sq6-e-tron-price-specs-australia",
+        "note": "Q6 e-tron (SUV) listed in the four-model MY27 line-up 'available to order now' (Zecar, 10 Sep 2026; EV Central 14 Sep 2026 agrees on four models). audi.com.au returned 403 to automated reads on 2026-11-26, so the configurator was not read."
+      },
+      "listPrice": {
+        "value": 89900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-audi-q6-e-tron-prices-slashed-by-more-than-dollar20000",
+        "note": "CarExpert 11 Sep 2026 table headed 'Price before on-road costs': 2027 Audi Q6 e-tron $89,900 (-$9918); same figure in EV Central (excludes on-road costs) and Zecar (MLP, built from Oct 2026 production)."
+      },
+      "batteryKwh": {
+        "value": 75.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-audi-q6-e-tron-prices-slashed-by-more-than-dollar20000",
+        "note": "'83kWh battery with 75.8kWh of usable capacity'; EV Database UK also 75.8 usable / 83.0 nominal"
+      },
+      "rangeKm": {
+        "value": 462,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/features-and-specs",
+        "note": "CarExpert 2027 Base spec (20-inch): WLTP combined 462 km; equals EV Database UK WLTP TEH 462 km. Audi has not confirmed MY27 AU range; held 466 km AU-certified figure was for the MY26 car."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/features-and-specs",
+        "note": "CarExpert 2027 Base spec WLTP combined 178 Wh/km (includes charging losses; usable/range = 16.4)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 526,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/2281/Audi-Q6-SUV-e-tron",
+        "note": "EV Database UK cargo volume 526 L, plus 64 L frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1517,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/2281/Audi-Q6-SUV-e-tron",
+        "note": "EV Database UK cargo volume max 1517 L; CarExpert SQ6 2027 spec also 1517 L. Held 1529 not reproduced; CarExpert Base spec's 1593 L rejected as an outlier"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/features-and-specs",
+        "note": "CarExpert 2027 spec: 5 seats (2+3)"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/features-and-specs",
+        "note": "CarExpert 2027 Base spec braked 2,000 kg; EV Database 2000 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027-suv-rwd-electric-jsgso5k520260910",
+        "note": "5 years / unlimited km; battery 8 yr/160,000 km; CarsGuide 11 Sep 2026 also states five years unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2600,
+        "basis": "judged",
+        "note": "Held 2800 at $99,900 lowered with the list cut; anchors audi-q4-e-tron-55-quattro 2650 at $97,936 and bmw-ix3-50-xdrive 2800 at $109,900"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "Kept the held Q6 RWD curve (Audi brand convention, steeper than Q4 [1,0.70,...] for thin volume and the 2025-26 price cuts). The MY27 $9,918 cut resets the new price lower; no evidence yet on MY27 residuals."
+      }
+    },
+    "audi-q6-e-tron-sportback-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://zecar.com/reviews/audi-q6-e-tron-sq6-e-tron-price-specs-australia",
+        "note": "Q6 Sportback e-tron listed in the four-model MY27 line-up 'available to order now' (Zecar, 10 Sep 2026; EV Central 14 Sep 2026 agrees on four models). audi.com.au returned 403 to automated reads on 2026-11-26, so the configurator was not read."
+      },
+      "listPrice": {
+        "value": 89900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-audi-q6-e-tron-prices-slashed-by-more-than-dollar20000",
+        "note": "CarExpert 11 Sep 2026 table headed 'Price before on-road costs': 2027 Audi Q6 Sportback e-tron $89,900 (-$9918); same figure in EV Central (excludes on-road costs) and Zecar (MLP, built from Oct 2026 production)."
+      },
+      "batteryKwh": {
+        "value": 75.8,
+        "basis": "sourced",
+        "url": "https://zecar.com/reviews/audi-q6-e-tron-sq6-e-tron-price-specs-australia",
+        "note": "Zecar: MY27 Q6 and Sportback share the sport edition's 83 kWh gross / 75.8 kWh usable pack; EV Database Sportback 75.8 usable"
+      },
+      "rangeKm": {
+        "value": 485,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3041/Audi-Q6-Sportback-e-tron",
+        "note": "EV Database Q6 Sportback e-tron (MY25) WLTP TEH 485 km (TEL 563). TEH used to match the SUV row (462 = TEH) and the MY27 20-inch wheel; CarExpert quoted 489 km on the 19-inch MY26 car. No MY27 figure published."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.7,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3041/Audi-Q6-Sportback-e-tron",
+        "note": "EV Database WLTP TEH rated 177 Wh/km, same end of band as range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 511,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3041/Audi-Q6-Sportback-e-tron",
+        "note": "511 L; CarExpert 2026 Sportback article also 511 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1373,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-audi-q6-and-sq6-sportback-price-and-specs",
+        "note": "CarExpert 2026 Sportback article 1373 L folded; EV Database 1373 L"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/features-and-specs",
+        "note": "CarExpert 2027 spec: 5 seats (2+3)"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3041/Audi-Q6-Sportback-e-tron",
+        "note": "EV Database braked 2000 kg, RWD"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027-suv-rwd-electric-jsgso5k520260910",
+        "note": "5 years / unlimited km; battery 8 yr/160,000 km; CarsGuide 11 Sep 2026 also states five years unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2650,
+        "basis": "judged",
+        "note": "SUV row +50 as held (coupe body); anchor audi-q4-e-tron-sportback-55-quattro 2700"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "Kept the held Q6 RWD curve (Audi brand convention, steeper than Q4 [1,0.70,...] for thin volume and the 2025-26 price cuts). The MY27 $9,918 cut resets the new price lower; no evidence yet on MY27 residuals."
+      }
+    },
+    "audi-q6-e-tron-sq6": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://zecar.com/reviews/audi-q6-e-tron-sq6-e-tron-price-specs-australia",
+        "note": "SQ6 e-tron (SUV) listed in the four-model MY27 line-up 'available to order now' (Zecar, 10 Sep 2026; EV Central 14 Sep 2026 agrees on four models). audi.com.au returned 403 to automated reads on 2026-11-26, so the configurator was not read."
+      },
+      "listPrice": {
+        "value": 129900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-audi-q6-e-tron-prices-slashed-by-more-than-dollar20000",
+        "note": "CarExpert 11 Sep 2026 table headed 'Price before on-road costs': 2027 Audi SQ6 e-tron $129,900 (-$21,418); same figure in EV Central (excludes on-road costs) and Zecar (MLP, built from Oct 2026 production)."
+      },
+      "batteryKwh": {
+        "value": 94.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-audi-q6-e-tron-prices-slashed-by-more-than-dollar20000",
+        "note": "'100kWh battery, of which 94.9kWh is usable'"
+      },
+      "rangeKm": {
+        "value": 562,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/sq6/features-and-specs",
+        "note": "CarExpert 2027 SQ6 spec (21-inch): WLTP high-vehicle 562 km (low 598, 'combined' 596). TEH taken for the standard 21-inch spec, matching the other rows' convention; CarExpert news quotes 585 km for the MY26 SQ6."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/sq6/features-and-specs",
+        "note": "CarExpert 2027 SQ6 spec WLTP high-vehicle 185 Wh/km, same end as range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 526,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/2281/Audi-Q6-SUV-e-tron",
+        "note": "Q6 SUV body 526 L (EV Database UK); same body"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1517,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/sq6/features-and-specs",
+        "note": "CarExpert 2027 SQ6 spec rear seat down 1,517 L"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/features-and-specs",
+        "note": "CarExpert 2027 spec: 5 seats (2+3)"
+      },
+      "towKg": {
+        "value": 2400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/sq6/features-and-specs",
+        "note": "CarExpert 2027 SQ6 spec braked 2,400 kg, unbraked 750"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027-suv-rwd-electric-jsgso5k520260910",
+        "note": "5 years / unlimited km; battery 8 yr/160,000 km; CarsGuide 11 Sep 2026 also states five years unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 3500,
+        "basis": "judged",
+        "note": "Held 4200 at $151,400 cut with the $21,418 list cut; anchors genesis-gv70-electrified-signature-performance-awd 3100 at $132,800, porsche-cayenne-phev-e-hybrid 3400 at $164,800; premium for 380kW performance"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.62,
+          0.5,
+          0.41,
+          0.34,
+          0.29
+        ],
+        "basis": "judged",
+        "note": "Kept the held SQ6 curve; steepest in the Audi set for a $130k+ performance EV with a $21,418 MY27 list cut eroding earlier cars. Anchor genesis-gv70-electrified [1,0.64,...]."
+      }
+    },
+    "audi-q6-e-tron-sq6-sportback": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://zecar.com/reviews/audi-q6-e-tron-sq6-e-tron-price-specs-australia",
+        "note": "SQ6 Sportback e-tron listed in the four-model MY27 line-up 'available to order now' (Zecar, 10 Sep 2026; EV Central 14 Sep 2026 agrees on four models). audi.com.au returned 403 to automated reads on 2026-11-26, so the configurator was not read."
+      },
+      "listPrice": {
+        "value": 134900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-audi-q6-e-tron-prices-slashed-by-more-than-dollar20000",
+        "note": "CarExpert 11 Sep 2026 table headed 'Price before on-road costs': 2027 Audi SQ6 Sportback e-tron $134,900 (-$21,418); same figure in EV Central (excludes on-road costs) and Zecar (MLP, built from Oct 2026 production)."
+      },
+      "batteryKwh": {
+        "value": 94.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3044/Audi-SQ6-Sportback-e-tron",
+        "note": "EV Database usable 94.9 kWh (100 nominal)"
+      },
+      "rangeKm": {
+        "value": 578,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/uk/car/3044/Audi-SQ6-Sportback-e-tron",
+        "note": "EV Database SQ6 Sportback (MY25) WLTP TEH 359 mi = 578 km (TEL 372 mi = 599 km); TEH to match SQ6 SUV row. No MY27 figure published."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.3,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3044/Audi-SQ6-Sportback-e-tron",
+        "note": "EV Database WLTP TEH rated 295 Wh/mi = 183 Wh/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 511,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3044/Audi-SQ6-Sportback-e-tron",
+        "note": "511 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1373,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3044/Audi-SQ6-Sportback-e-tron",
+        "note": "1373 L"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027/features-and-specs",
+        "note": "CarExpert 2027 spec: 5 seats (2+3)"
+      },
+      "towKg": {
+        "value": 2400,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3044/Audi-SQ6-Sportback-e-tron",
+        "note": "EV Database braked 2400 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/audi/q6-e-tron/2027-suv-rwd-electric-jsgso5k520260910",
+        "note": "5 years / unlimited km; battery 8 yr/160,000 km; CarsGuide 11 Sep 2026 also states five years unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 3600,
+        "basis": "judged",
+        "note": "SQ6 SUV row +100 for the $5,000 dearer coupe body; anchors as SQ6"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.62,
+          0.5,
+          0.41,
+          0.34,
+          0.29
+        ],
+        "basis": "judged",
+        "note": "Kept the held SQ6 curve; steepest in the Audi set for a $130k+ performance EV with a $21,418 MY27 list cut eroding earlier cars. Anchor genesis-gv70-electrified [1,0.64,...]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "audi-q6-e-tron-sportback-rwd.rangeKm: MY25 European WLTP TEH from EV Database; no MY27 or AU-certified figure, wheel match assumed",
+    "audi-q6-e-tron-sq6-sportback.rangeKm: MY25 European WLTP TEH from EV Database; no MY27 or AU-certified figure",
+    "audi-q6-e-tron-sq6.rangeKm: CarExpert database band (562 high / 598 low / 596 combined) is internally odd; Audi has not confirmed MY27 range",
+    "audi-q6-e-tron-rwd.rangeKm: CarExpert database WLTP 462 km, matching EVDB TEH; Audi has not confirmed MY27 range",
+    "audi-q6-e-tron-*.availability: audi.com.au configurator returned 403; orderability rests on launch reports saying 'available to order now'",
+    "audi-q6-e-tron-*.insuranceAnnual: judged",
+    "audi-q6-e-tron-*.depreciationCurve: judged, held curves kept",
+    "audi-q6-e-tron-rwd.bootLitresSeatsDown: 1517 L (EVDB, CarExpert SQ6) vs held 1529 and CarExpert Base 1593"
+  ]
+}

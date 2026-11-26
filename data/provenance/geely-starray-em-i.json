@@ -1,0 +1,316 @@
+{
+  "familyId": "geely-starray-em-i",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "geely-starray-em-i-complete": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.geely.com.au/build/starray-em-i",
+        "note": "Geely AU configurator lists Complete, Inspire Extended Range and Inspire AWD on the research date."
+      },
+      "listPrice": {
+        "value": 37490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-geely-starray-em-i-review",
+        "note": "CarExpert 2027 review price table, before on-road costs; configurator shows $37,490 without basis wording; CarExpert news 19 May 2026 'remains at $37,490 before on-road costs'; zecar 'excl. on-road costs'."
+      },
+      "batteryKwh": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/complete/features-and-specs",
+        "note": "'Useable battery' 18.4 kWh, LFP."
+      },
+      "rangeKm": {
+        "value": 83,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/complete/features-and-specs",
+        "note": "WLTP combined; UK Pro/Max on the same 18.4 kWh pack quoted 51 miles (82 km) WLTP, so not an NEDC submission."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.4 / 83 x 100."
+      },
+      "combinedRangeKm": {
+        "value": 906,
+        "basis": "derived",
+        "note": "83 + 51 L / 6.2 x 100 = 905.6. Tank 51 L per CarExpert spec page; Geely's own WLTP total 943 km (CarExpert news) implies the same 51 L at 5.93 L/100km WLTP charge-sustaining."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.2,
+        "basis": "judged",
+        "note": "Charge-sustaining figure from real-world reviews: Chasing Cars 5.9-7.0 battery depleted, Auto Express 6.6; Geely's WLTP total range implies 5.93. Kept from held data; matches sibling ordering (jaecoo-j7-shs 5.9, byd-sealion-6 4.8-5.8)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 428,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-geely-starray-em-i-review",
+        "note": "CarExpert 2027 review: 428 L seats up. CarExpert spec pages quote 528 L 'to the lower window', which needs the floor panel removed (NRMA); 428 kept as the usable figure."
+      },
+      "bootLitresSeatsDown": {
+        "value": 2065,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/complete/features-and-specs",
+        "note": "2,065 L seats down; CarExpert review confirms 2,065 L for FWD."
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/complete/features-and-specs",
+        "note": "750 kg braked and unbraked."
+      },
+      "insuranceAnnual": {
+        "value": 1500,
+        "basis": "judged",
+        "note": "Anchored to chery-tiggo-7-phev-urban ($37,990, 1450) and byd-sealion-6-essential ($42,990, 1450); kept from held data."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/complete/features-and-specs"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "note": "84 months / unlimited km whole vehicle, no servicing condition; battery 96 months / unlimited km to 70%. Also stated in CarExpert's 2027 review.",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/complete/features-and-specs"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Brand convention shared with geely-ex5: steeper than the mainstream default for a brand with ~2 years of Australian sales, repeated campaign discounting (6% off plus 0.88% finance EOFY; $500 factory bonus plus 0.68% finance Black Friday on geely.com.au) and no resale record."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car = combined CO2 <= 120 g/km. WLTP label 2.4 L/100km equates to roughly 56 g/km, far below 120."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/complete/features-and-specs",
+        "note": "WLTP combined label 2.4 L/100km, at or below 3.5."
+      }
+    },
+    "geely-starray-em-i-inspire-extended-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.geely.com.au/build/starray-em-i",
+        "note": "Listed on Geely AU configurator on the research date."
+      },
+      "listPrice": {
+        "value": 41490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-geely-starray-em-i-review",
+        "note": "CarExpert 2027 review, Inspire FWD $41,490 before on-road costs; configurator $41,490; CarExpert news 19 May 2026 and zecar 'excl. on-road costs' agree."
+      },
+      "batteryKwh": {
+        "value": 29.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/inspire-extended-range/features-and-specs",
+        "note": "'Useable battery kilowatt hour: 29.8 kWh', LFP."
+      },
+      "rangeKm": {
+        "value": 136,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/inspire-extended-range/features-and-specs",
+        "note": "WLTP combined 136 km; UK Ultra on the same 29.8 kWh pack is 84 miles (135 km) WLTP, so consistent."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.9,
+        "basis": "derived",
+        "note": "29.8 / 136 x 100."
+      },
+      "combinedRangeKm": {
+        "value": 959,
+        "basis": "derived",
+        "note": "136 + 51 L / 6.2 x 100 = 958.6. Tank 51 L per CarExpert spec page (zecar says 60 L, but Geely's WLTP total 996 km implies 51 L at the same 5.93 L/100km as the Complete)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.2,
+        "basis": "judged",
+        "note": "Same powertrain and engine as the Complete; real-world charge-sustaining 5.9-7.0 (Chasing Cars), 6.6 (Auto Express)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 428,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-geely-starray-em-i-review",
+        "note": "CarExpert 2027 review, 428 L seats up (528 L to window with floor removed)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 2065,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/inspire-extended-range/features-and-specs",
+        "note": "2,065 L seats down."
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/inspire-extended-range/features-and-specs",
+        "note": "750 kg braked."
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "Anchored to geely-ex5-complete ($41,990, 1600) and chery-tiggo-7-phev-ultimate ($41,990, 1550); kept from held data."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/inspire-extended-range/features-and-specs"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "note": "84 months / unlimited km whole vehicle, no servicing condition; battery 96 months / unlimited km to 70%. Also stated in CarExpert's 2027 review.",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/inspire-extended-range/features-and-specs"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Brand convention shared with geely-ex5: steeper than the mainstream default for a brand with ~2 years of Australian sales, repeated campaign discounting (6% off plus 0.88% finance EOFY; $500 factory bonus plus 0.68% finance Black Friday on geely.com.au) and no resale record."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car = combined CO2 <= 120 g/km. WLTP label 1.5 L/100km equates to roughly 35 g/km, far below 120."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027/inspire-extended-range/features-and-specs",
+        "note": "WLTP combined label 1.5 L/100km, at or below 3.5."
+      }
+    },
+    "geely-starray-em-i-inspire-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.geely.com.au/build/starray-em-i",
+        "note": "New grade, listed on Geely AU configurator at $44,990; in dealers from mid-September 2026 (zecar); reviewed by CarExpert and CarsGuide (13 Oct 2026)."
+      },
+      "listPrice": {
+        "value": 44990,
+        "basis": "sourced",
+        "url": "https://zecar.com/reviews/geely-starray-em-i-inspire-awd-price-specs-australia",
+        "note": "zecar '$44,990 plus on-road costs' / 'Recommended Retail Price (excl. on-road costs)'; CarsGuide and CarExpert review 'before on-road costs'; configurator $44,990. Lead's basis confirmed as list, not drive-away (CarExpert Sydney drive-away is $49,357)."
+      },
+      "batteryKwh": {
+        "value": 29.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027-inspire-awd-1-5l-suv-4x4-electric-jsm8mfmk20260907",
+        "note": "29.8 kWh usable."
+      },
+      "rangeKm": {
+        "value": 130,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027-inspire-awd-1-5l-suv-4x4-electric-jsm8mfmk20260907",
+        "note": "Geely AU WLTP combined claim. The UK did not take the AWD (UK range is Pro/Max/Ultra, all FWD), so no European cross-check exists; 130 km sits below the FWD's 136 km on the same pack, consistent with WLTP. CarExpert achieved 135 km on test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.9,
+        "basis": "derived",
+        "note": "29.8 / 130 x 100."
+      },
+      "combinedRangeKm": {
+        "value": 1026,
+        "basis": "derived",
+        "note": "130 + 60 L / 6.7 x 100 = 1025.5. Tank 60 L (CarExpert spec, CarExpert review, CarsGuide, zecar). Geely's 'up to 1065 km' WLTP total on geely.com.au implies 6.42 L/100km WLTP charge-sustaining."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.7,
+        "basis": "judged",
+        "note": "FWD's 6.2 scaled by Geely's own WLTP charge-sustaining ratio AWD/FWD (6.42 / 5.93 = 1.083, implied by 1065 km on 60 L vs 996 km on 51 L). Reviewers saw 5.0-5.3 on mountain/descent routes (CarsGuide, CarExpert), not representative. Sibling byd-sealion-6 AWD sits 1.0 above its FWD."
+      },
+      "bootLitresSeatsUp": {
+        "value": 428,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-geely-starray-em-i-review",
+        "note": "CarExpert 2027 AWD review 428 L seats up; CarsGuide 428 L main boot."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1993,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-geely-starray-em-i-review",
+        "note": "CarExpert 2027 AWD review: rear motor reduces underfloor space, max 1,993 L vs 2,065 L FWD (CarsGuide: 72 L less underfloor). CarExpert spec page still shows 2,065 L, likely copied from FWD."
+      },
+      "towKg": {
+        "value": 1050,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027-inspire-awd-1-5l-suv-4x4-electric-jsm8mfmk20260907",
+        "note": "1,050 kg braked, 750 kg unbraked; CarExpert review agrees."
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "Anchored to geely-ex5-inspire ($45,990, 1700) and jaecoo-j7-shs-summit ($45,990, 1650); 220 kW AWD rates higher than the FWD Inspire's 1600."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027-inspire-awd-1-5l-suv-4x4-electric-jsm8mfmk20260907"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "note": "84 months / unlimited km whole vehicle, no servicing condition; battery 96 months / unlimited km to 70%. Also stated in CarExpert's 2027 review.",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027-inspire-awd-1-5l-suv-4x4-electric-jsm8mfmk20260907"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Brand convention shared with geely-ex5: steeper than the mainstream default for a brand with ~2 years of Australian sales, repeated campaign discounting (6% off plus 0.88% finance EOFY; $500 factory bonus plus 0.68% finance Black Friday on geely.com.au) and no resale record."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car = combined CO2 <= 120 g/km. WLTP label 1.7 L/100km equates to roughly 39 g/km, far below 120."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/starray-em-i/2027-inspire-awd-1-5l-suv-4x4-electric-jsm8mfmk20260907",
+        "note": "WLTP combined label 1.7 L/100km, at or below 3.5."
+      }
+    }
+  },
+  "lowConfidence": [
+    "geely-starray-em-i-inspire-awd.fuelConsumptionL100km: judged by scaling FWD 6.2 by Geely's implied WLTP charge-sustaining ratio; no depleted-battery test of the AWD exists (reviews 5.0-5.3 on downhill-assisted routes)",
+    "geely-starray-em-i-inspire-awd.combinedRangeKm: derived from the judged 6.7 L/100km",
+    "geely-starray-em-i-inspire-awd.rangeKm: Australian WLTP claim only; the UK did not take the AWD, so no European cross-check",
+    "geely-starray-em-i-complete.fuelConsumptionL100km: judged from real-world reviews (5.9-7.0); Geely WLTP total implies 5.93",
+    "geely-starray-em-i-inspire-extended-range.fuelConsumptionL100km: as Complete",
+    "geely-starray-em-i-inspire-awd.bootLitresSeatsDown: 1,993 L from CarExpert review text; CarExpert spec page still shows 2,065 L",
+    "geely-starray-em-i-*.bootLitresSeatsUp: 428 L (review) vs 528 L 'to the lower window' on CarExpert spec pages; 428 used",
+    "geely-starray-em-i-*.listPrice: configurator shows prices without basis wording; 'before on-road costs' comes from CarExpert/zecar/CarsGuide",
+    "geely-starray-em-i-*.insuranceAnnual: judged",
+    "geely-starray-em-i-*.depreciationCurve: judged brand convention"
+  ]
+}

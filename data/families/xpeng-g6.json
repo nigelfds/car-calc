@@ -1,11 +1,12 @@
 {
   "id": "xpeng-g6",
-  "summary": "The XPeng G6 is a mid-size electric SUV coupe pitched squarely at the Tesla Model Y, with reviewers praising its upmarket cabin, strong tech package and genuinely quick charging on the refreshed 800V architecture. Testers rate the ride and refinement highly and note the flagship AWD Performance model undercuts a comparable Model Y on price while offering vastly stronger acceleration. The main knocks are steering that feels heavy and artificial, a chassis that doesn't quite match the Performance variant's straight-line pace, and quirks like the lack of a glovebox and a fiddly steering-column gear selector.",
+  "summary": "The XPeng G6 is a mid-size electric SUV coupe pitched squarely at the Tesla Model Y, with reviewers praising its upmarket cabin, strong tech package and genuinely quick charging on the refreshed 800V architecture. Testers rate the ride and refinement highly and note the flagship AWD Performance undercuts a comparable Model Y on price while offering vastly stronger acceleration; the facelifted range is three grades, with the Black Edition now an appearance option rather than a separate grade. The main knocks are steering that feels heavy and artificial, a chassis that doesn't quite match the Performance variant's straight-line pace, and quirks like the lack of a glovebox and a fiddly steering-column gear selector.",
   "pros": [
     "Upmarket interior fit-out and strong tech/safety suite for the price",
-    "Fast 800V/451kW DC charging with a 10-80% top-up around 12 minutes",
-    "AWD Performance variant offers Tesla Model Y Performance-rivalling pace at a lower price",
-    "Spacious rear seating with good headroom for a coupe-SUV shape"
+    "Fast 800V DC charging (up to 451kW on Long Range and Performance, 382kW on Standard Range) with a claimed 10-80% top-up around 12 minutes",
+    "AWD Performance variant offers Tesla Model Y Performance-rivalling pace (0-100km/h in about 4.1s) at a much lower price",
+    "Spacious rear seating with good headroom for a coupe-SUV shape, and a 571L boot (1,374L folded)",
+    "7-year unlimited-km warranty for private buyers (7yr/160,000km commercial), plus 8yr/160,000km cover on the battery and drive unit"
   ],
   "cons": [
     "Steering feels heavy and artificial, chassis doesn't fully back up the Performance model's speed",
@@ -14,11 +15,16 @@
     "Newer brand with a history of distributor changes in Australia, which may concern some buyers on parts/service continuity"
   ],
   "sources": [
+    "https://store.xpeng.com/au/configurator/New_G6R",
+    "https://www.xpeng.com/au/g6",
+    "https://www.xpeng.com/au/insight/warranty",
+    "https://www.xpeng.com/au/explore/new_g6_driveaway_offer",
     "https://www.carexpert.com.au/car-news/2026-xpeng-g6-prices-refreshed-suv-undercuts-tesla-model-y-zeekr-7x-and-byd-sealion-7-in-australia",
     "https://www.carexpert.com.au/car-reviews/2026-xpeng-g6-review-quick-drive",
-    "https://www.carexpert.com.au/car-reviews/2026-xpeng-g6-awd-performance-review-quick-drive",
-    "https://www.evee.com.au/blog/2026-xpeng-g6-australia-price-specs-and-range/",
-    "https://xpeng.com.au/g6-warranty"
+    "https://www.chasingcars.com.au/news/new-car-prices/wild-charging-speeds-for-new-xpeng-g6-2026-tesla-model-y-and-byd-sealion-7-rival-priced-for-australia/",
+    "https://ev-database.org/car/3402/XPENG-G6-RWD-Standard-Range",
+    "https://ev-database.org/uk/car/3275/XPENG-G6-RWD-Long-Range",
+    "https://ev-database.org/car/3276/XPENG-G6-AWD-Performance"
   ],
-  "sourcedAt": "2026-07-26"
+  "sourcedAt": "2026-11-26"
 }

@@ -4,10 +4,10 @@
     "familyId": "mg-4",
     "make": "MG",
     "model": "4",
-    "variant": "Urban 43",
+    "variant": "Urban Essence 43",
     "bodyType": "Hatch",
-    "listPrice": 29840,
-    "batteryKwh": 43,
+    "listPrice": 29856,
+    "batteryKwh": 41.9,
     "rangeKm": 316,
     "consumptionKwhPer100km": 16.5,
     "bootLitresSeatsUp": 382,
@@ -24,17 +24,17 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-4-urban-54",
     "familyId": "mg-4",
     "make": "MG",
     "model": "4",
-    "variant": "Urban 54",
+    "variant": "Urban Essence 54",
     "bodyType": "Hatch",
-    "listPrice": 32720,
-    "batteryKwh": 54,
+    "listPrice": 32735,
+    "batteryKwh": 52.8,
     "rangeKm": 405,
     "consumptionKwhPer100km": 16.1,
     "bootLitresSeatsUp": 382,
@@ -51,7 +51,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-4-essence-64",
@@ -60,8 +60,8 @@
     "model": "4",
     "variant": "Essence 64",
     "bodyType": "Hatch",
-    "listPrice": 37510,
-    "batteryKwh": 64,
+    "listPrice": 37534,
+    "batteryKwh": 61.7,
     "rangeKm": 452,
     "consumptionKwhPer100km": 17.6,
     "bootLitresSeatsUp": 350,
@@ -78,19 +78,19 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-4-xpower",
     "familyId": "mg-4",
     "make": "MG",
     "model": "4",
-    "variant": "XPower",
+    "variant": "XPOWER",
     "bodyType": "Hatch",
-    "listPrice": 45190,
-    "batteryKwh": 64,
+    "listPrice": 45211,
+    "batteryKwh": 61.7,
     "rangeKm": 405,
-    "consumptionKwhPer100km": 19,
+    "consumptionKwhPer100km": 19.0,
     "bootLitresSeatsUp": 350,
     "bootLitresSeatsDown": 1165,
     "seats": 5,
@@ -105,6 +105,6 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   }
 ]

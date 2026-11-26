@@ -1,0 +1,221 @@
+{
+  "familyId": "byd-shark-6",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-shark-6-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-shark-6",
+        "note": "BYD AU Build & Price (bydautomotive.com.au/configurator/byd-shark-6 301-redirects to this BYD-run configurator host) lists Premium at $57,900 on 2026-11-26 beside Dynamic Cab Chassis $55,900 (excluded: cab-chassis) and Premium/Performance; drive-away needs a postcode. Three grades also per CarExpert 2026 price-and-specs and EV Central."
+      },
+      "listPrice": {
+        "value": 57900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-shark-6-price-and-specs",
+        "note": "CarExpert 2026 Shark 6 price and specs (20 Apr 2026): $57,900 'before on-road costs'. Re-verified 2026-11-26: BYD configurator shows $57,900 with drive-away computed separately by postcode; EV Central lists the same and states 'Prices are list and exclude on-road costs'. EV Central's $4,000-off drive-away offer (to 21 Dec 2026) is a campaign and ignored."
+      },
+      "bootLitresSeatsUp": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Tub capacity (L) 1,200' for Premium and Performance (1520 x 1500 x 517mm per CarExpert). Ute: tub volume in both fields."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "Ute: equals tub volume."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Seating Capacity 5'; dual-cab pickup."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure technical table 'Towing Braked (kg)' 2,500; unbraked 750."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/shark-6",
+        "note": "BYD AU: vehicle 6 years/150,000km, traction battery 8 years/160,000km; matches the BYD reference value 6."
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "Anchored to ford-ranger-phev-sport (1850 at $61,100), gwm-cannon-alpha-phev-lux (1900 at $59,990) and gwm-cannon-phev-ultra (1800 at $52,687); unchanged from held value."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Changed from the held ute-specific [1,0.74,0.65,0.57,0.5,0.44] to the BYD brand convention used by most BYD rows (Seal 6, Atto 1/2, Sealion 5/6/7, Dolphin, Sealion 8 FWD), per 'one convention per brand'. The held curve retained better than the Ford Ranger PHEV (0.43 at year 5) with no documented evidence, while BYD runs repeated Shark 6 drive-away campaigns ($4,000 off to 21 Dec 2026 per EV Central)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Combined fuel consumption - SOC >25%' 2.0 L/100km (NEDC), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": false,
+        "basis": "derived",
+        "note": "Ute: field rules require false on every ute row; Victoria duties utes as goods vehicles (isNonPassengerForVicDuty true)."
+      },
+      "batteryKwh": {
+        "value": 29.6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Battery capacity (kWh) 29.6' BYD Blade LFP, unlabelled (CarExpert: 29.58). UK leaflet quotes 32.2 kWh at 361V for the same-weight truck, so 29.6 is likely the lower (usable-side) figure, but no source states both. The AU 25% SOC split for fuel figures suggests EV running stops near 25% SOC, so energy used for EV range may be ~22 kWh."
+      },
+      "rangeKm": {
+        "value": 89,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.byd.com/material/__EU/byd-site/byd-uk/specifications/BYD%20SHARK%20UK%20Leaflet.pdf",
+        "note": "UK BYD SHARK leaflet, WLTP 'Electric range - combined (mile) 55' = 88.5km; same 1.5T AWD truck (kerb 2710kg, GVM 3500, payload 790, tub 1200L, 18in 265/65 tyres all match the AU Premium). AU brochure's '100 (NEDC)' rejected by the direction test (higher than WLTP). Chasing Cars managed about 80km in testing."
+      },
+      "consumptionKwhPer100km": {
+        "value": 33.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 29.6 / 89 x 100 = 33.26. Not used: AU brochure 212 Wh/km (NEDC label) and UK 'Electric consumption combined 2.24 miles/kWh' (= 27.7 kWh/100km), which sits beside the weighted 80.71mpg fuel figure and is likely utility-factor-weighted."
+      },
+      "combinedRangeKm": {
+        "value": 674,
+        "basis": "sourced",
+        "url": "https://www.byd.com/material/__EU/byd-site/byd-uk/specifications/BYD%20SHARK%20UK%20Leaflet.pdf",
+        "note": "Manufacturer WLTP total: UK leaflet 'Combined range (miles) 419' = 674km. Built on WLTP, so preferred over the formula (89 + 60/9.6 x 100 = 714). Tank 60L per AU brochure. AU brochure's 800km is NEDC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 9.6,
+        "basis": "sourced",
+        "url": "https://www.byd.com/material/__EU/byd-site/byd-uk/specifications/BYD%20SHARK%20UK%20Leaflet.pdf",
+        "note": "Charge-sustaining WLTP: UK leaflet 'Fuel Consumption - combined (mpg) 29.42' (listed with low/medium/high CS phases, separate from the 80.71mpg weighted figure) = 282.481/29.42 = 9.60 L/100km. Chosen over the AU brochure's 'SOC <25%' 7.9 (NEDC) for consistency with the Performance's 10.5 (WLTP) row. Chasing Cars saw 8.0-8.8 on its trip computer on long drives without charging."
+      }
+    },
+    "byd-shark-6-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-shark-6",
+        "note": "BYD AU Build & Price (bydautomotive.com.au/configurator/byd-shark-6 301-redirects to this BYD-run configurator host) lists Performance at $62,900 on 2026-11-26 beside Dynamic Cab Chassis $55,900 (excluded: cab-chassis) and Premium/Performance; drive-away needs a postcode. Three grades also per CarExpert 2026 price-and-specs and EV Central."
+      },
+      "listPrice": {
+        "value": 62900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-shark-6-price-and-specs",
+        "note": "CarExpert 2026 Shark 6 price and specs (20 Apr 2026): $62,900 'before on-road costs'. Re-verified 2026-11-26: BYD configurator shows $62,900 with drive-away computed separately by postcode; EV Central lists the same and states 'Prices are list and exclude on-road costs'. EV Central's $4,000-off drive-away offer (to 21 Dec 2026) is a campaign and ignored."
+      },
+      "bootLitresSeatsUp": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Tub capacity (L) 1,200' for Premium and Performance (1520 x 1500 x 517mm per CarExpert). Ute: tub volume in both fields."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "Ute: equals tub volume."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Seating Capacity 5'; dual-cab pickup."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure technical table 'Towing Braked (kg)' 3,500; unbraked 750."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/shark-6",
+        "note": "BYD AU: vehicle 6 years/150,000km, traction battery 8 years/160,000km; matches the BYD reference value 6."
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "Anchored to ford-ranger-phev-wildtrak (1950 at $65,000) and gwm-cannon-alpha-phev-ultra (2050 at $66,990); 2.0T 350kW flagship. Unchanged from held value."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Changed from the held ute-specific [1,0.74,0.65,0.57,0.5,0.44] to the BYD brand convention used by most BYD rows (Seal 6, Atto 1/2, Sealion 5/6/7, Dolphin, Sealion 8 FWD), per 'one convention per brand'. The held curve retained better than the Ford Ranger PHEV (0.43 at year 5) with no documented evidence, while BYD runs repeated Shark 6 drive-away campaigns ($4,000 off to 21 Dec 2026 per EV Central)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Combined fuel consumption - SOC >25%' 1.3 L/100km (WLTP), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": false,
+        "basis": "derived",
+        "note": "Ute: field rules require false on every ute row; Victoria duties utes as goods vehicles (isNonPassengerForVicDuty true)."
+      },
+      "batteryKwh": {
+        "value": 29.6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Battery capacity (kWh) 29.6', same pack across grades, unlabelled usable/gross."
+      },
+      "rangeKm": {
+        "value": 80,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Electric range - combined cycle (km) 80 (WLTP)' for the Performance: Australian-spec figure on WLTP. Also CarExpert and EV Central. Performance not sold in the UK."
+      },
+      "consumptionKwhPer100km": {
+        "value": 35,
+        "basis": "judged",
+        "note": "batteryKwh / rangeKm x 100 = 29.6 / 80 x 100 = 37.0, above the schema's 35 ceiling, so capped at 35 (5.4% off, inside the cross-check). AU brochure '277 Wh per km (WLTP)' not used: likely the label figure (utility-factor-weighted or measured to the ~25% SOC floor). The gap points at 29.6 kWh not being the energy used for EV range."
+      },
+      "combinedRangeKm": {
+        "value": 640,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Combined range (km) 640 (WLTP)': manufacturer total built on WLTP. Formula check: 80 + 60/10.5 x 100 = 651."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SHARK-6-2026.pdf",
+        "note": "AU brochure 'Combined fuel consumption - SOC <25% (l/100km) 10.5 (WLTP)': charge-sustaining. Same figure in CarExpert Performance quick drive (no observed figure there)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-shark-6-performance.consumptionKwhPer100km: capped at the schema ceiling of 35; battery/range gives 37.0 and BYD's own 277 Wh/km is 27.7, so the true EV-mode figure is uncertain",
+    "byd-shark-6-premium.consumptionKwhPer100km: derived from an unlabelled 29.6 kWh; if EV running stops near 25% SOC the real figure is nearer 25-28",
+    "byd-shark-6-premium.batteryKwh: 29.6 unlabelled; UK quotes 32.2 kWh for the same truck, usable not published (same for Performance)",
+    "byd-shark-6-performance.batteryKwh: as Premium",
+    "byd-shark-6-premium.rangeKm: WLTP taken from the UK leaflet (same weights and tyres) because the AU figure is NEDC; changed from held 85 to 89",
+    "byd-shark-6-premium.fuelConsumptionL100km: UK WLTP charge-sustaining 9.6 chosen over AU NEDC 7.9 for consistency with Performance; Chasing Cars saw 8.0-8.8 in real use, so this may overstate running cost a little; changed from held 7.9",
+    "byd-shark-6-premium.depreciationCurve: realigned to the BYD brand convention from the held ute curve; no ute-specific BYD resale data (same for Performance)",
+    "byd-shark-6-performance.depreciationCurve: as Premium",
+    "byd-shark-6-premium.insuranceAnnual: judged, anchored to Ranger PHEV and Cannon rows (same for Performance)",
+    "byd-shark-6-performance.insuranceAnnual: judged, as Premium"
+  ]
+}

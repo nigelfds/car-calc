@@ -1,0 +1,251 @@
+{
+  "familyId": "zeekr-7x",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "zeekr-7x-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "MY27 three-grade line-up, orders opened 1 Nov 2026; grade also confirmed by EV Central and The Beep. Zeekr AU configurator (conf.zeekrlife.com/en-au) renders client-side and returned no grade data to fetch."
+      },
+      "listPrice": {
+        "value": 57900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "CarExpert: pricing excludes on-road costs; The Beep says before on-road costs in words (https://thebeep.com.au/car-news/2027-zeekr-7x-update-price-specs-australia/); unchanged from MY26"
+      },
+      "batteryKwh": {
+        "value": 73,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3081/Zeekr-7X-Core-RWD",
+        "note": "usable; Core RWD (MY25 EU): usable 73.0, nominal 75.6; WLTP TEL 482km, rated 178 Wh/km. EU spec now matches AU MY27 ranges (482/627/544). evdb.nz lists 71/94 usable against the older 480/615/543 ranges; held data had 71/95 unsourced"
+      },
+      "rangeKm": {
+        "value": 482,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "AU MY27 WLTP range per CarExpert/EV Central; matches EU WLTP TEL on EV Database (AWD 545 there). Wheels: 19in RWD/LR, 21in Performance AWD"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3081/Zeekr-7X-Core-RWD",
+        "note": "EU WLTP rated (grid, TEL) consumption from EV Database; Core RWD (MY25 EU): usable 73.0, nominal 75.6; WLTP TEL 482km, rated 178 Wh/km. No AU-published consumption figure found"
+      },
+      "bootLitresSeatsUp": {
+        "value": 539,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/key-tesla-model-y-rival-gets-more-power-same-price-for-2027-zeekr-7x-upgraded-with-500kw-flagship-and-up-to-627km-range/",
+        "note": "539L seats up, 1978L folded"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1978,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/key-tesla-model-y-rival-gets-more-power-same-price-for-2027-zeekr-7x-upgraded-with-500kw-flagship-and-up-to-627km-range/"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-zeekr-7x-price-and-specs",
+        "note": "five-seater; MY27 dimensions unchanged per EV Central"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3081/Zeekr-7X-Core-RWD",
+        "note": "2000kg braked on EV Database (EU spec); CarsGuide 2026 AU towing page also 2000kg for all three grades (https://www.carsguide.com.au/zeekr/7x/towing-capacity/2026); no AU manufacturer tech sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/2027-zeekr-7x-update-price-specs-australia/",
+        "note": "5 years unlimited km; battery 8yr/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "anchored to tesla-model-y-premium-rwd 2300 and xpeng-g6 1750-1900; slightly under the Model Y as a lower-value brand; unchanged from held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "steeper than the mainstream default for a brand on sale only since 2024 with sibling Zeekr X repriced down $5-10k; matches polestar-4. zeekr-x uses [1,0.68,0.57,0.48,0.41,0.35]: brand convention differs by one step"
+      }
+    },
+    "zeekr-7x-long-range-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "MY27 three-grade line-up, orders opened 1 Nov 2026; grade also confirmed by EV Central and The Beep. Zeekr AU configurator (conf.zeekrlife.com/en-au) renders client-side and returned no grade data to fetch."
+      },
+      "listPrice": {
+        "value": 63900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "CarExpert: pricing excludes on-road costs; The Beep says before on-road costs in words (https://thebeep.com.au/car-news/2027-zeekr-7x-update-price-specs-australia/); unchanged from MY26"
+      },
+      "batteryKwh": {
+        "value": 97,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3082/Zeekr-7X-Long-Range-RWD",
+        "note": "usable; Long Range RWD (MY25 EU): usable 97.0, nominal 100.0; WLTP TEL 627km, rated 177 Wh/km. EU spec now matches AU MY27 ranges (482/627/544). evdb.nz lists 71/94 usable against the older 480/615/543 ranges; held data had 71/95 unsourced"
+      },
+      "rangeKm": {
+        "value": 627,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "AU MY27 WLTP range per CarExpert/EV Central; matches EU WLTP TEL on EV Database (AWD 545 there). Wheels: 19in RWD/LR, 21in Performance AWD"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.7,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3082/Zeekr-7X-Long-Range-RWD",
+        "note": "EU WLTP rated (grid, TEL) consumption from EV Database; Long Range RWD (MY25 EU): usable 97.0, nominal 100.0; WLTP TEL 627km, rated 177 Wh/km. No AU-published consumption figure found"
+      },
+      "bootLitresSeatsUp": {
+        "value": 539,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/key-tesla-model-y-rival-gets-more-power-same-price-for-2027-zeekr-7x-upgraded-with-500kw-flagship-and-up-to-627km-range/",
+        "note": "539L seats up, 1978L folded"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1978,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/key-tesla-model-y-rival-gets-more-power-same-price-for-2027-zeekr-7x-upgraded-with-500kw-flagship-and-up-to-627km-range/"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-zeekr-7x-price-and-specs",
+        "note": "five-seater; MY27 dimensions unchanged per EV Central"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3082/Zeekr-7X-Long-Range-RWD",
+        "note": "2000kg braked on EV Database (EU spec); CarsGuide 2026 AU towing page also 2000kg for all three grades (https://www.carsguide.com.au/zeekr/7x/towing-capacity/2026); no AU manufacturer tech sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/2027-zeekr-7x-update-price-specs-australia/",
+        "note": "5 years unlimited km; battery 8yr/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2400,
+        "basis": "judged",
+        "note": "anchored to tesla-model-y-premium-rwd 2300 / long-range 2550 at bracketing prices; polestar-4 single motor 2350; unchanged from held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "steeper than the mainstream default for a brand on sale only since 2024 with sibling Zeekr X repriced down $5-10k; matches polestar-4. zeekr-x uses [1,0.68,0.57,0.48,0.41,0.35]: brand convention differs by one step"
+      }
+    },
+    "zeekr-7x-performance-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "MY27 three-grade line-up, orders opened 1 Nov 2026; grade also confirmed by EV Central and The Beep. Zeekr AU configurator (conf.zeekrlife.com/en-au) renders client-side and returned no grade data to fetch."
+      },
+      "listPrice": {
+        "value": 72900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "CarExpert: pricing excludes on-road costs; The Beep says before on-road costs in words (https://thebeep.com.au/car-news/2027-zeekr-7x-update-price-specs-australia/); unchanged from MY26"
+      },
+      "batteryKwh": {
+        "value": 97,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3083/Zeekr-7X-Privilege-AWD",
+        "note": "usable; Privilege AWD (MY25 EU, the AU Performance AWD): usable 97.0, nominal 100.0; WLTP TEL 545km, rated 199 Wh/km. EU spec now matches AU MY27 ranges (482/627/544). evdb.nz lists 71/94 usable against the older 480/615/543 ranges; held data had 71/95 unsourced"
+      },
+      "rangeKm": {
+        "value": 544,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2027-zeekr-7x-update-more-power-same-price",
+        "note": "AU MY27 WLTP range per CarExpert/EV Central; matches EU WLTP TEL on EV Database (AWD 545 there). Wheels: 19in RWD/LR, 21in Performance AWD"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3083/Zeekr-7X-Privilege-AWD",
+        "note": "EU WLTP rated (grid, TEL) consumption from EV Database; Privilege AWD (MY25 EU, the AU Performance AWD): usable 97.0, nominal 100.0; WLTP TEL 545km, rated 199 Wh/km. No AU-published consumption figure found"
+      },
+      "bootLitresSeatsUp": {
+        "value": 539,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/key-tesla-model-y-rival-gets-more-power-same-price-for-2027-zeekr-7x-upgraded-with-500kw-flagship-and-up-to-627km-range/",
+        "note": "539L seats up, 1978L folded"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1978,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/key-tesla-model-y-rival-gets-more-power-same-price-for-2027-zeekr-7x-upgraded-with-500kw-flagship-and-up-to-627km-range/"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-zeekr-7x-price-and-specs",
+        "note": "five-seater; MY27 dimensions unchanged per EV Central"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3083/Zeekr-7X-Privilege-AWD",
+        "note": "2000kg braked on EV Database (EU spec); CarsGuide 2026 AU towing page also 2000kg for all three grades (https://www.carsguide.com.au/zeekr/7x/towing-capacity/2026); no AU manufacturer tech sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/2027-zeekr-7x-update-price-specs-australia/",
+        "note": "5 years unlimited km; battery 8yr/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2750,
+        "basis": "judged",
+        "note": "anchored to tesla-model-y-premium-long-range-awd 2550 and l-premium 2700 at similar price; 500kW dual motor justifies a premium; unchanged from held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "steeper than the mainstream default for a brand on sale only since 2024 with sibling Zeekr X repriced down $5-10k; matches polestar-4. zeekr-x uses [1,0.68,0.57,0.48,0.41,0.35]: brand convention differs by one step"
+      }
+    }
+  },
+  "lowConfidence": [
+    "zeekr-7x-rwd.batteryKwh: usable 73 from EV Database EU MY25 page; evdb.nz says 71; no manufacturer usable figure",
+    "zeekr-7x-long-range-rwd.batteryKwh: usable 97 from EV Database EU page; evdb.nz says 94, held data 95; no manufacturer usable figure",
+    "zeekr-7x-performance-awd.batteryKwh: usable 97 from EV Database EU page; evdb.nz says 94, held data 95",
+    "zeekr-7x-*.consumptionKwhPer100km: EU WLTP rated figures via EV Database, not an Australian-published figure",
+    "zeekr-7x-*.towKg: EV Database and CarsGuide aggregator only; no Zeekr AU tech sheet opened",
+    "zeekr-7x-*.listPrice: press-release prices via CarExpert/The Beep; Zeekr AU configurator could not be read",
+    "zeekr-7x-*.depreciationCurve: judged; differs by one step from zeekr-x curve",
+    "zeekr-7x-*.insuranceAnnual: judged, anchored to tesla-model-y"
+  ]
+}

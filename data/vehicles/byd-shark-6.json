@@ -1,38 +1,5 @@
 [
   {
-    "id": "byd-shark-6-dynamic-cab-chassis",
-    "familyId": "byd-shark-6",
-    "make": "BYD",
-    "model": "Shark 6",
-    "variant": "Dynamic Cab Chassis",
-    "bodyType": "Ute",
-    "powertrain": "phev",
-    "listPrice": 55900,
-    "batteryKwh": 29.58,
-    "rangeKm": 85,
-    "consumptionKwhPer100km": 34.8,
-    "combinedRangeKm": 800,
-    "fuelConsumptionL100km": 7.9,
-    "isFuelEfficientForLct": true,
-    "isGreenForVicDuty": false,
-    "isNonPassengerForVicDuty": true,
-    "bootLitresSeatsUp": 790,
-    "bootLitresSeatsDown": 790,
-    "seats": 5,
-    "towKg": 2500,
-    "warrantyYears": 6,
-    "insuranceAnnual": 1750,
-    "depreciationCurve": [
-      1,
-      0.74,
-      0.65,
-      0.57,
-      0.5,
-      0.44
-    ],
-    "sourcedAt": "2026-07-28"
-  },
-  {
     "id": "byd-shark-6-premium",
     "familyId": "byd-shark-6",
     "make": "BYD",
@@ -41,11 +8,11 @@
     "bodyType": "Ute",
     "powertrain": "phev",
     "listPrice": 57900,
-    "batteryKwh": 29.58,
-    "rangeKm": 85,
-    "consumptionKwhPer100km": 34.8,
-    "combinedRangeKm": 800,
-    "fuelConsumptionL100km": 7.9,
+    "batteryKwh": 29.6,
+    "rangeKm": 89,
+    "consumptionKwhPer100km": 33.3,
+    "combinedRangeKm": 674,
+    "fuelConsumptionL100km": 9.6,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": false,
     "isNonPassengerForVicDuty": true,
@@ -55,15 +22,8 @@
     "towKg": 2500,
     "warrantyYears": 6,
     "insuranceAnnual": 1800,
-    "depreciationCurve": [
-      1,
-      0.74,
-      0.65,
-      0.57,
-      0.5,
-      0.44
-    ],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-shark-6-performance",
@@ -74,7 +34,7 @@
     "bodyType": "Ute",
     "powertrain": "phev",
     "listPrice": 62900,
-    "batteryKwh": 29.58,
+    "batteryKwh": 29.6,
     "rangeKm": 80,
     "consumptionKwhPer100km": 35,
     "combinedRangeKm": 640,
@@ -88,14 +48,7 @@
     "towKg": 3500,
     "warrantyYears": 6,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [
-      1,
-      0.74,
-      0.65,
-      0.57,
-      0.5,
-      0.44
-    ],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-11-26"
   }
 ]

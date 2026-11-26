@@ -1,0 +1,171 @@
+{
+  "familyId": "polestar-4",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "polestar-4-long-range-single-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/configure/polestar-4-coupe/",
+        "note": "MY27 coupe configurator lists Rear motor and Dual Motor; Performance is a pack on Dual Motor only"
+      },
+      "listPrice": {
+        "value": 73900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-polestar-4-coupe-suv-prices-cut-to-match-new-more-practical-sibling",
+        "note": "Rear motor $73,900 'before on-road costs' (MY27, from 2 Sep 2026); corroborated by https://thedriven.io/2026/09/10/polestar-australia-confirms-it-has-cut-prices-for-2027-polestar-4-coupe-to-match-new-electric-suv/"
+      },
+      "batteryKwh": {
+        "value": 94,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1841/Polestar-4-Long-Range-Single-Motor",
+        "note": "usable 94.0, gross 100.0 on the same page (MY24-26 entry); Polestar AU spec says '100 kWh'; CarExpert MY27 article confirms battery and powertrain unchanged (https://www.carexpert.com.au/car-news/2027-polestar-4-ev-updated-for-australia-with-no-price-rise)"
+      },
+      "rangeKm": {
+        "value": 620,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/",
+        "note": "Polestar AU spec page WLTP figure on 20-inch Aero wheels (standard on the grade)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.8,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/",
+        "note": "Polestar AU WLTP 17.8-18.4 kWh/100km, low end paired with 620 km on 20-inch; EV Database 178 Wh/km agrees"
+      },
+      "bootLitresSeatsUp": {
+        "value": 526,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/",
+        "note": "incl. under-floor; plus 15 L frunk not counted"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1536,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1841/Polestar-4-Long-Range-Single-Motor"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/",
+        "note": "Polestar AU spec 'Towing power up to'; matches EV Database braked figure"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4/",
+        "note": "5 years/100,000 km vehicle; 8 years/160,000 km battery"
+      },
+      "insuranceAnnual": {
+        "value": 2300,
+        "basis": "judged",
+        "note": "judged; anchored to volvo-ex40-twin-motor-ultra ($74,990, 2150) and polestar-2-long-range-dual-motor ($71,400, 2200), loaded for larger, more powerful car; held 2350 trimmed for $4,600 price cut"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "aligned to Polestar brand convention used on polestar-2 and polestar-3; evidence of soft residuals: second list-price cut in 2026 ($4,600 across the coupe from 2 Sep 2026, after MY27 Dual cut), same-price Polestar 4 SUV sibling launched"
+      }
+    },
+    "polestar-4-long-range-dual-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/configure/polestar-4-coupe/",
+        "note": "MY27 coupe configurator lists Rear motor and Dual Motor; Performance is a pack on Dual Motor only"
+      },
+      "listPrice": {
+        "value": 81750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-polestar-4-coupe-suv-prices-cut-to-match-new-more-practical-sibling",
+        "note": "Dual motor $81,750 'plus on-roads' (MY27). Performance pack ($7,200, needs Plus pack) configured at $95,450 is an option, not a grade; corroborated by https://thedriven.io/2026/09/10/polestar-australia-confirms-it-has-cut-prices-for-2027-polestar-4-coupe-to-match-new-electric-suv/"
+      },
+      "batteryKwh": {
+        "value": 94,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1842/Polestar-4-Long-Range-Dual-Motor",
+        "note": "usable 94.0, gross 100.0 on the same page (MY24-26 entry); Polestar AU spec says '100 kWh'; CarExpert MY27 article confirms battery and powertrain unchanged (https://www.carexpert.com.au/car-news/2027-polestar-4-ev-updated-for-australia-with-no-price-rise)"
+      },
+      "rangeKm": {
+        "value": 590,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/",
+        "note": "Polestar AU spec page WLTP figure on 20-inch Aero wheels (standard on the grade)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.0,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/",
+        "note": "Polestar AU WLTP 19.0-21.7 kWh/100km, low end paired with 590 km on 20-inch (EV Database 186 Wh/km)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 526,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/",
+        "note": "incl. under-floor; plus 15 L frunk not counted"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1536,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1842/Polestar-4-Long-Range-Dual-Motor"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4-models/polestar-4-coupe/specifications/",
+        "note": "Polestar AU spec 'Towing power up to'; matches EV Database braked figure"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-4/",
+        "note": "5 years/100,000 km vehicle; 8 years/160,000 km battery"
+      },
+      "insuranceAnnual": {
+        "value": 2550,
+        "basis": "judged",
+        "note": "judged; anchored to polestar-2-long-range-dual-motor-performance ($85,080, 2600) and zeekr-7x-performance-awd ($72,900, 2750); 400 kW AWD; held 2650 trimmed for $4,600 price cut"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "aligned to Polestar brand convention used on polestar-2 and polestar-3; evidence of soft residuals: second list-price cut in 2026 ($4,600 across the coupe from 2 Sep 2026, after MY27 Dual cut), same-price Polestar 4 SUV sibling launched"
+      }
+    }
+  },
+  "lowConfidence": [
+    "polestar-4-long-range-dual-motor.insuranceAnnual: judged premium for a 400 kW car",
+    "polestar-4-long-range-single-motor.insuranceAnnual: judged premium",
+    "polestar-4-long-range-single-motor.depreciationCurve: brand-convention curve, no Polestar 4 residual data",
+    "polestar-4-long-range-dual-motor.depreciationCurve: brand-convention curve, no Polestar 4 residual data",
+    "polestar-4-long-range-single-motor.batteryKwh: usable figure from EV Database MY24-26 entry; MY27 assumed unchanged per CarExpert",
+    "polestar-4-long-range-dual-motor.batteryKwh: usable figure from EV Database MY24-26 entry; MY27 assumed unchanged per CarExpert",
+    "polestar-4-long-range-single-motor.listPrice: configurator would not render a price to the fetcher; price from CarExpert and The Driven, both 'before on-road costs'",
+    "polestar-4-long-range-dual-motor.listPrice: configurator would not render a price to the fetcher; price from CarExpert and The Driven, both 'plus on-roads'"
+  ]
+}

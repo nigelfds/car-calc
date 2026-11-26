@@ -1,0 +1,93 @@
+{
+  "familyId": "chery-e5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "chery-e5-ultimate": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/models/chery-e5-electric-suv",
+        "note": "Chery AU E5 page: single grade 'Chery E5 Ultimate', postcode pricing live (Chery /api/dynamic-pricing/car-variant/3237 returns $39,604 for VIC 3000 and 3350); no Build & Price configurator exists on the Chery AU site. Nav lists 'New E5' (MY27 facelift, image 'MY27 E5 Side') as 'Coming soon' with no price; CarExpert 15 Sep 2026 says MY27 pricing and availability unconfirmed and it is a facelift of the same car (same motor and 430km claim)"
+      },
+      "listPrice": {
+        "value": 35990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/chery/e5/2026-ultimate-suv-fwd-electric-jsggos8g20260422",
+        "note": "CarExpert 2026 Ultimate price page: 'prices starting at $35,990' before on-road costs (drive-away $37,990 Sydney). CarsGuide price page lists 2026 and 2027 E5 from $35,990 excluding stamp duty and government charges. Reconciled with Chery's own Victorian drive-away: Chery API $39,604 for VIC 3000; Chery footnote [E4] says it includes RRP, 12 months rego, CTP, DEALER DELIVERY and stamp duty. Plain back-out (39604-880)/1.042 = 37,163 round-trips to $39,603.85 via calc/onroad.js but overstates the list by the delivery charge (sources.md price rule 4). App drive-away at 35,990 = $38,381.58, so the implied delivery is ~$1,173 (+4.2% duty), a plausible dealer delivery charge. National default (no postcode) is $37,990, stated drive-away in Chery's 8 Apr 2026 release; prior list was $40,990 plus on-roads (CarExpert 29 Mar 2026, CarsGuide 8 Apr 2026). Current $2,000 cashback (1 Nov-21 Dec 2026) is a campaign and ignored."
+      },
+      "batteryKwh": {
+        "value": 58.9,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-04/233_25_Chery_E5_Spec_Sheet_2025_Rebrand_v115%20%282%29%20%281%29.pdf",
+        "note": "Chery AU MY26 spec sheet 'Battery Capacity (kWh) 58.9', 163.5Ah x 360.2V = 58.9 kWh, so this reads as the nominal pack energy of the mid-2025 replacement LFP pack. EV Database UK lists 58.9 usable / 60.9 nominal; CarExpert (29 Mar 2026) gives 61.1 gross / 58.9 usable. Usable vs gross unsettled; if 58.9 is nominal the usable figure is likely ~2 kWh lower."
+      },
+      "rangeKm": {
+        "value": 430,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-04/233_25_Chery_E5_Spec_Sheet_2025_Rebrand_v115%20%282%29%20%281%29.pdf",
+        "note": "Chery AU spec sheet 'All Electric Range - WLTP 430', 18-inch wheels 215/55 R18 (only wheel offered). AU sheet also quotes 505 NEDC (rejected by direction test). EV Database UK: 267 mi (430 km) WLTP for the UK Omoda E5, same 18-inch car."
+      },
+      "consumptionKwhPer100km": {
+        "value": 13.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 58.9 / 430 x 100 = 13.70. Published NEDC 132 Wh/km rejected (NEDC); EV Database WLTP rated 256 Wh/mi (15.9 kWh/100km) includes charging losses."
+      },
+      "bootLitresSeatsUp": {
+        "value": 300,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-04/233_25_Chery_E5_Spec_Sheet_2025_Rebrand_v115%20%282%29%20%281%29.pdf",
+        "note": "AU spec sheet 'Luggage Capacity - VDA, Volume up to Cargo Cover 300' (matches convention). UK 380 L is a different measure."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1079,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-04/233_25_Chery_E5_Spec_Sheet_2025_Rebrand_v115%20%282%29%20%281%29.pdf",
+        "note": "AU spec sheet 'Volume 2nd Row Seats Folded, up to Roof 1,079'. To the roof, not the belt line: no belt-line figure published (CarExpert July 2026 also gives 1,079 'measured to the roof'); reads high against the convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/models/chery-e5-electric-suv",
+        "note": "schema.org seatingCapacity 5 on the Chery AU E5 page"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-chery-c5-and-e5-price-and-specs-hybrid-joins-small-suv-range",
+        "note": "CarExpert 2 Jul 2026 C5/E5 price and specs: 750kg braked. Chery AU spec sheet lists only 'Towing Capacity - Non-Braked Trailer 750' and 75kg towball; EV Database UK 750 braked / 750 unbraked."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-04/233_25_Chery_E5_Spec_Sheet_2025_Rebrand_v115%20%282%29%20%281%29.pdf",
+        "note": "Chery AU spec sheet 'Vehicle Warranty 7 Years / Unlimited kms', battery 8 years / unlimited; no servicing condition stated on the sheet or the E5 page"
+      },
+      "insuranceAnnual": {
+        "value": 1500,
+        "basis": "judged",
+        "note": "anchored to jaecoo-j5-ev-summit ($35,990, $1,500, same Chery group) and byd-atto3-essential ($39,990, $1,500); held $1,550 lowered to match the J5 EV at an identical list price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Chery brand convention used by every chery-tiggo-*-phev and jaecoo/omoda row (one convention per brand); held [..0.5,0.44,0.39] was the only Chery-group outlier. Below mainstream on evidence of heavy price cuts ($40,990 plus on-roads to $37,990 drive-away in Apr 2026, a further $2,000 cashback Nov 2026) and an imminent MY27 facelift."
+      }
+    }
+  },
+  "lowConfidence": [
+    "chery-e5-ultimate.listPrice: $35,990 RRP is from CarExpert/CarsGuide, not a Chery page; Chery publishes only drive-away (VIC $39,604 incl. dealer delivery). If Chery's delivery charge is lower than ~$1,173, the true list sits between $35,990 and $37,163",
+    "chery-e5-ultimate.batteryKwh: 58.9 may be nominal (163.5Ah x 360.2V) rather than usable; EV Database and CarExpert call it usable against a 60.9-61.1 kWh gross",
+    "chery-e5-ultimate.bootLitresSeatsDown: 1,079 L measured to the roof; no belt-line figure published",
+    "chery-e5-ultimate.towKg: braked 750 kg from CarExpert and EV Database UK; Chery AU spec sheet states only the 750 kg unbraked figure",
+    "chery-e5-ultimate.depreciationCurve: judged, Chery brand convention",
+    "chery-e5-ultimate.insuranceAnnual: judged, anchored to jaecoo-j5-ev-summit"
+  ]
+}

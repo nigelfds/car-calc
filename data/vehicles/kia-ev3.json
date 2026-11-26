@@ -7,17 +7,24 @@
     "variant": "Air Standard Range",
     "bodyType": "SUV",
     "listPrice": 47600,
-    "batteryKwh": 58.3,
+    "batteryKwh": 55.0,
     "rangeKm": 436,
     "consumptionKwhPer100km": 14.9,
     "bootLitresSeatsUp": 460,
-    "bootLitresSeatsDown": 1250,
+    "bootLitresSeatsDown": 1251,
     "seats": 5,
     "towKg": 500,
     "warrantyYears": 7,
     "insuranceAnnual": 1450,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev3-air-long-range",
@@ -27,17 +34,24 @@
     "variant": "Air Long Range",
     "bodyType": "SUV",
     "listPrice": 53315,
-    "batteryKwh": 81.4,
+    "batteryKwh": 78.0,
     "rangeKm": 604,
     "consumptionKwhPer100km": 14.9,
     "bootLitresSeatsUp": 460,
-    "bootLitresSeatsDown": 1250,
+    "bootLitresSeatsDown": 1251,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 7,
     "insuranceAnnual": 1550,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev3-earth-long-range",
@@ -47,17 +61,24 @@
     "variant": "Earth Long Range",
     "bodyType": "SUV",
     "listPrice": 58600,
-    "batteryKwh": 81.4,
+    "batteryKwh": 78.0,
     "rangeKm": 563,
     "consumptionKwhPer100km": 16.2,
     "bootLitresSeatsUp": 460,
-    "bootLitresSeatsDown": 1250,
+    "bootLitresSeatsDown": 1251,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 7,
     "insuranceAnnual": 1700,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev3-gt-line-long-range",
@@ -67,16 +88,50 @@
     "variant": "GT-Line Long Range",
     "bodyType": "SUV",
     "listPrice": 63950,
-    "batteryKwh": 81.4,
-    "rangeKm": 536,
+    "batteryKwh": 78.0,
+    "rangeKm": 563,
     "consumptionKwhPer100km": 16.2,
     "bootLitresSeatsUp": 460,
-    "bootLitresSeatsDown": 1250,
+    "bootLitresSeatsDown": 1251,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 7,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "kia-ev3-gt-line-awd",
+    "familyId": "kia-ev3",
+    "make": "Kia",
+    "model": "EV3",
+    "variant": "GT-Line Long Range AWD",
+    "bodyType": "SUV",
+    "listPrice": 66490,
+    "batteryKwh": 78.0,
+    "rangeKm": 559,
+    "consumptionKwhPer100km": 15.8,
+    "bootLitresSeatsUp": 460,
+    "bootLitresSeatsDown": 1251,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1950,
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

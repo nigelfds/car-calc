@@ -1,0 +1,116 @@
+{
+  "familyId": "alfa-romeo-tonale-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "alfa-romeo-tonale-phev-veloce-q4": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.alfaromeo.com.au/models/tonale-plug-in-hybrid",
+        "note": "Live Alfa AU plug-in model page with 'Configure and Order' links on the research date. The configurator renders client-side and served no prices to automated fetches (/configurator-hub 404, /selector-pricing has empty msrp fields), so the grade count rests on CarExpert 9 Jul 2026 and Chasing Cars 9 Sep 2026 (https://www.chasingcars.com.au/news/new-car-prices/alfa-romeo-tonale-2027-italian-marque-addresses-compact-suvs-niggles-to-compete-with-bmw-x1-and-cupra-formentor/), which both list a single PHEV grade, Veloce Q4, with the Ti dropped. The model page's Veloce/Ti/Edizione Speciale trim cards and 60km/1.5L/208kW figures are stale pre-facelift content."
+      },
+      "listPrice": {
+        "value": 78990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-alfa-romeo-tonale-price-and-specs",
+        "note": "CarExpert 9 Jul 2026 launch price table, all prices 'before on-road costs'. Same $78,990 before on-road costs in Chasing Cars 9 Sep 2026. Alfa AU site publishes no price; no later price change found."
+      },
+      "batteryKwh": {
+        "value": 12.0,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/tonale/965-facelift/345585/",
+        "note": "ADAC 'brutto 15,5 kWh, netto 12,0 kWh' for the facelift (ab 11/25) Plug-In 270 Q4, same powertrain as the AU Veloce Q4 (198kW/270hp). Held 12.9 had no source and is replaced. 15.5 gross matches CarExpert AU."
+      },
+      "rangeKm": {
+        "value": 59,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2026-alfa-romeo-tonale-price-and-specs",
+        "note": "CarExpert AU spec table 'WLTP' 59km (article text says 58km; Chasing Cars says 54km claimed). Direction test: below the European WLTP best case of 67km on 235/50R18 (ADAC), consistent with the AU Veloce's larger wheels; accepted."
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 12.0 / 59 x 100 = 20.3. ADAC's 12.3 kWh/100km is a utility-weighted WLTP figure, not EV-mode, and is not used."
+      },
+      "combinedRangeKm": {
+        "value": 703,
+        "basis": "derived",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/tonale/965-facelift/345585/",
+        "note": "59 + 42.5 L tank (ADAC Tankinhalt; CarExpert review rounds to 43 L) / 6.6 x 100 = 702.9, rounded 703."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.6,
+        "basis": "judged",
+        "note": "No published charge-sustaining figure. Australian tests: OnlineAuto up to 6.2 L/100km flat-battery loop; CarsGuide long-termer 7.0 and 6.1 L/100km in months of irregular charging (some EV running included, so true CS is higher). 6.6 sits between, and keeps sibling order by mass: Cupra Formentor VZe 6.5, BMW X1 xDrive25e 6.7, Mercedes GLA 250e 7.2."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-alfa-romeo-tonale-price-and-specs",
+        "note": "AU claimed combined 1.7 L/100km (also Chasing Cars), at or below 3.5. European WLTP 3.4 (ADAC) also passes. Price $78,990 is under both LCT thresholds regardless."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car: combined tailpipe CO2 <= 120 g/km. Tonale PHEV 39 g/km claimed (Chasing Cars)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 385,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-alfa-romeo-tonale-price-and-specs",
+        "note": "385L cargo capacity, PHEV with battery fitted; same in ADAC and OnlineAuto."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1430,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/tonale/965-facelift/345585/",
+        "note": "ADAC labels 1,430L 'dachhoch' (to the roof), not the belt-line convention; no to-belt-line figure found (CarExpert review and OnlineAuto also quote 1,430L). Likely overstates vs convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.ultimatespecs.com/car-specs/Alfa-Romeo/151889/Alfa-Romeo-Tonale-2026-13-VGT-MultiAir-Plug-In-270-Q4-Auto.html",
+        "note": "Five-seat SUV; no seven-seat version exists."
+      },
+      "towKg": {
+        "value": 1250,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-alfa-romeo-tonale-price-and-specs",
+        "note": "CarExpert AU spec table braked towing 1250kg; ADAC 'Anhängelast gebremst (12%)' 1250 kg."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.alfaromeo.com.au/warranty",
+        "note": "5 years / unlimited km for vehicles registered from 22 April 2022; no servicing condition stated. Battery 8yr/160,000km per CarExpert."
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "Anchored to mercedes-gla-phev-250e ($78,000, 2150) and bmw-x1-phev-xdrive25e ($79,500, 2150) at the same price point; held value unchanged."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "Aligned to the Alfa Romeo brand convention held on alfa-romeo-junior-elettrica (and Stellantis sibling jeep-avenger) per the one-convention-per-brand rule; replaces the held Tonale-only curve [1,0.63,0.5,0.41,0.34,0.29]. Below mainstream on documented evidence: 132 AU sales in 2025 and 53 in 2026 to October (https://atlas.carexpert.com.au/make/alfa-romeo/tonale), reported production end Nov 2027 (https://www.carscoops.com/2026/06/alfa-romeo-tonale-discontinuation/), US CarEdge 2-year residual ~45% (https://caredge.com/alfa-romeo/tonale/depreciation), which argues the steeper held curve was also defensible."
+      }
+    }
+  },
+  "lowConfidence": [
+    "alfa-romeo-tonale-phev-veloce-q4.availability: Alfa AU configurator served no data; one-grade count rests on CarExpert Jul 2026 and Chasing Cars Sep 2026",
+    "alfa-romeo-tonale-phev-veloce-q4.depreciationCurve: judged; aligned to brand convention, while Tonale-specific evidence (thin volume, production end 2027, US residuals) supports the steeper held curve",
+    "alfa-romeo-tonale-phev-veloce-q4.rangeKm: AU sources disagree (54/58/59km); 59 taken from CarExpert's WLTP spec table",
+    "alfa-romeo-tonale-phev-veloce-q4.fuelConsumptionL100km: judged from review real-world figures 6.1-7.0 L/100km",
+    "alfa-romeo-tonale-phev-veloce-q4.bootLitresSeatsDown: 1,430L is to the roof per ADAC, not the belt-line convention",
+    "alfa-romeo-tonale-phev-veloce-q4.insuranceAnnual: judged, anchored to GLA 250e and X1 xDrive25e"
+  ]
+}

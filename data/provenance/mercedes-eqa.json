@@ -1,0 +1,29 @@
+{
+  "familyId": "mercedes-eqa",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mercedes-eqa-250-plus": {
+      "availability": { "basis": "sourced", "url": "https://www.carsguide.com.au/car/14944868/mercedes-benz/eqa/suv", "note": "CarsGuide new-car listing '2026 Mercedes-Benz EQA 250+ H243 MY27', status 'New: Available to order', RRP $86,700. mercedes-benz.com.au (configurator, model and offer pages) returned HTTP 403 to automated reads, so the manufacturer configurator could not be opened; carsales 2026 research page lists the EQA250+ as current." },
+      "listPrice": { "value": 86700, "basis": "sourced", "url": "https://www.carexpert.com.au/mercedes-benz/eqa/2026-suv-fwd-electric-jsakkkgo20260121", "note": "CarExpert: 'prices starting at $86,700' before on-road costs, released 3 Jan 2026; matches CarsGuide MY27 listing RRP $86,700 and CarsGuide 2026/2027 EQA price pages (MSRP, excludes stamp duty and government charges). Up from $85,800. Manufacturer price list unreachable (403). Vic drive-away via calc/onroad.js = $91,221." },
+      "batteryKwh": { "value": 70.5, "basis": "sourced", "url": "https://ev-database.org/car/1985/Mercedes-EQA-250plus", "note": "usable 70.5 kWh, nominal/gross 73.9 kWh on the same page; CarExpert AU spec also lists 70.5 kWh usable" },
+      "rangeKm": { "value": 520, "basis": "sourced", "standard": "WLTP", "url": "https://www.autoexpress.co.uk/mercedes/eqa/prices-specs/104465/eqa-250+-140kw-amg-line-premium-70.5kwh-5dr-auto", "note": "UK EQA 250+ AMG Line Premium on 20-inch 235/45 R20 wheels (same wheel/tyre as the AU car), WLTP combined 520 km. Held AU figure 578 km rejected by the direction test: it exceeds Mercedes' WLTP best case of 560 km (EV Database TEL; CarExpert 2024 launch story '496km to 560km' WLTP), and CarsGuide labels 578 km NEDC." },
+      "consumptionKwhPer100km": { "value": 15.7, "basis": "sourced", "url": "https://www.autoexpress.co.uk/mercedes/eqa/prices-specs/104465/eqa-250+-140kw-amg-line-premium-70.5kwh-5dr-auto", "note": "WLTP combined 15.7 kWh/100km for the same 20-inch variant; battery/range = 13.6, 15.8% apart (wall-to-wheel includes charging loss), inside the 25% tolerance" },
+      "bootLitresSeatsUp": { "value": 340, "basis": "sourced", "url": "https://www.carexpert.com.au/mercedes-benz/eqa/2026-suv-fwd-electric-jsakkkgo20260121", "note": "VDA, to the lower window edge (cargo-cover convention)" },
+      "bootLitresSeatsDown": { "value": 1320, "basis": "sourced", "url": "https://www.carexpert.com.au/mercedes-benz/eqa/2026-suv-fwd-electric-jsakkkgo20260121", "note": "VDA, seats folded" },
+      "seats": { "value": 5, "basis": "sourced", "url": "https://www.carexpert.com.au/mercedes-benz/eqa/2026-suv-fwd-electric-jsakkkgo20260121" },
+      "towKg": { "value": 750, "basis": "sourced", "url": "https://www.carexpert.com.au/mercedes-benz/eqa/2026-suv-fwd-electric-jsakkkgo20260121", "note": "AU spec 750 kg braked; UK/EU data (Auto Express, EV Database) give 1,500 kg. Mercedes AU technical sheet unreachable (403)." },
+      "warrantyYears": { "value": 5, "basis": "sourced", "url": "https://www.carexpert.com.au/mercedes-benz/eqa/2026-suv-fwd-electric-jsakkkgo20260121", "note": "60 months, unlimited km, whole vehicle; battery 96 months/160,000 km" },
+      "insuranceAnnual": { "value": 2250, "basis": "judged", "note": "kept at held value; anchored to bmw-ix1-xdrive30-m-sport ($86,800, 2300), audi-q4-e-tron-55-quattro ($81,650, 2400) and mercedes-cla-ev-200-eq ($72,200, 1950)" },
+      "depreciationCurve": { "value": [1, 0.7, 0.58, 0.49, 0.42, 0.36], "basis": "judged", "note": "steeper than mainstream default: outgoing model replaced by the electric GLA in 2027 (CarExpert 30 Jul 2026, Chasing Cars 29 Jul 2026), and carsales shows new 2026 EQA250+ dealer stock at $65,490 indicative drive-away against an $86,700 RRP. Same curve as the held EQA data; other Mercedes rows differ (mercedes-cla-ev [1,0.72,...], mercedes-gla-phev [1,0.7,0.59,...]), so no single brand convention exists yet." }
+    }
+  },
+  "lowConfidence": [
+    "mercedes-eqa-250-plus.availability: Mercedes-Benz AU configurator blocked (403); orderability rests on CarsGuide MY27 'available to order' listing and carsales 2026 research page",
+    "mercedes-eqa-250-plus.listPrice: $86,700 from CarExpert and CarsGuide, not the manufacturer price list; CarsGuide 2027 page also carries stale $85,800 entries",
+    "mercedes-eqa-250-plus.rangeKm: UK WLTP figure for the same 20-inch spec; no AU WLTP figure found, AU-quoted 578 km rejected as NEDC",
+    "mercedes-eqa-250-plus.towKg: AU 750 kg from CarExpert spec vs 1,500 kg in UK/EU data; Mercedes AU sheet unreachable",
+    "mercedes-eqa-250-plus.depreciationCurve: judged; Mercedes rows in the dataset use several curves",
+    "mercedes-eqa-250-plus.insuranceAnnual: judged"
+  ]
+}
