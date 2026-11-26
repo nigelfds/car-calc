@@ -1,0 +1,420 @@
+{
+  "familyId": "hyundai-kona-electric",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "hyundai-kona-electric-standard-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "Model page variant list: 'KONA Electric SUV Standard Range 99kW Motor - FWD'; Build & Price JS-rendered (priceEnabled false)"
+      },
+      "listPrice": {
+        "value": 46000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/hyundai-kona-ioniq-5-ev-pricing-slashed-by-thousands",
+        "note": "$46,000 'before on-road costs' (CarExpert 5 Jun 2026 MY27 price table, permanent cut, not campaign); Chasing Cars 5 Jun 2026 and The Beep agree. Hyundai Build & Price JS-rendered, no Hyundai-published price retrievable; no later list change found"
+      },
+      "batteryKwh": {
+        "value": 48.6,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3462/Hyundai-Kona-Electric-486-kWh",
+        "note": "usable 48.6 kWh, nominal 51.0 kWh on EV Database MY26; Hyundai AU spec sheet 'Capacity 48.6 kWh' (269 V) is the usable figure"
+      },
+      "rangeKm": {
+        "value": 370,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet, WLTP footnote: 'All Electric Range (AER) 370 km', 99 kW, 17\" wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.8,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet WLTP combined kWh/100km for the same motor and wheel (includes charging losses, hence above battery/range); held value was 14.6"
+      },
+      "bootLitresSeatsUp": {
+        "value": 407,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 407 / 1241 L', all grades; VDA minimum is to the cargo cover. 27 L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1241,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "VDA maximum 1,241 L rear; total 1,268 L includes the 27 L frunk, not used"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Seatbelts/pre-tensioners 'all seating positions'; 3x rear top tethers, 60:40 rear backrest; CarExpert lists 5 seats"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Towing capacity 99 kW: braked '-' (not rated)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "'5 Year Standard New Car Warranty'; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1350,
+        "basis": "judged",
+        "note": "unchanged from held; anchored to kia-ev3 (1450 at $47,600, 1550 at $53,315, 1700 at $58,600, 1850 at $63,950) and hyundai-inster (1300 at $37,500, anchored to this family)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai EV brand convention, matches hyundai-inster rows (one curve per brand); softer than mainstream default given the $8,000 permanent list cut in June 2026 and earlier $13,000 drive-away campaign (Q1 2026)"
+      }
+    },
+    "hyundai-kona-electric-extended-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "MY27 spec sheet 'Powertrain availability': KONA offered with 99 kW and 150kW motors; model page range table lists 'Extended Range 505 km (17\" wheels)'. The model page's variant compare list shows one row per trim, so base Extended Range is not named there separately"
+      },
+      "listPrice": {
+        "value": 50000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/hyundai-kona-ioniq-5-ev-pricing-slashed-by-thousands",
+        "note": "$50,000 'before on-road costs' (CarExpert 5 Jun 2026 MY27 price table, permanent cut, not campaign); Chasing Cars 5 Jun 2026 and The Beep agree. Hyundai Build & Price JS-rendered, no Hyundai-published price retrievable; no later list change found"
+      },
+      "batteryKwh": {
+        "value": 64.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3463/Hyundai-Kona-Electric-648-kWh",
+        "note": "usable 64.8 kWh, nominal 68.0 kWh (96s1p, 358 V) on EV Database MY26; Hyundai AU spec sheet 'Capacity 64.8 kWh' is therefore the usable figure (the Kona exception)"
+      },
+      "rangeKm": {
+        "value": 505,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet, WLTP footnote: 'All Electric Range (AER) 505 km', 150kW, 17\" wheels; EV Database TEL 510"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.7,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet WLTP combined kWh/100km for the same motor and wheel (includes charging losses, hence above battery/range); held value was 14.7"
+      },
+      "bootLitresSeatsUp": {
+        "value": 407,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 407 / 1241 L', all grades; VDA minimum is to the cargo cover. 27 L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1241,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "VDA maximum 1,241 L rear; total 1,268 L includes the 27 L frunk, not used"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Seatbelts/pre-tensioners 'all seating positions'; 3x rear top tethers, 60:40 rear backrest; CarExpert lists 5 seats"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Towing capacity 150kW: braked 750 kg, unbraked 300 kg; CarExpert 2027 spec pages agree. Held value 0 was wrong"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "'5 Year Standard New Car Warranty'; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "unchanged from held; anchored to kia-ev3 (1450 at $47,600, 1550 at $53,315, 1700 at $58,600, 1850 at $63,950) and hyundai-inster (1300 at $37,500, anchored to this family)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai EV brand convention, matches hyundai-inster rows (one curve per brand); softer than mainstream default given the $8,000 permanent list cut in June 2026 and earlier $13,000 drive-away campaign (Q1 2026)"
+      }
+    },
+    "hyundai-kona-electric-elite": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "Model page variant list: 'KONA Electric Elite SUV Extended Range 150kW Motor - FWD'"
+      },
+      "listPrice": {
+        "value": 53000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/hyundai/kona/2027-elite-suv-fwd-electric-jskams5g20260728",
+        "note": "CarExpert 2027 MY spec page 'prices starting at $53,000' before on-road costs; driveaway $57,768 Sydney. Agrees with CarExpert/Chasing Cars 5 Jun 2026 tables. CarsGuide 2027 price page discarded (stale pre-cut prices plus a dropped ER N Line grade)"
+      },
+      "batteryKwh": {
+        "value": 64.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3463/Hyundai-Kona-Electric-648-kWh",
+        "note": "usable 64.8 kWh, nominal 68.0 kWh (96s1p, 358 V) on EV Database MY26; Hyundai AU spec sheet 'Capacity 64.8 kWh' is therefore the usable figure (the Kona exception)"
+      },
+      "rangeKm": {
+        "value": 444,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet, WLTP footnote: 'All Electric Range (AER) 444 km', 150kW, 19\" wheels (Elite/Premium/N Line ship on 19\"); EV Database TEH 440"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.7,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet WLTP combined kWh/100km for the same motor and wheel (includes charging losses, hence above battery/range); held value was 16.8"
+      },
+      "bootLitresSeatsUp": {
+        "value": 407,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 407 / 1241 L', all grades; VDA minimum is to the cargo cover. 27 L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1241,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "VDA maximum 1,241 L rear; total 1,268 L includes the 27 L frunk, not used"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Seatbelts/pre-tensioners 'all seating positions'; 3x rear top tethers, 60:40 rear backrest; CarExpert lists 5 seats"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Towing capacity 150kW: braked 750 kg, unbraked 300 kg; CarExpert 2027 spec pages agree. Held value 0 was wrong"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "'5 Year Standard New Car Warranty'; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "unchanged from held; anchored to kia-ev3 (1450 at $47,600, 1550 at $53,315, 1700 at $58,600, 1850 at $63,950) and hyundai-inster (1300 at $37,500, anchored to this family)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai EV brand convention, matches hyundai-inster rows (one curve per brand); softer than mainstream default given the $8,000 permanent list cut in June 2026 and earlier $13,000 drive-away campaign (Q1 2026)"
+      }
+    },
+    "hyundai-kona-electric-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "Model page variant list: 'KONA Electric Premium SUV Extended Range 150kW Motor - FWD'"
+      },
+      "listPrice": {
+        "value": 60000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/hyundai/kona/2027-premium-suv-fwd-electric-js5oa88s20260728",
+        "note": "CarExpert 2027 MY spec page 'prices starting at $60,000' before on-road costs; driveaway $65,118 Sydney. Agrees with CarExpert/Chasing Cars 5 Jun 2026 tables. CarsGuide 2027 price page discarded (stale pre-cut prices plus a dropped ER N Line grade)"
+      },
+      "batteryKwh": {
+        "value": 64.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3463/Hyundai-Kona-Electric-648-kWh",
+        "note": "usable 64.8 kWh, nominal 68.0 kWh (96s1p, 358 V) on EV Database MY26; Hyundai AU spec sheet 'Capacity 64.8 kWh' is therefore the usable figure (the Kona exception)"
+      },
+      "rangeKm": {
+        "value": 444,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet, WLTP footnote: 'All Electric Range (AER) 444 km', 150kW, 19\" wheels (Elite/Premium/N Line ship on 19\"); EV Database TEH 440"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.7,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet WLTP combined kWh/100km for the same motor and wheel (includes charging losses, hence above battery/range); held value was 16.8"
+      },
+      "bootLitresSeatsUp": {
+        "value": 407,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 407 / 1241 L', all grades; VDA minimum is to the cargo cover. 27 L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1241,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "VDA maximum 1,241 L rear; total 1,268 L includes the 27 L frunk, not used"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Seatbelts/pre-tensioners 'all seating positions'; 3x rear top tethers, 60:40 rear backrest; CarExpert lists 5 seats"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Towing capacity 150kW: braked 750 kg, unbraked 300 kg; CarExpert 2027 spec pages agree. Held value 0 was wrong"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "'5 Year Standard New Car Warranty'; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "unchanged from held; anchored to kia-ev3 (1450 at $47,600, 1550 at $53,315, 1700 at $58,600, 1850 at $63,950) and hyundai-inster (1300 at $37,500, anchored to this family)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai EV brand convention, matches hyundai-inster rows (one curve per brand); softer than mainstream default given the $8,000 permanent list cut in June 2026 and earlier $13,000 drive-away campaign (Q1 2026)"
+      }
+    },
+    "hyundai-kona-electric-premium-n-line": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "Model page variant list: 'KONA Electric Premium + N Line Package SUV Extended Range 150kW Motor - FWD' (own variantId; spec sheet calls it 'KONA Premium + N Line option pack'). Kept as a row: Hyundai lists it as a separate variant with its own price line, and it changes length and styling"
+      },
+      "listPrice": {
+        "value": 63000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/hyundai/kona/2027-n-line-premium-suv-fwd-electric-jskams5k20260728",
+        "note": "CarExpert 2027 MY spec page 'prices starting at $63,000' before on-road costs; driveaway $68,268 Sydney. Agrees with CarExpert/Chasing Cars 5 Jun 2026 tables. CarsGuide 2027 price page discarded (stale pre-cut prices plus a dropped ER N Line grade)"
+      },
+      "batteryKwh": {
+        "value": 64.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3463/Hyundai-Kona-Electric-648-kWh",
+        "note": "usable 64.8 kWh, nominal 68.0 kWh (96s1p, 358 V) on EV Database MY26; Hyundai AU spec sheet 'Capacity 64.8 kWh' is therefore the usable figure (the Kona exception)"
+      },
+      "rangeKm": {
+        "value": 444,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet, WLTP footnote: 'All Electric Range (AER) 444 km', 150kW, 19\" wheels (Elite/Premium/N Line ship on 19\"); EV Database TEH 440"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.7,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet WLTP combined kWh/100km for the same motor and wheel (includes charging losses, hence above battery/range); held value was 16.8"
+      },
+      "bootLitresSeatsUp": {
+        "value": 407,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 407 / 1241 L', all grades; VDA minimum is to the cargo cover. 27 L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1241,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "VDA maximum 1,241 L rear; total 1,268 L includes the 27 L frunk, not used"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Seatbelts/pre-tensioners 'all seating positions'; 3x rear top tethers, 60:40 rear backrest; CarExpert lists 5 seats"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
+        "note": "Towing capacity 150kW: braked 750 kg, unbraked 300 kg; CarExpert 2027 spec pages agree. Held value 0 was wrong"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+        "note": "'5 Year Standard New Car Warranty'; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "unchanged from held; anchored to kia-ev3 (1450 at $47,600, 1550 at $53,315, 1700 at $58,600, 1850 at $63,950) and hyundai-inster (1300 at $37,500, anchored to this family)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai EV brand convention, matches hyundai-inster rows (one curve per brand); softer than mainstream default given the $8,000 permanent list cut in June 2026 and earlier $13,000 drive-away campaign (Q1 2026)"
+      }
+    }
+  },
+  "lowConfidence": [
+    "hyundai-kona-electric-standard-range.listPrice: Hyundai Build & Price JS-rendered; price from June 2026 launch-of-cut reports saying before on-road costs (no 2027 CarExpert spec page found for SR); no later change found but not seen on a manufacturer page",
+    "hyundai-kona-electric-extended-range.listPrice: same basis as Standard Range",
+    "hyundai-kona-electric-elite.listPrice: CarExpert 2027 spec page + June reports; not seen on a Hyundai page",
+    "hyundai-kona-electric-premium.listPrice: CarExpert 2027 spec page + June reports; not seen on a Hyundai page",
+    "hyundai-kona-electric-premium-n-line.listPrice: CarExpert 2027 spec page + June reports; Hyundai treats N Line as an option package on Premium, kept as a row",
+    "hyundai-kona-electric-extended-range.availability: base 150kW grade not named separately in the model page's variant list; inferred from spec sheet powertrain availability and range table",
+    "hyundai-kona-electric-standard-range.insuranceAnnual: judged, anchored to kia-ev3 and hyundai-inster",
+    "hyundai-kona-electric-extended-range.insuranceAnnual: judged, anchored to kia-ev3 and hyundai-inster",
+    "hyundai-kona-electric-elite.insuranceAnnual: judged, anchored to kia-ev3 and hyundai-inster",
+    "hyundai-kona-electric-premium.insuranceAnnual: judged, anchored to kia-ev3 and hyundai-inster",
+    "hyundai-kona-electric-premium-n-line.insuranceAnnual: judged, anchored to kia-ev3 and hyundai-inster",
+    "hyundai-kona-electric-standard-range.depreciationCurve: judged Hyundai brand convention",
+    "hyundai-kona-electric-extended-range.depreciationCurve: judged Hyundai brand convention",
+    "hyundai-kona-electric-elite.depreciationCurve: judged Hyundai brand convention",
+    "hyundai-kona-electric-premium.depreciationCurve: judged Hyundai brand convention",
+    "hyundai-kona-electric-premium-n-line.depreciationCurve: judged Hyundai brand convention"
+  ]
+}

@@ -7,12 +7,12 @@
     "variant": "S PHEV AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 70880,
-    "batteryKwh": 13.8,
-    "rangeKm": 58,
-    "consumptionKwhPer100km": 23.8,
-    "combinedRangeKm": 781,
-    "fuelConsumptionL100km": 6.5,
+    "listPrice": 71175,
+    "batteryKwh": 12.0,
+    "rangeKm": 55,
+    "consumptionKwhPer100km": 21.8,
+    "combinedRangeKm": 682,
+    "fuelConsumptionL100km": 7.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 175,
@@ -21,8 +21,15 @@
     "towKg": 1010,
     "warrantyYears": 7,
     "insuranceAnnual": 1800,
-    "depreciationCurve": [1, 0.76, 0.66, 0.58, 0.51, 0.45],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-sorento-phev-sport-awd",
@@ -32,12 +39,12 @@
     "variant": "Sport PHEV AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 73500,
-    "batteryKwh": 13.8,
-    "rangeKm": 58,
-    "consumptionKwhPer100km": 23.8,
-    "combinedRangeKm": 781,
-    "fuelConsumptionL100km": 6.5,
+    "listPrice": 73825,
+    "batteryKwh": 12.0,
+    "rangeKm": 55,
+    "consumptionKwhPer100km": 21.8,
+    "combinedRangeKm": 682,
+    "fuelConsumptionL100km": 7.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 175,
@@ -46,8 +53,15 @@
     "towKg": 1010,
     "warrantyYears": 7,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.76, 0.66, 0.58, 0.51, 0.45],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-sorento-phev-sport-plus-awd",
@@ -57,12 +71,12 @@
     "variant": "Sport+ PHEV AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 78430,
-    "batteryKwh": 13.8,
-    "rangeKm": 58,
-    "consumptionKwhPer100km": 23.8,
-    "combinedRangeKm": 781,
-    "fuelConsumptionL100km": 6.5,
+    "listPrice": 78755,
+    "batteryKwh": 12.0,
+    "rangeKm": 55,
+    "consumptionKwhPer100km": 21.8,
+    "combinedRangeKm": 682,
+    "fuelConsumptionL100km": 7.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 175,
@@ -71,8 +85,15 @@
     "towKg": 1010,
     "warrantyYears": 7,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [1, 0.76, 0.66, 0.58, 0.51, 0.45],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-sorento-phev-gt-line-awd",
@@ -82,12 +103,12 @@
     "variant": "GT-Line PHEV AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 86790,
-    "batteryKwh": 13.8,
-    "rangeKm": 58,
-    "consumptionKwhPer100km": 23.8,
-    "combinedRangeKm": 781,
-    "fuelConsumptionL100km": 6.5,
+    "listPrice": 86115,
+    "batteryKwh": 12.0,
+    "rangeKm": 55,
+    "consumptionKwhPer100km": 21.8,
+    "combinedRangeKm": 682,
+    "fuelConsumptionL100km": 7.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 175,
@@ -96,7 +117,14 @@
     "towKg": 1010,
     "warrantyYears": 7,
     "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.74, 0.64, 0.56, 0.49, 0.43],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

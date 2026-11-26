@@ -5,24 +5,22 @@
     "478kW/770Nm with N Grin Boost and 0-100km/h in 3.2 seconds undercuts a BMW M3 ($169,100) and Mercedes-AMG C63 ($187,900) by more than $50,000",
     "487km WLTP range plus 800V charging at 10-80 per cent in 18 minutes makes it genuinely usable between track days, unlike most sub-$150k performance EVs",
     "N e-Shift simulated eight-speed and N Drift Optimiser give real driver involvement; CarExpert and Chasing Cars both rate its handling above the Ioniq 5 N",
-    "Warranty runs 7 years/unlimited km and explicitly covers non-competitive track use, with capped-price servicing around $1,312 over five years on 24-month/30,000km intervals"
+    "Hyundai's 7-year/unlimited-km warranty explicitly covers non-competitive track use, but only if every service is done on time at a Hyundai dealer (otherwise 5 years); the battery is covered for 8 years/160,000km, and capped-price servicing runs around $1,312 over five years on 24-month/30,000km intervals"
   ],
   "cons": [
-    "371-litre boot behind a structural brace, no frunk and a separate bootlid rather than a liftback - well short of a 524-litre Toyota Camry, and less usable than the Ioniq 5 N",
+    "371-litre boot behind a structural brace that makes folding the rear seats of little use, and a separate bootlid rather than a liftback - well short of a 524-litre Toyota Camry, and less usable than the Ioniq 5 N",
     "CarExpert recorded 22.0kWh/100km against the 18.7kWh/100km claim, cutting real touring range to roughly 380km on a 2166kg kerb weight",
     "Suspension transmits sharp edges and potholes into the cabin even on the softest damper setting, and rear headroom is a problem for anyone over about 190cm",
-    "At $115,000 before on-road costs it sits well above the $91,661 fuel-efficient threshold, so it cannot be novated FBT-exempt the way an $80,900 Tesla Model 3 Performance can",
+    "At $114,918 before on-road costs it sits well above the $91,661 fuel-efficient threshold, so it cannot be novated FBT-exempt the way an $80,900 Tesla Model 3 Performance can",
     "Hyundai has pulled every standard Ioniq 6 grade from sale in Australia, so there is no cheaper version to step down to and resale is exposed to an orphaned nameplate that was recently discounted by up to $34,142"
   ],
   "sources": [
+    "https://www.hyundai.com/au/en/cars/eco/ioniq6",
+    "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-6-n/docs/IONIQ-6-N-Specification-Sheet-MY27.pdf",
+    "https://www.carexpert.com.au/hyundai/ioniq-6/2027-n-sedan-4x4-electric-jskagwkw20261022",
+    "https://www.carexpert.com.au/hyundai/ioniq-6/2027",
     "https://www.carexpert.com.au/car-reviews/2026-hyundai-ioniq-6-n-review",
-    "https://www.chasingcars.com.au/reviews/sports-cars/hyundai-ioniq-6-n-2026-review/",
-    "https://www.carsguide.com.au/ev/hyundai-ioniq-6-n-101531",
-    "https://www.carsguide.com.au/car-news/work-to-do-standard-hyundai-ioniq-6-electric-car-pulled-from-sale-as-new-high-performance",
-    "https://www.carexpert.com.au/car-news/2026-hyundai-ioniq-6-n-price-and-specs",
-    "https://www.carexpert.com.au/car-news/hyundai-ioniq-6-facelift-delayed-but-hot-n-arriving-sooner",
-    "https://www.carsguide.com.au/hyundai/ioniq-6/price/2026",
-    "https://www.carexpert.com.au/car-news/hyundai-slashes-prices-across-its-ev-range"
+    "https://ev-database.org/car/3449/Hyundai-IONIQ-6-N"
   ],
-  "sourcedAt": "2026-07-27"
+  "sourcedAt": "2026-11-26"
 }

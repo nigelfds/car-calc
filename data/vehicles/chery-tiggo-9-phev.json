@@ -4,14 +4,14 @@
     "familyId": "chery-tiggo-9-phev",
     "make": "Chery",
     "model": "Tiggo 9",
-    "variant": "Super Hybrid Elite FWD",
     "bodyType": "SUV",
     "powertrain": "phev",
+    "variant": "Super Hybrid Elite FWD",
     "listPrice": 52990,
     "batteryKwh": 18.7,
-    "rangeKm": 90,
-    "consumptionKwhPer100km": 20.8,
-    "combinedRangeKm": 1257,
+    "rangeKm": 80,
+    "consumptionKwhPer100km": 23.4,
+    "combinedRangeKm": 1247,
     "fuelConsumptionL100km": 6,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -21,22 +21,29 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1800,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "chery-tiggo-9-phev-ultimate",
     "familyId": "chery-tiggo-9-phev",
     "make": "Chery",
     "model": "Tiggo 9",
-    "variant": "Super Hybrid Ultimate AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
+    "variant": "Super Hybrid Ultimate AWD",
     "listPrice": 59990,
     "batteryKwh": 34.5,
-    "rangeKm": 146,
-    "consumptionKwhPer100km": 23.6,
-    "combinedRangeKm": 1257,
+    "rangeKm": 140,
+    "consumptionKwhPer100km": 24.6,
+    "combinedRangeKm": 1251,
     "fuelConsumptionL100km": 6.3,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -46,7 +53,14 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

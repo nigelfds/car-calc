@@ -1,0 +1,177 @@
+{
+  "familyId": "byd-sealion-7",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-sealion-7-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-7",
+        "note": "BYD AU Build & Price (bydautomotive.com.au/configurator/sealion-7 redirects to the evdealergroup-byd.com.au host; working slug is byd-sealion-7) lists exactly two grades, Premium and Performance, both priced; Victoria selectable"
+      },
+      "listPrice": {
+        "value": 54990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-7",
+        "note": "configurator vehicle price $54,990 with GST field = price/11 and on-road fees added separately; CarExpert 2026 review states $54,990/$63,990 'before on-road costs' in words; Chasing Cars '$54,990 + ORCs'. $4,000 cashback (orders 1 Oct-21 Dec 2026) is a campaign, not applied"
+      },
+      "batteryKwh": {
+        "value": 82.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3070/BYD-SEALION-7-825-kWh-RWD-Comfort",
+        "note": "usable; EV Database gives 82.5 usable / 84.0 nominal for the same 82.5 kWh pack (EU car). BYD AU quotes 82.56 kWh unlabelled for both grades"
+      },
+      "rangeKm": {
+        "value": 482,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/sealion-7",
+        "note": "BYD AU spec table quotes both 'Combined range WLTP 482km' and NEDC (567km); WLTP taken. Matches EV Database EU WLTP for the same variant"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.9,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-Owners-Handbook-2025.pdf",
+        "note": "BYD AU owner's handbook technical data: 19.9 kWh/100km (WLTP) beside 17.0 (NEDC); held value was the NEDC figure. WLTP figure includes charging losses, 16% above usable/range (17.1); same grid-figure convention as tesla-model-y, xpeng-g6, zeekr-7x"
+      },
+      "bootLitresSeatsUp": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-2026.pdf",
+        "note": "BYD AU 2026 brochure spec 'Rear trunk capacity (L) 500'; 58L frunk not added (brochure's 558L 'combined'). Measurement standard not stated; BYD EU quotes 520L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1789,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3070/BYD-SEALION-7-825-kWh-RWD-Comfort",
+        "note": "EV Database 'Cargo Volume Max' 1,789L (BYD EU figure); BYD AU publishes no folded figure. Likely to the roof rather than the belt line"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-2026.pdf",
+        "note": "BYD AU brochure seating capacity 5"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-Owners-Handbook-2025.pdf",
+        "note": "BYD AU owner's handbook: maximum towing capacity (braked) 750 kg rear-wheel drive, 1500 kg four-wheel drive"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-7",
+        "note": "Vehicle warranty 6 years/150,000km; traction battery 8 years/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "held value kept; anchored to byd-seal-premium ($52,990, $1,600) and xpeng-g6-standard-range ($51,800, $1,750)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Seal 6, Atto 1/2, Sealion 5/6, Dolphin, Shark 6 realigned today); held value unchanged. BYD runs repeated cashback campaigns ($4,000 to 21 Dec 2026), which argues against anything gentler"
+      }
+    },
+    "byd-sealion-7-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-7",
+        "note": "BYD AU Build & Price (bydautomotive.com.au/configurator/sealion-7 redirects to the evdealergroup-byd.com.au host; working slug is byd-sealion-7) lists exactly two grades, Premium and Performance, both priced; Victoria selectable"
+      },
+      "listPrice": {
+        "value": 63990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-7",
+        "note": "configurator vehicle price $63,990 with GST field = price/11 and on-road fees added separately; CarExpert 2026 review states $54,990/$63,990 'before on-road costs' in words; Chasing Cars '$54,990 + ORCs'. $4,000 cashback (orders 1 Oct-21 Dec 2026) is a campaign, not applied"
+      },
+      "batteryKwh": {
+        "value": 82.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3071/BYD-SEALION-7-825-kWh-AWD-Design",
+        "note": "usable; EV Database gives 82.5 usable / 84.0 nominal for the same 82.5 kWh pack (EU car). BYD AU quotes 82.56 kWh unlabelled for both grades"
+      },
+      "rangeKm": {
+        "value": 456,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/sealion-7",
+        "note": "BYD AU spec table quotes both 'Combined range WLTP 456km' and NEDC (542km); WLTP taken. Matches EV Database EU WLTP for the same variant"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.4,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-Owners-Handbook-2025.pdf",
+        "note": "BYD AU owner's handbook technical data: 21.4 kWh/100km (WLTP) beside 17.9 (NEDC); held value was the NEDC figure. WLTP figure includes charging losses, 18% above usable/range (18.1); same grid-figure convention as tesla-model-y, xpeng-g6, zeekr-7x"
+      },
+      "bootLitresSeatsUp": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-2026.pdf",
+        "note": "BYD AU 2026 brochure spec 'Rear trunk capacity (L) 500'; 58L frunk not added (brochure's 558L 'combined'). Measurement standard not stated; BYD EU quotes 520L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1789,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3071/BYD-SEALION-7-825-kWh-AWD-Design",
+        "note": "EV Database 'Cargo Volume Max' 1,789L (BYD EU figure); BYD AU publishes no folded figure. Likely to the roof rather than the belt line"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-2026.pdf",
+        "note": "BYD AU brochure seating capacity 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-7-Owners-Handbook-2025.pdf",
+        "note": "BYD AU owner's handbook: maximum towing capacity (braked) 750 kg rear-wheel drive, 1500 kg four-wheel drive"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-7",
+        "note": "Vehicle warranty 6 years/150,000km; traction battery 8 years/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "held value kept; anchored to xpeng-g6-performance ($63,800, $2,100), byd-seal-performance ($61,990, $1,800) and byd-sealion-8-dynamic-awd ($63,990, $2,000)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Seal 6, Atto 1/2, Sealion 5/6, Dolphin, Shark 6 realigned today); held value unchanged. BYD runs repeated cashback campaigns ($4,000 to 21 Dec 2026), which argues against anything gentler"
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-sealion-7-premium.bootLitresSeatsDown: 1,789L is BYD EU's folded figure via EV Database, probably to the roof; no AU or to-the-belt-line figure published (Malaysian listing gives 1,769L) (same for Performance)",
+    "byd-sealion-7-performance.bootLitresSeatsDown: as Premium",
+    "byd-sealion-7-premium.bootLitresSeatsUp: BYD AU 500L does not state its standard; BYD EU quotes 520L (same for Performance)",
+    "byd-sealion-7-performance.bootLitresSeatsUp: as Premium",
+    "byd-sealion-7-premium.batteryKwh: usable 82.5 is EV Database's figure for the EU car; BYD AU's 82.56 kWh is unlabelled (same for Performance)",
+    "byd-sealion-7-performance.batteryKwh: as Premium",
+    "byd-sealion-7-premium.insuranceAnnual: judged",
+    "byd-sealion-7-performance.insuranceAnnual: judged",
+    "byd-sealion-7-premium.depreciationCurve: judged, BYD brand convention",
+    "byd-sealion-7-performance.depreciationCurve: judged, BYD brand convention"
+  ]
+}

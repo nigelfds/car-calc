@@ -17,7 +17,7 @@
     "warrantyYears": 6,
     "insuranceAnnual": 1300,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-atto2-premium",
@@ -37,6 +37,6 @@
     "warrantyYears": 6,
     "insuranceAnnual": 1400,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   }
 ]

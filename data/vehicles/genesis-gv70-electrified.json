@@ -6,7 +6,7 @@
     "model": "Electrified GV70",
     "variant": "Signature Performance AWD",
     "bodyType": "SUV",
-    "listPrice": 132800,
+    "listPrice": 132718,
     "batteryKwh": 80,
     "rangeKm": 462,
     "consumptionKwhPer100km": 20.0,
@@ -16,7 +16,14 @@
     "towKg": 1800,
     "warrantyYears": 5,
     "insuranceAnnual": 3100,
-    "depreciationCurve": [1, 0.64, 0.52, 0.43, 0.36, 0.3],
-    "sourcedAt": "2026-08-06"
+    "depreciationCurve": [
+      1,
+      0.64,
+      0.52,
+      0.43,
+      0.36,
+      0.3
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

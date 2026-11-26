@@ -1,0 +1,92 @@
+{
+  "familyId": "genesis-gv70-electrified",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "genesis-gv70-electrified-signature-performance-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.genesis.com/au/en/shopping/build-and-price.html",
+        "note": "Genesis AU Build & Price lists 'Electrified GV 70' (shop/gv70ev); highlights page carries Build & Price and Build and Order CTAs. Spec sheet and GoAuto (21 Jul 2026) both describe a single Signature Performance AWD grade. A stale 'NEW ELECTRIFIED GV70 COMING SOON' register-interest page also exists on the site (2025 update leftover)."
+      },
+      "listPrice": {
+        "value": 132718,
+        "basis": "sourced",
+        "url": "https://www.goauto.com.au/amp/genesis/genesis-extends-eofy-suv-price-cuts/2026-07-21/99887.html",
+        "note": "GoAuto 21 Jul 2026: 'the single variant GV70 Electrified, which lists from $132,718 plus on-road costs'; CarsGuide 2026 Electrified Sig. Perf. page shows MSRP $132,718. Held $132,800 was the June 2025 launch price (CarExpert, 'before on-road costs'); the $82 drop matches the LCT reduction from the 1 Jul 2026 fuel-efficient threshold rise to $91,661 (0.33 x ~$274 / 1.1). Genesis's own configurator price could not be read: its pricing API fetch was refused by a permission check."
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3237/Genesis-GV70-Electrified",
+        "note": "usable 80.0 kWh; nominal 84.0 kWh on the same page. Genesis AU spec sheet and highlights page print 84 kWh (gross, unlabelled, per Hyundai Group E-GMP convention)."
+      },
+      "rangeKm": {
+        "value": 462,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/documents/gv70ev/GENESIS_Specification_Sheet_Eletrified_GV70.pdf",
+        "note": "'Range (WLTP) 462km' on the AU spec sheet; AU grade ships on 20-inch wheels, matching EV Database's 462 km (TEH, 20-inch) rather than the 479 km 19-inch figure"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.0,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/documents/gv70ev/GENESIS_Specification_Sheet_Eletrified_GV70.pdf",
+        "note": "WLTP combined 200 Wh/km / 20.0 kWh/100km on the AU spec sheet (grid-side, so 15.6% above usable 80 / 462 x 100 = 17.3)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 503,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/documents/gv70ev/GENESIS_Specification_Sheet_Eletrified_GV70.pdf",
+        "note": "'Cargo area - VDA (minimum / maximum) 503 / 1678L'; 22 L under-bonnet cargo area not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1678,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/documents/gv70ev/GENESIS_Specification_Sheet_Eletrified_GV70.pdf",
+        "note": "VDA maximum 1,678 L; spec sheet does not state whether to the roof or belt line, same VDA-maximum basis the audi-q6-e-tron and kia-ev5 rows use"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/genesis/gv70/price/2026/electrified-sig-perf",
+        "note": "'SUV, 4doors, 5seats'; EV Database also 5"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/documents/gv70ev/GENESIS_Specification_Sheet_Eletrified_GV70.pdf",
+        "note": "Braked 1,800kg, unbraked 750kg, towball 159kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/au/en/terms-of-use/warranty.html",
+        "note": "60 months / unlimited km; servicing may be by 'a suitably qualified motor vehicle repairer', so unconditional. HV battery 96 months / 160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 3100,
+        "basis": "judged",
+        "note": "kept; price essentially unchanged ($82). Anchors: audi-q6-e-tron-sq6 3500 at $129,900 (380kW), bmw-ix3-50-xdrive 2900 at $112,500, genesis-gv60-magma-awd 3300 at $130,000"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.64,
+          0.52,
+          0.43,
+          0.36,
+          0.3
+        ],
+        "basis": "judged",
+        "note": "kept, matching genesis-gv60-magma-awd; steeper than mainstream for thin local volume (about nine retail sites, four states) and a $130k+ luxury EV. Brand inconsistency: genesis-gv60-advanced-rwd uses [1,0.66,0.54,0.45,0.38,0.32]; one Genesis curve still to be chosen."
+      }
+    }
+  },
+  "lowConfidence": [
+    "genesis-gv70-electrified-signature-performance-awd.listPrice: read from GoAuto (Jul 2026) and CarsGuide MSRP, not Genesis's own configurator (pricing API fetch refused); no Genesis-dated confirmation on the research date",
+    "genesis-gv70-electrified-signature-performance-awd.depreciationCurve: judged; Genesis brand currently carries two curves (GV60 Advanced differs)",
+    "genesis-gv70-electrified-signature-performance-awd.insuranceAnnual: judged against siblings",
+    "genesis-gv70-electrified-signature-performance-awd.bootLitresSeatsDown: VDA maximum basis (roof vs belt line) unstated"
+  ]
+}

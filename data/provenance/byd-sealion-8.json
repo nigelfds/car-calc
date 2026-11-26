@@ -1,0 +1,324 @@
+{
+  "familyId": "byd-sealion-8",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-sealion-8-dynamic-fwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-8",
+        "note": "BYD AU Build & Price (bydautomotive.com.au/configurator/byd-sealion-8 301-redirects to this BYD-run configurator host) lists Dynamic FWD at $56,990 on 2026-11-26, one of three grades (Dynamic FWD, Dynamic AWD, Premium AWD). Three grades also per CarExpert, RACV, CarsGuide and the Oct 2026 MY26 spec sheet."
+      },
+      "listPrice": {
+        "value": 56990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-8",
+        "note": "BYD configurator variant price $56,990, with drive-away computed separately from a postcode (manufacturer price preferred per owner). 'Before on-road costs' in words: CarExpert price-and-specs (https://www.carexpert.com.au/car-news/2026-byd-sealion-8-price-and-specs) and CarsGuide review; RACV 'plus on-road costs' with Vic drive-away $60,357.70 against the app's computed $60,263.58 (green-duty), a $94 gap per grade. Configurator's '$4k Cashback Offer' is a campaign and ignored."
+      },
+      "batteryKwh": {
+        "value": 19.0,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "MY26 AU spec sheet (version 261026) 'Battery capacity (kWh)' 19.0 for DM-i (BYD Blade LFP). Unlabelled gross vs usable; no source states both. Configurator copy wrongly prints 35.6kWh/359kW under the FWD grade too; the spec sheet is preferred."
+      },
+      "rangeKm": {
+        "value": 103,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet '*Electric range - NEDC combined cycle (km)' 103. No WLTP figure exists: BYD UK has no Sealion 8 page (404) and Auto Express (22 Sep 2026) says UK not confirmed and quotes NEDC only; BYD Singapore's 'Combined Range (WLTP)' field is blank; NZ also quotes NEDC (Driven). RACV's own estimate is ~88km WLTP-equivalent, not used. NEDC overstates."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.0/103x100; no EV-mode figure published. Inherits the NEDC range overstatement and possible gross battery."
+      },
+      "combinedRangeKm": {
+        "value": 1235,
+        "basis": "derived",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "rangeKm 103 + 60L tank (spec sheet 'Fuel tank capacity (L)' 60) / 5.3 L/100km x 100 = 1235.1. Electric part is NEDC because no WLTP exists."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.3,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet '*Combined fuel consumption - SOC <25% (l/100km)' 5.3: BYD's published charge-sustaining figure (NEDC). No review tested it (CarExpert says it had no time)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Combined fuel consumption - SOC >25%' 1.1 L/100km, at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/14944840/byd/sealion-8/suv",
+        "note": "Combined CO2 24 g/km (aggregator spec listing; the AWD figure taken from the Dynamic AWD listing, same powertrain as Premium AWD); SRO definition at https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty: green car = combined CO2 120 g/km or less."
+      },
+      "bootLitresSeatsUp": {
+        "value": 270,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Boot Capacity (L) 270 / 960 / 1,960'; 270 = all three rows up (RACV, CarsGuide), matching sibling convention (kia-sorento-phev 175 third row up). Measurement method not stated by BYD or reviewers; may be to the roof."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1960,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 1,960 L with second and third rows folded (RACV). Method unstated; likely to the roof rather than the belt line - no to-the-cover figure found in CarExpert, Chasing Cars, CarsGuide or RACV."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Seating Capacity 7'."
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Towing capacity (kg) - braked' 1800; unbraked 750. CarExpert's price-and-specs table prints 750 as braked (its error); RACV agrees with 1800/2000."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-8",
+        "note": "BYD AU model page: vehicle 6 years/150,000km; traction battery 8 years/160,000km. Matches BYD reference value 6."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "Kept at 1850: sits with the seven-seat PHEV cohort - chery-tiggo-9-phev-elite 1800 ($52,990), jaecoo-j8-shs-summit 1950 ($59,990), mazda-cx-80-phev-touring 1850 ($68,100) - and above mazda-cx-60-phev-pure 1700 / mitsubishi-outlander-phev-es 1650 (five-seat-class, refreshed today) for a larger, heavier new-brand seven-seater."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Seal 6, Atto 1/2, Sealion 5/6/7, Dolphin, Shark 6), per one curve per brand. The AWD rows previously held steeper bespoke curves ([1,0.73,...] and [1,0.72,...]) with no documented evidence; aligned for consistency."
+      }
+    },
+    "byd-sealion-8-dynamic-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-8",
+        "note": "BYD AU Build & Price (bydautomotive.com.au/configurator/byd-sealion-8 301-redirects to this BYD-run configurator host) lists Dynamic AWD at $63,990 on 2026-11-26, one of three grades (Dynamic FWD, Dynamic AWD, Premium AWD). Three grades also per CarExpert, RACV, CarsGuide and the Oct 2026 MY26 spec sheet."
+      },
+      "listPrice": {
+        "value": 63990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-8",
+        "note": "BYD configurator variant price $63,990, with drive-away computed separately from a postcode (manufacturer price preferred per owner). 'Before on-road costs' in words: CarExpert price-and-specs (https://www.carexpert.com.au/car-news/2026-byd-sealion-8-price-and-specs) and CarsGuide review; RACV 'plus on-road costs' with Vic drive-away $67,651.70 against the app's computed $67,557.58 (green-duty), a $94 gap per grade. Configurator's '$4k Cashback Offer' is a campaign and ignored."
+      },
+      "batteryKwh": {
+        "value": 35.6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "MY26 AU spec sheet (version 261026) 'Battery capacity (kWh)' 35.6 for DM-p (BYD Blade LFP). Unlabelled gross vs usable; no source states both. Configurator copy wrongly prints 35.6kWh/359kW under the FWD grade too; the spec sheet is preferred."
+      },
+      "rangeKm": {
+        "value": 152,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet '*Electric range - NEDC combined cycle (km)' 152. No WLTP figure exists: BYD UK has no Sealion 8 page (404) and Auto Express (22 Sep 2026) says UK not confirmed and quotes NEDC only; BYD Singapore's 'Combined Range (WLTP)' field is blank; NZ also quotes NEDC (Driven). RACV's own estimate is ~130km WLTP-equivalent, not used. NEDC overstates."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 35.6/152x100; no EV-mode figure published. Inherits the NEDC range overstatement and possible gross battery."
+      },
+      "combinedRangeKm": {
+        "value": 1104,
+        "basis": "derived",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "rangeKm 152 + 60L tank (spec sheet 'Fuel tank capacity (L)' 60) / 6.3 L/100km x 100 = 1104.4. Electric part is NEDC because no WLTP exists."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.3,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet '*Combined fuel consumption - SOC <25% (l/100km)' 6.3: BYD's published charge-sustaining figure (NEDC). No review tested it (CarExpert says it had no time)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Combined fuel consumption - SOC >25%' 1.0 L/100km, at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/byd/sealion-8/2026/dynamic-awd",
+        "note": "Combined CO2 22 g/km (aggregator spec listing; the AWD figure taken from the Dynamic AWD listing, same powertrain as Premium AWD); SRO definition at https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty: green car = combined CO2 120 g/km or less."
+      },
+      "bootLitresSeatsUp": {
+        "value": 270,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Boot Capacity (L) 270 / 960 / 1,960'; 270 = all three rows up (RACV, CarsGuide), matching sibling convention (kia-sorento-phev 175 third row up). Measurement method not stated by BYD or reviewers; may be to the roof."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1960,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 1,960 L with second and third rows folded (RACV). Method unstated; likely to the roof rather than the belt line - no to-the-cover figure found in CarExpert, Chasing Cars, CarsGuide or RACV."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Seating Capacity 7'."
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Towing capacity (kg) - braked' 2000; unbraked 750. CarExpert's price-and-specs table prints 750 as braked (its error); RACV agrees with 1800/2000."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-8",
+        "note": "BYD AU model page: vehicle 6 years/150,000km; traction battery 8 years/160,000km. Matches BYD reference value 6."
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "Kept at 2000: 359kW AWD; anchored to byd-sealion-7-performance 1900 at the same $63,990 with 390kW, chery-tiggo-9-phev-ultimate 1950 ($59,990, 34.5kWh AWD) and jaecoo-j8-shs-summit 1950."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Seal 6, Atto 1/2, Sealion 5/6/7, Dolphin, Shark 6), per one curve per brand. The AWD rows previously held steeper bespoke curves ([1,0.73,...] and [1,0.72,...]) with no documented evidence; aligned for consistency."
+      }
+    },
+    "byd-sealion-8-premium-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-8",
+        "note": "BYD AU Build & Price (bydautomotive.com.au/configurator/byd-sealion-8 301-redirects to this BYD-run configurator host) lists Premium AWD at $70,990 on 2026-11-26, one of three grades (Dynamic FWD, Dynamic AWD, Premium AWD). Three grades also per CarExpert, RACV, CarsGuide and the Oct 2026 MY26 spec sheet."
+      },
+      "listPrice": {
+        "value": 70990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-8",
+        "note": "BYD configurator variant price $70,990, with drive-away computed separately from a postcode (manufacturer price preferred per owner). 'Before on-road costs' in words: CarExpert price-and-specs (https://www.carexpert.com.au/car-news/2026-byd-sealion-8-price-and-specs) and CarsGuide review; RACV 'plus on-road costs' with Vic drive-away $74,945.70 against the app's computed $74,851.58 (green-duty), a $94 gap per grade. Configurator's '$4k Cashback Offer' is a campaign and ignored."
+      },
+      "batteryKwh": {
+        "value": 35.6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "MY26 AU spec sheet (version 261026) 'Battery capacity (kWh)' 35.6 for DM-p (BYD Blade LFP). Unlabelled gross vs usable; no source states both. Configurator copy wrongly prints 35.6kWh/359kW under the FWD grade too; the spec sheet is preferred."
+      },
+      "rangeKm": {
+        "value": 152,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet '*Electric range - NEDC combined cycle (km)' 152. No WLTP figure exists: BYD UK has no Sealion 8 page (404) and Auto Express (22 Sep 2026) says UK not confirmed and quotes NEDC only; BYD Singapore's 'Combined Range (WLTP)' field is blank; NZ also quotes NEDC (Driven). RACV's own estimate is ~130km WLTP-equivalent, not used. NEDC overstates."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 35.6/152x100; no EV-mode figure published. Inherits the NEDC range overstatement and possible gross battery."
+      },
+      "combinedRangeKm": {
+        "value": 1104,
+        "basis": "derived",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "rangeKm 152 + 60L tank (spec sheet 'Fuel tank capacity (L)' 60) / 6.3 L/100km x 100 = 1104.4. Electric part is NEDC because no WLTP exists."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.3,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet '*Combined fuel consumption - SOC <25% (l/100km)' 6.3: BYD's published charge-sustaining figure (NEDC). No review tested it (CarExpert says it had no time)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Combined fuel consumption - SOC >25%' 1.0 L/100km, at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/byd/sealion-8/2026/dynamic-awd",
+        "note": "Combined CO2 22 g/km (aggregator spec listing; the AWD figure taken from the Dynamic AWD listing, same powertrain as Premium AWD); SRO definition at https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty: green car = combined CO2 120 g/km or less."
+      },
+      "bootLitresSeatsUp": {
+        "value": 270,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Boot Capacity (L) 270 / 960 / 1,960'; 270 = all three rows up (RACV, CarsGuide), matching sibling convention (kia-sorento-phev 175 third row up). Measurement method not stated by BYD or reviewers; may be to the roof."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1960,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 1,960 L with second and third rows folded (RACV). Method unstated; likely to the roof rather than the belt line - no to-the-cover figure found in CarExpert, Chasing Cars, CarsGuide or RACV."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Seating Capacity 7'."
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
+        "note": "Spec sheet 'Towing capacity (kg) - braked' 2000; unbraked 750. CarExpert's price-and-specs table prints 750 as braked (its error); RACV agrees with 1800/2000."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-8",
+        "note": "BYD AU model page: vehicle 6 years/150,000km; traction battery 8 years/160,000km. Matches BYD reference value 6."
+      },
+      "insuranceAnnual": {
+        "value": 2050,
+        "basis": "judged",
+        "note": "Lowered from 2100 to 2050: 2100 matched kia-sorento-phev-gt-line-awd at $86,790; now level with mazda-cx-80-phev-azami 2050 ($80,300) - cheaper car, but 359kW - and above kia-sorento-phev-s-awd 1800 / mitsubishi-outlander-phev-exceed 1800 at similar price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Seal 6, Atto 1/2, Sealion 5/6/7, Dolphin, Shark 6), per one curve per brand. The AWD rows previously held steeper bespoke curves ([1,0.73,...] and [1,0.72,...]) with no documented evidence; aligned for consistency."
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-sealion-8-dynamic-awd.rangeKm: NEDC 152, no WLTP exists in any market checked (UK, SG, NZ); RACV estimates ~130km WLTP. Same for premium-awd.",
+    "byd-sealion-8-premium-awd.rangeKm: NEDC 152, as above.",
+    "byd-sealion-8-dynamic-fwd.rangeKm: NEDC 103; RACV estimates ~88km WLTP.",
+    "byd-sealion-8-*.consumptionKwhPer100km and combinedRangeKm: derived from NEDC range (and an unlabelled battery figure), so understate consumption and overstate combined range.",
+    "byd-sealion-8-*.batteryKwh: unlabelled gross vs usable (19.0 / 35.6).",
+    "byd-sealion-8-*.bootLitresSeatsDown: 1,960 L measurement method unstated, probably to the roof not the belt line.",
+    "byd-sealion-8-*.fuelConsumptionL100km: BYD's NEDC SOC<25% claim (5.3 / 6.3), untested by any review.",
+    "byd-sealion-8-*.insuranceAnnual: judged.",
+    "byd-sealion-8-*.isGreenForVicDuty: CO2 22/24 g/km from aggregator listings, not the Green Vehicle Guide; margin to 120 g/km is large."
+  ]
+}

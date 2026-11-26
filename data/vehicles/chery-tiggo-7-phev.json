@@ -7,12 +7,12 @@
     "variant": "Super Hybrid Urban",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 37990,
+    "listPrice": 32990,
     "batteryKwh": 18.4,
     "rangeKm": 90,
     "consumptionKwhPer100km": 20.4,
-    "combinedRangeKm": 1200,
-    "fuelConsumptionL100km": 5.5,
+    "combinedRangeKm": 1090,
+    "fuelConsumptionL100km": 6.0,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 356,
@@ -21,8 +21,15 @@
     "towKg": 0,
     "warrantyYears": 7,
     "insuranceAnnual": 1450,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "chery-tiggo-7-phev-ultimate",
@@ -32,12 +39,12 @@
     "variant": "Super Hybrid Ultimate",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 41990,
+    "listPrice": 36990,
     "batteryKwh": 18.4,
     "rangeKm": 90,
     "consumptionKwhPer100km": 20.4,
-    "combinedRangeKm": 1200,
-    "fuelConsumptionL100km": 5.5,
+    "combinedRangeKm": 1090,
+    "fuelConsumptionL100km": 6.0,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 356,
@@ -46,7 +53,14 @@
     "towKg": 0,
     "warrantyYears": 7,
     "insuranceAnnual": 1550,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

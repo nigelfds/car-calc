@@ -422,8 +422,8 @@
       "scope": "variant",
       "status": "pre-launch",
       "familyId": "hyundai-ioniq-6",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-26",
       "note": "Dynamiq and Epiq withdrawn H1 2026; family holds only the N. Add grades back only when orderable."
     },
     {
@@ -436,17 +436,6 @@
       "checkedAt": "2026-08-08",
       "recheckAfter": "2026-11-26",
       "note": "$177,990 rests on one listicle sentence; four trims unpriced (Lotus AU ships blank price fields)."
-    },
-    {
-      "name": "Hyundai/Kia gross battery figures",
-      "make": "Kia",
-      "powertrain": "bev",
-      "scope": "variant",
-      "status": "backlog",
-      "familyId": "kia-ev4",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2026-11-26",
-      "note": "Rows in kia-ev4, hyundai-ioniq-9, hyundai-elexio may carry gross kWh. Settle per pack. Settled 2026-11-26: kia-ev3 (58.3/81.4 gross -> 55/78 usable; kia-ev4 uses the same packs), kia-ev5 (88.1 gross -> 84 usable)."
     },
     {
       "name": "Kia EV5 2027 facelift",

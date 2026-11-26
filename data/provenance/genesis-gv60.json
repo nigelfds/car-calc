@@ -1,0 +1,174 @@
+{
+  "familyId": "genesis-gv60",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "genesis-gv60-advanced-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/ecomm/gv60advancedmy27/GV60advanced_2027.json",
+        "note": "Genesis AU Build & Price (https://www.genesis.com/au/en/shop/gv60) serves this MY27 JSON: one variant, ADVANCED RWD, hideOnShop false"
+      },
+      "listPrice": {
+        "value": 88300,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/ecomm/gv60advancedmy27/GV60advanced_2027.json",
+        "note": "Genesis configurator actualMlp 88300 (vehicleMlp 80272.73 = ex-GST); CarExpert review says '$88,300 before on-road costs' (https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-review), CarExpert pricing news agrees. Configurator also lists a separate $3,000 dealer delivery fee (on-road, not list). $4,000 paint options not included"
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3236/Genesis-GV60-Performance",
+        "note": "usable 80.0, nominal 84.0, 384 cells on the same page (84 kWh E-GMP pack, overseas MY25 Performance); Genesis AU spec sheet's unlabelled '84kWh' is gross: 84,000 Wh / 384 cells = 218.75 Wh per SK On pouch cell. Same pack in the Magma entry (https://ev-database.org/car/3683/Genesis-GV60-Magma: 84.0 nominal / 80.0 useable)"
+      },
+      "rangeKm": {
+        "value": 561,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/models/luxury-suv-genesis/gv60/brochure/Specification_Sheet_GV60_v4.pdf",
+        "note": "Genesis AU spec sheet (2 July 2026) 'All Electric Range (WLTP)' 561km, 19-inch wheels standard on the grade; configurator JSON also 561km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.7,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/models/luxury-suv-genesis/gv60/brochure/Specification_Sheet_GV60_v4.pdf",
+        "note": "Genesis AU spec sheet 'Electric driving efficiency; Combined (Wh/km): 167'; held value 16.8 was CarExpert's rounding. 80/561x100 = 14.3 (WLTP figure includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 432,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3236/Genesis-GV60-Performance",
+        "note": "432 L seats up; Genesis AU publishes no litre figure. Same body as the MY27 car; CarExpert Advanced review also quotes 432L (https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-review). Small frunk on the RWD not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1460,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3236/Genesis-GV60-Performance",
+        "note": "1460 L max on the same page; measurement convention (belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/au/en/models/luxury-suv-genesis/gv60/specs.html",
+        "note": "Body type '5-seat SUV'"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/models/luxury-suv-genesis/gv60/brochure/Specification_Sheet_GV60_v4.pdf",
+        "note": "Genesis AU spec sheet braked 1,600kg (unbraked 750, TBM 100). Held 0kg was wrong; CarsGuide now also lists Advanced (RWD) 1600kg (https://www.carsguide.com.au/genesis/gv60/towing-capacity/2026)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/au/en/terms-of-use/warranty.html",
+        "note": "60 months from first registration, no km limit for private use; HV battery 8 years/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2300,
+        "basis": "judged",
+        "note": "kept; anchored to polestar-4-long-range-single-motor (2300, $73,900) and kia-ev6-gt-line-awd (2200, $87,660), with a premium-brand loading"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.64,
+          0.52,
+          0.43,
+          0.36,
+          0.3
+        ],
+        "basis": "judged",
+        "note": "Genesis brand curve, matched to genesis-gv70-electrified and the held Magma row (one curve per brand; the held Advanced row used [1,0.66,0.54,0.45,0.38,0.32]). Steeper than mainstream on documented evidence: ~$15,000 price cut on the GV60 entry grade at the 2026 update (CarExpert, https://www.carexpert.com.au/car-news/2027-genesis-gv60-prices-hot-478kw-ev-on-sale-now) and a thin retail network (about nine sites) limiting the used market"
+      }
+    },
+    "genesis-gv60-magma-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/ecomm/gv60magma27/GV60Magma_2027.json",
+        "note": "Genesis AU Build & Price (https://www.genesis.com/au/en/shop/gv60magma) serves this MY27 JSON: one variant, MAGMA AWD, hideOnShop false"
+      },
+      "listPrice": {
+        "value": 130000,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/ecomm/gv60magma27/GV60Magma_2027.json",
+        "note": "Genesis configurator vehicleMlp 130000 (actualMlp 121152.52 is the price ex-LCT: 121152.52 + 0.33x(121152.52-91661)/1.1 = 130000). CarExpert: '$130,000 plus on-road costs' (https://www.carexpert.com.au/car-news/2027-genesis-gv60-prices-hot-478kw-ev-on-sale-now). Under the $250,000 schema cap"
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3683/Genesis-GV60-Magma",
+        "note": "useable 80.0, nominal 84.0, 384 cells 192s2p, 697V on the same page; Genesis AU '84kWh' is gross (84,000/384 = 218.75 Wh per cell)"
+      },
+      "rangeKm": {
+        "value": 425,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/models/gv60-magma-teaser/2026/brochure/Specification_Sheet_GV60_Magma_v4.pdf",
+        "note": "Genesis AU Magma spec sheet (2 July 2026) 'All Electric Range (WLTP)' 425km on 21-inch wheels; EV Database also 425. The configurator JSON's '470km' list item is a stale pre-launch figure, rejected"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.5,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/models/gv60-magma-teaser/2026/brochure/Specification_Sheet_GV60_Magma_v4.pdf",
+        "note": "Genesis AU spec sheet 215 Wh/km combined; CarExpert claim 21.5, tested 25.6"
+      },
+      "bootLitresSeatsUp": {
+        "value": 400,
+        "basis": "sourced",
+        "url": "https://www.cityam.com/?p=2473316",
+        "note": "'400 litres of luggage up to the parcel shelf' (City AM); CarExpert Magma review also 400L (https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-magma-review). What Car/EV Database 670 L rejected as not to the cover (larger than the 432 L standard car with the same body)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1350,
+        "basis": "judged",
+        "note": "no to-the-cover folded figure published; scaled from the Advanced ratio 1460/432 x 400 = 1352, rounded. What Car's 1,440 uses the 670 L convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/au/en/models/luxury-suv-genesis/gv60-magma/specs.html",
+        "note": "Body type '5-seat SUV'"
+      },
+      "towKg": {
+        "value": 2400,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/content/dam/genesis/au/en/models/gv60-magma-teaser/2026/brochure/Specification_Sheet_GV60_Magma_v4.pdf",
+        "note": "Genesis AU Magma spec sheet braked 2,400kg (unbraked 750, TBM 100); CarsGuide 2026 lists Magma 2400kg and EV Database 2,400kg. Held 0kg was wrong"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.genesis.com/au/en/terms-of-use/warranty.html",
+        "note": "60 months from first registration; CarExpert Magma review: five-year, unlimited-km"
+      },
+      "insuranceAnnual": {
+        "value": 3300,
+        "basis": "judged",
+        "note": "kept; anchored above genesis-gv70-electrified (3100, $132,800) and hyundai-ioniq-5-n (2750, $115,000) for 448kW performance-car loading"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.64,
+          0.52,
+          0.43,
+          0.36,
+          0.3
+        ],
+        "basis": "judged",
+        "note": "Genesis brand curve, matched to genesis-gv70-electrified and the held Magma row (one curve per brand; the held Advanced row used [1,0.66,0.54,0.45,0.38,0.32]). Steeper than mainstream on documented evidence: ~$15,000 price cut on the GV60 entry grade at the 2026 update (CarExpert, https://www.carexpert.com.au/car-news/2027-genesis-gv60-prices-hot-478kw-ev-on-sale-now) and a thin retail network (about nine sites) limiting the used market"
+      }
+    }
+  },
+  "lowConfidence": [
+    "genesis-gv60-magma-awd.bootLitresSeatsDown: judged by scaling the Advanced ratio; no published to-the-cover folded figure",
+    "genesis-gv60-advanced-rwd.depreciationCurve: changed from the held [1,0.66,...] to the Genesis brand curve shared with genesis-gv70-electrified; brand curve itself is judged",
+    "genesis-gv60-magma-awd.depreciationCurve: Genesis brand curve, judged; thin local volume data",
+    "genesis-gv60-magma-awd.insuranceAnnual: judged, anchored to gv70-electrified and ioniq-5-n",
+    "genesis-gv60-advanced-rwd.insuranceAnnual: judged, anchored to polestar-4 and kia-ev6",
+    "genesis-gv60-magma-awd.bootLitresSeatsUp: 400 L from a UK review and CarExpert; Genesis AU publishes no litre figure and other outlets quote 670 L",
+    "genesis-gv60-advanced-rwd.bootLitresSeatsDown: 1460 L from EV Database (overseas MY25), measurement convention unstated",
+    "genesis-gv60-magma-awd.towKg: 2400 kg exceeds the 1600 kg of the Advanced and other E-GMP siblings with a 100 kg tow-ball limit on both; it is on Genesis's own sheet and three other sources agree"
+  ]
+}

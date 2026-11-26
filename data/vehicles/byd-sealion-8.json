@@ -21,8 +21,15 @@
     "towKg": 1800,
     "warrantyYears": 6,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-sealion-8-dynamic-awd",
@@ -46,8 +53,15 @@
     "towKg": 2000,
     "warrantyYears": 6,
     "insuranceAnnual": 2000,
-    "depreciationCurve": [1, 0.73, 0.62, 0.54, 0.47, 0.41],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-sealion-8-premium-awd",
@@ -70,8 +84,15 @@
     "seats": 7,
     "towKg": 2000,
     "warrantyYears": 6,
-    "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-07-28"
+    "insuranceAnnual": 2050,
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

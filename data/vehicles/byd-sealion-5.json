@@ -20,9 +20,16 @@
     "seats": 5,
     "towKg": 750,
     "warrantyYears": 6,
-    "insuranceAnnual": 1250,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-28"
+    "insuranceAnnual": 1350,
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-sealion-5-premium",
@@ -45,8 +52,15 @@
     "seats": 5,
     "towKg": 750,
     "warrantyYears": 6,
-    "insuranceAnnual": 1320,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-28"
+    "insuranceAnnual": 1450,
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

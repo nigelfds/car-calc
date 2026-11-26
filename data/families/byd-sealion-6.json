@@ -1,31 +1,29 @@
 {
   "id": "byd-sealion-6",
-  "summary": "Australian reviewers consistently rate the Sealion 6 as the value pick of the plug-in hybrid SUV class, with the Essential holding the title of the country's cheapest new PHEV and offering a genuinely usable electric-only range. Opinions are more mixed on dynamics: reviewers like the improved, comfort-biased suspension tune but mark it down for body roll and light, indirect steering next to rivals such as the Cupra Formentor. Most agree the 425-litre boot is a real compromise versus segment rivals, and that running costs climb sharply once the battery is depleted.",
+  "summary": "Australian reviewers rate the Sealion 6 as one of the value picks of the plug-in hybrid SUV class, praising its long electric-only range and generous equipment for the money; it is no longer the cheapest PHEV in BYD's own line-up now that the smaller Sealion 5 starts under $34,000. The range has thinned to three grades, with the Dynamic and Premium Standard Range versions gone, so every grade above the Essential now carries the larger 26.6kWh battery. Opinions are more mixed on dynamics: reviewers like the revised, comfort-biased suspension but mark it down for body roll and light, indirect steering, and most agree the 425-litre boot is a compromise against segment rivals.",
   "pros": [
-    "Essential undercuts the Toyota RAV4 PHEV and Mitsubishi Outlander PHEV by a wide margin at $42,990 before on-roads, reviewers' benchmark for value in the class",
-    "Usable electric-only range for a budget PHEV: up to 92km (Essential) or 140km (Dynamic Extended Range) on a full charge, enough to cover most Melbourne commutes without touching the engine",
-    "Generous standard equipment for the price, including a rotating touchscreen (12.8in Essential/Dynamic, 15.8in Premium), dual-zone climate and vehicle-to-load power",
+    "Essential undercuts the Mitsubishi Outlander PHEV ES ($58,990) by $16,000 at $42,990 before on-roads, and the AWD Premium Extended Range is $52,990",
+    "Long electric-only range for the price: about 80km (Essential) and 125km (Dynamic Extended Range) on the European WLTP test for the same powertrains, enough to cover most Melbourne commutes without the engine",
+    "Generous standard equipment, including a rotating touchscreen (12.8in on the Essential, 15.6in further up the range), dual-zone climate and vehicle-to-load power",
     "Five-star ANCAP rating (assessed under 2023 Euro NCAP criteria) with seven airbags standard across the range",
     "8-year/160,000km battery warranty outlasts the vehicle's own 6-year/150,000km unconditional term"
   ],
   "cons": [
     "425-litre boot with the rear seats up trails segment rivals like the Toyota RAV4 and Mitsubishi Outlander PHEV, the direct cost of packaging the battery under the floor",
-    "Once the battery is depleted the Sealion 6 drinks far more than its 0.8-1.1L/100km label figure suggests — reviewers measured 4.8-6.0L/100km in charge-sustaining running — so the economics case weakens sharply for anyone who cannot charge at home",
+    "Once the battery is depleted it drinks far more than its 0.8-1.1L/100km label figure suggests: the same powertrains use 5.6-7.1L/100km charge-sustaining on Europe's WLTP test, so the economics weaken sharply without home charging",
     "Soft, comfort-tuned suspension brings noticeable body roll and light, indirect steering that reviewers rate well behind more dynamically composed rivals",
-    "No spare wheel, a tyre-repair kit only, and BYD's Australian resale value and dealer/service network remain relatively unproven for a car this new to the range"
+    "Front-drive grades are rated to tow only 750kg braked; only the AWD Premium Extended Range reaches 1,300kg"
   ],
   "sources": [
-    "https://www.carexpert.com.au/car-news/2025-byd-sealion-6-price-and-specs",
-    "https://www.carexpert.com.au/car-reviews/2025-byd-sealion-6-review",
-    "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-6-review",
-    "https://www.carsguide.com.au/byd/sealion-6",
-    "https://www.carsguide.com.au/byd/sealion-6/price",
-    "https://www.carsguide.com.au/byd/sealion-6/fuel-consumption",
-    "https://www.carsales.com.au/research/byd/sealion-6/",
-    "https://www.carsales.com.au/research/byd/sealion-6/2025/premium/",
-    "https://www.carsales.com.au/editorial/details/byd-sealion-6-dynamic-2024-review-146934/",
+    "https://evdealergroup-byd.com.au/configurator/byd-sealion-6",
     "https://bydautomotive.com.au/sealion-6",
-    "https://www.goauto.com.au/car-reviews/byd/sealion-6/2025-byd-sealion-essential-review/2025-07-31/96977.html"
+    "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+    "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-6-review",
+    "https://www.carexpert.com.au/car-news/byd-sealion-6-new-long-range-option-joins-phev-suv-lineup",
+    "https://www.racq.com.au/articles/car-updates/byd-introduces-sealion-6-premium-extended-range-plug-in-hybrid",
+    "https://www.carexpert.com.au/byd/sealion-6/2025-essential-1-5l-suv-fwd-electric-jsgmsofk20260101",
+    "https://www.carexpert.com.au/byd/sealion-6/2025-premium-extended-1-5l-suv-4x4-electric-jsgwsgs520260101",
+    "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf"
   ],
-  "sourcedAt": "2026-07-28"
+  "sourcedAt": "2026-11-26"
 }

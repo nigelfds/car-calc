@@ -66,15 +66,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.77,
+          0.74,
           0.63,
-          0.51,
-          0.44,
-          0.39
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "url": "https://evdepreciation.com/byd-atto-3-depreciation-australia-2025-review/",
-        "note": "kept the family's existing steeper-than-BYD-default curve: evdepreciation forecasts 78/63/51% retained at years 1-3 after repeated BYD price cuts; years 4-5 extrapolated"
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
       }
     },
     "byd-atto3-evo-dynamic": {
@@ -146,15 +145,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.77,
+          0.74,
           0.63,
-          0.51,
-          0.44,
-          0.39
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "url": "https://evdepreciation.com/byd-atto-3-depreciation-australia-2025-review/",
-        "note": "kept the family's existing steeper-than-BYD-default curve: evdepreciation forecasts 78/63/51% retained at years 1-3 after repeated BYD price cuts; years 4-5 extrapolated"
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
       }
     },
     "byd-atto3-evo-premium": {
@@ -226,15 +224,14 @@
       "depreciationCurve": {
         "value": [
           1,
-          0.77,
+          0.74,
           0.63,
-          0.51,
-          0.44,
-          0.39
+          0.55,
+          0.48,
+          0.42
         ],
         "basis": "judged",
-        "url": "https://evdepreciation.com/byd-atto-3-depreciation-australia-2025-review/",
-        "note": "kept the family's existing steeper-than-BYD-default curve: evdepreciation forecasts 78/63/51% retained at years 1-3 after repeated BYD price cuts; years 4-5 extrapolated"
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
       }
     }
   },
@@ -246,6 +243,6 @@
     "byd-atto3-evo-premium.insuranceAnnual: judged",
     "byd-atto3-evo-dynamic.insuranceAnnual: judged",
     "byd-atto3-essential.insuranceAnnual: judged",
-    "depreciationCurve (all rows): judged, family-specific curve steeper than BYD sibling default"
+    "depreciationCurve (all rows): judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
   ]
 }

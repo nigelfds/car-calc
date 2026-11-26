@@ -1,0 +1,117 @@
+{
+  "familyId": "byd-seal-6",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-seal-6-essential": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-seal-6?ref=website&spec=5700",
+        "note": "BYD AU configurator (bydautomotive.com.au/configurator/byd-seal-6 301s here) lists one sedan variant, 'BYD SEAL 6 Essential' (fuelType PHEV, body SEDAN, NVIC 0I1426). Nav menu lists only SEAL 6 and SEAL 6 Touring, both Plug-in Hybrid; no BEV sedan."
+      },
+      "listPrice": {
+        "value": 34990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-seal-6?ref=website&spec=5700",
+        "note": "Configurator variant price $34,990 (gst field 3180.91 = 34990/11); drive-away is computed separately after postcode entry. CarExpert (https://www.carexpert.com.au/car-news/2026-byd-seal-6-price-and-specs) says '$34,990 before on-road costs' in words; CarExpert's spec page gives $39,057 drive-away Sydney. App round-trip gives $37,340 Vic drive-away. A $4,000 cashback campaign runs to 21 Dec 2026 and is not in the list price."
+      },
+      "batteryKwh": {
+        "value": 10.08,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEAL-6-2026.pdf",
+        "note": "AU spec sheet 'Battery capacity (kWh) 10.08', unlabelled; BYD UK gives 10.08 kWh at 268.8V for the same Boost pack; CarExpert's database labels it usable. No source states gross and usable side by side. The AU sheet splits fuel figures at SoC 25%, so EV running may stop near 25% SoC."
+      },
+      "rangeKm": {
+        "value": 55,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEAL-6-2026.pdf",
+        "note": "AU spec sheet 'Electric range WLTP Combined Cycle 55' beside NEDC 70 (rejected). BYD UK Boost (same pack, 17in) 34 miles = 54.7km agrees."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 10.08 / 55 x 100 = 18.33. Not used: BYD UK 'Electric consumption combined 4.4 miles/kWh' (= 14.1 kWh/100km) and CarExpert's 140 Wh/km, which sit beside the weighted-combined fuel figure and are likely utility-factor-weighted; they would imply only ~7.7 kWh used over 55km."
+      },
+      "combinedRangeKm": {
+        "value": 1500,
+        "basis": "derived",
+        "note": "Capped at the schema ceiling of 1500. Formula gives 55 + 65 L / 4.4 x 100 = 1532 (tank 65 L from AU spec sheet and BYD UK); BYD UK's own WLTP 'Range - combined 935 miles' is 1505 km, also over the ceiling. Held value was 1355 (from the judged 5.0 L/100km)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 4.4,
+        "basis": "sourced",
+        "url": "https://www.byd.com/material/byd-site/byd-uk/specifications/SEAL%206%20DM-i-1225-BPS-UK-V2-web.pdf",
+        "note": "Charge-sustaining WLTP: BYD UK Boost 'Fuel Consumption - combined (mpg) 64.2' (listed with low/medium/high CS phases, separate from 122.8mpg weighted) = 282.481/64.2 = 4.40 L/100km. UK Boost is 135kW vs AU 130kW, same 1.5L engine, pack and 17in tyres, kerb 1665 vs 1650 kg. Chosen over AU NEDC 'SoC insufficient' 3.6 to match the WLTP approach on byd-shark-6. Changed from held judged 5.0. CarExpert observed 6.1 L/100km on a freeway-heavy test of the Premium. Ordering vs byd-sealion-6-essential (4.8, heavier SUV, same engine) is consistent."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEAL-6-2026.pdf",
+        "note": "AU spec sheet combined fuel consumption 1.1 L/100km (NEDC, SoC >= 25%), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "derived",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green cars are passenger cars with combined CO2 of 120 g/km or less. AU label 1.1 L/100km implies ~26 g/km; BYD UK WLTP weighted CO2 52 g/km. Both well under 120."
+      },
+      "bootLitresSeatsUp": {
+        "value": 491,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEAL-6-2026.pdf",
+        "note": "AU spec sheet 'Trunk capacity (L) 491'; BYD UK 491 (car has a boot parcel shelf, sedan boot lid). CarExpert price article's '1650L' folded is the kerb weight transposed from the spec table and is rejected."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1370,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEAL-6-2026.pdf",
+        "note": "AU spec sheet 'Trunk capacity with rear seats folded (L) 1,370'; BYD UK 1370."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEAL-6-2026.pdf",
+        "note": "AU spec sheet 'Seating Capacity 5'."
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/seal-6/2026-essential-1-5l-sedan-fwd-electric-jskagakf20260407",
+        "note": "CarExpert spec page: 750 kg braked. BYD AU spec sheet and UK sheet publish no towing figure."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/seal-6",
+        "note": "BYD AU Seal 6 page: 'Vehicle Warranty - 6 years or 150,000 kms'; traction battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1300,
+        "basis": "judged",
+        "note": "Unchanged; anchored between byd-dolphin-essential (1250 at $29,990) and byd-dolphin-premium (1400 at $36,990), below byd-sealion-6-essential (1450 at $42,990)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Dolphin, Sealion 6, Shark 6); heavy BYD discounting ($4,000 cashback to 21 Dec 2026) supports below-mainstream retention."
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-seal-6-essential.combinedRangeKm: capped at the schema ceiling 1500; formula gives 1532 and BYD UK WLTP gives 1505",
+    "byd-seal-6-essential.batteryKwh: 10.08 unlabelled on every BYD sheet; usable not published, and EV running may stop near 25% SoC",
+    "byd-seal-6-essential.consumptionKwhPer100km: derived from the unlabelled 10.08 kWh; BYD's published 14.1 kWh/100km is likely UF-weighted, true EV-mode figure uncertain",
+    "byd-seal-6-essential.towKg: CarExpert database only; BYD AU and UK sheets publish no tow rating",
+    "byd-seal-6-essential.fuelConsumptionL100km: UK WLTP 4.4 from the 135kW Boost tune (AU is 130kW); CarExpert saw 6.1 in real use; changed from held 5.0",
+    "byd-seal-6-essential.insuranceAnnual: judged, anchored to Dolphin and Sealion 6 rows",
+    "byd-seal-6-essential.depreciationCurve: BYD brand convention, no Seal 6 resale data yet"
+  ]
+}

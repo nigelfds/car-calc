@@ -1,0 +1,171 @@
+{
+  "familyId": "byd-atto2",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-atto2-dynamic": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-2",
+        "note": "bydautomotive.com.au/configurator/byd-atto-2 301-redirects to this BYD Build & Price flow, which lists ATTO 2 Dynamic $31,990 and Premium $35,990 on 2026-11-26"
+      },
+      "listPrice": {
+        "value": 31990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-byd-atto-2-dm-i-becomes-australias-cheapest-phev",
+        "note": "CarExpert 24 Sep 2026 pricing table: 2027 Atto 2 EV Dynamic $31,990 'before on-road costs' in words; BYD configurator (https://evdealergroup-byd.com.au/configurator/byd-atto-2) shows the same $31,990 unlabelled under an NSW drive-away banner, but it is below the computed Victorian drive-away, so per rule 3 it is the list price"
+      },
+      "batteryKwh": {
+        "value": 51.13,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3494/BYD-ATTO-2-511-kWh",
+        "note": "EV Database (UK, same 51.1 kWh variant): usable 51.1 kWh, nominal 53.0 kWh, so BYD's 51.13 kWh rated figure is the usable capacity; CarExpert prints 51.3 (typo)"
+      },
+      "rangeKm": {
+        "value": 345,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/atto-2",
+        "note": "BYD AU spec table labels 345 km WLTP for both grades; cross-checked against EV Database UK WLTP 214 mi (344 km) for the same 51.1 kWh pack, so not an NEDC submission. AU 16-inch wheel; BYD quotes one figure for both grades"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.1,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-atto-2-full-specs-detailed-for-budget-electric-small-suv",
+        "note": "CarExpert specs article: claimed 17.1 kWh/100km (WLTP); EV Database UK gives 277 Wh/mi = 17.2 kWh/100km. Battery/range gives 14.8, gap is charging losses (plug-to-wheel)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 380,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-2",
+        "note": "BYD AU spec table 380 L; measurement method not stated, believed VDA to the cover; EV Database lists 400 L. No frunk added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1320,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-2",
+        "note": "BYD AU spec table 1,320 L seats folded; CarExpert same"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-byd-atto-2-review",
+        "note": "five-seat small SUV, 60:40 split rear"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/byd/atto-2/towing-capacity/2026",
+        "note": "750 kg braked both grades; EV Database UK also 750 kg braked. BYD AU page does not state towing"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-2",
+        "note": "6 years/150,000 km vehicle, unconditional; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1300,
+        "basis": "judged",
+        "note": "held value kept; anchored to mg-4-urban-54 ($32,735, $1,300) and below byd-atto3-essential ($39,990, $1,500)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand curve shared with byd-atto1 and byd-dolphin (one curve per brand); byd-atto3 now uses a different curve [1,0.77,0.63,0.51,0.44,0.39], flagged to orchestrator"
+      }
+    },
+    "byd-atto2-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-2",
+        "note": "bydautomotive.com.au/configurator/byd-atto-2 301-redirects to this BYD Build & Price flow, which lists ATTO 2 Dynamic $31,990 and Premium $35,990 on 2026-11-26"
+      },
+      "listPrice": {
+        "value": 35990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-byd-atto-2-dm-i-becomes-australias-cheapest-phev",
+        "note": "CarExpert 24 Sep 2026 pricing table: 2027 Atto 2 EV Premium $35,990 'before on-road costs' in words; BYD configurator (https://evdealergroup-byd.com.au/configurator/byd-atto-2) shows the same $35,990 unlabelled under an NSW drive-away banner, but it is below the computed Victorian drive-away, so per rule 3 it is the list price"
+      },
+      "batteryKwh": {
+        "value": 51.13,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3494/BYD-ATTO-2-511-kWh",
+        "note": "EV Database (UK, same 51.1 kWh variant): usable 51.1 kWh, nominal 53.0 kWh, so BYD's 51.13 kWh rated figure is the usable capacity; CarExpert prints 51.3 (typo)"
+      },
+      "rangeKm": {
+        "value": 345,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/atto-2",
+        "note": "BYD AU spec table labels 345 km WLTP for both grades; cross-checked against EV Database UK WLTP 214 mi (344 km) for the same 51.1 kWh pack, so not an NEDC submission. AU 17-inch wheel; BYD quotes one figure for both grades"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.1,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-atto-2-full-specs-detailed-for-budget-electric-small-suv",
+        "note": "CarExpert specs article: claimed 17.1 kWh/100km (WLTP); EV Database UK gives 277 Wh/mi = 17.2 kWh/100km. Battery/range gives 14.8, gap is charging losses (plug-to-wheel)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 380,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-2",
+        "note": "BYD AU spec table 380 L; measurement method not stated, believed VDA to the cover; EV Database lists 400 L. No frunk added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1320,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-2",
+        "note": "BYD AU spec table 1,320 L seats folded; CarExpert same"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-byd-atto-2-review",
+        "note": "five-seat small SUV, 60:40 split rear"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/byd/atto-2/towing-capacity/2026",
+        "note": "750 kg braked both grades; EV Database UK also 750 kg braked. BYD AU page does not state towing"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-2",
+        "note": "6 years/150,000 km vehicle, unconditional; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1400,
+        "basis": "judged",
+        "note": "held value kept; anchored to mg-4-urban-54 ($32,735, $1,300) and below byd-atto3-essential ($39,990, $1,500)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand curve shared with byd-atto1 and byd-dolphin (one curve per brand); byd-atto3 now uses a different curve [1,0.77,0.63,0.51,0.44,0.39], flagged to orchestrator"
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-atto2-dynamic.depreciationCurve / byd-atto2-premium.depreciationCurve: judged BYD brand curve; conflicts with byd-atto3's refreshed curve, so the brand has two curves until reconciled",
+    "byd-atto2-dynamic.insuranceAnnual / byd-atto2-premium.insuranceAnnual: judged",
+    "byd-atto2-dynamic.bootLitresSeatsUp / byd-atto2-premium.bootLitresSeatsUp: BYD AU 380 L, measurement method unstated (EV Database 400 L)",
+    "byd-atto2-dynamic.listPrice / byd-atto2-premium.listPrice: configurator figure unlabelled; 'before on-road costs' wording comes from CarExpert 24 Sep 2026, two months old"
+  ]
+}

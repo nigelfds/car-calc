@@ -1,0 +1,93 @@
+{
+  "familyId": "hyundai-ioniq-9",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "hyundai-ioniq-9-calligraphy-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq9",
+        "note": "Hyundai AU model page embeds configurator data for one grade (Calligraphy, '314 kW Dual Electric Motor ... AWD') in 7-seat (GOW7) and 6-seat (GOW6) builds plus a Digital Side Mirrors option pack, all priceEnabled; Build & Price itself is JS-rendered. Spec sheet is MY27. CarsGuide 2027 price table lists only Calligraphy E4 6/7-seat and DSM permutations (options, +$2,000 / +$3,000)."
+      },
+      "listPrice": {
+        "value": 119668,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/hyundai/ioniq-9/price/2027",
+        "note": "CarsGuide MY2027 table: Calligraphy E4 (7 Seat) $119,668; footnote 'Manufacturer's Suggested Retail Price ... excludes stamp duty, other government charges and options' (not the words 'before on-road costs'). Launch price $119,750 'before on-road costs' (CarExpert, CarsGuide review); the $82 drop equals LCT indexation (0.33 x $274 threshold rise / 1.1). Hyundai's own model page gives only drive-away (fscLowPrice $128,977.72, 6-seat +$2,099.99 = $2,000 x 1.05, i.e. NSW-duty drive-away); that sits above the app's Vic drive-away for $119,668 ($125,574), so it is a genuine drive-away, not a list. CarExpert's 2026 variant page says '$121,750 before on-road costs', which matches the launch 6-seat price and was rejected."
+      },
+      "batteryKwh": {
+        "value": 106,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3069/Hyundai-IONIQ-9-Performance-AWD",
+        "note": "usable 106.0 kWh; nominal 110.3 kWh on same page. Hyundai AU spec sheet 'Capacity 110.3 kWh, Voltage 610 V' is the gross/system-energy figure (press release calls it 'system energy'). V x Ah and cell count not published (Hyundai says only '48 additional cells' vs EV9 99.8 kWh), so the settlement rests on EV Database's paired figures. Held 107 replaced."
+      },
+      "rangeKm": {
+        "value": 600,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-sheet-my27.pdf",
+        "note": "Hyundai AU MY27 spec sheet 'All Electric Range (WLTP) 600km', 21-inch wheels (only wheel offered); EV Database Performance AWD also 600 km WLTP"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.6,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-sheet-my27.pdf",
+        "note": "spec sheet 'Electric driving efficiency (Combined) 206Wh/km', WLTP, includes charging losses (EV Database: rated 206, vehicle 177 Wh/km); 16.6% above 106/600"
+      },
+      "bootLitresSeatsUp": {
+        "value": 338,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-sheet-my27.pdf",
+        "note": "'Cargo area - minimum: behind 3rd row / behind 2nd row (VDA) 338L / 908L'; frunk (52L AWD) not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2410,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/hyundai-ioniq-9-99256",
+        "note": "CarsGuide review: 'Drop both rows ... 2410 litres'; also CarsGuide boot-space page. Measurement height unstated and likely to the roof (EV Database max 2,419L); Hyundai AU publishes no folded-behind-1st-row figure and no to-the-belt-line figure was found. Matches the kia-ev9 sibling, which also holds its maximum (2,318L)."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-sheet-my27.pdf",
+        "note": "7 passenger (2nd row bench) standard; 6-seat is a $2,000 option"
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-sheet-my27.pdf",
+        "note": "Braked 2500 kg, unbraked 750 kg, max ball 125 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/owning/warranty",
+        "note": "5 years/unlimited km unconditional; extended to 7 years only with all scheduled servicing at an authorised Hyundai dealer; HV battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2700,
+        "basis": "judged",
+        "note": "held value kept; anchored to kia-ev9-gt-line-awd ($121,000, 2700), volvo-ex90-plus-single-motor ($106,990, 2700) and kia-ev9-earth-awd ($106,500, 2600)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
+      }
+    }
+  },
+  "lowConfidence": [
+    "hyundai-ioniq-9-calligraphy-awd.bootLitresSeatsDown: CarsGuide review figure with unstated measurement height, probably to the roof rather than the cargo-cover convention; no Hyundai folded figure published",
+    "hyundai-ioniq-9-calligraphy-awd.listPrice: from CarsGuide's MSRP table (footnoted as excluding stamp duty and government charges), not a Hyundai price list; Hyundai's own page shows only drive-away, and CarExpert shows a conflicting $121,750",
+    "hyundai-ioniq-9-calligraphy-awd.batteryKwh: usable 106 from EV Database only; Hyundai publishes no usable figure, cell count or Ah",
+    "hyundai-ioniq-9-calligraphy-awd.insuranceAnnual: judged",
+    "hyundai-ioniq-9-calligraphy-awd.depreciationCurve: judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
+  ]
+}

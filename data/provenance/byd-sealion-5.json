@@ -1,0 +1,218 @@
+{
+  "familyId": "byd-sealion-5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-sealion-5-essential": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-5",
+        "note": "bydautomotive.com.au/configurator 301-redirects to this BYD Build & Price flow; lists exactly two grades, Essential $33,990 and Premium $37,990, on 2026-11-26"
+      },
+      "listPrice": {
+        "value": 33990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-5",
+        "note": "BYD's own configurator shows $33,990 (unlabelled; its drive-away figure is computed separately per state). CarExpert price-and-specs and RACV say 'before on-road costs' / 'excl. on-road costs' in words for the same figure. RACV's Victorian drive-away estimate $36,291.70 vs app round-trip $36,297.58 (green-car duty), $6 gap, corroborating a list price"
+      },
+      "batteryKwh": {
+        "value": 12.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-sealion-5-price-and-specs",
+        "note": "BYD AU / CarExpert 12.9 kWh LFP; BYD UK quotes 12.96 kWh for the same pack. Nominal capacity: no source states usable vs gross"
+      },
+      "rangeKm": {
+        "value": 62,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydukmedia.com/en/models/byd-sealion-5-dm-i.html",
+        "note": "BYD UK Comfort (same pack, 18-inch wheels as AU) WLTP electric range 38.5 miles = 62 km. BYD AU/CarExpert quote 71 km NEDC: higher than WLTP, so rejected per the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 12.9/62 x 100; no published EV-mode WLTP figure readable (BYD Ireland MY26 guide lists one but its digits did not extract)"
+      },
+      "combinedRangeKm": {
+        "value": 1218,
+        "basis": "derived",
+        "note": "WLTP electric 62 km + 52 L tank (CarExpert, BYD UK) / 4.5 L/100km x 100 = 1217.6, rounded"
+      },
+      "fuelConsumptionL100km": {
+        "value": 4.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-sealion-5-price-and-specs",
+        "note": "BYD AU published charge-sustaining claim (4.5 L/100km with battery below 25%), NEDC-basis. Kept for consistency with byd-sealion-6, whose rows use the same BYD AU basis. BYD UK lists 51.4 mpg (~5.5 L/100km) WLTP combined for both grades, likely the WLTP charge-sustaining figure; Chasing Cars recorded 8.1 L/100km on country roads"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5",
+        "note": "combined label 'as low as 1.2L/100km' (Essential; CarExpert gives 1.2 for this grade), at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined tailpipe CO2 <= 120 g/km; a 1.2 L/100km label is roughly 28-30 g/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 463,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5",
+        "note": "BYD AU spec 463 L, matched by BYD UK; measurement method unlabelled (BYD Ireland guide's boot diagram references the parcel shelf, consistent with to-the-cover)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1410,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5",
+        "note": "BYD AU spec 1,410 L, matched by BYD UK and RACV; method unlabelled"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-sealion-5-price-specs-release-date.html",
+        "note": "RACV: maximum braked towing capacity limited to 750kg; no BYD AU technical sheet found"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5",
+        "note": "6 years/150,000 km vehicle; 8 years/160,000 km traction battery"
+      },
+      "insuranceAnnual": {
+        "value": 1350,
+        "basis": "judged",
+        "note": "raised from held 1250/1320 to align with today's refreshed siblings: chery-tiggo-7-phev-urban ($37,990, $1,450), geely-starray-em-i-complete ($37,490, $1,500), byd-sealion-6-essential ($42,990, $1,450); Essential set $100 below Premium"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand curve [1,0.74,0.63,0.55,0.48,0.42] used on 17 BYD rows including byd-sealion-6; one curve per brand (owner convention). byd-atto3 alone uses a steeper family curve"
+      }
+    },
+    "byd-sealion-5-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-5",
+        "note": "bydautomotive.com.au/configurator 301-redirects to this BYD Build & Price flow; lists exactly two grades, Essential $33,990 and Premium $37,990, on 2026-11-26"
+      },
+      "listPrice": {
+        "value": 37990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-5",
+        "note": "BYD's own configurator shows $37,990 (unlabelled; its drive-away figure is computed separately per state). CarExpert price-and-specs and RACV say 'before on-road costs' / 'excl. on-road costs' in words for the same figure. RACV's Victorian drive-away estimate $40,459.70 vs app round-trip $40,465.58 (green-car duty), $6 gap, corroborating a list price"
+      },
+      "batteryKwh": {
+        "value": 18.3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-sealion-5-price-and-specs",
+        "note": "BYD AU / CarExpert 18.3 kWh LFP; BYD UK quotes 18.3 kWh for the same pack. Nominal capacity: no source states usable vs gross"
+      },
+      "rangeKm": {
+        "value": 85,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydukmedia.com/en/models/byd-sealion-5-dm-i.html",
+        "note": "BYD UK Design (same pack, 18-inch wheels as AU) WLTP electric range 53 miles = 85 km. BYD AU/CarExpert quote 100 km NEDC: higher than WLTP, so rejected per the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.5,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.3/85 x 100; no published EV-mode WLTP figure readable (BYD Ireland MY26 guide lists one but its digits did not extract)"
+      },
+      "combinedRangeKm": {
+        "value": 1215,
+        "basis": "derived",
+        "note": "WLTP electric 85 km + 52 L tank (CarExpert, BYD UK) / 4.6 L/100km x 100 = 1215.4, rounded"
+      },
+      "fuelConsumptionL100km": {
+        "value": 4.6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-sealion-5-price-and-specs",
+        "note": "BYD AU published charge-sustaining claim (4.6 L/100km with battery below 25%), NEDC-basis. Kept for consistency with byd-sealion-6, whose rows use the same BYD AU basis. BYD UK lists 51.4 mpg (~5.5 L/100km) WLTP combined for both grades, likely the WLTP charge-sustaining figure; Chasing Cars recorded 8.1 L/100km on country roads"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5",
+        "note": "combined label 'as low as 1.2L/100km' (Essential; CarExpert gives 1.3 for this grade), at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined tailpipe CO2 <= 120 g/km; a 1.3 L/100km label is roughly 28-30 g/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 463,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5",
+        "note": "BYD AU spec 463 L, matched by BYD UK; measurement method unlabelled (BYD Ireland guide's boot diagram references the parcel shelf, consistent with to-the-cover)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1410,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5",
+        "note": "BYD AU spec 1,410 L, matched by BYD UK and RACV; method unlabelled"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-sealion-5-price-specs-release-date.html",
+        "note": "RACV: maximum braked towing capacity limited to 750kg; no BYD AU technical sheet found"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/sealion-5",
+        "note": "6 years/150,000 km vehicle; 8 years/160,000 km traction battery"
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "raised from held 1250/1320 to align with today's refreshed siblings: chery-tiggo-7-phev-urban ($37,990, $1,450), geely-starray-em-i-complete ($37,490, $1,500), byd-sealion-6-essential ($42,990, $1,450); Essential set $100 below Premium"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand curve [1,0.74,0.63,0.55,0.48,0.42] used on 17 BYD rows including byd-sealion-6; one curve per brand (owner convention). byd-atto3 alone uses a steeper family curve"
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-sealion-5-essential.fuelConsumptionL100km: BYD AU NEDC-basis charge-sustaining claim 4.5; BYD UK WLTP 51.4 mpg (~5.5) and Chasing Cars 8.1 real-world suggest it is optimistic; kept for consistency with byd-sealion-6",
+    "byd-sealion-5-premium.fuelConsumptionL100km: same as Essential, BYD AU claim 4.6 vs ~5.5 WLTP",
+    "byd-sealion-5-essential.combinedRangeKm / byd-sealion-5-premium.combinedRangeKm: inherit the optimistic charge-sustaining figure",
+    "byd-sealion-5-essential.batteryKwh / byd-sealion-5-premium.batteryKwh: nominal pack figures, usable vs gross unpublished; consumption derived from them",
+    "byd-sealion-5-essential.consumptionKwhPer100km / byd-sealion-5-premium.consumptionKwhPer100km: derived, cross-check tautological",
+    "byd-sealion-5-essential.bootLitresSeatsUp / bootLitresSeatsDown (both rows): BYD figures unlabelled as to cover vs roof",
+    "byd-sealion-5-essential.towKg / byd-sealion-5-premium.towKg: RACV only, no BYD technical sheet opened",
+    "byd-sealion-5-essential.insuranceAnnual / byd-sealion-5-premium.insuranceAnnual: judged",
+    "depreciationCurve (both rows): judged BYD brand default; a three-star ANCAP result could depress resale but no evidence yet"
+  ]
+}

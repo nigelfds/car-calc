@@ -1,8 +1,8 @@
 {
   "id": "byd-dolphin",
-  "summary": "Australia's cheapest new electric car, the Dolphin pairs a soft, comfortable ride with a surprisingly well-equipped, upscale-feeling cabin for the price, according to CarExpert, CarsGuide and WhichCar. Reviewers agree it is happiest as a city runabout: refined and efficient around town, but wind noise, mixed rear visibility and (on the base Essential) modest power blunt its appeal on the open road. It is not a driver's car, but on value and everyday livability it comfortably outpoints most petrol light hatches at a similar price.",
+  "summary": "Once Australia's cheapest new electric car and now undercut by BYD's own Atto 1 and the Geely EX2, the Dolphin pairs a soft, comfortable ride with a surprisingly well-equipped, upscale-feeling cabin for the price, according to CarExpert, CarsGuide and WhichCar. Reviewers agree it is happiest as a city runabout: refined and efficient around town, but wind noise, mixed rear visibility and (on the base Essential) modest power blunt its appeal on the open road. It is not a driver's car, but on value and everyday livability it comfortably outpoints most petrol light hatches at a similar price.",
   "pros": [
-    "Lowest entry price of any new EV in Australia",
+    "Essential undercuts the MG4 Urban Essence 54 and Atto 2 at $29,990 before on-roads while still offering 340km WLTP range",
     "Comfortable, well-controlled ride for the segment",
     "Roomy cabin and quality-feeling trim materials for the price",
     "Strong standard equipment including a large rotating touchscreen",
@@ -13,16 +13,16 @@
     "Slow 7kW AC home charging versus rivals' 11kW",
     "Small boot and restricted rear visibility",
     "6-year/150,000km warranty trails some rivals' 7-year cover",
-    "Steeper resale depreciation risk as BYD repeatedly cuts new prices"
+    "Steeper resale depreciation risk as BYD repeatedly cuts prices, most recently a $28,888 drive-away Essential campaign for orders to 15 December 2026"
   ],
   "sources": [
+    "https://evdealergroup-byd.com.au/configurator/byd-dolphin",
+    "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
     "https://www.carexpert.com.au/car-reviews/2025-byd-dolphin-dynamic-review",
-    "https://www.carsguide.com.au/ev/byd-dolphin-91411",
-    "https://www.whichcar.com.au/reviews/2024-byd-dolphin-review-australia",
+    "https://thedriven.io/2026/09/20/byd-slashes-price-of-dolphin-electric-hatch-to-below-30000-driveaway/",
     "https://www.carsguide.com.au/byd/dolphin/price/2026",
-    "https://zecar.com/electric-vehicles/byd/dolphin/2023/essential",
-    "https://zecar.com/electric-vehicles/byd/dolphin/2023/premium",
-    "https://www.carexpert.com.au/car-news/byd-importer-puts-electric-car-depreciation-in-the-spotlight"
+    "https://ev-database.org/uk/car/1917/BYD-DOLPHIN-449-kWh-Active",
+    "https://ev-database.org/uk/car/3297/BYD-DOLPHIN-604-kWh"
   ],
-  "sourcedAt": "2026-07-26"
+  "sourcedAt": "2026-11-26"
 }

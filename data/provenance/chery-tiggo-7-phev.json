@@ -1,0 +1,218 @@
+{
+  "familyId": "chery-tiggo-7-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "chery-tiggo-7-phev-urban": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/models/tiggo-7-super-hybrid",
+        "note": "Chery AU has no Build & Price; model page lists two grades (Urban, Ultimate) with live postcode pricing via /api/dynamic-pricing/car-variant/3409: VIC 3000 and VIC 3350 $36,478, NSW 2000 $36,247, no postcode $34,990 drive-away. CarExpert 2026 price list carries the same two FWD grades (20260701 release)"
+      },
+      "listPrice": {
+        "value": 32990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/chery/tiggo-7/2026-urban-1-5l-suv-fwd-electric-jsgsoawk20260701",
+        "note": "CarExpert: 'prices starting at $32,990 before on-road costs' (released to market 3 July 2026). Reconciled with Chery's own Victorian drive-away (manufacturer price): Chery API $36,478 for VIC 3000; Chery footnote [T14/T15] says it includes RRP, 12 months rego, CTP, DEALER DELIVERY and stamp duty. App drive-away at 32,990 = $35,255.58, so implied delivery = (36478-35255.58)/1.042 = $1,173, identical on both grades and identical to chery-e5's implied ~$1,173 (a figure Chery did not choose per grade). Plain back-out ((36478-880)/1.042) = 34,163 round-trips to $36,477.85 but overstates the list by the delivery charge (sources.md price rule 4). National no-postcode DAP $34,990 = MSRP + $2,000, the same flat pattern found on jaecoo-j7-shs. $2,000 cashback (1 Nov-21 Dec 2026) is a campaign and ignored. Held 2026-07-28 list was $37,990"
+      },
+      "batteryKwh": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "AU MY26 spec sheet 'Battery Capacity (kWh) 18.4' LFP; gross/usable not stated (CarExpert/NRMA say 18.3 kWh); treated as usable as on jaecoo-j7-shs and chery-tiggo-8-phev"
+      },
+      "rangeKm": {
+        "value": 90,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.cherycar.co.uk/models/tiggo-7-csh",
+        "note": "Chery UK TIGGO 7 CSH 'Electric Range (WLTP mile) 56' = 90 km, 18.4 kWh, 18in wheels as AU (AU 225/60 R18). AU spec sheet 'Electric Range (NEDC km) 93' (ADR 81/02) is higher than WLTP: rejected per direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.4/90 x 100 = 20.4; AU 163 Wh/km is the NEDC ADR label, not used per field rules"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.0,
+        "basis": "sourced",
+        "url": "https://www.cherycar.co.uk/models/tiggo-7-csh",
+        "note": "Chery UK 'Fuel Consumption - Combined (MPG) 47.08' = 6.0 L/100km, read as charge-sustaining (a weighted WLTP figure would be ~1 L/100km; same reading as jaecoo-j7-shs on Jaecoo UK 47.1 mpg). Corroborated by CarExpert review: Chery said 6.0L/100km was realistic; NRMA saw 3.8, The Beep ~4 once depleted. Held 5.5 was a review average; changed to 6.0 for consistency with jaecoo-j7-shs and chery-tiggo-8-phev on the same powertrain"
+      },
+      "combinedRangeKm": {
+        "value": 1090,
+        "basis": "derived",
+        "note": "90 WLTP + 60 L tank (AU spec sheet 'Fuel Tank Capacity (L) 60') / 6.0 x 100 = 1090. Chery's 1,200 km claim is built on NEDC range"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "'Fuel Consumption - Combined (L/100km) 1.4' (NEDC, ADR 81/02) <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car has combined tailpipe CO2 of 120 g/km or less; AU spec sheet 'CO2 Emissions - Combined 33 g/km'"
+      },
+      "bootLitresSeatsUp": {
+        "value": 356,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-chery-tiggo-7-super-hybrid-review",
+        "note": "CarExpert review: Chery quotes no PHEV figure; 356 L 'with the rear seats in place (to the top of the seats)' for the Tiggo 7 Pro (549 to the roof). CarExpert variant data also lists VDA 'rear seat up; to lower window 356 L' for this grade. Battery sits under the passenger compartment (AU spec sheet 'Battery Position Lower Passenger Compartment'), so the PHEV loses the underfloor bin, not cargo-cover volume"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1676,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-reviews/2026-chery-tiggo-7-super-hybrid-review",
+        "note": "The Beep: 'the related petrol car offers 356 litres with the seats up and 1676 litres folded'; measurement standard not stated and almost certainly to the roof (549 L seats-up to roof); no belt-line or PHEV-specific folded figure published. Not scaled, to stay consistent with jaecoo-j7-shs which also uses a to-roof folded figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "'Number of Seats 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "AU spec sheet lists only 'Maximum Towing Mass (Non-Braked Trailer) 750'; no braked rating, so 0"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/models/tiggo-7-super-hybrid",
+        "note": "'7-year unlimited kilometre warranty'; separate 8-year unlimited km HV battery warranty; no dealer-servicing condition on the page"
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "matched to jaecoo-j7-shs-track (same Chery 18.4 kWh SHS powertrain, $37,990, 1450, which was itself anchored to this row); list price cut $5,000 but byd-sealion-5-essential ($33,990) sits at a similar level; kept at held 1450"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Chery brand convention used by every Chery, Omoda and Jaecoo row (chery-e5, chery-tiggo-8/9-phev, jaecoo-j7-shs). Below mainstream on evidence of a $5,000 list and drive-away cut since launch ($39,990 to $34,990 national DAP on Urban) plus a further $2,000 cashback Nov-Dec 2026"
+      }
+    },
+    "chery-tiggo-7-phev-ultimate": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/models/tiggo-7-super-hybrid",
+        "note": "Chery AU has no Build & Price; model page lists two grades (Urban, Ultimate) with live postcode pricing via /api/dynamic-pricing/car-variant/3410: VIC 3000 and VIC 3350 $40,646, NSW 2000 $40,367, no postcode $38,990 drive-away. CarExpert 2026 price list carries the same two FWD grades (20260701 release)"
+      },
+      "listPrice": {
+        "value": 36990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/chery/tiggo-7/2026-ultimate-1-5l-suv-fwd-electric-jsgsoawm20260701",
+        "note": "CarExpert: 'prices starting at $36,990 before on-road costs' (released to market 3 July 2026). Reconciled with Chery's own Victorian drive-away (manufacturer price): Chery API $40,646 for VIC 3000; Chery footnote [T14/T15] says it includes RRP, 12 months rego, CTP, DEALER DELIVERY and stamp duty. App drive-away at 36,990 = $39,423.58, so implied delivery = (40646-39423.58)/1.042 = $1,173, identical on both grades and identical to chery-e5's implied ~$1,173 (a figure Chery did not choose per grade). Plain back-out ((40646-880)/1.042) = 38,163 round-trips to $40,645.85 but overstates the list by the delivery charge (sources.md price rule 4). National no-postcode DAP $38,990 = MSRP + $2,000, the same flat pattern found on jaecoo-j7-shs. $2,000 cashback (1 Nov-21 Dec 2026) is a campaign and ignored. Held 2026-07-28 list was $41,990"
+      },
+      "batteryKwh": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "AU MY26 spec sheet 'Battery Capacity (kWh) 18.4' LFP; gross/usable not stated (CarExpert/NRMA say 18.3 kWh); treated as usable as on jaecoo-j7-shs and chery-tiggo-8-phev"
+      },
+      "rangeKm": {
+        "value": 90,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.cherycar.co.uk/models/tiggo-7-csh",
+        "note": "Chery UK TIGGO 7 CSH 'Electric Range (WLTP mile) 56' = 90 km, 18.4 kWh, 18in wheels as AU (AU 225/60 R18). AU spec sheet 'Electric Range (NEDC km) 93' (ADR 81/02) is higher than WLTP: rejected per direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.4/90 x 100 = 20.4; AU 163 Wh/km is the NEDC ADR label, not used per field rules"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.0,
+        "basis": "sourced",
+        "url": "https://www.cherycar.co.uk/models/tiggo-7-csh",
+        "note": "Chery UK 'Fuel Consumption - Combined (MPG) 47.08' = 6.0 L/100km, read as charge-sustaining (a weighted WLTP figure would be ~1 L/100km; same reading as jaecoo-j7-shs on Jaecoo UK 47.1 mpg). Corroborated by CarExpert review: Chery said 6.0L/100km was realistic; NRMA saw 3.8, The Beep ~4 once depleted. Held 5.5 was a review average; changed to 6.0 for consistency with jaecoo-j7-shs and chery-tiggo-8-phev on the same powertrain"
+      },
+      "combinedRangeKm": {
+        "value": 1090,
+        "basis": "derived",
+        "note": "90 WLTP + 60 L tank (AU spec sheet 'Fuel Tank Capacity (L) 60') / 6.0 x 100 = 1090. Chery's 1,200 km claim is built on NEDC range"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "'Fuel Consumption - Combined (L/100km) 1.4' (NEDC, ADR 81/02) <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car has combined tailpipe CO2 of 120 g/km or less; AU spec sheet 'CO2 Emissions - Combined 33 g/km'"
+      },
+      "bootLitresSeatsUp": {
+        "value": 356,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-chery-tiggo-7-super-hybrid-review",
+        "note": "CarExpert review: Chery quotes no PHEV figure; 356 L 'with the rear seats in place (to the top of the seats)' for the Tiggo 7 Pro (549 to the roof). CarExpert variant data also lists VDA 'rear seat up; to lower window 356 L' for this grade. Battery sits under the passenger compartment (AU spec sheet 'Battery Position Lower Passenger Compartment'), so the PHEV loses the underfloor bin, not cargo-cover volume"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1676,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-reviews/2026-chery-tiggo-7-super-hybrid-review",
+        "note": "The Beep: 'the related petrol car offers 356 litres with the seats up and 1676 litres folded'; measurement standard not stated and almost certainly to the roof (549 L seats-up to roof); no belt-line or PHEV-specific folded figure published. Not scaled, to stay consistent with jaecoo-j7-shs which also uses a to-roof folded figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "'Number of Seats 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "AU spec sheet lists only 'Maximum Towing Mass (Non-Braked Trailer) 750'; no braked rating, so 0"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/models/tiggo-7-super-hybrid",
+        "note": "'7-year unlimited kilometre warranty'; separate 8-year unlimited km HV battery warranty; no dealer-servicing condition on the page"
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "Urban + 100 for higher-spec trim (360 camera, sunroof, Sony audio), mirroring jaecoo-j7-shs-summit at 1600 and the held 1550; kept at held 1550"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Chery brand convention used by every Chery, Omoda and Jaecoo row (chery-e5, chery-tiggo-8/9-phev, jaecoo-j7-shs). Below mainstream on evidence of a $5,000 list and drive-away cut since launch ($39,990 to $34,990 national DAP on Urban) plus a further $2,000 cashback Nov-Dec 2026"
+      }
+    }
+  },
+  "lowConfidence": [
+    "chery-tiggo-7-phev-urban.bootLitresSeatsDown: 1676 is the petrol Tiggo 7's folded figure, standard unstated and probably to the roof; no PHEV or belt-line figure published (also ultimate)",
+    "chery-tiggo-7-phev-urban.listPrice: $32,990 MSRP is from CarExpert, not a Chery page; Chery publishes only drive-away (VIC $36,478 incl. dealer delivery). Implied delivery $1,173 matches chery-e5; if delivery is lower the list sits between 32,990 and 34,163 (also ultimate: 36,990-38,163)",
+    "chery-tiggo-7-phev-urban.bootLitresSeatsUp: 356 is the petrol Tiggo 7 Pro figure to the top of the seats; Chery publishes none for the PHEV (also ultimate)",
+    "chery-tiggo-7-phev-urban.fuelConsumptionL100km: UK 47.08 mpg inferred to be charge-sustaining; label not explicit (also ultimate)",
+    "chery-tiggo-7-phev-urban.batteryKwh: 18.4 nominal, gross vs usable never stated (also ultimate)",
+    "chery-tiggo-7-phev-urban.insuranceAnnual: judged (also ultimate)",
+    "chery-tiggo-7-phev-urban.depreciationCurve: judged brand convention (also ultimate)"
+  ]
+}

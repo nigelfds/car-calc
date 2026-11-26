@@ -1,35 +1,32 @@
 {
   "id": "byd-sealion-5",
-  "summary": "The Sealion 5 is BYD's cheapest plug-in hybrid and, at $33,990 before on-roads for the Essential, the cheapest PHEV on sale in Australia — a front-drive medium SUV that sits just below the Sealion 6 on price while beating it on boot space. Australian reviewers agree the value case is unarguable and that ride comfort and rear-seat room are better than the price suggests, but they split on the driving experience, with several calling the steering lifeless and the 1.5-litre engine coarse under load. The consistent reservations are the 3.3kW AC-only charging, the absence of an ANCAP rating, and how quickly running costs climb once the battery is flat.",
+  "summary": "The Sealion 5 is BYD's cheapest plug-in hybrid at $33,990 before on-roads for the Essential, a front-drive medium SUV that undercuts the Sealion 6 by $9,000 while matching or beating it on boot space. Australian reviewers agree the value case is strong and that ride comfort and rear-seat room are better than the price suggests, but they split on the cabin and driving experience, with several calling the steering vague and the 1.5-litre engine noisy once the battery is flat. The firm reservations are the three-star ANCAP rating awarded in September 2026 (the first BYD to miss five stars), 3.3kW AC-only charging, and how quickly running costs climb without home charging.",
   "pros": [
-    "At $33,990 before on-road costs the Essential is the cheapest plug-in hybrid on sale in Australia, undercutting BYD's own Sealion 6 Essential by $9,000 and the Mitsubishi Outlander PHEV by more again",
+    "At $33,990 before on-road costs the Essential is the cheapest plug-in hybrid held here, undercutting the Geely Starray EM-i Complete by $3,500 and BYD's own Sealion 6 Essential by $9,000",
     "463-litre boot with the seats up (1,410 litres folded) is larger than the physically bigger Sealion 6's 425 litres, so the battery packaging costs less practicality than usual in the class",
-    "Premium's 18.3kWh battery is rated at 85km of WLTP electric range (100km on the NEDC figure BYD Australia quotes), enough for a typical Melbourne commuter to run several days between charges without starting the engine",
-    "High-voltage battery is covered for 8 years/160,000km, two years beyond the 6-year/150,000km unconditional vehicle warranty, and the drive unit for 8 years/150,000km",
-    "CarsGuide and CarExpert both rate interior material quality and ride comfort above the price point, and Chasing Cars singles out rear-seat space as genuinely family-sized"
+    "Premium's 18.3kWh battery is rated at 85km of WLTP electric range in the UK (100km on the NEDC figure BYD Australia quotes), enough for a typical Melbourne commuter to run several days between charges without starting the engine",
+    "High-voltage battery is covered for 8 years/160,000km, two years beyond the 6-year/150,000km unconditional vehicle warranty",
+    "CarsGuide says the cabin punches above its price and CarExpert calls it intuitive, while Chasing Cars rates rear-seat room as genuinely adult-sized"
   ],
   "cons": [
-    "Charge-sustaining fuel use is the number that matters: BYD quotes 4.5L/100km (Essential) and 4.6L/100km (Premium) with the battery below 25 per cent against a 1.2-1.3L/100km label, EV Central measured 4.9L/100km and Chasing Cars 8.1L/100km on country roads — a buyer who cannot charge at home loses most of the reason to own it",
-    "3.3kW AC onboard charger and no DC fast-charging at all: 4.5 hours to fill the Essential and about 6 hours the Premium, so an away-from-home top-up is effectively impossible",
-    "No ANCAP rating as at mid-2026 — the Sealion 5 is still on ANCAP's list to be tested rather than carrying a result, unlike the five-star Sealion 6",
+    "Three-star ANCAP rating (September 2026, both grades): Crash Avoidance scored 51% and Safe Driving 48%, lane-keeping failed the road-edge test, and it lacks child presence detection and eCall, where the Sealion 6 carries five stars",
+    "Charge-sustaining fuel use is the number that matters: BYD quotes 4.5L/100km (Essential) and 4.6L/100km (Premium) with the battery below 25 per cent against a 1.2-1.3L/100km label, and Chasing Cars recorded 8.1L/100km on country roads, so a buyer who cannot charge at home loses most of the reason to own it",
+    "3.3kW AC onboard charger and no DC fast-charging at all: CarsGuide estimates 4-5 hours from low on the Essential, so an away-from-home top-up is effectively impossible",
     "Front-wheel drive only, rated to tow just 750kg braked, and supplied with a tyre repair kit rather than a spare wheel",
-    "Reviewers repeatedly criticise the steering as light and lifeless and the 1.5-litre engine as noisy under load, with CarsGuide also noting limited steering-column adjustment and some high-speed instability"
+    "Reviewers criticise the steering as light or vague and the engine as noisy once the battery is depleted; CarsGuide also notes limited steering-column adjustment and some high-speed unsettledness, and Chasing Cars calls the cabin plastics cheap"
   ],
   "sources": [
+    "https://evdealergroup-byd.com.au/configurator/byd-sealion-5",
+    "https://bydautomotive.com.au/sealion-5",
     "https://www.carexpert.com.au/car-news/2026-byd-sealion-5-price-and-specs",
     "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-5-essential-review",
-    "https://www.carexpert.com.au/byd/sealion-5/essential/powertrain-and-performance",
-    "https://www.carexpert.com.au/byd/sealion-5/premium/powertrain-and-performance",
-    "https://www.carexpert.com.au/byd/sealion-5/pricing",
+    "https://www.carexpert.com.au/car-news/byd-sealion-5-slapped-with-three-star-safety-rating",
     "https://www.chasingcars.com.au/reviews/midsize-suvs/byd-sealion-5-2026-review/",
     "https://www.carsguide.com.au/family/byd-sealion-5-essential-101481",
-    "https://www.carsguide.com.au/byd/sealion-5/fuel-consumption",
     "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-sealion-5-price-specs-release-date.html",
-    "https://www.carsales.com.au/editorial/details/byd-sealion-5-2026-review-151421/",
     "https://evcentral.com.au/2026-byd-sealion-5-premium-review-this-phev-suv-is-the-mitsubishi-lancer-wagon-of-its-generation-thats-a-compliment-by-the-way/",
-    "https://bydautomotive.com.au/sealion-5",
     "https://bydukmedia.com/en/models/byd-sealion-5-dm-i.html",
     "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
   ],
-  "sourcedAt": "2026-07-28"
+  "sourcedAt": "2026-11-26"
 }

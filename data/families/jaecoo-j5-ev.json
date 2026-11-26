@@ -1,31 +1,33 @@
 {
   "id": "jaecoo-j5-ev",
-  "summary": "The Jaecoo J5 EV is the battery-electric member of Chery's Jaecoo J5 small-SUV line, sold in Australia in a single fully-loaded EV Summit grade alongside separate petrol and hybrid J5s that share the body but not the drivetrain. Australian reviewers rate it as one of the cheapest ways into a well-equipped electric SUV, praising the 130kW DC charging, the eight-year warranty and a $1,520 eight-year servicing bill, while splitting sharply over how it drives. Testers who liked the neutral suspension tune still found real-world consumption in the mid-to-high teens, which puts genuine range nearer 350km than the 402km WLTP claim.",
+  "summary": "The Jaecoo J5 EV is the battery-electric member of Chery's Jaecoo J5 small-SUV line, sold in Australia in a single fully-loaded EV Summit grade alongside separate petrol and hybrid J5s that share the body but not the drivetrain. Australian reviewers rate it as one of the cheapest ways into a well-equipped electric SUV, praising the 130kW DC charging, the eight-year warranty and a $1,520 eight-year servicing bill, while splitting over how it drives: Chasing Cars found the ride absorbent where others called it sharp, and most criticise the steering, brake feel and throttle calibration. Testers saw real-world consumption between about 14.7 and 17.5kWh/100km, which puts genuine range nearer 340-350km than the 399km WLTP figure for the UK-market twin on the same pack and 18-inch tyres.",
   "pros": [
-    "Cheapest end of the electric small-SUV class at $35,990 before on-road costs, and Jaecoo has run a flat $36,990 national drive-away offer continuously since launch — which is around $1,400 less than the Victorian on-roads would otherwise cost",
-    "130kW DC peak charging and 10.3kW three-phase AC, both well ahead of the 80kW-class Chery E5 it shares a 58.9kWh LFP pack with",
-    "Eight-year unlimited-kilometre vehicle warranty and a separate eight-year unlimited-kilometre high-voltage battery warranty, with eight years of capped-price servicing totalling $1,520; roadside assistance also runs to eight years but only if renewed at each scheduled service at an authorised Jaecoo dealer",
-    "Rated to tow 1,250kg braked on the manufacturer's own spec sheet — double the 750kg most cheap Chinese electric SUVs, including the Chery E5, BYD Atto 2 and GWM Ora 5, are limited to",
-    "Unusually complete equipment for the money: powered and heated/ventilated front seats, 360-degree camera, powered tailgate, glass roof, 50W wireless charging and a 13.2-inch screen, all standard on the only grade"
+    "Cheapest end of the electric small-SUV class at Jaecoo's own recommended retail price of $35,990 before on-road costs, and a $36,990 national drive-away offer has been rolled over since launch (the current one runs to 30 November 2026), about $1,400 under the roughly $38,400 Victorian drive-away the list price implies",
+    "Novated-lease buyers get a standing 10% national fleet discount off the $35,990 recommended retail price through an approved fleet management organisation, on top of the BEV FBT exemption",
+    "130kW DC peak charging (30-80% in about 28 minutes) and 10.3kW three-phase AC, both well ahead of the 80kW-class Chery E5 it shares a 58.9kWh-usable LFP pack with",
+    "Eight-year unlimited-kilometre vehicle and high-voltage battery warranty, conditional only on servicing to the manufacturer's schedule, with eight years of capped-price servicing totalling $1,520; roadside assistance also runs to eight years but only if renewed at each scheduled service at an authorised Jaecoo dealer",
+    "Rated to tow 1,250kg braked on the manufacturer's own spec sheet, against the 750kg of most cheap Chinese electric SUVs including the Chery E5, BYD Atto 2 and GWM Ora 5"
   ],
   "cons": [
-    "Real-world consumption of mid-to-high teens kWh/100km against a 14.3kWh/100km claim leaves usable range around 350km, roughly 50km short of the WLTP figure",
-    "Front-drive chassis struggles to deploy 155kW/288Nm: reviewers report wheelspin and pronounced torque steer under moderate throttle, plus very light steering and an inconsistent brake pedal with a delay in the regenerative blending",
-    "Ride is criticised as sharp over coarse or broken bitumen despite the otherwise neutral tune, and the 235/55 R18 tyres carry a repair kit rather than a spare — the closely related Chery E5 gets a spare",
-    "No ANCAP rating as at July 2026; Jaecoo says it expects five stars but the car is untested, unlike the BYD Atto 2 and Kia EV3 it is cross-shopped against",
-    "Jaecoo is a 2025-vintage nameplate in Australia with no resale, parts or reliability record, and the permanent drive-away discounting works against used values"
+    "Real-world consumption well above the rating: CarExpert saw 14.7kWh/100km, Chasing Cars 17.5kWh/100km and a 337km real-world range, against 399km WLTP",
+    "Front-drive chassis is unresolved: reviewers report very light steering with little self-centring, a squishy brake pedal with weak regeneration, an abrupt throttle at 60-80km/h and, on some test cars, torque steer under moderate throttle",
+    "Ride divides reviewers (absorbent to Chasing Cars, sharp over coarse bitumen to others), and the 235/55 R18 tyres carry a repair kit rather than a spare, where the closely related Chery E5 gets one",
+    "No ANCAP rating: reviewers at launch reported it untested, unlike the BYD Atto 2 and Kia EV3 it is cross-shopped against",
+    "Jaecoo is a 2025-vintage nameplate in Australia with no resale, parts or reliability record, and rolling drive-away campaigns work against used values"
   ],
   "sources": [
     "https://www.omodajaecoo.com.au/models/jaecoo-j5-bev",
+    "https://www.omodajaecoo.com.au/j5-build-your-own",
     "https://www.omodajaecoo.com.au/buying/offers",
     "https://www.omodajaecoo.com.au/sites/default/files/2026-05/Spec25_Jaecoo_J5_Spec_Sheet_AU_BEV_v101_compressed_compressed.pdf",
-    "https://www.carexpert.com.au/car-news/2026-jaecoo-j5-ev-price-and-specs-small-suv-undercuts-rivals-by-thousands",
+    "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
     "https://www.carexpert.com.au/car-reviews/2026-jaecoo-j5-ev-review",
+    "https://www.carexpert.com.au/car-news/2026-jaecoo-j5-ev-price-and-specs-small-suv-undercuts-rivals-by-thousands",
+    "https://www.chasingcars.com.au/reviews/small-cars/jaecoo-j5-ev-summit-2026-review/",
     "https://www.carsguide.com.au/ev/jaecoo-j5-ev-100610",
-    "https://www.carsales.com.au/editorial/details/jaecoo-j5-ev-2026-review-151877/",
-    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-jaecoo-j5-ev-price-specs-release-date.html",
-    "https://www.mynrma.com.au/open-road/car-reviews/jaecoo/2026-jaecoo-j5-ev-review",
-    "https://thedriven.io/2026/05/03/omoda-jaecoo-extends-amazing-j5-ev-36990-driveaway-price-to-eofy/"
+    "https://www.carsguide.com.au/jaecoo/j5/price/2027",
+    "https://jaecoo.co.uk/jaecoo-5/",
+    "https://ev-database.org/uk/car/3336/Jaecoo-E5"
   ],
-  "sourcedAt": "2026-07-31"
+  "sourcedAt": "2026-11-26"
 }

@@ -465,7 +465,7 @@
       "At $23,990 before on-road costs the Essential is the cheapest new EV on sale in Australia, roughly $6,000 under the BYD Dolphin Essential and the MG 4 Urban 43.",
       "Five-star ANCAP (2025, carried over from the European Dolphin Surf on confirmed identical spec) with six airbags, AEB, lane support and speed-sign recognition standard on both grades.",
       "The Premium's 115kW/220Nm makes it genuinely quick for a city car at a claimed 9.1s to 100km/h, and it accepts 85kW DC charging where rivals at this price often cap out around 50kW.",
-      "Soft, long-travel suspension over a 2,500mm wheelbase in a 3,990mm body gives an unusually settled urban ride plus a turning circle that suits multi-storey car parks.",
+      "Soft, long-travel suspension over a 2,500mm wheelbase in a 3,990mm body gives a settled urban ride that reviewers say takes most bumps and humps in its stride.",
       "BYD's 6-year/150,000km vehicle warranty and 8-year/160,000km battery cover apply with no dealer-servicing condition attached."
     ],
     "cons": [
@@ -473,19 +473,20 @@
       "The Essential's 220km WLTP range is the shortest of any EV on sale here and shrinks sharply at 100km/h, which makes the $4,000 Premium upgrade close to compulsory for anyone leaving the suburbs.",
       "Australian reviewers repeatedly criticise the driver-monitoring and speed-warning chimes, which revert to on at every start and need several touchscreen taps to silence.",
       "Almost all secondary controls live in the rotating touchscreen with few physical shortcuts, and the car ships with a repair kit rather than a spare wheel.",
-      "It gets noticeably noisy above about 80km/h, and the soft suspension that flatters it around town turns bouncy on coarse higher-speed roads."
+      "Road and tyre noise is ever-present at speed, and the soft suspension that flatters it around town turns springier and less composed on the open road, with marked body movement in faster corners."
     ],
     "sources": [
       "https://www.carexpert.com.au/car-news/2026-byd-atto-1-price-and-specs-australias-cheapest-ev-undercuts-many-ice-rivals",
       "https://www.carexpert.com.au/car-reviews/2026-byd-atto-1-review",
       "https://www.carsguide.com.au/ev/byd-atto-1-premium-101427",
-      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-atto-1-price-specs-release-date.html",
-      "https://www.mynrma.com.au/open-road/news/2025/2026-byd-atto-1-atto-2-pricing-revealed",
+      "https://evcentral.com.au/2025-byd-atto-1-premium-australias-cheapest-ev-is-also-a-decent-city-car-with-clever-design-and-real-driving-character-but-will-anyone-buy-it/",
       "https://www.ancap.com.au/safety-ratings/byd/atto-1/2d8d6c",
-      "https://www.carsales.com.au/research/byd/atto-1/",
-      "https://evcentral.com.au/2025-byd-atto-1-premium-australias-cheapest-ev-is-also-a-decent-city-car-with-clever-design-and-real-driving-character-but-will-anyone-buy-it/"
+      "https://bydautomotive.com.au/atto-1",
+      "https://evdealergroup-byd.com.au/configurator/byd-atto-1",
+      "https://ev-database.org/car/3193/BYD-DOLPHIN-SURF-30-kWh-Active",
+      "https://ev-database.org/car/3195/BYD-DOLPHIN-SURF-432-kWh-Comfort"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "byd-atto1.webp",
       "source": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_Surf_IMG_3808.jpg",
@@ -512,19 +513,15 @@
       "Soft suspension and very light, low-feedback steering leave it wallowy at speed, and several testers had to repeatedly switch off oversensitive lane-keeping and speed alerts"
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-reviews/2026-byd-atto-2-review",
-      "https://www.carexpert.com.au/car-reviews/2026-byd-atto-2-premium-review",
-      "https://www.carexpert.com.au/car-news/2026-byd-atto-2-full-specs-detailed-for-budget-electric-small-suv",
-      "https://www.chasingcars.com.au/reviews/small-suvs/byd-atto-2-2026-review/",
-      "https://www.carsguide.com.au/car-reviews/byd-atto-2-premium-101318",
-      "https://www.carsguide.com.au/byd/atto-2/towing-capacity/2026",
-      "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-2-review.html",
-      "https://www.carsales.com.au/editorial/details/byd-atto-2-2026-review-152323/",
-      "https://evcentral.com.au/2026-byd-atto-2-dynamic-review-cheap-and-surprisingly-cheerful-compact-electric-suv-makes-ice-rivals-redundant/",
+      "https://evdealergroup-byd.com.au/configurator/byd-atto-2",
       "https://bydautomotive.com.au/atto-2",
-      "https://zecar.com/reviews/2026-byd-atto-2-price-specs-australia-cheapest-electric-suv"
+      "https://www.carexpert.com.au/car-reviews/2026-byd-atto-2-review",
+      "https://www.carexpert.com.au/car-news/2026-byd-atto-2-full-specs-detailed-for-budget-electric-small-suv",
+      "https://www.carexpert.com.au/car-news/2027-byd-atto-2-dm-i-becomes-australias-cheapest-phev",
+      "https://www.carsguide.com.au/byd/atto-2/towing-capacity/2026",
+      "https://ev-database.org/uk/car/3494/BYD-ATTO-2-511-kWh"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "byd-atto2.webp",
       "source": "https://commons.wikimedia.org/wiki/File:BYD_Atto_2_DSC_8763.jpg",
@@ -575,9 +572,9 @@
   },
   {
     "id": "byd-dolphin",
-    "summary": "Australia's cheapest new electric car, the Dolphin pairs a soft, comfortable ride with a surprisingly well-equipped, upscale-feeling cabin for the price, according to CarExpert, CarsGuide and WhichCar. Reviewers agree it is happiest as a city runabout: refined and efficient around town, but wind noise, mixed rear visibility and (on the base Essential) modest power blunt its appeal on the open road. It is not a driver's car, but on value and everyday livability it comfortably outpoints most petrol light hatches at a similar price.",
+    "summary": "Once Australia's cheapest new electric car and now undercut by BYD's own Atto 1 and the Geely EX2, the Dolphin pairs a soft, comfortable ride with a surprisingly well-equipped, upscale-feeling cabin for the price, according to CarExpert, CarsGuide and WhichCar. Reviewers agree it is happiest as a city runabout: refined and efficient around town, but wind noise, mixed rear visibility and (on the base Essential) modest power blunt its appeal on the open road. It is not a driver's car, but on value and everyday livability it comfortably outpoints most petrol light hatches at a similar price.",
     "pros": [
-      "Lowest entry price of any new EV in Australia",
+      "Essential undercuts the MG4 Urban Essence 54 and Atto 2 at $29,990 before on-roads while still offering 340km WLTP range",
       "Comfortable, well-controlled ride for the segment",
       "Roomy cabin and quality-feeling trim materials for the price",
       "Strong standard equipment including a large rotating touchscreen",
@@ -588,18 +585,18 @@
       "Slow 7kW AC home charging versus rivals' 11kW",
       "Small boot and restricted rear visibility",
       "6-year/150,000km warranty trails some rivals' 7-year cover",
-      "Steeper resale depreciation risk as BYD repeatedly cuts new prices"
+      "Steeper resale depreciation risk as BYD repeatedly cuts prices, most recently a $28,888 drive-away Essential campaign for orders to 15 December 2026"
     ],
     "sources": [
+      "https://evdealergroup-byd.com.au/configurator/byd-dolphin",
+      "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
       "https://www.carexpert.com.au/car-reviews/2025-byd-dolphin-dynamic-review",
-      "https://www.carsguide.com.au/ev/byd-dolphin-91411",
-      "https://www.whichcar.com.au/reviews/2024-byd-dolphin-review-australia",
+      "https://thedriven.io/2026/09/20/byd-slashes-price-of-dolphin-electric-hatch-to-below-30000-driveaway/",
       "https://www.carsguide.com.au/byd/dolphin/price/2026",
-      "https://zecar.com/electric-vehicles/byd/dolphin/2023/essential",
-      "https://zecar.com/electric-vehicles/byd/dolphin/2023/premium",
-      "https://www.carexpert.com.au/car-news/byd-importer-puts-electric-car-depreciation-in-the-spotlight"
+      "https://ev-database.org/uk/car/1917/BYD-DOLPHIN-449-kWh-Active",
+      "https://ev-database.org/uk/car/3297/BYD-DOLPHIN-604-kWh"
     ],
-    "sourcedAt": "2026-07-26",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "byd-dolphin.webp",
       "source": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_IAA_2023_1X7A0634.jpg",
@@ -610,7 +607,7 @@
   },
   {
     "id": "byd-seal",
-    "summary": "The BYD Seal is a fast-charging, long-range electric sedan that undercuts the Tesla Model 3 on price while matching it on performance, especially in dual-motor Performance guise. Australian reviewers rate the equipment list, warranty and everyday value highly, but consistently flag a boot smaller than key rivals, an unsettled ride on rougher roads, and a touchscreen-heavy interior with few physical controls. Repeated BYD price cuts have also softened resale values across the range, a factor increasingly raised by reviewers and even BYD's own local distributor.",
+    "summary": "The BYD Seal is a fast-charging, long-range electric sedan that undercuts the Tesla Model 3 on price while matching it on performance, especially in dual-motor Performance guise. Australian reviewers rate the equipment list, warranty and everyday value highly, but consistently flag a boot smaller than key rivals, an unsettled ride on rougher roads, and a touchscreen-heavy interior with few physical controls. BYD dropped the entry-level Dynamic in June 2026 after slow sales, so the range is now just the rear-drive Premium and the dual-motor Performance.",
     "pros": [
       "Strong value against the Tesla Model 3, with a well-equipped cabin and quick acceleration in Performance guise (390kW/670Nm, 0-100km/h in 3.8s)",
       "Long WLTP range from the 82.56kWh Blade LFP battery: 570km (Premium) and 520km (Performance), with 150kW DC fast charging",
@@ -620,15 +617,19 @@
       "400L boot trails key rivals like the Tesla Model 3 (594L) and Toyota Camry (524L), with a narrow opening",
       "Ride quality criticised as unsettled and bouncy over bumps, lacking the composure of segment rivals",
       "Interior tech feels dated relative to newer BYD models, with too many functions buried in touchscreen menus rather than physical controls",
-      "Reviewers and BYD's own Australian distributor have flagged softening resale values as BYD continues to cut new-car prices across its range"
+      "Prices were cut by $2,808-$3,758 in January 2025 (Premium from $55,798, Performance from $65,748), hitting the resale value of earlier cars despite BYD's distributor vowing in 2023 not to discount"
     ],
     "sources": [
+      "https://bydautomotive.com.au/seal",
+      "https://evdealergroup-byd.com.au/configurator/byd-seal?ref=website&spec=1635",
       "https://www.carexpert.com.au/car-reviews/2026-byd-seal-review",
       "https://www.carexpert.com.au/car-news/byd-drops-its-cheapest-electric-sedan-in-australia",
+      "https://www.carexpert.com.au/car-news/2025-byd-seal-price-and-specs",
+      "https://www.carexpert.com.au/byd/seal/2025-premium-sedan-rwd-electric-jsfw8ga520250113",
       "https://www.carsguide.com.au/byd/seal/boot-space",
       "https://www.carexpert.com.au/car-news/byd-importer-puts-electric-car-depreciation-in-the-spotlight"
     ],
-    "sourcedAt": "2026-07-26",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "byd-seal.webp",
       "source": "https://commons.wikimedia.org/wiki/File:BYD_Seal_U_IAA_2023_1X7A0045.jpg",
@@ -639,37 +640,32 @@
   },
   {
     "id": "byd-seal-6",
-    "summary": "The Seal 6 is Australia's cheapest plug-in hybrid sedan, and reviewers agree the price is the argument: at $34,990 before on-roads it undercuts the petrol-hybrid Toyota Camry it targets while adding a plug, a 491-litre boot and a five-star ANCAP result. Where they are far less generous is the way it drives — the ride and steering draw the sharpest criticism of any recent BYD, and the 55km electric range is the shortest in the brand's local plug-in line-up. Only one grade is offered on the sedan body, so buyers wanting the sunroof, heated seats or DC charging have to move to the Touring wagon.",
+    "summary": "The Seal 6 is Australia's cheapest plug-in hybrid sedan, and reviewers agree the price is the argument: at $34,990 before on-roads it undercuts the petrol-hybrid Toyota Camry it targets while adding a plug, a 491-litre boot and a five-star ANCAP result. Where they are far less generous is the way it drives — the ride and steering draw the sharpest criticism of any recent BYD, and the 55km WLTP electric range is the shortest in the brand's local plug-in line-up. Only one grade, the Essential, is offered on the sedan body, so buyers wanting the sunroof, heated seats or DC charging have to move to the Touring wagon.",
     "pros": [
       "At $34,990 before on-road costs it is the cheapest plug-in hybrid sedan on sale in Australia, undercutting the non-plug-in Toyota Camry hybrid it is aimed at ($39,990) while adding 55km of electric-only running",
       "491-litre boot with the seats up and 1370 litres folded — larger than BYD's own Seal battery-electric sedan (400/950L), so the plug-in hardware costs almost nothing in load space",
       "Five-star ANCAP rating (2023-2025 criteria) with 92 per cent adult occupant protection, the highest adult score in ANCAP's release batch, and maximum points in the full-width frontal, side impact and oblique pole tests",
-      "65-litre tank behind a frugal charge-sustaining engine gives roughly 1350km between fills on our arithmetic (BYD claims over 1400km), so it does not trade touring range for the plug",
+      "65-litre tank behind a frugal engine (4.4L/100km WLTP with the battery depleted, per BYD UK's technical data) gives roughly 1500km between fills (BYD UK quotes 935 miles), so it does not trade touring range for the plug",
       "Six-year/150,000km warranty with no servicing conditions attached, and the drive battery separately covered for eight years/160,000km"
     ],
     "cons": [
       "55km of WLTP electric range is the shortest of any BYD plug-in hybrid sold here — half the Seal 6 Touring's 100km and well under the Sealion 6 Essential's 92km — so the petrol engine is involved on most days beyond a short commute",
-      "Charging is AC-only and capped at 3.3kW, with no DC fast-charge capability at all (the Touring gets 6.6kW AC and 27kW DC), so the 10.08kWh pack takes about three and a half hours from a home wallbox and cannot be topped up on a road trip",
+      "Charging is AC-only and capped at 3.3kW, with no DC fast-charge capability at all (the Touring Premium gets 6.6kW AC and 26kW DC), so the 10.08kWh pack takes about three hours from 15 to 100 per cent and cannot be topped up on a road trip",
       "CarExpert's launch drive described the ride as \"loose and slovenly\" with a floating feel at highway speed, numb steering and both understeer and snap-oversteer at the limit — the driving experience is the car's clear weak point rather than a minor demerit",
-      "The 1.1L/100km label figure assumes you start every trip with a full battery; once the pack is depleted it drinks around 5L/100km and CarExpert measured 6.1L/100km in the mechanically similar Touring, so a buyer who cannot charge at home is left with an ordinary hybrid carrying extra weight"
+      "The 1.1L/100km label figure assumes you start every trip with a full battery; once the pack is depleted BYD's own WLTP figure is 4.4L/100km and CarExpert measured 6.1L/100km on a freeway-heavy test of the mechanically similar Premium, so a buyer who cannot charge at home is left with an ordinary hybrid carrying extra weight"
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-news/2026-byd-seal-6-price-and-specs",
-      "https://www.carexpert.com.au/car-news/2026-byd-seal-6-will-be-australias-cheapest-phev-sedan-and-cheapest-wagon",
-      "https://www.carexpert.com.au/car-reviews/2026-byd-seal-6-dm-i-review-quick-drive",
-      "https://www.carexpert.com.au/byd/seal-6/2026-essential-1-5l-sedan-fwd-electric-jskagakf20260407",
-      "https://www.carsguide.com.au/car-news/2026-byd-seal-6-price-and-specs-locked-in-as-new-toyota-camry-rivalling-sedan-and-wagon",
-      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-seal-6-sedan-touring-price-specs-release-date.html",
-      "https://www.carsales.com.au/editorial/details/2026-byd-seal-6-sedan-and-wagon-priced-151751/",
-      "https://www.whichcar.com.au/news/byd-australia-expects-seal-6-station-wagon-outsell-sedan",
-      "https://evcentral.com.au/byd-seal-6-price-and-spec-revealed-sharply-priced-plug-in-hybrid-sedan-and-wagon-set-to-challenge-toyota-camry/",
+      "https://evdealergroup-byd.com.au/configurator/byd-seal-6?ref=website&spec=5700",
       "https://bydautomotive.com.au/seal-6",
+      "https://bydautomotive.com.au/brochures/BYD-SEAL-6-2026.pdf",
+      "https://www.carexpert.com.au/car-news/2026-byd-seal-6-price-and-specs",
+      "https://www.carexpert.com.au/byd/seal-6/2026-essential-1-5l-sedan-fwd-electric-jskagakf20260407",
+      "https://www.carexpert.com.au/car-reviews/2026-byd-seal-6-dm-i-review-quick-drive",
+      "https://www.byd.com/material/byd-site/byd-uk/specifications/SEAL%206%20DM-i-1225-BPS-UK-V2-web.pdf",
       "https://www.ancap.com.au/safety-ratings/byd/seal-6/e9400f",
-      "https://www.parkers.co.uk/byd/seal-6/touring/review/mpg-running-costs/",
-      "https://www.autocar.co.uk/car-review/byd/seal-6",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "byd-seal-6.webp",
       "source": "https://commons.wikimedia.org/wiki/File:BYD_Seal_6_DM-i_Touring_IAA_2025_DSC_2249.jpg",
@@ -680,38 +676,35 @@
   },
   {
     "id": "byd-sealion-5",
-    "summary": "The Sealion 5 is BYD's cheapest plug-in hybrid and, at $33,990 before on-roads for the Essential, the cheapest PHEV on sale in Australia — a front-drive medium SUV that sits just below the Sealion 6 on price while beating it on boot space. Australian reviewers agree the value case is unarguable and that ride comfort and rear-seat room are better than the price suggests, but they split on the driving experience, with several calling the steering lifeless and the 1.5-litre engine coarse under load. The consistent reservations are the 3.3kW AC-only charging, the absence of an ANCAP rating, and how quickly running costs climb once the battery is flat.",
+    "summary": "The Sealion 5 is BYD's cheapest plug-in hybrid at $33,990 before on-roads for the Essential, a front-drive medium SUV that undercuts the Sealion 6 by $9,000 while matching or beating it on boot space. Australian reviewers agree the value case is strong and that ride comfort and rear-seat room are better than the price suggests, but they split on the cabin and driving experience, with several calling the steering vague and the 1.5-litre engine noisy once the battery is flat. The firm reservations are the three-star ANCAP rating awarded in September 2026 (the first BYD to miss five stars), 3.3kW AC-only charging, and how quickly running costs climb without home charging.",
     "pros": [
-      "At $33,990 before on-road costs the Essential is the cheapest plug-in hybrid on sale in Australia, undercutting BYD's own Sealion 6 Essential by $9,000 and the Mitsubishi Outlander PHEV by more again",
+      "At $33,990 before on-road costs the Essential is the cheapest plug-in hybrid held here, undercutting the Geely Starray EM-i Complete by $3,500 and BYD's own Sealion 6 Essential by $9,000",
       "463-litre boot with the seats up (1,410 litres folded) is larger than the physically bigger Sealion 6's 425 litres, so the battery packaging costs less practicality than usual in the class",
-      "Premium's 18.3kWh battery is rated at 85km of WLTP electric range (100km on the NEDC figure BYD Australia quotes), enough for a typical Melbourne commuter to run several days between charges without starting the engine",
-      "High-voltage battery is covered for 8 years/160,000km, two years beyond the 6-year/150,000km unconditional vehicle warranty, and the drive unit for 8 years/150,000km",
-      "CarsGuide and CarExpert both rate interior material quality and ride comfort above the price point, and Chasing Cars singles out rear-seat space as genuinely family-sized"
+      "Premium's 18.3kWh battery is rated at 85km of WLTP electric range in the UK (100km on the NEDC figure BYD Australia quotes), enough for a typical Melbourne commuter to run several days between charges without starting the engine",
+      "High-voltage battery is covered for 8 years/160,000km, two years beyond the 6-year/150,000km unconditional vehicle warranty",
+      "CarsGuide says the cabin punches above its price and CarExpert calls it intuitive, while Chasing Cars rates rear-seat room as genuinely adult-sized"
     ],
     "cons": [
-      "Charge-sustaining fuel use is the number that matters: BYD quotes 4.5L/100km (Essential) and 4.6L/100km (Premium) with the battery below 25 per cent against a 1.2-1.3L/100km label, EV Central measured 4.9L/100km and Chasing Cars 8.1L/100km on country roads — a buyer who cannot charge at home loses most of the reason to own it",
-      "3.3kW AC onboard charger and no DC fast-charging at all: 4.5 hours to fill the Essential and about 6 hours the Premium, so an away-from-home top-up is effectively impossible",
-      "No ANCAP rating as at mid-2026 — the Sealion 5 is still on ANCAP's list to be tested rather than carrying a result, unlike the five-star Sealion 6",
+      "Three-star ANCAP rating (September 2026, both grades): Crash Avoidance scored 51% and Safe Driving 48%, lane-keeping failed the road-edge test, and it lacks child presence detection and eCall, where the Sealion 6 carries five stars",
+      "Charge-sustaining fuel use is the number that matters: BYD quotes 4.5L/100km (Essential) and 4.6L/100km (Premium) with the battery below 25 per cent against a 1.2-1.3L/100km label, and Chasing Cars recorded 8.1L/100km on country roads, so a buyer who cannot charge at home loses most of the reason to own it",
+      "3.3kW AC onboard charger and no DC fast-charging at all: CarsGuide estimates 4-5 hours from low on the Essential, so an away-from-home top-up is effectively impossible",
       "Front-wheel drive only, rated to tow just 750kg braked, and supplied with a tyre repair kit rather than a spare wheel",
-      "Reviewers repeatedly criticise the steering as light and lifeless and the 1.5-litre engine as noisy under load, with CarsGuide also noting limited steering-column adjustment and some high-speed instability"
+      "Reviewers criticise the steering as light or vague and the engine as noisy once the battery is depleted; CarsGuide also notes limited steering-column adjustment and some high-speed unsettledness, and Chasing Cars calls the cabin plastics cheap"
     ],
     "sources": [
+      "https://evdealergroup-byd.com.au/configurator/byd-sealion-5",
+      "https://bydautomotive.com.au/sealion-5",
       "https://www.carexpert.com.au/car-news/2026-byd-sealion-5-price-and-specs",
       "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-5-essential-review",
-      "https://www.carexpert.com.au/byd/sealion-5/essential/powertrain-and-performance",
-      "https://www.carexpert.com.au/byd/sealion-5/premium/powertrain-and-performance",
-      "https://www.carexpert.com.au/byd/sealion-5/pricing",
+      "https://www.carexpert.com.au/car-news/byd-sealion-5-slapped-with-three-star-safety-rating",
       "https://www.chasingcars.com.au/reviews/midsize-suvs/byd-sealion-5-2026-review/",
       "https://www.carsguide.com.au/family/byd-sealion-5-essential-101481",
-      "https://www.carsguide.com.au/byd/sealion-5/fuel-consumption",
       "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-sealion-5-price-specs-release-date.html",
-      "https://www.carsales.com.au/editorial/details/byd-sealion-5-2026-review-151421/",
       "https://evcentral.com.au/2026-byd-sealion-5-premium-review-this-phev-suv-is-the-mitsubishi-lancer-wagon-of-its-generation-thats-a-compliment-by-the-way/",
-      "https://bydautomotive.com.au/sealion-5",
       "https://bydukmedia.com/en/models/byd-sealion-5-dm-i.html",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "byd-sealion-5.webp",
       "source": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_05_DM-i_facelift_001.jpg",
@@ -722,34 +715,32 @@
   },
   {
     "id": "byd-sealion-6",
-    "summary": "Australian reviewers consistently rate the Sealion 6 as the value pick of the plug-in hybrid SUV class, with the Essential holding the title of the country's cheapest new PHEV and offering a genuinely usable electric-only range. Opinions are more mixed on dynamics: reviewers like the improved, comfort-biased suspension tune but mark it down for body roll and light, indirect steering next to rivals such as the Cupra Formentor. Most agree the 425-litre boot is a real compromise versus segment rivals, and that running costs climb sharply once the battery is depleted.",
+    "summary": "Australian reviewers rate the Sealion 6 as one of the value picks of the plug-in hybrid SUV class, praising its long electric-only range and generous equipment for the money; it is no longer the cheapest PHEV in BYD's own line-up now that the smaller Sealion 5 starts under $34,000. The range has thinned to three grades, with the Dynamic and Premium Standard Range versions gone, so every grade above the Essential now carries the larger 26.6kWh battery. Opinions are more mixed on dynamics: reviewers like the revised, comfort-biased suspension but mark it down for body roll and light, indirect steering, and most agree the 425-litre boot is a compromise against segment rivals.",
     "pros": [
-      "Essential undercuts the Toyota RAV4 PHEV and Mitsubishi Outlander PHEV by a wide margin at $42,990 before on-roads, reviewers' benchmark for value in the class",
-      "Usable electric-only range for a budget PHEV: up to 92km (Essential) or 140km (Dynamic Extended Range) on a full charge, enough to cover most Melbourne commutes without touching the engine",
-      "Generous standard equipment for the price, including a rotating touchscreen (12.8in Essential/Dynamic, 15.8in Premium), dual-zone climate and vehicle-to-load power",
+      "Essential undercuts the Mitsubishi Outlander PHEV ES ($58,990) by $16,000 at $42,990 before on-roads, and the AWD Premium Extended Range is $52,990",
+      "Long electric-only range for the price: about 80km (Essential) and 125km (Dynamic Extended Range) on the European WLTP test for the same powertrains, enough to cover most Melbourne commutes without the engine",
+      "Generous standard equipment, including a rotating touchscreen (12.8in on the Essential, 15.6in further up the range), dual-zone climate and vehicle-to-load power",
       "Five-star ANCAP rating (assessed under 2023 Euro NCAP criteria) with seven airbags standard across the range",
       "8-year/160,000km battery warranty outlasts the vehicle's own 6-year/150,000km unconditional term"
     ],
     "cons": [
       "425-litre boot with the rear seats up trails segment rivals like the Toyota RAV4 and Mitsubishi Outlander PHEV, the direct cost of packaging the battery under the floor",
-      "Once the battery is depleted the Sealion 6 drinks far more than its 0.8-1.1L/100km label figure suggests — reviewers measured 4.8-6.0L/100km in charge-sustaining running — so the economics case weakens sharply for anyone who cannot charge at home",
+      "Once the battery is depleted it drinks far more than its 0.8-1.1L/100km label figure suggests: the same powertrains use 5.6-7.1L/100km charge-sustaining on Europe's WLTP test, so the economics weaken sharply without home charging",
       "Soft, comfort-tuned suspension brings noticeable body roll and light, indirect steering that reviewers rate well behind more dynamically composed rivals",
-      "No spare wheel, a tyre-repair kit only, and BYD's Australian resale value and dealer/service network remain relatively unproven for a car this new to the range"
+      "Front-drive grades are rated to tow only 750kg braked; only the AWD Premium Extended Range reaches 1,300kg"
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-news/2025-byd-sealion-6-price-and-specs",
-      "https://www.carexpert.com.au/car-reviews/2025-byd-sealion-6-review",
-      "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-6-review",
-      "https://www.carsguide.com.au/byd/sealion-6",
-      "https://www.carsguide.com.au/byd/sealion-6/price",
-      "https://www.carsguide.com.au/byd/sealion-6/fuel-consumption",
-      "https://www.carsales.com.au/research/byd/sealion-6/",
-      "https://www.carsales.com.au/research/byd/sealion-6/2025/premium/",
-      "https://www.carsales.com.au/editorial/details/byd-sealion-6-dynamic-2024-review-146934/",
+      "https://evdealergroup-byd.com.au/configurator/byd-sealion-6",
       "https://bydautomotive.com.au/sealion-6",
-      "https://www.goauto.com.au/car-reviews/byd/sealion-6/2025-byd-sealion-essential-review/2025-07-31/96977.html"
+      "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+      "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-6-review",
+      "https://www.carexpert.com.au/car-news/byd-sealion-6-new-long-range-option-joins-phev-suv-lineup",
+      "https://www.racq.com.au/articles/car-updates/byd-introduces-sealion-6-premium-extended-range-plug-in-hybrid",
+      "https://www.carexpert.com.au/byd/sealion-6/2025-essential-1-5l-suv-fwd-electric-jsgmsofk20260101",
+      "https://www.carexpert.com.au/byd/sealion-6/2025-premium-extended-1-5l-suv-4x4-electric-jsgwsgs520260101",
+      "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf"
     ],
-    "sourcedAt": "2026-07-28",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "byd-sealion-6.webp",
       "source": "https://commons.wikimedia.org/wiki/File:%D0%91%D1%83%D1%85%D0%B0%D1%80%D0%B0,_BYD_Song_Plus_%D0%BD%D0%B0_%D0%A0%D1%83%D1%88%D0%BD%D0%BE%D0%B8-%D0%9D%D0%B0%D0%BC%D0%B0%D0%B7%D0%B3%D0%BE%D1%85%D0%B5.jpg",
@@ -775,14 +766,13 @@
     ],
     "sources": [
       "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-7-review",
-      "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-7-performance-review",
-      "https://www.carsguide.com.au/byd/sealion-7",
       "https://www.chasingcars.com.au/reviews/midsize-suvs/byd-sealion-7-premium-rwd-2026-review/",
-      "https://www.whichcar.com.au/reviews/byd-sealion-7-review-popular-electric-mid-size-suv",
       "https://bydautomotive.com.au/sealion-7",
-      "https://www.greenvehicleguide.gov.au/Vehicle/ViewVehicle?vehicleDisplayIdList=34397%3A34398"
+      "https://bydautomotive.com.au/brochures/BYD-SEALION-7-2026.pdf",
+      "https://evdealergroup-byd.com.au/configurator/byd-sealion-7",
+      "https://ev-database.org/car/3070/BYD-SEALION-7-825-kWh-RWD-Comfort"
     ],
-    "sourcedAt": "2026-07-26",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "byd-sealion-7.webp",
       "source": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_07_EV_DSC_8264.jpg",
@@ -793,33 +783,34 @@
   },
   {
     "id": "byd-sealion-8",
-    "summary": "The Sealion 8 is BYD's first three-row model in Australia, a large seven-seat plug-in hybrid that undercuts the Kia Sorento PHEV and Mazda CX-80 PHEV by roughly $11,000-$14,000 at the entry point while claiming far more electric range on paper — up to 152km, though on the lenient NEDC cycle rather than WLTP. Reviewers broadly agree on the value case, the presentation of the cabin and the generous second row, and agree that the 359kW AWD grades offer more performance than a family SUV needs. Where they diverge is ride and refinement: some rate it quiet and well-resolved, while CarExpert and Chasing Cars both flag inconsistent damping and road noise at speed.",
+    "summary": "The Sealion 8 is BYD's first three-row model in Australia, a large seven-seat plug-in hybrid that undercuts the Kia Sorento PHEV and Mazda CX-80 PHEV by roughly $11,000-$14,000 at the entry point while claiming far more electric range on paper — up to 152km, though on the lenient NEDC cycle, as BYD publishes no WLTP figure. Reviewers broadly agree on the value case, the presentation of the cabin and the generous second row, and CarsGuide judges the 359kW AWD grades' performance more than a family SUV needs. Where they diverge is ride and refinement: CarExpert rates it quiet and well-resolved, while Chasing Cars flags inconsistent damping and cabin noise and CarsGuide finds the comfort-biased ride short on body control.",
     "pros": [
-      "The 35.6kWh battery in the AWD grades is the largest plug-in pack in any seven-seat SUV sold here — roughly two and a half times the Kia Sorento PHEV's 13.8kWh — and BYD claims 152km of electric running from it.",
+      "The 35.6kWh battery in the AWD grades is the largest plug-in pack in any seven-seat SUV sold here, if only just ahead of the 34.5kWh Chery Tiggo 9 PHEV Ultimate and Jaecoo J8 SHS, and roughly two and a half times the Kia Sorento PHEV's 13.8kWh; BYD claims 152km (NEDC) of electric running from it.",
       "Sharp entry pricing: $56,990 before on-roads for the Dynamic FWD against $70,880 for the cheapest Kia Sorento PHEV and $68,100 for the Mazda CX-80 PHEV Touring.",
       "Braked towing of 1800kg (Dynamic FWD) or 2000kg (both AWD grades) comfortably beats the Kia Sorento PHEV's 1010kg, which is the usual weak point of a plug-in seven-seater.",
-      "Warranty is six years/150,000km with no servicing conditions attached, and the high-voltage battery carries a separate eight-year/160,000km cover.",
-      "Combined tailpipe CO2 of 22-24g/km puts every grade under Victoria's 120g/km green-passenger-car duty threshold and well inside the LCT fuel-efficient test, and all three list prices sit below the $80,809 ordinary LCT threshold so no luxury car tax is payable."
+      "Warranty is six years/150,000km, and the high-voltage battery carries a separate eight-year/160,000km cover.",
+      "Combined tailpipe CO2 of 22-24g/km puts every grade far under Victoria's 120g/km green-passenger-car duty threshold, the 1.0-1.1L/100km label passes the LCT fuel-efficient test, and all three list prices sit below the $80,809 ordinary LCT threshold so no luxury car tax is payable."
     ],
     "cons": [
       "Only 270 litres of boot behind the third row — enough for a school run, not a seven-up holiday — and there is no spare wheel at all, just a puncture repair kit.",
-      "Every electric range figure is NEDC. No WLTP number exists for this model in any market, and RACV's own conversion puts the realistic equivalents nearer 88km (FWD) and 130km (AWD).",
+      "Every electric range figure is NEDC. BYD publishes no WLTP number in Australia, New Zealand or Singapore and the car is not yet sold in the UK; RACV's own conversion puts the realistic equivalents nearer 88km (FWD) and 130km (AWD).",
       "The plug-in compromise is visible in BYD's own numbers: the 1.0-1.1L/100km label assumes a charged battery, and BYD quotes 5.3L/100km (FWD) or 6.3L/100km (AWD) once the pack falls below 25 per cent — so a buyer who cannot charge at home is simply running a 2.3-2.6 tonne SUV on petrol.",
       "The third row is described by CarsGuide as strictly for smaller kids, with tight access, and Chasing Cars criticises cabin noise, front-seat support and the reliance on touchscreen controls for basic functions.",
       "CarsGuide calls the 359kW AWD grades' performance irrelevant in a family car, yet they carry a $7,000-$14,000 premium over the Dynamic FWD and add around 265kg of kerb weight."
     ],
     "sources": [
+      "https://evdealergroup-byd.com.au/configurator/byd-sealion-8",
+      "https://bydautomotive.com.au/sealion-8",
+      "https://bydautomotive.com.au/brochures/BYD-SEALION-8-2026.pdf",
       "https://www.carexpert.com.au/car-news/2026-byd-sealion-8-price-and-specs",
       "https://www.carexpert.com.au/car-reviews/2026-byd-sealion-8-dynamic-fwd-review",
-      "https://www.carexpert.com.au/byd/sealion-8/premium/features-and-specs",
       "https://www.carsguide.com.au/car-reviews/byd-sealion-8-100787",
       "https://www.chasingcars.com.au/reviews/large-suvs/byd-sealion-8-2026-review/",
       "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-byd-sealion-8-price-specs-release-date.html",
-      "https://bydautomotive.com.au/sealion-8",
-      "https://evcentral.com.au/byd-sealion-8-phev-priced-from-56990-first-seven-seat-suv-from-chinese-giant-undercuts-most-rivals/",
+      "https://www.autoexpress.co.uk/byd/370491/new-byd-sealion-8-goes-sale-australia-and-uk-could-be-its-next-stop",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-shark-6",
@@ -1004,40 +995,33 @@
   },
   {
     "id": "chery-tiggo-7-phev",
-    "summary": "The Tiggo 7 Super Hybrid is the cheapest plug-in hybrid SUV on sale in Australia, and Australian reviewers agree the powertrain is the reason to buy it: an 18.4kWh LFP battery good for about 90km of electric range, 40kW DC fast charging almost nobody else offers at this price, and roughly 4-6L/100km once the battery is flat. Where they part company is the chassis and the software — NRMA, CarExpert and The Beep all criticise the stiff, jarring ride, the disconnected steering and an occasional driveline shunt, while carsales and CarsGuide are more forgiving on the basis of what it costs. Nobody argues it is good to drive; the case rests on running costs, the seven-year warranty and a transaction price that Chery keeps discounting.",
+    "summary": "The Tiggo 7 Super Hybrid is the cheapest plug-in hybrid SUV in this list at $32,990 before on-road costs, and Australian reviewers agree the powertrain is the reason to buy it: an 18.4kWh LFP battery good for about 90km of WLTP electric range, 40kW DC fast charging almost nobody else offers at this price, and roughly 4-6L/100km once the battery is flat. Where they part company is the chassis and the software — NRMA, CarExpert and The Beep all criticise the stiff, jarring ride, the disconnected steering and an occasional driveline shunt, while carsales and CarsGuide are more forgiving on the basis of what it costs. Nobody argues it is good to drive; the case rests on running costs, the seven-year warranty and a price Chery has now cut by $5,000 since launch.",
     "pros": [
       "About 90km of WLTP electric range from the 18.4kWh LFP pack — more than a BYD Sealion 5 Essential's 71km and enough for most Melbourne commutes on electricity alone",
       "40kW DC fast charging (30-80 per cent in about 20 minutes) plus 3.3kW vehicle-to-load, where the BYD Sealion 6 and Mitsubishi Outlander PHEV have no DC capability at all",
-      "Stays efficient with the battery depleted: Chery claims under 6.0L/100km charge-sustaining and Australian testers recorded 4.1-5.8L/100km, so the car is not punishing for a buyer who forgets to plug in",
+      "Stays efficient with the battery depleted: Chery UK's combined figure of 47.1mpg (6.0L/100km) is the charge-sustaining number, Chery Australia told CarExpert 6.0L/100km was realistic, and Australian testers recorded 3.8-6.0L/100km, so the car is not punishing for a buyer who forgets to plug in",
       "Seven-year unlimited-kilometre warranty with no dealer-servicing condition, a separate eight-year unlimited-kilometre battery warranty, and capped-price servicing quoted at $3,174 across seven years",
-      "Five-star ANCAP rating applied to petrol and Super Hybrid Tiggo 7 variants built from June 2025, and both grades sit far below the $80,809 ordinary LCT threshold"
+      "Five-star ANCAP rating applied to petrol and Super Hybrid Tiggo 7 variants built from June 2025, and at $32,990 and $36,990 before on-roads both grades sit far below the $75,000 FBT cap and the $80,809 ordinary LCT threshold"
     ],
     "cons": [
       "Ride and steering are the consistent complaint: NRMA calls the suspension stiff and jarring with steering that gives almost no feedback, CarExpert reports unexplained driveline power surges like a clutch dump, and The Beep describes vague steering and lazy throttle response",
       "The plug-in packaging costs you the underfloor storage and the spare wheel entirely — the Super Hybrid gets a tyre repair kit only, where the petrol Tiggo 7 has a two-level boot floor and underfloor bin",
       "No braked tow rating published — Chery quotes only 750kg unbraked, so a caravan or a boat rules the car out where a petrol mid-size SUV would not",
       "The 1.4L/100km label figure is a laboratory number that assumes you start every trip charged; without home charging you are running a 1,788kg SUV on its petrol engine at 4-6L/100km and the plug-in premium never pays back",
-      "Chery has run repeated $5,000 drive-away campaigns and $2,000 build-clearance cashbacks on this car since launch, so the street price keeps resetting and resale is unproven"
+      "Chery has cut the national drive-away price by $5,000 on both grades since launch (Urban $39,990 to $34,990) and still stacks a $2,000 cashback on top until 21 December 2026, so the street price keeps resetting and resale is unproven"
     ],
     "sources": [
       "https://cherymotor.com.au/models/tiggo-7-super-hybrid",
-      "https://cherymotor.com.au/news/chery-reveals-price-and-specification-tiggo-7-super-hybrid",
-      "https://www.carexpert.com.au/car-news/2025-chery-tiggo-7-super-hybrid-price-and-specs",
+      "https://cherymotor.com.au/sites/default/files/2026-01/245_25_Tiggo_7_PHEV_AU_Spec_Sheet_v109.pdf",
+      "https://www.carexpert.com.au/chery/tiggo-7/2026-urban-1-5l-suv-fwd-electric-jsgsoawk20260701",
+      "https://www.carexpert.com.au/chery/tiggo-7/2026-ultimate-1-5l-suv-fwd-electric-jsgsoawm20260701",
       "https://www.carexpert.com.au/car-reviews/2025-chery-tiggo-7-super-hybrid-review",
-      "https://www.carexpert.com.au/car-news/move-over-byd-australia-has-a-new-cheapest-phev-but-only-for-a-limited-time",
-      "https://www.carexpert.com.au/car-news/2026-chery-tiggo-7-price-and-specs-power-drop-but-no-price-change-for-refreshed-suv",
-      "https://www.carsguide.com.au/family/chery-tiggo-7-super-hybrid-99163",
-      "https://www.carsguide.com.au/chery/tiggo-7/price/2026",
-      "https://www.carsguide.com.au/chery/tiggo-7/boot-space",
-      "https://www.carsales.com.au/editorial/details/chery-tiggo-7-super-hybrid-urban-2026-review-151244/",
       "https://www.mynrma.com.au/open-road/car-reviews/chery/2026-chery-tiggo-7-super-hybrid-launch-review",
       "https://thebeep.com.au/car-reviews/2026-chery-tiggo-7-super-hybrid-review",
       "https://www.cherycar.co.uk/models/tiggo-7-csh",
-      "https://www.electrifying.com/reviews/chery-reviews/tiggo7phev/review",
-      "https://cherymotor.com.au/news/cherys-tiggo-7-tiggo-8-awarded-five-star-ancap-rating",
-      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+      "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "chery-tiggo-7-phev.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_7_Back_IMG_0391.jpg",
@@ -1048,77 +1032,75 @@
   },
   {
     "id": "chery-tiggo-8-phev",
-    "summary": "The Tiggo 8 Super Hybrid is the cheapest seven-seat plug-in hybrid on sale in Australia, and Australian reviewers agree the powertrain is the reason to buy it: a 1.5-litre turbo petrol engine and 150kW motor in a single-speed dedicated hybrid transmission, an 18.4kWh LFP battery good for 90km of WLTP electric range, and roughly 6L/100km once the battery is flat. Where they split is the chassis and the third row — CarsGuide and EV Central rate the value and the powertrain calibration highly, while Chasing Cars, carsales and the NRMA mark down a floaty, underdamped ride, screen-buried controls and a rearmost row that has no top-tether or ISOFIX anchorages at all. As a two-row family SUV with occasional seats seven and eight it is compelling; as a genuine three-row people mover it is compromised by 117 litres of boot behind the third row and kerbside-only access to it.",
+    "summary": "The Tiggo 8 Super Hybrid is the cheapest seven-seat plug-in hybrid on sale in Australia, and Australian reviewers agree the powertrain is the reason to buy it: a 1.5-litre turbo petrol engine and 150kW motor in a single-speed dedicated hybrid transmission, an 18.4kWh LFP battery good for 90km of WLTP electric range, and 5.6-6.1L/100km on test once the battery is flat. Where they split is the chassis and the third row — CarsGuide and EV Central rate the value and the powertrain calibration highly, while Chasing Cars, carsales and the NRMA mark down a floaty, underdamped ride, screen-buried controls and a rearmost row that has no top-tether or ISOFIX anchorages at all. As a two-row family SUV with occasional seats seven and eight it is compelling; as a genuine three-row people mover it is compromised by 117 litres of boot behind the third row and kerbside-only access to it.",
     "pros": [
       "The cheapest seven-seat PHEV in Australia at $42,990 before on-road costs for the Urban — roughly $25,000 under a Mitsubishi Outlander Exceed PHEV and about $30,000 under a Kia Sorento PHEV, both of which also seat seven",
-      "90km of WLTP electric-only range (56 miles, Chery UK) from the 18.4kWh LFP pack, enough to cover most Melbourne commutes on electricity, and Chery quotes 1200km combined; 40kW DC fast charging takes 30-80 per cent in about 20 minutes, which neither the Outlander PHEV nor a BYD Sealion 6 offers at all",
+      "90km of WLTP electric-only range (56 miles, Chery UK) from the 18.4kWh LFP pack, enough to cover most Melbourne commutes on electricity (Chasing Cars saw 68km in mixed real driving), and 40kW DC fast charging takes 30-80 per cent in about 20 minutes, which a BYD Sealion 6 at 18kW cannot match",
       "Seven-year/unlimited-kilometre warranty with no dealer-servicing-exclusivity condition, plus a separate eight-year/unlimited-kilometre high-voltage battery warranty and seven years of capped-price servicing totalling $3,174.15",
-      "The petrol engine drives the wheels directly through the DHT in parallel mode rather than acting only as a generator, so highway consumption settles at 5.4-6.1L/100km on a flat battery instead of collapsing the way a range-extender's does",
+      "The petrol engine drives the wheels directly through the DHT in parallel mode rather than acting only as a generator, so consumption on a flat battery settles at 5.6-6.1L/100km on Australian tests instead of collapsing the way a range-extender's does",
       "Five-star ANCAP rating from 2025 covering all variants including the Super Hybrid, with 86 per cent child occupant protection and nine airbags, and at $46,990 the top Ultimate still sits about $34,000 under the ordinary $80,809 LCT threshold"
     ],
     "cons": [
       "Only 117 litres of boot with all seven seats in use — less than a Kia Sorento's 179 litres and a Mitsubishi Outlander PHEV's 191 litres — so the third row and the weekly shop are effectively mutually exclusive",
       "No top-tether or ISOFIX anchorages in the third row at all, which ANCAP explicitly flags, and third-row access is via the kerbside door only, putting children out on the traffic side on a right-hand kerb",
-      "The 1.3L/100km combined label figure is meaningless in use: Chery itself points buyers to about 6.0L/100km charge-sustaining (47.1mpg WLTP with the battery depleted), and Australian testers recorded 5.4-6.1L/100km, so a buyer without home charging is running a 1.9-tonne seven-seater on premium 95-octane at ordinary-SUV cost",
+      "The 1.3L/100km combined label figure is meaningless in use: Chasing Cars recorded 5.6L/100km once the battery was flat and CarsGuide's long-term Ultimate logged 6.1 and then 6.9L/100km at the pump, so a buyer without home charging is running a 1.9-tonne seven-seater on premium 95-octane at ordinary-SUV cost",
       "No braked towing rating whatsoever — 750kg unbraked only — where the 2.0-litre petrol Tiggo 8 and most seven-seat rivals are rated for a caravan or a boat, and neither grade carries a spare wheel (inflator kit only)",
-      "Reviewers are consistent that the ride is soft and floaty with poor body control at speed, the climate and drive-mode functions are buried in the touchscreen, and Chery's aggressive national drive-away pricing plus a current $2,000 cashback offer leaves resale value unproven"
+      "Reviewers split on the ride, which Chasing Cars found slow to settle over potholes where CarExpert found it plush, the climate and drive-mode functions are buried in the touchscreen, and Chery's national drive-away pricing plus a $3,000 cashback running to 21 December 2026 leaves resale value unproven"
     ],
     "sources": [
       "https://cherymotor.com.au/models/tiggo-8-super-hybrid",
+      "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+      "https://cherymotor.com.au/news/chery-reveals-price-and-specification-tiggo-8-super-hybrid",
       "https://cherymotor.com.au/legal/owners/7-year-new-car-warranty-policy-statement",
       "https://www.carexpert.com.au/car-news/2025-chery-tiggo-8-super-hybrid-price-and-specs",
       "https://www.carexpert.com.au/car-reviews/2025-chery-tiggo-8-super-hybrid-review",
-      "https://www.carsguide.com.au/ev/chery-tiggo-8-super-hybrid-99206",
+      "https://www.carexpert.com.au/chery/tiggo-8/2026-urban-1-5l-suv-fwd-electric-jsgsoawo20250613",
+      "https://www.carexpert.com.au/chery/tiggo-8/2026-ultimate-1-5l-suv-fwd-electric-jsgsoaws20250613",
       "https://www.carsguide.com.au/chery/tiggo-8/price",
-      "https://www.carsguide.com.au/family/chery-tiggo-8-ultimate-super-hybrid-long-term-part-2-100875",
+      "https://www.carsguide.com.au/family/chery-tiggo-8-ultimate-super-hybrid-long-term-part-3-101618",
       "https://www.chasingcars.com.au/reviews/large-suvs/chery-tiggo-8-super-hybrid-urban-2026-review/",
-      "https://www.carsales.com.au/editorial/details/chery-tiggo-8-csh-urban-2026-review-151332/",
-      "https://evcentral.com.au/2026-chery-tiggo-8-csh-urban-review-sharp-pricing-and-a-heap-of-equipment-arent-the-only-positives-offered-by-this-plug-in-seven-seat-family-suv/",
-      "https://www.mynrma.com.au/open-road/car-reviews/chery/2026-chery-tiggo-8-super-hybrid-launch-review",
-      "https://www.ancap.com.au/safety-ratings/chery/tiggo-8/60ce71",
-      "https://www.sytner.co.uk/chery/range/tiggo-8-hybrid",
-      "https://www.parkers.co.uk/chery/tiggo-8/review/mpg-running-costs/",
-      "https://www.carwow.co.uk/chery/tiggo-8",
+      "https://cherycar.co.uk/models/tiggo-8-csh",
+      "https://www.electrifying.com/reviews/chery-reviews/tiggo-8/",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "chery-tiggo-9-phev",
-    "summary": "The Tiggo 9 Super Hybrid is Chery Australia's flagship: a 4.8-metre seven-seat plug-in hybrid sold only as a PHEV here, in a 225kW front-drive Elite at $52,990 and a 315kW all-wheel-drive Ultimate at $59,990 before on-road costs. Australian reviewers are close to unanimous that the powertrain is the story — the Ultimate's 34.5kWh pack returns a genuine 146km WLTP electric range that testers repeatedly measured at 138-145km, and 71kW DC charging is something no Outlander PHEV or BYD Sealion 6 offers. Where they diverge is the body around it: CarExpert, carsales and the NRMA rate the equipment and refinement well above the price, while CarsGuide, Chasing Cars and bttr.reviews mark down a third row with no airbag coverage, a floaty 20-inch ride and hard interior plastics, and there is still no ANCAP rating.",
+    "summary": "The Tiggo 9 Super Hybrid is Chery Australia's flagship: a 4.8-metre seven-seat plug-in hybrid in a 225kW front-drive Elite at $52,990 and a 315kW all-wheel-drive Ultimate at $59,990 before on-road costs, though Chery advertises only postcode drive-away prices that also carry a dealer delivery charge. Reviewers agree the powertrain is the story — the Ultimate's 34.5kWh pack is rated at 140km WLTP (CarExpert measured 138km) and takes 71kW DC charging — while the Elite's 19kWh pack manages about 80km. Where they diverge is the body around it: CarExpert praises the value and equipment but marks down a cramped third row its curtain airbags did not cover, firm ride and vague steering, CarsGuide found the ride comfortable, and there is still no ANCAP rating.",
     "pros": [
-      "146km of WLTP electric range on the Ultimate — the longest of any plug-in hybrid on sale in Australia and roughly double a Mitsubishi Outlander PHEV's 84km — from a 34.5kWh CATL NMC pack, with Australian testers independently recording 138km, 143km and 145km before the engine started",
-      "71kW DC fast charging (30-80 per cent in about 18 minutes) plus 6.6kW AC and 6.6kW vehicle-to-load, where the Outlander PHEV, Kia Sorento PHEV and BYD Sealion 6 offer no meaningful DC capability at all",
-      "Seven-year/unlimited-kilometre warranty with no dealer-servicing-exclusivity condition, a separate eight-year/unlimited-kilometre high-voltage battery warranty, and seven years of capped-price servicing totalling about $3,174",
-      "315kW/580Nm and 0-100km/h in 5.4 seconds in the Ultimate, with a 1500kg braked tow rating and a 70-litre tank, where the Tiggo 7 and Tiggo 8 Super Hybrids are not rated to tow anything braked at all",
-      "At $59,990 the top Ultimate sits nearly $21,000 below the ordinary $80,809 LCT threshold and undercuts a seven-seat Kia Sorento PHEV by roughly $25,000, so no luxury car tax is payable on either grade"
+      "140km of WLTP electric range on the Ultimate, from a 34.5kWh pack, against a Mitsubishi Outlander PHEV's 84km, with CarExpert recording 138km in hot weather before the engine started",
+      "71kW DC fast charging on the Ultimate (41kW on the Elite) plus 6.6kW AC, where the Outlander PHEV, Kia Sorento PHEV and BYD Sealion 6 offer no meaningful DC capability at all",
+      "Seven-year/unlimited-kilometre warranty with no dealer-servicing condition, a separate eight-year/unlimited-kilometre high-voltage battery warranty, and seven years of capped-price servicing",
+      "1500kg braked tow rating and a 70-litre tank on both grades, plus 315kW/580Nm in the Ultimate, where the Tiggo 7 and Tiggo 8 Super Hybrids are not rated to tow anything braked",
+      "At $59,990 the top Ultimate sits more than $20,000 below the ordinary $80,809 LCT threshold and undercuts a seven-seat Kia Sorento PHEV by roughly $25,000, so no luxury car tax is payable on either grade"
     ],
     "cons": [
-      "Only 143 litres of boot with all seven seats up — less than a Kia Sorento's 179 litres and a Mitsubishi Outlander PHEV's 191 litres — and the curtain airbags do not extend to the third row, which CarExpert and carsales both call an outright oversight; there is no ANCAP rating for the Tiggo 9 either way",
-      "The 1.3-1.4L/100km combined label figure is a fiction for anyone who cannot charge: Australian testers measured 5.9L/100km (carsales), 6.3L/100km (CarExpert) and 7.1L/100km (CarsGuide) once the battery was flat, and the car demands 95-octane premium, so a 2.2-tonne SUV with no home charger costs about the same to fuel as a petrol Kluger",
-      "Reviewers are consistent that the Ultimate's 20-inch wheels leave the ride busy over sharp edges with excessive body pitch, that the steering is over-light beyond 80km/h, and that the cabin mixes a good 15.6-inch screen with obviously cheap hard plastics",
-      "Third-row access is awkward and kerbside-biased, the boot floor does not lie flat with the third row folded, and neither grade carries a spare wheel — the repair kit is velcroed to the boot carpet with no dedicated stowage for it or the charging cable",
-      "The Elite arrived in May 2026 at $7,000 under the Ultimate that launched six months earlier, and Chery discounts hard on national drive-away campaigns, so residual values for both grades are unproven and the depreciation assumption here is inherited from the Tiggo 7 and Tiggo 8 rather than observed"
+      "Only 143 litres of boot with all seven seats up, less than a Kia Sorento's 179 litres and a Mitsubishi Outlander PHEV's 191 litres, and CarExpert found the curtain airbags do not cover third-row occupants (Chery's own page now claims full-length curtains, but its spec sheet is unchanged); there is no ANCAP rating either way",
+      "The 1.4-1.5L/100km combined label is a fiction for anyone who cannot charge: CarExpert measured 6.3L/100km and CarsGuide 7.1L/100km once the battery was flat, and the car demands 95-octane premium, so a 2.2-tonne SUV with no home charger costs about as much to fuel as a petrol large SUV",
+      "The Elite's 19kWh pack is rated at 90km only on the lenient NEDC cycle; CarExpert estimates 75-80km in real driving, barely half the Ultimate's, for a $7,000 saving",
+      "CarExpert criticises a firm, unsettled ride over consecutive bumps, wooden and vague steering and cheap shiny plastics between the front seats, and rates the third row too tight and awkward to reach for regular seven-seat use; neither grade carries a spare wheel",
+      "Chery discounts hard, with $3,000 cashback on both grades in late 2026 and only drive-away prices advertised, so residual values are unproven and the depreciation assumption here is the Chery brand curve rather than observed"
     ],
     "sources": [
       "https://cherymotor.com.au/models/tiggo-9-super-hybrid",
+      "https://cherymotor.com.au/sites/default/files/2026-05/271_25_Tiggo_9_PHEV_Spec_Sheet_v104.pdf",
       "https://cherymotor.com.au/news/chery-announces-price-and-spec-incoming-tiggo-9-super-hybrid",
-      "https://www.carexpert.com.au/car-news/2026-chery-tiggo-9-price-and-specs",
+      "https://cherymotor.com.au/owners/warranty",
+      "https://www.carexpert.com.au/chery/tiggo-9/2026/price-and-specs",
       "https://www.carexpert.com.au/car-news/2026-chery-tiggo-9-elite-prices-chinese-brands-largest-suv-just-got-cheaper",
+      "https://www.carexpert.com.au/car-reviews/2026-chery-tiggo-9-super-hybrid-elite-fwd-review",
       "https://www.carexpert.com.au/car-reviews/2026-chery-tiggo-9-review",
-      "https://www.carsales.com.au/editorial/details/chery-tiggo-9-super-hybrid-2026-review-151799/",
+      "https://www.carsguide.com.au/chery/tiggo-9/price",
       "https://www.carsguide.com.au/ev/chery-tiggo-9-super-hybrid-ultimate-100341",
-      "https://www.carsguide.com.au/family/chery-tiggo-9-super-hybrid-elite-fwd-101992",
-      "https://www.carsguide.com.au/chery/tiggo-9/boot-space",
-      "https://www.mynrma.com.au/open-road/car-reviews/chery/2026-chery-tiggo-9-review",
-      "https://www.bttr.reviews/chery-tiggo-9-super-hybrid-ultimate-awd-review/",
+      "https://www.carsguide.com.au/chery/tiggo-9/2027",
       "https://www.cherycar.co.uk/models/tiggo-9-csh",
-      "https://www.parkers.co.uk/chery/tiggo-9/review/mpg-running-costs/",
-      "https://www.autocar.co.uk/car-news/new-cars/chery-tiggo-9-422bhp-seven-seat-phev-offers-91-mile-ev-range-%C2%A343k",
+      "https://www.electrifying.com/blog/article/chery-launches-new-phev-suv-with-91-mile-range",
       "https://data.carnewschina.com/database/chery/chery-tiggo-9-c-dm/2026/params",
-      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+      "https://www.ancap.com.au/safety-ratings/chery/tiggo-9",
+      "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "chery-tiggo-9-phev.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_9_001.jpg",
@@ -1627,17 +1609,17 @@
   },
   {
     "id": "genesis-gv60",
-    "summary": "The GV60 is Genesis's E-GMP-based electric SUV, and the 2027 update swaps the old 77.4kWh pack for an 84kWh one while cutting the entry price by roughly $15,000 so the Advanced RWD lands under the luxury car tax threshold. Australian reviewers rate its cabin materials, noise suppression and low-speed ride among the best in the class, but consistently argue it is still priced above what an emerging luxury brand can command against the Hyundai and Kia relatives that share its hardware. The 448kW Magma adds genuine performance-car pace and heads the two-grade range, though it costs $15,000 more than a mechanically similar Ioniq 5 N and neither GV60 grade is rated to tow.",
+    "summary": "The GV60 is Genesis's E-GMP-based electric SUV, and the 2027 update swaps the old 77.4kWh pack for an 84kWh one while cutting the entry price by roughly $15,000 so the Advanced RWD lands under the luxury car tax threshold. Australian reviewers rate its cabin materials, noise suppression and low-speed ride among the best in the class, but consistently argue it is still priced above what an emerging luxury brand can command against the Hyundai and Kia relatives that share its hardware. The 448kW Magma adds genuine performance-car pace and heads the two-grade range, though it costs $15,000 more than a mechanically similar Ioniq 5 N.",
     "pros": [
       "At $88,300 before on-road costs the Advanced RWD sits below the $91,661 fuel-efficient luxury car tax threshold, so no LCT is embedded in its price — a roughly $15,000 cut on the superseded Luxury grade",
       "The 84kWh 800V pack claims 561km WLTP in the Advanced and a 10-80 per cent DC charge in 18 minutes on a 350kW charger, with 400V/800V compatibility and V2L",
-      "Ownership costs are covered: five years of complimentary scheduled servicing at 15,000km/12-month intervals, roadside assistance for up to 10 years, and an 8-year/160,000km high-voltage battery warranty on top of the 5-year/unlimited-km vehicle cover",
+      "Ownership costs are covered: five years of complimentary scheduled servicing, roadside assistance for up to 10 years, and an 8-year/160,000km high-voltage battery warranty on top of the 5-year/unlimited-km vehicle cover",
       "CarExpert rates the low-speed ride and suppression of wind, tyre and suspension noise as among the best of any EV, with soft-touch materials almost everywhere in the cabin",
-      "The Magma's dual-motor 448kW/740Nm drivetrain (478kW/790Nm in Boost) claims 0-100km/h in 3.4 seconds with an e-LSD, Drift Mode and a simulated gearshift system"
+      "The Magma's dual-motor 448kW/740Nm drivetrain (478kW/790Nm in Boost) claims 0-100km/h in 3.4 seconds, and Genesis's spec sheet rates it to tow 2400kg braked (1600kg for the Advanced)"
     ],
     "cons": [
-      "Neither grade is rated to tow — both the Advanced RWD and the Magma are listed at 0kg braked, where the superseded AWD grades were rated to 1600kg",
-      "432 litres behind the rear seats (400 in the Magma) is small for a mid-size SUV costing $88,000-plus, there is no spare wheel, and no internal V2L socket",
+      "Three of the Advanced's paint colours are a $4,000 option, which takes the car to $92,300 before on-roads and over the $91,661 luxury car tax threshold",
+      "432 litres behind the rear seats (400 in the Magma) is small for a mid-size SUV costing $88,000-plus, there is no spare wheel, and the Advanced has no internal V2L socket",
       "The Magma asks $15,000 more than a mechanically near-identical Hyundai Ioniq 5 N, and CarExpert measured 25.6kWh/100km against the 21.5kWh/100km claim — roughly 330km of real-world range",
       "Genesis runs only about nine Australian retail sites, all in NSW, VIC, QLD and WA, with nothing in SA, TAS, ACT or NT, which limits servicing access and thins the used-buyer pool",
       "Body control loosens over bigger compressions on country roads, and CarExpert still judges the Advanced roughly $20,000 too expensive to be competitive against Chinese and Hyundai-group rivals"
@@ -1646,15 +1628,16 @@
       "https://www.carexpert.com.au/car-news/2027-genesis-gv60-prices-hot-478kw-ev-on-sale-now",
       "https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-review",
       "https://www.carexpert.com.au/car-reviews/2026-genesis-gv60-magma-review",
-      "https://www.carsguide.com.au/ev/genesis-gv60-magma-102229",
-      "https://thedriven.io/2026/07/30/updated-genesis-gv60-the-sensible-one-and-the-478kw-one/",
-      "https://thebeep.com.au/car-news/2027-genesis-gv60-price-australia",
-      "https://www.carsguide.com.au/genesis/gv60/towing-capacity/2026",
+      "https://www.genesis.com/content/dam/genesis/au/en/ecomm/gv60advancedmy27/GV60advanced_2027.json",
+      "https://www.genesis.com/content/dam/genesis/au/en/ecomm/gv60magma27/GV60Magma_2027.json",
+      "https://www.genesis.com/content/dam/genesis/au/en/models/luxury-suv-genesis/gv60/brochure/Specification_Sheet_GV60_v4.pdf",
+      "https://www.genesis.com/content/dam/genesis/au/en/models/gv60-magma-teaser/2026/brochure/Specification_Sheet_GV60_Magma_v4.pdf",
       "https://www.genesis.com/au/en/terms-of-use/warranty.html",
-      "https://www.carexpert.com.au/car-news/genesis-expands-australian-retail-network-as-magma-gets-ready-to-flow-into-showrooms",
-      "https://ev-database.org/uk/car/3236/Genesis-GV60-Performance"
+      "https://www.carsguide.com.au/genesis/gv60/towing-capacity/2026",
+      "https://ev-database.org/car/3683/Genesis-GV60-Magma",
+      "https://ev-database.org/car/3236/Genesis-GV60-Performance"
     ],
-    "sourcedAt": "2026-08-06",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "genesis-gv60.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Genesis_GV60_Auto_Zuerich_2023_1X7A1130.jpg",
@@ -1665,7 +1648,7 @@
   },
   {
     "id": "genesis-gv70-electrified",
-    "summary": "Australian reviewers rate the Electrified GV70 as one of the most convincingly luxurious mid-size electric SUVs on sale, with a quiet, richly trimmed cabin, 800V charging at up to 350kW and 360kW of dual-motor pace in Boost mode. The trade-off is efficiency and packaging: 462km of WLTP range and a 503-litre boot both trail the Audi Q6 e-tron and BMW iX3 it is priced against, and testers describe the suspension tune as comfortable and quiet but soft rather than sharp. It is sold as a single $132,800 grade at fixed national agency pricing through a retail network of roughly nine sites that reaches only New South Wales, Victoria, Queensland and Western Australia.",
+    "summary": "Australian reviewers rate the Electrified GV70 as one of the most convincingly luxurious mid-size electric SUVs on sale, with a quiet, richly trimmed cabin, 800V charging at up to 350kW and 360kW of dual-motor pace in Boost mode. The trade-off is efficiency and packaging: 462km of WLTP range and a 503-litre boot both trail the Audi SQ6 e-tron and BMW iX3 it is cross-shopped against, and testers describe the suspension tune as comfortable and quiet but soft rather than sharp. It is sold as a single $132,718 grade at fixed national agency pricing through a retail network of roughly nine sites that reaches only New South Wales, Victoria, Queensland and Western Australia.",
     "pros": [
       "Genesis Australia's 5-year/unlimited-kilometre warranty is genuinely unconditional — its own terms allow servicing by 'a Genesis outlet, authorised Genesis repairer or suitably qualified motor vehicle repairer' — and the high-voltage battery is separately covered for 8 years/160,000km",
       "Five years or 75,000km of scheduled servicing is included in the purchase price, which few rivals at this price match",
@@ -1674,23 +1657,24 @@
       "320kW/605Nm rising to 360kW/700Nm in Boost mode gives a 4.4-second 0-100km/h from the only grade offered, with no options list to navigate"
     ],
     "cons": [
-      "462km of WLTP range and a claimed 20.0kWh/100km both trail the $122,500 Audi Q6 e-tron and the BMW iX3; CarsGuide recorded 21.0kWh/100km on test",
+      "462km of WLTP range and a claimed 20.0kWh/100km both trail the $129,900 Audi SQ6 e-tron (562km) and the $112,500 BMW iX3 50 xDrive (788km); CarsGuide recorded 21.0kWh/100km on test",
       "The 503-litre boot is the smallest of its named rivals and 39 litres down on the petrol GV70's 542 litres",
-      "One grade only at $132,800 with no cheaper entry point — that is above both the $91,661 fuel-efficient luxury car tax threshold and the $75,000 FBT exemption cap, so novated-lease buyers get no EV FBT exemption",
+      "One grade only at $132,718 with no cheaper entry point — that is above both the $91,661 fuel-efficient luxury car tax threshold and the $75,000 FBT exemption cap, so novated-lease buyers get no EV FBT exemption",
       "Genesis retails from around nine sites across NSW, Victoria, Queensland and WA only, leaving buyers in South Australia, Tasmania, the ACT and the Northern Territory with no local studio for sales or service",
       "Reviewers call the suspension 'spongey in corners' — it prioritises glide over body control, where the German rivals are sharper"
     ],
     "sources": [
-      "https://www.carsguide.com.au/ev/genesis-gv70-electrified-performance-99419",
-      "https://www.carexpert.com.au/car-news/2025-genesis-electrified-gv70-mid-size-electric-suv-detailed-for-australia",
-      "https://www.carsguide.com.au/genesis/gv70/price/2026",
+      "https://www.genesis.com/au/en/models/luxury-suv-genesis/gv70-ev/highlights.html",
+      "https://www.genesis.com/au/en/shopping/build-and-price.html",
       "https://www.genesis.com/content/dam/genesis/au/en/documents/gv70ev/GENESIS_Specification_Sheet_Eletrified_GV70.pdf",
       "https://www.genesis.com/au/en/terms-of-use/warranty.html",
-      "https://www.carexpert.com.au/car-news/genesis-expands-australian-retail-network-as-magma-gets-ready-to-flow-into-showrooms",
-      "https://ev-database.org/car/3237/Genesis-GV70-Electrified",
-      "https://www.carexpert.com.au/car-reviews/2023-genesis-electrified-gv70-review-first-drive"
+      "https://www.goauto.com.au/amp/genesis/genesis-extends-eofy-suv-price-cuts/2026-07-21/99887.html",
+      "https://www.carsguide.com.au/genesis/gv70/price/2026/electrified-sig-perf",
+      "https://www.carexpert.com.au/car-news/2025-genesis-electrified-gv70-mid-size-electric-suv-detailed-for-australia",
+      "https://www.carexpert.com.au/car-news/2026-genesis-gv70-price-and-specs",
+      "https://ev-database.org/car/3237/Genesis-GV70-Electrified"
     ],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-cannon-alpha-phev",
@@ -1957,9 +1941,9 @@
   },
   {
     "id": "hyundai-elexio",
-    "summary": "The Elexio is Hyundai's China-built mid-size electric SUV, mechanically close to the Kia EV5 but sold only as a single 160kW front-driver on an 88.1kWh LFP pack in two grades, $58,990 and $61,990 before on-road costs. Australian reviewers consistently rate its locally tuned ride and steering above the EV5's, and the 562km/546km WLTP claims are among the longest at the price, but they are equally consistent that the 38-minute 10-80% DC charge and the button-free 27-inch screen are the weak points. Where opinion splits is value: some call it well-priced against a Tesla Model Y, others note a BYD Sealion 7 or Geely EX5 does the same job for less, which is why Hyundai has been running drive-away campaigns since launch.",
+    "summary": "The Elexio is Hyundai's China-built mid-size electric SUV, mechanically close to the Kia EV5 but sold only as a single 160kW front-driver on a BYD-supplied 88.1kWh LFP pack (about 84kWh usable) in two grades, $58,990 and $61,990 before on-road costs. Australian reviewers consistently rate its locally tuned ride and steering above the EV5's, and the 562km/546km WLTP claims are among the longest at the price, but they are equally consistent that the 38-minute 10-80% DC charge and the button-free 27-inch screen are the weak points. Where opinion splits is value: some call it well-priced against a Tesla Model Y, others note a BYD Sealion 7 or Geely EX5 does the same job for less, which is why Hyundai has been running drive-away campaigns since launch.",
     "pros": [
-      "562km WLTP on the base grade's 18-inch wheels and 546km on the Elite's 20s, longer than the Kia EV5 Air Long Range's 555km claim from the same 88.1kWh pack",
+      "562km WLTP on the base grade's 18-inch wheels and 546km on the Elite's 20s, longer than the Kia EV5 Air Long Range's 555km claim from the same 88.1kWh (gross) pack",
       "Australian-tuned suspension: Chasing Cars and CarExpert both rate its body control and highway composure clearly above the mechanically related Kia EV5",
       "506L boot expanding to 1,540L, 1,250kg braked towing and a 4kW three-pin V2L outlet, so it tows and camps like the EV5 rather than a Kona Electric (rated 0kg)",
       "24-month/30,000km service intervals with capped-price servicing quoted at about $1,897 over four years, roughly $475 a year",
@@ -1970,20 +1954,20 @@
       "Tested consumption runs 20-20.8kWh/100km against the 18.2kWh/100km ADR/WLTP claim, and Chasing Cars measured a real-world 424km rather than the Elite's 546km",
       "27-inch screen with no physical switchgear for climate or drive modes, and reviewers report the head-up display disappears behind polarised sunglasses",
       "Front-wheel drive only at 160kW/310Nm and 8.9s to 100km/h, with no AWD grade to answer the Kia EV5 Earth or GT-Line",
-      "No spare wheel, tyre mobility kit only, and Hyundai was already discounting to $55,990/$59,990 drive-away within months of launch, which points to soft early resale"
+      "No spare wheel, tyre mobility kit only, and Hyundai was already advertising $57,990/$59,990 drive-away within months of launch, which points to soft early resale"
     ],
     "sources": [
       "https://www.hyundai.com/au/en/cars/eco/elexio",
+      "https://www.hyundai.com/au/en/cars/eco/elexio-1",
       "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
       "https://www.carexpert.com.au/car-reviews/2026-hyundai-elexio-review",
       "https://www.carexpert.com.au/car-news/2026-hyundai-elexio-new-base-model-priced-for-australia",
-      "https://www.chasingcars.com.au/reviews/midsize-suvs/hyundai-elexio-elite-2026-review/",
-      "https://www.carsguide.com.au/ev/hyundai-elexio-100920",
+      "https://www.carsguide.com.au/hyundai/elexio/price",
       "https://www.carsguide.com.au/hyundai/elexio/price/2026",
-      "https://evcentral.com.au/2026-hyundai-elexio-review-hyundai-calls-on-china-to-help-it-invigorate-its-ev-sales-in-australia-should-you-be-tempted/",
-      "https://zecar.com/reviews/hyundai-elexio-pricing-features-specifications"
+      "https://thedriven.io/2026/05/25/a-week-with-the-hyundai-elexio-fighting-china-with-china-in-the-electric-suv-knife-fight/",
+      "https://evdb.nz/v/kia-ev5"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "hyundai-elexio.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Elexio_003.jpg",
@@ -2033,23 +2017,31 @@
       "Distinctive, spacious interior with a flat floor and sliding rear seats",
       "Fast 800V charging architecture supports rapid top-ups on road trips",
       "Comfortable, grown-up highway ride with low wind and tyre noise",
-      "Ioniq 5 N offers genuine performance-car dynamics in a practical SUV body"
+      "Ioniq 5 N offers genuine performance-car dynamics in a practical SUV body",
+      "5-year unlimited-km warranty (7 years if every service is done at a Hyundai dealer), with the drive battery covered for 8 years / 160,000 km"
     ],
     "cons": [
       "Body control can feel loose and float-y over undulating roads at speed",
       "Real-world efficiency trails some rivals, particularly on the AWD and N variants",
       "Boot space is only average for the class",
-      "N Line Premium and N variants push well into luxury-car pricing territory"
+      "Premium N Line ($83,700) and N ($115,000) sit above the $75,000 FBT exemption cap that applies from April 2027, and the N also attracts luxury car tax"
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-news/2026-hyundai-ioniq-5-price-and-specs-smaller-battery-axed-in-reshuffled-range",
-      "https://www.carexpert.com.au/car-news/hyundai-kona-ioniq-5-ev-pricing-slashed-by-thousands",
-      "https://www.chasingcars.com.au/news/new-car-prices/prices-slashed-by-8000-for-hyundai-ioniq-5-and-kona-electric-as-cheaper-rivals-continue-to-flood-australias-ev-market/",
+      "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+      "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+      "https://www.hyundai.com/au/en/cars/eco/ioniq5n",
+      "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5n/images/Hyundai_2024_IONIQ_5N_Specifications.pdf",
+      "https://thebeep.com.au/car-news/2027-hyundai-kona-electric-ioniq-5-price-cut-australia",
+      "https://www.carexpert.com.au/hyundai/ioniq-5/2027-suv-rwd-electric-jsfsmfag20260601",
+      "https://www.carexpert.com.au/hyundai/ioniq-5/2027-elite-suv-rwd-electric-jsasa8fg20260601",
+      "https://www.carexpert.com.au/hyundai/ioniq-5/2027-n-line-premium-suv-4x4-electric-jsgfoaam20260601",
+      "https://carexpert.com.au/car-reviews/2026-hyundai-ioniq-5-review",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/hyundai-ioniq-5-2026-review/",
       "https://www.carexpert.com.au/car-reviews/2025-hyundai-ioniq-5-review",
-      "https://www.carsguide.com.au/hyundai/ioniq-5",
-      "https://www.carsales.com.au/research/hyundai/ioniq-5/2026/n-line-premium/"
+      "https://www.carsguide.com.au/car-news/big-shake-up-for-ballistic-ev-100279",
+      "https://ev-database.org/car/2236/Hyundai-IONIQ-5-84-kWh-RWD"
     ],
-    "sourcedAt": "2026-07-26",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "hyundai-ioniq-5.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_IAA_2021_1X7A0189.jpg",
@@ -2065,26 +2057,24 @@
       "478kW/770Nm with N Grin Boost and 0-100km/h in 3.2 seconds undercuts a BMW M3 ($169,100) and Mercedes-AMG C63 ($187,900) by more than $50,000",
       "487km WLTP range plus 800V charging at 10-80 per cent in 18 minutes makes it genuinely usable between track days, unlike most sub-$150k performance EVs",
       "N e-Shift simulated eight-speed and N Drift Optimiser give real driver involvement; CarExpert and Chasing Cars both rate its handling above the Ioniq 5 N",
-      "Warranty runs 7 years/unlimited km and explicitly covers non-competitive track use, with capped-price servicing around $1,312 over five years on 24-month/30,000km intervals"
+      "Hyundai's 7-year/unlimited-km warranty explicitly covers non-competitive track use, but only if every service is done on time at a Hyundai dealer (otherwise 5 years); the battery is covered for 8 years/160,000km, and capped-price servicing runs around $1,312 over five years on 24-month/30,000km intervals"
     ],
     "cons": [
-      "371-litre boot behind a structural brace, no frunk and a separate bootlid rather than a liftback - well short of a 524-litre Toyota Camry, and less usable than the Ioniq 5 N",
+      "371-litre boot behind a structural brace that makes folding the rear seats of little use, and a separate bootlid rather than a liftback - well short of a 524-litre Toyota Camry, and less usable than the Ioniq 5 N",
       "CarExpert recorded 22.0kWh/100km against the 18.7kWh/100km claim, cutting real touring range to roughly 380km on a 2166kg kerb weight",
       "Suspension transmits sharp edges and potholes into the cabin even on the softest damper setting, and rear headroom is a problem for anyone over about 190cm",
-      "At $115,000 before on-road costs it sits well above the $91,661 fuel-efficient threshold, so it cannot be novated FBT-exempt the way an $80,900 Tesla Model 3 Performance can",
+      "At $114,918 before on-road costs it sits well above the $91,661 fuel-efficient threshold, so it cannot be novated FBT-exempt the way an $80,900 Tesla Model 3 Performance can",
       "Hyundai has pulled every standard Ioniq 6 grade from sale in Australia, so there is no cheaper version to step down to and resale is exposed to an orphaned nameplate that was recently discounted by up to $34,142"
     ],
     "sources": [
+      "https://www.hyundai.com/au/en/cars/eco/ioniq6",
+      "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-6-n/docs/IONIQ-6-N-Specification-Sheet-MY27.pdf",
+      "https://www.carexpert.com.au/hyundai/ioniq-6/2027-n-sedan-4x4-electric-jskagwkw20261022",
+      "https://www.carexpert.com.au/hyundai/ioniq-6/2027",
       "https://www.carexpert.com.au/car-reviews/2026-hyundai-ioniq-6-n-review",
-      "https://www.chasingcars.com.au/reviews/sports-cars/hyundai-ioniq-6-n-2026-review/",
-      "https://www.carsguide.com.au/ev/hyundai-ioniq-6-n-101531",
-      "https://www.carsguide.com.au/car-news/work-to-do-standard-hyundai-ioniq-6-electric-car-pulled-from-sale-as-new-high-performance",
-      "https://www.carexpert.com.au/car-news/2026-hyundai-ioniq-6-n-price-and-specs",
-      "https://www.carexpert.com.au/car-news/hyundai-ioniq-6-facelift-delayed-but-hot-n-arriving-sooner",
-      "https://www.carsguide.com.au/hyundai/ioniq-6/price/2026",
-      "https://www.carexpert.com.au/car-news/hyundai-slashes-prices-across-its-ev-range"
+      "https://ev-database.org/car/3449/Hyundai-IONIQ-6-N"
     ],
-    "sourcedAt": "2026-07-27",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "hyundai-ioniq-6.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Hyundai_IONIQ_6_N_CE1_N_Black_Onetone_(10).jpg",
@@ -2095,85 +2085,90 @@
   },
   {
     "id": "hyundai-ioniq-9",
-    "summary": "Hyundai sells its three-row electric SUV in Australia as a single loaded Calligraphy grade, and reviewers agree it is the most convincing long-distance family EV on the market — 600km WLTP, 233kW DC charging and a third row adults actually fit in. The disagreement is entirely about price and polish: at $119,750 before on-roads it is the dearest car Hyundai has ever sold here, several thousand above a comparably equipped Kia EV9, and testers split over whether the firm 21-inch ride and a cabin borrowed from much cheaper Hyundais justify it. Real-world efficiency reports vary widely, from about 12.7kWh/100km around town to 23.4kWh/100km on country touring.",
+    "summary": "Hyundai sells its three-row electric SUV in Australia as a single loaded Calligraphy grade, and reviewers agree it is the most convincing long-distance family EV on the market — 600km WLTP, 233kW DC charging and a third row adults can actually use. The disagreement is entirely about price and polish: at $119,668 before on-roads for the 2027 model year it is the dearest car Hyundai sells here, well above a comparably equipped Kia EV9 Earth, and testers split over whether the firm 21-inch ride and a cabin borrowed from much cheaper Hyundais justify it. Real-world efficiency reports vary widely, from about 12.7kWh/100km around town to 23.4kWh/100km on country touring, with Chasing Cars recording 20.8kWh/100km on its launch drive.",
     "pros": [
-      "600km WLTP range from the 110.3kWh pack is the longest claim of any three-row EV sold here — about 80km more than a Kia EV9 Earth and 95km more than an EV9 GT-Line",
-      "800V E-GMP charging takes 10-80 per cent in about 24 minutes, and Australian testers have measured over 200kW against the 233kW peak",
+      "600km WLTP range from a 110.3kWh pack (about 106kWh usable) is the longest claim among the three-row EVs sold here, roughly 90km more than a Kia EV9 AWD grade",
+      "800V E-GMP charging takes 10-80 per cent in about 24 minutes at up to 233kW, and Australian testers have measured over 200kW",
       "Rated to tow 2500kg braked with trailer pre-wiring and Trailer Stability Assist standard, matching the EV9 and beating most large EVs",
       "Third row seats adults rather than children — a 175cm CarsGuide tester fit comfortably — with its own climate zone, reclining backrests and USB-C outlets",
       "One grade means no upselling: Nappa leather, 14-speaker Bose, heat pump, head-up display, surround-view and Highway Driving Assist 2 are all standard"
     ],
     "cons": [
-      "At $119,750 plus on-road costs it clears both the $75,000 and $91,661 FBT caps, so there is no novated-lease exemption, and a Kia EV9 Earth covers the same brief for $13,250 less",
-      "Hyundai's unconditional cover is five years/unlimited km — the advertised seven years lapses unless every service is done inside the Hyundai dealer network, where Kia's seven years has no such condition",
+      "At $119,668 plus on-road costs it clears both the $75,000 and $91,661 FBT caps, so there is no novated-lease exemption, and a Kia EV9 Earth covers the same brief for about $13,000 less",
+      "Hyundai's unconditional cover is five years/unlimited km — the advertised seven years lapses unless every scheduled service is done at an authorised Hyundai dealer, where Kia's seven years has no such condition; the battery is covered for 8 years/160,000km",
       "Only one battery and one drivetrain are offered, with no cheaper rear-drive entry point; the six-seat layout ($2,000) and digital side mirrors ($3,000) are options, not lower-priced grades",
       "338 litres behind the third row is modest for a 5.06m, 2.7-tonne vehicle, and there is no spare wheel at any price — only a tyre mobility kit"
     ],
     "sources": [
-      "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-Sheet.pdf",
-      "https://www.chasingcars.com.au/reviews/large-suvs/hyundai-ioniq-9-calligraphy-2025-australian-first-drive/",
+      "https://www.hyundai.com/au/en/cars/eco/ioniq9",
+      "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-9-2025/docs/Hyundai-IONIQ-9-Specification-sheet-my27.pdf",
+      "https://www.hyundai.com/au/en/owning/warranty",
+      "https://www.carsguide.com.au/hyundai/ioniq-9/price/2027",
       "https://www.carsguide.com.au/ev/hyundai-ioniq-9-99256",
-      "https://www.carsales.com.au/editorial/details/hyundai-ioniq-9-calligraphy-2025-review-150105/",
-      "https://evcentral.com.au/hyundai-ioniq-9-pricing-and-spec-announced-electric-family-suv-will-be-offered-in-australia-as-one-expensive-model/",
-      "https://thedriven.io/2025/07/16/ioniq-9-hyundai-announces-pricing-for-its-biggest-and-most-expensive-ev-to-date/",
-      "https://www.carexpert.com.au/hyundai/ioniq-9/pricing"
+      "https://www.chasingcars.com.au/reviews/large-suvs/hyundai-ioniq-9-calligraphy-2025-australian-first-drive/",
+      "https://www.carexpert.com.au/car-news/2025-hyundai-ioniq-9-price-and-specs",
+      "https://ev-database.org/car/3069/Hyundai-IONIQ-9-Performance-AWD"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-kona-electric",
-    "summary": "Australian reviewers see the Kona Electric as a competent, easy-to-live-with small SUV with genuinely spacious packaging and a comfortable, relaxed ride around town, backed by Hyundai's dealer network. The Extended Range base grade is widely rated the pick of the range as strong value, while the Standard Range's real-world range and slow 100kW charging are seen as behind newer rivals, and the step up to Premium is questioned as not clearly worth the extra outlay. Recent price cuts of roughly $8,000 across the range have sharpened its position against cheaper Chinese EVs without changing the fundamental verdict: a sound, unexciting choice rather than a class leader.",
+    "summary": "Australian reviewers see the Kona Electric as a competent, easy-to-live-with small SUV with genuinely spacious packaging and a comfortable, relaxed ride around town, backed by Hyundai's dealer network. The Extended Range base grade is widely rated the pick of the range for value, while the Standard Range's 370km WLTP range and slow 100kW charging are seen as behind newer rivals, and the MY27 Standard Range also lost its heat pump and interior V2L outlet to hit its price. Permanent cuts of $8,000 in June 2026, plus a new $53,000 Elite slotted between Extended Range and Premium, have sharpened its position against cheaper Chinese EVs without changing the fundamental verdict: a sound, unexciting choice rather than a class leader.",
     "pros": [
       "Spacious, well-packaged interior for the class, with strong rear legroom and a rare space-saver spare wheel",
       "Comfortable, well-damped ride that soaks up potholes and speed bumps around town",
       "Easy-to-use dual-screen infotainment with thoughtful right-hand-drive ergonomics",
-      "Extended Range grade seen by reviewers as strong value following 2026 price cuts, undercutting the Premium by around $10,000 for similar underlying capability"
+      "Extended Range grade ($50,000 before on-roads) undercuts the Premium by $10,000 with the same 64.8kWh battery, and its 17-inch wheels give the range's best 505km WLTP figure",
+      "Warranty extends from 5 to 7 years with unlimited km if every scheduled service is done at a Hyundai dealer; the drive battery is covered for 8 years/160,000km, and 64.8kWh grades are rated to tow 750kg braked"
     ],
     "cons": [
-      "Standard Range's real-world range (around 350km) looks light for a modern EV, especially for interstate trips",
-      "100kW DC fast-charging trails newer 800V rivals and is described by reviewers as not great for the segment",
-      "Chassis gets bouncy and less composed at highway speed or when pushed harder",
-      "Premium trim's price premium over Extended Range is questioned as not clearly justified by the added equipment"
+      "Standard Range's 370km WLTP range looks light for a modern EV, and for MY27 it loses the heat pump (hurting cold-weather range), interior V2L and portable charging cable, and is not rated to tow",
+      "100kW DC fast-charging (10-80% in about 45 minutes) trails newer 800V rivals and is described by reviewers as not great for the segment",
+      "Chassis gets bouncy and less composed over large crests and dips at highway speed",
+      "The 19-inch wheels on Elite, Premium and Premium N Line cut WLTP range from 505km to 444km, and the Premium's $7,000 step over the Elite is questioned as not clearly justified"
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-reviews/2024-hyundai-kona-electric-premium-review",
-      "https://www.carsales.com.au/editorial/details/hyundai-kona-electric-standard-range-2026-review-151240/",
+      "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+      "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
       "https://www.carexpert.com.au/car-news/hyundai-kona-ioniq-5-ev-pricing-slashed-by-thousands",
       "https://www.chasingcars.com.au/news/new-car-prices/prices-slashed-by-8000-for-hyundai-ioniq-5-and-kona-electric-as-cheaper-rivals-continue-to-flood-australias-ev-market/",
-      "https://www.gridly.com.au/blog/hyundai-kona-electric-review-australia-2026"
+      "https://thebeep.com.au/car-news/2027-hyundai-kona-electric-ioniq-5-price-cut-australia",
+      "https://www.carexpert.com.au/car-reviews/2024-hyundai-kona-electric-premium-review"
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "jaecoo-j5-ev",
-    "summary": "The Jaecoo J5 EV is the battery-electric member of Chery's Jaecoo J5 small-SUV line, sold in Australia in a single fully-loaded EV Summit grade alongside separate petrol and hybrid J5s that share the body but not the drivetrain. Australian reviewers rate it as one of the cheapest ways into a well-equipped electric SUV, praising the 130kW DC charging, the eight-year warranty and a $1,520 eight-year servicing bill, while splitting sharply over how it drives. Testers who liked the neutral suspension tune still found real-world consumption in the mid-to-high teens, which puts genuine range nearer 350km than the 402km WLTP claim.",
+    "summary": "The Jaecoo J5 EV is the battery-electric member of Chery's Jaecoo J5 small-SUV line, sold in Australia in a single fully-loaded EV Summit grade alongside separate petrol and hybrid J5s that share the body but not the drivetrain. Australian reviewers rate it as one of the cheapest ways into a well-equipped electric SUV, praising the 130kW DC charging, the eight-year warranty and a $1,520 eight-year servicing bill, while splitting over how it drives: Chasing Cars found the ride absorbent where others called it sharp, and most criticise the steering, brake feel and throttle calibration. Testers saw real-world consumption between about 14.7 and 17.5kWh/100km, which puts genuine range nearer 340-350km than the 399km WLTP figure for the UK-market twin on the same pack and 18-inch tyres.",
     "pros": [
-      "Cheapest end of the electric small-SUV class at $35,990 before on-road costs, and Jaecoo has run a flat $36,990 national drive-away offer continuously since launch — which is around $1,400 less than the Victorian on-roads would otherwise cost",
-      "130kW DC peak charging and 10.3kW three-phase AC, both well ahead of the 80kW-class Chery E5 it shares a 58.9kWh LFP pack with",
-      "Eight-year unlimited-kilometre vehicle warranty and a separate eight-year unlimited-kilometre high-voltage battery warranty, with eight years of capped-price servicing totalling $1,520; roadside assistance also runs to eight years but only if renewed at each scheduled service at an authorised Jaecoo dealer",
-      "Rated to tow 1,250kg braked on the manufacturer's own spec sheet — double the 750kg most cheap Chinese electric SUVs, including the Chery E5, BYD Atto 2 and GWM Ora 5, are limited to",
-      "Unusually complete equipment for the money: powered and heated/ventilated front seats, 360-degree camera, powered tailgate, glass roof, 50W wireless charging and a 13.2-inch screen, all standard on the only grade"
+      "Cheapest end of the electric small-SUV class at Jaecoo's own recommended retail price of $35,990 before on-road costs, and a $36,990 national drive-away offer has been rolled over since launch (the current one runs to 30 November 2026), about $1,400 under the roughly $38,400 Victorian drive-away the list price implies",
+      "Novated-lease buyers get a standing 10% national fleet discount off the $35,990 recommended retail price through an approved fleet management organisation, on top of the BEV FBT exemption",
+      "130kW DC peak charging (30-80% in about 28 minutes) and 10.3kW three-phase AC, both well ahead of the 80kW-class Chery E5 it shares a 58.9kWh-usable LFP pack with",
+      "Eight-year unlimited-kilometre vehicle and high-voltage battery warranty, conditional only on servicing to the manufacturer's schedule, with eight years of capped-price servicing totalling $1,520; roadside assistance also runs to eight years but only if renewed at each scheduled service at an authorised Jaecoo dealer",
+      "Rated to tow 1,250kg braked on the manufacturer's own spec sheet, against the 750kg of most cheap Chinese electric SUVs including the Chery E5, BYD Atto 2 and GWM Ora 5"
     ],
     "cons": [
-      "Real-world consumption of mid-to-high teens kWh/100km against a 14.3kWh/100km claim leaves usable range around 350km, roughly 50km short of the WLTP figure",
-      "Front-drive chassis struggles to deploy 155kW/288Nm: reviewers report wheelspin and pronounced torque steer under moderate throttle, plus very light steering and an inconsistent brake pedal with a delay in the regenerative blending",
-      "Ride is criticised as sharp over coarse or broken bitumen despite the otherwise neutral tune, and the 235/55 R18 tyres carry a repair kit rather than a spare — the closely related Chery E5 gets a spare",
-      "No ANCAP rating as at July 2026; Jaecoo says it expects five stars but the car is untested, unlike the BYD Atto 2 and Kia EV3 it is cross-shopped against",
-      "Jaecoo is a 2025-vintage nameplate in Australia with no resale, parts or reliability record, and the permanent drive-away discounting works against used values"
+      "Real-world consumption well above the rating: CarExpert saw 14.7kWh/100km, Chasing Cars 17.5kWh/100km and a 337km real-world range, against 399km WLTP",
+      "Front-drive chassis is unresolved: reviewers report very light steering with little self-centring, a squishy brake pedal with weak regeneration, an abrupt throttle at 60-80km/h and, on some test cars, torque steer under moderate throttle",
+      "Ride divides reviewers (absorbent to Chasing Cars, sharp over coarse bitumen to others), and the 235/55 R18 tyres carry a repair kit rather than a spare, where the closely related Chery E5 gets one",
+      "No ANCAP rating: reviewers at launch reported it untested, unlike the BYD Atto 2 and Kia EV3 it is cross-shopped against",
+      "Jaecoo is a 2025-vintage nameplate in Australia with no resale, parts or reliability record, and rolling drive-away campaigns work against used values"
     ],
     "sources": [
       "https://www.omodajaecoo.com.au/models/jaecoo-j5-bev",
+      "https://www.omodajaecoo.com.au/j5-build-your-own",
       "https://www.omodajaecoo.com.au/buying/offers",
       "https://www.omodajaecoo.com.au/sites/default/files/2026-05/Spec25_Jaecoo_J5_Spec_Sheet_AU_BEV_v101_compressed_compressed.pdf",
-      "https://www.carexpert.com.au/car-news/2026-jaecoo-j5-ev-price-and-specs-small-suv-undercuts-rivals-by-thousands",
+      "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
       "https://www.carexpert.com.au/car-reviews/2026-jaecoo-j5-ev-review",
+      "https://www.carexpert.com.au/car-news/2026-jaecoo-j5-ev-price-and-specs-small-suv-undercuts-rivals-by-thousands",
+      "https://www.chasingcars.com.au/reviews/small-cars/jaecoo-j5-ev-summit-2026-review/",
       "https://www.carsguide.com.au/ev/jaecoo-j5-ev-100610",
-      "https://www.carsales.com.au/editorial/details/jaecoo-j5-ev-2026-review-151877/",
-      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-jaecoo-j5-ev-price-specs-release-date.html",
-      "https://www.mynrma.com.au/open-road/car-reviews/jaecoo/2026-jaecoo-j5-ev-review",
-      "https://thedriven.io/2026/05/03/omoda-jaecoo-extends-amazing-j5-ev-36990-driveaway-price-to-eofy/"
+      "https://www.carsguide.com.au/jaecoo/j5/price/2027",
+      "https://jaecoo.co.uk/jaecoo-5/",
+      "https://ev-database.org/uk/car/3336/Jaecoo-E5"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "jaecoo-j5-ev.webp",
       "source": "https://commons.wikimedia.org/wiki/File:2025_Jaecoo_5_EV_Max_(Thailand)_rear_view.png",
@@ -2221,41 +2216,36 @@
   },
   {
     "id": "jaecoo-j8-shs",
-    "summary": "The J8 SHS Summit is Jaecoo's flagship and its first car above $50,000: a single $59,990 seven-seat plug-in hybrid with a 34.5kWh battery, 315kW/580Nm from a 1.5-litre turbo and three motors, and a 70-litre tank that stretches combined range past 1,100km. Australian reviewers agree the equipment list and the electric range are extraordinary for the money — CarExpert measured 124km on a charge against a 134km WLTP figure — and equally agree the chassis is the weak point, describing a floaty, under-damped ride, heavy body roll and steering with no meaningful feel, none of it locally tuned. The third row is the other consistent objection: it is a 5+2 with no airbag coverage, no ISOFIX and roadside-only access, where the BYD Sealion 8 gives you all three.",
+    "summary": "The J8 SHS Summit is Jaecoo's flagship and its first car above $50,000: a single $59,990 (before on-road costs) seven-seat plug-in hybrid with a 34.5kWh battery, 315kW/580Nm from a 1.5-litre turbo and three motors, and a 70-litre tank that stretches combined range past 1,100km. Australian reviewers agree the equipment list and the electric range are extraordinary for the money — CarExpert measured 124km on a charge against a 134km WLTP figure — and equally agree the chassis is the weak point, describing a floaty, under-damped ride, heavy body roll and steering with no meaningful feel, none of it locally tuned. The third row is the other consistent objection: it is a 5+2 with no airbag coverage, no ISOFIX and roadside-only access, where the BYD Sealion 8 gives you all three.",
     "pros": [
-      "134km of WLTP electric range from a 34.5kWh usable battery — roughly double the BYD Sealion 8's electric range and enough that most owners will only burn petrol on trips, with CarExpert observing 124km from a full charge in Australian conditions",
+      "134km of WLTP electric range from a 34.5kWh battery — roughly double the BYD Sealion 8's electric range and enough that most owners will only burn petrol on trips, with CarExpert observing 124km from a full charge in Australian conditions",
       "70kW DC fast charging plus 6.6kW AC, where the BYD Sealion 8, Mitsubishi Outlander PHEV and Mazda CX-80 PHEV have no DC capability at all, so a mid-trip top-up takes about 25 minutes rather than an overnight plug-in",
       "Eight-year/unlimited-kilometre vehicle warranty with no dealer-servicing exclusivity condition, matched by an eight-year unlimited-kilometre high-voltage battery warranty guaranteeing 70 per cent residual capacity, and eight years of capped-price servicing averaging about $485 a year",
-      "315kW/580Nm and a claimed 5.8-second 0-100km/h make it quicker than a Sealion 8 Premium AWD while towing 1600kg braked, and at $59,990 it sits $24,000 below the fuel-efficient LCT threshold so no luxury car tax applies",
+      "315kW/580Nm and a claimed 5.8-second 0-100km/h make it quicker than a Sealion 8 Premium AWD while towing 1600kg braked, and at $59,990 before on-roads it sits more than $30,000 below the fuel-efficient LCT threshold so no luxury car tax applies",
       "2021 litres of cargo space with both rear rows folded, and a 738-litre load bay with just the third row down — genuinely van-like for a $60,000 seven-seater"
     ],
     "cons": [
-      "Only 200 litres behind the third row when all seven seats are in use — less than a Toyota Corolla's boot, and well down on the Sealion 8's 270 litres, so it cannot carry seven people and their luggage",
+      "Only 200 litres behind the third row measured to the roof, and about 110 litres to the cargo cover, when all seven seats are in use — well down on the Sealion 8's 270 litres, so it cannot carry seven people and their luggage",
       "The 1.2L/100km ADR combined label is meaningless as a running cost: CarExpert measured 6.6L/100km once the battery was flat and closer to 10L/100km in stop-start city driving, so a buyer without home charging is running a 2275kg SUV on a 1.5-litre engine at large-petrol-SUV consumption",
       "Reviewers are unanimous on the chassis — CarsGuide calls the ride wallowy and floaty with excessive bounce over speed bumps, carsales criticises the body roll, vague steering and poor bump absorption, and EV Central found the steering too light for anything but town work; there is no Australian suspension tuning",
       "The third row has no airbag coverage and no child-seat anchor points, headroom suits nobody taller than an average 10-year-old, and the single-fold middle seat is on the traffic side rather than the kerb side — the Sealion 8 offers third-row ISOFIX and dedicated rear climate controls",
       "Jaecoo's electric range is quoted only as 169km NEDC in Australia, with no local WLTP homologation published; the 134km figure here comes from the identical UK-market Jaecoo 8 SHS-P, and the brand's Australian resale record above $50,000 is entirely unproven"
     ],
     "sources": [
+      "https://www.omodajaecoo.com.au/models/jaecoo-j8-shs",
+      "https://www.omodajaecoo.com.au/j8-shs-build-your-own",
+      "https://www.omodajaecoo.com.au/sites/default/files/2026-07/230_25_Jaecoo_J8_Spec_Sheet_AU_SHS%20UPDATES_v0.2.pdf",
+      "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
       "https://www.carexpert.com.au/car-news/2026-jaecoo-j8-shs-prices-chinese-large-suv-gets-seven-seats-phev-powertrain",
       "https://www.carexpert.com.au/car-reviews/2026-jaecoo-j8-shs-review",
-      "https://www.carexpert.com.au/car-news/2026-jaecoo-j8-price-and-specs",
-      "https://www.carsguide.com.au/ev/jaecoo-j8-summit-shs-102208",
-      "https://www.carsguide.com.au/jaecoo/j8/fuel-consumption",
+      "https://www.carsguide.com.au/jaecoo/j8/price/2027",
       "https://www.carsguide.com.au/jaecoo/j8/boot-space",
-      "https://www.carsales.com.au/editorial/details/jaecoo-j8-summit-shs-2026-review-152515/",
-      "https://www.carsales.com.au/research/jaecoo/j8/2026/shs-summit/",
-      "https://www.carsales.com.au/editorial/details/2026-jaecoo-j8-summit-shs-inbound-152372/",
-      "https://evcentral.com.au/2026-jaecoo-j8-shs-priced-for-australia-315kw-seven-seat-plug-in-hybrid-suv-arrives-to-take-on-byd-sealion-8-toyota-kluger-and-many-many-more/",
-      "https://evcentral.com.au/2026-jaecoo-j8-shs-phev-brief-drive-with-such-luxe-features-should-you-care-how-it-drives/",
-      "https://www.omodajaecoo.com.au/models/jaecoo-j8-shs",
-      "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+      "https://jaecoo.co.uk/jaecoo-8/",
+      "https://www.carwow.co.uk/jaecoo/8/specifications",
       "https://www.autoexpress.co.uk/jaecoo/8",
-      "https://www.carwow.co.uk/jaecoo/8",
-      "https://www.electrifying.com/reviews/jaecoo/8-1/review",
-      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+      "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "jaecoo-j8-shs.webp",
       "source": "https://commons.wikimedia.org/wiki/File:2024_Jaecoo_J8_grey_rear.jpg",
@@ -2418,10 +2408,10 @@
   },
   {
     "id": "kia-ev4",
-    "summary": "Kia's first electric sedan takes the EV3's E-GMP hardware and wraps it in a low, long four-door body, arriving at $49,990 before on-roads to sit just under the cheapest Tesla Model 3. Australian reviewers are near-unanimous on the ride and steering — several rate the chassis above cars costing far more — and on the frugality, with independent testing returning under 14kWh/100km. Where they part company is value: the Air is criticised as sparsely equipped and plasticky for the money, and the 612km battery cannot be had below $59,190 because there is no Air Long Range.",
+    "summary": "Kia's first electric sedan takes the EV3's E-GMP hardware and wraps it in a low, long four-door body, with MY27 pricing from $50,040 before on-roads: $4,860 under the Tesla Model 3 RWD but above the $45,900 entry Model 3. Australian reviewers are near-unanimous on the ride and steering — several rate the chassis above cars costing far more — and on the frugality, with independent testing returning under 14kWh/100km. Where they part company is value: the Air is criticised as sparsely equipped and plasticky for the money, and the 612km battery cannot be had below $59,240 because there is no Air Long Range.",
     "pros": [
-      "Air Standard Range lists at $49,990 before on-road costs, $4910 under the cheapest Tesla Model 3 and level with a BYD Seal",
-      "Long Range grades claim 612km WLTP from 81.4kWh, and testers recorded 13.7-13.9kWh/100km in the real world — better than the 14.9 claim",
+      "Air Standard Range lists at $50,040 before on-road costs, $2,950 under a BYD Seal Premium and $4,860 under a Tesla Model 3 RWD",
+      "Long Range grades claim 612km WLTP from a 78kWh usable pack (81.4kWh nominal), and testers recorded 13.7-13.9kWh/100km in the real world — better than the 14.9 claim",
       "Ride and steering are the review consensus high point; CarExpert rated the passive damping better resolved than many luxury cars",
       "Kia's 7-year/unlimited-km warranty is unconditional (no dealer-servicing strings), and 7 years of capped-price servicing totals $1929",
       "490L boot opening out to 1435L with the rear seats folded, and 1000kg braked towing on both Long Range grades"
@@ -2429,19 +2419,23 @@
     "cons": [
       "400V architecture peaks near 128kW, so a 10-80% DC stop takes about 31 minutes — well behind the 800V Ioniq 6 and EV6",
       "Headroom is tight in both rows: a 185cm-plus reviewer sat close to the roof front and rear, a consequence of the low sedan roofline",
-      "No Air Long Range on the Australian price list, so the 612km battery costs a $9200 jump to the $59,190 Earth",
+      "No Air Long Range on the Australian price list, so the 612km battery costs a $9,200 jump to the $59,240 Earth",
       "Blind Spot View Monitor and the surround-view camera are GT-Line only, and the Air also goes without powered front seats or wireless phone charging",
       "Reviewers flag hard plastics and a 150kW front-drive powertrain (7.4-7.8sec to 100km/h) that runs out of puff on uphill highway overtakes"
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-news/2026-kia-ev4-prices-new-ev-sedan-undercuts-tesla-model-3-in-australia",
+      "https://www.carexpert.com.au/kia/ev4/2027-air-sedan-fwd-electric-jsk8aok820260812",
+      "https://www.carexpert.com.au/kia/ev4/2027-earth-sedan-fwd-electric-jsk8aoka20260812",
+      "https://www.carexpert.com.au/kia/ev4/2027-gt-line-sedan-fwd-electric-jsk8aok520260812",
+      "https://www.carsguide.com.au/kia/ev4/price/2027",
       "https://www.carexpert.com.au/car-reviews/2026-kia-ev4-review",
-      "https://www.carsguide.com.au/kia/ev4/price/2026",
-      "https://www.carsales.com.au/editorial/details/kia-ev4-2026-review-151298/",
-      "https://www.chasingcars.com.au/reviews/large-cars/kia-ev4-gt-line-2026-review/",
-      "https://www.carexpert.com.au/car-news/2026-kia-ev4-gt-sedan-revealed"
+      "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+      "https://www.kia.com/au/cars/ev4.html",
+      "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev4-sedan.html",
+      "https://ev-database.org/car/3121/Kia-EV4-Fastback-583-kWh",
+      "https://ev-database.org/car/3122/Kia-EV4-Fastback-814-kWh"
     ],
-    "sourcedAt": "2026-07-30",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "kia-ev4.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Kia_EV4_GT-Line_Automesse_Ludwigsburg_2025_DSC_2535.jpg",
@@ -2489,27 +2483,29 @@
   },
   {
     "id": "kia-ev6",
-    "summary": "The facelifted 2026 Kia EV6 remains one of the most engaging mid-size electric SUVs to drive, with Australian reviewers rating its handling and steering among the best of any EV regardless of price, backed by rapid 800V DC charging and a now-uniform 84kWh battery that lifts range across every grade. It reads more as an electric grand tourer than a family hauler, though: reviewers consistently flag a smaller-than-expected boot, tight rear headroom and a busy low-speed ride, and note the range is priced at a premium against newer rivals, with the flagship GT landing well clear of the top FBT exemption threshold.",
+    "summary": "The facelifted Kia EV6, now in MY27 form, remains one of the most engaging mid-size electric SUVs to drive, with Australian reviewers rating its handling and steering among the best of any EV regardless of price, backed by rapid 800V DC charging and a uniform 84kWh battery across every grade. It reads more as an electric grand tourer than a family hauler, though: reviewers consistently flag a smaller-than-expected boot, tight rear headroom and a busy low-speed ride, and note the range is priced at a premium against newer rivals, with the flagship GT landing well clear of the top FBT exemption threshold.",
     "pros": [
       "Genuinely excellent handling and steering feel, rated by multiple reviewers among the best-driving EVs at any price",
-      "800V architecture enables very fast DC charging, around 10-80% in 18 minutes",
-      "Larger 84kWh battery lifts WLTP range across the range, up to 582km on the entry Air RWD",
-      "Strong 7-year/unlimited-km vehicle warranty with 7-year/150,000km high-voltage battery cover"
+      "800V architecture enables very fast DC charging, around 10-80% in 18 minutes on a 350kW charger",
+      "84kWh battery gives strong WLTP range, up to 582km on the entry Air RWD and 560km on the GT-Line RWD",
+      "1,800kg braked towing on every grade, plus Kia's 7-year/unlimited-km vehicle warranty"
     ],
     "cons": [
-      "480L boot trails key rivals such as the Ford Mustang Mach-E despite premium pricing",
+      "480-490L boot trails key rivals such as the Ford Mustang Mach-E, the Hyundai Ioniq 5 and even the cheaper Kia EV5",
       "Tight rear headroom and harder rear-seat plastics let down an otherwise upmarket cabin",
       "Speed-limit and driver-attention warnings are persistent and reset every drive",
-      "Priced above many rivals, with GT-Line and GT grades pushing well past the $75,000 FBT threshold and the GT AWD clearing $91,661 outright"
+      "Priced above many rivals: every grade above the Air ($72,865) sits past the $75,000 FBT threshold, and the $99,865 GT AWD clears $91,661 outright"
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-news/2026-kia-ev6-pricing-minor-price-increases-for-overhauled-ev",
+      "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+      "https://www.carexpert.com.au/kia/ev6/2027-air-suv-rwd-electric-jsf5wasm20260818",
+      "https://www.carexpert.com.au/kia/ev6/2027-gt-line-suv-rwd-electric-jsf5waso20260818",
+      "https://www.carsguide.com.au/kia/ev6/price/2026/gt-awd",
       "https://www.carexpert.com.au/car-news/2026-kia-ev6-price-and-specs",
       "https://www.carexpert.com.au/car-reviews/2026-kia-ev6-review",
-      "https://www.chasingcars.com.au/reviews/sports-suvs/kia-ev6-gt-line-rwd-2026-review/",
-      "https://www.carsguide.com.au/ev/kia-ev6-gt-line-rwd-101173"
+      "https://ev-database.org/imp/car/3028/Kia-EV6-Long-Range-2WD"
     ],
-    "sourcedAt": "2026-07-26",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "kia-ev6.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Kia_EV6_GT_IMG_8171.jpg",
@@ -2525,7 +2521,7 @@
       "Spacious, genuinely adult-friendly third row that few seven-seat EV rivals match",
       "Fast 800V architecture supports rapid DC charging, useful for family road trips",
       "High-quality, feature-rich interior with strong safety tech across the range",
-      "Strong 7-year/unlimited-km warranty backing the whole lineup"
+      "7-year/unlimited-km warranty across the whole lineup, two years longer than the Hyundai Ioniq 9's 5 years"
     ],
     "cons": [
       "Every variant is priced above the FBT exemption threshold, eroding novated lease appeal",
@@ -2534,12 +2530,15 @@
       "GT flagship commands a large premium mainly for extra performance few buyers will use"
     ],
     "sources": [
-      "https://thedriven.io/2026/02/17/2026-kia-ev9-pricing-reveals-new-top-trim-starts-at-129250/",
-      "https://www.chasingcars.com.au/news/electric-vehicles/kia-ev9-2026-flagship-gt-performance-suv-priced-at-129250-in-australia/",
-      "https://www.carexpert.com.au/kia/ev9",
-      "https://www.carsguide.com.au/kia/ev9"
+      "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+      "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev9.html",
+      "https://www.carexpert.com.au/car-news/2026-kia-ev9-hot-gt-arrives-as-korean-brands-priciest-model-ever",
+      "https://www.carexpert.com.au/kia/ev9/2027",
+      "https://www.carsguide.com.au/kia/ev9/price/2026/gt",
+      "https://www.carsguide.com.au/kia/ev9/price/2027",
+      "https://ev-database.org/car/1835/Kia-EV9-998-kWh-AWD"
     ],
-    "sourcedAt": "2026-07-26",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "kia-ev9.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Kia_EV9_1X7A2472.jpg",
@@ -2550,36 +2549,40 @@
   },
   {
     "id": "kia-sorento-phev",
-    "summary": "The Sorento plug-in hybrid is a genuinely large seven-seater with about 58km of WLTP electric range, and for 2026 Kia finally broadened it from a single GT-Line grade to a four-grade walk opening at $70,880. Australian reviewers consistently like the way it drives and rate the charge-sustaining economy — roughly 6.4-6.5L/100km once the battery is flat, which is real hybrid territory — but they are close to unanimous that the value case is thin, with the GT-Line asking around $17,500 more than the equivalent diesel and $12,500 more than the equivalent hybrid. The recurring complaints are structural rather than cosmetic: 3.3kW AC-only charging with no DC option, a 175-litre boot with the third row up, and a braked tow rating cut to 1010kg.",
+    "summary": "The Sorento plug-in hybrid is a genuinely large seven-seater with 55km of WLTP electric range, offered in a four-grade AWD walk from $71,175 for the MY27 update. Australian reviewers consistently like the way it drives and the charge-sustaining economy — roughly 6.4-6.5L/100km in their flat-battery tests (7.5L/100km on the European battery-empty WLTP cycle) — but they are close to unanimous that the value case is thin, with the GT-Line asking around $16,500 more than the equivalent diesel and $11,500 more than the equivalent AWD hybrid. The recurring complaints are structural rather than cosmetic: 3.3kW AC-only charging with no DC option, a 175-litre boot with the third row up, and a braked tow rating cut to 1010kg.",
     "pros": [
       "One of only two seven-seat plug-in hybrids on sale in Australia under $90,000 — the Mitsubishi Outlander Aspire is the other, while the BYD Sealion 6, Mazda CX-60 PHEV and Ford Ranger PHEV are all five-seat — and unlike the Outlander's children-only third row this is a full-size large SUV body",
       "Charge-sustaining economy is genuinely good for a 2.1-tonne seven-seater: CarExpert measured 6.5L/100km and Carscoops 6.4L/100km over a week without plugging in, so the car still behaves like a proper hybrid when the battery is empty rather than reverting to petrol-SUV consumption",
-      "Kia's seven-year, unlimited-kilometre warranty is unconditional — it is not tied to servicing inside the Kia dealer network, unlike the conditional 10-year offers from Mitsubishi and MG — and the high-voltage battery carries its own separate seven-year/150,000km cover",
-      "For 2026 the PHEV is no longer GT-Line-only: S, Sport, Sport+ and GT-Line are all offered in AWD, each priced exactly $11,500 above the equivalent all-wheel-drive hybrid grade, so a buyer can get the plug-in drivetrain from $70,880 instead of being forced into the $86,790 flagship",
-      "Real-world electric range holds up against the claim — CarExpert saw 55km and Carscoops comfortably over 50km against the 58km WLTP figure — which covers a typical Melbourne school run and commute without starting the engine"
+      "Kia's seven-year, unlimited-kilometre warranty is unconditional — it is not tied to servicing inside the Kia dealer network, unlike the conditional 10-year offers from Mitsubishi and MG — and the high-voltage battery carries its own separate eight-year/160,000km cover",
+      "The PHEV is no longer GT-Line-only: S, Sport, Sport+ and GT-Line are all offered in AWD, each priced exactly $11,500 above the equivalent all-wheel-drive hybrid grade, so a buyer can get the plug-in drivetrain from $71,175 instead of being forced into the $86,115 flagship",
+      "Real-world electric range holds up against the claim — CarExpert saw 55km and Carscoops comfortably over 50km against the 55km WLTP figure — which covers a typical Melbourne school run and commute without starting the engine"
     ],
     "cons": [
       "Charging is AC-only and capped at 3.3kW through a Type 2 port, with no DC fast-charging at all; Kia quotes 3 hours 26 minutes for 15-95 per cent, so a driver who cannot charge overnight at home has no practical way to keep the battery full",
-      "The 1.6L/100km label figure is meaningless in normal use: Carscoops recorded 6.4L/100km without charging against 6.0L/100km for the Sorento diesel, meaning an unplugged PHEV is slightly worse on fuel than the diesel it costs about $17,500 more than",
+      "The 1.6L/100km label figure is meaningless in normal use: Carscoops recorded 6.4L/100km without charging against 6.0L/100km for the Sorento diesel, meaning an unplugged PHEV is slightly worse on fuel than the diesel it costs about $16,500 more than at GT-Line level",
       "Boot space with all three rows up drops to 175 litres because the battery sits under the second-row seat, down from 187 litres in the petrol and diesel Sorento, and the curtain airbags still do not extend to the third row",
       "Braked towing was cut to 1010kg for the facelifted PHEV (down from 1350kg previously, and against 2000kg for the Sorento diesel), which rules out most camper trailers and is the single spec reviewers flag as a deal-breaker for towing families",
       "Running costs are higher than the badge suggests: it requires 95 RON premium unleaded, and servicing falls due every 12 months or 10,000km at roughly $705-$765 a visit, short intervals for a family SUV"
     ],
     "sources": [
+      "https://www.carexpert.com.au/kia/sorento/2027/price-and-specs",
+      "https://www.carexpert.com.au/kia/sorento/2027-s-1-6l-suv-4x4-electric-jsk5f8gw20260515",
+      "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
       "https://www.carexpert.com.au/car-news/2026-kia-sorento-price-and-specs",
       "https://www.carexpert.com.au/car-news/kia-sorento-hybrid-and-phev-lineups-expand-with-cheaper-entry-level-grades",
       "https://www.carexpert.com.au/car-news/2025-kia-sorento-phev-price-rises-scores-cleaner-plug-in-system",
       "https://www.carexpert.com.au/car-reviews/2025-kia-sorento-gt-line-phev-review",
-      "https://www.carsguide.com.au/family/kia-sorento-gt-line-phev-awd-98680",
-      "https://www.carsguide.com.au/kia/sorento/price/2026",
-      "https://www.carsales.com.au/research/kia/sorento/",
+      "https://www.carsguide.com.au/kia/sorento/price/2027",
+      "https://www.carsguide.com.au/car/15141005",
       "https://www.carscoops.com/2026/06/kia-sorento-phev-review/",
+      "https://evcentral.com.au/cars/kia/sorento-plug-in-hybrid/",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
       "https://www.electrive.com/2023/02/14/kia-sorento-phev-lots-of-space-and-high-consumption/",
-      "https://prod2-press.kia.com/eu/en/home/media-resouces/press-kits/products/2021/the-new-Kia-Sorento-Plug-in-Hybrid.html",
       "https://www.kia.com/au/shopping-tools/build-and-price.trim.sorento-plug-in-hybrid.html",
-      "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+      "https://www.kia.com/au/shopping-tools/offers/car-offers/sorento-plug-in-hybrid.html",
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28",
+    "sourcedAt": "2026-11-26",
     "image": {
       "file": "kia-sorento-phev.webp",
       "source": "https://commons.wikimedia.org/wiki/File:2024_Kia_Sorento_(MQ4)_Ditzingen_Mobil_IMG_9803.jpg",
@@ -3645,38 +3648,40 @@
   },
   {
     "id": "omoda-9-shs",
-    "summary": "The Omoda 9 SHS is Chery's flagship in Australia and is sold here in a single $61,990 Virtue AWD grade, pairing a 1.5-litre turbo petrol with three electric motors for 395kW, a 4.9-second 0-100km/h claim and 145km of WLTP electric range from a 34.46kWh battery — roughly double the electric range of a BYD Sealion 6 or Mitsubishi Outlander PHEV for similar money. Australian reviewers are consistent that the powertrain, equipment list and cabin quality are the strongest part of the car and that the chassis is not: CarExpert, CarsGuide, Chasing Cars and carsales all criticise vague steering, loose body control and a busy, head-tossing ride, and none rates it as a genuine premium drive. It is a compelling equipment-and-range package with a hard ceiling on driving polish, and with no resale history in a brand that launched here in 2025.",
+    "summary": "The Omoda 9 SHS is Chery's flagship in Australia and is sold here in a single MY27 Virtue AWD grade, listed by Omoda at $58,990 (reviewers still quote the $61,990 launch price), pairing a 1.5-litre turbo petrol with three electric motors for 395kW, a 4.9-second 0-100km/h claim and 145km of WLTP electric range from a 34.46kWh battery — roughly double the electric range of a BYD Sealion 6 or Mitsubishi Outlander PHEV for similar money. Australian reviewers are consistent that the powertrain, equipment list and cabin quality are the strongest part of the car and that the chassis is not: CarExpert, CarsGuide, Chasing Cars and carsales all criticise vague steering, loose body control and a busy, head-tossing ride, and none rates it as a genuine premium drive. It is a compelling equipment-and-range package with a hard ceiling on driving polish, and with no resale history in a brand that launched here in 2025.",
     "pros": [
-      "145km of WLTP electric-only range from a 34.46kWh usable battery — around double a BYD Sealion 6 Premium AWD (81km) or a Mitsubishi Outlander PHEV, and enough that most Melbourne buyers would rarely start the engine",
+      "145km of WLTP electric-only range from a 34.46kWh battery — around double a BYD Sealion 6 Premium AWD (81km) or a Mitsubishi Outlander PHEV, and enough that most Melbourne buyers would rarely start the engine",
       "395kW/650Nm from a 1.5-litre turbo petrol and three motors gives a claimed 4.9-second 0-100km/h, quicker than any PHEV SUV near the price and quicker than most $100k performance SUVs",
       "70kW DC fast charging (30-80 per cent in about 25 minutes) plus 6.6kW AC — the Sealion 6 and Outlander PHEV have no DC capability at all, so an Omoda 9 can top up its electric range on a road trip",
       "Eight-year/unlimited-kilometre vehicle warranty with a matching eight-year/unlimited-kilometre high-voltage battery warranty guaranteeing at least 70 per cent residual capacity, plus eight years of capped-price servicing ($3343 total) and roadside assistance",
-      "1500kg braked towing and a 660-litre boot (1783 litres folded) — the Jaecoo J7 SHS has no braked tow rating at all and only 340 litres, and the seven-seat Chery Tiggo 8 PHEV leaves just 117 litres behind its third row"
+      "1500kg braked towing where the Jaecoo J7 SHS has no braked tow rating at all, and a 471-litre boot to the window line (660 litres to the roof) against the J7 SHS's 340 litres to the cargo cover — though the seven-seat Chery Tiggo 9 and Jaecoo J8 carry more once their third rows are folded"
     ],
     "cons": [
-      "Omoda's own figure for a depleted battery is 7.0L/100km, not the 1.4L/100km combined label, and a 2000km European test returned 7.2L/100km — a 2.2-tonne AWD SUV on 95-octane premium, so the running-cost case collapses for anyone who cannot charge at home",
+      "Charge-sustaining economy is nothing like the 1.4L/100km NEDC label: CompleteCar puts a depleted battery at about 7.0L/100km, AutoTrader NZ saw 6.0-6.9L/100km and km77's 120km/h motorway loop 8.2L/100km — a 2.2-tonne AWD SUV on 95-octane premium, so the running-cost case collapses for anyone who cannot charge at home",
       "Ride and steering are the near-universal complaint: CarExpert calls it a 'bouncy, head-tossing ride', CarsGuide marks it down for 'vague steering' and 'lacking body control', and Chasing Cars describes the steering as 'numb and lifeless' — it does not drive like the premium car its price and equipment imply",
       "Five seats only, where a Chery Tiggo 8 Super Hybrid at $42,990 and several rivals at this money seat seven, and the front seats lack height and tilt adjustment despite being power-operated",
-      "Omoda launched in Australia in 2025 with one model and a small dealer network, and the flagship is already being advertised with a $5000 factory bonus — resale is unproven and the transaction price keeps resetting, which is why a steeper-than-average depreciation curve is assumed here",
-      "Only one grade is offered, so there is no cheaper way into the nameplate: the choice is $61,990 or nothing, roughly $20,000 above the closely related Jaecoo J7 SHS Track"
+      "Omoda launched in Australia in 2025 with one model and a small dealer network, and the advertised price keeps resetting — from $61,990 at launch to $58,990 on Omoda's MY27 configurator, alongside gift-card and 1.88 per cent finance campaigns — so resale is unproven, which is why a steeper-than-average depreciation curve is assumed here",
+      "Only one grade is offered, so there is no cheaper way into the nameplate: the choice is $58,990 or nothing, roughly $21,000 above the closely related Jaecoo J7 SHS Track, and the boot is only mid-sized for a 4.78m SUV once measured to the window line rather than the roof"
     ],
     "sources": [
+      "https://www.omodajaecoo.com.au/o9-build-your-own",
       "https://www.omodajaecoo.com.au/models/omoda-9",
+      "https://www.omodajaecoo.com.au/sites/default/files/2026-09/268_25_AU_Omoda_9_SHS_Spec_Sheet_v017.pdf",
       "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
-      "https://www.carexpert.com.au/car-news/2025-omoda-9-price-and-specs",
-      "https://www.carexpert.com.au/car-reviews/2025-omoda-9-review",
-      "https://www.carsguide.com.au/ev/omoda-9-99281",
-      "https://www.carsguide.com.au/family/omoda-9-virtue-shs-awd-101089",
-      "https://www.carsguide.com.au/omoda/omoda-9/price/2026",
-      "https://www.carsales.com.au/editorial/details/omoda-9-virtue-2026-review-151140/",
-      "https://www.carsales.com.au/research/omoda/omoda-9/",
-      "https://www.chasingcars.com.au/reviews/midsize-suvs/omoda-9-virtue-shs-2025-review/",
-      "https://www.exhaustnotes.com.au/2025-omoda-9-virtue-shs-car-review/",
-      "https://www.completecar.ie/car-reviews/article/Omoda/9/9_SHS_(2025)/2560/14172/2025-Omoda-9-SHS-(2025)-review.html",
+      "https://www.carexpert.com.au/omoda-jaecoo/omoda-9/2027-virtue-1-5l-suv-4x4-electric-jsgwaaww20260901",
+      "https://www.carsguide.com.au/omoda/omoda-9/price/2027",
+      "https://www.goauto.com.au/new-models/chery/omoda-9/omoda-9-shs-priced-ahead-of-august-launch/2025-07-21/96917.html",
+      "https://evcentral.com.au/cars/omoda/9-shs-p/",
+      "https://autotrader.co.nz/car-reviews/2025-omoda-9-shs-review",
+      "https://omodaauto.co.uk/omoda-9/",
       "https://omodaauto.co.uk/news/one-charge-one-tank-nine-countries-omoda-9-shs/",
+      "https://www.completecar.ie/car-reviews/article/Omoda/9/9_SHS_(2025)/2560/14172/2025-Omoda-9-SHS-(2025)-review.html",
+      "https://www.motor.es/omoda/9/shs-premium-15-tgdi-395kw-awd-51652.html",
+      "https://www.carwow.es/omoda/9/caracteristicas-tecnicas",
+      "https://www.km77.com/coches/omoda/9/2025/mediciones-propias/detalle",
       "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "polestar-2",
