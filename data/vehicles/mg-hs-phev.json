@@ -21,7 +21,14 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1550,
-    "depreciationCurve": [1, 0.71, 0.6, 0.52, 0.45, 0.39],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-28"
   },
   {
@@ -46,7 +53,14 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1650,
-    "depreciationCurve": [1, 0.71, 0.6, 0.52, 0.45, 0.39],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-28"
   }
 ]

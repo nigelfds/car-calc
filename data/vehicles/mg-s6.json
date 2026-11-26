@@ -9,14 +9,21 @@
     "listPrice": 47130,
     "batteryKwh": 74.3,
     "rangeKm": 530,
-    "consumptionKwhPer100km": 14.0,
+    "consumptionKwhPer100km": 14,
     "bootLitresSeatsUp": 581,
     "bootLitresSeatsDown": 1690,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1650,
-    "depreciationCurve": [1, 0.73, 0.63, 0.55, 0.48, 0.42],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-31"
   },
   {
@@ -36,7 +43,14 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.73, 0.63, 0.55, 0.48, 0.42],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-31"
   }
 ]

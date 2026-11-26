@@ -16,7 +16,14 @@
     "towKg": 500,
     "warrantyYears": 7,
     "insuranceAnnual": 1250,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-26"
   },
   {
@@ -36,7 +43,14 @@
     "towKg": 500,
     "warrantyYears": 7,
     "insuranceAnnual": 1300,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-26"
   },
   {
@@ -56,7 +70,14 @@
     "towKg": 500,
     "warrantyYears": 7,
     "insuranceAnnual": 1450,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-26"
   },
   {
@@ -69,14 +90,21 @@
     "listPrice": 45190,
     "batteryKwh": 64,
     "rangeKm": 405,
-    "consumptionKwhPer100km": 19.0,
+    "consumptionKwhPer100km": 19,
     "bootLitresSeatsUp": 350,
     "bootLitresSeatsDown": 1165,
     "seats": 5,
     "towKg": 500,
     "warrantyYears": 7,
     "insuranceAnnual": 1650,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
     "sourcedAt": "2026-07-26"
   }
 ]

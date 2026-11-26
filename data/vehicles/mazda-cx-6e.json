@@ -10,13 +10,20 @@
     "batteryKwh": 77,
     "rangeKm": 484,
     "consumptionKwhPer100km": 18.9,
-    "bootLitresSeatsUp": 468,
-    "bootLitresSeatsDown": 1434,
+    "bootLitresSeatsUp": 363,
+    "bootLitresSeatsDown": 956,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1900,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -30,13 +37,20 @@
     "batteryKwh": 77,
     "rangeKm": 468,
     "consumptionKwhPer100km": 19.4,
-    "bootLitresSeatsUp": 468,
-    "bootLitresSeatsDown": 1434,
+    "bootLitresSeatsUp": 363,
+    "bootLitresSeatsDown": 956,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 2000,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
     "sourcedAt": "2026-11-26"
   }
 ]

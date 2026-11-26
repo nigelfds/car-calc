@@ -35,16 +35,16 @@
         "note": "RACV: WLTP 18.9kWh/100km on 19-inch wheels; ev-database WLTP 304 Wh/mi (18.9 kWh/100km) for the TEL, stated to include charging losses, matching the dataset's WLTP-label convention. 77/484x100 = 15.9, 19% below; inside the 25% cross-check."
       },
       "bootLitresSeatsUp": {
-        "value": 468,
+        "value": 363,
         "basis": "sourced",
-        "url": "https://www.mazda.com.au/cars/cx-6e/",
-        "note": "Mazda AU: 468L to the ceiling; RACV/CarExpert give 363L to the tonneau cover. Ceiling figure chosen to pair with the folded figure on one convention; excludes 83L frunk."
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "To the cargo cover (RACV, CarExpert), matching the mazda-6e convention by owner decision 2026-11-26. Mazda AU quotes 468L to the ceiling. Excludes 83L frunk."
       },
       "bootLitresSeatsDown": {
-        "value": 1434,
+        "value": 956,
         "basis": "sourced",
-        "url": "https://www.mazda.com.au/cars/cx-6e/",
-        "note": "Mazda AU: 1,434L seats folded (to roof); 956L to belt line per RACV/CarExpert."
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "Seats folded to the belt line (RACV, CarExpert), same convention as seats-up. Mazda AU quotes 1,434L to the roof."
       },
       "seats": {
         "value": 5,
@@ -114,16 +114,16 @@
         "note": "RACV: WLTP 19.4kWh/100km on 21-inch wheels; CarsGuide spec table 19.4; ev-database TEH 312 Wh/mi (19.4). 77/468x100 = 16.5, 18% below; inside the 25% cross-check."
       },
       "bootLitresSeatsUp": {
-        "value": 468,
+        "value": 363,
         "basis": "sourced",
-        "url": "https://www.mazda.com.au/cars/cx-6e/",
-        "note": "Mazda AU: 468L to the ceiling; RACV/CarExpert give 363L to the tonneau cover. Ceiling figure chosen to pair with the folded figure on one convention; excludes 83L frunk."
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "To the cargo cover (RACV, CarExpert), matching the mazda-6e convention by owner decision 2026-11-26. Mazda AU quotes 468L to the ceiling. Excludes 83L frunk."
       },
       "bootLitresSeatsDown": {
-        "value": 1434,
+        "value": 956,
         "basis": "sourced",
-        "url": "https://www.mazda.com.au/cars/cx-6e/",
-        "note": "Mazda AU: 1,434L seats folded (to roof); 956L to belt line per RACV/CarExpert."
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "Seats folded to the belt line (RACV, CarExpert), same convention as seats-up. Mazda AU quotes 1,434L to the roof."
       },
       "seats": {
         "value": 5,
@@ -167,7 +167,6 @@
     "mazda-cx-6e-azami.insuranceAnnual: judged, GT anchor plus $100",
     "mazda-cx-6e-gt.depreciationCurve: judged, Mazda brand convention from mazda-6e; no AU resale data for a nameplate delivered from Sept 2026",
     "mazda-cx-6e-azami.depreciationCurve: judged, as GT",
-    "mazda-cx-6e-gt.bootLitresSeatsUp: 468L is to the roof; 363L to the cover per RACV/CarExpert. Convention choice, not a sourcing doubt",
     "mazda-cx-6e-gt.listPrice: Mazda Build & Price renders no data for automated fetches; MLP taken from Mazda's April 2026 release and re-confirmed by October 2026 launch reviews, not from the live configurator on the research date",
     "mazda-cx-6e-azami.listPrice: same as GT; the Azami was named but not priced on the live Mazda model page on the research date"
   ]
