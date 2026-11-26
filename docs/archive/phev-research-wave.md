@@ -1,5 +1,9 @@
 # PHEV research wave — batch plan
 
+> **Archived 2026-11-26.** The dataset refresh now runs from `.claude/skills/refresh-dataset/` and
+> `.claude/skills/research-car-family/`. Open items from this log (backlog, pre-launch, not on sale,
+> unrepresentable) were moved to `data/watchlist.json`. Kept as history; no longer updated.
+
 Prepared 2026-07-28. **Batches 1-7 complete.** Only batch 9 remains, and it closes the wave.
 
 **There is no batch 8.** Batch 7 absorbed it on 2026-08-08 and ran as eleven families in two

@@ -9,7 +9,7 @@
 // 1959 Morris Mini for the Mini Cooper — both caught here, because the model
 // term this function requires is simply absent from those titles.
 //
-// That is the failure docs/phev-research-wave.md describes for REEVs mis-filed
+// That is the failure docs/archive/phev-research-wave.md describes for REEVs mis-filed
 // as PHEVs: "wrong in a way the schema cannot catch". A photograph of the wrong
 // car above a correct price costs the same credibility a wrong price would.
 //

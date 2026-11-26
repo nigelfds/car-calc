@@ -1,5 +1,9 @@
 # PHEV family research brief — car-calc dataset
 
+> **Archived 2026-11-26, superseded by `.claude/skills/research-car-family/`**, which merges this brief
+> with its BEV/PHEV sibling and the lessons from the wave logs, and adds per-figure provenance.
+> Dispatch research agents with the skill. This file is kept as history and is no longer updated.
+
 You are researching **one plug-in hybrid family** for the Australian (specifically Victorian)
 market and writing **exactly two files**. Project root: `/Users/nigel/projects/car-calc`.
 Research date to record: **2026-07-28**.

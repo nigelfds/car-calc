@@ -1,5 +1,9 @@
 # BEV market survey — brief
 
+> **Archived 2026-11-26.** The dataset refresh now runs from `.claude/skills/refresh-dataset/` and
+> `.claude/skills/research-car-family/`. Open items from this log (backlog, pre-launch, not on sale,
+> unrepresentable) were moved to `data/watchlist.json`. Kept as history; no longer updated.
+
 **Prepared 2026-07-29. RUN 2026-07-29 — see [Findings](#findings) at the foot of this document.**
 The preparing session had spent its 200/200 WebSearch budget, and a survey is nothing but searching,
 so this was a job for a fresh session. That session ran it with five parallel surveyors split by
