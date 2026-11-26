@@ -7,17 +7,17 @@
     "variant": "2WD",
     "bodyType": "SUV",
     "listPrice": 55990,
-    "batteryKwh": 74.7,
+    "batteryKwh": 71.0,
     "rangeKm": 591,
     "consumptionKwhPer100km": 13.8,
-    "bootLitresSeatsUp": 452,
+    "bootLitresSeatsUp": 421,
     "bootLitresSeatsDown": 1410,
     "seats": 5,
     "towKg": 750,
     "warrantyYears": 5,
     "insuranceAnnual": 1620,
     "depreciationCurve": [1, 0.75, 0.65, 0.57, 0.5, 0.44],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-bz4x-awd",
@@ -30,14 +30,14 @@
     "batteryKwh": 71.0,
     "rangeKm": 517,
     "consumptionKwhPer100km": 16.0,
-    "bootLitresSeatsUp": 452,
+    "bootLitresSeatsUp": 410,
     "bootLitresSeatsDown": 1410,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1780,
     "depreciationCurve": [1, 0.75, 0.65, 0.57, 0.5, 0.44],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-bz4x-touring",
@@ -57,6 +57,6 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1850,
     "depreciationCurve": [1, 0.75, 0.65, 0.57, 0.5, 0.44],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   }
 ]

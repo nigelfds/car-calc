@@ -1,0 +1,176 @@
+{
+  "familyId": "mg-s5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mg-s5-essence-49": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mgs5-ev?ref=website",
+        "note": "Live Build & Price line 'MGS5 EV Essence 49kWh RWD' with VIC selectable in the state list; only two grades in the configurator, matching CarExpert's MY26 pricing story (Excite grades dropped)"
+      },
+      "listPrice": {
+        "value": 39453,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mgs5-ev?ref=website",
+        "note": "No list price published anywhere. MG configurator variant price $41,990 is MG's national Drive Away Price (struck through; $39,990* shown as 'Drive Away Price, Offer ends 31 December' with a $2,000 cashback on sales/deliveries 01 Nov-31 Dec 2026, a campaign, not used). The configurator template's '+ On-Road Costs' subtitle is generic: the per-state 'discount' it applies cancels the on-road fees so every state lands on the same figure. CarExpert (8 Jul 2026) called the previous regular price $42,990 drive-away, so the held listPrice was a drive-away figure. Back-out: (41990 - 880) / 1.042 = 39453; round-trip driveAwayPrice(39453) = 41,990.03. Independent check: the configurator's state discounts for the two grades differ by $201.60 in VIC (= 24 x $8.40 duty units) and $147 in NSW (3% of ~$4,900), i.e. dutiable values about $4,800 apart, matching the backed-out list gap of $4,798 rather than the $5,000 drive-away gap. Flat national drive-away may bundle dealer delivery, so this list may overstate by an unknown amount."
+      },
+      "batteryKwh": {
+        "value": 49,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mg-s5-ev",
+        "note": "MG AU says '49kWh LFP battery'. evdb.nz gives 51 kWh gross / 49 kWh usable for the NZ 49 Essence (same pack). Conflict: ev-database (EU 49 kWh car) gives 49.0 nominal / 47.1 usable. Kept 49 per evdb.nz, which also gives 65/62 for the 62 pack consistently."
+      },
+      "rangeKm": {
+        "value": 335,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "MG AU MY26 brochure spec table 'Driving Range: WLTP Combined Cycle (km)' 335; same table gives NEDC 410 (rejected). EU WLTP 340 km (ev-database) is higher than AU 335, so 335 is the local WLTP-derived spec."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.9,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "MG AU brochure 'Driving Efficiency (Wh/km)' 169; includes charging losses, so it sits 16% above battery/range (14.6)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 453,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "Boot Volume Seats In Place 453 L; same on MG model page"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1441,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "Boot Volume Seats Folded 1441 L"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3146/MG-MGS5-EV-49-kWh",
+        "note": "5 seats; MG brochure lists 40/60 rear folding seat with three rear belts"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "Maximum Towing Weight Braked (kg) 750 in MG AU brochure spec table"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "Standard 7 years/unlimited km; 10 years/250,000km only with every service at an MG dealer (conditional, in pros). HV battery 7 years/150,000km."
+      },
+      "insuranceAnnual": {
+        "value": 1500,
+        "basis": "judged",
+        "note": "Anchored to byd-atto3 rows (Essential $39,990 -> 1500, Premium $44,990 -> 1600) at near-identical list prices, and below mg-s6 Essence RWD (1650 at $47,130)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Kept held curve, matching mg-s6 (MG BEV convention): MG's rolling drive-away cuts ($1,000 off in July 2026, $2,000 cashback Nov-Dec 2026) and the dropped Excite grades keep resetting the market price. mg-4 currently uses the mainstream default, an inconsistency within the brand for the orchestrator to settle."
+      }
+    },
+    "mg-s5-essence-62": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mgs5-ev?ref=website",
+        "note": "Live Build & Price line 'MGS5 EV Essence 62kWh RWD' with VIC selectable in the state list; only two grades in the configurator, matching CarExpert's MY26 pricing story (Excite grades dropped)"
+      },
+      "listPrice": {
+        "value": 44251,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mgs5-ev?ref=website",
+        "note": "No list price published anywhere. MG configurator variant price $46,990 is MG's national Drive Away Price (struck through; $44,990* shown as 'Drive Away Price, Offer ends 31 December' with a $2,000 cashback on sales/deliveries 01 Nov-31 Dec 2026, a campaign, not used). The configurator template's '+ On-Road Costs' subtitle is generic: the per-state 'discount' it applies cancels the on-road fees so every state lands on the same figure. CarExpert (8 Jul 2026) called the previous regular price $47,990 drive-away, so the held listPrice was a drive-away figure. Back-out: (46990 - 880) / 1.042 = 44251; round-trip driveAwayPrice(44251) = 46,989.54. Independent check: the configurator's state discounts for the two grades differ by $201.60 in VIC (= 24 x $8.40 duty units) and $147 in NSW (3% of ~$4,900), i.e. dutiable values about $4,800 apart, matching the backed-out list gap of $4,798 rather than the $5,000 drive-away gap. Flat national drive-away may bundle dealer delivery, so this list may overstate by an unknown amount."
+      },
+      "batteryKwh": {
+        "value": 62,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mg-s5-ev",
+        "note": "MG AU says '62kWh LFP battery'. evdb.nz gives 65 kWh gross / 62 kWh usable for the NZ 62 Essence. The EU 64 kWh (62.1 usable) pack is NMC per ev-database, a different pack, so not used."
+      },
+      "rangeKm": {
+        "value": 450,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "MG AU MY26 brochure spec table 'Driving Range: WLTP Combined Cycle (km)' 450; same table gives NEDC 545 (rejected). NZ lists 465 km WLTP for the 62 Essence (evdb.nz); AU 450 is lower, so 450 is the local WLTP-derived spec. 18-inch wheels on both grades."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "MG AU brochure 'Driving Efficiency (Wh/km)' 168; includes charging losses, so it sits 22% above battery/range (13.8)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 453,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "Boot Volume Seats In Place 453 L; same on MG model page"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1441,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "Boot Volume Seats Folded 1441 L"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3146/MG-MGS5-EV-49-kWh",
+        "note": "5 seats; MG brochure lists 40/60 rear folding seat with three rear belts"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+        "note": "Maximum Towing Weight Braked (kg) 750 in MG AU brochure spec table"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "Standard 7 years/unlimited km; 10 years/250,000km only with every service at an MG dealer (conditional, in pros). HV battery 7 years/150,000km."
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "Anchored to byd-atto3 rows (Essential $39,990 -> 1500, Premium $44,990 -> 1600) at near-identical list prices, and below mg-s6 Essence RWD (1650 at $47,130)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Kept held curve, matching mg-s6 (MG BEV convention): MG's rolling drive-away cuts ($1,000 off in July 2026, $2,000 cashback Nov-Dec 2026) and the dropped Excite grades keep resetting the market price. mg-4 currently uses the mainstream default, an inconsistency within the brand for the orchestrator to settle."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mg-s5-essence-49.listPrice: backed out of MG's flat national drive-away ($41,990); no list price is published, and a national figure may bundle dealer delivery, overstating list",
+    "mg-s5-essence-62.listPrice: backed out of MG's flat national drive-away ($46,990); same caveat as the 49",
+    "mg-s5-essence-49.batteryKwh: usable 49 (evdb.nz) vs 47.1 (ev-database, EU car); sources conflict",
+    "mg-s5-essence-62.batteryKwh: usable 62 from evdb.nz only; AU pack (LFP) differs from the EU 64 kWh NMC pack",
+    "mg-s5-essence-62.consumptionKwhPer100km: MG's 168 Wh/km sits 22% above battery/range, close to the 25% cross-check limit",
+    "mg-s5-essence-49.insuranceAnnual: judged, anchored to byd-atto3",
+    "mg-s5-essence-62.insuranceAnnual: judged, anchored to byd-atto3",
+    "mg-s5-essence-49.depreciationCurve: judged, MG BEV convention shared with mg-s6 but not mg-4",
+    "mg-s5-essence-62.depreciationCurve: judged, MG BEV convention shared with mg-s6 but not mg-4"
+  ]
+}

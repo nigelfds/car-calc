@@ -1,0 +1,31 @@
+{
+  "id": "gwm-cannon-phev",
+  "summary": "The Cannon Hi4-T is the cheapest plug-in hybrid dual-cab ute on sale here, a smaller and lighter sibling to the Cannon Alpha PHEV that keeps its 3500kg braked towing, 115km NEDC electric range and proper low-range 4x4 hardware. Early Australian reviews praise its 310kW performance, unladen ride and off-road ability, and Chasing Cars matched the electric range claim, but CarSauce recorded about 12.9L/100km on the freeway once the battery was flat. It is a two-grade range, Lux and Ultra, with the Ultra adding only comfort equipment, and it has no ANCAP rating yet.",
+  "pros": [
+    "Lowest-priced plug-in ute in Australia at $48,793 before on-road costs for the Lux (backed out of GWM's Victorian drive-away price), undercutting the BYD Shark 6 and JAC Hunter PHEV",
+    "33.1kWh battery with a 115km NEDC electric-only claim that Chasing Cars matched on test and CarSauce got to about 100km, enough for most commutes without burning petrol",
+    "3500kg braked towing, 835kg payload, a dual-range transfer case and rear diff lock on both grades, with the full-size spare back under the tub",
+    "7-year/unlimited-km warranty with no servicing condition, plus 8-year battery cover, up to 110kW DC charging and three 230V outlets in the tub via vehicle-to-load"
+  ],
+  "cons": [
+    "The 2.4L/100km label assumes a full battery: CarSauce measured about 12.9L/100km on the freeway once depleted, so without home charging it is a thirsty 2.6-tonne petrol ute",
+    "Payload and towing cannot be used together: at 3500kg on the hitch only about 315kg of the 6400kg GCM is left for people and cargo",
+    "The battery sits under the tray and raises part of the tub floor; CarSauce notes an Australian pallet will not fit between the 1140mm wheel arches",
+    "Unrated by ANCAP, with reviewers flagging a firm ride over broken roads, average Giti tyres, weak air-conditioning and software quirks",
+    "Electric range is quoted only on the lenient NEDC cycle; there is no WLTP figure, and autotrader NZ expected 85-90km in normal use"
+  ],
+  "sources": [
+    "https://www.gwmanz.com/au/models/ute/cannon/",
+    "https://www.gwmanz.com/au/models/ute/cannon/cannon-phev/",
+    "https://www.carexpert.com.au/car-news/2027-gwm-cannon-hi4-t-becomes-australias-cheapest-phev-ute",
+    "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+    "https://www.chasingcars.com.au/reviews/utes/gwm-cannon-hi4-t-phev-2027-review/",
+    "https://carsauce.com/reviews/2026-gwm-cannon-phev-ultra-review",
+    "https://www.4x4australia.com.au/news/gwm-cannon-hi4-t-phev-pricing",
+    "https://zecar.com/reviews/gwm-cannon-hi4-t-phev-launch-offer-extended-30-november-2026",
+    "https://autotrader.co.nz/car-reviews/gwm-cannon-hi4-t-first-drive",
+    "https://evcentral.com.au/gwm-doubles-down-on-phev-utes-new-310kw-cannon-hi4-t-promises-sharp-price-and-115km-ev-range/",
+    "https://www.racq.com.au/articles/car-updates/gwm-doubles-down-on-phev-utes"
+  ],
+  "sourcedAt": "2026-11-26"
+}

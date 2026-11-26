@@ -1,0 +1,414 @@
+{
+  "familyId": "mitsubishi-outlander-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mitsubishi-outlander-phev-es": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "Four AWD grades on sale nationwide since March 2026 (GSR dropped); confirmed by Chasing Cars and EV Central launch reports and CarsGuide's June 2026 Exceed Tourer review. mitsubishi-motors.com.au returns HTTP 403 to automated fetches, so the configurator itself could not be opened."
+      },
+      "listPrice": {
+        "value": 58990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "CarExpert price table, 'before on-road costs' in words; same four figures in Chasing Cars, EV Central, zecar and the CarsGuide MSRP price page; Exceed Tourer re-confirmed 'before on-road costs' in CarsGuide's 22 Jun 2026 review. No later price change found by search on the research date."
+      },
+      "rangeKm": {
+        "value": 86,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://evcentral.com.au/2026-mitsubishi-outlander-phev-has-landed-in-australia-more-range-more-power-more-stuff-more-dollars/",
+        "note": "Mitsubishi's claimed WLTP electric range (EV Central, Chasing Cars, CarsGuide). ES is the only grade on 18-inch wheels (zecar, CarExpert review); European WLTP on 235/60R18 is 85 km (ADAC). Australian ADR figure 103 km is NEDC, rejected by the direction test. CarExpert's news item quoting 84 km WLTP is the pre-update NEDC figure mislabelled."
+      },
+      "batteryKwh": {
+        "value": 18.9,
+        "basis": "judged",
+        "note": "Usable capacity not published anywhere found. 22.7 kWh is gross (ADAC 'Batteriekapazit\u00e4t (Brutto)'; auto motor und sport 'Brutto'). Estimate kept at ~83% of gross: ADAC WLTP grid energy per charge is 20-21 kWh (23.4 kWh/100km x 85 km; 25.5 x 83), and AMS measured 22.3 kWh wall energy for a full charge, both including AC charging losses of ~8-12%. A dealer portal (vision-mobility.de, failed to load) lists 19.0 kWh usable."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.0,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.9 / 86 x 100. ADAC WLTP kWh figures are weighted/grid quantities and not used."
+      },
+      "combinedRangeKm": {
+        "value": 832,
+        "basis": "derived",
+        "note": "WLTP electric 86 km + 53 L tank / 7.1 L/100km x 100 (746 km). Tank 53 L from CarExpert's 2026 review (https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review) and ADAC; CarsGuide's launch news says 56 L (the pre-update tank)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.1,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mitsubishi/outlander/4generation/337157/",
+        "note": "European WLTP 'Batterie leer' (charge-sustaining) figure, same on 18- and 20-inch versions (ADAC). The previously held 6.7 L/100km was Mitsubishi Australia's figure for the pre-update 20 kWh car (CarExpert, Dec 2022). CarsGuide saw ~10 L/100km while the engine charged the pack; CarExpert's mixed-use test returned 5.2 L/100km."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "Combined label 1.2 L/100km (NEDC), below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Outlander PHEV label is 27 g/km (CarExpert review)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 472,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "CarExpert 2026 Exceed PHEV review, seats up; same five-seat body on ES/Exceed/Exceed Tourer."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1392,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "CarExpert 2026 Exceed PHEV review, rear seats folded to the roof."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "CarExpert price table seat counts (Aspire 7 seat / '5+2')."
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "Braked towing 1600 kg (CarExpert review); European figure also 1600 kg (ADAC). Not from the Mitsubishi AU spec sheet (site blocked)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "Unconditional 5 years/100,000 km; 10 years conditional on dealer servicing (CarExpert, CarsGuide)."
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "Held 2026-07-28 judgement, re-anchored: mazda-cx-60-phev-pure $1750 at $63,790, kia-sorento-phev-s-awd $1800 at $70,880, byd-sealion-6-premium-awd $1700 at $52,990; stepped by grade price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.76,
+          0.66,
+          0.58,
+          0.51,
+          0.45
+        ],
+        "basis": "judged",
+        "note": "Held 2026-07-28 curve, slightly below the mainstream default for an ageing PHEV facing cheaper Chinese plug-in rivals with more EV range (reviewers call it overpriced); sits between kia-sorento-phev (mainstream-like 0.76/0.45) and mazda-cx-60-phev (0.73/0.41)."
+      }
+    },
+    "mitsubishi-outlander-phev-aspire": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "Four AWD grades on sale nationwide since March 2026 (GSR dropped); confirmed by Chasing Cars and EV Central launch reports and CarsGuide's June 2026 Exceed Tourer review. mitsubishi-motors.com.au returns HTTP 403 to automated fetches, so the configurator itself could not be opened."
+      },
+      "listPrice": {
+        "value": 66790,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "CarExpert price table, 'before on-road costs' in words; same four figures in Chasing Cars, EV Central, zecar and the CarsGuide MSRP price page; Exceed Tourer re-confirmed 'before on-road costs' in CarsGuide's 22 Jun 2026 review. No later price change found by search on the research date."
+      },
+      "rangeKm": {
+        "value": 83,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mitsubishi/outlander/4generation/349938/",
+        "note": "European WLTP electric range for the same 22.7 kWh pack on 255/45R20 wheels (ADAC, Diamant Top from 11/25). Aspire and above ship on 20-inch wheels in Australia (CarExpert review: Aspire 20-inch, cumulative grade list; CarsGuide: Exceed Tourer 20-inch). Mitsubishi Australia's 86 km WLTP is the best-case 18-inch figure; 103 km NEDC rejected."
+      },
+      "batteryKwh": {
+        "value": 18.9,
+        "basis": "judged",
+        "note": "Usable capacity not published anywhere found. 22.7 kWh is gross (ADAC 'Batteriekapazit\u00e4t (Brutto)'; auto motor und sport 'Brutto'). Estimate kept at ~83% of gross: ADAC WLTP grid energy per charge is 20-21 kWh (23.4 kWh/100km x 85 km; 25.5 x 83), and AMS measured 22.3 kWh wall energy for a full charge, both including AC charging losses of ~8-12%. A dealer portal (vision-mobility.de, failed to load) lists 19.0 kWh usable."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.9 / 83 x 100. ADAC WLTP kWh figures are weighted/grid quantities and not used."
+      },
+      "combinedRangeKm": {
+        "value": 829,
+        "basis": "derived",
+        "note": "WLTP electric 83 km + 53 L tank / 7.1 L/100km x 100 (746 km). Tank 53 L from CarExpert's 2026 review (https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review) and ADAC; CarsGuide's launch news says 56 L (the pre-update tank)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.1,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mitsubishi/outlander/4generation/337157/",
+        "note": "European WLTP 'Batterie leer' (charge-sustaining) figure, same on 18- and 20-inch versions (ADAC). The previously held 6.7 L/100km was Mitsubishi Australia's figure for the pre-update 20 kWh car (CarExpert, Dec 2022). CarsGuide saw ~10 L/100km while the engine charged the pack; CarExpert's mixed-use test returned 5.2 L/100km."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "Combined label 1.2 L/100km (NEDC), below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Outlander PHEV label is 27 g/km (CarExpert review)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 191,
+        "basis": "carried",
+        "note": "Held from the 2026-07-28 research of this same (March 2026 update) model; no source re-found this run giving PHEV 7-seat figures (the petrol 7-seater is 163 L / 1608 L, a different floor)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1387,
+        "basis": "carried",
+        "note": "As bootLitresSeatsUp; held from 2026-07-28, same model year."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "CarExpert price table seat counts (Aspire 7 seat / '5+2')."
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "Braked towing 1600 kg (CarExpert review); European figure also 1600 kg (ADAC). Not from the Mitsubishi AU spec sheet (site blocked)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "Unconditional 5 years/100,000 km; 10 years conditional on dealer servicing (CarExpert, CarsGuide)."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "Held 2026-07-28 judgement, re-anchored: mazda-cx-60-phev-pure $1750 at $63,790, kia-sorento-phev-s-awd $1800 at $70,880, byd-sealion-6-premium-awd $1700 at $52,990; stepped by grade price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.76,
+          0.66,
+          0.58,
+          0.51,
+          0.45
+        ],
+        "basis": "judged",
+        "note": "Held 2026-07-28 curve, slightly below the mainstream default for an ageing PHEV facing cheaper Chinese plug-in rivals with more EV range (reviewers call it overpriced); sits between kia-sorento-phev (mainstream-like 0.76/0.45) and mazda-cx-60-phev (0.73/0.41)."
+      }
+    },
+    "mitsubishi-outlander-phev-exceed": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "Four AWD grades on sale nationwide since March 2026 (GSR dropped); confirmed by Chasing Cars and EV Central launch reports and CarsGuide's June 2026 Exceed Tourer review. mitsubishi-motors.com.au returns HTTP 403 to automated fetches, so the configurator itself could not be opened."
+      },
+      "listPrice": {
+        "value": 71640,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "CarExpert price table, 'before on-road costs' in words; same four figures in Chasing Cars, EV Central, zecar and the CarsGuide MSRP price page; Exceed Tourer re-confirmed 'before on-road costs' in CarsGuide's 22 Jun 2026 review. No later price change found by search on the research date."
+      },
+      "rangeKm": {
+        "value": 83,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mitsubishi/outlander/4generation/349938/",
+        "note": "European WLTP electric range for the same 22.7 kWh pack on 255/45R20 wheels (ADAC, Diamant Top from 11/25). Aspire and above ship on 20-inch wheels in Australia (CarExpert review: Aspire 20-inch, cumulative grade list; CarsGuide: Exceed Tourer 20-inch). Mitsubishi Australia's 86 km WLTP is the best-case 18-inch figure; 103 km NEDC rejected."
+      },
+      "batteryKwh": {
+        "value": 18.9,
+        "basis": "judged",
+        "note": "Usable capacity not published anywhere found. 22.7 kWh is gross (ADAC 'Batteriekapazit\u00e4t (Brutto)'; auto motor und sport 'Brutto'). Estimate kept at ~83% of gross: ADAC WLTP grid energy per charge is 20-21 kWh (23.4 kWh/100km x 85 km; 25.5 x 83), and AMS measured 22.3 kWh wall energy for a full charge, both including AC charging losses of ~8-12%. A dealer portal (vision-mobility.de, failed to load) lists 19.0 kWh usable."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.9 / 83 x 100. ADAC WLTP kWh figures are weighted/grid quantities and not used."
+      },
+      "combinedRangeKm": {
+        "value": 829,
+        "basis": "derived",
+        "note": "WLTP electric 83 km + 53 L tank / 7.1 L/100km x 100 (746 km). Tank 53 L from CarExpert's 2026 review (https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review) and ADAC; CarsGuide's launch news says 56 L (the pre-update tank)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.1,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mitsubishi/outlander/4generation/337157/",
+        "note": "European WLTP 'Batterie leer' (charge-sustaining) figure, same on 18- and 20-inch versions (ADAC). The previously held 6.7 L/100km was Mitsubishi Australia's figure for the pre-update 20 kWh car (CarExpert, Dec 2022). CarsGuide saw ~10 L/100km while the engine charged the pack; CarExpert's mixed-use test returned 5.2 L/100km."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "Combined label 1.2 L/100km (NEDC), below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Outlander PHEV label is 27 g/km (CarExpert review)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 472,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "CarExpert 2026 Exceed PHEV review, seats up; same five-seat body on ES/Exceed/Exceed Tourer."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1392,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "CarExpert 2026 Exceed PHEV review, rear seats folded to the roof."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "CarExpert price table seat counts (Aspire 7 seat / '5+2')."
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "Braked towing 1600 kg (CarExpert review); European figure also 1600 kg (ADAC). Not from the Mitsubishi AU spec sheet (site blocked)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "Unconditional 5 years/100,000 km; 10 years conditional on dealer servicing (CarExpert, CarsGuide)."
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "Held 2026-07-28 judgement, re-anchored: mazda-cx-60-phev-pure $1750 at $63,790, kia-sorento-phev-s-awd $1800 at $70,880, byd-sealion-6-premium-awd $1700 at $52,990; stepped by grade price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.76,
+          0.66,
+          0.58,
+          0.51,
+          0.45
+        ],
+        "basis": "judged",
+        "note": "Held 2026-07-28 curve, slightly below the mainstream default for an ageing PHEV facing cheaper Chinese plug-in rivals with more EV range (reviewers call it overpriced); sits between kia-sorento-phev (mainstream-like 0.76/0.45) and mazda-cx-60-phev (0.73/0.41)."
+      }
+    },
+    "mitsubishi-outlander-phev-exceed-tourer": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "Four AWD grades on sale nationwide since March 2026 (GSR dropped); confirmed by Chasing Cars and EV Central launch reports and CarsGuide's June 2026 Exceed Tourer review. mitsubishi-motors.com.au returns HTTP 403 to automated fetches, so the configurator itself could not be opened."
+      },
+      "listPrice": {
+        "value": 74490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "CarExpert price table, 'before on-road costs' in words; same four figures in Chasing Cars, EV Central, zecar and the CarsGuide MSRP price page; Exceed Tourer re-confirmed 'before on-road costs' in CarsGuide's 22 Jun 2026 review. No later price change found by search on the research date."
+      },
+      "rangeKm": {
+        "value": 83,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mitsubishi/outlander/4generation/349938/",
+        "note": "European WLTP electric range for the same 22.7 kWh pack on 255/45R20 wheels (ADAC, Diamant Top from 11/25). Aspire and above ship on 20-inch wheels in Australia (CarExpert review: Aspire 20-inch, cumulative grade list; CarsGuide: Exceed Tourer 20-inch). Mitsubishi Australia's 86 km WLTP is the best-case 18-inch figure; 103 km NEDC rejected."
+      },
+      "batteryKwh": {
+        "value": 18.9,
+        "basis": "judged",
+        "note": "Usable capacity not published anywhere found. 22.7 kWh is gross (ADAC 'Batteriekapazit\u00e4t (Brutto)'; auto motor und sport 'Brutto'). Estimate kept at ~83% of gross: ADAC WLTP grid energy per charge is 20-21 kWh (23.4 kWh/100km x 85 km; 25.5 x 83), and AMS measured 22.3 kWh wall energy for a full charge, both including AC charging losses of ~8-12%. A dealer portal (vision-mobility.de, failed to load) lists 19.0 kWh usable."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.9 / 83 x 100. ADAC WLTP kWh figures are weighted/grid quantities and not used."
+      },
+      "combinedRangeKm": {
+        "value": 829,
+        "basis": "derived",
+        "note": "WLTP electric 83 km + 53 L tank / 7.1 L/100km x 100 (746 km). Tank 53 L from CarExpert's 2026 review (https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review) and ADAC; CarsGuide's launch news says 56 L (the pre-update tank)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.1,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mitsubishi/outlander/4generation/337157/",
+        "note": "European WLTP 'Batterie leer' (charge-sustaining) figure, same on 18- and 20-inch versions (ADAC). The previously held 6.7 L/100km was Mitsubishi Australia's figure for the pre-update 20 kWh car (CarExpert, Dec 2022). CarsGuide saw ~10 L/100km while the engine charged the pack; CarExpert's mixed-use test returned 5.2 L/100km."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "Combined label 1.2 L/100km (NEDC), below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Outlander PHEV label is 27 g/km (CarExpert review)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 472,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "CarExpert 2026 Exceed PHEV review, seats up; same five-seat body on ES/Exceed/Exceed Tourer."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1392,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "CarExpert 2026 Exceed PHEV review, rear seats folded to the roof."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mitsubishi-outlander-phev-prices-more-ev-range-for-more-money",
+        "note": "CarExpert price table seat counts (Aspire 7 seat / '5+2')."
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "Braked towing 1600 kg (CarExpert review); European figure also 1600 kg (ADAC). Not from the Mitsubishi AU spec sheet (site blocked)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mitsubishi-outlander-phev-review",
+        "note": "Unconditional 5 years/100,000 km; 10 years conditional on dealer servicing (CarExpert, CarsGuide)."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "Held 2026-07-28 judgement, re-anchored: mazda-cx-60-phev-pure $1750 at $63,790, kia-sorento-phev-s-awd $1800 at $70,880, byd-sealion-6-premium-awd $1700 at $52,990; stepped by grade price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.76,
+          0.66,
+          0.58,
+          0.51,
+          0.45
+        ],
+        "basis": "judged",
+        "note": "Held 2026-07-28 curve, slightly below the mainstream default for an ageing PHEV facing cheaper Chinese plug-in rivals with more EV range (reviewers call it overpriced); sits between kia-sorento-phev (mainstream-like 0.76/0.45) and mazda-cx-60-phev (0.73/0.41)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mitsubishi-outlander-phev-*.batteryKwh: usable 18.9 kWh judged; only gross 22.7 kWh is published",
+    "mitsubishi-outlander-phev-aspire.bootLitresSeatsUp/bootLitresSeatsDown: carried 191/1387 L, no PHEV 7-seat source re-found this run",
+    "mitsubishi-outlander-phev-aspire/exceed/exceed-tourer.rangeKm: 83 km is the European WLTP 20-inch figure; Mitsubishi Australia quotes only 86 km WLTP (best case); Exceed/Exceed Tourer 20-inch wheels inferred from cumulative grade list plus CarsGuide Exceed Tourer review",
+    "mitsubishi-outlander-phev-*.fuelConsumptionL100km: 7.1 L/100km is the European WLTP battery-empty figure; no Australian charge-sustaining figure published for the 22.7 kWh car",
+    "mitsubishi-outlander-phev-*.combinedRangeKm: tank 53 L (CarExpert review, ADAC) vs 56 L in CarsGuide launch news",
+    "mitsubishi-outlander-phev-*.listPrice: manufacturer site blocked (HTTP 403); prices from March 2026 launch reports and a June 2026 review, no later change found",
+    "mitsubishi-outlander-phev-*.insuranceAnnual and depreciationCurve: judged"
+  ]
+}

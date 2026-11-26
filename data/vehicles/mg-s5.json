@@ -6,7 +6,7 @@
     "model": "S5 EV",
     "variant": "Essence 49",
     "bodyType": "SUV",
-    "listPrice": 42990,
+    "listPrice": 39453,
     "batteryKwh": 49,
     "rangeKm": 335,
     "consumptionKwhPer100km": 16.9,
@@ -24,7 +24,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-s5-essence-62",
@@ -33,10 +33,10 @@
     "model": "S5 EV",
     "variant": "Essence 62",
     "bodyType": "SUV",
-    "listPrice": 47990,
+    "listPrice": 44251,
     "batteryKwh": 62,
     "rangeKm": 450,
-    "consumptionKwhPer100km": 16.1,
+    "consumptionKwhPer100km": 16.8,
     "bootLitresSeatsUp": 453,
     "bootLitresSeatsDown": 1441,
     "seats": 5,
@@ -51,6 +51,6 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   }
 ]

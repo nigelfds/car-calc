@@ -145,17 +145,6 @@
       "note": "Expected end Aug 2026, $35,990-$38,990 d/a."
     },
     {
-      "name": "Mazda CX-6e",
-      "make": "Mazda",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "pre-launch",
-      "familyId": "mazda-cx-6e",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Expected Sept 2026 showrooms, $53,990-$56,990."
-    },
-    {
       "name": "Deepal S05",
       "make": "Deepal",
       "powertrain": "bev",
@@ -176,17 +165,6 @@
       "checkedAt": "2026-07-30",
       "recheckAfter": "2026-11-26",
       "note": "Expected 2H 2026; would be Honda's first BEV here."
-    },
-    {
-      "name": "Smart #5",
-      "make": "Smart",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "pre-launch",
-      "familyId": "smart-5",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Expected Oct-Dec 2026, from low $60,000s."
     },
     {
       "name": "XPeng G9L",
@@ -416,17 +394,6 @@
       "note": "Expected Q3 2026, $100k+. Shooting brake: confirm body type before researching."
     },
     {
-      "name": "BYD Atto 3 Evo",
-      "make": "BYD",
-      "powertrain": "bev",
-      "scope": "variant",
-      "status": "pre-launch",
-      "familyId": "byd-atto3",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "800V rework, registrations of interest only at 2026-07-27, due 2H 2026. Will likely restructure the family."
-    },
-    {
       "name": "Skoda Elroq Sportline 85",
       "make": "Skoda",
       "powertrain": "bev",
@@ -479,7 +446,29 @@
       "familyId": "kia-ev3",
       "checkedAt": "2026-08-08",
       "recheckAfter": "2026-11-26",
-      "note": "18 rows in kia-ev3, kia-ev4, kia-ev5, hyundai-ioniq-9, hyundai-elexio may carry gross kWh. Settle per pack."
+      "note": "14 rows in kia-ev3, kia-ev4, hyundai-ioniq-9, hyundai-elexio may carry gross kWh. Settle per pack. kia-ev5 settled 2026-11-26 (88.1 gross, 84 usable)."
+    },
+    {
+      "name": "Kia EV5 2027 facelift",
+      "make": "Kia",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "kia-ev5",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Facelift in Australian approval filings with more power and towing. New model year will need a full spec re-source."
+    },
+    {
+      "name": "BYD Atto 3 Essential run-out",
+      "make": "BYD",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "byd-atto3",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-26",
+      "note": "Reviews call the Essential outgoing; still orderable 2026-11-26. Delete row byd-atto3-essential when it leaves the configurator."
     },
     {
       "name": "Unsourced consumption figures",

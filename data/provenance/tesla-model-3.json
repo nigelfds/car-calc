@@ -1,0 +1,327 @@
+{
+  "familyId": "tesla-model-3",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "tesla-model-3-base-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+        "note": "Tesla AU configurator (tesla.com/en_au) returned HTTP 403 to automated fetches; CarExpert 1 Oct 2026 lists the MY2027 grade as orderable with deliveries from Oct 2026; CarExpert 2027 model page lists the same four grades"
+      },
+      "bootLitresSeatsUp": {
+        "value": 682,
+        "basis": "derived",
+        "note": "594 L rear boot + 88 L frunk, both from https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs (Tesla convention in this dataset counts the frunk, as tesla-model-y)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1065,
+        "basis": "derived",
+        "note": "977 L rear max (seats folded) + 88 L frunk from EV Database (https://ev-database.org/car/3740/Tesla-Model-3-RWD; same body on all grades). Replaces unsourced held 950."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs",
+        "note": "two front seats plus rear seating capacity 3"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs",
+        "note": "whole vehicle 60 months / unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2250,
+        "basis": "judged",
+        "note": "anchored to tesla-model-y Premium RWD 2300 ($58,900) and byd-seal Premium 1600; cheaper car, similar repair profile"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Brand convention: matches tesla-model-y curve. Moved off the mainstream default given the October 2026 $9,000 cut to the entry price (CarsGuide/CarExpert 1 Oct 2026), which pressures used values of earlier Model 3s."
+      },
+      "listPrice": {
+        "value": 45900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+        "note": "CarExpert table 'Price before on-road costs'; CarsGuide (https://www.carsguide.com.au/car-news/popular-tesla-now-9000-cheaper-new-2026-tesla-model-3-rwd-undercuts-byd-seal-kia-ev4-and) same $45,900 'before on-road costs'. The Driven quoted $45,990 'before on-road costs' \u2014 outlier, two outlets agree on $45,900. CarExpert intro also says 'from $45,900 before on-road costs'."
+      },
+      "batteryKwh": {
+        "value": 60,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3740/Tesla-Model-3-RWD",
+        "note": "usable 60.0 (EVDB estimate), nominal 64.0, CATL LFP; CarExpert spec page shows 60 kWh; CarsGuide says 'roughly 63kWh' (gross-ish)"
+      },
+      "rangeKm": {
+        "value": 572,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs",
+        "note": "WLTP combined; same figure from CarExpert news, CarsGuide and EVDB 3740; 18-inch Prismata wheels only"
+      },
+      "consumptionKwhPer100km": {
+        "value": 12.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3740/Tesla-Model-3-RWD",
+        "note": "EVDB WLTP rated 122 Wh/km for this 572 km variant. CarExpert spec page shows 132 Wh/km, identical to Premium RWD and apparently copied; not used"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/rear-wheel-drive/features-and-specs",
+        "note": "1,000 kg braked, 750 kg unbraked"
+      }
+    },
+    "tesla-model-3-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+        "note": "Tesla AU configurator (tesla.com/en_au) returned HTTP 403 to automated fetches; CarExpert 1 Oct 2026 lists the MY2027 grade as orderable with deliveries from Oct 2026; CarExpert 2027 model page lists the same four grades"
+      },
+      "bootLitresSeatsUp": {
+        "value": 682,
+        "basis": "derived",
+        "note": "594 L rear boot + 88 L frunk, both from https://www.carexpert.com.au/tesla/model-3/2027/premium-rear-wheel-drive/features-and-specs (Tesla convention in this dataset counts the frunk, as tesla-model-y)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1065,
+        "basis": "derived",
+        "note": "977 L rear max (seats folded) + 88 L frunk from EV Database (https://ev-database.org/car/3740/Tesla-Model-3-RWD; same body on all grades). Replaces unsourced held 950."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "two front seats plus rear seating capacity 3"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "whole vehicle 60 months / unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2400,
+        "basis": "judged",
+        "note": "anchored to tesla-model-y Premium RWD 2300 ($58,900); sedan set slightly higher. Held 2600 cut to close the gap with the sibling"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Brand convention: matches tesla-model-y curve. Moved off the mainstream default given the October 2026 $9,000 cut to the entry price (CarsGuide/CarExpert 1 Oct 2026), which pressures used values of earlier Model 3s."
+      },
+      "listPrice": {
+        "value": 54900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+        "note": "CarExpert table 'Price before on-road costs'; CarsGuide same $54,900. Unchanged from held 'RWD' row (renamed Premium RWD)"
+      },
+      "batteryKwh": {
+        "value": 60,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3403/Tesla-Model-3-RWD",
+        "note": "usable 60.0 (EVDB estimate), nominal 64.0 LFP; CarExpert spec page 60 kWh. Held 62.5 replaced"
+      },
+      "rangeKm": {
+        "value": 520,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "WLTP combined, 18-inch wheels; consistent with CarExpert news (base RWD has 52 km more). EU car of the same name rates 534 km on EVDB; AU figure used"
+      },
+      "consumptionKwhPer100km": {
+        "value": 13.2,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "WLTP combined 132 Wh/km"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-rear-wheel-drive/features-and-specs",
+        "note": "1,000 kg braked, 750 kg unbraked"
+      }
+    },
+    "tesla-model-3-long-range-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+        "note": "Tesla AU configurator (tesla.com/en_au) returned HTTP 403 to automated fetches; CarExpert 1 Oct 2026 lists the MY2027 grade as orderable with deliveries from Oct 2026; CarExpert 2027 model page lists the same four grades"
+      },
+      "bootLitresSeatsUp": {
+        "value": 682,
+        "basis": "derived",
+        "note": "594 L rear boot + 88 L frunk, both from https://www.carexpert.com.au/tesla/model-3/2027/premium-long-range-rear-wheel-drive/features-and-specs (Tesla convention in this dataset counts the frunk, as tesla-model-y)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1065,
+        "basis": "derived",
+        "note": "977 L rear max (seats folded) + 88 L frunk from EV Database (https://ev-database.org/car/3740/Tesla-Model-3-RWD; same body on all grades). Replaces unsourced held 950."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-long-range-rear-wheel-drive/features-and-specs",
+        "note": "two front seats plus rear seating capacity 3"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-long-range-rear-wheel-drive/features-and-specs",
+        "note": "whole vehicle 60 months / unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2550,
+        "basis": "judged",
+        "note": "matched to tesla-model-y Premium Long Range AWD 2550 ($68,900). Held 2900 cut"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Brand convention: matches tesla-model-y curve. Moved off the mainstream default given the October 2026 $9,000 cut to the entry price (CarsGuide/CarExpert 1 Oct 2026), which pressures used values of earlier Model 3s."
+      },
+      "listPrice": {
+        "value": 61900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+        "note": "CarExpert table 'Price before on-road costs' $61,900; CarsGuide same. Held 61,990 was $90 high"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3404/Tesla-Model-3-Premium-RWD",
+        "note": "usable 79.0, nominal 82.0 NMC (EU 'Premium RWD' = AU Premium Long Range RWD, same 750 km WLTP); CarExpert spec 79 kWh. Held 78 replaced"
+      },
+      "rangeKm": {
+        "value": 750,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-long-range-rear-wheel-drive/features-and-specs",
+        "note": "WLTP combined, 18-inch wheels; EVDB TEL 750 km agrees"
+      },
+      "consumptionKwhPer100km": {
+        "value": 12.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3404/Tesla-Model-3-Premium-RWD",
+        "note": "EVDB WLTP rated 125 Wh/km (TEL); CarExpert spec page leaves it blank"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/premium-long-range-rear-wheel-drive/features-and-specs",
+        "note": "1,000 kg braked, 750 kg unbraked"
+      }
+    },
+    "tesla-model-3-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+        "note": "Tesla AU configurator (tesla.com/en_au) returned HTTP 403 to automated fetches; CarExpert 1 Oct 2026 lists the MY2027 grade as orderable with deliveries from Oct 2026; CarExpert 2027 model page lists the same four grades"
+      },
+      "bootLitresSeatsUp": {
+        "value": 682,
+        "basis": "derived",
+        "note": "594 L rear boot + 88 L frunk, both from https://www.carexpert.com.au/tesla/model-3/2027/performance/features-and-specs (Tesla convention in this dataset counts the frunk, as tesla-model-y)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1065,
+        "basis": "derived",
+        "note": "977 L rear max (seats folded) + 88 L frunk from EV Database (https://ev-database.org/car/3740/Tesla-Model-3-RWD; same body on all grades). Replaces unsourced held 950."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/performance/features-and-specs",
+        "note": "two front seats plus rear seating capacity 3"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2027/performance/features-and-specs",
+        "note": "whole vehicle 60 months / unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 3150,
+        "basis": "judged",
+        "note": "anchored to tesla-model-y Performance AWD 3300 ($89,400) and polestar-2 Performance Pack 2600; cheaper than the Model Y Performance. Held 3200"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Brand convention: matches tesla-model-y curve. Moved off the mainstream default given the October 2026 $9,000 cut to the entry price (CarsGuide/CarExpert 1 Oct 2026), which pressures used values of earlier Model 3s."
+      },
+      "listPrice": {
+        "value": 80900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+        "note": "CarExpert table 'Price before on-road costs' $80,900 (Performance AWD); CarsGuide same"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3841/Tesla-Model-3-Performance",
+        "note": "usable 79.0, nominal 82.0. Held 79 retained"
+      },
+      "rangeKm": {
+        "value": 600,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3841/Tesla-Model-3-Performance",
+        "note": "MY2027 WLTP 600 km (up 29 km from 571); also CarExpert news and The Driven. CarExpert 2027 spec page still shows the MY2026 571 km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3841/Tesla-Model-3-Performance",
+        "note": "EVDB WLTP rated 158 Wh/km; 79/600 = 13.2 implied, within tolerance"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/tesla/model-3/2026-performance-sedan-4x4-electric-js85855f20260401",
+        "note": "CarExpert MY2026 Performance spec 1,000 kg braked. CarExpert MY2027 Performance page lists no towing figure, and EVDB's EU MY2027 Performance shows 500 kg braked; AU MY2027 rating unconfirmed"
+      }
+    }
+  },
+  "lowConfidence": [
+    "tesla-model-3-performance.towKg: AU MY2027 rating unconfirmed; MY2026 AU 1,000 kg, EU MY2027 500 kg, CarExpert MY2027 page blank",
+    "tesla-model-3-base-rwd.listPrice: The Driven says $45,990 vs $45,900 at CarExpert and CarsGuide; Tesla AU site unreachable (403)",
+    "tesla-model-3-rwd.listPrice: outlets only (CarExpert, CarsGuide); Tesla configurator unreachable",
+    "tesla-model-3-long-range-rwd.listPrice: outlets only (CarExpert, CarsGuide); Tesla configurator unreachable",
+    "tesla-model-3-performance.listPrice: outlets only (CarExpert, CarsGuide); Tesla configurator unreachable",
+    "tesla-model-3-base-rwd.batteryKwh: EVDB usable 60 is an estimate; Tesla does not publish",
+    "tesla-model-3-rwd.batteryKwh: EVDB usable 60 is an estimate; Tesla does not publish",
+    "tesla-model-3-base-rwd.bootLitresSeatsDown: 977 L folded from EVDB plus frunk; no AU source",
+    "tesla-model-3-base-rwd.insuranceAnnual: judged; all rows' insurance judged and re-anchored down to tesla-model-y",
+    "tesla-model-3-base-rwd.depreciationCurve: judged; all rows moved to tesla-model-y brand curve"
+  ]
+}

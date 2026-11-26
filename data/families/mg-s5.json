@@ -1,33 +1,35 @@
 {
   "id": "mg-s5",
-  "summary": "The MG S5 EV is the ZS EV's rear-drive replacement and is widely described by Australian reviewers as MG's most convincing model to date: a conventional, well-resolved small-to-mid electric SUV with a 453-litre boot, five-star ANCAP and pricing that sits under the Kia EV3. Reviewers agree the 62kWh car is the one to buy — the 49kWh Essence's 335km WLTP range draws consistent criticism as thin for the money — and the MY26 update added 25kW and 25km of range to the 62 at an unchanged $47,990. Opinion splits on the chassis: CarExpert and Chasing Cars rate the body control and steering response highly, while CarsGuide finds the steering too light and the styling derivative, and several testers note a ride that turns brittle over sharp-edged bumps.",
+  "summary": "The MG S5 EV is the ZS EV's rear-drive replacement and is widely described by Australian reviewers as MG's most convincing model to date: a conventional, well-resolved small-to-mid electric SUV with a 453-litre boot, five-star ANCAP and pricing that sits under the Kia EV3. Reviewers agree the 62kWh car is the one to buy — the 49kWh Essence's 335km WLTP range draws consistent criticism as thin for the money — and the MY26 update cut the range to two Essence grades while adding 25kW and 25km of range to the 62 without a price rise; MG sells both at national drive-away prices and publishes no list price. Opinion splits on the chassis: CarExpert and Chasing Cars rate the handling and steering response highly, while CarsGuide finds the steering too light and the styling polarising, and Chasing Cars calls the town ride 'fairly knobbly'.",
   "pros": [
-    "Up to 10 years/250,000km warranty (7 years/unlimited km if serviced outside the MG dealer network) — matching the 7-year cover from Kia, Chery and Geely and beating BYD's 6, with more on offer if you stay with MG servicing",
-    "MY26 Essence 62 gained 150kW/350Nm (up from 125kW/250Nm), cutting 0-100km/h from 8.6 to 7.0 seconds and lifting WLTP range 425 to 450km, at the same $47,990 list price",
-    "453L boot with underfloor storage, expanding to 1441L seats-down, plus a flat rear floor and genuine three-across rear seating — well ahead of the MG4 hatch's 350-382L and level with the Kia EV3",
-    "Five-star ANCAP (2025) with 90% adult occupant protection, and an MG Pilot Custom shortcut that lets you switch off individual driver-assist chimes without menu-diving",
+    "Up to 10 years/250,000km warranty (7 years/unlimited km if serviced outside the MG dealer network) — matching the 7-year cover from Kia, Chery and Geely and beating BYD's 6, with more on offer if you stay with MG servicing; the battery is covered for 7 years/150,000km",
+    "MY26 Essence 62 gained 150kW/350Nm (up from 125kW/250Nm), cutting 0-100km/h from 8.6 to 7.0 seconds and lifting WLTP range from 425 to 450km, with no price rise",
+    "453L boot expanding to 1441L seats-down, plus a flat rear floor and genuine three-across rear seating — well ahead of the MG4 hatch's 350-382L and level with the Kia EV3's 460L",
+    "Five-star ANCAP (2025) with 90% adult and 86% child occupant protection",
     "150kW DC charging gives a 30-80% top-up in about 19 minutes, and the LFP chemistry tolerates routine 100% charging"
   ],
   "cons": [
-    "Essence 49's 335km WLTP range is the range's weak point — CarExpert's verdict is that the '62 battery is far better than 49', and the $5000 step up buys 115km",
-    "The 10-year warranty is conditional on every scheduled service being done inside the MG dealer network; miss one and cover reverts to 7 years",
-    "Suspension can be harsh over sharp-edged urban bumps, and CarsGuide criticises steering that is 'too light and lacks communication'",
-    "No child presence detection, which cost it points in ANCAP's child occupant and safety assist categories (79% safety assist)",
-    "Weak Australian resale for the brand — used MG4s are retaining around 50% at three years against a ~60% EV market average, and MG's recurring drive-away and $1000-off campaigns keep resetting the market price"
+    "Essence 49's 335km WLTP range is the range's weak point — CarExpert's verdict is that the '62 battery is far better than 49', and the step up buys 115km more range for under five thousand dollars",
+    "The 10-year warranty is conditional on every scheduled service being done inside the MG dealer network within 30 days/2,000km of each interval; miss one and cover reverts to 7 years",
+    "Firm ride that Chasing Cars calls 'fairly knobbly' around town, and CarsGuide criticises steering that is 'too light and lacks communication'",
+    "Safety assist is its weakest ANCAP score at 79%, and child presence detection was not assessed because it is not fitted to every Australian variant",
+    "MG's rolling campaigns (one thousand dollars off in July 2026, a two-thousand-dollar cashback to 31 December 2026) keep resetting the market price, which weighs on resale"
   ],
   "sources": [
+    "https://www.mgmotor.com.au/configurator/mgs5-ev?ref=website",
+    "https://www.mgmotor.com.au/mgs5-ev",
+    "https://www.mgmotor.com.au/brochures/MGS5_EV_2026.pdf",
+    "https://mgmotor.com.au/explore/warranty",
     "https://www.carexpert.com.au/car-news/2026-mg-s5-ev-prices-electric-suv-gets-more-power-longer-range",
     "https://www.carexpert.com.au/car-reviews/2026-mg-s5-ev-review",
-    "https://www.carexpert.com.au/car-reviews/2025-mg-s5-ev-review",
-    "https://www.carexpert.com.au/mg/mg-s5-ev/2026/price-and-specs",
-    "https://www.chasingcars.com.au/reviews/small-suvs/mg-s5-ev-essence-2025-review/",
+    "https://www.carexpert.com.au/mg/mg-s5-ev/2026-essence-suv-rwd-electric-jsgs5o5k20260801",
+    "https://www.carsguide.com.au/car-news/updated-2027-mg-s5-released-with-smaller-lineup-in-australia-to-battle-against-jaecoo-j5",
     "https://www.carsguide.com.au/urban/mg-s5-ev-essence-62-101639",
-    "https://www.carsguide.com.au/mg/mgs5-ev/price/2026",
-    "https://www.carsales.com.au/editorial/details/2026-mg-s5-ev-range-shrinks-152429/",
-    "https://www.whichcar.com.au/news/mgs5-ev-electric-suv-ancap-five-stars-safety-rating",
+    "https://www.chasingcars.com.au/reviews/small-suvs/mg-s5-ev-essence-2025-review/",
     "https://www.ancap.com.au/safety-ratings/mg/mgs5-ev/31ab80",
-    "https://mgmotor.com.au/explore/warranty",
-    "https://zecar.com/electric-vehicles/mg/mgs5/2025/essence-62"
+    "https://thedriven.io/2025/05/25/tesla-model-3-kia-ev3-and-mgs5-ev-get-top-safety-scores/",
+    "https://ev-database.org/car/3146/MG-MGS5-EV-49-kWh",
+    "https://evdb.nz/v/mg-s5-ev"
   ],
-  "sourcedAt": "2026-07-27"
+  "sourcedAt": "2026-11-26"
 }

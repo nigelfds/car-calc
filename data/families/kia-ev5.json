@@ -10,19 +10,21 @@
   ],
   "cons": [
     "400V architecture caps DC charging at 140kW, and only about 102kW on the Air Standard Range, so 10-80% takes roughly 38 minutes against about half that in a Kia EV6",
-    "CarsGuide's GT-Line long-termer averaged 19.8kWh/100km over 932km for a real 424km against the 470km WLTP claim, and carsales saw 23-25kWh/100km in the Earth AWD",
-    "Cabin uses a lot of hard plastic that reviewers call low-rent at $70,000, and the climate display is partly obscured by the steering wheel rim",
+    "CarsGuide's GT-Line long-termer averaged 19.8kWh/100km over 932km, a real 424km from the 84kWh usable pack against the 470km WLTP claim",
+    "Cabin uses a lot of hard plastic that reviewers call low-rent at the GT-Line's $71,770, and the climate display is partly obscured by the steering wheel rim",
     "Lane-keep assist over-reacts on country bends and the speed-limit chime fires constantly, both needing to be switched off at every start-up",
-    "Surround-view camera and wireless phone charging are reserved for higher grades rather than standard across the range"
+    "Air Standard Range is rated to tow only 300kg braked against 1,250kg for the Long Range grades, and surround-view camera and wireless phone charging are reserved for higher grades"
   ],
   "sources": [
+    "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev5.html",
+    "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+    "https://www.kia.com/au/cars/ev5.html",
+    "https://www.carexpert.com.au/car-reviews/2026-kia-ev5-review-1",
     "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
     "https://www.carexpert.com.au/car-reviews/2025-kia-ev5-review",
     "https://www.carsguide.com.au/kia/ev5/price/2026",
     "https://www.carsguide.com.au/ev/kia-ev5-gt-line-long-term-part-1-97468",
-    "https://www.carsales.com.au/editorial/details/kia-ev5-earth-2025-review-147748/",
-    "https://www.chasingcars.com.au/news/future-cars/kia-ev5-2025-australian-pricing-and-specifications/",
-    "https://www.whichcar.com.au/reviews/2025-kia-ev5-all-you-need-to-know"
+    "https://www.chasingcars.com.au/news/future-cars/kia-ev5-2025-australian-pricing-and-specifications/"
   ],
-  "sourcedAt": "2026-07-27"
+  "sourcedAt": "2026-11-26"
 }

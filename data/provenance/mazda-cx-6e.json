@@ -1,0 +1,174 @@
+{
+  "familyId": "mazda-cx-6e",
+  "researchedAt": "2026-11-26",
+  "mode": "new",
+  "variants": {
+    "mazda-cx-6e-gt": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-6e/",
+        "note": "Mazda AU model page lists GT and Azami grades with orders open (GT priced from $56,990 drive-away); Build & Price page https://www.mazda.com.au/build/cx-6e/ exists but renders no data to automated fetches. Two-grade count confirmed by CarExpert and Chasing Cars launch reviews (Oct 2026)."
+      },
+      "listPrice": {
+        "value": 53990,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/mazda-news/mazda-cx-6e-australia-specs-pricing-electric-suv/",
+        "note": "Mazda AU release (8/4/2026) pricing table, MLP (manufacturer list price) column, GT RWD 190kW/78kWh. CarExpert quick drive (6 Oct 2026) and Chasing Cars repeat it 'before on-road costs' in words; RACV says 'plus ORCs'. Victorian drive-away computed by calc/onroad.js = $57,138; the GT's advertised $56,990 drive-away (Mazda AU page, offer to 31 Dec 2026 per zecar) is below that, so it is a discounted campaign, not the list price."
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3596/Mazda-CX-6e-78-kWh",
+        "note": "usable 77.0 kWh; nominal 78.0 kWh on the same page (Mazda AU quotes 78kWh). Same LFP pack as mazda-6e (77 usable)."
+      },
+      "rangeKm": {
+        "value": 484,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "RACV: WLTP up to 484km on 19-inch wheels (the GT's standard size). Mazda AU model page and release also quote 484km WLTP; no separate AU-certified figure found. Chasing Cars quotes 483km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.9,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "RACV: WLTP 18.9kWh/100km on 19-inch wheels; ev-database WLTP 304 Wh/mi (18.9 kWh/100km) for the TEL, stated to include charging losses, matching the dataset's WLTP-label convention. 77/484x100 = 15.9, 19% below; inside the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 468,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-6e/",
+        "note": "Mazda AU: 468L to the ceiling; RACV/CarExpert give 363L to the tonneau cover. Ceiling figure chosen to pair with the folded figure on one convention; excludes 83L frunk."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1434,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-6e/",
+        "note": "Mazda AU: 1,434L seats folded (to roof); 956L to belt line per RACV/CarExpert."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3596/Mazda-CX-6e-78-kWh",
+        "note": "5 seats; RACV also describes it as a five-seater"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-6e/",
+        "note": "Mazda AU: braked towing up to 1,500kg with Mazda Genuine Towing kit, 75kg ball weight; CarExpert quick drive also 1500kg braked"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "5 years / unlimited km vehicle warranty, unconditional; HV battery 8 years / 160,000km (also CarsGuide)"
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "anchored between mazda-6e-gt ($1,750 at $49,990) and deepal-s07-rwd ($2,200 at $53,900) / tesla-model-y-premium-rwd ($2,300 at $58,900); Mazda's mainstream dealer and repair network kept it under the Deepal and Tesla."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "matches Mazda brand convention set on mazda-6e (same platform, China-built, new EV nameplate with no AU resale history); supported by Mazda moving the GT to a discounted $56,990 drive-away offer within weeks of launch. Slightly gentler than deepal-s07 [1,0.68,...], in line with tesla-model-y [1,0.73,...]."
+      }
+    },
+    "mazda-cx-6e-azami": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-6e/",
+        "note": "Mazda AU model page lists GT and Azami grades with orders open (GT priced from $56,990 drive-away); Build & Price page https://www.mazda.com.au/build/cx-6e/ exists but renders no data to automated fetches. Two-grade count confirmed by CarExpert and Chasing Cars launch reviews (Oct 2026)."
+      },
+      "listPrice": {
+        "value": 56990,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/mazda-news/mazda-cx-6e-australia-specs-pricing-electric-suv/",
+        "note": "Mazda AU release (8/4/2026) pricing table, MLP (manufacturer list price) column, Azami RWD 190kW/78kWh. CarExpert quick drive (6 Oct 2026) and Chasing Cars repeat it 'before on-road costs' in words; RACV says 'plus ORCs'. Victorian drive-away computed by calc/onroad.js = $60,264; the GT's advertised $56,990 drive-away (Mazda AU page, offer to 31 Dec 2026 per zecar) is below that, so it is a discounted campaign, not the list price."
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3596/Mazda-CX-6e-78-kWh",
+        "note": "usable 77.0 kWh; nominal 78.0 kWh on the same page (Mazda AU quotes 78kWh). Same LFP pack as mazda-6e (77 usable)."
+      },
+      "rangeKm": {
+        "value": 468,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "RACV: WLTP 468km on 21-inch wheels (the Azami's standard size); CarExpert quick drive and CarsGuide spec table also give 468km for Azami."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.4,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "RACV: WLTP 19.4kWh/100km on 21-inch wheels; CarsGuide spec table 19.4; ev-database TEH 312 Wh/mi (19.4). 77/468x100 = 16.5, 18% below; inside the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 468,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-6e/",
+        "note": "Mazda AU: 468L to the ceiling; RACV/CarExpert give 363L to the tonneau cover. Ceiling figure chosen to pair with the folded figure on one convention; excludes 83L frunk."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1434,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-6e/",
+        "note": "Mazda AU: 1,434L seats folded (to roof); 956L to belt line per RACV/CarExpert."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3596/Mazda-CX-6e-78-kWh",
+        "note": "5 seats; RACV also describes it as a five-seater"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-6e/",
+        "note": "Mazda AU: braked towing up to 1,500kg with Mazda Genuine Towing kit, 75kg ball weight; CarExpert quick drive also 1500kg braked"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-mazda-cx-6e-price-specs-release-date.html",
+        "note": "5 years / unlimited km vehicle warranty, unconditional; HV battery 8 years / 160,000km (also CarsGuide)"
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "GT anchor plus $100 for the $3,000 higher price and 21-inch wheels; mazda-6e-atenza carries +$100 over its GT on the same logic."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "matches Mazda brand convention set on mazda-6e (same platform, China-built, new EV nameplate with no AU resale history); supported by Mazda moving the GT to a discounted $56,990 drive-away offer within weeks of launch. Slightly gentler than deepal-s07 [1,0.68,...], in line with tesla-model-y [1,0.73,...]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mazda-cx-6e-gt.insuranceAnnual: judged, no quote obtained; anchored to mazda-6e, deepal-s07, tesla-model-y",
+    "mazda-cx-6e-azami.insuranceAnnual: judged, GT anchor plus $100",
+    "mazda-cx-6e-gt.depreciationCurve: judged, Mazda brand convention from mazda-6e; no AU resale data for a nameplate delivered from Sept 2026",
+    "mazda-cx-6e-azami.depreciationCurve: judged, as GT",
+    "mazda-cx-6e-gt.bootLitresSeatsUp: 468L is to the roof; 363L to the cover per RACV/CarExpert. Convention choice, not a sourcing doubt",
+    "mazda-cx-6e-gt.listPrice: Mazda Build & Price renders no data for automated fetches; MLP taken from Mazda's April 2026 release and re-confirmed by October 2026 launch reviews, not from the live configurator on the research date",
+    "mazda-cx-6e-azami.listPrice: same as GT; the Azami was named but not priced on the live Mazda model page on the research date"
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "familyId": "hyundai-inster",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "hyundai-inster-standard-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/inster",
+        "note": "Model page price/spec component lists exactly two variants: 'INSTER SUV Standard Range 71.1kW Motor 42.0kWh FWD' and 'INSTER Cross w/Sunroof SUV Extended Range 84.5 kW Motor 49.0kWh FWD'; Build & Price JS-rendered"
+      },
+      "listPrice": {
+        "value": 37500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-hyundai-inster-price-cut-lineup-trimmed-in-australia",
+        "note": "$37,500 'before on-road costs' in words (2027 MY, down $1,500); EV Central agrees $37,500 excl. on-roads. $35,990 drive-away is a campaign to 31 Dec 2026, not used. Cross-check: Hyundai page drive-away estimate $41,712 vs app Vic drive-away $39,955 (gap ~ dealer delivery); CarExpert Sydney drive-away $41,447"
+      },
+      "batteryKwh": {
+        "value": 39,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2230/Hyundai-INSTER-Standard-Range",
+        "note": "usable 39.0 kWh; nominal 42.0 kWh on same page, and Hyundai AU spec sheet 'Capacity 42 kWh' is the gross figure"
+      },
+      "rangeKm": {
+        "value": 327,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "Hyundai AU spec sheet 'All Electric Range (AER) 327km', WLTP footnote, 15-inch wheels; matches EV Database WLTP TEL 327 km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.3,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "Hyundai AU spec sheet WLTP combined 14.3 kWh/100km (includes charging losses, hence above 39/327)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 280,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 280 L / 1,059 L', both grades; 280 L is with rear seats slid back (EV Database shows 351 L slid forward)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1059,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "VDA maximum 1,059 L, both grades"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-hyundai-inster-price-cut-lineup-trimmed-in-australia",
+        "note": "'Four seats'; two rear seating positions (ISOFIX 2x rear on spec sheet)"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "Towing capacity braked/unbraked shown as '-' (not rated); EV Database also 0 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/inster",
+        "note": "5 Year Standard New Car Warranty; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 1300,
+        "basis": "judged",
+        "note": "anchored to byd-dolphin-essential (1250 at $29,990) and hyundai-kona-electric-standard-range (1350 at $46,000); unchanged from held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai EV brand convention, matches hyundai-kona-electric rows; softer than mainstream default given two Inster list-price cuts in 2026 and heavy drive-away discounting ($35,990 Standard Range offer)"
+      }
+    },
+    "hyundai-inster-cross": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/inster",
+        "note": "Model page lists 'INSTER Cross w/Sunroof SUV Extended Range 84.5 kW Motor 49.0kWh FWD' (the 'Extended Range' here is the powertrain name, not the dropped grade)"
+      },
+      "listPrice": {
+        "value": 43500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-hyundai-inster-price-cut-lineup-trimmed-in-australia",
+        "note": "$43,500 'before on-road costs' in words (2027 MY, down $1,500); EV Central agrees $43,500 excl. on-roads. $41,990 drive-away campaign to 31 Dec 2026 not used. Cross-check: Hyundai page drive-away estimate $47,902 vs app Vic $46,207; Cross–Standard drive-away gap $6,190 on Hyundai page replicates a $6,000 list gap plus duty"
+      },
+      "batteryKwh": {
+        "value": 46,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2231/Hyundai-INSTER-Long-Range",
+        "note": "usable 46.0 kWh; nominal 49.0 kWh on same page and Hyundai AU spec sheet 'Capacity 49 kWh' (gross)"
+      },
+      "rangeKm": {
+        "value": 360,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "Hyundai AU spec sheet 'All Electric Range (AER) 360km (Sunroof)', WLTP, 17-inch wheels (the Cross as sold); EV Database Long Range TEL 370/TEH 359 is the non-Cross body"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.1,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "Hyundai AU spec sheet WLTP combined 15.1 kWh/100km (Sunroof), same car as the range figure"
+      },
+      "bootLitresSeatsUp": {
+        "value": 280,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 280 L / 1,059 L', both grades; 280 L is with rear seats slid back (EV Database shows 351 L slid forward)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1059,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "VDA maximum 1,059 L, both grades"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-hyundai-inster-price-cut-lineup-trimmed-in-australia",
+        "note": "'Four seats'; two rear seating positions (ISOFIX 2x rear on spec sheet)"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/inster/MY26-INSTER-Specification-Sheet-Aug-2026.pdf",
+        "note": "Towing capacity braked/unbraked shown as '-' (not rated); EV Database also 0 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/inster",
+        "note": "5 Year Standard New Car Warranty; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 1400,
+        "basis": "judged",
+        "note": "anchored to standard-range row +$100 for higher price and 17-inch wheels; between byd-dolphin-premium (1400 at $36,990) and hyundai-kona-electric-standard-range (1350); unchanged from held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai EV brand convention, matches hyundai-kona-electric rows; softer than mainstream default given two Inster list-price cuts in 2026 and heavy drive-away discounting ($35,990 Standard Range offer)"
+      }
+    }
+  },
+  "lowConfidence": [
+    "hyundai-inster-cross.insuranceAnnual: judged, anchored to siblings",
+    "hyundai-inster-standard-range.insuranceAnnual: judged, anchored to siblings",
+    "hyundai-inster-cross.depreciationCurve: judged brand convention",
+    "hyundai-inster-standard-range.depreciationCurve: judged brand convention",
+    "hyundai-inster-standard-range.listPrice: Build & Price is JS-rendered (priceEnabled false); price from two launch reports saying before on-road costs, corroborated by Hyundai page drive-away estimate and CarExpert drive-away",
+    "hyundai-inster-cross.listPrice: same basis as Standard Range",
+    "hyundai-inster-cross.batteryKwh: usable 46 kWh from EV Database's non-Cross Long Range record (same 49 kWh pack)"
+  ]
+}

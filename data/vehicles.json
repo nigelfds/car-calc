@@ -896,20 +896,20 @@
       0.44,
       0.39
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
-    "id": "byd-atto3-premium",
+    "id": "byd-atto3-evo-dynamic",
     "familyId": "byd-atto3",
     "make": "BYD",
     "model": "Atto 3",
-    "variant": "Premium Extended Range",
+    "variant": "Evo Dynamic",
     "bodyType": "SUV",
-    "listPrice": 44990,
+    "listPrice": 41990,
     "batteryKwh": 60.48,
     "rangeKm": 420,
-    "consumptionKwhPer100km": 14.9,
-    "bootLitresSeatsUp": 440,
+    "consumptionKwhPer100km": 16,
+    "bootLitresSeatsUp": 434,
     "bootLitresSeatsDown": 1340,
     "seats": 5,
     "towKg": 750,
@@ -923,7 +923,34 @@
       0.44,
       0.39
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "byd-atto3-evo-premium",
+    "familyId": "byd-atto3",
+    "make": "BYD",
+    "model": "Atto 3",
+    "variant": "Evo Premium",
+    "bodyType": "SUV",
+    "listPrice": 46990,
+    "batteryKwh": 74.8,
+    "rangeKm": 510,
+    "consumptionKwhPer100km": 16.4,
+    "bootLitresSeatsUp": 490,
+    "bootLitresSeatsDown": 1360,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1700,
+    "depreciationCurve": [
+      1,
+      0.77,
+      0.63,
+      0.51,
+      0.44,
+      0.39
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-dolphin-essential",
@@ -2736,6 +2763,72 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "gwm-cannon-phev-lux",
+    "familyId": "gwm-cannon-phev",
+    "make": "GWM",
+    "model": "Cannon PHEV",
+    "variant": "Lux",
+    "bodyType": "Ute",
+    "powertrain": "phev",
+    "listPrice": 48793,
+    "batteryKwh": 33.11,
+    "rangeKm": 115,
+    "consumptionKwhPer100km": 28.8,
+    "combinedRangeKm": 1041,
+    "fuelConsumptionL100km": 8.1,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": false,
+    "isNonPassengerForVicDuty": true,
+    "bootLitresSeatsUp": 1196,
+    "bootLitresSeatsDown": 1196,
+    "seats": 5,
+    "towKg": 3500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1700,
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "gwm-cannon-phev-ultra",
+    "familyId": "gwm-cannon-phev",
+    "make": "GWM",
+    "model": "Cannon PHEV",
+    "variant": "Ultra",
+    "bodyType": "Ute",
+    "powertrain": "phev",
+    "listPrice": 52687,
+    "batteryKwh": 33.11,
+    "rangeKm": 115,
+    "consumptionKwhPer100km": 28.8,
+    "combinedRangeKm": 1041,
+    "fuelConsumptionL100km": 8.1,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": false,
+    "isNonPassengerForVicDuty": true,
+    "bootLitresSeatsUp": 1196,
+    "bootLitresSeatsDown": 1196,
+    "seats": 5,
+    "towKg": 3500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1800,
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
     "id": "gwm-haval-h6-gt-phev-ultra-hi4",
     "familyId": "gwm-haval-h6-gt-phev",
     "make": "GWM",
@@ -3074,7 +3167,7 @@
     "model": "Inster",
     "variant": "Cross",
     "bodyType": "SUV",
-    "listPrice": 45000,
+    "listPrice": 43500,
     "batteryKwh": 46,
     "rangeKm": 360,
     "consumptionKwhPer100km": 15.1,
@@ -3092,61 +3185,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-08-08"
-  },
-  {
-    "id": "hyundai-inster-cross-roof-basket",
-    "familyId": "hyundai-inster",
-    "make": "Hyundai",
-    "model": "Inster",
-    "variant": "Cross Roof Basket",
-    "bodyType": "SUV",
-    "listPrice": 45000,
-    "batteryKwh": 46,
-    "rangeKm": 293,
-    "consumptionKwhPer100km": 18.8,
-    "bootLitresSeatsUp": 280,
-    "bootLitresSeatsDown": 1059,
-    "seats": 4,
-    "towKg": 0,
-    "warrantyYears": 5,
-    "insuranceAnnual": 1400,
-    "depreciationCurve": [
-      1,
-      0.74,
-      0.63,
-      0.55,
-      0.48,
-      0.42
-    ],
-    "sourcedAt": "2026-08-08"
-  },
-  {
-    "id": "hyundai-inster-extended-range",
-    "familyId": "hyundai-inster",
-    "make": "Hyundai",
-    "model": "Inster",
-    "variant": "Extended Range",
-    "bodyType": "SUV",
-    "listPrice": 42500,
-    "batteryKwh": 46,
-    "rangeKm": 360,
-    "consumptionKwhPer100km": 15.1,
-    "bootLitresSeatsUp": 280,
-    "bootLitresSeatsDown": 1059,
-    "seats": 4,
-    "towKg": 0,
-    "warrantyYears": 5,
-    "insuranceAnnual": 1350,
-    "depreciationCurve": [
-      1,
-      0.74,
-      0.63,
-      0.55,
-      0.48,
-      0.42
-    ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-inster-standard-range",
@@ -3155,7 +3194,7 @@
     "model": "Inster",
     "variant": "Standard Range",
     "bodyType": "SUV",
-    "listPrice": 39000,
+    "listPrice": 37500,
     "batteryKwh": 39,
     "rangeKm": 327,
     "consumptionKwhPer100km": 14.3,
@@ -3173,7 +3212,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-ioniq-5-elite-rwd",
@@ -3984,7 +4023,7 @@
     "variant": "Air 2WD Long Range",
     "bodyType": "SUV",
     "listPrice": 61170,
-    "batteryKwh": 88.1,
+    "batteryKwh": 84,
     "rangeKm": 555,
     "consumptionKwhPer100km": 18,
     "bootLitresSeatsUp": 513,
@@ -4001,7 +4040,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev5-air-standard-range",
@@ -4011,13 +4050,13 @@
     "variant": "Air 2WD Standard Range",
     "bodyType": "SUV",
     "listPrice": 56770,
-    "batteryKwh": 64.2,
+    "batteryKwh": 61.2,
     "rangeKm": 400,
     "consumptionKwhPer100km": 18.2,
     "bootLitresSeatsUp": 513,
     "bootLitresSeatsDown": 1714,
     "seats": 5,
-    "towKg": 1250,
+    "towKg": 300,
     "warrantyYears": 7,
     "insuranceAnnual": 1700,
     "depreciationCurve": [
@@ -4028,7 +4067,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev5-earth-awd",
@@ -4038,7 +4077,7 @@
     "variant": "Earth AWD Long Range",
     "bodyType": "SUV",
     "listPrice": 64770,
-    "batteryKwh": 88.1,
+    "batteryKwh": 84,
     "rangeKm": 500,
     "consumptionKwhPer100km": 20.1,
     "bootLitresSeatsUp": 513,
@@ -4055,7 +4094,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev5-gt-line-awd",
@@ -4065,7 +4104,7 @@
     "variant": "GT-Line AWD Long Range",
     "bodyType": "SUV",
     "listPrice": 71770,
-    "batteryKwh": 88.1,
+    "batteryKwh": 84,
     "rangeKm": 470,
     "consumptionKwhPer100km": 21,
     "bootLitresSeatsUp": 513,
@@ -4082,7 +4121,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev6-air-rwd",
@@ -5223,6 +5262,60 @@
     "sourcedAt": "2026-07-28"
   },
   {
+    "id": "mazda-cx-6e-azami",
+    "familyId": "mazda-cx-6e",
+    "make": "Mazda",
+    "model": "CX-6e",
+    "variant": "Azami",
+    "bodyType": "SUV",
+    "listPrice": 56990,
+    "batteryKwh": 77,
+    "rangeKm": 468,
+    "consumptionKwhPer100km": 19.4,
+    "bootLitresSeatsUp": 468,
+    "bootLitresSeatsDown": 1434,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2000,
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "mazda-cx-6e-gt",
+    "familyId": "mazda-cx-6e",
+    "make": "Mazda",
+    "model": "CX-6e",
+    "variant": "GT",
+    "bodyType": "SUV",
+    "listPrice": 53990,
+    "batteryKwh": 77,
+    "rangeKm": 484,
+    "consumptionKwhPer100km": 18.9,
+    "bootLitresSeatsUp": 468,
+    "bootLitresSeatsDown": 1434,
+    "seats": 5,
+    "towKg": 1500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1900,
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
     "id": "mazda-cx-80-phev-azami",
     "familyId": "mazda-cx-80-phev",
     "make": "Mazda",
@@ -6003,7 +6096,7 @@
     "model": "S5 EV",
     "variant": "Essence 49",
     "bodyType": "SUV",
-    "listPrice": 42990,
+    "listPrice": 39453,
     "batteryKwh": 49,
     "rangeKm": 335,
     "consumptionKwhPer100km": 16.9,
@@ -6021,7 +6114,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-s5-essence-62",
@@ -6030,10 +6123,10 @@
     "model": "S5 EV",
     "variant": "Essence 62",
     "bodyType": "SUV",
-    "listPrice": 47990,
+    "listPrice": 44251,
     "batteryKwh": 62,
     "rangeKm": 450,
-    "consumptionKwhPer100km": 16.1,
+    "consumptionKwhPer100km": 16.8,
     "bootLitresSeatsUp": 453,
     "bootLitresSeatsDown": 1441,
     "seats": 5,
@@ -6048,7 +6141,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-s6-essence-awd",
@@ -6384,10 +6477,10 @@
     "powertrain": "phev",
     "listPrice": 66790,
     "batteryKwh": 18.9,
-    "rangeKm": 86,
-    "consumptionKwhPer100km": 22,
-    "combinedRangeKm": 877,
-    "fuelConsumptionL100km": 6.7,
+    "rangeKm": 83,
+    "consumptionKwhPer100km": 22.8,
+    "combinedRangeKm": 829,
+    "fuelConsumptionL100km": 7.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 191,
@@ -6404,7 +6497,7 @@
       0.51,
       0.45
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mitsubishi-outlander-phev-es",
@@ -6418,8 +6511,8 @@
     "batteryKwh": 18.9,
     "rangeKm": 86,
     "consumptionKwhPer100km": 22,
-    "combinedRangeKm": 877,
-    "fuelConsumptionL100km": 6.7,
+    "combinedRangeKm": 832,
+    "fuelConsumptionL100km": 7.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 472,
@@ -6436,7 +6529,7 @@
       0.51,
       0.45
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mitsubishi-outlander-phev-exceed",
@@ -6448,10 +6541,10 @@
     "powertrain": "phev",
     "listPrice": 71640,
     "batteryKwh": 18.9,
-    "rangeKm": 86,
-    "consumptionKwhPer100km": 22,
-    "combinedRangeKm": 877,
-    "fuelConsumptionL100km": 6.7,
+    "rangeKm": 83,
+    "consumptionKwhPer100km": 22.8,
+    "combinedRangeKm": 829,
+    "fuelConsumptionL100km": 7.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 472,
@@ -6468,7 +6561,7 @@
       0.51,
       0.45
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mitsubishi-outlander-phev-exceed-tourer",
@@ -6480,10 +6573,10 @@
     "powertrain": "phev",
     "listPrice": 74490,
     "batteryKwh": 18.9,
-    "rangeKm": 86,
-    "consumptionKwhPer100km": 22,
-    "combinedRangeKm": 877,
-    "fuelConsumptionL100km": 6.7,
+    "rangeKm": 83,
+    "consumptionKwhPer100km": 22.8,
+    "combinedRangeKm": 829,
+    "fuelConsumptionL100km": 7.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 472,
@@ -6500,7 +6593,7 @@
       0.51,
       0.45
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "nissan-ariya-advance",
@@ -7478,6 +7571,87 @@
     "sourcedAt": "2026-08-06"
   },
   {
+    "id": "smart-5-brabus",
+    "familyId": "smart-5",
+    "make": "Smart",
+    "model": "#5",
+    "variant": "BRABUS (AWD)",
+    "bodyType": "SUV",
+    "listPrice": 73900,
+    "batteryKwh": 94,
+    "rangeKm": 540,
+    "consumptionKwhPer100km": 19.9,
+    "bootLitresSeatsUp": 630,
+    "bootLitresSeatsDown": 1530,
+    "seats": 5,
+    "towKg": 1600,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2750,
+    "depreciationCurve": [
+      1,
+      0.68,
+      0.57,
+      0.48,
+      0.41,
+      0.35
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "smart-5-premium",
+    "familyId": "smart-5",
+    "make": "Smart",
+    "model": "#5",
+    "variant": "Premium",
+    "bodyType": "SUV",
+    "listPrice": 63900,
+    "batteryKwh": 94,
+    "rangeKm": 590,
+    "consumptionKwhPer100km": 18.4,
+    "bootLitresSeatsUp": 630,
+    "bootLitresSeatsDown": 1530,
+    "seats": 5,
+    "towKg": 1600,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2300,
+    "depreciationCurve": [
+      1,
+      0.68,
+      0.57,
+      0.48,
+      0.41,
+      0.35
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "smart-5-pro-plus",
+    "familyId": "smart-5",
+    "make": "Smart",
+    "model": "#5",
+    "variant": "Pro+",
+    "bodyType": "SUV",
+    "listPrice": 58900,
+    "batteryKwh": 94,
+    "rangeKm": 590,
+    "consumptionKwhPer100km": 18.4,
+    "bootLitresSeatsUp": 630,
+    "bootLitresSeatsDown": 1530,
+    "seats": 5,
+    "towKg": 1600,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2150,
+    "depreciationCurve": [
+      1,
+      0.68,
+      0.57,
+      0.48,
+      0.41,
+      0.35
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
     "id": "subaru-solterra-awd",
     "familyId": "subaru-solterra",
     "make": "Subaru",
@@ -7667,31 +7841,58 @@
     "sourcedAt": "2026-07-31"
   },
   {
+    "id": "tesla-model-3-base-rwd",
+    "familyId": "tesla-model-3",
+    "make": "Tesla",
+    "model": "Model 3",
+    "variant": "RWD",
+    "bodyType": "Sedan",
+    "listPrice": 45900,
+    "batteryKwh": 60,
+    "rangeKm": 572,
+    "consumptionKwhPer100km": 12.2,
+    "bootLitresSeatsUp": 682,
+    "bootLitresSeatsDown": 1065,
+    "seats": 5,
+    "towKg": 1000,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2250,
+    "depreciationCurve": [
+      1,
+      0.73,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
+  },
+  {
     "id": "tesla-model-3-long-range-rwd",
     "familyId": "tesla-model-3",
     "make": "Tesla",
     "model": "Model 3",
-    "variant": "Long Range RWD",
+    "variant": "Premium Long Range RWD",
     "bodyType": "Sedan",
-    "listPrice": 61990,
-    "batteryKwh": 78,
+    "listPrice": 61900,
+    "batteryKwh": 79,
     "rangeKm": 750,
     "consumptionKwhPer100km": 12.5,
     "bootLitresSeatsUp": 682,
-    "bootLitresSeatsDown": 950,
+    "bootLitresSeatsDown": 1065,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 5,
-    "insuranceAnnual": 2900,
+    "insuranceAnnual": 2550,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
-      0.53,
-      0.47
+      0.73,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
-    "sourcedAt": "2026-07-26"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "tesla-model-3-performance",
@@ -7702,50 +7903,50 @@
     "bodyType": "Sedan",
     "listPrice": 80900,
     "batteryKwh": 79,
-    "rangeKm": 571,
-    "consumptionKwhPer100km": 16.5,
+    "rangeKm": 600,
+    "consumptionKwhPer100km": 15.8,
     "bootLitresSeatsUp": 682,
-    "bootLitresSeatsDown": 950,
+    "bootLitresSeatsDown": 1065,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 5,
-    "insuranceAnnual": 3200,
+    "insuranceAnnual": 3150,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
-      0.53,
-      0.47
+      0.73,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "tesla-model-3-rwd",
     "familyId": "tesla-model-3",
     "make": "Tesla",
     "model": "Model 3",
-    "variant": "RWD",
+    "variant": "Premium RWD",
     "bodyType": "Sedan",
     "listPrice": 54900,
-    "batteryKwh": 62.5,
+    "batteryKwh": 60,
     "rangeKm": 520,
-    "consumptionKwhPer100km": 13.8,
+    "consumptionKwhPer100km": 13.2,
     "bootLitresSeatsUp": 682,
-    "bootLitresSeatsDown": 950,
+    "bootLitresSeatsDown": 1065,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 5,
-    "insuranceAnnual": 2600,
+    "insuranceAnnual": 2400,
     "depreciationCurve": [
       1,
-      0.78,
-      0.68,
-      0.6,
-      0.53,
-      0.47
+      0.73,
+      0.63,
+      0.55,
+      0.48,
+      0.42
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "tesla-model-y-l-premium-awd",
@@ -7863,10 +8064,10 @@
     "variant": "2WD",
     "bodyType": "SUV",
     "listPrice": 55990,
-    "batteryKwh": 74.7,
+    "batteryKwh": 71,
     "rangeKm": 591,
     "consumptionKwhPer100km": 13.8,
-    "bootLitresSeatsUp": 452,
+    "bootLitresSeatsUp": 421,
     "bootLitresSeatsDown": 1410,
     "seats": 5,
     "towKg": 750,
@@ -7880,7 +8081,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-bz4x-awd",
@@ -7893,7 +8094,7 @@
     "batteryKwh": 71,
     "rangeKm": 517,
     "consumptionKwhPer100km": 16,
-    "bootLitresSeatsUp": 452,
+    "bootLitresSeatsUp": 410,
     "bootLitresSeatsDown": 1410,
     "seats": 5,
     "towKg": 1500,
@@ -7907,7 +8108,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-bz4x-touring",
@@ -7934,7 +8135,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "toyota-hilux-bev-sr-pickup",

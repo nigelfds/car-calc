@@ -7,17 +7,17 @@
     "variant": "Air 2WD Standard Range",
     "bodyType": "SUV",
     "listPrice": 56770,
-    "batteryKwh": 64.2,
+    "batteryKwh": 61.2,
     "rangeKm": 400,
     "consumptionKwhPer100km": 18.2,
     "bootLitresSeatsUp": 513,
     "bootLitresSeatsDown": 1714,
     "seats": 5,
-    "towKg": 1250,
+    "towKg": 300,
     "warrantyYears": 7,
     "insuranceAnnual": 1700,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev5-air-long-range",
@@ -27,7 +27,7 @@
     "variant": "Air 2WD Long Range",
     "bodyType": "SUV",
     "listPrice": 61170,
-    "batteryKwh": 88.1,
+    "batteryKwh": 84,
     "rangeKm": 555,
     "consumptionKwhPer100km": 18.0,
     "bootLitresSeatsUp": 513,
@@ -37,7 +37,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1800,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev5-earth-awd",
@@ -47,7 +47,7 @@
     "variant": "Earth AWD Long Range",
     "bodyType": "SUV",
     "listPrice": 64770,
-    "batteryKwh": 88.1,
+    "batteryKwh": 84,
     "rangeKm": 500,
     "consumptionKwhPer100km": 20.1,
     "bootLitresSeatsUp": 513,
@@ -57,7 +57,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1900,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "kia-ev5-gt-line-awd",
@@ -67,7 +67,7 @@
     "variant": "GT-Line AWD Long Range",
     "bodyType": "SUV",
     "listPrice": 71770,
-    "batteryKwh": 88.1,
+    "batteryKwh": 84,
     "rangeKm": 470,
     "consumptionKwhPer100km": 21.0,
     "bootLitresSeatsUp": 513,
@@ -77,6 +77,6 @@
     "warrantyYears": 7,
     "insuranceAnnual": 2050,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   }
 ]
