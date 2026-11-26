@@ -1042,16 +1042,6 @@
       "note": "Sells no PHEV in Australia at survey."
     },
     {
-      "name": "Kia: no plug-in hybrid",
-      "make": "Kia",
-      "powertrain": "phev",
-      "scope": "brand",
-      "status": "not-on-sale",
-      "checkedAt": "2026-07-28",
-      "recheckAfter": "2027-01-01",
-      "note": "Sells no PHEV in Australia at survey."
-    },
-    {
       "name": "Subaru: no plug-in hybrid",
       "make": "Subaru",
       "powertrain": "phev",
