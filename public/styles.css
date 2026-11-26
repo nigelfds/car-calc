@@ -208,7 +208,8 @@ input[type='date'],
   letter-spacing: -0.01em;
 }
 
-/* The mark: three payment "lines" (lease, loan, cash) merging into a bolt.
+/* The mark: an EV outline with a charging bolt, inside three rings in the
+   lease, loan and cash line colours.
    logo.svg's viewBox is cropped to the drawn circle, so the image fills the
    round frame with no offsets. Fixed size, so the header never reflows once
    the image loads. */
