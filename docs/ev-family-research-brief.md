@@ -1,5 +1,9 @@
 # EV family research brief — car-calc dataset
 
+> **Superseded 2026-11-26 by `.claude/skills/research-car-family/`**, which merges this brief
+> with its BEV/PHEV sibling and the lessons from the wave logs, and adds per-figure provenance.
+> Dispatch research agents with the skill. This file is kept as history and is no longer updated.
+
 You are researching **one** EV family for the Australian (specifically Victorian) market and
 writing **exactly two files**. Project root: `/Users/nigel/projects/car-calc`.
 

@@ -163,6 +163,22 @@ consumption, boot space, warranty and so on) and only overwrites the aggregate f
 passes — a bad edit leaves the previously-published dataset untouched rather than shipping broken
 data.
 
+### Research agents
+
+The per-family research procedure lives in the project skill
+`.claude/skills/research-car-family/`: what to source, from where, the traps earlier research waves
+hit, and the report to return. Each agent writes one family's `data/families/`, `data/vehicles/`
+and `data/provenance/` files. The provenance file records the page and basis behind every figure
+on every row, and is checked with:
+
+```bash
+node scripts/check-provenance.js <familyId>   # or --all
+```
+
+It also warns about dollar figures in a family's prose that match none of its list prices. That
+warning is advisory, since prose quotes rivals and drive-away prices too. Families researched before
+provenance existed have no file; the build does not require one.
+
 ### Car images
 
 `data/car-images.json` and `data/model-aliases.json` are keyed by family id but deliberately
