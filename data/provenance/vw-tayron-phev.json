@@ -1,0 +1,217 @@
+{
+  "familyId": "vw-tayron-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "vw-tayron-phev-150tsi-ehybrid-elegance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU model page lists 'MY26 Tayron eHybrid 150TSI Elegance' as one of two grades with MRDP footnotes for purchases 01/10/2026-31/12/2026; VW AU configurator shows a 'Tayron eHybrid' card with offer available. Dealer page (John Hughes VW) carries the same MY26 MRDP offer to 31/12/2026. No VW AU list price readable (MRDP amount not in page text; raw page fetch refused)."
+      },
+      "listPrice": {
+        "value": 62390,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tayron-ehybrid-review",
+        "note": "CarExpert review (2 Jun 2026): $62,390 before on-road costs. Chasing Cars (20 Feb 2026, 'All prices listed are before on-road costs') and EV Central (27 Jun 2026, 'before on-road costs') give the same figure. No price change found to the research date; CarsGuide 2027 price page also lists 62,390 excluding stamp duty but its record gives the 200TSI eHybrid a 2.0L engine, so it is discarded per the one-error rule. VW AU MRDP drive-away amounts not readable."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tayron/1generation/345196/",
+        "note": "ADAC: Batteriekapazitaet (Brutto) 25,7 kWh, (Netto) 19,7 kWh for the same Tayron 1.5 eHybrid; usable figure used. EV Central also calls 19.7 kWh net."
+      },
+      "rangeKm": {
+        "value": 116,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tayron-ehybrid-review",
+        "note": "Australian-spec claim 116 km (150TSI); VW AU model page gives 113-116 km. WLTP-derived (Chasing Cars labels 113-117 km WLTP): below the European WLTP best case of 119 km (150 kW, 18-inch, ADAC 345195) and in line with European 19-inch figures (115 km 150 kW / 114 km 200 kW). AU Elegance is on 19-inch, R-Line on 20-inch (EV Central)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.0,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.7 / 116 x 100. CarExpert measured 18.0 kWh/100km on a 50 km E-Mode loop."
+      },
+      "combinedRangeKm": {
+        "value": 879,
+        "basis": "derived",
+        "note": "rangeKm 116 + 45 L tank / 5.9 L/100km x 100 (762.7) = 879. Tank 45 L from CarExpert and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.9,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tayron/1generation/345196/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,9 L/100km for the 150 kW Tayron eHybrid on 255/45R19 (AU Elegance wheel size); the 18-inch 150 kW Elegance (345195) is 5,7. Same basis as kia-sorento-phev (ADAC battery-empty WLTP). Sibling check: Tiguan eHybrid 150 kW 18-inch, 1866 kg, is 5,7 (ADAC 345201), so the heavier Tayron reads higher. Held 7.0 was judged from UK real-world mpg."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU combined ADR 81/02 label 1.7 L/100km, at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CarExpert gives 37 g/km for this grade."
+      },
+      "bootLitresSeatsUp": {
+        "value": 705,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU '705L with rear seats in forward position', eHybrid with battery fitted (145 L less than petrol Tayron, CarExpert). VDA to the cargo cover per VW convention; ADAC lists the same 705 as 'normal'."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1915,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tayron/1generation/345196/",
+        "note": "ADAC 1915 L 'dachhoch, mit umgeklappter Ruecksitzbank' (to the roof); CarExpert and EV Central quote the same 1915 L. No belt-line folded figure found; kept to-roof, consistent with held data and kia-sorento-phev."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU: 5 seats; no third row on eHybrid (battery under rear floor, CarExpert)."
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tayron-ehybrid-review",
+        "note": "CarExpert spec table braked 1800 kg; ADAC gives the same braked figure for the 150 kW car. VW AU technical spec sheet not reached."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU '5-year comprehensive warranty'; CarExpert: 5 years/unlimited km, battery 8 years/160,000 km. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "Held 1800 kept. Anchors: vw-tiguan-phev-150tsi-elegance $1750 at $64,590, skoda-kodiaq-phev-select $1900 at $63,490, mitsubishi-outlander-phev-aspire $1750 at $66,790, kia-sorento-phev-s-awd $1800 at $71,175."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention: the single curve on every vw-id5 (and vw-tiguan-phev) row, per owner rule of one depreciation curve per brand. Held 2026-07-28 Tayron rows used steeper 0.70/0.36 and 0.68/0.34 curves with no documented evidence."
+      }
+    },
+    "vw-tayron-phev-200tsi-ehybrid-r-line": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU model page lists 'MY26 Tayron eHybrid 200TSI R-Line' as one of two grades with MRDP footnotes for purchases 01/10/2026-31/12/2026; VW AU configurator shows a 'Tayron eHybrid' card with offer available. Dealer page (John Hughes VW) carries the same MY26 MRDP offer to 31/12/2026. No VW AU list price readable (MRDP amount not in page text; raw page fetch refused)."
+      },
+      "listPrice": {
+        "value": 76550,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tayron-ehybrid-review",
+        "note": "CarExpert review (2 Jun 2026): $76,550 before on-road costs. Chasing Cars (20 Feb 2026, 'All prices listed are before on-road costs') and EV Central (27 Jun 2026, 'before on-road costs') give the same figure. No price change found to the research date; CarsGuide 2027 price page also lists 76,550 excluding stamp duty but its record gives the 200TSI eHybrid a 2.0L engine, so it is discarded per the one-error rule. VW AU MRDP drive-away amounts not readable."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tayron/1generation/345198/",
+        "note": "ADAC: Batteriekapazitaet (Brutto) 25,7 kWh, (Netto) 19,7 kWh for the same Tayron 1.5 eHybrid; usable figure used. EV Central also calls 19.7 kWh net."
+      },
+      "rangeKm": {
+        "value": 113,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tayron-ehybrid-review",
+        "note": "Australian-spec claim 113 km (200TSI); VW AU model page gives 113-116 km. WLTP-derived (Chasing Cars labels 113-117 km WLTP): below the European WLTP best case of 119 km (150 kW, 18-inch, ADAC 345195) and in line with European 19-inch figures (115 km 150 kW / 114 km 200 kW). AU Elegance is on 19-inch, R-Line on 20-inch (EV Central)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.7 / 113 x 100. CarExpert measured 18.0 kWh/100km on a 50 km E-Mode loop."
+      },
+      "combinedRangeKm": {
+        "value": 876,
+        "basis": "derived",
+        "note": "rangeKm 113 + 45 L tank / 5.9 L/100km x 100 (762.7) = 876. Tank 45 L from CarExpert and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.9,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tayron/1generation/345198/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,9 L/100km for the 200 kW Tayron eHybrid on 255/45R19; AU R-Line is on 20-inch and no 20-inch figure is listed. Same basis as kia-sorento-phev (ADAC battery-empty WLTP). Sibling check: Tiguan eHybrid 150 kW 18-inch, 1866 kg, is 5,7 (ADAC 345201), so the heavier Tayron reads higher. Held 7.0 was judged from UK real-world mpg."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU combined ADR 81/02 label 1.8 L/100km, at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CarExpert gives 38 g/km for this grade."
+      },
+      "bootLitresSeatsUp": {
+        "value": 705,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU '705L with rear seats in forward position', eHybrid with battery fitted (145 L less than petrol Tayron, CarExpert). VDA to the cargo cover per VW convention; ADAC lists the same 705 as 'normal'."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1915,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tayron/1generation/345198/",
+        "note": "ADAC 1915 L 'dachhoch, mit umgeklappter Ruecksitzbank' (to the roof); CarExpert and EV Central quote the same 1915 L. No belt-line folded figure found; kept to-roof, consistent with held data and kia-sorento-phev."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU: 5 seats; no third row on eHybrid (battery under rear floor, CarExpert)."
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tayron-ehybrid-review",
+        "note": "CarExpert spec table braked 2000 kg; ADAC gives the same braked figure for the 200 kW car. VW AU technical spec sheet not reached."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tayron-plug-in-hybrid.html",
+        "note": "VW AU '5-year comprehensive warranty'; CarExpert: 5 years/unlimited km, battery 8 years/160,000 km. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "Lowered from held 2050. Anchors: vw-tiguan-phev-200tsi-r-line $1950 at $74,550, mitsubishi-outlander-phev-exceed-tourer $1850 at $74,490, kia-sorento-phev-sport-plus-awd $1950 at $78,755, kia-sorento-phev-gt-line-awd $2100 at $86,115."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention: the single curve on every vw-id5 (and vw-tiguan-phev) row, per owner rule of one depreciation curve per brand. Held 2026-07-28 Tayron rows used steeper 0.70/0.36 and 0.68/0.34 curves with no documented evidence."
+      }
+    }
+  },
+  "lowConfidence": [
+    "vw-tayron-phev-*.listPrice: no Volkswagen AU list price readable on the research date (model page shows MRDP footnotes only, raw page fetch refused); $62,390 / $76,550 from CarExpert, Chasing Cars and EV Central launch-period 'before on-road costs' figures, with no evidence of a change since",
+    "vw-tayron-phev-200tsi-ehybrid-r-line.fuelConsumptionL100km: 5.9 is the European WLTP battery-empty figure on 19-inch wheels; the AU R-Line runs 20-inch, so the local car is likely slightly higher",
+    "vw-tayron-phev-*.fuelConsumptionL100km: European WLTP battery-empty (5.9) replaces held 7.0 judged from UK real-world; no Australian flat-battery test found",
+    "vw-tayron-phev-*.bootLitresSeatsDown: 1915 L is to the roof, not the belt-line convention; belt-line figure not published",
+    "vw-tayron-phev-*.towKg: from CarExpert spec table and ADAC, not VW AU's own spec sheet",
+    "vw-tayron-phev-*.insuranceAnnual and depreciationCurve: judged"
+  ]
+}

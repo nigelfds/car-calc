@@ -1,0 +1,119 @@
+{
+  "familyId": "gwm-haval-h6-gt-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "gwm-haval-h6-gt-phev-ultra-hi4": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/config/haval-h6gt/?model=Ultra",
+        "note": "Single PHEV grade 'H6GT Ultra PHEV' (code H6ULTSGT4AV4C, NVIC 0FZJ25, 19in wheels, 4WD, DHT) live on GWM AU configurator alongside the petrol H6GT Ultra; model page lists configurations 'Haval H6GT Ultra 4WD' and 'Haval H6GT Ultra PHEV 4WD'. CarExpert (17 Apr 2026) confirms a single Ultra PHEV trim."
+      },
+      "listPrice": {
+        "value": 51929,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/config/haval-h6gt/?model=Ultra",
+        "note": "GWM publishes drive-away only: configurator data gives driveaway_retail_price and driveaway_abn_price both $54,990 for 2026 build ('All prices are driveaway'; model page structured data highPrice 54990, petrol 46490 low; petrol card labelled VIC private). Standard price used; the 'Additional $2,000 off the driveaway price' offer ends 30 Nov 2026 and is ignored as a campaign. CarsGuide review (18 Aug 2026) also $54,990 driveaway. SUV divisor: (54990 - 880) / 1.042 = 51928.98 -> 51929; round-trip through calc/onroad.js driveAwayPrice = 54,990.02. No per-state price table is published (state price arrays empty, retail = ABN), so this is a flat national figure and the back-out cannot be verified against an independent on-road estimate. The held $52,990 was itself a drive-away figure (April 2026 launch 'national driveaway price', GoAuto/CarExpert/CarsGuide) and has been replaced. No source states a before-on-road-costs price in words; EV Central's '$52,990 plus on-road costs, price estimated' was not used."
+      },
+      "batteryKwh": {
+        "value": 35.43,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-gwm-haval-h6-gt-phev-prices-updated-suv-gets-overhauled-interior",
+        "note": "35.43kWh ternary lithium (CarExpert 2026 update; also CarsGuide 2026 review and GWM AU brochure 'Battery capacity 35.43 kWh', 310.8V). Unlabelled; usable vs gross unknown."
+      },
+      "rangeKm": {
+        "value": 183,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://www.carexpert.com.au/car-news/2026-gwm-haval-h6-gt-phev-prices-updated-suv-gets-overhauled-interior",
+        "note": "183km on the NEDC cycle for the MY26 update (CarExpert; CarsGuide news 20 Apr 2026; GoAuto); GWM AU page 'Pure electric range up to 183km', GWM internal testing. No WLTP figure exists: GWM NZ page says 'Up to 180km NEDC Range'; the H6 GT PHEV was not sold in the UK/EU. Testers: EV Central 130-140km, CarsGuide about 140km, Chasing Cars about 150km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 35.43 / 183 x 100 = 19.36 (no published EV-mode figure)."
+      },
+      "combinedRangeKm": {
+        "value": 1183,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 183 + 55 / 5.5 x 100 = 1183; equals GWM's own '1183km' combined-range claim (NEDC basis). Tank 55L per CarsGuide 2026 review and GWM brochure."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.5,
+        "basis": "derived",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h6gt/",
+        "note": "GWM convention (as gwm-cannon-phev): derived from GWM's claimed 1183km combined range less 183km EV range over the 55L tank: (1183 - 183) / 55 = 18.18 km/L = 5.50 L/100km. Corroborated by GWM's published ADR 81/02 Condition B (charge-sustaining) figure: 5.3 L/100km for MY26 (CarsGuide review) and 5.4 for MY25 (AU brochure). Real-world: Chasing Cars 5.4 flat-battery mixed, EV Central about 6.0, Chasing Cars 9.5 at 110km/h. Lower than the held standard H6 Ultra PHEV AWD's 5.8 despite more mass: that ordering follows GWM's own total-range claims for each car. Held value was 5.8 (no provenance)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-gwm-haval-h6-gt-phev-prices-updated-suv-gets-overhauled-interior",
+        "note": "MY26 combined label 0.6L/100km (NEDC, ADR 81/02), at or below 3.5. MY25 brochure 0.8."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car: passenger car with combined tailpipe CO2 of 120 g/km or less. GWM AU brochure CO2 19 g/km (MY25, 0.8L label); MY26 0.6L label implies about 14 g/km."
+      },
+      "bootLitresSeatsUp": {
+        "value": 392,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/gwm-haval-h6gt-phev-hi-4-102393",
+        "note": "392L seats up (CarsGuide 2026 review); GWM brochure 'Luggage capacity (L) Minimum 392' for the PHEV, same as petrol. Cargo-cover vs roof basis not stated; Chasing Cars also quotes 392L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1390,
+        "basis": "sourced",
+        "url": "https://a.storyblok.com/f/256395/x/3f6b54b2a8/h6gt_brochure_au.pdf",
+        "note": "GWM AU brochure 'Luggage capacity (L) Maximum 1390' for Ultra PHEV 4WD; CarsGuide 2026 review also 1390L. Measurement basis not stated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://a.storyblok.com/f/256395/x/3f6b54b2a8/h6gt_brochure_au.pdf",
+        "note": "Brochure 'Seating capacity 5'; model page vehicleSeatingCapacity 5."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/gwm-haval-h6gt-phev-hi-4-102393",
+        "note": "Braked 1500kg (CarsGuide 2026 review); GWM brochure 'Towing capacity - with trailer brakes 1,500' for PHEV (petrol 2,000)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/config/haval-h6gt/?model=Ultra",
+        "note": "Configurator disclaimer: '7 Year Unlimited KM warranty applies to Private, ABN, General Fleet...'; commercial use 7yr/150,000km. No servicing condition stated. Battery 8yr/unlimited km per CarsGuide 2026 review."
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "Kept at 1950: above byd-sealion-6-premium-extended-range (1700 at $52,990 list, AWD) and gwm-haval-h6-phev-ultra-awd (1750 at $49,490) for its 321kW/4.6sec performance; gwm-cannon-phev-ultra 1800 at $52,687."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "One curve per brand (owner convention): aligned to the GWM curve used by gwm-cannon-phev (refreshed 2026-11-26) and gwm-cannon-alpha-phev; held value was [1, 0.69, 0.58, 0.5, 0.43, 0.37]. Below-mainstream evidence: drive-away price moved $55,990 -> $53,990 -> $52,990 -> $54,990 with a recurring $2,000 bonus in under two years."
+      }
+    }
+  },
+  "lowConfidence": [
+    "gwm-haval-h6-gt-phev-ultra-hi4.listPrice: backed out of GWM's flat national $54,990 drive-away (retail = ABN, no state table), no independent on-road estimate to verify; no before-on-road-costs figure exists",
+    "gwm-haval-h6-gt-phev-ultra-hi4.rangeKm: NEDC only, no WLTP exists (not sold in UK/EU; NZ also NEDC); testers saw 130-150km",
+    "gwm-haval-h6-gt-phev-ultra-hi4.fuelConsumptionL100km: derived from GWM's NEDC total-range claim (5.5); Condition B 5.3-5.4 agrees but EV Central saw about 6.0 and motorway use about 9.5",
+    "gwm-haval-h6-gt-phev-ultra-hi4.combinedRangeKm: computed from NEDC electric range and the derived 5.5 L/100km",
+    "gwm-haval-h6-gt-phev-ultra-hi4.batteryKwh: 35.43 unlabelled, usable vs gross unknown",
+    "gwm-haval-h6-gt-phev-ultra-hi4.bootLitresSeatsUp: GWM/CarsGuide figure, measurement basis (cover vs roof) not stated (same for SeatsDown)",
+    "gwm-haval-h6-gt-phev-ultra-hi4.bootLitresSeatsDown: as SeatsUp; sourced from the MY25 brochure and CarsGuide MY26 review",
+    "gwm-haval-h6-gt-phev-ultra-hi4.insuranceAnnual: judged against Sealion 6 Premium AWD, H6 Ultra PHEV AWD and Cannon Ultra",
+    "gwm-haval-h6-gt-phev-ultra-hi4.depreciationCurve: GWM brand convention taken from gwm-cannon-phev; other GWM families (H6 PHEV, Tank, Ora) still hold different curves"
+  ]
+}

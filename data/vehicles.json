@@ -2536,12 +2536,12 @@
     "variant": "Lux",
     "bodyType": "Ute",
     "powertrain": "phev",
-    "listPrice": 59990,
+    "listPrice": 54990,
     "batteryKwh": 37.11,
     "rangeKm": 115,
     "consumptionKwhPer100km": 32.3,
-    "combinedRangeKm": 1060,
-    "fuelConsumptionL100km": 7.9,
+    "combinedRangeKm": 1008,
+    "fuelConsumptionL100km": 8.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": false,
     "isNonPassengerForVicDuty": true,
@@ -2550,7 +2550,7 @@
     "seats": 5,
     "towKg": 3500,
     "warrantyYears": 7,
-    "insuranceAnnual": 1900,
+    "insuranceAnnual": 1800,
     "depreciationCurve": [
       1,
       0.7,
@@ -2559,7 +2559,7 @@
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-cannon-alpha-phev-ultra",
@@ -2569,12 +2569,12 @@
     "variant": "Ultra",
     "bodyType": "Ute",
     "powertrain": "phev",
-    "listPrice": 66990,
+    "listPrice": 61990,
     "batteryKwh": 37.11,
     "rangeKm": 115,
     "consumptionKwhPer100km": 32.3,
-    "combinedRangeKm": 1060,
-    "fuelConsumptionL100km": 7.9,
+    "combinedRangeKm": 1008,
+    "fuelConsumptionL100km": 8.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": false,
     "isNonPassengerForVicDuty": true,
@@ -2583,7 +2583,7 @@
     "seats": 5,
     "towKg": 3500,
     "warrantyYears": 7,
-    "insuranceAnnual": 2050,
+    "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
       0.7,
@@ -2592,7 +2592,7 @@
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-cannon-phev-lux",
@@ -2668,12 +2668,12 @@
     "variant": "Ultra PHEV Hi4",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 52990,
+    "listPrice": 51929,
     "batteryKwh": 35.43,
     "rangeKm": 183,
     "consumptionKwhPer100km": 19.4,
-    "combinedRangeKm": 1131,
-    "fuelConsumptionL100km": 5.8,
+    "combinedRangeKm": 1183,
+    "fuelConsumptionL100km": 5.5,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 392,
@@ -2684,13 +2684,13 @@
     "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
-      0.69,
+      0.7,
       0.58,
-      0.5,
-      0.43,
-      0.37
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-haval-h6-phev-lux",
@@ -2700,10 +2700,10 @@
     "variant": "Lux PHEV",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 43490,
+    "listPrice": 42332,
     "batteryKwh": 19.09,
     "rangeKm": 106,
-    "consumptionKwhPer100km": 18.4,
+    "consumptionKwhPer100km": 18,
     "combinedRangeKm": 1106,
     "fuelConsumptionL100km": 5.5,
     "isFuelEfficientForLct": true,
@@ -2716,13 +2716,13 @@
     "insuranceAnnual": 1450,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.52,
-      0.45,
-      0.39
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-haval-h6-phev-ultra",
@@ -2732,10 +2732,10 @@
     "variant": "Ultra PHEV",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 46490,
+    "listPrice": 45211,
     "batteryKwh": 19.09,
     "rangeKm": 106,
-    "consumptionKwhPer100km": 18.4,
+    "consumptionKwhPer100km": 18,
     "combinedRangeKm": 1106,
     "fuelConsumptionL100km": 5.5,
     "isFuelEfficientForLct": true,
@@ -2748,13 +2748,13 @@
     "insuranceAnnual": 1550,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.52,
-      0.45,
-      0.39
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-haval-h6-phev-ultra-awd",
@@ -2764,11 +2764,11 @@
     "variant": "Ultra PHEV AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 49490,
+    "listPrice": 48090,
     "batteryKwh": 19.09,
     "rangeKm": 100,
-    "consumptionKwhPer100km": 18.6,
-    "combinedRangeKm": 1043,
+    "consumptionKwhPer100km": 19.1,
+    "combinedRangeKm": 1048,
     "fuelConsumptionL100km": 5.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -2780,13 +2780,13 @@
     "insuranceAnnual": 1750,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.52,
-      0.45,
-      0.39
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-ora-5-lux",
@@ -2808,12 +2808,12 @@
     "depreciationCurve": [
       1,
       0.7,
-      0.59,
-      0.51,
-      0.44,
-      0.38
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-ora-5-ultra",
@@ -2835,12 +2835,12 @@
     "depreciationCurve": [
       1,
       0.7,
-      0.59,
-      0.51,
-      0.44,
-      0.38
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-tank-300-phev-lux",
@@ -2850,7 +2850,7 @@
     "variant": "Lux",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 55990,
+    "listPrice": 54808,
     "batteryKwh": 37.11,
     "rangeKm": 115,
     "consumptionKwhPer100km": 32.3,
@@ -2866,13 +2866,13 @@
     "insuranceAnnual": 1850,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.51,
-      0.44,
-      0.38
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-tank-300-phev-ultra",
@@ -2882,7 +2882,7 @@
     "variant": "Ultra",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 59990,
+    "listPrice": 58647,
     "batteryKwh": 37.11,
     "rangeKm": 115,
     "consumptionKwhPer100km": 32.3,
@@ -2898,13 +2898,13 @@
     "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.51,
-      0.44,
-      0.38
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-tank-500-phev-ultra-hi4t",
@@ -2914,11 +2914,11 @@
     "variant": "Ultra Hi4-T PHEV",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 78490,
+    "listPrice": 75921,
     "batteryKwh": 37.11,
-    "rangeKm": 120,
-    "consumptionKwhPer100km": 30.9,
-    "combinedRangeKm": 953,
+    "rangeKm": 110,
+    "consumptionKwhPer100km": 33.7,
+    "combinedRangeKm": 943,
     "fuelConsumptionL100km": 8.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -2930,13 +2930,13 @@
     "insuranceAnnual": 2200,
     "depreciationCurve": [
       1,
-      0.67,
-      0.55,
-      0.46,
-      0.39,
-      0.33
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-elexio-base",
@@ -4831,7 +4831,7 @@
     "rangeKm": 560,
     "consumptionKwhPer100km": 15.9,
     "bootLitresSeatsUp": 337,
-    "bootLitresSeatsDown": 1074,
+    "bootLitresSeatsDown": 678,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
@@ -4844,7 +4844,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mazda-6e-gt",
@@ -4858,7 +4858,7 @@
     "rangeKm": 560,
     "consumptionKwhPer100km": 15.9,
     "bootLitresSeatsUp": 337,
-    "bootLitresSeatsDown": 1074,
+    "bootLitresSeatsDown": 678,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
@@ -4871,7 +4871,7 @@
       0.48,
       0.42
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mazda-cx-60-phev-azami",
@@ -5572,11 +5572,11 @@
     "variant": "Essence",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 52990,
+    "listPrice": 50010,
     "batteryKwh": 23.2,
     "rangeKm": 120,
     "consumptionKwhPer100km": 19.3,
-    "combinedRangeKm": 1050,
+    "combinedRangeKm": 1052,
     "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -5594,7 +5594,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-hs-phev-excite",
@@ -5604,11 +5604,11 @@
     "variant": "Excite",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 48990,
+    "listPrice": 46171,
     "batteryKwh": 23.2,
     "rangeKm": 120,
     "consumptionKwhPer100km": 19.3,
-    "combinedRangeKm": 1050,
+    "combinedRangeKm": 1052,
     "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -5626,7 +5626,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im5-performance",
@@ -5638,7 +5638,7 @@
     "listPrice": 74002,
     "batteryKwh": 96.5,
     "rangeKm": 575,
-    "consumptionKwhPer100km": 18.9,
+    "consumptionKwhPer100km": 19.7,
     "bootLitresSeatsUp": 457,
     "bootLitresSeatsDown": 1290,
     "seats": 5,
@@ -5653,7 +5653,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im5-platinum",
@@ -5680,7 +5680,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im5-premium",
@@ -5707,7 +5707,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im6-performance",
@@ -5734,7 +5734,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im6-platinum",
@@ -5746,7 +5746,7 @@
     "listPrice": 64405,
     "batteryKwh": 96.5,
     "rangeKm": 555,
-    "consumptionKwhPer100km": 21.3,
+    "consumptionKwhPer100km": 20.7,
     "bootLitresSeatsUp": 665,
     "bootLitresSeatsDown": 1640,
     "seats": 5,
@@ -5761,7 +5761,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im6-premium",
@@ -5773,7 +5773,7 @@
     "listPrice": 57687,
     "batteryKwh": 73.5,
     "rangeKm": 450,
-    "consumptionKwhPer100km": 20,
+    "consumptionKwhPer100km": 19.1,
     "bootLitresSeatsUp": 665,
     "bootLitresSeatsDown": 1640,
     "seats": 5,
@@ -5788,7 +5788,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-s5-essence-49",
@@ -5854,7 +5854,7 @@
     "listPrice": 53848,
     "batteryKwh": 74.3,
     "rangeKm": 485,
-    "consumptionKwhPer100km": 15.3,
+    "consumptionKwhPer100km": 18.1,
     "bootLitresSeatsUp": 581,
     "bootLitresSeatsDown": 1690,
     "seats": 5,
@@ -5869,7 +5869,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-s6-essence-rwd",
@@ -5881,7 +5881,7 @@
     "listPrice": 47130,
     "batteryKwh": 74.3,
     "rangeKm": 530,
-    "consumptionKwhPer100km": 14,
+    "consumptionKwhPer100km": 16.6,
     "bootLitresSeatsUp": 581,
     "bootLitresSeatsDown": 1690,
     "seats": 5,
@@ -5896,7 +5896,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mini-aceman-jcw-e-favoured",
@@ -6998,8 +6998,8 @@
     "bodyType": "SUV",
     "listPrice": 48990,
     "batteryKwh": 58,
-    "rangeKm": 395,
-    "consumptionKwhPer100km": 15.9,
+    "rangeKm": 406,
+    "consumptionKwhPer100km": 16.9,
     "bootLitresSeatsUp": 470,
     "bootLitresSeatsDown": 1580,
     "seats": 5,
@@ -7014,7 +7014,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "skoda-elroq-85-select",
@@ -7025,8 +7025,8 @@
     "bodyType": "SUV",
     "listPrice": 55990,
     "batteryKwh": 77,
-    "rangeKm": 529,
-    "consumptionKwhPer100km": 16.6,
+    "rangeKm": 521,
+    "consumptionKwhPer100km": 17.2,
     "bootLitresSeatsUp": 470,
     "bootLitresSeatsDown": 1580,
     "seats": 5,
@@ -7041,7 +7041,7 @@
       0.5,
       0.44
     ],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "skoda-enyaq-60-select",
@@ -8469,12 +8469,12 @@
     "model": "ID.4",
     "variant": "GTX 4MOTION",
     "bodyType": "SUV",
-    "listPrice": 69990,
-    "batteryKwh": 79,
-    "rangeKm": 511,
-    "consumptionKwhPer100km": 17.4,
-    "bootLitresSeatsUp": 543,
-    "bootLitresSeatsDown": 1575,
+    "listPrice": 70990,
+    "batteryKwh": 77,
+    "rangeKm": 522,
+    "consumptionKwhPer100km": 16.9,
+    "bootLitresSeatsUp": 533,
+    "bootLitresSeatsDown": 1565,
     "seats": 5,
     "towKg": 1800,
     "warrantyYears": 5,
@@ -8487,7 +8487,7 @@
       0.46,
       0.4
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "vw-id4-pro",
@@ -8496,16 +8496,16 @@
     "model": "ID.4",
     "variant": "Pro",
     "bodyType": "SUV",
-    "listPrice": 59990,
-    "batteryKwh": 77,
-    "rangeKm": 544,
-    "consumptionKwhPer100km": 16.7,
-    "bootLitresSeatsUp": 543,
-    "bootLitresSeatsDown": 1575,
+    "listPrice": 60990,
+    "batteryKwh": 79,
+    "rangeKm": 546,
+    "consumptionKwhPer100km": 16.2,
+    "bootLitresSeatsUp": 533,
+    "bootLitresSeatsDown": 1565,
     "seats": 5,
     "towKg": 1000,
     "warrantyYears": 5,
-    "insuranceAnnual": 1800,
+    "insuranceAnnual": 1850,
     "depreciationCurve": [
       1,
       0.72,
@@ -8514,7 +8514,7 @@
       0.46,
       0.4
     ],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "vw-id5-gtx",
@@ -8582,8 +8582,8 @@
     "batteryKwh": 19.7,
     "rangeKm": 116,
     "consumptionKwhPer100km": 17,
-    "combinedRangeKm": 759,
-    "fuelConsumptionL100km": 7,
+    "combinedRangeKm": 879,
+    "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 705,
@@ -8594,13 +8594,13 @@
     "insuranceAnnual": 1800,
     "depreciationCurve": [
       1,
-      0.7,
-      0.58,
-      0.49,
-      0.42,
-      0.36
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "vw-tayron-phev-200tsi-ehybrid-r-line",
@@ -8614,8 +8614,8 @@
     "batteryKwh": 19.7,
     "rangeKm": 113,
     "consumptionKwhPer100km": 17.4,
-    "combinedRangeKm": 756,
-    "fuelConsumptionL100km": 7,
+    "combinedRangeKm": 876,
+    "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 705,
@@ -8623,16 +8623,16 @@
     "seats": 5,
     "towKg": 2000,
     "warrantyYears": 5,
-    "insuranceAnnual": 2050,
+    "insuranceAnnual": 2000,
     "depreciationCurve": [
       1,
-      0.68,
-      0.56,
-      0.47,
-      0.4,
-      0.34
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "vw-tiguan-phev-150tsi-elegance",

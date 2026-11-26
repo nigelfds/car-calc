@@ -16,8 +16,15 @@
     "towKg": 750,
     "warrantyYears": 7,
     "insuranceAnnual": 1300,
-    "depreciationCurve": [1, 0.7, 0.59, 0.51, 0.44, 0.38],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-ora-5-ultra",
@@ -36,7 +43,14 @@
     "towKg": 750,
     "warrantyYears": 7,
     "insuranceAnnual": 1400,
-    "depreciationCurve": [1, 0.7, 0.59, 0.51, 0.44, 0.38],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

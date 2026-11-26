@@ -1,0 +1,119 @@
+{
+  "familyId": "gwm-tank-500-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "gwm-tank-500-phev-ultra-hi4t": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/config/tank-500/",
+        "note": "Configurator data (client-rendered; read from its _payload.json) lists four Tank 500 lines: Lux Diesel, Vanta Diesel, Vanta HEV and 'TANK 500 Ultra PHEV' (code T5ULTSUV9AV4C) with driveaway_retail_price 79990.00 and driveaway_abn_price 78990.00. Model page https://www.gwmanz.com/au/models/suv/tank-500/ JSON-LD offers the Ultra PHEV at 79990, InStock. CarExpert diesel-launch article: PHEV 'will remain part of the lineup', 'currently priced at $79,990 drive-away in its single Ultra trim'. One PHEV grade, as held."
+      },
+      "listPrice": {
+        "value": 75921,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/config/tank-500/",
+        "note": "GWM publishes drive-away only: configurator driveaway_retail_price $79,990 (ABN $78,990); disclaimer 'All prices are driveaway'; model page 'Price is for private buyers in VIC'. Standard price, ignoring the $1,000 'additional off the driveaway price' offer ending 30 Nov 2026. SUV divisor: (79990 - 880) / 1.042 = 75921; round-trip through calc/onroad.js driveAwayPrice (green passenger) = 79,989.68. $79,990 drive-away unchanged since launch (CarExpert 4 Oct 2025, 7 Jun 2026, 10 Aug 2026; Chasing Cars). No GWM 'plus on-road costs' figure exists and nothing independent verifies GWM's on-road inclusions; the configurator stores one flat figure with empty per-state price arrays. Rejected: held $78,490 'before on-road costs' (CarExpert spec page, CarsGuide/RedBook 'MSRP', marked 'Discontinued Mar 2026' there): a $78,490 list costs $82,667 on the road in VIC by the app's model, $2,677 above GWM's own drive-away for the same car, so it is not the price a buyer pays; owner convention prefers the manufacturer's price. Threshold position unchanged either way (over $75,000, under $80,809)."
+      },
+      "batteryKwh": {
+        "value": 37.11,
+        "basis": "sourced",
+        "url": "https://assets.gwmanz.com/f/256395/x/3a24c99c20/tank-500-brochure-au-web.pdf",
+        "note": "Brochure spec table 'Battery Capacity (kWh) 37.11', NMC; CarExpert spec page 'Maximum battery kilowatt hour: 37.11 kWh'. Unlabelled, usable vs gross unknown; same convention as the Tank 300 / Cannon Alpha 37.11 pack."
+      },
+      "rangeKm": {
+        "value": 110,
+        "basis": "sourced",
+        "standard": "other",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gwm-tank-500-ultra-hi4-t-phev-review",
+        "note": "China WLTC electric range (WLTP drive cycle under Chinese certification), 'electric driving range 110km (WLTC)' per CarExpert's 10 Aug 2026 Australian review; carnewschina 2026 params (https://data.carnewschina.com/database/tank/tank-500-hi4-t/2026/params) lists 110km WLTC and 120km NEDC for the same 37.1kWh/70L/5-seat Hi4-T, but that record mislabels total power as 130kW so it is corroboration only. Direction test: GWM AU's '120km' (brochure 'NEDC EV range (km) 120') is higher than the WLTC figure, so it is the NEDC number and was rejected. Not sold in the UK/Europe, so no EU WLTP exists. Testers: CarExpert about 100km real-world; Chasing Cars ~102km estimate; EV Central and Chasing Cars measured 36-37kWh/100km (= ~100km)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 33.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 37.11 / 110 x 100 = 33.74. Brochure 'Wh/km 272' (27.2kWh/100km) is the ADR/R101 utility-weighted label, not an EV-mode figure, so not used. Measured EV-mode 36 (Chasing Cars) and 37 (EV Central) kWh/100km sit 7-10% above."
+      },
+      "combinedRangeKm": {
+        "value": 943,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 110 + 70 / 8.4 x 100 = 943.3. Tank 70L per brochure ('Fuel tank capacity (L) 70') and CarExpert spec page. GWM's own NEDC combined range is 950km; China WLTC combined 900km (carnewschina)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.4,
+        "basis": "sourced",
+        "url": "https://assets.gwmanz.com/f/256395/x/3a24c99c20/tank-500-brochure-au-web.pdf",
+        "note": "Brochure 'Low charge fuel economy (L/100km) combined 8.4' (GWM, NEDC basis), also CarExpert spec page secondary 'Combined: 8.4 L/100km'. Cross-check: GWM 950km NEDC combined range gives (950-120)/70 = 8.43, the same method used for gwm-cannon-phev (8.1); GWM order across siblings Alpha 7.9 < Cannon 8.1 < Tank 300 8.3 < Tank 500 8.4 follows mass (Tank 500 heaviest, 2820kg). China WLTC 900km combined implies 8.9. Real-world: CarsGuide 10.2, Chasing Cars ~10.0 with flat battery."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://assets.gwmanz.com/f/256395/x/3a24c99c20/tank-500-brochure-au-web.pdf",
+        "note": "Brochure 'Fuel consumption combined 2.1L/100km' (PHEV column), at or below 3.5; GWM model page 'Fuel Economy (combined) 2.1'."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green cars are 'passenger cars with combined tailpipe carbon dioxide (CO2) emissions of 120 grams or less per kilometre'; brochure CO2 47 g/km (PHEV), passenger SUV."
+      },
+      "bootLitresSeatsUp": {
+        "value": 640,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/tank-500/2026-ultra-2l-suv-4x4-electric-jsgwssgm20260501",
+        "note": "CarExpert 'Rear seat up; to lower window: 640 L' (to the window line, i.e. cover convention); brochure 'Cargo volume behind 2nd row' 640L for PHEV (795L hybrid). CarExpert review and Chasing Cars 640L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/tank-500/2026-ultra-2l-suv-4x4-electric-jsgwssgm20260501",
+        "note": "CarExpert 'Rear seat down: 1,400 L'; brochure 'Cargo volume behind 1st row (2-seat mode)' 1400L. Measurement convention not stated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://assets.gwmanz.com/f/256395/x/3a24c99c20/tank-500-brochure-au-web.pdf",
+        "note": "Brochure 'Seating capacity' 5 (PHEV) vs 7 (hybrid); GWM model page 'maximum seating capacity of five (5) seats'."
+      },
+      "towKg": {
+        "value": 3000,
+        "basis": "sourced",
+        "url": "https://assets.gwmanz.com/f/256395/x/3a24c99c20/tank-500-brochure-au-web.pdf",
+        "note": "Brochure 'Braked towing capacity 3000', unbraked 750, GCM 6430."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://assets.gwmanz.com/f/256395/x/3a24c99c20/tank-500-brochure-au-web.pdf",
+        "note": "Brochure '7 Year Unlimited KM Warranty' and '8 Year Unlimited KM Battery Pack Warranty'; configurator disclaimer: 7 year unlimited km applies to private, ABN, fleet buyers, no servicing condition."
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "Kept at 2200. Anchors: denza-b5-base 2350 at $74,990 (direct plug-in 4WD rival), vw-tayron-phev 2050 at $76,550, mazda-cx-80-phev-gt 1950 at $75,100; Tank 300 Ultra 1950 at $59,990. Heavy 300kW ladder-frame 4WD with low-volume parts sits between the mainstream and the Denza."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "GWM brand convention (one curve per brand): same curve as gwm-cannon-phev, gwm-cannon-alpha-phev, gwm-haval-h6-phev, gwm-ora-5 as refreshed 2026-11-26; replaces the held steeper [1,0.67,0.55,0.46,0.39,0.33]. Evidence for below-mainstream retention: near-continuous discounting ($77,990 early-bird, $4,000 EOFY June 2026, $76,990 per EV Central, $1,000 off to Nov 2026), PHEV ANCAP coverage unclear."
+      }
+    }
+  },
+  "lowConfidence": [
+    "gwm-tank-500-phev-ultra-hi4t.rangeKm: 110km China WLTC via CarExpert review (standard 'other'); no EU WLTP exists, GWM AU quotes 120km NEDC; measured EV consumption implies ~100km",
+    "gwm-tank-500-phev-ultra-hi4t.fuelConsumptionL100km: GWM NEDC low-charge 8.4 kept for sibling consistency; China WLTC implies 8.9 and testers measured 10.0-10.2, so running cost is likely understated",
+    "gwm-tank-500-phev-ultra-hi4t.combinedRangeKm: computed from WLTC EV range and NEDC-basis 8.4 L/100km",
+    "gwm-tank-500-phev-ultra-hi4t.listPrice: backed out of GWM's VIC private $79,990 drive-away with no independent check of GWM's on-road inclusions; CarExpert/RedBook carry $78,490 'MSRP' ($2,569 higher)",
+    "gwm-tank-500-phev-ultra-hi4t.consumptionKwhPer100km: derived from 110km, tautological against the cross-check",
+    "gwm-tank-500-phev-ultra-hi4t.batteryKwh: 37.11 unlabelled, usable vs gross unknown",
+    "gwm-tank-500-phev-ultra-hi4t.bootLitresSeatsDown: measurement convention not stated by GWM or CarExpert",
+    "gwm-tank-500-phev-ultra-hi4t.insuranceAnnual: judged against Denza B5 and Tayron PHEV",
+    "gwm-tank-500-phev-ultra-hi4t.depreciationCurve: GWM brand convention, no resale data for the PHEV"
+  ]
+}

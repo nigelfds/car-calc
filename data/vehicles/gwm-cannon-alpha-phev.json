@@ -7,12 +7,12 @@
     "variant": "Lux",
     "bodyType": "Ute",
     "powertrain": "phev",
-    "listPrice": 59990,
+    "listPrice": 54990,
     "batteryKwh": 37.11,
     "rangeKm": 115,
     "consumptionKwhPer100km": 32.3,
-    "combinedRangeKm": 1060,
-    "fuelConsumptionL100km": 7.9,
+    "combinedRangeKm": 1008,
+    "fuelConsumptionL100km": 8.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": false,
     "isNonPassengerForVicDuty": true,
@@ -21,7 +21,7 @@
     "seats": 5,
     "towKg": 3500,
     "warrantyYears": 7,
-    "insuranceAnnual": 1900,
+    "insuranceAnnual": 1800,
     "depreciationCurve": [
       1,
       0.7,
@@ -30,7 +30,7 @@
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-cannon-alpha-phev-ultra",
@@ -40,12 +40,12 @@
     "variant": "Ultra",
     "bodyType": "Ute",
     "powertrain": "phev",
-    "listPrice": 66990,
+    "listPrice": 61990,
     "batteryKwh": 37.11,
     "rangeKm": 115,
     "consumptionKwhPer100km": 32.3,
-    "combinedRangeKm": 1060,
-    "fuelConsumptionL100km": 7.9,
+    "combinedRangeKm": 1008,
+    "fuelConsumptionL100km": 8.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": false,
     "isNonPassengerForVicDuty": true,
@@ -54,7 +54,7 @@
     "seats": 5,
     "towKg": 3500,
     "warrantyYears": 7,
-    "insuranceAnnual": 2050,
+    "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
       0.7,
@@ -63,6 +63,6 @@
       0.42,
       0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   }
 ]

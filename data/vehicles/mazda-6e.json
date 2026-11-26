@@ -11,13 +11,20 @@
     "rangeKm": 560,
     "consumptionKwhPer100km": 15.9,
     "bootLitresSeatsUp": 337,
-    "bootLitresSeatsDown": 1074,
+    "bootLitresSeatsDown": 678,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1750,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-30"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mazda-6e-atenza",
@@ -31,12 +38,19 @@
     "rangeKm": 560,
     "consumptionKwhPer100km": 15.9,
     "bootLitresSeatsUp": 337,
-    "bootLitresSeatsDown": 1074,
+    "bootLitresSeatsDown": 678,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-30"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

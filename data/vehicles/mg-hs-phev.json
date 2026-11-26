@@ -7,11 +7,11 @@
     "variant": "Excite",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 48990,
+    "listPrice": 46171,
     "batteryKwh": 23.2,
     "rangeKm": 120,
     "consumptionKwhPer100km": 19.3,
-    "combinedRangeKm": 1050,
+    "combinedRangeKm": 1052,
     "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -29,7 +29,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-hs-phev-essence",
@@ -39,11 +39,11 @@
     "variant": "Essence",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 52990,
+    "listPrice": 50010,
     "batteryKwh": 23.2,
     "rangeKm": 120,
     "consumptionKwhPer100km": 19.3,
-    "combinedRangeKm": 1050,
+    "combinedRangeKm": 1052,
     "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -61,6 +61,6 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   }
 ]

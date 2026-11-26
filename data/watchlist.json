@@ -400,9 +400,9 @@
       "scope": "variant",
       "status": "pre-launch",
       "familyId": "skoda-elroq",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "Orders open October 2026, unpriced at 2026-07-27."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-15",
+      "note": "Skoda AU says orders open early 2027; unpriced at 2026-11-26."
     },
     {
       "name": "Renault Megane E-Tech facelift",
@@ -466,9 +466,9 @@
       "scope": "variant",
       "status": "backlog",
       "familyId": "zeekr-x",
-      "checkedAt": "2026-08-08",
+      "checkedAt": "2026-11-26",
       "recheckAfter": "2026-11-26",
-      "note": "6 rows (forthing-taikon-5 x2, mg-s6 x2, zeekr-x x2) lack a sourced consumption figure. Do not fill with NEDC or derived figures."
+      "note": "4 rows (forthing-taikon-5 x2, zeekr-x x2) lack a sourced consumption figure. Do not fill with NEDC or derived figures. mg-s6 settled 2026-11-26."
     },
     {
       "name": "JAC Hunter PHEV",

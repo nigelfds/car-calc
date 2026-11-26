@@ -24,7 +24,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im5-platinum",
@@ -51,7 +51,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im5-performance",
@@ -63,7 +63,7 @@
     "listPrice": 74002,
     "batteryKwh": 96.5,
     "rangeKm": 575,
-    "consumptionKwhPer100km": 18.9,
+    "consumptionKwhPer100km": 19.7,
     "bootLitresSeatsUp": 457,
     "bootLitresSeatsDown": 1290,
     "seats": 5,
@@ -78,6 +78,6 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   }
 ]

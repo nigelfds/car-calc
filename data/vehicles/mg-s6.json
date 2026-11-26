@@ -9,7 +9,7 @@
     "listPrice": 47130,
     "batteryKwh": 74.3,
     "rangeKm": 530,
-    "consumptionKwhPer100km": 14,
+    "consumptionKwhPer100km": 16.6,
     "bootLitresSeatsUp": 581,
     "bootLitresSeatsDown": 1690,
     "seats": 5,
@@ -24,7 +24,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-s6-essence-awd",
@@ -36,7 +36,7 @@
     "listPrice": 53848,
     "batteryKwh": 74.3,
     "rangeKm": 485,
-    "consumptionKwhPer100km": 15.3,
+    "consumptionKwhPer100km": 18.1,
     "bootLitresSeatsUp": 581,
     "bootLitresSeatsDown": 1690,
     "seats": 5,
@@ -51,6 +51,6 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   }
 ]

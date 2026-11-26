@@ -1,0 +1,175 @@
+{
+  "familyId": "vw-id4",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "vw-id4-pro": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id4.html",
+        "note": "VW AU ID.4 model page lists 'MY27 ID. 4 Pro' from $65,990 driveaway (campaign to 31/12/2026). VW AU has no classic build & price for ID models; /app/locals/offers-pricing showed 'no Offers' template this run. CarExpert 9 Oct 2026 and Cars24 10 Oct 2026 confirm two MY27 grades. Not run-out: MY27 launched Oct 2026; ID. Tiguan replacement has no AU timing."
+      },
+      "listPrice": {
+        "value": 60990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/volkswagen-id4-gets-updates-higher-prices-for-2027-despite-looming-replacement",
+        "note": "CarExpert 9 Oct 2026: 'Officially starting at $60,990 before on-road costs' (+$1,000 for MY27); Cars24 10 Oct 2026 same; CarExpert 2027 spec page 'from $60,990 before on-road costs'. VW AU's own pages fetched show only the campaign $65,990 driveaway, no plus-on-road figure. Computed VIC drive-away $64,432 sits below the $65,990 campaign figure, consistent (campaign includes dealer delivery/CTP)."
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "usable; VW AU MY27 spec sheet 'Gross 84 kWh / Useable 79 kWh'; EV Database MY27 84.0/79.0. MY27 Pro moved from the 82/77 pack"
+      },
+      "rangeKm": {
+        "value": 546,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "VW AU MY27 spec sheet 'Driving range - Combined (WLTP) 546km', 19-inch Hamar wheels standard. Below EV Database MY27 TEL 351 mi (565 km), passes direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.2,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "VW AU MY27 spec sheet 'Energy Consumption Wh/km - Combined 162.0' (WLTP, incl. charging losses); battery/range = 14.5, 12% off. Same method as vw-id5"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3496/Volkswagen-ID4-Pro",
+        "note": "EV Database ID.4 Pro MY27 (84/79 kWh, RWD) 1,000 kg braked / 750 unbraked. VW AU MY27 spec sheet omits towing. Matches held value and vw-id5-pro."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "raised from 1800 with the $1,000 list rise; anchored to skoda-enyaq-85-sportline (1850 at $60,990, same price) and vw-id5-pro (1900 at $62,990)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 533,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "VW AU MY27 spec sheet 'Luggage area volume L - Rear seat upright 533' (both grades); CarExpert 2027 Pro spec page labels 533 'Rear seat up; to lower window' (to the cover). EV Database MY27 533. Held 543 was the MY26 figure."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1565,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "VW AU MY27 spec sheet 'Rear seat folded 1565'; no frunk (EV Database frunk 0 L)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volkswagen/id-4/2027-pro-suv-rwd-electric-jsgofkaw20260828",
+        "note": "CarExpert 2027 spec page: 5 seats, 2+3"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id4.html",
+        "note": "'5 year' vehicle warranty, unlimited km per CarExpert spec page; separate 8-year/160,000km battery warranty"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention, identical to vw-id5 rows (refreshed 2026-11-26); held value kept. Announced ID. Tiguan replacement and campaign drive-away pricing could justify steeper, no used-market evidence yet"
+      }
+    },
+    "vw-id4-gtx": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id4-gtx.html",
+        "note": "VW AU GTX page: 'MY27 ID. 4 GTX' from $75,990 driveaway; footnote: campaign price for MY27 ID. 4 GTX, purchase 01/10/2026 and delivery by 31/12/2026."
+      },
+      "listPrice": {
+        "value": 70990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/volkswagen-id4-gets-updates-higher-prices-for-2027-despite-looming-replacement",
+        "note": "CarExpert 9 Oct 2026: GTX 'now has a list price of $70,990 before on-road costs' (+$1,000); Cars24 10 Oct 2026 same. VW AU shows only $75,990 campaign driveaway. Computed VIC drive-away $74,852 below campaign figure, consistent."
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "usable; VW AU MY27 spec sheet 'Gross 82 kWh / Useable 77 kWh'; EV Database MY27 GTX 82.0/77.0. Held 79 was the MY26 84/79 pack"
+      },
+      "rangeKm": {
+        "value": 522,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "VW AU MY27 spec sheet 'Driving range - Combined (WLTP) 522km', 20-inch Ystad wheels standard. Below EV Database MY27 TEL 538 km. GTX page FAQ still quotes 544 (stale)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.9,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "VW AU MY27 spec sheet 'Energy Consumption Wh/km - Combined 168.9', rounded; battery/range = 14.75, 14.6% off"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3498/Volkswagen-ID4-GTX",
+        "note": "EV Database ID.4 GTX MY27 1,800 kg braked / 750 unbraked. VW AU spec sheet omits towing. Matches held value and vw-id5-gtx."
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "held value kept; anchored to vw-id5-gtx (2100 at $72,990), skoda-enyaq-rs (2150 at $76,590), toyota-bz4x-touring (1850 at $69,990)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 533,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "VW AU MY27 spec sheet 'Luggage area volume L - Rear seat upright 533' (both grades); CarExpert 2027 Pro spec page labels 533 'Rear seat up; to lower window' (to the cover). EV Database MY27 533. Held 543 was the MY26 figure."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1565,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/pdfs/showroom-brochures-live/VW_ID4_MY27_Brochure.pdf",
+        "note": "VW AU MY27 spec sheet 'Rear seat folded 1565'; no frunk (EV Database frunk 0 L)"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volkswagen/id-4/2027-pro-suv-rwd-electric-jsgofkaw20260828",
+        "note": "CarExpert 2027 spec page: 5 seats, 2+3"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id4.html",
+        "note": "'5 year' vehicle warranty, unlimited km per CarExpert spec page; separate 8-year/160,000km battery warranty"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention, identical to vw-id5 rows (refreshed 2026-11-26); held value kept. Announced ID. Tiguan replacement and campaign drive-away pricing could justify steeper, no used-market evidence yet"
+      }
+    }
+  },
+  "lowConfidence": [
+    "vw-id4-pro.towKg: no AU manufacturer figure; EV Database European MY27 1,000 kg",
+    "vw-id4-gtx.towKg: no AU manufacturer figure; EV Database European MY27 1,800 kg",
+    "vw-id4-pro.listPrice: VW AU pages show only campaign drive-away ($65,990); list from CarExpert/Cars24 launch reports in words",
+    "vw-id4-gtx.listPrice: as above ($75,990 campaign drive-away on VW AU)",
+    "vw-id4-pro.insuranceAnnual: judged, anchored to Enyaq 85 Sportline / ID.5 Pro",
+    "vw-id4-gtx.insuranceAnnual: judged, anchored to ID.5 GTX / Enyaq RS",
+    "vw-id4-pro.depreciationCurve: VW brand curve; replacement announced",
+    "vw-id4-gtx.depreciationCurve: VW brand curve; replacement announced"
+  ]
+}

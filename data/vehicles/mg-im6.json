@@ -9,7 +9,7 @@
     "listPrice": 57687,
     "batteryKwh": 73.5,
     "rangeKm": 450,
-    "consumptionKwhPer100km": 20,
+    "consumptionKwhPer100km": 19.1,
     "bootLitresSeatsUp": 665,
     "bootLitresSeatsDown": 1640,
     "seats": 5,
@@ -24,7 +24,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im6-platinum",
@@ -36,7 +36,7 @@
     "listPrice": 64405,
     "batteryKwh": 96.5,
     "rangeKm": 555,
-    "consumptionKwhPer100km": 21.3,
+    "consumptionKwhPer100km": 20.7,
     "bootLitresSeatsUp": 665,
     "bootLitresSeatsDown": 1640,
     "seats": 5,
@@ -51,7 +51,7 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-im6-performance",
@@ -78,6 +78,6 @@
       0.53,
       0.47
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-26"
   }
 ]

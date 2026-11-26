@@ -1,37 +1,33 @@
 {
   "id": "gwm-tank-500-phev",
-  "summary": "The Tank 500 Hi4-T is the plug-in version of GWM's Prado-sized ladder-frame 4WD and it sells as a single Ultra grade alongside three conventional-hybrid Tank 500s. Australian reviewers agree it is the most genuinely off-road-capable plug-in hybrid on sale here - dual-range mechanical 4WD, three locking differentials, 3000kg braked towing and 6kW vehicle-to-load - and agree just as consistently that the 37.11kWh pack costs it the third row, dropping a seven-seat nameplate to five seats and 640L of boot. Scores land mid-field (CarsGuide 7.0, EV Central 3.5) and the recurring complaint is that the real numbers do not follow the claims: 10.0-10.2L/100km once the battery is flat against a 2.1L/100km label, and a measured 36-37kWh/100km in EV mode against a 120km NEDC range claim.",
+  "summary": "The Tank 500 Hi4-T is the plug-in version of GWM's Prado-sized ladder-frame 4WD and it sells as a single Ultra grade alongside the new 3.0-litre diesel Lux and Vanta and a Vanta hybrid that the diesel is replacing. Australian reviewers agree it is the most genuinely off-road-capable plug-in hybrid on sale here - dual-range mechanical 4WD, three locking differentials, 3000kg braked towing and 6kW vehicle-to-load - and agree just as consistently that the 37.11kWh pack costs it the third row, dropping a seven-seat nameplate to five seats and 640L of boot. Scores land mid-field (CarsGuide 7.0, EV Central 3.5) and the recurring complaint is that the real numbers do not follow the claims: 10.0-10.2L/100km once the battery is flat against a 2.1L/100km label, and a measured 36-37kWh/100km in EV mode that delivers about 100km against GWM Australia's 120km NEDC claim and the 110km WLTC figure.",
   "pros": [
     "The only plug-in hybrid in Australia with real off-road hardware: a dual-range transfer case with centre diff lock plus front and rear electronic lockers, 800mm wading depth and 213mm clearance, where the plug-in seven-seaters it is cross-shopped against - Mazda CX-80, Kia Sorento PHEV - are on-road crossovers with no low range at all",
     "3000kg braked towing at full GVM (GCM is 6430kg against a 3430kg GVM, so the tow rating does not cannibalise the load rating) plus 6kW vehicle-to-load off the traction battery, which runs a caravan and a campsite from the same car",
-    "A 37.11kWh nickel-manganese-cobalt pack claiming 120km of electric-only range and 50kW DC fast charging on CCS2 (30-80 per cent in 24 minutes) - most plug-in hybrids at any price cannot DC charge at all, and the Mazda CX-80 and Kia Sorento carry 17.8kWh and 13.8kWh packs",
+    "A 37.11kWh nickel-manganese-cobalt pack good for 110km of electric-only range on the WLTC cycle (GWM Australia quotes 120km NEDC) and 50kW DC fast charging on CCS2 (30-80 per cent in 24 minutes) - most plug-in hybrids at any price cannot DC charge at all, and the Mazda CX-80 and Kia Sorento carry 17.8kWh and 13.8kWh packs",
     "7-year/unlimited-km warranty with no dealer-servicing condition attached, backed by 8-year/unlimited-km cover on the drive battery, 7 years roadside assistance and 7 years of capped-price servicing",
     "300kW/750Nm and a claimed 6.9sec 0-100km/h for roughly the money of a mid-spec Toyota Prado or Ford Everest, both of which are four-cylinder diesels well under half the power"
   ],
   "cons": [
     "The third row is deleted to fit the battery, and GWM's own spec sheet proves it: the hybrid grades are 7 seats with 795L behind the second row and 98L behind the third, while the Ultra Plug-In Hybrid is 5 seats with 640L and a blank cell where the third-row figure should be - so the seven-seat Tank 500 badge does not buy you a seven-seater",
     "The 2.1L/100km combined label is meaningless once the battery is flat: GWM's own low-charge figure is 8.4L/100km, CarsGuide measured 10.2L/100km and Chasing Cars about 10.0L/100km, so a buyer who cannot charge at home is running a 2.8-tonne petrol 4WD on 91 octane",
-    "Electric range is quoted on the superseded NEDC cycle and no WLTP figure exists anywhere, because GWM does not sell the Tank brand in the UK or Europe - and the measured 36-37kWh/100km EV consumption returned by Chasing Cars and EV Central implies about 100km from the 37.11kWh pack rather than the claimed 120km",
+    "GWM Australia still quotes electric range on the superseded NEDC cycle (120km); the WLTC figure is 110km, and the measured 36-37kWh/100km EV consumption returned by Chasing Cars and EV Central implies about 100km from the 37.11kWh pack - CarExpert also found real-world range around 100km",
     "At 2820kg kerb the plug-in carries 215kg more than the hybrid and its payload falls from 790kg to 610kg, so a 3000kg caravan's typical 300kg ball weight consumes half of what is left; reviewers also single out body roll, an adaptive cruise system that brakes far too early and sign recognition that misread school-zone limits",
-    "GWM has already discounted it twice - $79,990 drive-away at launch in late 2025, $77,990 early-bird, and $76,990 by mid-2026 - and the Tank 500's five-star ANCAP result was awarded to the 2024 hybrid, with GWM saying at the plug-in's launch that it was still working with ANCAP on whether the heavier PHEV is covered"
+    "GWM's $79,990 drive-away price (VIC private; $78,990 for ABN holders) is the launch sticker, but it has been discounted almost continuously - $77,990 early-bird at launch, a $4,000 end-of-financial-year cut in June 2026, $76,990 on the road per EV Central, and $1,000 off to 30 November 2026 - while the Tank 500's five-star ANCAP result was awarded to the 2024 hybrid, with GWM saying at the plug-in's launch that it was still working with ANCAP on whether the heavier PHEV is covered"
   ],
   "sources": [
     "https://www.gwmanz.com/au/models/suv/tank-500/",
+    "https://www.gwmanz.com/au/config/tank-500/",
     "https://assets.gwmanz.com/f/256395/x/3a24c99c20/tank-500-brochure-au-web.pdf",
-    "https://www.carexpert.com.au/car-reviews/2026-gwm-tank-500-hi4-t-phev-review-quick-drive",
-    "https://www.carexpert.com.au/car-reviews/2025-gwm-tank-500-hi4-t-phev-review",
+    "https://www.carexpert.com.au/car-reviews/2026-gwm-tank-500-ultra-hi4-t-phev-review",
+    "https://www.carexpert.com.au/gwm/tank-500/2026-ultra-2l-suv-4x4-electric-jsgwssgm20260501",
     "https://www.carexpert.com.au/car-news/2026-gwm-tank-500-plug-in-hybrid-pricing-revealed",
     "https://www.carexpert.com.au/car-news/gwm-tank-500-phev-gets-aussie-chassis-tuning-and-more-tech-for-the-same-price",
+    "https://www.carexpert.com.au/car-news/2026-gwm-tank-500-prices-prado-everest-rival-finally-gets-diesel-power-with-new-30l",
     "https://www.carsguide.com.au/adventure/gwm-tank-500-ultra-phev-100440",
-    "https://www.carsguide.com.au/gwm/tank-500/price/2026/hi4-t-ultra-phev",
     "https://www.chasingcars.com.au/reviews/large-suvs/gwm-tank-500-ultra-hi4-t-phev-2026-review/",
     "https://evcentral.com.au/2026-gwm-tank-500-ultra-phev-review-plug-in-4x4-gets-dirty-against-rival-denza-b5-and-old-school-toyota-prado/",
-    "https://www.carsales.com.au/research/gwm/tank-500/2026/ultra-hi4-t-phev/",
-    "https://rvdaily.com.au/gwm-tank-500-hi4-t-phev-caravan-towing/",
-    "https://gwmcars.co.uk/models/",
-    "https://en.wikipedia.org/wiki/GWM_Tank_500",
-    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
-    "https://www.ato.gov.au/tax-rates-and-codes/luxury-car-tax-rate-and-thresholds"
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
   ],
-  "sourcedAt": "2026-07-28"
+  "sourcedAt": "2026-11-26"
 }

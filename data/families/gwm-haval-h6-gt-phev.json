@@ -1,34 +1,34 @@
 {
   "id": "gwm-haval-h6-gt-phev",
-  "summary": "The H6 GT is the coupe-roofline sibling of the Haval H6, but its plug-in hybrid is a genuinely different car underneath: a 35.43kWh pack claiming 183km of electric range against the standard H6 PHEV's 19.09kWh and 100-106km, for about $3,500 more. Reviewers agree the EV range and the 321kW/4.6sec Hi4 all-wheel-drive performance are extraordinary at the price, and agree just as consistently that the 392L boot is small for a 4.7m SUV, the brake pedal is poor and the driver-assist calibration is intrusive. The electric range is quoted on NEDC only, and independent tests returned 130-150km, so the claim is best read as an upper bound rather than a number to budget against.",
+  "summary": "The H6 GT is the coupe-roofline sibling of the Haval H6, but its plug-in hybrid is a genuinely different car underneath: a 35.43kWh pack claiming 183km of electric range against the standard H6 PHEV's 19.09kWh and 100-106km. Reviewers agree the EV range and the 321kW/4.6sec Hi4 all-wheel-drive performance are extraordinary at the price, and agree just as consistently that the 392L boot is small for a 4.7m SUV, the brake pedal is poor and the driver-assist calibration is intrusive. The electric range is quoted on NEDC only, and independent tests returned 130-150km, so the claim is best read as an upper bound rather than a number to budget against.",
   "pros": [
-    "A 35.43kWh ternary-lithium pack claiming 183km of electric range - nearly double the 19.09kWh and 100-106km of the cheaper standard Haval H6 PHEV, and more electric range than any other plug-in hybrid on sale in Australia under $60,000",
-    "321kW/642Nm from the second-generation Hi4 dual-motor all-wheel-drive system for a claimed 4.58sec 0-100km/h, quicker than the 268kW standard H6 Ultra PHEV AWD (4.8sec) and well clear of any BYD Sealion 6",
-    "DC fast charging at up to 48kW on CCS2 (30-80 per cent in about 26 minutes) plus 6.6kW AC, so the pack can be usefully topped up mid-trip rather than only overnight - most PHEVs in this price bracket cannot DC charge at all",
+    "A 35.43kWh ternary-lithium pack claiming 183km of electric range - nearly double the 19.09kWh and 100-106km of the cheaper standard Haval H6 PHEV, and more electric range than any BYD Sealion 6 (80-125km)",
+    "321kW/642Nm from the Hi4 dual-motor all-wheel-drive system for a claimed 4.58sec 0-100km/h, quicker than the 268kW standard H6 Ultra PHEV AWD (4.8sec) and well clear of any BYD Sealion 6",
+    "DC fast charging at up to 48kW (30-80 per cent in as little as 26 minutes, GWM claim) plus 6.6kW AC, so the pack can be usefully topped up mid-trip rather than only overnight - most PHEVs in this price bracket cannot DC charge at all",
     "Seven-year/unlimited-km warranty with no dealer-servicing condition attached, plus separate eight-year/unlimited-km cover on the drive battery and five years of roadside assistance and capped-price servicing",
-    "GWM is currently advertising the $52,990 list price as a $52,990 national drive-away figure (a $2,000 saving on the $54,990 indicative drive-away), so the on-road costs the calculator adds are in practice being absorbed by the campaign"
+    "GWM's standard price is $54,990 drive-away (VIC private, 2026 build), and until 30 November 2026 it takes a further $2,000 off, bringing it to $52,990 drive-away"
   ],
   "cons": [
-    "The coupe roofline costs it real practicality: 392L seats-up and 1390L folded, against 560L/1445L in the standard H6 PHEV and 425L in a BYD Sealion 6, which Chasing Cars called 'piddly for its 4727mm length' - and rear headroom suffers too",
-    "The 0.6L/100km combined-cycle label is meaningless once the battery is flat: Australian testers recorded about 5.0L/100km (CarsGuide), 5.4L/100km (RACQ and Chasing Cars) and 6.0L/100km (EV Central), with Chasing Cars seeing 9.5L/100km at motorway speed, so a buyer who cannot charge at home is worse off than in a conventional hybrid",
-    "Electric range is quoted on the NEDC cycle only - no WLTP figure has ever been published for this car, CarsGuide recorded the WLTP rating as still pending at launch - and real-world tests returned 130-140km (EV Central) and about 150km (Chasing Cars) against the 180-183km claim",
-    "At 2045-2075kg it carries roughly 450kg more than the petrol H6 GT, there is no spare wheel on the PHEV (a repair kit only, because the rear motor takes the space), and reviewers are unanimous about the spongy brake pedal - the NRMA called it 'one of the worst brake pedal actions in recent memory'",
-    "Pricing has fallen three times since launch, from $55,990 drive-away in Q1 2025 to $53,990 and now $52,990, which is good for a buyer today but is documented evidence that resale values will be dragged down by the next campaign"
+    "The coupe roofline costs it real practicality: 392L seats-up and 1390L folded, against 560L/1445L in the standard H6 PHEV and 425L in a BYD Sealion 6, which Chasing Cars called 'piddly (for its 4727mm length)' - and rear headroom suffers too",
+    "The 0.6L/100km combined-cycle label is meaningless once the battery is flat: GWM's own charge-sustaining (Condition B) figure is 5.3-5.4L/100km, Chasing Cars measured 5.4L/100km and EV Central about 6.0L/100km, with Chasing Cars seeing 9.5L/100km at 110km/h, so a buyer who cannot charge at home is worse off than in a conventional hybrid",
+    "Electric range is quoted on the NEDC cycle only - GWM publishes no WLTP figure in Australia or New Zealand - and real-world tests returned 130-140km (EV Central), about 140km (CarsGuide) and about 150km (Chasing Cars) against the 180-183km claim",
+    "At 2045-2075kg it carries roughly 400kg more than the petrol H6 GT, there is no spare wheel on the PHEV (a repair kit only), and reviewers criticise the brake pedal - RACQ found it 'spongy, requiring a deliberate push through to the second-stage of braking'",
+    "Pricing has moved repeatedly since launch - $55,990 drive-away in 2025, $53,990, $52,990 for the April 2026 update, now $54,990 with a $2,000 bonus - which is documented evidence that resale values will be dragged down by the next campaign"
   ],
   "sources": [
     "https://www.gwmanz.com/au/models/suv/haval-h6gt/",
+    "https://www.gwmanz.com/au/config/haval-h6gt/?model=Ultra",
+    "https://a.storyblok.com/f/256395/x/3f6b54b2a8/h6gt_brochure_au.pdf",
+    "https://gwmanz.com/nz/models/suv/haval-h6gt-phev",
+    "https://www.carsguide.com.au/ev/gwm-haval-h6gt-phev-hi-4-102393",
+    "https://www.carsguide.com.au/car-news/upgraded-2026-gwm-haval-h6-gt-plug-in-hybrid-gears-up-to-tackle-byd-sealion-6-jaecoo-j7",
     "https://www.carexpert.com.au/car-news/2026-gwm-haval-h6-gt-phev-prices-updated-suv-gets-overhauled-interior",
     "https://www.carexpert.com.au/car-news/2025-gwm-haval-h6-gt-phev-offers-sharp-pricing-180km-of-ev-range",
-    "https://www.carsales.com.au/editorial/details/2026-haval-h6gt-hi4-phev-gets-some-handy-upgrades-151811/",
-    "https://www.carsales.com.au/research/gwm/haval-h6gt/2025/ultra-phev/",
-    "https://www.carsguide.com.au/ev/gwm-haval-h6-gt-phev-96976",
-    "https://www.carsguide.com.au/gwm/haval-h6gt/price/2026/ultra-phev-hi4-4wd",
+    "https://web2.goauto.com.au/new-models/gwm/haval/h6-gt-phev/2026-04-20/99033.html",
     "https://www.chasingcars.com.au/reviews/midsize-suvs/haval-h6-gt-plug-in-hybrid-2025-review/",
     "https://www.racq.com.au/articles/car-reviews/gwm-haval-h6gt-phev",
-    "https://www.mynrma.com.au/open-road/car-reviews/gwm/2025-gwm-haval-h6gt-phev-review",
     "https://evcentral.com.au/2025-gwm-haval-h6gt-phev-review-new-plug-in-hybrid-packs-in-the-value-and-ev-range-to-make-life-tough-for-byd-sealion-6-mitsubishi-outlander-phev/",
-    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
-    "https://www.ato.gov.au/tax-rates-and-codes/luxury-car-tax-rate-and-thresholds"
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
   ],
-  "sourcedAt": "2026-07-28"
+  "sourcedAt": "2026-11-26"
 }
