@@ -125,7 +125,8 @@ Push the branch and open one PR. Its description is the change report:
 
 - Counts: families and variants before and after; added, removed, renamed.
 - **Every row that crossed $75,000, $80,809 or $91,661**, and every price change over 15%. Compute
-  these from `git show main:data/vehicles.json` against the branch's `data/vehicles.json`.
+  these from main's `data/vehicles/*.json` (read with `git show main:data/vehicles/<id>.json`) against
+  the branch's. The aggregates are not committed, so there is no `main:data/vehicles.json`.
 - Spec changes to battery, range, seats or towing.
 - Every LOW CONFIDENCE item, grouped by family.
 - New families still without a photo, and the contact sheet status.
