@@ -1,0 +1,42 @@
+[
+  {
+    "id": "leapmotor-b03x-style",
+    "familyId": "leapmotor-b03x",
+    "make": "Leapmotor",
+    "model": "B03X",
+    "variant": "Style",
+    "bodyType": "SUV",
+    "listPrice": 26990,
+    "batteryKwh": 39,
+    "rangeKm": 292,
+    "consumptionKwhPer100km": 15.5,
+    "bootLitresSeatsUp": 475,
+    "bootLitresSeatsDown": 1315,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1250,
+    "depreciationCurve": [1, 0.72, 0.59, 0.5, 0.43, 0.37],
+    "sourcedAt": "2026-11-27"
+  },
+  {
+    "id": "leapmotor-b03x-design-lr",
+    "familyId": "leapmotor-b03x",
+    "make": "Leapmotor",
+    "model": "B03X",
+    "variant": "Design LR",
+    "bodyType": "SUV",
+    "listPrice": 30990,
+    "batteryKwh": 52,
+    "rangeKm": 382,
+    "consumptionKwhPer100km": 15.7,
+    "bootLitresSeatsUp": 475,
+    "bootLitresSeatsDown": 1315,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1300,
+    "depreciationCurve": [1, 0.72, 0.59, 0.5, 0.43, 0.37],
+    "sourcedAt": "2026-11-27"
+  }
+]

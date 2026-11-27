@@ -1,0 +1,31 @@
+{
+  "id": "lexus-es",
+  "summary": "The new-generation ES is Lexus Australia's first battery-electric sedan, a large five-seater sold as the front-drive ES350e ($77,000) and dual-motor ES500e ($84,000) Sports Luxury, both on a 74.7kWh pack (about 71kWh usable) shared with the RZ and bZ4X. Australian reviewers rate it highly for ride comfort, refinement, rear legroom and equipment for the money — CarsGuide scored the ES350e 8.1/10 and Chasing Cars the ES500e 8.0 — but split on the cabin, which several find less characterful and more touchscreen-dependent than past Lexus models, and on range, which Chasing Cars calls mediocre at 465-510km WLTP.",
+  "pros": [
+    "Strong value for a luxury EV sedan: the ES350e at $77,000 and ES500e at $84,000 before on-road costs both sit under the $91,661 fuel-efficient LCT threshold, so either qualifies for the FBT exemption on a novated lease bought before April 2027",
+    "Efficient for its size: 16.4kWh/100km claimed for the ES350e and 17.9 for the ES500e, and Chasing Cars measured 16.8kWh/100km overall in the heavier ES500e with high-15s around town",
+    "22kW three-phase AC charging (10-100% in about 4.5 hours) and 150kW DC (10-80% in about 28 minutes) on both grades",
+    "Five-year unlimited-kilometre warranty with no servicing condition, plus a separate eight-year/160,000km drive-battery warranty",
+    "Reviewers consistently praise the ride, refinement and vast rear legroom, and both grades come fully loaded with 21-inch wheels, adaptive suspension and a power driver's seat"
+  ],
+  "cons": [
+    "The rear backrest is fixed, so the 517-litre boot cannot be extended — only a ski port passes long items through, which rules out flat-pack loads a fold-down rival such as the Tesla Model 3 swallows",
+    "Not rated to tow (0kg braked), where the RZ SUV on the same platform is rated to 1500kg",
+    "Both grades sit above the $75,000 FBT exemption cap that applies from 1 April 2027, and capped-price servicing for the EV is $625 per visit ($3,125 over five years), which CarExpert flags as expensive for an electric car",
+    "Range is middling for the money: 510km WLTP for the ES350e and 465km for the ES500e, and CarsGuide's mixed test projected only about 380km from the ES350e",
+    "The cabin moves drive modes and climate controls into the touchscreen, a step backwards in CarsGuide's and Chasing Cars' view, the driver-attention monitor is aggressive, and there is no spare wheel, only a repair kit"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-lexus-es-price-and-specs-new-generation-luxury-sedan-brings-ev-power-for-a-small-premium",
+    "https://www.carexpert.com.au/car-reviews/2026-lexus-es350e-sports-luxury-review",
+    "https://www.carexpert.com.au/lexus/es/sports-luxury/technology",
+    "https://www.chasingcars.com.au/reviews/large-cars/lexus-es500e-sports-luxury-awd-2026-review/",
+    "https://www.carsguide.com.au/ev/lexus-es-350e-sports-luxury-102233",
+    "https://evcentral.com.au/first-ever-electric-lexus-es-detailed-for-australia-priced-from-77000-with-510km-range-new-hybrid-also-confirmed/",
+    "https://www.carsguide.com.au/lexus/es350e/2026",
+    "https://www.carsguide.com.au/lexus/es500e/2026",
+    "https://www.carsales.com.au/research/lexus/es/2026/es350e-sports-luxury/",
+    "https://ev-database.org/car/3492/Lexus-ES-350e"
+  ],
+  "sourcedAt": "2026-11-27"
+}

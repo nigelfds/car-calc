@@ -1,0 +1,30 @@
+{
+  "id": "mercedes-glb-ev",
+  "summary": "The electric GLB replaces the EQB as Mercedes-Benz's seven-seat electric SUV, built on the same MMA platform and 800-volt hardware as the CLA and sold here in two grades, the rear-drive 250+ and the dual-motor 350 4MATIC, both with an 85kWh usable battery and seven seats standard. Australian reviewers rate it well: CarExpert calls it one of the most enjoyable mainstream Mercedes SUVs in recent memory and Chasing Cars says it finally deserves the badge, though both find the screen-heavy cabin and haptic controls polarising and the third row fit only for children. It undercuts the outgoing EQB by more than $15,000, which makes it a value pick among premium seven-seat EVs rather than a true seven-adult carrier.",
+  "pros": [
+    "At $74,990 before on-road costs the 250+ is the cheapest seven-seat electric SUV here and sits just $10 under the $75,000 cap that keeps the full FBT exemption from 1 April 2027; the 350 4MATIC at $86,200 stays under the $91,661 LCT threshold",
+    "85kWh usable battery gives 570km (250+) and 554km (350 4MATIC) WLTP on the standard 20-inch wheels, and Chasing Cars measured 15.7kWh/100km in the 350 4MATIC, about 541km real-world",
+    "800-volt architecture charges at up to 320kW DC, 10-80 per cent in a claimed 22 minutes",
+    "Reviewers praise the ride: Chasing Cars found 'hugely improved ride quality' over the EQB and CarExpert called it 'easily one of the most enjoyable mainstream Mercedes-Benz SUVs'",
+    "Five-year unlimited-kilometre warranty, eight-year/160,000km battery cover, and a 127-litre front boot on top of the rear load space"
+  ],
+  "cons": [
+    "The third row suits occupants under 171cm only, and with all seven seats up the boot shrinks to 145 litres (480 litres with the third row folded)",
+    "Interior divides reviewers: Chasing Cars marks down the polarising dashboard screens, flawed haptic steering-wheel controls and quality 'not quite premium', and CarExpert says there is too much screen",
+    "CarExpert lists 'ridiculous servicing costs' among its criticisms of the new GLB",
+    "Efficiency claims vary in testing: CarExpert's European drive of the 250+ used 18.1kWh/100km, near the top of the claimed band, for roughly 470km per charge",
+    "Not yet rated by ANCAP or Euro NCAP, and Mercedes EV resale here has been weak, with this car itself launched more than $15,000 below the EQB it replaces"
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2027-mercedes-benz-glb-price-and-specs-new-generation-seven-seat-suv-gains-eqb-replacing-ev-option",
+    "https://www.carexpert.com.au/car-reviews/2027-mercedes-benz-glb-review-quick-drive",
+    "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-glb-electric-review-quick-drive",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/mercedes-benz-glb-350-4matic-electric-2027-first-drive/",
+    "https://evcentral.com.au/mercedes-benz-australian-specifciation-revealed-seven-seat-electric-suv-starts-under-75000/",
+    "https://thebeep.com.au/car-news/2027-mercedes-benz-glb-price-specs-australia",
+    "https://zecar.com/reviews/mercedes-benz-glb-electric-price-specs-australia",
+    "https://ev-database.org/car/3406/Mercedes-Benz-GLB-250plus",
+    "https://ev-database.org/car/3407/Mercedes-Benz-GLB-350-4MATIC"
+  ],
+  "sourcedAt": "2026-11-27"
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "mg-u9-ev-dual-cab-awd",
+    "familyId": "mg-u9-ev",
+    "make": "MG",
+    "model": "U9 EV",
+    "variant": "Dual-Cab AWD",
+    "bodyType": "Ute",
+    "listPrice": 78990,
+    "batteryKwh": 98.4,
+    "rangeKm": 430,
+    "consumptionKwhPer100km": 26.7,
+    "isNonPassengerForVicDuty": true,
+    "bootLitresSeatsUp": 1053,
+    "bootLitresSeatsDown": 1053,
+    "seats": 5,
+    "towKg": 3500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2300,
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-11-27"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "id": "mg-u9-ev",
+  "summary": "The MGU9 EV, a rebadged Maxus eTerron 9, arrived in Australia in the fourth quarter of 2026 as a single, highly specified dual-motor AWD dual-cab at $78,990 before on-road costs, and Australian reviewers agree it is the most capable electric ute on sale: it is the only one rated to tow 3500kg braked, and its 102.2kWh LFP pack gives 430km of WLTP range against 245km for the Toyota HiLux BEV. The reservations are about the ute rather than the drivetrain: CarsGuide (7.1/10) calls it the pick of the electric utes and praises the SUV-like multilink ride, but finds it enormous on the road, short on payload at 685kg and fussy with its safety alerts. As a light commercial, its unconditional warranty is five years rather than the seven MG gives its passenger cars.",
+  "pros": [
+    "3500kg braked towing (750kg unbraked) matches the diesel Ford Ranger and HiLux, where the Toyota HiLux BEV manages 2000kg and the KGM Musso EV AWD 2300kg",
+    "430km WLTP range from a 102.2kWh LFP battery (98.4kWh usable per a European catalogue of the eTerron 9 twin), about 185km more than the HiLux BEV's 245km",
+    "325kW/700Nm dual-motor AWD, 0-100km/h in 5.8 seconds, four-wheel air suspension and a multilink rear that CarsGuide says makes it feel more like an SUV than a ute",
+    "Priced at $78,990 before on-roads, $4000 under the HiLux BEV SR5, below the $91,661 fuel-efficient LCT threshold, and with a 685kg payload it still counts as a car for the electric-car FBT exemption",
+    "Useful extras for trade work: a 236-litre frunk, 6.6kW vehicle-to-load from the charge port plus three 2.2kW outlets in the tub and frunk that work while driving"
+  ],
+  "cons": [
+    "Unconditional warranty is five years/unlimited km for private buyers (five years/160,000km for commercial use); seven years/200,000km needs every service done on time at an MG dealer, and the HV battery is covered for seven years/150,000km",
+    "685kg payload is low for a dual-cab - CarsGuide calls it underwhelming - and a loaded tub plus five occupants eats most of it",
+    "One grade only, with no cheaper stripped-out workhorse, so at $78,990 it sits above the $75,000 cap that applies to the FBT exemption from 1 April 2027 and about $18,000 more than the KGM Musso EV AWD's $61,014 list price",
+    "DC charging peaks at only 115kW, so 20-80 per cent takes about 42 minutes, and the official 26.7kWh/100km WLTP figure is before towing; reviewers doubt the range under heavy work",
+    "At 5.5m long it feels enormous on the road, more so than American utes according to CarsGuide, with poor forward vision"
+  ],
+  "sources": [
+    "https://www.mgmotor.com.au/configurator/mgu9-ev",
+    "https://mgmotor.com.au/vehicles/mgu9-ev",
+    "https://mgmotor.com.au/explore/warranty",
+    "https://www.carexpert.com.au/car-news/2027-mg-u9-ev-ute-priced-loaded-dual-cab-electric-ute-aimed-at-toyota-hilux-bev",
+    "https://www.carexpert.com.au/car-news/mgs-first-ute-to-get-shorter-warranty",
+    "https://www.carexpert.com.au/car-news/2026-mg-u9-price-and-specs",
+    "https://www.carsguide.com.au/ev/mg-u9-ev-102997",
+    "https://thedriven.io/2026/09/18/mg-confirms-78990-price-for-electric-u9-ute-with-430km-range-and-3-5-tonne-towing/",
+    "https://www.chasingcars.com.au/news/car-industry/mg-factory-warranty-wrapped-in-red-tape-chinese-automaker-drops-unrestricted-10-year-warranty-u9-ute-coverage-cut-to-five-years/",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/maxus/eterron-9/1generation/338681",
+    "https://elektromobilni.pl/katalog-ev/maxus-eterron-9/?wersja=236367"
+  ],
+  "sourcedAt": "2026-11-27"
+}

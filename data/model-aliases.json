@@ -1,12 +1,15 @@
 {
   "bmw-ix2": "BMW iX2",
   "byd-atto1": "BYD Dolphin Surf",
+  "byd-m9-phev": "BYD Xia",
   "byd-sealion-6": "BYD Song Plus",
+  "gac-m8-phev": "Trumpchi M8",
   "geely-ex2": "Geely Xingyuan",
   "geely-ex5": "Geely Galaxy E5",
   "gwm-cannon-alpha-phev": "GWM Poer Sahar",
   "gwm-cannon-phev": "Great Wall Poer",
   "gwm-haval-h6-gt-phev": "Haval H6 GT",
+  "gwm-haval-h7-phev": "Haval Raptor",
   "jaecoo-j5-ev": "Jaecoo 5",
   "kgm-torres-evx": "SsangYong Torres",
   "mazda-6e": "Mazda EZ-6",
@@ -14,5 +17,7 @@
   "mg-im5": "IM L6",
   "mg-im6": "IM LS6",
   "mg-s5": "MGS5",
+  "mg-u9-ev": "Maxus eTerron 9",
+  "mitsubishi-asx-vr-e": "Foxtron Bria",
   "volvo-ex40": "Volvo XC40 Recharge"
 }

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "cupra-leon-phev-ve",
+    "familyId": "cupra-leon-phev",
+    "make": "Cupra",
+    "model": "Leon",
+    "variant": "Ve",
+    "bodyType": "Hatch",
+    "powertrain": "phev",
+    "listPrice": 62990,
+    "batteryKwh": 19.7,
+    "rangeKm": 123,
+    "consumptionKwhPer100km": 16,
+    "combinedRangeKm": 907,
+    "fuelConsumptionL100km": 5.1,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 270,
+    "bootLitresSeatsDown": 1103,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1750,
+    "depreciationCurve": [1, 0.68, 0.56, 0.47, 0.4, 0.34],
+    "sourcedAt": "2026-11-27"
+  }
+]

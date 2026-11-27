@@ -1,0 +1,56 @@
+[
+  {
+    "id": "xpeng-x9-fwd-standard-range",
+    "familyId": "xpeng-x9",
+    "make": "XPeng",
+    "model": "X9",
+    "variant": "FWD Standard Range",
+    "bodyType": "SUV",
+    "listPrice": 89900,
+    "batteryKwh": 93.0,
+    "rangeKm": 535,
+    "consumptionKwhPer100km": 20.2,
+    "bootLitresSeatsUp": 721,
+    "bootLitresSeatsDown": 2554,
+    "seats": 7,
+    "towKg": 0,
+    "warrantyYears": 7,
+    "insuranceAnnual": 2350,
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-27"
+  },
+  {
+    "id": "xpeng-x9-awd-performance",
+    "familyId": "xpeng-x9",
+    "make": "XPeng",
+    "model": "X9",
+    "variant": "AWD Performance",
+    "bodyType": "SUV",
+    "listPrice": 109900,
+    "batteryKwh": 106.0,
+    "rangeKm": 580,
+    "consumptionKwhPer100km": 20.8,
+    "bootLitresSeatsUp": 721,
+    "bootLitresSeatsDown": 2554,
+    "seats": 7,
+    "towKg": 1500,
+    "warrantyYears": 7,
+    "insuranceAnnual": 2650,
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-27"
+  }
+]

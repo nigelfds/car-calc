@@ -68,39 +68,6 @@
       "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Sedan GT."
     },
     {
-      "name": "Deepal E07",
-      "make": "Deepal",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "deepal-e07",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "File as SUV, not Ute. Verify the March 2026 ADR 34/03 stop-sale was lifted."
-    },
-    {
-      "name": "XPeng X9",
-      "make": "XPeng",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "xpeng-x9",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: People mover, filed as SUV. $89,900-$109,900 at survey."
-    },
-    {
-      "name": "Zeekr 009",
-      "make": "Zeekr",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "zeekr-009",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "People mover, filed as SUV. $115,900-$139,900 at survey."
-    },
-    {
       "name": "LDV MIFA 9",
       "make": "LDV",
       "powertrain": "bev",
@@ -109,17 +76,6 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-05-26",
       "note": "No longer on sale (2026-11-26 sweep)."
-    },
-    {
-      "name": "Volkswagen ID. Buzz",
-      "make": "Volkswagen",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "vw-id-buzz",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: People mover, filed as SUV. Passenger versions only; Cargo is a panel van."
     },
     {
       "name": "Mercedes-Benz EQV",
@@ -133,17 +89,6 @@
       "note": "People mover, filed as SUV. Thin sourcing: verify still on sale."
     },
     {
-      "name": "Leapmotor B05",
-      "make": "Leapmotor",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "leapmotor-b05",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Expected end Aug 2026, $35,990-$38,990 d/a."
-    },
-    {
       "name": "Deepal S05",
       "make": "Deepal",
       "powertrain": "bev",
@@ -153,17 +98,6 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-03-01",
       "note": "\"Final stages\" late July 2026, ~$40k-$45k."
-    },
-    {
-      "name": "Honda Super-One",
-      "make": "Honda",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "honda-super-one",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Expected 2H 2026; would be Honda's first BEV here."
     },
     {
       "name": "XPeng G9L",
@@ -186,17 +120,6 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-01-15",
       "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Expected late 2026."
-    },
-    {
-      "name": "Mercedes-Benz GLB Electric",
-      "make": "Mercedes-Benz",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "mercedes-glb-ev",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: EQB successor, expected Q4 2026."
     },
     {
       "name": "Mercedes-Benz EQS (refreshed)",
@@ -262,17 +185,6 @@
       "checkedAt": "2026-07-30",
       "recheckAfter": "2026-11-26",
       "note": "Paused for an 800V facelift; unconfirmed."
-    },
-    {
-      "name": "MG U9 EV",
-      "make": "MG",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "mg-u9-ev",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Ute. Late 2026, unconfirmed."
     },
     {
       "name": "Hyundai Ioniq 3",
@@ -456,17 +368,6 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-02-26",
       "note": "Reviews call the Essential outgoing; still orderable 2026-11-26. Delete row byd-atto3-essential when it leaves the configurator."
-    },
-    {
-      "name": "JAC Hunter PHEV",
-      "make": "JAC",
-      "powertrain": "phev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "jac-hunter-phev",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Reservations only at 2026-08-08. When it lands: two grades, Hunter Pro 4x4 and Hunter X 4x4, $49,988 / $54,844 list."
     },
     {
       "name": "Omoda 7 PHEV",
@@ -1641,34 +1542,12 @@
       "note": "Europe moved to EV67/EV89 packs; AU still lists 60/87 kWh."
     },
     {
-      "name": "Mitsubishi ASX VR-e",
-      "make": "Mitsubishi",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "mitsubishi-asx-vr-e",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
-    },
-    {
       "name": "Denza D9",
       "make": "Denza",
       "powertrain": "bev",
       "scope": "model",
       "status": "backlog",
       "familyId": "denza-d9",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
-    },
-    {
-      "name": "Lexus ES (electric)",
-      "make": "Lexus",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "lexus-es",
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-01-15",
       "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
@@ -1689,22 +1568,11 @@
       "make": "BMW",
       "powertrain": "bev",
       "scope": "model",
-      "status": "backlog",
+      "status": "pre-launch",
       "familyId": "bmw-i3",
-      "checkedAt": "2026-11-26",
+      "checkedAt": "2026-11-27",
       "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
-    },
-    {
-      "name": "Leapmotor B03X",
-      "make": "Leapmotor",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "leapmotor-b03x",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+      "note": "Priced, not yet orderable (2026-11-27): i3 40 xDrive $96,900 and i3 50 xDrive $112,900 before on-road costs, announced ~30 Sep 2026; showrooms about Feb 2027, M60 mid-2027. bmw.com.au and the configurator were unreadable; no source says AU orders are open. Research as a new family once Build & Price lists it."
     },
     {
       "name": "Polestar 4 SUV (or fold into polestar-4)",
@@ -1724,50 +1592,6 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "land-rover-range-rover-sport-electric",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
-    },
-    {
-      "name": "GWM Haval H7 PHEV",
-      "make": "GWM",
-      "powertrain": "phev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "gwm-haval-h7-phev",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
-    },
-    {
-      "name": "BYD Atto 2 DM-i",
-      "make": "BYD",
-      "powertrain": "phev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "byd-atto2-phev",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
-    },
-    {
-      "name": "BYD M9 PHEV",
-      "make": "BYD",
-      "powertrain": "phev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "byd-m9-phev",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
-    },
-    {
-      "name": "GAC M8 PHEV",
-      "make": "GAC",
-      "powertrain": "phev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "gac-m8-phev",
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-01-15",
       "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
@@ -1812,17 +1636,6 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "vw-touareg-phev",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2027-01-15",
-      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
-    },
-    {
-      "name": "Cupra Leon PHEV",
-      "make": "Cupra",
-      "powertrain": "phev",
-      "scope": "model",
-      "status": "backlog",
-      "familyId": "cupra-leon-phev",
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-01-15",
       "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
@@ -1986,6 +1799,39 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-05-26",
       "note": "Dropped for MY27 (2026-11-26 sweep)."
+    },
+    {
+      "name": "Volkswagen ID. Buzz Pro+",
+      "make": "Volkswagen",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "vw-id-buzz",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-01-15",
+      "note": "MY27 Pro+ SWB $84,990 and Pro+ LWB $89,990 reported by CarExpert and GoAuto, but absent from the VW AU model page and configurator on 2026-11-27. Add the rows when the configurator lists them."
+    },
+    {
+      "name": "Leapmotor B03X deliveries",
+      "make": "Leapmotor",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "leapmotor-b03x",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-01-15",
+      "note": "Held on dealer pre-order (2026-11-27); the $29,990/$33,990 drive-away offer requires delivery by 31 Dec 2026. Confirm deliveries began and that list prices hold after the offer."
+    },
+    {
+      "name": "BYD M9 Dynamic availability",
+      "make": "BYD",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "byd-m9-phev",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-01-15",
+      "note": "Dynamic (8 seats) is priced and orderable in the configurator but BYD's model page says \"coming soon\" and no review or ANCAP covers it. Drop the row if BYD withdraws it."
     }
   ]
 }

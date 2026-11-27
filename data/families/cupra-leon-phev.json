@@ -1,0 +1,33 @@
+{
+  "id": "cupra-leon-phev",
+  "summary": "The Leon Ve is the only plug-in hybrid Leon hatch sold in Australia, a detuned 150kW version of the Volkswagen Group's second-generation 1.5-litre eHybrid with a 19.7kWh usable battery and 123km of claimed electric range, priced at $62,990 before on-road costs since its mid-2026 launch. No Australian outlet has yet published a full review of the hatch, so the verdict leans on the mechanically related Leon Sportstourer VZe wagon, which CarExpert and Chasing Cars praised for 'outstanding' plugged-in efficiency and a fun chassis but marked down for road noise and a price north of $70,000. The hatch body is the catch: the battery shrinks the boot to 270 litres, and the 200kW VZe plug-in is offered here only as the Sportstourer wagon, which this dataset does not list.",
+  "pros": [
+    "123km of claimed electric range (Cupra Australia's figure; Europe's WLTP rating on the same 18-inch tyre is 131km) from a 19.7kWh usable battery outlasts the Formentor VZe's 114km and almost doubles the Mitsubishi Outlander PHEV's 86km",
+    "At $62,990 before on-road costs it is the cheapest way into the Volkswagen Group's long-range eHybrid in Australia, $6,000 under the Cupra Formentor VZe and $1,600 under the VW Tiguan 150TSI eHybrid",
+    "50kW DC fast charging (10-80 per cent in about 26 minutes) and an 11kW onboard AC charger, up from 3.6kW on the previous Leon plug-in, which few small plug-in hybrids match",
+    "1.4L/100km and 33g/km CO2 on the label clear the 3.5L/100km fuel-efficient LCT test and Victoria's 120g/km green-car duty threshold, and the price sits well under the $75,000 FBT cap",
+    "Five-year unlimited-kilometre warranty, with the high-voltage battery covered for 8 years/160,000km; Cupra's November-December 2026 offer adds a $5,850 cashback on MY25 and MY26 Leons ordered and delivered by 31 December"
+  ],
+  "cons": [
+    "The battery cuts the boot to 270 litres to the window line (ADAC: 270 to 1,191 litres to the roof), against the 344 litres Cupra Australia quotes for the Leon range, which is less than many city hatches",
+    "Once the battery is flat it is a 1,673kg hatch on a 1.5-litre engine: ADAC's WLTP battery-empty figure is 5.1L/100km from a 40-litre tank, and Chasing Cars saw consumption head towards 6L/100km on a low battery in the related VZe wagon, so the case depends on home charging",
+    "No Australian braked tow rating is published for the Ve hatch, and Germany's ADAC lists the 150kW Leon eHybrid hatch with no approved trailer load; buyers who need to tow should look at the 1,700kg-rated Sportstourer VZe wagon",
+    "It gives up 50kW to the Formentor and Terramar VZe on the same drivetrain (150kW/350Nm, 7.7sec to 100km/h), and reviewers of the related wagon flagged intrusive road noise",
+    "Plug-in hybrids lost the FBT exemption on 1 April 2025, there is no dedicated Australian review of the hatch yet, and Cupra's history of deep run-out discounting on earlier Leon and Formentor plug-ins makes resale a risk"
+  ],
+  "sources": [
+    "https://www.cupra.com/en-au/cars/leon",
+    "https://www.cupra.com/en-au/shopping/offers",
+    "https://www.cupra.com/en-au/owners/warranty",
+    "https://www.carexpert.com.au/car-news/2026-cupra-leon-ve-prices-updated-spanish-phev-hatch-gets-much-more-range",
+    "https://www.carexpert.com.au/cupra/leon/2026/ve/features-and-specs",
+    "https://www.carexpert.com.au/car-news/2026-cupra-leon-ve-second-phev-hatch-marching-in-with-more-range-less-grunt",
+    "https://www.carexpert.com.au/car-reviews/2026-cupra-leon-review",
+    "https://www.carexpert.com.au/car-reviews/2026-cupra-leon-sportstourer-vze-review",
+    "https://www.chasingcars.com.au/reviews/small-cars/cupra-leon-vze-sportstourer-2026-review/",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/leon/1generation-facelift/345226/",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/leon/1generation-facelift/336523",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-11-27"
+}

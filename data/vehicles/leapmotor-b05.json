@@ -1,0 +1,42 @@
+[
+  {
+    "id": "leapmotor-b05-style",
+    "familyId": "leapmotor-b05",
+    "make": "Leapmotor",
+    "model": "B05",
+    "variant": "Style",
+    "bodyType": "Hatch",
+    "listPrice": 35888,
+    "batteryKwh": 55,
+    "rangeKm": 401,
+    "consumptionKwhPer100km": 15.8,
+    "bootLitresSeatsUp": 357,
+    "bootLitresSeatsDown": 1205,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1500,
+    "depreciationCurve": [1, 0.72, 0.59, 0.5, 0.43, 0.37],
+    "sourcedAt": "2026-11-27"
+  },
+  {
+    "id": "leapmotor-b05-design-lr",
+    "familyId": "leapmotor-b05",
+    "make": "Leapmotor",
+    "model": "B05",
+    "variant": "Design LR",
+    "bodyType": "Hatch",
+    "listPrice": 39888,
+    "batteryKwh": 65,
+    "rangeKm": 482,
+    "consumptionKwhPer100km": 15.9,
+    "bootLitresSeatsUp": 357,
+    "bootLitresSeatsDown": 1205,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 6,
+    "insuranceAnnual": 1550,
+    "depreciationCurve": [1, 0.72, 0.59, 0.5, 0.43, 0.37],
+    "sourcedAt": "2026-11-27"
+  }
+]

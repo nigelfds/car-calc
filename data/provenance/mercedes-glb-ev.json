@@ -1,0 +1,173 @@
+{
+  "familyId": "mercedes-glb-ev",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "mercedes-glb-ev-250-plus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/mercedes-benz-australian-specifciation-revealed-seven-seat-electric-suv-starts-under-75000/",
+        "note": "EV Central (Sep 2026): on sale in Australia now, deliveries from September 2026, national pricing; Chasing Cars reports official on-sale 4 September 2026; CarExpert price-and-specs says 'now available in local showrooms'. mercedes-benz.com.au (overview and configurator) returned 403 this run, so no configurator entry was seen directly. Mercedes-Benz Australia sells on a national agency price, so the grade is orderable in Victoria at the same list price."
+      },
+      "listPrice": {
+        "value": 74990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mercedes-benz-glb-price-and-specs-new-generation-seven-seat-suv-gains-eqb-replacing-ev-option",
+        "note": "CarExpert price table headed 'Price before on-road costs', '$74,990 plus on-roads'; same figure in CarExpert 2027 quick drive, EV Central ('excluding on-road costs'), The Beep ('before on-road costs') and Zecar (MRLP, excludes on-roads). Manufacturer price list unreachable (403). Optional Plus Package $4,000 not included."
+      },
+      "batteryKwh": {
+        "value": 85,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3406/Mercedes-Benz-GLB-250plus",
+        "note": "usable; EV Database gives 90.0 kWh nominal / 85.0 kWh usable for the same variant; CarExpert 2026 quick drive quotes Mercedes: 85.5 kWh total, 85 kWh usable. Same pack in both grades."
+      },
+      "rangeKm": {
+        "value": 570,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2027-mercedes-benz-glb-price-and-specs-new-generation-seven-seat-suv-gains-eqb-replacing-ev-option",
+        "note": "WLTP for the AU spec on standard 20-inch AMG Line wheels (CarExpert, Chasing Cars, EV Central agree); 'peak' figures 626/609 km are the best-case wheel. Below EV Database WLTP band (TEL 632 / TEH 538), so passes the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-mercedes-benz-glb-review-quick-drive",
+        "note": "CarExpert 2027 quick drive spec table, claimed energy use 17.5 kWh/100km (WLTP rated, includes charging losses; inside EV Database's TEL-TEH band). 85/570x100 = 14.9, 17% off, inside the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 145,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-mercedes-benz-glb-review-quick-drive",
+        "note": "145 L with all seven seats up (CarExpert 2027 quick drive; CarExpert 2026 quick drive gives the same 7-seat figure). Seven-seat convention matches kia-ev9 and byd-sealion-8 (all rows up). 480 L with third row folded; 127 L frunk not added. Measurement method not stated; the 565 L in CarExpert's benchmark table conflicts and was ignored."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1605,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-mercedes-benz-glb-review-quick-drive",
+        "note": "1,605 L with second and third rows folded (CarExpert, EV Central, The Beep). Method not stated: a Mercedes maximum figure is probably to the roof rather than the belt line; no to-the-belt figure found. EV Database's 540/1,715 L are the European five-seat car, which is not sold here (The Beep)."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/2027-mercedes-benz-glb-price-specs-australia",
+        "note": "Seven seats standard on every grade; five-seat version not offered in Australia. Third row rated for occupants up to 171 cm (Chasing Cars)."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3406/Mercedes-Benz-GLB-250plus",
+        "note": "EV Database (European data) 1500 kg braked / 750 kg unbraked for this variant. No Australian per-grade figure found: CarExpert's 2027 quick drive gives '1,800-2,000 kg' braked for the whole GLB range without splitting EV grades; Australian price-and-specs articles omit towing. Not from a Mercedes AU spec sheet (403)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mercedes-benz-glb-price-and-specs-new-generation-seven-seat-suv-gains-eqb-replacing-ev-option",
+        "note": "Five years, unlimited km; high-voltage battery eight years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "anchored to siblings: mercedes-cla-ev-200-eq ($72,200, 1950), mercedes-eqa-250-plus ($86,700, 2250), mercedes-cla-ev-350-4matic-eq ($91,300, 2500). Slightly above the CLA 200 for a larger, heavier seven-seat SUV at $74,990."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one curve per brand by owner convention: Mercedes-Benz curve as on mercedes-cla-ev and mercedes-eqa. Steeper than mainstream on weak Mercedes EV resale (the GLB EV itself launched more than $15,000 below the outgoing EQB, per CarExpert)."
+      }
+    },
+    "mercedes-glb-ev-350-4matic": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/mercedes-benz-australian-specifciation-revealed-seven-seat-electric-suv-starts-under-75000/",
+        "note": "EV Central (Sep 2026): on sale in Australia now, deliveries from September 2026, national pricing; Chasing Cars reports official on-sale 4 September 2026; CarExpert price-and-specs says 'now available in local showrooms'. mercedes-benz.com.au (overview and configurator) returned 403 this run, so no configurator entry was seen directly. Mercedes-Benz Australia sells on a national agency price, so the grade is orderable in Victoria at the same list price."
+      },
+      "listPrice": {
+        "value": 86200,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mercedes-benz-glb-price-and-specs-new-generation-seven-seat-suv-gains-eqb-replacing-ev-option",
+        "note": "CarExpert price table headed 'Price before on-road costs', '$86,200 plus on-roads'; same figure in CarExpert 2027 quick drive, EV Central ('excluding on-road costs'), The Beep ('before on-road costs') and Zecar (MRLP, excludes on-roads). Manufacturer price list unreachable (403). Optional Plus Package $4,000 not included."
+      },
+      "batteryKwh": {
+        "value": 85,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3407/Mercedes-Benz-GLB-350-4MATIC",
+        "note": "usable; EV Database gives 90.0 kWh nominal / 85.0 kWh usable for the same variant; CarExpert 2026 quick drive quotes Mercedes: 85.5 kWh total, 85 kWh usable. Same pack in both grades."
+      },
+      "rangeKm": {
+        "value": 554,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2027-mercedes-benz-glb-price-and-specs-new-generation-seven-seat-suv-gains-eqb-replacing-ev-option",
+        "note": "WLTP for the AU spec on standard 20-inch AMG Line wheels (CarExpert, Chasing Cars, EV Central agree); 'peak' figures 626/609 km are the best-case wheel. Below EV Database WLTP band (TEL 615 / TEH 521), so passes the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-mercedes-benz-glb-review-quick-drive",
+        "note": "CarExpert 2027 quick drive spec table, claimed energy use 17.7 kWh/100km (WLTP rated, includes charging losses; inside EV Database's TEL-TEH band). 85/554x100 = 15.3, 15% off, inside the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 145,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-mercedes-benz-glb-review-quick-drive",
+        "note": "145 L with all seven seats up (CarExpert 2027 quick drive; CarExpert 2026 quick drive gives the same 7-seat figure). Seven-seat convention matches kia-ev9 and byd-sealion-8 (all rows up). 480 L with third row folded; 127 L frunk not added. Measurement method not stated; the 565 L in CarExpert's benchmark table conflicts and was ignored."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1605,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-mercedes-benz-glb-review-quick-drive",
+        "note": "1,605 L with second and third rows folded (CarExpert, EV Central, The Beep). Method not stated: a Mercedes maximum figure is probably to the roof rather than the belt line; no to-the-belt figure found. EV Database's 540/1,715 L are the European five-seat car, which is not sold here (The Beep)."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/2027-mercedes-benz-glb-price-specs-australia",
+        "note": "Seven seats standard on every grade; five-seat version not offered in Australia. Third row rated for occupants up to 171 cm (Chasing Cars)."
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3407/Mercedes-Benz-GLB-350-4MATIC",
+        "note": "EV Database (European data) 2000 kg braked / 750 kg unbraked for this variant. No Australian per-grade figure found: CarExpert's 2027 quick drive gives '1,800-2,000 kg' braked for the whole GLB range without splitting EV grades; Australian price-and-specs articles omit towing. Not from a Mercedes AU spec sheet (403)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mercedes-benz-glb-price-and-specs-new-generation-seven-seat-suv-gains-eqb-replacing-ev-option",
+        "note": "Five years, unlimited km; high-voltage battery eight years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 2250,
+        "basis": "judged",
+        "note": "anchored to siblings: mercedes-cla-ev-200-eq ($72,200, 1950), mercedes-eqa-250-plus ($86,700, 2250), mercedes-cla-ev-350-4matic-eq ($91,300, 2500). Matches the EQA 250+ at near-identical price; below the more powerful CLA 350."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one curve per brand by owner convention: Mercedes-Benz curve as on mercedes-cla-ev and mercedes-eqa. Steeper than mainstream on weak Mercedes EV resale (the GLB EV itself launched more than $15,000 below the outgoing EQB, per CarExpert)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mercedes-glb-ev-250-plus.towKg: European EV Database figure (1500 kg); no Australian per-grade tow rating found, and CarExpert quotes 1,800-2,000 kg range-wide",
+    "mercedes-glb-ev-350-4matic.towKg: European EV Database figure (2000 kg); no Australian per-grade tow rating found",
+    "mercedes-glb-ev-250-plus.availability: mercedes-benz.com.au returned 403, so orderability rests on Australian launch coverage (EV Central, Chasing Cars, CarExpert), not a configurator entry; same for 350 4MATIC",
+    "mercedes-glb-ev-250-plus.listPrice: manufacturer price list unreachable; five Australian outlets agree on $74,990 before on-roads, $10 under the $75,000 cap, so any price rise would cross it",
+    "mercedes-glb-ev-250-plus.bootLitresSeatsDown: 1,605 L measurement method unstated, probably to the roof; same for 350 4MATIC",
+    "mercedes-glb-ev-250-plus.insuranceAnnual: judged from Mercedes siblings; same for 350 4MATIC"
+  ]
+}

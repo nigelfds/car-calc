@@ -90,6 +90,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "byd-atto2-phev": {
+    "file": "byd-atto2-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Atto_2_DM-i_IMG_6083.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "byd-atto3": {
     "file": "byd-atto3.webp",
     "source": "https://commons.wikimedia.org/wiki/File:BYD_Atto_3_1X7A6495.jpg",
@@ -195,6 +202,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "cupra-leon-phev": {
+    "file": "cupra-leon-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cupra_Leon_Mk4_Facelift_DSC_8489.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "cupra-tavascan": {
     "file": "cupra-tavascan.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Cupra_Tavascan_Leonberg_2024_IMG_0881.jpg",
@@ -207,6 +221,13 @@
     "source": "https://commons.wikimedia.org/wiki/File:Cupra_Terramar_VZ_IMG_2333.jpg",
     "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "deepal-e07": {
+    "file": "deepal-e07.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Nevo_E07_001.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
     "note": "Cropped and resized."
   },
   "deepal-s07": {
@@ -250,6 +271,13 @@
     "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
+  },
+  "gac-m8-phev": {
+    "file": "gac-m8-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Trumpchi_M8_II_007.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized. Searched as Trumpchi M8."
   },
   "geely-ex2": {
     "file": "geely-ex2.webp",
@@ -307,6 +335,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "gwm-haval-h7-phev": {
+    "file": "gwm-haval-h7-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Haval_Raptor_002.jpg",
+    "author": "Quzhouliulian",
+    "licence": "CC0",
+    "note": "Cropped and resized. Searched as Haval Raptor."
+  },
   "gwm-ora-5": {
     "file": "gwm-ora-5.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Ora_5_001.jpg",
@@ -318,6 +353,13 @@
     "file": "gwm-tank-500-phev.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Onyx_Silver_GWM_Tank_500_in_GWM_Pasteur_01.jpg",
     "author": "MoCars",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "honda-super-one": {
+    "file": "honda-super-one.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Honda_Super-ONE_(JG6).jpg",
+    "author": "Tokumeigakarinoaoshima",
     "licence": "CC0",
     "note": "Cropped and resized."
   },
@@ -353,6 +395,13 @@
     "file": "hyundai-ioniq-9.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_9_IMG_5950.jpg",
     "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "jac-hunter-phev": {
+    "file": "jac-hunter-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:JAC_Hunter_facelift_001.jpg",
+    "author": "JustAnotherCarDesigner",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
@@ -440,6 +489,20 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the pre-2020 Defender 110."
   },
+  "leapmotor-b03x": {
+    "file": "leapmotor-b03x.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_B03X_Leonberg_2026_IMG_8584.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "leapmotor-b05": {
+    "file": "leapmotor-b05.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_B05_Auto_Zuerich_2026_IMG_8910.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "leapmotor-b10": {
     "file": "leapmotor-b10.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_B10_IAA_2025_DSC_2069.jpg",
@@ -453,6 +516,13 @@
     "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
+  },
+  "lexus-es": {
+    "file": "lexus-es.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:LEXUS_ES_300h_(XZ20)_China_(5).jpg",
+    "author": "Dinkun Chen",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Curated pick was the previous-generation ES; this is the new-generation ES 300h, same body as the ES350e/ES500e."
   },
   "lexus-nx-phev": {
     "file": "lexus-nx-phev.webp",
@@ -538,6 +608,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "mercedes-glb-ev": {
+    "file": "mercedes-glb-ev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLB_-_Avant.jpg",
+    "author": "Y.Leclercq",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Curated pick was the previous-generation GLB 35."
+  },
   "mercedes-glc-phev": {
     "file": "mercedes-glc-phev.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_X254_1X7A6345.jpg",
@@ -587,6 +664,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "mg-u9-ev": {
+    "file": "mg-u9-ev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Maxus_eTerron_9_IAA_Transportation_2024_(DSC02709).jpg",
+    "author": "MarcelX42",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Searched as Maxus eTerron 9."
+  },
   "mini-aceman": {
     "file": "mini-aceman.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_DSC_7115.jpg",
@@ -600,6 +684,13 @@
     "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
+  },
+  "mitsubishi-asx-vr-e": {
+    "file": "mitsubishi-asx-vr-e.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Foxtron_Bria_at_Taipei_AMPA_2026_7.jpg",
+    "author": "4300streetcar",
+    "licence": "CC BY 4.0",
+    "note": "Cropped and resized. Searched as Foxtron Bria."
   },
   "mitsubishi-outlander-phev": {
     "file": "mitsubishi-outlander-phev.webp",
@@ -783,6 +874,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "vw-id-buzz": {
+    "file": "vw-id-buzz.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_ID._Buzz_1X7A6263.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Curated pick was the ID. Buzz Cargo van."
+  },
   "vw-id5": {
     "file": "vw-id5.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_ID.5_Leonberg_2022_1X7A0459.jpg",
@@ -810,6 +908,20 @@
     "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
+  },
+  "xpeng-x9": {
+    "file": "xpeng-x9.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:XPeng_X9_IAA_2025_DSC_2063.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "zeekr-009": {
+    "file": "zeekr-009.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Zeekr_009_beige_front.jpg",
+    "author": "michel",
+    "licence": "CC BY 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Curated pick was an interior shot."
   },
   "zeekr-7x": {
     "file": "zeekr-7x.webp",

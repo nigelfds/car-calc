@@ -1,0 +1,29 @@
+{
+  "id": "byd-m9-phev",
+  "summary": "The M9 is BYD's plug-in hybrid people mover, aimed squarely at the Kia Carnival: the eight-seat Dynamic lists at $61,990 and the seven-seat Premium at $72,990 before on-roads, and unusually for a Chinese PHEV BYD quotes WLTP figures of 80km and 145km of electric range. CarExpert rates the launch Premium excellent for its space, equipment and quiet, comfortable drive, while CarsGuide is cooler on handling, styling and servicing costs and notes it trails the Carnival on boot space. The cheaper Dynamic was still marked 'coming soon' on BYD's model page at research time, so its specs come from BYD's sheet rather than any review.",
+  "pros": [
+    "The Premium's 36.6kWh battery gives a WLTP-rated 145km of electric range, and CarExpert saw just over 120km on mostly motorway driving; the Kia Carnival hybrid cannot be plugged in at all.",
+    "Pricing undercuts the hybrid Carnival where they compete: the Premium's $72,990 is $3,850 below the Carnival GT-Line Hybrid's $76,840, and both grades sit under $75,000 and the $80,809 LCT threshold.",
+    "Combined CO2 of 9-20g/km (WLTP) puts both grades well under Victoria's 120g/km green-car duty threshold.",
+    "BYD's own charge-sustaining claim of 7.1-7.3L/100km is realistic: CarExpert measured 7.2L/100km with the battery depleted, five aboard and luggage.",
+    "Warranty is six years/150,000km, with the traction battery covered for eight years/160,000km and the drive unit for eight years/150,000km."
+  ],
+  "cons": [
+    "Boot space is 470 litres behind the third row against the Carnival's 627 litres, the second-row captain's chairs cannot be stowed, and there is no spare wheel, only a repair kit.",
+    "It is a plug-in compromise at 2,450-2,650kg: without regular charging it runs at about 7L/100km on petrol, and CarsGuide suggests infrequent chargers or long-distance drivers may be better off with a diesel.",
+    "Servicing is awkward and dear: due every 12 months/20,000km or every 10,000km of hybrid running, with a five-year capped-price plan of $2,880 that CarsGuide calls expensive.",
+    "Braked towing is 1,500kg and laden ground clearance just 140mm, so CarsGuide rates it for gravel driveways rather than rough tracks, and its 624kg payload (Premium) is one a fully loaded family can reach.",
+    "The Dynamic has a smaller 20.4kWh battery and only 80km WLTP range, and at research time it had not been reviewed or ANCAP-rated (the five-star rating covers the Premium only)."
+  ],
+  "sources": [
+    "https://evdealergroup-byd.com.au/configurator/byd-m9",
+    "https://bydautomotive.com.au/m9",
+    "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+    "https://www.carexpert.com.au/car-news/2027-byd-m9-phev-priced-up-against-kia-carnival-in-australia",
+    "https://www.carexpert.com.au/car-reviews/2027-byd-m9-review",
+    "https://www.carsguide.com.au/ev/byd-m9-103166",
+    "https://evcentral.com.au/byd-m9-lands-from-61990-forget-other-chinese-people-movers-the-m9-is-aimed-straight-at-the-top-selling-kia-carnival/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-11-27"
+}

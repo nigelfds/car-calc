@@ -1,0 +1,107 @@
+{
+  "familyId": "cupra-leon-phev",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "cupra-leon-phev-ve": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/cars/leon",
+        "note": "Cupra AU Leon page variants table lists three hatch grades (S mild hybrid, Ve plug-in hybrid 150kW/350Nm, VZx petrol), each with a 'Configure yours' link and a driveaway price; Ve 'Driveaway from $67,490'. Configurator is JS/region-priced and not readable. CarExpert launch article (20 May 2026) confirms the Ve hatch on sale from June 2026. The only other PHEV Leon, the 200kW VZe, is sold here only as the Sportstourer wagon (excluded)."
+      },
+      "listPrice": {
+        "value": 62990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-cupra-leon-ve-prices-updated-spanish-phev-hatch-gets-much-more-range",
+        "note": "CarExpert 20 May 2026: '$62,990 before on-road costs', with Cupra's per-state drive-away table (VIC $67,990). Round-trip: calc/onroad.js gives VIC drive-away $66,594 at list $62,990, $1,396 under Cupra's VIC MDP, consistent with dealer delivery being bundled. Cupra AU site now shows 'Driveaway from $67,490' (region not stated; matches Cupra's launch SA/TAS figure), so no list change inferred. CarExpert Ve spec page also shows $62,990. Cupra $5,850 cashback (MY25/MY26 Leon, 1 Nov-31 Dec 2026) is a campaign, not a list change."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/leon/1generation-facelift/345226/",
+        "note": "ADAC Leon 1.5 e-HYBRID DSG 150 kW (from 10/25): 25.8 kWh gross, 19.7 kWh net; usable used. CarExpert AU Ve spec: 25.8 gross / 20 usable (rounded). Same VW Group pack as siblings."
+      },
+      "rangeKm": {
+        "value": 123,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.cupra.com/en-au/cars/leon",
+        "note": "Cupra AU 'Up to 123km electric range' for the Ve; CarExpert AU spec page and launch article call it 123 km WLTP. Lower than ADAC's European WLTP 131 km on the same 225/40R18 tyre, so taken as the WLTP-derived local figure (direction test passes). Not explicitly labelled ADR 81/02."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16,
+        "basis": "derived",
+        "note": "batteryKwh 19.7 / rangeKm 123 x 100 = 16.02"
+      },
+      "combinedRangeKm": {
+        "value": 907,
+        "basis": "derived",
+        "note": "rangeKm 123 + 40 L tank / 5.1 L/100km x 100 (784.3) = 907. Tank 40 L from ADAC 345226 and CarExpert AU Ve spec."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.1,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/leon/1generation-facelift/345226/",
+        "note": "ADAC 'Verbrauch kombiniert WLTP PHEV (Batterie leer)' 5.1 L/100km, Leon hatch 150 kW from 10/25, 225/40R18 as on AU Ve. Lower than siblings Formentor VZe 5.6, Terramar 5.7, Tiguan 5.8 on the same basis, consistent with the Leon's lower mass (1,673 kg EU) and output. Chasing Cars saw nearly 6 L/100km on a low battery in the heavier 200 kW Sportstourer VZe."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-cupra-leon-ve-prices-updated-spanish-phev-hatch-gets-much-more-range",
+        "note": "Combined label 1.4 L/100km (CarExpert launch article and AU spec page), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CarExpert AU Ve spec page gives 33 g/km."
+      },
+      "bootLitresSeatsUp": {
+        "value": 270,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/leon/2026/ve/features-and-specs",
+        "note": "CarExpert AU Ve spec 270 L 'to lower window' (ISO), i.e. cargo cover; ADAC 270 L agrees. Cupra AU Leon page's 344 L is not tied to a variant and matches the non-PHEV hatch."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1103,
+        "basis": "judged",
+        "note": "No belt-line folded figure published for the Ve. ADAC gives 1,191 L to the roof ('dachhoch'); scaled by the Formentor VZe's belt-line/roof ratio (CarExpert 1,311 / ADAC 1,415 = 0.9265): 1,191 x 0.9265 = 1,103."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/leon/2026/ve/features-and-specs"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No Australian braked rating found: CarExpert AU Ve spec lists none, CarExpert 2026 towing chart gives no figures, CarsGuide 2026 towing page shows 0 kg 'yet to be specified' for every Leon. ADAC's 150 kW Leon e-HYBRID hatch entry (08/24-10/25, https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/leon/1generation-facelift/336523) states no trailer or nose loads are approved; the current 10/25 entry lists no towing fields. The Sportstourer e-HYBRID is rated 1,700 kg (ADAC 345230). Recorded as not rated to tow until Cupra AU publishes a figure."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/owners/warranty",
+        "note": "'5-year unlimited-kilometre warranty across the entire CUPRA range'; no servicing condition stated. Battery 96 months/160,000 km per CarExpert AU Ve spec page."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "Anchored to vw-tiguan-phev-150tsi-elegance $1,750 at $64,590 (same 150 kW drivetrain, similar price) and below cupra-formentor-phev-vze $1,950 at $68,990 (200 kW performance badge)."
+      },
+      "depreciationCurve": {
+        "value": [1, 0.68, 0.56, 0.47, 0.4, 0.34],
+        "basis": "judged",
+        "note": "Cupra brand curve per owner rule (one curve per brand), matching cupra-formentor-phev and cupra-terramar-phev rows. Steeper than mainstream default: thin local volume and documented run-out discounting."
+      }
+    }
+  },
+  "lowConfidence": [
+    "cupra-leon-phev-ve.towKg: 0 judged; no Australian rating published, ADAC shows no tow approval for the MY25 150 kW hatch eHybrid; Cupra AU may yet rate it (Sportstourer eHybrid is 1,700 kg)",
+    "cupra-leon-phev-ve.bootLitresSeatsDown: 1,103 L scaled from ADAC's 1,191 L to-the-roof figure using the Formentor ratio",
+    "cupra-leon-phev-ve.listPrice: Cupra AU configurator not readable (JS, region-priced); $62,990 from CarExpert's May 2026 launch article 'before on-road costs'; Cupra site's $67,490 drive-away does not name its region",
+    "cupra-leon-phev-ve.fuelConsumptionL100km: European WLTP battery-empty (ADAC 5.1); no Australian flat-battery test of the Ve hatch",
+    "cupra-leon-phev-ve.rangeKm: Cupra AU 123 km labelled WLTP, not explicitly ADR 81/02",
+    "cupra-leon-phev-ve.insuranceAnnual: judged, anchored to Tiguan 150TSI eHybrid and Formentor VZe rows",
+    "cupra-leon-phev-ve.depreciationCurve: judged Cupra brand curve"
+  ]
+}

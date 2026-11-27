@@ -1,0 +1,35 @@
+{
+  "id": "leapmotor-b05",
+  "summary": "The B05 is Leapmotor's first hatchback in Australia, a rear-drive electric five-door sold from $35,888 list in Style and Design LR grades and aimed squarely at the MG4, BYD Dolphin and GAC Aion UT. Australian launch drives agree the Europe-tuned chassis is the highlight, with CarExpert calling it Leapmotor's most charming vehicle yet and CarsGuide rating it among the best-riding Chinese cars it has driven, but both found the lane-keep and driver-attention systems overbearing and the software in need of polish. It is too new to have Australian long-term or resale history, and Leapmotor has so far sold it mostly on a $35,990 drive-away campaign for the Lightning Yellow Style.",
+  "pros": [
+    "Strong value for a rear-drive 160kW hatch: $35,888 list for the Style with a 56.2kWh LFP pack, 401km WLTP and 0-100km/h in 7.5 seconds, and a $35,990 drive-away offer on Lightning Yellow cars to 31 December 2026",
+    "The $39,888 Design LR adds a 67.1kWh pack for 482km WLTP and 174kW DC charging (Style 156kW), plus TechnoLeather, heated front seats and steering wheel, a panoramic roof and a 12-speaker system, and cuts 0-100km/h to 6.7 seconds",
+    "Chassis retuned in Europe draws the praise: CarExpert found it balanced and composed on winding roads, and CarsGuide called it one of the best-riding cars it has driven from China",
+    "Efficient on test: CarExpert saw 14.6kWh/100km on mostly high-speed rural roads against a 15.8-15.9kWh/100km WLTP claim, with 30-80% DC charging in about 16-18 minutes",
+    "Wireless Apple CarPlay and Android Auto, a 14.6-inch screen and 360-degree cameras are standard, with eight years of roadside assistance and capped-price servicing and a five-star ANCAP rating"
+  ],
+  "cons": [
+    "Lane-keep assist is too sensitive and cannot be fully switched off because it is tied to the driver attention monitor, according to CarExpert; CarsGuide also found the driver aids constantly beeping and tugging at the wheel",
+    "Not rated to tow in the official specifications: Leapmotor Australia's buyer's guide gives no towing figure and UK reviewers report the B05 cannot tow, even though one Australian database lists 750kg",
+    "Boot is small for the class at 357 litres seats up and 1,205 litres folded, with no frunk and no rear wiper",
+    "Six-year/150,000km warranty trails the seven years from MG, Kia and GWM, and Leapmotor's thin dealer network and short local history make resale the open risk",
+    "Software is unfinished: CarExpert reported a false seatbelt warning and touchscreen lag, and CarsGuide noted screens taking about five seconds to wake, which delays the reversing camera"
+  ],
+  "sources": [
+    "https://www.leapmotor.net/en-au/models/b05",
+    "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+    "https://www.leapmotor.net/en-au/offers",
+    "https://www.carexpert.com.au/car-news/2026-leapmotor-b05-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2027-leapmotor-b05-review",
+    "https://www.carexpert.com.au/leapmotor/b05/2026-style-hatchback-rwd-electric-jskawmwm20260701",
+    "https://www.carexpert.com.au/leapmotor/b05/2026-design-lr-hatchback-rwd-electric-jskawmwo20260701",
+    "https://www.chasingcars.com.au/news/new-car-prices/leapmotor-b05-2026-rear-wheel-drive-hatchback-priced-from-35888-to-rival-mg4-and-model-3-rwd/",
+    "https://www.carsguide.com.au/ev/leapmotor-b05-101915",
+    "https://www.carsguide.com.au/leapmotor/b05/towing-capacity/2026",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-leapmotor-b05-price-specs-release-date.html",
+    "https://ev-database.org/car/3563/Leapmotor-B05-562-kWh",
+    "https://ev-database.org/car/3564/Leapmotor-B05-671-kWh",
+    "https://www.autoexpress.co.uk/leapmotor/b05/369770/new-leapmotor-b05-2026-review-lack-thrills-dents-its-appeal"
+  ],
+  "sourcedAt": "2026-11-27"
+}

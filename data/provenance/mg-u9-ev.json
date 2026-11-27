@@ -1,0 +1,29 @@
+{
+  "familyId": "mg-u9-ev",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "mg-u9-ev-dual-cab-awd": {
+      "availability": { "basis": "sourced", "url": "https://www.mgmotor.com.au/configurator/mgu9-ev", "note": "Live MG AU Build & Price serves exactly one variant line, 'MGU9 EV', $78,990 + On-Road Costs, with orderable accessories. CarExpert and CarsGuide launch coverage both say a single dual-motor AWD dual-cab variant. No cab-chassis or 2WD EV offered." },
+      "listPrice": { "value": 78990, "basis": "sourced", "url": "https://www.mgmotor.com.au/configurator/mgu9-ev", "note": "Configurator labels it '$78,990 + On-Road Costs' in words (unlike MG passenger cars, which show drive-away). CarExpert and CarsGuide: '$78,990 before on-road costs'; The Driven '$78,990 + on-road costs'." },
+      "batteryKwh": { "value": 98.4, "basis": "sourced", "url": "https://elektromobilni.pl/katalog-ev/maxus-eterron-9/?wersja=236367", "note": "Usable ('netto') 98.4 kWh, gross ('brutto') 102.2 kWh on the same page, for the Maxus eTerron 9 (the U9 EV's twin). MG AU and ADAC give 102.2 kWh only (ADAC labels it Brutto). Same 102.2 kWh LFP pack as the AU car. Single source for the usable figure." },
+      "rangeKm": { "value": 430, "basis": "sourced", "standard": "WLTP", "url": "https://mgmotor.com.au/vehicles/mgu9-ev", "note": "MG AU model page: up to 430km WLTP. Only one wheel (20-inch 275/55 R20) in AU; ADAC lists the same tyre and 430km WLTP for the eTerron 9 Premium, so the AU figure is not an NEDC submission (direction test: equal)." },
+      "consumptionKwhPer100km": { "value": 26.7, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/maxus/eterron-9/1generation/338681", "note": "ADAC: 'Verbrauch kombiniert (WLTP) 26,7 kWh/100 km' for the eTerron 9 Premium 4WD. EU WLTP figure includes charging losses; usable battery / range gives 22.9 (matches elektromobilni.pl's 22.9). Gap 16.7%, inside the 25% tolerance. Same convention as kgm-musso-ev (WLTP figure with charging losses). MG AU publishes no consumption." },
+      "bootLitresSeatsUp": { "value": 1053, "basis": "judged", "note": "No tub litre figure published. CarExpert U9 (diesel) spec table: tub length 1600mm x width 1230mm x depth 535mm = 1,053 L; reads 10-20% high (box volume, ignores arch intrusion profile). EV assumed to share the diesel U9's tub (same body; MG says the EV tub fits a standard pallet). Comparable to kgm-musso-ev 1039 and toyota-hilux-bev 1000." },
+      "bootLitresSeatsDown": { "value": 1053, "basis": "judged", "note": "Ute rule: equal to tub volume. See bootLitresSeatsUp." },
+      "seats": { "value": 5, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/maxus/eterron-9/1generation/338681", "note": "ADAC 'Sitzanzahl 5' for the eTerron 9; dual-cab body as sold in AU." },
+      "towKg": { "value": 3500, "basis": "sourced", "url": "https://mgmotor.com.au/vehicles/mgu9-ev", "note": "MG AU model page: 3,500kg braked, 750kg unbraked. CarExpert, CarsGuide and ADAC ('Anhangelast gebremst 12%: 3500 kg') agree. AU technical spec sheet not opened: brochure PDF link returned a logo file." },
+      "warrantyYears": { "value": 5, "basis": "sourced", "url": "https://mgmotor.com.au/explore/warranty", "note": "MG AU warranty page, light commercial table: 'Standard Warranty Period: 5 years / unlimited kms'; extended 7 years/200,000 km only with exclusive MG-dealer servicing (conditional, in cons); commercial use 5 years/160,000 km non-extendable. The same page also says 'For IM & MGU9 vehicles a 7-year warranty applies', read in context as the capped extended term (IM excluded from the 10-year extension); CarExpert (mgs-first-ute-to-get-shorter-warranty, 2026-mg-u9-price-and-specs), CarsGuide's U9 EV review ('standard five-year guarantee up to seven years/160,000km') and Chasing Cars all give five years standard. MG model page logo says 7-year/unlimited km, treated as the conditional figure. HV battery 7 years/150,000 km." },
+      "insuranceAnnual": { "value": 2300, "basis": "judged", "note": "Anchored to toyota-hilux-bev SR $2,100 ($76,490) and SR5 $2,250 ($82,990) and kgm-musso-ev AWD $1,950 ($61,014); set slightly above the HiLux SR5 for 325kW output, a new low-volume model and an unproven parts/repair network." },
+      "depreciationCurve": { "value": [1, 0.78, 0.68, 0.6, 0.53, 0.47], "basis": "judged", "note": "MG brand curve: every MG row (mg-4, mg-s6, mg-im6, mg-hs-phev) uses the mainstream default by owner decision 2026-11-26. Electric-ute residuals are unproven (kgm-musso-ev uses a steeper curve citing LDV eT60 values), so this is likely optimistic." }
+    }
+  },
+  "lowConfidence": [
+    "mg-u9-ev-dual-cab-awd.depreciationCurve: MG brand convention imposed; electric utes (LDV eT60) have depreciated far faster, and kgm-musso-ev uses [1,.66,.54,.45,.38,.32]",
+    "mg-u9-ev-dual-cab-awd.bootLitresSeatsUp/bootLitresSeatsDown: tub dims from the diesel U9 (1600x1230x535mm) multiplied out; EV tub assumed identical; box volume reads 10-20% high",
+    "mg-u9-ev-dual-cab-awd.batteryKwh: usable 98.4 kWh from one Polish EV catalogue for the Maxus eTerron 9 twin; MG AU gives only 102.2 kWh",
+    "mg-u9-ev-dual-cab-awd.insuranceAnnual: judged against HiLux BEV and Musso EV rows",
+    "mg-u9-ev-dual-cab-awd.warrantyYears: MG warranty page contains a conflicting line ('For IM & MGU9 vehicles a 7-year warranty applies'); 5 taken from the light-commercial table and three Australian outlets",
+    "mg-u9-ev-dual-cab-awd.consumptionKwhPer100km: EU (ADAC) WLTP figure for the eTerron 9, not an AU-published number; includes charging losses"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "familyId": "leapmotor-b03x",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "leapmotor-b03x-style": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/models/b03x",
+        "note": "Leapmotor AU B03X page lists Style and Design LR, 'Available to Pre-Order at your Local Dealer Today', with a drive-away offer for cars 'purchased and delivered between 1 October and 31 December'; offers page (https://www.leapmotor.net/en-au/offers) repeats it. Leapmotor AU has no public configurator with prices (same as leapmotor-b10). Buyer's guide dated October 2026 lists both grades. Treated as orderable via dealer pre-order with deliveries promised by 31 Dec 2026; first deliveries not independently confirmed."
+      },
+      "listPrice": {
+        "value": 26990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-leapmotor-b03x-price-and-specs",
+        "note": "CarExpert (10 Oct 2026): Style 'priced from $26,990 before on-road costs'; EV Central (7 Oct 2026, https://evcentral.com.au/australia-has-a-new-electric-suv-pricing-benchmark-leapmotor-b03x-arrives-from-29990-drive-away/) same before-on-roads figure. Leapmotor itself publishes only the drive-away offer ($29,990 for Style, Acorn Brown, to 31 Dec 2026). Direction check: calc/onroad.js Victorian drive-away for $26,990 is $29,082; the national $29,990 offer sits $908 above it (it bundles 12 months rego, CTP and dealer delivery), and the gap is ~$3,000 above list on both grades, consistent with a genuine list price rather than a discount."
+      },
+      "batteryKwh": {
+        "value": 39,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3665/Leapmotor-B03X-398-kWh",
+        "note": "usable per EV Database; nominal 39.8 kWh is the unlabelled figure in Leapmotor AU buyer's guide (https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf). LFP; same pack sizes as the European B03X."
+      },
+      "rangeKm": {
+        "value": 292,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide (Oct 2026): EV range up to 292 km (WLTP). No NEDC figure published. Both grades on 18-inch wheels (18-inch steel), the only wheel offered per grade, so the 'up to' figure is the local car. EV Database gives the same WLTP figure."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.5,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide: energy consumption 155 Wh/km WLTP (includes charging losses). batteryKwh/rangeKm gives 13.4, within the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 475,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide: rear cargo volume behind 2nd row 475 L; measurement method not stated. Reviews quote Leapmotor's international 510 L including a 105 L underfloor bin (CarExpert review), and EV Database gives 407 L (European). 475 L is the Australian manufacturer figure and its 1,315 L folded figure is well below the 1,605 L international (likely to-roof) figure, suggesting a to-the-cover/belt-line basis. No frunk."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1315,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide: behind 1st row 1,315 L. International/review figure 1,605 L not used (likely to roof)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3665/Leapmotor-B03X-398-kWh",
+        "note": "EV Database: 5 seats; AU buyer's guide shows a 60/40 rear bench with ISOFIX."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-leapmotor-b03x-review",
+        "note": "CarExpert review: not homologated for towing at launch; towbar and rating planned for a future model year. AU buyer's guide and CarExpert towing page list no capacity; EV Database lists 0 kg."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide: vehicle warranty 6 years/150,000 km; HV battery 8 years/160,000 km. Unconditional. CarExpert price article agrees."
+      },
+      "insuranceAnnual": {
+        "value": 1250,
+        "basis": "judged",
+        "note": "anchored to mg-4-urban-43 ($29,780, $1,250), byd-atto1-premium ($27,990, $1,200), byd-dolphin-essential ($29,990, $1,250) and geely-ex2-complete ($26,490, $1,150); leapmotor-b10-style sits ~$50 above BYD peers, so Leapmotor small-brand loading kept"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.59,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "Leapmotor brand curve [1, 0.72, 0.59, 0.5, 0.43, 0.37] as held on leapmotor-b10 and leapmotor-c10, per dispatcher and the one-curve-per-brand convention."
+      }
+    },
+    "leapmotor-b03x-design-lr": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/models/b03x",
+        "note": "Leapmotor AU B03X page lists Style and Design LR, 'Available to Pre-Order at your Local Dealer Today', with a drive-away offer for cars 'purchased and delivered between 1 October and 31 December'; offers page (https://www.leapmotor.net/en-au/offers) repeats it. Leapmotor AU has no public configurator with prices (same as leapmotor-b10). Buyer's guide dated October 2026 lists both grades. Treated as orderable via dealer pre-order with deliveries promised by 31 Dec 2026; first deliveries not independently confirmed."
+      },
+      "listPrice": {
+        "value": 30990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-leapmotor-b03x-price-and-specs",
+        "note": "CarExpert (10 Oct 2026): Design LR 'a list price of $30,990 plus ORCs'; EV Central (7 Oct 2026, https://evcentral.com.au/australia-has-a-new-electric-suv-pricing-benchmark-leapmotor-b03x-arrives-from-29990-drive-away/) same before-on-roads figure. Leapmotor itself publishes only the drive-away offer ($33,990 for Design LR, Acorn Brown, to 31 Dec 2026). Direction check: calc/onroad.js Victorian drive-away for $30,990 is $33,250; the national $33,990 offer sits $740 above it (it bundles 12 months rego, CTP and dealer delivery), and the gap is ~$3,000 above list on both grades, consistent with a genuine list price rather than a discount."
+      },
+      "batteryKwh": {
+        "value": 52,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3666/Leapmotor-B03X-530-kWh",
+        "note": "usable per EV Database; nominal 53.0 kWh is the unlabelled figure in Leapmotor AU buyer's guide (https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf). LFP; same pack sizes as the European B03X."
+      },
+      "rangeKm": {
+        "value": 382,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide (Oct 2026): EV range up to 382 km (WLTP). No NEDC figure published. Both grades on 18-inch wheels (18-inch alloy), the only wheel offered per grade, so the 'up to' figure is the local car. EV Database gives the same WLTP figure."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.7,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide: energy consumption 157 Wh/km WLTP (includes charging losses). batteryKwh/rangeKm gives 13.6, within the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 475,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide: rear cargo volume behind 2nd row 475 L; measurement method not stated. Reviews quote Leapmotor's international 510 L including a 105 L underfloor bin (CarExpert review), and EV Database gives 407 L (European). 475 L is the Australian manufacturer figure and its 1,315 L folded figure is well below the 1,605 L international (likely to-roof) figure, suggesting a to-the-cover/belt-line basis. No frunk."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1315,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide: behind 1st row 1,315 L. International/review figure 1,605 L not used (likely to roof)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3666/Leapmotor-B03X-530-kWh",
+        "note": "EV Database: 5 seats; AU buyer's guide shows a 60/40 rear bench with ISOFIX."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-leapmotor-b03x-review",
+        "note": "CarExpert review: not homologated for towing at launch; towbar and rating planned for a future model year. AU buyer's guide and CarExpert towing page list no capacity; EV Database lists 0 kg."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/b03x-buyers-guide-2026.pdf",
+        "note": "Leapmotor AU buyer's guide: vehicle warranty 6 years/150,000 km; HV battery 8 years/160,000 km. Unconditional. CarExpert price article agrees."
+      },
+      "insuranceAnnual": {
+        "value": 1300,
+        "basis": "judged",
+        "note": "anchored to byd-atto2-dynamic ($31,990, $1,300), geely-ex2-inspire ($30,990, $1,250) and gwm-ora-5-lux ($31,700, $1,300); +$50 over the Style, matching the B10 grade step"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.59,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "Leapmotor brand curve [1, 0.72, 0.59, 0.5, 0.43, 0.37] as held on leapmotor-b10 and leapmotor-c10, per dispatcher and the one-curve-per-brand convention."
+      }
+    }
+  },
+  "lowConfidence": [
+    "leapmotor-b03x-style.availability: dealer pre-order only on the research date; Leapmotor page FAQ still says 'Orders will open in Spring 2026' and EV Central's page carries a 'Not on sale yet' banner; first deliveries not confirmed",
+    "leapmotor-b03x-design-lr.availability: as for Style",
+    "leapmotor-b03x-style.bootLitresSeatsUp: 475 L AU figure, measurement basis unstated; international figures 405 L (floor up) / 510 L (incl. underfloor), EV Database 407 L",
+    "leapmotor-b03x-design-lr.bootLitresSeatsUp: as for Style",
+    "leapmotor-b03x-style.bootLitresSeatsDown: 1,315 L AU figure, basis unstated; international 1,605 L, EV Database 1,358 L",
+    "leapmotor-b03x-design-lr.bootLitresSeatsDown: as for Style",
+    "leapmotor-b03x-style.listPrice: no manufacturer list price published (drive-away only); $26,990 from CarExpert and EV Central 'before on-road costs', Oct 2026",
+    "leapmotor-b03x-design-lr.listPrice: as for Style; $30,990 'plus ORCs' from CarExpert and EV Central",
+    "leapmotor-b03x-style.batteryKwh: 39.0 usable from EV Database only; Leapmotor publishes 39.8 nominal",
+    "leapmotor-b03x-design-lr.batteryKwh: 52.0 usable from EV Database only; Leapmotor publishes 53.0 nominal",
+    "leapmotor-b03x-style.towKg: 0 from CarExpert review (international car, 'not homologated at launch'); Australian spec silent",
+    "leapmotor-b03x-design-lr.towKg: as for Style",
+    "leapmotor-b03x-style.insuranceAnnual: judged",
+    "leapmotor-b03x-design-lr.insuranceAnnual: judged",
+    "leapmotor-b03x-style.depreciationCurve: judged brand curve",
+    "leapmotor-b03x-design-lr.depreciationCurve: judged brand curve"
+  ]
+}

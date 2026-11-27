@@ -1,0 +1,31 @@
+{
+  "id": "byd-atto2-phev",
+  "summary": "The Atto 2 DM-i is the plug-in hybrid version of BYD's Atto 2 small SUV and, at $24,990 before on-roads for the Essential, Australia's cheapest plug-in hybrid. That is $7,000 less than the electric Atto 2 Dynamic, and the boot is bigger at 425 litres. Australian reviewers agree the value is hard to argue with and that it drives like an EV most of the time. They split on the Premium's firm ride. They also flag a buzzy engine once it starts, the Essential's short 39km electric range, slow 3.3kW AC-only charging and the lack of an ANCAP rating.",
+  "pros": [
+    "At $24,990 before on-road costs the Essential is the cheapest plug-in hybrid held here, $9,000 under BYD's own Sealion 5 Essential and $7,000 under the electric Atto 2 Dynamic",
+    "Premium's 18.03kWh battery gives a 90km WLTP electric range (the same figure BYD UK quotes), enough for most Melbourne commutes without starting the engine; RACV and EV Central both say it feels like an EV most of the time",
+    "425-litre boot (1,335 litres folded) is 45 litres more than the electric Atto 2's, because the plug-in hybrid is slightly longer",
+    "Premium adds 3kW vehicle-to-load, a 12.8-inch screen and front sensors for $5,000 more; five years of capped-price servicing costs $2,230 in total",
+    "High-voltage battery is covered for 8 years/160,000km, two years beyond the 6-year/150,000km unconditional vehicle warranty"
+  ],
+  "cons": [
+    "Essential's 7.85kWh battery gives only 39km of WLTP electric range, which RACV and CarsGuide call its weak point. BYD's claim once the battery is low is 5.6L/100km for both grades, so the Essential burns petrol on many commutes and loses most of its advantage without home charging",
+    "3.3kW AC onboard charger and no DC fast charging: about 6 hours from 15 per cent on the Premium (2.7 hours on the Essential), so charging away from home is impractical",
+    "Not rated by ANCAP or Euro NCAP. EV Central doubts it will earn five stars and notes there is no driver monitoring, while the related Sealion 5 plug-in hybrid scored three stars",
+    "CarExpert calls the 1.5-litre engine buzzy, with vibration through the floor, and the steering numb. RACV, EV Central and Chasing Cars all find the ride firm over bumps",
+    "No spare wheel (inflator kit only), braked towing of just 750kg, and only white paint at no cost ($600 for any other colour)"
+  ],
+  "sources": [
+    "https://evdealergroup-byd.com.au/configurator/byd-atto-2-dmi",
+    "https://bydautomotive.com.au/atto-2-dmi",
+    "https://www.carexpert.com.au/car-news/2027-byd-atto-2-dm-i-becomes-australias-cheapest-phev",
+    "https://www.carexpert.com.au/car-reviews/2027-byd-atto-2-dm-i-review-quick-drive",
+    "https://www.chasingcars.com.au/news/new-car-prices/byd-atto-2-dm-i-small-suv-becomes-australias-cheapest-plug-in-hybrid-at-24990-before-on-roads/",
+    "https://www.chasingcars.com.au/reviews/small-suvs/byd-atto-2-dm-i-2027-review/",
+    "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-2-dm-i-phev-review.html",
+    "https://evcentral.com.au/2026-byd-atto-2-dm-i-review-australias-cheapest-plug-in-hybrid-drives-like-an-ev-but-its-not-as-smooth-as-some/",
+    "https://www.carsguide.com.au/ev/byd-atto-2-dm-i-phev-102777",
+    "https://bydukmedia.com/en/models/byd-atto-2-dm-i.html"
+  ],
+  "sourcedAt": "2026-11-27"
+}

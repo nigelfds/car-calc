@@ -1,0 +1,31 @@
+{
+  "id": "jac-hunter-phev",
+  "summary": "The Hunter is a plug-in hybrid version of JAC's T9 dual-cab with an Australian chassis tune, and at $49,988 before on-road costs for the Pro it undercuts the BYD Shark 6 by about $8,000 while matching the segment's 3500kg braked towing and beating it on payload. Australian reviewers credit its ride and handling, 31.2kWh battery and roughly 80km of real electric range, but CarExpert rated it only 'Average', citing clunky infotainment, a dated feel and a powertrain that does not deliver its 360kW/1010Nm headline. The X grade adds diff locks, surround-view and leather for $54,844, which reviewers say weakens the value case; JAC is a small brand here, so resale and dealer reach are the open questions.",
+  "pros": [
+    "The Pro 4x4 is $49,988 before on-road costs, about $7,900 under the BYD Shark 6 Premium, and both Hunter grades are rated to 3500kg braked towing where the Shark 6 Premium stops at 2500kg; front and rear diff locks are standard on the X and a $1,888 option on the Pro.",
+    "915kg payload and a 6430kg GCM, ahead of the Shark 6 Premium's 790kg and the GWM Cannon PHEV's 835kg, with a tub that 4X4 Australia and CarsGuide confirm takes a standard pallet between the arches.",
+    "31.2kWh LFP battery: CarsGuide measured about 80km of electric driving against the 100km NEDC claim, and 11kW AC charging refills it in about 3.5 hours, three times the Ford Ranger PHEV's 3.5kW.",
+    "7-year/unlimited-km warranty that also covers commercial use, an 8-year/150,000km battery warranty, 7 years of capped-price servicing, and a five-star ANCAP rating from 2026."
+  ],
+  "cons": [
+    "Fuel use rises steeply once the battery is flat: EV Central saw around 14L/100km with the engine driving and CarsGuide about 9.5L/100km over mixed driving, against the 1.6L/100km NEDC label, so the economics need home charging.",
+    "No low-range transfer case; JAC relies on motor torque and a rock-crawl mode instead, which 4X4 Australia and EV Central flag against the GWM Cannon PHEV's dual-range box.",
+    "Reviewers found the powertrain short of its 360kW/1010Nm claim, with a lethargic EV-mode take-off, plus clunky infotainment, over-eager driver monitoring, and a high cabin floor that compromises the seating position.",
+    "Electric range is quoted only on the lenient NEDC cycle, and DC charging tops out at 46kW, well below the GWM Cannon PHEV's 110kW.",
+    "JAC is a small, low-volume brand here that discounted the diesel T9 by $3,500 in its first run-out, so resale value and dealer coverage outside the main cities are unproven."
+  ],
+  "sources": [
+    "https://www.carexpert.com.au/car-news/2026-jac-hunter-phev-priced-from-under-dollar50000",
+    "https://www.carexpert.com.au/car-reviews/2027-jac-hunter-review",
+    "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+    "https://www.carsguide.com.au/adventure/jac-hunter-phev-x-102492",
+    "https://www.4x4australia.com.au/reviews/2026-jac-hunter-x-phev-review",
+    "https://www.4x4australia.com.au/news/jac-hunter-phev-range-and-fuel-efficiency-figures-confirmed",
+    "https://evcentral.com.au/2026-jac-hunter-x-phev-review-australias-cheapest-phev-ute-combines-serious-capability-with-useful-ev-range/",
+    "https://evcentral.com.au/2026-jac-hunter-phev-review-australias-cheapest-phev-ute-targets-byd-shark-6-gwm-cannon-alpha/",
+    "https://goauto.com.au/new-models/jac/hunter/phev/jac-undercuts-phev-ute-rivals/2026-07-13/99813.html",
+    "https://www.carsales.com.au/research/jac/hunter/2026/pro/",
+    "https://www.carexpert.com.au/car-news/jac-t9-gets-thousands-off-in-end-of-year-deals"
+  ],
+  "sourcedAt": "2026-11-27"
+}
