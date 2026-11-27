@@ -4,7 +4,7 @@
 - [x] Step 1: market sweep, see sweep.md. Waiting for the person to confirm the work list.
 - [ ] Step 2: plan batches
 - [x] Steps 3-4: research and integrate. Done. Trial (10), waves 1 to 4 (26 each, wave 3 partly rerun after a pause) and wave 5 (22): all 134 families have provenance. See trial.md and wave-1.md to wave-5.md.
-- [ ] Step 5: watchlist, rates, tax tables. Known watchlist fixes from the sweep: Denza, Mitsubishi
+- [x] Step 5: watchlist, rates, tax tables. Medicare thresholds fixed (file held 2024-25), electricity set to the 2026-27 VDO flat rate. Left for the owner: VIC rego now $958.80 metro (the back-out formula assumes $880), finance rates after +50bp cash rate, petrol after the Nov spike. 33 new families from the sweep not researched.
       and Land Rover now sell BEVs; Nissan has a PHEV coming; LDV MIFA 9 and Isuzu D-Max EV are off.
 - [ ] Steps 6-8: images, app check, PR
 

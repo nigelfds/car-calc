@@ -9,9 +9,9 @@
   ],
   "medicareLevy": {
     "rate": 0.02,
-    "lowIncomeThreshold": 27222,
-    "shadeOutTo": 34027,
-    "note": "2025-26 figures, refresh when ATO publishes 2026-27"
+    "lowIncomeThreshold": 28011,
+    "shadeOutTo": 35013,
+    "note": "2025-26 thresholds (May 2026 Budget; check they are legislated). The file held the 2024-25 figures. 2026-27 thresholds come with the May 2027 Budget."
   },
   "lito": { "max": 700, "taperFrom": 37500, "taperRate": 0.05, "secondTaperFrom": 45000, "secondTaperRate": 0.015 },
   "lct": { "fuelEfficientThreshold": 91661, "otherThreshold": 80809, "rate": 0.33 },
