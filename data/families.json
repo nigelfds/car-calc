@@ -69,7 +69,14 @@
       "https://caredge.com/alfa-romeo/tonale/depreciation",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "alfa-romeo-tonale-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_Tonale_PHEV_1X7A6811.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "audi-a5-phev",
@@ -105,7 +112,14 @@
       "https://www.carsales.com.au/research/audi/a5/2026/e-hybrid-s-line/83567289-7d2a-4f0f-a3cc-2e304bd3ee8d/",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "audi-a5-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Audi_A5_B10_DSC_7314.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "audi-q4-e-tron",
@@ -1229,7 +1243,14 @@
       "https://www.electrifying.com/reviews/cupra-reviews/terramar-e-hybrid/review",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "cupra-terramar-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cupra_Terramar_VZ_IMG_2333.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "deepal-s07",
@@ -1295,7 +1316,14 @@
       "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/denza/bao-5/1generation/351875/",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-11-27"
+    "sourcedAt": "2026-11-27",
+    "image": {
+      "file": "denza-b5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2025_Denza_B5_3.jpg",
+      "author": "Calreyn88",
+      "licence": "CC BY 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "denza-b8",
@@ -1619,7 +1647,14 @@
       "https://zecar.com/reviews/geely-starray-em-i-inspire-extended-range-my27-australia-price-specs",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "geely-starray-em-i.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Geely_Starray_EM-i_Auto_Zuerich_2026_IMG_8743.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "genesis-gv60",
@@ -1758,7 +1793,14 @@
       "https://evcentral.com.au/gwm-doubles-down-on-phev-utes-new-310kw-cannon-hi4-t-promises-sharp-price-and-115km-ev-range/",
       "https://www.racq.com.au/articles/car-updates/gwm-doubles-down-on-phev-utes"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "gwm-cannon-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2024_Great_Wall_Poer_Kingkong_white_front.jpg",
+      "author": "Throwawayacc222",
+      "licence": "CC0",
+      "note": "Cropped and resized. Searched as Great Wall Poer."
+    }
   },
   {
     "id": "gwm-haval-h6-gt-phev",
@@ -1944,7 +1986,14 @@
       "https://evcentral.com.au/2026-gwm-tank-500-ultra-phev-review-plug-in-4x4-gets-dirty-against-rival-denza-b5-and-old-school-toyota-prado/",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "gwm-tank-500-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Onyx_Silver_GWM_Tank_500_in_GWM_Pasteur_01.jpg",
+      "author": "MoCars",
+      "licence": "CC0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "hyundai-elexio",
@@ -2116,7 +2165,14 @@
       "https://www.carexpert.com.au/car-news/2025-hyundai-ioniq-9-price-and-specs",
       "https://ev-database.org/car/3069/Hyundai-IONIQ-9-Performance-AWD"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "hyundai-ioniq-9.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_9_IMG_5950.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "hyundai-kona-electric",
@@ -3031,7 +3087,14 @@
       "https://ev-database.org/uk/car/3596/Mazda-CX-6e-78-kWh",
       "https://zecar.com/offers-and-deals/mazda-6e-and-cx-6e-driveaway-offer"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "mazda-cx-6e.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-6e_Auto_Zuerich_2026_IMG_8767.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mazda-cx-80-phev",
@@ -3207,7 +3270,14 @@
       "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/gla/247-facelift/336416/",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "mercedes-gla-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_GLA_45_S_4MATIC%2B_(H247)_1X7A5829.jpg",
+      "author": "Alexander Migl",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "mercedes-glc-phev",
@@ -3853,7 +3923,14 @@
       "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
       "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "porsche-cayenne-phev.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Porsche_Cayenne_Coup%C3%A9_GTS_1X7A7224.jpg",
+      "author": "Alexander-93",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "renault-scenic-e-tech",
@@ -4112,7 +4189,14 @@
       "https://evcentral.com.au/tesla-model-y-has-yet-another-rival-smart-5-lands-from-58900-with-590km-range-and-400kw-charging/",
       "https://zecar.com/electric-vehicles/smart/-5/2026/premium"
     ],
-    "sourcedAt": "2026-11-26"
+    "sourcedAt": "2026-11-26",
+    "image": {
+      "file": "smart-5.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Smart_Hashtag_5,_Zurich_(PANA0065).jpg",
+      "author": "Matti Blume",
+      "licence": "CC BY-SA 4.0",
+      "note": "Cropped and resized."
+    }
   },
   {
     "id": "subaru-solterra",

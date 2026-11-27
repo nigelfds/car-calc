@@ -6,6 +6,20 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "alfa-romeo-tonale-phev": {
+    "file": "alfa-romeo-tonale-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_Tonale_PHEV_1X7A6811.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "audi-a5-phev": {
+    "file": "audi-a5-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_A5_B10_DSC_7314.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "audi-q5-phev": {
     "file": "audi-q5-phev.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Audi_Q5_Sportback_GU_DSC_9270.jpg",
@@ -188,11 +202,25 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "cupra-terramar-phev": {
+    "file": "cupra-terramar-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cupra_Terramar_VZ_IMG_2333.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "deepal-s07": {
     "file": "deepal-s07.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Deepal_S07_IAA_2025_DSC_1897.jpg",
     "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "denza-b5": {
+    "file": "denza-b5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Denza_B5_3.jpg",
+    "author": "Calreyn88",
+    "licence": "CC BY 4.0",
     "note": "Cropped and resized."
   },
   "ford-mustang-mach-e": {
@@ -237,6 +265,13 @@
     "licence": "CC0",
     "note": "Cropped and resized. Searched as Geely Galaxy E5."
   },
+  "geely-starray-em-i": {
+    "file": "geely-starray-em-i.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Geely_Starray_EM-i_Auto_Zuerich_2026_IMG_8743.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "genesis-gv60": {
     "file": "genesis-gv60.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Genesis_GV60_Auto_Zuerich_2023_1X7A1130.jpg",
@@ -250,6 +285,13 @@
     "author": "iMoD Official",
     "licence": "CC BY 3.0",
     "note": "Cropped and resized. Searched as GWM Poer Sahar."
+  },
+  "gwm-cannon-phev": {
+    "file": "gwm-cannon-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Great_Wall_Poer_Kingkong_white_front.jpg",
+    "author": "Throwawayacc222",
+    "licence": "CC0",
+    "note": "Cropped and resized. Searched as Great Wall Poer."
   },
   "gwm-haval-h6-gt-phev": {
     "file": "gwm-haval-h6-gt-phev.webp",
@@ -269,6 +311,13 @@
     "file": "gwm-ora-5.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Ora_5_001.jpg",
     "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "gwm-tank-500-phev": {
+    "file": "gwm-tank-500-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Onyx_Silver_GWM_Tank_500_in_GWM_Pasteur_01.jpg",
+    "author": "MoCars",
     "licence": "CC0",
     "note": "Cropped and resized."
   },
@@ -297,6 +346,13 @@
     "file": "hyundai-ioniq-6.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Hyundai_IONIQ_6_N_CE1_N_Black_Onetone_(10).jpg",
     "author": "Damian B Oh",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "hyundai-ioniq-9": {
+    "file": "hyundai-ioniq-9.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_9_IMG_5950.jpg",
+    "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
@@ -447,6 +503,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "mazda-cx-6e": {
+    "file": "mazda-cx-6e.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-6e_Auto_Zuerich_2026_IMG_8767.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "mazda-cx-80-phev": {
     "file": "mazda-cx-80-phev.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-80_PHEV_DSC_6068.jpg",
@@ -465,6 +528,13 @@
     "file": "mercedes-eqa.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_EQA,_IAA_2017,_Frankfurt_(1Y7A2961).jpg",
     "author": "Matti Blume",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "mercedes-gla-phev": {
+    "file": "mercedes-gla-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_GLA_45_S_4MATIC%2B_(H247)_1X7A5829.jpg",
+    "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
@@ -566,6 +636,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "porsche-cayenne-phev": {
+    "file": "porsche-cayenne-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Porsche_Cayenne_Coup%C3%A9_GTS_1X7A7224.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "renault-scenic-e-tech": {
     "file": "renault-scenic-e-tech.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Renault_Sc%C3%A9nic_E-Tech_IAA_2023_1X7A0344.jpg",
@@ -604,6 +681,13 @@
   "smart-3": {
     "file": "smart-3.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Smart_3,_BAS_24,_Brussels_(P1170547-RR).jpg",
+    "author": "Matti Blume",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "smart-5": {
+    "file": "smart-5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Smart_Hashtag_5,_Zurich_(PANA0065).jpg",
     "author": "Matti Blume",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
