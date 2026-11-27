@@ -10,10 +10,10 @@
         "note": "Live Build & Price line 'MG4 EV Urban Essence 43' (separate Urban configurator), VIC selectable; CarExpert launch review confirms Essence 43 and 54 as the Urban grades"
       },
       "listPrice": {
-        "value": 29856,
+        "value": 29780,
         "basis": "backed-out",
         "url": "https://www.mgmotor.com.au/configurator/mg4-ev-urban",
-        "note": "No list price published; MG prices drive-away only. Configurator shows $31,990 struck through (MG's regular national Drive Away Price, matching CarExpert's launch pricing) and $29,990* under a $2,000 cashback on MG4 EV Urban sold/delivered 01 Nov-31 Dec 2026 (campaign, not used). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (31990 - 880) / 1.042 = 29856; round-trip driveAwayPrice(29856) = 31,989.95. Independent check: the configurator's VIC per-state discounts for Essence 43 and 54 differ by $126.00 (= 15 x $8.40 duty units, dutiable gap ~$3,000) and NSW by $87 (3% of $2,900), matching the backed-out list gap of $2,879 rather than a different structure. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount."
+        "note": "No list price published; MG prices drive-away only. Configurator shows $31,990 struck through (MG's regular national Drive Away Price, matching CarExpert's launch pricing) and $29,990* under a $2,000 cashback on MG4 EV Urban sold/delivered 01 Nov-31 Dec 2026 (campaign, not used). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (31990 - 958.80) / 1.042 = 29,780; round-trip driveAwayPrice(29856) = 31,989.95. Independent check: the configurator's VIC per-state discounts for Essence 43 and 54 differ by $126.00 (= 15 x $8.40 duty units, dutiable gap ~$3,000) and NSW by $87 (3% of $2,900), matching the backed-out list gap of $2,879 rather than a different structure. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 29,856 at $880; round trip 31989.56)."
       },
       "batteryKwh": {
         "value": 41.9,
@@ -89,10 +89,10 @@
         "note": "Live Build & Price line 'MG4 EV Urban Essence 54', VIC selectable. The configurator's third line, 'Essence 54 Special Edition' ($35,990 regular drive-away), is the same car with two-tone paint and door ambient lighting for $1,000 (identical battery, range, boot, tow in the AU brochure), so it is treated as an appearance pack on this row, not a grade"
       },
       "listPrice": {
-        "value": 32735,
+        "value": 32660,
         "basis": "backed-out",
         "url": "https://www.mgmotor.com.au/configurator/mg4-ev-urban",
-        "note": "No list price published; MG prices drive-away only. Configurator shows $34,990 struck through (MG's regular national Drive Away Price, matching CarExpert's launch pricing) and $32,990* under a $2,000 cashback on MG4 EV Urban sold/delivered 01 Nov-31 Dec 2026 (campaign, not used). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (34990 - 880) / 1.042 = 32735; round-trip driveAwayPrice(32735) = 34,989.87. Independent check: the configurator's VIC per-state discounts for Essence 43 and 54 differ by $126.00 (= 15 x $8.40 duty units, dutiable gap ~$3,000) and NSW by $87 (3% of $2,900), matching the backed-out list gap of $2,879 rather than a different structure. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount."
+        "note": "No list price published; MG prices drive-away only. Configurator shows $34,990 struck through (MG's regular national Drive Away Price, matching CarExpert's launch pricing) and $32,990* under a $2,000 cashback on MG4 EV Urban sold/delivered 01 Nov-31 Dec 2026 (campaign, not used). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (34990 - 958.80) / 1.042 = 32,660; round-trip driveAwayPrice(32735) = 34,989.87. Independent check: the configurator's VIC per-state discounts for Essence 43 and 54 differ by $126.00 (= 15 x $8.40 duty units, dutiable gap ~$3,000) and NSW by $87 (3% of $2,900), matching the backed-out list gap of $2,879 rather than a different structure. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 32,735 at $880; round trip 34990.52)."
       },
       "batteryKwh": {
         "value": 52.8,
@@ -168,10 +168,10 @@
         "note": "Live Build & Price line 'MG4 EV Essence 64' (MY26 facelift, LFP pack, 140 kW RWD), VIC selectable; CarExpert (10 Apr 2026) confirms the facelift line-up is Essence 64 and XPower only"
       },
       "listPrice": {
-        "value": 37534,
+        "value": 37458,
         "basis": "backed-out",
         "url": "https://www.mgmotor.com.au/configurator/mg4-ev",
-        "note": "No list price published; MG prices drive-away only. Configurator shows $39,990* 'Drive Away Price' with no struck-through figure; the MG4 EV (non-Urban) is not in the Nov-Dec cashback list, and CarExpert (10 Apr 2026) reported $39,990 drive-away as the facelift's standard price with no end date, so it is the regular price (the asterisk's T&Cs name a stale 01-31 Oct 2026 window). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (39990 - 880) / 1.042 = 37534; round-trip driveAwayPrice(37534) = 39,990.43. Independent check: the configurator's VIC per-state discounts for Essence 64 and XPOWER differ by $327.60 (= 39 x $8.40 duty units, dutiable gap ~$7,800), matching the backed-out list gap of $7,677 rather than the $8,000 drive-away gap. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount."
+        "note": "No list price published; MG prices drive-away only. Configurator shows $39,990* 'Drive Away Price' with no struck-through figure; the MG4 EV (non-Urban) is not in the Nov-Dec cashback list, and CarExpert (10 Apr 2026) reported $39,990 drive-away as the facelift's standard price with no end date, so it is the regular price (the asterisk's T&Cs name a stale 01-31 Oct 2026 window). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (39990 - 958.80) / 1.042 = 37,458; round-trip driveAwayPrice(37534) = 39,990.43. Independent check: the configurator's VIC per-state discounts for Essence 64 and XPOWER differ by $327.60 (= 39 x $8.40 duty units, dutiable gap ~$7,800), matching the backed-out list gap of $7,677 rather than the $8,000 drive-away gap. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 37,534 at $880; round trip 39990.04)."
       },
       "batteryKwh": {
         "value": 61.7,
@@ -247,10 +247,10 @@
         "note": "Live Build & Price line 'MG4 EV XPOWER' (AWD, NCM pack), VIC selectable; CarExpert (10 Apr 2026) confirms it"
       },
       "listPrice": {
-        "value": 45211,
+        "value": 45136,
         "basis": "backed-out",
         "url": "https://www.mgmotor.com.au/configurator/mg4-ev",
-        "note": "No list price published; MG prices drive-away only. Configurator shows $47,990* 'Drive Away Price' with no struck-through figure; the MG4 EV (non-Urban) is not in the Nov-Dec cashback list, and CarExpert (10 Apr 2026) reported $47,990 drive-away as the facelift's standard price with no end date, so it is the regular price (the asterisk's T&Cs name a stale 01-31 Oct 2026 window). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (47990 - 880) / 1.042 = 45211; round-trip driveAwayPrice(45211) = 47,989.86. Independent check: the configurator's VIC per-state discounts for Essence 64 and XPOWER differ by $327.60 (= 39 x $8.40 duty units, dutiable gap ~$7,800), matching the backed-out list gap of $7,677 rather than the $8,000 drive-away gap. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount."
+        "note": "No list price published; MG prices drive-away only. Configurator shows $47,990* 'Drive Away Price' with no struck-through figure; the MG4 EV (non-Urban) is not in the Nov-Dec cashback list, and CarExpert (10 Apr 2026) reported $47,990 drive-away as the facelift's standard price with no end date, so it is the regular price (the asterisk's T&Cs name a stale 01-31 Oct 2026 window). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (47990 - 958.80) / 1.042 = 45,136; round-trip driveAwayPrice(45211) = 47,989.86. Independent check: the configurator's VIC per-state discounts for Essence 64 and XPOWER differ by $327.60 (= 39 x $8.40 duty units, dutiable gap ~$7,800), matching the backed-out list gap of $7,677 rather than the $8,000 drive-away gap. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 45,211 at $880; round trip 47990.51)."
       },
       "batteryKwh": {
         "value": 61.7,
@@ -266,7 +266,7 @@
         "note": "MG AU MY26 brochure 'Driving Range: WLTP Combined Cycle (km)' 405; no NEDC figure quoted. NZ WLTP identical (evdb.nz)."
       },
       "consumptionKwhPer100km": {
-        "value": 19.0,
+        "value": 19,
         "basis": "sourced",
         "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
         "note": "MG AU brochure 'Driving Efficiency' 19.0 kWh/100km (190 Wh/km); includes charging losses, so it sits 25% above usable battery / range"

@@ -10,10 +10,10 @@
         "note": "Zeekr AU MY26 X page lists RWD and AWD with a live Build & Price link (conf.zeekrlife.com/en-au/?linkCode=1581, client-rendered; a deeper fetch of it was refused by a permission check). No MY27 X announced as of 2026-11-27; the Oct/Nov MY27 update was the 7X only. Two-grade line-up confirmed by CarExpert and The Beep."
       },
       "listPrice": {
-        "value": 46084,
+        "value": 46009,
         "basis": "backed-out",
         "url": "https://thebeep.com.au/car-news/2026-zeekr-x-price-specs-australia",
-        "note": "Zeekr quotes $48,900 drive-away; The Beep FAQ: 'all-inclusive with no additional on-road costs', national flat figure (CarExpert https://www.carexpert.com.au/car-news/2026-zeekr-x-price-and-specs-updated-ev-gets-massive-price-cuts-1). No 'before on-road costs' list price published by Zeekr; CarExpert/Zecar/CarsGuide database pages label $48,900 as MSRP/before on-roads, but CarExpert's own Sydney drive-away then adds ~$3,018 on top (shows the database stores the drive-away figure as MSRP), so rejected in favour of the manufacturer's drive-away wording. (48900-880)/1.042 = 46084; round-trip driveAwayPrice total 48899.53. Zeekr sells agency-direct, so no dealer delivery is bundled; whether CTP is included is unstated. Unverified against an independent on-road estimate (configurator unreadable)."
+        "note": "Zeekr quotes $48,900 drive-away; The Beep FAQ: 'all-inclusive with no additional on-road costs', national flat figure (CarExpert https://www.carexpert.com.au/car-news/2026-zeekr-x-price-and-specs-updated-ev-gets-massive-price-cuts-1). No 'before on-road costs' list price published by Zeekr; CarExpert/Zecar/CarsGuide database pages label $48,900 as MSRP/before on-roads, but CarExpert's own Sydney drive-away then adds ~$3,018 on top (shows the database stores the drive-away figure as MSRP), so rejected in favour of the manufacturer's drive-away wording. (48900 - 958.80)/1.042 = 46,009; round-trip driveAwayPrice total 48899.53. Zeekr sells agency-direct, so no dealer delivery is bundled; whether CTP is included is unstated. Unverified against an independent on-road estimate (configurator unreadable). Re-derived 2026-11-27 for VIC rego $958.80 (was 46,084 at $880; round trip 48900.18)."
       },
       "batteryKwh": {
         "value": 60,
@@ -89,10 +89,10 @@
         "note": "Zeekr AU MY26 X page lists RWD and AWD with a live Build & Price link (conf.zeekrlife.com/en-au/?linkCode=1581, client-rendered; a deeper fetch of it was refused by a permission check). No MY27 X announced as of 2026-11-27; the Oct/Nov MY27 update was the 7X only. Two-grade line-up confirmed by CarExpert and The Beep."
       },
       "listPrice": {
-        "value": 54722,
+        "value": 54646,
         "basis": "backed-out",
         "url": "https://thebeep.com.au/car-news/2026-zeekr-x-price-specs-australia",
-        "note": "Zeekr quotes $57,900 drive-away; The Beep FAQ: 'all-inclusive with no additional on-road costs', national flat figure (CarExpert https://www.carexpert.com.au/car-news/2026-zeekr-x-price-and-specs-updated-ev-gets-massive-price-cuts-1). No 'before on-road costs' list price published by Zeekr; CarExpert/Zecar/CarsGuide database pages label $57,900 as MSRP/before on-roads, but CarExpert's own Sydney drive-away then adds ~$3,018 on top (shows the database stores the drive-away figure as MSRP), so rejected in favour of the manufacturer's drive-away wording. (57900-880)/1.042 = 54722; round-trip driveAwayPrice total 57900.32. Zeekr sells agency-direct, so no dealer delivery is bundled; whether CTP is included is unstated. Unverified against an independent on-road estimate (configurator unreadable)."
+        "note": "Zeekr quotes $57,900 drive-away; The Beep FAQ: 'all-inclusive with no additional on-road costs', national flat figure (CarExpert https://www.carexpert.com.au/car-news/2026-zeekr-x-price-and-specs-updated-ev-gets-massive-price-cuts-1). No 'before on-road costs' list price published by Zeekr; CarExpert/Zecar/CarsGuide database pages label $57,900 as MSRP/before on-roads, but CarExpert's own Sydney drive-away then adds ~$3,018 on top (shows the database stores the drive-away figure as MSRP), so rejected in favour of the manufacturer's drive-away wording. (57900 - 958.80)/1.042 = 54,646; round-trip driveAwayPrice total 57900.32. Zeekr sells agency-direct, so no dealer delivery is bundled; whether CTP is included is unstated. Unverified against an independent on-road estimate (configurator unreadable). Re-derived 2026-11-27 for VIC rego $958.80 (was 54,722 at $880; round trip 57899.93)."
       },
       "batteryKwh": {
         "value": 65,

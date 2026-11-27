@@ -16,7 +16,14 @@
     "towKg": 1200,
     "warrantyYears": 5,
     "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
+    "depreciationCurve": [
+      1,
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
+    ],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -26,7 +33,7 @@
     "model": "iX1",
     "variant": "xDrive30 Sport Collection",
     "bodyType": "SUV",
-    "listPrice": 75835,
+    "listPrice": 75759,
     "batteryKwh": 65.2,
     "rangeKm": 426,
     "consumptionKwhPer100km": 17.3,
@@ -36,7 +43,14 @@
     "towKg": 1200,
     "warrantyYears": 5,
     "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
+    "depreciationCurve": [
+      1,
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
+    ],
     "sourcedAt": "2026-11-26"
   }
 ]

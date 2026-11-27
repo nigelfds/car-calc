@@ -10,10 +10,10 @@
         "note": "GWM AU Ora 5 page on 2026-11-26: two grades, Lux $33,990 and Ultra $36,990 driveaway, 'Price is for private buyers in VIC', 2026 build; configurator renders client-side. CarExpert pricing page lists the same two grades"
       },
       "listPrice": {
-        "value": 31775,
+        "value": 31700,
         "basis": "backed-out",
         "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
-        "note": "GWM VIC private-buyer driveaway $33,990 (no in-words list price from GWM). (33990 - 880) / 1.042 = 31775; round-trip through calc/onroad.js driveAwayPrice gives $33,989.55. GoAuto calls it national driveaway, so the figure may be a flat national campaign price rather than a VIC calculation; no independent on-road estimate could be found. Rejected: Zecar '$33,990 RRP before on-road costs' (equals the driveaway); CarExpert model page '$32,490 before on-road costs' for the Lux (unsourced database figure; its VIC driveaway would be $34,735, $745 above GWM's). Ignored the extra $1,000-off campaign ending 30 Nov 2026"
+        "note": "GWM VIC private-buyer driveaway $33,990 (no in-words list price from GWM). (33990 - 958.80) / 1.042 = 31,700; round-trip through calc/onroad.js driveAwayPrice gives $33,989.55. GoAuto calls it national driveaway, so the figure may be a flat national campaign price rather than a VIC calculation; no independent on-road estimate could be found. Rejected: Zecar '$33,990 RRP before on-road costs' (equals the driveaway); CarExpert model page '$32,490 before on-road costs' for the Lux (unsourced database figure; its VIC driveaway would be $34,735, $745 above GWM's). Ignored the extra $1,000-off campaign ending 30 Nov 2026 Re-derived 2026-11-27 for VIC rego $958.80 (was 31,775 at $880; round trip 33990.20)."
       },
       "batteryKwh": {
         "value": 58.3,
@@ -89,10 +89,10 @@
         "note": "GWM AU Ora 5 page on 2026-11-26: two grades, Lux $33,990 and Ultra $36,990 driveaway, 'Price is for private buyers in VIC', 2026 build; configurator renders client-side. CarExpert pricing page lists the same two grades"
       },
       "listPrice": {
-        "value": 34655,
+        "value": 34579,
         "basis": "backed-out",
         "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
-        "note": "GWM VIC private-buyer driveaway $36,990 (no in-words list price from GWM). (36990 - 880) / 1.042 = 34655; round-trip through calc/onroad.js driveAwayPrice gives $36,990.51. GoAuto calls it national driveaway, so the figure may be a flat national campaign price rather than a VIC calculation; no independent on-road estimate could be found. Rejected: Zecar '$33,990 RRP before on-road costs' (equals the driveaway); CarExpert model page '$32,490 before on-road costs' for the Lux (unsourced database figure; its VIC driveaway would be $34,735, $745 above GWM's). Ignored the extra $1,000-off campaign ending 30 Nov 2026"
+        "note": "GWM VIC private-buyer driveaway $36,990 (no in-words list price from GWM). (36990 - 958.80) / 1.042 = 34,579; round-trip through calc/onroad.js driveAwayPrice gives $36,990.51. GoAuto calls it national driveaway, so the figure may be a flat national campaign price rather than a VIC calculation; no independent on-road estimate could be found. Rejected: Zecar '$33,990 RRP before on-road costs' (equals the driveaway); CarExpert model page '$32,490 before on-road costs' for the Lux (unsourced database figure; its VIC driveaway would be $34,735, $745 above GWM's). Ignored the extra $1,000-off campaign ending 30 Nov 2026 Re-derived 2026-11-27 for VIC rego $958.80 (was 34,655 at $880; round trip 36990.12)."
       },
       "batteryKwh": {
         "value": 58.3,

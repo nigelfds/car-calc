@@ -1768,7 +1768,7 @@
     "id": "gwm-cannon-phev",
     "summary": "The Cannon Hi4-T is the cheapest plug-in hybrid dual-cab ute on sale here, a smaller and lighter sibling to the Cannon Alpha PHEV that keeps its 3500kg braked towing, 115km NEDC electric range and proper low-range 4x4 hardware. Early Australian reviews praise its 310kW performance, unladen ride and off-road ability, and Chasing Cars matched the electric range claim, but CarSauce recorded about 12.9L/100km on the freeway once the battery was flat. It is a two-grade range, Lux and Ultra, with the Ultra adding only comfort equipment, and it has no ANCAP rating yet.",
     "pros": [
-      "Lowest-priced plug-in ute in Australia at $48,793 before on-road costs for the Lux (backed out of GWM's Victorian drive-away price), undercutting the BYD Shark 6 and JAC Hunter PHEV",
+      "Lowest-priced plug-in ute in Australia at $48,716 before on-road costs for the Lux (backed out of GWM's Victorian drive-away price), undercutting the BYD Shark 6 and JAC Hunter PHEV",
       "33.1kWh battery with a 115km NEDC electric-only claim that Chasing Cars matched on test and CarSauce got to about 100km, enough for most commutes without burning petrol",
       "3500kg braked towing, 835kg payload, a dual-range transfer case and rear diff lock on both grades, with the full-size spare back under the tub",
       "7-year/unlimited-km warranty with no servicing condition, plus 8-year battery cover, up to 110kW DC charging and three 230V outlets in the tub via vehicle-to-load"
@@ -1796,10 +1796,10 @@
     "sourcedAt": "2026-11-26",
     "image": {
       "file": "gwm-cannon-phev.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:2024_Great_Wall_Poer_Kingkong_white_front.jpg",
-      "author": "Throwawayacc222",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_Wall_King_Kong_Cannon_007.jpg",
+      "author": "KitsuneDP",
       "licence": "CC0",
-      "note": "Cropped and resized. Searched as Great Wall Poer."
+      "note": "Cropped and resized. Chosen by hand to replace a snow photo with a canopy and roof box; the Australian Cannon is the King Kong Cannon."
     }
   },
   {
@@ -1925,7 +1925,7 @@
     "id": "gwm-tank-300-phev",
     "summary": "The Tank 300 Hi4-T is the plug-in version of GWM's boxy body-on-frame off-roader, and Australian reviewers agree it is the cheapest way into a genuinely capable plug-in 4x4 — a 37.11kWh battery, a mechanical transfer case with front and rear locking diffs, and a 3000kg braked tow rating for $57,990 drive-away in Victoria, where the only other plug-in SUV rated to tow 3000kg here costs more than twice as much. They also agree on where it falls down: the drivetrain calibration is the most-criticised thing about the car, with CarsGuide calling the throttle calibration 'awful' and EV Central describing hesitation between petrol and electric power. Chasing Cars scores it 8.0/10, and every reviewer makes the same caveat, that the running-cost case rests entirely on charging at home, because once the battery is flat this is a 2.6-tonne petrol 4x4 drinking 10 to 12L/100km.",
     "pros": [
-      "A 3000kg braked tow rating with a genuine mechanical transfer case and front and rear locking differentials, from $57,990 drive-away ($54,808 before on-roads) — the only other plug-in hybrid SUV on sale in Australia rated to 3000kg is the Land Rover Defender 110 P300e, which starts at over $131,000, and every cheaper plug-in SUV tops out at 1500-2500kg",
+      "A 3000kg braked tow rating with a genuine mechanical transfer case and front and rear locking differentials, from $57,990 drive-away ($54,732 before on-roads) — the only other plug-in hybrid SUV on sale in Australia rated to 3000kg is the Land Rover Defender 110 P300e, which starts at over $131,000, and every cheaper plug-in SUV tops out at 1500-2500kg",
       "The 37.11kWh pack is the largest in any plug-in hybrid SUV under $60,000 before on-roads here, claiming 115km of electric range (NEDC), and independent testers got closer to the claim than usual: Chasing Cars saw 85-95km in stop-start driving and EV Central about 90km, enough to cover a typical commute on the plug alone",
       "300kW and 750Nm for a claimed 6.3sec 0-100km/h, plus 50kW DC fast charging on CCS2 (30-80 per cent in about 24 minutes) and 6kW vehicle-to-load — DC charging is rare at this price and lets the pack be usefully topped up on a trip rather than only overnight",
       "7-year/unlimited-km unconditional warranty with no dealer-servicing condition attached, plus separate 8-year/unlimited-km cover on the drive battery",
@@ -1936,7 +1936,7 @@
       "Electric range is quoted on the superseded NEDC cycle only and GWM publishes no WLTP figure for this car — it is not sold in the UK or continental Europe, so the Hi4-T has never been type-approved there and there is no European number to fall back on. Chasing Cars quotes an unsourced 100km 'WLTP' figure; read GWM's 115km as an optimistic upper bound against the 85-95km testers actually returned",
       "Practicality is thin for a 4.76m off-roader: 360L behind the second row (1520L folded) is less than the coupe-rooflined Haval H6 GT PHEV manages, payload is only 610kg, and the 3000kg tow rating sits 500kg below GWM's own Cannon Alpha PHEV ute and a diesel Ford Everest or Toyota Prado",
       "Drivability is the consistent complaint across Australian reviews: CarsGuide calls the throttle calibration 'awful', with little response at first and then a sudden surge that can spin the tyres on gravel, EV Central describes hesitation handing over between power sources, and Chasing Cars reports cabin creaks and a lumpy on-road ride. The part-time four-wheel-drive system also cannot be used on sealed roads",
-      "Pricing is campaign-driven rather than stable — GWM launched both grades at $55,990 and $59,990 drive-away and then added $2,000 on 1 June 2026, taking the Victorian drive-away figures to $57,990 and $61,990 ($54,808 and $58,647 before on-roads), and the Chinese-market Tank 300L facelift with a 59.6kWh pack and roughly double the electric range is already public, which would date this car sharply if it reaches Australia"
+      "Pricing is campaign-driven rather than stable — GWM launched both grades at $55,990 and $59,990 drive-away and then added $2,000 on 1 June 2026, taking the Victorian drive-away figures to $57,990 and $61,990 ($54,732 and $58,571 before on-roads), and the Chinese-market Tank 300L facelift with a 59.6kWh pack and roughly double the electric range is already public, which would date this car sharply if it reaches Australia"
     ],
     "sources": [
       "https://www.gwmanz.com/au/models/suv/tank-300/",
@@ -3358,7 +3358,7 @@
   },
   {
     "id": "mg-hs-phev",
-    "summary": "The HS Super Hybrid is MG's plug-in version of its mid-size SUV, pairing a 120km WLTP electric range with 220kW and the full 507-litre HS boot, from $46,171 before on-roads ($48,990 drive-away nationally). Reviewers agree the powertrain is the drawcard and the car is comfortable and well equipped, but are consistently lukewarm on the chassis: 220kW through the front wheels troubles the tyres out of slow corners, and the steering is distant. The catch is charging, since the car takes AC only and cannot DC fast-charge at all, so the value case depends on charging at home.",
+    "summary": "The HS Super Hybrid is MG's plug-in version of its mid-size SUV, pairing a 120km WLTP electric range with 220kW and the full 507-litre HS boot, from $46,095 before on-roads ($48,990 drive-away nationally). Reviewers agree the powertrain is the drawcard and the car is comfortable and well equipped, but are consistently lukewarm on the chassis: 220kW through the front wheels troubles the tyres out of slow corners, and the steering is distant. The catch is charging, since the car takes AC only and cannot DC fast-charge at all, so the value case depends on charging at home.",
     "pros": [
       "120km of WLTP electric range from a 24.7kWh (23.2kWh usable) LFP pack beats the GWM Haval H6 PHEV's 106km and the Jaecoo J7 SHS's 90km, though the BYD Sealion 6 Dynamic Extended Range (125km) and Geely Starray EM-i Inspire (136km) now go further; EV Central's long-term car consistently managed about 100km in EV mode.",
       "MG advertises a 10-year/250,000km warranty, but that term requires servicing exclusively at an MG dealer on schedule; the unconditional cover is seven years/unlimited kilometres, and the high-voltage battery has its own seven-year/150,000km term.",
@@ -3610,7 +3610,7 @@
       "210-litre boot is among the smallest of any EV on sale in Australia — under half the 470 litres of a Skoda Elroq, and only 800 litres with the rear seats folded",
       "Strictly a four-seater with token rear legroom; CarExpert's 6'1\" tester said someone his height would struggle to fit behind his own driving position, and CarsGuide called the rear backrests too upright for adults",
       "Real-world consumption of 16.9kWh/100km on CarExpert's test loop, against the 14.7kWh/100km claim, cuts usable range to roughly 290km from the 49.2kWh usable battery",
-      "Expensive for the metal: an MG 4 Essence 64 is $37,534 and a Tesla Model 3 starts at $45,900, both far more practical, and the SE comes only in Favoured trim, with the Paul Smith Edition the sole alternative at $2,000 more",
+      "Expensive for the metal: an MG 4 Essence 64 is $37,458 and a Tesla Model 3 starts at $45,900, both far more practical, and the SE comes only in Favoured trim, with the Paul Smith Edition the sole alternative at $2,000 more",
       "95kW peak DC charging is modest — 30 minutes for 10-80 per cent, where similarly priced rivals manage well over 100kW"
     ],
     "sources": [

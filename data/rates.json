@@ -5,7 +5,7 @@
   "opportunityRatePct": 4.5,
   "electricityCentsPerKwh": 27,
   "petrolCentsPerLitre": 195,
-  "otherRunningCostsAnnual": 1240,
+  "otherRunningCostsAnnual": 1319,
   "defaultAnnualKm": 15000,
   "sources": {
     "loanRatePct": "Mid-market green EV secured rate, July 2026. Best advertised 5.66%.",
@@ -13,7 +13,7 @@
     "adminFeeAnnual": "Typical $85/month packaging fee.",
     "electricityCentsPerKwh": "2026-27 Victorian Default Offer flat rates, Melbourne zones 25.96 to 27.47 c/kWh (ESC final decision, May 2026, via Canstar).",
     "petrolCentsPerLitre": "Melbourne 91 unleaded, cycle-averaged estimate July 2026. Only used for plug-in hybrids.",
-    "otherRunningCostsAnnual": "VIC rego ~$880 plus servicing and tyres. ZLEV discount ended 1 Jan 2026."
+    "otherRunningCostsAnnual": "VIC rego $958.80 (2026-27 metro, incl. TAC) plus servicing and tyres. ZLEV discount ended 1 Jan 2026."
   },
   "sourcedAt": "2026-11-27"
 }

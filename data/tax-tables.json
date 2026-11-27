@@ -34,6 +34,7 @@
       { "upTo": null, "ratePer200": 18.00 }
     ]
   },
-  "registrationAnnual": 880,
+  "registrationAnnual": 958.8,
+  "registrationNote": "2026-27 Melbourne metro passenger rego incl. TAC charge (VicRoads via Canstar, Oct 2026). Was 880. Backed-out list prices use this figure.",
   "sourcedAt": "2026-07-25"
 }

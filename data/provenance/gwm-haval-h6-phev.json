@@ -10,10 +10,10 @@
         "note": "GWM AU offers page lists the H6 Lux PHEV (MY26, 2026 build) with a VIC private drive-away price, as of 1/11/2026; H6 model page lists the same eight grades incl. Lux PHEV, Ultra PHEV, Ultra PHEV AWD. Build & Price at https://www.gwmanz.com/au/ is script-rendered. CarExpert 2026 review and CarExpert/GoAuto launch articles agree on three PHEV grades."
       },
       "listPrice": {
-        "value": 42332,
+        "value": 42256,
         "basis": "backed-out",
         "url": "https://www.gwmanz.com/au/offers/",
-        "note": "GWM publishes drive-away only: $44,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $4,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (44990 - 880) / 1.042 = 42332; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 44,989.94. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $43,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins."
+        "note": "GWM publishes drive-away only: $44,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $4,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (44990 - 958.80) / 1.042 = 42,256; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 44,989.94. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $43,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins. Re-derived 2026-11-27 for VIC rego $958.80 (was 42,332 at $880; round trip 44989.55)."
       },
       "batteryKwh": {
         "value": 19.09,
@@ -111,10 +111,10 @@
         "note": "GWM AU offers page lists the H6 Ultra PHEV (MY26, 2026 build) with a VIC private drive-away price, as of 1/11/2026; H6 model page lists the same eight grades incl. Lux PHEV, Ultra PHEV, Ultra PHEV AWD. Build & Price at https://www.gwmanz.com/au/ is script-rendered. CarExpert 2026 review and CarExpert/GoAuto launch articles agree on three PHEV grades."
       },
       "listPrice": {
-        "value": 45211,
+        "value": 45136,
         "basis": "backed-out",
         "url": "https://www.gwmanz.com/au/offers/",
-        "note": "GWM publishes drive-away only: $47,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $4,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (47990 - 880) / 1.042 = 45211; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 47,989.86. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $46,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins."
+        "note": "GWM publishes drive-away only: $47,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $4,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (47990 - 958.80) / 1.042 = 45,136; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 47,989.86. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $46,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins. Re-derived 2026-11-27 for VIC rego $958.80 (was 45,211 at $880; round trip 47990.51)."
       },
       "batteryKwh": {
         "value": 19.09,
@@ -212,10 +212,10 @@
         "note": "GWM AU offers page lists the H6 Ultra PHEV AWD (MY26, 2026 build) with a VIC private drive-away price, as of 1/11/2026; H6 model page lists the same eight grades incl. Lux PHEV, Ultra PHEV, Ultra PHEV AWD. Build & Price at https://www.gwmanz.com/au/ is script-rendered. CarExpert 2026 review and CarExpert/GoAuto launch articles agree on three PHEV grades."
       },
       "listPrice": {
-        "value": 48090,
+        "value": 48015,
         "basis": "backed-out",
         "url": "https://www.gwmanz.com/au/offers/",
-        "note": "GWM publishes drive-away only: $50,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $5,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (50990 - 880) / 1.042 = 48090; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 50,989.78. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $49,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins."
+        "note": "GWM publishes drive-away only: $50,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $5,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (50990 - 958.80) / 1.042 = 48,015; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 50,989.78. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $49,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins. Re-derived 2026-11-27 for VIC rego $958.80 (was 48,090 at $880; round trip 50990.43)."
       },
       "batteryKwh": {
         "value": 19.09,

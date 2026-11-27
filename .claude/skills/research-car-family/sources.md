@@ -46,8 +46,8 @@ Back the list price out with the app's Victorian model, using the divisor for th
 
 | Body type | Formula |
 |---|---|
-| `Sedan`, `Hatch`, `SUV` | `list = (driveaway − 880) / 1.042` |
-| `Ute` | `list = (driveaway − 880) / 1.027` |
+| `Sedan`, `Hatch`, `SUV` | `list = (driveaway − 958.80) / 1.042` |
+| `Ute` | `list = (driveaway − 958.80) / 1.027` |
 
 Then round-trip it through the real function and tables, and confirm you land within a dollar or two
 of the advertised drive-away:

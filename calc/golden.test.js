@@ -34,8 +34,8 @@ test('GOLDEN: a $145k earner takes home $107,380 a year', () => {
   close(netIncome({ grossSalary: 145000 }, tables).netAnnual, 107380);
 });
 
-test('GOLDEN: Kia EV5 Air drive-away in Victoria is $59,232', () => {
-  close(optionCosts({ vehicle: ev5, inputs }, tables).novated.detail.driveAway, 59232);
+test('GOLDEN: Kia EV5 Air drive-away in Victoria is $59,311', () => {
+  close(optionCosts({ vehicle: ev5, inputs }, tables).novated.detail.driveAway, 59310.8);
 });
 
 test('GOLDEN: the 48-month residual is 37.5% of the car price, not the drive-away price', () => {

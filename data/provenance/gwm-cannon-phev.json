@@ -10,10 +10,10 @@
         "note": "GWM AU Cannon range page lists the Lux PHEV with a VIC private drive-away price; Build & Price link https://www.gwmanz.com/au/config/cannon/ (configurator is script-rendered, prices not readable); CarExpert/4x4 Australia confirm two grades, Lux and Ultra, both 4x4 dual-cab pickups; in dealers since 21 Oct 2026 (zecar)"
       },
       "listPrice": {
-        "value": 48793,
+        "value": 48716,
         "basis": "backed-out",
         "url": "https://www.gwmanz.com/au/models/ute/cannon/",
-        "note": "GWM publishes drive-away only: $50,990 drive-away, VIC private buyer, standard price before the $2,000 launch bonus (bonus runs to deliveries by 30 Nov 2026, so ignored as a campaign). Ute divisor: (50990 - 880) / 1.027 = 48793; round-trip through calc/onroad.js driveAwayPrice (isNonPassenger true) = 50,990.41. No independent on-road estimate exists to verify against; the $1,000 ABN-vs-private gap and $4,000 Lux-Ultra gap are both GWM-chosen. CarExpert's spec page states '$48,990 before on-road costs', which is exactly the private campaign drive-away figure and is below what a $48,990 list would cost on the road in VIC, so it is a mislabelled drive-away price and was rejected. Same $50,990/$54,990 private and $49,990/$53,990 ABN figures in CarExpert, 4x4 Australia, zecar, CarSauce."
+        "note": "GWM publishes drive-away only: $50,990 drive-away, VIC private buyer, standard price before the $2,000 launch bonus (bonus runs to deliveries by 30 Nov 2026, so ignored as a campaign). Ute divisor: (50990 - 958.80) / 1.027 = 48,716; round-trip through calc/onroad.js driveAwayPrice (isNonPassenger true) = 50,990.41. No independent on-road estimate exists to verify against; the $1,000 ABN-vs-private gap and $4,000 Lux-Ultra gap are both GWM-chosen. CarExpert's spec page states '$48,990 before on-road costs', which is exactly the private campaign drive-away figure and is below what a $48,990 list would cost on the road in VIC, so it is a mislabelled drive-away price and was rejected. Same $50,990/$54,990 private and $49,990/$53,990 ABN figures in CarExpert, 4x4 Australia, zecar, CarSauce. Re-derived 2026-11-27 for VIC rego $958.80 (was 48,793 at $880; round trip 50990.13)."
       },
       "batteryKwh": {
         "value": 33.11,
@@ -107,10 +107,10 @@
         "note": "GWM AU Cannon range page lists the Ultra PHEV with a VIC private drive-away price; Build & Price link https://www.gwmanz.com/au/config/cannon/ (configurator is script-rendered, prices not readable); CarExpert/4x4 Australia confirm two grades, Lux and Ultra, both 4x4 dual-cab pickups; in dealers since 21 Oct 2026 (zecar)"
       },
       "listPrice": {
-        "value": 52687,
+        "value": 52611,
         "basis": "backed-out",
         "url": "https://www.gwmanz.com/au/models/ute/cannon/",
-        "note": "GWM publishes drive-away only: $54,990 drive-away, VIC private buyer, standard price before the $2,000 launch bonus (bonus runs to deliveries by 30 Nov 2026, so ignored as a campaign). Ute divisor: (54990 - 880) / 1.027 = 52687; round-trip through calc/onroad.js driveAwayPrice (isNonPassenger true) = 54,989.55. No independent on-road estimate exists to verify against; the $1,000 ABN-vs-private gap and $4,000 Lux-Ultra gap are both GWM-chosen. CarExpert's spec page states '$48,990 before on-road costs', which is exactly the private campaign drive-away figure and is below what a $48,990 list would cost on the road in VIC, so it is a mislabelled drive-away price and was rejected. Same $50,990/$54,990 private and $49,990/$53,990 ABN figures in CarExpert, 4x4 Australia, zecar, CarSauce."
+        "note": "GWM publishes drive-away only: $54,990 drive-away, VIC private buyer, standard price before the $2,000 launch bonus (bonus runs to deliveries by 30 Nov 2026, so ignored as a campaign). Ute divisor: (54990 - 958.80) / 1.027 = 52,611; round-trip through calc/onroad.js driveAwayPrice (isNonPassenger true) = 54,989.55. No independent on-road estimate exists to verify against; the $1,000 ABN-vs-private gap and $4,000 Lux-Ultra gap are both GWM-chosen. CarExpert's spec page states '$48,990 before on-road costs', which is exactly the private campaign drive-away figure and is below what a $48,990 list would cost on the road in VIC, so it is a mislabelled drive-away price and was rejected. Same $50,990/$54,990 private and $49,990/$53,990 ABN figures in CarExpert, 4x4 Australia, zecar, CarSauce. Re-derived 2026-11-27 for VIC rego $958.80 (was 52,687 at $880; round trip 54990.30)."
       },
       "batteryKwh": {
         "value": 33.11,

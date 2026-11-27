@@ -10,13 +10,13 @@
         "note": "Deepal AU has no Build & Price configurator; the official S07 page and offer page (2026-11-26) advertise 'with 20-inch wheels from $47,990 driveaway', 'Available for delivery now. While stocks last.', no end date. Run-out: 19-inch version sold out and remaining stock is 2025-built (CarExpert 7 Jul 2026). Melbourne retailers: Deepal Melbourne City, Deepal Doncaster. Single grade."
       },
       "listPrice": {
-        "value": 45211,
+        "value": 45136,
         "basis": "backed-out",
         "url": "https://www.deepal.com.au/special-offers/s07/",
-        "note": "Deepal AU offer $47,990 drive-away (20-inch wheels, excl. premium paint, private buyers, while stocks last, no end date). (47990-880)/1.042 = 45,211.1; round-trip through calc/onroad.js driveAwayPrice: 47,989.86 (stamp duty 1,898.86 + rego 880). Flat national figure that bundles recommended dealer delivery and CTP, so the back-out overstates the true list by an estimated $1,000-2,500. No independent verification available: Deepal publishes no list price or on-road estimate (only the 20-inch option at $1,100 'excluding government and statutory charges'). Launch list was $53,900 before on-road costs (CarExpert review); CarsGuide's $49,990 'MSRP' matches the mid-2025 $49,990 drive-away campaign and is not used. Manufacturer's published price used per owner decision."
+        "note": "Deepal AU offer $47,990 drive-away (20-inch wheels, excl. premium paint, private buyers, while stocks last, no end date). (47990 - 958.80)/1.042 = 45,136.1; round-trip through calc/onroad.js driveAwayPrice: 47,989.86 (stamp duty 1,898.86 + rego 880). Flat national figure that bundles recommended dealer delivery and CTP, so the back-out overstates the true list by an estimated $1,000-2,500. No independent verification available: Deepal publishes no list price or on-road estimate (only the 20-inch option at $1,100 'excluding government and statutory charges'). Launch list was $53,900 before on-road costs (CarExpert review); CarsGuide's $49,990 'MSRP' matches the mid-2025 $49,990 drive-away campaign and is not used. Manufacturer's published price used per owner decision. Re-derived 2026-11-27 for VIC rego $958.80 (was 45,211 at $880; round trip 47990.51)."
       },
       "batteryKwh": {
-        "value": 78.0,
+        "value": 78,
         "basis": "sourced",
         "url": "https://ev-database.org/car/3369/Changan-Deepal-S07-Standard",
         "note": "usable 78.0 kWh, nominal 80.0 kWh (EV Database, European S07, 20-inch). Deepal AU spec sheet quotes 79.97 kWh unlabelled, i.e. gross; same 79.97 kWh ternary pack and 160 kW RWD as Europe (changaneurope.com spec)."

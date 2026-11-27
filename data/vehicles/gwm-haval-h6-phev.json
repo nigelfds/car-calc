@@ -7,7 +7,7 @@
     "variant": "Lux PHEV",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 42332,
+    "listPrice": 42256,
     "batteryKwh": 19.09,
     "rangeKm": 106,
     "consumptionKwhPer100km": 18,
@@ -21,7 +21,14 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1450,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -32,7 +39,7 @@
     "variant": "Ultra PHEV",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 45211,
+    "listPrice": 45136,
     "batteryKwh": 19.09,
     "rangeKm": 106,
     "consumptionKwhPer100km": 18,
@@ -46,7 +53,14 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1550,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
     "sourcedAt": "2026-11-26"
   },
   {
@@ -57,7 +71,7 @@
     "variant": "Ultra PHEV AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 48090,
+    "listPrice": 48015,
     "batteryKwh": 19.09,
     "rangeKm": 100,
     "consumptionKwhPer100km": 19.1,
@@ -71,7 +85,14 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1750,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
     "sourcedAt": "2026-11-26"
   }
 ]

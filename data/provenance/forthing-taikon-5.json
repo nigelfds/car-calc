@@ -10,10 +10,10 @@
         "note": "Build & Price (page-data) lists Electric > Luxury with driveAwayPrice 38990; model marketed as 'Forthing Electric' since Sept 2026 trademark dispute"
       },
       "listPrice": {
-        "value": 36574,
+        "value": 36498,
         "basis": "backed-out",
         "url": "https://www.forthing.com.au/build-and-price/",
-        "note": "Only a manufacturer recommended drive-away price exists ($38,990, dealerDeliveryFee 0 in configurator data; CarExpert table also says drive-away). (38990 - 880) / 1.042 = 36574; round-trip through calc/onroad.js driveAwayPrice = 38990.11. No independent on-road estimate found to verify against; unchanged from held back-out."
+        "note": "Only a manufacturer recommended drive-away price exists ($38,990, dealerDeliveryFee 0 in configurator data; CarExpert table also says drive-away). (38990 - 958.80) / 1.042 = 36,498; round-trip through calc/onroad.js driveAwayPrice = 38990.11. No independent on-road estimate found to verify against; unchanged from held back-out. Re-derived 2026-11-27 for VIC rego $958.80 (was 36,574 at $880; round trip 38989.72)."
       },
       "batteryKwh": {
         "value": 64.4,
@@ -89,10 +89,10 @@
         "note": "Build & Price (page-data) lists Electric > Exclusive with driveAwayPrice 42490; model marketed as 'Forthing Electric' since Sept 2026 trademark dispute"
       },
       "listPrice": {
-        "value": 39933,
+        "value": 39857,
         "basis": "backed-out",
         "url": "https://www.forthing.com.au/build-and-price/",
-        "note": "Only a manufacturer recommended drive-away price exists ($42,490, dealerDeliveryFee 0 in configurator data; CarExpert table also says drive-away). (42490 - 880) / 1.042 = 39933; round-trip through calc/onroad.js driveAwayPrice = 42490.19. No independent on-road estimate found to verify against; unchanged from held back-out."
+        "note": "Only a manufacturer recommended drive-away price exists ($42,490, dealerDeliveryFee 0 in configurator data; CarExpert table also says drive-away). (42490 - 958.80) / 1.042 = 39,857; round-trip through calc/onroad.js driveAwayPrice = 42490.19. No independent on-road estimate found to verify against; unchanged from held back-out. Re-derived 2026-11-27 for VIC rego $958.80 (was 39,933 at $880; round trip 42489.79)."
       },
       "batteryKwh": {
         "value": 64.4,
