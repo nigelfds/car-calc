@@ -7,8 +7,12 @@
     "node": "22.x"
   },
   "scripts": {
-    "test": "node --test",
+    "build": "node scripts/build-dataset.js",
+    "prestart": "node scripts/build-dataset.js",
     "start": "node server/index.js",
+    "pretest": "node scripts/build-dataset.js",
+    "test": "node --test",
+    "precurate": "node scripts/build-dataset.js",
     "curate": "node scripts/curate-images.js"
   },
   "dependencies": {

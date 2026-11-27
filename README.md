@@ -150,9 +150,11 @@ bypasses it — reasonable for a WIP branch, rarely so for `main`.
 
 ## Refreshing the dataset
 
-`data/vehicles.json` and `data/families.json` are **generated artefacts** — never hand-edit them.
-The source of truth is the per-model research files under `data/vehicles/*.json` and
-`data/families/*.json`. To add or update a model, edit (or add) its file there, then rebuild:
+`data/vehicles.json` and `data/families.json` are **generated artefacts** and are not committed.
+Heroku builds them at deploy (`npm run build`), and `npm start`, `npm test` and `npm run curate`
+rebuild them first, so a fresh clone needs no extra step. The source of truth is the per-model
+research files under `data/vehicles/*.json` and `data/families/*.json`. To add or update a model,
+edit (or add) its file there; to rebuild and validate by hand:
 
 ```bash
 node scripts/build-dataset.js
