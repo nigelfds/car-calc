@@ -247,6 +247,8 @@ functions that never call a model — the same inputs always produce the same or
 
 ## Deployment
 
-A `Procfile` is included for Heroku (`web: node server/index.js`). Deployment itself is a
-separate, deliberate step. The app needs no API keys or other secrets. If `ANTHROPIC_API_KEY` is
-still set in the Heroku config from earlier, it is now unused and can be removed.
+Heroku deploys every push to `main` straight to production; there is no CI or staging step, so the
+pre-push hook above is the only gate. The Node buildpack runs `npm run build`
+(`scripts/build-dataset.js`) to generate `data/vehicles.json` and `data/families.json`, which are
+not committed; a row that fails validation fails the build, and the previous release keeps serving.
+The `Procfile` then starts `node server/index.js`. The app needs no API keys or other secrets.
