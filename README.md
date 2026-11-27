@@ -221,12 +221,13 @@ Shown in the app itself, next to each editable rate, and in `data/rates.json`:
 
 | Rate | Default | Source |
 |---|---|---|
-| Novated lease finance rate | 7.5% | Competitive novated comparison rate, 6.5–7.5%; ~9.5% effective over 5 years. |
-| Car loan interest rate | 6.5% | Mid-market green EV secured rate, July 2026. Best advertised rate seen was 5.66%. |
+| Novated lease finance rate | 8.0% | Competitive novated comparison rates were 6.5–7.5% in mid-2026; the cash rate is up 50bp since. |
+| Car loan interest rate | 6.75% | Mid-market green EV secured rate, November 2026. Best advertised green loan 5.79%. |
 | Novated lease admin fee | $1,020/yr | Typical $85/month packaging fee. |
 | Other running costs (rego, servicing, tyres) | $1,319/yr | VIC registration $958.80 (2026-27 metro) plus servicing and tyres. The ZLEV registration discount ended 1 Jan 2026. |
-| Electricity | 28c/kWh | Melbourne residential off-peak-weighted estimate. |
-| Return your savings would otherwise earn | 4.5% | An assumption, not a published rate — it's what your own money would earn if you didn't spend it on a car. Edit it to match your actual savings/offset rate. |
+| Electricity | 27c/kWh | 2026-27 Victorian Default Offer flat rate, Melbourne. |
+| Petrol (plug-in hybrids only) | 230c/L | Unleaded 91, November 2026 national and five-city averages. |
+| Return your savings would otherwise earn | 5.0% | An assumption, not a published rate — it's what your own money would earn if you didn't spend it on a car. Edit it to match your actual savings/offset rate. |
 | Lease residual | ATO statutory minimum for the term | Not a market rate — a legislated minimum. Overridable if your financier has quoted something different. |
 
 All figures are dated in `data/rates.json`'s `sourcedAt` field and were current as of that date;
