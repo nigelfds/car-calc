@@ -18,4 +18,8 @@ land-rover-range-rover-velar-phev, land-rover-range-rover-sport-phev, vw-touareg
 
 ## Status
 
-- Batch 1 dispatched.
+- Batch 1 done and committed: 17 families added (349 variants across 151 families).
+- bmw-i3 not written: not orderable in Australia yet; watchlist entry set to pre-launch, recheck 2027-01-15.
+- byd-m9-phev has no freely licensed photo on Commons yet.
+- Agent usage for batch 1: about 2.14M tokens across 18 agents (mean about 119k each).
+- Next: the 17 remaining families above, on the owner's go.

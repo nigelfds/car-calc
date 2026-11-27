@@ -63,7 +63,7 @@ another way — that's intended, since specs-only is the whole point of the tab,
 around. A link that already carries both (one saved before this existed, say) still opens correctly;
 only a fresh Compare link is built clean.
 
-Any of the dataset's 312 variants goes in any of the three slots, chosen from an autocomplete on
+Any of the dataset's 349 variants goes in any of the three slots, chosen from an autocomplete on
 each — there's no preference filtering and no restriction by body type, so a ute sits next to a
 hatchback as readily as two SUVs. The slots live in the URL as `?tab=compare&compare=id1,id2,id3`; a
 cleared *interior* slot serialises as an empty segment (`id1,,id3`) rather than being dropped,
