@@ -1,5 +1,5 @@
 {
-  "_about": "Models and brands already checked and not held, so a sweep re-checks them only once recheckAfter has passed. Seeded 2026-11-26 from the BEV and PHEV wave logs (now in docs/archive/). Validated by data/watchlist.test.js.",
+  "_about": "Models and brands already checked and not held, so a sweep re-checks them only once recheckAfter has passed. Seeded 2026-11-26 from the BEV and PHEV wave logs (in git history). Validated by data/watchlist.test.js.",
   "entries": [
     {
       "name": "Porsche Taycan",
