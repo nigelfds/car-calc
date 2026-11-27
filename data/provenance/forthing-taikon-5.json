@@ -1,0 +1,183 @@
+{
+  "familyId": "forthing-taikon-5",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "forthing-taikon-5-bev-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.forthing.com.au/build-and-price/",
+        "note": "Build & Price (page-data) lists Electric > Luxury with driveAwayPrice 38990; model marketed as 'Forthing Electric' since Sept 2026 trademark dispute"
+      },
+      "listPrice": {
+        "value": 36574,
+        "basis": "backed-out",
+        "url": "https://www.forthing.com.au/build-and-price/",
+        "note": "Only a manufacturer recommended drive-away price exists ($38,990, dealerDeliveryFee 0 in configurator data; CarExpert table also says drive-away). (38990 - 880) / 1.042 = 36574; round-trip through calc/onroad.js driveAwayPrice = 38990.11. No independent on-road estimate found to verify against; unchanged from held back-out."
+      },
+      "batteryKwh": {
+        "value": 64.4,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/forthing-taikon",
+        "note": "EVDB NZ: usable 64.4, gross (nominal) 67* (asterisk unexplained). Forthing AU Oct 2026 spec sheet gives 'Battery capacity (kWh) 64.4' unlabelled."
+      },
+      "rangeKm": {
+        "value": 427,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://cdn.cms-uploads.i-motor.me/ymboty0zwr1rq9whqhewuf0q0c6j",
+        "note": "Forthing-Electric-SpecSheet-October2026.pdf: 'Electric Driving range: WLTP Up to 427km', 235/55 R19 on both grades. NZ quotes 400km WLTP for a 240Nm motor variant; the AU car is 150kW/340Nm, matching the 204hp/340Nm Forthing Friday listed at 425km WLTP (auto-data.net, lead only), so 427 is not treated as an NEDC submission (that variant's NEDC is listed at 480km)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.5,
+        "basis": "sourced",
+        "url": "https://www.drivencarguide.co.nz/reviews/forthing-taikon-ev-luxury-review-not-perfect-but-hard-to-beat-for-value/",
+        "note": "Forthing (NZ) claimed combined 15.5kWh/100km quoted by Driven, 19-inch 235/55 wheels. Same 15.5 WLTP listed for the 204hp/340Nm Friday on auto-data.net (lead). No AU claim published. 2.8% from 64.4/427. CarExpert tested 14.1-15.0 indicated."
+      },
+      "bootLitresSeatsUp": {
+        "value": 480,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-forthing-review-quick-drive",
+        "note": "CarExpert: 'Forthing quotes 480L' seats up, excluding underfloor storage; the 541L previously held is a JATO figure (also used by NZ outlets). Measurement method not stated."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1480,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-forthing-review-quick-drive",
+        "note": "CarExpert: Forthing quotes 1480L seats folded; AA NZ also 1480. Method not stated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://cdn.cms-uploads.i-motor.me/ymboty0zwr1rq9whqhewuf0q0c6j",
+        "note": "Seating Capacity 5 on both grades"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://cdn.cms-uploads.i-motor.me/ymboty0zwr1rq9whqhewuf0q0c6j",
+        "note": "Oct 2026 spec sheet: 'Towing Capacity - Braked and Unbraked (kg) 750' (REEV sheet identical). EV Central review also lists 750kg. Held 1500 came from the launch-era sheet / JATO; NZ outlets still quote 1.5t."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.forthing.com.au/warranty/",
+        "note": "7yr/200,000km comprehensive, no servicing condition stated; battery 8yr/200,000km, 70% capacity"
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "Anchored to gac-aion-v-premium (1650), geely-ex5-complete (1600) and chery-e5; Luxury sits $3,000-5,000 below them in list price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "One curve for all Forthing rows. Steeper than mainstream default: new brand with no resale history, thin dealer network, drive-away-only pricing with stock campaigns ($2,500 gift card Nov-Dec 2026) and a possible forced rename. Matches gac-aion-v (comparable new-to-market Chinese brand)."
+      }
+    },
+    "forthing-taikon-5-bev-exclusive": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.forthing.com.au/build-and-price/",
+        "note": "Build & Price (page-data) lists Electric > Exclusive with driveAwayPrice 42490; model marketed as 'Forthing Electric' since Sept 2026 trademark dispute"
+      },
+      "listPrice": {
+        "value": 39933,
+        "basis": "backed-out",
+        "url": "https://www.forthing.com.au/build-and-price/",
+        "note": "Only a manufacturer recommended drive-away price exists ($42,490, dealerDeliveryFee 0 in configurator data; CarExpert table also says drive-away). (42490 - 880) / 1.042 = 39933; round-trip through calc/onroad.js driveAwayPrice = 42490.19. No independent on-road estimate found to verify against; unchanged from held back-out."
+      },
+      "batteryKwh": {
+        "value": 64.4,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/forthing-taikon",
+        "note": "EVDB NZ: usable 64.4, gross (nominal) 67* (asterisk unexplained). Forthing AU Oct 2026 spec sheet gives 'Battery capacity (kWh) 64.4' unlabelled."
+      },
+      "rangeKm": {
+        "value": 427,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://cdn.cms-uploads.i-motor.me/ymboty0zwr1rq9whqhewuf0q0c6j",
+        "note": "Forthing-Electric-SpecSheet-October2026.pdf: 'Electric Driving range: WLTP Up to 427km', 235/55 R19 on both grades. NZ quotes 400km WLTP for a 240Nm motor variant; the AU car is 150kW/340Nm, matching the 204hp/340Nm Forthing Friday listed at 425km WLTP (auto-data.net, lead only), so 427 is not treated as an NEDC submission (that variant's NEDC is listed at 480km)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.5,
+        "basis": "sourced",
+        "url": "https://www.drivencarguide.co.nz/reviews/forthing-taikon-ev-luxury-review-not-perfect-but-hard-to-beat-for-value/",
+        "note": "Forthing (NZ) claimed combined 15.5kWh/100km quoted by Driven, 19-inch 235/55 wheels. Same 15.5 WLTP listed for the 204hp/340Nm Friday on auto-data.net (lead). No AU claim published. 2.8% from 64.4/427. CarExpert tested 14.1-15.0 indicated."
+      },
+      "bootLitresSeatsUp": {
+        "value": 480,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-forthing-review-quick-drive",
+        "note": "CarExpert: 'Forthing quotes 480L' seats up, excluding underfloor storage; the 541L previously held is a JATO figure (also used by NZ outlets). Measurement method not stated."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1480,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-forthing-review-quick-drive",
+        "note": "CarExpert: Forthing quotes 1480L seats folded; AA NZ also 1480. Method not stated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://cdn.cms-uploads.i-motor.me/ymboty0zwr1rq9whqhewuf0q0c6j",
+        "note": "Seating Capacity 5 on both grades"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://cdn.cms-uploads.i-motor.me/ymboty0zwr1rq9whqhewuf0q0c6j",
+        "note": "Oct 2026 spec sheet: 'Towing Capacity - Braked and Unbraked (kg) 750' (REEV sheet identical). EV Central review also lists 750kg. Held 1500 came from the launch-era sheet / JATO; NZ outlets still quote 1.5t."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.forthing.com.au/warranty/",
+        "note": "7yr/200,000km comprehensive, no servicing condition stated; battery 8yr/200,000km, 70% capacity"
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "Anchored to geely-ex5-complete (1600, $41,990) and gac-aion-v-premium (1650, $42,590); $50 over the Luxury for the higher value"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "One curve for all Forthing rows. Steeper than mainstream default: new brand with no resale history, thin dealer network, drive-away-only pricing with stock campaigns ($2,500 gift card Nov-Dec 2026) and a possible forced rename. Matches gac-aion-v (comparable new-to-market Chinese brand)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "forthing-taikon-5-bev-luxury.listPrice: backed out of manufacturer drive-away; no independent on-road estimate to verify against",
+    "forthing-taikon-5-bev-exclusive.listPrice: backed out of manufacturer drive-away; no independent on-road estimate to verify against",
+    "forthing-taikon-5-bev-luxury.consumptionKwhPer100km: 15.5 is Forthing NZ's claim (NZ car quoted with 240Nm/400km) corroborated only by an aggregator for the 340Nm variant; no AU claim",
+    "forthing-taikon-5-bev-exclusive.consumptionKwhPer100km: as Luxury",
+    "forthing-taikon-5-bev-luxury.towKg: Oct 2026 sheet 750kg braked contradicts launch-era 1500kg still quoted by JATO-fed outlets; no announcement of a change",
+    "forthing-taikon-5-bev-exclusive.towKg: as Luxury",
+    "forthing-taikon-5-bev-luxury.bootLitresSeatsUp: Forthing 480L vs JATO 541L; measurement method (to cover or roof) unstated",
+    "forthing-taikon-5-bev-exclusive.bootLitresSeatsUp: as Luxury",
+    "forthing-taikon-5-bev-luxury.batteryKwh: usable 64.4 from EVDB NZ only (gross 67 asterisked); Forthing AU does not label it",
+    "forthing-taikon-5-bev-exclusive.batteryKwh: as Luxury",
+    "forthing-taikon-5-bev-luxury.rangeKm: AU 427 WLTP vs NZ 400 WLTP; accepted on the 340Nm Friday's 425km WLTP match",
+    "forthing-taikon-5-bev-exclusive.rangeKm: as Luxury",
+    "forthing-taikon-5-bev-luxury.insuranceAnnual: judged",
+    "forthing-taikon-5-bev-exclusive.insuranceAnnual: judged",
+    "forthing-taikon-5-bev-luxury.depreciationCurve: judged, no resale data for the brand",
+    "forthing-taikon-5-bev-exclusive.depreciationCurve: judged, no resale data for the brand"
+  ]
+}

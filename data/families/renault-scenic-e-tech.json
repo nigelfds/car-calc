@@ -1,8 +1,8 @@
 {
   "id": "renault-scenic-e-tech",
-  "summary": "The Scenic E-Tech is Renault's mid-size electric SUV, built on the same CMF-EV platform as the Megane E-Tech and sold in Australia in three front-wheel-drive grades from $55,990 to $65,990 before on-road costs. Australian reviewers rate it near the top of its class for ride comfort, rear-seat space and cabin quality -- Chasing Cars scored the Esprit Alpine 8.0/10 and singled out its damping and adult-sized rear seat -- and the 87kWh grades' 625km WLTP claim is the longest in the segment under $70,000. The disagreement is over whether that is enough against cheaper Chinese rivals, given a 130-150kW charging peak that is only average, soft brake feel, and a five-year/100,000km warranty that is the shortest of any mainstream EV brand here.",
+  "summary": "The Scenic E-Tech is Renault's mid-size electric SUV, built on the same CMF-EV platform as the Megane E-Tech and sold in Australia in three front-wheel-drive grades from $55,990 to $65,990 before on-road costs. Australian reviewers rate it near the top of its class for ride comfort, rear-seat space and cabin quality -- Chasing Cars scored the Esprit Alpine 8.0/10 and singled out its damping and adult-sized rear seat -- and the Techno Long Range's 625km WLTP claim (599km for the Esprit Alpine on its 20-inch wheels) is the longest in the segment under $70,000. The disagreement is over whether that is enough against cheaper Chinese rivals, given a 130-150kW charging peak that is only average, soft brake feel, and a five-year/100,000km warranty that is the shortest of any mainstream EV brand here.",
   "pros": [
-    "The 87kWh grades claim 625km WLTP, more than the Kia EV3 Earth (563km), Skoda Elroq 85 (529km) and Tesla Model Y Long Range AWD (600km), and Chasing Cars still saw 518km in real-world testing",
+    "The Techno Long Range EV87 claims 625km WLTP, more than the Kia EV3 Air Long Range (604km), Skoda Elroq 85 (521km) and Tesla Model Y Long Range AWD (600km); the Esprit Alpine's 20-inch wheels cut that to 599km, and Chasing Cars still saw 518km in real-world testing",
     "Genuinely usable as a family car in a way most rivals in the price band are not: 545 litres of boot (1,670 with the 40/20/40 rear seats folded), a rear bench Chasing Cars rated a 'real highlight' for full-size adults, and a 1,100kg braked tow rating against the Megane E-Tech's 900kg",
     "Ride and refinement are the standout: reviewers describe the damping as smooth and sophisticated over urban bumps, a clear step away from the Megane E-Tech's much-criticised firmness on its 20-inch wheels",
     "Android Automotive with built-in Google Maps and Google Assistant, plus ADAS calibration that Australian reviewers say works quietly rather than beeping constantly -- a specific complaint they level at most Chinese rivals in this class",
@@ -16,17 +16,19 @@
     "Renault is a small-volume brand here distributed by Ateco, service pricing was still unconfirmed at launch, and the sister Megane E-Tech has already been cut $10,000 from its launch price -- a resale risk this car inherits"
   ],
   "sources": [
-    "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
     "https://www.renault.com.au/vehicles/scenic-e-tech/",
-    "https://www.renault.com.au/build-and-price/scenic-e-tech/",
+    "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
     "https://www.renault.com.au/special-offers/",
     "https://www.carexpert.com.au/car-news/2026-renault-scenic-e-tech-price-and-specs-french-ev-offers-600km-range-for-under-dollar60k",
     "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+    "https://www.carexpert.com.au/renault/scenic-e-tech/2026",
     "https://www.chasingcars.com.au/reviews/midsize-suvs/renault-scenic-e-tech-esprit-alpine-ev87-2026-review/",
-    "https://www.carsguide.com.au/renault/scenic-e-tech/2026",
+    "https://www.carsguide.com.au/renault/scenic-e-tech",
     "https://www.carsguide.com.au/renault/scenic-e-tech/price/2026",
-    "https://www.carsales.com.au/research/renault/scenic-e-tech/",
-    "https://evcentral.com.au/2026-renault-scenic-e-tech-review-french-electric-suv-brings-european-polish-to-australia-but-can-it-justify-the-price/"
+    "https://www.carsguide.com.au/car-news/bold-european-suv-returns-with-big-changes-100093",
+    "https://ev-database.org/car/3218/Renault-Scenic-E-Tech-EV60-170hp",
+    "https://ev-database.org/car/3219/Renault-Scenic-E-Tech-EV87-220hp",
+    "https://www.carbuyer.co.uk/renault/scenic/prices-specs/104305/160kw-esprit-alpine-87kwh-long-range-5dr-auto"
   ],
-  "sourcedAt": "2026-07-31"
+  "sourcedAt": "2026-11-27"
 }

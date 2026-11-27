@@ -1,0 +1,254 @@
+{
+  "familyId": "polestar-3",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "polestar-3-rear-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/configure/polestar-3/",
+        "note": "configurator (MY27, est. delivery Apr-May 2027) lists Rear motor, Dual motor and Performance as three drivetrain choices; prices only as state drive-away"
+      },
+      "listPrice": {
+        "value": 116700,
+        "basis": "sourced",
+        "url": "https://www.goauto.com.au/new-models/polestar/3/polestar-3-update-pricing-announced/2026-03-07/98657.html",
+        "note": "GoAuto 'from $116,700 + ORC', 'Pricing excludes on-road costs' (2026 MY27, 7 Mar 2026); CarExpert table 'Price before on-road costs' same figure (https://www.carexpert.com.au/car-news/2027-polestar-3-update-includes-faster-charging-new-motor); CarsGuide first drive 31 Jul 2026 same figure 'before on-road costs' (https://www.carsguide.com.au/ev/polestar-3-102286). No later change found. Polestar AU configurator shows state drive-away only, so not manufacturer-confirmed. CarsGuide's RedBook grid shows $4,550 more on every grade, discarded as a lead conflicting with its own editorial"
+      },
+      "batteryKwh": {
+        "value": 88,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3326/Polestar-3-Rear-Motor",
+        "note": "usable 88.0, gross 92.0 on the same page; Polestar AU spec states '92 kWh' capacity unlabelled. CarExpert variant page says 90 kWh usable; EV Database preferred as it states both figures"
+      },
+      "rangeKm": {
+        "value": 603,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU spec page WLTP 603 km, matching the configurator; standard wheel 20-inch Aero. EV Database WLTP TEL 604 km; March 2026 press figures were 604/635/593"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.6,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU WLTP 17.6-21.6 kWh/100km, low end (includes charging losses, hence ~21% above usable/range)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 484,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "484 L to the rear seat backs incl. 90 L underfloor (597 L to the roof); 23.8 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1411,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "1,411 L folded, measurement height unlabelled (possibly to roof); EV Database same"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3326/Polestar-3-Rear-Motor"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU 'Towing power up to 1,500 kg'; EV Database braked 1,500 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/warranty-and-service/",
+        "note": "'5 year vehicle warranty' (no km limit stated; reviews say unlimited km); battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 3000,
+        "basis": "judged",
+        "note": "judged; anchored to volvo-ex90-plus-single-motor ($106,990, 2700) and bmw-ix-xdrive45-m-sport ($142,900, 3200); held 3000 kept, price unchanged; Chasing Cars cites a Budget Direct median $1,831 that is a discounted online first-year quote, not used"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "Polestar brand curve, identical to polestar-4 and polestar-2 rows; evidence of soft residuals: repeated Polestar list-price cuts in 2026 and thin local volume"
+      }
+    },
+    "polestar-3-dual-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/configure/polestar-3/",
+        "note": "configurator (MY27, est. delivery Apr-May 2027) lists Rear motor, Dual motor and Performance as three drivetrain choices; prices only as state drive-away"
+      },
+      "listPrice": {
+        "value": 131100,
+        "basis": "sourced",
+        "url": "https://www.goauto.com.au/new-models/polestar/3/polestar-3-update-pricing-announced/2026-03-07/98657.html",
+        "note": "GoAuto 'from $131,100 + ORC', 'Pricing excludes on-road costs' (2026 MY27, 7 Mar 2026); CarExpert table 'Price before on-road costs' same figure (https://www.carexpert.com.au/car-news/2027-polestar-3-update-includes-faster-charging-new-motor); CarsGuide first drive 31 Jul 2026 same figure 'before on-road costs' (https://www.carsguide.com.au/ev/polestar-3-102286). No later change found. Polestar AU configurator shows state drive-away only, so not manufacturer-confirmed. CarsGuide's RedBook grid shows $4,550 more on every grade, discarded as a lead conflicting with its own editorial"
+      },
+      "batteryKwh": {
+        "value": 102,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3327/Polestar-3-Dual-Motor",
+        "note": "usable 102.0, gross 106.0 on the same page; Polestar AU spec states '106 kWh' capacity unlabelled. Chasing Cars (29 Jan 2026) called 106 kWh usable; contradicted by EV Database's paired gross 106 / usable 102"
+      },
+      "rangeKm": {
+        "value": 647,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU spec page WLTP 647 km, matching the configurator; standard wheel 20-inch Aero. EV Database WLTP TEL 647 km; March 2026 press figures were 604/635/593"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.1,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU WLTP 19.1-23.4 kWh/100km, low end (includes charging losses, hence ~21% above usable/range)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 484,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "484 L to the rear seat backs incl. 90 L underfloor (597 L to the roof); 23.8 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1411,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "1,411 L folded, measurement height unlabelled (possibly to roof); EV Database same"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3327/Polestar-3-Dual-Motor"
+      },
+      "towKg": {
+        "value": 2200,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU 'Towing power up to 2,200 kg'; EV Database braked 2,200 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/warranty-and-service/",
+        "note": "'5 year vehicle warranty' (no km limit stated; reviews say unlimited km); battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 3200,
+        "basis": "judged",
+        "note": "judged; anchored to volvo-ex90-ultra-twin-motor-performance ($134,990, 3150) and bmw-ix-xdrive45-m-sport ($142,900, 3200); held 3200 kept, price unchanged"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "Polestar brand curve, identical to polestar-4 and polestar-2 rows; evidence of soft residuals: repeated Polestar list-price cuts in 2026 and thin local volume"
+      }
+    },
+    "polestar-3-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/configure/polestar-3/",
+        "note": "configurator (MY27, est. delivery Apr-May 2027) lists Rear motor, Dual motor and Performance as three drivetrain choices; prices only as state drive-away; Performance is its own drivetrain (500 kW, 22-inch wheels, air suspension standard), not a pack on Dual motor, so it keeps its own row"
+      },
+      "listPrice": {
+        "value": 146700,
+        "basis": "sourced",
+        "url": "https://www.goauto.com.au/new-models/polestar/3/polestar-3-update-pricing-announced/2026-03-07/98657.html",
+        "note": "GoAuto 'from $146,700 + ORC', 'Pricing excludes on-road costs' (2026 MY27, 7 Mar 2026); CarExpert table 'Price before on-road costs' same figure (https://www.carexpert.com.au/car-news/2027-polestar-3-update-includes-faster-charging-new-motor); CarsGuide first drive 31 Jul 2026 same figure 'before on-road costs' (https://www.carsguide.com.au/ev/polestar-3-102286). No later change found. Polestar AU configurator shows state drive-away only, so not manufacturer-confirmed. CarsGuide's RedBook grid shows $4,550 more on every grade, discarded as a lead conflicting with its own editorial"
+      },
+      "batteryKwh": {
+        "value": 102,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3328/Polestar-3-Performance",
+        "note": "usable 102.0, gross 106.0 on the same page; Polestar AU spec states '106 kWh' capacity unlabelled."
+      },
+      "rangeKm": {
+        "value": 601,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU spec page WLTP 601 km, matching the configurator; standard wheel 22-inch Performance. EV Database WLTP TEL 601 km; March 2026 press figures were 604/635/593"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.6,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU WLTP 20.6-23.4 kWh/100km, low end (includes charging losses, hence ~21% above usable/range)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 484,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "484 L to the rear seat backs incl. 90 L underfloor (597 L to the roof); 23.8 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1411,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "1,411 L folded, measurement height unlabelled (possibly to roof); EV Database same"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3328/Polestar-3-Performance"
+      },
+      "towKg": {
+        "value": 2200,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/specifications/",
+        "note": "Polestar AU 'Towing power up to 2,200 kg'; EV Database braked 2,200 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.polestar.com/au/polestar-3/warranty-and-service/",
+        "note": "'5 year vehicle warranty' (no km limit stated; reviews say unlimited km); battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 3600,
+        "basis": "judged",
+        "note": "judged; anchored to bmw-ix-xdrive45-m-sport ($142,900, 3200) and volvo-ex90-ultra-twin-motor-performance ($134,990, 3150), loaded for 500 kW output and 22-inch wheels; held 3600 kept, price unchanged"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "Polestar brand curve, identical to polestar-4 and polestar-2 rows; evidence of soft residuals: repeated Polestar list-price cuts in 2026 and thin local volume"
+      }
+    }
+  },
+  "lowConfidence": [
+    "polestar-3-rear-motor.listPrice: press pricing from March 2026 (re-stated in July 2026 reviews); Polestar AU shows state drive-away only and the configurator fetch could not show a price, so not manufacturer-confirmed on the research date",
+    "polestar-3-dual-motor.listPrice: as above",
+    "polestar-3-performance.listPrice: as above",
+    "polestar-3-performance.insuranceAnnual: judged premium, loaded above bmw-ix for 500 kW output",
+    "polestar-3-dual-motor.insuranceAnnual: judged premium",
+    "polestar-3-rear-motor.insuranceAnnual: judged premium",
+    "polestar-3-rear-motor.batteryKwh: EV Database 88 usable vs CarExpert 90 usable",
+    "polestar-3-rear-motor.bootLitresSeatsDown: 1,411 L measurement height unlabelled, possibly to the roof (same on all rows)",
+    "polestar-3-dual-motor.bootLitresSeatsDown: as above",
+    "polestar-3-performance.bootLitresSeatsDown: as above",
+    "polestar-3-rear-motor.depreciationCurve: brand convention, judged"
+  ]
+}

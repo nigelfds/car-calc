@@ -1,0 +1,171 @@
+{
+  "familyId": "gac-aion-ut",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "gac-aion-ut-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/AION%20UT/2025",
+        "note": "GAC AU spec page lists Premium and Luxury; AU model page offers ordering with $1,000 deposit, Q4 2026 campaign live"
+      },
+      "listPrice": {
+        "value": 31990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-gac-aion-ut-pricing-ev-hatch-now-arriving-with-special-drive-away-offers",
+        "note": "CarExpert: $31,990 'before on-road costs' in words; CarsGuide price page (https://www.carsguide.com.au/gac/aion-ut/price/2026) gives the same MSRP excluding stamp duty. GAC's own AU site quotes only a Q4 2026 campaign drive-away (Premium from $31,990, orders 1 Oct-31 Dec 2026); RRP national drive-away per CarExpert review is $32,990, below the app's computed Vic drive-away ($34,214) because it is a flat national figure, so no back-out used"
+      },
+      "batteryKwh": {
+        "value": 60,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-eu/configuration/AION%20UT/2024",
+        "note": "GAC Europe: 'Net capacity 60 kWh (Gross: 62 kWh)', same 215/55 R17 car; EV Database agrees 60 usable / 62 nominal. Held 58 was wrong"
+      },
+      "rangeKm": {
+        "value": 430,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.gacgroup.com/en-au/configuration/AION%20UT/2025",
+        "note": "GAC AU spec 'WLTP 430km'; GAC Europe WLTP combined 430km on the same 17-inch wheel"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
+        "note": "WLTP rated 164 Wh/km (EV Database); CarExpert quotes claimed 16.4kWh/100km. Battery-to-range gives 14.0, 17% off, within tolerance (rated figure includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 321,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gac/aion-ut/2026/luxury/features-and-specs",
+        "note": "321L to the lower window (cover convention); GAC AU spec 'standard volume block method' 321/689. EU 440/1,600 is a different (to-roof) method"
+      },
+      "bootLitresSeatsDown": {
+        "value": 689,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gac/aion-ut/2026/luxury/features-and-specs",
+        "note": "689L seats folded to the lower window; matches GAC AU spec"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/AION%20UT/2025"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
+        "note": "EV Database: no tow hitch, braked 0kg; GAC AU spec lists no towing capacity"
+      },
+      "warrantyYears": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gac-aion-ut-luxury-review",
+        "note": "8yr/unlimited km vehicle warranty; only the 5yr roadside is conditional on GAC-network servicing"
+      },
+      "insuranceAnnual": {
+        "value": 1350,
+        "basis": "judged",
+        "note": "anchored to byd-dolphin-premium $1,400 at $36,990 and mg-4-urban-54 $1,300 at $32,735; Luxury +$100 for the $4,000 step"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one GAC brand curve shared with gac-aion-v: steeper than mainstream default for a new brand with no AU resale history, ~30 dealers and repeated drive-away campaigns (launch $30,990 d/a, Q4 2026 $31,990 d/a)"
+      }
+    },
+    "gac-aion-ut-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/AION%20UT/2025",
+        "note": "GAC AU spec page lists Premium and Luxury; AU model page offers ordering with $1,000 deposit, Q4 2026 campaign live"
+      },
+      "listPrice": {
+        "value": 35990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-gac-aion-ut-pricing-ev-hatch-now-arriving-with-special-drive-away-offers",
+        "note": "CarExpert: $35,990 'before on-road costs' in words; CarsGuide price page (https://www.carsguide.com.au/gac/aion-ut/price/2026) gives the same MSRP excluding stamp duty. GAC's own AU site quotes only a Q4 2026 campaign drive-away (Premium from $31,990, orders 1 Oct-31 Dec 2026); RRP national drive-away per CarExpert review is $37,590, below the app's computed Vic drive-away ($38,382) because it is a flat national figure, so no back-out used"
+      },
+      "batteryKwh": {
+        "value": 60,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-eu/configuration/AION%20UT/2024",
+        "note": "GAC Europe: 'Net capacity 60 kWh (Gross: 62 kWh)', same 215/55 R17 car; EV Database agrees 60 usable / 62 nominal. Held 58 was wrong"
+      },
+      "rangeKm": {
+        "value": 430,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.gacgroup.com/en-au/configuration/AION%20UT/2025",
+        "note": "GAC AU spec 'WLTP 430km'; GAC Europe WLTP combined 430km on the same 17-inch wheel"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
+        "note": "WLTP rated 164 Wh/km (EV Database); CarExpert quotes claimed 16.4kWh/100km. Battery-to-range gives 14.0, 17% off, within tolerance (rated figure includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 321,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gac/aion-ut/2026/luxury/features-and-specs",
+        "note": "321L to the lower window (cover convention); GAC AU spec 'standard volume block method' 321/689. EU 440/1,600 is a different (to-roof) method"
+      },
+      "bootLitresSeatsDown": {
+        "value": 689,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gac/aion-ut/2026/luxury/features-and-specs",
+        "note": "689L seats folded to the lower window; matches GAC AU spec"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/AION%20UT/2025"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
+        "note": "EV Database: no tow hitch, braked 0kg; GAC AU spec lists no towing capacity"
+      },
+      "warrantyYears": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gac-aion-ut-luxury-review",
+        "note": "8yr/unlimited km vehicle warranty; only the 5yr roadside is conditional on GAC-network servicing"
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "anchored to byd-dolphin-premium $1,400 at $36,990 and mg-4-urban-54 $1,300 at $32,735; Luxury +$100 for the $4,000 step"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one GAC brand curve shared with gac-aion-v: steeper than mainstream default for a new brand with no AU resale history, ~30 dealers and repeated drive-away campaigns (launch $30,990 d/a, Q4 2026 $31,990 d/a)"
+      }
+    }
+  },
+  "lowConfidence": [
+    "gac-aion-ut-premium.depreciationCurve: judged GAC brand curve, no Australian resale data",
+    "gac-aion-ut-luxury.depreciationCurve: judged GAC brand curve, no Australian resale data",
+    "gac-aion-ut-premium.insuranceAnnual: judged from BYD Dolphin / MG 4 anchors",
+    "gac-aion-ut-luxury.insuranceAnnual: judged from BYD Dolphin / MG 4 anchors",
+    "gac-aion-ut-luxury.listPrice: $35,990 plus on-roads from CarExpert (March/review) and CarsGuide MSRP; GAC's own site shows only the Premium campaign drive-away, and CarExpert's spec page labels $35,990 as drive-away",
+    "gac-aion-ut-premium.listPrice: GAC site quotes only campaign drive-away $31,990 (= list); list sourced from CarExpert/CarsGuide"
+  ]
+}

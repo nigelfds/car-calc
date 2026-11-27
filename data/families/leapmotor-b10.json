@@ -5,7 +5,7 @@
     "Cheapest way into a new electric SUV in Australia at $37,888 list, several thousand under a BYD Atto 3 Essential and a Geely EX5 Complete, with a 14.6-inch screen, panoramic roof, wireless charging and 360-degree cameras standard on the base Style",
     "Rear-wheel drive with Maserati-influenced suspension tuning — carsales rated it 'one of the best value and most engaging small electric SUVs' at 81/100 and CarsGuide gave 7.4/10, both singling out ride and handling as ahead of the class",
     "Apple CarPlay and Android Auto are fitted, unlike the Leapmotor C10, which still has neither on any grade",
-    "The $40,888 Design LR steps up to a 67.1kWh pack, 434km WLTP and 168kW DC charging (30-80% in about 18 minutes) against the Style's 56.2kWh and 140kW, for $3,000",
+    "The $40,888 Design LR steps up to a 67.1kWh pack (about 65kWh usable), 434km WLTP and 168kW DC charging against the Style's 56.2kWh (about 55kWh usable), 361km and 140kW, for $3,000; both charge 30-80% in about 20 minutes",
     "Eight years of capped-price servicing at roughly $370 per visit on 12-month/20,000km intervals, plus eight years of roadside assistance and a five-star ANCAP rating"
   ],
   "cons": [
@@ -13,20 +13,23 @@
     "Standard Linglong eco tyres were criticised by RACQ, carsales and CarsGuide alike for squealing and losing grip early under brakes, which reviewers say squanders the chassis the car is otherwise praised for",
     "Lane-keep assist is intrusive enough that multiple Australian reviewers disable it every drive, and there are no physical controls — mirrors, vents and most functions live in the touchscreen",
     "Six-year/150,000km warranty is unconditional but trails the seven years offered by Kia, MG, Geely and Chery in the same price bracket, after Leapmotor cut the term from seven years for MY25",
-    "Resale is the open risk: Leapmotor has around 20 Australian dealers, almost no local resale history, and launched the B10 on a $38,990 national drive-away offer that sat below the true on-road cost"
+    "Resale is the open risk: Leapmotor has around 20 Australian dealers and almost no local resale history, launched the B10 on a $38,990 national drive-away offer that sat below the true on-road cost, and kept discounting the Style to that figure through September 2026"
   ],
   "sources": [
-    "https://www.carsguide.com.au/ev/leapmotor-b10-100848",
-    "https://www.carsguide.com.au/ev/leapmotor-b10-style-100861",
-    "https://www.racq.com.au/articles/car-reviews/leapmotor-b10-design-long-range-my26-review",
-    "https://www.mynrma.com.au/open-road/car-reviews/leapmotor/2026-leapmotor-b10-review",
-    "https://www.carsales.com.au/editorial/details/leapmotor-b10-2026-review-151612/",
+    "https://www.leapmotor.net/au/b10",
+    "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+    "https://www.leapmotor.net/en-au/offers",
+    "https://www.leapmotor.net/en-au/services-for-you/maintenance-and-warranty",
+    "https://www.carexpert.com.au/leapmotor/b10/2026-style-suv-rwd-electric-jsgwmwkf20260410",
+    "https://www.carexpert.com.au/leapmotor/b10/2026-design-lr-suv-rwd-electric-jsgwmwka20260410",
+    "https://www.carexpert.com.au/car-news/leapmotor-deals-chinese-brand-slashes-thousands-off-b10-c10-evs-and-erevs",
     "https://www.carexpert.com.au/car-reviews/2026-leapmotor-b10-review",
     "https://www.carexpert.com.au/car-news/2026-leapmotor-b10-becomes-australias-cheapest-electric-suv",
-    "https://www.carexpert.com.au/car-news/2026-leapmotor-b10-hybrid-ev-prices-chinese-brands-smallest-ev-in-australia-gets-a-petrol-engine",
-    "https://www.carexpert.com.au/car-news/leapmotor-b10-gets-bigger-battery-800v-tech-and-more-range",
-    "https://www.carexpert.com.au/car-news/leapmotor-winds-back-warranty-for-its-tesla-model-y-rival",
-    "https://www.carsguide.com.au/leapmotor/b10/towing-capacity/2026"
+    "https://www.carsguide.com.au/ev/leapmotor-b10-style-100861",
+    "https://carsguide.com.au/ev/leapmotor-b10-design-lr-100862",
+    "https://www.carsguide.com.au/leapmotor/b10/towing-capacity/2026",
+    "https://ev-database.org/car/3232/Leapmotor-B10-562-kWh",
+    "https://ev-database.org/uk/car/3233/Leapmotor-B10-671-kWh"
   ],
-  "sourcedAt": "2026-07-31"
+  "sourcedAt": "2026-11-27"
 }

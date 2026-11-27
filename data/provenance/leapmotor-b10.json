@@ -1,0 +1,177 @@
+{
+  "familyId": "leapmotor-b10",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "leapmotor-b10-style": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/au/b10",
+        "note": "Leapmotor AU B10 page lists the BEV in two grades, Style and Design LR, with the MY26 buyer's guide; Leapmotor AU has no public configurator with prices (the /en-au/pricing calculator renders client-side). Offers page (https://www.leapmotor.net/en-au/offers) runs a BEV wall-charger offer on B10s purchased and delivered 1 Oct to 31 Dec 2026, confirming the BEV is on sale. Hybrid EV (REEV) Style/Design excluded as range-extenders."
+      },
+      "listPrice": {
+        "value": 37888,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/leapmotor-deals-chinese-brand-slashes-thousands-off-b10-c10-evs-and-erevs",
+        "note": "CarExpert deals roundup (31 Jul 2026): B10 EV Style 'from $37,888 plus on-road costs' (alongside a $38,990 D/A campaign for 1 Jul-30 Sep 2026, now expired). CarExpert spec page (live 2026-11-27, https://www.carexpert.com.au/leapmotor/b10/2026-style-suv-rwd-electric-jsgwmwkf20260410) 'prices starting at $37,888 before on-road costs'; CarsGuide Style review (21 Feb 2026, https://www.carsguide.com.au/ev/leapmotor-b10-style-100861) 'Starting from $37,888 before on-road costs'. No manufacturer price page is published. Victorian drive-away via calc/onroad.js: $40,359; the expired $38,990 D/A offer sat below that, i.e. a discounted campaign."
+      },
+      "batteryKwh": {
+        "value": 55,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3232/Leapmotor-B10-562-kWh",
+        "note": "usable, EV Database estimate (asterisked as estimated); nominal 56.2 kWh is the figure Leapmotor AU prints (unlabelled, gross) on the B10 page and MY26 buyer's guide (https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf). Same pack as the European car (LFP, 140 kW DC)."
+      },
+      "rangeKm": {
+        "value": 361,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+        "note": "Leapmotor AU MY26 buyer's guide: EV range up to 361 km (WLTP), same table gives NEDC/ADR 81/02 up to 442 km (higher, rejected per direction test). 18-inch wheels on both grades, so the 'up to' figure is the local wheel."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.2,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+        "note": "Leapmotor AU MY26 buyer's guide: 172 Wh/km WLTP (includes charging losses); usable/range gives 15.2, within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+        "note": "Leapmotor AU buyer's guide: rear cargo volume behind 2nd row 490 L (BEV). CarExpert spec page labels 490 L 'to lower window', i.e. to the cargo cover. EV Database's 430 L is a European figure, not used. No frunk added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1475,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+        "note": "Leapmotor AU buyer's guide: behind 1st row 1,475 L (BEV)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/leapmotor/b10/2026-style-suv-rwd-electric-jsgwmwkf20260410",
+        "note": "5 seats (2+3)"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/leapmotor/b10/towing-capacity/2026",
+        "note": "CarsGuide 2026 towing table: Style and Design LR electric 0 kg braked (REEV 750 kg). Leapmotor AU buyer's guide lists no towing figure. EV Database gives 750 kg for the European BEV, which is not the Australian rating."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/services-for-you/maintenance-and-warranty",
+        "note": "Leapmotor AU: vehicle warranty 6 years/150,000 km, battery 8 years/160,000 km; buyer's guide agrees. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "held figure kept; anchored to byd-atto3-essential ($39,990, $1,500), mg-s5-essence-49 ($39,453, $1,500), geely-ex5-complete ($41,990, $1,600) and leapmotor-c10-style ($45,888, $1,700)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.59,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "Leapmotor brand curve [1, 0.72, 0.59, 0.5, 0.43, 0.37], the curve held on leapmotor-c10 Style and Design LR; chosen as the single Leapmotor curve per owner convention. Below mainstream for thin local volume (~20 dealers), no resale history, heavy drive-away campaigning on B10 and C10, and a 7-to-6-year warranty cut."
+      }
+    },
+    "leapmotor-b10-design-lr": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/au/b10",
+        "note": "Leapmotor AU B10 page lists the BEV in two grades, Style and Design LR, with the MY26 buyer's guide; Leapmotor AU has no public configurator with prices (the /en-au/pricing calculator renders client-side). Offers page (https://www.leapmotor.net/en-au/offers) runs a BEV wall-charger offer on B10s purchased and delivered 1 Oct to 31 Dec 2026, confirming the BEV is on sale. Hybrid EV (REEV) Style/Design excluded as range-extenders."
+      },
+      "listPrice": {
+        "value": 40888,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/leapmotor/b10/2026-design-lr-suv-rwd-electric-jsgwmwka20260410",
+        "note": "CarExpert spec page (live 2026-11-27): 'prices starting at $40,888 before on-road costs', with a separate $45,132 Sydney drive-away estimate. CarsGuide Design LR review (23 Feb 2026, https://carsguide.com.au/ev/leapmotor-b10-design-lr-100862): 'Starting from $40,888, before on-road costs', $40,888 MSRP. No manufacturer price page is published; the Oct-Dec 2026 Leapmotor offer for the BEV is a free wall charger, not a price. Victorian drive-away via calc/onroad.js: $43,485."
+      },
+      "batteryKwh": {
+        "value": 65,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3233/Leapmotor-B10-671-kWh",
+        "note": "usable, EV Database estimate (asterisked as estimated); nominal 67.1 kWh is the figure Leapmotor AU prints (unlabelled, gross) on the B10 page and MY26 buyer's guide (https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf). Same pack as the European car (LFP, 168 kW DC)."
+      },
+      "rangeKm": {
+        "value": 434,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+        "note": "Leapmotor AU MY26 buyer's guide: EV range up to 434 km (WLTP), same table gives NEDC/ADR 81/02 up to 516 km (higher, rejected per direction test). 18-inch wheels on both grades, so the 'up to' figure is the local wheel."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.3,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+        "note": "Leapmotor AU MY26 buyer's guide: 173 Wh/km WLTP (includes charging losses); usable/range gives 15.0, within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+        "note": "Leapmotor AU buyer's guide: rear cargo volume behind 2nd row 490 L (BEV). CarExpert spec page labels 490 L 'to lower window', i.e. to the cargo cover. EV Database's 430 L is a European figure, not used. No frunk added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1475,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+        "note": "Leapmotor AU buyer's guide: behind 1st row 1,475 L (BEV)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/leapmotor/b10/2026-design-lr-suv-rwd-electric-jsgwmwka20260410",
+        "note": "5 seats (2+3)"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/leapmotor/b10/towing-capacity/2026",
+        "note": "CarsGuide 2026 towing table: Style and Design LR electric 0 kg braked (REEV 750 kg). Leapmotor AU buyer's guide lists no towing figure. EV Database gives 750 kg for the European BEV, which is not the Australian rating."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/services-for-you/maintenance-and-warranty",
+        "note": "Leapmotor AU: vehicle warranty 6 years/150,000 km, battery 8 years/160,000 km; buyer's guide agrees. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "held figure kept; anchored to byd-atto3-essential ($39,990, $1,500), mg-s5-essence-49 ($39,453, $1,500), geely-ex5-complete ($41,990, $1,600) and leapmotor-c10-style ($45,888, $1,700)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.59,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "Leapmotor brand curve [1, 0.72, 0.59, 0.5, 0.43, 0.37], the curve held on leapmotor-c10 Style and Design LR; chosen as the single Leapmotor curve per owner convention. Below mainstream for thin local volume (~20 dealers), no resale history, heavy drive-away campaigning on B10 and C10, and a 7-to-6-year warranty cut."
+      }
+    }
+  },
+  "lowConfidence": [
+    "leapmotor-b10-style.listPrice: no manufacturer price source exists (no public AU configurator or price list); $37,888 from CarExpert and CarsGuide \"before/plus on-road costs\", latest dated mention 31 Jul 2026, live CarExpert spec page on research date",
+    "leapmotor-b10-design-lr.listPrice: as for Style; $40,888 from CarExpert spec page and CarsGuide (Feb 2026), no manufacturer confirmation",
+    "leapmotor-b10-style.batteryKwh: 55.0 usable is an EV Database estimate; Leapmotor publishes only 56.2 (gross)",
+    "leapmotor-b10-design-lr.batteryKwh: 65.0 usable is an EV Database estimate; Leapmotor publishes only 67.1 (gross)",
+    "leapmotor-b10-style.towKg: 0 kg from CarsGuide only; manufacturer AU spec silent; Europe rates the BEV 750 kg",
+    "leapmotor-b10-design-lr.towKg: as for Style",
+    "leapmotor-b10-style.insuranceAnnual: judged",
+    "leapmotor-b10-design-lr.insuranceAnnual: judged",
+    "leapmotor-b10-style.depreciationCurve: judged brand curve",
+    "leapmotor-b10-design-lr.depreciationCurve: judged brand curve"
+  ]
+}

@@ -7,17 +7,24 @@
     "variant": "Select RWD",
     "bodyType": "SUV",
     "listPrice": 65990,
-    "batteryKwh": 73,
+    "batteryKwh": 72.6,
     "rangeKm": 470,
     "consumptionKwhPer100km": 18.5,
     "bootLitresSeatsUp": 402,
-    "bootLitresSeatsDown": 1420,
+    "bootLitresSeatsDown": 800,
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 1900,
-    "depreciationCurve": [1, 0.68, 0.56, 0.47, 0.4, 0.35],
-    "sourcedAt": "2026-07-27"
+    "depreciationCurve": [
+      1,
+      0.75,
+      0.64,
+      0.56,
+      0.49,
+      0.43
+    ],
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "ford-mustang-mach-e-premium",
@@ -31,13 +38,20 @@
     "rangeKm": 600,
     "consumptionKwhPer100km": 17.7,
     "bootLitresSeatsUp": 402,
-    "bootLitresSeatsDown": 1420,
+    "bootLitresSeatsDown": 800,
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.68, 0.56, 0.47, 0.4, 0.35],
-    "sourcedAt": "2026-07-27"
+    "depreciationCurve": [
+      1,
+      0.75,
+      0.64,
+      0.56,
+      0.49,
+      0.43
+    ],
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "ford-mustang-mach-e-gt",
@@ -51,12 +65,19 @@
     "rangeKm": 515,
     "consumptionKwhPer100km": 21,
     "bootLitresSeatsUp": 402,
-    "bootLitresSeatsDown": 1420,
+    "bootLitresSeatsDown": 800,
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 2800,
-    "depreciationCurve": [1, 0.66, 0.54, 0.45, 0.38, 0.33],
-    "sourcedAt": "2026-07-27"
+    "depreciationCurve": [
+      1,
+      0.75,
+      0.64,
+      0.56,
+      0.49,
+      0.43
+    ],
+    "sourcedAt": "2026-11-27"
   }
 ]

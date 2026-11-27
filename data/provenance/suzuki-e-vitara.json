@@ -1,0 +1,173 @@
+{
+  "familyId": "suzuki-e-vitara",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "suzuki-e-vitara-motion": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/",
+        "note": "e VITARA Motion listed with a 'From' drive-away price on Suzuki AU model page on 2026-11-27, with a Build & Price link (/vehicles/electric/e-vitara/build-and-price/); the configurator's price data could not be fetched (permission refused), so grade count also checked against Suzuki AU offers page and CarsGuide 2027 price list (Ultra 2WD is Qld-only)"
+      },
+      "listPrice": {
+        "value": 47990,
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/offers/e-vitara-motion/",
+        "note": "Suzuki AU Black Friday offer (ends 30 Nov 2026) for Motion in Bluish Black Pearl: 'Offer provides 10% off the Manufacturer's Recommended Retail Price (RRP)', 'Save $4,874'. With $745 premium paint (CarExpert launch article) 10% x ($47,990 + $745) = $4,873.5, rounding to $4,874. Same $47,990 is Glass's MSRP on https://www.carsguide.com.au/suzuki/e-vitara/price/2027 ('excludes costs such as stamp duty, other government charges and options'). Suzuki publishes no list price in words; its advertised drive-away is $46,990 (https://www.suzuki.com.au/vehicles/electric/e-vitara/), BELOW app-computed Vic drive-away of $50,886 — a Suzuki-funded drive-away campaign, not a list price. Lead of $49,990/$58,990 drive-away not found on any current Suzuki page."
+      },
+      "batteryKwh": {
+        "value": 47.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3211/Suzuki-e-VITARA-49-kWh-2WD",
+        "note": "EV Database usable 47.8 kWh, nominal (gross) 48.8 kWh on the same page; Suzuki AU spec page gives '49 kWh total' (gross)"
+      },
+      "rangeKm": {
+        "value": 344,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/",
+        "note": "Suzuki AU model page 344 km, footnoted WLTP; EV Database WLTP 214 mi = 344 km, 18-inch wheels standard on both AU grades"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3211/Suzuki-e-VITARA-49-kWh-2WD",
+        "note": "EV Database WLTP rated consumption 240 Wh/mi = 14.9 kWh/100km; Suzuki UK lists 14.9-16.6 kWh/100km. Implied usable/range 13.9, within tolerance"
+      },
+      "bootLitresSeatsUp": {
+        "value": 244,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-suzuki-e-vitara-review-quick-drive",
+        "note": "CarExpert quick drive: FWD 'just 244 litres' rear bench fully back, 310 L slid forward; Suzuki AU model page '244 L# with seats fully back', VDA method (to the parcel shelf). Seats-back figure used"
+      },
+      "bootLitresSeatsDown": {
+        "value": 562,
+        "basis": "sourced",
+        "url": "https://cars.suzuki.co.uk/new-cars/e-vitara/",
+        "note": "Suzuki UK 'up to 562 litres' rear seats folded (method not named; EV Database also 562). Suzuki global states VDA method; whether this folded figure is to belt line or roof is unconfirmed. Same figure used for both grades"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/specifications/"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/specifications/",
+        "note": "Suzuki AU specifications, braked 750 kg both grades"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/",
+        "note": "Suzuki AU: new car warranty 5 years unlimited km, unconditional; battery 8 yr/160,000 km separately"
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "anchored to kia-ev3-air-standard ($47,600, $1,450) and mg-s5 rows ($1,500-1,600); held value kept"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Single Suzuki brand curve (only Suzuki rows held), below mainstream default and matching byd-atto2: thin volume for a new EV nameplate and sustained discounting — drive-away offers below RRP plus on-roads since launch and a further 10%-off-RRP Black Friday offer in Nov 2026"
+      }
+    },
+    "suzuki-e-vitara-ultra": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/",
+        "note": "e VITARA Ultra listed with a 'From' drive-away price on Suzuki AU model page on 2026-11-27, with a Build & Price link (/vehicles/electric/e-vitara/build-and-price/); the configurator's price data could not be fetched (permission refused), so grade count also checked against Suzuki AU offers page and CarsGuide 2027 price list (Ultra 2WD is Qld-only)"
+      },
+      "listPrice": {
+        "value": 56990,
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/offers/e-vitara-ultra/",
+        "note": "Suzuki AU Black Friday offer (ends 30 Nov 2026) for Ultra in Bluish Black Pearl: 'Offer provides 10% off the Manufacturer's Recommended Retail Price (RRP)', 'Save $5,774'. With $745 premium paint (CarExpert launch article) 10% x ($56,990 + $745) = $5,773.5, rounding to $5,774. Same $56,990 is Glass's MSRP on https://www.carsguide.com.au/suzuki/e-vitara/price/2027 ('excludes costs such as stamp duty, other government charges and options'). Suzuki publishes no list price in words; its advertised drive-away is $56,990 (https://www.suzuki.com.au/vehicles/electric/e-vitara/), BELOW app-computed Vic drive-away of $60,264 — a Suzuki-funded drive-away campaign, not a list price. Lead of $49,990/$58,990 drive-away not found on any current Suzuki page."
+      },
+      "batteryKwh": {
+        "value": 59.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3213/Suzuki-e-VITARA-61-kWh-4WD-AllGrip",
+        "note": "EV Database usable 59.8 kWh, nominal (gross) 61.1 kWh on the same page; Suzuki AU spec page gives '61 kWh total' (gross)"
+      },
+      "rangeKm": {
+        "value": 395,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/",
+        "note": "Suzuki AU model page 395 km, footnoted WLTP; EV Database WLTP 245 mi = 394 km, 18-inch wheels standard on both AU grades"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.6,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3213/Suzuki-e-VITARA-61-kWh-4WD-AllGrip",
+        "note": "EV Database WLTP rated consumption 267 Wh/mi = 16.6 kWh/100km; Suzuki UK lists 14.9-16.6 kWh/100km. Implied usable/range 15.1, within tolerance"
+      },
+      "bootLitresSeatsUp": {
+        "value": 238,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-suzuki-e-vitara-review-quick-drive",
+        "note": "CarExpert quick drive: AWD 238 L rear bench fully back, 306 L slid forward (FWD 244/310); Suzuki AU page quotes only the 244/310 figures. Seats-back figure used"
+      },
+      "bootLitresSeatsDown": {
+        "value": 562,
+        "basis": "sourced",
+        "url": "https://cars.suzuki.co.uk/new-cars/e-vitara/",
+        "note": "Suzuki UK 'up to 562 litres' rear seats folded (method not named; EV Database also 562). Suzuki global states VDA method; whether this folded figure is to belt line or roof is unconfirmed. Same figure used for both grades"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/specifications/"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/specifications/",
+        "note": "Suzuki AU specifications, braked 750 kg both grades"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.suzuki.com.au/vehicles/electric/e-vitara/",
+        "note": "Suzuki AU: new car warranty 5 years unlimited km, unconditional; battery 8 yr/160,000 km separately"
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "anchored to kia-ev3-earth-long-range ($58,600, $1,700) and jeep-avenger-limited ($54,990, $1,750), shaded down for Suzuki's lower repair costs; held value kept"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Single Suzuki brand curve (only Suzuki rows held), below mainstream default and matching byd-atto2: thin volume for a new EV nameplate and sustained discounting — drive-away offers below RRP plus on-roads since launch and a further 10%-off-RRP Black Friday offer in Nov 2026"
+      }
+    }
+  },
+  "lowConfidence": [
+    "suzuki-e-vitara-motion.listPrice: Suzuki states no RRP in words; $47,990 is implied by its '10% off RRP' saving ($4,874, with $745 paint) and matched by Glass's MSRP via CarsGuide. Suzuki's own advertised drive-away ($46,990) is below this list price, so the app's computed Vic drive-away (~$50,886) overstates what buyers are actually offered by ~$3,900",
+    "suzuki-e-vitara-ultra.listPrice: same derivation ($5,774 saving); RRP $56,990 equals Suzuki's advertised $56,990 drive-away, so the app's ~$60,264 computed drive-away overstates the current offer by ~$3,270",
+    "suzuki-e-vitara-ultra.bootLitresSeatsDown: 562 L is Suzuki UK's 'up to' figure, likely the FWD; the AWD folded figure is unpublished and may be slightly lower; folded measurement basis (belt line vs roof) unconfirmed",
+    "suzuki-e-vitara-motion.bootLitresSeatsDown: 562 L measurement basis (belt line vs roof) unconfirmed",
+    "suzuki-e-vitara-ultra.insuranceAnnual: judged",
+    "suzuki-e-vitara-motion.insuranceAnnual: judged",
+    "suzuki-e-vitara-motion.depreciationCurve: judged brand curve",
+    "suzuki-e-vitara-ultra.depreciationCurve: judged brand curve"
+  ]
+}

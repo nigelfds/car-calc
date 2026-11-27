@@ -11,7 +11,7 @@
     "batteryKwh": 23.9,
     "rangeKm": 90,
     "consumptionKwhPer100km": 26.6,
-    "combinedRangeKm": 850,
+    "combinedRangeKm": 851,
     "fuelConsumptionL100km": 10.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -21,8 +21,15 @@
     "towKg": 3000,
     "warrantyYears": 6,
     "insuranceAnnual": 2350,
-    "depreciationCurve": [1, 0.65, 0.53, 0.44, 0.37, 0.31],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.65,
+      0.53,
+      0.44,
+      0.37,
+      0.31
+    ],
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "denza-b5-leopard",
@@ -36,7 +43,7 @@
     "batteryKwh": 23.9,
     "rangeKm": 90,
     "consumptionKwhPer100km": 26.6,
-    "combinedRangeKm": 850,
+    "combinedRangeKm": 851,
     "fuelConsumptionL100km": 10.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -46,7 +53,14 @@
     "towKg": 3000,
     "warrantyYears": 6,
     "insuranceAnnual": 2450,
-    "depreciationCurve": [1, 0.64, 0.52, 0.43, 0.36, 0.3],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.65,
+      0.53,
+      0.44,
+      0.37,
+      0.31
+    ],
+    "sourcedAt": "2026-11-27"
   }
 ]

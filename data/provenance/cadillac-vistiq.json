@@ -1,0 +1,28 @@
+{
+  "familyId": "cadillac-vistiq",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "cadillac-vistiq-platinum": {
+      "availability": { "basis": "sourced", "url": "https://www.cadillacanz.com/au-en/vistiq-electric-suv", "note": "Cadillac AU Vistiq page (fetched with curl; WebFetch got 403) links Build & Price for the single Platinum grade and serves the MY27 Platinum spec sheet. The configurator at shop.cadillacanz.com is a script-only app whose price could not be read (reading its bundle was refused by a permission check). One grade agrees with CarExpert and CarsGuide launch reviews." },
+      "listPrice": { "value": 116000, "basis": "sourced", "url": "https://www.carexpert.com.au/car-news/2026-cadillac-vistiq-price-and-specs", "note": "'$116,000 before on-road costs' in words; same in CarExpert review and CarsGuide review (both re-opened 2026-11-27). CarsGuide model page lists MY2027 at $116,000. No manufacturer price page readable; no price change or offer found for MY27." },
+      "batteryKwh": { "value": 91, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/vistiq/1generation/351198/", "note": "usable: ADAC lists 95.0 kWh gross / 91.0 kWh net for the European Platinum AWD 6-seat on 295/40R22; EV Database (ev-database.org/car/3267) gives 95.0 nominal / 91.0 usable. Cadillac AU MY27 spec sheet: '91 kWh' rated energy, same pack." },
+      "rangeKm": { "value": 461, "basis": "sourced", "standard": "WLTP", "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/2026/vistiq/vistiq-specification/Specifications-MY27-VISTIQ-Platinum-(3).pdf", "note": "Cadillac AU MY27 spec sheet: 461 km combined, footnoted as WLTP. Direction test: European WLTP 460 km (ADAC, Cadillac Sweden press spec) - consistent, not NEDC. Single wheel (22-inch)." },
+      "consumptionKwhPer100km": { "value": 22, "basis": "sourced", "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/2026/vistiq/vistiq-specification/Specifications-MY27-VISTIQ-Platinum-(3).pdf", "note": "Cadillac AU MY27 spec sheet 22.0 kWh/100 km (WLTP, grid-side); ADAC 21.8. Battery/range = 19.7, 11.5% under, within tolerance (charging losses)." },
+      "bootLitresSeatsUp": { "value": 297, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/vistiq/1generation/351198/", "note": "behind third row, to the window line (owner's to-the-cover convention). Same 297 L in Cadillac Sweden press spec (mb.cision.com/Public/9762/4156141/91da5f56ade692b8.pdf), plus 61 L underfloor not added. Cadillac AU spec sheet's 430 L is the US SAE to-the-roof figure (15.2 cu ft); replaced held 430." },
+      "bootLitresSeatsDown": { "value": 1658, "basis": "judged", "note": "second and third rows folded, to the window line: unpublished. Scaled from Cadillac AU's SAE to-the-roof 2271 L (to first row) by the car's own window/roof ratio behind the second row, 889 L (Cadillac Sweden/ADAC, window) / 1218 L (Cadillac AU, SAE) = 0.730; 2271 x 0.730 = 1658. Replaced held 2271 (to the roof)." },
+      "seats": { "value": 6, "basis": "sourced", "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/2026/vistiq/vistiq-specification/Specifications-MY27-VISTIQ-Platinum-(3).pdf", "note": "'6-passenger seating with 2nd row Captain's Chairs'" },
+      "towKg": { "value": 2000, "basis": "sourced", "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/vistiq/1generation/351198/", "note": "braked, European 91 kWh Platinum 6-seat (12% gradient); Cadillac Sweden press spec also 'Max slapvagnsvikt 2 000 kg'. Cadillac AU spec sheet gives no towing figure. Choice AU lists 2268 kg, which equals the US 5,000 lb rating for the 102 kWh car and is likely copied from it; held value was 2268. Took the manufacturer figure for the pack and spec Australia gets." },
+      "warrantyYears": { "value": 5, "basis": "sourced", "url": "https://www.cadillacanz.com/au-en/ownership-warranty", "note": "'Bumper to Bumper 5 Years Unlimited km'; battery 8 years/160,000 km separately" },
+      "insuranceAnnual": { "value": 3000, "basis": "judged", "note": "anchored to volvo-ex90 rows ($2,700 at $106,990; $3,150 at $134,990), kia-ev9-gt-line-awd ($2,700 at $121,000) and bmw-ix ($3,200 at $142,900); at $116,000 with a thin parts/repair network, $3,000. Unchanged from held." },
+      "depreciationCurve": { "value": [1, 0.66, 0.54, 0.45, 0.38, 0.32], "basis": "judged", "note": "Proposed single Cadillac brand curve (owner rule: one curve per brand). Chose the held Vistiq curve, the middle of the three held Cadillac curves (Lyriq 0.31, Optiq 0.33 at year 5) and identical to volvo-ex90. Evidence for steeper-than-mainstream: thin local volume and dealer network, Lyriq's permanent $32,000 cut in 2026. Lyriq and Optiq rows should be aligned to this curve." }
+    }
+  },
+  "lowConfidence": [
+    "cadillac-vistiq-platinum.bootLitresSeatsDown: judged, scaled from US to-the-roof 2271 L by the car's own window/roof ratio; no to-the-belt-line figure published",
+    "cadillac-vistiq-platinum.towKg: no Australian manufacturer figure; 2000 kg is Cadillac Europe's rating for the same 91 kWh car, Choice AU says 2268 kg (US rating)",
+    "cadillac-vistiq-platinum.listPrice: manufacturer configurator unreadable; $116,000 from CarExpert/CarsGuide 'before on-road costs', unchanged since launch, MY27 price not confirmed on a Cadillac page",
+    "cadillac-vistiq-platinum.depreciationCurve: judged brand curve; Lyriq/Optiq currently on different curves",
+    "cadillac-vistiq-platinum.insuranceAnnual: judged"
+  ]
+}

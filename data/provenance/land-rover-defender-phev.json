@@ -1,0 +1,217 @@
+{
+  "familyId": "land-rover-defender-phev",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "land-rover-defender-phev-110-p300e-x-dynamic-se": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/land-rover/defender/2027-x-dynamic-se-2l-suv-4x4-electric-jsgsofsw20260703",
+        "note": "CarExpert MY27 variant page: 2.0L electric 110 X-Dynamic SE 'released to the Australian market on 5th July 2026' with a price; CarExpert MY27 line-up article lists exactly two P300e grades (110 X-Dynamic SE, X-Dynamic HSE), none on 90 or 130; CarsGuide 2027 price page lists the same two; landrover.com.au models page shows 'Petrol Plug-in Electric Hybrid' in the engine selector of the 110 X-Dynamic SE and X-Dynamic HSE only. The landrover.com.au Build & Order configurator is JS-rendered and returned no content to fetch, so no manufacturer configurator count"
+      },
+      "listPrice": {
+        "value": 136800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-land-rover-defender-lineup-revealed-with-new-trims-and-price-hikes",
+        "note": "CarExpert MY27 line-up table, prices 'before on-road costs' in words (10 July 2026); same figure on the CarExpert variant page ('prices starting at $136,800') and CarsGuide 2027 MSRP column (https://www.carsguide.com.au/land-rover/defender/price/2027). Up from held MY26 figure. Land Rover AU publishes only MRDP drive-away figures on a JS configurator that could not be read, so no manufacturer list figure to prefer"
+      },
+      "batteryKwh": {
+        "value": 15.4,
+        "basis": "sourced",
+        "url": "https://www.landrover.co.uk/content/dam/lrdx/pdfs/uk/wltp-pdfs/Land-Rover-Defender-TD-Insert-1L6632600000GBEN01P.pdf",
+        "note": "UK technical specification 'Battery capacity Total (Usable) kWh 19.2 (15.4)'; CarExpert AU page 'Useable battery kilowatt hour: 15.39 kWh', gross 19.22"
+      },
+      "rangeKm": {
+        "value": 48,
+        "basis": "judged",
+        "note": "UK WLTP 'EV Range Combined (WLTP) miles (km) 32-27 (51-44)' across wheel sizes (https://www.landrover.co.uk/content/dam/lrdx/pdfs/uk/wltp-pdfs/Land-Rover-Defender-TD-Insert-1L6632600000GBEN01P.pdf); AU grade on 20-inch wheels, value is the band midpoint 47.5 rounded. Standard WLTP. CarExpert AU 52 km is above the WLTP best case and the CarExpert P400e review states Land Rover's 52 km is NEDC: rejected by the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 32.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 15.4 / 48 x 100 = 32.08"
+      },
+      "combinedRangeKm": {
+        "value": 976,
+        "basis": "derived",
+        "note": "48 km WLTP electric + 90 L usable tank (UK technical spec; CarExpert AU lists 89 L) / 9.7 L/100km x 100 = 48 + 927.8 = 976"
+      },
+      "fuelConsumptionL100km": {
+        "value": 9.7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2024-defender-110-p400e-x-dynamic-se-review",
+        "note": "CarExpert real-world figure on the same 221kW 2.0L PHEV drivetrain (then badged P400e) with the battery depleted: 9.7 L/100km over a 100km loop. No published charge-sustaining figure found"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/land-rover/defender/2027-x-dynamic-se-2l-suv-4x4-electric-jsgsofsw20260703",
+        "note": "AU ADR 81/02 combined label 3.1 L/100km (CarExpert MY27 variant page), at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = passenger car with combined CO2 of 120 g/km or less; CarExpert MY27 page 'CO2 level - g/km combined: 78 g/km'"
+      },
+      "bootLitresSeatsUp": {
+        "value": 696,
+        "basis": "sourced",
+        "url": "https://www.autoexpress.co.uk/land-rover/defender/practicality",
+        "note": "Auto Express: 'The P300e plug-in model is a bit smaller, at 696 litres, or 1,759 litres with the seats flat' (non-hybrid 786/1875, matching Land Rover's UK dry VDA figures). Land Rover quotes only dry/wet VDA volumes, which in this tall box read as to-the-roof; no to-the-cargo-cover figure found. CarExpert's database '499 L to lower window' rejected: its D350 record gives 857 L 'to lower window', above Land Rover's 786 L dry, and 3000 kg towing against Land Rover's 3500 kg. Held 670 was 786 minus Land Rover's 'up to 116 litres'"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1759,
+        "basis": "sourced",
+        "url": "https://www.autoexpress.co.uk/land-rover/defender/practicality",
+        "note": "Auto Express 1,759 L seats flat for the P300e; equals Land Rover UK dry 1,875 L less 116 L. Same to-the-roof basis as seats-up"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.landrover.com.au/defender/defender/models-and-specifications.html",
+        "note": "'Plug In Hybrid models are only available with 5 seats, due to battery geometry in loadspace'; CarExpert 'Seating capacity: 5'"
+      },
+      "towKg": {
+        "value": 3000,
+        "basis": "sourced",
+        "url": "https://www.landrover.co.uk/content/dam/lrdx/pdfs/uk/wltp-pdfs/Land-Rover-Defender-TD-Insert-1L6632600000GBEN01P.pdf",
+        "note": "UK technical spec P300e 'Maximum towing 3,000'; CarExpert AU 3,000 kg braked"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/land-rover/defender/2027-x-dynamic-se-2l-suv-4x4-electric-jsgsofsw20260703",
+        "note": "'60 month, unlimited km warranty'"
+      },
+      "insuranceAnnual": {
+        "value": 3000,
+        "basis": "judged",
+        "note": "Held value kept; anchored to volvo-xc90-phev (Plus T8 $2,700) at a lower price, Defender carries higher theft and repair-cost exposure"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "One curve for all Land Rover rows (owner convention); held SE curve adopted for both grades (HSE previously [1,0.64,0.53,0.44,0.37,0.31]). Close to volvo-xc90-phev [1,0.66,0.54,0.45,0.38,0.32]; Defender's strong used demand offset by luxury-PHEV depreciation"
+      }
+    },
+    "land-rover-defender-phev-110-p300e-x-dynamic-hse": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/land-rover/defender/2027-x-dynamic-hse-2l-suv-4x4-electric-jsgsofss20260703",
+        "note": "CarExpert MY27 variant page: 2.0L electric 110 X-Dynamic HSE 'released to the Australian market on 5th July 2026' with a price; CarExpert MY27 line-up article lists exactly two P300e grades (110 X-Dynamic SE, X-Dynamic HSE), none on 90 or 130; CarsGuide 2027 price page lists the same two; landrover.com.au models page shows 'Petrol Plug-in Electric Hybrid' in the engine selector of the 110 X-Dynamic SE and X-Dynamic HSE only. The landrover.com.au Build & Order configurator is JS-rendered and returned no content to fetch, so no manufacturer configurator count"
+      },
+      "listPrice": {
+        "value": 149000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-land-rover-defender-lineup-revealed-with-new-trims-and-price-hikes",
+        "note": "CarExpert MY27 line-up table, prices 'before on-road costs' in words (10 July 2026); same figure on the CarExpert variant page ('prices starting at $149,000') and CarsGuide 2027 MSRP column (https://www.carsguide.com.au/land-rover/defender/price/2027). Up from held MY26 figure. Land Rover AU publishes only MRDP drive-away figures on a JS configurator that could not be read, so no manufacturer list figure to prefer"
+      },
+      "batteryKwh": {
+        "value": 15.4,
+        "basis": "sourced",
+        "url": "https://www.landrover.co.uk/content/dam/lrdx/pdfs/uk/wltp-pdfs/Land-Rover-Defender-TD-Insert-1L6632600000GBEN01P.pdf",
+        "note": "UK technical specification 'Battery capacity Total (Usable) kWh 19.2 (15.4)'; CarExpert AU page 'Useable battery kilowatt hour: 15.39 kWh', gross 19.22"
+      },
+      "rangeKm": {
+        "value": 48,
+        "basis": "judged",
+        "note": "UK WLTP 'EV Range Combined (WLTP) miles (km) 32-27 (51-44)' across wheel sizes (https://www.landrover.co.uk/content/dam/lrdx/pdfs/uk/wltp-pdfs/Land-Rover-Defender-TD-Insert-1L6632600000GBEN01P.pdf); AU grade on 20-inch wheels, value is the band midpoint 47.5 rounded. Standard WLTP. CarExpert AU 52 km is above the WLTP best case and the CarExpert P400e review states Land Rover's 52 km is NEDC: rejected by the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 32.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 15.4 / 48 x 100 = 32.08"
+      },
+      "combinedRangeKm": {
+        "value": 976,
+        "basis": "derived",
+        "note": "48 km WLTP electric + 90 L usable tank (UK technical spec; CarExpert AU lists 89 L) / 9.7 L/100km x 100 = 48 + 927.8 = 976"
+      },
+      "fuelConsumptionL100km": {
+        "value": 9.7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2024-defender-110-p400e-x-dynamic-se-review",
+        "note": "CarExpert real-world figure on the same 221kW 2.0L PHEV drivetrain (then badged P400e) with the battery depleted: 9.7 L/100km over a 100km loop. No published charge-sustaining figure found"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/land-rover/defender/2027-x-dynamic-hse-2l-suv-4x4-electric-jsgsofss20260703",
+        "note": "AU ADR 81/02 combined label 3.1 L/100km (CarExpert MY27 variant page), at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = passenger car with combined CO2 of 120 g/km or less; CarExpert MY27 page 'CO2 level - g/km combined: 78 g/km'"
+      },
+      "bootLitresSeatsUp": {
+        "value": 696,
+        "basis": "sourced",
+        "url": "https://www.autoexpress.co.uk/land-rover/defender/practicality",
+        "note": "Auto Express: 'The P300e plug-in model is a bit smaller, at 696 litres, or 1,759 litres with the seats flat' (non-hybrid 786/1875, matching Land Rover's UK dry VDA figures). Land Rover quotes only dry/wet VDA volumes, which in this tall box read as to-the-roof; no to-the-cargo-cover figure found. CarExpert's database '499 L to lower window' rejected: its D350 record gives 857 L 'to lower window', above Land Rover's 786 L dry, and 3000 kg towing against Land Rover's 3500 kg. Held 670 was 786 minus Land Rover's 'up to 116 litres'"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1759,
+        "basis": "sourced",
+        "url": "https://www.autoexpress.co.uk/land-rover/defender/practicality",
+        "note": "Auto Express 1,759 L seats flat for the P300e; equals Land Rover UK dry 1,875 L less 116 L. Same to-the-roof basis as seats-up"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.landrover.com.au/defender/defender/models-and-specifications.html",
+        "note": "'Plug In Hybrid models are only available with 5 seats, due to battery geometry in loadspace'; CarExpert 'Seating capacity: 5'"
+      },
+      "towKg": {
+        "value": 3000,
+        "basis": "sourced",
+        "url": "https://www.landrover.co.uk/content/dam/lrdx/pdfs/uk/wltp-pdfs/Land-Rover-Defender-TD-Insert-1L6632600000GBEN01P.pdf",
+        "note": "UK technical spec P300e 'Maximum towing 3,000'; CarExpert AU 3,000 kg braked"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/land-rover/defender/2027-x-dynamic-hse-2l-suv-4x4-electric-jsgsofss20260703",
+        "note": "'60 month, unlimited km warranty'"
+      },
+      "insuranceAnnual": {
+        "value": 3200,
+        "basis": "judged",
+        "note": "Held value kept; anchored to volvo-xc90-phev (Ultra T8 $2,850) at a lower price, Defender carries higher theft and repair-cost exposure"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "One curve for all Land Rover rows (owner convention); held SE curve adopted for both grades (HSE previously [1,0.64,0.53,0.44,0.37,0.31]). Close to volvo-xc90-phev [1,0.66,0.54,0.45,0.38,0.32]; Defender's strong used demand offset by luxury-PHEV depreciation"
+      }
+    }
+  },
+  "lowConfidence": [
+    "land-rover-defender-phev-110-p300e-x-dynamic-se.rangeKm: midpoint of UK WLTP 44-51 km band, no per-wheel figure for the AU 20-inch car",
+    "land-rover-defender-phev-110-p300e-x-dynamic-se.bootLitresSeatsUp: to-the-roof style figure, no to-the-cargo-cover figure published",
+    "land-rover-defender-phev-110-p300e-x-dynamic-se.insuranceAnnual: judged",
+    "land-rover-defender-phev-110-p300e-x-dynamic-se.depreciationCurve: judged",
+    "land-rover-defender-phev-110-p300e-x-dynamic-se.fuelConsumptionL100km: single real-world review figure on the earlier P400e badge",
+    "land-rover-defender-phev-110-p300e-x-dynamic-hse.rangeKm: midpoint of UK WLTP 44-51 km band, no per-wheel figure for the AU 20-inch car",
+    "land-rover-defender-phev-110-p300e-x-dynamic-hse.bootLitresSeatsUp: to-the-roof style figure, no to-the-cargo-cover figure published",
+    "land-rover-defender-phev-110-p300e-x-dynamic-hse.insuranceAnnual: judged",
+    "land-rover-defender-phev-110-p300e-x-dynamic-hse.depreciationCurve: judged",
+    "land-rover-defender-phev-110-p300e-x-dynamic-hse.fuelConsumptionL100km: single real-world review figure on the earlier P400e badge"
+  ]
+}

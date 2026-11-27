@@ -1,0 +1,255 @@
+{
+  "familyId": "jeep-avenger",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "jeep-avenger-longitude": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jeep/avenger",
+        "note": "CarExpert's live configurator listing on the research date prices all three grades (Longitude, Limited, Summit) as MY24 with Sydney drive-away figures ($54,492). Jeep AU's own Avenger page (https://www.jeep.com.au/avenger.html) and visualiser are live with 'Build yours' and a current offer, but render client-side and returned no grade list to automated fetches; a direct page download was refused by a permission check and not retried. Grade count of three confirmed by CarExpert review 2 Jan 2026 and CarsGuide 2026 price page. Jeep offers page states 'new and demonstrator MY24 Avenger Longitude while stocks last', so this may be run-out stock."
+      },
+      "listPrice": {
+        "value": 49990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
+        "note": "CarExpert review (2 Jan 2026) price table, 'before on-road costs'. Same $49,990 on CarsGuide 2026 price page (https://www.carsguide.com.au/jeep/avenger/price/2026), footnoted as MSRP excluding stamp duty and government charges. Cross-check: CarExpert's Sydney drive-away listing sits about $4,500-5,000 above list, consistent with list. Jeep AU publishes no grade list price to automated fetches; its only stated price is the $40,000 drive-away MY24 Longitude stock offer, a campaign not used."
+      },
+      "batteryKwh": {
+        "value": 51,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1816/Jeep-Avenger-Electric",
+        "note": "Usable. EV Database: usable 50.8 kWh, nominal (gross) 54.0 kWh, same pack in every grade. Jeep AU buyers guide ('Battery Capacity (kWh) 54') and CarExpert ('54kWh') quote gross. 51 kept to match CarExpert's database 'Useable 51.00' and the sibling alfa-romeo-junior-elettrica; 50.8 rounds to it."
+      },
+      "rangeKm": {
+        "value": 396,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU MY24 buyers guide 'WLTP Driving Range (km)' 396 for Longitude & Limited (17-inch, 215/60 R17). Direction test: inside EV Database's European WLTP band of 385-404 km; accepted. Jeep AU model page 'up to 390km' WLTP is the Summit figure."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.6,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU buyers guide 'Certified combined cycle consumption (Wh/km)' 156. This is grid-to-wheel, so it sits about 20% above usable/range (12.9); within the build's 25% tolerance. EV Database WLTP 153-160 Wh/km agrees."
+      },
+      "bootLitresSeatsUp": {
+        "value": 355,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU buyers guide 'Boot Space (L) 355'; CarExpert calls it VDA, i.e. to the cargo cover. EV Database 355 L, frunk 0 L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1252,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
+        "note": "CarExpert review 1252L rear seats folded; EV Database 1,252 L. CarsGuide boot-space page rounds to 1250L (held value). Measurement height (belt line vs roof) not stated by any source; Jeep AU publishes no folded figure."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Buyers guide 'Seats 5'."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1816/Jeep-Avenger-Electric",
+        "note": "EV Database: braked towing 0 kg, 'tow hitch not possible'. Jeep AU buyers guide lists no towing capacity."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/warranty.html",
+        "note": "Jeep AU: 5 years/100,000km unconditional; battery 8 years/160,000km conditional on scheduled servicing. Buyers guide agrees."
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "Held value kept. Lowest grade; sits under volvo-ex30 Plus ($49,990, $1,800) on cheaper parts/lower power, and under alfa-romeo-junior-elettrica ($58,990, $1,900), which shares the platform."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "One Jeep brand curve (the only Jeep family held). Steeper than mainstream on evidence: $40,000 drive-away MY24 run-out offer (about $13,000 under Victorian drive-away of the $49,990 list), MY24 demos at $37,000 drive-away (CarsGuide news 18 Mar 2026), 97 sales in 2025 (CarExpert 22 Mar 2026), shrinking Jeep network. Matches sibling alfa-romeo-junior-elettrica curve on the same platform."
+      }
+    },
+    "jeep-avenger-limited": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jeep/avenger",
+        "note": "CarExpert's live configurator listing on the research date prices all three grades (Longitude, Limited, Summit) as MY24 with Sydney drive-away figures ($59,742). Jeep AU's own Avenger page (https://www.jeep.com.au/avenger.html) and visualiser are live with 'Build yours' and a current offer, but render client-side and returned no grade list to automated fetches; a direct page download was refused by a permission check and not retried. Grade count of three confirmed by CarExpert review 2 Jan 2026 and CarsGuide 2026 price page. Jeep offers page states 'new and demonstrator MY24 Avenger Longitude while stocks last', so this may be run-out stock."
+      },
+      "listPrice": {
+        "value": 54990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
+        "note": "CarExpert review (2 Jan 2026) price table, 'before on-road costs'. Same $54,990 on CarsGuide 2026 price page (https://www.carsguide.com.au/jeep/avenger/price/2026), footnoted as MSRP excluding stamp duty and government charges. Cross-check: CarExpert's Sydney drive-away listing sits about $4,500-5,000 above list, consistent with list. Jeep AU publishes no grade list price to automated fetches; its only stated price is the $40,000 drive-away MY24 Longitude stock offer, a campaign not used."
+      },
+      "batteryKwh": {
+        "value": 51,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1816/Jeep-Avenger-Electric",
+        "note": "Usable. EV Database: usable 50.8 kWh, nominal (gross) 54.0 kWh, same pack in every grade. Jeep AU buyers guide ('Battery Capacity (kWh) 54') and CarExpert ('54kWh') quote gross. 51 kept to match CarExpert's database 'Useable 51.00' and the sibling alfa-romeo-junior-elettrica; 50.8 rounds to it."
+      },
+      "rangeKm": {
+        "value": 396,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU MY24 buyers guide 'WLTP Driving Range (km)' 396 for Longitude & Limited (17-inch, 215/60 R17). Direction test: inside EV Database's European WLTP band of 385-404 km; accepted. Jeep AU model page 'up to 390km' WLTP is the Summit figure."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.6,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU buyers guide 'Certified combined cycle consumption (Wh/km)' 156. This is grid-to-wheel, so it sits about 20% above usable/range (12.9); within the build's 25% tolerance. EV Database WLTP 153-160 Wh/km agrees."
+      },
+      "bootLitresSeatsUp": {
+        "value": 355,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU buyers guide 'Boot Space (L) 355'; CarExpert calls it VDA, i.e. to the cargo cover. EV Database 355 L, frunk 0 L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1252,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
+        "note": "CarExpert review 1252L rear seats folded; EV Database 1,252 L. CarsGuide boot-space page rounds to 1250L (held value). Measurement height (belt line vs roof) not stated by any source; Jeep AU publishes no folded figure."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Buyers guide 'Seats 5'."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1816/Jeep-Avenger-Electric",
+        "note": "EV Database: braked towing 0 kg, 'tow hitch not possible'. Jeep AU buyers guide lists no towing capacity."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/warranty.html",
+        "note": "Jeep AU: 5 years/100,000km unconditional; battery 8 years/160,000km conditional on scheduled servicing. Buyers guide agrees."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "Held value kept. Between volvo-ex30 Plus ($1,800) and Ultra ($54,990, $1,900); same mechanicals as Longitude, +$5,000 list."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "One Jeep brand curve (the only Jeep family held). Steeper than mainstream on evidence: $40,000 drive-away MY24 run-out offer (about $13,000 under Victorian drive-away of the $49,990 list), MY24 demos at $37,000 drive-away (CarsGuide news 18 Mar 2026), 97 sales in 2025 (CarExpert 22 Mar 2026), shrinking Jeep network. Matches sibling alfa-romeo-junior-elettrica curve on the same platform."
+      }
+    },
+    "jeep-avenger-summit": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jeep/avenger",
+        "note": "CarExpert's live configurator listing on the research date prices all three grades (Longitude, Limited, Summit) as MY24 with Sydney drive-away figures ($66,042). Jeep AU's own Avenger page (https://www.jeep.com.au/avenger.html) and visualiser are live with 'Build yours' and a current offer, but render client-side and returned no grade list to automated fetches; a direct page download was refused by a permission check and not retried. Grade count of three confirmed by CarExpert review 2 Jan 2026 and CarsGuide 2026 price page. Jeep offers page states 'new and demonstrator MY24 Avenger Longitude while stocks last', so this may be run-out stock."
+      },
+      "listPrice": {
+        "value": 60990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
+        "note": "CarExpert review (2 Jan 2026) price table, 'before on-road costs'. Same $60,990 on CarsGuide 2026 price page (https://www.carsguide.com.au/jeep/avenger/price/2026), footnoted as MSRP excluding stamp duty and government charges. Cross-check: CarExpert's Sydney drive-away listing sits about $4,500-5,000 above list, consistent with list. Jeep AU publishes no grade list price to automated fetches; its only stated price is the $40,000 drive-away MY24 Longitude stock offer, a campaign not used."
+      },
+      "batteryKwh": {
+        "value": 51,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1816/Jeep-Avenger-Electric",
+        "note": "Usable. EV Database: usable 50.8 kWh, nominal (gross) 54.0 kWh, same pack in every grade. Jeep AU buyers guide ('Battery Capacity (kWh) 54') and CarExpert ('54kWh') quote gross. 51 kept to match CarExpert's database 'Useable 51.00' and the sibling alfa-romeo-junior-elettrica; 50.8 rounds to it."
+      },
+      "rangeKm": {
+        "value": 390,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU MY24 buyers guide 'WLTP Driving Range (km)' 390 for Summit (18-inch, 215/55 R18). Direction test: inside EV Database's European WLTP band of 385-404 km; accepted. Jeep AU model page 'up to 390km' WLTP is the Summit figure."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.8,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU buyers guide 'Certified combined cycle consumption (Wh/km)' 158. This is grid-to-wheel, so it sits about 20% above usable/range (13.1); within the build's 25% tolerance. EV Database WLTP 153-160 Wh/km agrees."
+      },
+      "bootLitresSeatsUp": {
+        "value": 355,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Jeep AU buyers guide 'Boot Space (L) 355'; CarExpert calls it VDA, i.e. to the cargo cover. EV Database 355 L, frunk 0 L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1252,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
+        "note": "CarExpert review 1252L rear seats folded; EV Database 1,252 L. CarsGuide boot-space page rounds to 1250L (held value). Measurement height (belt line vs roof) not stated by any source; Jeep AU publishes no folded figure."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+        "note": "Buyers guide 'Seats 5'."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1816/Jeep-Avenger-Electric",
+        "note": "EV Database: braked towing 0 kg, 'tow hitch not possible'. Jeep AU buyers guide lists no towing capacity."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.jeep.com.au/warranty.html",
+        "note": "Jeep AU: 5 years/100,000km unconditional; battery 8 years/160,000km conditional on scheduled servicing. Buyers guide agrees."
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "Held value kept. Matches alfa-romeo-junior-elettrica ($58,990, $1,900) on the same platform; under mini-aceman SE ($60,990, $2,000)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "One Jeep brand curve (the only Jeep family held). Steeper than mainstream on evidence: $40,000 drive-away MY24 run-out offer (about $13,000 under Victorian drive-away of the $49,990 list), MY24 demos at $37,000 drive-away (CarsGuide news 18 Mar 2026), 97 sales in 2025 (CarExpert 22 Mar 2026), shrinking Jeep network. Matches sibling alfa-romeo-junior-elettrica curve on the same platform."
+      }
+    }
+  },
+  "lowConfidence": [
+    "jeep-avenger-longitude.availability: Jeep AU configurator not machine-readable; orderability rests on CarExpert configurator listing (MY24) and a 'while stocks last' MY24 offer, so the range may be run-out stock pending an unannounced MY26/MY27 facelift",
+    "jeep-avenger-limited.availability: as Longitude",
+    "jeep-avenger-summit.availability: as Longitude",
+    "jeep-avenger-longitude.listPrice: from Jan 2026 CarExpert and CarsGuide MSRP pages; Jeep AU shows no list price, only a $40,000 drive-away campaign",
+    "jeep-avenger-limited.listPrice: as Longitude",
+    "jeep-avenger-summit.listPrice: as Longitude; CarExpert model overview also shows a stray $63,990 Summit figure",
+    "jeep-avenger-longitude.bootLitresSeatsDown: 1252 L folded measurement height unknown; same on all rows",
+    "jeep-avenger-longitude.insuranceAnnual: judged; same for all rows",
+    "jeep-avenger-longitude.depreciationCurve: judged brand curve; same for all rows"
+  ]
+}

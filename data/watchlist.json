@@ -433,9 +433,9 @@
       "scope": "variant",
       "status": "backlog",
       "familyId": "lotus-emeya",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "$177,990 rests on one listicle sentence; four trims unpriced (Lotus AU ships blank price fields)."
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-02-27",
+      "note": "600 $189,990 and 600 SE $209,990 (both held) rest on 2024 launch prices; Lotus AU still shows no prices. Confirm when a manufacturer price appears."
     },
     {
       "name": "Kia EV5 2027 facelift",
@@ -458,17 +458,6 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-02-26",
       "note": "Reviews call the Essential outgoing; still orderable 2026-11-26. Delete row byd-atto3-essential when it leaves the configurator."
-    },
-    {
-      "name": "Unsourced consumption figures",
-      "make": "Zeekr",
-      "powertrain": "bev",
-      "scope": "variant",
-      "status": "backlog",
-      "familyId": "zeekr-x",
-      "checkedAt": "2026-11-26",
-      "recheckAfter": "2026-11-26",
-      "note": "4 rows (forthing-taikon-5 x2, zeekr-x x2) lack a sourced consumption figure. Do not fill with NEDC or derived figures. mg-s6 settled 2026-11-26."
     },
     {
       "name": "JAC Hunter PHEV",
@@ -584,9 +573,9 @@
       "scope": "variant",
       "status": "unrepresentable",
       "familyId": "lotus-eletre",
-      "checkedAt": "2026-08-08",
+      "checkedAt": "2026-11-27",
       "recheckAfter": "2027-07-01",
-      "note": "$279,990; Base and S are held."
+      "note": "Eletre 900 series (formerly R): $279,990 per CarsGuide 2026, above the $250,000 ceiling. Base and S (600 series) are held."
     },
     {
       "name": "Lotus Emeya 900 Sport / Sport Carbon",
@@ -595,9 +584,9 @@
       "scope": "variant",
       "status": "unrepresentable",
       "familyId": "lotus-emeya",
-      "checkedAt": "2026-08-08",
+      "checkedAt": "2026-11-27",
       "recheckAfter": "2027-07-01",
-      "note": "No AU price; UK pricing implies ~$272k-$294k."
+      "note": "Emeya 900 (formerly R): $259,990 per CarExpert and CarsGuide, above the $250,000 schema ceiling."
     },
     {
       "name": "MG Cyberster",
@@ -1583,6 +1572,105 @@
       "checkedAt": "2026-11-26",
       "recheckAfter": "2027-03-01",
       "note": "Listed as currently unavailable; CarsGuide 2027 page still shows $53,990. mini.com.au returned 503; recheck whether it has returned."
+    },
+    {
+      "name": "Lotus Eletre X",
+      "make": "Lotus",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "pre-launch",
+      "familyId": "lotus-eletre-x",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-04-01",
+      "note": "70 kWh plug-in with the engine mainly as a range-extender; due Q2 2027, outlet estimate $237,500. Classify PHEV or REEV at launch."
+    },
+    {
+      "name": "Cadillac Optiq-V",
+      "make": "Cadillac",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "cadillac-optiq",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-06-01",
+      "note": "GM ANZ: not for our market (CarExpert, 4 Jun 2026)."
+    },
+    {
+      "name": "Cadillac Lyriq-V deliveries",
+      "make": "Cadillac",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "cadillac-lyriq",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-04-01",
+      "note": "Lyriq-V added at $99,000 with orders open; deliveries late Q1 to Q2 2027. Confirm deliveries and any AU tow rating."
+    },
+    {
+      "name": "Jeep Avenger run-out",
+      "make": "Jeep",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "jeep-avenger",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-03-01",
+      "note": "All grades are MY24 stock with a $40,000 drive-away offer; Europe has a MY27 facelift, AU timing unannounced. Remove or update when Jeep AU changes the range."
+    },
+    {
+      "name": "Forthing Taikon name dispute",
+      "make": "Forthing",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "forthing-taikon-5",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-02-27",
+      "note": "Porsche opposed the Taikon trademark; Forthing markets the car as Forthing Electric but it is still badged Taikon 5. Rename the family only if the model name formally changes."
+    },
+    {
+      "name": "Leapmotor C10 Style (BEV)",
+      "make": "Leapmotor",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "leapmotor-c10",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-03-01",
+      "note": "Entry BEV Style dropped in the June 2026 MY26 update (EV Central); Leapmotor AU page still names Style, so evidence is mixed."
+    },
+    {
+      "name": "Leapmotor C10 AWD Sports+ Special Edition",
+      "make": "Leapmotor",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "leapmotor-c10",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-02-01",
+      "note": "50-car run from March 2026. Remove the row when sold out."
+    },
+    {
+      "name": "Nissan Ariya facelift",
+      "make": "Nissan",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "nissan-ariya",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-03-01",
+      "note": "Held grades are MY25 run-out with drive-away deals to 31 Mar 2027; facelift revealed overseas, no AU date. Advance+ orderability is uncertain."
+    },
+    {
+      "name": "Renault Scenic E-Tech battery update",
+      "make": "Renault",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "renault-scenic-e-tech",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-06-01",
+      "note": "Europe moved to EV67/EV89 packs; AU still lists 60/87 kWh."
     }
   ]
 }

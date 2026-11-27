@@ -16,8 +16,15 @@
     "towKg": 2250,
     "warrantyYears": 5,
     "insuranceAnnual": 4600,
-    "depreciationCurve": [1, 0.55, 0.43, 0.35, 0.29, 0.24],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.55,
+      0.42,
+      0.33,
+      0.26,
+      0.21
+    ],
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "lotus-eletre-s",
@@ -29,14 +36,21 @@
     "listPrice": 229990,
     "batteryKwh": 109,
     "rangeKm": 535,
-    "consumptionKwhPer100km": 21.4,
+    "consumptionKwhPer100km": 23.9,
     "bootLitresSeatsUp": 688,
     "bootLitresSeatsDown": 1532,
     "seats": 5,
     "towKg": 2250,
     "warrantyYears": 5,
     "insuranceAnnual": 5100,
-    "depreciationCurve": [1, 0.53, 0.41, 0.33, 0.27, 0.22],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.55,
+      0.42,
+      0.33,
+      0.26,
+      0.21
+    ],
+    "sourcedAt": "2026-11-27"
   }
 ]

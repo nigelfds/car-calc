@@ -11,7 +11,7 @@
     "batteryKwh": 27.6,
     "rangeKm": 100,
     "consumptionKwhPer100km": 27.6,
-    "combinedRangeKm": 905,
+    "combinedRangeKm": 898,
     "fuelConsumptionL100km": 11.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -23,13 +23,13 @@
     "insuranceAnnual": 2500,
     "depreciationCurve": [
       1,
-      0.64,
+      0.65,
       0.53,
-      0.45,
-      0.38,
-      0.32
+      0.44,
+      0.37,
+      0.31
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "denza-b8-6s",
@@ -43,7 +43,7 @@
     "batteryKwh": 27.6,
     "rangeKm": 100,
     "consumptionKwhPer100km": 27.6,
-    "combinedRangeKm": 905,
+    "combinedRangeKm": 898,
     "fuelConsumptionL100km": 11.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -55,12 +55,12 @@
     "insuranceAnnual": 2600,
     "depreciationCurve": [
       1,
-      0.62,
-      0.52,
+      0.65,
+      0.53,
       0.44,
       0.37,
       0.31
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-27"
   }
 ]

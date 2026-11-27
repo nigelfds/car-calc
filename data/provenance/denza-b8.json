@@ -1,0 +1,222 @@
+{
+  "familyId": "denza-b8",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "denza-b8-7s": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "MY26 AU spec sheet (version 260306, linked from denza.com/au/car/b8 'Download Spec Sheet') lists exactly two grades, B8 7S and B8 6S; 7S column. Denza's Build & Order is a dealer-hosted store dialog with no price shown; CarsGuide's 2026 price page and CarExpert variant pages list the same two grades."
+      },
+      "listPrice": {
+        "value": 91000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/denza/b8/2026-7s-2l-suv-4x4-electric-jsk5fmks20251208",
+        "note": "CarExpert variant page (opened 2026-11-27): 'prices starting at $91,000' before on-road costs; its Sydney drive-away is $98,121 (the 6S-7S drive-away gap $7,339 = $6,990 list gap x 1.05 NSW duty, consistent with unchanged list prices). Corroborated in words by CarExpert price-and-specs news ('Price before on-road costs'), CarExpert review, EV Central and RACV ('plus on-road costs'), and CarsGuide price page (MSRP excluding stamp duty). Denza's own site publishes no price, so no manufacturer figure exists to prefer."
+      },
+      "batteryKwh": {
+        "value": 27.6,
+        "basis": "derived",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "36.8 x 0.75 = 27.6. Spec sheet 'Battery capacity (kWh)' 36.8 (BYD Blade LFP, unlabelled gross vs usable). The spec sheet's electric range is stated for 'SOC 25%-100%' and DMO switches to charge-sustaining at 25%, so the range test draws ~75% of the pack; using 36.8 against that range would give 36.8 kWh/100km (over the 35 bound). Same convention as held denza-b5 (31.8 x 0.75 = 23.9). No source states a usable figure."
+      },
+      "rangeKm": {
+        "value": 100,
+        "basis": "sourced",
+        "standard": "other",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Electric Range (SOC 25%-100%) (km) (WLTC)' 100: WLTC cycle claim, not a European WLTP homologation (no UK/EU market for the B8 found; Malaysia also quotes 100km). The same sheet's NEDC 115km is the Australian sticker figure; it is higher than WLTC, so rejected per the direction test. Also quoted by CarExpert price-and-specs and Chasing Cars."
+      },
+      "consumptionKwhPer100km": {
+        "value": 27.6,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 27.6/100x100 (tautological). Spec sheet 'Energy Consumption (Wh/km)' 244 not used: it pairs with the NEDC 115km (244 x 1.15 = 28.1 kWh), a different standard. Chasing Cars measured 33.7 kWh/100km in real-world EV driving."
+      },
+      "combinedRangeKm": {
+        "value": 898,
+        "basis": "derived",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "rangeKm 100 + 91 L tank (spec sheet 'Fuel tank volume (L)' 91) / 11.4 L/100km x 100 = 898.2. Denza's own 'WLTC Combined Range' 905 not used because it is a WLTC (not WLTP) total; replaces held 905."
+      },
+      "fuelConsumptionL100km": {
+        "value": 11.4,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'WLTC Combined Fuel Consumption - SOC <25% (L/100km)' 11.36, rounded; Denza's published charge-sustaining figure (NEDC equivalent 9.89). Real-world: Chasing Cars 11.1 (highway, hybrid mode), EV Central 10.5 (pre-production), CarExpert ~10 (HEV mode)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Combined Fuel Consumption - SOC 25%-100% (L/100km) (NEDC)' 2.0, the ADR 81/02 label figure (CarExpert variant page also 'Combined: 2 L/100km'); at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green car = passenger car with combined CO2 of 120 g/km or less. Spec sheet 'CO2 Emissions (g/km)' 51."
+      },
+      "bootLitresSeatsUp": {
+        "value": 147,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Minimum Boot Capacity (L)' 147 (all rows up). CarExpert variant page labels it VDA. Cargo-cover vs roof not stated; no cargo cover is fitted behind the third row in the reviews read."
+      },
+      "bootLitresSeatsDown": {
+        "value": 920,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Maximum Boot Capacity (L)' 920 (7S); Chasing Cars and CarExpert describe it as third row folded (behind the second row), CarExpert labels VDA. No figure with the second row also folded is published, so this sits low against other seven-seaters holding both-rows-folded (often to-the-roof) figures."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Seating Capacity' 7 (2+3+2)."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet Towing 'With Trailer Brakes (kg)' 3500 (750 unbraked); drawbar, hitch and 12-pin plug standard."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-denza-b8-review",
+        "note": "CarExpert review: 'six-year, 150,000km vehicle warranty and an eight-year, 160,000km high-voltage battery warranty'; same on CarExpert variant pages and CarsGuide review. RACV's warranty section says five years in one place and six in another; treated as an RACV error."
+      },
+      "insuranceAnnual": {
+        "value": 2500,
+        "basis": "judged",
+        "note": "Kept: anchored to land-rover-defender-phev SE 3000 ($131,100), gwm-tank-500-phev 2200 ($75,921) and held denza-b5 2350/2450 ($74,990/$79,990); B8 sits between on price and is a 3.3t 425kW body-on-frame PHEV. 6S +100 for the higher value."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.65,
+          0.53,
+          0.44,
+          0.37,
+          0.31
+        ],
+        "basis": "judged",
+        "note": "One Denza brand curve [1,0.65,0.53,0.44,0.37,0.31] (the held denza-b5-base curve, the middle of the four bespoke Denza curves held before) for every Denza row. Evidence for a steep curve: debut luxury nameplate with no residual history, seven dealers (RACV), and close to the land-rover-defender-phev curves ([1,0.66,...]/[1,0.64,...]). Replaces held 7S [1,0.64,0.53,0.45,0.38,0.32] and 6S [1,0.62,0.52,0.44,0.37,0.31]."
+      }
+    },
+    "denza-b8-6s": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "MY26 AU spec sheet (version 260306, linked from denza.com/au/car/b8 'Download Spec Sheet') lists exactly two grades, B8 7S and B8 6S; 6S column. Denza's Build & Order is a dealer-hosted store dialog with no price shown; CarsGuide's 2026 price page and CarExpert variant pages list the same two grades."
+      },
+      "listPrice": {
+        "value": 97990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/denza/b8/2026-6s-2l-suv-4x4-electric-jsk5fmko20251208",
+        "note": "CarExpert variant page (opened 2026-11-27): 'prices starting at $97,990' before on-road costs; its Sydney drive-away is $105,460 (the 6S-7S drive-away gap $7,339 = $6,990 list gap x 1.05 NSW duty, consistent with unchanged list prices). Corroborated in words by CarExpert price-and-specs news ('Price before on-road costs'), CarExpert review, EV Central and RACV ('plus on-road costs'), and CarsGuide price page (MSRP excluding stamp duty). Denza's own site publishes no price, so no manufacturer figure exists to prefer."
+      },
+      "batteryKwh": {
+        "value": 27.6,
+        "basis": "derived",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "36.8 x 0.75 = 27.6. Spec sheet 'Battery capacity (kWh)' 36.8 (BYD Blade LFP, unlabelled gross vs usable). The spec sheet's electric range is stated for 'SOC 25%-100%' and DMO switches to charge-sustaining at 25%, so the range test draws ~75% of the pack; using 36.8 against that range would give 36.8 kWh/100km (over the 35 bound). Same convention as held denza-b5 (31.8 x 0.75 = 23.9). No source states a usable figure."
+      },
+      "rangeKm": {
+        "value": 100,
+        "basis": "sourced",
+        "standard": "other",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Electric Range (SOC 25%-100%) (km) (WLTC)' 100: WLTC cycle claim, not a European WLTP homologation (no UK/EU market for the B8 found; Malaysia also quotes 100km). The same sheet's NEDC 115km is the Australian sticker figure; it is higher than WLTC, so rejected per the direction test. Also quoted by CarExpert price-and-specs and Chasing Cars."
+      },
+      "consumptionKwhPer100km": {
+        "value": 27.6,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 27.6/100x100 (tautological). Spec sheet 'Energy Consumption (Wh/km)' 244 not used: it pairs with the NEDC 115km (244 x 1.15 = 28.1 kWh), a different standard. Chasing Cars measured 33.7 kWh/100km in real-world EV driving."
+      },
+      "combinedRangeKm": {
+        "value": 898,
+        "basis": "derived",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "rangeKm 100 + 91 L tank (spec sheet 'Fuel tank volume (L)' 91) / 11.4 L/100km x 100 = 898.2. Denza's own 'WLTC Combined Range' 905 not used because it is a WLTC (not WLTP) total; replaces held 905."
+      },
+      "fuelConsumptionL100km": {
+        "value": 11.4,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'WLTC Combined Fuel Consumption - SOC <25% (L/100km)' 11.36, rounded; Denza's published charge-sustaining figure (NEDC equivalent 9.89). Real-world: Chasing Cars 11.1 (highway, hybrid mode), EV Central 10.5 (pre-production), CarExpert ~10 (HEV mode)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Combined Fuel Consumption - SOC 25%-100% (L/100km) (NEDC)' 2.0, the ADR 81/02 label figure (CarExpert variant page also 'Combined: 2 L/100km'); at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green car = passenger car with combined CO2 of 120 g/km or less. Spec sheet 'CO2 Emissions (g/km)' 51."
+      },
+      "bootLitresSeatsUp": {
+        "value": 147,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Minimum Boot Capacity (L)' 147 (all rows up). CarExpert variant page labels it VDA. Cargo-cover vs roof not stated; no cargo cover is fitted behind the third row in the reviews read."
+      },
+      "bootLitresSeatsDown": {
+        "value": 902,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Maximum Boot Capacity (L)' 902 (6S); Chasing Cars and CarExpert describe it as third row folded (behind the second row), CarExpert labels VDA. No figure with the second row also folded is published, so this sits low against other seven-seaters holding both-rows-folded (often to-the-roof) figures."
+      },
+      "seats": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Seating Capacity' 6 (2+2+2)."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet Towing 'With Trailer Brakes (kg)' 3500 (750 unbraked); drawbar, hitch and 12-pin plug standard."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-denza-b8-review",
+        "note": "CarExpert review: 'six-year, 150,000km vehicle warranty and an eight-year, 160,000km high-voltage battery warranty'; same on CarExpert variant pages and CarsGuide review. RACV's warranty section says five years in one place and six in another; treated as an RACV error."
+      },
+      "insuranceAnnual": {
+        "value": 2600,
+        "basis": "judged",
+        "note": "Kept: anchored to land-rover-defender-phev SE 3000 ($131,100), gwm-tank-500-phev 2200 ($75,921) and held denza-b5 2350/2450 ($74,990/$79,990); B8 sits between on price and is a 3.3t 425kW body-on-frame PHEV. 6S +100 for the higher value."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.65,
+          0.53,
+          0.44,
+          0.37,
+          0.31
+        ],
+        "basis": "judged",
+        "note": "One Denza brand curve [1,0.65,0.53,0.44,0.37,0.31] (the held denza-b5-base curve, the middle of the four bespoke Denza curves held before) for every Denza row. Evidence for a steep curve: debut luxury nameplate with no residual history, seven dealers (RACV), and close to the land-rover-defender-phev curves ([1,0.66,...]/[1,0.64,...]). Replaces held 7S [1,0.64,0.53,0.45,0.38,0.32] and 6S [1,0.62,0.52,0.44,0.37,0.31]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "denza-b8-*.batteryKwh: 27.6 derived as 75% of the unlabelled 36.8 kWh pack to match the 'SOC 25%-100%' range window; no usable figure published.",
+    "denza-b8-*.consumptionKwhPer100km: 27.6 derived (tautological); Chasing Cars measured 33.7 kWh/100km real-world.",
+    "denza-b8-*.rangeKm: 100 km is a WLTC-cycle claim, not a European WLTP homologation; no WLTP market found.",
+    "denza-b8-*.bootLitresSeatsDown: 920/902 L is behind the second row (third row folded), not both rows folded; no fuller figure published, so it reads low against other seven-seaters.",
+    "denza-b8-*.bootLitresSeatsUp: 147 L, measurement height not stated.",
+    "denza-b8-*.listPrice: no manufacturer price published (Build & Order shows none); sourced from CarExpert and CarsGuide MSRP pages and launch reviews saying 'before on-road costs'.",
+    "denza-b8-*.combinedRangeKm: 898 computed from a WLTC electric range and WLTC charge-sustaining figure.",
+    "denza-b8-*.depreciationCurve: judged Denza brand curve; must match denza-b5's curve (refreshed in parallel).",
+    "denza-b8-*.insuranceAnnual: judged."
+  ]
+}

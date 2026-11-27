@@ -1,0 +1,93 @@
+{
+  "familyId": "alfa-romeo-junior-elettrica",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "alfa-romeo-junior-elettrica": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/14873513/alfa-romeo/junior/suv",
+        "note": "CarsGuide lists the 2026 Junior Elettrica Series 1 'New: Available to order' at $58,990 RRP. Alfa AU model page (https://www.alfaromeo.com.au/models/junior) is live with Ibrida and Elettrica and 'configure' links, but the configurator renders client-side and /selector-pricing serves empty msrp fields, so no manufacturer price or grade count could be read. One battery-electric grade on CarExpert's Series 1 (release 1 Dec 2025) page; the older 20250402 CarExpert entry ($55,900) is Series 0 stock."
+      },
+      "listPrice": {
+        "value": 58990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/alfa-romeo/junior/2026-elettrica-suv-fwd-electric-jsgowamm20251201",
+        "note": "CarExpert Series 1 spec page: 'from $58,990 before on-road costs' (Sydney drive-away $64,057, gap consistent with a list price). CarsGuide Series 1 $58,990 RRP agrees. Launch $57,900 (July 2025) and Series 0 $55,900 are superseded. No manufacturer price readable (configurator client-side). Unchanged from held."
+      },
+      "batteryKwh": {
+        "value": 51,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/junior/966/334291/",
+        "note": "ADAC: brutto 54,0 kWh, netto 51,0 kWh (Elettrica 156, same 115kW powertrain). CarExpert AU: 54 kWh gross / 51 usable; EV Database 54.0 nominal / 50.8 usable. Alfa AU's '54kWh' is gross."
+      },
+      "rangeKm": {
+        "value": 407,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.alfaromeo.com.au/models/junior",
+        "note": "Alfa AU model page '407km (WLTP)' on the AU 18-inch Petali wheels. Direction test: below the European WLTP 410 km on 215/55R18 (ADAC, CarExpert), so not an NEDC submission; accepted. EV Database band 398-412."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.1,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/junior/966/334291/",
+        "note": "ADAC WLTP Stromverbrauch kombiniert 15,1 kWh/100km on 215/55R18 (wall-plug, includes charging losses). Held 15.2 had no record and is replaced. batteryKwh/rangeKm x 100 = 12.5, 17% under 15.1, inside the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/alfa-romeo/junior/2026-elettrica-suv-fwd-electric-jsgowamm20251201",
+        "note": "Maker figure 400 L seats up (CarExpert AU, Alfa AU model page, ADAC catalogue). ADAC's own measurement (Autotest PDF) is 295 L to the parcel shelf and 410 L to the roof, so the maker's 400 may be closer to a roof-height figure; kept as the maker's figure for consistency with siblings' maker figures. Frunk: none."
+      },
+      "bootLitresSeatsDown": {
+        "value": 929,
+        "basis": "judged",
+        "url": "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6501-alfa-romeo-junior-elettrica-156-speciale/alfa-romeo-junior-elettrica-156-speciale.pdf",
+        "note": "Maker 1,265 L is to the roof (ADAC catalogue 'dachhoch'), against the belt-line convention. ADAC Autotest measured 685 L folded to the window line (and 295 L seats-up to the shelf). Scaled to the maker's seats-up basis: 685 x 400/295 = 929. Unscaled ADAC figure 685 is the alternative."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/alfa-romeo/junior/2026-elettrica-suv-fwd-electric-jsgowamm20251201",
+        "note": "CarExpert: rear seating capacity 3, two front; five seats."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2184/Alfa-Romeo-Junior-Elettrica-54-kWh",
+        "note": "EV Database: tow hitch not possible, 0 kg braked/unbraked. ADAC lists 'keine Anhängelast'. No AU tow figure published."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.alfaromeo.com.au/warranty",
+        "note": "Alfa AU: five years, no kilometre limit; no servicing condition stated. Battery 8 yr/160,000 km per CarExpert cost-of-ownership page."
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "Kept. Anchored to jeep-avenger-summit (same platform, $60,990, 1900) and mini-aceman-se-favoured ($60,990, 2000)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "One curve per brand: matches alfa-romeo-tonale-phev exactly (also jeep-avenger). Steeper than mainstream default for thin Alfa volume, an eight-dealer network and Stellantis EV discounting on the Avenger twin."
+      }
+    }
+  },
+  "lowConfidence": [
+    "alfa-romeo-junior-elettrica.bootLitresSeatsDown: judged scaling of ADAC's 685 L belt-line measurement to the maker's 400 L basis; maker 1,265 L is to the roof",
+    "alfa-romeo-junior-elettrica.listPrice: no manufacturer price readable (configurator client-side); rests on CarExpert 'before on-road costs' and CarsGuide RRP",
+    "alfa-romeo-junior-elettrica.insuranceAnnual: judged, anchored to jeep-avenger-summit and mini-aceman-se-favoured",
+    "alfa-romeo-junior-elettrica.depreciationCurve: brand convention, not model-specific evidence",
+    "alfa-romeo-junior-elettrica.bootLitresSeatsUp: maker 400 L may be nearer a to-the-roof figure (ADAC measured 295 L to the shelf)"
+  ]
+}

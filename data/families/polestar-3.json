@@ -1,12 +1,12 @@
 {
   "id": "polestar-3",
-  "summary": "The Polestar 3 is a large five-seat electric SUV that shares its SPA2 underpinnings with the Volvo EX90 but is tuned to feel considerably more athletic, and the March 2026 update moved it to an 800-volt architecture with much faster charging and, on two of three variants, a lower price. Australian reviewers are close to unanimous on the ride, body control and cabin quality, and rate the rear seat as one of the roomiest in the class. Disagreement centres on practicality and interaction: the boot is modest for the car's 4.9m footprint, there is no third-row option, and almost every secondary control has been pushed into the touchscreen.",
+  "summary": "The Polestar 3 is a large five-seat electric SUV that shares its SPA2 underpinnings with the Volvo EX90 but is tuned to feel considerably more athletic, and the March 2026 update moved it to an 800-volt architecture with much faster charging and, on two of three variants, a lower price. Australian reviewers praise the performance, body control and cabin quality and rate the rear seat as one of the roomiest in the class, though Chasing Cars found the steel-sprung Rear Motor's ride busy. Disagreement centres on practicality and interaction: the boot is modest for the car's 4.9m footprint, there is no third-row option, and almost every secondary control has been pushed into the touchscreen.",
   "pros": [
     "800-volt architecture charges at up to 350kW (310kW on the Rear Motor), taking 10-80 per cent to 22 minutes — more than 25 per cent quicker than the 250kW car it replaced",
-    "The MY26 update made the previously $9,000 Plus Pack and the Pilot Pack standard on every variant while cutting the Rear Motor's price $1,720 to $116,700 and the Dual Motor's $1,600 to $131,100",
-    "Ride and body control rated 'exceptional' by carsales, and Chasing Cars found the rear-drive chassis genuinely lively despite a 2.3-tonne kerb weight",
+    "The MY27 update made the previously $9,000 Plus pack standard on every variant while cutting the Rear Motor's price $1,720 to $116,700 and the Dual Motor's $1,620 to $131,100",
+    "Chasing Cars rated the handling 'fluid' despite a kerb weight over 2.3 tonnes, and CarExpert found the air-sprung Performance's body control 'noticeably improved' over the passive Rear Motor",
     "Palatial rear legroom plus a 25-speaker Bowers & Wilkins system that CarExpert called among the best it has experienced",
-    "5-year unlimited-kilometre warranty with long 24-month/30,000km service intervals, about $2,251 for six years of capped-price servicing"
+    "5-year unlimited-kilometre warranty plus 8-year/160,000km battery cover, with long 24-month/30,000km service intervals at about $2,295 for six years"
   ],
   "cons": [
     "484 litres to the seat backs (including a 90-litre underfloor bin) is small for a 4.9m SUV, and unlike the Volvo EX90 it shares a platform with there is no six- or seven-seat option — five seats only",
@@ -16,14 +16,17 @@
     "Every variant is well above the $91,661 FBT-exempt luxury cap, so novated-lease buyers get none of the EV FBT exemption that a Kia EV5 or Tesla Model Y attracts"
   ],
   "sources": [
+    "https://www.polestar.com/au/configure/polestar-3/",
     "https://www.polestar.com/au/polestar-3/specifications/",
-    "https://www.carexpert.com.au/car-reviews/2026-polestar-3-review",
-    "https://www.carsales.com.au/editorial/details/polestar-3-2026-review-152586/",
-    "https://www.chasingcars.com.au/reviews/midsize-suvs/polestar-3-long-range-single-motor-2025-review/",
-    "https://www.carsguide.com.au/car-news/game-changing-update-for-electric-suv-800-volt-ev-charging-headlines-updates-for-2026",
+    "https://www.polestar.com/au/polestar-3/warranty-and-service/",
+    "https://www.carexpert.com.au/car-news/2027-polestar-3-update-includes-faster-charging-new-motor",
     "https://www.goauto.com.au/new-models/polestar/3/polestar-3-update-pricing-announced/2026-03-07/98657.html",
-    "https://ev-database.org/uk/car/3327/Polestar-3-Dual-Motor",
-    "https://thedriven.io/2026/03/05/new-polestar-3-comes-with-improved-charging-architecture-priced-from-116700/"
+    "https://www.carsguide.com.au/ev/polestar-3-102286",
+    "https://www.carexpert.com.au/car-reviews/2026-polestar-3-review",
+    "https://www.chasingcars.com.au/reviews/large-suvs/polestar-3-800v-2026-review/",
+    "https://ev-database.org/car/3326/Polestar-3-Rear-Motor",
+    "https://ev-database.org/car/3327/Polestar-3-Dual-Motor",
+    "https://ev-database.org/car/3328/Polestar-3-Performance"
   ],
-  "sourcedAt": "2026-08-06"
+  "sourcedAt": "2026-11-27"
 }

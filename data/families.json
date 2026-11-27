@@ -1,12 +1,12 @@
 [
   {
     "id": "alfa-romeo-junior-elettrica",
-    "summary": "The Junior Elettrica is Alfa Romeo's first battery-electric car and the only pure-EV grade in the Junior range here, a single front-drive spec using the same 115kW motor and 51kWh usable Stellantis pack as its platform twin the Jeep Avenger, but with an Italian chassis tune and a $58,990 list price. Australian reviewers are near-unanimous that the Junior steers and rides better than almost anything else this size — the same testers call the pricing hard to defend against a Volvo EX30 or Kia EV3, and the Elettrica asks about $13,000 more than the Ibrida hybrid that makes up most of the model's sales. Opinion splits on whether the badge, the driving character and $232-a-year servicing offset a 400-litre boot, a cramped rear seat, no crash-test rating at all and a national network of only eight dealers.",
+    "summary": "The Junior Elettrica is Alfa Romeo's first battery-electric car and the only pure-EV grade in the Junior range here, a single front-drive spec using the same 115kW motor and 51kWh usable Stellantis pack as its platform twin the Jeep Avenger, but with an Italian chassis tune and a $58,990 list price. Australian reviewers are near-unanimous that the Junior steers and rides better than almost anything else this size — the same testers call the pricing hard to defend against a Volvo EX30 or Kia EV3, and the Elettrica asks $12,000 more than the $46,990 Ibrida hybrid that makes up most of the model's sales. Opinion splits on whether the badge, the driving character and $232-a-year servicing offset a 400-litre boot, a cramped rear seat, no crash-test rating at all and a national network of only eight dealers.",
     "pros": [
       "Cheapest electric car in Australia to service by a wide margin: Alfa's own schedule averages $232.32 a year over five years at 12-month/15,000km intervals, against $621.17 a year for the Ibrida hybrid version of the same car.",
       "Reviewers rate the chassis the best part of the car — CarsGuide scored the Junior 9/10 for driving and called the steering 'communicative and direct', where the mechanically related Jeep Avenger is criticised for over-light steering.",
       "Charging is competitive for a 51kWh car: 100kW DC takes 20-80 per cent in 27 minutes and an 11kW three-phase AC charger fills it in 5 hours 45 minutes, so a home three-phase supply is genuinely usable.",
-      "At $58,990 list and $65,649 drive-away in Melbourne it sits comfortably under the $75,000 FBT threshold, so a novated lease keeps the full exemption — and Alfa's own calculator itemises the $2,995 dealer delivery rather than burying it.",
+      "At $58,990 before on-road costs it comes to about $62,350 on the road in Melbourne before dealer delivery, comfortably under the $75,000 FBT cap, so a novated lease keeps the full exemption after April 2027.",
       "Five-year, unlimited-kilometre warranty with no dealer-servicing condition attached, unlike the platform-mate Jeep Avenger whose five years is capped at 100,000km."
     ],
     "cons": [
@@ -17,22 +17,19 @@
       "The 207kW Elettrica Veloce sold in Europe has been explicitly ruled out for Australia, so the only battery-electric Junior on offer is the 115kW/260Nm car that takes 9.0 seconds to 100km/h and tops out at 150km/h."
     ],
     "sources": [
-      "https://www.alfaromeo.com.au/selector-pricing",
       "https://www.alfaromeo.com.au/models/junior",
       "https://www.alfaromeo.com.au/warranty",
-      "https://www.media.stellantis.com/au-en/alfa-romeo/press/design-meet-performance-the-all-new-alfa-romeo-junior-starting-at-45-900-msrp",
-      "https://www.carexpert.com.au/car-reviews/2026-alfa-romeo-junior-ibrida-review",
-      "https://www.carsguide.com.au/urban/alfa-romeo-junior-lbrida-mhev-99777",
-      "https://www.carsguide.com.au/alfa-romeo/junior/range",
-      "https://www.carsguide.com.au/alfa-romeo/junior/price/2026",
-      "https://www.carsguide.com.au/car-news/hot-italian-ev-not-for-oz-99784",
+      "https://www.carexpert.com.au/alfa-romeo/junior/2026-elettrica-suv-fwd-electric-jsgowamm20251201",
       "https://www.carexpert.com.au/alfa-romeo/junior/2026-elettrica-suv-fwd-electric-jsgowamm20250402",
-      "https://www.carexpert.com.au/car-news/alfa-romeo-comfortable-with-its-tiny-dealer-network",
-      "https://www.carsales.com.au/research/alfa-romeo/junior/",
-      "https://www.chasingcars.com.au/news/new-car-prices/alfa-romeo-junior-hybrid-and-ev-2026-finally-arrives-to-take-on-the-mini-aceman-and-lexus-lbx/",
-      "https://ev-database.org/car/2184/Alfa-Romeo-Junior-Elettrica-54-kWh"
+      "https://www.carexpert.com.au/car-news/alfa-romeos-cheapest-model-in-australia-just-got-cheaper",
+      "https://www.carexpert.com.au/alfa-romeo/junior/2026/elettrica/cost-of-ownership",
+      "https://www.carsguide.com.au/car/14873513/alfa-romeo/junior/suv",
+      "https://www.carsguide.com.au/alfa-romeo/junior/price/2026",
+      "https://ev-database.org/car/2184/Alfa-Romeo-Junior-Elettrica-54-kWh",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/junior/966/334291/",
+      "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6501-alfa-romeo-junior-elettrica-156-speciale/alfa-romeo-junior-elettrica-156-speciale.pdf"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "alfa-romeo-junior-elettrica.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_Junior_IMG_0474_(cropped).jpg",
@@ -857,34 +854,37 @@
   },
   {
     "id": "cadillac-lyriq",
-    "summary": "Cadillac's first Australian model is a 2.8-tonne dual-motor electric SUV that a permanent $32,000 cut has re-priced from $122,000 to $90,000 before on-road costs, dropping it under the fuel-efficient LCT threshold and into FBT-exempt novated-lease territory. Reviewers agree on the hushed ride, the 530km WLTP range and the distinctive styling, but split hard on the cabin: CarExpert and carsales rate it genuinely luxurious, while Chasing Cars judges the materials and rear-seat packaging not good enough at any price. The unresolved risks are a three-outlet retail network across Australia and New Zealand, no tow rating at all, and the resale damage the cut inflicts on every car sold before it.",
+    "summary": "Cadillac's first Australian model has been updated for MY27 with a smaller 92kWh pack, 503km WLTP range and slower 130kW DC charging, still at the $90,000 before on-road costs that a permanent $32,000 cut set, which keeps the Sport (now the only regular grade, the Luxury having been dropped) under the fuel-efficient LCT threshold; the new 459kW Lyriq-V adds a $99,000 performance grade above it, with deliveries due from late in the first quarter of 2027. Reviewers agree on the hushed ride and distinctive styling but split on the cabin: CarExpert finds it comfortable and luxurious, while Chasing Cars judges the materials and rear seat not good enough at any price. The unresolved risks are a thin retail network, no Australian tow rating, and resale values re-based by the price cut.",
     "pros": [
-      "The permanent cut from $122,000 to $90,000 before on-road costs puts it under the $91,661 fuel-efficient LCT threshold, so it now qualifies for the FBT exemption on a novated lease — it did not at launch.",
-      "530km WLTP from a 102kWh pack, and a 22.1kW three-phase AC onboard charger roughly double the 11kW most rivals fit, so a full charge on three-phase takes about five hours rather than overnight-plus.",
-      "793 litres behind the second row and 1,722 litres folded, against 526/1,536L in a Polestar 4 and 333L behind row two in a seven-seat Kia EV9.",
-      "Five years unlimited-kilometre warranty plus five years of complimentary scheduled servicing at 12-month/12,000km intervals, an eight-year/160,000km battery warranty, and a year of free public charging upgradable to three years or a 7kW home charger.",
-      "Genuinely quiet: active noise cancellation that pre-empts road impacts and a 19-speaker AKG Studio system with Dolby Atmos are what every Australian reviewer singles out, alongside 388kW/610Nm and 0-100km/h in 5.3 seconds."
+      "The Sport's $90,000 before on-road costs sits under the $91,661 fuel-efficient LCT threshold, so it qualifies for the FBT exemption on a novated lease; the $99,000 Lyriq-V does not.",
+      "503km WLTP range for the Sport (471km for the Lyriq-V) and a 22.1kW three-phase AC onboard charger, double the 11kW most rivals fit, which Cadillac rates at up to 105km of range per hour of charging.",
+      "The MY27 update adds lane centring and traffic sign recognition, fixing the earlier car's adaptive cruise that could not steer, and upgrades the AKG Studio audio from 19 to 23 speakers with Dolby Atmos.",
+      "Five-year unlimited-kilometre warranty, an eight-year/160,000km battery warranty and five years of premium roadside assistance, with 24-month/24,000km service intervals.",
+      "The Lyriq-V's 459kW/880Nm and claimed 3.6-second 0-100km/h make it the quickest Cadillac yet for $9,000 more than the Sport, and CarExpert calls its V-Mode genuinely more engaging to drive."
     ],
     "cons": [
-      "The $32,000 cut is a resale problem as much as a bargain — every Lyriq sold at $117,000 to $124,000 was re-based overnight to $90,000, and Cadillac does not report sales to VFACTS, so there is no local residual data to argue with.",
+      "The MY27 range is a step back on paper: the pack shrinks from 102kWh to 92kWh, WLTP range falls from 530km to 503km, and peak DC charging drops from 190kW to 130kW, which CarExpert says leaves range and charging behind rivals.",
       "Not rated to tow anything in Australia, where a Kia EV9 pulls 2,500kg braked and a Zeekr 7X 2,000kg.",
-      "Three retail outlets across Australia and New Zealand — the Rosebery Experience Centre in Sydney, a Port Melbourne test-drive venue and Auckland — with the promised Brisbane site still unopened, so servicing and panel repair mean a long trip for most buyers.",
-      "Super Cruise is not approved for Australian roads and the adaptive cruise ships without lane centring; there is also no head-up display and no native navigation at $90,000.",
-      "At 2,774kg and a claimed 22.5kWh/100km it is markedly thirstier than a Polestar 4 Dual Motor's 18.7kWh/100km, and Chasing Cars rates the rear seat's high floor and hard ISOFIX bracing covers as genuinely uncomfortable."
+      "A thin network: Cadillac's own outlets are the Rosebery Experience Centre in Sydney, a Port Melbourne test-drive venue and Auckland, with dealer partners promised but unnamed as of CarExpert's April 2026 report, so servicing can mean a long trip.",
+      "The $32,000 cut re-based every early Lyriq sold at $117,000 to $124,000, Cadillac does not report sales to VFACTS, and there is no local residual data to argue with.",
+      "Chasing Cars rates the rear seat's short, flat cushion and intrusive ISOFIX panel as genuinely uncomfortable and the cabin materials well below expectation, and CarExpert heard squeaks and creaks in the Lyriq-V; MY27 also loses the two front knee airbags."
     ],
     "sources": [
-      "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and",
-      "https://www.carexpert.com.au/car-news/cadillac-lyriq-ev-prices-cut-with-new-drive-away-offer",
-      "https://www.carexpert.com.au/car-news/cadillac-lyriq-offer-extended-and-this-is-one-luxury-ev-buyers-shouldnt-ignore",
-      "https://www.carexpert.com.au/car-news/why-cadillac-is-yet-another-luxury-brand-to-slash-ev-prices",
-      "https://www.carsguide.com.au/ev/cadillac-lyriq-luxury-101266",
-      "https://www.carsguide.com.au/ev/cadillac-lyriq-sport-97727",
+      "https://www.cadillacanz.com/au-en/lyriq-electric-suv",
+      "https://www.cadillacanz.com/au-en/lyriq-electric-suv/lyriq-v",
+      "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+      "https://www.carexpert.com.au/car-news/2027-cadillac-lyriq-price-and-specs",
+      "https://www.carexpert.com.au/car-news/2027-cadillac-lyriq-prices-american-ev-gets-more-kit-range-cut",
+      "https://www.carexpert.com.au/car-news/2027-cadillac-lyriq-v-quickest-caddy-ever-priced-for-australia",
+      "https://www.carexpert.com.au/car-news/2027-cadillac-lyriq-v-price-and-specs-delivery-timing-confirmed-for-hot-electric-suv",
+      "https://www.carexpert.com.au/car-reviews/2027-cadillac-lyriq-v-review-quick-drive",
+      "https://thebeep.com.au/car-news/2027-cadillac-lyriq-v-price-specs-australia",
       "https://www.carexpert.com.au/car-reviews/2025-cadillac-lyriq-sport-review",
       "https://www.chasingcars.com.au/reviews/large-suvs/cadillac-lyriq-sport-2025-review/",
-      "https://www.carsales.com.au/editorial/details/cadillac-lyriq-2025-review-147540/",
+      "https://www.carsguide.com.au/ev/cadillac-lyriq-luxury-101266",
       "https://www.carexpert.com.au/car-news/cadillac-to-expand-ev-dealer-network-across-australia-and-new-zealand"
     ],
-    "sourcedAt": "2026-07-30",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "cadillac-lyriq.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Lyriq,_Frankfurt_(PANA1089).jpg",
@@ -895,17 +895,17 @@
   },
   {
     "id": "cadillac-optiq",
-    "summary": "The Optiq is the cheapest way into General Motors' relaunched Cadillac brand in Australia, and reviewers consistently praise its distinctive, well-finished cabin, quiet running and unusually generous standard equipment for $80,000 before on-road costs. The consensus criticism is just as consistent: 425km of WLTP range and a 110kW DC charging ceiling are the weakest numbers among luxury mid-size electric SUVs on sale here, and Australia takes the superseded 224kW powertrain rather than the US car's 328kW update. Opinion divides mainly on the ride, which most describe as composed and connected but firmer and less plush than the badge implies.",
+    "summary": "The Optiq is the cheapest way into General Motors' relaunched Cadillac brand in Australia, and reviewers consistently praise its distinctive, well-finished cabin, quiet running and unusually generous standard equipment for $80,000 before on-road costs. The consensus criticism is just as consistent: 425km of WLTP range and a 110kW DC charging ceiling are the weakest numbers among luxury mid-size electric SUVs on sale here, and Australia takes the superseded 224kW powertrain rather than the US car's 328kW update. Opinion divides mainly on the ride: CarExpert finds it composed but short of the plushness the badge implies on 21-inch wheels, while CarsGuide's August 2026 review calls it very comfortable.",
     "pros": [
-      "At $80,000 before on-road costs it undercuts the BMW iX3 ($89,900), Genesis GV60 ($88,300) and Lexus RZ ($84,500), and sits well under the $91,661 fuel-efficient LCT threshold that governs the novated-lease FBT exemption",
-      "Genuinely big for the class: a 744-litre boot with the rear seats up (1603 litres folded) and a 2954mm wheelbase that reviewers rate for near-limousine rear knee room",
+      "$80,000 before on-road costs for a single, fully loaded grade, under the $91,661 fuel-efficient LCT threshold that governs the novated-lease FBT exemption today (but above the $75,000 cap that applies from 1 April 2027)",
+      "Generous rear cabin: a 2954mm wheelbase that reviewers rate for near-limousine rear knee room, with a quiet, active-noise-cancelled interior CarsGuide calls serene",
       "Heavily specified in its single grade — 33-inch curved display with wireless Apple CarPlay and Android Auto (features GM deleted from its US EVs), 19-speaker AKG Dolby Atmos audio, heated/ventilated/massaging front seats, Brembo front brakes, panoramic glass roof and 21-inch wheels",
       "22.1kW three-phase AC charging is unusually quick for the segment and adds roughly 100km of range per hour at home, which softens the weak DC rate for overnight chargers",
       "Five-year unlimited-kilometre warranty with no servicing strings attached, an eight-year/160,000km battery warranty, and a five-star Euro NCAP result (2025) scoring 83% for adult occupant protection"
     ],
     "cons": [
-      "110kW is the lowest DC fast-charging peak of any luxury mid-size electric SUV sold in Australia — a Polestar 4 accepts 200kW — so road trips mean noticeably longer stops",
-      "425km of WLTP range is short for an $80,000 EV in 2026, and the 19.9kWh/100km WLTP consumption claim is high for the class (CarExpert measured 17.9kWh/100km on test)",
+      "110kW peak DC charging and 425km of WLTP range rank last among luxury mid-size electric SUVs sold here (a Polestar 4 accepts 200kW), and the 19.9kWh/100km WLTP claim is high for the class (CarsGuide measured 21.2kWh/100km)",
+      "The boot is smaller than local spec sheets suggest: 443 litres to the cover on the European VDA measure (1340 litres folded to the roof), behind the BMW iX1's 490 and Polestar 4's 526; the 744 litres quoted in Australia is the US to-the-roof figure",
       "Australia gets the superseded 224kW/480Nm dual-motor drivetrain while the US MY26 car has 328kW/675Nm and 150kW charging, and GM Australia has given no timing for bringing the update here; the Optiq-V is ruled out entirely",
       "Firm-riding on 21-inch wheels with no adaptive dampers available, which several Australian reviewers judged short of the plushness a luxury badge implies, and the steering is described as vague on-centre",
       "New-brand ownership risk: Cadillac does not report Australian sales, retails through a handful of metropolitan experience centres, permanently cut the larger Lyriq's price by $32,000 during 2026, and had still not confirmed Optiq service pricing at launch"
@@ -913,14 +913,17 @@
     "sources": [
       "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-price-and-specs",
       "https://www.carexpert.com.au/car-reviews/2026-cadillac-optiq-review",
-      "https://www.carsguide.com.au/ev/cadillac-optiq-101795",
-      "https://www.carsales.com.au/editorial/details/cadillac-optiq-2026-review-152184/",
-      "https://www.carsguide.com.au/car-news/sharp-price-for-luxury-challenger-evs-2026-cadillac-vistiq-and-cadillac-optiq-price-and",
       "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-arriving-without-us-updates-hot-v-flagship-not-coming-to-australia",
-      "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and",
-      "https://thedriven.io/2026/06/05/cadillac-is-back-with-a-very-different-electric-pitch-for-australian-buyers/"
+      "https://www.carexpert.com.au/car-news/why-cadillac-is-yet-another-luxury-brand-to-slash-ev-prices",
+      "https://www.carsguide.com.au/luxury/cadillac-optiq-sport-102515",
+      "https://www.carsguide.com.au/cadillac/optiq/price/2026/sport",
+      "https://www.carsguide.com.au/cadillac/optiq/price",
+      "https://thebeep.com.au/cars/cadillac/optiq",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/optiq/1generation/345575/",
+      "https://ev-database.org/car/3371/Cadillac-OPTIQ-500-E4",
+      "https://www.greenncap.com/assessments/cadillac-optiq-2026-0243/"
     ],
-    "sourcedAt": "2026-07-30",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "cadillac-optiq.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Optiq_Auto_Zuerich_2025_DSC_3328.jpg",
@@ -931,30 +934,30 @@
   },
   {
     "id": "cadillac-vistiq",
-    "summary": "The Vistiq is Cadillac's three-row flagship EV for Australia, sold in a single fully-loaded Platinum grade at $116,000 before on-road costs — sharp enough to undercut a Kia EV9 GT-Line and well under a Volvo EX90 or Hyundai Ioniq 9. Australian reviewers rate the cabin, the AKG audio and the genuinely usable third row highly, and are near-unanimous that the drivetrain is far quicker than the class needs. Where they diverge is whether the Australia-only 91kWh pack is enough: 461km of WLTP range and a 130kW DC charging ceiling are both below what the price and the badge imply, and the brand's tiny local footprint makes resale the open question.",
+    "summary": "The Vistiq is Cadillac's three-row flagship EV for Australia, sold in a single fully-loaded Platinum grade (now MY27) at $116,000 before on-road costs: sharp enough to undercut a Kia EV9 GT-Line, a Hyundai Ioniq 9 Calligraphy and a twin-motor Volvo EX90, though not the single-motor EX90 Plus. Australian reviewers rate the cabin, the AKG audio and the six-seat layout highly, and agree the drivetrain is far quicker than the class needs. Where they diverge is whether the Europe-spec 91kWh pack is enough: 461km of WLTP range and a 130kW DC charging ceiling are both below what the price and the badge imply, and the brand's tiny local footprint makes resale the open question.",
     "pros": [
-      "At $116,000 before on-roads it undercuts the Kia EV9 GT-Line ($121,000), Hyundai Ioniq 9 and Volvo EX90 while arriving in top Platinum trim only — 22-inch wheels, adaptive air suspension, rear-wheel steering, four-zone climate, a 33-inch curved display and 23-speaker AKG audio are all standard, with no options ladder to climb",
-      "Third row is adult-sized rather than the usual '5+2' afterthought, and the second-row captain's chairs leave a walk-through aisle to reach it",
+      "At $116,000 before on-roads it undercuts the Kia EV9 GT-Line ($121,000), Hyundai Ioniq 9 Calligraphy ($119,668) and twin-motor Volvo EX90 ($134,990) while arriving in top Platinum trim only: 22-inch wheels, adaptive air suspension, rear-wheel steering, four-zone climate, a 33-inch curved display and 23-speaker AKG audio are all standard, with no options ladder to climb",
+      "Second-row captain's chairs leave a walk-through aisle to the third row, which CarExpert found fine for a 180cm adult on headroom, though the seat sits knees-up",
       "459kW/880Nm dual-motor AWD covers 0-100km/h in 4.2 seconds, quicker than any EV9 including the GT",
-      "Five years of complimentary scheduled servicing and roadside assistance comes on top of the 5-year/unlimited-km warranty, with the battery covered for 8 years/160,000km"
+      "5-year/unlimited-km warranty with five years of premium roadside assistance and an 8-year/160,000km battery warranty; MY27 cars stretch service intervals to 24 months/24,000km (complimentary servicing applies only to the MY25 Lyriq, not the Vistiq)"
     ],
     "cons": [
-      "DC charging peaks at just 130kW — the US car gets 190kW, and the 800V Kia EV9 recharges materially faster, so long trips cost more time than the price suggests",
-      "461km WLTP from the Australia-only 91kWh usable pack (the US car gets 102kWh) trails the Kia EV9 Earth's 521km and the Ioniq 9, in a 5.2m SUV that is thirsty at a claimed 22kWh/100km",
-      "Six seats only in Australia — the US seven-seat bench is not offered — with 430L behind the third row and no front boot under the long bonnet",
+      "DC charging peaks at just 130kW, the slowest of its direct rivals (EV Central lists the EX90 at 250kW and the EV9 at 210kW), so long trips cost more time than the price suggests",
+      "461km WLTP from the 91kWh usable pack (the US car gets 102kWh) trails the Kia EV9 Earth's 512km and the Ioniq 9's 600km, in a 2.9-tonne SUV that is thirsty at a claimed 22kWh/100km",
+      "Six seats only in Australia, with no ISOFIX or top tethers in the third row, and only 297L behind the third row to the window line (Cadillac's 430L is the US to-the-roof figure); no front boot and no spare wheel",
       "Resale is the brand risk: Cadillac sells through a handful of Australian stores and the closely related Lyriq took a permanent $32,000 price cut in 2026, which drags residuals across the range"
     ],
     "sources": [
+      "https://www.cadillacanz.com/au-en/vistiq-electric-suv",
+      "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/2026/vistiq/vistiq-specification/Specifications-MY27-VISTIQ-Platinum-(3).pdf",
+      "https://www.cadillacanz.com/au-en/ownership-service",
       "https://www.carexpert.com.au/car-news/2026-cadillac-vistiq-price-and-specs",
       "https://www.carexpert.com.au/car-reviews/2026-cadillac-vistiq-platinum-review",
       "https://www.carsguide.com.au/ev/cadillac-vistiq-platinum-101638",
-      "https://www.carsguide.com.au/car-news/sharp-price-for-luxury-challenger-evs-2026-cadillac-vistiq-and-cadillac-optiq-price-and",
-      "https://www.carexpert.com.au/car-news/cadillac-says-smaller-ev-batteries-for-australia-are-driven-by-european-regulations",
       "https://evcentral.com.au/2026-cadillac-vistiq-review-six-seat-luxury-suv-takes-on-volvo-ex90-kia-ev9-hyundai-ioniq-9/",
-      "https://www.carsales.com.au/editorial/details/2026-cadillac-vistiq-priced-for-oz-151515/",
-      "https://www.carsguide.com.au/car-news/2026-cadillac-lyriq-electric-suv-price-cut-by-32000-permanently-to-undercut-bmw-ix-and"
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/vistiq/1generation/351198/"
     ],
-    "sourcedAt": "2026-07-30",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "cadillac-vistiq.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Vistiq_Auto_Zuerich_2025_DSC_3016.jpg",
@@ -1268,7 +1271,7 @@
     "pros": [
       "90km of electric range on the WLTC cycle rather than the NEDC figure most Chinese-derived plug-ins quote here — Chasing Cars measured 88km in urban running — and it is the rare PHEV with 100kW DC fast charging alongside 11kW AC, so the battery can be refilled on the road rather than only overnight",
       "Real off-road hardware at the price: front and rear electronically locking differentials, low-range gearing, and 220-310mm of ground clearance via the Leopard's Disus-P hydraulic active suspension, in a body-on-frame 4x4 that undercuts a Land Rover Defender P300e plug-in by more than $50,000",
-      "400kW and 760Nm through a motor on each axle gives a claimed 4.8s 0-100km/h and 3000kg braked towing, with a manufacturer-quoted 850km combined WLTC range from the 83-litre tank",
+      "400kW and 760Nm through a motor on each axle gives a claimed 4.8s 0-100km/h and 3000kg braked towing, and the 83-litre tank stretches total range to about 850km at Denza's 10.9L/100km battery-depleted WLTC figure",
       "Five-star ANCAP under the current 2023-25 criteria (86% adult occupant, 95% child occupant), rated in December 2025 and valid to December 2031 — a full-criteria result rather than a carried-over older rating",
       "Six-year/150,000km vehicle warranty with no dealer-servicing condition attached, an eight-year/160,000km battery warranty, and capped-price servicing quoted at $3542 across the first five years on 12-month/20,000km intervals"
     ],
@@ -1276,35 +1279,30 @@
       "The 1.9L/100km label figure only holds while the battery lasts: Denza's own charge-sustaining number is 10.9L/100km on WLTC (9.5L/100km on the more lenient NEDC), EV Central's trip computer showed 11.7L/100km with the pack depleted and Chasing Cars saw 14.0L/100km driven hard, so a buyer without home charging is running a three-tonne petrol SUV",
       "Payload is 600kg for the base car and just 490kg for the 3007kg Leopard, which five adults and luggage will exhaust before any towball download is added — and every Australian reviewer flags the weight in the way it drives, with CarsGuide citing a busy ride and lots of body roll and the NRMA describing off-road progress as beating the earth into submission",
       "3000kg braked towing sits 500kg under the diesel wagons and plug-in utes this car is cross-shopped against, and under the Denza B8's own 3500kg rating — 4x4 Australia and CarExpert both call the tow rating underdone for the segment",
-      "Denza is a brand-new marque in Australia with no residual-value history, a handful of metropolitan dealers and unproven long-term reliability — Chasing Cars names residuals and durability as the open questions, and the complex hydraulic suspension on the Leopard adds a repair risk used buyers will discount for",
-      "Advertised pricing is before on-road costs but the cars are widely quoted drive-away — roughly $81,500 for the base B5 and $86,700 for the Leopard in Victoria — so the $74,990 headline is about $6,500 short of what it takes to register one"
+      "Denza is a brand-new marque in Australia with no residual-value history, a thin dealer network and unproven long-term reliability — Chasing Cars names residuals and durability as the open questions, Denza was already cutting more than $7000 off unsold 2025-build cars in late 2026, and the complex hydraulic suspension on the Leopard adds a repair risk used buyers will discount for",
+      "Pricing is before on-road costs: Denza's own Victorian campaign figures put on-roads at about $6200, so a 2026-build B5 is roughly $81,200 drive-away in Victoria and the Leopard about $86,200 — the $74,990 and $79,990 drive-away deals apply only to selected 2025-build stock and end on 30 November 2026"
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-news/2026-denza-b5-price-and-specs",
-      "https://www.carsguide.com.au/ev/denza-b5-100852",
-      "https://www.carsguide.com.au/denza/b5/price/2026",
-      "https://www.chasingcars.com.au/reviews/large-suvs/denza-b5-leopard-2026-review/",
-      "https://www.carsales.com.au/editorial/details/denza-b5-leopard-2026-review-151471/",
-      "https://www.4x4australia.com.au/reviews/2026-denza-b5-and-b8-review",
-      "https://evcentral.com.au/2026-denza-b5-leopard-review-toyota-should-be-worried-this-plug-in-hybrid-could-redefine-the-australian-4x4-wagon-market/",
-      "https://www.mynrma.com.au/open-road/car-reviews/denza/2026-denza-b5-local-review",
-      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-denza-b5-b8-price-specs-release-date.html",
-      "https://www.cars24.com.au/car-news/2026-denza-b5-prices-specs-revealed/",
       "https://www.denza.com/au/car/b5",
-      "https://www.denzasydney.com.au/pages/warranty",
-      "https://www.greenvehicleguide.gov.au/Vehicle/ViewVehicle?vehicleDisplayIdList=37303:37302",
-      "https://www.ancap.com.au/safety-ratings/denza/b5/d50378",
-      "https://www.byduae.ae/en/articles/dmo/",
+      "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+      "https://www.denzasydney.com.au/configurator/denza-b5",
+      "https://www.goauto.com.au/new-models/denza/b5/2026-02-19/98509.html",
+      "https://www.goauto.com.au/car-reviews/denza.html",
+      "https://www.carexpert.com.au/car-news/denza-b5-price-cut-byds-toyota-prado-rival-now-priced-under-dollar74k-drive-away",
+      "https://www.carexpert.com.au/denza/b5/pricing",
+      "https://www.carexpert.com.au/car-news/byds-denza-expands-network-amid-regional-australia-push",
+      "https://www.cars24.com.au/car-news/denza-b5-price-cut-australia",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/denza/bao-5/1generation/351875/",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "denza-b8",
-    "summary": "Denza is BYD's premium marque and the B8 — the export rebadge of China's Fangchengbao Bao 8 — is its full-size three-row plug-in 4WD, launched here in February 2026 at $91,000 before on-roads. Australian reviewers agree it massively undercuts the Toyota LandCruiser, Lexus GX and Land Rover Defender it targets while arriving with equipment those cars charge options money for, and they split hard on whether a 3290kg 425kW family wagon is a car anyone needed: CarsGuide scores it 7.5 and calls the price ultra-sharp, carsales 79/100, EV Central 4/5, while Chasing Cars gives 6.5 for a busy, unpredictable ride and CarExpert rates it 'good' but explicitly tells buyers to take the smaller B5 instead. Every review lands on the same physical fact — at just under 3.3 tonnes kerb against a 3992kg GVM there is only 702kg of payload for a seven-seater, and no reviewer thinks the DiSus-P air suspension hides the mass on-road. Off-road the hardware is genuine (310mm clearance, 890mm wading, rear locker standard and a front locker on the 6S) but 4x4 Australia notes there is no transfer case and no mechanical low range, so it leans on electronics and diff locks where a LandCruiser leans on gearing. The powertrain is a true plug-in hybrid, not a range-extender: the 2.0-litre turbo petrol clutches to the front axle through the EHS assembly and BYD's DMO system lists engine direct drive alongside EV, series and idle-generation modes, with the rear axle electric-only. The running-cost case is the sharpest in the segment for a buyer who charges nightly and collapses for one who does not — 100km of WLTC electric range, then 11.4L/100km once the battery drops under 25 per cent, the thirstiest charge-sustaining figure of any plug-in hybrid in this dataset.",
+    "summary": "Denza is BYD's premium marque and the B8 — the export rebadge of China's Fangchengbao Bao 8 — is its full-size three-row plug-in 4WD, launched here in February 2026 at $91,000 before on-roads (7S) and $97,990 (6S), unchanged at November 2026. Australian reviewers agree it massively undercuts the Toyota LandCruiser, Lexus GX and Land Rover Defender it targets while arriving with equipment those cars charge options money for, and they split hard on whether a 3290kg 425kW family wagon is a car anyone needed: CarsGuide scores it 7.5 and calls the price ultra-sharp, EV Central 4/5, while Chasing Cars gives 6.5 for a busy, unpredictable ride and CarExpert rates it 'good' but explicitly tells buyers to take the smaller B5 instead. Every review lands on the same physical fact — at just under 3.3 tonnes kerb against a 3992kg GVM there is only about 700kg of payload for a seven-seater, and no reviewer thinks the DiSus-P suspension hides the mass on-road. Off-road the hardware is genuine (310mm clearance, 890mm wading, rear locker standard and a front locker on the 6S); 4x4 Australia notes the DMO layout has no transfer case, with Denza fitting a low-range gearset on the rear axle only where a LandCruiser has full-time dual-range gearing. The powertrain is a true plug-in hybrid, not a range-extender: BYD's DMO system switches between EV, series, parallel and engine direct-drive modes, so the 2.0-litre turbo can drive the wheels. The running-cost case is the sharpest in the segment for a buyer who charges nightly and collapses for one who does not — 100km of WLTC electric range, then 11.4L/100km once the battery drops under 25 per cent, the thirstiest charge-sustaining figure of any plug-in hybrid in this dataset.",
     "pros": [
-      "Prices a LandCruiser-sized, LandCruiser-capable three-row 4WD at $91,000-$97,990 before on-roads with air suspension, cross-axle lockers, nappa leather and (on the 6S) heated, cooled and massaging captain's chairs standard — CarExpert, CarsGuide, carsales and RACV all independently call the equipment-for-money the car's strongest single argument",
-      "100km of WLTC electric range from a 36.8kWh LFP blade pack and 905km of WLTC combined range on a 91-litre tank, so a buyer with home charging can do a metropolitan week without burning petrol and still cross the country at the weekend",
+      "Prices a LandCruiser-sized, LandCruiser-capable three-row 4WD at $91,000-$97,990 before on-roads with adaptive DiSus-P suspension, cross-axle lockers, nappa leather and (on the 6S) heated, cooled and massaging captain's chairs standard — CarExpert, CarsGuide, EV Central and RACV all independently call the equipment-for-money the car's strongest single argument",
+      "100km of WLTC electric range from a 36.8kWh LFP blade pack, and roughly 900km in total on a 91-litre tank at Denza's 11.36L/100km WLTC charge-sustaining claim, so a buyer with home charging can do a metropolitan week without burning petrol and still cross the country at the weekend",
       "3500kg braked towing with the towbar, hitch and wiring fitted at the factory, plus 310mm ground clearance, 890mm wading depth and a rear differential lock standard (front locker added on the 6S) — the tow rating matches a diesel LandCruiser rather than the 2500kg most plug-in SUVs manage",
       "Its 2.0L/100km ADR 81/02 combined label clears the 3.5L/100km luxury car tax fuel-efficient test comfortably, which at these prices is worth real money: the 7S at $91,000 lands under the $91,661 fuel-efficient threshold and attracts no LCT at all, and the 6S pays on only $6,329 of its price instead of $17,181",
       "Six-year/150,000km vehicle warranty with an eight-year/160,000km battery warranty and three years roadside assistance, and five years of capped-price servicing at $3,420 (12 months/20,000km intervals) — CarExpert notes that undercuts a LandCruiser's $4,500"
@@ -1317,30 +1315,28 @@
       "Denza is brand new to Australia with a handful of dealers, no residual history and no independent reliability record; RACV specifically flags long-term durability and regional support, and a debut luxury nameplate at $91,000-plus is the classic hard-depreciating case here"
     ],
     "sources": [
+      "https://www.denza.com/au/car/b8",
+      "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
       "https://www.carexpert.com.au/car-news/2026-denza-b8-price-and-specs",
       "https://www.carexpert.com.au/car-reviews/2026-denza-b8-review",
       "https://www.carexpert.com.au/denza/b8/2026-7s-2l-suv-4x4-electric-jsk5fmks20251208",
       "https://www.carexpert.com.au/denza/b8/2026-6s-2l-suv-4x4-electric-jsk5fmko20251208",
-      "https://www.carexpert.com.au/denza/b8/2026/features-and-specs",
       "https://www.carsguide.com.au/ev/denza-b8-100883",
       "https://www.carsguide.com.au/denza/b8/price/2026",
       "https://www.chasingcars.com.au/reviews/large-suvs/denza-b8-2026-review/",
-      "https://www.carsales.com.au/editorial/details/denza-b8-2026-review-151513/",
       "https://evcentral.com.au/2026-denza-b8-6s-review-the-toyota-landcruiser-is-about-to-be-tested-more-seriously-than-ever-by-this-full-size-chinese-phev-4x4-wagon/",
       "https://www.racv.com.au/royalauto/car-reviews/denza/2026-denza-b8-review.html",
       "https://www.4x4australia.com.au/reviews/2026-denza-b5-and-b8-review",
-      "https://www.carexpert.com.au/car-news/2026-denza-b5-price-and-specs",
       "https://www.byduae.ae/en/articles/dmo/",
-      "https://auto.sina.cn/review/2024-10-18/detail-incsymyt8600647.d.html",
       "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "ford-mustang-mach-e",
     "summary": "The Mustang Mach-E is a coupe-profiled mid-size electric SUV and Ford Australia's only battery-electric passenger car, updated for 2026 with more power, a standard heat pump and a 15.5-inch portrait touchscreen. Australian reviewers consistently like how it drives — genuinely rear-drive-flavoured, precise steering, strong straight-line pace — and rate the cabin as quiet and upmarket, but they are split on the firm suspension, with CarExpert calling the ride 'far too firm' while CarsGuide found the 2026 retune acceptable. The recurring verdict is that the Select makes the value case and the Premium does not, because Chinese and Korean rivals deliver more space and equipment for less money.",
     "pros": [
-      "Extended-range Premium claims 600km WLTP from 88kWh usable, further than a Tesla Model Y Long Range RWD or Kia EV6 GT-Line, and Chasing Cars still saw 465km on a highway loop",
+      "Extended-range Premium claims 600km WLTP from 88kWh usable, matching a Tesla Model Y Premium Long Range AWD and beating a Kia EV6 GT-Line RWD's 560km, and Chasing Cars still saw 465km on a highway loop",
       "GT makes 434kW/955Nm for 2026 (up 76kW) and undercuts a Kia EV6 GT on both price and outputs",
       "2026 update adds a standard heat pump across the range, which reduces the cold-weather range penalty",
       "Cheap to service for a $65k-plus EV: 12-month/15,000km intervals at roughly $158 a year, about $790 over five years",
@@ -1348,7 +1344,7 @@
     ],
     "cons": [
       "402-litre boot is small for the class and the tapered roofline limits what fits, versus 513L in a Kia EV5 and 526L in a Polestar 4 — and the frunk shrank to 49L for 2026 to make room for the heat pump",
-      "Not rated to tow anything in Australia (0kg braked), where European Mach-Es are rated to 1000kg and rivals like the EV6 tow 1600kg",
+      "Not rated to tow anything in Australia (0kg braked), where European Mach-Es are rated to 750-1500kg and rivals like the EV6 tow 1800kg",
       "Ride is firm to the point of bump-crashiness on suburban roads, and the GT's MagneRide dampers were judged to make it worse rather than better",
       "Real-world efficiency is poor: Chasing Cars averaged about 19kWh/100km and 19.6kWh/100km on the highway against a 17.7kWh/100km claim, which hurts anyone relying on public charging",
       "Electronic door releases with a B-pillar button and no conventional handle, no spare wheel, and no charging cable included; Ford also ran an Australian stop-sale in late 2025 over two door-latch and related recalls"
@@ -1360,9 +1356,10 @@
       "https://www.chasingcars.com.au/reviews/midsize-suvs/ford-mustang-mach-e-premium-long-term-review/",
       "https://evcentral.com.au/2026-ford-mustang-mach-e-premium-review-will-the-latest-price-slash-finally-bring-some-sales/",
       "https://www.carsales.com.au/research/ford/mustang-mach-e/",
-      "https://www.ford.com.au/price/MustangMach-E"
+      "https://ev-database.org/car/3188/Ford-Mustang-Mach-E-ER-RWD",
+      "https://carbuyer.co.uk/ford/mustang-mach-e-suv/302978/ford-mustang-mach-e-suv-review/practicality"
     ],
-    "sourcedAt": "2026-07-27",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "ford-mustang-mach-e.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Ford_Mustang_Mach-E_GT_IAA_2021_1X7A0176.jpg",
@@ -1411,65 +1408,67 @@
   },
   {
     "id": "forthing-taikon-5",
-    "summary": "The Taikon 5 is the first model from Forthing, a Dongfeng sub-brand distributed in Australia by Ateco, and it landed in June 2026 as the cheapest mid-size electric SUV on sale here. The battery-electric grades share one 150kW front-drive powertrain and a 64.4kWh LFP pack rated at 427km WLTP, so the Luxury-to-Exclusive step buys trim rather than range; a range-extender version of the same body is sold alongside them and is excluded here. No Australian outlet had road-tested it at the research date, and the New Zealand launch reviews that exist split over whether the electric version's softer, less resolved ride is a fair trade for its sharper acceleration and low price.",
+    "summary": "The Taikon 5 is the first model from Forthing, a Dongfeng sub-brand distributed in Australia by Ateco, and since September 2026 it has been marketed here simply as the Forthing Electric because Porsche has opposed the Taikon trademark; cars still wear the badge and the dispute is unresolved. Both battery-electric grades share one 150kW front-drive motor and a 64.4kWh LFP pack rated at 427km WLTP, so the Luxury-to-Exclusive step buys equipment rather than range, and a range-extender version of the same body is sold alongside and excluded here. Australian reviewers agree it is sharply priced, roomy and efficient (CarExpert saw 14.1 to 15.0kWh/100km indicated), but rate its front-drive dynamics from below average to poor, with torque steer, a jittery or floaty ride and modest tyre grip.",
     "pros": [
-      "Cheapest mid-size electric SUV in Australia at launch: $38,990 drive-away for the BEV Luxury, roughly $6,000 under a GAC Aion V Premium and $8,000 under a Leapmotor C10 Style on a comparable drive-away basis",
-      "1500kg braked towing on both BEV grades per Forthing's own June 2026 spec sheet, matching a Leapmotor C10 where the similarly priced GAC Aion V has no published towing rating at all",
-      "541-litre boot expanding to 1480 litres, against 427/978 litres for a GAC Aion V and 300/1079 litres for a Chery E5",
-      "Unconditional seven-year/200,000km vehicle warranty with no dealer-servicing strings, plus an eight-year/200,000km battery warranty guaranteeing at least 70 per cent capacity; roadside assistance extends to five years but only if every scheduled service is done at a Forthing service centre",
-      "Base Luxury already includes a 14.6-inch screen, wireless CarPlay and Android Auto, 10-way power driver's seat with ventilation and massage, 19-inch alloys, 3.5kW V2L, AEB, adaptive cruise and blind-spot monitoring"
+      "Among the cheapest mid-size electric SUVs in Australia at $38,990 drive-away for the Luxury, about $6,000 under a GAC Aion V Premium and $9,500 under a Leapmotor C10 Style on a comparable drive-away basis",
+      "Efficient for the class: CarExpert recorded 14.1 to 15.0kWh/100km indicated on test, against Forthing's 15.5kWh/100km claim",
+      "480-litre boot (Forthing's figure, excluding underfloor storage) expanding to 1480 litres, against 427/978 litres for a GAC Aion V and 300/1079 litres for a Chery E5",
+      "Unconditional seven-year/200,000km vehicle warranty with no dealer-servicing strings, plus an eight-year/200,000km battery warranty guaranteeing at least 70 per cent capacity; roadside assistance extends to five years only if every scheduled service is done at a Forthing service centre",
+      "Base Luxury already includes a 14.6-inch screen, wireless CarPlay and Android Auto, 10-way power driver's seat with ventilation and massage, 19-inch alloys, 3.5kW V2L, AEB, adaptive cruise and blind-spot monitoring, and the Exclusive adds a space-saver spare that is rare on an EV"
     ],
     "cons": [
-      "Unrated by ANCAP at launch, and the car ships without driver-attention monitoring or e-call, which rules out a five-star result under the current protocol",
+      "Unrated by ANCAP, and the car ships without driver-attention monitoring or e-call, which rules out a five-star result under the current protocol",
+      "Forthing's October 2026 spec sheet rates it to tow only 750kg braked or unbraked, half the 1500kg a Leapmotor C10 is rated for and half the figure Forthing published at launch",
       "80kW peak DC charging is slow for the segment, giving 30-80 per cent in about 30 minutes against roughly 24 minutes for 10-80 per cent on a 180kW GAC Aion V",
-      "Only 14 Forthing dealers nationally (three in Victoria) and no capped-price servicing programme announced, so servicing costs and resale are entirely unproven",
-      "Forthing Australia publishes drive-away pricing only, and the campaign is restricted to new stock vehicles with no options while stock lasts, so there is no published list price for this car anywhere",
-      "No energy-consumption figure is published in Australia at all, and the 427km WLTP claim sits 27km above the 400km WLTP figure Forthing quotes for the identical 64.4kWh car in New Zealand"
+      "Front-drive dynamics draw the reviews' main criticism: EV Central cites torque steer, vague steering, body float and motor whine, and CarExpert calls it quick to reach its limits on budget tyres",
+      "A new brand with 26 dealers nationally (seven in Victoria), a naming dispute with Porsche that may yet force a rename, and drive-away-only pricing with no published list price, so resale is entirely unproven"
     ],
     "sources": [
-      "https://www.forthing.com.au/new-vehicles/taikon-5-electric/",
+      "https://www.forthing.com.au/new-vehicles/electric/",
+      "https://www.forthing.com.au/build-and-price/",
       "https://www.forthing.com.au/warranty/",
       "https://www.forthing.com.au/find-a-dealer/",
+      "https://www.carexpert.com.au/car-news/porsche-challenges-forthing-taikon-5-trademark",
+      "https://www.carexpert.com.au/car-reviews/2027-forthing-review-quick-drive",
       "https://www.carexpert.com.au/car-news/2026-forthing-taikon-5-price-and-specs",
+      "https://evcentral.com.au/2026-forthing-taikon-5-ev-review-427km-of-range-for-38990-drive-away-from-a-brand-that-currently-cant-say-its-own-name/",
       "https://www.carsguide.com.au/car-news/2026-forthing-taikon-5-pricing-and-specs-revealed-as-new-rival-to-the-jaecoo-j5-ev-and-byd",
-      "https://www.chasingcars.com.au/news/new-car-prices/forthing-taikon-5-2026-price-beating-byd-sealion-6-rival-detailed-in-both-plug-in-and-bev-guise-ahead-of-aussie-debut/",
-      "https://thedriven.io/2026/06/18/new-chinese-brand-forthing-launches-first-electric-suv-in-australia-pitched-at-under-40000/",
-      "https://zecar.com/reviews/forthing-taikon-5-price-specs-australia",
-      "https://www.carsales.com.au/forthing/taikon-5/",
+      "https://www.drivencarguide.co.nz/reviews/forthing-taikon-ev-luxury-review-not-perfect-but-hard-to-beat-for-value/",
       "https://www.aa.co.nz/cars/car-reviews/forthing-taikon/",
-      "https://www.drivencarguide.co.nz/reviews/forthing-taikon-first-drive-is-this-is-what-a-forward-thinking-astronaut-would-drive/"
+      "https://evdb.nz/v/forthing-taikon"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "gac-aion-ut",
-    "summary": "GAC's first small car for Australia undercuts the BYD Dolphin Premium and MG 4 Essence while offering more battery, more power and far more rear legroom than either, and Australian reviewers consistently rate its ride comfort and cabin packaging above its price. The disagreement is over the software and the ownership case: CarExpert and EV Central found the touchscreen-only controls buggy and the driver-assist warnings intrusive, while CarsGuide and Chasing Cars were more forgiving and focused on the value. Everyone flags the same unknowns — a brand with no Australian resale history, roughly 30 dealers, no capped-price servicing and no ANCAP rating yet.",
+    "summary": "GAC's first small car for Australia undercuts the BYD Dolphin Premium and MG 4 Essence 64 while offering a similar-size battery, more power and far more rear legroom than either, and Australian reviewers consistently rate its ride comfort and cabin packaging above its price. The disagreement is over the software and the ownership case: CarExpert and EV Central found the touchscreen-only controls buggy and the driver-assist warnings intrusive, while CarsGuide and Chasing Cars were more forgiving and focused on the value. Everyone flags the same unknowns: a brand with no Australian resale history, roughly 30 dealers and no capped-price servicing, though a five-star ANCAP rating published in October 2026 has settled the safety question.",
     "pros": [
-      "60kWh (58kWh usable) LFP pack and 430km WLTP range beat the BYD Dolphin Premium's 427km for $1000 less list price",
+      "60kWh usable (62kWh gross) LFP pack and 430km WLTP range beat the BYD Dolphin Premium's 427km, and the $31,990 Premium lists $5000 below that BYD",
       "150kW/210Nm and a 7.3-second 0-100km/h make it quicker than every rival under $40,000, including the MG 4 Essence 64",
       "2750mm wheelbase and 905mm of rear legroom give it back-seat space a Toyota Corolla hatch cannot match, despite being 105mm shorter",
       "Eight-year/unlimited-kilometre warranty is unconditional and two years longer than BYD's six or MG's seven",
       "11kW AC charging as standard, against 7kW on the BYD Dolphin"
     ],
     "cons": [
-      "No ANCAP rating as at July 2026 — testing is deferred until the local eCall system goes live, so buyers are taking GAC's five-star target on trust",
+      "Five-star ANCAP (October 2026) came with weak scores for touchscreen-reliant controls, and the fitted eCall system will not be active until GAC's promised October 2027 switch-on",
       "Climate and audio are buried in the 14.6-inch touchscreen with almost no physical controls, and reviewers report menu lag and outright bugs",
       "87kW DC peak is slow for a 60kWh pack: about 40 minutes for 10-80 per cent, where an MG 4 64 manages a similar job faster",
       "No capped-price servicing programme; GAC quotes $199-$640 a visit at dealer discretion and about $1607 over five years",
       "Roughly 30 dealers nationally and no Australian resale track record, so residual values and parts supply are unproven"
     ],
     "sources": [
+      "https://www.gacgroup.com/en-au/hatchback/aion-ut",
+      "https://www.gacgroup.com/en-au/configuration/AION%20UT/2025",
+      "https://www.gacgroup.com/en-eu/configuration/AION%20UT/2024",
       "https://www.carexpert.com.au/car-reviews/2026-gac-aion-ut-luxury-review",
       "https://www.carexpert.com.au/car-news/2026-gac-aion-ut-pricing-ev-hatch-now-arriving-with-special-drive-away-offers",
-      "https://www.carsguide.com.au/ev/gac-aion-ut-101212",
+      "https://www.carexpert.com.au/gac/aion-ut/2026/luxury/features-and-specs",
       "https://www.carsguide.com.au/gac/aion-ut/price/2026",
-      "https://www.chasingcars.com.au/reviews/small-cars/gac-aion-ut-2026-review/",
-      "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-gac-aion-ut-price-specs-release-date.html",
-      "https://evcentral.com.au/2026-gac-aion-ut-review-cheap-electric-city-car-brings-big-space-and-solid-driving-manners-but-what-about-the-ownership-experience/",
-      "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh",
-      "https://www.gacgroup.com/en-au/hatchback/aion-ut"
+      "https://zecar.com/offers-and-deals/gac-aion-ut-drive-away-offer-from-31990",
+      "https://carsauce.com/news/gac-aion-ut-five-star-ancap-safety-rating-australia",
+      "https://ev-database.org/car/3518/GAC-AION-UT-60-kWh"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "gac-aion-ut.webp",
       "source": "https://commons.wikimedia.org/wiki/File:GAC_Aion_UT_EV_Car_at_Universitas_Widyatama.jpg",
@@ -1480,32 +1479,33 @@
   },
   {
     "id": "gac-aion-v",
-    "summary": "The Aion V is the first electric SUV from GAC, which launched in Australia in December 2025, and it undercuts most mid-size rivals while quoting a longer 510km WLTP range than the Geely EX5 or BYD Atto 3. Reviewers rate the cabin quality, quietness and standard equipment highly and find the ride comfortable if unexciting, but consistently criticise the touchscreen-only controls and the intrusive driver-monitoring and speed-sign systems. Both grades share one 150kW front-drive powertrain and a 75.26kWh LFP battery, so the choice between them is purely about trim rather than range or performance.",
+    "summary": "The Aion V is the first electric SUV from GAC, which launched in Australia in December 2025, and it undercuts most mid-size rivals while quoting a longer 510km WLTP range than the Geely EX5 and matching the dearer BYD Atto 3 Evo Premium. Reviewers rate the cabin quality, quietness and standard equipment highly and find the ride comfortable if unexciting, but consistently criticise the touchscreen-only controls and the intrusive driver-monitoring and speed-sign systems. Both grades share one 150kW front-drive powertrain and a 75.26kWh (usable) LFP battery, so the choice between them is purely about trim rather than range or performance.",
     "pros": [
-      "510km WLTP range from a 75.26kWh LFP pack, ahead of the Geely EX5 (475km) and BYD Atto 3 (420km) at similar money",
-      "180kW DC charging with a claimed 24-minute 10-80 per cent, roughly double the Geely EX5's peak rate",
-      "8-year/unlimited-km vehicle warranty and 8-year/200,000km battery warranty for private buyers, longer than BYD's 6 years or Geely's 7 (commercial use drops to 5 years/150,000km)",
+      "510km WLTP range from a 75.26kWh usable LFP pack, ahead of the Geely EX5 (475km) and level with the BYD Atto 3 Evo Premium for $4,400 less",
+      "180kW peak DC charging with a claimed 24-minute 20-80 per cent, roughly double the Geely EX5's peak rate",
+      "8-year/unlimited-km vehicle warranty and 8-year/200,000km battery warranty for private buyers, with no dealer-servicing condition, longer than BYD's 6 years or Geely's 7 (commercial use drops to 5 years/150,000km)",
       "Heat pump, V2L, panoramic sunroof, surround-view camera and heated/ventilated front seats are standard on the $42,590 base Premium",
       "5-star ANCAP rating (2025 datestamp, valid to December 2031) applying to both grades"
     ],
     "cons": [
-      "No towing rating published in Australia at all, against 1500kg braked for a BYD Sealion 7 or Leapmotor C10",
+      "No towing rating at all (GAC publishes none and EV Database lists no tow hitch), against 1500kg braked for a Leapmotor C10 or BYD Atto 3 Evo Premium",
       "Everything runs through the 14.6-inch touchscreen, with no volume dial and mirror adjustment buried in menus",
       "Driver-monitoring and speed-limit warnings are intrusive and reset to on at every start, a recurring complaint across Australian reviews",
       "Highway consumption climbs past 25kWh/100km against the 16.7kWh/100km WLTP claim, so the 510km figure is urban-biased",
-      "Brand-new to Australia with about 19 dealers as at March 2026 and no capped-price servicing scheme, leaving resale and running costs unproven"
+      "Brand-new to Australia with about 19 dealers as at March 2026 and no published capped-price service prices as of CarExpert's September 2026 review, leaving resale and running costs unproven"
     ],
     "sources": [
-      "https://www.gacgroup.com/en-au/price/aion-v/2024",
-      "https://www.gacgroup.com/en-au/configuration/aion-v/2024",
+      "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+      "https://www.gacgroup.com/en-au/suv/aion-v",
+      "https://eu-www-resouce-cdn.gacgroup.com/static/AU/tenant/cms/material/202608/1787037645132-Warranty-Terms-and-Conditions-FINAL-.pdf",
       "https://www.carexpert.com.au/car-news/2026-gac-aion-v-price-and-specs",
-      "https://www.carexpert.com.au/car-reviews/2026-gac-aion-v-review-quick-drive",
-      "https://www.carsguide.com.au/family/gac-aion-v-luxury-101340",
-      "https://www.mynrma.com.au/open-road/car-reviews/gac/2026-gac-aion-v-review",
+      "https://www.carexpert.com.au/car-reviews/2027-gac-aion-v-review",
+      "https://www.carexpert.com.au/car-news/gac-launches-in-australia-with-aggressive-pricing-long-warranty",
       "https://evcentral.com.au/2025-gac-aion-v-review-new-chinese-suv-sizes-up-byd-mg-and-even-toyota-with-long-range-and-budget-price/",
-      "https://www.carsguide.com.au/gac/aion-v/towing-capacity/2026"
+      "https://ev-database.org/uk/car/3559/GAC-AION-V-75-kWh",
+      "https://thebeep.com.au/cars/gac/aion-v"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "gac-aion-v.webp",
       "source": "https://commons.wikimedia.org/wiki/File:GAC_Aion_V_(second_generation)_IAA_2025_DSC_1406.jpg",
@@ -2269,26 +2269,30 @@
       "Lightest car in its class at 1520kg, more than 200kg under a BYD Atto 3, which is why it matches rivals' range on a much smaller battery and why reviewers praise its steering and body control.",
       "Genuinely more capable off-sealed-road than its rivals: 200mm of ground clearance, selectable terrain modes and hill descent control, none of which a Volvo EX30 or Kia EV3 offers.",
       "Cheap and predictable to maintain: servicing is capped at $250 per visit at 12-month/12,500km intervals, with roadside assistance renewed for life while it is serviced through the Jeep network.",
-      "Slow sales have made it heavily negotiable — Jeep Australia has run the Longitude at $40,000 drive-away with premium paint included, roughly $16,000 below the equivalent of its $49,990 list price."
+      "Slow sales have made it heavily negotiable: Jeep Australia is clearing new and demonstrator MY24 Longitudes at $40,000 drive-away with premium paint, about $13,000 under the roughly $53,000 Victorian drive-away its $49,990 list price implies."
     ],
     "cons": [
-      "Three-star ANCAP rating (shared with Euro NCAP, 2023): 59 per cent for vulnerable road user protection and 53 per cent for safety assist, with no child presence detection, against five stars for the Volvo EX30, Kia EV3 and Skoda Elroq.",
+      "Three-star ANCAP rating (shared with Euro NCAP, 2024): 59 per cent for vulnerable road user protection and 53 per cent for safety assist, with no child presence detection, against five stars for the Volvo EX30, Kia EV3 and Skoda Elroq.",
       "Rear seat and boot are the weakest part of the car: 355L behind the second row versus 470L in a Skoda Elroq, no rear air vents, no centre armrest and no rear door pockets, so it suits couples rather than families.",
       "Only 115kW and 260Nm for about nine seconds to 100km/h, and reviewers repeatedly criticise over-light steering and brakes that give dead travel and then bite too hard.",
-      "Ownership risk is real: Jeep Australia is down to three models with a shrinking dealer network, the Avenger sold just 92 cars here in 2025, the five-year warranty is capped at 100,000km, and $16,000 discounts point to poor resale."
+      "Ownership risk is real: Jeep Australia is down to three models with a shrinking dealer network, the Avenger sold just 97 cars here in 2025, the five-year warranty is capped at 100,000km, and deep discounts point to poor resale."
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
-      "https://www.carsguide.com.au/jeep/avenger/price/2026",
-      "https://www.carsguide.com.au/ev/jeep-avenger-95848",
-      "https://evcentral.com.au/seven-day-test-jeep-avenger-summit-too-much-fun-or-just-too-much/",
-      "https://thedriven.io/2024/12/14/jeep-avenger-review-light-and-efficient-but-this-electric-suv-lacks-space-and-features/",
-      "https://www.carexpert.com.au/car-news/jeep-australia-sticking-with-wrangler-new-chinese-bronco-rival-firming-1",
-      "https://www.carsguide.com.au/jeep/avenger/boot-space",
       "https://www.jeep.com.au/avenger.html",
+      "https://www.jeep.com.au/offers.html",
+      "https://www.jeep.com.au/warranty.html",
+      "https://www.jeep.com.au/content/dam/cross-regional/apac/jeep/en_au/pdfs/bg/avenger/jeep-avenger-my24-buyers-guide-oct2024.pdf",
+      "https://www.carexpert.com.au/car-reviews/2026-jeep-avenger-review",
+      "https://www.carexpert.com.au/jeep/avenger",
+      "https://www.carexpert.com.au/car-news/five-vehicles-that-could-turn-around-jeep-australias-sales-slide",
+      "https://www.carexpert.com.au/car-news/jeep-australia-sticking-with-wrangler-new-chinese-bronco-rival-firming-1",
+      "https://www.carsguide.com.au/jeep/avenger/price/2026",
+      "https://www.carsguide.com.au/jeep/avenger/boot-space",
+      "https://www.carsguide.com.au/news/jeep/avenger",
+      "https://ev-database.org/car/1816/Jeep-Avenger-Electric",
       "https://www.euroncap.com/assessments/jeep/avenger/1063/"
     ],
-    "sourcedAt": "2026-07-27",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "jeep-avenger.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Jeep_Avenger_1X7A0818.jpg",
@@ -2339,39 +2343,35 @@
   },
   {
     "id": "kgm-torres-evx",
-    "summary": "KGM's first electric SUV for Australia arrives as a single fully-equipped front-drive grade carrying the largest battery in its price class - 80.6kWh of BYD LFP Blade - but Australian reviewers agree that battery buys less range than it should, with a 462km WLTP claim that trails the smaller-batteried Geely EX5 and testers recording between 18.2 and 21.7kWh/100km. Where they part company is whether the fundamentals compensate: CarsGuide scored it 7.1/10 for interfaces that simply work and a genuinely roomy cabin, while CarExpert and The Driven both flagged missing equipment for the money and 339Nm regularly overwhelming the front tyres. The counterweight is running cost - $2,114 of capped-price servicing over seven years and an unconditional seven-year warranty - set against no ANCAP rating at all and just 168 Torres of any kind sold in Australia across the whole first half of 2025.",
+    "summary": "KGM's first electric SUV for Australia arrives as a single fully-equipped front-drive grade carrying the largest battery in its price class - 80.6kWh of BYD LFP Blade - but Australian reviewers agree that battery buys less range than it should, with a 462km WLTP claim that trails the smaller-batteried Geely EX5 and testers recording between 18.2 and 21.7kWh/100km. Where they part company is whether the fundamentals compensate: CarsGuide scored it 7.1/10 for interfaces that simply work and a genuinely roomy cabin, while CarExpert and The Driven both flagged missing equipment for the money, and CarsGuide and The Driven found the 339Nm overwhelming the front tyres. The counterweight is running cost - $2,114 of capped-price servicing over seven years and an unconditional seven-year warranty - set against no ANCAP rating at all and just 168 Torres of any kind sold in Australia across the whole first half of 2025.",
     "pros": [
       "Capped-price servicing totals $2,114 over seven years/140,000km (about $302 a year) with a complimentary first service inside six months or 5,000km, and KGM's seven-year/unlimited-kilometre warranty is unconditional - you may service outside the KGM dealer network provided you keep records proving the work met KGM's specification - while the BYD Blade pack carries a separate 10-year/unlimited-kilometre warranty guaranteeing at least 70 per cent state of health",
-      "The 80.6kWh battery is the biggest in the sub-$60,000 mid-size electric SUV class - Geely EX5 68.4kWh, MG S5 62kWh, BYD Atto 3 60.5kWh - and it supports 3.5kW vehicle-to-load, 120-130kW DC charging (10-80 per cent in about 37 minutes) and 10.5kW three-phase AC",
+      "The 80.6kWh battery is the biggest in the sub-$60,000 mid-size electric SUV class - Geely EX5 68.4kWh, MG S5 62kWh, BYD Atto 3 60.5kWh - and KGM quotes 10-80 per cent in about 37 minutes on a 300kW charger (42 minutes on a 100kW unit) plus 10.5kW three-phase AC charging",
       "1,500kg braked towing where the Geely EX5 is not rated to tow at all and the MG S5 and BYD Atto 3 stop at 750kg, plus a 465-litre boot that opens out to 1,526 litres with the rear seats folded",
       "One grade, no options list to navigate and no cheaper trim that deletes equipment: 18-inch alloys, powered sunroof, twin 12.3-inch screens, synthetic leather, heated and ventilated front seats, 360-degree camera, eight airbags and full driver-assist including lane centring and junction-assist AEB are all standard",
-      "A $5,010 factory bonus off the recommended retail price was running at the research date, taking the car to $53,690 drive-away with metallic paint included - available for a limited time and while stocks last, so it is a buying-window discount rather than a permanent repositioning"
+      "A $5,010 factory bonus off the $58,000 drive-away recommended price was still running at the research date on 2025-built MY26 cars, taking the car to $52,990 drive-away in solid white or $53,690 with metallic paint - available for a limited time and while stocks last, so it is a buying-window discount rather than a permanent repositioning"
     ],
     "cons": [
       "462km WLTP from 80.6kWh is the weakest efficiency in the class - the Geely EX5 gets 475km from 68.4kWh - and CarExpert measured 21.7kWh/100km against the 18.7kWh/100km claim; worse, 462km is the identical figure KGM published for the superseded 73.4kWh pack while Europe rates the 80.6kWh car at 503km, so the Australian range claim may simply be a carried-over number",
       "No ANCAP rating at all, and no KGM or SsangYong model is ANCAP-rated, so a fleet or salary-packaging buyer with a five-star purchasing policy cannot order one despite the eight airbags and full driver-assist suite",
-      "Front-wheel drive only with no AWD option offered, and CarsGuide, CarExpert and The Driven independently report the 339Nm overwhelming the front Nexen tyres off the line, with regenerative braking that feels inconsistent",
+      "Front-wheel drive only with no AWD option offered, and CarsGuide and The Driven both report the 339Nm overwhelming the front Nexen tyres off the line even in the dry, while CarExpert calls grip levels 'not the most assertive'",
       "KGM sold 168 Torres in the first half of 2025 against 24,034 Toyota RAV4s, and the brand's total 2025 Australian volume of 4,116 was down 23.7 per cent - thin dealer coverage, and a $5,010 factory bonus on new stock pushes used values down further; CarsGuide's own verdict is that rivals come 'from brands that might hold their value better'",
       "No spare wheel (a repair kit only), climate control is touchscreen-only so you must leave CarPlay to change the temperature, and there is no built-in navigation, no wireless phone mirroring and no wireless charging pad - a cable is mandatory"
     ],
     "sources": [
       "https://kgm.com.au/models/torres",
+      "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM-MY26-Torres-EVX_Specs-and-Features.pdf",
       "https://www.kgm.com.au/owners-and-service/servicing/torres-evx",
       "https://kgm.com.au/owners-and-service/warranty/warranty-terms",
-      "https://www.carexpert.com.au/car-news/2026-kgm-torres-evx-price-and-specs-ex-ssangyong-suv-the-latest-tesla-model-y-rival",
       "https://www.carexpert.com.au/car-reviews/2026-kgm-torres-evx-review",
       "https://www.carexpert.com.au/kgm/torres/2026-evx-suv-fwd-electric-jsk5mmg520251125",
       "https://www.carsguide.com.au/ev/kgm-torres-evx-100443",
       "https://www.carsguide.com.au/kgm/torres-evx/price/2026",
-      "https://www.carsguide.com.au/car-news/koreas-byd-battler-is-here-100194",
-      "https://www.carsguide.com.au/kgm/torres-evx/towing-capacity/2026",
       "https://thedriven.io/2026/04/04/kgm-torres-evx-review-an-electric-suv-that-is-worth-looking-at/",
-      "https://zecar.com/reviews/kgm-torres-evx-arrives-in-australia-from-58k-driveaway",
-      "https://www.cars24.com.au/car-news/2026-kgm-torres-evx-prices-and-specs-detailed/",
-      "https://ev-database.org/car/3389/KGM-Torres-EVX-806-kWh",
-      "https://ev-database.org/car/2189/KGM-Torres-EVX"
+      "https://thebeep.com.au/cars/kgm/torres",
+      "https://ev-database.org/car/3389/KGM-Torres-EVX-806-kWh"
     ],
-    "sourcedAt": "2026-07-30",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "kgm-torres-evx.webp",
       "source": "https://commons.wikimedia.org/wiki/File:SsangYong_Torres_Automesse_Ludwigsburg_2024_IMG_1442.jpg",
@@ -2600,31 +2600,32 @@
   },
   {
     "id": "land-rover-defender-phev",
-    "summary": "The only plug-in Defender is the 110 P300e, a 221kW 2.0-litre petrol hybrid sold in two trims and no other body length. Reviewers agree it keeps everything that makes a Defender a Defender — the twin-speed transfer case, the air suspension, the 3000kg tow rating — and adds around 48km of quiet electric running that suits a Melbourne commute. Where they split is whether that is worth the money: the battery costs boot space, a third-row seat and roughly $13,000-$16,600 over the equivalent D350 diesel, and the fuel saving only materialises if the car is plugged in nightly.",
+    "summary": "The only plug-in Defender is the 110 P300e, a 221kW 2.0-litre petrol hybrid sold in two trims and no other body length. Reviewers agree it keeps everything that makes a Defender a Defender — the twin-speed transfer case, the air suspension, the 3000kg tow rating — and adds around 48km of quiet electric running that suits a Melbourne commute. Where they split is whether that is worth the money: the battery costs boot space, a third-row seat and roughly $13,500-$17,500 over the equivalent D350 diesel, and the fuel saving only materialises if the car is plugged in nightly.",
     "pros": [
-      "The only Defender you can plug in: about 48km of WLTP electric range covers a typical Melbourne commute, and it is one of the few PHEVs at any price with DC fast charging (40kW, 0-80 per cent in roughly 30 minutes) rather than AC only.",
+      "The only Defender you can plug in: about 48km of WLTP electric range covers a typical Melbourne commute, and it is one of the few PHEVs at any price with DC fast charging rather than AC only (Land Rover quotes 0-80 per cent in about 30 minutes at up to 40kW; CarExpert's Australian data lists 32kW).",
       "Keeps the Defender's touring hardware intact — 3000kg braked towing, a 90-litre tank, twin-speed transfer case and up to 900mm wading on air suspension — so the battery is added capability rather than a substitution.",
-      "Clears both Australian tax tests: 78g/km CO2 on the Australian label is well inside Victoria's 120g/km green-car duty threshold, and the 3.4L/100km combined figure sneaks under the 3.5L/100km fuel-efficient LCT limit that lifts the threshold from $80,809 to $91,661.",
+      "Clears both Australian tax tests: 78g/km CO2 on the Australian label is well inside Victoria's 120g/km green-car duty threshold, and the 3.1L/100km combined label sits under the 3.5L/100km fuel-efficient LCT limit that lifts the threshold from $80,809 to $91,661.",
       "Five-year, unlimited-kilometre warranty with five years of roadside assistance and six-year anti-corrosion cover, level with Volvo and BMW rather than the shorter terms Land Rover Australia used to offer."
     ],
     "cons": [
-      "CarExpert measured 9.7L/100km on the same drivetrain once the battery was flat and never recharged — about 63 per cent above the 3.4L/100km label — so a buyer without home charging is running a 2.6-tonne car on a small four-cylinder engine and paying for it in fuel.",
-      "The pack eats the boot: Land Rover quotes up to 116 litres less loadspace than a non-hybrid 110 and a loadspace floor raised 36mm, leaving 853 litres behind the second row.",
+      "CarExpert measured 9.7L/100km on the same drivetrain once the battery was flat and never recharged, against a 3.1L/100km label, so a buyer without home charging is running a 2.5-tonne car on a small four-cylinder engine and paying for it in fuel.",
+      "The pack eats the boot: the P300e has 696 litres behind the second row and 1759 litres folded against 786 and 1875 litres for a non-hybrid 110, with the loadspace floor raised 36mm over the battery.",
       "No third row. Land Rover does not offer the seven-seat Family Pack on the P300e, so a family that needs six or seven seats has to take a D350 110 or step up to a 130.",
       "Braked towing falls to 3000kg against 3500kg for the D350 and P425, and the PHEV carries roughly 100kg more kerb weight, so it is the worst Defender in the range for a heavy trailer.",
-      "At $131,100 and $143,200 before on-road costs it asks $13,000-$16,600 more than the D350 X-Dynamic SE and HSE, and it is well past the $75,000 cap in the 2027 FBT phase-down as well as both LCT thresholds."
+      "At $136,800 and $149,000 before on-road costs after the MY27 price rise, it asks $17,500 and $13,500 more than the D350 X-Dynamic SE and HSE, and it is well past the $75,000 cap in the 2027 FBT phase-down as well as both LCT thresholds."
     ],
     "sources": [
-      "https://www.carexpert.com.au/car-news/2026-land-rover-defender-upgrade-brings-more-v8-options-new-tech-design-tweaks",
+      "https://www.carexpert.com.au/car-news/2027-land-rover-defender-lineup-revealed-with-new-trims-and-price-hikes",
+      "https://www.carexpert.com.au/land-rover/defender/2027-x-dynamic-se-2l-suv-4x4-electric-jsgsofsw20260703",
+      "https://www.carexpert.com.au/land-rover/defender/2027-x-dynamic-hse-2l-suv-4x4-electric-jsgsofss20260703",
       "https://www.carexpert.com.au/car-reviews/2024-defender-110-p400e-x-dynamic-se-review",
-      "https://www.carsguide.com.au/land-rover/defender/price/2026/110-p300e-x-dynamic-se-phev",
-      "https://www.carsales.com.au/research/land-rover/defender/2026/110-p300e-x-dynamic-se/",
+      "https://www.carsguide.com.au/land-rover/defender/price/2027",
+      "https://www.autoexpress.co.uk/land-rover/defender/practicality",
       "https://www.landrover.com.au/defender/defender/models-and-specifications.html",
       "https://www.landrover.co.uk/content/dam/lrdx/pdfs/uk/wltp-pdfs/Land-Rover-Defender-TD-Insert-1L6632600000GBEN01P.pdf",
-      "https://www.vesr.gov.au/vehicle/land-rover-defender-le-110-p400e-electric-hybrid-awd-5-seats-suv-2024-2025",
-      "https://sro.vic.gov.au/exemptions-and-reductions-motor-vehicle-duty"
+      "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
     ],
-    "sourcedAt": "2026-07-28",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "land-rover-defender-phev.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_110_Station_Wagon_2016_-_rear.jpg",
@@ -2640,7 +2641,7 @@
       "Cheapest way into a new electric SUV in Australia at $37,888 list, several thousand under a BYD Atto 3 Essential and a Geely EX5 Complete, with a 14.6-inch screen, panoramic roof, wireless charging and 360-degree cameras standard on the base Style",
       "Rear-wheel drive with Maserati-influenced suspension tuning — carsales rated it 'one of the best value and most engaging small electric SUVs' at 81/100 and CarsGuide gave 7.4/10, both singling out ride and handling as ahead of the class",
       "Apple CarPlay and Android Auto are fitted, unlike the Leapmotor C10, which still has neither on any grade",
-      "The $40,888 Design LR steps up to a 67.1kWh pack, 434km WLTP and 168kW DC charging (30-80% in about 18 minutes) against the Style's 56.2kWh and 140kW, for $3,000",
+      "The $40,888 Design LR steps up to a 67.1kWh pack (about 65kWh usable), 434km WLTP and 168kW DC charging against the Style's 56.2kWh (about 55kWh usable), 361km and 140kW, for $3,000; both charge 30-80% in about 20 minutes",
       "Eight years of capped-price servicing at roughly $370 per visit on 12-month/20,000km intervals, plus eight years of roadside assistance and a five-star ANCAP rating"
     ],
     "cons": [
@@ -2648,22 +2649,25 @@
       "Standard Linglong eco tyres were criticised by RACQ, carsales and CarsGuide alike for squealing and losing grip early under brakes, which reviewers say squanders the chassis the car is otherwise praised for",
       "Lane-keep assist is intrusive enough that multiple Australian reviewers disable it every drive, and there are no physical controls — mirrors, vents and most functions live in the touchscreen",
       "Six-year/150,000km warranty is unconditional but trails the seven years offered by Kia, MG, Geely and Chery in the same price bracket, after Leapmotor cut the term from seven years for MY25",
-      "Resale is the open risk: Leapmotor has around 20 Australian dealers, almost no local resale history, and launched the B10 on a $38,990 national drive-away offer that sat below the true on-road cost"
+      "Resale is the open risk: Leapmotor has around 20 Australian dealers and almost no local resale history, launched the B10 on a $38,990 national drive-away offer that sat below the true on-road cost, and kept discounting the Style to that figure through September 2026"
     ],
     "sources": [
-      "https://www.carsguide.com.au/ev/leapmotor-b10-100848",
-      "https://www.carsguide.com.au/ev/leapmotor-b10-style-100861",
-      "https://www.racq.com.au/articles/car-reviews/leapmotor-b10-design-long-range-my26-review",
-      "https://www.mynrma.com.au/open-road/car-reviews/leapmotor/2026-leapmotor-b10-review",
-      "https://www.carsales.com.au/editorial/details/leapmotor-b10-2026-review-151612/",
+      "https://www.leapmotor.net/au/b10",
+      "https://www.leapmotor.net/docs/lpmiwebsiteenaulibraries/brochures/leapmotor-b10-buyersguide-my26-v102.pdf",
+      "https://www.leapmotor.net/en-au/offers",
+      "https://www.leapmotor.net/en-au/services-for-you/maintenance-and-warranty",
+      "https://www.carexpert.com.au/leapmotor/b10/2026-style-suv-rwd-electric-jsgwmwkf20260410",
+      "https://www.carexpert.com.au/leapmotor/b10/2026-design-lr-suv-rwd-electric-jsgwmwka20260410",
+      "https://www.carexpert.com.au/car-news/leapmotor-deals-chinese-brand-slashes-thousands-off-b10-c10-evs-and-erevs",
       "https://www.carexpert.com.au/car-reviews/2026-leapmotor-b10-review",
       "https://www.carexpert.com.au/car-news/2026-leapmotor-b10-becomes-australias-cheapest-electric-suv",
-      "https://www.carexpert.com.au/car-news/2026-leapmotor-b10-hybrid-ev-prices-chinese-brands-smallest-ev-in-australia-gets-a-petrol-engine",
-      "https://www.carexpert.com.au/car-news/leapmotor-b10-gets-bigger-battery-800v-tech-and-more-range",
-      "https://www.carexpert.com.au/car-news/leapmotor-winds-back-warranty-for-its-tesla-model-y-rival",
-      "https://www.carsguide.com.au/leapmotor/b10/towing-capacity/2026"
+      "https://www.carsguide.com.au/ev/leapmotor-b10-style-100861",
+      "https://carsguide.com.au/ev/leapmotor-b10-design-lr-100862",
+      "https://www.carsguide.com.au/leapmotor/b10/towing-capacity/2026",
+      "https://ev-database.org/car/3232/Leapmotor-B10-562-kWh",
+      "https://ev-database.org/uk/car/3233/Leapmotor-B10-671-kWh"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "leapmotor-b10.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_B10_IAA_2025_DSC_2069.jpg",
@@ -2674,33 +2678,41 @@
   },
   {
     "id": "leapmotor-c10",
-    "summary": "The C10 is Stellantis-distributed Leapmotor's mid-size electric SUV, sold in Australia as a deliberate value play against the Tesla Model Y and Kia EV5 with list prices from the mid-$40,000s. Australian reviewers broadly agree on the package — RACV, CarExpert and CarsGuide all praise its limousine-like rear legroom, Maserati-tuned ride comfort and equipment level, and CarsGuide's 2026 BEV Design review scored it 7.5/10 after an over-the-air update tamed the intrusive driver-assist alerts. Where they diverge is how much the usability faults matter: the missing Apple CarPlay and Android Auto, everything-in-the-touchscreen layout and fiddly key card drew consistent criticism, and Chasing Cars marked the related C10 down to 5.5/10 for grabby brakes and numb steering, while RACV explicitly warned buyers about brand risk given Leapmotor's tiny local volume.",
+    "summary": "The C10 is Stellantis-distributed Leapmotor's mid-size electric SUV, sold in Australia as a value play against the Tesla Model Y and Kia EV5; since the June 2026 update the battery-electric range is down to two grades, the $49,888 Design LR and the $53,888 AWD Sports+ Special Edition, after the entry 69.9kWh Style was dropped. Australian reviewers broadly agree on the package — RACV, CarExpert and CarsGuide all praise its limousine-like rear legroom, comfortable ride and equipment level, and CarsGuide's 2026 BEV Design review scored it 7.5/10 after an over-the-air update tamed the intrusive driver-assist alerts. Where they diverge is how much the usability faults matter: the missing Apple CarPlay and Android Auto, everything-in-the-touchscreen layout and fiddly key card drew consistent criticism, Chasing Cars marked the related range-extender C10 down to 5.5/10 for grabby brakes and numb steering, and RACV warned buyers about brand risk given Leapmotor's tiny local volume.",
     "pros": [
-      "Roughly $10,000 under a Tesla Model Y and several thousand under a Kia EV5 Air, with a panoramic roof, 14.6-inch screen and 17 driver-assist systems standard even on the $45,888 Style",
-      "Class-leading rear legroom on a flat floor — reviewers consistently rate the second row as the C10's standout, ahead of the Model Y and EV5 — plus a 581L boot expanding to 1410L",
-      "Ride comfort was tuned with Maserati chassis input and RACV found it smothers poor surfaces rather than fidgeting like most cheap EVs on 20-inch wheels",
-      "The $49,888 Design LR gets an 81.9kWh battery, 800V architecture and 180kW DC charging (30-80% in about 22 minutes) for the same price the smaller-battery Design used to cost",
-      "Cheap to keep: five services capped at $2000 total ($400 each, 12 months/20,000km) and a five-star ANCAP rating from 2024 testing"
+      "The $49,888 Design LR undercuts a Kia EV5 Air Long Range by about $11,000 and a BYD Sealion 7 Premium by about $5,000, with a panoramic roof, 14.6-inch screen and a full driver-assist suite standard",
+      "Class-leading rear legroom on a flat floor — reviewers consistently rate the second row as the C10's standout, ahead of the Model Y and EV5",
+      "The Design LR's 81.9kWh usable LFP battery, 800V architecture and 180kW DC charging (30-80% in about 22 minutes) give 510km WLTP for the same price the 69.9kWh Design used to cost",
+      "The AWD Sports+ Special Edition brings 440kW and a claimed 4.0-second 0-100km/h for $53,888 before on-roads, Model Y Performance pace for far less money",
+      "Rated to tow 1500kg braked, double the BYD Sealion 7 RWD's 750kg, with an eight-year/160,000km battery warranty and a five-star ANCAP rating from 2024 testing"
     ],
     "cons": [
       "No Apple CarPlay or Android Auto on any grade, with mirrors, vents and most functions buried in the touchscreen and no physical console buttons",
-      "The entry Style is stuck on the old 69.9kWh pack and 84kW DC charging — roughly half the Design LR's peak rate — so the $4000 step up buys a materially different car, not just trim",
+      "The quoted 581L boot is measured to the roof; to the cargo cover it is about 435L, behind the Sealion 7's 500L and EV5's 513L",
       "Leapmotor cut the C10's warranty from seven years/160,000km to six years/150,000km for MY25, so it now trails the seven years offered by Kia, MG, Deepal and Geely",
-      "Weak resale outlook: Leapmotor delivered only 579 C10s in Australia in 2025 and 39 in the first two months of 2026, and dealers are already listing stock in the high-$30,000s against a $45,888 list price",
-      "Numb steering, grabby friction brakes that are hard to modulate in traffic, no frunk, and a key-card entry system reviewers called convoluted enough that Leapmotor has admitted a rethink"
+      "Weak resale outlook: Leapmotor's local volume is tiny, the BEV line-up has been cut to two grades (the AWD Sports+ was limited to 50 cars), and the brand leans on recurring cashback and $0 on-road campaigns to move stock",
+      "Numb steering, grabby friction brakes that are hard to modulate in traffic, and a plastic key card held against the mirror to unlock that CarsGuide called weird"
     ],
     "sources": [
-      "https://www.carsguide.com.au/ev/leapmotor-c10-bev-design-100447",
-      "https://www.carexpert.com.au/car-reviews/2025-leapmotor-c10-review",
+      "https://www.leapmotor.net/en-au/models/c10",
+      "https://www.leapmotor.net/en-au/models/c10-awd-sports",
+      "https://www.leapmotor.net/en-au/services-for-you/maintenance-and-warranty",
+      "https://evcentral.com.au/big-changes-for-leapmotor-c10-ev-in-australia-line-up-rationalised-range-extended-good-news-story-on-price/",
+      "https://www.goauto.com.au/amp/leapmotor/c10/leapmotor-introduces-c10-design-long-range/2026-06-18/99571.html",
       "https://www.carexpert.com.au/car-news/2026-leapmotor-c10-design-long-range-adds-more-range-for-no-extra-money",
-      "https://www.racv.com.au/royalauto/car-reviews/leapmotor/2025-leapmotor-c10-review.html",
-      "https://www.chasingcars.com.au/reviews/midsize-suvs/leapmotor-c10-reev-ultra-hybrid-2026-review/",
-      "https://www.carexpert.com.au/car-news/leapmotor-c10-awd-sports-is-an-exclusive-but-affordable-model-y-performance-rival",
-      "https://www.carexpert.com.au/car-news/leapmotor-winds-back-warranty-for-its-tesla-model-y-rival",
+      "https://www.carexpert.com.au/leapmotor/c10/2026",
+      "https://www.carexpert.com.au/car-reviews/2025-leapmotor-c10-review",
+      "https://www.carsguide.com.au/car-reviews/leapmotor-c10-design-96589",
+      "https://zecar.com/reviews/leapmotor-c10-my26-update-range-power-price",
       "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+      "https://ev-database.org/car/3388/Leapmotor-C10-AWD-819-kWh",
+      "https://www.carexpert.com.au/car-news/leapmotor-c10-awd-sports-is-an-exclusive-but-affordable-model-y-performance-rival",
+      "https://www.racv.com.au/royalauto/car-reviews/leapmotor/2025-leapmotor-c10-review.html",
+      "https://www.carsguide.com.au/ev/leapmotor-c10-bev-design-100447",
+      "https://www.chasingcars.com.au/reviews/midsize-suvs/leapmotor-c10-reev-ultra-hybrid-2026-review/",
       "https://www.ancap.com.au/safety-ratings/leapmotor/c10/00117b"
     ],
-    "sourcedAt": "2026-07-27",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "leapmotor-c10.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Leapmotor_C10_IAA_2023_1X7A0248.jpg",
@@ -2838,33 +2850,37 @@
   },
   {
     "id": "lotus-eletre",
-    "summary": "Lotus's first SUV is a 2.5-tonne, 450kW-to-675kW electric hyper-SUV that Australian reviewers rate genuinely well — CarExpert called it \"really, ridiculously good\" and praised air suspension that stays composed on coarse country roads — but CarsGuide scored it only 7.2 out of 10 and flagged limited cabin practicality and a driving character that no longer resembles a Lotus. A MY25 factory price cut of $49,010 to $35,010 a variant transformed the value case, dropping the entry car from $239,000 to $189,990, and it is that repricing rather than the engineering that reviewers now credit for making it competitive. The unresolved risk is ownership rather than the car: Lotus sold 12 Eletres in Australia in 2024, nine in 2025 and three to date in 2026, through a five-showroom network, so parts, resale and service depth are all unproven.",
+    "summary": "Lotus's first SUV is a 2.5-tonne, 450kW-to-675kW electric hyper-SUV that Australian reviewers rate genuinely well — CarExpert called it \"really, ridiculously good\" and praised air suspension that stays composed on coarse country roads — but CarsGuide scored it only 7.2 out of 10 and flagged limited cabin practicality and a driving character that no longer resembles a Lotus. A MY25 factory price cut of $35,010 to $49,010 a variant transformed the value case, dropping the entry car from $239,000 to $189,990, and it is that repricing rather than the engineering that reviewers now credit for making it competitive; Lotus's Australian site now markets the range as the 600 series (Base and S) and 900 series (R) but publishes no prices. The unresolved risk is ownership rather than the car: Lotus sold 12 Eletres in Australia in 2024, nine in 2025 and four to October 2026, through a five-showroom network, so parts, resale and service depth are all unproven.",
     "pros": [
       "Cut by $49,010 in MY25 — the entry Eletre fell from $239,000 to $189,990 before on-roads, undercutting a BMW iX M60 and Lamborghini Urus while offering 450kW and 4.5sec to 100km/h",
       "800V architecture takes 350kW DC for a 10-80 per cent charge in about 20 minutes, well ahead of the 400V Audi SQ8 e-tron and Mercedes-AMG EQE SUV it is cross-shopped against",
-      "688-litre boot expanding to 1,532 litres and a 2,250kg braked tow rating, which is more than the BMW iX or Polestar 3 will pull",
+      "688-litre boot (to the window line) expanding to 1,532 litres and a 2,250kg braked tow rating, more than the Polestar 3's 2,200kg though short of the BMW iX's 2,500kg",
       "CarExpert rates the Unreal Engine 5 infotainment as \"one of the best infotainment experiences available\", ahead of Tesla's, backed by a 23-speaker 2,160W KEF system on the S",
       "Two-year/30,000km service intervals with only cabin filter and brake fluid as mandatory replacements, so scheduled maintenance is unusually light for the price bracket"
     ],
     "cons": [
       "CarExpert recorded 340km from a full charge in hard driving against a 490km WLTP claim on the R, so the 600km and 535km figures on these grades will not survive highway use",
       "Lotus has no capped-price servicing in Australia and distributes through only five Simply Sports Cars showrooms, so warranty and repair access is thin outside the capitals",
-      "Resale is the weakest part of the case: 24 Eletres were sold new in Australia across 2024 and 2025 combined, and the MY25 price cut wiped up to $49,010 off MY24 cars overnight",
+      "Resale is the weakest part of the case: 21 Eletres were sold new in Australia across 2024 and 2025 combined, and the MY25 price cut wiped up to $49,010 off MY24 cars overnight",
       "Standard brakes are judged inadequate for the performance — CarExpert recommends the $32,199 carbon-ceramic upgrade, and options escalate a car that already carries heavy unrecoverable Luxury Car Tax",
       "The flagship Eletre R at $279,990 sits above this calculator's modelling ceiling, and neither S nor base qualifies for the FBT exemption, so novated leasing offers no relief on any grade"
     ],
     "sources": [
+      "https://www.lotuscars.com/en-AU/eletre",
       "https://www.lotuscars.com/en-AU/eletre/specifications",
+      "https://www.lotuscars.com/en-AU/support/warranty/eletre",
+      "https://www.carexpert.com.au/car-reviews/2027-lotus-eletre-x-review-quick-drive",
       "https://www.carexpert.com.au/car-news/2025-lotus-eletre-price-and-specs-massive-price-cuts-for-electric-suv",
-      "https://www.carsguide.com.au/lotus/eletre/price/2026",
-      "https://www.carexpert.com.au/car-reviews/2024-lotus-eletre-review",
       "https://www.carexpert.com.au/car-reviews/2025-lotus-eletre-review-quick-drive",
-      "https://www.carsguide.com.au/ev/lotus-eletre-95066",
-      "https://www.carexpert.com.au/lotus/eletre/2026",
-      "https://www.goauto.com.au/new-models/lotus/eletre/australian-lotus-eletre-pricing-announced/2023-09-12/91937.html",
-      "https://ev-database.org/uk/car/1768/Lotus-Eletre-R"
+      "https://www.carexpert.com.au/lotus/eletre/2025-suv-4x4-electric-jsfsgfww20260701",
+      "https://www.carexpert.com.au/lotus/eletre/s/features-and-specs",
+      "https://www.carsguide.com.au/lotus/eletre/price/2026",
+      "https://www.carsguide.com.au/lotus/eletre/price/2026/s",
+      "https://atlas.carexpert.com.au/make/lotus/eletre",
+      "https://ev-database.org/uk/car/1767/Lotus-Eletre",
+      "https://ev-database.org/uk/car/2066/Lotus-Eletre-S"
     ],
-    "sourcedAt": "2026-08-08",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "lotus-eletre.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Lotus_Eletre_IAA_2023_1X7A0668.jpg",
@@ -2875,35 +2891,37 @@
   },
   {
     "id": "lotus-emeya",
-    "summary": "The Emeya is Lotus's electric four-door hyper-GT, and Australian reviewers agree it is a genuinely resolved luxury EV — CarExpert praises air suspension that \"breathes nicely with the road\" rather than feeling floaty, and CarsGuide rates the chassis agile enough to hold its own against a Porsche Taycan while offering far more rear legroom. Where they part company is on whether it is still a Lotus: at 2480-2575kg CarsGuide argues it \"abandons Lotus' lightweight principles\" and that the heaviness dulls its edge. The bigger buyer risk is commercial rather than dynamic — Australia bought 5 in 2024, 3 in 2025 and none year-to-date in 2026, making it the slowest-selling car you can actually walk in and order.",
+    "summary": "The Emeya is Lotus's electric four-door hyper-GT, and Australian reviewers agree it is a genuinely resolved luxury EV — CarExpert praises air suspension that \"breathes nicely with the road\" rather than feeling floaty, and CarsGuide rates the chassis agile enough to hold its own against a Porsche Taycan while offering far more rear legroom. Where they part company is on whether it is still a Lotus: at 2480-2575kg CarsGuide argues it \"abandons Lotus' lightweight principles\" and that the heaviness dulls its edge. The bigger buyer risk is commercial rather than dynamic — Australia bought 5 in 2024, 3 in 2025 and 2 to October 2026; the range-topping 900 (formerly R, $259,990) is not listed here because it sits above the app's price ceiling.",
     "pros": [
       "Wheelbase is roughly 200mm longer than a Porsche Taycan's, so rear legroom is genuinely adult-sized where the Taycan and Audi e-tron GT are cramped",
       "800V architecture charges at up to 350kW for a 10-80 per cent top-up in about 14 minutes, comfortably quicker than a Taycan on the same charger",
-      "Liftback tailgate gives 509 litres behind the rear seats and 1388 litres folded, plus a 34-litre frunk — far more usable than the sedan-booted e-tron GT",
+      "Liftback tailgate gives 509 litres behind the rear seats (1388 litres folded, measured to the roof), plus a 34-litre frunk — far more usable than the sedan-booted e-tron GT",
       "Unconditional five-year/150,000km vehicle warranty with eight years/200,000km on the battery, no dealer-servicing strings attached",
-      "Entry 600 grade is certified at 580km combined WLTP from a 98.9kWh usable pack, ahead of the 506km BMW i5 M60 at a similar price"
+      "Entry 600 on 20-inch wheels is rated at 610km WLTP from a 98.9kWh usable pack (580km for the 21-inch 600 SE), well ahead of the 506km BMW i5 M60 at a similar price"
     ],
     "cons": [
-      "Australian volume is effectively nil — 5 sales in 2024, 3 in 2025 and zero year-to-date in 2026 — so there is almost no used-buyer base and resale risk is severe",
+      "Australian volume is effectively nil — 5 sales in 2024, 3 in 2025 and 2 to October 2026 — so there is almost no used-buyer base and resale risk is severe",
       "Only five Lotus retailers nationally (Brisbane, Sydney, Melbourne, Adelaide, Perth), meaning no franchised service or warranty support outside a capital city",
-      "Documented heavy discounting: Carscoops reported in May 2026 that UK dealers were taking roughly 36 per cent off a $189K-equivalent Emeya, and the Australian entry price has already been cut from $189,990 to $177,990",
+      "Documented heavy discounting overseas: Carscoops reported in May 2026 that a London Lotus dealer had cut a new Emeya R from £140,105 to £89,950, about 40 per cent off",
       "Kerb weight of 2480-2575kg is close to a large SUV, and CarsGuide judges that the mass blunts the agility the badge implies",
-      "Lotus Australia publishes no prices on its website or configurator, so the grade walk above the entry 600 cannot be compared without visiting a retailer"
+      "Lotus Australia publishes no prices on its website or configurator; the $189,990 and $209,990 figures are the 2024 launch prices still quoted by CarExpert, so confirm the current list price with a retailer"
     ],
     "sources": [
       "https://www.lotuscars.com/en-AU/emeya/models",
+      "https://www.lotuscars.com/en-AU/emeya",
+      "https://www.lotuscars.com/en-AU/support/warranty/emeya",
       "https://www.carexpert.com.au/car-news/2025-lotus-emeya-electric-taycan-rival-priced-for-australia",
-      "https://www.carexpert.com.au/car-reviews/2025-lotus-emeya-review-quick-drive",
-      "https://www.carexpert.com.au/lotus/emeya/pricing",
-      "https://www.carexpert.com.au/lotus/emeya/2025-r-jsggfssw20240812",
+      "https://www.carexpert.com.au/lotus/emeya/2025-hatchback-4x4-electric-jsggfsw520260701",
+      "https://www.carexpert.com.au/lotus/emeya/2025-s-hatchback-4x4-electric-jsggfsss20260701",
+      "https://www.carexpert.com.au/lotus/emeya/2026",
+      "https://atlas.carexpert.com.au/make/lotus/emeya",
       "https://www.carsguide.com.au/ev/lotus-emeya-95486",
-      "https://www.carsguide.com.au/car-news/two-and-a-half-tonne-sports-cars-2025-lotus-emeya-hyper-gt-australian-pricing-confirmed",
-      "https://www.carsales.com.au/research/lotus/emeya/",
-      "https://manofmany.com/auto/cars/slowest-selling-cars-australia",
+      "https://evcentral.com.au/cars/lotus/emeya/",
       "https://www.carscoops.com/2026/05/lotus-emeya-discounts-uk/",
-      "https://ev-database.org/car/3214/Lotus-Emeya-600"
+      "https://ev-database.org/car/3214/Lotus-Emeya-600",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lotus/emeya/1generation/339644"
     ],
-    "sourcedAt": "2026-08-08",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "lotus-emeya.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Lotus_Emeya_Auto_Zuerich_2024_DSC_6171.jpg",
@@ -3614,7 +3632,7 @@
   },
   {
     "id": "nissan-ariya",
-    "summary": "Nissan's only EV in Australia is a quiet, comfort-tuned mid-size SUV that finally went on sale here in September 2025, roughly six years after its global reveal, and Australian reviewers consistently rate it competent rather than class-leading. Its strongest cards are the 10-year/300,000km conditional warranty, better-than-claimed real-world efficiency and a 1500kg tow rating on the dual-motor Evolve; against that, 130kW DC charging and a fidgety ride over sharp bumps leave it behind newer rivals. Verdicts diverge on value: testers praise the drivetrain refinement and cabin isolation, but most call the list pricing optimistic next to a Tesla Model Y, BYD Sealion 7 or Kia EV5.",
+    "summary": "Nissan's only EV in Australia is a quiet, comfort-tuned mid-size SUV that went on sale here in September 2025, roughly six years after its global reveal, and Australian reviewers consistently rate it competent rather than class-leading. Its strongest cards are the 10-year/300,000km conditional warranty, better-than-claimed real-world efficiency and a 1500kg tow rating on the dual-motor Evolve; against that, 130kW DC charging and a fidgety ride over sharp bumps leave it behind newer rivals. List prices are unchanged at $55,840-$71,840 before on-roads, but by late 2026 Nissan was clearing MY25 stock with drive-away deals ahead of a facelifted Ariya already revealed overseas, so testers' complaints about optimistic pricing next to a Tesla Model Y, BYD Sealion 7 or Kia EV5 now apply mainly to the list figure.",
     "pros": [
       "10-year/300,000km warranty if every service is done at a Nissan dealer, with $299 capped-price servicing; stay outside the dealer network and it reverts to 5 years/unlimited km, short of Kia's unconditional 7",
       "Real-world efficiency beats the WLTP claim: Australian testers recorded mid-17kWh/100km around town and 557km from the 87kWh Advance+ against its 504km WLTP figure",
@@ -3626,18 +3644,19 @@
       "Engage and Advance are stuck with 385km WLTP from the 63kWh pack; the 87kWh battery costs $63,840 in Advance+ form, an $8,000 step up from the base car",
       "Suspension reacts abruptly to sharp bumps and the Evolve's 20-inch wheels make the ride busy on coarse Melbourne surfaces",
       "No front boot on any variant, a high rear floor that leaves rear passengers knees-up with negligible toe room, and wired-only Android Auto",
-      "Resale risk is real: 127 deliveries in 2025 and ~104 in the first four months of 2026, with factory bonuses near $7,000 and $49,990-$53,990 driveaway offers appearing within a year of launch"
+      "Resale risk is real: 127 deliveries in 2025 and ~104 in the first four months of 2026, then MY25 run-out deals of $42,990-$60,990 drive-away (up to ~$15,000 off) extended to March 2027 while a facelift waits in the wings"
     ],
     "sources": [
+      "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+      "https://www.nissan.com.au/vehicles/browse-range/ariya.html",
       "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-review",
+      "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-advance-review-long-term-introduction",
+      "https://www.carexpert.com.au/car-news/nissan-ariya-deals-ev-prices-slashed-by-up-to-dollar15000",
       "https://www.carsguide.com.au/car-news/2026-nissan-ariya-pricing-and-features-byd-sealion-7-tesla-model-y-and-xpeng-g6-rival",
       "https://www.carsguide.com.au/ev/nissan-ariya-99524",
-      "https://www.chasingcars.com.au/reviews/midsize-suvs/nissan-ariya-2026-review/",
-      "https://www.chasingcars.com.au/reviews/midsize-suvs/nissan-ariya-advance-2026-review/",
-      "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
-      "https://zecar.com/reviews/nissan-ariya-deals-australia-2026"
+      "https://ev-database.org/car/1301/Nissan-Ariya-63kWh"
     ],
-    "sourcedAt": "2026-07-27",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "nissan-ariya.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Nissan_Ariya_Automesse_Ludwigsburg_2022_1X7A5877.jpg",
@@ -3724,13 +3743,13 @@
   },
   {
     "id": "polestar-3",
-    "summary": "The Polestar 3 is a large five-seat electric SUV that shares its SPA2 underpinnings with the Volvo EX90 but is tuned to feel considerably more athletic, and the March 2026 update moved it to an 800-volt architecture with much faster charging and, on two of three variants, a lower price. Australian reviewers are close to unanimous on the ride, body control and cabin quality, and rate the rear seat as one of the roomiest in the class. Disagreement centres on practicality and interaction: the boot is modest for the car's 4.9m footprint, there is no third-row option, and almost every secondary control has been pushed into the touchscreen.",
+    "summary": "The Polestar 3 is a large five-seat electric SUV that shares its SPA2 underpinnings with the Volvo EX90 but is tuned to feel considerably more athletic, and the March 2026 update moved it to an 800-volt architecture with much faster charging and, on two of three variants, a lower price. Australian reviewers praise the performance, body control and cabin quality and rate the rear seat as one of the roomiest in the class, though Chasing Cars found the steel-sprung Rear Motor's ride busy. Disagreement centres on practicality and interaction: the boot is modest for the car's 4.9m footprint, there is no third-row option, and almost every secondary control has been pushed into the touchscreen.",
     "pros": [
       "800-volt architecture charges at up to 350kW (310kW on the Rear Motor), taking 10-80 per cent to 22 minutes — more than 25 per cent quicker than the 250kW car it replaced",
-      "The MY26 update made the previously $9,000 Plus Pack and the Pilot Pack standard on every variant while cutting the Rear Motor's price $1,720 to $116,700 and the Dual Motor's $1,600 to $131,100",
-      "Ride and body control rated 'exceptional' by carsales, and Chasing Cars found the rear-drive chassis genuinely lively despite a 2.3-tonne kerb weight",
+      "The MY27 update made the previously $9,000 Plus pack standard on every variant while cutting the Rear Motor's price $1,720 to $116,700 and the Dual Motor's $1,620 to $131,100",
+      "Chasing Cars rated the handling 'fluid' despite a kerb weight over 2.3 tonnes, and CarExpert found the air-sprung Performance's body control 'noticeably improved' over the passive Rear Motor",
       "Palatial rear legroom plus a 25-speaker Bowers & Wilkins system that CarExpert called among the best it has experienced",
-      "5-year unlimited-kilometre warranty with long 24-month/30,000km service intervals, about $2,251 for six years of capped-price servicing"
+      "5-year unlimited-kilometre warranty plus 8-year/160,000km battery cover, with long 24-month/30,000km service intervals at about $2,295 for six years"
     ],
     "cons": [
       "484 litres to the seat backs (including a 90-litre underfloor bin) is small for a 4.9m SUV, and unlike the Volvo EX90 it shares a platform with there is no six- or seven-seat option — five seats only",
@@ -3740,16 +3759,19 @@
       "Every variant is well above the $91,661 FBT-exempt luxury cap, so novated-lease buyers get none of the EV FBT exemption that a Kia EV5 or Tesla Model Y attracts"
     ],
     "sources": [
+      "https://www.polestar.com/au/configure/polestar-3/",
       "https://www.polestar.com/au/polestar-3/specifications/",
-      "https://www.carexpert.com.au/car-reviews/2026-polestar-3-review",
-      "https://www.carsales.com.au/editorial/details/polestar-3-2026-review-152586/",
-      "https://www.chasingcars.com.au/reviews/midsize-suvs/polestar-3-long-range-single-motor-2025-review/",
-      "https://www.carsguide.com.au/car-news/game-changing-update-for-electric-suv-800-volt-ev-charging-headlines-updates-for-2026",
+      "https://www.polestar.com/au/polestar-3/warranty-and-service/",
+      "https://www.carexpert.com.au/car-news/2027-polestar-3-update-includes-faster-charging-new-motor",
       "https://www.goauto.com.au/new-models/polestar/3/polestar-3-update-pricing-announced/2026-03-07/98657.html",
-      "https://ev-database.org/uk/car/3327/Polestar-3-Dual-Motor",
-      "https://thedriven.io/2026/03/05/new-polestar-3-comes-with-improved-charging-architecture-priced-from-116700/"
+      "https://www.carsguide.com.au/ev/polestar-3-102286",
+      "https://www.carexpert.com.au/car-reviews/2026-polestar-3-review",
+      "https://www.chasingcars.com.au/reviews/large-suvs/polestar-3-800v-2026-review/",
+      "https://ev-database.org/car/3326/Polestar-3-Rear-Motor",
+      "https://ev-database.org/car/3327/Polestar-3-Dual-Motor",
+      "https://ev-database.org/car/3328/Polestar-3-Performance"
     ],
-    "sourcedAt": "2026-08-06",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "polestar-3.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Polestar_3_IAA_2023_1X7A0703.jpg",
@@ -3835,9 +3857,9 @@
   },
   {
     "id": "renault-scenic-e-tech",
-    "summary": "The Scenic E-Tech is Renault's mid-size electric SUV, built on the same CMF-EV platform as the Megane E-Tech and sold in Australia in three front-wheel-drive grades from $55,990 to $65,990 before on-road costs. Australian reviewers rate it near the top of its class for ride comfort, rear-seat space and cabin quality -- Chasing Cars scored the Esprit Alpine 8.0/10 and singled out its damping and adult-sized rear seat -- and the 87kWh grades' 625km WLTP claim is the longest in the segment under $70,000. The disagreement is over whether that is enough against cheaper Chinese rivals, given a 130-150kW charging peak that is only average, soft brake feel, and a five-year/100,000km warranty that is the shortest of any mainstream EV brand here.",
+    "summary": "The Scenic E-Tech is Renault's mid-size electric SUV, built on the same CMF-EV platform as the Megane E-Tech and sold in Australia in three front-wheel-drive grades from $55,990 to $65,990 before on-road costs. Australian reviewers rate it near the top of its class for ride comfort, rear-seat space and cabin quality -- Chasing Cars scored the Esprit Alpine 8.0/10 and singled out its damping and adult-sized rear seat -- and the Techno Long Range's 625km WLTP claim (599km for the Esprit Alpine on its 20-inch wheels) is the longest in the segment under $70,000. The disagreement is over whether that is enough against cheaper Chinese rivals, given a 130-150kW charging peak that is only average, soft brake feel, and a five-year/100,000km warranty that is the shortest of any mainstream EV brand here.",
     "pros": [
-      "The 87kWh grades claim 625km WLTP, more than the Kia EV3 Earth (563km), Skoda Elroq 85 (529km) and Tesla Model Y Long Range AWD (600km), and Chasing Cars still saw 518km in real-world testing",
+      "The Techno Long Range EV87 claims 625km WLTP, more than the Kia EV3 Air Long Range (604km), Skoda Elroq 85 (521km) and Tesla Model Y Long Range AWD (600km); the Esprit Alpine's 20-inch wheels cut that to 599km, and Chasing Cars still saw 518km in real-world testing",
       "Genuinely usable as a family car in a way most rivals in the price band are not: 545 litres of boot (1,670 with the 40/20/40 rear seats folded), a rear bench Chasing Cars rated a 'real highlight' for full-size adults, and a 1,100kg braked tow rating against the Megane E-Tech's 900kg",
       "Ride and refinement are the standout: reviewers describe the damping as smooth and sophisticated over urban bumps, a clear step away from the Megane E-Tech's much-criticised firmness on its 20-inch wheels",
       "Android Automotive with built-in Google Maps and Google Assistant, plus ADAS calibration that Australian reviewers say works quietly rather than beeping constantly -- a specific complaint they level at most Chinese rivals in this class",
@@ -3851,19 +3873,21 @@
       "Renault is a small-volume brand here distributed by Ateco, service pricing was still unconfirmed at launch, and the sister Megane E-Tech has already been cut $10,000 from its launch price -- a resale risk this car inherits"
     ],
     "sources": [
-      "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
       "https://www.renault.com.au/vehicles/scenic-e-tech/",
-      "https://www.renault.com.au/build-and-price/scenic-e-tech/",
+      "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
       "https://www.renault.com.au/special-offers/",
       "https://www.carexpert.com.au/car-news/2026-renault-scenic-e-tech-price-and-specs-french-ev-offers-600km-range-for-under-dollar60k",
       "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+      "https://www.carexpert.com.au/renault/scenic-e-tech/2026",
       "https://www.chasingcars.com.au/reviews/midsize-suvs/renault-scenic-e-tech-esprit-alpine-ev87-2026-review/",
-      "https://www.carsguide.com.au/renault/scenic-e-tech/2026",
+      "https://www.carsguide.com.au/renault/scenic-e-tech",
       "https://www.carsguide.com.au/renault/scenic-e-tech/price/2026",
-      "https://www.carsales.com.au/research/renault/scenic-e-tech/",
-      "https://evcentral.com.au/2026-renault-scenic-e-tech-review-french-electric-suv-brings-european-polish-to-australia-but-can-it-justify-the-price/"
+      "https://www.carsguide.com.au/car-news/bold-european-suv-returns-with-big-changes-100093",
+      "https://ev-database.org/car/3218/Renault-Scenic-E-Tech-EV60-170hp",
+      "https://ev-database.org/car/3219/Renault-Scenic-E-Tech-EV87-220hp",
+      "https://www.carbuyer.co.uk/renault/scenic/prices-specs/104305/160kw-esprit-alpine-87kwh-long-range-5dr-auto"
     ],
-    "sourcedAt": "2026-07-31",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "renault-scenic-e-tech.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Renault_Sc%C3%A9nic_E-Tech_IAA_2023_1X7A0344.jpg",
@@ -4192,34 +4216,38 @@
   },
   {
     "id": "suzuki-e-vitara",
-    "summary": "Suzuki's first battery-electric car in Australia is a 4.28m small SUV built in India on a BYD-supplied LFP battery, sold in Victoria as the 49kWh front-drive Motion and the 61kWh dual-motor Ultra. Reviewers broadly agree it drives well and feels a class above its price inside, and broadly agree it is priced above what its 344-395km WLTP range and 70kW DC charging justify against BYD, MG and Kia rivals. Suzuki publishes drive-away pricing only and no list price, and the launch figures rose $2,000-$3,000 once the 100-car introductory allocation ended.",
+    "summary": "Suzuki's first battery-electric car in Australia is a 4.28m small SUV built in India on a BYD-supplied LFP battery, sold in Victoria as the 49kWh front-drive Motion and the 61kWh dual-motor Ultra. Reviewers broadly agree it drives well and feels a class above its price inside, and broadly agree it is priced above what its 344-395km WLTP range and 70kW DC charging justify against BYD, MG and Kia rivals. Suzuki advertises drive-away prices only; the $47,990 and $56,990 used here are the manufacturer RRPs implied by Suzuki's own '10% off RRP' offer and matched by Glass's MSRP, and Suzuki's advertised drive-away offers ($46,990 and $56,990 in November 2026) sit below what those RRPs plus Victorian on-roads would cost.",
     "pros": [
       "Five years/unlimited kilometres of warranty with no servicing conditions attached — Suzuki Australia advertises no longer conditional term, unlike MG, Nissan or Hyundai, so the headline number is the number you actually get; the traction battery is separately covered for 8 years/160,000km.",
       "The Ultra's ALLGRIP-e dual-motor all-wheel drive makes 135kW/307Nm and runs 0-100km/h in 7.4 seconds; the BYD Atto 2, MG S5 EV and Kia EV3 rivals it is cross-shopped against are front-drive only.",
-      "The rear bench slides and reclines, so boot space moves between 238 litres with maximum rear legroom and 306 litres with the bench forward, and 562 litres with the seats folded — you choose legroom or luggage per trip.",
+      "The rear bench slides and reclines, so boot space moves between 244 litres with maximum rear legroom and 310 litres with the bench forward in the Motion (238-306 litres in the Ultra), and up to 562 litres with the seats folded — you choose legroom or luggage per trip.",
       "Capped-price servicing is covered by Suzuki's 5-year/100,000km Genuine Service Program at 12-month/20,000km intervals, and a Type 2 AC charging cable Suzuki values at over $1,000 is standard on both grades.",
       "Suzuki has one of the larger established dealer and parts networks in regional Australia, which is a real difference from the newer Chinese brands the e Vitara is priced against."
     ],
     "cons": [
-      "At $49,990 and $58,990 drive-away post-introductory, it is roughly $10,000 dearer than a BYD Atto 2 and above the MG S5 EV and Kia EV3 while offering less range than any of them — CarExpert and EV Central both make price the central criticism.",
+      "At $47,990 and $56,990 RRP (Suzuki advertises $46,990 and $56,990 drive-away), it costs well over $10,000 more than a BYD Atto 2 and more than the MG S5 EV and Kia EV3, yet the Motion's 344km WLTP only matches the cheaper Atto 2 and MG S5 49kWh and falls well short of the EV3's 436-604km — CarExpert and EV Central both make price the central criticism.",
       "CarsGuide measured about 295km in the Ultra against its 395km WLTP claim, a shortfall near 100km, and recorded 17.9kWh/100km against the 16.5kWh/100km official figure.",
       "DC charging peaks around 70kW for a 45-minute 10-80% stop on both battery sizes — slow for 2026 — and there is no vehicle-to-load outlet.",
       "Four stars from ANCAP in 2026, with 77% adult occupant protection and no head-protecting centre airbag; most direct rivals hold five stars.",
-      "Victorian buyers get two grades only. The 61kWh front-drive Ultra — the longest-range e Vitara at 426km WLTP, at $54,990 drive-away — is sold solely by the separate Suzuki Queensland distributor covering Queensland and the Northern Rivers of NSW, and cannot be ordered here."
+      "Victorian buyers get two grades only. The 61kWh front-drive Ultra — the longest-range e Vitara, listed at $51,990 MSRP — is sold solely by the separate Suzuki Queensland distributor covering Queensland and the Northern Rivers of NSW, and cannot be ordered here."
     ],
     "sources": [
       "https://www.suzuki.com.au/vehicles/electric/e-vitara/",
+      "https://www.suzuki.com.au/vehicles/electric/e-vitara/specifications/",
+      "https://www.suzuki.com.au/offers/e-vitara-motion/",
+      "https://www.suzuki.com.au/offers/e-vitara-ultra/",
       "https://www.carexpert.com.au/car-news/2026-suzuki-e-vitara-priced-from-46990-drive-away-over-10k-more-than-byd-atto-2",
+      "https://www.carexpert.com.au/car-reviews/2026-suzuki-e-vitara-review-quick-drive",
       "https://www.carexpert.com.au/car-reviews/2026-suzuki-e-vitara-review-quick-drive-1",
       "https://www.carsguide.com.au/ev/suzuki-e-vitara-ultra-101977",
-      "https://www.carsguide.com.au/ev/suzuki-e-vitara-101075",
-      "https://www.carsguide.com.au/car-news/2026-suzuki-e-vitara-compact-electric-suv-price-announced-for-australia-as-it-prepares-to",
-      "https://www.carsales.com.au/research/suzuki/e-vitara/",
+      "https://www.carsguide.com.au/suzuki/e-vitara/price/2027",
       "https://evcentral.com.au/suzuki-e-vitara-priced-small-electric-suv-arrives-under-47k-but-rises-are-coming/",
       "https://thedriven.io/2026/04/08/suzuki-gets-four-star-ancap-safety-rating-for-its-first-ev-in-australia/",
-      "https://ev-database.org/uk/car/3213/Suzuki-e-VITARA-61-kWh-4WD-AllGrip"
+      "https://ev-database.org/uk/car/3211/Suzuki-e-VITARA-49-kWh-2WD",
+      "https://ev-database.org/uk/car/3213/Suzuki-e-VITARA-61-kWh-4WD-AllGrip",
+      "https://cars.suzuki.co.uk/new-cars/e-vitara/"
     ],
-    "sourcedAt": "2026-07-31"
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "tesla-model-3",
@@ -4862,22 +4890,21 @@
       "405-415km WLTP range is short for the money, and Australian testers recorded 16.5-20.7kWh/100km against the 15.5kWh/100km claim (carsales measured 20.7), so plan on roughly 300-350km between charges rather than 400",
       "Driver-assistance calibration is the near-universal complaint across CarExpert, carsales and CarsGuide: overspeed warnings that repeatedly cut the audio, an attention monitor that chimes on ordinary head checks, and lane-centring that tugs at the wheel",
       "Almost every function including drive modes, seat adjustment and climate is buried in a menu-heavy touchscreen, and reviewers report the reversing camera hijacking the display and wireless CarPlay microphone dropouts",
-      "Service and support proposition is thin for a five-year commitment: about 16 Zeekr retail and service sites nationally (three in Melbourne plus Geelong, nothing in Tasmania or the NT), MY26 servicing moved to 12-month/20,000km intervals at roughly $614 a visit and $3,072 over five years, and the standard warranty is five years unlimited km now that the seven-year pre-order offer closed on 31 May 2026, where a Volvo EX30 includes five years of free servicing",
+      "Service and support proposition is thin for a five-year commitment: about 16 Zeekr retail and service sites nationally (three in Melbourne plus Geelong, nothing in Tasmania or the NT), MY26 servicing moved to 12-month/20,000km intervals at $2,662 (RWD) to $3,072 (AWD) over five years, and the standard warranty is five years unlimited km now that the seven-year pre-order offer closed on 31 May 2026, where a Volvo EX30 includes five years of free servicing",
       "Resale is an unquantified risk on a brand first sold here in 2024, and Chasing Cars notes MY26 prices dropped $5,000-$10,000 in a single model year, which immediately devalues the outgoing cars and gives no reason to expect the MY26 pricing to hold"
     ],
     "sources": [
+      "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
       "https://www.carexpert.com.au/car-news/2026-zeekr-x-price-and-specs-updated-ev-gets-massive-price-cuts-1",
-      "https://www.carexpert.com.au/car-reviews/2026-zeekr-x-review-quick-drive",
-      "https://www.carexpert.com.au/car-reviews/2025-zeekr-x-awd-review",
-      "https://www.carsguide.com.au/ev/zeekr-x-awd-101316",
-      "https://www.carsales.com.au/editorial/details/2026-zeekr-x-awd-review-151703/",
-      "https://www.carsales.com.au/editorial/details/zeekr-x-prices-slashed-for-2026-151748/",
+      "https://carexpert.com.au/car-reviews/2026-zeekr-x-review-quick-drive",
+      "https://thebeep.com.au/car-news/2026-zeekr-x-price-specs-australia",
+      "https://thedriven.io/2026/04/10/zeekr-x-pricing-revealed-48900-driveaway-for-updated-electric-suv/",
       "https://www.chasingcars.com.au/news/new-car-prices/zeekr-x-2026-drops-up-to-10000-with-more-power-and-better-equipment-confirmed-for-kia-ev3-bmw-ix1-rival/",
       "https://evcentral.com.au/2026-zeekr-x-review-compact-electric-suv-gets-more-power-and-more-polish-to-take-on-byd-kia-geely-and-jaecoo/",
       "https://ev-database.org/car/3585/Zeekr-X-Long-Range-RWD",
       "https://ev-database.org/car/3586/Zeekr-X-Privilege-AWD"
     ],
-    "sourcedAt": "2026-07-27",
+    "sourcedAt": "2026-11-27",
     "image": {
       "file": "zeekr-x.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Zeekr_X,_Almaty_(LRM_20240331_124050).jpg",
