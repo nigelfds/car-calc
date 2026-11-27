@@ -1,0 +1,248 @@
+{
+  "familyId": "smart-5",
+  "researchedAt": "2026-11-26",
+  "mode": "new",
+  "variants": {
+    "smart-5-pro-plus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "Pro+ listed with a price on the smart AU #5 configurator; deliveries from November 2026 (CarExpert)"
+      },
+      "listPrice": {
+        "value": 58900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "configurator: \"from $58,900 + ORC\"; CarExpert says \"before on-road costs\" in words, same figure"
+      },
+      "batteryKwh": {
+        "value": 94,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "usable; CarExpert states 100kWh gross / 94kWh usable for all grades, Zecar agrees"
+      },
+      "rangeKm": {
+        "value": 590,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "WLTP per grade on smart AU configurator and #5 page, on the 19-inch wheel the AU grade ships on (CarExpert wheel table); no AU-certified figure found"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "claimed figure quoted by CarExpert; usable/range gives 15.9, the claim likely includes charging losses (within 25% cross-check)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 630,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1530,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "also \"up to 1530 litres\" on au.smart.com #5 page"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://zecar.com/electric-vehicles/smart/-5/2026/premium",
+        "note": "five seats per Zecar and Chasing Cars"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "braked, all grades; no smart AU technical sheet published yet"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "5yr/150,000km vehicle; battery 8yr/150,000km separately"
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "anchored to smart-3 rows (1850/1950/2350 at $52.9k-$65.9k) and tesla-model-y (2300 at $58,900, 2550 at $68,900); BRABUS loaded for 475kW"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention shared with smart-1 and smart-3 (heavy list cuts and runout discounting on #1/#3, three-dealer network)"
+      }
+    },
+    "smart-5-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "Premium listed with a price on the smart AU #5 configurator; deliveries from November 2026 (CarExpert)"
+      },
+      "listPrice": {
+        "value": 63900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "configurator: \"from $63,900 + ORC\"; CarExpert says \"before on-road costs\" in words, same figure"
+      },
+      "batteryKwh": {
+        "value": 94,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "usable; CarExpert states 100kWh gross / 94kWh usable for all grades, Zecar agrees"
+      },
+      "rangeKm": {
+        "value": 590,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "WLTP per grade on smart AU configurator and #5 page, on the 20-inch wheel the AU grade ships on (CarExpert wheel table); no AU-certified figure found"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "claimed figure quoted by CarExpert; usable/range gives 15.9, the claim likely includes charging losses (within 25% cross-check)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 630,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1530,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "also \"up to 1530 litres\" on au.smart.com #5 page"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://zecar.com/electric-vehicles/smart/-5/2026/premium",
+        "note": "five seats per Zecar and Chasing Cars"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "braked, all grades; no smart AU technical sheet published yet"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "5yr/150,000km vehicle; battery 8yr/150,000km separately"
+      },
+      "insuranceAnnual": {
+        "value": 2300,
+        "basis": "judged",
+        "note": "anchored to smart-3 rows (1850/1950/2350 at $52.9k-$65.9k) and tesla-model-y (2300 at $58,900, 2550 at $68,900); BRABUS loaded for 475kW"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention shared with smart-1 and smart-3 (heavy list cuts and runout discounting on #1/#3, three-dealer network)"
+      }
+    },
+    "smart-5-brabus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "BRABUS listed with a price on the smart AU #5 configurator; deliveries from November 2026 (CarExpert)"
+      },
+      "listPrice": {
+        "value": 73900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "configurator: \"from $73,900 + ORC\"; CarExpert says \"before on-road costs\" in words, same figure"
+      },
+      "batteryKwh": {
+        "value": 94,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "usable; CarExpert states 100kWh gross / 94kWh usable for all grades, Zecar agrees"
+      },
+      "rangeKm": {
+        "value": 540,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=31",
+        "note": "WLTP per grade on smart AU configurator and #5 page, on the 21-inch wheel the AU grade ships on (CarExpert wheel table); no AU-certified figure found"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "claimed figure quoted by CarExpert; usable/range gives 17.4, the claim likely includes charging losses (within 25% cross-check)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 630,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1530,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "also \"up to 1530 litres\" on au.smart.com #5 page"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://zecar.com/electric-vehicles/smart/-5/2026/premium",
+        "note": "five seats per Zecar and Chasing Cars"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "braked, all grades; no smart AU technical sheet published yet"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-smart-5-price-and-specs-new-tesla-model-y-rival-here-this-year",
+        "note": "5yr/150,000km vehicle; battery 8yr/150,000km separately"
+      },
+      "insuranceAnnual": {
+        "value": 2750,
+        "basis": "judged",
+        "note": "anchored to smart-3 rows (1850/1950/2350 at $52.9k-$65.9k) and tesla-model-y (2300 at $58,900, 2550 at $68,900); BRABUS loaded for 475kW"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention shared with smart-1 and smart-3 (heavy list cuts and runout discounting on #1/#3, three-dealer network)"
+      }
+    }
+  },
+  "lowConfidence": [
+    "smart-5-brabus.insuranceAnnual: judged, no comparable 475kW smart row held",
+    "smart-5-pro-plus.insuranceAnnual / smart-5-premium.insuranceAnnual: judged from smart-3 and tesla-model-y",
+    "smart-5-*.depreciationCurve: judged, brand convention; no #5 resale data yet",
+    "smart-5-*.consumptionKwhPer100km: claimed figure from CarExpert, not on a smart AU page; 15-16% above usable/range",
+    "smart-5-*.towKg / boot: from launch reports (CarExpert, Zecar), no smart AU technical sheet published"
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "familyId": "nissan-ariya",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "nissan-ariya-engage": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Grade card and version code on Nissan AU spec page (MY25 stock, offer extended to 31/03/2027)"
+      },
+      "listPrice": {
+        "value": 55840,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car-news/2026-nissan-ariya-pricing-and-features-byd-sealion-7-tesla-model-y-and-xpeng-g6-rival",
+        "note": "'before on-road costs' in words ('Price before on-road costs' / 'Pricing (before on-road costs)'). Nissan AU renders no price figure (placeholder '$1', driveaway wording only). Same list in CarExpert deals article 5 Oct 2026, CarsGuide 2026 model page and electriccaraustralia.com (Nov 2026); current deal prices are drive-away campaigns, not list cuts."
+      },
+      "batteryKwh": {
+        "value": 63,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1301/Nissan-Ariya-63kWh",
+        "note": "usable 63.0 kWh, nominal 66.0 kWh (EV Database, Ariya 63kWh)"
+      },
+      "rangeKm": {
+        "value": 385,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU '63kWh Battery with 385km Indicative Driving Range', WLTP; below UK WLTP 393-404 km so WLTP-derived local spec"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+        "note": "low end of CarsGuide's claimed 18.4-20.8kWh/100km band, which belongs to the 63kWh 2WD grades; published wall-to-wheel WLTP figure, ~12% above battery/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 466,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec sheet; measurement method not stated (Nissan VDA convention assumed, to cargo cover); no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1350,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec sheet, seats folded"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec page, braked 750kg"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "anchored to kia-ev5-air-standard-range (1700, $56,770) and toyota-bz4x-2wd (1620, $55,990)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-review",
+        "note": "'Up to 10 years or 300,000km - service activated'; five years/unlimited km outside the Nissan dealer network. Unconditional term recorded."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+        "note": "five-seat mid-size SUV, all grades"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Single Nissan brand curve (only Nissan rows in dataset), kept below mainstream default: thin volume (127 deliveries in 2025) and MY25 run-out deals of $10,850-$14,850 off list (CarExpert 5 Oct 2026), extended to 31/03/2027 per Nissan offers footnote, with a facelift pending. Sits just above Ford Mach-E's [1,0.68,...] and below Hyundai Ioniq 5's [1,0.74,...]."
+      }
+    },
+    "nissan-ariya-advance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Grade card and version code on Nissan AU spec page (MY25 stock, offer extended to 31/03/2027)"
+      },
+      "listPrice": {
+        "value": 59840,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car-news/2026-nissan-ariya-pricing-and-features-byd-sealion-7-tesla-model-y-and-xpeng-g6-rival",
+        "note": "'before on-road costs' in words ('Price before on-road costs' / 'Pricing (before on-road costs)'). Nissan AU renders no price figure (placeholder '$1', driveaway wording only). Same list in CarExpert deals article 5 Oct 2026, CarsGuide 2026 model page and electriccaraustralia.com (Nov 2026); current deal prices are drive-away campaigns, not list cuts."
+      },
+      "batteryKwh": {
+        "value": 63,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1301/Nissan-Ariya-63kWh",
+        "note": "usable 63.0 kWh, nominal 66.0 kWh (EV Database, Ariya 63kWh)"
+      },
+      "rangeKm": {
+        "value": 385,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec page, 63kWh 2WD grades share 385km WLTP; CarsGuide first drive confirms 385km for Advance"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+        "note": "low end of CarsGuide's claimed 18.4-20.8kWh/100km band (63kWh 2WD); published wall-to-wheel WLTP figure"
+      },
+      "bootLitresSeatsUp": {
+        "value": 466,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec sheet; measurement method not stated (Nissan VDA convention assumed, to cargo cover); no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1350,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec sheet, seats folded"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec page, braked 750kg"
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "between kia-ev5-air-standard-range (1700) and kia-ev5-air-long-range (1800, $61,170); +$100 over Engage for the price step"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-review",
+        "note": "'Up to 10 years or 300,000km - service activated'; five years/unlimited km outside the Nissan dealer network. Unconditional term recorded."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+        "note": "five-seat mid-size SUV, all grades"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Single Nissan brand curve (only Nissan rows in dataset), kept below mainstream default: thin volume (127 deliveries in 2025) and MY25 run-out deals of $10,850-$14,850 off list (CarExpert 5 Oct 2026), extended to 31/03/2027 per Nissan offers footnote, with a facelift pending. Sits just above Ford Mach-E's [1,0.68,...] and below Hyundai Ioniq 5's [1,0.74,...]."
+      }
+    },
+    "nissan-ariya-advance-plus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/nissan-ariya-deals-ev-prices-slashed-by-up-to-dollar15000",
+        "note": "Nissan AU browse page names the ADVANCE+ grade ('up to 504km of range on the ADVANCE+ grade') but the spec page grade cards show only ENGAGE/ADVANCE/EVOLVE default versions (AR2EV63EN25, AR2EV63AD25, AR4EV87EV25); CarExpert 5 Oct 2026 lists Advance+ with a $51,990 drive-away MY25 offer, extended to 31/03/2027 on Nissan's offers page"
+      },
+      "listPrice": {
+        "value": 63840,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-advance-review-long-term-introduction",
+        "note": "'before on-road costs' in words ('Price before on-road costs' / 'Pricing (before on-road costs)'). Nissan AU renders no price figure (placeholder '$1', driveaway wording only). Same list in CarExpert deals article 5 Oct 2026, CarsGuide 2026 model page and electriccaraustralia.com (Nov 2026); current deal prices are drive-away campaigns, not list cuts."
+      },
+      "batteryKwh": {
+        "value": 87,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1302/Nissan-Ariya-87kWh",
+        "note": "usable 87.0 kWh, nominal 91.0 kWh (EV Database, Ariya 87kWh 2WD)"
+      },
+      "rangeKm": {
+        "value": 504,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-advance-review-long-term-introduction",
+        "note": "CarExpert long-term spec table 'claimed WLTP range 504km'; also Nissan AU browse page 'up to 504km of range on the ADVANCE+ grade'; below UK WLTP 516-536 km so WLTP-derived local spec"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.1,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-advance-review-long-term-introduction",
+        "note": "CarExpert 'Claimed energy consumption 19.1kWh/100km' (WLTP, wall-to-wheel; ~10.6% above 87/504)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 466,
+        "basis": "judged",
+        "note": "Advance+ not on Nissan AU spec sheet; uses the 2WD body figure (466L) since EV Database lists identical cargo (468L/1350L) for 63kWh and 87kWh 2WD (https://ev-database.org/car/1302/Nissan-Ariya-87kWh); CarExpert's 'bigger battery offers less space' refers to the AWD Evolve (408L)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1350,
+        "basis": "judged",
+        "note": "as seats-up: 2WD figure 1350L, matching EV Database 87kWh 2WD max 1350L"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car-news/2026-nissan-ariya-pricing-and-features-byd-sealion-7-tesla-model-y-and-xpeng-g6-rival",
+        "note": "CarsGuide: 'The rest of the range has 750kg' (only Evolve rated 1500kg); EV Database 87kWh 2WD also 750kg braked"
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "anchored to kia-ev5-air-long-range (1800, $61,170) and kia-ev5-earth-awd (1900, $64,770)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-review",
+        "note": "'Up to 10 years or 300,000km - service activated'; five years/unlimited km outside the Nissan dealer network. Unconditional term recorded."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+        "note": "five-seat mid-size SUV, all grades"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Single Nissan brand curve (only Nissan rows in dataset), kept below mainstream default: thin volume (127 deliveries in 2025) and MY25 run-out deals of $10,850-$14,850 off list (CarExpert 5 Oct 2026), extended to 31/03/2027 per Nissan offers footnote, with a facelift pending. Sits just above Ford Mach-E's [1,0.68,...] and below Hyundai Ioniq 5's [1,0.74,...]."
+      }
+    },
+    "nissan-ariya-evolve-e-4orce": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Grade card and version code on Nissan AU spec page (MY25 stock, offer extended to 31/03/2027)"
+      },
+      "listPrice": {
+        "value": 71840,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car-news/2026-nissan-ariya-pricing-and-features-byd-sealion-7-tesla-model-y-and-xpeng-g6-rival",
+        "note": "'before on-road costs' in words ('Price before on-road costs' / 'Pricing (before on-road costs)'). Nissan AU renders no price figure (placeholder '$1', driveaway wording only). Same list in CarExpert deals article 5 Oct 2026, CarsGuide 2026 model page and electriccaraustralia.com (Nov 2026); current deal prices are drive-away campaigns, not list cuts."
+      },
+      "batteryKwh": {
+        "value": 87,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1305/Nissan-Ariya-e-4ORCE-87kWh-Performance",
+        "note": "usable 87.0 kWh, nominal 91.0 kWh (EV Database, Ariya e-4ORCE 87kWh 290 kW, the AU Evolve's 290kW/600Nm spec)"
+      },
+      "rangeKm": {
+        "value": 487,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+        "note": "CarsGuide first drive 'claimed WLTP range' 487km for Evolve e-4orce; CarExpert review lists 87kWh e-4ORCE 487km WLTP; below UK WLTP 498-507 km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.8,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+        "note": "high end of CarsGuide's claimed 18.4-20.8kWh/100km band, the AWD Evolve; published wall-to-wheel WLTP, ~16% above 87/487"
+      },
+      "bootLitresSeatsUp": {
+        "value": 408,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec sheet; measurement method not stated (Nissan VDA convention assumed, to cargo cover); no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1280,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Nissan AU spec sheet, seats folded"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.nissan.com.au/vehicles/browse-range/ariya/specs-and-pricing.html",
+        "note": "Evolve 1500kg braked with Genuine Nissan towbar"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "anchored to kia-ev5-gt-line-awd (2050, $71,770) and toyota-bz4x-awd (1780, $67,990); higher for 290kW performance"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-nissan-ariya-review",
+        "note": "'Up to 10 years or 300,000km - service activated'; five years/unlimited km outside the Nissan dealer network. Unconditional term recorded."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/nissan-ariya-99524",
+        "note": "five-seat mid-size SUV, all grades"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Single Nissan brand curve (only Nissan rows in dataset), kept below mainstream default: thin volume (127 deliveries in 2025) and MY25 run-out deals of $10,850-$14,850 off list (CarExpert 5 Oct 2026), extended to 31/03/2027 per Nissan offers footnote, with a facelift pending. Sits just above Ford Mach-E's [1,0.68,...] and below Hyundai Ioniq 5's [1,0.74,...]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "nissan-ariya-advance-plus.availability: Nissan AU spec page shows only three grade cards (no 87kWh 2WD version code); Advance+ orderability rests on Nissan's browse-page text and CarExpert's Oct 2026 deal list; the build-and-price data endpoint could not be read",
+    "nissan-ariya-advance-plus.bootLitresSeatsUp: judged from the 2WD body figure; Advance+ not on Nissan AU spec sheet",
+    "nissan-ariya-advance-plus.bootLitresSeatsDown: judged from the 2WD body figure",
+    "nissan-ariya-engage.listPrice: Nissan AU renders no list price; all four list prices rest on outlets saying 'before on-road costs' (CarsGuide, CarExpert), unchanged since launch; CarExpert's Oct 2026 article also says the range 'opened from $54,840', a $1,000 discrepancy it does not explain",
+    "nissan-ariya-engage.consumptionKwhPer100km: 18.4 and 20.8 are the ends of CarsGuide's claimed band, assigned to 63kWh 2WD and Evolve by inference (aeva.au per-variant listing was unreachable)",
+    "nissan-ariya-evolve-e-4orce.consumptionKwhPer100km: high end of CarsGuide's band, assigned by inference",
+    "nissan-ariya-*.depreciationCurve: judged brand curve below mainstream on run-out discounting and thin volume",
+    "nissan-ariya-*.insuranceAnnual: judged against Kia EV5 and Toyota bZ4X rows"
+  ]
+}

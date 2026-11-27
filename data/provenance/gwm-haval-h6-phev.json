@@ -1,0 +1,334 @@
+{
+  "familyId": "gwm-haval-h6-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "gwm-haval-h6-phev-lux": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/offers/",
+        "note": "GWM AU offers page lists the H6 Lux PHEV (MY26, 2026 build) with a VIC private drive-away price, as of 1/11/2026; H6 model page lists the same eight grades incl. Lux PHEV, Ultra PHEV, Ultra PHEV AWD. Build & Price at https://www.gwmanz.com/au/ is script-rendered. CarExpert 2026 review and CarExpert/GoAuto launch articles agree on three PHEV grades."
+      },
+      "listPrice": {
+        "value": 42256,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/offers/",
+        "note": "GWM publishes drive-away only: $44,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $4,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (44990 - 958.80) / 1.042 = 42,256; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 44,989.94. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $43,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins. Re-derived 2026-11-27 for VIC rego $958.80 (was 42,332 at $880; round trip 44989.55)."
+      },
+      "batteryKwh": {
+        "value": 19.09,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Maximum battery kilowatt hour: 19.09 kWh' LFP; also CarExpert AWD review and CarsGuide. Unlabelled; usable vs gross not published."
+      },
+      "rangeKm": {
+        "value": 106,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Range: 106 km'; GWM powertrains page 'up to 106km', GWM internal testing, ADR 81/02 (NEDC-based). No WLTP figure exists: the H6 PHEV is not sold in WLTP markets (Auto Express: UK/EU H6 is hybrid only)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.09 / 106 x 100 = 18.01; no published EV-mode figure (held 18.4 was an unlabelled database figure, possibly ADR label, so replaced). Tautological against the cross-check."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.5,
+        "basis": "derived",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h6/powertrains/",
+        "note": "No published charge-sustaining figure. Derived from GWM's total-range claim (1,106km, top of the 1,043-1,106km band, 2WD) with 106km EV range and 55L tank: (1106 - 106) / 55 = 18.18 km/L = 5.5 L/100km. Same method as sibling GWM PHEVs; matches CarExpert's claimed 5.5 L/100km 'with low battery'. Lighter than the AWD, so lower than its 5.8."
+      },
+      "combinedRangeKm": {
+        "value": 1106,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 106 + 55 / 5.5 x 100 = 1106. Tank 55L (CarExpert Lux spec 'Capacity: 55 L'). Equals GWM's NEDC 1,106km."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "Combined label 'Combined: 1 L/100km' (ADR 81/02); GWM powertrains page 1.0-1.1 L/100km. At or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green cars are passenger cars with combined CO2 of 120 g/km or less; GWM powertrains page lists 22-25 g/km for the PHEVs."
+      },
+      "bootLitresSeatsUp": {
+        "value": 560,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Rear seat up; to lower window: 560 L' (to the cargo cover); same 560L on the AWD per CarExpert review and Chasing Cars ('560 litres across the range')."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1445,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Rear seat down: 1,445 L'; same on AWD per CarExpert review and Chasing Cars."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Seating capacity: 5'."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "Braked 1500kg ('Gross trailer weight braked: 1,500 kg' on the Lux spec page; 1500kg in the AWD review and CarsGuide)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h6/",
+        "note": "'7-year unlimited-km vehicle warranty' on the GWM H6 page; CarExpert: 84 months unlimited km, battery 96 months unlimited km. No servicing condition stated."
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "Anchored to byd-sealion-6-essential (1450 at $42,990) and chery-tiggo-7-phev-urban/ultimate (1450/1550 at $37,990/$41,990); held value unchanged."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Owner convention one curve per brand: adopted the GWM curve used by gwm-cannon-phev (refreshed 2026-11-26) and gwm-cannon-alpha-phev, replacing the held [1,0.71,0.6,0.52,0.45,0.39]. Evidence for below-mainstream retention: recurring extra $4,000-$5,000 drive-away discounts on top of national drive-away pricing (GWM offers page, to 30 Nov 2026), and RedBook MSRP sits above the advertised drive-away."
+      }
+    },
+    "gwm-haval-h6-phev-ultra": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/offers/",
+        "note": "GWM AU offers page lists the H6 Ultra PHEV (MY26, 2026 build) with a VIC private drive-away price, as of 1/11/2026; H6 model page lists the same eight grades incl. Lux PHEV, Ultra PHEV, Ultra PHEV AWD. Build & Price at https://www.gwmanz.com/au/ is script-rendered. CarExpert 2026 review and CarExpert/GoAuto launch articles agree on three PHEV grades."
+      },
+      "listPrice": {
+        "value": 45136,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/offers/",
+        "note": "GWM publishes drive-away only: $47,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $4,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (47990 - 958.80) / 1.042 = 45,136; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 47,989.86. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $46,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins. Re-derived 2026-11-27 for VIC rego $958.80 (was 45,211 at $880; round trip 47990.51)."
+      },
+      "batteryKwh": {
+        "value": 19.09,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Maximum battery kilowatt hour: 19.09 kWh' LFP; also CarExpert AWD review and CarsGuide. Unlabelled; usable vs gross not published."
+      },
+      "rangeKm": {
+        "value": 106,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Range: 106 km'; GWM powertrains page 'up to 106km', GWM internal testing, ADR 81/02 (NEDC-based). No WLTP figure exists: the H6 PHEV is not sold in WLTP markets (Auto Express: UK/EU H6 is hybrid only)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.09 / 106 x 100 = 18.01; no published EV-mode figure (held 18.4 was an unlabelled database figure, possibly ADR label, so replaced). Tautological against the cross-check."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.5,
+        "basis": "derived",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h6/powertrains/",
+        "note": "No published charge-sustaining figure. Derived from GWM's total-range claim (1,106km, top of the 1,043-1,106km band, 2WD) with 106km EV range and 55L tank: (1106 - 106) / 55 = 18.18 km/L = 5.5 L/100km. Same method as sibling GWM PHEVs; matches CarExpert's claimed 5.5 L/100km 'with low battery'. Lighter than the AWD, so lower than its 5.8."
+      },
+      "combinedRangeKm": {
+        "value": 1106,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 106 + 55 / 5.5 x 100 = 1106. Tank 55L (CarExpert Lux spec 'Capacity: 55 L'). Equals GWM's NEDC 1,106km."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "Combined label 'Combined: 1 L/100km' (ADR 81/02); GWM powertrains page 1.0-1.1 L/100km. At or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green cars are passenger cars with combined CO2 of 120 g/km or less; GWM powertrains page lists 22-25 g/km for the PHEVs."
+      },
+      "bootLitresSeatsUp": {
+        "value": 560,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Rear seat up; to lower window: 560 L' (to the cargo cover); same 560L on the AWD per CarExpert review and Chasing Cars ('560 litres across the range')."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1445,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Rear seat down: 1,445 L'; same on AWD per CarExpert review and Chasing Cars."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Seating capacity: 5'."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "Braked 1500kg ('Gross trailer weight braked: 1,500 kg' on the Lux spec page; 1500kg in the AWD review and CarsGuide). Ultra 2WD shares the powertrain and is not separately sourced; same as both other grades."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h6/",
+        "note": "'7-year unlimited-km vehicle warranty' on the GWM H6 page; CarExpert: 84 months unlimited km, battery 96 months unlimited km. No servicing condition stated."
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "Anchored to byd-sealion-6-dynamic-extended-range (1500 at $46,990) and chery-tiggo-7-phev-ultimate (1550); $100 over the Lux for the higher grade; held value unchanged."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Owner convention one curve per brand: adopted the GWM curve used by gwm-cannon-phev (refreshed 2026-11-26) and gwm-cannon-alpha-phev, replacing the held [1,0.71,0.6,0.52,0.45,0.39]. Evidence for below-mainstream retention: recurring extra $4,000-$5,000 drive-away discounts on top of national drive-away pricing (GWM offers page, to 30 Nov 2026), and RedBook MSRP sits above the advertised drive-away."
+      }
+    },
+    "gwm-haval-h6-phev-ultra-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/offers/",
+        "note": "GWM AU offers page lists the H6 Ultra PHEV AWD (MY26, 2026 build) with a VIC private drive-away price, as of 1/11/2026; H6 model page lists the same eight grades incl. Lux PHEV, Ultra PHEV, Ultra PHEV AWD. Build & Price at https://www.gwmanz.com/au/ is script-rendered. CarExpert 2026 review and CarExpert/GoAuto launch articles agree on three PHEV grades."
+      },
+      "listPrice": {
+        "value": 48015,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/offers/",
+        "note": "GWM publishes drive-away only: $50,990 'Driveaway from', 'Price based on private buyers in VIC', 2026 build; the 'additional $5,000 off the driveaway price' campaign ending 30 Nov 2026 is ignored. (50990 - 958.80) / 1.042 = 48,015; round-trip through calc/onroad.js driveAwayPrice (green, passenger) = 50,989.78. The same figure is quoted as a national drive-away (GoAuto '*National driveaway price', CarExpert 'Drive-away pricing' Sydney basis, unchanged since Sep 2025 launch), so it is a flat national figure, not a per-state calculation; no independent on-road estimate to verify against. Held value (RedBook MSRP via CarsGuide, $49,490) would put the VIC drive-away about $1,200-$1,460 above GWM's own advertised drive-away, so GWM's figure (owner convention: manufacturer's price) wins. Re-derived 2026-11-27 for VIC rego $958.80 (was 48,090 at $880; round trip 50990.43)."
+      },
+      "batteryKwh": {
+        "value": 19.09,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Maximum battery kilowatt hour: 19.09 kWh' LFP; also CarExpert AWD review and CarsGuide. Unlabelled; usable vs gross not published."
+      },
+      "rangeKm": {
+        "value": 100,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gwm-haval-h6-ultra-phev-awd-review",
+        "note": "'100km (ADR 81/02)' for the Ultra PHEV AWD; GWM powertrains page 'up to 106km' (2WD) with GWM internal testing. No WLTP figure exists: the H6 PHEV is not sold in WLTP markets (Auto Express: UK/EU H6 is hybrid only). Chasing Cars measured 89km, CarExpert expects ~80km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.09 / 100 x 100 = 19.09; CarsGuide's 18.6 kWh/100km is an ADR label figure, not used per field rules. Tautological against the cross-check."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.8,
+        "basis": "derived",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h6/powertrains/",
+        "note": "No published charge-sustaining figure for the AWD. Derived from GWM's total-range claim (1,043km for AWD, low end of the 1,043-1,106km band on the powertrains page) with 100km EV range and 55L tank: (1043 - 100) / 55 = 17.15 km/L = 5.83 L/100km. Same method as sibling GWM PHEVs (Cannon, Tank). Supported by Chasing Cars' tested 5.8 L/100km dead-battery; CarExpert claimed 5.5 / tested 6.2 with low battery. Heavier than 2WD (1980 vs 1895kg), higher figure."
+      },
+      "combinedRangeKm": {
+        "value": 1048,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 100 + 55 / 5.8 x 100 = 1048. Tank 55L (CarExpert review, CarsGuide). GWM's own 1,043km is NEDC."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gwm-haval-h6-ultra-phev-awd-review",
+        "note": "ADR combined '1.1L/100km (with battery charge)', at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green cars are passenger cars with combined CO2 of 120 g/km or less; GWM powertrains page lists 22-25 g/km for the PHEVs."
+      },
+      "bootLitresSeatsUp": {
+        "value": 560,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Rear seat up; to lower window: 560 L' (to the cargo cover); same 560L on the AWD per CarExpert review and Chasing Cars ('560 litres across the range')."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1445,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Rear seat down: 1,445 L'; same on AWD per CarExpert review and Chasing Cars."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h6/phev-lux/features-and-specs",
+        "note": "'Seating capacity: 5'."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gwm-haval-h6-ultra-phev-awd-review",
+        "note": "Braked 1500kg ('Gross trailer weight braked: 1,500 kg' on the Lux spec page; 1500kg in the AWD review and CarsGuide)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h6/",
+        "note": "'7-year unlimited-km vehicle warranty' on the GWM H6 page; CarExpert: 84 months unlimited km, battery 96 months unlimited km. No servicing condition stated."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "Anchored to byd-sealion-6-premium-extended-range (1700 at $52,990, AWD) and gwm-haval-h6-gt-phev-ultra-hi4 (1950 at $52,990); 268kW AWD warrants a premium over the 2WD Ultra; held value unchanged."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Owner convention one curve per brand: adopted the GWM curve used by gwm-cannon-phev (refreshed 2026-11-26) and gwm-cannon-alpha-phev, replacing the held [1,0.71,0.6,0.52,0.45,0.39]. Evidence for below-mainstream retention: recurring extra $4,000-$5,000 drive-away discounts on top of national drive-away pricing (GWM offers page, to 30 Nov 2026), and RedBook MSRP sits above the advertised drive-away."
+      }
+    }
+  },
+  "lowConfidence": [
+    "gwm-haval-h6-phev-lux.listPrice: backed out of GWM's $44,990 VIC private drive-away, which is a flat national figure (GoAuto); no independent on-road check, and RedBook MSRP $43,490 disagrees",
+    "gwm-haval-h6-phev-ultra.listPrice: backed out of $47,990 drive-away, same caveat (RedBook $46,490)",
+    "gwm-haval-h6-phev-ultra-awd.listPrice: backed out of $50,990 drive-away, same caveat (RedBook $49,490)",
+    "gwm-haval-h6-phev-lux.rangeKm: NEDC only (ADR 81/02), no WLTP exists; Chasing Cars measured 89km (same for Ultra)",
+    "gwm-haval-h6-phev-ultra.rangeKm: as Lux",
+    "gwm-haval-h6-phev-ultra-awd.rangeKm: NEDC 100km only; CarExpert expects about 80km",
+    "gwm-haval-h6-phev-lux.fuelConsumptionL100km: derived from GWM's NEDC total-range claim; testers recorded 5.8-6.2 on the AWD (same for Ultra)",
+    "gwm-haval-h6-phev-ultra.fuelConsumptionL100km: as Lux",
+    "gwm-haval-h6-phev-ultra-awd.fuelConsumptionL100km: derived 5.8 from GWM's 1,043km claim; CarExpert tested 6.2",
+    "gwm-haval-h6-phev-lux.combinedRangeKm: computed from derived fuel figure and NEDC range (same for Ultra and Ultra AWD)",
+    "gwm-haval-h6-phev-ultra.combinedRangeKm: as Lux",
+    "gwm-haval-h6-phev-ultra-awd.combinedRangeKm: as Lux",
+    "gwm-haval-h6-phev-lux.batteryKwh: 19.09 unlabelled, usable vs gross unknown (same for all grades)",
+    "gwm-haval-h6-phev-ultra.batteryKwh: as Lux",
+    "gwm-haval-h6-phev-ultra-awd.batteryKwh: as Lux",
+    "gwm-haval-h6-phev-ultra.towKg: Ultra 2WD tow rating not on a page of its own; taken as the shared 1500kg",
+    "gwm-haval-h6-phev-lux.depreciationCurve: GWM brand convention adopted from the Cannon rows; changed from the held H6 curve (same for all grades)",
+    "gwm-haval-h6-phev-ultra.depreciationCurve: as Lux",
+    "gwm-haval-h6-phev-ultra-awd.depreciationCurve: as Lux",
+    "gwm-haval-h6-phev-lux.insuranceAnnual: judged against Sealion 6 and Tiggo 7 PHEV rows (same for Ultra, Ultra AWD)",
+    "gwm-haval-h6-phev-ultra.insuranceAnnual: judged",
+    "gwm-haval-h6-phev-ultra-awd.insuranceAnnual: judged"
+  ]
+}

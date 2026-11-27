@@ -1,19 +1,20 @@
 {
-  "loanRatePct": 6.5,
-  "leaseRatePct": 7.5,
+  "loanRatePct": 6.75,
+  "leaseRatePct": 8.0,
   "adminFeeAnnual": 1020,
-  "opportunityRatePct": 4.5,
-  "electricityCentsPerKwh": 28,
-  "petrolCentsPerLitre": 195,
-  "otherRunningCostsAnnual": 1240,
+  "opportunityRatePct": 5.0,
+  "electricityCentsPerKwh": 27,
+  "petrolCentsPerLitre": 230,
+  "otherRunningCostsAnnual": 1319,
   "defaultAnnualKm": 15000,
   "sources": {
-    "loanRatePct": "Mid-market green EV secured rate, July 2026. Best advertised 5.66%.",
-    "leaseRatePct": "Competitive novated comparison rate 6.5-7.5%; ~9.5% effective on 5 years.",
+    "loanRatePct": "Mid-market green EV secured rate, November 2026 (RBA cash rate 4.85% from 4 Nov 2026). Best advertised green loan 5.79% (Money.com.au, 17 Nov 2026); Bank Australia 6.29%.",
+    "leaseRatePct": "Competitive novated comparison rate was 6.5-7.5% in mid-2026; cash rate up 50bp since, so 8.0%.",
     "adminFeeAnnual": "Typical $85/month packaging fee.",
-    "electricityCentsPerKwh": "Melbourne residential off-peak-weighted estimate.",
-    "petrolCentsPerLitre": "Melbourne 91 unleaded, cycle-averaged estimate July 2026. Only used for plug-in hybrids.",
-    "otherRunningCostsAnnual": "VIC rego ~$880 plus servicing and tyres. ZLEV discount ended 1 Jan 2026."
+    "electricityCentsPerKwh": "2026-27 Victorian Default Offer flat rates, Melbourne zones 25.96 to 27.47 c/kWh (ESC final decision, May 2026, via Canstar).",
+    "petrolCentsPerLitre": "Unleaded 91, November 2026: national average 234.3c on 7 Nov, five-city average 232.7c week to 4 Nov (ACCC via IBTimes); wholesale easing. Only used for plug-in hybrids.",
+    "otherRunningCostsAnnual": "VIC rego $958.80 (2026-27 metro, incl. TAC) plus servicing and tyres. ZLEV discount ended 1 Jan 2026.",
+    "opportunityRatePct": "High-interest savings, November 2026: ordinary accounts above 5%, bonus rates to 6% (cash rate 4.85%)."
   },
-  "sourcedAt": "2026-07-25"
+  "sourcedAt": "2026-11-27"
 }

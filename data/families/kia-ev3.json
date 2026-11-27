@@ -1,23 +1,26 @@
 {
   "id": "kia-ev3",
-  "summary": "Kia's compact electric SUV pairs a genuinely spacious, well-finished cabin with suspension tuning that Australian reviewers rate as composed and comfortable over rough surfaces. Entry Air variants are seen as strong value under $50k with usable real-world range, but the flagship GT-Line drifts close to $70,000 on-road, where reviewers feel it should offer more standard safety kit such as a surround-view camera.",
+  "summary": "Kia's compact electric SUV pairs a genuinely spacious, well-finished cabin with ride tuning Australian reviewers rate as comfortable over most surfaces, though large low-profile wheels let sharp edges through. The entry Air grades are the value picks at $47,600 and $53,315 before on-roads, while CarExpert questions whether the upper grades stack up; the MY27 range adds a dual-motor GT-Line AWD flagship at $66,490 before on-roads with 195kW, a locally tuned chassis and a 1,500kg tow rating.",
   "pros": [
-    "Locally tuned ride soaks up broken Melbourne road surfaces while staying composed at highway speed",
-    "Roomy, well-packaged cabin and a genuinely usable 460L boot (1250L seats folded) for a compact SUV",
-    "Air Long Range offers a genuinely long 604km WLTP claim while still pricing under $55,000",
+    "Roomy, well-packaged cabin and a usable 460L boot (1,251L seats folded) plus a 25L frunk for a compact SUV",
+    "Air Long Range pairs a 604km WLTP claim with a $53,315 before-on-roads price",
+    "GT-Line AWD adds a second motor (195kW, 0-100km/h in 6.6s), larger brakes and Australian suspension tuning for only $2,540 over the front-drive GT-Line",
     "Five-star ANCAP rating and Kia's 7-year/unlimited-km vehicle warranty (7yr/150,000km battery)"
   ],
   "cons": [
-    "GT-Line pricing approaches $70,000 drive-away yet still lacks a surround-view camera",
-    "Noticeable road and wind noise intrude at highway speeds on all variants",
-    "Modest DC fast-charging speeds mean longer top-up stops on road trips than key rivals",
-    "Entry Air Standard Range is rated to tow just 500kg braked, well below the 1000kg of Long Range variants"
+    "Upper grades are pricey: GT-Line $63,950 and GT-Line AWD $66,490 before on-roads, and CarExpert questions the value equation",
+    "Noticeable road noise on rougher surfaces and wind rustle at freeway speeds",
+    "127kW peak DC charging means longer top-up stops on road trips than key rivals",
+    "Entry Air Standard Range is rated to tow just 500kg braked, against 1,000kg for front-drive Long Range grades and 1,500kg for the GT-Line AWD"
   ],
   "sources": [
     "https://www.carexpert.com.au/car-reviews/2026-kia-ev3-review",
-    "https://www.carsguide.com.au/kia/ev3/price/2026",
-    "https://www.chasingcars.com.au/reviews/small-suvs/kia-ev3-earth-long-term-review/",
-    "https://www.racv.com.au/royalauto/car-reviews/kia/2026-kia-ev3-review.html"
+    "https://www.carexpert.com.au/car-news/2027-kia-ev3-to-add-awd-flagship-in-australia",
+    "https://www.carsguide.com.au/kia/ev3/price/2027",
+    "https://www.chasingcars.com.au/news/new-car-prices/popular-electric-car-goes-awd-ev3-gt-line-awd-2026-joins-range-as-all-paw-byd-atto-3-mg-s5-megane-e-tech-rival/",
+    "https://www.kia.com/au/cars/ev3.html",
+    "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev3/kia-ev3-brochure.pdf",
+    "https://ev-database.org/car/3638/Kia-EV3-Long-Range"
   ],
-  "sourcedAt": "2026-07-26"
+  "sourcedAt": "2026-11-26"
 }

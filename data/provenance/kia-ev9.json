@@ -1,0 +1,338 @@
+{
+  "familyId": "kia-ev9",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "kia-ev9-air-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev9.html",
+        "note": "'Air' listed as one of four EV9 grades on Kia AU Build & Price on 2026-11-26; prices postcode-gated drive-away ('Set your location to get local pricing'), not read"
+      },
+      "listPrice": {
+        "value": 97000,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev9/price/2027",
+        "note": "CarsGuide 2027 MSRP $97,000 (excludes stamp duty, other government charges and options); unchanged from CarExpert's Feb 2026 'Price before on-road costs' table (https://www.carexpert.com.au/car-news/2026-kia-ev9-hot-gt-arrives-as-korean-brands-priciest-model-ever). Kia configurator postcode-gated drive-away, not read. CarExpert MY27 variant pages' 'before on-road costs' figures (Air $98,803, GT-Line $130,334) rejected: they exceed list by roughly the LCT on the car (Air +$1,803, GT-Line +$9,334), i.e. LCT added a second time, and CarExpert's MY26 GT-Line page shows the same inflation ($129,883 vs Kia's $121,000)."
+      },
+      "batteryKwh": {
+        "value": 73.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1833/Kia-EV9-761-kWh-RWD",
+        "note": "usable 73.0 kWh, nominal 76.1 (EV Database, MY25-27). Kia AU MY26 spec sheet 76.1 kWh = 632 V x 120.6 Ah = 76.2 kWh nominal, so Kia publishes gross"
+      },
+      "rangeKm": {
+        "value": 443,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet, WLTP AER combined, Air; CarExpert MY27 pages carry the same figures (spec unchanged for MY27)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet WLTP combined, Air; grid energy incl. charging losses, so ~18-20% above usable/range (Kia convention as kia-ev5)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 333,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "VDA, 7 seats up, all grades; CarExpert MY27 GT-Line page describes 333 L as 'to the lower window' (to the cover line). 90 L / 52 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2318,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "VDA, 2 seats up, 7-seat grades 2,318 L (GT 2,393). Kia does not state whether to roof or belt line"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Seat Capacity row: Air/Earth/GT-Line 7, GT 6"
+      },
+      "towKg": {
+        "value": 900,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "braked towing: RWD single motor 900 kg; AWD dual motor (incl. GT) 2,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev9/2027",
+        "note": "7 years, unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2400,
+        "basis": "judged",
+        "note": "kept held 2400; volvo-ex90-plus-single-motor (2700, $106,990) and hyundai-ioniq-9-calligraphy-awd (2700, $119,750) sit above at higher prices; kia-ev5-gt-line-awd 2050 at $71,770 below"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, matches kia-ev5 and kia-ev3"
+      }
+    },
+    "kia-ev9-earth-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev9.html",
+        "note": "'Earth' listed as one of four EV9 grades on Kia AU Build & Price on 2026-11-26; prices postcode-gated drive-away ('Set your location to get local pricing'), not read"
+      },
+      "listPrice": {
+        "value": 106500,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev9/price/2027",
+        "note": "CarsGuide 2027 MSRP $106,500 (excludes stamp duty, other government charges and options); unchanged from CarExpert's Feb 2026 'Price before on-road costs' table (https://www.carexpert.com.au/car-news/2026-kia-ev9-hot-gt-arrives-as-korean-brands-priciest-model-ever). Kia configurator postcode-gated drive-away, not read. CarExpert MY27 variant pages' 'before on-road costs' figures (Air $98,803, GT-Line $130,334) rejected: they exceed list by roughly the LCT on the car (Air +$1,803, GT-Line +$9,334), i.e. LCT added a second time, and CarExpert's MY26 GT-Line page shows the same inflation ($129,883 vs Kia's $121,000)."
+      },
+      "batteryKwh": {
+        "value": 96.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1835/Kia-EV9-998-kWh-AWD",
+        "note": "usable 96.0 kWh (EV Database, marked estimate; nominal 99.8). Kia AU MY26 spec sheet 99.8 kWh = 552 V x 180.9 Ah = 99.86 kWh nominal, so Kia publishes gross"
+      },
+      "rangeKm": {
+        "value": 512,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet, WLTP AER combined, Earth; CarExpert MY27 pages carry the same figures (spec unchanged for MY27)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.3,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet WLTP combined, Earth; grid energy incl. charging losses, so ~18-20% above usable/range (Kia convention as kia-ev5)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 333,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "VDA, 7 seats up, all grades; CarExpert MY27 GT-Line page describes 333 L as 'to the lower window' (to the cover line). 90 L / 52 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2318,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "VDA, 2 seats up, 7-seat grades 2,318 L (GT 2,393). Kia does not state whether to roof or belt line"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Seat Capacity row: Air/Earth/GT-Line 7, GT 6"
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "braked towing: RWD single motor 900 kg; AWD dual motor (incl. GT) 2,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev9/2027",
+        "note": "7 years, unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2600,
+        "basis": "judged",
+        "note": "kept held 2600; just under volvo-ex90-plus-single-motor (2700) at near-identical price, Kia premium-brand discount"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, matches kia-ev5 and kia-ev3"
+      }
+    },
+    "kia-ev9-gt-line-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev9.html",
+        "note": "'GT-Line' listed as one of four EV9 grades on Kia AU Build & Price on 2026-11-26; prices postcode-gated drive-away ('Set your location to get local pricing'), not read"
+      },
+      "listPrice": {
+        "value": 121000,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev9/price/2027",
+        "note": "CarsGuide 2027 MSRP $121,000 (excludes stamp duty, other government charges and options); unchanged from CarExpert's Feb 2026 'Price before on-road costs' table (https://www.carexpert.com.au/car-news/2026-kia-ev9-hot-gt-arrives-as-korean-brands-priciest-model-ever). Kia configurator postcode-gated drive-away, not read. CarExpert MY27 variant pages' 'before on-road costs' figures (Air $98,803, GT-Line $130,334) rejected: they exceed list by roughly the LCT on the car (Air +$1,803, GT-Line +$9,334), i.e. LCT added a second time, and CarExpert's MY26 GT-Line page shows the same inflation ($129,883 vs Kia's $121,000)."
+      },
+      "batteryKwh": {
+        "value": 96.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1835/Kia-EV9-998-kWh-AWD",
+        "note": "usable 96.0 kWh (EV Database, marked estimate; nominal 99.8). Kia AU MY26 spec sheet 99.8 kWh = 552 V x 180.9 Ah = 99.86 kWh nominal, so Kia publishes gross"
+      },
+      "rangeKm": {
+        "value": 505,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet, WLTP AER combined, GT-Line; CarExpert MY27 pages carry the same figures (spec unchanged for MY27)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.8,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet WLTP combined, GT-Line; grid energy incl. charging losses, so ~18-20% above usable/range (Kia convention as kia-ev5)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 333,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "VDA, 7 seats up, all grades; CarExpert MY27 GT-Line page describes 333 L as 'to the lower window' (to the cover line). 90 L / 52 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2318,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "VDA, 2 seats up, 7-seat grades 2,318 L (GT 2,393). Kia does not state whether to roof or belt line"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Seat Capacity row: Air/Earth/GT-Line 7, GT 6"
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "braked towing: RWD single motor 900 kg; AWD dual motor (incl. GT) 2,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev9/2027",
+        "note": "7 years, unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2700,
+        "basis": "judged",
+        "note": "kept held 2700; matches hyundai-ioniq-9-calligraphy-awd (2700, $119,750), the platform sibling at the same price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, matches kia-ev5 and kia-ev3"
+      }
+    },
+    "kia-ev9-gt-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev9.html",
+        "note": "'GT' listed as one of four EV9 grades on Kia AU Build & Price on 2026-11-26; prices postcode-gated drive-away ('Set your location to get local pricing'), not read"
+      },
+      "listPrice": {
+        "value": 129600,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev9/price/2026/gt",
+        "note": "CarsGuide MSRP (excludes stamp duty and government charges): current GT $129,600, with the $129,250 launch configuration marked 'Discontinued Aug 2026'; CarsGuide 2027 price page also $129,600. Launch figure $129,250 'before on-road costs' (CarExpert, 13 Feb 2026) is superseded. No news report of the $350 rise found; Kia's own price is postcode-gated drive-away and could not be read. CarExpert MY27 variant pages' 'before on-road costs' figures (Air $98,803, GT-Line $130,334) rejected: they exceed list by roughly the LCT on the car (Air +$1,803, GT-Line +$9,334), i.e. LCT added a second time, and CarExpert's MY26 GT-Line page shows the same inflation ($129,883 vs Kia's $121,000)."
+      },
+      "batteryKwh": {
+        "value": 96.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1835/Kia-EV9-998-kWh-AWD",
+        "note": "usable 96.0 kWh (EV Database, marked estimate; nominal 99.8). Kia AU MY26 spec sheet 99.8 kWh = 552 V x 180.9 Ah = 99.86 kWh nominal, so Kia publishes gross"
+      },
+      "rangeKm": {
+        "value": 510,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet, WLTP AER combined, GT; CarExpert MY27 pages carry the same figures (spec unchanged for MY27)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet WLTP combined, GT; grid energy incl. charging losses, so ~18-20% above usable/range (Kia convention as kia-ev5)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 333,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "VDA, 7 seats up, all grades; CarExpert MY27 GT-Line page describes 333 L as 'to the lower window' (to the cover line). 90 L / 52 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2393,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "VDA, 2 seats up: 2,393 L for the 6-seat GT (held 2,318 was the 7-seat figure)"
+      },
+      "seats": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "Seat Capacity row: Air/Earth/GT-Line 7, GT 6"
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev9/kia-ev9-brochure.pdf",
+        "note": "braked towing: RWD single motor 900 kg; AWD dual motor (incl. GT) 2,500 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev9/2027",
+        "note": "7 years, unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 2800,
+        "basis": "judged",
+        "note": "kept held 2800; performance grade above GT-Line, below volvo-ex90-ultra-twin-motor-performance (3150, $134,990)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, matches kia-ev5 and kia-ev3"
+      }
+    }
+  },
+  "lowConfidence": [
+    "kia-ev9-gt-awd.listPrice: $129,600 rests on CarsGuide's MSRP database alone (launch $129,250 marked discontinued Aug 2026); no press report of the rise, Kia's configurator is postcode-gated drive-away and was not read",
+    "kia-ev9-air-rwd.listPrice: Kia configurator not read; CarsGuide 2027 MSRP matching Feb 2026 launch list",
+    "kia-ev9-earth-awd.listPrice: same - configurator not read, third-party list figures",
+    "kia-ev9-gt-line-awd.listPrice: same - configurator not read, third-party list figures",
+    "kia-ev9-earth-awd.batteryKwh: 96.0 usable is EV Database's own estimate; Kia publishes only gross 99.8",
+    "kia-ev9-gt-line-awd.batteryKwh: as Earth, EV Database estimate",
+    "kia-ev9-gt-awd.batteryKwh: as Earth, EV Database estimate",
+    "kia-ev9-air-rwd.batteryKwh: 73.0 usable from EV Database only; Kia publishes only gross 76.1",
+    "kia-ev9-air-rwd.bootLitresSeatsDown: Kia VDA 2-seat figure, line (roof vs belt) unstated; applies to all rows",
+    "kia-ev9-gt-awd.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev9-gt-line-awd.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev9-earth-awd.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev9-air-rwd.insuranceAnnual: judged, anchored to siblings"
+  ]
+}

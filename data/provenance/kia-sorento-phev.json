@@ -1,0 +1,420 @@
+{
+  "familyId": "kia-sorento-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "kia-sorento-phev-s-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-s-1-6l-suv-4x4-electric-jsk5f8gw20260515",
+        "note": "MY27 (MQ4 PE MY27) PHEV grade, released 5 May 2026; CarsGuide lists it 'New: Available to order' (https://www.carsguide.com.au/kia/sorento/price/2027). Kia's own Build & Price lists all four PHEV grades (S, Sport, Sport+, GT-Line Plug-in Hybrid) but prices are postcode-gated drive-away and the page could not be read further; Kia's November 2026 offers page also lists all four."
+      },
+      "listPrice": {
+        "value": 71175,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-s-1-6l-suv-4x4-electric-jsk5f8gw20260515",
+        "note": "CarExpert MY27 variant page: 'prices starting at $71,175' before on-road costs (MSRP); same figure as CarsGuide MY27 RRP (https://www.carsguide.com.au/kia/sorento/price/2027) and EV Central (list excl. on-roads, updated 21 Nov 2026). Independent check: CarExpert's Sydney drive-away ladder ($76,851/$79,634/$84,810/$92,538) steps exactly 1.05x the MY27 list steps (NSW 5% duty), and every PHEV grade sits $12,075 drive-away (= $11,500 list) above its AWD hybrid twin. Kia's configurator is postcode-gated drive-away and its November 2026 'drive away from' offers ($69,990-$85,990) are a campaign below list, so no manufacturer list figure could be read. Held $70,880 was the MY26 price."
+      },
+      "batteryKwh": {
+        "value": 12.0,
+        "basis": "judged",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "Usable capacity is not published. 13.8 kWh is gross (ADAC 'Batteriekapazitaet (Brutto)'; Kia UK spec, CarsGuide and CarExpert round to 14). Estimate from measured grid energy per full EV run: electrive 28 kWh/100km x ~49 km = 13.7 kWh and ADAC test 26.4 kWh/100km x 54 km = 14.3 kWh, less ~12% AC charging loss = 12.0-12.6 kWh; electrive notes EV mode ends near 15% SOC (11.7 kWh). Taken as 12.0 kWh (~87% of gross), comparable to the ~83% judged for mitsubishi-outlander-phev."
+      },
+      "rangeKm": {
+        "value": 55,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "European WLTP electric range for the 7-seat 1.6 T-GDI PHEV on 235/55R19 (the tyre every Australian MY27 grade ships on per CarExpert variant pages), with the same 1.6 L/100km and 37 g/km label as the Australian car; the 2026 Euro 6e-bis listing (348145) also gives 55 km. CarExpert MY27 variant pages and EV Central both quote 55 km. Australian 68 km is NEDC (CarExpert labels it NEDC) and is rejected by the direction test; Kia AU's 2025 launch quote of 58 km WLTP was not found on a current page. Held value was 58."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 12.0 / 55 x 100. ADR/VESR label and ADAC weighted kWh figures (18.2 / 9.7 kWh/100km) are utility-factor quantities and not used."
+      },
+      "combinedRangeKm": {
+        "value": 682,
+        "basis": "derived",
+        "note": "WLTP electric 55 km + 47 L tank / 7.5 L/100km x 100 (627 km) = 682 km. Tank 47 L from ADAC and CarExpert MY27 variant page (CarExpert's 2024 news item says 67 L, the hybrid's tank)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.5,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 7.5 L/100km for the 7-seat 19-inch car (CO2 170 g/km battery empty); the Euro 6e-bis 2026 listing gives 7.2. Same basis as sibling mitsubishi-outlander-phev (ADAC battery-empty). Australian real-world: CarExpert 6.5 and Carscoops 6.4 L/100km with a flat battery. Held 6.5 was the real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/sorento/price/2027",
+        "note": "Combined label 1.6 L/100km (CO2 37 g/km) on the MY27 listing, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Sorento PHEV label is 37 g/km (CarsGuide MY27 listing)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 175,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
+        "note": "175 L with all three rows up, to the lower window line (cargo-cover convention); ADAC 'Kofferraumvolumen normal' 175 L; CarExpert Jan 2026 price article gives 175 L as the PHEV-specific figure. CarExpert's S/Sport/Sport+ PHEV pages show 179/1996 L, the hybrid figures copied (battery under the second row is common to all PHEV grades)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1988,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "ADAC 'dachhoch' (to the roof) with rows folded 1988 L, also on CarExpert's GT-Line PHEV page. To-the-roof, matching the folded-figure basis on sibling 7-seaters (outlander, cx-80, sealion-8); ADAC's window-height folded figure is 809 L."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-s-1-6l-suv-4x4-electric-jsk5f8gw20260515",
+        "note": "2+3+2 seating."
+      },
+      "towKg": {
+        "value": 1010,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-s-1-6l-suv-4x4-electric-jsk5f8gw20260515",
+        "note": "Braked 1010 kg / unbraked 750 kg on CarExpert MY27 variant page; ADAC 7-seat EU listing also 1010 kg. Kia AU technical spec sheet not opened (configurator gated)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/sorento/price/2027",
+        "note": "84 months / unlimited km, unconditional; battery 8 years / 160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "Held 2026-07-28 judgement kept; list moved under $700. Anchors: mitsubishi-outlander-phev-aspire $1750 at $66,790 and exceed-tourer $1850 at $74,490; mazda-cx-80-phev touring $1850 at $68,100, gt $1950 at $75,100, azami-sp $2150 at $85,300."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default, the single Kia brand curve used on every kia-ev3/ev4/ev5/ev6/ev9 row (owner: one curve per brand, go with mainstream). Held rows used 0.76/0.45 and 0.74/0.43 (GT-Line)."
+      }
+    },
+    "kia-sorento-phev-sport-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-sport-1-6l-suv-4x4-electric-jsk5f8ka20260515",
+        "note": "MY27 (MQ4 PE MY27) PHEV grade, released 5 May 2026; CarsGuide lists it 'New: Available to order' (https://www.carsguide.com.au/car/15141001). Kia's own Build & Price lists all four PHEV grades (S, Sport, Sport+, GT-Line Plug-in Hybrid) but prices are postcode-gated drive-away and the page could not be read further; Kia's November 2026 offers page also lists all four."
+      },
+      "listPrice": {
+        "value": 73825,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-sport-1-6l-suv-4x4-electric-jsk5f8ka20260515",
+        "note": "CarExpert MY27 variant page: 'prices starting at $73,825' before on-road costs (MSRP); same figure as CarsGuide MY27 RRP (https://www.carsguide.com.au/car/15141001) and EV Central (list excl. on-roads, updated 21 Nov 2026). Independent check: CarExpert's Sydney drive-away ladder ($76,851/$79,634/$84,810/$92,538) steps exactly 1.05x the MY27 list steps (NSW 5% duty), and every PHEV grade sits $12,075 drive-away (= $11,500 list) above its AWD hybrid twin. Kia's configurator is postcode-gated drive-away and its November 2026 'drive away from' offers ($69,990-$85,990) are a campaign below list, so no manufacturer list figure could be read. Held $73,500 was the MY26 price."
+      },
+      "batteryKwh": {
+        "value": 12.0,
+        "basis": "judged",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "Usable capacity is not published. 13.8 kWh is gross (ADAC 'Batteriekapazitaet (Brutto)'; Kia UK spec, CarsGuide and CarExpert round to 14). Estimate from measured grid energy per full EV run: electrive 28 kWh/100km x ~49 km = 13.7 kWh and ADAC test 26.4 kWh/100km x 54 km = 14.3 kWh, less ~12% AC charging loss = 12.0-12.6 kWh; electrive notes EV mode ends near 15% SOC (11.7 kWh). Taken as 12.0 kWh (~87% of gross), comparable to the ~83% judged for mitsubishi-outlander-phev."
+      },
+      "rangeKm": {
+        "value": 55,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "European WLTP electric range for the 7-seat 1.6 T-GDI PHEV on 235/55R19 (the tyre every Australian MY27 grade ships on per CarExpert variant pages), with the same 1.6 L/100km and 37 g/km label as the Australian car; the 2026 Euro 6e-bis listing (348145) also gives 55 km. CarExpert MY27 variant pages and EV Central both quote 55 km. Australian 68 km is NEDC (CarExpert labels it NEDC) and is rejected by the direction test; Kia AU's 2025 launch quote of 58 km WLTP was not found on a current page. Held value was 58."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 12.0 / 55 x 100. ADR/VESR label and ADAC weighted kWh figures (18.2 / 9.7 kWh/100km) are utility-factor quantities and not used."
+      },
+      "combinedRangeKm": {
+        "value": 682,
+        "basis": "derived",
+        "note": "WLTP electric 55 km + 47 L tank / 7.5 L/100km x 100 (627 km) = 682 km. Tank 47 L from ADAC and CarExpert MY27 variant page (CarExpert's 2024 news item says 67 L, the hybrid's tank)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.5,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 7.5 L/100km for the 7-seat 19-inch car (CO2 170 g/km battery empty); the Euro 6e-bis 2026 listing gives 7.2. Same basis as sibling mitsubishi-outlander-phev (ADAC battery-empty). Australian real-world: CarExpert 6.5 and Carscoops 6.4 L/100km with a flat battery. Held 6.5 was the real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/15141001",
+        "note": "Combined label 1.6 L/100km (CO2 37 g/km) on the MY27 listing, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Sorento PHEV label is 37 g/km (CarsGuide MY27 listing)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 175,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
+        "note": "175 L with all three rows up, to the lower window line (cargo-cover convention); ADAC 'Kofferraumvolumen normal' 175 L; CarExpert Jan 2026 price article gives 175 L as the PHEV-specific figure. CarExpert's S/Sport/Sport+ PHEV pages show 179/1996 L, the hybrid figures copied (battery under the second row is common to all PHEV grades)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1988,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "ADAC 'dachhoch' (to the roof) with rows folded 1988 L, also on CarExpert's GT-Line PHEV page. To-the-roof, matching the folded-figure basis on sibling 7-seaters (outlander, cx-80, sealion-8); ADAC's window-height folded figure is 809 L."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-sport-1-6l-suv-4x4-electric-jsk5f8ka20260515",
+        "note": "2+3+2 seating."
+      },
+      "towKg": {
+        "value": 1010,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-sport-1-6l-suv-4x4-electric-jsk5f8ka20260515",
+        "note": "Braked 1010 kg / unbraked 750 kg on CarExpert MY27 variant page; ADAC 7-seat EU listing also 1010 kg. Kia AU technical spec sheet not opened (configurator gated)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/15141001",
+        "note": "84 months / unlimited km, unconditional; battery 8 years / 160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "Held 2026-07-28 judgement kept; list moved under $700. Anchors: mitsubishi-outlander-phev-aspire $1750 at $66,790 and exceed-tourer $1850 at $74,490; mazda-cx-80-phev touring $1850 at $68,100, gt $1950 at $75,100, azami-sp $2150 at $85,300."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default, the single Kia brand curve used on every kia-ev3/ev4/ev5/ev6/ev9 row (owner: one curve per brand, go with mainstream). Held rows used 0.76/0.45 and 0.74/0.43 (GT-Line)."
+      }
+    },
+    "kia-sorento-phev-sport-plus-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-sport-1-6l-suv-4x4-electric-jsk5f8kk20260515",
+        "note": "MY27 (MQ4 PE MY27) PHEV grade, released 5 May 2026; CarsGuide lists it 'New: Available to order' (https://www.carsguide.com.au/car/15141003). Kia's own Build & Price lists all four PHEV grades (S, Sport, Sport+, GT-Line Plug-in Hybrid) but prices are postcode-gated drive-away and the page could not be read further; Kia's November 2026 offers page also lists all four."
+      },
+      "listPrice": {
+        "value": 78755,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-sport-1-6l-suv-4x4-electric-jsk5f8kk20260515",
+        "note": "CarExpert MY27 variant page: 'prices starting at $78,755' before on-road costs (MSRP); same figure as CarsGuide MY27 RRP (https://www.carsguide.com.au/car/15141003) and EV Central (list excl. on-roads, updated 21 Nov 2026). Independent check: CarExpert's Sydney drive-away ladder ($76,851/$79,634/$84,810/$92,538) steps exactly 1.05x the MY27 list steps (NSW 5% duty), and every PHEV grade sits $12,075 drive-away (= $11,500 list) above its AWD hybrid twin. Kia's configurator is postcode-gated drive-away and its November 2026 'drive away from' offers ($69,990-$85,990) are a campaign below list, so no manufacturer list figure could be read. Held $78,430 was the MY26 price."
+      },
+      "batteryKwh": {
+        "value": 12.0,
+        "basis": "judged",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "Usable capacity is not published. 13.8 kWh is gross (ADAC 'Batteriekapazitaet (Brutto)'; Kia UK spec, CarsGuide and CarExpert round to 14). Estimate from measured grid energy per full EV run: electrive 28 kWh/100km x ~49 km = 13.7 kWh and ADAC test 26.4 kWh/100km x 54 km = 14.3 kWh, less ~12% AC charging loss = 12.0-12.6 kWh; electrive notes EV mode ends near 15% SOC (11.7 kWh). Taken as 12.0 kWh (~87% of gross), comparable to the ~83% judged for mitsubishi-outlander-phev."
+      },
+      "rangeKm": {
+        "value": 55,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "European WLTP electric range for the 7-seat 1.6 T-GDI PHEV on 235/55R19 (the tyre every Australian MY27 grade ships on per CarExpert variant pages), with the same 1.6 L/100km and 37 g/km label as the Australian car; the 2026 Euro 6e-bis listing (348145) also gives 55 km. CarExpert MY27 variant pages and EV Central both quote 55 km. Australian 68 km is NEDC (CarExpert labels it NEDC) and is rejected by the direction test; Kia AU's 2025 launch quote of 58 km WLTP was not found on a current page. Held value was 58."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 12.0 / 55 x 100. ADR/VESR label and ADAC weighted kWh figures (18.2 / 9.7 kWh/100km) are utility-factor quantities and not used."
+      },
+      "combinedRangeKm": {
+        "value": 682,
+        "basis": "derived",
+        "note": "WLTP electric 55 km + 47 L tank / 7.5 L/100km x 100 (627 km) = 682 km. Tank 47 L from ADAC and CarExpert MY27 variant page (CarExpert's 2024 news item says 67 L, the hybrid's tank)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.5,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 7.5 L/100km for the 7-seat 19-inch car (CO2 170 g/km battery empty); the Euro 6e-bis 2026 listing gives 7.2. Same basis as sibling mitsubishi-outlander-phev (ADAC battery-empty). Australian real-world: CarExpert 6.5 and Carscoops 6.4 L/100km with a flat battery. Held 6.5 was the real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/15141003",
+        "note": "Combined label 1.6 L/100km (CO2 37 g/km) on the MY27 listing, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Sorento PHEV label is 37 g/km (CarsGuide MY27 listing)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 175,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
+        "note": "175 L with all three rows up, to the lower window line (cargo-cover convention); ADAC 'Kofferraumvolumen normal' 175 L; CarExpert Jan 2026 price article gives 175 L as the PHEV-specific figure. CarExpert's S/Sport/Sport+ PHEV pages show 179/1996 L, the hybrid figures copied (battery under the second row is common to all PHEV grades)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1988,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "ADAC 'dachhoch' (to the roof) with rows folded 1988 L, also on CarExpert's GT-Line PHEV page. To-the-roof, matching the folded-figure basis on sibling 7-seaters (outlander, cx-80, sealion-8); ADAC's window-height folded figure is 809 L."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-sport-1-6l-suv-4x4-electric-jsk5f8kk20260515",
+        "note": "2+3+2 seating."
+      },
+      "towKg": {
+        "value": 1010,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-sport-1-6l-suv-4x4-electric-jsk5f8kk20260515",
+        "note": "Braked 1010 kg / unbraked 750 kg on CarExpert MY27 variant page; ADAC 7-seat EU listing also 1010 kg. Kia AU technical spec sheet not opened (configurator gated)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/15141003",
+        "note": "84 months / unlimited km, unconditional; battery 8 years / 160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "Held 2026-07-28 judgement kept; list moved under $700. Anchors: mitsubishi-outlander-phev-aspire $1750 at $66,790 and exceed-tourer $1850 at $74,490; mazda-cx-80-phev touring $1850 at $68,100, gt $1950 at $75,100, azami-sp $2150 at $85,300."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default, the single Kia brand curve used on every kia-ev3/ev4/ev5/ev6/ev9 row (owner: one curve per brand, go with mainstream). Held rows used 0.76/0.45 and 0.74/0.43 (GT-Line)."
+      }
+    },
+    "kia-sorento-phev-gt-line-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
+        "note": "MY27 (MQ4 PE MY27) PHEV grade, released 5 May 2026; CarsGuide lists it 'New: Available to order' (https://www.carsguide.com.au/car/15141005). Kia's own Build & Price lists all four PHEV grades (S, Sport, Sport+, GT-Line Plug-in Hybrid) but prices are postcode-gated drive-away and the page could not be read further; Kia's November 2026 offers page also lists all four."
+      },
+      "listPrice": {
+        "value": 86115,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
+        "note": "CarExpert MY27 variant page: 'prices starting at $86,115' before on-road costs (MSRP); same figure as CarsGuide MY27 RRP (https://www.carsguide.com.au/car/15141005) and EV Central (list excl. on-roads, updated 21 Nov 2026). Independent check: CarExpert's Sydney drive-away ladder ($76,851/$79,634/$84,810/$92,538) steps exactly 1.05x the MY27 list steps (NSW 5% duty), and every PHEV grade sits $12,075 drive-away (= $11,500 list) above its AWD hybrid twin. Kia's configurator is postcode-gated drive-away and its November 2026 'drive away from' offers ($69,990-$85,990) are a campaign below list, so no manufacturer list figure could be read. Held $86,790 was the MY26 price."
+      },
+      "batteryKwh": {
+        "value": 12.0,
+        "basis": "judged",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "Usable capacity is not published. 13.8 kWh is gross (ADAC 'Batteriekapazitaet (Brutto)'; Kia UK spec, CarsGuide and CarExpert round to 14). Estimate from measured grid energy per full EV run: electrive 28 kWh/100km x ~49 km = 13.7 kWh and ADAC test 26.4 kWh/100km x 54 km = 14.3 kWh, less ~12% AC charging loss = 12.0-12.6 kWh; electrive notes EV mode ends near 15% SOC (11.7 kWh). Taken as 12.0 kWh (~87% of gross), comparable to the ~83% judged for mitsubishi-outlander-phev."
+      },
+      "rangeKm": {
+        "value": 55,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "European WLTP electric range for the 7-seat 1.6 T-GDI PHEV on 235/55R19 (the tyre every Australian MY27 grade ships on per CarExpert variant pages), with the same 1.6 L/100km and 37 g/km label as the Australian car; the 2026 Euro 6e-bis listing (348145) also gives 55 km. CarExpert MY27 variant pages and EV Central both quote 55 km. Australian 68 km is NEDC (CarExpert labels it NEDC) and is rejected by the direction test; Kia AU's 2025 launch quote of 58 km WLTP was not found on a current page. Held value was 58."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 12.0 / 55 x 100. ADR/VESR label and ADAC weighted kWh figures (18.2 / 9.7 kWh/100km) are utility-factor quantities and not used."
+      },
+      "combinedRangeKm": {
+        "value": 682,
+        "basis": "derived",
+        "note": "WLTP electric 55 km + 47 L tank / 7.5 L/100km x 100 (627 km) = 682 km. Tank 47 L from ADAC and CarExpert MY27 variant page (CarExpert's 2024 news item says 67 L, the hybrid's tank)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.5,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 7.5 L/100km for the 7-seat 19-inch car (CO2 170 g/km battery empty); the Euro 6e-bis 2026 listing gives 7.2. Same basis as sibling mitsubishi-outlander-phev (ADAC battery-empty). Australian real-world: CarExpert 6.5 and Carscoops 6.4 L/100km with a flat battery. Held 6.5 was the real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/15141005",
+        "note": "Combined label 1.6 L/100km (CO2 37 g/km) on the MY27 listing, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Sorento PHEV label is 37 g/km (CarsGuide MY27 listing)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 175,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
+        "note": "175 L with all three rows up, to the lower window line (cargo-cover convention); ADAC 'Kofferraumvolumen normal' 175 L; CarExpert Jan 2026 price article gives 175 L as the PHEV-specific figure. CarExpert's S/Sport/Sport+ PHEV pages show 179/1996 L, the hybrid figures copied (battery under the second row is common to all PHEV grades)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1988,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/sorento/mq4-facelift/336069/",
+        "note": "ADAC 'dachhoch' (to the roof) with rows folded 1988 L, also on CarExpert's GT-Line PHEV page. To-the-roof, matching the folded-figure basis on sibling 7-seaters (outlander, cx-80, sealion-8); ADAC's window-height folded figure is 809 L."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
+        "note": "2+3+2 seating."
+      },
+      "towKg": {
+        "value": 1010,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/sorento/2027-gt-line-1-6l-suv-4x4-electric-jsasomof20260515",
+        "note": "Braked 1010 kg / unbraked 750 kg on CarExpert MY27 variant page; ADAC 7-seat EU listing also 1010 kg. Kia AU technical spec sheet not opened (configurator gated)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/15141005",
+        "note": "84 months / unlimited km, unconditional; battery 8 years / 160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "Held 2026-07-28 judgement kept; list moved under $700. Anchors: mitsubishi-outlander-phev-aspire $1750 at $66,790 and exceed-tourer $1850 at $74,490; mazda-cx-80-phev touring $1850 at $68,100, gt $1950 at $75,100, azami-sp $2150 at $85,300."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default, the single Kia brand curve used on every kia-ev3/ev4/ev5/ev6/ev9 row (owner: one curve per brand, go with mainstream). Held rows used 0.76/0.45 and 0.74/0.43 (GT-Line)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "kia-sorento-phev-*.batteryKwh: usable 12.0 kWh judged from measured grid energy (electrive, ADAC); only gross 13.8 kWh is published",
+    "kia-sorento-phev-*.listPrice: no manufacturer list readable (Kia configurator postcode-gated drive-away; fetch of the page source refused); MY27 MSRP from CarExpert variant pages, CarsGuide RRP and EV Central, cross-checked by CarExpert's drive-away ladder",
+    "kia-sorento-phev-*.rangeKm: 55 km is European WLTP for the 19-inch 7-seater; Kia AU quoted 58 km WLTP at the 2025 launch, not found on a current page",
+    "kia-sorento-phev-*.bootLitresSeatsDown: 1988 L is to the roof (consistent with siblings), not the belt-line convention; belt-line folded figure not published for all rows folded",
+    "kia-sorento-phev-*.fuelConsumptionL100km: 7.5 L/100km is European WLTP battery-empty (pre-Euro 6e-bis car matching the AU label); Australian real-world flat-battery tests 6.4-6.5",
+    "kia-sorento-phev-*.towKg: 1010 kg from CarExpert spec data and ADAC, not Kia's AU spec sheet",
+    "kia-sorento-phev-*.insuranceAnnual and depreciationCurve: judged"
+  ]
+}

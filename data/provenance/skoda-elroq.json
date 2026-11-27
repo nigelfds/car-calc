@@ -1,0 +1,173 @@
+{
+  "familyId": "skoda-elroq",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "skoda-elroq-60-select": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/models/elroq-family/elroq-60-select",
+        "note": "Skoda AU model page lists the grade with a 'from' MRDP price and a Build your own link; MY27 spec sheet covers it"
+      },
+      "listPrice": {
+        "value": 48990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
+        "note": "CarExpert MY27 price table headed 'Price before on-road costs' (10 Jul 2026, +$1,000 on MY26). Skoda AU now publishes only MRDP: 'From $49,990 driveaway' to 31/12/26 on the model page and spec sheet; no Skoda-published list price found. Configurator is JS-rendered and returned no prices."
+      },
+      "batteryKwh": {
+        "value": 58,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "MY27 AU spec sheet 'High Voltage Battery Capacity (Gross / Nett)', nett figure; usable confirmed on EV Database: 58.0 usable / 61.0 nominal LFP (https://ev-database.org/car/3565/Skoda-Elroq-60)"
+      },
+      "rangeKm": {
+        "value": 406,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "MY27 AU spec sheet, WLTP combined, standard 19-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.9,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "MY27 AU spec sheet 'Energy Consumption Wh/km - Combined' 169 Wh/km (WLTP, includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 470,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "VDA, rear seats up; 21L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1580,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "VDA, rear seats down"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "two-row, five-seat; outer rear ISOFIX per spec sheet"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "Braked 1000 kg with Skoda Genuine tow bar (AU spec sheet); EV Database's 1,800 kg for the European 85 is not the AU rating"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/own/warranty",
+        "note": "7 Year/Unlimited Kilometre Warranty for all new Skoda cars; page states no servicing condition"
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "held value kept; anchored between hyundai-kona-electric-extended-range ($50,000, 1450), kia-ev3-air-long-range ($53,315, 1550) and skoda-enyaq-60-select ($51,990, 1700)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Skoda brand convention, identical to skoda-enyaq rows; set below mainstream default for thin local EV volume and persistent drive-away offers sitting below list plus on-roads"
+      }
+    },
+    "skoda-elroq-85-select": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/models/elroq-family/elroq-85-select",
+        "note": "Skoda AU model page lists the grade with a 'from' MRDP price and a Build your own link; MY27 spec sheet covers it"
+      },
+      "listPrice": {
+        "value": 55990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-skoda-elroq-and-enyaq-updated-evs-detailed-for-australia",
+        "note": "CarExpert MY27 price table headed 'Price before on-road costs' (10 Jul 2026, +$1,000 on MY26). Skoda AU now publishes only MRDP: 'From $59,990 driveaway' to 31/12/26 on the model page and spec sheet; no Skoda-published list price found. Configurator is JS-rendered and returned no prices."
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "MY27 AU spec sheet 'High Voltage Battery Capacity (Gross / Nett)', nett figure; usable confirmed on EV Database: 77.0 usable / 82.0 nominal (https://ev-database.org/car/3566/Skoda-Elroq-85)"
+      },
+      "rangeKm": {
+        "value": 521,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "MY27 AU spec sheet, WLTP combined, standard 19-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.2,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "MY27 AU spec sheet 'Energy Consumption Wh/km - Combined' 172 Wh/km (WLTP, includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 470,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "VDA, rear seats up; 21L frunk not added (owner convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1580,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "VDA, rear seats down"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "two-row, five-seat; outer rear ISOFIX per spec sheet"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/67aebb25-c355-47dc-9f97-04c222906708",
+        "note": "Braked 1000 kg with Skoda Genuine tow bar (AU spec sheet); EV Database's 1,800 kg for the European 85 is not the AU rating"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/own/warranty",
+        "note": "7 Year/Unlimited Kilometre Warranty for all new Skoda cars; page states no servicing condition"
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "held value kept; anchored between kia-ev3-earth-long-range ($58,600, 1700) and vw-id4-pro ($59,990, 1800), below skoda-enyaq-85-sportline ($60,990, 1850)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Skoda brand convention, identical to skoda-enyaq rows; set below mainstream default for thin local EV volume and persistent drive-away offers sitting below list plus on-roads"
+      }
+    }
+  },
+  "lowConfidence": [
+    "skoda-elroq-60-select.listPrice: Skoda AU publishes only MRDP ($49,990 drive-away, below the $51,928 the app computes from $48,990, so a subsidised offer); $48,990 list rests on CarExpert's July 2026 MY27 table, not re-confirmed by a Skoda-published list price on the research date",
+    "skoda-elroq-85-select.listPrice: same basis; $55,990 from CarExpert's MY27 table; Skoda's $59,990 MRDP is only $768 above the app's computed drive-away, consistent but not proof",
+    "skoda-elroq-60-select.insuranceAnnual: judged, anchored to kona-electric, kia-ev3 and enyaq rows",
+    "skoda-elroq-85-select.insuranceAnnual: judged, anchored to kia-ev3 and vw-id4 rows",
+    "skoda-elroq-60-select.depreciationCurve: judged Skoda brand convention",
+    "skoda-elroq-85-select.depreciationCurve: judged Skoda brand convention"
+  ]
+}

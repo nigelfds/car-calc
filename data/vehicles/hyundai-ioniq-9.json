@@ -6,8 +6,8 @@
     "model": "Ioniq 9",
     "variant": "Calligraphy AWD",
     "bodyType": "SUV",
-    "listPrice": 119750,
-    "batteryKwh": 107,
+    "listPrice": 119668,
+    "batteryKwh": 106,
     "rangeKm": 600,
     "consumptionKwhPer100km": 20.6,
     "bootLitresSeatsUp": 338,
@@ -16,7 +16,7 @@
     "towKg": 2500,
     "warrantyYears": 5,
     "insuranceAnnual": 2700,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-11-26"
   }
 ]

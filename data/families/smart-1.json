@@ -1,10 +1,10 @@
 {
   "id": "smart-1",
-  "summary": "The smart #1 is a 4.27m electric crossover built on Geely's SEA platform and styled by Mercedes-Benz, sold in Australia by LSH Auto out of just three Mercedes-Benz showrooms in Sydney, Melbourne and Brisbane. Australian reviewers consistently rate the driving experience above its price -- a well-damped ride, quick 200kW rear-drive response and a rear seat that slides 15cm and genuinely fits adults -- and it now undercuts a Volvo EX30 on list price. Where opinion turns hostile is the software: nearly every function lives behind a 12.8-inch screen guarded by a fox avatar, and CarExpert singled out the speed-sign warnings and driver-monitoring camera as among the most intrusive it has tested.",
+  "summary": "The smart #1 is a 4.27m electric crossover built on Geely's SEA platform and styled by Mercedes-Benz, sold in Australia by LSH Auto out of just three Mercedes-Benz showrooms in Sydney, Melbourne and Brisbane. Australian reviewers consistently rate the driving experience above its price -- a well-damped ride, quick 200kW rear-drive response and a rear seat that slides 15cm and genuinely fits adults -- and at $49,900 for the Pro+ it now just undercuts a Volvo EX30 on list price. Where opinion turns hostile is the software: nearly every function lives behind a 12.8-inch screen guarded by a fox avatar, and CarExpert singled out the speed-sign warnings and driver-monitoring camera as among the most intrusive it has tested.",
   "pros": [
-    "Undercuts its SEA-platform sibling the Volvo EX30 (from $49,990) while giving 200kW and 343Nm to the EX30 Plus's 200kW, and undercuts a BMW iX1 by roughly $29,000",
+    "Pro+ at $49,900 before on-roads just undercuts its SEA-platform sibling the Volvo EX30 (from $49,990) while matching the EX30 Plus's 200kW, and undercuts a BMW iX1 by roughly $29,000",
     "150kW DC charging takes 10-80 per cent in under 30 minutes, and the Premium and BRABUS add 22kW three-phase AC -- a real advantage over the Pro+'s 7.4kW single-phase for anyone on a three-phase home supply",
-    "Rear bench slides 15cm and folds to 976 litres, so a 4.27m car carries adults in the back with legroom rivals like the Zeekr X cannot match",
+    "Rear bench slides 15cm and folds to 986 litres, so a 4.27m car carries adults in the back with legroom rivals like the Zeekr X cannot match",
     "Rated to tow 1,600kg braked -- the same as an EX30 and unusual for a sub-$50,000 EV of this size",
     "Five-star ANCAP rating, with a heat pump standard on Premium and BRABUS"
   ],
@@ -17,13 +17,12 @@
   ],
   "sources": [
     "https://au.smart.com/en/configurator/",
+    "https://au.smart.com/en/configurator/?model_id=11",
     "https://au.smart.com/en/hashtag-one/",
-    "https://au.smart.com/en/service/",
-    "https://www.carexpert.com.au/car-reviews/2025-smart-1-premium-review",
-    "https://www.carsguide.com.au/ev/smart-1-94672",
-    "https://www.lshauto.com.au/news-events/smart-1-and-3-evs-launch-in-australia",
-    "https://www.carexpert.com.au/car-news/australias-best-new-car-warranties-in-2026",
-    "https://thebeep.com.au/cars/smart/1"
+    "https://au.smart.com/en/media/2025-smart-1-premium-review",
+    "https://www.carexpert.com.au/smart/1/pro/features-and-specs",
+    "https://ev-database.org/car/1667/Smart-1-Proplus",
+    "https://www.carsguide.com.au/ev/smart-1-94672"
   ],
-  "sourcedAt": "2026-08-01"
+  "sourcedAt": "2026-11-26"
 }

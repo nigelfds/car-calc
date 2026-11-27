@@ -1,0 +1,84 @@
+{
+  "familyId": "subaru-uncharted",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "subaru-uncharted-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.subaru.com.au/uncharted",
+        "note": "Subaru AU model page for the MY27 Uncharted SEV, colours 'available as at 22 September 2026', with Build Your Own link; vehicle price is shown only after a postcode is set, so the configurator price could not be read by fetch. Single AWD grade confirmed by CarsGuide 2027 price list (AWD plus Roof Pack and Roof + Two Tone Pack option lines at +$1,200 / +$2,400, which are options, not grades) and by CarExpert and Chasing Cars road tests (4 Aug 2026)"
+      },
+      "listPrice": {
+        "value": 59990,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/subaru/uncharted/price/2027",
+        "note": "2027 AWD $59,990; page states the price 'excludes costs such as stamp duty, other government charges and options'. CarExpert launch article (https://www.carexpert.com.au/car-news/2026-subaru-uncharted-price-and-specs) and review say '$59,990 before on-road costs' in words. No later change found; CarExpert's $65,107 is a Sydney drive-away estimate. Manufacturer's own price not readable (postcode-gated)"
+      },
+      "batteryKwh": {
+        "value": 71,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3506/Subaru-E-Outback-AWD",
+        "note": "usable 71.0 kWh, nominal 74.7 kWh for the same 74.7 kWh pack (E-Outback = AU Trailseeker). AU Uncharted quotes 74.7 kWh unlabelled (gross per Subaru/Toyota rule; CarExpert spec page mislabels it 'usable'). European Uncharted AWD uses a different 77 kWh (72 usable) pack (completecar.ie), so no Uncharted-specific EV Database page matches the AU pack"
+      },
+      "rangeKm": {
+        "value": 522,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2026-subaru-uncharted-price-and-specs",
+        "note": "WLTP claim for the AU car on 20-inch wheels; same 522 km WLTP in CarExpert review and Chasing Cars review"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.0,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-subaru-uncharted-price-and-specs",
+        "note": "16.0 kWh/100km claimed (WLTP); 71/522 = 13.6 implied (plug-to-wheel loss, within tolerance). On test 17.8 (CarExpert) and 18.3 (Chasing Cars)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 403,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/subaru/uncharted/2026/features-and-specs",
+        "note": "403 L VDA to the lower window line; same figure in CarExpert launch article and Chasing Cars review"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1089,
+        "basis": "carried",
+        "note": "Held figure (2026-07-31) from Subaru AU spec sheet, folded to the belt line; subaru.com.au/uncharted/2026/specs now renders without spec data (MY27 heading only) so it could not be re-opened. CarExpert's 1,323 L folded is to the roof (held note gave 1,304 with panoramic roof), so it does not meet the cargo-cover convention. MY27 is a carry-over at the same price"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/subaru/uncharted/2026/features-and-specs"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No Subaru AU towing rating found: held research found none on Subaru AU's spec sheet; subaru.com.au/why-subaru/towing does not list the Uncharted; CarExpert spec page lists only a 150 kg noseweight and no braked figure; Subaru AU offers a 1,500 kg towbar accessory for the Trailseeker but none found for the Uncharted. Against this, CarExpert's review (4 Aug 2026) states 750 kg unbraked / 1,500 kg braked, matching European C-HR+/Uncharted AWD ratings (ev-database C-HR+ 77 kWh AWD; completecar.ie). Kept at 0 pending a manufacturer sheet"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-subaru-uncharted-price-and-specs",
+        "note": "5 years / unlimited km vehicle; 8 years / 160,000 km high-voltage battery"
+      },
+      "insuranceAnnual": {
+        "value": 1640,
+        "basis": "judged",
+        "note": "Anchored between toyota-bz4x-2wd ($55,990, 1620) and subaru-solterra-awd ($61,990, 1650); raised from held 1600, which sat below the cheaper bZ4X 2WD. Kia EV3 Earth Long Range ($58,600) holds 1700"
+      },
+      "depreciationCurve": {
+        "value": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+        "basis": "judged",
+        "note": "Owner convention: one Subaru curve for all Subaru rows, held curve kept. Steeper than mainstream default because Subaru cut Solterra by $2,000 and Trailseeker by $4,000 on 14 May 2026 (CarExpert, https://www.carexpert.com.au/car-news/subaru-cuts-ev-pricing-again-with-thousands-slashed-off-solterra-trailseeker); no new evidence to change it"
+      }
+    }
+  },
+  "lowConfidence": [
+    "subaru-uncharted-awd.towKg: 0 kept against CarExpert review's 1,500 kg braked and European 1,500 kg ratings; no Subaru AU sheet could be opened to settle it",
+    "subaru-uncharted-awd.bootLitresSeatsDown: 1,089 carried from held Subaru AU spec sheet, which now renders empty; only re-checkable figure is CarExpert's 1,323 to the roof",
+    "subaru-uncharted-awd.batteryKwh: usable 71.0 taken from EV Database's E-Outback (same 74.7 kWh pack); no EV Database page for the AU-spec Uncharted",
+    "subaru-uncharted-awd.listPrice: manufacturer's own price is postcode-gated; $59,990 from CarsGuide 2027 list and CarExpert 'before on-road costs'",
+    "subaru-uncharted-awd.insuranceAnnual: judged",
+    "subaru-uncharted-awd.depreciationCurve: judged, brand convention"
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "familyId": "lotus-eletre",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "lotus-eletre-base": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.lotuscars.com/en-AU/eletre/specifications",
+        "note": "Lotus AU specifications page data lists ELETRE BASE (600 series, 603 hp/450 kW) as a current AU grade, price field blank; configurator is JS-only and did not render. CarsGuide 2026 VIC listing shows it available to order."
+      },
+      "listPrice": {
+        "value": 189990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-lotus-eletre-x-review-quick-drive",
+        "note": "CarExpert 24 Oct 2026: 'base Eletre ... starts at $189,990 plus on-road costs'. Same figure as CarsGuide 2026 MSRP (https://www.carsguide.com.au/lotus/eletre/price/2026). Lotus AU publishes no price; CarExpert Atlas shows $189,900, treated as a typo."
+      },
+      "batteryKwh": {
+        "value": 109,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/1767/Lotus-Eletre",
+        "note": "usable 109.0 kWh; gross/nominal 111.9 kWh on the same page; CarExpert AU spec also gives 111.9 gross / 109 usable"
+      },
+      "rangeKm": {
+        "value": 600,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.lotuscars.com/en-AU/eletre/specifications",
+        "note": "Lotus AU: 'Range (WLTP) 535 - 600 km'; AU base ships on 20-inch wheels (CarExpert AU spec, 255/45 R20 + 285/45 R20) which is the 600 km case. EV Database TEL 373 mi = 600 km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/2025-suv-4x4-electric-jsfsgfww20260701",
+        "note": "WLTP combined 214 Wh/km on CarExpert AU spec; Lotus AU footnote gives 21.4-25.4 kWh/100km range-wide. 109/600 = 18.2, within tolerance (WLTP figure includes charging loss)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 688,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/2025-suv-4x4-electric-jsfsgfww20260701",
+        "note": "'Rear seats up, to lower window 688 L' on CarExpert AU spec (to the window line = cargo-cover convention); frunk 46 L not added. EV Database gives 611 L (method unstated)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1532,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/2025-suv-4x4-electric-jsfsgfww20260701",
+        "note": "rear seats folded 1,532 L; matches EV Database max"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/2025-suv-4x4-electric-jsfsgfww20260701",
+        "note": "two front + three rear seats; EV Database also 5"
+      },
+      "towKg": {
+        "value": 2250,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/2025-suv-4x4-electric-jsfsgfww20260701",
+        "note": "2,250 kg braked / 750 kg unbraked on CarExpert AU spec (JATO data); EV Database same. Lotus AU spec page does not publish towing."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.lotuscars.com/en-AU/support/warranty/eletre",
+        "note": "Lotus AU: 'standard 5-year or 150,000 km warranty'; HV battery 8 yr/200,000 km. CarExpert spec grids show 36 months, contradicted by Lotus's own page."
+      },
+      "insuranceAnnual": {
+        "value": 4600,
+        "basis": "judged",
+        "note": "Anchored to lotus-emeya-600 ($177,990, $4,600) and porsche-cayenne-phev-s-e-hybrid ($187,800, $3,800); Lotus premium for thin parts/repair network. Unchanged from held."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.55,
+          0.42,
+          0.33,
+          0.26,
+          0.21
+        ],
+        "basis": "judged",
+        "note": "Single Lotus brand curve (owner convention), matching the held lotus-emeya-600 curve. Steeper than mainstream on documented evidence: MY25 factory cut of $35,010-$49,010 overnight, 21 AU sales across 2024-25 and 4 to Oct 2026 (CarExpert Atlas), five-showroom network. Previously Base and S carried two different curves."
+      }
+    },
+    "lotus-eletre-s": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.lotuscars.com/en-AU/eletre/specifications",
+        "note": "Lotus AU specifications page data lists ELETRE S (600 series, 450 kW, 22-inch wheels, KEF 2160W 23-speaker) as a current AU grade, price field blank. CarsGuide 2026 lists it."
+      },
+      "listPrice": {
+        "value": 229990,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/lotus/eletre/price/2026/s",
+        "note": "CarsGuide 2026 Eletre S $229,990, MSRP excluding stamp duty and government charges. CarExpert S spec page sidebar shows $229,990 labelled drive-away (Sydney) - the same number, so the label is CarExpert's template, not a genuine drive-away. No 'before on-road costs' wording in words for the S on a 2026 page; Lotus AU publishes no price."
+      },
+      "batteryKwh": {
+        "value": 109,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/2066/Lotus-Eletre-S",
+        "note": "usable 109.0 kWh; gross/nominal 111.9 kWh on the same page; CarExpert AU S spec 111.9 gross / 109 usable"
+      },
+      "rangeKm": {
+        "value": 535,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.lotuscars.com/en-AU/eletre/specifications",
+        "note": "Lotus AU: 'Range (WLTP) 490 - 535 km' for ELETRE S; CarExpert AU spec 535 km WLTP on standard 22-inch wheels. EV Database TEL 332 mi = 534 km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/s/features-and-specs",
+        "note": "WLTP combined 239 Wh/km on CarExpert AU S spec (held 21.4 was the base figure). 109/535 = 20.4, within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 688,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/s/features-and-specs",
+        "note": "'Rear seats up, to lower window 688 L' on CarExpert AU spec (to the window line = cargo-cover convention); frunk 46 L not added. EV Database gives 611 L (method unstated)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1532,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/s/features-and-specs",
+        "note": "rear seats folded 1,532 L; matches EV Database max"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/s/features-and-specs",
+        "note": "two front + three rear seats; EV Database also 5"
+      },
+      "towKg": {
+        "value": 2250,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/eletre/s/features-and-specs",
+        "note": "2,250 kg braked / 750 kg unbraked on CarExpert AU spec (JATO data); EV Database same. Lotus AU spec page does not publish towing."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.lotuscars.com/en-AU/support/warranty/eletre",
+        "note": "Lotus AU: 'standard 5-year or 150,000 km warranty'; HV battery 8 yr/200,000 km. CarExpert spec grids show 36 months, contradicted by Lotus's own page."
+      },
+      "insuranceAnnual": {
+        "value": 5100,
+        "basis": "judged",
+        "note": "Anchored to lotus-eletre-base ($4,600) scaled for +$40k value, and porsche-cayenne-phev-s-e-hybrid-coupe-black-edition ($197,600, $4,000) plus Lotus thin-network premium. Unchanged from held."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.55,
+          0.42,
+          0.33,
+          0.26,
+          0.21
+        ],
+        "basis": "judged",
+        "note": "Single Lotus brand curve (owner convention), matching the held lotus-emeya-600 curve. Steeper than mainstream on documented evidence: MY25 factory cut of $35,010-$49,010 overnight, 21 AU sales across 2024-25 and 4 to Oct 2026 (CarExpert Atlas), five-showroom network. Previously Base and S carried two different curves."
+      }
+    }
+  },
+  "lowConfidence": [
+    "lotus-eletre-s.listPrice: Lotus AU publishes no prices; $229,990 rests on CarsGuide 2026 MSRP and a CarExpert spec page labelled drive-away, with no 2026 'before on-road costs' sentence for the S",
+    "lotus-eletre-base.listPrice: Lotus AU publishes no prices; CarExpert Oct 2026 sentence and CarsGuide MSRP agree on $189,990, Atlas shows $189,900",
+    "lotus-eletre-*.insuranceAnnual: judged, no quote obtainable for a car with 4 sales in 2026",
+    "lotus-eletre-*.depreciationCurve: judged single Lotus brand curve on thin resale evidence",
+    "lotus-eletre-*.bootLitresSeatsUp: 688 L 'to lower window' from CarExpert spec grid; EV Database gives 611 L, Lotus AU page gives no figure",
+    "lotus-eletre-*.towKg: 2,250 kg from JATO/CarExpert and EV Database, not a Lotus AU spec sheet"
+  ]
+}

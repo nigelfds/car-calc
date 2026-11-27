@@ -6,6 +6,20 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "alfa-romeo-tonale-phev": {
+    "file": "alfa-romeo-tonale-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_Tonale_PHEV_1X7A6811.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "audi-a5-phev": {
+    "file": "audi-a5-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_A5_B10_DSC_7314.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "audi-q5-phev": {
     "file": "audi-q5-phev.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Audi_Q5_Sportback_GU_DSC_9270.jpg",
@@ -16,13 +30,6 @@
   "audi-q6-e-tron": {
     "file": "audi-q6-e-tron.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_Sportback_DSC_9276.jpg",
-    "author": "Alexander Migl",
-    "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
-  },
-  "bmw-i4": {
-    "file": "bmw-i4.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:BMW_i4_IAA_2021_1X7A0307.jpg",
     "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
@@ -57,10 +64,10 @@
   },
   "bmw-x1-phev": {
     "file": "bmw-x1-phev.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:2018_BMW_X1_sDrive18i_xLine_1.5_Front.jpg",
-    "author": "Vauxford",
+    "source": "https://commons.wikimedia.org/wiki/File:2023-02_BMW_U11-X1_s18d_blue-green.jpg",
+    "author": "Wikisympathisant",
     "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the previous-generation (F48) X1."
   },
   "bmw-x3-phev": {
     "file": "bmw-x3-phev.webp",
@@ -160,12 +167,12 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
-  "chery-omoda-e5": {
-    "file": "chery-omoda-e5.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Chery_E5.jpg",
-    "author": "Rutger van der Maar",
-    "licence": "CC BY 2.0",
-    "note": "Cropped and resized."
+  "chery-e5": {
+    "file": "chery-e5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Chery_Omoda_E5_front.jpg",
+    "author": "LuvsMG481",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the unrelated 2010s Chery E5 sedan."
   },
   "chery-tiggo-7-phev": {
     "file": "chery-tiggo-7-phev.webp",
@@ -190,8 +197,15 @@
   },
   "cupra-tavascan": {
     "file": "cupra-tavascan.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Cupra_Tavascan_at_IAA_2019_IMG_0790.jpg",
-    "author": "Alexander Migl",
+    "source": "https://commons.wikimedia.org/wiki/File:Cupra_Tavascan_Leonberg_2024_IMG_0881.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the 2019 concept."
+  },
+  "cupra-terramar-phev": {
+    "file": "cupra-terramar-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cupra_Terramar_VZ_IMG_2333.jpg",
+    "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
@@ -200,6 +214,13 @@
     "source": "https://commons.wikimedia.org/wiki/File:Deepal_S07_IAA_2025_DSC_1897.jpg",
     "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
+  "denza-b5": {
+    "file": "denza-b5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Denza_B5_3.jpg",
+    "author": "Calreyn88",
+    "licence": "CC BY 4.0",
     "note": "Cropped and resized."
   },
   "ford-mustang-mach-e": {
@@ -218,10 +239,10 @@
   },
   "gac-aion-ut": {
     "file": "gac-aion-ut.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:GAC_Aion_UT_EV_Car_at_Universitas_Widyatama.jpg",
-    "author": "MRWikiTankenTai",
-    "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "source": "https://commons.wikimedia.org/wiki/File:Aion_UT_007.jpg",
+    "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was a tilted close-up."
   },
   "gac-aion-v": {
     "file": "gac-aion-v.webp",
@@ -244,6 +265,13 @@
     "licence": "CC0",
     "note": "Cropped and resized. Searched as Geely Galaxy E5."
   },
+  "geely-starray-em-i": {
+    "file": "geely-starray-em-i.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Geely_Starray_EM-i_Auto_Zuerich_2026_IMG_8743.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "genesis-gv60": {
     "file": "genesis-gv60.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Genesis_GV60_Auto_Zuerich_2023_1X7A1130.jpg",
@@ -257,6 +285,13 @@
     "author": "iMoD Official",
     "licence": "CC BY 3.0",
     "note": "Cropped and resized. Searched as GWM Poer Sahar."
+  },
+  "gwm-cannon-phev": {
+    "file": "gwm-cannon-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Wall_King_Kong_Cannon_007.jpg",
+    "author": "KitsuneDP",
+    "licence": "CC0",
+    "note": "Cropped and resized. Chosen by hand to replace a snow photo with a canopy and roof box; the Australian Cannon is the King Kong Cannon."
   },
   "gwm-haval-h6-gt-phev": {
     "file": "gwm-haval-h6-gt-phev.webp",
@@ -276,6 +311,13 @@
     "file": "gwm-ora-5.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Ora_5_001.jpg",
     "author": "JustAnotherCarDesigner",
+    "licence": "CC0",
+    "note": "Cropped and resized."
+  },
+  "gwm-tank-500-phev": {
+    "file": "gwm-tank-500-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Onyx_Silver_GWM_Tank_500_in_GWM_Pasteur_01.jpg",
+    "author": "MoCars",
     "licence": "CC0",
     "note": "Cropped and resized."
   },
@@ -302,8 +344,15 @@
   },
   "hyundai-ioniq-6": {
     "file": "hyundai-ioniq-6.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_IONIQ_6_N_CE1_N_Black_Onetone_(10).jpg",
-    "author": "Damian B Oh",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_6_N.jpg",
+    "author": "Calreyn88",
+    "licence": "CC0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was an interior shot; the range is the Ioniq 6 N only."
+  },
+  "hyundai-ioniq-9": {
+    "file": "hyundai-ioniq-9.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_9_IMG_5950.jpg",
+    "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
@@ -386,10 +435,10 @@
   },
   "land-rover-defender-phev": {
     "file": "land-rover-defender-phev.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_110_Station_Wagon_2016_-_rear.jpg",
-    "author": "DeFacto",
+    "source": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_(L663)_DSC_9062.jpg",
+    "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the pre-2020 Defender 110."
   },
   "leapmotor-b10": {
     "file": "leapmotor-b10.webp",
@@ -407,10 +456,10 @@
   },
   "lexus-nx-phev": {
     "file": "lexus-nx-phev.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Lexus_LF-NX_IAA_2013.jpg",
-    "author": "Alexander Migl",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_Lexus_NX_450h%2B_F_Sport_PHEV_CVT.jpg",
+    "author": "Calreyn88",
     "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the 2013 LF-NX concept."
   },
   "lexus-rx-phev": {
     "file": "lexus-rx-phev.webp",
@@ -440,13 +489,6 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
-  "maserati-grecale-folgore": {
-    "file": "maserati-grecale-folgore.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Maserati_Grecale_GT_1X7A6371.jpg",
-    "author": "Alexander Migl",
-    "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
-  },
   "mazda-6e": {
     "file": "mazda-6e.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Mazda_EZ-6_004.jpg",
@@ -461,6 +503,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "mazda-cx-6e": {
+    "file": "mazda-cx-6e.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-6e_Auto_Zuerich_2026_IMG_8767.jpg",
+    "author": "Alexander Migl",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized."
+  },
   "mazda-cx-80-phev": {
     "file": "mazda-cx-80-phev.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-80_PHEV_DSC_6068.jpg",
@@ -470,31 +519,31 @@
   },
   "mercedes-cla-ev": {
     "file": "mercedes-cla-ev.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_CLA_Shooting_Break,_GIMS_2019,_Le_Grand-Saconnex_(GIMS0613).jpg",
-    "author": "Matti Blume",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_CLA_250%2B_avec_technologie_EQ_Limited_Edition_(55085144824).jpg",
+    "author": "Alexandre Prevot from Nancy, France",
     "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the previous-generation CLA Shooting Brake."
   },
   "mercedes-eqa": {
     "file": "mercedes-eqa.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_EQA,_IAA_2017,_Frankfurt_(1Y7A2961).jpg",
-    "author": "Matti Blume",
-    "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "source": "https://commons.wikimedia.org/wiki/File:2021_Mercedes-Benz_EQA_250_AMG_Line_-_66kWh_(190PS)_Electric_-_Mountain_Grey_-_02-2024,_Front.jpg",
+    "author": "Harvey Bold",
+    "licence": "CC BY 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the 2017 Concept EQA."
   },
-  "mercedes-eqb": {
-    "file": "mercedes-eqb.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:MERCEDES-EQ_EQB_China.jpg",
-    "author": "Dinkun Chen",
+  "mercedes-gla-phev": {
+    "file": "mercedes-gla-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_GLA_45_S_4MATIC%2B_(H247)_1X7A5829.jpg",
+    "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
   "mercedes-glc-phev": {
     "file": "mercedes-glc-phev.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Concept_GLC_Coupe_IAA_2015.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_X254_1X7A6345.jpg",
     "author": "Alexander Migl",
     "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the 2015 GLC Coupe concept."
   },
   "mg-4": {
     "file": "mg-4.webp",
@@ -554,10 +603,10 @@
   },
   "mitsubishi-outlander-phev": {
     "file": "mitsubishi-outlander-phev.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Mitsubishi_Outlander_PHEV,_Auto_2025,_Zurich_(20251029-P1074527).jpg",
-    "author": "Matti Blume",
-    "licence": "CC BY-SA",
-    "note": "Cropped and resized."
+    "source": "https://commons.wikimedia.org/wiki/File:Mitsubishi_OUTLANDER_PHEV_G_(5LA-GN0W-XDHHZ)_front.jpg",
+    "author": "Tokumeigakarinoaoshima",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was a rally-liveried show car."
   },
   "nissan-ariya": {
     "file": "nissan-ariya.webp",
@@ -575,10 +624,10 @@
   },
   "polestar-3": {
     "file": "polestar-3.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Polestar_3_IAA_2023_1X7A0703.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Polestar_3_Auto_Zuerich_2023_1X7A1307.jpg",
     "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was an interior shot."
   },
   "polestar-4": {
     "file": "polestar-4.webp",
@@ -587,10 +636,10 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
-  "renault-megane-e-tech": {
-    "file": "renault-megane-e-tech.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Renault_Megane_E-Tech_IAA_2021_1X7A0073.jpg",
-    "author": "Alexander Migl",
+  "porsche-cayenne-phev": {
+    "file": "porsche-cayenne-phev.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Porsche_Cayenne_Coup%C3%A9_GTS_1X7A7224.jpg",
+    "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
@@ -636,6 +685,13 @@
     "licence": "CC BY-SA 4.0",
     "note": "Cropped and resized."
   },
+  "smart-5": {
+    "file": "smart-5.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Smart_5_003.jpg",
+    "author": "Zoerides",
+    "licence": "CC0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was a camouflaged prototype."
+  },
   "subaru-solterra": {
     "file": "subaru-solterra.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Subaru_Solterra_ST-E_Auto_Zuerich_2023_1X7A1257.jpg",
@@ -652,10 +708,10 @@
   },
   "tesla-model-3": {
     "file": "tesla-model-3.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3,_EMS_2024,_Essen_(P1032260).jpg",
-    "author": "Matti Blume",
-    "licence": "CC BY-SA",
-    "note": "Cropped and resized."
+    "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg",
+    "author": "Alexander-93",
+    "licence": "CC BY-SA 4.0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was a modified pre-update Model 3 at a tuning show."
   },
   "tesla-model-y": {
     "file": "tesla-model-y.webp",
@@ -680,10 +736,10 @@
   },
   "toyota-rav4-phev": {
     "file": "toyota-rav4-phev.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Toyota_RAV4_(XA10)_IMG_1260.jpg",
-    "author": "Alexander-93",
-    "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "source": "https://commons.wikimedia.org/wiki/File:2026_Toyota_RAV4_PHEV_GR_Sport_Prototype.jpg",
+    "author": "TTTNIS",
+    "licence": "CC0",
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was a 1990s RAV4; this is the 2026 RAV4 PHEV (show car)."
   },
   "volvo-es90": {
     "file": "volvo-es90.webp",
@@ -743,10 +799,10 @@
   },
   "vw-tiguan-phev": {
     "file": "vw-tiguan-phev.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_Tiguan_R_1X7A0362.jpg",
-    "author": "Alexander Migl",
+    "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_Tiguan_III_1X7A2497.jpg",
+    "author": "Alexander-93",
     "licence": "CC BY-SA 4.0",
-    "note": "Cropped and resized."
+    "note": "Cropped and resized. Chosen by hand 2026-11-27. Old photo was the previous-generation Tiguan R."
   },
   "xpeng-g6": {
     "file": "xpeng-g6.webp",

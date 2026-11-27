@@ -22,7 +22,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1500,
     "depreciationCurve": [1, 0.75, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "geely-starray-em-i-inspire-extended-range",
@@ -47,6 +47,31 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1600,
     "depreciationCurve": [1, 0.75, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
+  },
+  {
+    "id": "geely-starray-em-i-inspire-awd",
+    "familyId": "geely-starray-em-i",
+    "make": "Geely",
+    "model": "Starray EM-i",
+    "variant": "Inspire AWD",
+    "bodyType": "SUV",
+    "powertrain": "phev",
+    "listPrice": 44990,
+    "batteryKwh": 29.8,
+    "rangeKm": 130,
+    "consumptionKwhPer100km": 22.9,
+    "combinedRangeKm": 1026,
+    "fuelConsumptionL100km": 6.7,
+    "isFuelEfficientForLct": true,
+    "isGreenForVicDuty": true,
+    "bootLitresSeatsUp": 428,
+    "bootLitresSeatsDown": 1993,
+    "seats": 5,
+    "towKg": 1050,
+    "warrantyYears": 7,
+    "insuranceAnnual": 1700,
+    "depreciationCurve": [1, 0.75, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-11-26"
   }
 ]

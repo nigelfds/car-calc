@@ -10,14 +10,21 @@
     "batteryKwh": 71.0,
     "rangeKm": 566,
     "consumptionKwhPer100km": 14.6,
-    "bootLitresSeatsUp": 410,
-    "bootLitresSeatsDown": 2005,
+    "bootLitresSeatsUp": 421,
+    "bootLitresSeatsDown": 1050,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1650,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "subaru-solterra-awd-touring",
@@ -31,12 +38,19 @@
     "rangeKm": 517,
     "consumptionKwhPer100km": 16.0,
     "bootLitresSeatsUp": 410,
-    "bootLitresSeatsDown": 2005,
+    "bootLitresSeatsDown": 1050,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1800,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

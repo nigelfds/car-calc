@@ -1,11 +1,11 @@
 {
   "id": "alfa-romeo-junior-elettrica",
-  "summary": "The Junior Elettrica is Alfa Romeo's first battery-electric car and the only pure-EV grade in the Junior range here, a single front-drive spec using the same 115kW motor and 51kWh usable Stellantis pack as its platform twin the Jeep Avenger, but with an Italian chassis tune and a $58,990 list price. Australian reviewers are near-unanimous that the Junior steers and rides better than almost anything else this size — the same testers call the pricing hard to defend against a Volvo EX30 or Kia EV3, and the Elettrica asks about $13,000 more than the Ibrida hybrid that makes up most of the model's sales. Opinion splits on whether the badge, the driving character and $232-a-year servicing offset a 400-litre boot, a cramped rear seat, no crash-test rating at all and a national network of only eight dealers.",
+  "summary": "The Junior Elettrica is Alfa Romeo's first battery-electric car and the only pure-EV grade in the Junior range here, a single front-drive spec using the same 115kW motor and 51kWh usable Stellantis pack as its platform twin the Jeep Avenger, but with an Italian chassis tune and a $58,990 list price. Australian reviewers are near-unanimous that the Junior steers and rides better than almost anything else this size — the same testers call the pricing hard to defend against a Volvo EX30 or Kia EV3, and the Elettrica asks $12,000 more than the $46,990 Ibrida hybrid that makes up most of the model's sales. Opinion splits on whether the badge, the driving character and $232-a-year servicing offset a 400-litre boot, a cramped rear seat, no crash-test rating at all and a national network of only eight dealers.",
   "pros": [
     "Cheapest electric car in Australia to service by a wide margin: Alfa's own schedule averages $232.32 a year over five years at 12-month/15,000km intervals, against $621.17 a year for the Ibrida hybrid version of the same car.",
     "Reviewers rate the chassis the best part of the car — CarsGuide scored the Junior 9/10 for driving and called the steering 'communicative and direct', where the mechanically related Jeep Avenger is criticised for over-light steering.",
     "Charging is competitive for a 51kWh car: 100kW DC takes 20-80 per cent in 27 minutes and an 11kW three-phase AC charger fills it in 5 hours 45 minutes, so a home three-phase supply is genuinely usable.",
-    "At $58,990 list and $65,649 drive-away in Melbourne it sits comfortably under the $75,000 FBT threshold, so a novated lease keeps the full exemption — and Alfa's own calculator itemises the $2,995 dealer delivery rather than burying it.",
+    "At $58,990 before on-road costs it comes to about $62,350 on the road in Melbourne before dealer delivery, comfortably under the $75,000 FBT cap, so a novated lease keeps the full exemption after April 2027.",
     "Five-year, unlimited-kilometre warranty with no dealer-servicing condition attached, unlike the platform-mate Jeep Avenger whose five years is capped at 100,000km."
   ],
   "cons": [
@@ -16,20 +16,17 @@
     "The 207kW Elettrica Veloce sold in Europe has been explicitly ruled out for Australia, so the only battery-electric Junior on offer is the 115kW/260Nm car that takes 9.0 seconds to 100km/h and tops out at 150km/h."
   ],
   "sources": [
-    "https://www.alfaromeo.com.au/selector-pricing",
     "https://www.alfaromeo.com.au/models/junior",
     "https://www.alfaromeo.com.au/warranty",
-    "https://www.media.stellantis.com/au-en/alfa-romeo/press/design-meet-performance-the-all-new-alfa-romeo-junior-starting-at-45-900-msrp",
-    "https://www.carexpert.com.au/car-reviews/2026-alfa-romeo-junior-ibrida-review",
-    "https://www.carsguide.com.au/urban/alfa-romeo-junior-lbrida-mhev-99777",
-    "https://www.carsguide.com.au/alfa-romeo/junior/range",
-    "https://www.carsguide.com.au/alfa-romeo/junior/price/2026",
-    "https://www.carsguide.com.au/car-news/hot-italian-ev-not-for-oz-99784",
+    "https://www.carexpert.com.au/alfa-romeo/junior/2026-elettrica-suv-fwd-electric-jsgowamm20251201",
     "https://www.carexpert.com.au/alfa-romeo/junior/2026-elettrica-suv-fwd-electric-jsgowamm20250402",
-    "https://www.carexpert.com.au/car-news/alfa-romeo-comfortable-with-its-tiny-dealer-network",
-    "https://www.carsales.com.au/research/alfa-romeo/junior/",
-    "https://www.chasingcars.com.au/news/new-car-prices/alfa-romeo-junior-hybrid-and-ev-2026-finally-arrives-to-take-on-the-mini-aceman-and-lexus-lbx/",
-    "https://ev-database.org/car/2184/Alfa-Romeo-Junior-Elettrica-54-kWh"
+    "https://www.carexpert.com.au/car-news/alfa-romeos-cheapest-model-in-australia-just-got-cheaper",
+    "https://www.carexpert.com.au/alfa-romeo/junior/2026/elettrica/cost-of-ownership",
+    "https://www.carsguide.com.au/car/14873513/alfa-romeo/junior/suv",
+    "https://www.carsguide.com.au/alfa-romeo/junior/price/2026",
+    "https://ev-database.org/car/2184/Alfa-Romeo-Junior-Elettrica-54-kWh",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/junior/966/334291/",
+    "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6501-alfa-romeo-junior-elettrica-156-speciale/alfa-romeo-junior-elettrica-156-speciale.pdf"
   ],
-  "sourcedAt": "2026-07-31"
+  "sourcedAt": "2026-11-27"
 }

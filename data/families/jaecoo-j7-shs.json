@@ -1,36 +1,37 @@
 {
   "id": "jaecoo-j7-shs",
-  "summary": "The J7 SHS is Chery's Jaecoo sub-brand undercutting the plug-in hybrid mid-size SUV class on equipment-per-dollar, and Australian reviewers are near-unanimous that the powertrain is the best part of the car: 90km of WLTP electric range from an 18.3kWh battery, a claimed 1200km combined range and an eight-year unlimited-kilometre warranty that carries no dealer-servicing condition. Where they disagree is the chassis — CarExpert and EV Central call the ride acceptable for the money, while CarsGuide, carsales and Chasing Cars mark it down for numb steering, loose body control and a fidgety, noisy ride on coarse Australian surfaces. Nobody rates it class-leading to drive, and the 340-litre boot, the missing braked tow rating and a service network of roughly 50 sites are the recurring practical objections.",
+  "summary": "The J7 SHS is Chery's Jaecoo sub-brand undercutting the plug-in hybrid mid-size SUV class on equipment-per-dollar, and for MY27 it is cheaper again and comes in three grades: Track and Summit front-drivers with about 90km of WLTP electric range from an 18.4kWh battery, and a new 260kW Summit AWD whose rear motor cuts the claimed electric range to 80km on the older NEDC test (an estimated 72km WLTP). Australian reviewers broadly agree the powertrain and the eight-year unlimited-kilometre warranty are the best parts of the car, but disagree on the chassis: CarExpert found it smooth and quiet on the highway, while Chasing Cars scored it 6.5/10 for numb steering, a stiff, noisy ride and calibration that needs work. The 340-litre boot, the missing braked tow rating and a young service network are the recurring practical objections.",
   "pros": [
-    "90km of WLTP electric-only range from the 18.3kWh LFP battery — more than the BYD Sealion 6 Premium AWD's 81km and enough to cover a typical Melbourne commute on electricity alone",
-    "Eight-year/unlimited-kilometre warranty with no compulsory dealer-servicing condition, plus a separate eight-year unlimited-kilometre high-voltage battery warranty guaranteeing at least 70 per cent residual capacity — longer than BYD's 6-year and MG's 7-year cover",
-    "The petrol engine drives the front wheels directly in parallel mode as well as running as a generator in series mode, so highway efficiency does not collapse the way it does in a range-extender",
-    "40kW DC fast charging (30-80 per cent in about 20 minutes) is unusual at this price — the Sealion 6 and Outlander PHEV have no DC capability at all",
-    "Five-star ANCAP rating from 2025 testing, and both SHS grades sit far below the $80,809 ordinary LCT threshold so no luxury car tax applies"
+    "About 90km of WLTP electric-only range from the 18.4kWh LFP battery in the front-drive grades, more than the BYD Sealion 6 Premium AWD's 81km and enough to cover a typical Melbourne commute on electricity alone",
+    "Eight-year/unlimited-kilometre warranty with no shorter fallback term, plus eight-year unlimited-kilometre high-voltage battery cover against capacity falling below 70 per cent, longer than BYD's six-year and MG's seven-year cover",
+    "40kW DC fast charging (30-80 per cent in about 20 minutes) and 6.6kW AC charging (25-100 per cent in about 160 minutes) on every grade, unusual at this price",
+    "The new Summit AWD adds a 113kW/210Nm rear motor for 260kW and 490Nm combined, against 205kW for the front-drive grades, for $3000 more than the Summit 2WD",
+    "All three grades sit far below the $75,000 and $80,809 thresholds and their 1.3-1.9L/100km label figures pass the 3.5L/100km fuel-efficiency test, so no luxury car tax applies"
   ],
   "cons": [
-    "340-litre boot (to the cargo cover) is well down on the 424 litres of the front-drive petrol J7 and the 425 litres of a BYD Sealion 6 — the direct cost of packaging the battery — and the SHS is the only J7 with no spare wheel",
-    "Jaecoo quotes 5.9L/100km once the battery is depleted, not the 1.0L/100km combined label figure, and carsales measured about 6.0L/100km in charge-sustaining running with 8-9L/100km on the motorway, so the running-cost case largely evaporates for a buyer who cannot charge at home",
-    "No braked towing rating at all on the SHS (750kg unbraked only), where the petrol J7 is rated to 1350kg braked and a Sealion 6 Premium AWD tows 1300kg",
-    "Reviewers consistently criticise the steering as disconnected and artificial, the body control as loose when pushed and the ride as fidgety and noisy on coarse-chip roads, with abrupt regenerative braking and hesitant low-speed throttle response",
-    "Jaecoo launched in Australia in 2025 with about 50 service locations nationally and has already run repeated $3000 factory bonuses and cashback offers, so resale value is unproven and the transaction price keeps resetting"
+    "340-litre boot (to the cargo cover) is well down on the 425 litres of a BYD Sealion 6, the direct cost of packaging the battery, and the SHS makes do with a tyre repair kit instead of a spare wheel",
+    "Jaecoo UK's WLTP figure is 47.1mpg (about 6.0L/100km) once the battery is depleted, not the 1.3L/100km label figure, and Chasing Cars estimated 8-9L/100km at motorway speed, so the running-cost case largely evaporates for a buyer who cannot charge at home",
+    "No braked towing rating at all on the Australian SHS (750kg unbraked only), although the same car is rated to 1500kg braked in the UK and a Sealion 6 Premium AWD tows 1300kg here",
+    "Reviewers criticise the steering as numb on centre and lacking self-centring, the regenerative braking as on/off in its strongest setting, and (Chasing Cars) the ride as stiff and noisy over small bumps with intrusive tyre noise above 80km/h",
+    "MY27 cut the Track's price by $4000 but also took away its heated and ventilated front seats, synthetic leather and surround-view camera, and the advertised drive-away prices are time-limited campaigns that keep resetting, so resale value is unproven"
   ],
   "sources": [
-    "https://www.carexpert.com.au/car-news/2026-jaecoo-j7-price-and-specs-entry-price-rises-after-base-core-dropped",
-    "https://www.carexpert.com.au/car-reviews/2026-jaecoo-j7-review",
-    "https://www.carexpert.com.au/car-reviews/2025-jaecoo-j7-shs-summit-review",
-    "https://www.carexpert.com.au/car-reviews/2025-jaecoo-j7-shs-phev-review",
-    "https://www.carsguide.com.au/ev/jaecoo-j7-shs-track-100909",
-    "https://www.carsguide.com.au/jaecoo/j7/price/2026",
-    "https://www.carsguide.com.au/jaecoo/j7/fuel-consumption",
-    "https://www.carsales.com.au/editorial/details/jaecoo-j7-shs-track-2026-review-152201/",
-    "https://www.carsales.com.au/research/jaecoo/j7/2026/shs-summit/",
-    "https://www.chasingcars.com.au/reviews/midsize-suvs/jaecoo-j7-summit-shs-plug-in-hybrid-review/",
-    "https://evcentral.com.au/2026-jaecoo-j7-shs-track-review-affordable-plug-in-hybrid-suv-proves-the-powertrain-is-the-star/",
-    "https://www.ecocarguide.com.au/jaecoo-j7-shs-phev-super-hybrid-system-details/",
+    "https://www.omodajaecoo.com.au/j7-shs-build-your-own",
     "https://www.omodajaecoo.com.au/models/jaecoo-j7-shs",
+    "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
     "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+    "https://www.carexpert.com.au/car-news/2027-jaecoo-j7-gets-awd-phev-option-higher-entry-price",
+    "https://www.carexpert.com.au/car-news/2027-jaecoo-j7-shs-p-black-edition-prices-another-month-another-black-pack",
+    "https://www.carexpert.com.au/omoda-jaecoo/jaecoo-j7/2027-track-1-5l-suv-fwd-electric-jsk5mkkw20260717",
+    "https://www.carexpert.com.au/omoda-jaecoo/jaecoo-j7/2027-summit-1-5l-suv-4x4-electric-jskfa5ma20260720",
+    "https://www.carexpert.com.au/car-reviews/2025-jaecoo-j7-shs-phev-review",
+    "https://www.carsguide.com.au/jaecoo/j7/price/2027",
+    "https://www.chasingcars.com.au/news/new-car-prices/jaecoo-j7-my27-chery-refreshes-eclipse-cross-zr-v-and-karoq-rival/",
+    "https://www.chasingcars.com.au/reviews/midsize-suvs/jaecoo-j7-summit-shs-plug-in-hybrid-review/",
+    "https://evcentral.com.au/2027-jaecoo-j7-shs-p-gets-cheaper-and-more-powerful-new-260kw-awd-phev-flagship-joins-range-for-47990-drive-away/",
+    "https://jaecoo.co.uk/jaecoo-7/",
+    "https://jaecoo.co.uk/news/new-flagship-jaecoo-7-luxury-plus-plug-in-hybrid-all-wheel-drive/",
     "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
   ],
-  "sourcedAt": "2026-07-28"
+  "sourcedAt": "2026-11-26"
 }

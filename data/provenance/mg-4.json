@@ -1,0 +1,339 @@
+{
+  "familyId": "mg-4",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mg-4-urban-43": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mg4-ev-urban",
+        "note": "Live Build & Price line 'MG4 EV Urban Essence 43' (separate Urban configurator), VIC selectable; CarExpert launch review confirms Essence 43 and 54 as the Urban grades"
+      },
+      "listPrice": {
+        "value": 29780,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mg4-ev-urban",
+        "note": "No list price published; MG prices drive-away only. Configurator shows $31,990 struck through (MG's regular national Drive Away Price, matching CarExpert's launch pricing) and $29,990* under a $2,000 cashback on MG4 EV Urban sold/delivered 01 Nov-31 Dec 2026 (campaign, not used). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (31990 - 958.80) / 1.042 = 29,780; round-trip driveAwayPrice(29856) = 31,989.95. Independent check: the configurator's VIC per-state discounts for Essence 43 and 54 differ by $126.00 (= 15 x $8.40 duty units, dutiable gap ~$3,000) and NSW by $87 (3% of $2,900), matching the backed-out list gap of $2,879 rather than a different structure. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 29,856 at $880; round trip 31989.56)."
+      },
+      "batteryKwh": {
+        "value": 41.9,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mg-4",
+        "note": "Usable 41.9 kWh, nominal 42.8 kWh on evdb.nz for the NZ MY26 Urban Essence 43 (same pack and WLTP range as AU). MG AU brochure prints the nominal 42.8 kWh."
+      },
+      "rangeKm": {
+        "value": 316,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "MG AU MY26 brochure 'Driving Range: WLTP Combined Cycle (km)' 316; no NEDC figure quoted. NZ WLTP identical (evdb.nz)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "MG AU brochure 'Driving Efficiency' 16.5 kWh/100km (165 Wh/km); includes charging losses, so it sits 24% above usable battery / range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 382,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "Boot Volume Seats In Place 382 L, plus 98 L underboot not added; CarExpert review agrees 382-1266 L. EU figure of 577 L (ev-database) is a to-roof/with-underfloor convention, rejected"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1266,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "Boot Volume Seats Folded 1266 L; convention (belt line vs roof) not stated by MG"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "Brochure: 40/60 rear folding seat, three rear seat belts"
+      },
+      "towKg": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "Maximum Towing Weight Braked (kg) 500 in MG AU brochure spec table"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "Standard 7 years/unlimited km; 10 years/250,000km only with every service at an MG dealer (conditional, in pros). HV battery 7 years/150,000km."
+      },
+      "insuranceAnnual": {
+        "value": 1250,
+        "basis": "judged",
+        "note": "Anchored to byd-dolphin-essential (1250 at $29,990) and geely-ex2-inspire (1250 at $30,990); held value unchanged"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 to use one mainstream curve for all MG rows."
+      }
+    },
+    "mg-4-urban-54": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mg4-ev-urban",
+        "note": "Live Build & Price line 'MG4 EV Urban Essence 54', VIC selectable. The configurator's third line, 'Essence 54 Special Edition' ($35,990 regular drive-away), is the same car with two-tone paint and door ambient lighting for $1,000 (identical battery, range, boot, tow in the AU brochure), so it is treated as an appearance pack on this row, not a grade"
+      },
+      "listPrice": {
+        "value": 32660,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mg4-ev-urban",
+        "note": "No list price published; MG prices drive-away only. Configurator shows $34,990 struck through (MG's regular national Drive Away Price, matching CarExpert's launch pricing) and $32,990* under a $2,000 cashback on MG4 EV Urban sold/delivered 01 Nov-31 Dec 2026 (campaign, not used). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (34990 - 958.80) / 1.042 = 32,660; round-trip driveAwayPrice(32735) = 34,989.87. Independent check: the configurator's VIC per-state discounts for Essence 43 and 54 differ by $126.00 (= 15 x $8.40 duty units, dutiable gap ~$3,000) and NSW by $87 (3% of $2,900), matching the backed-out list gap of $2,879 rather than a different structure. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 32,735 at $880; round trip 34990.52)."
+      },
+      "batteryKwh": {
+        "value": 52.8,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mg-4",
+        "note": "Usable 52.8 kWh, nominal 54 kWh on evdb.nz for the NZ MY26 Urban Essence 54 (same pack and WLTP range as AU). MG AU brochure prints the nominal 54 kWh. ev-database (UK Urban Long Range) agrees: 53.9 nominal / 52.8 usable."
+      },
+      "rangeKm": {
+        "value": 405,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "MG AU MY26 brochure 'Driving Range: WLTP Combined Cycle (km)' 405; no NEDC figure quoted. NZ WLTP identical (evdb.nz). EU Urban Long Range WLTP 416 km (ev-database) is higher, so 405 is the local WLTP-derived spec."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.1,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "MG AU brochure 'Driving Efficiency' 16.1 kWh/100km (161 Wh/km); includes charging losses, so it sits 23% above usable battery / range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 382,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "Boot Volume Seats In Place 382 L, plus 98 L underboot not added; CarExpert review agrees 382-1266 L. EU figure of 577 L (ev-database) is a to-roof/with-underfloor convention, rejected"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1266,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "Boot Volume Seats Folded 1266 L; convention (belt line vs roof) not stated by MG"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "Brochure: 40/60 rear folding seat, three rear seat belts"
+      },
+      "towKg": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_URBAN_2026_v9.pdf",
+        "note": "Maximum Towing Weight Braked (kg) 500 in MG AU brochure spec table"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "Standard 7 years/unlimited km; 10 years/250,000km only with every service at an MG dealer (conditional, in pros). HV battery 7 years/150,000km."
+      },
+      "insuranceAnnual": {
+        "value": 1300,
+        "basis": "judged",
+        "note": "Anchored to byd-atto2-dynamic (1300 at $31,990) and below byd-dolphin-premium (1400 at $36,990); held value unchanged"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 to use one mainstream curve for all MG rows."
+      }
+    },
+    "mg-4-essence-64": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mg4-ev",
+        "note": "Live Build & Price line 'MG4 EV Essence 64' (MY26 facelift, LFP pack, 140 kW RWD), VIC selectable; CarExpert (10 Apr 2026) confirms the facelift line-up is Essence 64 and XPower only"
+      },
+      "listPrice": {
+        "value": 37458,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mg4-ev",
+        "note": "No list price published; MG prices drive-away only. Configurator shows $39,990* 'Drive Away Price' with no struck-through figure; the MG4 EV (non-Urban) is not in the Nov-Dec cashback list, and CarExpert (10 Apr 2026) reported $39,990 drive-away as the facelift's standard price with no end date, so it is the regular price (the asterisk's T&Cs name a stale 01-31 Oct 2026 window). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (39990 - 958.80) / 1.042 = 37,458; round-trip driveAwayPrice(37534) = 39,990.43. Independent check: the configurator's VIC per-state discounts for Essence 64 and XPOWER differ by $327.60 (= 39 x $8.40 duty units, dutiable gap ~$7,800), matching the backed-out list gap of $7,677 rather than the $8,000 drive-away gap. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 37,534 at $880; round trip 39990.04)."
+      },
+      "batteryKwh": {
+        "value": 61.7,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mg-4",
+        "note": "Usable 61.7 kWh, nominal 64 kWh on evdb.nz for the NZ MY26 Essence (LFP) (same pack and WLTP range as AU). MG AU brochure prints the nominal 64 kWh."
+      },
+      "rangeKm": {
+        "value": 452,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "MG AU MY26 brochure 'Driving Range: WLTP Combined Cycle (km)' 452; no NEDC figure quoted. NZ WLTP identical (evdb.nz)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.6,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "MG AU brochure 'Driving Efficiency' 17.6 kWh/100km (176 Wh/km); includes charging losses, so it sits 29% above usable battery / range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 350,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "Boot Volume Seats In Place 350 L; MG does not state the convention (NZ listing shows 363 L for the MY26 Essence)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1165,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "Boot Volume Seats Folded 1165 L; convention (belt line vs roof) not stated by MG"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "Brochure: 40/60 rear folding seat, three rear seat belts"
+      },
+      "towKg": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "Maximum Towing Weight Braked (kg) 500 in MG AU brochure spec table"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "Standard 7 years/unlimited km; 10 years/250,000km only with every service at an MG dealer (conditional, in pros). HV battery 7 years/150,000km."
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "Between byd-dolphin-premium (1400 at $36,990) and mg-s5-essence-49 (1500 at $39,453); held value unchanged"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 to use one mainstream curve for all MG rows."
+      }
+    },
+    "mg-4-xpower": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mg4-ev",
+        "note": "Live Build & Price line 'MG4 EV XPOWER' (AWD, NCM pack), VIC selectable; CarExpert (10 Apr 2026) confirms it"
+      },
+      "listPrice": {
+        "value": 45136,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mg4-ev",
+        "note": "No list price published; MG prices drive-away only. Configurator shows $47,990* 'Drive Away Price' with no struck-through figure; the MG4 EV (non-Urban) is not in the Nov-Dec cashback list, and CarExpert (10 Apr 2026) reported $47,990 drive-away as the facelift's standard price with no end date, so it is the regular price (the asterisk's T&Cs name a stale 01-31 Oct 2026 window). The '+ On-Road Costs' template text is generic: per-state discounts cancel on-roads so every state lands on one national figure. Back-out: (47990 - 958.80) / 1.042 = 45,136; round-trip driveAwayPrice(45211) = 47,989.86. Independent check: the configurator's VIC per-state discounts for Essence 64 and XPOWER differ by $327.60 (= 39 x $8.40 duty units, dutiable gap ~$7,800), matching the backed-out list gap of $7,677 rather than the $8,000 drive-away gap. Flat national drive-away includes the maximum dealer delivery charge (configurator T&Cs), so this list may overstate by that amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 45,211 at $880; round trip 47990.51)."
+      },
+      "batteryKwh": {
+        "value": 61.7,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mg-4",
+        "note": "Usable 61.7 kWh, nominal 64 kWh on evdb.nz for the NZ MY26 XPower (NMC) (same pack and WLTP range as AU). MG AU brochure prints the nominal 64 kWh."
+      },
+      "rangeKm": {
+        "value": 405,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "MG AU MY26 brochure 'Driving Range: WLTP Combined Cycle (km)' 405; no NEDC figure quoted. NZ WLTP identical (evdb.nz)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "MG AU brochure 'Driving Efficiency' 19.0 kWh/100km (190 Wh/km); includes charging losses, so it sits 25% above usable battery / range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 350,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "Boot Volume Seats In Place 350 L; MG does not state the convention (NZ listing shows 363 L for the MY26 Essence)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1165,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "Boot Volume Seats Folded 1165 L; convention (belt line vs roof) not stated by MG"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "Brochure: 40/60 rear folding seat, three rear seat belts"
+      },
+      "towKg": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG4_EV_2026_V2.pdf",
+        "note": "Maximum Towing Weight Braked (kg) 500 in MG AU brochure spec table"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "Standard 7 years/unlimited km; 10 years/250,000km only with every service at an MG dealer (conditional, in pros). HV battery 7 years/150,000km."
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "Above mg-s5-essence-62 (1600 at $44,251) for a 320 kW AWD performance hatch; held value unchanged"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 to use one mainstream curve for all MG rows."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mg-4-urban-43.listPrice: backed out of MG's flat national drive-away ($31,990), which includes the maximum dealer delivery charge, so list may overstate",
+    "mg-4-urban-54.listPrice: backed out of $34,990 national drive-away; same caveat",
+    "mg-4-essence-64.listPrice: backed out of $39,990 national drive-away; configurator asterisk is unexplained (no struck-through figure, not in cashback list), treated as regular per CarExpert",
+    "mg-4-xpower.listPrice: backed out of $47,990 national drive-away; same caveat as Essence 64",
+    "mg-4-urban-54.batteryKwh: usable 52.8 from evdb.nz/ev-database (NZ/UK cars); MG AU publishes only nominal",
+    "mg-4-urban-43.batteryKwh: usable 41.9 from evdb.nz only",
+    "mg-4-essence-64.batteryKwh: usable 61.7 for the new LFP pack from evdb.nz only",
+    "mg-4-xpower.batteryKwh: usable 61.7 from evdb.nz (older XPower listed 62.1)",
+    "mg-4-essence-64.bootLitresSeatsUp: MG AU 350 L vs NZ 363 L; convention unstated",
+    "mg-4-xpower.bootLitresSeatsUp: MG AU 350 L vs NZ 363 L; convention unstated",
+    "mg-4-urban-43.insuranceAnnual: judged, anchored to byd-dolphin / geely-ex2",
+    "mg-4-urban-54.insuranceAnnual: judged, anchored to byd-atto2",
+    "mg-4-essence-64.insuranceAnnual: judged, anchored to byd-dolphin-premium / mg-s5",
+    "mg-4-xpower.insuranceAnnual: judged, anchored to mg-s5-essence-62 plus performance loading"
+  ]
+}

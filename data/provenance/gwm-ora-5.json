@@ -1,0 +1,173 @@
+{
+  "familyId": "gwm-ora-5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "gwm-ora-5-lux": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+        "note": "GWM AU Ora 5 page on 2026-11-26: two grades, Lux $33,990 and Ultra $36,990 driveaway, 'Price is for private buyers in VIC', 2026 build; configurator renders client-side. CarExpert pricing page lists the same two grades"
+      },
+      "listPrice": {
+        "value": 31700,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+        "note": "GWM VIC private-buyer driveaway $33,990 (no in-words list price from GWM). (33990 - 958.80) / 1.042 = 31,700; round-trip through calc/onroad.js driveAwayPrice gives $33,989.55. GoAuto calls it national driveaway, so the figure may be a flat national campaign price rather than a VIC calculation; no independent on-road estimate could be found. Rejected: Zecar '$33,990 RRP before on-road costs' (equals the driveaway); CarExpert model page '$32,490 before on-road costs' for the Lux (unsourced database figure; its VIC driveaway would be $34,735, $745 above GWM's). Ignored the extra $1,000-off campaign ending 30 Nov 2026 Re-derived 2026-11-27 for VIC rego $958.80 (was 31,775 at $880; round trip 33990.20)."
+      },
+      "batteryKwh": {
+        "value": 58.3,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/gwm-ora-5",
+        "note": "EV Database NZ (same AU/NZ Lux/Ultra spec): usable 58.3 kWh, nominal 60 kWh (asterisked as estimate). GWM prints 58.33 kWh, i.e. the usable figure. ev-database.org (UK) does not list the Ora 5"
+      },
+      "rangeKm": {
+        "value": 435,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.km77.com/coches/gwm/ora-5/2026/estandar/bev/ora-5-bev/datos",
+        "note": "km77 (Spain, same 150 kW, 225/60R18 car): 435 km WLTP. GWM AU says 'up to 435km WLTC' (WLTC is the WLTP cycle); GWM's April release said ~430 km. Both grades on 18-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.5,
+        "basis": "sourced",
+        "url": "https://www.km77.com/coches/gwm/ora-5/2026/estandar/bev/ora-5-bev/datos",
+        "note": "km77 WLTP combined 15.5 kWh/100km; GWM AU page also 15.5. Battery/range = 13.4, gap is charging losses"
+      },
+      "bootLitresSeatsUp": {
+        "value": 362,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+        "note": "GWM AU 'up to 362L'; method not stated (assumed to the cover). km77 Spain lists 422 L, likely including underfloor; no frunk added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1060,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ora-5/2026-lux-suv-fwd-electric-jskamoww20260410",
+        "note": "CarExpert spec page 1,060 L seats down; EV Database NZ same"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+        "note": "5 seats"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/news/gwm-unveils-the-all-new-ora-5-suv-priced-from-just-33-990-driveaway/",
+        "note": "GWM AU launch release: 750 kg braked and unbraked; CarExpert spec page 750 kg braked"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-gwm-ora-5-price-and-specs",
+        "note": "7 years/unlimited km vehicle, unconditional; battery 8 years/unlimited km for private buyers"
+      },
+      "insuranceAnnual": {
+        "value": 1300,
+        "basis": "judged",
+        "note": "held value kept; matches byd-atto2-dynamic ($31,990, $1,300), above geely-ex2-inspire ($30,990, $1,250)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "GWM brand convention as recorded in gwm-cannon-phev provenance (also gwm-cannon-alpha-phev); held curve [1,0.7,0.59,0.51,0.44,0.38] replaced to keep one curve per brand. Haval H6/H6 GT and Tank rows still carry other curves, flagged to orchestrator. Ora hatch withdrawn after weak sales supports a below-mainstream curve"
+      }
+    },
+    "gwm-ora-5-ultra": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+        "note": "GWM AU Ora 5 page on 2026-11-26: two grades, Lux $33,990 and Ultra $36,990 driveaway, 'Price is for private buyers in VIC', 2026 build; configurator renders client-side. CarExpert pricing page lists the same two grades"
+      },
+      "listPrice": {
+        "value": 34579,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+        "note": "GWM VIC private-buyer driveaway $36,990 (no in-words list price from GWM). (36990 - 958.80) / 1.042 = 34,579; round-trip through calc/onroad.js driveAwayPrice gives $36,990.51. GoAuto calls it national driveaway, so the figure may be a flat national campaign price rather than a VIC calculation; no independent on-road estimate could be found. Rejected: Zecar '$33,990 RRP before on-road costs' (equals the driveaway); CarExpert model page '$32,490 before on-road costs' for the Lux (unsourced database figure; its VIC driveaway would be $34,735, $745 above GWM's). Ignored the extra $1,000-off campaign ending 30 Nov 2026 Re-derived 2026-11-27 for VIC rego $958.80 (was 34,655 at $880; round trip 36990.12)."
+      },
+      "batteryKwh": {
+        "value": 58.3,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/gwm-ora-5",
+        "note": "EV Database NZ (same AU/NZ Lux/Ultra spec): usable 58.3 kWh, nominal 60 kWh (asterisked as estimate). GWM prints 58.33 kWh, i.e. the usable figure. ev-database.org (UK) does not list the Ora 5"
+      },
+      "rangeKm": {
+        "value": 435,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.km77.com/coches/gwm/ora-5/2026/estandar/bev/ora-5-bev/datos",
+        "note": "km77 (Spain, same 150 kW, 225/60R18 car): 435 km WLTP. GWM AU says 'up to 435km WLTC' (WLTC is the WLTP cycle); GWM's April release said ~430 km. Both grades on 18-inch wheels; Chasing Cars confirms 18-inch wheels on Ultra"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.5,
+        "basis": "sourced",
+        "url": "https://www.km77.com/coches/gwm/ora-5/2026/estandar/bev/ora-5-bev/datos",
+        "note": "km77 WLTP combined 15.5 kWh/100km; GWM AU page also 15.5. Battery/range = 13.4, gap is charging losses"
+      },
+      "bootLitresSeatsUp": {
+        "value": 362,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+        "note": "GWM AU 'up to 362L'; method not stated (assumed to the cover). km77 Spain lists 422 L, likely including underfloor; no frunk added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1060,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ora-5/2026-lux-suv-fwd-electric-jskamoww20260410",
+        "note": "CarExpert spec page 1,060 L seats down; EV Database NZ same"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
+        "note": "5 seats"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/news/gwm-unveils-the-all-new-ora-5-suv-priced-from-just-33-990-driveaway/",
+        "note": "GWM AU launch release: 750 kg braked and unbraked; CarExpert spec page 750 kg braked"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-gwm-ora-5-price-and-specs",
+        "note": "7 years/unlimited km vehicle, unconditional; battery 8 years/unlimited km for private buyers"
+      },
+      "insuranceAnnual": {
+        "value": 1400,
+        "basis": "judged",
+        "note": "held value kept; matches byd-atto2-premium ($35,990, $1,400), below jaecoo-j5-ev-summit ($35,990, $1,500)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "GWM brand convention as recorded in gwm-cannon-phev provenance (also gwm-cannon-alpha-phev); held curve [1,0.7,0.59,0.51,0.44,0.38] replaced to keep one curve per brand. Haval H6/H6 GT and Tank rows still carry other curves, flagged to orchestrator. Ora hatch withdrawn after weak sales supports a below-mainstream curve"
+      }
+    }
+  },
+  "lowConfidence": [
+    "gwm-ora-5-lux.listPrice: backed out of a GWM driveaway that GoAuto calls national, unverified against any independent on-road figure; CarExpert's $32,490 'before on-road costs' disagrees by $715 (Ultra same method)",
+    "gwm-ora-5-ultra.listPrice: backed out of GWM's $36,990 driveaway; no before-on-road figure found anywhere",
+    "gwm-ora-5-lux.depreciationCurve: GWM brand convention changed to the Cannon curve; GWM families still disagree on the brand curve (same for Ultra)",
+    "gwm-ora-5-lux.bootLitresSeatsUp: GWM's 362 L method unstated, Spanish listing gives 422 L (same for Ultra)",
+    "gwm-ora-5-lux.batteryKwh: usable 58.3 from EV Database NZ, whose 60 kWh nominal is itself an estimate (same for Ultra)",
+    "gwm-ora-5-lux.insuranceAnnual: judged, anchored to byd-atto2 (Ultra $1,400 likewise)"
+  ]
+}

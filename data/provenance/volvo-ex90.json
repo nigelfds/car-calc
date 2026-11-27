@@ -1,0 +1,172 @@
+{
+  "familyId": "volvo-ex90",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "volvo-ex90-plus-single-motor": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/volvo/ex90",
+        "note": "CarsGuide current range lists Plus Single Motor $106,990 and Ultra Twin Motor Performance $134,990 only; CarExpert 2027 page lists Plus and Ultra; CarsGuide reviewed the single-motor Plus 20 Oct 2026. volvocars.com/au configurator returned 403 to automated reads"
+      },
+      "listPrice": {
+        "value": 106990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-volvo-ex90-ev-base-price-slashed-by-dollar18000",
+        "note": "'$106,990 before on-road costs' in words (MY27, replaces Plus Twin Motor). Corroborated by CarsGuide review MSRP table. CarExpert 2027 drive-away $114,709 vs app VIC drive-away $112,364 (+$2,346), the same ~$2.3-2.6k gap as Ultra (+$2,569) and MY26 Plus (+$2,601), i.e. dealer delivery, consistent with this list price"
+      },
+      "batteryKwh": {
+        "value": 88,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3323/Volvo-EX90-Single-Motor",
+        "note": "usable 88.0 kWh, nominal 92.0 kWh on the same page (MY26-27). Electrive reports 90 kWh net from Volvo spec; matches sibling volvo-es90 single motor at 88"
+      },
+      "rangeKm": {
+        "value": 479,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2027-volvo-ex90-ev-base-price-slashed-by-dollar18000",
+        "note": "'479km of WLTP range' for the AU Plus Single Motor; also CarsGuide. Equals EV Database WLTP TEH 298 mi (480 km); EU 'up to' 572 km is the TEL best case. Lower than the best case, so a WLTP-derived local figure per the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.6,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car-reviews/volvo-ex90-plus-102847",
+        "note": "CarsGuide: claimed 21.6 kWh/100km combined. This is WLTP grid energy incl. charging losses at the TEH end: EV Database rated TEH 348 Wh/mi = 21.6 kWh/100km (same end as the 479 km range). Battery/range = 18.4 (vehicle consumption excl. charging losses); same quantity convention as the held twin-motor row (22.8)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 324,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/volvo/ex90",
+        "note": "324 L with all seats up (CarsGuide range page, both grades); matches held Volvo AU figure"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2135,
+        "basis": "carried",
+        "note": "Held figure from Volvo AU specifications page (researched 2026-08-06); volvocars.com/au returned 403 this run. Body unchanged for MY27 (Redbook via CarExpert: only battery/powertrain and Ultra Nappa changed). Sources measure folded volume differently (CarExpert 1915 L two-seat on MY25 car, EV Database 1955 L max), so not re-verified"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3323/Volvo-EX90-Single-Motor"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3323/Volvo-EX90-Single-Motor",
+        "note": "braked 1,500 kg; Electrive gives 1.5 t Single Motor vs 2.2 t Twin Motor; CarExpert 2027 page gives range 1,500-2,200 kg with Ultra at 2,200. CarsGuide and CHOICE show 2,200 for the single motor, rejected (CarsGuide spec table mixes in twin-motor data)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-volvo-ex90-review-2",
+        "note": "5 years/unlimited km vehicle warranty, 8-year battery; also CarsGuide 20 Oct 2026 review"
+      },
+      "insuranceAnnual": {
+        "value": 2700,
+        "basis": "judged",
+        "note": "anchored to kia-ev9-earth-awd ($106,500, 2600) and volvo-es90-ultra-single-motor ($107,990, 2750); below the held EX90 Plus Twin ($124,990, 2900)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Kept the held steep Volvo EX90 curve: Volvo cut the entry price by $18,000 within about a year (Plus Twin $124,990 -> Plus Single $106,990, CarExpert 29 Jun 2026) and the MY26 400V->800V switch orphans launch cars; in line with volvo-es90 [1,0.67..0.34]/[1,0.64..0.31] and polestar-3 [1,0.66..0.33]"
+      }
+    },
+    "volvo-ex90-ultra-twin-motor-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/volvo/ex90",
+        "note": "Listed as top grade on CarsGuide current range and CarExpert 2027 page; volvocars.com/au returned 403"
+      },
+      "listPrice": {
+        "value": 134990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-volvo-ex90-ev-base-price-slashed-by-dollar18000",
+        "note": "'$134,990 plus on-roads (unchanged)' for MY27. CarsGuide review MSRP table agrees. CarExpert 2027 drive-away $144,109 vs app VIC $141,540 (+$2,569 dealer delivery, same pattern as Plus)"
+      },
+      "batteryKwh": {
+        "value": 102,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3325/Volvo-EX90-Twin-Motor-Performance",
+        "note": "usable 102.0 kWh, nominal 106.0 kWh (MY26-27). Electrive reports 103 kWh net for Twin Motor"
+      },
+      "rangeKm": {
+        "value": 521,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/uk/car/3325/Volvo-EX90-Twin-Motor-Performance",
+        "note": "EV Database WLTP TEH 324 mi = 521 km; matches Volvo AU's quoted 521 km (CarsGuide range page 'up to 521km'). TEL 377 mi is the EU best case"
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3325/Volvo-EX90-Twin-Motor-Performance",
+        "note": "EV Database WLTP rated consumption incl. charging losses, TEH 367 Wh/mi = 22.8 kWh/100km, same TEH end as the 521 km range; matches held Volvo AU claim. Battery/range = 19.6 (excl. charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 324,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/volvo/ex90",
+        "note": "324 L all seats up, both grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2135,
+        "basis": "carried",
+        "note": "Held figure from Volvo AU specifications page (researched 2026-08-06); volvocars.com/au returned 403 this run. Body unchanged for MY27 (Redbook via CarExpert: only battery/powertrain and Ultra Nappa changed). Sources measure folded volume differently (CarExpert 1915 L two-seat on MY25 car, EV Database 1955 L max), so not re-verified"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3325/Volvo-EX90-Twin-Motor-Performance"
+      },
+      "towKg": {
+        "value": 2200,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3325/Volvo-EX90-Twin-Motor-Performance",
+        "note": "braked 2,200 kg; CarExpert 2027 page names the Ultra at 2,200 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-volvo-ex90-review-2",
+        "note": "5 years/unlimited km vehicle warranty, 8-year battery; also CarsGuide 20 Oct 2026 review"
+      },
+      "insuranceAnnual": {
+        "value": 3150,
+        "basis": "judged",
+        "note": "held value kept; anchored to polestar-3-dual-motor ($131,100, 3200) and volvo-xc90-phev-ultra-t8 ($130,990, 2850)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Kept the held steep Volvo EX90 curve: Volvo cut the entry price by $18,000 within about a year (Plus Twin $124,990 -> Plus Single $106,990, CarExpert 29 Jun 2026) and the MY26 400V->800V switch orphans launch cars; in line with volvo-es90 [1,0.67..0.34]/[1,0.64..0.31] and polestar-3 [1,0.66..0.33]"
+      }
+    }
+  },
+  "lowConfidence": [
+    "volvo-ex90-plus-single-motor.bootLitresSeatsDown: carried from the Volvo AU spec page (2026-08-06), not re-opened (403); sources disagree on folded volume (1,915-2,135 L)",
+    "volvo-ex90-ultra-twin-motor-performance.bootLitresSeatsDown: same carried figure, not re-verified",
+    "volvo-ex90-plus-single-motor.batteryKwh: EV Database 88 kWh usable vs Electrive's reported 90 kWh net",
+    "volvo-ex90-plus-single-motor.consumptionKwhPer100km: from a CarsGuide review that mixes single- and twin-motor figures; corroborated only by EV Database's TEH rated figure, not a Volvo page",
+    "volvo-ex90-plus-single-motor.availability: volvocars.com/au configurator blocked; orderability rests on CarsGuide/CarExpert range listings and an Oct 2026 review",
+    "volvo-ex90-plus-single-motor.insuranceAnnual: judged",
+    "volvo-ex90-ultra-twin-motor-performance.insuranceAnnual: judged",
+    "volvo-ex90-plus-single-motor.depreciationCurve: judged, steep curve held from earlier research",
+    "volvo-ex90-ultra-twin-motor-performance.depreciationCurve: judged"
+  ]
+}

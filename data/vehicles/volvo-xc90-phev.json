@@ -9,10 +9,10 @@
     "powertrain": "phev",
     "listPrice": 120990,
     "batteryKwh": 14.7,
-    "rangeKm": 69,
-    "consumptionKwhPer100km": 20.3,
-    "combinedRangeKm": 991,
-    "fuelConsumptionL100km": 7.7,
+    "rangeKm": 71,
+    "consumptionKwhPer100km": 20.7,
+    "combinedRangeKm": 981,
+    "fuelConsumptionL100km": 7.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 262,
@@ -21,8 +21,15 @@
     "towKg": 2400,
     "warrantyYears": 5,
     "insuranceAnnual": 2700,
-    "depreciationCurve": [1, 0.68, 0.57, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "volvo-xc90-phev-ultra-t8",
@@ -34,10 +41,10 @@
     "powertrain": "phev",
     "listPrice": 130990,
     "batteryKwh": 14.7,
-    "rangeKm": 69,
-    "consumptionKwhPer100km": 20.3,
-    "combinedRangeKm": 991,
-    "fuelConsumptionL100km": 7.7,
+    "rangeKm": 71,
+    "consumptionKwhPer100km": 20.7,
+    "combinedRangeKm": 981,
+    "fuelConsumptionL100km": 7.8,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 262,
@@ -46,7 +53,14 @@
     "towKg": 2400,
     "warrantyYears": 5,
     "insuranceAnnual": 2850,
-    "depreciationCurve": [1, 0.66, 0.55, 0.47, 0.4, 0.34],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.66,
+      0.54,
+      0.45,
+      0.38,
+      0.32
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

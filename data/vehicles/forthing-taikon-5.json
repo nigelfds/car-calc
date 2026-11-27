@@ -6,18 +6,25 @@
     "model": "Taikon 5",
     "variant": "BEV Luxury",
     "bodyType": "SUV",
-    "listPrice": 36574,
+    "listPrice": 36498,
     "batteryKwh": 64.4,
     "rangeKm": 427,
-    "consumptionKwhPer100km": 15.1,
-    "bootLitresSeatsUp": 541,
+    "consumptionKwhPer100km": 15.5,
+    "bootLitresSeatsUp": 480,
     "bootLitresSeatsDown": 1480,
     "seats": 5,
-    "towKg": 1500,
+    "towKg": 750,
     "warrantyYears": 7,
     "insuranceAnnual": 1550,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "forthing-taikon-5-bev-exclusive",
@@ -26,17 +33,24 @@
     "model": "Taikon 5",
     "variant": "BEV Exclusive",
     "bodyType": "SUV",
-    "listPrice": 39933,
+    "listPrice": 39857,
     "batteryKwh": 64.4,
     "rangeKm": 427,
-    "consumptionKwhPer100km": 15.1,
-    "bootLitresSeatsUp": 541,
+    "consumptionKwhPer100km": 15.5,
+    "bootLitresSeatsUp": 480,
     "bootLitresSeatsDown": 1480,
     "seats": 5,
-    "towKg": 1500,
+    "towKg": 750,
     "warrantyYears": 7,
     "insuranceAnnual": 1600,
-    "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-27"
   }
 ]

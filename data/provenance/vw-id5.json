@@ -1,0 +1,175 @@
+{
+  "familyId": "vw-id5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "vw-id5-pro": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/app/locals/offers-pricing",
+        "note": "VW AU Offers & Pricing carline list (records inserted 2026-11-19) carries 'ID. 5 Pro', model code E393RN/26, MY2026, 'Driveaway Offer Available'; model page live with Black Friday offer on ID.5 stock purchased to 31 Dec 2026. Run-out: Cars24 19 Oct 2026 reports VW AU confirmed no MY27, 'examples already in dealer stock remain available'. VW AU has no classic build & price for ID models (/app/configurator returned 403); offer price itself loads from an API this run could not read."
+      },
+      "listPrice": {
+        "value": 62990,
+        "basis": "sourced",
+        "url": "https://www.cars24.com.au/car-news/volkswagen-id5-australia-discontinued/",
+        "note": "Cars24 19 Oct 2026: 'prices ranging from $62,990 to $72,990 before on-road costs'. Also CarExpert review (Feb 2026) '$62,990 plus on-road costs' and CarsGuide long-term 'lists for $62,990 before on-road costs'. VW AU drive-away offer amount not machine-readable; computed VIC drive-away $66,516 sits above dealer offers seen ($65,990 MY25, $67,990 MY26 Capalaba to 30 Sep), consistent with run-out discounting."
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "usable; VW AU MY26 spec sheet 'Battery capacity Gross 82 kWh / Useable 77 kWh'; EV Database 82.0 nominal / 77.0 usable. Net, consistent with cupra-tavascan and audi-q4-e-tron"
+      },
+      "rangeKm": {
+        "value": 544,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "VW AU MY26 spec sheet 'Driving range - Combined (WLTP) 544km', 19-inch Hamar wheels standard. Below EV Database WLTP TEL 567 km, so passes direction test. Held 543 (CarExpert review text)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.2,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "VW AU MY26 spec sheet 'Energy Consumption Wh/km - Combined 162.0' (WLTP, includes charging losses); battery/range = 14.2, 12.6% off"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3254/Volkswagen-ID5-Pro",
+        "note": "EV Database (ID.5 Pro MY26, same 210kW/77kWh RWD) 1,000 kg braked. VW AU spec sheet omits towing. Matches vw-id4-pro (1000) and the AU Cupra Tavascan Endurance brochure (1,000 kg, same RWD 77kWh MEB drivetrain). carsales AU database says 1,200 (overview text says 1,400) - inconsistent aggregator, rejected. Held value was 1,200."
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "held value kept; anchored to vw-id4-pro (1800 at $59,990), cupra-tavascan-endurance and skoda-enyaq-coupe-85-sportline (1950 at ~$66,500-67,000)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention, same as vw-id4 rows; held value kept. Discontinuation could weigh on resale but no used-market evidence yet"
+      },
+      "bootLitresSeatsUp": {
+        "value": 549,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "VW AU MY26 spec sheet 'Luggage area volume L - Rear seat upright 549'; CarExpert spec page labels it 'Rear seat up; to lower window' (to the cover)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1561,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "VW AU MY26 spec sheet 'Rear seat folded 1561'"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volkswagen/id-5/2026-pro-jsgskoow20251201",
+        "note": "five-seat SUV; carsales 'Seat Capacity 5', CarExpert '2+3'"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id5.html",
+        "note": "'5 years unlimited kilometre warranty'; separate 8-year/160,000km battery warranty"
+      }
+    },
+    "vw-id5-gtx": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/app/locals/offers-pricing",
+        "note": "VW AU Offers & Pricing carline list (records inserted 2026-11-19) carries 'ID. 5 GTX', model code E399VPU/25 (MY25 stock), 'Driveaway Offer Available'; GTX model page live with Black Friday offer. Run-out per Cars24 19 Oct 2026."
+      },
+      "listPrice": {
+        "value": 72990,
+        "basis": "sourced",
+        "url": "https://www.cars24.com.au/car-news/volkswagen-id5-australia-discontinued/",
+        "note": "Cars24 19 Oct 2026 range top '$72,990 before on-road costs'; CarExpert review (Feb 2026) GTX $72,990 in 'Price before on-road costs' column; CarsGuide GTX review '$72,990 before on-road costs'. Computed VIC drive-away $76,936."
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "usable; VW AU MY26 spec sheet 'Gross 84 kWh / Useable 79 kWh'; EV Database 84.0 nominal / 79.0 usable"
+      },
+      "rangeKm": {
+        "value": 526,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "VW AU MY26 spec sheet 'Driving range - Combined (WLTP) 526km', 20-inch Ystad wheels standard. Below EV Database WLTP TEL 540 km. Held 522 (older MY25 figure still on VW model page FAQ and CarsGuide review)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.9,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "VW AU MY26 spec sheet 'Energy Consumption Wh/km - Combined 168.7', rounded to 16.9; battery/range = 15.0, 12.6% off"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3255/Volkswagen-ID5-GTX",
+        "note": "EV Database (ID.5 GTX MY26, 79kWh) 1,800 kg braked / 750 unbraked. VW AU spec sheet omits towing. Matches vw-id4-gtx (1800) and the AU Cupra Tavascan VZ brochure (1,800, same dual-motor MEB). carsales AU database 1,400, Parkers (UK, older) 1,200 - conflicting."
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "held value kept; anchored to vw-id4-gtx (2000 at $69,990), cupra-tavascan-vz and skoda-enyaq-rs (2150 at $75,490-76,590)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "changed from held [1,0.69,0.57,0.48,0.41,0.35] to the VW brand convention used by both vw-id4 rows (one convention per brand; the steeper held curve had no recorded evidence)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 549,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "VW AU MY26 spec sheet 'Luggage area volume L - Rear seat upright 549'; CarExpert spec page labels it 'Rear seat up; to lower window' (to the cover)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1561,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-5/id--5-pro/ID5-MY26-Brochure.pdf",
+        "note": "VW AU MY26 spec sheet 'Rear seat folded 1561'"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/volkswagen/id-5/2026/gtx/e7933414-6e28-4f0a-ab77-1346c77306e3/",
+        "note": "five-seat SUV; carsales 'Seat Capacity 5', CarExpert '2+3'"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id5.html",
+        "note": "'5 years unlimited kilometre warranty'; separate 8-year/160,000km battery warranty"
+      }
+    }
+  },
+  "lowConfidence": [
+    "vw-id5-pro.towKg: no AU manufacturer figure; EV Database European 1,000 kg used against carsales AU 1,200 (held 1,200)",
+    "vw-id5-gtx.towKg: no AU manufacturer figure; EV Database 1,800 kg, carsales AU 1,400, Parkers UK 1,200",
+    "vw-id5-pro.listPrice: VW AU offers/configurator price not machine-readable; run-out stock sells on drive-away offers, list from Cars24 Oct 2026 and earlier reviews",
+    "vw-id5-gtx.listPrice: as above; GTX stock is MY25 (E399VPU/25)",
+    "vw-id5-gtx.depreciationCurve: aligned to VW brand curve; discontinuation and run-out discounting may justify steeper for both grades",
+    "vw-id5-pro.depreciationCurve: VW brand curve; discontinued model",
+    "vw-id5-gtx.insuranceAnnual: judged, anchored to ID.4 GTX / Tavascan VZ / Enyaq RS",
+    "vw-id5-pro.insuranceAnnual: judged, anchored to ID.4 Pro / Tavascan Endurance"
+  ]
+}

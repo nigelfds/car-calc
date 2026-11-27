@@ -1,0 +1,173 @@
+{
+  "familyId": "byd-atto1",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-atto1-essential": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-1",
+        "note": "'BYD ATTO 1 Essential' listed with a price in the configurator BYD AU's Build & Price redirects to, 2026-11-26; two grades, matching CarExpert"
+      },
+      "listPrice": {
+        "value": 23990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-1",
+        "note": "configurator variant price 23990 (vehicle subtotal; on-road fees are added separately to reach drive-away). CarExpert (https://www.carexpert.com.au/car-news/2026-byd-atto-1-price-and-specs-australias-cheapest-ev-undercuts-many-ice-rivals) says 'before on-road costs' in words for the same figure. App VIC drive-away $25,877.58. Configurator also runs a $19,990 drive-away campaign on this grade (orders 15 Sep-15 Dec 2026, VIC private incentive $6,909.75), implying a normal VIC drive-away of ~$26,900, above the app's figure, consistent with list + on-roads + dealer delivery. Campaign ignored as temporary."
+      },
+      "batteryKwh": {
+        "value": 30,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3193/BYD-DOLPHIN-SURF-30-kWh-Active",
+        "note": "usable; EV Database lists nominal 32.0 kWh for the European Dolphin Surf Active, the same car (ANCAP confirms identical safety spec); CarExpert AU quotes 30kWh unlabelled"
+      },
+      "rangeKm": {
+        "value": 220,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/atto-1",
+        "note": "BYD AU 'Driving range WLTP 220km'; matches EV Database WLTP 220 km for the EU Active on the same pack. AU grade on 15-inch steel 175/65 R15; direction test passes (equal, not higher)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3193/BYD-DOLPHIN-SURF-30-kWh-Active",
+        "note": "EV Database WLTP rated consumption 155 Wh/km (grid, incl. charging losses); battery/range gives 13.6"
+      },
+      "bootLitresSeatsUp": {
+        "value": 308,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-1",
+        "note": "BYD AU 'boot capacity of 308 litres'; method unstated; EV Database lists the same 308 L and no frunk; taken as to the cargo cover"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1037,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-1",
+        "note": "BYD AU 'expand to 1,037 litres when the rear seats are folded down'"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-byd-atto-1-review",
+        "note": "CarExpert: 'four-seater, not a five-seater', 2+2 layout"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3193/BYD-DOLPHIN-SURF-30-kWh-Active",
+        "note": "EV Database braked towing 0 kg; BYD AU page and AU reviews give no tow rating"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-1",
+        "note": "BYD AU 'Vehicle Warranty - 6 years or 150,000 kms'; traction battery 8 years/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 1100,
+        "basis": "judged",
+        "note": "Anchored below geely-ex2-complete ($26,490, $1,150) and byd-dolphin-essential ($29,990, $1,250) as the cheapest, lowest-powered BEV held; unchanged from held value."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention shared by Dolphin, Atto 2, Shark 6 and most BYD rows (one curve per brand); steeper than the mainstream default given repeated BYD drive-away campaigns, including this car's own $19,990 drive-away offer (configurator, Sep-Dec 2026). Unchanged from held value."
+      }
+    },
+    "byd-atto1-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-1",
+        "note": "'BYD ATTO 1 Premium' listed with a price in the configurator BYD AU's Build & Price redirects to, 2026-11-26; two grades, matching CarExpert"
+      },
+      "listPrice": {
+        "value": 27990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-1",
+        "note": "configurator variant price 27990 (vehicle subtotal; on-road fees are added separately to reach drive-away). CarExpert (https://www.carexpert.com.au/car-news/2026-byd-atto-1-price-and-specs-australias-cheapest-ev-undercuts-many-ice-rivals) says 'before on-road costs' in words for the same figure. App VIC drive-away $30,045.58."
+      },
+      "batteryKwh": {
+        "value": 43.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3195/BYD-DOLPHIN-SURF-432-kWh-Comfort",
+        "note": "usable; EV Database lists nominal 46.0 kWh for the European Dolphin Surf Comfort (115kW), the same car (ANCAP confirms identical safety spec); CarExpert AU quotes 43.2kWh unlabelled"
+      },
+      "rangeKm": {
+        "value": 310,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/atto-1",
+        "note": "BYD AU 'Driving range WLTP 310km'; matches EV Database WLTP 310 km for the EU Comfort (115kW) on the same pack. AU grade on 16-inch alloy 185/55 R16; direction test passes (equal, not higher)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3195/BYD-DOLPHIN-SURF-432-kWh-Comfort",
+        "note": "EV Database WLTP rated consumption 160 Wh/km (grid, incl. charging losses); battery/range gives 13.9"
+      },
+      "bootLitresSeatsUp": {
+        "value": 308,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-1",
+        "note": "BYD AU 'boot capacity of 308 litres'; method unstated; EV Database lists the same 308 L and no frunk; taken as to the cargo cover"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1037,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-1",
+        "note": "BYD AU 'expand to 1,037 litres when the rear seats are folded down'"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-byd-atto-1-review",
+        "note": "CarExpert: 'four-seater, not a five-seater', 2+2 layout"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3195/BYD-DOLPHIN-SURF-432-kWh-Comfort",
+        "note": "EV Database braked towing 0 kg; BYD AU page and AU reviews give no tow rating"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-1",
+        "note": "BYD AU 'Vehicle Warranty - 6 years or 150,000 kms'; traction battery 8 years/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 1200,
+        "basis": "judged",
+        "note": "Anchored between geely-ex2-complete ($26,490, $1,150) and mg-4-urban-43 / byd-dolphin-essential (~$29,900, $1,250); unchanged from held value."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention shared by Dolphin, Atto 2, Shark 6 and most BYD rows (one curve per brand); steeper than the mainstream default given repeated BYD drive-away campaigns, including this car's own $19,990 drive-away offer (configurator, Sep-Dec 2026). Unchanged from held value."
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-atto1-essential.insuranceAnnual: judged, anchored to geely-ex2 and byd-dolphin rows",
+    "byd-atto1-premium.insuranceAnnual: judged, as Essential",
+    "byd-atto1-essential.depreciationCurve: judged BYD brand curve, no Atto 1 resale data yet",
+    "byd-atto1-premium.depreciationCurve: as Essential",
+    "byd-atto1-essential.bootLitresSeatsUp: BYD AU does not state the measurement method; taken as to the cargo cover (same for Premium and for the 1,037 L folded figure)",
+    "byd-atto1-essential.batteryKwh: usable figure from EV Database's European Dolphin Surf Active, assumed the same pack as the AU car (Premium likewise from the Comfort)"
+  ]
+}

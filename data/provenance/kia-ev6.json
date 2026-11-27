@@ -1,0 +1,338 @@
+{
+  "familyId": "kia-ev6",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "kia-ev6-air-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev6.html",
+        "note": "'Air' listed as an EV6 grade on Kia AU Build & Price on 2026-11-26 (four grades); prices postcode-gated drive-away, not read. Kia AU EV6 MY27 spec sheet lists the same four grades."
+      },
+      "listPrice": {
+        "value": 72865,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev6/2027-air-suv-rwd-electric-jsf5wasm20260818",
+        "note": "CarExpert MY27 variant page (released 2 Aug 2026) 'prices starting at $72,865' before on-road costs; CarsGuide 2026 Air price page lists $72,865 MSRP (excludes stamp duty and government charges) beside $72,660 'Discontinued Jul 2026' (the MY26 price CarExpert's Jan 2026 news gave before on-road costs): a uniform +$205 MY27 rise. Kia configurator prices are postcode-gated drive-away and were not read. CarsGuide's 2027 model-year page still shows MY25 prices ($x,590) and was discarded."
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3028/Kia-EV6-Long-Range-2WD",
+        "note": "usable 80.0 kWh, nominal 84.0 kWh, 384 cells 192s2p, 697 V (EV Database, MY25-27). Kia AU MY27 spec sheet's 84 kWh = 697 V x 120.6 Ah, and 84,000 Wh / 384 cells = 218.75 Wh per SK On cell: Kia prints gross."
+      },
+      "rangeKm": {
+        "value": 582,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU EV6 MY27 spec sheet, WLTP AER combined, EV6 Air RWD"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.9,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU EV6 MY27 spec sheet WLTP combined 159 Wh/km, EV6 Air RWD; includes charging losses, so sits above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Cargo Area Rear (Min) (L, VDA)' 490 for EV6 Air RWD; CarExpert describes it as to the lower window (cargo cover). Frunk (52 L RWD / 20 L AWD) not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1270,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev6/2027-air-suv-rwd-electric-jsf5wasm20260818",
+        "note": "CarExpert MY27 variant page 1270 L rear seats folded; Kia AU spec sheet gives no folded figure. CarExpert's Jan 2026 news quoted 1,250 L (VDA) for the MY26 range; folded measurement method unlabelled."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Seat Capacity' 5, all grades"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Towing Capacity Braked (kg)' 1,800 on all four grades (held RWD/GT-Line AWD 1,600 was out of date)"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/owners/warranty.html",
+        "note": "Kia AU: 7-year unlimited-km new vehicle warranty; page says EV terms differ in the T&Cs, battery term not verified this run"
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "kept held 1750; between hyundai-ioniq-5-rwd (1550, $68,200)/ioniq-5-elite-rwd (1700, $73,200) and kia-ev5-gt-line-awd (2050, $71,770); EV6 sits a little above Ioniq 5 at similar price for its sportier positioning"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, matching kia-ev3 and kia-ev5 (refreshed 2026-11-26). No heavy price cut or warranty change found: MY27 rose $205."
+      }
+    },
+    "kia-ev6-gt-line-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev6.html",
+        "note": "'GT-Line RWD' listed as an EV6 grade on Kia AU Build & Price on 2026-11-26 (four grades); prices postcode-gated drive-away, not read. Kia AU EV6 MY27 spec sheet lists the same four grades."
+      },
+      "listPrice": {
+        "value": 79865,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev6/2027-gt-line-suv-rwd-electric-jsf5waso20260818",
+        "note": "CarExpert MY27 variant page (released 2 Aug 2026) 'prices starting at $79,865' before on-road costs; CarsGuide 2026 GT-Line RWD price page lists $79,865 MSRP (excludes stamp duty and government charges) beside $79,660 'Discontinued Jul 2026' (the MY26 price CarExpert's Jan 2026 news gave before on-road costs): a uniform +$205 MY27 rise. Kia configurator prices are postcode-gated drive-away and were not read. CarsGuide's 2027 model-year page still shows MY25 prices ($x,590) and was discarded."
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3028/Kia-EV6-Long-Range-2WD",
+        "note": "usable 80.0 kWh, nominal 84.0 kWh, 384 cells 192s2p, 697 V (EV Database, MY25-27). Kia AU MY27 spec sheet's 84 kWh = 697 V x 120.6 Ah, and 84,000 Wh / 384 cells = 218.75 Wh per SK On cell: Kia prints gross."
+      },
+      "rangeKm": {
+        "value": 560,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU EV6 MY27 spec sheet, WLTP AER combined, GT-Line RWD"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.9,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU EV6 MY27 spec sheet WLTP combined 169 Wh/km, GT-Line RWD; includes charging losses, so sits above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 480,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Cargo Area Rear (Min) (L, VDA)' 480 for GT-Line RWD; CarExpert describes it as to the lower window (cargo cover). Frunk (52 L RWD / 20 L AWD) not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1260,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev6/2027-gt-line-suv-rwd-electric-jsf5waso20260818",
+        "note": "CarExpert MY27 variant page 1260 L rear seats folded; Kia AU spec sheet gives no folded figure. CarExpert's Jan 2026 news quoted 1,250 L (VDA) for the MY26 range; folded measurement method unlabelled."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Seat Capacity' 5, all grades"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Towing Capacity Braked (kg)' 1,800 on all four grades (held RWD/GT-Line AWD 1,600 was out of date)"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/owners/warranty.html",
+        "note": "Kia AU: 7-year unlimited-km new vehicle warranty; page says EV terms differ in the T&Cs, battery term not verified this run"
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "kept held 2000; matches hyundai-ioniq-5-n-line-premium-awd (2000, $83,700) and sits just under kia-ev5-gt-line-awd (2050) despite the higher price, single motor"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, matching kia-ev3 and kia-ev5 (refreshed 2026-11-26). No heavy price cut or warranty change found: MY27 rose $205."
+      }
+    },
+    "kia-ev6-gt-line-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev6.html",
+        "note": "'GT-Line AWD' listed as an EV6 grade on Kia AU Build & Price on 2026-11-26 (four grades); prices postcode-gated drive-away, not read. Kia AU EV6 MY27 spec sheet lists the same four grades."
+      },
+      "listPrice": {
+        "value": 87865,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev6/2027-gt-line-suv-4x4-electric-jsf5wass20260818",
+        "note": "CarExpert MY27 variant page (released 2 Aug 2026) 'prices starting at $87,865' before on-road costs; CarsGuide 2026 GT-Line AWD price page lists $87,865 MSRP (excludes stamp duty and government charges) beside $87,660 'Discontinued Jul 2026' (the MY26 price CarExpert's Jan 2026 news gave before on-road costs): a uniform +$205 MY27 rise. Kia configurator prices are postcode-gated drive-away and were not read. CarsGuide's 2027 model-year page still shows MY25 prices ($x,590) and was discarded."
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3028/Kia-EV6-Long-Range-2WD",
+        "note": "usable 80.0 kWh, nominal 84.0 kWh, 384 cells 192s2p, 697 V (EV Database, MY25-27). Kia AU MY27 spec sheet's 84 kWh = 697 V x 120.6 Ah, and 84,000 Wh / 384 cells = 218.75 Wh per SK On cell: Kia prints gross."
+      },
+      "rangeKm": {
+        "value": 522,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU EV6 MY27 spec sheet, WLTP AER combined, GT-Line AWD"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU EV6 MY27 spec sheet WLTP combined 177 Wh/km, GT-Line AWD; includes charging losses, so sits above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 480,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Cargo Area Rear (Min) (L, VDA)' 480 for GT-Line AWD; CarExpert describes it as to the lower window (cargo cover). Frunk (52 L RWD / 20 L AWD) not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1260,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev6/2027-gt-line-suv-4x4-electric-jsf5wass20260818",
+        "note": "CarExpert MY27 variant page 1260 L rear seats folded; Kia AU spec sheet gives no folded figure. CarExpert's Jan 2026 news quoted 1,250 L (VDA) for the MY26 range; folded measurement method unlabelled."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Seat Capacity' 5, all grades"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Towing Capacity Braked (kg)' 1,800 on all four grades (held RWD/GT-Line AWD 1,600 was out of date)"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/owners/warranty.html",
+        "note": "Kia AU: 7-year unlimited-km new vehicle warranty; page says EV terms differ in the T&Cs, battery term not verified this run"
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "kept held 2200; dual-motor step over GT-Line RWD, below genesis-gv60-advanced-rwd (2300, $88,300) which carries a premium-brand loading"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, matching kia-ev3 and kia-ev5 (refreshed 2026-11-26). No heavy price cut or warranty change found: MY27 rose $205."
+      }
+    },
+    "kia-ev6-gt-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev6.html",
+        "note": "'GT' listed as an EV6 grade on Kia AU Build & Price on 2026-11-26 (four grades); prices postcode-gated drive-away, not read. Kia AU EV6 MY27 spec sheet lists the same four grades."
+      },
+      "listPrice": {
+        "value": 99865,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/kia/ev6/price/2026/gt-awd",
+        "note": "CarsGuide 2026 GT AWD price page lists $99,865 MSRP (excludes stamp duty and government charges) beside $99,660 'Discontinued Jul 2026' (the MY26 price CarExpert's Jan 2026 news gave before on-road costs), matching the uniform +$205 MY27 rise on the other three grades. CarExpert's MY27 GT page says 'prices starting at $102,347' before on-road costs; rejected as an outlier: $2,482 above the +$205 pattern, about the LCT on $99,865 ((99,865-91,661)/1.1 x 0.33 = $2,461), suggesting LCT counted twice. Kia configurator is postcode-gated drive-away and was not read."
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3079/Kia-EV6-GT",
+        "note": "usable 80.0 kWh, nominal 84.0 kWh, 384 cells 192s2p, 697 V (EV Database, MY25-27). Kia AU MY27 spec sheet's 84 kWh = 697 V x 120.6 Ah, and 84,000 Wh / 384 cells = 218.75 Wh per SK On cell: Kia prints gross. EV Database marks the GT's usable figure as an estimate."
+      },
+      "rangeKm": {
+        "value": 450,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU EV6 MY27 spec sheet, WLTP AER combined, GT AWD"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.9,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU EV6 MY27 spec sheet WLTP combined 209 Wh/km, GT AWD; includes charging losses, so sits above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 480,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Cargo Area Rear (Min) (L, VDA)' 480 for GT AWD; CarExpert describes it as to the lower window (cargo cover). Frunk (52 L RWD / 20 L AWD) not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1260,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev6/2027-gt-suv-4x4-electric-jsfkwag520260818",
+        "note": "CarExpert MY27 variant page 1260 L rear seats folded; Kia AU spec sheet gives no folded figure. CarExpert's Jan 2026 news quoted 1,250 L (VDA) for the MY26 range; folded measurement method unlabelled."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Seat Capacity' 5, all grades"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev6/kia-ev6-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet 'Towing Capacity Braked (kg)' 1,800 on all four grades (held RWD/GT-Line AWD 1,600 was out of date)"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/owners/warranty.html",
+        "note": "Kia AU: 7-year unlimited-km new vehicle warranty; page says EV terms differ in the T&Cs, battery term not verified this run"
+      },
+      "insuranceAnnual": {
+        "value": 2600,
+        "basis": "judged",
+        "note": "kept held 2600; 478 kW performance grade at ~$100k, below hyundai-ioniq-5-n (2750, $115,000) and above genesis-gv60-advanced-rwd (2300)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, matching kia-ev3 and kia-ev5 (refreshed 2026-11-26). No heavy price cut or warranty change found: MY27 rose $205."
+      }
+    }
+  },
+  "lowConfidence": [
+    "kia-ev6-gt-awd.listPrice: CarExpert says $102,347 before on-road costs; $99,865 taken from CarsGuide's MSRP config and the uniform +$205 MY27 pattern; Kia's own list not readable (configurator postcode-gated drive-away)",
+    "kia-ev6-air-rwd.listPrice: configurator not read; CarExpert MY27 page plus CarsGuide 2026 config list, both third-party",
+    "kia-ev6-gt-line-rwd.listPrice: same - configurator not read, third-party list figures",
+    "kia-ev6-gt-line-awd.listPrice: same - configurator not read, third-party list figures",
+    "kia-ev6-gt-awd.batteryKwh: 80 usable is EV Database's estimate for the GT",
+    "kia-ev6-air-rwd.bootLitresSeatsDown: 1,270 from CarExpert's database only; method unlabelled; Kia AU publishes no folded figure",
+    "kia-ev6-gt-line-rwd.bootLitresSeatsDown: 1,260 from CarExpert's database; MY26 news said 1,250",
+    "kia-ev6-gt-line-awd.bootLitresSeatsDown: as GT-Line RWD",
+    "kia-ev6-gt-awd.bootLitresSeatsDown: as GT-Line RWD",
+    "kia-ev6-gt-awd.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev6-gt-line-awd.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev6-gt-line-rwd.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev6-air-rwd.insuranceAnnual: judged, anchored to siblings"
+  ]
+}

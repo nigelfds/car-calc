@@ -7,7 +7,7 @@
     "variant": "e-hybrid quattro 270kW",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 96900,
+    "listPrice": 96818,
     "batteryKwh": 20.7,
     "rangeKm": 82,
     "consumptionKwhPer100km": 25.2,
@@ -21,8 +21,15 @@
     "towKg": 2000,
     "warrantyYears": 5,
     "insuranceAnnual": 2450,
-    "depreciationCurve": [1, 0.68, 0.56, 0.48, 0.41, 0.35],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "audi-q5-phev-sportback-e-hybrid-quattro",
@@ -32,7 +39,7 @@
     "variant": "e-hybrid quattro 270kW",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 100400,
+    "listPrice": 100318,
     "batteryKwh": 20.7,
     "rangeKm": 82,
     "consumptionKwhPer100km": 25.2,
@@ -46,7 +53,14 @@
     "towKg": 2000,
     "warrantyYears": 5,
     "insuranceAnnual": 2500,
-    "depreciationCurve": [1, 0.67, 0.55, 0.47, 0.4, 0.34],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.67,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

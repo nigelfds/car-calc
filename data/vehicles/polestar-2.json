@@ -16,8 +16,15 @@
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 2050,
-    "depreciationCurve": [1, 0.66, 0.55, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-07-30"
+    "depreciationCurve": [
+      1,
+      0.66,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "polestar-2-long-range-dual-motor",
@@ -36,8 +43,15 @@
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 2200,
-    "depreciationCurve": [1, 0.66, 0.55, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-07-30"
+    "depreciationCurve": [
+      1,
+      0.66,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "polestar-2-long-range-dual-motor-performance",
@@ -56,7 +70,14 @@
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 2600,
-    "depreciationCurve": [1, 0.66, 0.55, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-07-30"
+    "depreciationCurve": [
+      1,
+      0.66,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

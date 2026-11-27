@@ -1,0 +1,219 @@
+{
+  "familyId": "vw-tiguan-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "vw-tiguan-phev-150tsi-elegance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU model page lists 'MY26 Tiguan eHybrid 150TSI Elegance' as one of two grades, with MRDP footnotes for vehicles purchased from 01/10/2026 and delivered by 31/12/2026 and a 0.0% finance offer ending 31/12/2026. VW AU configurator fetch returned 403. The Beep review (updated 21 Nov 2026) confirms two grades on sale."
+      },
+      "listPrice": {
+        "value": 64590,
+        "basis": "sourced",
+        "url": "https://web1.goauto.com.au/new-models/volkswagen/tiguan/ehybrid/2026-02-18/98521.html",
+        "note": "GoAuto launch report (18 Feb 2026, VW press pricing): 'from $64,590' excluding on-road costs. CarExpert review (28 May 2026), EV Central review (30 May 2026) and Chasing Cars (20 Feb 2026, 'All prices listed are before on-road costs') agree; The Beep (updated 21 Nov 2026) still gives $64,590 before on-roads. VW AU page shows MRDP only, no amount readable."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tiguan/3generation/345202/",
+        "note": "ADAC: Batteriekapazitaet brutto 25,7 kWh, netto 19,7 kWh for the same Tiguan 1.5 eHybrid; usable figure used. EV Central spec box labels 19.7 as net."
+      },
+      "rangeKm": {
+        "value": 117,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tiguan-ehybrid-review",
+        "note": "Australian claim 117 km for the 150TSI Elegance (CarExpert 'WLTP'; EV Central model page and The Beep agree; VW AU 'up to 117km'). Direction test: equal to the European WLTP 117 km for the 150 kW car on 255/45R19 (ADAC 345202), matching the AU Elegance's 19-inch wheels; not above it, so accepted as WLTP-derived."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.7 / 117 x 100. EV Central lists 13.8-14.1 kWh/100km (WLTP electric consumption) but that is a different test quantity; derived value kept for consistency with vw-tayron-phev."
+      },
+      "combinedRangeKm": {
+        "value": 893,
+        "basis": "derived",
+        "note": "rangeKm 117 + 45 L tank / 5.8 L/100km x 100 (775.9) = 893. Tank 45 L from CarExpert and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.8,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tiguan/3generation/345202/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,8 L/100km for the 150 kW Tiguan eHybrid on 255/45R19 (AU Elegance wheel size). Same basis as vw-tayron-phev (5.9, heavier car) and kia-sorento-phev. The Beep reports about 5 L/100km real-world with a flat battery. Held 7.0 was judged from European real-world testing."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU combined ADR 81/02 label 1.6 L/100km (FAQ), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CarExpert gives 37 g/km for this grade."
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU '490L with rear seats in forward position', eHybrid with battery fitted (about 160 L less than petrol Tiguan, CarExpert). VDA to the cargo cover; ADAC lists the same 490 as 'normal'."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1486,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tiguan/3generation/345202/",
+        "note": "ADAC 1486 L 'dachhoch' with rear seat folded (to the roof); CarExpert, EV Central and The Beep quote the same 1486 L. No belt-line folded figure found; kept to-roof, consistent with vw-tayron-phev."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU: 5 seats."
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tiguan-ehybrid-review",
+        "note": "CarExpert spec table braked 1800 kg; The Beep and EV Central model page agree; ADAC gives 1800 kg braked (12%) for the 150 kW car. VW AU technical spec sheet not reached."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU '5-year comprehensive warranty', transferable; CarExpert: 5 years/unlimited km, HV battery 8 years/160,000 km. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "Held value kept. Anchors: vw-tayron-phev 150TSI Elegance $1800 at $62,390 and 200TSI R-Line $2000 at $76,550 (larger body); skoda-kodiaq-phev-select $1900 at $63,490; mitsubishi-outlander-phev-aspire $1750 at $66,790."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention (one curve per brand, owner rule): same curve as vw-id5 and vw-tayron-phev rows."
+      }
+    },
+    "vw-tiguan-phev-200tsi-r-line": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU model page lists 'MY26 Tiguan eHybrid 200TSI R-Line' as one of two grades, with MRDP footnotes for vehicles purchased from 01/10/2026 and delivered by 31/12/2026 and a 0.0% finance offer ending 31/12/2026. VW AU configurator fetch returned 403. The Beep review (updated 21 Nov 2026) confirms two grades on sale."
+      },
+      "listPrice": {
+        "value": 74550,
+        "basis": "sourced",
+        "url": "https://web1.goauto.com.au/new-models/volkswagen/tiguan/ehybrid/2026-02-18/98521.html",
+        "note": "GoAuto launch report (18 Feb 2026, VW press pricing): 'from $74,550' excluding on-road costs. CarExpert review (28 May 2026) and EV Central review (30 May 2026) say $74,550 'before on-road costs' in words; The Beep (4 Nov 2026, updated 21 Nov 2026) says $74,550 before on-roads and launch deals ended. Chasing Cars (20 Feb 2026) lists $75,550 in its price list but $74,550 in its own body text: internal inconsistency, treated as a typo and rejected. VW AU page shows MRDP only, no amount readable."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tiguan/3generation/345204/",
+        "note": "ADAC: Batteriekapazitaet brutto 25,7 kWh, netto 19,7 kWh for the same Tiguan 1.5 eHybrid; usable figure used. EV Central spec box labels 19.7 as net."
+      },
+      "rangeKm": {
+        "value": 115,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tiguan-ehybrid-review",
+        "note": "Australian claim 115 km for the 200TSI R-Line (CarExpert spec table 'WLTP'); EV Central model page and The Beep give the same 115 km. Held 113 km was the Tayron R-Line figure and is corrected. Direction test: below the European WLTP 117 km for the 200 kW R-Line on 255/45R19 (ADAC 345204); AU R-Line is on 20-inch, so lower is consistent with a WLTP-derived local figure."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.7 / 115 x 100. EV Central lists 13.8-14.1 kWh/100km (WLTP electric consumption) but that is a different test quantity; derived value kept for consistency with vw-tayron-phev."
+      },
+      "combinedRangeKm": {
+        "value": 891,
+        "basis": "derived",
+        "note": "rangeKm 115 + 45 L tank / 5.8 L/100km x 100 (775.9) = 891. Tank 45 L from CarExpert and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.8,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tiguan/3generation/345204/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,8 L/100km for the 200 kW Tiguan eHybrid on 255/45R19 (AU R-Line is on 20-inch; no 20-inch figure listed). Same basis as vw-tayron-phev (5.9, heavier car) and kia-sorento-phev. The Beep reports about 5 L/100km real-world with a flat battery. Held 7.0 was judged from European real-world testing."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU combined ADR 81/02 label 1.7 L/100km (FAQ), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CarExpert gives 38 g/km for this grade."
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU '490L with rear seats in forward position', eHybrid with battery fitted (about 160 L less than petrol Tiguan, CarExpert). VDA to the cargo cover; ADAC lists the same 490 as 'normal'."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1486,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/tiguan/3generation/345204/",
+        "note": "ADAC 1486 L 'dachhoch' with rear seat folded (to the roof); CarExpert, EV Central and The Beep quote the same 1486 L. No belt-line folded figure found; kept to-roof, consistent with vw-tayron-phev."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU: 5 seats."
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volkswagen-tiguan-ehybrid-review",
+        "note": "CarExpert spec table braked 2000 kg; The Beep and EV Central model page agree; ADAC gives 2000 kg braked (12%) for the 200 kW car. VW AU technical spec sheet not reached."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/tiguan-plug-in-hybrid.html",
+        "note": "VW AU '5-year comprehensive warranty', transferable; CarExpert: 5 years/unlimited km, HV battery 8 years/160,000 km. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "Held value kept. Anchors: vw-tayron-phev 150TSI Elegance $1800 at $62,390 and 200TSI R-Line $2000 at $76,550 (larger body); skoda-kodiaq-phev-select $1900 at $63,490; mitsubishi-outlander-phev-aspire $1750 at $66,790."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention (one curve per brand, owner rule): same curve as vw-id5 and vw-tayron-phev rows."
+      }
+    }
+  },
+  "lowConfidence": [
+    "vw-tiguan-phev-200tsi-r-line.fuelConsumptionL100km: ADAC battery-empty figure is for 19-inch wheels; AU R-Line runs 20-inch and may read slightly higher",
+    "vw-tiguan-phev-200tsi-r-line.insuranceAnnual: judged, anchored to vw-tayron-phev and kodiaq/outlander rows",
+    "vw-tiguan-phev-150tsi-elegance.insuranceAnnual: judged, anchored to vw-tayron-phev and kodiaq/outlander rows",
+    "vw-tiguan-phev-150tsi-elegance.depreciationCurve: judged VW brand curve, no model-specific resale data",
+    "vw-tiguan-phev-200tsi-r-line.depreciationCurve: judged VW brand curve, no model-specific resale data",
+    "vw-tiguan-phev-150tsi-elegance.bootLitresSeatsDown: 1486 L is to the roof (ADAC 'dachhoch'); no belt-line figure published",
+    "vw-tiguan-phev-200tsi-r-line.bootLitresSeatsDown: 1486 L is to the roof (ADAC 'dachhoch'); no belt-line figure published",
+    "vw-tiguan-phev-200tsi-r-line.listPrice: no VW-published list price readable (MRDP only); $74,550 from launch reports, one of which (Chasing Cars) also prints $75,550"
+  ]
+}

@@ -1,36 +1,34 @@
 {
   "id": "mercedes-c-350e-phev",
-  "summary": "The C 350e is the plug-in hybrid grade of Mercedes-Benz Australia's C-Class sedan range, sold as a single specification at $98,200 — exactly the same list price as the mild-hybrid C 300 it comfortably out-accelerates. Its 19.53kWh usable battery is good for 115km of WLTP electric range, more than the heavier GLC 350e SUV on the same 230kW powertrain manages from a larger pack, and Australian reviewers are consistent that the calibration, the near-silent EV mode and the 11kW AC charging make it a genuine electric car for commuting. The criticisms are equally consistent: the battery takes the boot from 455 litres to 315, DC fast charging is a $1500 option rather than standard, and at $98,200 the car sits above both Luxury Car Tax thresholds and above the FBT cap with no plug-in hybrid exemption left to offset it.",
+  "summary": "The C 350e is the plug-in hybrid grade of Mercedes-Benz Australia's C-Class sedan range, sold as a single specification at $99,418 before on-road costs — effectively the same list price as the mild-hybrid C 300 it comfortably out-accelerates — and it is the outgoing W206 model, with the updated C-Class due in Australia in the first half of 2027. Its 19.5kWh usable battery is good for 116km of WLTP electric range on the 18-inch rear-drive specification, and Australian reviewers are consistent that the calibration, the near-silent EV mode and the 11kW AC charging make it a genuine electric car for commuting. The criticisms are equally consistent: the battery takes the boot from 455 litres to 315, DC fast charging is a $1500 option rather than standard, and at $99,418 the car sits above both Luxury Car Tax thresholds and above the FBT cap with no plug-in hybrid exemption left to offset it.",
   "pros": [
-    "115km of WLTP electric range from a 19.53kWh usable battery is the longest of any plug-in hybrid sedan on sale in Australia — more than double the BYD Seal 6's 55km WLTP, and more than the GLC 350e SUV's 107km on the same powertrain because the sedan is roughly 250kg lighter and far slipperier, so a typical Melbourne commute never starts the engine",
-    "It lists at $98,200 before on-road costs, exactly the same as the mild-hybrid C 300 petrol, so the plug-in hardware costs nothing over a car it beats on outputs — 230kW/550Nm against the C 300's 190kW/400Nm, and 0-100km/h in 6.1 seconds",
+    "116km of WLTP electric range from a 19.5kWh usable battery is the longest of any plug-in hybrid sedan in this dataset — well clear of the Audi A5 e-hybrid's 97km — and more than the heavier GLC 350e SUV manages on the same 230kW powertrain, so a typical Melbourne commute never starts the engine",
+    "It lists at $99,418 before on-road costs, $10 under the mild-hybrid C 300 petrol's $99,428, so the plug-in hardware costs nothing over a car it beats on outputs — 230kW/550Nm against the C 300's 190kW/400Nm, and 0-100km/h in 6.1 seconds",
     "Charges properly for a plug-in hybrid: 11kW three-phase AC takes about two hours flat to full, and the optional 55kW DC fast charging ($1500) does 10-80 per cent in around 20 minutes, which almost no plug-in hybrid at this price offers at all",
     "Braked towing is rated at 1800kg, unusually high for a plug-in hybrid sedan and only 600kg short of the GLC 350e SUV, so the battery has not cost it usefulness as a tow car",
     "Mercedes-Benz Australia's five-year, unlimited-kilometre warranty is unconditional and is not tied to servicing inside the dealer network"
   ],
   "cons": [
     "The battery costs the boot 140 litres: 315L against 455L in the petrol and mild-hybrid C-Class, which is less than the Audi A5's 331L and nowhere near a BMW i4's 470L, and Mercedes publishes no seats-folded figure for the plug-in saloon at all — the 40:20:40 rear seat does fold and load-through is possible, but you are buying a materially smaller boot than the badge implies",
-    "The 1.5L/100km combined label is meaningless once the battery is flat: Mercedes' own charge-sustaining figure is 7.6L/100km on 95 RON premium, so a buyer who cannot charge at home is running a two-tonne petrol sedan and the whole case for the car collapses",
-    "At $98,200 it sits above both Luxury Car Tax thresholds — the ordinary $80,809 and the fuel-efficient $91,661 it qualifies for on its 1.5L/100km combined figure — and well above the $75,000 FBT cap, and since the FBT exemption for plug-in hybrids ended on 1 April 2025 there is no novated-lease advantage left to offset that",
+    "The 1.5L/100km combined label is meaningless once the battery is flat: the European WLTP battery-empty figure for the same rear-drive 230kW car is 6.6L/100km and Mercedes-Benz Australia quotes 7.6L/100km, on 95 RON premium either way, so a buyer who cannot charge at home is running a two-tonne petrol sedan and the whole case for the car collapses",
+    "At $99,418 it sits above both Luxury Car Tax thresholds — the ordinary $80,809 and the fuel-efficient $91,661 it qualifies for on its 1.5L/100km combined figure — and well above the $75,000 FBT cap, and since the FBT exemption for plug-in hybrids ended on 1 April 2025 there is no novated-lease advantage left to offset that",
     "Servicing is expensive: Chasing Cars quotes $6890 for a five-year plan, and DC fast charging is a $1500 option rather than standard equipment, so the car that makes the strongest public-charging case among plug-in hybrids charges at 11kW unless you pay for it",
-    "Mercedes-Benz Australia publishes the electric range as 104km under the NEDC-based ADR cycle rather than WLTP, and at least one Australian reviewer put the real-world figure closer to 80km — the 115km WLTP figure recorded here comes from European homologation for the same 18-inch specification"
+    "It is a run-out model: the updated C-Class arrives in the first half of 2027, and Mercedes-Benz Australia publishes the current car's electric range as 104km under the NEDC-based ADR cycle rather than WLTP, with at least one Australian reviewer putting the real-world figure closer to 80km — the 116km WLTP figure recorded here comes from European homologation for the same 18-inch specification"
   ],
   "sources": [
+    "https://www.carexpert.com.au/car-news/2025-mercedes-benz-c350e-priced-for-australia-phev-sedan-has-100km-of-range",
+    "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-c-class-review",
+    "https://www.carexpert.com.au/car-news/2026-mercedes-benz-c300-amg-line-plus-edition-sportier-styling-lower-price",
+    "https://www.carexpert.com.au/car-news/2027-mercedes-benz-c-class-revealed-australian-launch-confirmed",
     "https://www.chasingcars.com.au/reviews/large-cars/mercedes-benz-c-350e-2026-review/",
     "https://www.carsguide.com.au/ev/mercedes-benz-c350e-99839",
-    "https://www.carexpert.com.au/car-news/2025-mercedes-benz-c350e-priced-for-australia-phev-sedan-has-100km-of-range",
-    "https://www.carexpert.com.au/car-news/2025-mercedes-benz-c350e-plug-in-hybrid-sedan-confirmed-for-australia",
-    "https://www.carexpert.com.au/car-reviews/2026-mercedes-benz-c-class-review",
-    "https://www.carsales.com.au/research/mercedes-benz/c-class/2026/c350-e/",
-    "https://www.carsales.com.au/editorial/details/mercedes-benz-c350e-2025-review-150610/",
+    "https://www.carsguide.com.au/mercedes-benz/c350-e/price/2026",
+    "https://www.carsguide.com.au/car/14861463/mercedes-benz/c350-e/sedan",
     "https://www.carsguide.com.au/mercedes-benz/c350-e/towing-capacity",
-    "https://www.carsguide.com.au/mercedes-benz/c-class/boot-space",
-    "https://www.electrifying.com/reviews/mercedes/c300e/review",
     "https://www.carbuyer.co.uk/mercedes/c-class/practicality",
-    "https://www.auto-data.net/en/mercedes-benz-c-class-w206-c-300e-313hp-plug-in-hybrid-9g-tronic-44914",
-    "https://group.mercedes-benz.com/sustainability/environment-climate/decarbonisation/environmental-check/c-300-e-plug-in-hybrid.html",
     "https://jesmb.de/6473/",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/c-klasse/206/340084",
     "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
   ],
-  "sourcedAt": "2026-08-08"
+  "sourcedAt": "2026-11-26"
 }

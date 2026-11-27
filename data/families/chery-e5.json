@@ -1,0 +1,30 @@
+{
+  "id": "chery-e5",
+  "summary": "The Chery E5 (rebranded from Omoda E5 during 2025, with the Omoda name now reserved for a separate model line) is one of the cheapest new electric SUVs on sale in Australia, a small front-wheel-drive EV pitched on price and standard equipment rather than dynamic polish. Australian reviewers consistently praise its value, long warranty and well-equipped cabin, but mark it down for unsettled ride quality, an over-cautious safety-assist calibration, and a boot that trails class rivals. The range is a single Ultimate grade ($35,990 before on-roads, advertised nationally from $37,990 drive-away but $39,604 drive-away for a Melbourne postcode) with a 58.9kWh LFP battery and 430km WLTP range; a facelifted MY27 'New E5' is listed as coming soon but is not yet priced or orderable.",
+  "pros": [
+    "One of the cheapest new electric SUVs on sale in Australia at $35,990 before on-roads, undercutting the BYD Atto 3 ($39,990) and Geely EX5 ($41,990)",
+    "Long ownership package: 7-year unlimited-km vehicle warranty and 8-year unlimited-km battery warranty, plus 7-year capped-price servicing",
+    "Well-equipped single grade: dual 12.3-inch screens, heated front and rear seats, heated steering wheel, Sony audio, power tailgate, sunroof and a full-size spare",
+    "430km WLTP range from a 58.9kWh LFP battery, with a heat pump and 155kW motor (0-100km/h in 7.6 seconds)"
+  ],
+  "cons": [
+    "Softly sprung, with body lean in corners and sharp bumps such as expansion joints upsetting the ride; reviewers split on whether it is jittery or comfortable around town",
+    "Safety-assist calibration is poor: lane centring that cannot hold the lane and can steer toward other vehicles, and a driver monitor that chimes at normal glances",
+    "Small 300-litre boot (to the cargo cover, seats up) trails the Atto 3's 440 litres and the Jaecoo J5 EV's 384 litres",
+    "Slow DC charging for the class: 80kW peak, about 30 minutes for 30-80%, and only 6.6kW single-phase AC",
+    "A facelifted MY27 E5 is listed as coming soon, so a current car may depreciate faster once it arrives"
+  ],
+  "sources": [
+    "https://cherymotor.com.au/models/chery-e5-electric-suv",
+    "https://cherymotor.com.au/sites/default/files/2026-04/233_25_Chery_E5_Spec_Sheet_2025_Rebrand_v115%20%282%29%20%281%29.pdf",
+    "https://cherymotor.com.au/news/chery-strengthens-ev-value-my26-e5-ultimate-now-priced-37990-driveaway",
+    "https://www.carexpert.com.au/chery/e5/2026-ultimate-suv-fwd-electric-jsggos8g20260422",
+    "https://www.carexpert.com.au/car-reviews/2025-chery-e5-review",
+    "https://www.carexpert.com.au/car-news/2026-chery-c5-and-e5-price-and-specs-hybrid-joins-small-suv-range",
+    "https://www.carexpert.com.au/car-comparisons/2026-chery-e5-vs-byd-atto-3-spec-battle",
+    "https://www.carexpert.com.au/car-news/2027-chery-e5-electric-suv-refresh-brings-bolder-styling-more-luxury-features",
+    "https://www.carsguide.com.au/car-news/budget-electric-2026-chery-e5-suv-gets-a-sharper-drive-away-price-to-battle-byd-atto-3-and",
+    "https://ev-database.org/uk/car/3046/Omoda-E5"
+  ],
+  "sourcedAt": "2026-11-26"
+}

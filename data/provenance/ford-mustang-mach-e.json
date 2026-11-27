@@ -1,0 +1,261 @@
+{
+  "familyId": "ford-mustang-mach-e",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "ford-mustang-mach-e-select": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/ford/mustang-mach-e/",
+        "note": "ford.com.au Build & Price/price page returned 403 again, configurator unreadable. carsales research page lists Select, Premium and GT as current 2026 series (MY26.00 and MY26.50 codes, same indicative drive-away across codes, so no price change); CarExpert (29 Nov 2025) and CarsGuide (13 Nov 2025) launch coverage agree on exactly three grades. Not in data/watchlist.json."
+      },
+      "listPrice": {
+        "value": 65990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-ford-mustang-mach-e-price-and-specs",
+        "note": "CarExpert 2026 price and specs: Select $65,990 'before on-road costs' in words; CarsGuide review https://www.carsguide.com.au/ev/ford-mustang-mach-e-100096 gives the same body-text figures (its MSRP table carries the superseded 2024 prices, $500-1,000 lower). Cross-check: carsales indicative drive-away series lows $69,348 / $84,283 / $103,396 sit within ~$400 of calc/onroad.js VIC drive-aways $69,642 / $84,751 / $103,507 for these lists, so the list is unchanged at MY26.5. EV Central (Jan 2026) reported campaign drive-aways ~$60k/$75k/$89k; campaigns, not list, and not re-verified. Manufacturer price page 403."
+      },
+      "batteryKwh": {
+        "value": 72.6,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3187/Ford-Mustang-Mach-E-SR-RWD",
+        "note": "EV Database MY25 SR RWD: usable 72.6 kWh, gross 78.0 kWh (same 470 km WLTP as the AU Select; Ford AU/CarsGuide round it to '73kWh (usable)' LFP). Held 73 replaced by the more precise usable figure."
+      },
+      "rangeKm": {
+        "value": 470,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3187/Ford-Mustang-Mach-E-SR-RWD",
+        "note": "EV Database WLTP 470 km; CarExpert/CarsGuide AU launch copy also 470 km WLTP (19-inch wheels)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3187/Ford-Mustang-Mach-E-SR-RWD",
+        "note": "EV Database WLTP rated 185 Wh/km = 18.5 kWh/100km (plug-to-wheel, incl. charging loss); 72.6/470 = 15.4, 20% gap within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 402,
+        "basis": "sourced",
+        "url": "https://carbuyer.co.uk/ford/mustang-mach-e-suv/302978/ford-mustang-mach-e-suv-review/practicality",
+        "note": "Carbuyer: '402 litres to the parcel shelf (519 litres to the roof)'. CarsGuide 2026 review also 402 L. CarExpert's 519 L is labelled 'to roof'. Frunk (49 L AU 2026) not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 800,
+        "basis": "sourced",
+        "url": "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6234-ford-mustang-mach-e-extended-range-awd/ford-mustang-mach-e-extended-range-awd.pdf",
+        "note": "ADAC Autotest (Extended Range AWD, same body): rear seats folded, loaded to the lower window line ('bis zur Fensterunterkante') up to 800 L; 1,375 L to the roof. Ford's 1,420 L is to the roof (ADAC catalogue 'dachhoch', CarExpert 'to roof'), replaced by the belt-line figure per the cargo-cover convention, as done for tesla-model-y (ADAC window line). ADAC measured 360 L seats-up against Ford's 402 L, so 800 may read ~10% low. Replaces held 1420."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-ford-mustang-mach-e-review",
+        "note": "five-seat mid-size SUV, all grades"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ford/mustang-mach-e/towing-capacity",
+        "note": "CarsGuide towing table: 2026 Mach-E braked 0 kg (page also says the rating is 'yet to be specified in our database'). No Australian source gives a braked rating; CarExpert's towing pages list none; Ford AU spec page 403. EV Central's comparison table shows 750 kg (likely the unbraked figure or a EU number) and EV Database lists EU ratings 750/1500 kg. Held 0 kept."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-ford-mustang-mach-e-price-and-specs",
+        "note": "5 years/unlimited km; battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "Held 1900 kept; anchored to kia-ev6-air-rwd 1750 ($72,865) and tesla-model-y-premium-rwd 2300 ($58,900); hyundai-ioniq-5-rwd 1550."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.64,
+          0.56,
+          0.49,
+          0.43
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand; matches ford-ranger-phev exactly. Held Mach-E curve was steeper ([1,0.68,...]) reflecting heavy EV discounting (EV Central Jan 2026 drive-away cuts), so this likely flatters Mach-E resale."
+      }
+    },
+    "ford-mustang-mach-e-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/ford/mustang-mach-e/",
+        "note": "ford.com.au Build & Price/price page returned 403 again, configurator unreadable. carsales research page lists Select, Premium and GT as current 2026 series (MY26.00 and MY26.50 codes, same indicative drive-away across codes, so no price change); CarExpert (29 Nov 2025) and CarsGuide (13 Nov 2025) launch coverage agree on exactly three grades. Not in data/watchlist.json."
+      },
+      "listPrice": {
+        "value": 80490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-ford-mustang-mach-e-price-and-specs",
+        "note": "CarExpert 2026 price and specs: Premium $80,490 'before on-road costs' in words; CarsGuide review https://www.carsguide.com.au/ev/ford-mustang-mach-e-100096 gives the same body-text figures (its MSRP table carries the superseded 2024 prices, $500-1,000 lower). Cross-check: carsales indicative drive-away series lows $69,348 / $84,283 / $103,396 sit within ~$400 of calc/onroad.js VIC drive-aways $69,642 / $84,751 / $103,507 for these lists, so the list is unchanged at MY26.5. EV Central (Jan 2026) reported campaign drive-aways ~$60k/$75k/$89k; campaigns, not list, and not re-verified. Manufacturer price page 403."
+      },
+      "batteryKwh": {
+        "value": 88,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3188/Ford-Mustang-Mach-E-ER-RWD",
+        "note": "EV Database MY25 ER RWD: usable 88.0 kWh, gross 98.7 kWh. Lead to check usable vs gross confirmed: 88 is usable."
+      },
+      "rangeKm": {
+        "value": 600,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3188/Ford-Mustang-Mach-E-ER-RWD",
+        "note": "EV Database WLTP 600 km (TEH; 615 TEL); CarExpert/CarsGuide AU 600 km WLTP. TEH value matches the AU claim."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.7,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3188/Ford-Mustang-Mach-E-ER-RWD",
+        "note": "EV Database WLTP rated 177 Wh/km = 17.7 kWh/100km; 88/600 = 14.7, 20% gap within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 402,
+        "basis": "sourced",
+        "url": "https://carbuyer.co.uk/ford/mustang-mach-e-suv/302978/ford-mustang-mach-e-suv-review/practicality",
+        "note": "Carbuyer: '402 litres to the parcel shelf (519 litres to the roof)'. CarsGuide 2026 review also 402 L. CarExpert's 519 L is labelled 'to roof'. Frunk (49 L AU 2026) not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 800,
+        "basis": "sourced",
+        "url": "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6234-ford-mustang-mach-e-extended-range-awd/ford-mustang-mach-e-extended-range-awd.pdf",
+        "note": "ADAC Autotest (Extended Range AWD, same body): rear seats folded, loaded to the lower window line ('bis zur Fensterunterkante') up to 800 L; 1,375 L to the roof. Ford's 1,420 L is to the roof (ADAC catalogue 'dachhoch', CarExpert 'to roof'), replaced by the belt-line figure per the cargo-cover convention, as done for tesla-model-y (ADAC window line). ADAC measured 360 L seats-up against Ford's 402 L, so 800 may read ~10% low. Replaces held 1420."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-ford-mustang-mach-e-review",
+        "note": "five-seat mid-size SUV, all grades"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ford/mustang-mach-e/towing-capacity",
+        "note": "CarsGuide towing table: 2026 Mach-E braked 0 kg (page also says the rating is 'yet to be specified in our database'). No Australian source gives a braked rating; CarExpert's towing pages list none; Ford AU spec page 403. EV Central's comparison table shows 750 kg (likely the unbraked figure or a EU number) and EV Database lists EU ratings 750/1500 kg. Held 0 kept."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-ford-mustang-mach-e-price-and-specs",
+        "note": "5 years/unlimited km; battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "Held 2100 kept; anchored to kia-ev6-gt-line-rwd 2000 ($79,865) and polestar-4-long-range-dual-motor 2550 ($81,750)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.64,
+          0.56,
+          0.49,
+          0.43
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand; matches ford-ranger-phev exactly. Held Mach-E curve was steeper ([1,0.68,...]) reflecting heavy EV discounting (EV Central Jan 2026 drive-away cuts), so this likely flatters Mach-E resale."
+      }
+    },
+    "ford-mustang-mach-e-gt": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/ford/mustang-mach-e/",
+        "note": "ford.com.au Build & Price/price page returned 403 again, configurator unreadable. carsales research page lists Select, Premium and GT as current 2026 series (MY26.00 and MY26.50 codes, same indicative drive-away across codes, so no price change); CarExpert (29 Nov 2025) and CarsGuide (13 Nov 2025) launch coverage agree on exactly three grades. Not in data/watchlist.json."
+      },
+      "listPrice": {
+        "value": 98490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-ford-mustang-mach-e-price-and-specs",
+        "note": "CarExpert 2026 price and specs: GT $98,490 'before on-road costs' in words; CarsGuide review https://www.carsguide.com.au/ev/ford-mustang-mach-e-100096 gives the same body-text figures (its MSRP table carries the superseded 2024 prices, $500-1,000 lower). Cross-check: carsales indicative drive-away series lows $69,348 / $84,283 / $103,396 sit within ~$400 of calc/onroad.js VIC drive-aways $69,642 / $84,751 / $103,507 for these lists, so the list is unchanged at MY26.5. EV Central (Jan 2026) reported campaign drive-aways ~$60k/$75k/$89k; campaigns, not list, and not re-verified. Manufacturer price page 403."
+      },
+      "batteryKwh": {
+        "value": 91,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3190/Ford-Mustang-Mach-E-GT",
+        "note": "EV Database MY25 GT: usable 91.0 kWh, gross 98.7 kWh."
+      },
+      "rangeKm": {
+        "value": 515,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3190/Ford-Mustang-Mach-E-GT",
+        "note": "EV Database WLTP 515 km (TEL; 510 TEH); CarExpert/CarsGuide AU 515 km WLTP on 20-inch wheels."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3190/Ford-Mustang-Mach-E-GT",
+        "note": "EV Database WLTP rated 210 Wh/km (TEL) = 21.0 kWh/100km; 91/515 = 17.7, 19% gap within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 402,
+        "basis": "sourced",
+        "url": "https://carbuyer.co.uk/ford/mustang-mach-e-suv/302978/ford-mustang-mach-e-suv-review/practicality",
+        "note": "Carbuyer: '402 litres to the parcel shelf (519 litres to the roof)'. CarsGuide 2026 review also 402 L. CarExpert's 519 L is labelled 'to roof'. Frunk (49 L AU 2026) not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 800,
+        "basis": "sourced",
+        "url": "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6234-ford-mustang-mach-e-extended-range-awd/ford-mustang-mach-e-extended-range-awd.pdf",
+        "note": "ADAC Autotest (Extended Range AWD, same body): rear seats folded, loaded to the lower window line ('bis zur Fensterunterkante') up to 800 L; 1,375 L to the roof. Ford's 1,420 L is to the roof (ADAC catalogue 'dachhoch', CarExpert 'to roof'), replaced by the belt-line figure per the cargo-cover convention, as done for tesla-model-y (ADAC window line). ADAC measured 360 L seats-up against Ford's 402 L, so 800 may read ~10% low. Replaces held 1420."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-ford-mustang-mach-e-review",
+        "note": "five-seat mid-size SUV, all grades"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ford/mustang-mach-e/towing-capacity",
+        "note": "CarsGuide towing table: 2026 Mach-E braked 0 kg (page also says the rating is 'yet to be specified in our database'). No Australian source gives a braked rating; CarExpert's towing pages list none; Ford AU spec page 403. EV Central's comparison table shows 750 kg (likely the unbraked figure or a EU number) and EV Database lists EU ratings 750/1500 kg. Held 0 kept."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-ford-mustang-mach-e-price-and-specs",
+        "note": "5 years/unlimited km; battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2800,
+        "basis": "judged",
+        "note": "Held 2800 kept; anchored to kia-ev6-gt-awd 2600 ($99,865) and tesla-model-y-performance-awd 3200 ($84,900); high-output AWD premium."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.64,
+          0.56,
+          0.49,
+          0.43
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand; matches ford-ranger-phev exactly. Held Mach-E curve was steeper ([1,0.68,...]) reflecting heavy EV discounting (EV Central Jan 2026 drive-away cuts), so this likely flatters Mach-E resale."
+      }
+    }
+  },
+  "lowConfidence": [
+    "ford-mustang-mach-e-select.towKg: 0 kg rests on CarsGuide's database placeholder and absence of any Australian rating; Ford AU spec page 403; one review table says 750 kg",
+    "ford-mustang-mach-e-premium.towKg: same as Select",
+    "ford-mustang-mach-e-gt.towKg: same as Select",
+    "ford-mustang-mach-e-select.depreciationCurve: brand convention (Ranger PHEV curve) applied to an EV that has seen deep discounting; likely too generous",
+    "ford-mustang-mach-e-premium.depreciationCurve: as Select",
+    "ford-mustang-mach-e-gt.depreciationCurve: as Select",
+    "ford-mustang-mach-e-select.bootLitresSeatsDown: ADAC independent belt-line measurement on pre-facelift car, ADAC's seats-up measured 10% under Ford's",
+    "ford-mustang-mach-e-premium.bootLitresSeatsDown: as Select",
+    "ford-mustang-mach-e-gt.bootLitresSeatsDown: as Select",
+    "ford-mustang-mach-e-select.listPrice: ford.com.au 403; price from CarExpert launch article (Nov 2025) plus carsales drive-away cross-check, not the manufacturer page",
+    "ford-mustang-mach-e-premium.listPrice: as Select",
+    "ford-mustang-mach-e-gt.listPrice: as Select",
+    "ford-mustang-mach-e-select.insuranceAnnual: judged",
+    "ford-mustang-mach-e-premium.insuranceAnnual: judged",
+    "ford-mustang-mach-e-gt.insuranceAnnual: judged"
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "familyId": "chery-tiggo-8-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "chery-tiggo-8-phev-urban": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/models/tiggo-8-super-hybrid",
+        "note": "Chery AU Tiggo 8 Super Hybrid page lists two grades, Urban and Ultimate, each with postcode-gated drive-away pricing and VIC 3000 novated lease figures; no Build & Price configurator on the Chery AU site. CarsGuide and CarExpert both list the same two grades for 2026/2027"
+      },
+      "listPrice": {
+        "value": 42990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/chery/tiggo-8/2026-urban-1-5l-suv-fwd-electric-jsgsoawo20250613",
+        "note": "CarExpert 2026 Urban page: 'prices starting at $42,990' before on-road costs; CarsGuide price page lists the same MSRP (Glass's, excludes stamp duty and government charges). Chery publishes only drive-away: national $45,990 drive-away (Chery release 13 Jun 2025, still CarExpert's Sydney drive-away); Chery footnote says its drive-away includes RRP, 12 months rego, CTP, dealer delivery and stamp duty. MSRP = national DAP - $3,000 on both grades (not the -$2,000 seen on Jaecoo). Round-trip: 42,990 through calc/onroad.js gives Vic $45,675.58, $314 below the national DAP, consistent with Chery's DAP carrying dealer delivery. Plain back-out ((45990-880)/1.042 = 43,292) rejected because it absorbs dealer delivery (sources.md rule 4). Chery's VIC postcode figure could not be read (dynamic-pricing API fetch refused). $3,000 cashback 1 Nov-21 Dec 2026 is a campaign and ignored"
+      },
+      "batteryKwh": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "Chery AU spec sheet 'Battery Capacity (kWh) 18.4' LFP; Chery UK also 18.4. CarExpert variant pages and Chery's 2025 release give 18.3 (CarExpert labels it usable). Gross vs usable not settled; difference 0.5%"
+      },
+      "rangeKm": {
+        "value": 90,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://cherycar.co.uk/models/tiggo-8-csh",
+        "note": "Chery UK Tiggo 8 Super Hybrid spec table: 56 miles WLTP = 90 km; UK car on 19in alloys, 18.4 kWh, same as AU (235/50 R19). AU spec sheet 95 km is NEDC (ADR 81/02) and higher than WLTP: rejected by direction test. Chery AU body copy also says 'up to 90km'"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.4 / 90 x 100 = 20.44. CarExpert 15.4 kWh/100km is the NEDC/weighted label figure, not used"
+      },
+      "combinedRangeKm": {
+        "value": 1161,
+        "basis": "derived",
+        "note": "WLTP EV 90 km + 60 L tank (AU spec sheet 'Fuel Tank Capacity (L) 60') / 5.6 L/100km x 100 = 90 + 1071.4 = 1161. Chery's 1,200 km claim is NEDC-based, not used"
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.6,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/large-suvs/chery-tiggo-8-super-hybrid-urban-2026-review/",
+        "note": "Chasing Cars Urban review: 'a still very impressive 5.6L/100km' once the battery was flat (real-world review figure; no published charge-sustaining figure found: Chery UK and AU give only weighted figures). CarsGuide long-term Ultimate 6.1 then 6.9 L/100km at the pump, CarExpert ~5.8 on test, both with partial charging. Held 6.0 (attributed to an unverified 47.1 mpg UK depleted figure) replaced. Sits between siblings tiggo-7-phev 5.5 and tiggo-9-phev-elite 6.0 by mass"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "Chery AU spec sheet 'Fuel Consumption - Combined (L/100km) 1.3' (label), <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; CarExpert Urban page lists CO2 31 g/km combined"
+      },
+      "bootLitresSeatsUp": {
+        "value": 117,
+        "basis": "sourced",
+        "url": "https://cherycar.co.uk/models/tiggo-8-csh",
+        "note": "Chery UK: 117 litres 'even when all seven seats are in use'; CarExpert variant page 117 L 'to lower window' (belt line, matches convention). Chery AU spec sheet gives no boot figures"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1930,
+        "basis": "sourced",
+        "url": "https://cherycar.co.uk/models/tiggo-8-csh",
+        "note": "Chery UK: 'up to 1,930 litres' with the seats down; method not stated and likely to the roof, so reads high against the cargo-cover convention. CarExpert's 739 L 'rear seats down (VDA)' is ambiguous (probably third row only) and conflicts with 479-494 L third-row-folded figures elsewhere"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "AU spec sheet 'Number of Seats 7'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "AU spec sheet lists only 'Maximum Towing Mass (Non-Braked Trailer) 750'; no braked rating (CarExpert also 750 kg unbraked only)"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/legal/owners/7-year-new-car-warranty-policy-statement",
+        "note": "7 years / unlimited km; condition is servicing per manufacturer guidelines and intervals, not dealer-only servicing. HV battery 8 years / unlimited (Chery AU model page)"
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "held value kept; anchored between chery-tiggo-7-phev-ultimate ($41,990, $1,550) and chery-tiggo-9-phev-elite ($52,990, $1,800)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Chery-group brand convention (chery-tiggo-7-phev, chery-tiggo-9-phev, chery-e5, jaecoo-j8-shs); evidence: $3,000 cashback (Nov-Dec 2026) and rolling finance/servicing campaigns on a car launched mid-2025, young brand with unproven resale"
+      }
+    },
+    "chery-tiggo-8-phev-ultimate": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/models/tiggo-8-super-hybrid",
+        "note": "Chery AU Tiggo 8 Super Hybrid page lists two grades, Urban and Ultimate, each with postcode-gated drive-away pricing and VIC 3000 novated lease figures; no Build & Price configurator on the Chery AU site. CarsGuide and CarExpert both list the same two grades for 2026/2027"
+      },
+      "listPrice": {
+        "value": 46990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/chery/tiggo-8/2026-ultimate-1-5l-suv-fwd-electric-jsgsoaws20250613",
+        "note": "CarExpert 2026 Ultimate page: 'prices starting at $46,990' before on-road costs; CarsGuide price page lists the same MSRP (Glass's, excludes stamp duty and government charges). Chery publishes only drive-away: national $49,990 drive-away (Chery release 13 Jun 2025, still CarExpert's Sydney drive-away); Chery footnote says its drive-away includes RRP, 12 months rego, CTP, dealer delivery and stamp duty. MSRP = national DAP - $3,000 on both grades (not the -$2,000 seen on Jaecoo). Round-trip: 46,990 through calc/onroad.js gives Vic $49,843.58, $146 below the national DAP, consistent with Chery's DAP carrying dealer delivery. Plain back-out ((49990-880)/1.042 = 47,131) rejected because it absorbs dealer delivery (sources.md rule 4). Chery's VIC postcode figure could not be read (dynamic-pricing API fetch refused). $3,000 cashback 1 Nov-21 Dec 2026 is a campaign and ignored"
+      },
+      "batteryKwh": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "Chery AU spec sheet 'Battery Capacity (kWh) 18.4' LFP; Chery UK also 18.4. CarExpert variant pages and Chery's 2025 release give 18.3 (CarExpert labels it usable). Gross vs usable not settled; difference 0.5%"
+      },
+      "rangeKm": {
+        "value": 90,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://cherycar.co.uk/models/tiggo-8-csh",
+        "note": "Chery UK Tiggo 8 Super Hybrid spec table: 56 miles WLTP = 90 km; UK car on 19in alloys, 18.4 kWh, same as AU (235/50 R19). AU spec sheet 95 km is NEDC (ADR 81/02) and higher than WLTP: rejected by direction test. Chery AU body copy also says 'up to 90km'"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.4 / 90 x 100 = 20.44. CarExpert 15.4 kWh/100km is the NEDC/weighted label figure, not used"
+      },
+      "combinedRangeKm": {
+        "value": 1161,
+        "basis": "derived",
+        "note": "WLTP EV 90 km + 60 L tank (AU spec sheet 'Fuel Tank Capacity (L) 60') / 5.6 L/100km x 100 = 90 + 1071.4 = 1161. Chery's 1,200 km claim is NEDC-based, not used"
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.6,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/large-suvs/chery-tiggo-8-super-hybrid-urban-2026-review/",
+        "note": "Chasing Cars Urban review: 'a still very impressive 5.6L/100km' once the battery was flat (real-world review figure; no published charge-sustaining figure found: Chery UK and AU give only weighted figures). CarsGuide long-term Ultimate 6.1 then 6.9 L/100km at the pump, CarExpert ~5.8 on test, both with partial charging. Held 6.0 (attributed to an unverified 47.1 mpg UK depleted figure) replaced. Sits between siblings tiggo-7-phev 5.5 and tiggo-9-phev-elite 6.0 by mass"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "Chery AU spec sheet 'Fuel Consumption - Combined (L/100km) 1.3' (label), <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; CarExpert Ultimate page lists CO2 31 g/km combined"
+      },
+      "bootLitresSeatsUp": {
+        "value": 117,
+        "basis": "sourced",
+        "url": "https://cherycar.co.uk/models/tiggo-8-csh",
+        "note": "Chery UK: 117 litres 'even when all seven seats are in use'; CarExpert variant page 117 L 'to lower window' (belt line, matches convention). Chery AU spec sheet gives no boot figures"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1930,
+        "basis": "sourced",
+        "url": "https://cherycar.co.uk/models/tiggo-8-csh",
+        "note": "Chery UK: 'up to 1,930 litres' with the seats down; method not stated and likely to the roof, so reads high against the cargo-cover convention. CarExpert's 739 L 'rear seats down (VDA)' is ambiguous (probably third row only) and conflicts with 479-494 L third-row-folded figures elsewhere"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "AU spec sheet 'Number of Seats 7'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/sites/default/files/2026-06/246_25_Tiggo_8_PHEV_AU_Spec_Sheet_v109.pdf",
+        "note": "AU spec sheet lists only 'Maximum Towing Mass (Non-Braked Trailer) 750'; no braked rating (CarExpert also 750 kg unbraked only)"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://cherymotor.com.au/legal/owners/7-year-new-car-warranty-policy-statement",
+        "note": "7 years / unlimited km; condition is servicing per manufacturer guidelines and intervals, not dealer-only servicing. HV battery 8 years / unlimited (Chery AU model page)"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "held value kept; anchored between chery-tiggo-7-phev-ultimate ($41,990, $1,550) and chery-tiggo-9-phev-elite ($52,990, $1,800)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Chery-group brand convention (chery-tiggo-7-phev, chery-tiggo-9-phev, chery-e5, jaecoo-j8-shs); evidence: $3,000 cashback (Nov-Dec 2026) and rolling finance/servicing campaigns on a car launched mid-2025, young brand with unproven resale"
+      }
+    }
+  },
+  "lowConfidence": [
+    "chery-tiggo-8-phev-urban.bootLitresSeatsDown: 1,930 L from Chery UK, method unstated, probably to the roof (also ultimate)",
+    "chery-tiggo-8-phev-urban.listPrice: $42,990 MSRP from CarExpert/CarsGuide (likely one data feed); Chery publishes only drive-away and its VIC postcode figure could not be read; computed Vic DAP $314 below the $45,990 national DAP (also ultimate: $46,990, $146 below $49,990). Back-out alternatives 43,292 / 47,131",
+    "chery-tiggo-8-phev-urban.fuelConsumptionL100km: 5.6 is one review's flat-battery figure; CarsGuide long-term logged 6.1-6.9 with partial charging (also ultimate)",
+    "chery-tiggo-8-phev-urban.combinedRangeKm: built on the review-sourced 5.6 L/100km (also ultimate)",
+    "chery-tiggo-8-phev-urban.batteryKwh: 18.4 per Chery AU/UK; CarExpert says 18.3 usable; gross vs usable unsettled (also ultimate)",
+    "chery-tiggo-8-phev-urban.insuranceAnnual: judged (also ultimate)",
+    "chery-tiggo-8-phev-urban.depreciationCurve: judged Chery brand convention (also ultimate)"
+  ]
+}

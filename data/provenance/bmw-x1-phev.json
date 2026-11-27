@@ -1,0 +1,116 @@
+{
+  "familyId": "bmw-x1-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "bmw-x1-phev-xdrive25e": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/bmw/x-models/x1/price/2026",
+        "note": "CarsGuide 2026 X1 price list shows seven X1 variants with xDrive25e M Sport the only PHEV; EV Central (updated 21 Nov 2026) lists it as current; BMW AU used/demo site carries 2026 xDrive25e demonstrators. bmw.com.au configurator returned HTTP 503 on every attempt on the research date, so the manufacturer page could not be opened. No xDrive30e is sold in Australia (ADAC lists the X1 xDrive30e for Europe only)."
+      },
+      "listPrice": {
+        "value": 79900,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/bmw-x1-xdrive25e-102540",
+        "note": "CarsGuide review (3 Sep 2026): 'from $79,900 before on-road costs' in words; CarsGuide 2026 price list gives $79,900 MSRP excluding stamp duty and government charges; EV Central $79,900 'plus on-road costs' (flagged estimated). Launch price was $79,500 (CarExpert, CarsGuide news, Cars24); a +$400 rise in line with sDrive20i $66,700 to $67,500 and M35i $93,900 to $94,700 on the same CarsGuide list. BMW AU Build & Price unreachable (HTTP 503)."
+      },
+      "batteryKwh": {
+        "value": 14.2,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/x1/u11/345271/",
+        "note": "ADAC: Batteriekapazitaet netto 14,2 kWh, brutto 16,3 kWh; CarsGuide review gives 16.3 / 14.2 kWh gross/usable."
+      },
+      "rangeKm": {
+        "value": 78,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2026-bmw-x1-and-x2-updates-bring-phev-and-mhev-power",
+        "note": "Lower end of BMW Australia's 78-86 km WLTP band (CarExpert, Cars24). AU car ships with the mandatory M Sport package on 19-inch wheels (Cars24), so the low end of the band is taken; ADAC gives 82 km WLTP for the European M Sport on 225/50R18, EV Central quotes 82 km. Held 80 was mid-band."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.2,
+        "basis": "derived",
+        "note": "batteryKwh 14.2 / rangeKm 78 x 100 = 18.2. ADAC's 13,4 kWh/100km 'Stromverbrauch kombiniert' is the utility-factor-weighted WLTP figure, a different quantity, so not used."
+      },
+      "combinedRangeKm": {
+        "value": 848,
+        "basis": "derived",
+        "note": "rangeKm 78 + 47 L tank / 6.1 L/100km x 100 (770.5) = 848. Tank 47 L from ADAC and CarsGuide review."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.1,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/x1/u11/345271/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 6,1 L/100km for X1 xDrive25e M Sportpaket (ab 10/25) on 225/50R18; same basis as vw-tiguan-phev (5.8) and cupra-formentor-phev (5.6). No 19-inch figure listed; BMW AU's quoted 6.3-7.1 L/100km band (CarsGuide news, Cars24) suggests the AU 19-inch car reads somewhat higher. CarsGuide review measured 9.5-10 L/100km real-world with a flat battery. Held 6.7 was mid-band of BMW AU's figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/bmw-x1-xdrive25e-102540",
+        "note": "CarsGuide review: claimed combined 3.3 L/100km (ADR 81/02), at or below 3.5. ADAC WLTP weighted combined 2,5 L/100km."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; ADAC gives 56 g/km WLTP combined, and the 3.3 L/100km ADR label equates to roughly 75-78 g/km."
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/x1/u11/345271/",
+        "note": "ADAC Kofferraumvolumen normal 490 L (PHEV, battery fitted; petrol X1 is 540 L); CarsGuide review and Cars24 also 490 L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1495,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/x1/u11/345271/",
+        "note": "ADAC 1495 L 'dachhoch' with rear seat folded (to the roof); CarsGuide review and Cars24 quote the same 1,495 L. No belt-line folded figure found; kept to-roof, consistent with vw-tiguan-phev and bmw-ix1. Reads high against the cargo-cover convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/cars/bmw/x1/",
+        "note": "EV Central: 5 seats."
+      },
+      "towKg": {
+        "value": 1700,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/x1/u11/345271/",
+        "note": "ADAC Anhaengelast gebremst (12%) 1700 kg; EV Central braked towing 1,700 kg."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/bmw-x1-xdrive25e-102540",
+        "note": "CarsGuide review: 5 years / unlimited km; high-voltage battery 8 years / 160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "Held 2150 kept (+$400 list change too small to move it). Anchors: mercedes-gla-phev-250e $2150 at $78,000, bmw-ix1-xdrive30 $2100 at $77,900, bmw-ix2-xdrive30-m-sport $2200 at $79,900."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "BMW brand curve per owner rule (one curve per brand), matching bmw-ix3-50-xdrive. Held [1,0.75,0.64,0.56,0.49,0.43] dropped."
+      }
+    }
+  },
+  "lowConfidence": [
+    "bmw-x1-phev-xdrive25e.rangeKm: 78 km is the low end of BMW AU's 78-86 km WLTP band, assumed to match the mandatory 19-inch M Sport wheels; no per-wheel WLTP figure could be opened (BMW sites returned 503); ADAC 18-inch figure is 82",
+    "bmw-x1-phev-xdrive25e.fuelConsumptionL100km: ADAC battery-empty 6.1 is on 18-inch tyres; BMW AU quotes 6.3-7.1 and CarsGuide measured 9.5-10 real-world, so the AU 19-inch car likely reads higher",
+    "bmw-x1-phev-xdrive25e.listPrice: $79,900 from CarsGuide review and price list plus EV Central (estimated); BMW AU Build & Price unreachable (HTTP 503), launch price was $79,500",
+    "bmw-x1-phev-xdrive25e.bootLitresSeatsDown: 1,495 L is to the roof, not the belt line",
+    "bmw-x1-phev-xdrive25e.insuranceAnnual: judged",
+    "bmw-x1-phev-xdrive25e.depreciationCurve: judged brand curve"
+  ]
+}

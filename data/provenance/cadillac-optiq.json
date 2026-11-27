@@ -1,0 +1,94 @@
+{
+  "familyId": "cadillac-optiq",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "cadillac-optiq-sport-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/cars/cadillac/optiq",
+        "note": "cadillacanz.com returned 403 to WebFetch on the research date (a curl attempt was refused by a permission check and not retried), so the manufacturer configurator could not be opened. Availability rests on The Beep's live per-state drive-away listing for the Sport AWD (Vic $86,136, with a recent price-history change), CarsGuide's price pages listing the Sport for MY26 and an MY27 row at $80,000, and CarsGuide's 30 Aug 2026 review of a customer-spec car. Single grade confirmed by CarExpert and CarsGuide."
+      },
+      "listPrice": {
+        "value": 80000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-price-and-specs",
+        "note": "CarExpert: '$80,000 before on-road costs' in words, single Sport grade. Re-checked on research date: CarsGuide review (30 Aug 2026) 'A$80,000 MSRP, before on-road costs'; CarsGuide price page MSRP $80,000 for MY26 and MY27. Manufacturer site 403. The Beep's Vic drive-away $86,136 sits ~$1,900 above the app's computed $84,240, consistent with an $80,000 list plus dealer delivery. Intro $85,000 drive-away offer (1 Aug-31 Oct 2026) has expired."
+      },
+      "batteryKwh": {
+        "value": 75,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/optiq/1generation/345575/",
+        "note": "usable: ADAC 75.0 kWh netto / 79.0 brutto; EV Database 75.0 usable / 79.0 gross; Green NCAP 75.0 net / 80.6 installed. Australian car uses the same 75 kWh European-spec pack (CarExpert)."
+      },
+      "rangeKm": {
+        "value": 425,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-price-and-specs",
+        "note": "CarExpert 425 km WLTP for the Australian Sport; matches ADAC and EV Database WLTP for the European 21-inch Premium Sport. Australian grade rides on 21-inch wheels."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.9,
+        "basis": "sourced",
+        "url": "https://www.greenncap.com/assessments/cadillac-optiq-2026-0243/",
+        "note": "WLTP 19.9 kWh/100km (Green NCAP declared, ADAC, CarExpert). Wall-to-wheel figure; usable battery/range gives 17.6, 13% lower, within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 443,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/optiq/1generation/345575/",
+        "note": "VDA to the cover (ADAC 'normal' 443 L; EV Database 443 L; German reviews cite Cadillac's 443 L plus a 61 L underfloor bin). Australian sources quote 744 L, which matches the US SAE to-the-roof 26.3 cu ft figure, so it is not used. No frunk."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1340,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/optiq/1generation/345575/",
+        "note": "ADAC labels 1,340 L 'dachhoch' (to the roof) with seats folded; no belt-line figure found, so this overstates the cargo-cover convention. Australian 1,603 L is the US SAE figure."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/optiq/1generation/345575/",
+        "note": "ADAC Sitzpl\u00e4tze 5; The Beep and CarsGuide list 5 seats."
+      },
+      "towKg": {
+        "value": 680,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cadillac/optiq/1generation/345575/",
+        "note": "ADAC Anh\u00e4ngelast gebremst 680 kg; EV Database 680 kg; CarsGuide Australian Sport page 680 kg braked."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-cadillac-optiq-price-and-specs",
+        "note": "5 years/unlimited km, no servicing condition; battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 2500,
+        "basis": "judged",
+        "note": "kept at 2500: between bmw-ix1 xDrive30 M Sport ($77,900, $2,100) and polestar-4 dual motor ($81,750, $2,550), below cadillac-lyriq ($90,000, $2,850); new-brand parts uncertainty argues for the upper end."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Brand curve for all Cadillac rows chosen as [1,0.66,0.54,0.45,0.38,0.32]: the held cadillac-vistiq curve, one step from the held Optiq curve (0.33 at year 5), and shared with volvo-ex40. Steeper than mainstream for a new brand with thin local volume, no published resale data, and a $32,000 permanent Lyriq list cut in June 2026 (CarExpert 9 Jun 2026)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "cadillac-optiq-sport-awd.availability: manufacturer configurator (cadillacanz.com) returned 403; availability rests on third-party listings and reviews",
+    "cadillac-optiq-sport-awd.depreciationCurve: judged; one brand curve chosen without resale data, must match cadillac-lyriq and cadillac-vistiq rows written in parallel",
+    "cadillac-optiq-sport-awd.insuranceAnnual: judged from siblings",
+    "cadillac-optiq-sport-awd.bootLitresSeatsDown: to the roof (ADAC 'dachhoch'); no belt-line figure published",
+    "cadillac-optiq-sport-awd.listPrice: manufacturer site unreachable; $80,000 from CarExpert and CarsGuide (MSRP, before on-road costs), not re-read off Cadillac's own page",
+    "cadillac-optiq-sport-awd.bootLitresSeatsUp: European VDA 443 L; assumes Australian car has the same load floor as the European Premium Sport (Australian outlets quote the US 744 L)"
+  ]
+}

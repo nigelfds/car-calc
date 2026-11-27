@@ -2,7 +2,7 @@
   "id": "gwm-ora-5",
   "summary": "The Ora 5 is GWM's replacement for the axed Ora hatch: a 4.47m front-drive electric small SUV sold here in two grades, both with the same 150kW motor and 58.3kWh LFP battery. Reviewers agree it is a lot of electric car for the money and unusually quiet at highway speed, and note the rare inclusion of a space-saver spare, but they split sharply on the suspension, which CarExpert calls too firm and Chasing Cars calls floaty yet busy. The consistent criticisms are over-eager driver-monitoring alerts, a touchscreen that swallows the regen and drive-mode controls, and a claimed efficiency figure real-world testing does not reach.",
   "pros": [
-    "435km WLTC range from a 58.3kWh usable battery for an under-$35,000 list price, against 345km for the BYD Atto 2 it is aimed at",
+    "435km WLTP range from a 58.3kWh usable battery for an under-$35,000 list price, against 345km for the BYD Atto 2 it is aimed at",
     "Seven-year unlimited-kilometre warranty (eight on the battery) with capped-price servicing at $195 a visit, $1,365 across the seven years",
     "Carries a space-saver spare wheel, still uncommon in this class, plus 6kW vehicle-to-load and 120kW DC charging for 10-80% in about 30 minutes",
     "362-litre boot expanding to 1,060 litres with the 60/40 rear seats folded, and a 750kg braked tow rating where the MG 4 manages 500kg and the BYD Dolphin none at all",
@@ -12,19 +12,21 @@
     "The claimed 15.5kWh/100km is optimistic: CarExpert observed about 18kWh/100km in mixed driving, which cuts real range to roughly 325km",
     "Driver-monitoring and seatbelt warnings misfire repeatedly, and regenerative braking strength is adjustable only through the 14.6-inch touchscreen with almost no physical controls",
     "Ride quality is the main point of reviewer disagreement - firm and bump-sensitive to CarExpert, floaty with mild rear-end instability at speed to Chasing Cars - and neither rates it as settled",
-    "Unrated by ANCAP at the time of writing, with testing still under way",
-    "GWM publishes no list price at all - only a Victorian drive-away figure ($33,990 Lux, $36,990 Ultra) - so the list prices shown here are backed out of those figures and are estimates, not sourced numbers; the outgoing Ora hatch it replaces was also withdrawn after weak local sales, so expect softer resale than a BYD or MG equivalent"
+    "Five-star ANCAP rating (November 2026) but with its weakest scores in Safe Driving (70%) and Crash Avoidance (71%): adaptive cruise failed at roundabouts and crossings, and it missed ANCAP's submerged-vehicle escape requirement",
+    "GWM publishes no list price, only a Victorian private-buyer drive-away ($33,990 Lux, $36,990 Ultra), so the list prices shown here are backed out of those figures and are estimates, not sourced numbers (CarExpert quotes $32,490 before on-roads for the Lux, which would not fit GWM's drive-away); the outgoing Ora hatch it replaces was also withdrawn after weak local sales, so expect softer resale than a BYD or MG equivalent"
   ],
   "sources": [
-    "https://www.carexpert.com.au/car-news/2026-gwm-ora-5-price-and-specs",
-    "https://www.carexpert.com.au/car-reviews/2026-gwm-ora-5-suv-review-quick-drive",
-    "https://www.chasingcars.com.au/reviews/small-suvs/gwm-ora-5-2026-review/",
-    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-gwm-ora-5-price-specs-release-date.html",
-    "https://www.carsguide.com.au/gwm/ora-5/price/2026",
     "https://www.gwmanz.com/au/models/suv/ora-5-suv/",
     "https://www.gwmanz.com/au/news/gwm-unveils-the-all-new-ora-5-suv-priced-from-just-33-990-driveaway/",
-    "https://thedriven.io/2026/07/09/gwm-ora-5-first-drive-a-new-electric-suv-at-an-affordable-price/",
-    "https://www.carsales.com.au/research/gwm/ora-5/"
+    "https://www.carexpert.com.au/car-news/2026-gwm-ora-5-price-and-specs",
+    "https://www.carexpert.com.au/car-reviews/2026-gwm-ora-5-suv-review-quick-drive",
+    "https://www.carexpert.com.au/gwm/ora-5/2026-lux-suv-fwd-electric-jskamoww20260410",
+    "https://www.carexpert.com.au/car-news/byd-sealion-8-gwm-ora-5-and-subaru-outback-score-five-star-ancap-ratings",
+    "https://www.chasingcars.com.au/reviews/small-suvs/gwm-ora-5-2026-review/",
+    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-gwm-ora-5-price-specs-release-date.html",
+    "https://www.goauto.com.au/new-models/gwm/ora/5/2026-07-03/99727.html",
+    "https://evdb.nz/v/gwm-ora-5",
+    "https://www.km77.com/coches/gwm/ora-5/2026/estandar/bev/ora-5-bev/datos"
   ],
-  "sourcedAt": "2026-07-31"
+  "sourcedAt": "2026-11-26"
 }

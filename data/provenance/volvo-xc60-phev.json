@@ -1,0 +1,221 @@
+{
+  "familyId": "volvo-xc60-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "volvo-xc60-phev-plus-t8": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/car/14863153/volvo/xc60/suv",
+        "note": "CarsGuide new-car listing '2026 Volvo XC60 Plus T8 Phev Dark', 'New: Available to order', $92,990. volvocars.com/au configurator refused by the proxy (403), so availability rests on third parties: CarsGuide 2027 XC60 price page lists this grade at MSRP among 4 current grades; CarExpert 2027 range page's configurator still shows the MY26 T8 Plus Dark/Ultra Dark with drive-away prices; Chasing Cars (22 Sep 2026) calls the T8 Volvo's current PHEV with the long-range car due Q2 2027"
+      },
+      "listPrice": {
+        "value": 92990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-plus-dark-jsfsa5a520250623",
+        "note": "'prices starting at $92,990' before on-road costs (CarExpert variant page; CarExpert review 9 Jan 2026 and MY26 launch news say 'before on-road costs' in words); CarsGuide 2027 MSRP $92,990; CarExpert Sydney drive-away $99,757 consistent. Chasing Cars (22 Sep 2026) gives 'from $92,683 before on-roads' — unexplained $307 difference, not adopted"
+      },
+      "batteryKwh": {
+        "value": 14.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-plus-dark-jsfsa5a520250623",
+        "note": "'Useable battery kilowatt hour: 14.9 kWh'; 'Maximum battery kilowatt hour: 18.8 kWh' (gross) on the same page. Auto Express (22 Sep 2026) also gives 18.8 kWh with 14.9 kWh usable. Held value was 14.7"
+      },
+      "rangeKm": {
+        "value": 81,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.cars.co.za/motoring-news/volvo-xc60-t8-phev-2026-review/334255/",
+        "note": "Volvo claim 'up to 81 km' WLTP for the 18.8 kWh T8 (cars.co.za, Feb 2026); CarExpert AU spec pages for both grades give 81 km. Rejected: carsales 89 km '(ADR)' and EV Central/CarExpert-news 89 km 'WLTP' — higher than the manufacturer's WLTP best case, so per the direction test not the comparable quantity. Held 79 km (UK 49.1 mi) not re-openable: volvocars.com refused by proxy (403)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.9 / 81 x 100 = 18.4. Published 26.2 kWh/100km 'combined' (CarExpert, EV Central labels it NEDC) not used: 42% off battery/range, a different quantity"
+      },
+      "combinedRangeKm": {
+        "value": 926,
+        "basis": "derived",
+        "note": "81 km WLTP electric + 71 L tank (CarExpert spec page) / 8.4 L/100km x 100 = 81 + 845.2 = 926"
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.4,
+        "basis": "judged",
+        "note": "No published charge-sustaining figure found (volvocars.com blocked). Held 8.4 kept: EV Central (AU, Oct 2025) 'over 8L/100km once the battery was depleted'; Auto Express T6 group test with a depleted battery 32.6 mpg = 8.7 L/100km, and 'near to 30mpg' (9.4) without plugging in. Sits above siblings bmw-x3-phev 7.6, audi-q5-phev 7.8, mercedes-glc-phev 7.8 and the heavier volvo-xc90-phev 7.7 (XC90 ordering looks backwards by mass; flagged in report)"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-plus-dark-jsfsa5a520250623",
+        "note": "combined-cycle label 'Combined: 1.6 L/100km', at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = passenger car with combined CO2 of 120 g/km or less; CarExpert spec page 'CO2 level - g/km combined: 36 g/km'"
+      },
+      "bootLitresSeatsUp": {
+        "value": 468,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-plus-dark-jsfsa5a520250623",
+        "note": "'Rear seat up; to lower window: 468 L' (SAE), i.e. to the belt line, matching the cargo-cover convention; Chasing Cars also 468 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1395,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-plus-dark-jsfsa5a520250623",
+        "note": "'Rear seat down: 1,395 L' (SAE), PHEV figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-plus-dark-jsfsa5a520250623",
+        "note": "'Seating capacity: 5'"
+      },
+      "towKg": {
+        "value": 2250,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-plus-dark-jsfsa5a520250623",
+        "note": "2,250 kg braked / 750 kg unbraked; EV Central also 2,250 kg. Manufacturer tech sheet unreachable (volvocars.com 403)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volvo-xc60-review",
+        "note": "five years, unlimited km, unconditional"
+      },
+      "insuranceAnnual": {
+        "value": 2250,
+        "basis": "judged",
+        "note": "Held value kept; anchored to audi-q5-phev-e-hybrid-quattro ($96,900, 2450) and bmw-x3-phev-30e-xdrive ($104,800, 2600); volvo-xc90-phev-plus-t8 ($120,990, 2700)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "judged: one Volvo brand curve, matched to volvo-ex90"
+      }
+    },
+    "volvo-xc60-phev-ultra-t8": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/volvo/xc60/price/2027",
+        "note": "CarsGuide 2027 price page lists 'Ultra T8 PHEV Dark' $101,990 among 4 current XC60 grades. volvocars.com/au configurator refused by the proxy (403), so availability rests on third parties: CarsGuide 2027 XC60 price page lists this grade at MSRP among 4 current grades; CarExpert 2027 range page's configurator still shows the MY26 T8 Plus Dark/Ultra Dark with drive-away prices; Chasing Cars (22 Sep 2026) calls the T8 Volvo's current PHEV with the long-range car due Q2 2027"
+      },
+      "listPrice": {
+        "value": 101990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-ultra-dark-2l-suv-4x4-electric-jsf5ks5a20250623",
+        "note": "'prices starting at $101,990' before on-road costs (CarExpert variant page; CarExpert review 9 Jan 2026 says 'before on-road costs'); CarsGuide 2027 MSRP $101,990; carsales 'base price incl GST & LCT' $101,990; CarExpert Sydney drive-away $109,207 consistent"
+      },
+      "batteryKwh": {
+        "value": 14.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-ultra-dark-2l-suv-4x4-electric-jsf5ks5a20250623",
+        "note": "'Useable battery kilowatt hour: 14.9 kWh'; 'Maximum battery kilowatt hour: 18.8 kWh' (gross) on the same page. Auto Express (22 Sep 2026) also gives 18.8 kWh with 14.9 kWh usable. Held value was 14.7"
+      },
+      "rangeKm": {
+        "value": 81,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.cars.co.za/motoring-news/volvo-xc60-t8-phev-2026-review/334255/",
+        "note": "Volvo claim 'up to 81 km' WLTP for the 18.8 kWh T8 (cars.co.za, Feb 2026); CarExpert AU spec pages for both grades give 81 km. Rejected: carsales 89 km '(ADR)' and EV Central/CarExpert-news 89 km 'WLTP' — higher than the manufacturer's WLTP best case, so per the direction test not the comparable quantity. Held 79 km (UK 49.1 mi) not re-openable: volvocars.com refused by proxy (403)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.9 / 81 x 100 = 18.4. Published 26.2 kWh/100km 'combined' (CarExpert, EV Central labels it NEDC) not used: 42% off battery/range, a different quantity"
+      },
+      "combinedRangeKm": {
+        "value": 926,
+        "basis": "derived",
+        "note": "81 km WLTP electric + 71 L tank (CarExpert spec page) / 8.4 L/100km x 100 = 81 + 845.2 = 926"
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.4,
+        "basis": "judged",
+        "note": "No published charge-sustaining figure found (volvocars.com blocked). Held 8.4 kept: EV Central (AU, Oct 2025) 'over 8L/100km once the battery was depleted'; Auto Express T6 group test with a depleted battery 32.6 mpg = 8.7 L/100km, and 'near to 30mpg' (9.4) without plugging in. Sits above siblings bmw-x3-phev 7.6, audi-q5-phev 7.8, mercedes-glc-phev 7.8 and the heavier volvo-xc90-phev 7.7 (XC90 ordering looks backwards by mass; flagged in report)"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-ultra-dark-2l-suv-4x4-electric-jsf5ks5a20250623",
+        "note": "combined-cycle label 'Combined: 1.6 L/100km', at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = passenger car with combined CO2 of 120 g/km or less; CarExpert spec page 'CO2 level - g/km combined: 36 g/km'"
+      },
+      "bootLitresSeatsUp": {
+        "value": 468,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-ultra-dark-2l-suv-4x4-electric-jsf5ks5a20250623",
+        "note": "'Rear seat up; to lower window: 468 L' (SAE), i.e. to the belt line, matching the cargo-cover convention; Chasing Cars also 468 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1395,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-ultra-dark-2l-suv-4x4-electric-jsf5ks5a20250623",
+        "note": "'Rear seat down: 1,395 L' (SAE), PHEV figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-ultra-dark-2l-suv-4x4-electric-jsf5ks5a20250623",
+        "note": "'Seating capacity: 5'"
+      },
+      "towKg": {
+        "value": 2250,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc60/2026-ultra-dark-2l-suv-4x4-electric-jsf5ks5a20250623",
+        "note": "2,250 kg braked / 750 kg unbraked; EV Central also 2,250 kg. Manufacturer tech sheet unreachable (volvocars.com 403)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-volvo-xc60-review",
+        "note": "five years, unlimited km, unconditional"
+      },
+      "insuranceAnnual": {
+        "value": 2400,
+        "basis": "judged",
+        "note": "Held value kept; anchored to mercedes-glc-phev-350e-4matic ($99,900, 2500), audi-q5-phev-sportback ($100,400, 2500) and bmw-x3-phev-30e-xdrive ($104,800, 2600)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "judged: one Volvo brand curve, matched to volvo-ex90"
+      }
+    }
+  },
+  "lowConfidence": [
+    "volvo-xc60-phev-plus-t8.availability: volvocars.com/au unreachable (proxy 403); orderability rests on CarsGuide 'available to order' and CarExpert configurator, no manufacturer configurator check",
+    "volvo-xc60-phev-ultra-t8.availability: as above",
+    "volvo-xc60-phev-plus-t8.fuelConsumptionL100km: judged 8.4 from AU/UK real-world depleted-battery reports (8+ to 9.4); no published charge-sustaining figure",
+    "volvo-xc60-phev-ultra-t8.fuelConsumptionL100km: as above",
+    "volvo-xc60-phev-plus-t8.rangeKm: 81 km is Volvo's WLTP 'up to' figure; Volvo also publishes 79 km (UK 49.1 mi) and 89 km (AU, 'certification pending'); Ultra rides on 21-inch wheels and may sit nearer 79",
+    "volvo-xc60-phev-ultra-t8.rangeKm: as above",
+    "volvo-xc60-phev-plus-t8.listPrice: aggregator/review sources only; Chasing Cars Sep 2026 quotes $92,683",
+    "volvo-xc60-phev-ultra-t8.listPrice: aggregator/review sources only, Volvo price list unreachable",
+    "volvo-xc60-phev-plus-t8.insuranceAnnual: judged",
+    "volvo-xc60-phev-ultra-t8.insuranceAnnual: judged",
+    "volvo-xc60-phev-plus-t8.depreciationCurve: judged: one Volvo brand curve, matched to volvo-ex90",
+    "volvo-xc60-phev-ultra-t8.depreciationCurve: judged: one Volvo brand curve, matched to volvo-ex90"
+  ]
+}

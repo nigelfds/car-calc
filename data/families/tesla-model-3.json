@@ -1,22 +1,26 @@
 {
   "id": "tesla-model-3",
-  "summary": "Australian reviewers regard the updated Model 3 as the class benchmark among electric sedans, praising a noticeably quieter cabin and softer ride than earlier versions alongside brisk performance and strong efficiency. The Long Range RWD's 750km WLTP claim makes it the longest-range EV sold in the country, while the screen-only control layout continues to split opinion. The Performance variant's near-$81,000 list price also pushes it close to the FBT exemption threshold that keeps novated-lease buyers interested in the cheaper variants.",
+  "summary": "Australian reviewers regard the updated Model 3 as the benchmark electric sedan, praising a supple ride, a well-insulated cabin and strong efficiency, while the touchscreen drive selector and spoke-mounted indicator buttons continue to split opinion. The MY2027 line-up adds a de-contented RWD from $45,900 before on-road costs with 572km of WLTP range, more than the $54,900 Premium RWD's 520km, while the Premium Long Range RWD's 750km WLTP claim remains the longest-range EV sold here. The Performance's $80,900 list price sits above the $75,000 cap that limits the FBT exemption from April 2027, so novated-lease buyers are steered to the three rear-drive grades.",
   "pros": [
-    "Long Range RWD offers the longest WLTP range of any EV on sale in Australia at 750km",
-    "Access to Tesla's extensive Australian Supercharger network plus regular over-the-air software updates",
-    "Recent refresh brings a quieter cabin and noticeably improved ride comfort over the outgoing model",
-    "Strong outright performance, with the dual-motor Performance variant hitting 100km/h in around 3.1 seconds"
+    "Premium Long Range RWD claims 750km WLTP, the longest range of any EV on sale in Australia, for $61,900 before on-road costs",
+    "New base RWD at $45,900 undercuts the BYD Seal Premium ($52,990) and Kia EV4 Air while offering 572km WLTP range and vehicle-to-load",
+    "CarExpert measured 12.98kWh/100km in the RWD, well below the 15.3kWh/100km it saw in a Model Y RWD under similar conditions",
+    "Access to Tesla's Australian Supercharger network plus regular over-the-air software updates",
+    "Supple, comfortable ride and good road and wind noise insulation since the Highland update"
   ],
   "cons": [
-    "Touchscreen-only interface, including indicators and gear selection on some builds, remains a sticking point for reviewers",
-    "Comprehensive insurance premiums tend to sit at the higher end of the EV market due to repair and parts costs",
-    "Performance variant's list price sits close to the $75,000 FBT exemption threshold, eroding some of the novated-lease tax advantage"
+    "Spoke-mounted indicator buttons are easy to press by accident and the touchscreen drive selector slows parking and three-point turns",
+    "Base RWD drops the rear passenger touchscreen and ambient lighting and uses part-textile seats to hit its price",
+    "Performance's $80,900 list price sits above the $75,000 FBT full-exemption cap that applies from 1 April 2027",
+    "Rear headroom and legroom are tighter than in the Model Y, and the five-year warranty trails Kia, MG and BYD"
   ],
   "sources": [
-    "https://www.carexpert.com.au/tesla/model-3/2026",
+    "https://www.carexpert.com.au/car-news/tesla-model-3-becomes-australias-cheapest-electric-sedan",
+    "https://www.carsguide.com.au/car-news/popular-tesla-now-9000-cheaper-new-2026-tesla-model-3-rwd-undercuts-byd-seal-kia-ev4-and",
+    "https://thedriven.io/2026/10/01/tesla-slashes-entry-price-of-model-3-to-below-46000-boosts-range-and-adds-vehicle-to-load-on-all-new-evs/",
     "https://www.carexpert.com.au/car-reviews/2026-tesla-model-3-review",
-    "https://www.carsguide.com.au/ev/tesla-model-3-premium-long-range-rwd-100750",
-    "https://www.carexpert.com.au/car-news/2026-tesla-model-3-now-australias-longest-range-ev"
+    "https://www.carexpert.com.au/tesla/model-3/2027",
+    "https://ev-database.org/car/3740/Tesla-Model-3-RWD"
   ],
-  "sourcedAt": "2026-07-26"
+  "sourcedAt": "2026-11-26"
 }

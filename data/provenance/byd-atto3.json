@@ -1,0 +1,248 @@
+{
+  "familyId": "byd-atto3",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-atto3-essential": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-3-evo",
+        "note": "bydautomotive.com.au/configurator 'ATTO 3 EVO' Build & Price (BYD Australia Pty Ltd) 301-redirects to this VirtualYard flow, which lists ATTO 3 Essential $39,990, EVO Dynamic $41,990, EVO Premium $46,990"
+      },
+      "listPrice": {
+        "value": 39990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-3-evo",
+        "note": "configurator lists $39,990 under a 'Drive Away Price for NSW' heading, but that is below the computed Victorian drive-away ($42,550), so per rule 3 it is the list price; CarsGuide 2026 price page lists Standard Range Essential at $39,990 MSRP excluding stamp duty and government charges; CarExpert (12 Aug 2026) gives $39,990 plus on-roads"
+      },
+      "batteryKwh": {
+        "value": 49.9,
+        "basis": "carried",
+        "note": "pre-Evo car carried over unchanged (no model-year change); held figure from 2026-07-27 research, not re-opened"
+      },
+      "rangeKm": {
+        "value": 345,
+        "basis": "carried",
+        "note": "pre-Evo car carried over unchanged; held figure from 2026-07-27, believed WLTP, standard not re-verified"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.8,
+        "basis": "carried",
+        "note": "pre-Evo car unchanged; held figure from 2026-07-27"
+      },
+      "bootLitresSeatsUp": {
+        "value": 440,
+        "basis": "carried",
+        "note": "pre-Evo car unchanged; BYD AU now quotes 434L for the non-Premium body, held 440 kept"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1340,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-3",
+        "note": "BYD AU table 1,340L max luggage for the front-drive body"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "carried",
+        "note": "five-seat SUV, body unchanged"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-3-evo-premium-review.html",
+        "note": "RACV: front-drive Atto 3 rated 750kg braked (Premium's 1,500kg is 'double')"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-3-evo-premium-review.html",
+        "note": "6 years/150,000km vehicle"
+      },
+      "insuranceAnnual": {
+        "value": 1500,
+        "basis": "judged",
+        "note": "held value kept; anchored below byd-atto3-evo-dynamic and mg-s5-essence-49 ($42,990, $1,500)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
+      }
+    },
+    "byd-atto3-evo-dynamic": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-3-evo",
+        "note": "bydautomotive.com.au/configurator 'ATTO 3 EVO' Build & Price (BYD Australia Pty Ltd) 301-redirects to this VirtualYard flow, which lists ATTO 3 Essential $39,990, EVO Dynamic $41,990, EVO Premium $46,990"
+      },
+      "listPrice": {
+        "value": 41990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-atto-3-evo-prices-updated-ev-available-with-front-or-rear-wheel-drive",
+        "note": "CarExpert, TheDriven, RACV ('plus ORCs') and CarsGuide ('excluding on-road costs') all say before on-road costs in words; configurator shows $41,990"
+      },
+      "batteryKwh": {
+        "value": 60.48,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-3",
+        "note": "BYD AU 60.48kWh; same 150kW FWD 60.5kWh pack as EU MY25 Atto 3, which EV Database lists as 60.5 usable / 62.0 gross (https://ev-database.org/car/3192/BYD-ATTO-3), so treated as usable"
+      },
+      "rangeKm": {
+        "value": 420,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/atto-3",
+        "note": "BYD AU text 420km WLTP; the 480km in BYD's own table is NEDC and rejected; matches EV Database WLTP 420km for the same pack"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-3-evo-premium-review.html",
+        "note": "RACV claimed WLTP 16.0kWh/100km for the Dynamic; EV Database rates the same EU pack/motor at 160 Wh/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 434,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-3",
+        "note": "BYD AU 434L; CarsGuide Evo review also 434L for Dynamic"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1340,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/atto-3",
+        "note": "BYD AU table 1,340L max luggage"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3192/BYD-ATTO-3",
+        "note": "five seats"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-3-evo-premium-review.html",
+        "note": "RACV: Dynamic 750kg braked"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-3-evo-premium-review.html",
+        "note": "6 years/150,000km vehicle; CarsGuide sidebar's 7 years/unlimited conflicts with its own text and is ignored"
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "anchored to geely-ex5-complete ($41,990, $1,600) and the held Atto 3 Premium at $1,600"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
+      }
+    },
+    "byd-atto3-evo-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-atto-3-evo",
+        "note": "bydautomotive.com.au/configurator 'ATTO 3 EVO' Build & Price (BYD Australia Pty Ltd) 301-redirects to this VirtualYard flow, which lists ATTO 3 Essential $39,990, EVO Dynamic $41,990, EVO Premium $46,990"
+      },
+      "listPrice": {
+        "value": 46990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-atto-3-evo-prices-updated-ev-available-with-front-or-rear-wheel-drive",
+        "note": "before on-road costs in words (CarExpert, TheDriven, RACV 'plus ORCs'); RACV's Victorian drive-away 'just over $51,000' sits above the computed $49,844, consistent with a $46,990 list plus dealer charges"
+      },
+      "batteryKwh": {
+        "value": 74.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3474/BYD-ATTO-3-Evo-RWD-Design",
+        "note": "EV Database: 74.8 usable, 76.0 gross (est.); BYD AU quotes 74.88kWh; CarExpert lists 74.8 net"
+      },
+      "rangeKm": {
+        "value": 510,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/atto-3",
+        "note": "BYD AU text 510km WLTP; BYD table 600km is NEDC and rejected; EV Database WLTP 510km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3474/BYD-ATTO-3-Evo-RWD-Design",
+        "note": "WLTP rated 164 Wh/km; RACV and CarExpert also quote 16.4 claimed"
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-atto-3-evo-prices-updated-ev-available-with-front-or-rear-wheel-drive",
+        "note": "490L rear plus 101L front boot (frunk excluded)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1360,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-atto-3-evo-prices-updated-ev-available-with-front-or-rear-wheel-drive",
+        "note": "1,360L folded; RACV and EV Database agree"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3474/BYD-ATTO-3-Evo-RWD-Design",
+        "note": "five seats"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-byd-atto-3-evo-prices-updated-ev-available-with-front-or-rear-wheel-drive",
+        "note": "1,500kg braked; RACV and EV Database agree"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.racv.com.au/royalauto/car-reviews/byd/2026-byd-atto-3-evo-premium-review.html",
+        "note": "6 years/150,000km vehicle; battery 8y/160,000km, drive unit 8y/150,000km"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "anchored to geely-ex5-inspire ($45,990, $1,700) and leapmotor-c10-style ($45,888, $1,700); 230kW output justifies a step over the Dynamic"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-atto3-essential.availability: reviews call it 'outgoing' and say the Dynamic replaces it; still in the configurator with a price on 2026-11-26 but likely run-out stock that may vanish soon",
+    "byd-atto3-essential.rangeKm/batteryKwh/consumptionKwhPer100km/bootLitresSeatsUp: carried from 2026-07-27 without re-opening sources; no prior provenance existed",
+    "byd-atto3-evo-dynamic.batteryKwh: 60.48 treated as usable via EV Database's EU MY25 car; Australian Dynamic not separately confirmed",
+    "byd-atto3-evo-dynamic.bootLitresSeatsDown: 1,340L from an unlabelled BYD AU table column",
+    "byd-atto3-evo-premium.insuranceAnnual: judged",
+    "byd-atto3-evo-dynamic.insuranceAnnual: judged",
+    "byd-atto3-essential.insuranceAnnual: judged",
+    "depreciationCurve (all rows): judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
+  ]
+}

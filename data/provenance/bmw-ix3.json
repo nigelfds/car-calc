@@ -1,0 +1,91 @@
+{
+  "familyId": "bmw-ix3",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "bmw-ix3-50-xdrive": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/bmw-ix3-ev-price-rises-just-months-after-australian-launch",
+        "note": "CarExpert 6 Nov 2026: 50 xDrive 'now listed at $112,500 before on-road costs'. BMW AU configurator could not be opened this run (503, then fetch refused by permission check)."
+      },
+      "listPrice": {
+        "value": 112500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/bmw-ix3-ev-price-rises-just-months-after-australian-launch",
+        "note": "'now listed at $112,500 before on-road costs, up $2600 from its $109,900 list price'; BMW spokesperson: commercial decision, no equipment change. CarsGuide 40 review pricing box also shows $112,500 as top 2026 iX3 MSRP (https://www.carsguide.com.au/ev/bmw-ix3-40-edrive-102334)."
+      },
+      "batteryKwh": {
+        "value": 108.7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-bmw-ix3-price-and-specs-1",
+        "note": "usable: 108.7kWh net, 113.4kWh gross (CarExpert); Auto Express UK lists same 108.7 usable / 113.4 gross"
+      },
+      "rangeKm": {
+        "value": 788,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.autoexpress.co.uk/bmw/ix3/prices-specs/108912/345kw-xdrive50-m-sport-108kwh-5dr-auto",
+        "note": "WLTP combined for xDrive50 M Sport on 255/45 R20 (Australia: M Sport pack and 20-inch standard per CarExpert 10 Mar 2026). ADAC (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix3/na5/343922/) same 788 km / 16.4 kWh for 50 M Sportpaket xDrive. Replaces held 793 km (zecar, overseas configurator). 805 km headline is the non-M Sport base car. No AU-certified figure found."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.4,
+        "basis": "sourced",
+        "url": "https://www.autoexpress.co.uk/bmw/ix3/prices-specs/108912/345kw-xdrive50-m-sport-108kwh-5dr-auto",
+        "note": "WLTP combined, same variant/wheel as rangeKm; held 15.3 was the TEL (low-end) figure. battery/range = 13.8, within tolerance (WLTP consumption includes charging losses)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 520,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-bmw-ix3-price-and-specs-1",
+        "note": "520L seats up, plus 58L frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-bmw-ix3-price-and-specs-1"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "carried",
+        "note": "five-seat mid-size SUV; no model change (price rise without equipment change)"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://autotrader.co.nz/showroom/bmw/2026-bmw-ix3-50-xdrive-first-drive",
+        "note": "'towing is rated at 2000kg braked'; notes Australian market gets mechanical tow bar. Auto Express UK and ADAC also 2,000 kg braked (12%)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-bmw-ix3-price-and-specs-1",
+        "note": "5 years unlimited km; battery 8 years/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2900,
+        "basis": "judged",
+        "note": "raised from 2800 with the $2,600 list rise; anchored between audi-q6-e-tron-rwd ($99,900, 2800) and audi-q6-e-tron-performance ($115,500, 3150), and below bmw-ix ($142,900, 3200)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "kept from 2026-07-31: between mainstream bmw-ix1 default and steeper bmw-ix; strong demand (CarsGuide Jan 2026 'almost sold out') and a list rise rather than cuts give no evidence to steepen; luxury-EV resale still weaker than mainstream"
+      }
+    }
+  },
+  "lowConfidence": [
+    "bmw-ix3-50-xdrive.availability: BMW AU configurator not opened (503 then permission refusal); availability rests on CarExpert 6 Nov 2026",
+    "bmw-ix3-50-xdrive.rangeKm: UK/German WLTP for M Sport on 20-inch, not an AU-certified figure; AU wheel style (1048 M) not confirmed identical to UK spec",
+    "bmw-ix3-50-xdrive.consumptionKwhPer100km: same source and caveat as rangeKm",
+    "bmw-ix3-50-xdrive.insuranceAnnual: judged",
+    "bmw-ix3-50-xdrive.depreciationCurve: judged, no local resale data yet for the new generation"
+  ]
+}

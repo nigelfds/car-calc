@@ -77,6 +77,9 @@ standard**, so they agree because they describe one car.
 
 ### Space, seats, towing
 
+- **Boot convention: to the cargo cover** (VDA to the parcel shelf; folded, to the belt line), not to
+  the roof. Where a maker quotes only to-the-roof figures, say so in the note and look for a review's
+  to-the-cover figure first. A frunk is not added in. Owner decision, 2026-11-26.
 - `bootLitresSeatsDown` ≥ `bootLitresSeatsUp`. For a PHEV, take the figure with the battery fitted;
   the petrol twin's brochure figure is a trap. When the folded figure is genuinely unpublished, scale
   it from a comparable car's ratio, mark it `judged`, and say so.
@@ -97,7 +100,8 @@ standard**, so they agree because they describe one car.
 - **`depreciationCurve`** starts at `1`, declines monotonically, stays within 0–1. The mainstream
   default is `[1, 0.78, 0.68, 0.6, 0.53, 0.47]`. Deviate only on documented evidence (heavy price
   cuts, discounting, thin local volume, a warranty cut), keep one convention per brand, and give the
-  evidence in the provenance note.
+  evidence in the provenance note. Every MG row (MG, IM, HS) uses the mainstream default, by owner
+  decision 2026-11-26.
 
 ### Utes
 

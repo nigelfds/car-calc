@@ -7,7 +7,7 @@
     "variant": "Lux",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 55990,
+    "listPrice": 54732,
     "batteryKwh": 37.11,
     "rangeKm": 115,
     "consumptionKwhPer100km": 32.3,
@@ -23,13 +23,13 @@
     "insuranceAnnual": 1850,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.51,
-      0.44,
-      0.38
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-tank-300-phev-ultra",
@@ -39,7 +39,7 @@
     "variant": "Ultra",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 59990,
+    "listPrice": 58571,
     "batteryKwh": 37.11,
     "rangeKm": 115,
     "consumptionKwhPer100km": 32.3,
@@ -55,12 +55,12 @@
     "insuranceAnnual": 1950,
     "depreciationCurve": [
       1,
-      0.71,
-      0.6,
-      0.51,
-      0.44,
-      0.38
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   }
 ]

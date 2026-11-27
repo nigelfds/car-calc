@@ -1,0 +1,115 @@
+{
+  "familyId": "skoda-kodiaq-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "skoda-kodiaq-phev-select": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/models/kodiaq-family/kodiaq-phev",
+        "note": "Skoda AU Kodiaq PHEV model page lists 'PHEV Select' with 'From $59,990' MRDP for vehicles sold and delivered by 31/12/26 and a 'Build your own' link to the AU car configurator (cc.skoda-auto.com/aus/en-AU, JS app, grade list not readable as text). CarExpert 18 Nov 2026 confirms the MY27 Kodiaq line-up keeps the single Select 150kW Plug-in Hybrid grade (MY27 change: new alloy design only; no price changes communicated). One grade, matches held."
+      },
+      "listPrice": {
+        "value": 63490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-skoda-kodiaq-phev-priced-for-australia",
+        "note": "CarExpert (4 Dec 2025): '$63,490 before on-road costs'; CarExpert review (26 Mar 2026), GoAuto ('excluding on-road costs', 8 Dec 2025) and Chasing Cars (26 Mar 2026) agree. Skoda AU publishes only MRDP: launch $68,990 driveaway in the Apr 2026 MY26 spec sheet (app round-trip of 63,490 gives 67,037; ~$1,950 gap consistent with Skoda's 'estimated dealer delivery charge' in the MRDP), and a current campaign $59,990 MRDP to 31/12/26 (backs out to ~$56,727, below list, so a time-limited offer, not the list). CarExpert 18 Nov 2026: no MY27 price changes communicated."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/kodiaq/2generation/346774/",
+        "note": "ADAC: Brutto 25,7 kWh / Netto 19,7 kWh for Kodiaq 1.5 TSI iV PHEV. Skoda AU spec sheet prints 25.7 under a 'Gross / Nett' heading, which is the gross figure. Usable used."
+      },
+      "rangeKm": {
+        "value": 110,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.skoda.com.au/_doc/98ea8b9e-7ade-44d9-a356-c94841bd3ceb",
+        "note": "Skoda AU MY26 spec sheet (Apr 2026): 'ENERGY CONSUMPTION (WLTP) Range - Combined up to 110 km'. Below European WLTP for the 19-inch car (ADAC 346774: 119 km) so accepted. CarExpert/GoAuto launch news quoted 112 km; manufacturer's 110 preferred."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 19.7 / 110 x 100 = 17.9. (ADAC's 14.0 kWh/100km is the European WLTP EV figure on a 119 km range, not used to keep one standard.)"
+      },
+      "combinedRangeKm": {
+        "value": 873,
+        "basis": "derived",
+        "note": "rangeKm 110 + 45 L tank / 5.9 L/100km x 100 (762.7) = 872.7 -> 873. Tank 45 L from Skoda AU spec sheet."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.9,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/kodiaq/2generation/346774/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,9 L/100km for the Kodiaq 1.5 TSI iV on 235/50R19 (AU Select tyre size per Skoda AU spec sheet); 18-inch Selection (ADAC 346773) is 5,7. Same basis and same 5.9 as vw-tayron-phev (19-inch, 150 kW). Held 7.0 was judged from UK real-world mpg."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/98ea8b9e-7ade-44d9-a356-c94841bd3ceb",
+        "note": "Skoda AU spec sheet ADR 81/02 combined 1.9 L/100km (CO2 42 g/km), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; Skoda AU spec sheet 42 g/km."
+      },
+      "bootLitresSeatsUp": {
+        "value": 745,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/98ea8b9e-7ade-44d9-a356-c94841bd3ceb",
+        "note": "Skoda AU spec sheet: 'Luggage capacity up to the rear shelf' 745 L for Plug-in Hybrid (to the cargo cover, battery fitted). ADAC and CarExpert agree."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1945,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/98ea8b9e-7ade-44d9-a356-c94841bd3ceb",
+        "note": "Skoda AU spec sheet: 'all rear seats folded down, up to the roof' 1945 L. No belt-line folded figure found; kept to-roof, consistent with vw-tayron-phev."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-skoda-kodiaq-select-phev-review",
+        "note": "CarExpert: five seats; Skoda AU spec sheet shows no third-row luggage figure for the PHEV."
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/_doc/98ea8b9e-7ade-44d9-a356-c94841bd3ceb",
+        "note": "Skoda AU spec sheet braked 1800 kg (750 unbraked) with genuine tow bar."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.skoda.com.au/own/warranty",
+        "note": "Skoda AU: 7 Year/Unlimited Kilometre warranty for all new Skoda cars purchased on or after 1 Sept 2022 (private, fleet, government); no servicing condition stated. Spec-sheet MRDP footnote wording 'includes warranty extension to 7 years' is ambiguous; warranty page treated as authoritative."
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "Lowered from held 1900 to match vw-tayron-phev-150tsi-ehybrid-elegance $1800 at $62,390 (same powertrain, size, price). Other anchors: vw-tiguan-phev-150tsi-elegance $1750 at $64,590, mitsubishi-outlander-phev-aspire $1750 at $66,790, kia-sorento-phev-s-awd $1800 at $71,175."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Skoda brand convention per owner rule (one curve per brand), as on skoda-elroq. Held curve [1,0.67,...,0.33] dropped; the $59,990 MRDP campaign (vs $68,990 launch MRDP) is recorded in the family cons rather than in a separate curve."
+      }
+    }
+  },
+  "lowConfidence": [
+    "skoda-kodiaq-phev-select.insuranceAnnual: judged, anchored to VW eHybrid siblings",
+    "skoda-kodiaq-phev-select.depreciationCurve: brand convention, not model evidence; current $59,990 MRDP campaign suggests heavier early loss",
+    "skoda-kodiaq-phev-select.listPrice: Skoda AU publishes no RRP, only MRDP; list from CarExpert/GoAuto/Chasing Cars, MY27 price unconfirmed beyond CarExpert's 'no price changes communicated'",
+    "skoda-kodiaq-phev-select.fuelConsumptionL100km: European ADAC WLTP battery-empty figure for the 19-inch Sportline, used for the AU Select on the same tyre size",
+    "skoda-kodiaq-phev-select.bootLitresSeatsDown: to-the-roof figure, no belt-line figure published"
+  ]
+}

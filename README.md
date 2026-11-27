@@ -63,7 +63,7 @@ another way — that's intended, since specs-only is the whole point of the tab,
 around. A link that already carries both (one saved before this existed, say) still opens correctly;
 only a fresh Compare link is built clean.
 
-Any of the dataset's 314 variants goes in any of the three slots, chosen from an autocomplete on
+Any of the dataset's 312 variants goes in any of the three slots, chosen from an autocomplete on
 each — there's no preference filtering and no restriction by body type, so a ute sits next to a
 hatchback as readily as two SUVs. The slots live in the URL as `?tab=compare&compare=id1,id2,id3`; a
 cleared *interior* slot serialises as an empty segment (`id1,,id3`) rather than being dropped,
@@ -169,7 +169,7 @@ A full refresh runs from the project skill `.claude/skills/refresh-dataset/`: a 
 market sweep, research agents in batches, removals and renames, image curation, and one pull request
 with a change report. `data/watchlist.json` records models already checked and not held (backlog,
 pre-launch, not on sale, too expensive, out of scope) with a recheck date, so a sweep does not repeat
-settled work. The research logs from the July–August 2026 build are in `docs/archive/`.
+settled work. The research logs from the July–August 2026 build are in git history (removed from `docs/archive/` in the November 2026 refresh).
 
 The per-family research procedure lives in the project skill
 `.claude/skills/research-car-family/`: what to source, from where, the traps earlier research waves
@@ -221,12 +221,13 @@ Shown in the app itself, next to each editable rate, and in `data/rates.json`:
 
 | Rate | Default | Source |
 |---|---|---|
-| Novated lease finance rate | 7.5% | Competitive novated comparison rate, 6.5–7.5%; ~9.5% effective over 5 years. |
-| Car loan interest rate | 6.5% | Mid-market green EV secured rate, July 2026. Best advertised rate seen was 5.66%. |
+| Novated lease finance rate | 8.0% | Competitive novated comparison rates were 6.5–7.5% in mid-2026; the cash rate is up 50bp since. |
+| Car loan interest rate | 6.75% | Mid-market green EV secured rate, November 2026. Best advertised green loan 5.79%. |
 | Novated lease admin fee | $1,020/yr | Typical $85/month packaging fee. |
-| Other running costs (rego, servicing, tyres) | $1,240/yr | VIC registration ≈ $880 plus servicing and tyres. The ZLEV registration discount ended 1 Jan 2026. |
-| Electricity | 28c/kWh | Melbourne residential off-peak-weighted estimate. |
-| Return your savings would otherwise earn | 4.5% | An assumption, not a published rate — it's what your own money would earn if you didn't spend it on a car. Edit it to match your actual savings/offset rate. |
+| Other running costs (rego, servicing, tyres) | $1,319/yr | VIC registration $958.80 (2026-27 metro) plus servicing and tyres. The ZLEV registration discount ended 1 Jan 2026. |
+| Electricity | 27c/kWh | 2026-27 Victorian Default Offer flat rate, Melbourne. |
+| Petrol (plug-in hybrids only) | 230c/L | Unleaded 91, November 2026 national and five-city averages. |
+| Return your savings would otherwise earn | 5.0% | An assumption, not a published rate — it's what your own money would earn if you didn't spend it on a car. Edit it to match your actual savings/offset rate. |
 | Lease residual | ATO statutory minimum for the term | Not a market rate — a legislated minimum. Overridable if your financier has quoted something different. |
 
 All figures are dated in `data/rates.json`'s `sourcedAt` field and were current as of that date;

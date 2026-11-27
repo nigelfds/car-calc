@@ -16,8 +16,8 @@
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 2100,
-    "depreciationCurve": [1, 0.68, 0.57, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lexus-rz-500e-sports-luxury",
@@ -36,8 +36,8 @@
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 2250,
-    "depreciationCurve": [1, 0.67, 0.56, 0.48, 0.41, 0.35],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "lexus-rz-550e-f-sport",
@@ -46,7 +46,7 @@
     "model": "RZ",
     "variant": "550e F Sport AWD",
     "bodyType": "SUV",
-    "listPrice": 105000,
+    "listPrice": 104920,
     "batteryKwh": 72.0,
     "rangeKm": 437,
     "consumptionKwhPer100km": 18.8,
@@ -56,7 +56,7 @@
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 2550,
-    "depreciationCurve": [1, 0.65, 0.54, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-11-26"
   }
 ]

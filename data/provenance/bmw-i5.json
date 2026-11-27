@@ -1,0 +1,174 @@
+{
+  "familyId": "bmw-i5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "bmw-i5-edrive40-m-sport": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/bmw/i5/price/2027",
+        "note": "CarsGuide lists 2026 and 2027 i5 eDrive40 sedan at $155,900; CarExpert 2026 spec page and carsales 2026 research page also current. BMW AU site and configurator returned 503 throughout this run, so no configurator confirmation."
+      },
+      "listPrice": {
+        "value": 155900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-rwd-electric-jsfoosak20260701",
+        "note": "CarExpert 2026 eDrive40 spec page: 'prices starting at $155,900' before on-road costs ($165,698 drive-away Sydney). Same on CarsGuide 2026/2027 MSRP and carsales 'base price incl GST & LCT'. Manufacturer configurator unreachable (503)."
+      },
+      "batteryKwh": {
+        "value": 81.2,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-rwd-electric-jsfoosak20260701",
+        "note": "usable 81.2, gross 83.9 (CarExpert); EV Database 81.2 usable / 84.4 nominal"
+      },
+      "rangeKm": {
+        "value": 550,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.carsales.com.au/research/bmw/i5/2026/edrive40-m-sport",
+        "note": "carsales (Redbook) 2026 eDrive40 M Sport: 550 km ADR, 582 km WLTP (old best case), 550 km manufacturer; 20-inch staggered wheels as standard. CarExpert spec page also 550 km. Below EV Database MY25 WLTP TEL 618 km, so passes direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "derived",
+        "note": "linear interpolation of EV Database MY25 WLTP rated consumption (TEL 238 Wh/mi = 14.8 kWh/100km at 618 km; TEH 286 Wh/mi = 17.8 at 517 km; https://ev-database.org/uk/car/3112/BMW-i5-eDrive40-Saloon) to the 550 km AU range: 14.8 + (618-550)/(618-517) x 3.0 = 16.8. Held 16.6 had no traceable source; CarExpert spec page quotes 181 Wh/km (likely high-end of band)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-rwd-electric-jsfoosak20260701",
+        "note": "490 L rear seats up, 'to the lower window' (cargo-cover convention)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 785,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3112/BMW-i5-eDrive40-Saloon",
+        "note": "EV Database 'Cargo Volume Max' 785 L; measurement convention not stated, BMW AU folded figure not found"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/bmw/i5/2026/edrive40-m-sport"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-rwd-electric-jsfoosak20260701",
+        "note": "1,500 kg braked, 750 unbraked; carsales and EV Database agree"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-rwd-electric-jsfoosak20260701",
+        "note": "5 years unlimited km; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 3300,
+        "basis": "judged",
+        "note": "kept: above bmw-ix xDrive45 ($142,900, 3200) and bmw-ix3 ($112,500, 2900), below porsche-cayenne-phev-s-e-hybrid ($187,800, 3800)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "owner convention 2026-11-26: one depreciation curve per brand, matched to bmw-ix3 (replaces held steeper [1,0.64,...]). Counter-evidence: carsales private-sale guide prices a 2026 eDrive40 M Sport at $81,000-89,500 vs $155,900 new (~55% retained), steeper than this curve's year-1 0.72"
+      }
+    },
+    "bmw-i5-m60-xdrive": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-bmw-i5-touring-review",
+        "note": "CarExpert 14 Feb 2026: M60 xDrive sedan lists at $215,900 before on-road costs; CarsGuide 2027 listing still carries M60 xDrive sedan; carsales 2026 M60 sedan drive-away $226,237-235,900. BMW AU configurator unreachable (503). US MY27 drops M60 but no AU evidence of that."
+      },
+      "listPrice": {
+        "value": 215900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-bmw-i5-touring-review",
+        "note": "'The M60 xDrive sedan lists at $215,900 before on-road costs' (CarExpert, Feb 2026). CarExpert 2026 M60 spec page and CarsGuide 2027 agree."
+      },
+      "batteryKwh": {
+        "value": 81.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3114/BMW-i5-M60-xDrive-Saloon",
+        "note": "usable 81.2, nominal 84.4 (EV Database MY25); CarExpert spec page 81.2 usable / 83.9 gross"
+      },
+      "rangeKm": {
+        "value": 506,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-4x4-electric-jsfoosao20260701",
+        "note": "CarExpert 2026 M60 sedan spec page: 506 km WLTP combined on 20-inch. Inside EV Database MY25 WLTP band 475-533 km. No ADR sedan figure found (carsales gives ADR 501 for the wagon only)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.0,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2024-bmw-i5-m60-xdrive-review",
+        "note": "CarExpert M60 review: claimed 18.0 kWh/100km. Consistent with EV Database MY25 rated 17.3-19.4 interpolated to 506 km (~18.3)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-4x4-electric-jsfoosao20260701",
+        "note": "490 L to the lower window"
+      },
+      "bootLitresSeatsDown": {
+        "value": 785,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3114/BMW-i5-M60-xDrive-Saloon",
+        "note": "EV Database 'Cargo Volume Max'; convention not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3114/BMW-i5-M60-xDrive-Saloon"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-4x4-electric-jsfoosao20260701",
+        "note": "2,000 kg braked; EV Database agrees"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/i5/2026-sedan-4x4-electric-jsfoosao20260701",
+        "note": "5 years unlimited km; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 4500,
+        "basis": "judged",
+        "note": "kept: above porsche-cayenne-phev-s-e-hybrid-coupe-black-edition ($197,600, 4000) for a 442kW sedan at $215,900"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "owner convention 2026-11-26: one depreciation curve per brand, matched to bmw-ix3 (replaces held steeper [1,0.64,...]). Counter-evidence: carsales private-sale guide prices a 2026 eDrive40 M Sport at $81,000-89,500 vs $155,900 new (~55% retained), steeper than this curve's year-1 0.72"
+      }
+    }
+  },
+  "lowConfidence": [
+    "bmw-i5-edrive40-m-sport.availability: BMW AU configurator returned 503 all run; availability rests on CarsGuide/CarExpert/carsales listings",
+    "bmw-i5-m60-xdrive.availability: same; latest dated AU source for the M60 sedan price is CarExpert Feb 2026",
+    "bmw-i5-edrive40-m-sport.consumptionKwhPer100km: derived by interpolating EV Database UK WLTP band to the AU range",
+    "bmw-i5-m60-xdrive.rangeKm: WLTP from aggregator spec data, no ADR sedan figure found",
+    "bmw-i5-edrive40-m-sport.depreciationCurve: brand curve by owner convention; carsales private-sale guide suggests steeper loss",
+    "bmw-i5-m60-xdrive.depreciationCurve: brand curve by owner convention",
+    "bmw-i5-edrive40-m-sport.bootLitresSeatsDown: EV Database figure, convention unstated",
+    "bmw-i5-m60-xdrive.bootLitresSeatsDown: EV Database figure, convention unstated",
+    "bmw-i5-edrive40-m-sport.insuranceAnnual: judged",
+    "bmw-i5-m60-xdrive.insuranceAnnual: judged"
+  ]
+}

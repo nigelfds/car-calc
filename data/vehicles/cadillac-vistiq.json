@@ -10,13 +10,13 @@
     "batteryKwh": 91,
     "rangeKm": 461,
     "consumptionKwhPer100km": 22,
-    "bootLitresSeatsUp": 430,
-    "bootLitresSeatsDown": 2271,
+    "bootLitresSeatsUp": 297,
+    "bootLitresSeatsDown": 1658,
     "seats": 6,
-    "towKg": 2268,
+    "towKg": 2000,
     "warrantyYears": 5,
     "insuranceAnnual": 3000,
     "depreciationCurve": [1, 0.66, 0.54, 0.45, 0.38, 0.32],
-    "sourcedAt": "2026-07-30"
+    "sourcedAt": "2026-11-27"
   }
 ]

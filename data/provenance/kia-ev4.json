@@ -1,0 +1,250 @@
+{
+  "familyId": "kia-ev4",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "kia-ev4-air-standard": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev4-sedan.html",
+        "note": "'Air' listed as a grade on Kia AU Build & Price (EV4 Sedan) on 2026-11-26; prices postcode-gated drive-away estimates, not read"
+      },
+      "listPrice": {
+        "value": 50040,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev4/2027-air-sedan-fwd-electric-jsk8aok820260812",
+        "note": "CarExpert 2027 (MY27) variant page 'prices starting at $50,040 before on-road costs', fetched 2026-11-26; CarsGuide 2027 price page https://www.carsguide.com.au/kia/ev4/price/2027 'Air Fwd Sr' $50,040 MSRP excluding stamp duty and government charges agrees. Up from held $49,990 (MY26 launch). Kia AU configurator shows only postcode-gated drive-away, so manufacturer list not readable directly"
+      },
+      "batteryKwh": {
+        "value": 55.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3121/Kia-EV4-Fastback-583-kWh",
+        "note": "EV Database EV4 Fastback (Sedan body) useable 55.0 kWh, nominal 58.3 kWh on the same page. Kia AU MY27 spec sheet (https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf) prints 58.3 kWh / 158.2 Ah = ~369 V nominal x Ah, i.e. nominal/gross; held 58.3 was gross. Same packs as kia-ev3 (55.0/78.0)"
+      },
+      "rangeKm": {
+        "value": 456,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU EV4 MY27 Mechanical & Feature List, WLTP All Electric Range combined; 17-inch Air SR"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.3,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU EV4 MY27 spec sheet WLTP Energy Consumption Combined 143 Wh/km (Air SR); equals EV Database TEL 143 Wh/km at 456 km; grid energy incl. charging losses, so above usable/range by ~17-19%"
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Cargo Area Rear (5 Seats Up) 490 L VDA, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1435,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev4/2027-air-sedan-fwd-electric-jsk8aok820260812",
+        "note": "CarExpert MY27 spec: 1,435 L rear seats down (VDA); EV Database 'Cargo Volume Max' 1,435 L agrees. Kia AU sheet gives no folded figure. Same source type as kia-ev3's 1,251. Held 1100 had no provenance and matched no source; replaced. Measurement height (belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Seat Capacity 5"
+      },
+      "towKg": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet braked towing: Air SR 500, LR 1,000 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev4-review",
+        "note": "7-year unlimited-km new-vehicle warranty; battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "level with kia-ev3-air-standard (1450, $47,600) and hyundai-kona-electric-extended-range (1450, $50,000); kept held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, same as kia-ev3 and kia-ev5; prices moved only ~$50, no evidence to deviate"
+      }
+    },
+    "kia-ev4-earth-long-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev4-sedan.html",
+        "note": "'Earth' listed as a grade on Kia AU Build & Price (EV4 Sedan) on 2026-11-26; prices postcode-gated drive-away estimates, not read"
+      },
+      "listPrice": {
+        "value": 59240,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev4/2027-earth-sedan-fwd-electric-jsk8aoka20260812",
+        "note": "CarExpert 2027 (MY27) variant page 'prices starting at $59,240 before on-road costs', fetched 2026-11-26; CarsGuide 2027 price page https://www.carsguide.com.au/kia/ev4/price/2027 'Earth Fwd Lr' $59,240 MSRP excluding stamp duty and government charges agrees. Up from held $59,190 (MY26 launch). Kia AU configurator shows only postcode-gated drive-away, so manufacturer list not readable directly"
+      },
+      "batteryKwh": {
+        "value": 78.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3122/Kia-EV4-Fastback-814-kWh",
+        "note": "EV Database EV4 Fastback (Sedan body) useable 78.0 kWh, nominal 81.4 kWh on the same page. Kia AU MY27 spec sheet (https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf) prints 81.4 kWh / 237.3 Ah = ~343 V nominal x Ah, i.e. nominal/gross; held 81.4 was gross. Same packs as kia-ev3 (55.0/78.0)"
+      },
+      "rangeKm": {
+        "value": 612,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU EV4 MY27 Mechanical & Feature List, WLTP All Electric Range combined; 19-inch Earth and GT-Line LR"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.9,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU EV4 MY27 spec sheet WLTP Energy Consumption Combined 149 Wh/km (LR); EV Database TEH 150 Wh/km at 611 km; grid energy incl. charging losses, so above usable/range by ~17-19%"
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Cargo Area Rear (5 Seats Up) 490 L VDA, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1435,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev4/2027-earth-sedan-fwd-electric-jsk8aoka20260812",
+        "note": "CarExpert MY27 spec: 1,435 L rear seats down (VDA); EV Database 'Cargo Volume Max' 1,435 L agrees. Kia AU sheet gives no folded figure. Same source type as kia-ev3's 1,251. Held 1100 had no provenance and matched no source; replaced. Measurement height (belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Seat Capacity 5"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet braked towing: Air SR 500, LR 1,000 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev4-review",
+        "note": "7-year unlimited-km new-vehicle warranty; battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "kept held; between kia-ev3-air-long-range (1550, $53,315) and kia-ev3-earth-long-range (1700, $58,600)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, same as kia-ev3 and kia-ev5; prices moved only ~$50, no evidence to deviate"
+      }
+    },
+    "kia-ev4-gt-line-long-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev4-sedan.html",
+        "note": "'GT-Line' listed as a grade on Kia AU Build & Price (EV4 Sedan) on 2026-11-26; prices postcode-gated drive-away estimates, not read"
+      },
+      "listPrice": {
+        "value": 64755,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev4/2027-gt-line-sedan-fwd-electric-jsk8aok520260812",
+        "note": "CarExpert 2027 (MY27) variant page 'prices starting at $64,755 before on-road costs', fetched 2026-11-26; CarsGuide 2027 price page https://www.carsguide.com.au/kia/ev4/price/2027 'Gt-Line Fwd Lr' $64,755 MSRP excluding stamp duty and government charges agrees. Up from held $64,690 (MY26 launch). Kia AU configurator shows only postcode-gated drive-away, so manufacturer list not readable directly"
+      },
+      "batteryKwh": {
+        "value": 78.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3122/Kia-EV4-Fastback-814-kWh",
+        "note": "EV Database EV4 Fastback (Sedan body) useable 78.0 kWh, nominal 81.4 kWh on the same page. Kia AU MY27 spec sheet (https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf) prints 81.4 kWh / 237.3 Ah = ~343 V nominal x Ah, i.e. nominal/gross; held 81.4 was gross. Same packs as kia-ev3 (55.0/78.0)"
+      },
+      "rangeKm": {
+        "value": 612,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU EV4 MY27 Mechanical & Feature List, WLTP All Electric Range combined; 19-inch Earth and GT-Line LR"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.9,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU EV4 MY27 spec sheet WLTP Energy Consumption Combined 149 Wh/km (LR); EV Database TEH 150 Wh/km at 611 km; grid energy incl. charging losses, so above usable/range by ~17-19%"
+      },
+      "bootLitresSeatsUp": {
+        "value": 490,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Cargo Area Rear (5 Seats Up) 490 L VDA, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1435,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev4/2027-gt-line-sedan-fwd-electric-jsk8aok520260812",
+        "note": "CarExpert MY27 spec: 1,435 L rear seats down (VDA); EV Database 'Cargo Volume Max' 1,435 L agrees. Kia AU sheet gives no folded figure. Same source type as kia-ev3's 1,251. Held 1100 had no provenance and matched no source; replaced. Measurement height (belt line vs roof) not stated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Seat Capacity 5"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev4/kia-ev4-brochure.pdf",
+        "note": "Kia AU MY27 spec sheet braked towing: Air SR 500, LR 1,000 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev4-review",
+        "note": "7-year unlimited-km new-vehicle warranty; battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "kept held; just under kia-ev3-gt-line-long-range (1850, $63,950); a sedan priced ~$800 higher, so level within judgement"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; one curve per brand, same as kia-ev3 and kia-ev5; prices moved only ~$50, no evidence to deviate"
+      }
+    }
+  },
+  "lowConfidence": [
+    "kia-ev4-*.bootLitresSeatsDown: 1,435 L (CarExpert/EV Database, VDA) for a boot-lid sedan exceeds the EV4 hatch's 1,415 L; likely measured to the roof rather than the belt line, but no to-the-belt-line figure found. Held 1100 was unsourced",
+    "kia-ev4-*.listPrice: MY27 figures ($50,040/$59,240/$64,755) from CarExpert and CarsGuide, likely one shared data feed; Kia AU configurator is postcode-gated drive-away, so no manufacturer list read",
+    "kia-ev4-*.batteryKwh: usable 55.0/78.0 from EV Database only; Kia AU prints nominal V x Ah",
+    "kia-ev4-*.insuranceAnnual: judged, held values kept"
+  ]
+}

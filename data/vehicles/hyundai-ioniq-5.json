@@ -10,14 +10,21 @@
     "batteryKwh": 80,
     "rangeKm": 570,
     "consumptionKwhPer100km": 16.0,
-    "bootLitresSeatsUp": 527,
-    "bootLitresSeatsDown": 1587,
+    "bootLitresSeatsUp": 520,
+    "bootLitresSeatsDown": 1580,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 1550,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-ioniq-5-elite-rwd",
@@ -30,21 +37,28 @@
     "batteryKwh": 80,
     "rangeKm": 530,
     "consumptionKwhPer100km": 17.0,
-    "bootLitresSeatsUp": 527,
-    "bootLitresSeatsDown": 1587,
+    "bootLitresSeatsUp": 520,
+    "bootLitresSeatsDown": 1580,
     "seats": 5,
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 1700,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-ioniq-5-n-line-premium-awd",
     "familyId": "hyundai-ioniq-5",
     "make": "Hyundai",
     "model": "Ioniq 5",
-    "variant": "N Line Premium AWD",
+    "variant": "Premium N Line AWD",
     "bodyType": "SUV",
     "listPrice": 83700,
     "batteryKwh": 80,
@@ -56,8 +70,15 @@
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 2000,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-ioniq-5-n",
@@ -76,7 +97,14 @@
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 2750,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

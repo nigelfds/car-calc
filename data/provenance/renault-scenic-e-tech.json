@@ -1,0 +1,252 @@
+{
+  "familyId": "renault-scenic-e-tech",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "renault-scenic-e-tech-techno-ev60": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU Scenic E-Tech page lists techno, techno - Long Range and esprit Alpine with build & price links (price shown POA); CarsGuide lists the same three for MY2026/2027"
+      },
+      "listPrice": {
+        "value": 55990,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
+        "note": "Renault AU press release lists all three grades 'plus on-road costs' (manufacturer's own price, preferred per owner convention); CarsGuide model page re-checked 2026-11-27 lists $55,990-$65,990 'all before on-road costs' for MY2026/2027; CarExpert quick drive table 'before on-roads' agrees. renault.com.au vehicle page now shows POA and the build & price tool is script-rendered, so no live configurator price was read. Cross-check: CarExpert Sydney drive-away $60,907 (Techno) / $71,407 (Esprit Alpine) differ by $10,500 vs list $10,000, consistent with NSW 5% marginal duty on unchanged list prices."
+      },
+      "batteryKwh": {
+        "value": 60,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3218/Renault-Scenic-E-Tech-EV60-170hp",
+        "note": "usable 60.0 kWh; gross (nominal) 65.0 kWh on the same page; Renault AU quotes 60kWh"
+      },
+      "rangeKm": {
+        "value": 430,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU vehicle page '430km WLTP' for techno EV60; EV Database TU2025 WLTP 430 km (TEL) / 418 km (TEH); AU Techno ships on 19-inch wheels (CarExpert), matching the low-end figure"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+        "note": "CarExpert quick drive claimed 16.3kWh/100km; EV Database WLTP rated 163 Wh/km (TEL). WLTP rated consumption includes charging losses, hence ~16% above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 545,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU '545 litres'; ADAC labels 545 L 'normal' (to the cover); no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1670,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU '1,670 litres with the rear bench folded'; ADAC labels 1,670 L 'dachhoch' (to the roof), not the belt-line convention. No belt-line figure found (kofferraum.org refused). Kept maker figure, as bmw-ix1 / alfa-romeo-tonale-phev do; overstates vs convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3218/Renault-Scenic-E-Tech-EV60-170hp",
+        "note": "5 seats; Renault IE/UK spec also 5"
+      },
+      "towKg": {
+        "value": 1100,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+        "note": "CarExpert quick drive spec table 1,100kg braked all grades; CarExpert 2026 model page and EV Database agree. No Renault AU tech sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU page: 5 years/100,000km vehicle warranty, battery 8 years/160,000km (70%). CarExpert and Chasing Cars say unlimited km; term is 5 either way"
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "held value kept; level with skoda-elroq-85-select (1750 at $55,990, same price)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.52,
+          0.45,
+          0.39
+        ],
+        "basis": "judged",
+        "note": "One curve per Renault brand. Owner asked to match renault-megane-e-tech, but that family was removed 2026-11-26 and no file holds its curve (archive records only its year-one 0.68). Scenic is now the only Renault family, so all three rows take the held Techno curve; Esprit Alpine moved from its held steeper [1,0.7,...]. Below mainstream default for thin local volume (CarExpert: 127 sales 2026 YTD), small Ateco-distributed brand and the Megane's $10,000 cut"
+      }
+    },
+    "renault-scenic-e-tech-techno-long-range-ev87": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU Scenic E-Tech page lists techno, techno - Long Range and esprit Alpine with build & price links (price shown POA); CarsGuide lists the same three for MY2026/2027"
+      },
+      "listPrice": {
+        "value": 59990,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
+        "note": "Renault AU press release lists all three grades 'plus on-road costs' (manufacturer's own price, preferred per owner convention); CarsGuide model page re-checked 2026-11-27 lists $55,990-$65,990 'all before on-road costs' for MY2026/2027; CarExpert quick drive table 'before on-roads' agrees. renault.com.au vehicle page now shows POA and the build & price tool is script-rendered, so no live configurator price was read. Cross-check: CarExpert Sydney drive-away $60,907 (Techno) / $71,407 (Esprit Alpine) differ by $10,500 vs list $10,000, consistent with NSW 5% marginal duty on unchanged list prices."
+      },
+      "batteryKwh": {
+        "value": 87,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3219/Renault-Scenic-E-Tech-EV87-220hp",
+        "note": "usable 87.0 kWh; gross (nominal) 92.0 kWh on the same page; Renault AU quotes 87kWh"
+      },
+      "rangeKm": {
+        "value": 625,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU vehicle page 'up to 625 kilometres' WLTP, footnoted as based on the techno long range variant (19-inch wheels); EV Database TU2025 WLTP 623 km (TEL)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+        "note": "CarExpert quick drive claimed 16.8kWh/100km; EV Database WLTP rated 168 Wh/km (TEL)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 545,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU '545 litres'; ADAC labels 545 L 'normal' (to the cover); no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1670,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU '1,670 litres with the rear bench folded'; ADAC labels 1,670 L 'dachhoch' (to the roof), not the belt-line convention. No belt-line figure found (kofferraum.org refused). Kept maker figure, as bmw-ix1 / alfa-romeo-tonale-phev do; overstates vs convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3219/Renault-Scenic-E-Tech-EV87-220hp",
+        "note": "5 seats; Renault IE/UK spec also 5"
+      },
+      "towKg": {
+        "value": 1100,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+        "note": "CarExpert quick drive spec table 1,100kg braked all grades; CarExpert 2026 model page and EV Database agree. No Renault AU tech sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU page: 5 years/100,000km vehicle warranty, battery 8 years/160,000km (70%). CarExpert and Chasing Cars say unlimited km; term is 5 either way"
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "held value kept; level with vw-id4-pro (1850 at $60,990) and kia-ev3-gt-line-long-range (1850 at $63,950)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.52,
+          0.45,
+          0.39
+        ],
+        "basis": "judged",
+        "note": "One curve per Renault brand. Owner asked to match renault-megane-e-tech, but that family was removed 2026-11-26 and no file holds its curve (archive records only its year-one 0.68). Scenic is now the only Renault family, so all three rows take the held Techno curve; Esprit Alpine moved from its held steeper [1,0.7,...]. Below mainstream default for thin local volume (CarExpert: 127 sales 2026 YTD), small Ateco-distributed brand and the Megane's $10,000 cut"
+      }
+    },
+    "renault-scenic-e-tech-esprit-alpine-ev87": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU Scenic E-Tech page lists techno, techno - Long Range and esprit Alpine with build & price links (price shown POA); CarsGuide lists the same three for MY2026/2027"
+      },
+      "listPrice": {
+        "value": 65990,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/news/order-books-open-for-renault-scenic-e-tech-electric-suv-price-and-specs-announced/3860/",
+        "note": "Renault AU press release lists all three grades 'plus on-road costs' (manufacturer's own price, preferred per owner convention); CarsGuide model page re-checked 2026-11-27 lists $55,990-$65,990 'all before on-road costs' for MY2026/2027; CarExpert quick drive table 'before on-roads' agrees. renault.com.au vehicle page now shows POA and the build & price tool is script-rendered, so no live configurator price was read. Cross-check: CarExpert Sydney drive-away $60,907 (Techno) / $71,407 (Esprit Alpine) differ by $10,500 vs list $10,000, consistent with NSW 5% marginal duty on unchanged list prices."
+      },
+      "batteryKwh": {
+        "value": 87,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3219/Renault-Scenic-E-Tech-EV87-220hp",
+        "note": "usable 87.0 kWh; gross (nominal) 92.0 kWh on the same page; Carbuyer UK also lists usable 87 kWh"
+      },
+      "rangeKm": {
+        "value": 599,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carbuyer.co.uk/renault/scenic/prices-specs/104305/160kw-esprit-alpine-87kwh-long-range-5dr-auto",
+        "note": "Carbuyer UK WLTP pure electric range (comb) 599 km for the 160kW Esprit Alpine 87kWh on 235/45 R20, the same tyre size the AU Esprit Alpine wears (Chasing Cars); ADAC lists 598 km for the same trim. Changed from held 625: Renault AU footnotes its 625km as the techno long range figure, and AU reviews repeat 625 for this grade without a wheel-specific figure"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.6,
+        "basis": "sourced",
+        "url": "https://www.carbuyer.co.uk/renault/scenic/prices-specs/104305/160kw-esprit-alpine-87kwh-long-range-5dr-auto",
+        "note": "Carbuyer UK WLTP energy consumption (combined) 17.6 kWh/100km, same variant and wheel; ADAC 17.5. Changed from held 16.8 to match the 20-inch range figure"
+      },
+      "bootLitresSeatsUp": {
+        "value": 545,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU '545 litres'; ADAC labels 545 L 'normal' (to the cover); no frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1670,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU '1,670 litres with the rear bench folded'; ADAC labels 1,670 L 'dachhoch' (to the roof), not the belt-line convention. No belt-line figure found (kofferraum.org refused). Kept maker figure, as bmw-ix1 / alfa-romeo-tonale-phev do; overstates vs convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3219/Renault-Scenic-E-Tech-EV87-220hp",
+        "note": "5 seats; Renault IE/UK spec also 5"
+      },
+      "towKg": {
+        "value": 1100,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-renault-scenic-e-tech-review-quick-drive",
+        "note": "CarExpert quick drive spec table 1,100kg braked all grades; CarExpert 2026 model page and EV Database agree. No Renault AU tech sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.renault.com.au/vehicles/scenic-e-tech/",
+        "note": "Renault AU page: 5 years/100,000km vehicle warranty, battery 8 years/160,000km (70%). CarExpert and Chasing Cars say unlimited km; term is 5 either way"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "held value kept; level with kia-ev3-gt-line-awd (1950 at $66,490)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.52,
+          0.45,
+          0.39
+        ],
+        "basis": "judged",
+        "note": "One curve per Renault brand. Owner asked to match renault-megane-e-tech, but that family was removed 2026-11-26 and no file holds its curve (archive records only its year-one 0.68). Scenic is now the only Renault family, so all three rows take the held Techno curve; Esprit Alpine moved from its held steeper [1,0.7,...]. Below mainstream default for thin local volume (CarExpert: 127 sales 2026 YTD), small Ateco-distributed brand and the Megane's $10,000 cut"
+      }
+    }
+  },
+  "lowConfidence": [
+    "renault-scenic-e-tech-*.depreciationCurve: owner asked to match renault-megane-e-tech, whose file no longer exists; unified on the held Techno curve [1,0.72,0.61,0.52,0.45,0.39] instead",
+    "renault-scenic-e-tech-*.listPrice: renault.com.au shows POA and its configurator is script-rendered; prices from Renault AU launch press release ('plus on-road costs') re-confirmed by CarsGuide 'before on-road costs' on the research date, not a live configurator",
+    "renault-scenic-e-tech-esprit-alpine-ev87.rangeKm: 599 km is the UK WLTP figure on the same 20-inch tyre; no AU wheel-specific figure (Renault AU quotes only the Techno LR's 625)",
+    "renault-scenic-e-tech-*.bootLitresSeatsDown: 1,670 L is to the roof per ADAC, not the belt line",
+    "renault-scenic-e-tech-*.towKg: from CarExpert and EV Database, no Renault AU technical sheet",
+    "renault-scenic-e-tech-*.insuranceAnnual: judged, held values anchored to skoda-elroq, vw-id4, kia-ev3"
+  ]
+}

@@ -7,7 +7,7 @@
     "variant": "RWD Standard Range",
     "bodyType": "SUV",
     "listPrice": 51800,
-    "batteryKwh": 68.5,
+    "batteryKwh": 67.8,
     "rangeKm": 480,
     "consumptionKwhPer100km": 16.6,
     "bootLitresSeatsUp": 571,
@@ -17,7 +17,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1750,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "xpeng-g6-long-range",
@@ -27,7 +27,7 @@
     "variant": "RWD Long Range",
     "bodyType": "SUV",
     "listPrice": 56800,
-    "batteryKwh": 80.8,
+    "batteryKwh": 80.0,
     "rangeKm": 525,
     "consumptionKwhPer100km": 17.9,
     "bootLitresSeatsUp": 571,
@@ -37,7 +37,7 @@
     "warrantyYears": 7,
     "insuranceAnnual": 1900,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "xpeng-g6-performance",
@@ -47,7 +47,7 @@
     "variant": "AWD Performance",
     "bodyType": "SUV",
     "listPrice": 63800,
-    "batteryKwh": 80.8,
+    "batteryKwh": 80.0,
     "rangeKm": 510,
     "consumptionKwhPer100km": 18.4,
     "bootLitresSeatsUp": 571,
@@ -57,26 +57,6 @@
     "warrantyYears": 7,
     "insuranceAnnual": 2100,
     "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-08-08"
-  },
-  {
-    "id": "xpeng-g6-performance-black-edition",
-    "familyId": "xpeng-g6",
-    "make": "XPeng",
-    "model": "G6",
-    "variant": "AWD Performance Black Edition",
-    "bodyType": "SUV",
-    "listPrice": 66800,
-    "batteryKwh": 80.8,
-    "rangeKm": 510,
-    "consumptionKwhPer100km": 18.4,
-    "bootLitresSeatsUp": 571,
-    "bootLitresSeatsDown": 1374,
-    "seats": 5,
-    "towKg": 1500,
-    "warrantyYears": 7,
-    "insuranceAnnual": 2200,
-    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
-    "sourcedAt": "2026-08-08"
+    "sourcedAt": "2026-11-26"
   }
 ]

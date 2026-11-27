@@ -1,0 +1,177 @@
+{
+  "familyId": "gac-aion-v",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "gac-aion-v-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC Australia spec/price page (gacgroup.com/en-au) serves two grades, Premium and Luxury, each with a salePrice; the model page links to a live drive-away price builder; theBeep lists both grades with Victorian drive-away prices on 2026-11-27"
+      },
+      "listPrice": {
+        "value": 42590,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page data: vehModelName 'Premium' salePrice 42590, shown under the site's 'Base MSRP' label (manufacturer's own figure; the page's drive-away figure is a separate postcode-based calculator). CarExpert (18 Nov 2025, https://www.carexpert.com.au/car-news/2026-gac-aion-v-price-and-specs) gives $42,590 under 'Price before on-road costs' in words, and CarExpert's 6 Sep 2026 review repeats it. Direction check: theBeep Victorian drive-away $46,180 sits $921 above the app's computed VIC drive-away $45,258.78, so the list price is genuine (gap ~ dealer delivery, same on both grades). CarsGuide's '$47,990 Luxury' lead not reproduced: its page showed $44,590 MSRP but also a 7yr warranty and 75.20kWh, so that record was discarded"
+      },
+      "batteryKwh": {
+        "value": 75.26,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3559/GAC-AION-V-75-kWh",
+        "note": "usable: EV Database lists nominal 78.0 kWh, useable 75.3 kWh for the same 510km WLTP variant; GAC AU page lists 'Battery Capacity(kWh) 75.26' unlabelled, which matches the usable figure"
+      },
+      "rangeKm": {
+        "value": 510,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page '510（WLTP）' on the 19-inch wheel both grades ship on; EV Database UK lists 317 mi (510 km) WLTP for the same variant"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.7,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page 'Vehicle Consumption-combined（kWh/100km） 16.7（WLTP）'; EV Database 269 Wh/mi = 16.7; battery/range = 14.8, within tolerance (WLTP figure includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 427,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page 'Rear Trunk Space (L) 427-978'; CarExpert gives 427L seats up. Measurement method (to cover vs roof) not stated; no frunk (EV Database frunk 0 L)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 978,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page 427-978; CarExpert 978L rear seats folded. Method not stated; the low folded figure suggests a belt-line measurement"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "'Seating Capacity 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3559/GAC-AION-V-75-kWh",
+        "note": "EV Database: braked towing 0 kg, tow hitch not possible; GAC AU spec page lists no towing figure; EV Central says GAC has not published one"
+      },
+      "warrantyYears": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://eu-www-resouce-cdn.gacgroup.com/static/AU/tenant/cms/material/202608/1787037645132-Warranty-Terms-and-Conditions-FINAL-.pdf",
+        "note": "GAC AU warranty T&Cs (Aug 2026): '8 Year Unlimited Kilometre Warranty - Electrical Vehicle' other than commercial use; GAC 'does not require you to perform all service or repairs at a GAC Authorised Service Dealer', so not servicing-conditional. Commercial EV use 5 yr/150,000 km; traction battery 8 yr/200,000 km private"
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "held value kept after re-anchoring: byd-atto3-evo-premium $1,700 at $46,990, leapmotor-c10-style $1,700 at $45,888, byd-sealion-7-premium $1,650 at $54,990, geely-ex5 $1,600/$1,700; Luxury $50 above Premium for the $2,000 price step"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one GAC brand curve [1, 0.7, 0.58, 0.49, 0.42, 0.36], identical to gac-aion-ut: steeper than mainstream for a brand new to Australia (launched Dec 2025) with thin dealer network and no resale history, plus ongoing $2,000 cashback on the Premium (theBeep, 20 May-31 Dec 2026); sits just below leapmotor-c10's new-brand curve"
+      }
+    },
+    "gac-aion-v-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC Australia spec/price page (gacgroup.com/en-au) serves two grades, Premium and Luxury, each with a salePrice; the model page links to a live drive-away price builder; theBeep lists both grades with Victorian drive-away prices on 2026-11-27"
+      },
+      "listPrice": {
+        "value": 44590,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page data: vehModelName 'Luxury' salePrice 44590, shown under the site's 'Base MSRP' label (manufacturer's own figure; the page's drive-away figure is a separate postcode-based calculator). CarExpert (18 Nov 2025, https://www.carexpert.com.au/car-news/2026-gac-aion-v-price-and-specs) gives $44,590 under 'Price before on-road costs' in words, and CarExpert's 6 Sep 2026 review repeats it. Direction check: theBeep Victorian drive-away $48,270 sits $927 above the app's computed VIC drive-away $47,342.78, so the list price is genuine (gap ~ dealer delivery, same on both grades). CarsGuide's '$47,990 Luxury' lead not reproduced: its page showed $44,590 MSRP but also a 7yr warranty and 75.20kWh, so that record was discarded"
+      },
+      "batteryKwh": {
+        "value": 75.26,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3559/GAC-AION-V-75-kWh",
+        "note": "usable: EV Database lists nominal 78.0 kWh, useable 75.3 kWh for the same 510km WLTP variant; GAC AU page lists 'Battery Capacity(kWh) 75.26' unlabelled, which matches the usable figure"
+      },
+      "rangeKm": {
+        "value": 510,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page '510（WLTP）' on the 19-inch wheel both grades ship on; EV Database UK lists 317 mi (510 km) WLTP for the same variant"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.7,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page 'Vehicle Consumption-combined（kWh/100km） 16.7（WLTP）'; EV Database 269 Wh/mi = 16.7; battery/range = 14.8, within tolerance (WLTP figure includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 427,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page 'Rear Trunk Space (L) 427-978'; CarExpert gives 427L seats up. Measurement method (to cover vs roof) not stated; no frunk (EV Database frunk 0 L)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 978,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "GAC AU page 427-978; CarExpert 978L rear seats folded. Method not stated; the low folded figure suggests a belt-line measurement"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/aion-v/2025",
+        "note": "'Seating Capacity 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3559/GAC-AION-V-75-kWh",
+        "note": "EV Database: braked towing 0 kg, tow hitch not possible; GAC AU spec page lists no towing figure; EV Central says GAC has not published one"
+      },
+      "warrantyYears": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://eu-www-resouce-cdn.gacgroup.com/static/AU/tenant/cms/material/202608/1787037645132-Warranty-Terms-and-Conditions-FINAL-.pdf",
+        "note": "GAC AU warranty T&Cs (Aug 2026): '8 Year Unlimited Kilometre Warranty - Electrical Vehicle' other than commercial use; GAC 'does not require you to perform all service or repairs at a GAC Authorised Service Dealer', so not servicing-conditional. Commercial EV use 5 yr/150,000 km; traction battery 8 yr/200,000 km private"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "held value kept after re-anchoring: byd-atto3-evo-premium $1,700 at $46,990, leapmotor-c10-style $1,700 at $45,888, byd-sealion-7-premium $1,650 at $54,990, geely-ex5 $1,600/$1,700; Luxury $50 above Premium for the $2,000 price step"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one GAC brand curve [1, 0.7, 0.58, 0.49, 0.42, 0.36], identical to gac-aion-ut: steeper than mainstream for a brand new to Australia (launched Dec 2025) with thin dealer network and no resale history, plus ongoing $2,000 cashback on the Premium (theBeep, 20 May-31 Dec 2026); sits just below leapmotor-c10's new-brand curve"
+      }
+    }
+  },
+  "lowConfidence": [
+    "gac-aion-v-premium.depreciationCurve: judged; no Australian resale data exists for GAC yet",
+    "gac-aion-v-luxury.depreciationCurve: judged; no Australian resale data exists for GAC yet",
+    "gac-aion-v-premium.insuranceAnnual: judged from sibling anchors",
+    "gac-aion-v-luxury.insuranceAnnual: judged from sibling anchors",
+    "gac-aion-v-premium.bootLitresSeatsUp: GAC does not state the measurement method (cover vs roof)",
+    "gac-aion-v-luxury.bootLitresSeatsUp: GAC does not state the measurement method (cover vs roof)",
+    "gac-aion-v-premium.bootLitresSeatsDown: measurement method unstated",
+    "gac-aion-v-luxury.bootLitresSeatsDown: measurement method unstated",
+    "gac-aion-v-premium.listPrice: GAC's own price table loads by script; salePrice read from page data under a 'Base MSRP' label, wording 'before on-road costs' comes from CarExpert",
+    "gac-aion-v-luxury.listPrice: as Premium"
+  ]
+}

@@ -6,7 +6,7 @@
     "model": "Ora 5",
     "variant": "Lux",
     "bodyType": "SUV",
-    "listPrice": 31775,
+    "listPrice": 31700,
     "batteryKwh": 58.3,
     "rangeKm": 435,
     "consumptionKwhPer100km": 15.5,
@@ -16,8 +16,15 @@
     "towKg": 750,
     "warrantyYears": 7,
     "insuranceAnnual": 1300,
-    "depreciationCurve": [1, 0.7, 0.59, 0.51, 0.44, 0.38],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "gwm-ora-5-ultra",
@@ -26,7 +33,7 @@
     "model": "Ora 5",
     "variant": "Ultra",
     "bodyType": "SUV",
-    "listPrice": 34655,
+    "listPrice": 34579,
     "batteryKwh": 58.3,
     "rangeKm": 435,
     "consumptionKwhPer100km": 15.5,
@@ -36,7 +43,14 @@
     "towKg": 750,
     "warrantyYears": 7,
     "insuranceAnnual": 1400,
-    "depreciationCurve": [1, 0.7, 0.59, 0.51, 0.44, 0.38],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

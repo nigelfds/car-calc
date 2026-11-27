@@ -1,0 +1,115 @@
+{
+  "familyId": "mercedes-gla-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mercedes-gla-phev-250e": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/mercedes-benz/gla-class/price/2027",
+        "note": "CarsGuide 2027 GLA price page lists 'GLA-Class 250 E (Eq Hybrid Tech.)' at $78,800 beside the MY26 'GLA250 E' at $78,000; CarExpert MY27 spec page (released 3 Jan 2026) and EV Central (prices updated 21 Nov 2026) list it as current. mercedes-benz.com.au returns 403, so the configurator could not be opened. One grade only; no other GLA plug-in grade exists."
+      },
+      "listPrice": {
+        "value": 78800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/gla/2026-base-jsgw8s8g20260121",
+        "note": "CarExpert MY27 'prices starting at $78,800' before on-road costs, released 3 Jan 2026; Sydney drive-away $84,858. carsales 'Price when new' $78,800 (base price incl GST & LCT, MY26 launched March 2026) and CarsGuide 2027 price page (MSRP, excludes stamp duty and government charges) agree. Up $800 from the $78,000 launch price. Manufacturer price list unreachable (403). Vic drive-away via calc/onroad.js = $82,990."
+      },
+      "batteryKwh": {
+        "value": 11.5,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/gla/247-facelift/328578",
+        "note": "ADAC GLA 250 e (07/23-07/24, 235/55R18): 15,6 kWh gross, 11,5 kWh net. AU launch coverage (CarsGuide 21 Jul 2025, CarExpert 17 Jul 2025) quotes 11.5kWh with 65km. CONFLICT: CarExpert MY27 spec feed gives 15.6 max / 12.91 usable with 74 km WLTP, carsales gives 13.0 kWh, and ADAC lists 12,9 kWh net for European cars from 09/24. Kept 11.5 to stay paired with the AU 65 km figure."
+      },
+      "rangeKm": {
+        "value": 65,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carsales.com.au/research/mercedes-benz/gla-class/2026/gla250-e-with-eq-hybrid-technology/0f3edf77-9baf-405d-b1bf-a8a5cf0884eb/",
+        "note": "carsales (Redbook) electric range 65 km 'ADR and WLTP' for the MY26/MY27 GLA250 e; CarExpert and CarsGuide launch stories 'up to 65km (WLTP)'. Below ADAC's European 69 km (11.5 kWh) and 74 km (12.9 kWh), so passes the direction test. CarExpert MY27 spec feed shows 74 km (European data)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.7,
+        "basis": "derived",
+        "note": "batteryKwh 11.5 / rangeKm 65 x 100 = 17.7. ADAC's 19,1 kWh/100km WLTP figure includes charging losses, not used."
+      },
+      "combinedRangeKm": {
+        "value": 595,
+        "basis": "derived",
+        "note": "rangeKm 65 + 35 L tank / 6.6 L/100km x 100 (530.3) = 595. Tank 35 L from ADAC, CarExpert MY27 spec and carsales."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.6,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/gla/247-facelift/328578",
+        "note": "ADAC 'Verbrauch kombiniert PHEV (Batterie leer)' 6,6 L/100km WLTP for the 11.5 kWh-net GLA 250 e on 235/55R18 (as AU). ADAC 09/24+ 12.9 kWh car reads 6,7. Same basis as cupra-formentor-phev (5.6, ADAC battery-empty). Parkers measured 7.9 L/100km on a motorway cruise. Held 7.2 was judged."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/mercedes-benz/gla-class/2026/gla250-e-with-eq-hybrid-technology/0f3edf77-9baf-405d-b1bf-a8a5cf0884eb/",
+        "note": "carsales combined label 1.2 L/100km (ADR), at or below 3.5. List price is under the $80,809 ordinary threshold anyway."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; carsales gives 28 g/km combined."
+      },
+      "bootLitresSeatsUp": {
+        "value": 385,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/gla/247-facelift/328578",
+        "note": "ADAC Kofferraumvolumen normal 385 L for the GLA 250 e (battery fitted). CarExpert and carsales print the petrol GLA's 435/445 L against the PHEV, the known trap."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1285,
+        "basis": "judged",
+        "note": "ADAC gives 1385 L 'dachhoch' (to the roof) only; no belt-line folded figure published. Scaled by the cupra-formentor-phev ratio of belt-line to roof folded volume (1311/1415 = 0.926): 1385 x 0.926 = 1283, rounded to 1285. Held 1385 was the to-roof figure. Note mercedes-eqa's 1320 appears to be Mercedes' to-roof figure too."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/mercedes-benz/gla-class/2026/gla250-e-with-eq-hybrid-technology/0f3edf77-9baf-405d-b1bf-a8a5cf0884eb/"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/gla/2026-base-jsgw8s8g20260121",
+        "note": "CarExpert MY27 spec 1,800 kg braked (740 unbraked); ADAC Anhaengelast gebremst (12%) 1800 kg agrees. Not from a Mercedes AU technical sheet (403)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/gla/2026-base-jsgw8s8g20260121",
+        "note": "60 months, unlimited km, whole vehicle"
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "held value kept; anchored to bmw-x1-phev-xdrive25e ($79,500, 2150) and mercedes-eqa-250-plus ($86,700, 2250)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one curve per brand by owner decision: matches mercedes-eqa. Evidence for steeper-than-mainstream: run-out design, all-new GLA due 2027 with no plug-in hybrid (Chasing Cars 29 Jul 2026, The Beep 30 Jul 2026); carsales private price guide $68,900-70,900 for the MY26 car against $78,800 new. Held curve was [1,0.7,0.59,0.51,0.44,0.38]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mercedes-gla-phev-250e.batteryKwh: AU launch press says 11.5 kWh but CarExpert MY27 feed (12.91 usable, 74 km) and carsales (13.0 kWh) suggest the MY27 car may carry the European 12.9 kWh-net pack; kept 11.5 paired with the AU 65 km",
+    "mercedes-gla-phev-250e.rangeKm: 65 km AU claim may understate an MY27 car on the 12.9 kWh pack (74 km WLTP in Europe)",
+    "mercedes-gla-phev-250e.bootLitresSeatsDown: judged, scaled from ADAC's to-roof 1385 L by the Formentor ratio",
+    "mercedes-gla-phev-250e.availability: manufacturer configurator unreachable (403); orderability from CarsGuide/CarExpert/EV Central only",
+    "mercedes-gla-phev-250e.listPrice: $78,800 from outlets only, manufacturer price list unreachable",
+    "mercedes-gla-phev-250e.insuranceAnnual: judged",
+    "mercedes-gla-phev-250e.depreciationCurve: judged, brand convention"
+  ]
+}

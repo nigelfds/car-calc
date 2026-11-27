@@ -8,20 +8,27 @@
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 68990,
-    "batteryKwh": 20,
+    "batteryKwh": 19.7,
     "rangeKm": 114,
-    "consumptionKwhPer100km": 17.5,
-    "combinedRangeKm": 729,
-    "fuelConsumptionL100km": 6.5,
+    "consumptionKwhPer100km": 17.3,
+    "combinedRangeKm": 828,
+    "fuelConsumptionL100km": 5.6,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 345,
     "bootLitresSeatsDown": 1311,
     "seats": 5,
-    "towKg": 1500,
+    "towKg": 1700,
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [1, 0.67, 0.55, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.68,
+      0.56,
+      0.47,
+      0.4,
+      0.34
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

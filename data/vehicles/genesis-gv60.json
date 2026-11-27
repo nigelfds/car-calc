@@ -9,15 +9,22 @@
     "listPrice": 88300,
     "batteryKwh": 80,
     "rangeKm": 561,
-    "consumptionKwhPer100km": 16.8,
+    "consumptionKwhPer100km": 16.7,
     "bootLitresSeatsUp": 432,
     "bootLitresSeatsDown": 1460,
     "seats": 5,
-    "towKg": 0,
+    "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 2300,
-    "depreciationCurve": [1, 0.66, 0.54, 0.45, 0.38, 0.32],
-    "sourcedAt": "2026-08-06"
+    "depreciationCurve": [
+      1,
+      0.64,
+      0.52,
+      0.43,
+      0.36,
+      0.3
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "genesis-gv60-magma-awd",
@@ -33,10 +40,17 @@
     "bootLitresSeatsUp": 400,
     "bootLitresSeatsDown": 1350,
     "seats": 5,
-    "towKg": 0,
+    "towKg": 2400,
     "warrantyYears": 5,
     "insuranceAnnual": 3300,
-    "depreciationCurve": [1, 0.64, 0.52, 0.43, 0.36, 0.3],
-    "sourcedAt": "2026-08-06"
+    "depreciationCurve": [
+      1,
+      0.64,
+      0.52,
+      0.43,
+      0.36,
+      0.3
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

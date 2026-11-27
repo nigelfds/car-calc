@@ -1,36 +1,33 @@
 {
   "id": "mercedes-gla-phev",
-  "summary": "The GLA 250 e is Mercedes-Benz Australia's cheapest plug-in hybrid and the only plug-in grade in a GLA range that is otherwise 48-volt mild-hybrid petrol — it pairs the GLA 200's 120kW 1.3-litre four with a motor inside the eight-speed dual-clutch for 160kW/450Nm and 65km of WLTP electric range from an 11.5kWh usable battery. At $78,000 before on-road costs it undercuts the petrol GLA 250 4MATIC it out-torques, sits below the $80,809 luxury car tax threshold entirely, and is a genuinely different and much smaller-hearted machine from the $99,900 GLC 350e despite the shared badge. The compromises are concentrated in long-distance use: a 35-litre tank and a 1.3-litre engine that Parkers measured at 36mpg on a motorway cruise give it roughly 550km of combined range, the least of any premium plug-in SUV in this dataset, and the battery takes 50 litres out of the boot.",
+  "summary": "The GLA 250 e is Mercedes-Benz Australia's cheapest plug-in hybrid and the only plug-in grade in a GLA range that is otherwise 48-volt mild-hybrid petrol — it pairs the GLA 200's 1.3-litre four with a motor inside the eight-speed dual-clutch for 160kW/450Nm and 65km of WLTP electric range from an 11.5kWh usable battery. At $78,800 before on-road costs for the MY27 update it still undercuts the petrol GLA 250 4MATIC it out-torques and sits below the $80,809 luxury car tax threshold entirely, but it is a run-out design: the all-new GLA due in Australia in 2027 is electric or mild-hybrid only, with no plug-in successor announced. The compromises are concentrated in long-distance use: a 35-litre tank and a 1.3-litre engine rated at 6.6L/100km with the battery empty give it roughly 595km of combined range, the least of any premium plug-in SUV in this dataset, and the battery takes 50 litres out of the boot.",
   "pros": [
     "65km of electric range is genuine WLTP, not the NEDC figure Mercedes Australia has been caught publishing elsewhere — it sits inside Mercedes' own European 63-70km WLTP band for the facelifted GLA 250 e and matches the UK car's 39 miles, so unlike the GLC 350e's much-quoted 132km this number survives the check, and it covers a typical Melbourne commute on grid power",
-    "At $78,000 before on-road costs it lists $2,500 BELOW the petrol GLA 250 4MATIC ($80,500) while making more torque (160kW/450Nm against 165kW/350Nm), and it sits $2,809 under the $80,809 ordinary luxury car tax threshold so no LCT is payable at all — its 1.2L/100km combined label also qualifies it for the $91,661 fuel-efficient threshold, leaving roughly $13,600 of options headroom before LCT could ever start",
+    "At $78,800 before on-road costs it lists about $2,700 below the MY27 petrol GLA 250 4MATIC ($81,527) while making more torque (160kW/450Nm against 165kW/350Nm), and it sits $2,009 under the $80,809 ordinary luxury car tax threshold so no LCT is payable at all — its 1.2L/100km combined label also qualifies it for the $91,661 fuel-efficient threshold, leaving roughly $12,800 of options headroom before LCT could ever start",
     "28g/km of CO2 on the combined cycle is far inside Victoria's 120g/km green passenger car limit, so stamp duty is charged at the flat green rate rather than the ordinary tiers",
     "1800kg braked towing is strong for a compact plug-in: the BMW X1 xDrive25e manages 1700kg, the Cupra Formentor VZe 1500kg, and many small PHEVs are not rated to tow at all",
-    "Mercedes-Benz Australia's five-year, unlimited-kilometre warranty is unconditional and not tied to servicing inside the dealer network, and the $78,000 price includes metallic paint, a panoramic sunroof, 18-inch alloys, heated front seats and a 360-degree camera as standard"
+    "Mercedes-Benz Australia's five-year, unlimited-kilometre warranty is unconditional and not tied to servicing inside the dealer network, and the $78,800 price includes metallic paint, 18-inch alloys, heated front seats and a 360-degree camera as standard"
   ],
   "cons": [
-    "The 1.2L/100km label collapses the moment the battery is flat: Parkers recorded 36mpg (7.9L/100km) from the 1.3-litre four on a motorway cruise and called it thirstier than a VW Tiguan eHybrid, while DrivingElectric puts real-world charge-sustaining economy at 40-50mpg (5.7-7.1L/100km) — a buyer without home charging is running a 1.8-tonne premium SUV on premium unleaded",
-    "The battery under the boot floor cuts luggage space from 435 litres in the front-drive petrol GLA to 385, the smallest boot in the range — and carsales and other Australian spec pages still print the petrol car's 445-litre figure against the plug-in, so the number most buyers will see is the wrong one",
-    "A 35-litre fuel tank, down from the petrol GLA's, leaves roughly 550km of combined range at a realistic 7.2L/100km — well short of the GLC 350e's 900km and the BMW X1 xDrive25e's 780km, so it needs refuelling as often as it needs recharging",
+    "The 1.2L/100km label collapses the moment the battery is flat: ADAC lists 6.6L/100km on the WLTP cycle with the battery empty, Parkers recorded 36mpg (7.9L/100km) from the 1.3-litre four on a motorway cruise and called it thirstier than a VW Tiguan eHybrid — a buyer without home charging is running a 1.8-tonne premium SUV on premium unleaded",
+    "The battery under the boot floor cuts luggage space from 435 litres in the front-drive petrol GLA to 385, the smallest boot in the range — and carsales, CarExpert and other Australian spec pages still print the petrol car's 435-445-litre figures against the plug-in, so the number most buyers will see is the wrong one",
+    "A 35-litre fuel tank leaves roughly 595km of combined range at ADAC's 6.6L/100km battery-empty figure — well short of the GLC 350e's 900km and the BMW X1 xDrive25e's 780km, so it needs refuelling as often as it needs recharging",
     "Charging is AC-only and slow: 3.7kW is standard and takes most of a working day from flat, the 11kW three-phase upgrade is an $800 option, and there is no DC capability at all, so the electric range cannot be usefully topped up away from home",
-    "At $78,000 it is above the $75,000 FBT cap and PHEVs lost the FBT exemption entirely on 1 April 2025, so there is no novated-lease advantage left — and Mercedes servicing is expensive, with a five-year pre-paid plan on the GLA 250 quoted at $6,185 on 12-month/25,000km intervals"
+    "At $78,800 it is above the $75,000 FBT cap and PHEVs lost the FBT exemption entirely on 1 April 2025, so there is no novated-lease advantage left — and the all-new GLA arriving in 2027 drops the plug-in hybrid, which leaves this outgoing car exposed on resale"
   ],
   "sources": [
-    "https://www.carsguide.com.au/car-news/hybrid-power-back-on-the-menu-at-mercedes",
-    "https://www.carexpert.com.au/car-news/2025-mercedes-benz-gla250e-brands-cheapest-phev-priced-for-australia",
-    "https://www.racq.com.au/articles/car-updates/mercedes-benz-launches-gla-250-e-plug-in-hybrid-suv",
-    "https://www.carsales.com.au/research/mercedes-benz/gla-class/2026/gla250-e-with-eq-hybrid-technology/",
-    "https://www.carsales.com.au/research/mercedes-benz/gla-class/",
+    "https://www.carexpert.com.au/mercedes-benz/gla/2026-base-jsgw8s8g20260121",
+    "https://www.carsguide.com.au/mercedes-benz/gla-class/price/2027",
     "https://www.carsguide.com.au/mercedes-benz/gla-class/price/2026",
-    "https://www.carsguide.com.au/mercedes-benz/gla-class/gla250/",
-    "https://www.carexpert.com.au/car-reviews/2025-mercedes-benz-gla-review",
-    "https://www.carexpert.com.au/mercedes-benz/gla/2026/price-and-specs",
-    "https://thebeep.com.au/cars/mercedes-benz/gla-suv",
-    "https://www.drivingelectric.com/mercedes-benz/gla/practicality",
-    "https://www.parkers.co.uk/mercedes-benz/gla-class/review/mpg-running-costs/",
-    "https://www.electrifying.com/reviews/mercedes-reviews/gla-250e-phev/review",
-    "https://www.auto-data.net/en/mercedes-benz-gla-h247-facelift-2023-gla-250e-218hp-plug-in-hybrid-8g-dct-50035",
-    "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates"
+    "https://www.carsales.com.au/research/mercedes-benz/gla-class/2026/gla250-e-with-eq-hybrid-technology/0f3edf77-9baf-405d-b1bf-a8a5cf0884eb/",
+    "https://www.carexpert.com.au/car-news/2025-mercedes-benz-gla250e-brands-cheapest-phev-priced-for-australia",
+    "https://www.carsguide.com.au/car-news/hybrid-power-back-on-the-menu-at-mercedes",
+    "https://www.chasingcars.com.au/news/future-cars/mercedes-benz-gla-2027-revealed-hybrid-and-ev-small-suv-twins-locked-in-for-australia/",
+    "https://thebeep.com.au/car-news/2027-mercedes-benz-gla-electric-hybrid-australia",
+    "https://evcentral.com.au/cars/mercedes-benz/gla/",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/gla/247-facelift/328578",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mercedes-benz/gla/247-facelift/336416/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
   ],
-  "sourcedAt": "2026-08-08"
+  "sourcedAt": "2026-11-26"
 }

@@ -7,11 +7,11 @@
     "variant": "Ultra Hi4-T PHEV",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 78490,
+    "listPrice": 75846,
     "batteryKwh": 37.11,
-    "rangeKm": 120,
-    "consumptionKwhPer100km": 30.9,
-    "combinedRangeKm": 953,
+    "rangeKm": 110,
+    "consumptionKwhPer100km": 33.7,
+    "combinedRangeKm": 943,
     "fuelConsumptionL100km": 8.4,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -23,12 +23,12 @@
     "insuranceAnnual": 2200,
     "depreciationCurve": [
       1,
-      0.67,
-      0.55,
-      0.46,
-      0.39,
-      0.33
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   }
 ]

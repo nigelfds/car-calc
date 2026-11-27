@@ -1,0 +1,173 @@
+{
+  "familyId": "mini-aceman",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mini-aceman-se-favoured": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026-se-favoured-suv-fwd-electric-jsgffom520260427",
+        "note": "mini.com.au configurator unreachable (503 / connection reset) on research date; CarExpert 2026 model-year variant page (released 1 April 2026) used. CarExpert 2026 price list shows only SE Favoured and JCW E Favoured."
+      },
+      "batteryKwh": {
+        "value": 49.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2191/Mini-Aceman-SE",
+        "note": "usable; gross 54.2 on the same page; CarExpert AU variant page also gives 54.2 gross / 49.2 usable"
+      },
+      "bootLitresSeatsUp": {
+        "value": 300,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026/se-favoured/features-and-specs",
+        "note": "rear seats up, to the lower window (cargo-cover convention); same 300 on CHOICE"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1005,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026/se-favoured/features-and-specs",
+        "note": "rear seats folded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.choice.com.au/products/transport/cars/eco-friendly/mini-aceman-se"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.choice.com.au/products/transport/cars/eco-friendly/mini-aceman-se",
+        "note": "braked 750 kg per CHOICE (AU); EV Database gives 750 kg braked for the same variant. MINI AU tech sheet unreachable. Changed from held 0."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026-se-favoured-suv-fwd-electric-jsgffom520260427",
+        "note": "5 years / unlimited km whole vehicle"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "All Mini rows on one curve (owner convention); matches mini-cooper-electric. Steeper than mainstream default on evidence of the Aceman E's heavy run-out discounting and deletion (CarExpert, Mar 2025) and thin local volume."
+      },
+      "listPrice": {
+        "value": 60990,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/urban/mini-aceman-se-101563",
+        "note": "CarsGuide review 9 May 2026: 'lists for $60,990 before on-road costs'. CarExpert 2026 variant page also says $60,990 before on-road costs; its $66,157 headline is Sydney drive-away. MINI's own page unreachable."
+      },
+      "rangeKm": {
+        "value": 406,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026-se-favoured-suv-fwd-electric-jsgffom520260427",
+        "note": "WLTP combined as listed for the AU 2026 SE Favoured; equals EV Database WLTP TEL 406 (TEH 382). AU car ships on 19-inch wheels, so 406 is the best case of the band."
+      },
+      "consumptionKwhPer100km": {
+        "value": 13.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2191/Mini-Aceman-SE",
+        "note": "WLTP rated 138 Wh/km (TEL), same end of band as the 406 km range. Held value was 14.4 (unsourced)."
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "kept; anchored to mini-cooper-electric SE Paul Smith (2000 at $60,990) and mini-countryman-electric E Classic (2000)"
+      }
+    },
+    "mini-aceman-jcw-e-favoured": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026-john-cooper-works-e-favoured-suv-fwd-electric-jsgmfoks20260427",
+        "note": "mini.com.au configurator unreachable (503 / connection reset) on research date; CarExpert 2026 model-year variant page (released 1 April 2026) used. CarExpert 2026 price list shows only SE Favoured and JCW E Favoured."
+      },
+      "batteryKwh": {
+        "value": 49.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3059/Mini-Aceman-JCW",
+        "note": "usable; gross 54.2 on the same page; CarExpert AU variant page also gives 54.2 gross / 49.2 usable"
+      },
+      "bootLitresSeatsUp": {
+        "value": 300,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026/se-favoured/features-and-specs",
+        "note": "rear seats up, to the lower window (cargo-cover convention); same 300 on CHOICE"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1005,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026/se-favoured/features-and-specs",
+        "note": "rear seats folded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.choice.com.au/products/transport/cars/eco-friendly/mini-aceman-jcw-e"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.choice.com.au/products/transport/cars/eco-friendly/mini-aceman-jcw-e",
+        "note": "braked 750 kg per CHOICE (AU); EV Database gives 750 kg braked for the same variant. MINI AU tech sheet unreachable. Changed from held 0."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026-john-cooper-works-e-favoured-suv-fwd-electric-jsgmfoks20260427",
+        "note": "5 years / unlimited km whole vehicle"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "All Mini rows on one curve (owner convention); matches mini-cooper-electric. Steeper than mainstream default on evidence of the Aceman E's heavy run-out discounting and deletion (CarExpert, Mar 2025) and thin local volume."
+      },
+      "listPrice": {
+        "value": 65990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026-john-cooper-works-e-favoured-suv-fwd-electric-jsgmfoks20260427",
+        "note": "CarExpert 2026 JCW E Favoured page: 'starting at $65,990' before on-road costs ($71,326 headline is Sydney drive-away). Corroborated by CarsGuide 2026 JCW E MSRP $65,990 (https://www.carsguide.com.au/mini/aceman/price/2026/jcw-e), CHOICE $65,990 and CarExpert launch review ($65,990 before on-road costs). MINI's own page unreachable."
+      },
+      "rangeKm": {
+        "value": 355,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/mini/aceman/2026-john-cooper-works-e-favoured-suv-fwd-electric-jsgmfoks20260427",
+        "note": "WLTP combined as listed for the AU 2026 JCW E Favoured; CarsGuide JCW E also 355. EV Database band 345 (TEH) - 391 (TEL)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3059/Mini-Aceman-JCW",
+        "note": "WLTP rated 164 Wh/km (TEH); AU 355 km sits nearest the TEH end (345 km). 49.2/355 = 13.9, within tolerance."
+      },
+      "insuranceAnnual": {
+        "value": 2350,
+        "basis": "judged",
+        "note": "kept; anchored to mini-cooper-electric JCW E Favoured (2300 at $63,990), +$50 for the $2,000 higher price"
+      }
+    }
+  },
+  "lowConfidence": [
+    "mini-aceman-se-favoured.towKg: 750 kg braked from CHOICE and EV Database; MINI AU tech sheet unreachable, held value was 0, sibling mini-cooper-electric still 0",
+    "mini-aceman-jcw-e-favoured.towKg: same as SE, CHOICE + EV Database only",
+    "mini-aceman-se-favoured.rangeKm: 406 is the WLTP best case (TEL); AU car ships on 19-inch wheels and EV Database TEH is 382",
+    "mini-aceman-jcw-e-favoured.listPrice: CarExpert wording 'starting at $65,990' is not grade-specific; corroborated by CarsGuide MSRP and CHOICE, MINI's own page unreachable",
+    "mini-aceman-se-favoured.listPrice: MINI's own page unreachable; CarsGuide and CarExpert both say before on-road costs in words",
+    "mini-aceman-*.depreciationCurve: judged; Mini curve [1,0.71,...] differs from held mini-countryman-electric [1,0.73,...], brand convention needs reconciling",
+    "mini-aceman-*.insuranceAnnual: judged, anchored to Mini siblings",
+    "family pros: battery warranty km split, 160,000 (CHOICE, CarExpert review) vs 100,000 (CarExpert/CarsGuide spec tables)"
+  ]
+}

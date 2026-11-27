@@ -7,11 +7,11 @@
     "variant": "Excite",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 48990,
+    "listPrice": 46095,
     "batteryKwh": 23.2,
     "rangeKm": 120,
     "consumptionKwhPer100km": 19.3,
-    "combinedRangeKm": 1050,
+    "combinedRangeKm": 1052,
     "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -21,8 +21,15 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1550,
-    "depreciationCurve": [1, 0.71, 0.6, 0.52, 0.45, 0.39],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mg-hs-phev-essence",
@@ -32,11 +39,11 @@
     "variant": "Essence",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 52990,
+    "listPrice": 49934,
     "batteryKwh": 23.2,
     "rangeKm": 120,
     "consumptionKwhPer100km": 19.3,
-    "combinedRangeKm": 1050,
+    "combinedRangeKm": 1052,
     "fuelConsumptionL100km": 5.9,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
@@ -46,7 +53,14 @@
     "towKg": 1500,
     "warrantyYears": 7,
     "insuranceAnnual": 1650,
-    "depreciationCurve": [1, 0.71, 0.6, 0.52, 0.45, 0.39],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.78,
+      0.68,
+      0.6,
+      0.53,
+      0.47
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

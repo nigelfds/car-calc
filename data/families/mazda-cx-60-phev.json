@@ -1,28 +1,30 @@
 {
   "id": "mazda-cx-60-phev",
-  "summary": "Mazda's P50e plug-in hybrid pairs a 2.5-litre turbo petrol engine with a 17.8kWh battery for a claimed 76km of EV-only range and brisk 5.8-second 0-100km/h performance, wrapped in Mazda's most upmarket cabin. Reviewers rate the interior materials and safety kit highly and note the boot doesn't shrink for the battery pack, but they consistently flag drivetrain roughness — jerky low-speed transmission behaviour, occasional 'tug-of-war' shunt between engine and motor, and creaks reviewers say feel unresolved for the price. With the FBT exemption for plug-in hybrids gone since April 2025, reviewers are also blunt that the economics only work for buyers who charge at home every night; leave it unplugged and fuel use climbs sharply.",
+  "summary": "Mazda's P50e plug-in hybrid pairs a 2.5-litre petrol four with a 17.8kWh (gross) battery for 63km of WLTP electric range (76km on Australia's older NEDC claim) and brisk 5.8-second 0-100km/h performance, wrapped in Mazda's most upmarket cabin. A July 2026 repricing cut every P50e grade by $7,150, so the range now runs $56,640 to $76,840 before on-roads across Pure, Evolve, Touring, GT and Azami (plus SP and Takumi packages), and CarExpert calls the cuts 'huge'. Reviewers still rate the interior and safety kit highly, but consistently flag a low-speed transmission that 'stumbles' and shifts roughly even in EV mode, a ride they say may be worse than the petrol and diesel CX-60s, and economics that only work if you charge at home most nights.",
   "pros": [
-    "76km claimed WLTP electric range (55-60km real-world per CarExpert) covers most Australian commutes on electricity alone, backed by a 241kW/500Nm combined output good for 5.8-5.9 second 0-100km/h",
-    "477L boot with seats up and 1726L seats-down is identical to the petrol and diesel CX-60 — unlike many PHEV rivals, the battery pack doesn't cost you cargo space",
-    "2500kg braked towing capacity matches the petrol/diesel CX-60 and beats most mid-size PHEV SUV rivals, plus a 1500W vehicle-to-load outlet in the boot",
-    "5-star ANCAP (2022, tested to Euro NCAP protocols) across the range, and the high-voltage battery carries an 8-year warranty on top of the 5-year vehicle term",
+    "July 2026 price cuts of $7,150 per grade put the P50e Pure at $56,640 before on-roads, below a base Mitsubishi Outlander PHEV ES ($58,990), and every grade except the $76,840 Azami SP and Takumi packages sits under the $75,000 FBT cap that applies from April 2027",
+    "477L boot with seats up and 1726L seats-down is the same as the petrol and diesel CX-60, so unlike many PHEV rivals the battery pack costs no cargo space (it does cost the spare wheel)",
+    "2500kg braked towing capacity matches the inline-six CX-60s and beats most mid-size PHEV SUV rivals, plus a 1500W vehicle-to-load outlet in the boot",
+    "5-star ANCAP (2022, tested to Euro NCAP protocols) across the range, front cross-traffic assist and Cruising and Traffic Support now standard on every grade, and an 8-year/160,000km high-voltage battery warranty on top of the 5-year vehicle term",
     "Combined-cycle 49g/km CO2 and 2.1L/100km comfortably qualify every grade for Victoria's green passenger-car duty rate and the higher fuel-efficient LCT threshold"
   ],
   "cons": [
-    "Reviewers describe unresolved drivetrain manners: 'bunny hops' at low speed, a 'tug-o-war' sensation between engine and electric motor, and creaks CarExpert called 'not confidence inspiring' for a flagship-priced Mazda",
-    "Once the battery is depleted it's a ~2.2-tonne turbo-petrol AWD SUV — CarsGuide's real-world test (two charging stops over 600km) implies combustion-only running closer to 8-9L/100km versus the 2.1L/100km label, and reviewers note fuel use 'climbs a lot' if you can't charge at home",
-    "PHEVs lost the FBT exemption on 1 April 2025, so the novated-lease case that drives this site now hinges entirely on the fuel-efficient LCT and green duty concessions, not a tax-free benefit — several reviewers flag this as undermining the CX-60 PHEV's original value pitch",
-    "Azami Sp and Azami Takumi list at $83,990 and CarsGuide/CarExpert both flag CX-60 servicing costs as 'on the higher side' versus mainstream SUV rivals",
-    "200kg heavier than the equivalent G40e petrol CX-60 according to Mazda's own guide, which reviewers link to the firmer, occasionally unsettled ride reported even in Touring-spec cars"
+    "Reviewers describe unresolved drivetrain manners: CarExpert's 2026 GT review says the eight-speed auto 'stumbles' at low speed and the electric drive still produces gearshift sensations in EV mode, a complaint that has persisted since launch",
+    "Once the battery is depleted it is a 2.2-tonne petrol AWD SUV using 7.7L/100km on the European charge-sustaining test, against the 2.1L/100km label; CarExpert's 2026 test returned 6.4L/100km, worse than the 5.2L/100km it saw in an Outlander PHEV",
+    "Real-world EV range is modest for the price: CarExpert saw 55-60km against the 76km NEDC claim, and its 2026 verdict lists 'EV capability could be better'",
+    "PHEVs lost the FBT exemption on 1 April 2025, so the novated-lease case now rests on the fuel-efficient LCT and green duty concessions rather than a tax-free benefit, and the P50e is still $5,000 dearer than the equivalent inline-six grade",
+    "The PHEV's ride is the least resolved of the CX-60 range: CarExpert says the extra battery weight leaves it 'messier' over speed bumps and sharp hits than the petrol and diesel versions"
   ],
   "sources": [
+    "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+    "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-updates-tech-and-safety-upgrades-for-up-to-dollar7000-less",
+    "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
     "https://www.carexpert.com.au/car-reviews/2024-mazda-cx-60-p50e-gt-review",
-    "https://www.carsguide.com.au/luxury/mazda-cx-60-gt-p50e-90939",
-    "https://www.carsguide.com.au/mazda/cx-60/range",
-    "https://www.carsguide.com.au/mazda/cx-60/price/2026",
-    "https://www.carexpert.com.au/mazda/cx-60/2026/price-and-specs",
+    "https://web1.goauto.com.au/new-models/mazda/mazda-cuts-prices-across-flagship-suv-ranges/2026-07-23/99905.html",
+    "https://www.mazda.com.au/cars/cx-60/",
     "https://www.mazda.com.au/mazda-news/mazda-cx-60-phev-guide/",
-    "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates"
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
   ],
-  "sourcedAt": "2026-07-28"
+  "sourcedAt": "2026-11-26"
 }

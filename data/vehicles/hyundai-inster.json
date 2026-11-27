@@ -6,7 +6,7 @@
     "model": "Inster",
     "variant": "Standard Range",
     "bodyType": "SUV",
-    "listPrice": 39000,
+    "listPrice": 37500,
     "batteryKwh": 39,
     "rangeKm": 327,
     "consumptionKwhPer100km": 14.3,
@@ -16,28 +16,15 @@
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 1300,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-08-08"
-  },
-  {
-    "id": "hyundai-inster-extended-range",
-    "familyId": "hyundai-inster",
-    "make": "Hyundai",
-    "model": "Inster",
-    "variant": "Extended Range",
-    "bodyType": "SUV",
-    "listPrice": 42500,
-    "batteryKwh": 46,
-    "rangeKm": 360,
-    "consumptionKwhPer100km": 15.1,
-    "bootLitresSeatsUp": 280,
-    "bootLitresSeatsDown": 1059,
-    "seats": 4,
-    "towKg": 0,
-    "warrantyYears": 5,
-    "insuranceAnnual": 1350,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-inster-cross",
@@ -46,7 +33,7 @@
     "model": "Inster",
     "variant": "Cross",
     "bodyType": "SUV",
-    "listPrice": 45000,
+    "listPrice": 43500,
     "batteryKwh": 46,
     "rangeKm": 360,
     "consumptionKwhPer100km": 15.1,
@@ -56,27 +43,14 @@
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 1400,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-08-08"
-  },
-  {
-    "id": "hyundai-inster-cross-roof-basket",
-    "familyId": "hyundai-inster",
-    "make": "Hyundai",
-    "model": "Inster",
-    "variant": "Cross Roof Basket",
-    "bodyType": "SUV",
-    "listPrice": 45000,
-    "batteryKwh": 46,
-    "rangeKm": 293,
-    "consumptionKwhPer100km": 18.8,
-    "bootLitresSeatsUp": 280,
-    "bootLitresSeatsDown": 1059,
-    "seats": 4,
-    "towKg": 0,
-    "warrantyYears": 5,
-    "insuranceAnnual": 1400,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-08-08"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

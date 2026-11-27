@@ -1,9 +1,9 @@
 {
   "id": "denza-b8",
-  "summary": "Denza is BYD's premium marque and the B8 — the export rebadge of China's Fangchengbao Bao 8 — is its full-size three-row plug-in 4WD, launched here in February 2026 at $91,000 before on-roads. Australian reviewers agree it massively undercuts the Toyota LandCruiser, Lexus GX and Land Rover Defender it targets while arriving with equipment those cars charge options money for, and they split hard on whether a 3290kg 425kW family wagon is a car anyone needed: CarsGuide scores it 7.5 and calls the price ultra-sharp, carsales 79/100, EV Central 4/5, while Chasing Cars gives 6.5 for a busy, unpredictable ride and CarExpert rates it 'good' but explicitly tells buyers to take the smaller B5 instead. Every review lands on the same physical fact — at just under 3.3 tonnes kerb against a 3992kg GVM there is only 702kg of payload for a seven-seater, and no reviewer thinks the DiSus-P air suspension hides the mass on-road. Off-road the hardware is genuine (310mm clearance, 890mm wading, rear locker standard and a front locker on the 6S) but 4x4 Australia notes there is no transfer case and no mechanical low range, so it leans on electronics and diff locks where a LandCruiser leans on gearing. The powertrain is a true plug-in hybrid, not a range-extender: the 2.0-litre turbo petrol clutches to the front axle through the EHS assembly and BYD's DMO system lists engine direct drive alongside EV, series and idle-generation modes, with the rear axle electric-only. The running-cost case is the sharpest in the segment for a buyer who charges nightly and collapses for one who does not — 100km of WLTC electric range, then 11.4L/100km once the battery drops under 25 per cent, the thirstiest charge-sustaining figure of any plug-in hybrid in this dataset.",
+  "summary": "Denza is BYD's premium marque and the B8 — the export rebadge of China's Fangchengbao Bao 8 — is its full-size three-row plug-in 4WD, launched here in February 2026 at $91,000 before on-roads (7S) and $97,990 (6S), unchanged at November 2026. Australian reviewers agree it massively undercuts the Toyota LandCruiser, Lexus GX and Land Rover Defender it targets while arriving with equipment those cars charge options money for, and they split hard on whether a 3290kg 425kW family wagon is a car anyone needed: CarsGuide scores it 7.5 and calls the price ultra-sharp, EV Central 4/5, while Chasing Cars gives 6.5 for a busy, unpredictable ride and CarExpert rates it 'good' but explicitly tells buyers to take the smaller B5 instead. Every review lands on the same physical fact — at just under 3.3 tonnes kerb against a 3992kg GVM there is only about 700kg of payload for a seven-seater, and no reviewer thinks the DiSus-P suspension hides the mass on-road. Off-road the hardware is genuine (310mm clearance, 890mm wading, rear locker standard and a front locker on the 6S); 4x4 Australia notes the DMO layout has no transfer case, with Denza fitting a low-range gearset on the rear axle only where a LandCruiser has full-time dual-range gearing. The powertrain is a true plug-in hybrid, not a range-extender: BYD's DMO system switches between EV, series, parallel and engine direct-drive modes, so the 2.0-litre turbo can drive the wheels. The running-cost case is the sharpest in the segment for a buyer who charges nightly and collapses for one who does not — 100km of WLTC electric range, then 11.4L/100km once the battery drops under 25 per cent, the thirstiest charge-sustaining figure of any plug-in hybrid in this dataset.",
   "pros": [
-    "Prices a LandCruiser-sized, LandCruiser-capable three-row 4WD at $91,000-$97,990 before on-roads with air suspension, cross-axle lockers, nappa leather and (on the 6S) heated, cooled and massaging captain's chairs standard — CarExpert, CarsGuide, carsales and RACV all independently call the equipment-for-money the car's strongest single argument",
-    "100km of WLTC electric range from a 36.8kWh LFP blade pack and 905km of WLTC combined range on a 91-litre tank, so a buyer with home charging can do a metropolitan week without burning petrol and still cross the country at the weekend",
+    "Prices a LandCruiser-sized, LandCruiser-capable three-row 4WD at $91,000-$97,990 before on-roads with adaptive DiSus-P suspension, cross-axle lockers, nappa leather and (on the 6S) heated, cooled and massaging captain's chairs standard — CarExpert, CarsGuide, EV Central and RACV all independently call the equipment-for-money the car's strongest single argument",
+    "100km of WLTC electric range from a 36.8kWh LFP blade pack, and roughly 900km in total on a 91-litre tank at Denza's 11.36L/100km WLTC charge-sustaining claim, so a buyer with home charging can do a metropolitan week without burning petrol and still cross the country at the weekend",
     "3500kg braked towing with the towbar, hitch and wiring fitted at the factory, plus 310mm ground clearance, 890mm wading depth and a rear differential lock standard (front locker added on the 6S) — the tow rating matches a diesel LandCruiser rather than the 2500kg most plug-in SUVs manage",
     "Its 2.0L/100km ADR 81/02 combined label clears the 3.5L/100km luxury car tax fuel-efficient test comfortably, which at these prices is worth real money: the 7S at $91,000 lands under the $91,661 fuel-efficient threshold and attracts no LCT at all, and the 6S pays on only $6,329 of its price instead of $17,181",
     "Six-year/150,000km vehicle warranty with an eight-year/160,000km battery warranty and three years roadside assistance, and five years of capped-price servicing at $3,420 (12 months/20,000km intervals) — CarExpert notes that undercuts a LandCruiser's $4,500"
@@ -16,22 +16,20 @@
     "Denza is brand new to Australia with a handful of dealers, no residual history and no independent reliability record; RACV specifically flags long-term durability and regional support, and a debut luxury nameplate at $91,000-plus is the classic hard-depreciating case here"
   ],
   "sources": [
+    "https://www.denza.com/au/car/b8",
+    "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB8_SpecSheetAU_260306.pdf",
     "https://www.carexpert.com.au/car-news/2026-denza-b8-price-and-specs",
     "https://www.carexpert.com.au/car-reviews/2026-denza-b8-review",
     "https://www.carexpert.com.au/denza/b8/2026-7s-2l-suv-4x4-electric-jsk5fmks20251208",
     "https://www.carexpert.com.au/denza/b8/2026-6s-2l-suv-4x4-electric-jsk5fmko20251208",
-    "https://www.carexpert.com.au/denza/b8/2026/features-and-specs",
     "https://www.carsguide.com.au/ev/denza-b8-100883",
     "https://www.carsguide.com.au/denza/b8/price/2026",
     "https://www.chasingcars.com.au/reviews/large-suvs/denza-b8-2026-review/",
-    "https://www.carsales.com.au/editorial/details/denza-b8-2026-review-151513/",
     "https://evcentral.com.au/2026-denza-b8-6s-review-the-toyota-landcruiser-is-about-to-be-tested-more-seriously-than-ever-by-this-full-size-chinese-phev-4x4-wagon/",
     "https://www.racv.com.au/royalauto/car-reviews/denza/2026-denza-b8-review.html",
     "https://www.4x4australia.com.au/reviews/2026-denza-b5-and-b8-review",
-    "https://www.carexpert.com.au/car-news/2026-denza-b5-price-and-specs",
     "https://www.byduae.ae/en/articles/dmo/",
-    "https://auto.sina.cn/review/2024-10-18/detail-incsymyt8600647.d.html",
     "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
   ],
-  "sourcedAt": "2026-08-08"
+  "sourcedAt": "2026-11-27"
 }

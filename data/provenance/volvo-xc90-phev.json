@@ -1,0 +1,225 @@
+{
+  "familyId": "volvo-xc90-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "volvo-xc90-phev-plus-t8": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-plus-dark-2l-suv-4x4-electric-jsgwffs520260605",
+        "note": "CarExpert 2027 Plus Dark (2.0L, electric) variant page: 'released to the Australian market on 5th June 2026' with a price; CarsGuide 2027 XC90 price page lists 'Plus T8 Dark Phev $120,990' as one of two T8 grades (Plus T8 Dark, Ultra T8 Dark) beside the B5 mild hybrids; CarExpert 2027 range page shows the same two 340kW PHEV grades. volvocars.com/au configurator returned 403, so no manufacturer configurator check"
+      },
+      "listPrice": {
+        "value": 120990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-plus-dark-2l-suv-4x4-electric-jsgwffs520260605",
+        "note": "'prices starting at $120,990' before on-road costs (CarExpert MY27 variant page; Sydney drive-away $129,157 excludes CTP and dealer delivery). CarsGuide 2027 MSRP $120,990 (https://www.carsguide.com.au/volvo/xc90/price/2027). Unchanged from held. Chasing Cars (22 Sep 2026, https://www.chasingcars.com.au/news/future-cars/a-200km-plug-in-hybrid-2027-volvo-xc60-xc90-phevs-more-than-double-their-electric-range/) quotes the XC90 T8 'from $114,222 before on-roads', unexplained and not adopted (it also mis-states the XC60 by $307 against Volvo's list); Volvo's own price list unreachable (403)"
+      },
+      "batteryKwh": {
+        "value": 14.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/341496/",
+        "note": "ADAC 'Batteriekapazität' 18,8 kWh brutto, 14,7 kWh netto; CarExpert AU page gives 'Maximum battery kilowatt hour: 18.8 kWh' (gross), same pack. Same net on the Euro 6e-bis listing (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/350415/)"
+      },
+      "rangeKm": {
+        "value": 71,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/341496/",
+        "note": "European WLTP electric range 71 km (city 89 km) for the T8 Plus Dark on 275/40R21, 07/25-03/26 certification, the listing whose label matches the AU car's older-utility-factor 1.8 L/100km best. AU car rides on 20-inch (275/45 R20). Euro 6e-bis listing (ab 03/26) gives 70 km. CarExpert AU 77 km (CarsGuide review: 'official electric driving range according to Volvo is 77km') is higher than WLTP and rejected by the direction test (NEDC). Held 69 km not re-sourced"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.7 / 71 x 100 = 20.7. ADAC WLTP 'Stromverbrauch' 12.8 kWh/100km is utility-factor weighted, not used"
+      },
+      "combinedRangeKm": {
+        "value": 981,
+        "basis": "derived",
+        "note": "71 km WLTP electric + 71 L tank (CarExpert 'Capacity: 71 L'; ADAC 71,0 l) / 7.8 L/100km x 100 = 71 + 910.3 = 981"
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.8,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/341496/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 7,8 l/100 km (CO2 175 g/km battery empty), same basis as mazda-cx-80-phev and kia-sorento-phev (ADAC battery-empty, pre-6e-bis listing). Euro 6e-bis listing (ab 03/26, Plus Bright) gives 7.2. Held 7.7 was a carsales real-world figure. Now sits below volvo-xc60-phev's judged 8.4, which has no WLTP source; the lighter XC60 is the one likely high"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-plus-dark-2l-suv-4x4-electric-jsgwffs520260605",
+        "note": "AU combined-cycle label 'Combined: 1.8 L/100km', at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = passenger car with combined CO2 of 120 g/km or less; CarExpert 'CO2 level - g/km combined: 40 g/km'"
+      },
+      "bootLitresSeatsUp": {
+        "value": 262,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-plus-dark-2l-suv-4x4-electric-jsgwffs520260605",
+        "note": "'Rear seat up; to lower window: 262 L' (all three rows up, to the belt line); ADAC 'normal' 262 L. Euro 6e-bis Plus Bright lists 244 L, not the AU car"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1816,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/341496/",
+        "note": "ADAC 'dachhoch' (to the roof) with rear seats folded 1816 L; CarExpert 'Rear seat down: 1,816 L'. To-the-roof, matching the folded basis on 7-seat siblings kia-sorento-phev (1988) and mazda-cx-80-phev (1971); ADAC's window-height folded figure is 640 L, which the cargo-cover convention would strictly prefer"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-plus-dark-2l-suv-4x4-electric-jsgwffs520260605",
+        "note": "'Seating capacity: 7' (2+3+2)"
+      },
+      "towKg": {
+        "value": 2400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-plus-dark-2l-suv-4x4-electric-jsgwffs520260605",
+        "note": "'Gross trailer weight braked: 2,400 kg' (unbraked 750); ADAC 2400 kg (12%). Volvo AU tech sheet unreachable (403)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-plus-dark-2l-suv-4x4-electric-jsgwffs520260605",
+        "note": "'60 month, unlimited km warranty', unconditional; battery 96 months/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2700,
+        "basis": "judged",
+        "note": "Held value kept (list unchanged at $120,990). Anchors: lexus-rx-phev-450h-plus-sports-luxury ($123,650, 2850), volvo-ex90-plus-single-motor ($106,990, 2700), land-rover-defender-phev SE ($131,100, 3000); sits slightly under the Lexus at a slightly lower price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one Volvo curve, matching volvo-ex90. Evidence for a steep curve: luxury PHEV without the FBT exemption since Apr 2025, and a long-range XC90 T8 with more than double the electric range (164 km WLTP) due Q2 2027 (Chasing Cars, 22 Sep 2026) orphans this 18.8 kWh car. Held curve was [1,0.68,..0.36]/[1,0.66,..0.34]"
+      }
+    },
+    "volvo-xc90-phev-ultra-t8": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-ultra-dark-2l-suv-4x4-electric-jofsg8mk20260605",
+        "note": "CarExpert 2027 Ultra Dark (2.0L, electric) variant page: 'released to the Australian market on 5th June 2026' with a price; CarsGuide 2027 XC90 price page lists 'Ultra T8 Dark Phev $130,990' as one of two T8 grades (Plus T8 Dark, Ultra T8 Dark) beside the B5 mild hybrids; CarExpert 2027 range page shows the same two 340kW PHEV grades. volvocars.com/au configurator returned 403, so no manufacturer configurator check"
+      },
+      "listPrice": {
+        "value": 130990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-ultra-dark-2l-suv-4x4-electric-jofsg8mk20260605",
+        "note": "'prices starting at $130,990' before on-road costs (CarExpert MY27 variant page; Sydney drive-away $139,657 excludes CTP and dealer delivery). CarsGuide 2027 MSRP $130,990 (https://www.carsguide.com.au/volvo/xc90/price/2027). Unchanged from held. Chasing Cars (22 Sep 2026, https://www.chasingcars.com.au/news/future-cars/a-200km-plug-in-hybrid-2027-volvo-xc60-xc90-phevs-more-than-double-their-electric-range/) quotes the XC90 T8 'from $114,222 before on-roads', unexplained and not adopted (it also mis-states the XC60 by $307 against Volvo's list); Volvo's own price list unreachable (403)"
+      },
+      "batteryKwh": {
+        "value": 14.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/341498/",
+        "note": "ADAC 'Batteriekapazität' 18,8 kWh brutto, 14,7 kWh netto; CarExpert AU page gives 'Maximum battery kilowatt hour: 18.8 kWh' (gross), same pack. Same net on the Euro 6e-bis listing (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/350415/)"
+      },
+      "rangeKm": {
+        "value": 71,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/341498/",
+        "note": "European WLTP electric range 71 km (city 89 km) for the T8 Ultra Dark on 275/40R21, 07/25-03/26 certification, the listing whose label matches the AU car's older-utility-factor 1.8 L/100km best. AU car rides on 22-inch (275/35 R22). Euro 6e-bis listing (ab 03/26) gives 70 km. CarExpert AU 77 km (CarsGuide review: 'official electric driving range according to Volvo is 77km') is higher than WLTP and rejected by the direction test (NEDC). Held 69 km not re-sourced"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.7 / 71 x 100 = 20.7. ADAC WLTP 'Stromverbrauch' 12.8 kWh/100km is utility-factor weighted, not used"
+      },
+      "combinedRangeKm": {
+        "value": 981,
+        "basis": "derived",
+        "note": "71 km WLTP electric + 71 L tank (CarExpert 'Capacity: 71 L'; ADAC 71,0 l) / 7.8 L/100km x 100 = 71 + 910.3 = 981"
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.8,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/341498/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 7,8 l/100 km (CO2 175 g/km battery empty), same basis as mazda-cx-80-phev and kia-sorento-phev (ADAC battery-empty, pre-6e-bis listing). Euro 6e-bis listing (ab 03/26, Plus Bright) gives 7.2. Held 7.7 was a carsales real-world figure. Now sits below volvo-xc60-phev's judged 8.4, which has no WLTP source; the lighter XC60 is the one likely high"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-ultra-dark-2l-suv-4x4-electric-jofsg8mk20260605",
+        "note": "AU combined-cycle label 'Combined: 1.8 L/100km', at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = passenger car with combined CO2 of 120 g/km or less; CarExpert 'CO2 level - g/km combined: 40 g/km'"
+      },
+      "bootLitresSeatsUp": {
+        "value": 262,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-ultra-dark-2l-suv-4x4-electric-jofsg8mk20260605",
+        "note": "'Rear seat up; to lower window: 262 L' (all three rows up, to the belt line); ADAC 'normal' 262 L. Euro 6e-bis Plus Bright lists 244 L, not the AU car"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1816,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/volvo/xc90/2generation-facelift-2/341498/",
+        "note": "ADAC 'dachhoch' (to the roof) with rear seats folded 1816 L; CarExpert 'Rear seat down: 1,816 L'. To-the-roof, matching the folded basis on 7-seat siblings kia-sorento-phev (1988) and mazda-cx-80-phev (1971); ADAC's window-height folded figure is 640 L, which the cargo-cover convention would strictly prefer"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-ultra-dark-2l-suv-4x4-electric-jofsg8mk20260605",
+        "note": "'Seating capacity: 7' (2+3+2)"
+      },
+      "towKg": {
+        "value": 2400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-ultra-dark-2l-suv-4x4-electric-jofsg8mk20260605",
+        "note": "'Gross trailer weight braked: 2,400 kg' (unbraked 750); ADAC 2400 kg (12%). Volvo AU tech sheet unreachable (403)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volvo/xc90/2027-ultra-dark-2l-suv-4x4-electric-jofsg8mk20260605",
+        "note": "'60 month, unlimited km warranty', unconditional; battery 96 months/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2850,
+        "basis": "judged",
+        "note": "Held value kept (list unchanged at $130,990). Anchors: lexus-rx-phev-450h-plus-sports-luxury ($123,650, 2850), land-rover-defender-phev SE ($131,100, 3000), volvo-ex90-ultra-twin-motor-performance ($134,990, 3150, BEV)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one Volvo curve, matching volvo-ex90. Evidence for a steep curve: luxury PHEV without the FBT exemption since Apr 2025, and a long-range XC90 T8 with more than double the electric range (164 km WLTP) due Q2 2027 (Chasing Cars, 22 Sep 2026) orphans this 18.8 kWh car. Held curve was [1,0.68,..0.36]/[1,0.66,..0.34]"
+      }
+    }
+  },
+  "lowConfidence": [
+    "volvo-xc90-phev-plus-t8.availability: volvocars.com/au configurator 403; grade list rests on CarExpert and CarsGuide",
+    "volvo-xc90-phev-plus-t8.listPrice: reviews/aggregators only, Volvo price list unreachable; Chasing Cars quotes $114,222 for the T8 (unexplained)",
+    "volvo-xc90-phev-plus-t8.rangeKm: European WLTP 71 km on 21-inch wheels; AU Plus on 20-inch, Ultra on 22-inch; Euro 6e-bis gives 70",
+    "volvo-xc90-phev-plus-t8.fuelConsumptionL100km: European WLTP battery-empty 7.8 (pre-6e-bis); 6e-bis listing gives 7.2",
+    "volvo-xc90-phev-plus-t8.bootLitresSeatsDown: 1816 L is to the roof (siblings' basis); window-height folded figure 640 L",
+    "volvo-xc90-phev-plus-t8.insuranceAnnual: judged",
+    "volvo-xc90-phev-plus-t8.depreciationCurve: judged, owner's one-curve-per-brand convention (volvo-ex90)",
+    "volvo-xc90-phev-ultra-t8.availability: volvocars.com/au configurator 403; grade list rests on CarExpert and CarsGuide",
+    "volvo-xc90-phev-ultra-t8.listPrice: reviews/aggregators only, Volvo price list unreachable; Chasing Cars quotes $114,222 for the T8 (unexplained)",
+    "volvo-xc90-phev-ultra-t8.rangeKm: European WLTP 71 km on 21-inch wheels; AU Plus on 20-inch, Ultra on 22-inch; Euro 6e-bis gives 70",
+    "volvo-xc90-phev-ultra-t8.fuelConsumptionL100km: European WLTP battery-empty 7.8 (pre-6e-bis); 6e-bis listing gives 7.2",
+    "volvo-xc90-phev-ultra-t8.bootLitresSeatsDown: 1816 L is to the roof (siblings' basis); window-height folded figure 640 L",
+    "volvo-xc90-phev-ultra-t8.insuranceAnnual: judged",
+    "volvo-xc90-phev-ultra-t8.depreciationCurve: judged, owner's one-curve-per-brand convention (volvo-ex90)"
+  ]
+}

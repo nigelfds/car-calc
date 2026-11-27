@@ -3,10 +3,10 @@
     "id": "hyundai-ioniq-6-n",
     "familyId": "hyundai-ioniq-6",
     "make": "Hyundai",
-    "model": "Ioniq 6 N",
+    "model": "Ioniq 6",
     "variant": "N",
     "bodyType": "Sedan",
-    "listPrice": 115000,
+    "listPrice": 114918,
     "batteryKwh": 80,
     "rangeKm": 487,
     "consumptionKwhPer100km": 18.7,
@@ -15,15 +15,8 @@
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
-    "insuranceAnnual": 2950,
-    "depreciationCurve": [
-      1,
-      0.72,
-      0.61,
-      0.53,
-      0.46,
-      0.4
-    ],
-    "sourcedAt": "2026-08-08"
+    "insuranceAnnual": 2750,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-11-26"
   }
 ]

@@ -1,0 +1,221 @@
+{
+  "familyId": "denza-b5",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "denza-b5-base": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.denzasydney.com.au/configurator/denza-b5",
+        "note": "Denza's Build & Order (hosted by the Denza Sydney dealer) shows MY26 variant 'B5' live with a configurator price. The same data feed carries a VIC state price for the 2025-build offer, so the grade is sold in Victoria. Denza's AU model page lists only B5 and B5 Leopard: https://www.denza.com/au/car/b5"
+      },
+      "listPrice": {
+        "value": 74990,
+        "basis": "sourced",
+        "url": "https://www.denzasydney.com.au/configurator/denza-b5",
+        "note": "Configurator data: MY26 dap_min_price/dap_max_price 74990.0 (B5 configuratorMinPrice '74,990'; metallic paint is a $1500 option). Not drive-away: in the same feed, the 2025-build $74,990 drive-away offer carries a VIC list_price of 68752.70, so the configurator prices come before on-roads. GoAuto's launch story says 'Pricing excludes on-road costs' in words (https://www.goauto.com.au/new-models/denza/b5/2026-02-19/98509.html), and GoAuto's Leopard review says '$79,990 plus on-road costs' (https://www.goauto.com.au/car-reviews/denza.html). CarExpert's pricing page Sydney drive-away figures of $81,221/$86,471 are consistent. The 2025-build $74,990/$79,990 drive-away campaign (to 2026-11-30) is a run-out campaign and was ignored."
+      },
+      "batteryKwh": {
+        "value": 23.9,
+        "basis": "derived",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "31.8 kWh pack (spec sheet 'Battery capacity (kWh) 31.8'; the label does not say gross or net) × 0.75, because the car keeps a 25% SOC floor (spec sheet electric range is quoted 'SOC 25%-100%'; GoAuto review: 'runs the batteries down to 25 per cent'). 23.85, rounded. This is the energy available for EV driving, not a published usable figure."
+      },
+      "rangeKm": {
+        "value": 90,
+        "basis": "sourced",
+        "standard": "other",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "WLTC (China's version of the WLTP cycle), SOC 25-100%, the same figure for both grades on the AU spec sheet. The AU label figure is NEDC 100 km (same sheet). It fails the direction test against the EU WLTP figure of 92 km for the Bao 5 Ultimate on 275/55R20 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/denza/bao-5/1generation/351875/), so NEDC is rejected. WLTP 92 is not used: it is for a differently tuned EU car (110 kW engine vs 135 kW in the AU car) and exists only for the 20-inch grade, and using it on the Leopard alone would give the heavier car more range than the Base. WLTC 90 sits 2% under WLTP 92, so it is not inflated."
+      },
+      "consumptionKwhPer100km": {
+        "value": 26.6,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm × 100 = 23.9 / 90 × 100 = 26.56. Cross-check: the spec sheet's 'Energy Consumption 233 Wh/km' × NEDC 100 km = 23.3 kWh, which matches the 23.9 kWh EV window. So 233 Wh/km is the NEDC figure, and it is not used."
+      },
+      "combinedRangeKm": {
+        "value": 851,
+        "basis": "derived",
+        "note": "rangeKm 90 + tank 83 L (spec sheet) / fuelConsumptionL100km 10.9 × 100 = 851.5, rounded down. Denza's own 'WLTC Combined Range' is 850 km (spec sheet)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.9,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'WLTC Combined Fuel Consumption - SOC <25% (L/100km) 10.92' (charge-sustaining; the NEDC equivalent of 9.49 is rejected). GoAuto's review averaged 8.8 L/100km on a mixed test with some battery use."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Combined label 'Combined Fuel Consumption - SOC 25%-100% (L/100km) (NEDC) 1.9' is at or under 3.5. Moot at these prices (under $80,809)."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "An SRO green car has combined CO2 of 120 g/km or less; the spec sheet gives CO2 42 g/km (https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 470,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Minimum Boot Capacity (L) 470'; GoAuto review 470-1064 L; ADAC gives 475 L normal for the EU car. The CarExpert price-and-specs story gives 1604 L folded, a transposition, so that record was discarded."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1064,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Maximum Boot Capacity (L) 1064'. Belt-line basis: ADAC lists the EU car at 1069 L window-high and 1736 L roof-high (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/denza/bao-5/1generation/351875/), so 1064 is the to-the-window figure, which matches the convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Seating Capacity 5'."
+      },
+      "towKg": {
+        "value": 3000,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet Towing 'With Trailer Brakes (kg) 3000' (750 unbraked). The EU car is rated 2500 kg (ADAC) under a different homologation."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.goauto.com.au/new-models/denza/b5/2026-02-19/98509.html",
+        "note": "'six years/150,000km vehicle coverage', with a separate 8-year/160,000km battery warranty."
+      },
+      "insuranceAnnual": {
+        "value": 2350,
+        "basis": "judged",
+        "note": "Carried judgement, re-anchored against gwm-tank-500-phev ($2200 at $75,921), denza-b8-7s ($2500 at $91,000) and land-rover-defender-phev ($3000 at $131,100). A 2.9 t 4x4 from a new brand with costly repairs sits above the Tank."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.65,
+          0.53,
+          0.44,
+          0.37,
+          0.31
+        ],
+        "basis": "judged",
+        "note": "One curve for every Denza row: the one denza-b8 also carries in this refresh (previously held on denza-b5-base). Steeper than BYD's [1,0.74,...] because Denza is a new marque with no residual history and was already cutting more than $7000 off unsold 2025-build B5s in Oct-Nov 2026 (https://www.carexpert.com.au/car-news/denza-b5-price-cut-byds-toyota-prado-rival-now-priced-under-dollar74k-drive-away; https://www.cars24.com.au/car-news/denza-b5-price-cut-australia). Close to land-rover-defender-phev's [1,0.66,...]."
+      }
+    },
+    "denza-b5-leopard": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.denzasydney.com.au/configurator/denza-b5",
+        "note": "Denza's Build & Order (hosted by the Denza Sydney dealer) shows MY26 variant 'B5 Leopard' live with a configurator price. The same data feed carries a VIC state price for the 2025-build offer, so the grade is sold in Victoria. Denza's AU model page lists only B5 and B5 Leopard: https://www.denza.com/au/car/b5"
+      },
+      "listPrice": {
+        "value": 79990,
+        "basis": "sourced",
+        "url": "https://www.denzasydney.com.au/configurator/denza-b5",
+        "note": "Configurator data: MY26 dap_min_price/dap_max_price 79990.0 (B5 configuratorMinPrice '74,990'; metallic paint is a $1500 option). Not drive-away: in the same feed, the 2025-build $74,990 drive-away offer carries a VIC list_price of 68752.70, so the configurator prices come before on-roads. GoAuto's launch story says 'Pricing excludes on-road costs' in words (https://www.goauto.com.au/new-models/denza/b5/2026-02-19/98509.html), and GoAuto's Leopard review says '$79,990 plus on-road costs' (https://www.goauto.com.au/car-reviews/denza.html). CarExpert's pricing page Sydney drive-away figures of $81,221/$86,471 are consistent. The 2025-build $74,990/$79,990 drive-away campaign (to 2026-11-30) is a run-out campaign and was ignored."
+      },
+      "batteryKwh": {
+        "value": 23.9,
+        "basis": "derived",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "31.8 kWh pack (spec sheet 'Battery capacity (kWh) 31.8'; the label does not say gross or net) × 0.75, because the car keeps a 25% SOC floor (spec sheet electric range is quoted 'SOC 25%-100%'; GoAuto review: 'runs the batteries down to 25 per cent'). 23.85, rounded. This is the energy available for EV driving, not a published usable figure."
+      },
+      "rangeKm": {
+        "value": 90,
+        "basis": "sourced",
+        "standard": "other",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "WLTC (China's version of the WLTP cycle), SOC 25-100%, the same figure for both grades on the AU spec sheet. The AU label figure is NEDC 100 km (same sheet). It fails the direction test against the EU WLTP figure of 92 km for the Bao 5 Ultimate on 275/55R20 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/denza/bao-5/1generation/351875/), so NEDC is rejected. WLTP 92 is not used: it is for a differently tuned EU car (110 kW engine vs 135 kW in the AU car) and exists only for the 20-inch grade, and using it on the Leopard alone would give the heavier car more range than the Base. WLTC 90 sits 2% under WLTP 92, so it is not inflated."
+      },
+      "consumptionKwhPer100km": {
+        "value": 26.6,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm × 100 = 23.9 / 90 × 100 = 26.56. Cross-check: the spec sheet's 'Energy Consumption 233 Wh/km' × NEDC 100 km = 23.3 kWh, which matches the 23.9 kWh EV window. So 233 Wh/km is the NEDC figure, and it is not used."
+      },
+      "combinedRangeKm": {
+        "value": 851,
+        "basis": "derived",
+        "note": "rangeKm 90 + tank 83 L (spec sheet) / fuelConsumptionL100km 10.9 × 100 = 851.5, rounded down. Denza's own 'WLTC Combined Range' is 850 km (spec sheet)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.9,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'WLTC Combined Fuel Consumption - SOC <25% (L/100km) 10.92' (charge-sustaining; the NEDC equivalent of 9.49 is rejected). GoAuto's review averaged 8.8 L/100km on a mixed test with some battery use."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Combined label 'Combined Fuel Consumption - SOC 25%-100% (L/100km) (NEDC) 1.9' is at or under 3.5. Moot at these prices (under $80,809)."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "An SRO green car has combined CO2 of 120 g/km or less; the spec sheet gives CO2 42 g/km (https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 470,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Minimum Boot Capacity (L) 470'; GoAuto review 470-1064 L; ADAC gives 475 L normal for the EU car. The CarExpert price-and-specs story gives 1604 L folded, a transposition, so that record was discarded."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1064,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Maximum Boot Capacity (L) 1064'. Belt-line basis: ADAC lists the EU car at 1069 L window-high and 1736 L roof-high (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/denza/bao-5/1generation/351875/), so 1064 is the to-the-window figure, which matches the convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet 'Seating Capacity 5'."
+      },
+      "towKg": {
+        "value": 3000,
+        "basis": "sourced",
+        "url": "https://www.denza.com/material/denza-site/au/spec-sheet/MY26_DENZAB5_SpecSheetAU_260306.pdf",
+        "note": "Spec sheet Towing 'With Trailer Brakes (kg) 3000' (750 unbraked). The EU car is rated 2500 kg (ADAC) under a different homologation."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.goauto.com.au/new-models/denza/b5/2026-02-19/98509.html",
+        "note": "'six years/150,000km vehicle coverage', with a separate 8-year/160,000km battery warranty."
+      },
+      "insuranceAnnual": {
+        "value": 2450,
+        "basis": "judged",
+        "note": "Base $2350 plus $100 for the $5000 higher price, 20-inch wheels and DiSus-P hydraulic suspension; under denza-b8-7s at $2500."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.65,
+          0.53,
+          0.44,
+          0.37,
+          0.31
+        ],
+        "basis": "judged",
+        "note": "One curve for every Denza row: the one denza-b8 also carries in this refresh (previously held on denza-b5-base). Steeper than BYD's [1,0.74,...] because Denza is a new marque with no residual history and was already cutting more than $7000 off unsold 2025-build B5s in Oct-Nov 2026 (https://www.carexpert.com.au/car-news/denza-b5-price-cut-byds-toyota-prado-rival-now-priced-under-dollar74k-drive-away; https://www.cars24.com.au/car-news/denza-b5-price-cut-australia). Close to land-rover-defender-phev's [1,0.66,...]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "denza-b5-base.depreciationCurve: judged; new brand with no resale data, matched to denza-b8",
+    "denza-b5-leopard.depreciationCurve: judged; new brand with no resale data, matched to denza-b8",
+    "denza-b5-base.rangeKm: WLTC 90 (standard other); no WLTP figure exists for the 18-inch AU car, and EU WLTP 92 is for a 20-inch, differently tuned car",
+    "denza-b5-leopard.rangeKm: WLTC 90 kept over EU WLTP 92 (different engine tune) so both grades stay consistent",
+    "denza-b5-base.batteryKwh: derived as 75% of 31.8 kWh (25% SOC floor); unclear whether 31.8 is gross",
+    "denza-b5-leopard.batteryKwh: derived as 75% of 31.8 kWh (25% SOC floor); unclear whether 31.8 is gross",
+    "denza-b5-base.insuranceAnnual: judged against Tank 500 PHEV, B8 and Defender PHEV",
+    "denza-b5-leopard.insuranceAnnual: judged against Tank 500 PHEV, B8 and Defender PHEV",
+    "denza-b5-base.listPrice: read from the data feed of the dealer-hosted configurator (Denza Sydney); its price fields are unlabelled, so pre-on-road is shown only by inference and by GoAuto's 'excludes on-road costs'",
+    "denza-b5-leopard.listPrice: read from the data feed of the dealer-hosted configurator (Denza Sydney); its price fields are unlabelled, so pre-on-road is shown only by inference and by GoAuto's 'plus on-road costs'"
+  ]
+}

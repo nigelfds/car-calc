@@ -1,0 +1,221 @@
+{
+  "familyId": "lexus-nx-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "lexus-nx-phev-450h-plus-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-lexus-nx-review-quick-drive",
+        "note": "CarExpert 24 Nov 2026 lists the current (outgoing) NX450h+ Luxury as on sale at 84630 plus ORCs; CarsGuide MY2027 price list also carries it. lexus.com.au configurator returned 403, so not checked directly. Facelift not due until H1 2027."
+      },
+      "listPrice": {
+        "value": 84630,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/cars/lexus/nx-450h/",
+        "note": "EV Central: list price 'plus on-road costs', pricing updated 21 Nov 2026 (flagged as estimated); agrees with CarExpert 24 Nov 2026 '$84,630 plus ORCs' (https://www.carexpert.com.au/car-reviews/2027-lexus-nx-review-quick-drive) and CarsGuide MY2027 MSRP list (https://www.carsguide.com.au/lexus/nx/price/2027). Up from held 84,500."
+      },
+      "batteryKwh": {
+        "value": 16.0,
+        "basis": "judged",
+        "note": "No usable figure published by Lexus/Toyota. 18.1 kWh is gross (ADAC lists it as 'brutto', https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/nx/az2/342016/). 16.0 usable (~88%) matches lexus-rx-phev on the same pack; third-party estimates for the identical RAV4 PHEV pack range 14-16.7 kWh."
+      },
+      "rangeKm": {
+        "value": 72,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/nx/az2/342016/",
+        "note": "ADAC catalogue, NX 450h+ from 07/25, WLTP electric range 72 km on 18-inch (235/60R18), matching the AU Luxury per CarsGuide. Lexus Europe band 70-74 km (https://newsroom.lexus.eu/plugged-in-or-unplugged-lexus-hybrid-technology-sets-the-pace/). AU 87 km label figure is NEDC-derived (CarExpert) and rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 16.0/72x100. ADAC's 11.6 kWh/100km is utility-factor weighted and not used."
+      },
+      "bootLitresSeatsUp": {
+        "value": 520,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+        "note": "CarExpert: 520 L seats up, same for all NX powertrains; CarsGuide Luxury review also 520 L. European VDA 545 L not used."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1141,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+        "note": "CarExpert 2025 review: 1141 L seats folded. Other AU outlets print 1411 L; EU roof-high is 1436 L and the same-platform RAV4 PHEV is 1168 L folded to tonneau (Toyota UK spec), so 1141 is taken as to-the-cover and 1411 as to-roof. Held 1410 replaced per boot-to-cover convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/luxury/lexus-nx-450h-luxury-100844",
+        "note": "CarsGuide: five seats"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/luxury/lexus-nx-450h-luxury-100844",
+        "note": "Australian braked towing 1000 kg (CarsGuide Luxury review and CarExpert F Sport review). Europe rates 1500 kg (ADAC); AU figure used."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+        "note": "five-year, unlimited-kilometre warranty; battery extension conditional on annual health checks is in pros"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "kept from held row; anchored below lexus-rx-phev (2550/2850 at $105k/$124k), near volvo-xc60-phev plus T8 (2250 at $92,990) and mercedes-glc-phev (2500 at $99,900)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand. Mainstream default used for all Lexus rows; no documented evidence of heavy discounting, and Lexus hybrids hold value. Replaces the held per-grade curves."
+      },
+      "combinedRangeKm": {
+        "value": 931,
+        "basis": "derived",
+        "note": "72 km WLTP electric + 55 L tank (ADAC; CarsGuide 55 L) / 6.4 L/100km x 100 = 931 km"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.4,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/nx/az2/342016/",
+        "note": "ADAC: 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 6.4 L/100km, charge-sustaining, MY from 07/25. AU testers 5.4-5.7 L/100km (CarsGuide, CarExpert)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/luxury/lexus-nx-450h-luxury-100844",
+        "note": "Lexus AU label combined 1.3 L/100km (also CarExpert spec table), at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green = combined tailpipe CO2 <= 120 g/km; NX450h+ label 29 g/km (CarExpert spec table, https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review)"
+      }
+    },
+    "lexus-nx-phev-450h-plus-f-sport": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-lexus-nx-review-quick-drive",
+        "note": "CarExpert 24 Nov 2026 lists the current (outgoing) NX450h+ F Sport as on sale at 96090 plus ORCs; CarsGuide MY2027 price list also carries it. lexus.com.au configurator returned 403, so not checked directly. Facelift not due until H1 2027."
+      },
+      "listPrice": {
+        "value": 96090,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/cars/lexus/nx-450h/",
+        "note": "EV Central: list price 'plus on-road costs', pricing updated 21 Nov 2026 (flagged as estimated); agrees with CarExpert 24 Nov 2026 '$96,090 plus ORCs' (https://www.carexpert.com.au/car-reviews/2027-lexus-nx-review-quick-drive) and CarsGuide MY2027 MSRP list (https://www.carsguide.com.au/lexus/nx/price/2027). Up from held 96,000."
+      },
+      "batteryKwh": {
+        "value": 16.0,
+        "basis": "judged",
+        "note": "No usable figure published by Lexus/Toyota. 18.1 kWh is gross (ADAC lists it as 'brutto', https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/nx/az2/342020/). 16.0 usable (~88%) matches lexus-rx-phev on the same pack; third-party estimates for the identical RAV4 PHEV pack range 14-16.7 kWh."
+      },
+      "rangeKm": {
+        "value": 72,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/nx/az2/342020/",
+        "note": "ADAC catalogue, NX 450h+ from 07/25, WLTP electric range 72 km on 20-inch (235/50R20), matching the AU F Sport per CarExpert. Lexus Europe band 70-74 km (https://newsroom.lexus.eu/plugged-in-or-unplugged-lexus-hybrid-technology-sets-the-pace/). AU 87 km label figure is NEDC-derived (CarExpert) and rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 16.0/72x100. ADAC's 11.6 kWh/100km is utility-factor weighted and not used."
+      },
+      "bootLitresSeatsUp": {
+        "value": 520,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+        "note": "CarExpert: 520 L seats up, same for all NX powertrains; CarsGuide Luxury review also 520 L. European VDA 545 L not used."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1141,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+        "note": "CarExpert 2025 review: 1141 L seats folded. Other AU outlets print 1411 L; EU roof-high is 1436 L and the same-platform RAV4 PHEV is 1168 L folded to tonneau (Toyota UK spec), so 1141 is taken as to-the-cover and 1411 as to-roof. Held 1410 replaced per boot-to-cover convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/luxury/lexus-nx-450h-luxury-100844",
+        "note": "CarsGuide: five seats"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+        "note": "Australian braked towing 1000 kg (CarsGuide Luxury review and CarExpert F Sport review). Europe rates 1500 kg (ADAC); AU figure used."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review",
+        "note": "five-year, unlimited-kilometre warranty; battery extension conditional on annual health checks is in pros"
+      },
+      "insuranceAnnual": {
+        "value": 2350,
+        "basis": "judged",
+        "note": "kept from held row; anchored below lexus-rx-phev (2550/2850 at $105k/$124k), near volvo-xc60-phev plus T8 (2250 at $92,990) and mercedes-glc-phev (2500 at $99,900)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand. Mainstream default used for all Lexus rows; no documented evidence of heavy discounting, and Lexus hybrids hold value. Replaces the held per-grade curves."
+      },
+      "combinedRangeKm": {
+        "value": 931,
+        "basis": "derived",
+        "note": "72 km WLTP electric + 55 L tank (ADAC; CarsGuide 55 L) / 6.4 L/100km x 100 = 931 km"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.4,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/nx/az2/342020/",
+        "note": "ADAC: 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 6.4 L/100km, charge-sustaining, MY from 07/25. AU testers 5.4-5.7 L/100km (CarsGuide, CarExpert)."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/luxury/lexus-nx-450h-luxury-100844",
+        "note": "Lexus AU label combined 1.3 L/100km (also CarExpert spec table), at or below 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green = combined tailpipe CO2 <= 120 g/km; NX450h+ label 29 g/km (CarExpert spec table, https://www.carexpert.com.au/car-reviews/2025-lexus-nx450h-f-sport-review)"
+      }
+    }
+  },
+  "lowConfidence": [
+    "lexus-nx-phev-450h-plus-luxury.batteryKwh: usable capacity unpublished; 16.0 judged from 18.1 gross, matched to lexus-rx-phev",
+    "lexus-nx-phev-450h-plus-f-sport.batteryKwh: usable capacity unpublished; 16.0 judged from 18.1 gross, matched to lexus-rx-phev",
+    "lexus-nx-phev-450h-plus-luxury.listPrice: lexus.com.au configurator 403; $84,630 from EV Central (marked estimated), CarExpert and CarsGuide MSRP list, no manufacturer page",
+    "lexus-nx-phev-450h-plus-f-sport.listPrice: lexus.com.au configurator 403; $96,090 from EV Central (marked estimated), CarExpert and CarsGuide MSRP list, no manufacturer page",
+    "lexus-nx-phev-450h-plus-luxury.bootLitresSeatsDown: AU outlets split 1141 vs 1411 L; 1141 taken as to-cover by inference, not labelled",
+    "lexus-nx-phev-450h-plus-f-sport.bootLitresSeatsDown: AU outlets split 1141 vs 1411 L; 1141 taken as to-cover by inference, not labelled",
+    "lexus-nx-phev-450h-plus-luxury.rangeKm: ADAC gives 72 km for both 18 and 20-inch; Lexus Europe band 70-74 km, so the 18-inch car may be ~74",
+    "lexus-nx-phev-450h-plus-f-sport.rangeKm: ADAC gives 72 km for both wheel sizes; Lexus Europe band 70-74 km, so the 20-inch car may be ~70",
+    "lexus-nx-phev-450h-plus-luxury.depreciationCurve: brand-wide mainstream default chosen; must match lexus-rx-phev and lexus-rz",
+    "lexus-nx-phev-450h-plus-f-sport.depreciationCurve: brand-wide mainstream default chosen; must match lexus-rx-phev and lexus-rz",
+    "lexus-nx-phev-450h-plus-luxury.insuranceAnnual: judged",
+    "lexus-nx-phev-450h-plus-f-sport.insuranceAnnual: judged"
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "familyId": "kgm-musso-ev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "kgm-musso-ev-2wd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://kgm.com.au/models/configurator/musso-ev",
+        "note": "KGM AU configurator serves two Musso EV MY26 grades: 2WD $60,000 and AWD $64,000 national drive-away, private buyer. Black Edge is not a configurator grade; the model page calls it 'A styling pack for the Musso EV'."
+      },
+      "listPrice": {
+        "value": 57130,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kgm/musso/2026-base-utility-fwd-electric-jsk5ks5m20251118",
+        "note": "CarExpert spec page: 'prices starting at $57,130' before on-road costs, against $60,000 drive-away. KGM itself publishes only a flat national drive-away ($60,000; GoAuto calls it 'national driveaway'; configurator disclaimer says it includes an estimated dealer delivery charge). CarsGuide price page lists the same 2WD $57,130 (MSRP footnote). Direction check: list $57,130 through calc/onroad.js (ute) gives a VIC drive-away of $59,553 approx, below KGM's $60,000, so the drive-away is genuine and carries dealer delivery plus NSW-level on-roads. The ute-divisor back-out ($57,566) would overstate the list by about $436 because of that bundling, so the manufacturer-supplied list price was used."
+      },
+      "batteryKwh": {
+        "value": 80.6,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "KGM AU MY26 spec sheet (Sept 2026 issue): 'Capacity 80.6 kWh', LFP, 371.2 V, unlabelled. CarExpert gives 80.59 kWh. Treated as usable (EV Database lists 80.6 usable / 83.0 nominal, but its page could not be opened this run)."
+      },
+      "rangeKm": {
+        "value": 419,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "KGM AU spec sheet footnote 2: WLTP combined. Sept 2026 sheet revised 420/380 to 419/379. Same 17-inch 245/60 wheel on both grades. CarExpert 2WD spec page still shows the launch 420 km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "KGM AU spec sheet: WLTP combined 230 Wh/km. Battery/range gives 19.2; the WLTP figure includes charging losses, gap inside the 25% tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 1039,
+        "basis": "judged",
+        "note": "Tub litres unpublished. KGM AU spec sheet tub 1,345 x 1,515 x 510 mm = 1,039 L; reads 10-20% high (wheel arches ignored). Ute convention: tub volume in both boot fields."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1039,
+        "basis": "judged",
+        "note": "Same tub volume as bootLitresSeatsUp (ute convention)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "Dual cab, five seatbelt positions (60/40 split rear bench)."
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "KGM AU spec sheet (Sept 2026): braked 1,800 kg, towball 180 kg for 2WD. KGM model page's 'up to 2.3 tonne' is the AWD figure."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://kgm.com.au/owners-and-service/warranty/warranty-terms",
+        "note": "7 years unlimited km 'bumper to bumper'; servicing outside the dealer network allowed with invoices, so unconditional. HV battery 10 years/unlimited km."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "Anchored to byd-shark-6-dynamic-cab-chassis (1750 at $55,900), gwm-cannon-phev-ultra (1800 at $52,687) and kgm-torres-evx (1800 at $55,188); a new electric ute nameplate with no ANCAP rating, so slightly above the Torres EVX. Held value kept."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "KGM brand convention, same curve as kgm-torres-evx. Below-mainstream evidence: KGM's 2025 sales fell 23.7% (VFACTS, per held research), the only electric-ute precedent (LDV eT60) trades around 40-50% of new after 2-3 years, no ANCAP rating (CarExpert and CarsGuide reviews, opened this run)."
+      }
+    },
+    "kgm-musso-ev-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://kgm.com.au/models/configurator/musso-ev",
+        "note": "KGM AU configurator serves two Musso EV MY26 grades: 2WD $60,000 and AWD $64,000 national drive-away, private buyer. Black Edge is not a configurator grade; the model page calls it 'A styling pack for the Musso EV'."
+      },
+      "listPrice": {
+        "value": 61014,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kgm/musso/2026-base-utility-4x4-electric-jsk5ks5o20251118",
+        "note": "CarExpert spec page: 'prices starting at $61,014' before on-road costs, against $64,000 drive-away. KGM itself publishes only a flat national drive-away ($64,000; GoAuto calls it 'national driveaway'; configurator disclaimer says it includes an estimated dealer delivery charge). CarsGuide price page lists the same AWD $61,014 (MSRP footnote). Direction check: list $61,014 through calc/onroad.js (ute) gives a VIC drive-away of $63,541 approx, below KGM's $64,000, so the drive-away is genuine and carries dealer delivery plus NSW-level on-roads. The ute-divisor back-out ($61,461) would overstate the list by about $447 because of that bundling, so the manufacturer-supplied list price was used."
+      },
+      "batteryKwh": {
+        "value": 80.6,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "KGM AU MY26 spec sheet (Sept 2026 issue): 'Capacity 80.6 kWh', LFP, 371.2 V, unlabelled. CarExpert gives 80.59 kWh. Treated as usable (EV Database lists 80.6 usable / 83.0 nominal, but its page could not be opened this run)."
+      },
+      "rangeKm": {
+        "value": 379,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "KGM AU spec sheet footnote 2: WLTP combined. Sept 2026 sheet revised 420/380 to 419/379. Same 17-inch 245/60 wheel on both grades. CarExpert AWD spec page still shows the launch 380 km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 26,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "KGM AU spec sheet: WLTP combined 260 Wh/km. Battery/range gives 21.3; the WLTP figure includes charging losses, gap inside the 25% tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 1039,
+        "basis": "judged",
+        "note": "Tub litres unpublished. KGM AU spec sheet tub 1,345 x 1,515 x 510 mm = 1,039 L; reads 10-20% high (wheel arches ignored). Ute convention: tub volume in both boot fields."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1039,
+        "basis": "judged",
+        "note": "Same tub volume as bootLitresSeatsUp (ute convention)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "Dual cab, five seatbelt positions (60/40 split rear bench)."
+      },
+      "towKg": {
+        "value": 2300,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM_Musso-EV-MY26_Specs%20and%20Features.pdf",
+        "note": "KGM AU spec sheet (Sept 2026 issue, GCM raised 4,890 to 5,390 kg): AWD braked 2,300 kg, towball 230 kg. The Driven (28 Aug 2026) reports KGM lifting the AWD rating from 1,800 to 2,300 kg. CarExpert's AWD spec page still shows the launch 1,800 kg."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://kgm.com.au/owners-and-service/warranty/warranty-terms",
+        "note": "7 years unlimited km 'bumper to bumper'; servicing outside the dealer network allowed with invoices, so unconditional. HV battery 10 years/unlimited km."
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "Anchored as 2WD plus $100 for the dearer $61,014 list and 266 kW dual-motor output; below toyota-hilux-bev-sr-pickup (2100 at $76,490). Held value kept."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "KGM brand convention, same curve as kgm-torres-evx. Below-mainstream evidence: KGM's 2025 sales fell 23.7% (VFACTS, per held research), the only electric-ute precedent (LDV eT60) trades around 40-50% of new after 2-3 years, no ANCAP rating (CarExpert and CarsGuide reviews, opened this run)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "kgm-musso-ev-2wd.listPrice: KGM publishes drive-away only; $57,130 is the 'before on-road costs' figure on CarExpert's data-provider spec page (matched by CarsGuide's MSRP, likely the same feed), not on a KGM page. Ute back-out of $60,000 gives $57,566 instead",
+    "kgm-musso-ev-awd.listPrice: as 2WD, $61,014 vs back-out $61,461",
+    "kgm-musso-ev-2wd.bootLitresSeatsUp: tub volume multiplied out from dimensions, reads 10-20% high (same for SeatsDown and the AWD row)",
+    "kgm-musso-ev-awd.bootLitresSeatsUp: as 2WD",
+    "kgm-musso-ev-2wd.batteryKwh: 80.6 kWh unlabelled on KGM's sheet; usable-vs-gross not confirmed on an opened page (same for AWD)",
+    "kgm-musso-ev-awd.batteryKwh: as 2WD",
+    "kgm-musso-ev-awd.towKg: 2,300 kg is from the Sept 2026 spec sheet revision; whether earlier-build AWD utes carry it is not stated",
+    "kgm-musso-ev-2wd.depreciationCurve: KGM brand convention, no resale data for an electric ute nameplate (same for AWD)",
+    "kgm-musso-ev-awd.depreciationCurve: as 2WD",
+    "kgm-musso-ev-2wd.insuranceAnnual: judged against Shark 6, Cannon PHEV and Torres EVX",
+    "kgm-musso-ev-awd.insuranceAnnual: judged"
+  ]
+}

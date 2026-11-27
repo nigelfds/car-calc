@@ -1,0 +1,218 @@
+{
+  "familyId": "gwm-cannon-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "new",
+  "variants": {
+    "gwm-cannon-phev-lux": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/ute/cannon/",
+        "note": "GWM AU Cannon range page lists the Lux PHEV with a VIC private drive-away price; Build & Price link https://www.gwmanz.com/au/config/cannon/ (configurator is script-rendered, prices not readable); CarExpert/4x4 Australia confirm two grades, Lux and Ultra, both 4x4 dual-cab pickups; in dealers since 21 Oct 2026 (zecar)"
+      },
+      "listPrice": {
+        "value": 48716,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/models/ute/cannon/",
+        "note": "GWM publishes drive-away only: $50,990 drive-away, VIC private buyer, standard price before the $2,000 launch bonus (bonus runs to deliveries by 30 Nov 2026, so ignored as a campaign). Ute divisor: (50990 - 958.80) / 1.027 = 48,716; round-trip through calc/onroad.js driveAwayPrice (isNonPassenger true) = 50,990.41. No independent on-road estimate exists to verify against; the $1,000 ABN-vs-private gap and $4,000 Lux-Ultra gap are both GWM-chosen. CarExpert's spec page states '$48,990 before on-road costs', which is exactly the private campaign drive-away figure and is below what a $48,990 list would cost on the road in VIC, so it is a mislabelled drive-away price and was rejected. Same $50,990/$54,990 private and $49,990/$53,990 ABN figures in CarExpert, 4x4 Australia, zecar, CarSauce. Re-derived 2026-11-27 for VIC rego $958.80 (was 48,793 at $880; round trip 50990.13)."
+      },
+      "batteryKwh": {
+        "value": 33.11,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "'Max battery kilowatt hour: 33.11 kWh' LFP (SVOLT per autotrader NZ); every source quotes 33.1kWh unlabelled, usable not published. Treated like the sibling Cannon Alpha's unlabelled 37.11kWh."
+      },
+      "rangeKm": {
+        "value": 115,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://www.gwmanz.com/au/models/ute/cannon/cannon-phev/",
+        "note": "GWM AU '115km Pure Electric Range' (NEDC), GWM internal testing. No WLTP figure found: GWM sells this ute only in non-WLTP markets (AU, NZ, China). zecar mentions '~98kkm' WLTP with a typo and no source; not used. Testers: Chasing Cars matched 115km, CarSauce ~100km, autotrader NZ estimated 85-90km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 33.11 / 115 x 100 = 28.79; no published EV-mode figure. Tautological against the cross-check."
+      },
+      "combinedRangeKm": {
+        "value": 1041,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 115 + 75 / 8.1 x 100 = 1041. Tank 75L per CarExpert spec page, Chasing Cars, 4x4 Australia, autotrader NZ. GWM's own figure is 1037km NEDC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.1,
+        "basis": "derived",
+        "note": "No published charge-sustaining figure. Derived from GWM's own claimed 1037km NEDC combined range (gwmanz cannon-phev page) with 115km EV range and 75L tank: (1037 - 115) / 75 = 12.29 km/L = 8.13 L/100km. Same method reproduces the sibling Cannon Alpha's GWM 7.9 L/100km (heavier, 2810kg vs 2585kg kerb; Hi4-T here has 310kW vs 300kW). Real-world evidence is worse: CarSauce measured about 12.9 L/100km on the freeway with a depleted battery; ACM syndicated review suggests about 9 L/100km is realistic. Kept the GWM-derived figure for consistency with the Alpha, Tank 300 (8.3) and Tank 500 (8.4) rows, all GWM figures."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "Combined label 'Combined: 2.4 L/100km' (NEDC), at or below 3.5. Also CarExpert news, Chasing Cars, autotrader NZ."
+      },
+      "isGreenForVicDuty": {
+        "value": false,
+        "basis": "derived",
+        "note": "Ute: field rules require false on every ute row; Victoria charges utes as goods vehicles (isNonPassengerForVicDuty true)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 1196,
+        "basis": "judged",
+        "note": "Tub litres unpublished. CarExpert spec page: cargo length 1520mm, width 1520mm, height 540mm; CarSauce measured 517.5mm depth with a raised battery section in the floor and 1140mm between the arches. 1520 x 1520 x 517.5 = 1196 L; reads 10-20% high because arches are ignored. Siblings: Cannon Alpha 1140, Shark 6 1200, Ranger PHEV 1185."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1196,
+        "basis": "judged",
+        "note": "Ute: equals tub volume (bootLitresSeatsUp)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "Crew cab pickup, 4 doors, rear 'Seating capacity: 3' plus two front seats; dual cab per CarExpert news and autotrader NZ."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "'Braked Towing Capacity: 3,500 kg'; 350kg towball, 6400kg GCM per 4x4 Australia; GWM page '3500kg Braked Towing Capacity'."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "'84 month, unlimited km warranty'; battery 96 months. GWM page: '7-year unlimited kilometer warranty', no servicing condition stated (matches GWM reference value 7)."
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "Anchored to ford-ranger-phev-xl (1700 at $54,300) and byd-shark-6-dynamic-cab-chassis (1750 at $55,900); cheaper list price but 310kW and a new nameplate, so matched to the Ranger XL rather than lower. Alpha Lux sits at 1900 at $59,990."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "GWM ute convention: same curve as gwm-cannon-alpha-phev. Evidence for below-mainstream retention: a $2,000 launch bonus extended within weeks of dealer arrival (zecar), brand-wide drive-away campaigns on the Alpha, unrated by ANCAP (CarSauce)."
+      }
+    },
+    "gwm-cannon-phev-ultra": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/ute/cannon/",
+        "note": "GWM AU Cannon range page lists the Ultra PHEV with a VIC private drive-away price; Build & Price link https://www.gwmanz.com/au/config/cannon/ (configurator is script-rendered, prices not readable); CarExpert/4x4 Australia confirm two grades, Lux and Ultra, both 4x4 dual-cab pickups; in dealers since 21 Oct 2026 (zecar)"
+      },
+      "listPrice": {
+        "value": 52611,
+        "basis": "backed-out",
+        "url": "https://www.gwmanz.com/au/models/ute/cannon/",
+        "note": "GWM publishes drive-away only: $54,990 drive-away, VIC private buyer, standard price before the $2,000 launch bonus (bonus runs to deliveries by 30 Nov 2026, so ignored as a campaign). Ute divisor: (54990 - 958.80) / 1.027 = 52,611; round-trip through calc/onroad.js driveAwayPrice (isNonPassenger true) = 54,989.55. No independent on-road estimate exists to verify against; the $1,000 ABN-vs-private gap and $4,000 Lux-Ultra gap are both GWM-chosen. CarExpert's spec page states '$48,990 before on-road costs', which is exactly the private campaign drive-away figure and is below what a $48,990 list would cost on the road in VIC, so it is a mislabelled drive-away price and was rejected. Same $50,990/$54,990 private and $49,990/$53,990 ABN figures in CarExpert, 4x4 Australia, zecar, CarSauce. Re-derived 2026-11-27 for VIC rego $958.80 (was 52,687 at $880; round trip 54990.30)."
+      },
+      "batteryKwh": {
+        "value": 33.11,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "'Max battery kilowatt hour: 33.11 kWh' LFP (SVOLT per autotrader NZ); every source quotes 33.1kWh unlabelled, usable not published. Treated like the sibling Cannon Alpha's unlabelled 37.11kWh."
+      },
+      "rangeKm": {
+        "value": 115,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://www.gwmanz.com/au/models/ute/cannon/cannon-phev/",
+        "note": "GWM AU '115km Pure Electric Range' (NEDC), GWM internal testing. No WLTP figure found: GWM sells this ute only in non-WLTP markets (AU, NZ, China). zecar mentions '~98kkm' WLTP with a typo and no source; not used. Testers: Chasing Cars matched 115km, CarSauce ~100km, autotrader NZ estimated 85-90km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.8,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 33.11 / 115 x 100 = 28.79; no published EV-mode figure. Tautological against the cross-check."
+      },
+      "combinedRangeKm": {
+        "value": 1041,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 115 + 75 / 8.1 x 100 = 1041. Tank 75L per CarExpert spec page, Chasing Cars, 4x4 Australia, autotrader NZ. GWM's own figure is 1037km NEDC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.1,
+        "basis": "derived",
+        "note": "No published charge-sustaining figure. Derived from GWM's own claimed 1037km NEDC combined range (gwmanz cannon-phev page) with 115km EV range and 75L tank: (1037 - 115) / 75 = 12.29 km/L = 8.13 L/100km. Same method reproduces the sibling Cannon Alpha's GWM 7.9 L/100km (heavier, 2810kg vs 2585kg kerb; Hi4-T here has 310kW vs 300kW). Real-world evidence is worse: CarSauce measured about 12.9 L/100km on the freeway with a depleted battery; ACM syndicated review suggests about 9 L/100km is realistic. Kept the GWM-derived figure for consistency with the Alpha, Tank 300 (8.3) and Tank 500 (8.4) rows, all GWM figures."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "Combined label 'Combined: 2.4 L/100km' (NEDC), at or below 3.5. Also CarExpert news, Chasing Cars, autotrader NZ."
+      },
+      "isGreenForVicDuty": {
+        "value": false,
+        "basis": "derived",
+        "note": "Ute: field rules require false on every ute row; Victoria charges utes as goods vehicles (isNonPassengerForVicDuty true)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 1196,
+        "basis": "judged",
+        "note": "Tub litres unpublished. CarExpert spec page: cargo length 1520mm, width 1520mm, height 540mm; CarSauce measured 517.5mm depth with a raised battery section in the floor and 1140mm between the arches. 1520 x 1520 x 517.5 = 1196 L; reads 10-20% high because arches are ignored. Siblings: Cannon Alpha 1140, Shark 6 1200, Ranger PHEV 1185."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1196,
+        "basis": "judged",
+        "note": "Ute: equals tub volume (bootLitresSeatsUp)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "Crew cab pickup, 4 doors, rear 'Seating capacity: 3' plus two front seats; dual cab per CarExpert news and autotrader NZ."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "'Braked Towing Capacity: 3,500 kg'; 350kg towball, 6400kg GCM per 4x4 Australia; GWM page '3500kg Braked Towing Capacity'."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/ute/2026-lux-2l-utility-4x4-electric-jsm8ookk20260918",
+        "note": "'84 month, unlimited km warranty'; battery 96 months. GWM page: '7-year unlimited kilometer warranty', no servicing condition stated (matches GWM reference value 7)."
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "Lux plus 100, mirroring the Alpha Lux-to-Ultra step direction; anchored to byd-shark-6-premium (1800 at $57,900)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "GWM ute convention: same curve as gwm-cannon-alpha-phev. Evidence for below-mainstream retention: a $2,000 launch bonus extended within weeks of dealer arrival (zecar), brand-wide drive-away campaigns on the Alpha, unrated by ANCAP (CarSauce)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "gwm-cannon-phev-lux.fuelConsumptionL100km: derived from GWM's NEDC 1037km total-range claim (8.1); CarSauce measured about 12.9 L/100km on the freeway with a flat battery and ACM suggests about 9, so running cost is likely understated (same applies to Ultra)",
+    "gwm-cannon-phev-ultra.fuelConsumptionL100km: as Lux, derived 8.1 against real-world 9-12.9",
+    "gwm-cannon-phev-lux.combinedRangeKm: computed from the derived 8.1 L/100km and NEDC electric range (same for Ultra)",
+    "gwm-cannon-phev-ultra.combinedRangeKm: as Lux",
+    "gwm-cannon-phev-lux.rangeKm: NEDC only, no WLTP exists; testers saw 85-115km (same for Ultra)",
+    "gwm-cannon-phev-ultra.rangeKm: as Lux",
+    "gwm-cannon-phev-lux.listPrice: backed out of GWM VIC private drive-away $50,990 with no independent check of GWM's on-road inclusions",
+    "gwm-cannon-phev-ultra.listPrice: backed out of $54,990 drive-away, same caveat",
+    "gwm-cannon-phev-lux.batteryKwh: 33.11 unlabelled, usable vs gross unknown (same for Ultra)",
+    "gwm-cannon-phev-ultra.batteryKwh: as Lux",
+    "gwm-cannon-phev-lux.bootLitresSeatsUp: tub volume multiplied out from dimensions, reads high (same for Ultra, and SeatsDown)",
+    "gwm-cannon-phev-ultra.bootLitresSeatsUp: as Lux",
+    "gwm-cannon-phev-lux.insuranceAnnual: judged against Ranger PHEV XL and Shark 6",
+    "gwm-cannon-phev-ultra.insuranceAnnual: judged",
+    "gwm-cannon-phev-lux.depreciationCurve: GWM brand convention, no resale data for a new nameplate (same for Ultra)"
+  ]
+}

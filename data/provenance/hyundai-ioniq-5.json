@@ -1,0 +1,337 @@
+{
+  "familyId": "hyundai-ioniq-5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "hyundai-ioniq-5-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+        "note": "Model page price component lists 'IONIQ 5' with a Hyundai drive-away estimate (fscLowPrice $74,042.21); Build & Price at /au/en/shop/calculator#/ioniq-5 is JS-rendered (priceEnabled false). Spec sheet MY27 lists exactly three non-N grades: IONIQ 5, Elite, Premium N Line"
+      },
+      "listPrice": {
+        "value": 68200,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/hyundai/ioniq-5/2027-suv-rwd-electric-jsfsmfag20260601",
+        "note": "CarExpert 2027 MY page: 'prices starting at $68,200 before on-road costs' in words; The Beep (5 Jun 2026, https://thebeep.com.au/car-news/2027-hyundai-kona-electric-ioniq-5-price-cut-australia) lists same under 'Price (excl. on-roads)', down $8,000. Cross-check: Hyundai model page drive-away estimate $74,042.21 vs app Vic drive-away $71,944, gap ~$2,098 = dealer delivery, consistent across all three grades"
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2236/Hyundai-IONIQ-5-84-kWh-RWD",
+        "note": "usable 80.0 kWh; nominal 84.0 kWh, 384 cells 192s2p on same page. Hyundai AU spec sheet 84 kWh / 697 V is gross: 84,000 / 384 = 218.75 Wh per cell, matching SK On pouch cell"
+      },
+      "rangeKm": {
+        "value": 570,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet All Electric Range, WLTP footnote, 19-inch wheels for this grade"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.0,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet electric driving efficiency combined (16.04 / 16.99 / 18.11 kWh/100km), rounded to 0.1; includes charging losses so sits above 80/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 520,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 520 L / 1580 L', all three grades; VDA minimum (cargo-cover convention). Frunk 57 L (24 L AWD) not added. Held 527/1587 was the pre-MY27 figure; CarExpert 2026 review also quotes 520/1580"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1580,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "VDA maximum 1580 L, seats folded"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Towing capacity braked 1600 kg (un-braked 750 kg, ball 100 kg), all three grades"
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "anchored to kia-ev6-air-rwd (1750 at $72,660) and kia-ev5-gt-line-awd (2050 at $71,770); unchanged from held"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://carexpert.com.au/car-reviews/2026-hyundai-ioniq-5-review",
+        "note": "second row fits three adults across, two front seats, no third row; Hyundai spec sheet lists 3 rear top-tether anchors and 60:40 rear seat"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+        "note": "standard 5 year unlimited km warranty; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr / 160,000 km"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai brand convention (one curve per brand): matches hyundai-kona-electric, hyundai-elexio and hyundai-inster rows; Ioniq 5 had an $8,000 list cut on all three non-N grades for MY27 (The Beep, June 2026) plus $71,990 drive-away run-out offers, the same evidence class Inster cites. Changed from held mainstream default."
+      }
+    },
+    "hyundai-ioniq-5-elite-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+        "note": "Model page price component lists 'IONIQ 5 Elite' with a Hyundai drive-away estimate (fscLowPrice $79,292.21); Build & Price at /au/en/shop/calculator#/ioniq-5 is JS-rendered (priceEnabled false). Spec sheet MY27 lists exactly three non-N grades: IONIQ 5, Elite, Premium N Line"
+      },
+      "listPrice": {
+        "value": 73200,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/hyundai/ioniq-5/2027-elite-suv-rwd-electric-jsasa8fg20260601",
+        "note": "CarExpert 2027 MY page: 'prices starting at $73,200 before on-road costs' in words; The Beep (5 Jun 2026, https://thebeep.com.au/car-news/2027-hyundai-kona-electric-ioniq-5-price-cut-australia) lists same under 'Price (excl. on-roads)', down $8,000. Cross-check: Hyundai model page drive-away estimate $79,292.21 vs app Vic drive-away $77,154, gap ~$2,138 = dealer delivery, consistent across all three grades"
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2236/Hyundai-IONIQ-5-84-kWh-RWD",
+        "note": "usable 80.0 kWh; nominal 84.0 kWh, 384 cells 192s2p on same page. Hyundai AU spec sheet 84 kWh / 697 V is gross: 84,000 / 384 = 218.75 Wh per cell, matching SK On pouch cell"
+      },
+      "rangeKm": {
+        "value": 530,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet All Electric Range, WLTP footnote, 20-inch wheels for this grade"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.0,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet electric driving efficiency combined (16.04 / 16.99 / 18.11 kWh/100km), rounded to 0.1; includes charging losses so sits above 80/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 520,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 520 L / 1580 L', all three grades; VDA minimum (cargo-cover convention). Frunk 57 L (24 L AWD) not added. Held 527/1587 was the pre-MY27 figure; CarExpert 2026 review also quotes 520/1580"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1580,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "VDA maximum 1580 L, seats folded"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Towing capacity braked 1600 kg (un-braked 750 kg, ball 100 kg), all three grades"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "anchored to kia-ev6-air-rwd (1750 at $72,660) and kia-ev6-gt-line-rwd (2000 at $79,660); unchanged from held"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://carexpert.com.au/car-reviews/2026-hyundai-ioniq-5-review",
+        "note": "second row fits three adults across, two front seats, no third row; Hyundai spec sheet lists 3 rear top-tether anchors and 60:40 rear seat"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+        "note": "standard 5 year unlimited km warranty; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr / 160,000 km"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai brand convention (one curve per brand): matches hyundai-kona-electric, hyundai-elexio and hyundai-inster rows; Ioniq 5 had an $8,000 list cut on all three non-N grades for MY27 (The Beep, June 2026) plus $71,990 drive-away run-out offers, the same evidence class Inster cites. Changed from held mainstream default."
+      }
+    },
+    "hyundai-ioniq-5-n-line-premium-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+        "note": "Model page price component lists 'IONIQ 5 Premium N Line' with a Hyundai drive-away estimate (fscLowPrice $90,317.21); Build & Price at /au/en/shop/calculator#/ioniq-5 is JS-rendered (priceEnabled false). Spec sheet MY27 lists exactly three non-N grades: IONIQ 5, Elite, Premium N Line"
+      },
+      "listPrice": {
+        "value": 83700,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/hyundai/ioniq-5/2027-n-line-premium-suv-4x4-electric-jsgfoaam20260601",
+        "note": "CarExpert 2027 MY page: 'prices starting at $83,700 before on-road costs' in words; The Beep (5 Jun 2026, https://thebeep.com.au/car-news/2027-hyundai-kona-electric-ioniq-5-price-cut-australia) lists same under 'Price (excl. on-roads)', down $8,000. Cross-check: Hyundai model page drive-away estimate $90,317.21 vs app Vic drive-away $88,095, gap ~$2,222 = dealer delivery, consistent across all three grades"
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2237/Hyundai-IONIQ-5-84-kWh-AWD",
+        "note": "usable 80.0 kWh; nominal 84.0 kWh, 384 cells 192s2p on same page. Hyundai AU spec sheet 84 kWh / 697 V is gross: 84,000 / 384 = 218.75 Wh per cell, matching SK On pouch cell (AWD usable marked estimated by EV Database)"
+      },
+      "rangeKm": {
+        "value": 495,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet All Electric Range, WLTP footnote, 20-inch wheels for this grade"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.1,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Hyundai AU MY27 spec sheet electric driving efficiency combined (16.04 / 16.99 / 18.11 kWh/100km), rounded to 0.1; includes charging losses so sits above 80/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 520,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 520 L / 1580 L', all three grades; VDA minimum (cargo-cover convention). Frunk 57 L (24 L AWD) not added. Held 527/1587 was the pre-MY27 figure; CarExpert 2026 review also quotes 520/1580"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1580,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "VDA maximum 1580 L, seats folded"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/docs/MY27_Specification_Sheet_IONIQ5_Electric.pdf",
+        "note": "Towing capacity braked 1600 kg (un-braked 750 kg, ball 100 kg), all three grades"
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "anchored to kia-ev6-gt-line-awd (2200 at $87,660) and kia-ev6-gt-line-rwd (2000 at $79,660); unchanged from held"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://carexpert.com.au/car-reviews/2026-hyundai-ioniq-5-review",
+        "note": "second row fits three adults across, two front seats, no third row; Hyundai spec sheet lists 3 rear top-tether anchors and 60:40 rear seat"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+        "note": "standard 5 year unlimited km warranty; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr / 160,000 km"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai brand convention (one curve per brand): matches hyundai-kona-electric, hyundai-elexio and hyundai-inster rows; Ioniq 5 had an $8,000 list cut on all three non-N grades for MY27 (The Beep, June 2026) plus $71,990 drive-away run-out offers, the same evidence class Inster cites. Changed from held mainstream default."
+      }
+    },
+    "hyundai-ioniq-5-n": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq5n",
+        "note": "IONIQ 5 N page price component lists 'N with Vision Roof SUV 166kW + 282kW Electric Motors - front / rear 84 kWh AWD' with drive-away estimate fscLowPrice $123,728.71; single grade"
+      },
+      "listPrice": {
+        "value": 115000,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/2027-hyundai-kona-electric-ioniq-5-price-cut-australia",
+        "note": "The Beep (5 Jun 2026, 2027 MY) 'Price (excl. on-roads)' $115,000, N excluded from the $8,000 cut; CarsGuide (Dec 2025) $115,000 before on-road costs. Cross-check: Hyundai drive-away estimate $123,728.71 vs app Vic $120,710; gap ~$3,019 = ~$2,100 dealer delivery plus LCT and duty on it, consistent with the other grades"
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2237/Hyundai-IONIQ-5-84-kWh-AWD",
+        "note": "N uses the same 84.0 kWh gross / 697 V pack (Hyundai N spec sheet 84.0 kWh, 697 V); usable 80.0 kWh per EV Database 84 kWh pack record (384 cells, 192s2p). No N-specific usable figure opened"
+      },
+      "rangeKm": {
+        "value": 448,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5n/images/Hyundai_2024_IONIQ_5N_Specifications.pdf",
+        "note": "Hyundai AU IONIQ 5 N spec sheet All Electric Range 448 km, WLTP, 21-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.2,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5n/images/Hyundai_2024_IONIQ_5N_Specifications.pdf",
+        "note": "Hyundai AU N spec sheet electric driving efficiency combined 21.2 kWh/100km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 480,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5n/images/Hyundai_2024_IONIQ_5N_Specifications.pdf",
+        "note": "'Cargo area rear - VDA (minimum / maximum) 480 L / 1,540 L'; frunk N/A. Spec sheet is the 2024 N document still linked from the live N page"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1540,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5n/images/Hyundai_2024_IONIQ_5N_Specifications.pdf",
+        "note": "VDA maximum 1,540 L"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5n/images/Hyundai_2024_IONIQ_5N_Specifications.pdf",
+        "note": "Towing capacity braked / un-braked N/A (not rated)"
+      },
+      "insuranceAnnual": {
+        "value": 2750,
+        "basis": "judged",
+        "note": "anchored to hyundai-ioniq-6-n (2950 at $115,000) and kia-ev6-gt-awd (2600 at $99,660); unchanged from held"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://carexpert.com.au/car-reviews/2026-hyundai-ioniq-5-review",
+        "note": "second row fits three adults across, two front seats, no third row; Hyundai spec sheet lists 3 rear top-tether anchors and 60:40 rear seat"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+        "note": "standard 5 year unlimited km warranty; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros); EV battery 8 yr / 160,000 km"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Hyundai brand convention (one curve per brand): matches hyundai-kona-electric, hyundai-elexio and hyundai-inster rows; Ioniq 5 had an $8,000 list cut on all three non-N grades for MY27 (The Beep, June 2026) plus $71,990 drive-away run-out offers, the same evidence class Inster cites. Changed from held mainstream default."
+      }
+    }
+  },
+  "lowConfidence": [
+    "hyundai-ioniq-5-rwd.depreciationCurve: changed from mainstream default to the Hyundai brand curve [1,0.74,...] for one-curve-per-brand; hyundai-ioniq-9 (mainstream) and hyundai-ioniq-6-n (0.72) still diverge",
+    "hyundai-ioniq-5-elite-rwd.depreciationCurve: same as RWD",
+    "hyundai-ioniq-5-n-line-premium-awd.depreciationCurve: same as RWD",
+    "hyundai-ioniq-5-n.depreciationCurve: same as RWD; a low-volume performance halo may depreciate differently",
+    "hyundai-ioniq-5-n.batteryKwh: usable 80 taken from the standard 84 kWh pack record, no N-specific usable source opened",
+    "hyundai-ioniq-5-n-line-premium-awd.batteryKwh: EV Database marks the AWD usable 80.0 as estimated",
+    "hyundai-ioniq-5-n.listPrice: newest in-words source is The Beep (June 2026); Build & Price JS-rendered, corroborated only by Hyundai drive-away estimate gap",
+    "hyundai-ioniq-5-n.insuranceAnnual: judged, anchored to siblings",
+    "hyundai-ioniq-5-n-line-premium-awd.insuranceAnnual: judged, anchored to siblings",
+    "hyundai-ioniq-5-elite-rwd.insuranceAnnual: judged, anchored to siblings",
+    "hyundai-ioniq-5-rwd.insuranceAnnual: judged, anchored to siblings",
+    "hyundai-ioniq-5-rwd.listPrice: Build & Price JS-rendered; price from CarExpert and The Beep before on-road costs, corroborated by Hyundai drive-away estimate (same for Elite and Premium N Line)"
+  ]
+}

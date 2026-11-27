@@ -1,0 +1,336 @@
+{
+  "familyId": "kia-ev5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "kia-ev5-air-standard-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev5.html",
+        "note": "'Air - Standard Range' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away only), not read"
+      },
+      "listPrice": {
+        "value": 56770,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev5-review-1",
+        "note": "CarExpert 2026 review (21 Aug 2026) table: $56,770 before on-road costs, $49,990 drive-away campaign; CarsGuide 2026 price page MSRP $56,770 (excludes stamp duty and government charges), fetched 2026-11-26. Launch coverage (GoAuto, Chasing Cars) quoted $56,770 as a launch drive-away; the current $49,990 drive-away sits below list, so $56,770 is list."
+      },
+      "batteryKwh": {
+        "value": 61.2,
+        "basis": "judged",
+        "note": "Kia AU brochure 64.2 kWh = 396.8 V x 162 Ah, nominal (gross); same Kia/FinDreams LFP family as the 88.1 kWh pack Kia NZ labels gross. No usable figure found; scaled by the long-range pack's 84/88.1 ratio: 64.2 x 0.9535 = 61.2. Zecar's 64.2 usable rejected (its 161 Wh/km contradicts Kia's 182)."
+      },
+      "rangeKm": {
+        "value": 400,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet, WLTP AER combined, Air 2WD SR"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.2,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet WLTP combined 182 Wh/km, Air 2WD SR; includes charging losses, so sits ~18-20% above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 513,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "VDA, rear seats up, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1714,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "VDA, rear seats down, all grades"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev5/2026-air-suv-fwd-electric-jsgkfffo20250901",
+        "note": "5 seats; single-row-pair body across all grades"
+      },
+      "towKg": {
+        "value": 300,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet braked towing: Air 2WD SR 300 kg; LR grades 1,250 kg (held 1250 was wrong for SR)"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
+        "note": "7 years unlimited km vehicle; battery 7 yr/150,000 km; Kia AU brochure refers to 'Kia's 7 Year warranty'"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "kept held 1700; anchored between kia-ev3-earth-long-range (1700, $58,600) and kia-ev3-gt-line-long-range (1850); below tesla-model-y-premium-rwd (2300) which carries a Tesla premium"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; matches Kia brand convention on kia-ev3 and kia-ev9. $49,990 drive-away campaign on Air SR and a 2027 facelift in approval filings are noted but not yet enough evidence to deviate"
+      }
+    },
+    "kia-ev5-air-long-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev5.html",
+        "note": "'Air - Long Range' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away only), not read"
+      },
+      "listPrice": {
+        "value": 61170,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev5-review-1",
+        "note": "CarExpert 2026 review: $61,170 before on-road costs ($59,990 drive-away campaign); CarsGuide 2026 MSRP $61,170; CarExpert 2026 Air variant page $61,170 before on-roads"
+      },
+      "batteryKwh": {
+        "value": 84,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/kia-ev5",
+        "note": "usable 84 kWh, nominal 88.1 kWh (evdb.nz). Kia NZ brochure labels 88.1 kWh '(Gross)'; Kia AU brochure 399.4 V x 220.6 Ah = 88.1 kWh nominal. CarsGuide GT-Line long-termer also uses 84 kWh usable. CarExpert's '88.1 kWh usable' rejected against Kia's own gross label."
+      },
+      "rangeKm": {
+        "value": 555,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet, WLTP AER combined, Air 2WD LR"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.0,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet WLTP combined 180 Wh/km, Air 2WD LR; includes charging losses, so sits ~18-20% above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 513,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "VDA, rear seats up, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1714,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "VDA, rear seats down, all grades"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev5/2026-air-suv-fwd-electric-jsgkfffo20250901",
+        "note": "5 seats; single-row-pair body across all grades"
+      },
+      "towKg": {
+        "value": 1250,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet braked towing: Air 2WD SR 300 kg; LR grades 1,250 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
+        "note": "7 years unlimited km vehicle; battery 7 yr/150,000 km; Kia AU brochure refers to 'Kia's 7 Year warranty'"
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "kept held 1800; kia-ev3-gt-line-long-range 1850 at $63,950 and the EV5 SR 1700 bracket it"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; matches Kia brand convention on kia-ev3 and kia-ev9. $49,990 drive-away campaign on Air SR and a 2027 facelift in approval filings are noted but not yet enough evidence to deviate"
+      }
+    },
+    "kia-ev5-earth-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev5.html",
+        "note": "'Earth' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away only), not read"
+      },
+      "listPrice": {
+        "value": 64770,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev5-review-1",
+        "note": "CarExpert 2026 review: $64,770 before on-road costs ($64,990 drive-away); CarsGuide 2026 MSRP $64,770 (Beige and Black interior lines same price)"
+      },
+      "batteryKwh": {
+        "value": 84,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/kia-ev5",
+        "note": "usable 84 kWh, nominal 88.1 kWh (evdb.nz). Kia NZ brochure labels 88.1 kWh '(Gross)'; Kia AU brochure 399.4 V x 220.6 Ah = 88.1 kWh nominal. CarsGuide GT-Line long-termer also uses 84 kWh usable. CarExpert's '88.1 kWh usable' rejected against Kia's own gross label."
+      },
+      "rangeKm": {
+        "value": 500,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet, WLTP AER combined, Earth AWD LR"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.1,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet WLTP combined 201 Wh/km, Earth AWD LR; includes charging losses, so sits ~18-20% above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 513,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "VDA, rear seats up, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1714,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "VDA, rear seats down, all grades"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev5/2026-air-suv-fwd-electric-jsgkfffo20250901",
+        "note": "5 seats; single-row-pair body across all grades"
+      },
+      "towKg": {
+        "value": 1250,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet braked towing: Air 2WD SR 300 kg; LR grades 1,250 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
+        "note": "7 years unlimited km vehicle; battery 7 yr/150,000 km; Kia AU brochure refers to 'Kia's 7 Year warranty'"
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "kept held 1900; AWD step over Air LR, below tesla-model-y-premium-long-range-awd (2550)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; matches Kia brand convention on kia-ev3 and kia-ev9. $49,990 drive-away campaign on Air SR and a 2027 facelift in approval filings are noted but not yet enough evidence to deviate"
+      }
+    },
+    "kia-ev5-gt-line-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.kia.com/au/shopping-tools/build-and-price.trim.ev5.html",
+        "note": "'GT-Line' listed as a grade on Kia AU Build & Price on 2026-11-26; prices postcode-gated (drive-away only), not read"
+      },
+      "listPrice": {
+        "value": 71770,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-kia-ev5-review-1",
+        "note": "CarExpert 2026 review: $71,770 before on-road costs ($75,990 drive-away); CarsGuide 2026 MSRP $71,770. Two-Tone configurator line is premium two-tone paint per Kia brochure, not a separate grade"
+      },
+      "batteryKwh": {
+        "value": 84,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/kia-ev5",
+        "note": "usable 84 kWh, nominal 88.1 kWh (evdb.nz). Kia NZ brochure labels 88.1 kWh '(Gross)'; Kia AU brochure 399.4 V x 220.6 Ah = 88.1 kWh nominal. CarsGuide GT-Line long-termer also uses 84 kWh usable. CarExpert's '88.1 kWh usable' rejected against Kia's own gross label."
+      },
+      "rangeKm": {
+        "value": 470,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet, WLTP AER combined, GT-Line AWD LR"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.0,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet WLTP combined 210 Wh/km, GT-Line AWD LR; includes charging losses, so sits ~18-20% above usable/range"
+      },
+      "bootLitresSeatsUp": {
+        "value": 513,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "VDA, rear seats up, all grades"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1714,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "VDA, rear seats down, all grades"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kia/ev5/2026-air-suv-fwd-electric-jsgkfffo20250901",
+        "note": "5 seats; single-row-pair body across all grades"
+      },
+      "towKg": {
+        "value": 1250,
+        "basis": "sourced",
+        "url": "https://www.kia.com/content/dam/kwcms/au/en/images/pdf/ev5/kia-ev5-brochure.pdf",
+        "note": "Kia AU MY26 spec sheet braked towing: Air 2WD SR 300 kg; LR grades 1,250 kg"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-kia-ev5-price-and-specs",
+        "note": "7 years unlimited km vehicle; battery 7 yr/150,000 km; Kia AU brochure refers to 'Kia's 7 Year warranty'"
+      },
+      "insuranceAnnual": {
+        "value": 2050,
+        "basis": "judged",
+        "note": "kept held 2050; top EV5 grade, below kia-ev9-air-rwd (2400) and tesla-model-y-premium-long-range-awd (2550)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default; matches Kia brand convention on kia-ev3 and kia-ev9. $49,990 drive-away campaign on Air SR and a 2027 facelift in approval filings are noted but not yet enough evidence to deviate"
+      }
+    }
+  },
+  "lowConfidence": [
+    "kia-ev5-air-standard-range.batteryKwh: usable figure unpublished; 61.2 scaled from the long-range pack's usable/gross ratio",
+    "kia-ev5-air-long-range.batteryKwh: 84 kWh usable rests on evdb.nz (method unstated) and a CarsGuide long-termer that may copy it; Kia publishes only gross 88.1",
+    "kia-ev5-earth-awd.batteryKwh: as Air Long Range, 84 usable from evdb.nz",
+    "kia-ev5-gt-line-awd.batteryKwh: as Air Long Range, 84 usable from evdb.nz",
+    "kia-ev5-air-standard-range.listPrice: Kia configurator prices are postcode-gated drive-away and were not read; list rests on CarExpert (Aug 2026) and CarsGuide MSRP pages",
+    "kia-ev5-air-long-range.listPrice: same - configurator not read, third-party list figures",
+    "kia-ev5-earth-awd.listPrice: same - configurator not read, third-party list figures",
+    "kia-ev5-gt-line-awd.listPrice: same - configurator not read, third-party list figures",
+    "kia-ev5-gt-line-awd.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev5-earth-awd.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev5-air-long-range.insuranceAnnual: judged, anchored to siblings",
+    "kia-ev5-air-standard-range.insuranceAnnual: judged, anchored to siblings"
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "familyId": "mg-hs-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mg-hs-phev-excite": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mg-hs?ref=website",
+        "note": "Live Build & Price line 'MG HS Excite 1.5 SUPER HYBRID' with price, VIC in the state list. Two SUPER HYBRID grades (Excite, Essence), matching CarExpert's 2025 launch story. MY25 and MY26 stock both sold (MY25/26 cashback; '25 Build' plate clearance)."
+      },
+      "listPrice": {
+        "value": 46095,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mg-hs?ref=website",
+        "note": "No list price published. Configurator variant data price 48990 shown struck through, with $42,990* as 'Drive Away Price, Offer ends 31 December' and footnote 'Drive Away Price for NSW delivery with Private registration'; the starred figure is the struck figure less a $6,000 MY25/26 cashback (sold/delivered 01 Nov-31 Dec 2026; a campaign, not used). The per-state 'discounts' in the variant data (VIC 9431.3, NSW 9086) equal the cashback plus that state's on-roads, so every state lands on the same national figure: the struck figure is MG's flat national drive-away, not list (as with mg-s5 and mg-4). CarExpert (29 May 2025) launched it at $52,990/$55,990 drive-away; CarsGuide labels $48,990/$52,990 'MSRP' but the manufacturer labels them drive-away, and the manufacturer is preferred. Back-out: (48990 - 958.80) / 1.042 = 46,095; round-trip driveAwayPrice(46171) = 48,990.18. Independent check: implied configurator VIC on-roads (discount less cashback) are $3,431.30 Excite / $3,548.90 Essence, against the app's $2,819 / $2,980 at these lists; the ~$600-850 excess matches a bundled dealer-delivery charge (NSW implied on-roads $3,086 / $3,176 tell the same story), so this list likely overstates the true list by roughly $600-850. Re-derived 2026-11-27 for VIC rego $958.80 (was 46,171 at $880; round trip 48989.79)."
+      },
+      "batteryKwh": {
+        "value": 23.2,
+        "basis": "sourced",
+        "url": "https://marquenews.com.au/mg-hs-super-hybrid/",
+        "note": "'a 24.7 kWh battery pack, 23.2 kWh of which is useable'; MG AU brochure gives 'Battery Capacity Nominal (kWh) 24.7' (gross)."
+      },
+      "rangeKm": {
+        "value": 120,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "MG AU SUPER HYBRID brochure 'WLTP Battery Range (km)* 120' both grades; same table 'NEDC Battery Range 135' (the ADR figure on MG's model page, rejected per the NEDC rule). RACV and CarExpert also quote 120 km WLTP."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 23.2/120 x 100 = 19.33. MG's brochure 'Electric Driving Efficiency (kWh/100km)* 18' is the ADR 81/02 label quantity, not used for a PHEV per field rules; it sits 7% below the derived value."
+      },
+      "bootLitresSeatsUp": {
+        "value": 507,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "'Boot Volume with Seats in Place (L) 507'; CarExpert quick drive labels 507-1484 L as VDA (to the cover). Same as petrol HS: battery costs no boot."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1484,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "'Boot Volume with Seats Folded (L) 1484'; measurement height for the folded figure not stated (VDA per CarExpert)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "2nd Row 60/40 Split Fold Seat; Rear Seat Belt (3 point x3)"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "'Maximum Towing Weight Braked (kg) 1500' both grades; RACV also 1500 kg."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "'Standard Warranty Period: 7 years / unlimited kms'; 10 years/250,000 km only if exclusively serviced at an MG dealer (conditional, in pros). HV battery 7 years/150,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "Anchored to byd-sealion-6 Dynamic Extended Range (1500 at $46,990) and Premium Extended Range (1700 at $52,990) and mg-s5 Essence 62 (1600 at $44,251); HS's 220kW sits a little above the Sealion 6 FWD grades. Unchanged from held."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; every MG row uses it by owner decision 2026-11-26. Heavy campaign discounting ($6,000-8,000 cashbacks) would argue for a steeper curve, but one curve per brand."
+      },
+      "combinedRangeKm": {
+        "value": 1052,
+        "basis": "derived",
+        "note": "120 WLTP + 55 L (brochure 'Fuel Tank Capacity (L) 55') / 5.9 L/100km x 100 = 120 + 932 = 1052"
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.9,
+        "basis": "carried",
+        "note": "Model year and powertrain unchanged since 2026-07-28 (2026 brochure specs identical). Held from carsales (5.9 on a long highway leg, battery depleted) and NRMA (~6.0 suburban hybrid mode); both pages refused with HTTP 403 this run. Pages opened today read lower: EV Central long-term test (?p=40944) 4.8 and 5.3 L/100km on battery-depleted legs; CarExpert quick drive quotes MG's '~4.5-5.0L/100km - Depleted battery'; RACV 'around 5L/100km'. Kept 5.9 so HS does not undercut heavier-equipped siblings byd-sealion-6 (5.6-5.7) and chery-tiggo-7-phev (5.5) on thin evidence."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "'Fuel Consumption (L/100km) Combined* 0.7' label figure, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined CO2 120 g/km or less; MG AU brochure 'CO2 (g/km) Combined* 17'."
+      }
+    },
+    "mg-hs-phev-essence": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mg-hs?ref=website",
+        "note": "Live Build & Price line 'MG HS Essence 1.5 SUPER HYBRID' with price, VIC in the state list. Two SUPER HYBRID grades (Excite, Essence), matching CarExpert's 2025 launch story. MY25 and MY26 stock both sold (MY25/26 cashback; '25 Build' plate clearance)."
+      },
+      "listPrice": {
+        "value": 49934,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mg-hs?ref=website",
+        "note": "No list price published. Configurator variant data price 52990 shown struck through, with $45,990* as 'Drive Away Price, Offer ends 31 December' and footnote 'Drive Away Price for NSW delivery with Private registration'; the starred figure is the struck figure less a $7,000 MY25/26 cashback (sold/delivered 01 Nov-31 Dec 2026; a campaign, not used). The per-state 'discounts' in the variant data (VIC 10548.9, NSW 10176) equal the cashback plus that state's on-roads, so every state lands on the same national figure: the struck figure is MG's flat national drive-away, not list (as with mg-s5 and mg-4). CarExpert (29 May 2025) launched it at $52,990/$55,990 drive-away; CarsGuide labels $48,990/$52,990 'MSRP' but the manufacturer labels them drive-away, and the manufacturer is preferred. Back-out: (52990 - 958.80) / 1.042 = 49,934; round-trip driveAwayPrice(50010) = 52,990.42. Independent check: implied configurator VIC on-roads (discount less cashback) are $3,431.30 Excite / $3,548.90 Essence, against the app's $2,819 / $2,980 at these lists; the ~$600-850 excess matches a bundled dealer-delivery charge (NSW implied on-roads $3,086 / $3,176 tell the same story), so this list likely overstates the true list by roughly $600-850. Re-derived 2026-11-27 for VIC rego $958.80 (was 50,010 at $880; round trip 52990.03)."
+      },
+      "batteryKwh": {
+        "value": 23.2,
+        "basis": "sourced",
+        "url": "https://marquenews.com.au/mg-hs-super-hybrid/",
+        "note": "'a 24.7 kWh battery pack, 23.2 kWh of which is useable'; MG AU brochure gives 'Battery Capacity Nominal (kWh) 24.7' (gross)."
+      },
+      "rangeKm": {
+        "value": 120,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "MG AU SUPER HYBRID brochure 'WLTP Battery Range (km)* 120' both grades; same table 'NEDC Battery Range 135' (the ADR figure on MG's model page, rejected per the NEDC rule). RACV and CarExpert also quote 120 km WLTP."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 23.2/120 x 100 = 19.33. MG's brochure 'Electric Driving Efficiency (kWh/100km)* 18' is the ADR 81/02 label quantity, not used for a PHEV per field rules; it sits 7% below the derived value."
+      },
+      "bootLitresSeatsUp": {
+        "value": 507,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "'Boot Volume with Seats in Place (L) 507'; CarExpert quick drive labels 507-1484 L as VDA (to the cover). Same as petrol HS: battery costs no boot."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1484,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "'Boot Volume with Seats Folded (L) 1484'; measurement height for the folded figure not stated (VDA per CarExpert)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "2nd Row 60/40 Split Fold Seat; Rear Seat Belt (3 point x3)"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "'Maximum Towing Weight Braked (kg) 1500' both grades; RACV also 1500 kg."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "'Standard Warranty Period: 7 years / unlimited kms'; 10 years/250,000 km only if exclusively serviced at an MG dealer (conditional, in pros). HV battery 7 years/150,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "Anchored to byd-sealion-6 Dynamic Extended Range (1500 at $46,990) and Premium Extended Range (1700 at $52,990) and mg-s5 Essence 62 (1600 at $44,251); HS's 220kW sits a little above the Sealion 6 FWD grades. Unchanged from held."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; every MG row uses it by owner decision 2026-11-26. Heavy campaign discounting ($6,000-8,000 cashbacks) would argue for a steeper curve, but one curve per brand."
+      },
+      "combinedRangeKm": {
+        "value": 1052,
+        "basis": "derived",
+        "note": "120 WLTP + 55 L (brochure 'Fuel Tank Capacity (L) 55') / 5.9 L/100km x 100 = 120 + 932 = 1052"
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.9,
+        "basis": "carried",
+        "note": "Model year and powertrain unchanged since 2026-07-28 (2026 brochure specs identical). Held from carsales (5.9 on a long highway leg, battery depleted) and NRMA (~6.0 suburban hybrid mode); both pages refused with HTTP 403 this run. Pages opened today read lower: EV Central long-term test (?p=40944) 4.8 and 5.3 L/100km on battery-depleted legs; CarExpert quick drive quotes MG's '~4.5-5.0L/100km - Depleted battery'; RACV 'around 5L/100km'. Kept 5.9 so HS does not undercut heavier-equipped siblings byd-sealion-6 (5.6-5.7) and chery-tiggo-7-phev (5.5) on thin evidence."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MG_HS_SUPERHYBRID_2026.pdf",
+        "note": "'Fuel Consumption (L/100km) Combined* 0.7' label figure, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined CO2 120 g/km or less; MG AU brochure 'CO2 (g/km) Combined* 17'."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mg-hs-phev-excite.listPrice: backed out of MG flat national drive-away $48,990 (no list published); configurator per-state data imply bundled dealer delivery, so list likely overstated by ~$600-850",
+    "mg-hs-phev-essence.listPrice: backed out of MG flat national drive-away $52,990; same ~$600-850 overstatement caveat",
+    "mg-hs-phev-excite.fuelConsumptionL100km: carried 5.9 from carsales/NRMA (403 this run); EV Central depleted legs today read 4.8-5.3 and MG claims 4.5-5.0",
+    "mg-hs-phev-essence.fuelConsumptionL100km: same as Excite",
+    "mg-hs-phev-excite.combinedRangeKm: derived from the soft 5.9 L/100km; at 5.3 it would be 1158",
+    "mg-hs-phev-essence.combinedRangeKm: same as Excite",
+    "mg-hs-phev-excite.insuranceAnnual: judged, anchored to byd-sealion-6 and mg-s5",
+    "mg-hs-phev-essence.insuranceAnnual: judged, anchored to byd-sealion-6 and mg-s5",
+    "mg-hs-phev-excite.depreciationCurve: judged, MG brand convention despite heavy cashback discounting",
+    "mg-hs-phev-essence.depreciationCurve: judged, MG brand convention despite heavy cashback discounting",
+    "mg-hs-phev-excite.bootLitresSeatsDown: 1484 measurement height unstated (VDA per CarExpert)",
+    "mg-hs-phev-essence.bootLitresSeatsDown: 1484 measurement height unstated (VDA per CarExpert)"
+  ]
+}

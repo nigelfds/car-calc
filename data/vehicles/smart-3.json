@@ -17,7 +17,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1850,
     "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-3-premium",
@@ -37,7 +37,7 @@
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
     "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "smart-3-brabus",
@@ -57,6 +57,6 @@
     "warrantyYears": 5,
     "insuranceAnnual": 2350,
     "depreciationCurve": [1, 0.68, 0.57, 0.48, 0.41, 0.35],
-    "sourcedAt": "2026-08-06"
+    "sourcedAt": "2026-11-26"
   }
 ]

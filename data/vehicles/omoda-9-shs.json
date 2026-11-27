@@ -7,7 +7,7 @@
     "variant": "SHS Virtue AWD",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 61990,
+    "listPrice": 58990,
     "batteryKwh": 34.46,
     "rangeKm": 145,
     "consumptionKwhPer100km": 23.8,
@@ -15,13 +15,13 @@
     "fuelConsumptionL100km": 7,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
-    "bootLitresSeatsUp": 660,
-    "bootLitresSeatsDown": 1783,
+    "bootLitresSeatsUp": 471,
+    "bootLitresSeatsDown": 1004,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 8,
     "insuranceAnnual": 2000,
     "depreciationCurve": [1, 0.7, 0.58, 0.49, 0.42, 0.36],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   }
 ]

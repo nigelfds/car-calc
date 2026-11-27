@@ -1,0 +1,214 @@
+{
+  "familyId": "audi-q5-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "audi-q5-phev-e-hybrid-quattro": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/new-hybrid-q5-arrives",
+        "note": "Audi Australia magazine 13 Aug 2026 'New hybrid Q5 arrives' lists the Q5 e-hybrid SUV with MLP; Chasing Cars (13 Aug 2026) calls it the 'sole e-Hybrid specification' in SUV and Sportback; CarExpert price-and-specs still lists the PHEV. audi.com.au configurator returned HTTP 403 to automated reads on 2026-11-26, so not read directly."
+      },
+      "listPrice": {
+        "value": 96818,
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/new-hybrid-q5-arrives",
+        "note": "Audi AU Manufacturer List Pricing, 'excludes dealer delivery and government statutory charges': SUV $96818. Same figure 'before on-road costs' in words at https://www.carsguide.com.au/ev/audi-q5-e-hybrid-102380 and https://www.carexpert.com.au/car-reviews/2026-audi-q5-e-hybrid-review-quick-drive. Replaces the Nov 2025 launch figure $96900 (still shown in CarsGuide's Glass's table and carsales research); manufacturer price preferred per owner convention."
+      },
+      "batteryKwh": {
+        "value": 20.7,
+        "basis": "sourced",
+        "url": "https://www.audi.com/en/press-releases/the-audi-q5-e-hybrid-all-rounder-with-great-electric-range-16685",
+        "note": "usable: 25.9 kWh gross, 20.7 kWh net on the same page; Chasing Cars also states 20.7 kWh usable"
+      },
+      "rangeKm": {
+        "value": 82,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://magazine.audi.com.au/article/new-hybrid-q5-arrives",
+        "note": "Audi AU: 'up to 82km (on the WLTP cycle)' for the AU 270kW car; CarExpert and Chasing Cars 82 km WLTP. CarsGuide says up to 88 km and auto-data 81-92 km (EU band); the AU figure is used."
+      },
+      "consumptionKwhPer100km": {
+        "value": 25.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 20.7 / 82 x 100. Audi weighted kWh/100km (16.1-17.2) is utility-factor weighted, not used."
+      },
+      "combinedRangeKm": {
+        "value": 787,
+        "basis": "derived",
+        "note": "82 km WLTP electric + 55 L tank / 7.8 L/100km x 100 = 82 + 705. Tank 55 L from https://www.auto-data.net/en/audi-q5-iii-gu-2.0-tfsi-367hp-e-hybrid-quattro-ultra-s-tronic-54561 (Chasing Cars says 70 L, judged a petrol-Q5 figure; EU spec sources agree on 55 L for the PHEV)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.8,
+        "basis": "judged",
+        "note": "Audi's WLTP 'battery discharged' combined band for the 270 kW car is 8.1-7.2 L/100km (https://www.audi.com/en/audi-q5-suv-e-hybrid-quattro-16677); 7.8 kept from held data, upper half of the band for the AU car's standard 20-inch wheels and 2,170+ kg mass. Siblings: mercedes-glc-phev 7.8, bmw-x3-phev 7.6, audi-a5-phev 7.3 (lighter, same powertrain). No independent AU charge-sustaining test found."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-audi-q5-e-hybrid-review-quick-drive",
+        "note": "combined label 3.3 L/100km (also Audi AU magazine and carsales) <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; CarExpert quotes 75 g/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 438,
+        "basis": "sourced",
+        "url": "https://www.audi.com/en/press-releases/the-audi-q5-e-hybrid-all-rounder-with-great-electric-range-16685",
+        "note": "Audi press release SUV 438 L / 1358 L (VDA, to the cover); Chasing Cars and CarsGuide agree on seats-up. CarExpert's 520/1473 is the petrol Q5 figure (trap)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1358,
+        "basis": "sourced",
+        "url": "https://www.audi.com/en/press-releases/the-audi-q5-e-hybrid-all-rounder-with-great-electric-range-16685",
+        "note": "Audi press release SUV folded 1358 L; Chasing Cars agrees"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/midsize-suvs/audi-q5-e-hybrid-2026-review/",
+        "note": "five-seat medium SUV"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-audi-q5-e-hybrid-review-quick-drive",
+        "note": "CarExpert: 2,000 kg braked for the AU e-hybrid; auto-data and carsales research agree"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-audi-q5-e-hybrid-review-quick-drive",
+        "note": "5 years / unlimited km; battery 8 yr / 160,000 km. Chasing Cars and CarsGuide also five years."
+      },
+      "insuranceAnnual": {
+        "value": 2450,
+        "basis": "judged",
+        "note": "kept held figure; anchored to mercedes-glc-phev 2500 ($99.9k), volvo-xc60-phev-ultra-t8 2400 ($102k), audi-a5-phev 2350 ($89.9k), audi-q6-e-tron-rwd 2600"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.67,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "Audi brand curve matching audi-q4-e-tron [1,0.67,0.55,0.46,0.39,0.33], per owner convention (one curve per brand). Held curve was [1,0.68,0.56,0.48,0.41,0.35]."
+      }
+    },
+    "audi-q5-phev-sportback-e-hybrid-quattro": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/new-hybrid-q5-arrives",
+        "note": "Audi Australia magazine 13 Aug 2026 'New hybrid Q5 arrives' lists the Q5 e-hybrid Sportback with MLP; Chasing Cars (13 Aug 2026) calls it the 'sole e-Hybrid specification' in SUV and Sportback; CarExpert price-and-specs still lists the PHEV. audi.com.au configurator returned HTTP 403 to automated reads on 2026-11-26, so not read directly."
+      },
+      "listPrice": {
+        "value": 100318,
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/new-hybrid-q5-arrives",
+        "note": "Audi AU Manufacturer List Pricing, 'excludes dealer delivery and government statutory charges': Sportback $100318. Same figure 'before on-road costs' in words at https://www.carsguide.com.au/ev/audi-q5-e-hybrid-102380 and https://www.carexpert.com.au/car-reviews/2026-audi-q5-e-hybrid-review-quick-drive. Replaces the Nov 2025 launch figure $100400 (still shown in CarsGuide's Glass's table and carsales research); manufacturer price preferred per owner convention."
+      },
+      "batteryKwh": {
+        "value": 20.7,
+        "basis": "sourced",
+        "url": "https://www.audi.com/en/press-releases/the-audi-q5-e-hybrid-all-rounder-with-great-electric-range-16685",
+        "note": "usable: 25.9 kWh gross, 20.7 kWh net on the same page; Chasing Cars also states 20.7 kWh usable"
+      },
+      "rangeKm": {
+        "value": 82,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://magazine.audi.com.au/article/new-hybrid-q5-arrives",
+        "note": "Audi AU: 'up to 82km (on the WLTP cycle)' for the AU 270kW car; CarExpert and Chasing Cars 82 km WLTP. CarsGuide says up to 88 km and auto-data 81-92 km (EU band); the AU figure is used."
+      },
+      "consumptionKwhPer100km": {
+        "value": 25.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 20.7 / 82 x 100. Audi weighted kWh/100km (16.1-17.2) is utility-factor weighted, not used."
+      },
+      "combinedRangeKm": {
+        "value": 787,
+        "basis": "derived",
+        "note": "82 km WLTP electric + 55 L tank / 7.8 L/100km x 100 = 82 + 705. Tank 55 L from https://www.auto-data.net/en/audi-q5-iii-gu-2.0-tfsi-367hp-e-hybrid-quattro-ultra-s-tronic-54561 (Chasing Cars says 70 L, judged a petrol-Q5 figure; EU spec sources agree on 55 L for the PHEV)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.8,
+        "basis": "judged",
+        "note": "Audi's WLTP 'battery discharged' combined band for the 270 kW car is 8.1-7.2 L/100km (https://www.audi.com/en/audi-q5-suv-e-hybrid-quattro-16677); 7.8 kept from held data, upper half of the band for the AU car's standard 20-inch wheels and 2,170+ kg mass. Siblings: mercedes-glc-phev 7.8, bmw-x3-phev 7.6, audi-a5-phev 7.3 (lighter, same powertrain). No independent AU charge-sustaining test found."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-audi-q5-e-hybrid-review-quick-drive",
+        "note": "combined label 3.3 L/100km (also Audi AU magazine and carsales) <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; CarExpert quotes 75 g/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 433,
+        "basis": "sourced",
+        "url": "https://www.audi.com/en/press-releases/the-audi-q5-e-hybrid-all-rounder-with-great-electric-range-16685",
+        "note": "Audi press release Sportback 433 L / 1300 L (VDA, to the cover); Chasing Cars and CarsGuide agree on seats-up. CarExpert's 520/1473 is the petrol Q5 figure (trap)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1300,
+        "basis": "sourced",
+        "url": "https://www.audi.com/en/press-releases/the-audi-q5-e-hybrid-all-rounder-with-great-electric-range-16685",
+        "note": "Audi press release Sportback folded 1300 L; Chasing Cars agrees"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/midsize-suvs/audi-q5-e-hybrid-2026-review/",
+        "note": "five-seat medium SUV"
+      },
+      "towKg": {
+        "value": 2000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-audi-q5-e-hybrid-review-quick-drive",
+        "note": "CarExpert: 2,000 kg braked for the AU e-hybrid; auto-data and carsales research agree"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-audi-q5-e-hybrid-review-quick-drive",
+        "note": "5 years / unlimited km; battery 8 yr / 160,000 km. Chasing Cars and CarsGuide also five years."
+      },
+      "insuranceAnnual": {
+        "value": 2500,
+        "basis": "judged",
+        "note": "kept held figure; anchored to mercedes-glc-phev 2500 ($99.9k), volvo-xc60-phev-ultra-t8 2400 ($102k), audi-a5-phev 2350 ($89.9k), audi-q6-e-tron-rwd 2600; Sportback +$50 for higher price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.67,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "Audi brand curve matching audi-q4-e-tron [1,0.67,0.55,0.46,0.39,0.33], per owner convention (one curve per brand). Held curve was [1,0.67,0.55,0.47,0.4,0.34]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "audi-q5-phev-*.fuelConsumptionL100km: judged 7.8 within Audi WLTP battery-discharged band 7.2-8.1; no independent charge-sustaining test found (held prose cited one, not re-found)",
+    "audi-q5-phev-*.availability: audi.com.au configurator returned 403; orderability rests on Audi AU magazine Aug 2026 launch article and Aug 2026 reviews",
+    "audi-q5-phev-*.combinedRangeKm: 55 L tank from EU spec (auto-data); Chasing Cars says 70 L",
+    "audi-q5-phev-*.insuranceAnnual: judged",
+    "audi-q5-phev-*.depreciationCurve: judged, brand curve from audi-q4-e-tron"
+  ]
+}

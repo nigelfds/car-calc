@@ -1,0 +1,716 @@
+{
+  "familyId": "mazda-cx-60-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mazda-cx-60-phev-pure": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU CX-60 page served model code C60CAW5P50EP4 with live Victorian prices on the research date (build & price renders no data to automated fetches; the page's embedded configurator data was read instead). Seven P50e price lines: Pure, Evolve, Touring, GT, Azami, Azami SP, Azami Takumi."
+      },
+      "listPrice": {
+        "value": 56640,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $61,970 (RDP) vs app drive-away $59,899, gap $2,071. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
+      },
+      "batteryKwh": {
+        "value": 14,
+        "basis": "judged",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
+      },
+      "rangeKm": {
+        "value": 63,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP electric range for the current (ab 11/25) car on 235/50R20, 63 km. The 12/24-11/25 cars showed 64 km on both 235/60R18 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/337820/) and 20-inch, so no wheel split is applied; this grade ships on 18-inch wheels. Australian 76 km is NEDC (CarExpert spec tables say 'Electric driving range (NEDC) 76km'), rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 63 x 100. Agrees with CarExpert's 2026 GT test (22.1 kWh/100km). The 14.8 kWh/100km Australian claim is the ADR utility-weighted label, not used."
+      },
+      "combinedRangeKm": {
+        "value": 712,
+        "basis": "derived",
+        "note": "WLTP electric 63 km + 50 L tank / 7.7 L/100km x 100 (649 km). Tank 50 L from CarExpert's 2026 GT review and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' charge-sustaining figure, identical on 18- and 20-inch cars. Previously held 8.5 was a review-based estimate. heise measured 7.2-8.5 L/100km without charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Combined label 2.1 L/100km, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CX-60 P50e label is 49 g/km (CarExpert 2026 price-and-specs table)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 477,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU page: '477L of cargo space'. CarExpert 2024 P50e GT review confirms 477 L 'to rear package tray' for the PHEV. CarExpert's 2026 tables quote 570 L, the European roof-height VDA figure (ADAC 'Kofferraumvolumen normal 570 l'); the app's convention keeps the Australian 477."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1726,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 P50e GT review dimensions table '1726L (rear seats folded)'; same in ADAC for the PHEV."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "Five-seat two-row SUV."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 GT review 'Braked tow capacity 2500kg'; Mazda AU PHEV guide says braked towing 'remains 2500kg'."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "Lowered with the $7,150 price cut. Anchored to mitsubishi-outlander-phev (ES $58,990 -> $1,650, Aspire $66,790 -> $1,750, Exceed $71,640 -> $1,800), mazda-cx-80-phev-touring ($68,100 -> $1,850) and kia-sorento-phev-s-awd ($70,880 -> $1,800), with a small premium-brand loading."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    },
+    "mazda-cx-60-phev-evolve": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU CX-60 page served model code C60CAW5P50EEX4 with live Victorian prices on the research date (build & price renders no data to automated fetches; the page's embedded configurator data was read instead). Seven P50e price lines: Pure, Evolve, Touring, GT, Azami, Azami SP, Azami Takumi."
+      },
+      "listPrice": {
+        "value": 61640,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $65,617 (special offer) vs app drive-away $65,109, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
+      },
+      "batteryKwh": {
+        "value": 14,
+        "basis": "judged",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
+      },
+      "rangeKm": {
+        "value": 63,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP electric range for the current (ab 11/25) car on 235/50R20, 63 km. The 12/24-11/25 cars showed 64 km on both 235/60R18 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/337820/) and 20-inch, so no wheel split is applied; this grade ships on 18-inch wheels. Australian 76 km is NEDC (CarExpert spec tables say 'Electric driving range (NEDC) 76km'), rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 63 x 100. Agrees with CarExpert's 2026 GT test (22.1 kWh/100km). The 14.8 kWh/100km Australian claim is the ADR utility-weighted label, not used."
+      },
+      "combinedRangeKm": {
+        "value": 712,
+        "basis": "derived",
+        "note": "WLTP electric 63 km + 50 L tank / 7.7 L/100km x 100 (649 km). Tank 50 L from CarExpert's 2026 GT review and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' charge-sustaining figure, identical on 18- and 20-inch cars. Previously held 8.5 was a review-based estimate. heise measured 7.2-8.5 L/100km without charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Combined label 2.1 L/100km, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CX-60 P50e label is 49 g/km (CarExpert 2026 price-and-specs table)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 477,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU page: '477L of cargo space'. CarExpert 2024 P50e GT review confirms 477 L 'to rear package tray' for the PHEV. CarExpert's 2026 tables quote 570 L, the European roof-height VDA figure (ADAC 'Kofferraumvolumen normal 570 l'); the app's convention keeps the Australian 477."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1726,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 P50e GT review dimensions table '1726L (rear seats folded)'; same in ADAC for the PHEV."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "Five-seat two-row SUV."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 GT review 'Braked tow capacity 2500kg'; Mazda AU PHEV guide says braked towing 'remains 2500kg'."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "Lowered with the $7,150 price cut. Anchored to mitsubishi-outlander-phev (ES $58,990 -> $1,650, Aspire $66,790 -> $1,750, Exceed $71,640 -> $1,800), mazda-cx-80-phev-touring ($68,100 -> $1,850) and kia-sorento-phev-s-awd ($70,880 -> $1,800), with a small premium-brand loading."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    },
+    "mazda-cx-60-phev-touring": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU CX-60 page served model code C60CAW5P50ETX4 with live Victorian prices on the research date (build & price renders no data to automated fetches; the page's embedded configurator data was read instead). Seven P50e price lines: Pure, Evolve, Touring, GT, Azami, Azami SP, Azami Takumi."
+      },
+      "listPrice": {
+        "value": 64640,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $68,743 (special offer) vs app drive-away $68,235, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
+      },
+      "batteryKwh": {
+        "value": 14,
+        "basis": "judged",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
+      },
+      "rangeKm": {
+        "value": 63,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP electric range for the current (ab 11/25) car on 235/50R20, 63 km. The 12/24-11/25 cars showed 64 km on both 235/60R18 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/337820/) and 20-inch, so no wheel split is applied; this grade ships on 18-inch wheels. Australian 76 km is NEDC (CarExpert spec tables say 'Electric driving range (NEDC) 76km'), rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 63 x 100. Agrees with CarExpert's 2026 GT test (22.1 kWh/100km). The 14.8 kWh/100km Australian claim is the ADR utility-weighted label, not used."
+      },
+      "combinedRangeKm": {
+        "value": 712,
+        "basis": "derived",
+        "note": "WLTP electric 63 km + 50 L tank / 7.7 L/100km x 100 (649 km). Tank 50 L from CarExpert's 2026 GT review and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' charge-sustaining figure, identical on 18- and 20-inch cars. Previously held 8.5 was a review-based estimate. heise measured 7.2-8.5 L/100km without charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Combined label 2.1 L/100km, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CX-60 P50e label is 49 g/km (CarExpert 2026 price-and-specs table)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 477,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU page: '477L of cargo space'. CarExpert 2024 P50e GT review confirms 477 L 'to rear package tray' for the PHEV. CarExpert's 2026 tables quote 570 L, the European roof-height VDA figure (ADAC 'Kofferraumvolumen normal 570 l'); the app's convention keeps the Australian 477."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1726,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 P50e GT review dimensions table '1726L (rear seats folded)'; same in ADAC for the PHEV."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "Five-seat two-row SUV."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 GT review 'Braked tow capacity 2500kg'; Mazda AU PHEV guide says braked towing 'remains 2500kg'."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "Lowered with the $7,150 price cut. Anchored to mitsubishi-outlander-phev (ES $58,990 -> $1,650, Aspire $66,790 -> $1,750, Exceed $71,640 -> $1,800), mazda-cx-80-phev-touring ($68,100 -> $1,850) and kia-sorento-phev-s-awd ($70,880 -> $1,800), with a small premium-brand loading."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    },
+    "mazda-cx-60-phev-gt": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU CX-60 page served model code C60CAW5P50EGTX4 with live Victorian prices on the research date (build & price renders no data to automated fetches; the page's embedded configurator data was read instead). Seven P50e price lines: Pure, Evolve, Touring, GT, Azami, Azami SP, Azami Takumi."
+      },
+      "listPrice": {
+        "value": 70640,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $76,558 (RDP) vs app drive-away $74,487, gap $2,071. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
+      },
+      "batteryKwh": {
+        "value": 14,
+        "basis": "judged",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
+      },
+      "rangeKm": {
+        "value": 63,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP electric range for the current (ab 11/25) car on 235/50R20, 63 km. The 12/24-11/25 cars showed 64 km on both 235/60R18 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/337820/) and 20-inch, so no wheel split is applied; this grade ships on 20-inch wheels. Australian 76 km is NEDC (CarExpert spec tables say 'Electric driving range (NEDC) 76km'), rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 63 x 100. Agrees with CarExpert's 2026 GT test (22.1 kWh/100km). The 14.8 kWh/100km Australian claim is the ADR utility-weighted label, not used."
+      },
+      "combinedRangeKm": {
+        "value": 712,
+        "basis": "derived",
+        "note": "WLTP electric 63 km + 50 L tank / 7.7 L/100km x 100 (649 km). Tank 50 L from CarExpert's 2026 GT review and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' charge-sustaining figure, identical on 18- and 20-inch cars. Previously held 8.5 was a review-based estimate. heise measured 7.2-8.5 L/100km without charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Combined label 2.1 L/100km, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CX-60 P50e label is 49 g/km (CarExpert 2026 price-and-specs table)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 477,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU page: '477L of cargo space'. CarExpert 2024 P50e GT review confirms 477 L 'to rear package tray' for the PHEV. CarExpert's 2026 tables quote 570 L, the European roof-height VDA figure (ADAC 'Kofferraumvolumen normal 570 l'); the app's convention keeps the Australian 477."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1726,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 P50e GT review dimensions table '1726L (rear seats folded)'; same in ADAC for the PHEV."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "Five-seat two-row SUV."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 GT review 'Braked tow capacity 2500kg'; Mazda AU PHEV guide says braked towing 'remains 2500kg'."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "Lowered with the $7,150 price cut. Anchored to mitsubishi-outlander-phev (ES $58,990 -> $1,650, Aspire $66,790 -> $1,750, Exceed $71,640 -> $1,800), mazda-cx-80-phev-touring ($68,100 -> $1,850) and kia-sorento-phev-s-awd ($70,880 -> $1,800), with a small premium-brand loading."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    },
+    "mazda-cx-60-phev-azami": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU CX-60 page served model code C60CAW5P50EA4 with live Victorian prices on the research date (build & price renders no data to automated fetches; the page's embedded configurator data was read instead). Seven P50e price lines: Pure, Evolve, Touring, GT, Azami, Azami SP, Azami Takumi."
+      },
+      "listPrice": {
+        "value": 74840,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "CarExpert 23 Aug 2026 price table headed 'Price before on-road costs'; same figure in CarExpert's 2026 P50e GT review (Aug 2026) and GoAuto 23 Jul 2026 ('Pricing excludes on-road costs'). Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $79,371 (special offer) vs app drive-away $78,863, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
+      },
+      "batteryKwh": {
+        "value": 14,
+        "basis": "judged",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
+      },
+      "rangeKm": {
+        "value": 63,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP electric range for the current (ab 11/25) car on 235/50R20, 63 km. The 12/24-11/25 cars showed 64 km on both 235/60R18 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/337820/) and 20-inch, so no wheel split is applied; this grade ships on 20-inch wheels. Australian 76 km is NEDC (CarExpert spec tables say 'Electric driving range (NEDC) 76km'), rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 63 x 100. Agrees with CarExpert's 2026 GT test (22.1 kWh/100km). The 14.8 kWh/100km Australian claim is the ADR utility-weighted label, not used."
+      },
+      "combinedRangeKm": {
+        "value": 712,
+        "basis": "derived",
+        "note": "WLTP electric 63 km + 50 L tank / 7.7 L/100km x 100 (649 km). Tank 50 L from CarExpert's 2026 GT review and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' charge-sustaining figure, identical on 18- and 20-inch cars. Previously held 8.5 was a review-based estimate. heise measured 7.2-8.5 L/100km without charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Combined label 2.1 L/100km, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CX-60 P50e label is 49 g/km (CarExpert 2026 price-and-specs table)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 477,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU page: '477L of cargo space'. CarExpert 2024 P50e GT review confirms 477 L 'to rear package tray' for the PHEV. CarExpert's 2026 tables quote 570 L, the European roof-height VDA figure (ADAC 'Kofferraumvolumen normal 570 l'); the app's convention keeps the Australian 477."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1726,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 P50e GT review dimensions table '1726L (rear seats folded)'; same in ADAC for the PHEV."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "Five-seat two-row SUV."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 GT review 'Braked tow capacity 2500kg'; Mazda AU PHEV guide says braked towing 'remains 2500kg'."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "Lowered with the $7,150 price cut. Anchored to mitsubishi-outlander-phev (ES $58,990 -> $1,650, Aspire $66,790 -> $1,750, Exceed $71,640 -> $1,800), mazda-cx-80-phev-touring ($68,100 -> $1,850) and kia-sorento-phev-s-awd ($70,880 -> $1,800), with a small premium-brand loading."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    },
+    "mazda-cx-60-phev-azami-sp": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU CX-60 page served model code C60CAW5P50EASP4 with live Victorian prices on the research date (build & price renders no data to automated fetches; the page's embedded configurator data was read instead). Seven P50e price lines: Pure, Evolve, Touring, GT, Azami, Azami SP, Azami Takumi. Mazda and CarExpert treat SP and Takumi as $2,000 option packages on the Azami (CarExpert: \"Takumi Package ($2000, Azami only)\"); kept as rows because Mazda prices them as separate lines with their own model code and the package takes the car over the $75,000 cap."
+      },
+      "listPrice": {
+        "value": 76840,
+        "basis": "sourced",
+        "url": "https://web1.goauto.com.au/new-models/mazda/mazda-cuts-prices-across-flagship-suv-ranges/2026-07-23/99905.html",
+        "note": "GoAuto 23 Jul 2026 price table, 'Pricing excludes on-road costs' (prints -$5150 for the Azami lines, an arithmetic slip: the new figures match CarExpert's July table, which also lists this line at $76,840 'excludes on-road costs'). CarExpert's Aug 2026 table omits SP/Takumi and lists them as $2,000 Azami packages, consistent with $74,840 + $2,000. Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $81,455 (special offer, Azami with $2,000 package interior) vs app drive-away $80,947, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
+      },
+      "batteryKwh": {
+        "value": 14,
+        "basis": "judged",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
+      },
+      "rangeKm": {
+        "value": 63,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP electric range for the current (ab 11/25) car on 235/50R20, 63 km. The 12/24-11/25 cars showed 64 km on both 235/60R18 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/337820/) and 20-inch, so no wheel split is applied; this grade ships on 20-inch wheels. Australian 76 km is NEDC (CarExpert spec tables say 'Electric driving range (NEDC) 76km'), rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 63 x 100. Agrees with CarExpert's 2026 GT test (22.1 kWh/100km). The 14.8 kWh/100km Australian claim is the ADR utility-weighted label, not used."
+      },
+      "combinedRangeKm": {
+        "value": 712,
+        "basis": "derived",
+        "note": "WLTP electric 63 km + 50 L tank / 7.7 L/100km x 100 (649 km). Tank 50 L from CarExpert's 2026 GT review and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' charge-sustaining figure, identical on 18- and 20-inch cars. Previously held 8.5 was a review-based estimate. heise measured 7.2-8.5 L/100km without charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Combined label 2.1 L/100km, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CX-60 P50e label is 49 g/km (CarExpert 2026 price-and-specs table)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 477,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU page: '477L of cargo space'. CarExpert 2024 P50e GT review confirms 477 L 'to rear package tray' for the PHEV. CarExpert's 2026 tables quote 570 L, the European roof-height VDA figure (ADAC 'Kofferraumvolumen normal 570 l'); the app's convention keeps the Australian 477."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1726,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 P50e GT review dimensions table '1726L (rear seats folded)'; same in ADAC for the PHEV."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "Five-seat two-row SUV."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 GT review 'Braked tow capacity 2500kg'; Mazda AU PHEV guide says braked towing 'remains 2500kg'."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "Lowered with the $7,150 price cut. Anchored to mitsubishi-outlander-phev (ES $58,990 -> $1,650, Aspire $66,790 -> $1,750, Exceed $71,640 -> $1,800), mazda-cx-80-phev-touring ($68,100 -> $1,850) and kia-sorento-phev-s-awd ($70,880 -> $1,800), with a small premium-brand loading."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    },
+    "mazda-cx-60-phev-azami-takumi": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU CX-60 page served model code C60CAW5P50EAT4 with live Victorian prices on the research date (build & price renders no data to automated fetches; the page's embedded configurator data was read instead). Seven P50e price lines: Pure, Evolve, Touring, GT, Azami, Azami SP, Azami Takumi. Mazda and CarExpert treat SP and Takumi as $2,000 option packages on the Azami (CarExpert: \"Takumi Package ($2000, Azami only)\"); kept as rows because Mazda prices them as separate lines with their own model code and the package takes the car over the $75,000 cap."
+      },
+      "listPrice": {
+        "value": 76840,
+        "basis": "sourced",
+        "url": "https://web1.goauto.com.au/new-models/mazda/mazda-cuts-prices-across-flagship-suv-ranges/2026-07-23/99905.html",
+        "note": "GoAuto 23 Jul 2026 price table, 'Pricing excludes on-road costs' (prints -$5150 for the Azami lines, an arithmetic slip: the new figures match CarExpert's July table, which also lists this line at $76,840 'excludes on-road costs'). CarExpert's Aug 2026 table omits SP/Takumi and lists them as $2,000 Azami packages, consistent with $74,840 + $2,000. Cross-check against Mazda's own Victorian figure on https://www.mazda.com.au/cars/cx-60/: $81,455 (special offer, Azami with $2,000 package interior) vs app drive-away $80,947, gap $508. The gap is ~$2,071 on the RDP lines (Pure, GT; Mazda's RDP includes dealer delivery) and ~$508 on every special-offer line, replicating across grades, which confirms the list structure. July 2026 prices still current: no later Australian price change found; the Oct 2026 CarExpert 2027 update item is Europe-only."
+      },
+      "batteryKwh": {
+        "value": 14,
+        "basis": "judged",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazität (Brutto)', heise 'Battery in kWh gross', auto motor und sport 'Energiegehalt brutto'). Estimate: heise could not discharge below 19% SoC (engine refires at 26%), so usable <= ~14.4 kWh; CarExpert real-world 55-60 km EV range at 22.1-25.2 kWh/100km trip-computer consumption implies 12.2-15.1 kWh delivered. CX-80 sibling holds the gross 17.8 on the same pack and should be aligned."
+      },
+      "rangeKm": {
+        "value": 63,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP electric range for the current (ab 11/25) car on 235/50R20, 63 km. The 12/24-11/25 cars showed 64 km on both 235/60R18 (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/337820/) and 20-inch, so no wheel split is applied; this grade ships on 20-inch wheels. Australian 76 km is NEDC (CarExpert spec tables say 'Electric driving range (NEDC) 76km'), rejected by the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 63 x 100. Agrees with CarExpert's 2026 GT test (22.1 kWh/100km). The 14.8 kWh/100km Australian claim is the ADR utility-weighted label, not used."
+      },
+      "combinedRangeKm": {
+        "value": 712,
+        "basis": "derived",
+        "note": "WLTP electric 63 km + 50 L tank / 7.7 L/100km x 100 (649 km). Tank 50 L from CarExpert's 2026 GT review and ADAC."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-60/kh/346701/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' charge-sustaining figure, identical on 18- and 20-inch cars. Previously held 8.5 was a review-based estimate. heise measured 7.2-8.5 L/100km without charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Combined label 2.1 L/100km, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CX-60 P50e label is 49 g/km (CarExpert 2026 price-and-specs table)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 477,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-60/",
+        "note": "Mazda AU page: '477L of cargo space'. CarExpert 2024 P50e GT review confirms 477 L 'to rear package tray' for the PHEV. CarExpert's 2026 tables quote 570 L, the European roof-height VDA figure (ADAC 'Kofferraumvolumen normal 570 l'); the app's convention keeps the Australian 477."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1726,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 P50e GT review dimensions table '1726L (rear seats folded)'; same in ADAC for the PHEV."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "Five-seat two-row SUV."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-60-p50e-gt-review",
+        "note": "CarExpert 2026 GT review 'Braked tow capacity 2500kg'; Mazda AU PHEV guide says braked towing 'remains 2500kg'."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-60-price-and-specs",
+        "note": "Five-year unlimited-km vehicle warranty; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "Lowered with the $7,150 price cut. Anchored to mitsubishi-outlander-phev (ES $58,990 -> $1,650, Aspire $66,790 -> $1,750, Exceed $71,640 -> $1,800), mazda-cx-80-phev-touring ($68,100 -> $1,850) and kia-sorento-phev-s-awd ($70,880 -> $1,800), with a small premium-brand loading."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    }
+  },
+  "lowConfidence": [
+    "mazda-cx-60-phev-*.batteryKwh: usable 14.0 kWh judged; only gross 17.8 is published anywhere found",
+    "mazda-cx-60-phev-*.consumptionKwhPer100km: derived from the judged usable battery (agrees with CarExpert's tested 22.1)",
+    "mazda-cx-60-phev-azami-sp / azami-takumi: these are $2,000 option packages on the Azami that Mazda prices as separate lines; kept as rows, could arguably be dropped",
+    "mazda-cx-60-phev-azami-sp.listPrice / azami-takumi.listPrice: $76,840 from GoAuto and CarExpert's July table plus Azami + $2,000 package; CarExpert's Aug table omits them",
+    "mazda-cx-60-phev-pure/evolve/touring.rangeKm: the current-WLTP 63 km is from a 20-inch car; the 18-inch car was 64 km under the previous certification",
+    "mazda-cx-60-phev-*.insuranceAnnual: judged",
+    "mazda-cx-60-phev-*.depreciationCurve: judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "familyId": "cupra-formentor-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "cupra-formentor-phev-vze": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/cars/formentor",
+        "note": "Cupra AU Formentor page lists five grades (S, V, VZe, VZx, VZ5) each with a 'Configure now' link; VZe is the only PHEV. Configurator is JS/region-priced and not readable; CarsGuide (8 Jul 2026) and CarExpert (22 Aug 2026) confirm the same five-grade line-up."
+      },
+      "listPrice": {
+        "value": 68990,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/urban/cupra-formentor-vze-102042",
+        "note": "CarsGuide 8 Jul 2026: 'priced from $68,990 before on-road costs'. CarExpert launch price table (https://www.carexpert.com.au/car-news/2026-cupra-formentor-updated-suv-range-priced-for-australia) column 'price before on-road costs' $68,990, national drive-away $74,490. Cupra AU configurator not readable; no later price change found. Nov-Dec 2026 Cupra offer of $5,850 cashback is a campaign, not a list change."
+      },
+      "batteryKwh": {
+        "value": 19.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/formentor/1generation-facelift/349374/",
+        "note": "ADAC: Batteriekapazitaet (Brutto) 25,8 kWh, (Netto) 19,7 kWh for Formentor 1.5 e-HYBRID 200 kW; usable used. CarExpert AU spec gives 25.8 gross / '20' usable (rounded)."
+      },
+      "rangeKm": {
+        "value": 114,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.cupra.com/en-au/cars/formentor",
+        "note": "Cupra AU 'up to 114 km' under ADR 81/02 and WLTP testing; same in CarExpert AU spec and CarsGuide. Below European WLTP 117 km (ADAC, 245/40R19, same tyre as AU car), so WLTP-derived local figure."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.3,
+        "basis": "derived",
+        "note": "batteryKwh 19.7 / rangeKm 114 x 100 = 17.28"
+      },
+      "combinedRangeKm": {
+        "value": 828,
+        "basis": "derived",
+        "note": "rangeKm 114 + 40 L tank / 5.6 L/100km x 100 (714.3) = 828. Tank 40 L from ADAC and CarExpert AU spec."
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.6,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/formentor/1generation-facelift/349374/",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 5,6 L/100km, Formentor 1.5 e-HYBRID VZ (production from 02/26), 245/40R19 as on AU VZe. The 06/25-10/25 VZ entry (ADAC 340304) reads 5,7. Same basis as vw-tayron-phev (5.9, heavier car). Auto Motor und Sport measured 7.1 L/100km in hybrid mode. Held 6.5 was judged."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/urban/cupra-formentor-vze-102042",
+        "note": "Combined label 1.7 L/100km under ADR 81/02 (CarsGuide; CarExpert spec agrees), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined CO2 120 g/km or less; CarExpert AU spec gives 38 g/km."
+      },
+      "bootLitresSeatsUp": {
+        "value": 345,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/formentor/2026/vze/features-and-specs",
+        "note": "CarExpert AU spec 345 L 'to lower window' (cargo cover); ADAC 345 L agrees."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1311,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/formentor/2026/vze/features-and-specs",
+        "note": "CarExpert AU spec 345-1311 L. ADAC/AMS give 1415 L to the roof ('dachhoch'), so 1311 is taken as the lower (belt-line) measure; method not stated by CarExpert."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/formentor/2026/vze/features-and-specs"
+      },
+      "towKg": {
+        "value": 1700,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-cupra-formentor-price-and-specs",
+        "note": "CarExpert MY26 AU price-and-specs (22 Aug 2026) braked 1700 kg; CarExpert VZe spec page and ADAC (Anhaengelast gebremst 12% 1700 kg) agree. Held 1500 kg was the pre-update VZe figure. Not from a Cupra AU spec sheet (brochure PDF too large to read)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/owners/warranty",
+        "note": "'factory-backed 5-year unlimited kilometre warranty'; no servicing condition stated. Battery 8 yr/160,000 km per CarExpert spec page."
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "Held 1950 kept. Anchors: cupra-tavascan-endurance $1950 at $66,490, vw-tiguan-phev-200tsi-r-line $1950 at $74,550, vw-tiguan-phev-150tsi-elegance $1750 at $64,590; performance badge puts it above the Tiguan 150TSI."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "Cupra brand curve per owner rule (one curve per brand), matching cupra-tavascan V and Endurance rows. Held [1,0.67,0.55,0.46,0.39,0.33] dropped. Steeper than mainstream default: thin local volume, Formentor sales down 61.3% H1 2026, MY24 VZe run-out discounting."
+      }
+    }
+  },
+  "lowConfidence": [
+    "cupra-formentor-phev-vze.bootLitresSeatsDown: 1311 L from CarExpert with no stated method; ADAC 1415 L is to the roof; no Cupra AU figure read",
+    "cupra-formentor-phev-vze.fuelConsumptionL100km: European WLTP battery-empty (ADAC 5.6; earlier 2025 entry 5.7); no Australian flat-battery figure; AMS real-world hybrid 7.1",
+    "cupra-formentor-phev-vze.listPrice: Cupra AU configurator not readable (JS, region-priced); $68,990 from CarsGuide/CarExpert 'before on-road costs' launch-period figures, no later change found",
+    "cupra-formentor-phev-vze.towKg: 1700 kg from CarExpert and ADAC, not a Cupra AU spec sheet; changed from held 1500",
+    "cupra-formentor-phev-vze.insuranceAnnual: judged, anchored to Tavascan Endurance and Tiguan eHybrid rows",
+    "cupra-formentor-phev-vze.depreciationCurve: judged Cupra brand curve"
+  ]
+}

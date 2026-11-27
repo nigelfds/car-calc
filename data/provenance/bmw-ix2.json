@@ -1,0 +1,89 @@
+{
+  "familyId": "bmw-ix2",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "bmw-ix2-xdrive30-m-sport": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/ix2/2026-m-sport-suv-4x4-electric-jsfwff5o20260331",
+        "note": "CarExpert 2026 iX2 listing shows a single variant, M Sport 4x4 electric (xDrive30), series dated 2026-03-31; CarExpert price-cut story (1 Apr 2026) says every iX2 sold here is dual-motor xDrive, and The Driven (31 Mar 2026) says 'Gone are the eDrive20 variants of the iX1 and iX2'. BMW AU configurator and model pages (bmw.com.au) returned 503 on every attempt this run, so the live configurator count could not be confirmed."
+      },
+      "listPrice": {
+        "value": 79900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/bmw-electric-suv-prices-slashed",
+        "note": "'trimmed by $7700 to $79,900 before on-roads' (CarExpert, 1 Apr 2026). CarsGuide 7 Apr 2026 same '$79,900 (before on-road costs)', down from $87,600. EV Central model page (updated 21 Nov 2026, 'list and exclude on-road costs') still $79,900, though it also still lists the discontinued eDrive20. The Driven's '$79,990' treated as a typo (it also gives the pre-cut price as $86,900 against $87,600 elsewhere). BMW AU Build & Price unreachable (503), so no manufacturer figure this run."
+      },
+      "batteryKwh": {
+        "value": 65.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3461/BMW-iX2-xDrive30",
+        "note": "EV Database MY26 (available since Feb 2026): useable 65.2 kWh, nominal 66.5 kWh. BMW's stated MY26 rise 64.6 -> 65.2 kWh usable (Auto Express, 29 Jan 2026). ADAC catalogue (ab 03/26) prints netto 65.0 / brutto 66.5. Held 64.8 was the pre-update usable figure."
+      },
+      "rangeKm": {
+        "value": 476,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix2/u10/348808/",
+        "note": "ADAC catalogue, iX2 xDrive30 M Sportpaket (Modellstart 03/26), 245/45R19 tyres - the 19-inch wheel the AU M Sport ships on (CarExpert variant page). Auto Express UK xDrive30 M Sport 19-inch: same 476 km; EV Database TEL/TEH 479/443. No AU-certified MY26 figure found: CarExpert (1 Apr 2026) said local range figures were yet to be announced, and CarsGuide/carsales still show the pre-update 395 km ADR / 449 km WLTP. Replaces held 395 km (pre-update ADR)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.4,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix2/u10/348808/",
+        "note": "WLTP combined 15,4 kWh/100 km, same variant and tyre as rangeKm (Auto Express 15.5). battery/range = 13.7, 12% below, inside tolerance (WLTP figure includes charging losses). Held 18.5 was the pre-update ADR label."
+      },
+      "bootLitresSeatsUp": {
+        "value": 525,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2024-bmw-ix2-xdrive30-review",
+        "note": "BMW figure 525 L seats up (CarExpert review; ADAC catalogue labels it 'normal'). ADAC's own Autotest measured 395 L under the cover plus about 60 L underfloor (https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6460-bmw-ix2-xdrive30/bmw-ix2-xdrive30.pdf), so the 525 VDA figure likely overstates to-the-cover space. No frunk."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1400,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix2/u10/348808/",
+        "note": "ADAC catalogue labels 1400 L 'dachhoch mit umgeklappter Rücksitzbank' (to the roof), not the belt-line convention. ADAC Autotest measured 755 L to the window line (1,215 L to the roof) on its own method. Kept 1400 for consistency with siblings (bmw-ix1, bmw-ix3 also use BMW's to-roof maximum); overstates vs convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3461/BMW-iX2-xDrive30",
+        "note": "'5 people'; CarExpert variant page 5 seats (2+3)"
+      },
+      "towKg": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix2/u10/348808/",
+        "note": "'Anhängelast gebremst 12%: 1200 kg'; CarExpert AU variant page also 1,200 kg braked / 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/ix2/2026-m-sport-suv-4x4-electric-jsfwff5o20260331",
+        "note": "5 years/unlimited km; battery 8 years/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "kept: list price unchanged at $79,900; sits between bmw-ix1-xdrive30 ($77,900, 2100) and mercedes-eqa-250-plus ($86,700, 2250), above volvo-ex40-twin-motor-ultra ($74,990, 2150)"
+      },
+      "depreciationCurve": {
+        "value": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
+        "basis": "judged",
+        "note": "owner convention: one curve per brand, matching bmw-ix3 (refreshed 2026-11-26). Held curve [1,0.75,0.65,0.57,0.5,0.44] replaced. Evidence supports a steeper-than-mainstream curve here anyway: the $7,700 (8.8%) March 2026 list cut erodes used values of earlier cars."
+      }
+    }
+  },
+  "lowConfidence": [
+    "bmw-ix2-xdrive30-m-sport.availability: BMW AU configurator unreachable (503) all run; single-grade line-up rests on CarExpert, CarsGuide and The Driven (Mar-Apr 2026) and nothing dated after April confirms it",
+    "bmw-ix2-xdrive30-m-sport.listPrice: not confirmed on BMW's own site this run; the newest corroboration (EV Central, updated 21 Nov 2026) also carries a discontinued grade",
+    "bmw-ix2-xdrive30-m-sport.rangeKm: European WLTP for the MY26 SiC-inverter car; assumes Australian stock is MY26 (CarExpert says all MY26 iX2 get SiC) and no local certified figure was found",
+    "bmw-ix2-xdrive30-m-sport.bootLitresSeatsDown: 1400 L is to the roof; ADAC measured 755 L to the window line",
+    "bmw-ix2-xdrive30-m-sport.bootLitresSeatsUp: 525 L VDA likely includes the underfloor well; ADAC measured 395 L under the cover",
+    "bmw-ix2-xdrive30-m-sport.batteryKwh: 65.2 (EV Database, BMW release) vs 65.0 net (ADAC/Auto Express)",
+    "bmw-ix2-xdrive30-m-sport.insuranceAnnual: judged",
+    "bmw-ix2-xdrive30-m-sport.depreciationCurve: judged, brand convention"
+  ]
+}

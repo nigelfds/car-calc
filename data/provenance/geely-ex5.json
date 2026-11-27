@@ -1,0 +1,172 @@
+{
+  "familyId": "geely-ex5",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "geely-ex5-complete": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.geely.com.au/build/geely-ex5",
+        "note": "Geely AU Build & Price lists exactly two grades, Complete $41,990 and Inspire $45,990, on the research date; CarExpert 2027 model page agrees on two grades."
+      },
+      "listPrice": {
+        "value": 41990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex5-price-and-specs-mid-size-electric-suv-gets-bigger-battery",
+        "note": "$41,990 'before on-road costs' (CarExpert news, 2 Mar 2026; zecar likewise); Geely AU configurator shows $41,990 without basis wording on the research date. CarExpert's $46,267 is a Sydney drive-away."
+      },
+      "batteryKwh": {
+        "value": 68.39,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3583/Geely-EX5-Ultra",
+        "note": "Usable. EV Database (UK EX5, same 68.4 kWh LFP pack) gives nominal 70.0 / usable 68.4 kWh; CarExpert AU spec page labels 68.39 kWh usable."
+      },
+      "rangeKm": {
+        "value": 475,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027-complete-suv-fwd-electric-jsgom8mk20260318",
+        "note": "475 km WLTP on 18-inch wheels (CarExpert 2027 spec page; Geely AU configurator '475km WLTP'). Direction test: no higher than the UK WLTP figures for the same pack, so not an NEDC submission."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.0,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027-complete-suv-fwd-electric-jsgom8mk20260318",
+        "note": "Geely WLTP combined consumption as quoted by CarExpert (wall-to-wheel, hence above battery/range = 14.4)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 410,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/geely-ex5-inspire-101373",
+        "note": "410 L total in a two-layer boot (CarsGuide; CarExpert review 302-410 L). 302 L is above the false floor 'to lower window' (CarExpert spec page); the ~108 L lower layer is a lift-floor well usable with the new cargo blind in place, so the total is kept. UK EV Database gives 461 L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1877,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027-complete-suv-fwd-electric-jsgom8mk20260318",
+        "note": "Rear seat down 1,877 L."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027-complete-suv-fwd-electric-jsgom8mk20260318",
+        "note": "Rear bench seating capacity 3 plus two front seats."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027-complete-suv-fwd-electric-jsgom8mk20260318",
+        "note": "No braked or unbraked rating listed; trailer noseweight 0 kg. Not rated to tow in Australia; the UK-market car is rated 750 kg braked (EV Database) but no AU rating exists."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027-complete-suv-fwd-electric-jsgom8mk20260318",
+        "note": "84 months / unlimited km whole vehicle, no servicing condition (private use); battery 96 months / unlimited km to 70%. Roadside assist 7 years only if serviced in the Geely network."
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "Kept from held data; anchored to byd-atto3-evo-dynamic ($41,990, 1600), byd-atto3-evo-premium ($46,990, 1700) and geely-starray-em-i-inspire-awd ($44,990, 1700)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Geely brand convention shared with geely-starray-em-i: steeper than the mainstream default for a brand with ~2 years of Australian sales, repeated campaign discounting ($500 factory bonus plus 0.68% finance Black Friday offer on geely.com.au/ex5) and no resale record."
+      }
+    },
+    "geely-ex5-inspire": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.geely.com.au/build/geely-ex5",
+        "note": "Geely AU Build & Price lists exactly two grades, Complete $41,990 and Inspire $45,990, on the research date; CarExpert 2027 model page agrees on two grades."
+      },
+      "listPrice": {
+        "value": 45990,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/geely-ex5-inspire-101373",
+        "note": "$45,990 'before on-road costs' (CarsGuide review 25 Apr 2026; CarExpert news and review agree); Geely AU configurator shows $45,990 without basis wording on the research date."
+      },
+      "batteryKwh": {
+        "value": 68.39,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3583/Geely-EX5-Ultra",
+        "note": "Usable. EV Database (UK EX5, same 68.4 kWh LFP pack) gives nominal 70.0 / usable 68.4 kWh; CarExpert AU spec page labels 68.39 kWh usable."
+      },
+      "rangeKm": {
+        "value": 450,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027/inspire/features-and-specs",
+        "note": "450 km WLTP on 19-inch wheels (CarExpert 2027 spec page; Geely AU configurator '450km WLTP'). UK EX5 Ultra on the same pack: 280 mi (451 km) WLTP per EV Database, so the AU figure is WLTP-derived."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027/inspire/features-and-specs",
+        "note": "Geely WLTP combined consumption as quoted by CarExpert (wall-to-wheel, hence above battery/range = 15.2)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 410,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/geely-ex5-inspire-101373",
+        "note": "410 L total in a two-layer boot (CarsGuide; CarExpert review 302-410 L). 302 L is above the false floor 'to lower window' (CarExpert spec page); the ~108 L lower layer is a lift-floor well usable with the new cargo blind in place, so the total is kept. UK EV Database gives 461 L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1877,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027/inspire/features-and-specs",
+        "note": "Rear seat down 1,877 L."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027/inspire/features-and-specs",
+        "note": "Rear bench seating capacity 3 plus two front seats."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027/inspire/features-and-specs",
+        "note": "No braked or unbraked rating listed; trailer noseweight 0 kg. Not rated to tow in Australia; the UK-market car is rated 750 kg braked (EV Database) but no AU rating exists."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex5/2027/inspire/features-and-specs",
+        "note": "84 months / unlimited km whole vehicle, no servicing condition (private use); battery 96 months / unlimited km to 70%. Roadside assist 7 years only if serviced in the Geely network."
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "Kept from held data; anchored to byd-atto3-evo-dynamic ($41,990, 1600), byd-atto3-evo-premium ($46,990, 1700) and geely-starray-em-i-inspire-awd ($44,990, 1700)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Geely brand convention shared with geely-starray-em-i: steeper than the mainstream default for a brand with ~2 years of Australian sales, repeated campaign discounting ($500 factory bonus plus 0.68% finance Black Friday offer on geely.com.au/ex5) and no resale record."
+      }
+    }
+  },
+  "lowConfidence": [
+    "geely-ex5-*.bootLitresSeatsUp: 410 L includes a ~108 L under-floor well; above-floor figure is 302 L (CarExpert 'to lower window'); UK EV Database 461 L",
+    "geely-ex5-*.listPrice: configurator shows prices without basis wording; 'before on-road costs' comes from CarExpert/CarsGuide/zecar",
+    "geely-ex5-*.towKg: 0 because no AU rating is published; UK car is rated 750 kg braked",
+    "geely-ex5-*.insuranceAnnual: judged",
+    "geely-ex5-*.depreciationCurve: judged brand convention"
+  ]
+}

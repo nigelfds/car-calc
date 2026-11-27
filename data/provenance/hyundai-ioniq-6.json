@@ -1,0 +1,92 @@
+{
+  "familyId": "hyundai-ioniq-6",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "hyundai-ioniq-6-n": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/ioniq6",
+        "note": "Hyundai AU IONIQ 6 page shows only the IONIQ 6 N; Hyundai's car price calculator data (fetched 2026-11-26, postcode 3000) lists 'IONIQ 6 N' priced and not sold out, as two variants (N, N with sunroof) at the same price, so one row. The legacy 'IONIQ 6' calculator entry has no category or calculator link. CarExpert 2027 model page lists the N as the only 2027 Ioniq 6 (released 4 Oct 2026)."
+      },
+      "listPrice": {
+        "value": 114918,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/hyundai/ioniq-6/2027-n-sedan-4x4-electric-jskagwkw20261022",
+        "note": "MY27 N: CarExpert 'prices starting at $114,918 before on-road costs' (drive-away from $122,781 Sydney). Hyundai's own calculator data for the N variant returned mlpFromPIM 114918 (with a separate LCT-exclusive 'mlp' of 109,551 and Vic drive-away 123,511 incl. $1,995 dealer delivery), so the manufacturer figure agrees. Replaces the MY26 launch price of $115,000 (CarExpert review 7 May 2026). App round-trip: drive-away 120,625 (app excludes dealer delivery)."
+      },
+      "batteryKwh": {
+        "value": 80,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3449/Hyundai-IONIQ-6-N",
+        "note": "usable 80.0; nominal 84.0 on the same page. Hyundai AU spec sheet prints 'Capacity 84.0 kWh', which is gross: 84,000 Wh / 384 cells = 218.75 Wh per SK On pouch cell."
+      },
+      "rangeKm": {
+        "value": 487,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-6-n/docs/IONIQ-6-N-Specification-Sheet-MY27.pdf",
+        "note": "Hyundai AU MY27 spec sheet (dated 23 Oct 2026): 'All Electric Range (WLTP) 487 km'; EV Database WLTP 487 km for the same 84 kWh N on 20-inch wheels, so the AU figure is not an NEDC inflation."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.7,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-6-n/docs/IONIQ-6-N-Specification-Sheet-MY27.pdf",
+        "note": "Hyundai AU spec sheet 'Electric driving efficiency (kWh/100km) Combined: 18.7' (ADR 81/02); EVDB WLTP 187 Wh/km agrees. Usable/range = 16.4, 14% below, inside tolerance (charging losses)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 371,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-6-n/docs/IONIQ-6-N-Specification-Sheet-MY27.pdf",
+        "note": "'Cargo area rear - VDA 371 L'. CarExpert's database page lists a 45 L frunk, but EVDB and CarExpert's review say no frunk; either way a frunk is not added (owner convention 2026-11-26)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 700,
+        "basis": "judged",
+        "note": "No seats-folded figure published by Hyundai AU, EVDB or CarExpert. Spec sheet lists a 60:40 split-fold backrest, but CarExpert's review says folding is of little use behind the fixed chassis brace. Kept the held 700 L (ratio 1.89 to seats-up), between sedan siblings tesla-model-3 (977/594 = 1.64) and byd-seal (950/400 = 2.38)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3449/Hyundai-IONIQ-6-N",
+        "note": "EVDB 5 seats; CarExpert 2027 page lists 3 rear seating positions; spec sheet lists 3 rear top-tether anchors."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq-6-n/docs/IONIQ-6-N-Specification-Sheet-MY27.pdf",
+        "note": "Towing capacity braked 'N/A', un-braked 'N/A'; EVDB 0 kg, no tow hitch option."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-hyundai-ioniq-6-n-review",
+        "note": "7 years/unlimited km only if serviced on time at a Hyundai dealer, otherwise 5 years; unconditional term recorded. Battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 2750,
+        "basis": "judged",
+        "note": "Matched to hyundai-ioniq-5-n (2750): same E-GMP N powertrain, same ~$115k price. Lowered from the held 2950, which had no recorded evidence for being dearer than the 5 N. Between kia-ev6-gt (2600 at $99,660) and tesla-model-3-performance (3150 at $80,900)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry"
+      }
+    }
+  },
+  "lowConfidence": [
+    "hyundai-ioniq-6-n.depreciationCurve: judged; brand convention (one curve per brand), reconciled at wave-2 integration to the curve most rows of this brand carry",
+    "hyundai-ioniq-6-n.bootLitresSeatsDown: unpublished, carried judged figure 700 L; rear seat folding is of limited use behind the chassis brace",
+    "hyundai-ioniq-6-n.insuranceAnnual: judged, matched to hyundai-ioniq-5-n",
+    "hyundai-ioniq-6-n.listPrice: $114,918 from CarExpert 'before on-road costs' and Hyundai calculator data (mlpFromPIM); Hyundai's own public pages carry no 'plus on-road costs' price in static HTML",
+    "hyundai-ioniq-6-n.batteryKwh: usable 80 is EV Database's figure; Hyundai publishes only the 84.0 kWh gross"
+  ]
+}

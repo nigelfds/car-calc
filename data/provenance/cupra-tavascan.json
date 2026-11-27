@@ -1,0 +1,253 @@
+{
+  "familyId": "cupra-tavascan",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "cupra-tavascan-v": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/cars/tavascan",
+        "note": "Cupra AU Tavascan page lists V, Endurance and VZ (plus VZ with optional Extreme Package) with configurator links; Sep 2026 AU brochure spec table lists the same three grades"
+      },
+      "listPrice": {
+        "value": 55490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/cupra-launching-its-cheapest-ev-yet-in-australia-undercutting-tesla-model-y",
+        "note": "New MY27 entry grade. CarExpert 30 Jun 2026 'Priced at $55,490 before on-road costs'; Chasing Cars 'All prices listed are before on-road costs' and GoAuto 'plus on-road costs' agree. Cupra AU configurator is region-priced via JS and serves only MDP drive-away, so not readable; CarExpert's live Sydney drive-away of $60,382 for the V (carexpert.com.au/cupra/tavascan/pricing) is consistent with this list price."
+      },
+      "batteryKwh": {
+        "value": 58,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/tavascan/2026/v/features-and-specs",
+        "note": "usable; brochure spec table row 'EV battery capacity - Usable (kWh)' 58 (LFP); CarExpert spec page gives 61 kWh gross / 58 kWh usable"
+      },
+      "rangeKm": {
+        "value": 414,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "20-inch Heckla wheels; brochure footnote 6 'ADR 81/02 derived from WLTP testing'"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.6,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Energy consumption (Wh/km)' 166 (ADR 81/02 from WLTP); within 25% of battery/range (14.0)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 540,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Luggage area - Seats up (L) 540'"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1550,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure '(1,550 with rear seats down)'"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/tavascan/2026/v/features-and-specs",
+        "note": "five-seat SUV; 60:40 split-fold rear per brochure"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Towing capacity - Braked (kg)' 1,000 / 1,000 / 1,800 (V / Endurance / VZ)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/owners/warranty",
+        "note": "'factory-backed 5-year unlimited kilometre warranty'; no dealer-servicing condition stated"
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "anchored to skoda-elroq-85-select ($55,990, 1750) and skoda-enyaq-60-select ($51,990, 1700)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    },
+    "cupra-tavascan-endurance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/cars/tavascan",
+        "note": "Cupra AU Tavascan page lists V, Endurance and VZ (plus VZ with optional Extreme Package) with configurator links; Sep 2026 AU brochure spec table lists the same three grades"
+      },
+      "listPrice": {
+        "value": 66490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/cupra-launching-its-cheapest-ev-yet-in-australia-undercutting-tesla-model-y",
+        "note": "CarExpert 30 Jun 2026 'Price before on-road costs' $66,490 (+$5,500 on the $60,990 base; former $4,500 Interior Package now standard); Chasing Cars and GoAuto ('+ ORC') agree. Configurator not machine-readable (MDP drive-away only)."
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "usable; brochure spec table 'EV battery capacity - Usable (kWh)' 77; EV Database gives 82.0 nominal / 77.0 usable for the same MEB pack"
+      },
+      "rangeKm": {
+        "value": 520,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "20-inch Heckla wheels; brochure footnote 6 'ADR 81/02 derived from WLTP testing'. Below EV Database WLTP best case, so WLTP-derived local spec"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.9,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Energy consumption (Wh/km)' 169; within 25% of battery/range (14.8)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 540,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Luggage area - Seats up (L) 540'"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1550,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure '(1,550 with rear seats down)'"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/tavascan/2026/v/features-and-specs",
+        "note": "five-seat SUV; 60:40 split-fold rear per brochure"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Towing capacity - Braked (kg)' 1,000 / 1,000 / 1,800 (V / Endurance / VZ)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/owners/warranty",
+        "note": "'factory-backed 5-year unlimited kilometre warranty'; no dealer-servicing condition stated"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "anchored to skoda-enyaq-coupe-85-sportline ($66,990, 1950) and vw-id5-pro ($62,990, 1900); held value 1900 at $60,990 raised with the $5,500 price rise"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    },
+    "cupra-tavascan-vz": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/cars/tavascan",
+        "note": "Cupra AU Tavascan page lists V, Endurance and VZ (plus VZ with optional Extreme Package) with configurator links; Sep 2026 AU brochure spec table lists the same three grades"
+      },
+      "listPrice": {
+        "value": 75490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/cupra-launching-its-cheapest-ev-yet-in-australia-undercutting-tesla-model-y",
+        "note": "CarExpert 30 Jun 2026 'Price before on-road costs' $75,490 (+$1,000); Chasing Cars and GoAuto ('+ ORC') agree. Extreme Package is an $8,000 option, not a grade. Configurator not machine-readable (MDP drive-away only)."
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3610/CUPRA-Tavascan-250-kW---77-kWh-VZ",
+        "note": "usable; EV Database 82.0 kWh nominal / 77.0 kWh usable; AU brochure spec table 'Usable (kWh)' 77"
+      },
+      "rangeKm": {
+        "value": 509,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "21-inch Katla wheels, without Extreme Package (448 km with it); brochure footnote 6 'ADR 81/02 derived from WLTP testing'. Below EV Database WLTP TEL 527 km, so WLTP-derived local spec"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.4,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Energy consumption (Wh/km)' 174 (197 with Extreme Package); within 25% of battery/range (15.1)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 540,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Luggage area - Seats up (L) 540'"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1550,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure '(1,550 with rear seats down)'"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/cupra/tavascan/2026/v/features-and-specs",
+        "note": "five-seat SUV; 60:40 split-fold rear per brochure"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/content/dam/countries/au/cupra-website/travascan/brochure/au-cupra-tavascan-brochure-sep26-hr.pdf",
+        "note": "brochure 'Towing capacity - Braked (kg)' 1,000 / 1,000 / 1,800 (V / Endurance / VZ); EV Database also 1,800. Held value was 1,200"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cupra.com/en-au/owners/warranty",
+        "note": "'factory-backed 5-year unlimited kilometre warranty'; no dealer-servicing condition stated"
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "anchored to skoda-enyaq-rs ($76,590, 2150) and vw-id5-gtx ($72,990, 2100); held value kept"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.56,
+          0.47,
+          0.4,
+          0.34
+        ],
+        "basis": "judged",
+        "note": "judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry"
+      }
+    }
+  },
+  "lowConfidence": [
+    "cupra-tavascan-v.depreciationCurve: judged; brand convention (one curve per brand), reconciled at wave-3 integration to the curve most rows of this brand carry",
+    "cupra-tavascan-v.insuranceAnnual: judged, anchored to Skoda Elroq 85 Select",
+    "cupra-tavascan-endurance.insuranceAnnual: judged, anchored to Enyaq Coupe 85 Sportline / ID.5 Pro",
+    "cupra-tavascan-vz.insuranceAnnual: judged, anchored to Enyaq RS / ID.5 GTX",
+    "cupra-tavascan-v.listPrice: Cupra configurator not readable (region-priced MDP drive-away via JS); price from June 2026 launch reports saying 'before on-road costs', with no later AU price change found",
+    "cupra-tavascan-endurance.listPrice: as above, launch reports only",
+    "cupra-tavascan-vz.listPrice: as above, launch reports only; sits $490 over the $75,000 cap so a small change would move it across"
+  ]
+}

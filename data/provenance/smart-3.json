@@ -1,0 +1,251 @@
+{
+  "familyId": "smart-3",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "smart-3-pro-plus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "Pro+ listed with a price on the smart AU #3 configurator on 2026-11-26; three grades, matching held and the CarExpert 2026 #3 page"
+      },
+      "listPrice": {
+        "value": 52900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "configurator: \"from $52,900 + ORC\"; unchanged from held. CarExpert's launch review table headed 'Price before on-roads' gave the pre-cut 2024 figures ($57,900/$61,900/$70,900)"
+      },
+      "batteryKwh": {
+        "value": 62,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1999/Smart-3-Proplus",
+        "note": "usable; EV Database gives 66.0 kWh nominal / 62.0 kWh usable for this variant. smart AU/NZ and CarExpert quote the 66 kWh gross figure"
+      },
+      "rangeKm": {
+        "value": 435,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "WLTP per grade on smart AU configurator and #3 page; same figure on smart NZ spec sheet and EV Database; AU grade ships on 19-inch Flux wheels (NZ spec sheet); no AU-certified figure found"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "sourced",
+        "url": "https://nz.smart.com/app/uploads/2025/02/smart-3-spec-sheet.pdf",
+        "note": "'Consumption WLTP Combined' on smart NZ spec sheet; EV Database gives 168 Wh/km; usable/range gives 14.3"
+      },
+      "bootLitresSeatsUp": {
+        "value": 370,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1999/Smart-3-Proplus",
+        "note": "370 L seats up on EV Database, CarExpert AU review ('claimed boot capacity 370 litres') and carwow; measurement method unstated ('Manufacturer's Own'). smart NZ spec sheet says 260 L; 15 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1160,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1999/Smart-3-Proplus",
+        "note": "1,160 L seats folded on EV Database and CarExpert AU review; method unstated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://nz.smart.com/app/uploads/2025/02/smart-3-spec-sheet.pdf",
+        "note": "five seats on smart NZ spec sheet and EV Database"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1999/Smart-3-Proplus",
+        "note": "braked; EV Database, and CarExpert (JATO) 'same across the #3 range'; no smart AU technical sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-smart-3-review",
+        "note": "five-year/150,000km vehicle warranty (CarExpert, smart NZ spec sheet); battery 8yr/150,000km conditional on dealer servicing (au.smart.com/en/service/)"
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "held value kept for Pro+ at $52,900; anchored to smart-1 (1800/1900/2300 at $49,990-$63,900), smart-5 (2150/2300/2750 at $58,900-$73,900) and tesla-model-y (2300 at $58,900)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention, identical to smart-5 and smart-1: $5,000 list cuts per grade since 2024 launch and runout offers to $50,990 drive-away (CarExpert), three-dealer network"
+      }
+    },
+    "smart-3-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "Premium listed with a price on the smart AU #3 configurator on 2026-11-26; three grades, matching held and the CarExpert 2026 #3 page"
+      },
+      "listPrice": {
+        "value": 56900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "configurator: \"from $56,900 + ORC\"; unchanged from held. CarExpert's launch review table headed 'Price before on-roads' gave the pre-cut 2024 figures ($57,900/$61,900/$70,900)"
+      },
+      "batteryKwh": {
+        "value": 62,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2054/Smart-3-Premium",
+        "note": "usable; EV Database gives 66.0 kWh nominal / 62.0 kWh usable for this variant. smart AU/NZ and CarExpert quote the 66 kWh gross figure"
+      },
+      "rangeKm": {
+        "value": 455,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "WLTP per grade on smart AU configurator and #3 page; same figure on smart NZ spec sheet and EV Database; AU grade ships on 19-inch Torque wheels (NZ spec sheet); no AU-certified figure found"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.3,
+        "basis": "sourced",
+        "url": "https://nz.smart.com/app/uploads/2025/02/smart-3-spec-sheet.pdf",
+        "note": "'Consumption WLTP Combined' on smart NZ spec sheet; EV Database gives 163 Wh/km; usable/range gives 13.6"
+      },
+      "bootLitresSeatsUp": {
+        "value": 370,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2054/Smart-3-Premium",
+        "note": "370 L seats up on EV Database, CarExpert AU review ('claimed boot capacity 370 litres') and carwow; measurement method unstated ('Manufacturer's Own'). smart NZ spec sheet says 260 L; 15 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1160,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2054/Smart-3-Premium",
+        "note": "1,160 L seats folded on EV Database and CarExpert AU review; method unstated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://nz.smart.com/app/uploads/2025/02/smart-3-spec-sheet.pdf",
+        "note": "five seats on smart NZ spec sheet and EV Database"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2054/Smart-3-Premium",
+        "note": "braked; EV Database, and CarExpert (JATO) 'same across the #3 range'; no smart AU technical sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-smart-3-review",
+        "note": "five-year/150,000km vehicle warranty (CarExpert, smart NZ spec sheet); battery 8yr/150,000km conditional on dealer servicing (au.smart.com/en/service/)"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "held value kept for Premium at $56,900; anchored to smart-1 (1800/1900/2300 at $49,990-$63,900), smart-5 (2150/2300/2750 at $58,900-$73,900) and tesla-model-y (2300 at $58,900)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention, identical to smart-5 and smart-1: $5,000 list cuts per grade since 2024 launch and runout offers to $50,990 drive-away (CarExpert), three-dealer network"
+      }
+    },
+    "smart-3-brabus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "BRABUS listed with a price on the smart AU #3 configurator on 2026-11-26; three grades, matching held and the CarExpert 2026 #3 page"
+      },
+      "listPrice": {
+        "value": 65900,
+        "basis": "sourced",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "configurator: \"from $65,900 + ORC\"; unchanged from held. CarExpert's launch review table headed 'Price before on-roads' gave the pre-cut 2024 figures ($57,900/$61,900/$70,900)"
+      },
+      "batteryKwh": {
+        "value": 62,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2000/Smart-3-Brabus",
+        "note": "usable; EV Database gives 66.0 kWh nominal / 62.0 kWh usable for this variant. smart AU/NZ and CarExpert quote the 66 kWh gross figure"
+      },
+      "rangeKm": {
+        "value": 415,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://au.smart.com/en/configurator/?model_id=21",
+        "note": "WLTP per grade on smart AU configurator and #3 page; same figure on smart NZ spec sheet and EV Database; AU grade ships on 20-inch Synchro wheels (NZ spec sheet); no AU-certified figure found"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.6,
+        "basis": "sourced",
+        "url": "https://nz.smart.com/app/uploads/2025/02/smart-3-spec-sheet.pdf",
+        "note": "'Consumption WLTP Combined' on smart NZ spec sheet; EV Database gives 176 Wh/km; usable/range gives 14.9"
+      },
+      "bootLitresSeatsUp": {
+        "value": 370,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2000/Smart-3-Brabus",
+        "note": "370 L seats up on EV Database, CarExpert AU review ('claimed boot capacity 370 litres') and carwow; measurement method unstated ('Manufacturer's Own'). smart NZ spec sheet says 260 L; 15 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1160,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2000/Smart-3-Brabus",
+        "note": "1,160 L seats folded on EV Database and CarExpert AU review; method unstated"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://nz.smart.com/app/uploads/2025/02/smart-3-spec-sheet.pdf",
+        "note": "five seats on smart NZ spec sheet and EV Database"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2000/Smart-3-Brabus",
+        "note": "braked; EV Database, and CarExpert (JATO) 'same across the #3 range'; no smart AU technical sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-smart-3-review",
+        "note": "five-year/150,000km vehicle warranty (CarExpert, smart NZ spec sheet); battery 8yr/150,000km conditional on dealer servicing (au.smart.com/en/service/)"
+      },
+      "insuranceAnnual": {
+        "value": 2350,
+        "basis": "judged",
+        "note": "held value kept for BRABUS at $65,900, loaded for 315kW AWD; anchored to smart-1 (1800/1900/2300 at $49,990-$63,900), smart-5 (2150/2300/2750 at $58,900-$73,900) and tesla-model-y (2300 at $58,900)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.68,
+          0.57,
+          0.48,
+          0.41,
+          0.35
+        ],
+        "basis": "judged",
+        "note": "smart brand convention, identical to smart-5 and smart-1: $5,000 list cuts per grade since 2024 launch and runout offers to $50,990 drive-away (CarExpert), three-dealer network"
+      }
+    }
+  },
+  "lowConfidence": [
+    "smart-3-*.bootLitresSeatsUp / bootLitresSeatsDown: 370/1160 L measurement method unstated; smart's own NZ spec sheet quotes 260 L, so the to-the-cover figure may be lower",
+    "smart-3-brabus.insuranceAnnual: judged, loaded for 315kW AWD",
+    "smart-3-pro-plus.insuranceAnnual / smart-3-premium.insuranceAnnual: judged from smart-1, smart-5 and tesla-model-y",
+    "smart-3-*.depreciationCurve: judged, brand convention",
+    "smart-3-*.towKg: EV Database and CarExpert/JATO only, no smart AU technical sheet"
+  ]
+}

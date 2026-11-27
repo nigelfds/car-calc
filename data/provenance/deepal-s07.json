@@ -1,0 +1,93 @@
+{
+  "familyId": "deepal-s07",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "deepal-s07-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.deepal.com.au/vehicles/deepal/s07/",
+        "note": "Deepal AU has no Build & Price configurator; the official S07 page and offer page (2026-11-26) advertise 'with 20-inch wheels from $47,990 driveaway', 'Available for delivery now. While stocks last.', no end date. Run-out: 19-inch version sold out and remaining stock is 2025-built (CarExpert 7 Jul 2026). Melbourne retailers: Deepal Melbourne City, Deepal Doncaster. Single grade."
+      },
+      "listPrice": {
+        "value": 45136,
+        "basis": "backed-out",
+        "url": "https://www.deepal.com.au/special-offers/s07/",
+        "note": "Deepal AU offer $47,990 drive-away (20-inch wheels, excl. premium paint, private buyers, while stocks last, no end date). (47990 - 958.80)/1.042 = 45,136.1; round-trip through calc/onroad.js driveAwayPrice: 47,989.86 (stamp duty 1,898.86 + rego 880). Flat national figure that bundles recommended dealer delivery and CTP, so the back-out overstates the true list by an estimated $1,000-2,500. No independent verification available: Deepal publishes no list price or on-road estimate (only the 20-inch option at $1,100 'excluding government and statutory charges'). Launch list was $53,900 before on-road costs (CarExpert review); CarsGuide's $49,990 'MSRP' matches the mid-2025 $49,990 drive-away campaign and is not used. Manufacturer's published price used per owner decision. Re-derived 2026-11-27 for VIC rego $958.80 (was 45,211 at $880; round trip 47990.51)."
+      },
+      "batteryKwh": {
+        "value": 78,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3369/Changan-Deepal-S07-Standard",
+        "note": "usable 78.0 kWh, nominal 80.0 kWh (EV Database, European S07, 20-inch). Deepal AU spec sheet quotes 79.97 kWh unlabelled, i.e. gross; same 79.97 kWh ternary pack and 160 kW RWD as Europe (changaneurope.com spec)."
+      },
+      "rangeKm": {
+        "value": 475,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.deepal.com.au/media/eukkp1uh/deepal_s07_spec_sheet_v2-2.pdf",
+        "note": "Deepal AU spec sheet v2.2: 'Estimated WLTP Driving Range 475 km' (ADR 81/02 footnote). Europe sells only the 20-inch 255/45R20 version and rates it 475 km WLTP (EV Database TEL; changaneurope.com), the same wheel as the only orderable AU car; AU figure equals, not exceeds, WLTP so passes the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.6,
+        "basis": "sourced",
+        "url": "https://www.deepal.com.au/media/eukkp1uh/deepal_s07_spec_sheet_v2-2.pdf",
+        "note": "Deepal AU spec sheet 'WLTP Energy Consumption 18.6 kWh/100km'; ~13% above usable/range (16.4), consistent with a grid-to-wheel figure including charging losses (EV Database WLTP vehicle consumption 16.4 kWh/100km); same treatment as xpeng-g6."
+      },
+      "bootLitresSeatsUp": {
+        "value": 445,
+        "basis": "sourced",
+        "url": "https://www.deepal.com.au/media/eukkp1uh/deepal_s07_spec_sheet_v2-2.pdf",
+        "note": "AU spec sheet 'Trunk 445' L, frunk 125 L excluded; CarExpert review same. Measurement method not stated (EV Database lists 510 L, likely including underfloor); to-cover convention assumed for the AU figure."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1385,
+        "basis": "sourced",
+        "url": "https://www.deepal.com.au/media/eukkp1uh/deepal_s07_spec_sheet_v2-2.pdf",
+        "note": "AU spec sheet 'Trunk with Seat Folded Down 1385' L; method not stated, may be to the roof."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.deepal.com.au/media/eukkp1uh/deepal_s07_spec_sheet_v2-2.pdf",
+        "note": "AU spec sheet seating capacity 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.deepal.com.au/media/eukkp1uh/deepal_s07_spec_sheet_v2-2.pdf",
+        "note": "AU spec sheet maximum braked towing 1500 kg (unbraked 750)"
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.deepal.com.au/vehicles/deepal/s07/",
+        "note": "'7-year/160,000 kilometre new car warranty', no servicing condition stated; battery 8 yr/240,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "down from held 2,200 as the effective list fell ~$8.7k; above mazda-cx-6e-gt 1,900 ($53,990, same platform, mainstream network) for a small new brand with thin repair network; xpeng-g6-long-range 1,900, byd-sealion-7-premium 1,650."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "deviates from mainstream on documented evidence: run-out of 2025-built stock at $47,990 d/a vs $53,900 launch list (CarExpert 7 Jul 2026), repeated drive-away campaigns since mid-2025, thin local volume, new brand, update teased. Softened from held [1,0.68,0.56,0.47,0.40,0.34] to match zeekr-7x (new Chinese brand, same evidence class) for consistency."
+      }
+    }
+  },
+  "lowConfidence": [
+    "deepal-s07-rwd.listPrice: backed out of a flat national run-out drive-away that bundles dealer delivery and CTP; no independent verification possible (Deepal publishes no list price); likely overstated by ~$1,000-2,500",
+    "deepal-s07-rwd.depreciationCurve: judged; deviates from the mainstream default on run-out/discounting evidence, aligned to zeekr-7x",
+    "deepal-s07-rwd.insuranceAnnual: judged against mazda-cx-6e and xpeng-g6",
+    "deepal-s07-rwd.bootLitresSeatsDown: measurement method unstated, may be to the roof",
+    "deepal-s07-rwd.availability: run-out stock only, no configurator; could sell out before the next refresh"
+  ]
+}

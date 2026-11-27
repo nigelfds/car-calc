@@ -1,0 +1,173 @@
+{
+  "familyId": "byd-seal",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-seal-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-seal?ref=website&spec=1635",
+        "note": "BYD AU configurator (bydautomotive.com.au/configurator/byd-seal 301-redirects here) lists exactly two variants, 'BYD SEAL Premium' and 'BYD SEAL Performance'; Dynamic dropped June 2026 per https://www.carexpert.com.au/car-news/byd-drops-its-cheapest-electric-sedan-in-australia"
+      },
+      "listPrice": {
+        "value": 52990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-seal?ref=website&spec=1635",
+        "note": "configurator variant price $52,990 with GST component = price/11; drive-away is computed separately by postcode on top, so this is the list before on-road costs (structure, not words). CarExpert states $52,990 'before on-road costs' in words (https://www.carexpert.com.au/car-news/byd-drops-its-cheapest-electric-sedan-in-australia, 25 Jun 2026); unchanged since the 13 Jan 2025 price cut"
+      },
+      "batteryKwh": {
+        "value": 82.56,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/seal",
+        "note": "BYD AU spec table 'Battery capacity 82.56kWh'. Treated as usable: EV Database gives 82.5 kWh usable / 84.0 kWh nominal for the same Blade pack (https://ev-database.org/car/2001/BYD-SEAL-825-kWh-RWD-Design)"
+      },
+      "rangeKm": {
+        "value": 570,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/seal",
+        "note": "BYD AU spec table quotes both 'Combined range NEDC 650km' and 'WLTP 570km'; NEDC rejected. WLTP matches EV Database's European figure for the same pack and drivetrain (https://ev-database.org/car/2001/BYD-SEAL-825-kWh-RWD-Design); both grades on 235/45 R19"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.6,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2001/BYD-SEAL-825-kWh-RWD-Design",
+        "note": "EV Database WLTP rated consumption 166 Wh/km (manufacturer figure incl. charging losses); battery/range gives 14.5, 15% lower, consistent with charging losses"
+      },
+      "bootLitresSeatsUp": {
+        "value": 400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/seal/2025-premium-sedan-rwd-electric-jsfw8ga520250113",
+        "note": "400 L rear seats up 'to lower window' (cargo-cover equivalent); 53 L frunk not added per owner convention"
+      },
+      "bootLitresSeatsDown": {
+        "value": 950,
+        "basis": "judged",
+        "url": "https://www.cinch.co.uk/used-cars/byd/seal/awd-review",
+        "note": "BYD publishes no folded figure. Cinch (UK) gives '~1,000 litres' seats folded; EV Database's 1,440 L maximum is unlabelled (likely to the roof). Held 950 kept as a belt-line estimate below Cinch's approximate figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "carried",
+        "note": "five-seat sedan; body and seating unchanged in the AU line-up (BYD AU page dimensions and spec unchanged since 2025)"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/seal/2025-premium-sedan-rwd-electric-jsfw8ga520250113",
+        "note": "CarExpert spec page: 750 kg braked, 750 kg unbraked. BYD AU towing calculator is JS-only and the owner's handbook gives no rating. EV Database's EU RWD figure (1,000 kg) is a different market's homologation"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/seal",
+        "note": "BYD AU: 'Vehicle Warranty - 6 years or 150,000 kms'; battery 8 years/160,000 km. Unconditional"
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "held value kept; anchored to byd-sealion-7-premium (1650 at $54,990) and below xpeng-g6-standard-range (1750 at $51,800); Tesla Model 3 rows run higher (2400 at $54,900) on Tesla's repair-cost profile"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Changed from the held steeper [1,0.7,0.58,0.5,0.44,0.39] to the BYD brand convention used by most BYD rows (Seal 6, Sealion 5/6/7, Dolphin, Atto 1/2, Shark 6), per 'one depreciation curve per brand'. Seal prices have been stable since the January 2025 cut (CarExpert), so no Seal-specific evidence justifies a steeper curve"
+      }
+    },
+    "byd-seal-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-seal?ref=website&spec=1635",
+        "note": "BYD AU configurator (bydautomotive.com.au/configurator/byd-seal 301-redirects here) lists exactly two variants, 'BYD SEAL Premium' and 'BYD SEAL Performance'; Dynamic dropped June 2026 per https://www.carexpert.com.au/car-news/byd-drops-its-cheapest-electric-sedan-in-australia"
+      },
+      "listPrice": {
+        "value": 61990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-seal?ref=website&spec=1635",
+        "note": "configurator variant price $61,990 with GST component = price/11; drive-away is computed separately by postcode on top, so this is the list before on-road costs (structure, not words). CarExpert states $61,990 'before on-road costs' in words (https://www.carexpert.com.au/car-news/byd-drops-its-cheapest-electric-sedan-in-australia, 25 Jun 2026); unchanged since the 13 Jan 2025 price cut"
+      },
+      "batteryKwh": {
+        "value": 82.56,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/seal",
+        "note": "BYD AU spec table 'Battery capacity 82.56kWh'. Treated as usable: EV Database gives 82.5 kWh usable / 84.0 kWh nominal for the same Blade pack (https://ev-database.org/car/2002/BYD-SEAL-825-kWh-AWD-Excellence)"
+      },
+      "rangeKm": {
+        "value": 520,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/seal",
+        "note": "BYD AU spec table quotes both 'Combined range NEDC 580km' and 'WLTP 520km'; NEDC rejected. WLTP matches EV Database's European figure for the same pack and drivetrain (https://ev-database.org/car/2002/BYD-SEAL-825-kWh-AWD-Excellence); both grades on 235/45 R19"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/2002/BYD-SEAL-825-kWh-AWD-Excellence",
+        "note": "EV Database WLTP rated consumption 182 Wh/km (manufacturer figure incl. charging losses); battery/range gives 15.9, 15% lower, consistent with charging losses"
+      },
+      "bootLitresSeatsUp": {
+        "value": 400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/seal/2025-performance-sedan-4x4-electric-jsfw8ga820250113",
+        "note": "400 L rear seats up 'to lower window' (cargo-cover equivalent); 53 L frunk not added per owner convention"
+      },
+      "bootLitresSeatsDown": {
+        "value": 950,
+        "basis": "judged",
+        "url": "https://www.cinch.co.uk/used-cars/byd/seal/awd-review",
+        "note": "BYD publishes no folded figure. Cinch (UK) gives '~1,000 litres' seats folded; EV Database's 1,440 L maximum is unlabelled (likely to the roof). Held 950 kept as a belt-line estimate below Cinch's approximate figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "carried",
+        "note": "five-seat sedan; body and seating unchanged in the AU line-up (BYD AU page dimensions and spec unchanged since 2025)"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/seal/2025-performance-sedan-4x4-electric-jsfw8ga820250113",
+        "note": "CarExpert spec page: 1,500 kg braked, 750 kg unbraked; matches EV Database EU AWD figure (1,500 kg)"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/seal",
+        "note": "BYD AU: 'Vehicle Warranty - 6 years or 150,000 kms'; battery 8 years/160,000 km. Unconditional"
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "held value kept; anchored to byd-sealion-7-performance (1900 at $63,990) and xpeng-g6-long-range (1900 at $56,800); a sedan on the same 390kW powertrain, slightly cheaper"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Changed from the held steeper [1,0.7,0.58,0.5,0.44,0.39] to the BYD brand convention used by most BYD rows (Seal 6, Sealion 5/6/7, Dolphin, Atto 1/2, Shark 6), per 'one depreciation curve per brand'. Seal prices have been stable since the January 2025 cut (CarExpert), so no Seal-specific evidence justifies a steeper curve"
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-seal-premium.bootLitresSeatsDown: judged 950 L; no manufacturer folded figure, only Cinch UK '~1,000 litres'",
+    "byd-seal-performance.bootLitresSeatsDown: judged 950 L; no manufacturer folded figure, only Cinch UK '~1,000 litres'",
+    "byd-seal-premium.towKg: 750 kg from CarExpert's spec database only; BYD AU publishes no towing figure in a fetchable page, and the EU homologation is 1,000 kg",
+    "byd-seal-premium.depreciationCurve: moved to BYD brand convention; byd-atto3 (refreshed today) still uses a steeper curve, so the brand is not yet on one curve",
+    "byd-seal-performance.depreciationCurve: moved to BYD brand convention; see premium",
+    "byd-seal-premium.insuranceAnnual: judged, anchored to Sealion 7 and XPeng G6",
+    "byd-seal-performance.insuranceAnnual: judged, anchored to Sealion 7 and XPeng G6",
+    "byd-seal-premium.batteryKwh: BYD's 82.56 kWh treated as usable on EV Database's 82.5 usable / 84.0 nominal; BYD does not label it"
+  ]
+}

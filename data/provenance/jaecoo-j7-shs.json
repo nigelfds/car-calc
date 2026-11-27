@@ -1,0 +1,320 @@
+{
+  "familyId": "jaecoo-j7-shs",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "jaecoo-j7-shs-track": {
+      "batteryKwh": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU MY27 spec sheet 'Battery Capacity (kWh) 18.4' (LFP); gross/usable not stated anywhere found (Jaecoo UK says 18.3-18.4); treated as usable, as on chery-tiggo-7-phev"
+      },
+      "bootLitresSeatsUp": {
+        "value": 340,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet 'Up to Cargo Cover 340' (500 to roof); PHEV-specific sheet so battery fitted"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1265,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet '2nd Row Seats Folded, Measured Up to Roof 1,265'"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "'Number of Seats 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet lists only 'Maximum Towing Mass - Unbraked 750' and towball 75; no braked rating (UK car is rated 1500 braked, not applicable here)"
+      },
+      "warrantyYears": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+        "note": "8 years/unlimited km from first registration; conditional only on servicing per manufacturer guidelines (not dealer-only), no shorter fallback term; HV battery same terms, <70% capacity covered"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Omoda/Jaecoo brand convention (jaecoo-j8-shs, omoda-9-shs, chery-tiggo-7-phev); evidence of steep curve: MY27 cut drive-away prices $3000-4000 within ~15 months of launch, rolling time-limited DAP campaigns and gift-card offers (omodajaecoo.com.au model page), young brand with unproven resale"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "Fuel Consumption - Combined (NEDC, ADR 81/02) 1.3 (2WD) L/100km <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; AU spec sheet CO2 31 (2WD) g/km"
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/j7-shs-build-your-own",
+        "note": "MY27 Track 2WD live on configurator, 'Driveaway from $39,990'"
+      },
+      "listPrice": {
+        "value": 37990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/omoda-jaecoo/jaecoo-j7/2027-track-1-5l-suv-fwd-electric-jsk5mkkw20260717",
+        "note": "CarExpert: 'prices start at $37,990 before on-road costs'; same MSRP on CarsGuide 2027 price page (MSRP footnote, excl. stamp duty). Jaecoo configurator shows only DAP $39,990 (campaign, ordered by 30/11/2026). Back-out cross-check: (39990-880)/1.042=37,533 round-trips to $39,989; MSRP 37,990 round-trips to $40,466 Vic, $476 above the national DAP. MSRP = DAP - $2,000 on every grade (Track/Summit/Summit AWD/Black Edition), i.e. Jaecoo's national DAP carries a flat ~$2,000 on-road allowance below Vic on-roads"
+      },
+      "rangeKm": {
+        "value": 90,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://jaecoo.co.uk/jaecoo-7/",
+        "note": "Jaecoo UK 7 SHS-P FWD (18.3-18.4 kWh, 19in 235/50R19 as AU) 'EV range 56 miles' = 90 km WLTP. AU spec sheet 100 km is NEDC (ADR 81/02) and higher than WLTP: rejected per direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.4,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.4/90 = 20.4; AU 159 Wh/km is the NEDC ADR label (not used per field rules)"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.0,
+        "basis": "sourced",
+        "url": "https://jaecoo.co.uk/jaecoo-7/",
+        "note": "Jaecoo UK 'combined fuel economy 47.1 mpg' (=6.0 L/100km) alongside 23 g/km CO2 weighted: the 47.1 mpg is the charge-sustaining figure (weighted would be ~1 L/100km). Consistent with Jaecoo AU's earlier 5.9 L/100km battery-depleted claim quoted by CarExpert"
+      },
+      "combinedRangeKm": {
+        "value": 1090,
+        "basis": "derived",
+        "note": "90 WLTP + 60 L tank (AU spec sheet) / 6.0 x 100 = 1090"
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "matched to chery-tiggo-7-phev-urban (same Chery 18.4 kWh SHS powertrain, same $37,990 list) at 1450"
+      }
+    },
+    "jaecoo-j7-shs-summit": {
+      "batteryKwh": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU MY27 spec sheet 'Battery Capacity (kWh) 18.4' (LFP); gross/usable not stated anywhere found (Jaecoo UK says 18.3-18.4); treated as usable, as on chery-tiggo-7-phev"
+      },
+      "bootLitresSeatsUp": {
+        "value": 340,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet 'Up to Cargo Cover 340' (500 to roof); PHEV-specific sheet so battery fitted"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1265,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet '2nd Row Seats Folded, Measured Up to Roof 1,265'"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "'Number of Seats 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet lists only 'Maximum Towing Mass - Unbraked 750' and towball 75; no braked rating (UK car is rated 1500 braked, not applicable here)"
+      },
+      "warrantyYears": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+        "note": "8 years/unlimited km from first registration; conditional only on servicing per manufacturer guidelines (not dealer-only), no shorter fallback term; HV battery same terms, <70% capacity covered"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Omoda/Jaecoo brand convention (jaecoo-j8-shs, omoda-9-shs, chery-tiggo-7-phev); evidence of steep curve: MY27 cut drive-away prices $3000-4000 within ~15 months of launch, rolling time-limited DAP campaigns and gift-card offers (omodajaecoo.com.au model page), young brand with unproven resale"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "Fuel Consumption - Combined (NEDC, ADR 81/02) 1.3 (2WD) L/100km <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; AU spec sheet CO2 31 (2WD) g/km"
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/j7-shs-build-your-own",
+        "note": "MY27 Summit 2WD live on configurator, 'Driveaway from $44,990'"
+      },
+      "listPrice": {
+        "value": 42990,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/jaecoo/j7/price/2027",
+        "note": "CarsGuide 2027 price page 'Shs Summit (FWD)' $42,990, footnote: based on Manufacturer's Suggested Retail Price, excludes stamp duty and other government charges. CarExpert's Summit FWD Sydney drive-away $47,297 is computed from the same $42,990 MSRP. Jaecoo DAP $44,990 (campaign, ordered by 30/11/2026). Back-out cross-check: (44990-880)/1.042=42,332 round-trips to $44,990; MSRP 42,990 round-trips to $45,676 Vic ($686 above DAP); same flat DAP-$2,000 pattern as the other grades"
+      },
+      "rangeKm": {
+        "value": 90,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://jaecoo.co.uk/jaecoo-7/",
+        "note": "same FWD powertrain, battery and 19in wheel as Track; Jaecoo UK 56 miles WLTP = 90 km. AU NEDC 100 km rejected (higher than WLTP)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.4,
+        "basis": "derived",
+        "note": "18.4/90 x 100"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.0,
+        "basis": "sourced",
+        "url": "https://jaecoo.co.uk/jaecoo-7/",
+        "note": "Jaecoo UK 47.1 mpg charge-sustaining (see Track); same FWD powertrain"
+      },
+      "combinedRangeKm": {
+        "value": 1090,
+        "basis": "derived",
+        "note": "90 + 60/6.0 x 100"
+      },
+      "insuranceAnnual": {
+        "value": 1600,
+        "basis": "judged",
+        "note": "between chery-tiggo-7-phev-ultimate ($41,990, 1550) and the held J7 Summit at $45,990 (1650); Summit adds 360 camera, powered/heated/ventilated seats"
+      }
+    },
+    "jaecoo-j7-shs-summit-awd": {
+      "batteryKwh": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU MY27 spec sheet 'Battery Capacity (kWh) 18.4' (LFP); gross/usable not stated anywhere found (Jaecoo UK says 18.3-18.4); treated as usable, as on chery-tiggo-7-phev"
+      },
+      "bootLitresSeatsUp": {
+        "value": 340,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet 'Up to Cargo Cover 340' (500 to roof); PHEV-specific sheet so battery fitted"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1265,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet '2nd Row Seats Folded, Measured Up to Roof 1,265'"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "'Number of Seats 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "AU spec sheet lists only 'Maximum Towing Mass - Unbraked 750' and towball 75; no braked rating (UK car is rated 1500 braked, not applicable here)"
+      },
+      "warrantyYears": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+        "note": "8 years/unlimited km from first registration; conditional only on servicing per manufacturer guidelines (not dealer-only), no shorter fallback term; HV battery same terms, <70% capacity covered"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Omoda/Jaecoo brand convention (jaecoo-j8-shs, omoda-9-shs, chery-tiggo-7-phev); evidence of steep curve: MY27 cut drive-away prices $3000-4000 within ~15 months of launch, rolling time-limited DAP campaigns and gift-card offers (omodajaecoo.com.au model page), young brand with unproven resale"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-09/153_24_Jaecoo_J7_Spec_Sheet_AU_SHS_v1.3_compressed%20%281%29.pdf",
+        "note": "Fuel Consumption - Combined (NEDC, ADR 81/02) 1.9 (AWD) L/100km <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; AU spec sheet CO2 45 (AWD) g/km"
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/j7-shs-build-your-own",
+        "note": "MY27 Summit AWD live on configurator, 'Driveaway from $47,990'. Black Edition ($49,990 DAP) excluded as a $2,000 cosmetic pack on this grade"
+      },
+      "listPrice": {
+        "value": 45990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/omoda-jaecoo/jaecoo-j7/2027-summit-1-5l-suv-4x4-electric-jskfa5ma20260720",
+        "note": "CarExpert: 'prices starting at $45,990 before on-road costs' (Summit 4x4); CarsGuide 2027 page 'Shs Summit (AWD)' $45,990 MSRP. Jaecoo DAP $47,990 (campaign). Back-out cross-check: (47990-880)/1.042=45,211 round-trips to $47,990; MSRP 45,990 round-trips to $48,802 Vic ($812 above DAP)"
+      },
+      "rangeKm": {
+        "value": 72,
+        "basis": "derived",
+        "note": "No WLTP exists for the 18.4 kWh AWD: UK AWD is the 26.6 kWh Luxury+ (70 mi vs 79 mi FWD, jaecoo.co.uk news). Derived as AU NEDC AWD 80 km x (WLTP 90 / NEDC 100 for the 2WD on the same pack) = 72. Applying the UK Luxury+ AWD/FWD ratio (70/79) to 90 instead gives 80"
+      },
+      "consumptionKwhPer100km": {
+        "value": 25.6,
+        "basis": "derived",
+        "note": "18.4/72 x 100 = 25.6 (tautological with derived range)"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.4,
+        "basis": "judged",
+        "note": "no published charge-sustaining figure for AWD; 2WD 6.0 (Jaecoo UK) + 0.4 for 129 kg extra tare (1,923 vs 1,794 kg, AU spec sheet) and rear-motor drag; NEDC label rises 1.3 -> 1.9. Sibling byd-sealion-6 AWD is +1.0 over its 2WD but with a different engine strategy"
+      },
+      "combinedRangeKm": {
+        "value": 1010,
+        "basis": "derived",
+        "note": "72 + 60/6.4 x 100 = 1009.5, rounded 1010"
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "260 kW AWD at $45,990; anchored to byd-sealion-6-premium-awd (1700) and jaecoo-j7-shs-summit (1600)"
+      }
+    }
+  },
+  "lowConfidence": [
+    "jaecoo-j7-shs-summit-awd.rangeKm: no WLTP for the 18.4 kWh AWD anywhere; 72 derived by scaling AU NEDC 80 by the 2WD WLTP/NEDC ratio; UK Luxury+ ratio would give 80",
+    "jaecoo-j7-shs-summit-awd.consumptionKwhPer100km: derived from the derived range, cross-check is tautological",
+    "jaecoo-j7-shs-summit-awd.fuelConsumptionL100km: judged +0.4 over 2WD, no published charge-sustaining AWD figure",
+    "jaecoo-j7-shs-summit-awd.combinedRangeKm: built on derived range and judged consumption",
+    "jaecoo-j7-shs-track.listPrice: MSRP from CarExpert/CarsGuide (likely one RedBook-type feed, so not independent); Jaecoo publishes only a campaign national DAP; MSRP gives a Vic drive-away $476 above Jaecoo's advertised $39,990 (back-out alternative 37,533)",
+    "jaecoo-j7-shs-summit.listPrice: MSRP from CarsGuide (CarExpert drive-away consistent); Vic computed DAP $686 above advertised $44,990 (back-out alternative 42,332)",
+    "jaecoo-j7-shs-summit-awd.listPrice: MSRP from CarExpert/CarsGuide; Vic computed DAP $812 above advertised $47,990 (back-out alternative 45,211)",
+    "jaecoo-j7-shs-track.batteryKwh: 18.4 nominal, gross vs usable never stated (auto-data lists 18.316 gross); same applies to all rows",
+    "jaecoo-j7-shs-track.fuelConsumptionL100km: UK 47.1 mpg inferred to be charge-sustaining from the 23 g/km weighted CO2 beside it; label not explicit (also summit)",
+    "jaecoo-j7-shs-track.insuranceAnnual: judged (all rows)",
+    "jaecoo-j7-shs-track.depreciationCurve: judged brand convention (all rows)"
+  ]
+}

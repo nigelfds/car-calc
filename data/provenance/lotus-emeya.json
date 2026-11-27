@@ -1,0 +1,175 @@
+{
+  "familyId": "lotus-emeya",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "lotus-emeya-600": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.lotuscars.com/en-AU/emeya/models",
+        "note": "Lotus AU models page lists '600' (450 kW, 102 kWh) as a current grade alongside '600 SE' and '900'; no price shown. Configurator (/configurator/emeya/emeya) is JS-only and publishes no AU prices. CarExpert 2025 Base spec page: 'released to the Australian market on 3rd July 2026'."
+      },
+      "listPrice": {
+        "value": 189990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-lotus-emeya-electric-taycan-rival-priced-for-australia",
+        "note": "CarExpert: 'Priced from $189,990 before on-road costs in entry-level Emeya guise'. Same figure on CarExpert Base spec page (released 3 Jul 2026, 'prices starting at $189,990'), CarExpert 2026 page, CarExpert Atlas ($189,990-$259,990) and EVCentral (list excl. on-roads, flagged 'price estimated', updated 27 Nov 2026). Lotus AU publishes no price. Held $177,990 came only from a Man of Many listicle (https://manofmany.com/auto/cars/slowest-selling-cars-australia, 'from AUD$177,990 plus on-road costs', updated 3 May 2026); Man of Many's own Emeya article says $189,990 and no other source corroborates a cut, so rejected."
+      },
+      "batteryKwh": {
+        "value": 98.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3214/Lotus-Emeya-600",
+        "note": "usable; EV Database 'Useable Capacity' 98.9 kWh vs 'Nominal Capacity' 102.0 kWh. ADAC and CarExpert agree (gross 102.0/102.22, net 98.9). Lotus AU '102 kWh battery' is gross."
+      },
+      "rangeKm": {
+        "value": 610,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.lotuscars.com/en-AU/emeya/models",
+        "note": "Lotus AU models page: 600 '580 - 610 km max range (WLTP)'. AU 600 ships on 20-inch wheels (CarExpert Base spec page, 255/40 R20 / 285/40 R20); EV Database gives 610 km WLTP for the lowest-energy (TEL) config and evdb.nz says 21-inch wheels drop it to 580. CarExpert AU spec 609 km. Held 580 was the old page's 'up to' copy."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.7,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3214/Lotus-Emeya-600",
+        "note": "EV Database WLTP 'Rated Consumption' 177 Wh/km (TEL), same config as the 610 km; CarExpert AU spec 'Combined: 177 Wh/km'. battery/range = 16.2, within tolerance (rated figure includes charging losses)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 509,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/emeya/2025-hatchback-4x4-electric-jsggfsw520260701",
+        "note": "CarExpert: 'Rear seat up; to lower window: 509 L' (to-the-cover convention). EV Database agrees. 34 L frunk not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1388,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lotus/emeya/1generation/339644",
+        "note": "Lotus/EV Database 'Cargo Volume Max' 1388 L; ADAC labels it 'dachhoch' (to the roof, seats folded) and leaves the 'fensterhoch' (belt-line) field blank. No to-the-belt figure published; kept as the roof figure, overstates against the cargo-cover convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/emeya/2025-hatchback-4x4-electric-jsggfsw520260701",
+        "note": "'Seating capacity: 5'"
+      },
+      "towKg": {
+        "value": 2250,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/emeya/2025-hatchback-4x4-electric-jsggfsw520260701",
+        "note": "CarExpert AU spec: '2250kg braked'. EV Database 'Towing Weight Braked' 2250 kg. Not from a Lotus AU spec sheet (none published)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.lotuscars.com/en-AU/support/warranty/emeya",
+        "note": "Lotus AU: 'The standard 5-year or 150,000 km warranty covers every component'; battery 8 years/200,000 km. CarExpert spec page's '36 month, unlimited km' is a template error."
+      },
+      "insuranceAnnual": {
+        "value": 4600,
+        "basis": "judged",
+        "note": "Matched to lotus-eletre-base ($4,600 at the same $189,990); between bmw-i5-edrive40-m-sport ($3,300) and bmw-i5-m60-xdrive ($4,500 at $215,900); low-volume brand, parts scarcity."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.55,
+          0.42,
+          0.33,
+          0.26,
+          0.21
+        ],
+        "basis": "judged",
+        "note": "Single Lotus brand curve (owner convention), the same curve the parallel lotus-eletre refresh wrote to both Eletre rows and the held Emeya 600 curve. Steeper than mainstream on documented evidence: Australian sales of 5 (2024), 3 (2025), 2 to Oct 2026 per CarExpert Atlas (https://atlas.carexpert.com.au/make/lotus/emeya); five-retailer network; Carscoops May 2026 reports a London dealer selling a new Emeya R ~40% under list (https://www.carscoops.com/2026/05/lotus-emeya-discounts-uk/)."
+      }
+    },
+    "lotus-emeya-600-se": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.lotuscars.com/en-AU/emeya/models",
+        "note": "Lotus AU models page lists '600 SE' (internal name '600 GT SE - 600 SE in APAC'; rear-wheel steer, glass roof, power doors, comfort seat pack) as a current grade; no price shown. It is the former Emeya S: CarExpert 2025 S spec page, released to the Australian market 3 Jul 2026, 21-inch. CarExpert 2026 page counts 3 variants (Base, S, R). New row vs held data."
+      },
+      "listPrice": {
+        "value": 209990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-lotus-emeya-electric-taycan-rival-priced-for-australia",
+        "note": "CarExpert: 'rises to $209,990 for the Emeya S' in the same sentence as 'before on-road costs'. CarsGuide review (https://www.carsguide.com.au/ev/lotus-emeya-95486): 'priced from $209,990 (plus on-road costs)'. CarExpert S spec page (Jul 2026): 'prices starting at $209,990'. EVCentral $209,990 list, 'price estimated'. Lotus AU publishes no price. Launch-era figure; no 2026 price sentence found."
+      },
+      "batteryKwh": {
+        "value": 98.9,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lotus/emeya/1generation/339644",
+        "note": "usable; ADAC 600 GT SE 'Batteriekapazität (Netto)' 98,9 kWh vs 'Brutto' 102,0 kWh."
+      },
+      "rangeKm": {
+        "value": 580,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lotus/emeya/1generation/339644",
+        "note": "ADAC 600 GT SE on 265/40R21 / 305/35R21: 'Reichweite WLTP (elektrisch)' 580 km. AU 600 SE ships on 21-inch (CarExpert S spec page). Lotus AU models page band for 600 SE: '500 - 580 km max range (WLTP)'. CarExpert's 609 km on the S page copies the Base figure and is rejected."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.7,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lotus/emeya/1generation/339644",
+        "note": "ADAC 'Verbrauch kombiniert (WLTP)' 18,7 kWh/100 km for the same 21-inch config; matches the low end of Lotus AU's '18,7-22,4 kWh/100km' footer. battery/range = 17.1."
+      },
+      "bootLitresSeatsUp": {
+        "value": 509,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lotus/emeya/1generation/339644",
+        "note": "ADAC 'Kofferraumvolumen normal' 509 l; CarExpert S spec 'to lower window: 509 L'. 34 L frunk not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1388,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lotus/emeya/1generation/339644",
+        "note": "Lotus/EV Database 'Cargo Volume Max' 1388 L; ADAC labels it 'dachhoch' (to the roof, seats folded) and leaves the 'fensterhoch' (belt-line) field blank. No to-the-belt figure published; kept as the roof figure, overstates against the cargo-cover convention."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lotus/emeya/2025-s-hatchback-4x4-electric-jsggfsss20260701",
+        "note": "'Seating capacity: 5', '2+3'. ADAC 'Sitzanzahl' 5."
+      },
+      "towKg": {
+        "value": 2250,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lotus/emeya/1generation/339644",
+        "note": "ADAC 600 GT SE 'Anhängelast gebremst 12%' 2250 kg; CarExpert S spec '2250kg braked'. Electric towbar is an option on the AU 600 SE (Lotus AU models page)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.lotuscars.com/en-AU/support/warranty/emeya",
+        "note": "Lotus AU: 5 years/150,000 km on every component; battery 8 years/200,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 4900,
+        "basis": "judged",
+        "note": "Interpolated between lotus-eletre-base ($4,600 at $189,990) and lotus-eletre-s ($5,100 at $229,990); above bmw-i5-m60-xdrive ($4,500 at $215,900) for brand scarcity."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.55,
+          0.42,
+          0.33,
+          0.26,
+          0.21
+        ],
+        "basis": "judged",
+        "note": "Single Lotus brand curve (owner convention), the same curve the parallel lotus-eletre refresh wrote to both Eletre rows and the held Emeya 600 curve. Steeper than mainstream on documented evidence: Australian sales of 5 (2024), 3 (2025), 2 to Oct 2026 per CarExpert Atlas (https://atlas.carexpert.com.au/make/lotus/emeya); five-retailer network; Carscoops May 2026 reports a London dealer selling a new Emeya R ~40% under list (https://www.carscoops.com/2026/05/lotus-emeya-discounts-uk/)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "lotus-emeya-600-se.listPrice: Lotus AU publishes no prices; $209,990 is the 2024 launch figure, still quoted on CarExpert's Jul 2026 spec page but with no 2026 'before on-road costs' sentence",
+    "lotus-emeya-600.listPrice: Lotus AU publishes no prices; $189,990 is the launch figure repeated by CarExpert (2024 sentence, Jul 2026 spec page, Atlas) and EVCentral (estimated); held $177,990 from one listicle rejected",
+    "lotus-emeya-600-se.availability: no configurator price for any grade; orderability rests on the Lotus AU models page plus CarExpert's Jul 2026 release listing",
+    "lotus-emeya-*.bootLitresSeatsDown: 1388 L is to the roof (ADAC 'dachhoch'); no belt-line figure published",
+    "lotus-emeya-*.insuranceAnnual: judged, no quote obtainable for a car with 2 sales in 2026",
+    "lotus-emeya-*.depreciationCurve: judged single Lotus brand curve on thin resale evidence",
+    "lotus-emeya-*.towKg: 2,250 kg from CarExpert/ADAC/EV Database, not a Lotus AU spec sheet",
+    "lotus-emeya-600.rangeKm: 610 km assumes the AU 600's standard 20-inch wheel (CarExpert spec); Lotus AU band is 580-610"
+  ]
+}

@@ -27,8 +27,8 @@ test('drive-away price sums list price, duty and registration', () => {
   const result = driveAwayPrice({ listPrice: 56000 }, tables);
   close(result.lct, 0);
   close(result.stampDuty, 2352);
-  close(result.registration, 880);
-  close(result.total, 59232);
+  close(result.registration, 958.8);
+  close(result.total, 59310.8);
 });
 
 // I6: LCT is a wholesale tax already embedded in the advertised list price

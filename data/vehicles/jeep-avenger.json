@@ -11,13 +11,13 @@
     "rangeKm": 396,
     "consumptionKwhPer100km": 15.6,
     "bootLitresSeatsUp": 355,
-    "bootLitresSeatsDown": 1250,
+    "bootLitresSeatsDown": 1252,
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 1650,
     "depreciationCurve": [1, 0.68, 0.56, 0.47, 0.4, 0.34],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "jeep-avenger-limited",
@@ -31,13 +31,13 @@
     "rangeKm": 396,
     "consumptionKwhPer100km": 15.6,
     "bootLitresSeatsUp": 355,
-    "bootLitresSeatsDown": 1250,
+    "bootLitresSeatsDown": 1252,
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 1750,
     "depreciationCurve": [1, 0.68, 0.56, 0.47, 0.4, 0.34],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "jeep-avenger-summit",
@@ -51,12 +51,12 @@
     "rangeKm": 390,
     "consumptionKwhPer100km": 15.8,
     "bootLitresSeatsUp": 355,
-    "bootLitresSeatsDown": 1250,
+    "bootLitresSeatsDown": 1252,
     "seats": 5,
     "towKg": 0,
     "warrantyYears": 5,
     "insuranceAnnual": 1900,
     "depreciationCurve": [1, 0.68, 0.56, 0.47, 0.4, 0.34],
-    "sourcedAt": "2026-07-27"
+    "sourcedAt": "2026-11-27"
   }
 ]

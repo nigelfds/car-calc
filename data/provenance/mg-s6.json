@@ -1,0 +1,179 @@
+{
+  "familyId": "mg-s6",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mg-s6-essence-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mgs6-ev?ref=website",
+        "note": "Live Build & Price line 'MGS6 EV Essence RWD' (price 49990); exactly two variant lines in the configurator, matching CarExpert/CarsGuide/EV Central launch coverage (Essence RWD and Essence AWD only)."
+      },
+      "listPrice": {
+        "value": 47055,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mgs6-ev?ref=website",
+        "note": "No list price published. Configurator variant price field is 49990 and its display shows $49,990 struck through with $48,990* as 'Drive Away Price, Offer ends 31 December' (a $1,000 cashback on MGS6 EV for sales/deliveries 01 Nov-31 Dec 2026: campaign, not used). $49,990 is MG's regular national drive-away (CarExpert review and news, CarsGuide, Chasing Cars and EV Central all call it drive-away; MG model page says 'from $49,990 driveaway'). Back-out: (49990 - 958.80) / 1.042 = 47,055; round-trip driveAwayPrice(47130) = 49,989.46. Independent check against MG's own per-state on-road 'discounts' in the configurator data: VIC discount is $4,674.90 (RWD) vs $4,952.10 (AWD), a $277.20 gap = 33 Victorian duty units of $8.40 per $200; NSW gap $335 = 5% marginal duty on ~$6,700. Metallic paint (+$700) moves VIC by $25.20 (3 units) and NSW by $35 (5% of $700) on both grades, confirming the discounts are duty-driven. Together these put the dutiable-value gap at about $6,600-6,700, against a backed-out list gap of $6,718 and a drive-away gap of $7,000, so the back-out is consistent to within ~$100. Flat national drive-away may bundle dealer delivery, so list may overstate by an unknown amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 47,130 at $880; round trip 49990.11)."
+      },
+      "batteryKwh": {
+        "value": 74.3,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3418/MG-MGS6-EV-RWD-77-kWh",
+        "note": "EV Database: usable 74.3 kWh, nominal 77.0 kWh NMC (same 77 kWh NCM pack MG AU quotes, unlabelled = gross/nominal). Chasing Cars also states 74.3 kWh usable."
+      },
+      "rangeKm": {
+        "value": 530,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.mgmotor.com.au/brochures/MGS6_EV_2026_v2.pdf",
+        "note": "MG AU brochure spec table 'Driving Range: WLTP Combined Cycle (km)' 530 on 20-inch 245/50 R20 wheels; same table gives NEDC 605 (rejected). EU WLTP on EV Database is also 530 km, so AU is not above the WLTP best case."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.6,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3418/MG-MGS6-EV-RWD-77-kWh",
+        "note": "EV Database WLTP 'Rated Consumption' 166 Wh/km (official manufacturer figure incl. charging losses) for the EU car with the same 530 km WLTP range; sits ~18% above battery/range (14.0). MG AU publishes only an NEDC efficiency (145 Wh/km), not used. Replaces the held derived value, resolving the watchlist backlog item."
+      },
+      "bootLitresSeatsUp": {
+        "value": 581,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS6_EV_2026_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume Seats In Place (L)' 581, repeated by CarExpert, Chasing Cars and EV Central; measurement method not stated. MG UK quotes 674 L for the same car, which Carwow says is measured to the roof; EV Database lists 493 L. 581 kept as the manufacturer's AU figure; frunk not added (86 L (brochure) / 124 L (configurator blurb))."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1690,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS6_EV_2026_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume Seats Folded (L)' 1690 (UK/EV Database 1910 to the roof)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3418/MG-MGS6-EV-RWD-77-kWh",
+        "note": "5 seats; MG AU brochure lists 40/60 rear folding seat with three rear 3-point belts."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS6_EV_2026_v2.pdf",
+        "note": "MG AU brochure 'Maximum Towing Weight Braked (kg)' 1500 (unbraked 750)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "Standard 7 years/unlimited km; 10 years/250,000km only with service-activated extension (conditional, in pros). HV battery 7 years/150,000 km on MG's page (CarExpert says 160,000; manufacturer preferred)."
+      },
+      "insuranceAnnual": {
+        "value": 1650,
+        "basis": "judged",
+        "note": "Held value kept: anchored to byd-sealion-7-premium (1650 at $54,990), kia-ev5-air-standard-range (1700 at $56,770) and mg-s5-essence-62 (1600 at $44,251); S6 RWD list $47,130 sits between."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 to use one mainstream curve for all MG rows (matches mg-s5 and mg-4)."
+      }
+    },
+    "mg-s6-essence-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/mgs6-ev?ref=website",
+        "note": "Live Build & Price line 'MGS6 EV Essence AWD' (price 56990); exactly two variant lines in the configurator, matching CarExpert/CarsGuide/EV Central launch coverage (Essence RWD and Essence AWD only)."
+      },
+      "listPrice": {
+        "value": 53773,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/mgs6-ev?ref=website",
+        "note": "No list price published. Configurator variant price field is 56990 and its display shows $56,990 struck through with $55,990* as 'Drive Away Price, Offer ends 31 December' (a $1,000 cashback on MGS6 EV for sales/deliveries 01 Nov-31 Dec 2026: campaign, not used). $56,990 is MG's regular national drive-away (CarExpert review and news, CarsGuide, Chasing Cars and EV Central all call it drive-away; MG model page says 'from $49,990 driveaway'). Back-out: (56990 - 958.80) / 1.042 = 53,773; round-trip driveAwayPrice(53848) = 56,989.62. Independent check against MG's own per-state on-road 'discounts' in the configurator data: VIC discount is $4,674.90 (RWD) vs $4,952.10 (AWD), a $277.20 gap = 33 Victorian duty units of $8.40 per $200; NSW gap $335 = 5% marginal duty on ~$6,700. Metallic paint (+$700) moves VIC by $25.20 (3 units) and NSW by $35 (5% of $700) on both grades, confirming the discounts are duty-driven. Together these put the dutiable-value gap at about $6,600-6,700, against a backed-out list gap of $6,718 and a drive-away gap of $7,000, so the back-out is consistent to within ~$100. Flat national drive-away may bundle dealer delivery, so list may overstate by an unknown amount. Re-derived 2026-11-27 for VIC rego $958.80 (was 53,848 at $880; round trip 56990.27)."
+      },
+      "batteryKwh": {
+        "value": 74.3,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3419/MG-MGS6-EV-Dual-Motor-77-kWh",
+        "note": "EV Database: usable 74.3 kWh, nominal 77.0 kWh NMC (same 77 kWh NCM pack MG AU quotes, unlabelled = gross/nominal). Chasing Cars also states 74.3 kWh usable."
+      },
+      "rangeKm": {
+        "value": 485,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.mgmotor.com.au/brochures/MGS6_EV_2026_v2.pdf",
+        "note": "MG AU brochure spec table 'Driving Range: WLTP Combined Cycle (km)' 485 on 20-inch 245/50 R20 wheels; same table gives NEDC 550 (rejected). EU WLTP on EV Database is also 485 km, so AU is not above the WLTP best case."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.1,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3419/MG-MGS6-EV-Dual-Motor-77-kWh",
+        "note": "EV Database WLTP 'Rated Consumption' 181 Wh/km (official manufacturer figure incl. charging losses) for the EU car with the same 485 km WLTP range; sits ~18% above battery/range (15.3). MG AU publishes only an NEDC efficiency (160 Wh/km), not used. Replaces the held derived value, resolving the watchlist backlog item."
+      },
+      "bootLitresSeatsUp": {
+        "value": 581,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS6_EV_2026_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume Seats In Place (L)' 581, repeated by CarExpert, Chasing Cars and EV Central; measurement method not stated. MG UK quotes 674 L for the same car, which Carwow says is measured to the roof; EV Database lists 493 L. 581 kept as the manufacturer's AU figure; frunk not added (67 L (brochure) / 102 L (configurator blurb))."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1690,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS6_EV_2026_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume Seats Folded (L)' 1690 (UK/EV Database 1910 to the roof)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3419/MG-MGS6-EV-Dual-Motor-77-kWh",
+        "note": "5 seats; MG AU brochure lists 40/60 rear folding seat with three rear 3-point belts."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/brochures/MGS6_EV_2026_v2.pdf",
+        "note": "MG AU brochure 'Maximum Towing Weight Braked (kg)' 1500 (unbraked 750)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/warranty",
+        "note": "Standard 7 years/unlimited km; 10 years/250,000km only with service-activated extension (conditional, in pros). HV battery 7 years/150,000 km on MG's page (CarExpert says 160,000; manufacturer preferred)."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "Held value kept: 266 kW dual-motor at $53,848 list, anchored between byd-sealion-7-premium (1650 at $54,990) and byd-sealion-7-performance (1900 at $63,990, also dual-motor AWD)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 to use one mainstream curve for all MG rows (matches mg-s5 and mg-4)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mg-s6-essence-rwd.bootLitresSeatsUp: MG AU 581 L with no stated method; UK 674 L is to the roof and EV Database gives 493 L, so the to-the-cover figure may be lower",
+    "mg-s6-essence-awd.bootLitresSeatsUp: same 581 L method uncertainty as the RWD",
+    "mg-s6-essence-rwd.bootLitresSeatsDown: 1690 L method unstated (UK 1910 L to the roof)",
+    "mg-s6-essence-awd.bootLitresSeatsDown: same as RWD",
+    "mg-s6-essence-rwd.listPrice: backed out of MG's flat national drive-away ($49,990); no list published, duty offsets agree on the grade gap only to ~$100, and a national figure may bundle dealer delivery",
+    "mg-s6-essence-awd.listPrice: backed out of $56,990 national drive-away; same caveats",
+    "mg-s6-essence-rwd.consumptionKwhPer100km: EU WLTP rated figure (EV Database), not an AU-published figure; same range and wheel size but EU spec",
+    "mg-s6-essence-awd.consumptionKwhPer100km: EU WLTP rated figure (EV Database), as for RWD",
+    "mg-s6-essence-rwd.insuranceAnnual: judged, anchored to byd-sealion-7-premium and mg-s5",
+    "mg-s6-essence-awd.insuranceAnnual: judged, anchored to byd-sealion-7 rows",
+    "mg-s6-essence-rwd.depreciationCurve: judged, MG mainstream convention",
+    "mg-s6-essence-awd.depreciationCurve: judged, MG mainstream convention"
+  ]
+}

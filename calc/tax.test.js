@@ -25,8 +25,8 @@ test('medicare levy is nil below the low-income threshold', () => {
 });
 
 test('medicare levy phases in between the threshold and shade-out point', () => {
-  close(medicareLevy(30000, tables), 277.80);
-  close(medicareLevy(34027, tables), 680.54);
+  close(medicareLevy(30000, tables), 198.90);
+  close(medicareLevy(35013, tables), 700.26);
 });
 
 test('medicare levy is 2% above the shade-out point', () => {

@@ -1,0 +1,93 @@
+{
+  "familyId": "bmw-ix",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "bmw-ix-xdrive45-m-sport": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/bmw/ix/2026/price-and-specs",
+        "note": "CarExpert 2026 iX listing: one variant (M Sport) on sale in Australia. BMW AU model page and configurator returned 503 on every attempt this run. No AU run-out announced: BMW AU's Brendan Michel says iX production continues through 2027 (bmwblog 2 Jul 2026); iX5 60 xDrive due 'about mid-2027' (CarExpert, BMW AU product manager)."
+      },
+      "listPrice": {
+        "value": 142900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-bmw-ix-price-and-specs",
+        "note": "'$142,900 before on-road costs' (CarExpert 20 Feb 2025). Re-checked on research date: carsales 2026 MY research page 'Price Guide (base price incl GST & LCT)' $142,900; CarsGuide review MSRP $142,900; CarExpert 2026 Sydney drive-away $152,163, consistent with that list plus NSW on-roads. App's VIC drive-away for $142,900 = $149,781.8. Zecar shows $131,900 'RRP before on-road costs' undated, uncorroborated by any other source or price-cut report: rejected. BMW AU configurator unreachable (503)."
+      },
+      "batteryKwh": {
+        "value": 94.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3109/BMW-iX-xDrive45",
+        "note": "usable; EV Database gives 100.0 kWh nominal / 94.8 kWh usable on the same page"
+      },
+      "rangeKm": {
+        "value": 522,
+        "basis": "sourced",
+        "standard": "AU-certified",
+        "url": "https://www.carsales.com.au/research/bmw/ix/2026/xdrive45-m-sport/cd5b1c9d-5156-42df-bcbd-1b00c37e5b60/",
+        "note": "carsales: 522 km (ADR), 602 km (WLTP best case). Below BMW's WLTP best case so WLTP-derived local spec per direction test; CarsGuide quotes 'up to 522km' with 21-inch wheels standard (CarExpert: 21-inch standard, 22/23-inch optional)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3109/BMW-iX-xDrive45",
+        "note": "EV Database WLTP TEH 209 Wh/km at 517 km, the WLTP point nearest the 522 km AU figure. Replaces held 21.8 (top of BMW's 17.8-21.9 band, paired with the worst-case wheel). battery/range = 18.2, inside tolerance; the published figure includes charging losses, matching sibling convention (bmw-ix3, volvo-ex90)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-bmw-ix-price-and-specs",
+        "note": "500L seats up; same on carsales and EV Database. No frunk on the iX, none added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-bmw-ix-price-and-specs",
+        "note": "1750L rear seats folded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/bmw/ix/2026/xdrive45-m-sport/cd5b1c9d-5156-42df-bcbd-1b00c37e5b60/"
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/bmw/ix/2026/xdrive45-m-sport/cd5b1c9d-5156-42df-bcbd-1b00c37e5b60/",
+        "note": "2,500 kg braked / 750 kg unbraked (carsales, Redbook data); EV Database agrees. BMW AU technical data unreachable (503)."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-bmw-ix-price-and-specs",
+        "note": "5 years unlimited km; battery 8 years/160,000 km (also CarsGuide)"
+      },
+      "insuranceAnnual": {
+        "value": 3200,
+        "basis": "judged",
+        "note": "kept: anchored above bmw-ix3-50-xdrive ($112,500, 2900) and volvo-ex90-ultra ($134,990, 3150), below bmw-i5-edrive40 ($155,900, 3300) and audi-q6-e-tron-sq6 ($129,900, 3500)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "owner convention: one curve per brand, matched to bmw-ix3 (was [1,0.64,0.52,0.43,0.36,0.3]). Evidence pointing steeper not used: carsales private price guide $121,000-125,800 for a 2026 car vs $142,900 new; iX5 successor due mid-2027."
+      }
+    }
+  },
+  "lowConfidence": [
+    "bmw-ix-xdrive45-m-sport.availability: BMW AU configurator not opened (503 throughout); availability rests on CarExpert/carsales 2026 listings",
+    "bmw-ix-xdrive45-m-sport.listPrice: no manufacturer page opened; $142,900 is the Feb 2025 launch price carried by carsales/CarsGuide/CarExpert 2026 listings, no 2026 re-price found but none ruled out; Zecar's undated $131,900 rejected",
+    "bmw-ix-xdrive45-m-sport.depreciationCurve: judged; brand convention (bmw-ix3) applied although resale evidence and the mid-2027 iX5 successor point steeper",
+    "bmw-ix-xdrive45-m-sport.consumptionKwhPer100km: EV Database WLTP TEH point (517 km), not a BMW figure for the AU 21-inch wheel",
+    "bmw-ix-xdrive45-m-sport.towKg: carsales/Redbook and EV Database, not the BMW AU spec sheet (unreachable)",
+    "bmw-ix-xdrive45-m-sport.insuranceAnnual: judged"
+  ]
+}

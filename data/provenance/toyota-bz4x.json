@@ -1,0 +1,249 @@
+{
+  "familyId": "toyota-bz4x",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "toyota-bz4x-2wd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-fwd-electric-jsg5ffoo20251210",
+        "note": "toyota.com.au (model pages, news, configurator, spec-table PDFs) returned HTTP 403 / 404 to automated fetches, so the configurator could not be opened. CarExpert's 2026 spec page lists the FWD grade at $55,990 before on-roads with current drive-away pricing; Toyota-network dealer page lists 2WD and AWD as the two bZ4X variants (https://www.sunshinetoyota.com.au/models/bz4x)"
+      },
+      "listPrice": {
+        "value": 55990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-toyota-bz4x-price-and-specs",
+        "note": "'before on-road costs' in words; same figure on CarExpert spec page and CarExpert review re-opened 2026-11-26; no later change found"
+      },
+      "batteryKwh": {
+        "value": 71.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3400/Toyota-bZ4X-Touring-FWD-747-kWh",
+        "note": "usable 71.0 kWh; nominal (gross) 74.7 kWh on the same page for the MY26 74.7 kWh pack. Australian pages quote 74.7 kWh unlabelled (gross, per Toyota-family rule); held row carried gross 74.7 (EV Database has no non-Touring MY26 74.7 kWh page because Europe takes 57.7/73.1 packs on the standard body; the Touring FWD is the same 74.7 kWh pack and 591 km WLTP figure)"
+      },
+      "rangeKm": {
+        "value": 591,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-fwd-electric-jsg5ffoo20251210",
+        "note": "WLTP combined, 18-inch wheels; matches EV Database Touring FWD 591 km TEL"
+      },
+      "consumptionKwhPer100km": {
+        "value": 13.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-fwd-electric-jsg5ffoo20251210",
+        "note": "138 Wh/km WLTP combined; 71.0/591 = 12.0 implied (plug-to-wheel loss)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 421,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-toyota-bz4x-price-and-specs",
+        "note": "421 L 2WD; CarExpert spec page: VDA to lower window. Replaces held 452, which is Toyota UK's figure including under-deckboard space"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1410,
+        "basis": "carried",
+        "note": "Held figure from Toyota AU spec table (20260619, now 404); MY26 body unchanged since 2026-07-27; no current AU folded figure found to re-verify"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-fwd-electric-jsg5ffoo20251210"
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-fwd-electric-jsg5ffoo20251210",
+        "note": "750 kg braked"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-bz4x-review",
+        "note": "5 years / unlimited km unconditional; motors 7 years and battery to 10 years conditional on Toyota servicing (in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 1620,
+        "basis": "judged",
+        "note": "held; anchored below subaru-solterra-awd ($1,650 at $61,990) for a cheaper FWD grade"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Held Toyota convention [1, 0.75, 0.65, 0.57, 0.5, 0.44], kept: one convention per brand; sits just above the Subaru Solterra/Trailseeker twins (0.74 start) on Toyota's larger dealer network, below mainstream default for the 2025-26 $6,910-$10,010 price cuts that hit earlier-stock residuals"
+      }
+    },
+    "toyota-bz4x-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-4x4-electric-jsg5ffos20251210",
+        "note": "toyota.com.au (model pages, news, configurator, spec-table PDFs) returned HTTP 403 / 404 to automated fetches, so the configurator could not be opened. CarExpert's 2026 spec page lists the AWD at $67,990 before on-roads; dealer page https://www.sunshinetoyota.com.au/models/bz4x lists it"
+      },
+      "listPrice": {
+        "value": 67990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-4x4-electric-jsg5ffos20251210",
+        "note": "'before on-road costs' on the CarExpert spec page; CarExpert news says 'plus on-roads'; CarsGuide AWD review 'before on-road costs'"
+      },
+      "batteryKwh": {
+        "value": 71.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3401/Toyota-bZ4X-Touring-AWD-747-kWh",
+        "note": "usable 71.0 kWh; nominal (gross) 74.7 kWh on the same page for the MY26 74.7 kWh pack. Australian pages quote 74.7 kWh unlabelled (gross, per Toyota-family rule); held row carried gross 74.7; CarExpert AWD spec page: 74.7 kWh, 391 V"
+      },
+      "rangeKm": {
+        "value": 517,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-4x4-electric-jsg5ffos20251210",
+        "note": "WLTP combined, 20-inch wheels"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.0,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-4x4-electric-jsg5ffos20251210",
+        "note": "160 Wh/km WLTP combined"
+      },
+      "bootLitresSeatsUp": {
+        "value": 410,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-4x4-electric-jsg5ffos20251210",
+        "note": "VDA to lower window; CarsGuide AWD review also 410 L (https://www.carsguide.com.au/ev/toyota-bz4x-awd-100529). Replaces held 452"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1410,
+        "basis": "carried",
+        "note": "Held figure from Toyota AU spec table (now 404); not re-verified"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-4x4-electric-jsg5ffos20251210"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-suv-4x4-electric-jsg5ffos20251210",
+        "note": "1,500 kg braked, 750 kg unbraked"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-bz4x-review",
+        "note": "5 years / unlimited km unconditional; motors 7 years and battery to 10 years conditional on Toyota servicing (in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 1780,
+        "basis": "judged",
+        "note": "held; anchored to subaru-solterra-awd-touring ($1,800 at $67,990, same platform and price)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Held Toyota convention [1, 0.75, 0.65, 0.57, 0.5, 0.44], kept: one convention per brand; sits just above the Subaru Solterra/Trailseeker twins (0.74 start) on Toyota's larger dealer network, below mainstream default for the 2025-26 $6,910-$10,010 price cuts that hit earlier-stock residuals"
+      }
+    },
+    "toyota-bz4x-touring": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-base-suv-4x4-electric-jskafm5f20260415",
+        "note": "toyota.com.au (model pages, news, configurator, spec-table PDFs) returned HTTP 403 / 404 to automated fetches, so the configurator could not be opened. CarExpert spec page lists the Touring (4x4, 488 km, 603 L) at $69,990 before on-roads with a current drive-away figure; Toyota-network dealer page https://www.sunshinetoyota.com.au/models/bz4x-touring lists it under 'SUVs & 4WDs'. Toyota's own Touring page carries a stale 'Not currently available in Australia' pre-production note (search snippet), contradicted by May 2026 deliveries and reviews. Body type settled as SUV: Toyota dealer and CarExpert spec pages class it SUV, ground clearance 211 mm as the standard bZ4X, 1,500 kg tow; outlets (https://www.chasingcars.com.au/news/new-car-prices/toyota-bz4x-touring-2026-big-ts-wagon-bodied-ev-flagship-priced-from-69990-to-contend-kia-ev6-and-skoda-enyaq/, https://www.carexpert.com.au/car-news/2026-toyota-bz4x-touring-high-riding-electric-wagon-priced-for-australia) call it 'wagon-bodied'/'wagon-style crossover SUV'; twin subaru-trailseeker is held as SUV"
+      },
+      "listPrice": {
+        "value": 69990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-base-suv-4x4-electric-jskafm5f20260415",
+        "note": "'before on-road costs'; CarExpert Touring review same, Chasing Cars 'before on-road costs'"
+      },
+      "batteryKwh": {
+        "value": 71.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3401/Toyota-bZ4X-Touring-AWD-747-kWh",
+        "note": "usable 71.0 kWh; nominal (gross) 74.7 kWh on the same page for the MY26 74.7 kWh pack. Australian pages quote 74.7 kWh unlabelled (gross, per Toyota-family rule); held row carried gross 74.7"
+      },
+      "rangeKm": {
+        "value": 488,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-base-suv-4x4-electric-jskafm5f20260415",
+        "note": "WLTP combined, AU 20-inch grade; EV Database European Touring AWD 528 TEL / 478 TEH"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-base-suv-4x4-electric-jskafm5f20260415",
+        "note": "168 Wh/km WLTP combined; also on dealer page"
+      },
+      "bootLitresSeatsUp": {
+        "value": 603,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-base-suv-4x4-electric-jskafm5f20260415",
+        "note": "603 L VDA to lower window; same figure on Toyota dealer page https://www.sunshinetoyota.com.au/models/bz4x-touring"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1718,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-bz4x-touring-review-quick-drive",
+        "note": "1,718 L seats folded, a European figure paired with 669 L seats-up (AU quotes 603 L), so the measuring basis may not match the seats-up figure"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-base-suv-4x4-electric-jskafm5f20260415"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/toyota/bz4x/2026-base-suv-4x4-electric-jskafm5f20260415",
+        "note": "1,500 kg braked, 750 kg unbraked"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-toyota-bz4x-review",
+        "note": "5 years / unlimited km unconditional; motors 7 years and battery to 10 years conditional on Toyota servicing (in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "held; anchored to subaru-trailseeker-awd-touring ($1,880 at $69,990, its twin)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.65,
+          0.57,
+          0.5,
+          0.44
+        ],
+        "basis": "judged",
+        "note": "Held Toyota convention [1, 0.75, 0.65, 0.57, 0.5, 0.44], kept: one convention per brand; sits just above the Subaru Solterra/Trailseeker twins (0.74 start) on Toyota's larger dealer network, below mainstream default for the 2025-26 $6,910-$10,010 price cuts that hit earlier-stock residuals"
+      }
+    }
+  },
+  "lowConfidence": [
+    "toyota-bz4x-2wd.bootLitresSeatsDown: carried 1410 from a Toyota AU spec PDF that now 404s; no current AU folded figure found",
+    "toyota-bz4x-awd.bootLitresSeatsDown: carried 1410, same reason; AWD seats-up is 11 L smaller than 2WD so folded likely slightly smaller too",
+    "toyota-bz4x-touring.bootLitresSeatsDown: 1718 is a European figure on a 669 L seats-up basis, not the AU 603 L basis",
+    "toyota-bz4x-touring.bodyType: SUV per Toyota dealer and CarExpert spec pages, but outlets call it wagon-bodied and data/watchlist.json lists it among out-of-scope wagons",
+    "toyota-bz4x-*.availability: Toyota AU configurator returned 403; orderability taken from CarExpert spec pages and a Toyota dealer page",
+    "toyota-bz4x-2wd.batteryKwh: usable 71.0 taken from EV Database's Touring FWD page for the same 74.7 kWh pack (no standard-body MY26 page)",
+    "toyota-bz4x-*.insuranceAnnual: judged, anchored to Subaru twins",
+    "toyota-bz4x-*.depreciationCurve: judged Toyota convention"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "_about": "Models and brands already checked and not held, so a sweep re-checks them only once recheckAfter has passed. Seeded 2026-11-26 from the BEV and PHEV wave logs (now in docs/archive/). Validated by data/watchlist.test.js.",
+  "_about": "Models and brands already checked and not held, so a sweep re-checks them only once recheckAfter has passed. Seeded 2026-11-26 from the BEV and PHEV wave logs (in git history). Validated by data/watchlist.test.js.",
   "entries": [
     {
       "name": "Porsche Taycan",
@@ -8,9 +8,9 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "porsche-taycan",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Sedan, ~8 variants. Base ~$175,100; flagships over $250,000 are unrepresentable, so split at the ceiling."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Sedan, ~8 variants. Base ~$175,100; flagships over $250,000 are unrepresentable, so split at the ceiling."
     },
     {
       "name": "Porsche Macan Electric",
@@ -19,9 +19,9 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "porsche-macan-electric",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "SUV."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: SUV."
     },
     {
       "name": "Porsche Cayenne Electric",
@@ -30,9 +30,9 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "porsche-cayenne-electric",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Verify orderable: first deliveries were due Q3 2026."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Verify orderable: first deliveries were due Q3 2026."
     },
     {
       "name": "Audi e-tron GT",
@@ -41,9 +41,9 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "audi-e-tron-gt",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Sedan. S / RS / RS Performance at survey."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Sedan. S / RS / RS Performance at survey."
     },
     {
       "name": "Genesis G80 Electrified",
@@ -52,9 +52,9 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "genesis-g80-electrified",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Sedan. Weakest source in the survey (a Genesis AU model listing only); verify before researching."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Sedan. Weakest source in the survey (a Genesis AU model listing only); verify before researching."
     },
     {
       "name": "Polestar 5",
@@ -63,9 +63,9 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "polestar-5",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Sedan GT."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Sedan GT."
     },
     {
       "name": "Deepal E07",
@@ -85,9 +85,9 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "xpeng-x9",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "People mover, filed as SUV. $89,900-$109,900 at survey."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: People mover, filed as SUV. $89,900-$109,900 at survey."
     },
     {
       "name": "Zeekr 009",
@@ -105,11 +105,10 @@
       "make": "LDV",
       "powertrain": "bev",
       "scope": "model",
-      "status": "backlog",
-      "familyId": "ldv-mifa-9",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "People mover, filed as SUV. $106,000-$131,000 at survey."
+      "status": "not-on-sale",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-05-26",
+      "note": "No longer on sale (2026-11-26 sweep)."
     },
     {
       "name": "Volkswagen ID. Buzz",
@@ -118,9 +117,9 @@
       "scope": "model",
       "status": "backlog",
       "familyId": "vw-id-buzz",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "People mover, filed as SUV. Passenger versions only; Cargo is a panel van."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: People mover, filed as SUV. Passenger versions only; Cargo is a panel van."
     },
     {
       "name": "Mercedes-Benz EQV",
@@ -138,22 +137,11 @@
       "make": "Leapmotor",
       "powertrain": "bev",
       "scope": "model",
-      "status": "pre-launch",
+      "status": "backlog",
       "familyId": "leapmotor-b05",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Expected end Aug 2026, $35,990-$38,990 d/a."
-    },
-    {
-      "name": "Mazda CX-6e",
-      "make": "Mazda",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "pre-launch",
-      "familyId": "mazda-cx-6e",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Expected Sept 2026 showrooms, $53,990-$56,990."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Expected end Aug 2026, $35,990-$38,990 d/a."
     },
     {
       "name": "Deepal S05",
@@ -162,8 +150,8 @@
       "scope": "model",
       "status": "pre-launch",
       "familyId": "deepal-s05",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
       "note": "\"Final stages\" late July 2026, ~$40k-$45k."
     },
     {
@@ -171,22 +159,11 @@
       "make": "Honda",
       "powertrain": "bev",
       "scope": "model",
-      "status": "pre-launch",
+      "status": "backlog",
       "familyId": "honda-super-one",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Expected 2H 2026; would be Honda's first BEV here."
-    },
-    {
-      "name": "Smart #5",
-      "make": "Smart",
-      "powertrain": "bev",
-      "scope": "model",
-      "status": "pre-launch",
-      "familyId": "smart-5",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Expected Oct-Dec 2026, from low $60,000s."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Expected 2H 2026; would be Honda's first BEV here."
     },
     {
       "name": "XPeng G9L",
@@ -195,8 +172,8 @@
       "scope": "model",
       "status": "pre-launch",
       "familyId": "xpeng-g9l",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
       "note": "Expected Q4 2026 deliveries, $76,800-$84,800."
     },
     {
@@ -204,33 +181,33 @@
       "make": "Mercedes-Benz",
       "powertrain": "bev",
       "scope": "model",
-      "status": "pre-launch",
+      "status": "backlog",
       "familyId": "mercedes-glc-ev",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Expected late 2026."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Expected late 2026."
     },
     {
       "name": "Mercedes-Benz GLB Electric",
       "make": "Mercedes-Benz",
       "powertrain": "bev",
       "scope": "model",
-      "status": "pre-launch",
+      "status": "backlog",
       "familyId": "mercedes-glb-ev",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "EQB successor, expected Q4 2026."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: EQB successor, expected Q4 2026."
     },
     {
       "name": "Mercedes-Benz EQS (refreshed)",
       "make": "Mercedes-Benz",
       "powertrain": "bev",
       "scope": "model",
-      "status": "pre-launch",
+      "status": "backlog",
       "familyId": "mercedes-eqs",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "EQE/EQS Sedan and SUV were off the configurator 2026-08-06; refreshed EQS due Q4 2026."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: EQE/EQS Sedan and SUV were off the configurator 2026-08-06; refreshed EQS due Q4 2026."
     },
     {
       "name": "Volvo EX60",
@@ -250,8 +227,8 @@
       "scope": "model",
       "status": "pre-launch",
       "familyId": "alpine-a390",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2027-01-01",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
       "note": "Expected late 2026 to early 2027; brand returning to Australia."
     },
     {
@@ -261,8 +238,8 @@
       "scope": "model",
       "status": "pre-launch",
       "familyId": "nio-firefly",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
       "note": "Expected H2 2026, >$40k."
     },
     {
@@ -291,11 +268,11 @@
       "make": "MG",
       "powertrain": "bev",
       "scope": "model",
-      "status": "pre-launch",
+      "status": "backlog",
       "familyId": "mg-u9-ev",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Ute. Late 2026, unconfirmed."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Ute. Late 2026, unconfirmed."
     },
     {
       "name": "Hyundai Ioniq 3",
@@ -324,11 +301,10 @@
       "make": "Isuzu",
       "powertrain": "bev",
       "scope": "model",
-      "status": "pre-launch",
-      "familyId": "isuzu-d-max-ev",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2026-11-26",
-      "note": "Ute. Unconfirmed by Isuzu Ute Australia."
+      "status": "not-on-sale",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-05-26",
+      "note": "Cancelled for Australia (2026-11-26 sweep)."
     },
     {
       "name": "Mahindra BE 6 / XEV 9e",
@@ -416,37 +392,26 @@
       "note": "Expected Q3 2026, $100k+. Shooting brake: confirm body type before researching."
     },
     {
-      "name": "BYD Atto 3 Evo",
-      "make": "BYD",
-      "powertrain": "bev",
-      "scope": "variant",
-      "status": "pre-launch",
-      "familyId": "byd-atto3",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "800V rework, registrations of interest only at 2026-07-27, due 2H 2026. Will likely restructure the family."
-    },
-    {
       "name": "Skoda Elroq Sportline 85",
       "make": "Skoda",
       "powertrain": "bev",
       "scope": "variant",
       "status": "pre-launch",
       "familyId": "skoda-elroq",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "Orders open October 2026, unpriced at 2026-07-27."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-15",
+      "note": "Skoda AU says orders open early 2027; unpriced at 2026-11-26."
     },
     {
       "name": "Renault Megane E-Tech facelift",
       "make": "Renault",
       "powertrain": "bev",
-      "scope": "variant",
+      "scope": "model",
       "status": "pre-launch",
       "familyId": "renault-megane-e-tech",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2027-01-01",
-      "note": "H1 2027: more range and faster DC charging."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "Family removed 2026-11-26: Techno EV60 run-out (POA), MY27 Esprit Alpine deposit/register-interest only on renault.com.au. Press: sole grade, $55,990 before ORC (CarExpert/The Driven/EV Central 28 Oct 2026), deliveries H1 2027. Re-add with new id renault-megane-e-tech-esprit-alpine when priced in the configurator."
     },
     {
       "name": "Hyundai Ioniq 6 standard grades",
@@ -455,8 +420,8 @@
       "scope": "variant",
       "status": "pre-launch",
       "familyId": "hyundai-ioniq-6",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-26",
       "note": "Dynamiq and Epiq withdrawn H1 2026; family holds only the N. Add grades back only when orderable."
     },
     {
@@ -466,42 +431,42 @@
       "scope": "variant",
       "status": "backlog",
       "familyId": "lotus-emeya",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "$177,990 rests on one listicle sentence; four trims unpriced (Lotus AU ships blank price fields)."
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-02-27",
+      "note": "600 $189,990 and 600 SE $209,990 (both held) rest on 2024 launch prices; Lotus AU still shows no prices. Confirm when a manufacturer price appears."
     },
     {
-      "name": "Hyundai/Kia gross battery figures",
+      "name": "Kia EV5 2027 facelift",
       "make": "Kia",
       "powertrain": "bev",
       "scope": "variant",
-      "status": "backlog",
-      "familyId": "kia-ev3",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "18 rows in kia-ev3, kia-ev4, kia-ev5, hyundai-ioniq-9, hyundai-elexio may carry gross kWh. Settle per pack."
+      "status": "pre-launch",
+      "familyId": "kia-ev5",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Facelift in Australian approval filings with more power and towing. New model year will need a full spec re-source."
     },
     {
-      "name": "Unsourced consumption figures",
-      "make": "Zeekr",
+      "name": "BYD Atto 3 Essential run-out",
+      "make": "BYD",
       "powertrain": "bev",
       "scope": "variant",
       "status": "backlog",
-      "familyId": "zeekr-x",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "6 rows (forthing-taikon-5 x2, mg-s6 x2, zeekr-x x2) lack a sourced consumption figure. Do not fill with NEDC or derived figures."
+      "familyId": "byd-atto3",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-26",
+      "note": "Reviews call the Essential outgoing; still orderable 2026-11-26. Delete row byd-atto3-essential when it leaves the configurator."
     },
     {
       "name": "JAC Hunter PHEV",
       "make": "JAC",
       "powertrain": "phev",
       "scope": "model",
-      "status": "pre-launch",
+      "status": "backlog",
       "familyId": "jac-hunter-phev",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
-      "note": "Reservations only at 2026-08-08. When it lands: two grades, Hunter Pro 4x4 and Hunter X 4x4, $49,988 / $54,844 list."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family. Previous note: Reservations only at 2026-08-08. When it lands: two grades, Hunter Pro 4x4 and Hunter X 4x4, $49,988 / $54,844 list."
     },
     {
       "name": "Omoda 7 PHEV",
@@ -510,8 +475,8 @@
       "scope": "model",
       "status": "pre-launch",
       "familyId": "omoda-7-phev",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
       "note": "Pre-launch."
     },
     {
@@ -521,8 +486,8 @@
       "scope": "model",
       "status": "pre-launch",
       "familyId": "chery-stockman-phev",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
       "note": "Diesel PHEV ute, pre-launch."
     },
     {
@@ -532,8 +497,8 @@
       "scope": "model",
       "status": "pre-launch",
       "familyId": "gwm-haval-jolion-phev",
-      "checkedAt": "2026-08-08",
-      "recheckAfter": "2026-11-26",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
       "note": "Pre-launch."
     },
     {
@@ -606,9 +571,9 @@
       "scope": "variant",
       "status": "unrepresentable",
       "familyId": "lotus-eletre",
-      "checkedAt": "2026-08-08",
+      "checkedAt": "2026-11-27",
       "recheckAfter": "2027-07-01",
-      "note": "$279,990; Base and S are held."
+      "note": "Eletre 900 series (formerly R): $279,990 per CarsGuide 2026, above the $250,000 ceiling. Base and S (600 series) are held."
     },
     {
       "name": "Lotus Emeya 900 Sport / Sport Carbon",
@@ -617,9 +582,9 @@
       "scope": "variant",
       "status": "unrepresentable",
       "familyId": "lotus-emeya",
-      "checkedAt": "2026-08-08",
+      "checkedAt": "2026-11-27",
       "recheckAfter": "2027-07-01",
-      "note": "No AU price; UK pricing implies ~$272k-$294k."
+      "note": "Emeya 900 (formerly R): $259,990 per CarExpert and CarsGuide, above the $250,000 schema ceiling."
     },
     {
       "name": "MG Cyberster",
@@ -662,14 +627,14 @@
       "note": "~12 km electric range, under the 30 km rangeKm floor."
     },
     {
-      "name": "Wagons: BMW i5 Touring, BYD Seal 6 EV Touring, Toyota bZ4X Touring, Audi A5 Avant e-hybrid",
+      "name": "Wagons: BMW i5 Touring, BYD Seal 6 EV Touring, Audi A5 Avant e-hybrid, Audi RS 5 Avant",
       "make": "various",
       "powertrain": "any",
       "scope": "model",
       "status": "out-of-scope",
       "checkedAt": "2026-08-08",
       "recheckAfter": "2027-07-01",
-      "note": "Wagons are excluded by decision."
+      "note": "Wagons are excluded by decision. The Toyota bZ4X Touring (and its twin, the Subaru Trailseeker) are held as SUVs by owner decision 2026-11-26."
     },
     {
       "name": "Commercial vans and conversions",
@@ -852,16 +817,6 @@
       "note": "Off the AU configurator 2026-08-06; see the refreshed EQS entry."
     },
     {
-      "name": "Mitsubishi: no battery-electric passenger car",
-      "make": "Mitsubishi",
-      "powertrain": "bev",
-      "scope": "brand",
-      "status": "not-on-sale",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2027-01-01",
-      "note": "Sells cars here but no BEV passenger car at survey."
-    },
-    {
       "name": "Honda: no battery-electric passenger car",
       "make": "Honda",
       "powertrain": "bev",
@@ -942,16 +897,6 @@
       "note": "Sells cars here but no BEV passenger car at survey."
     },
     {
-      "name": "Land Rover: no battery-electric passenger car",
-      "make": "Land Rover",
-      "powertrain": "bev",
-      "scope": "brand",
-      "status": "not-on-sale",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2027-01-01",
-      "note": "Sells cars here but no BEV passenger car at survey."
-    },
-    {
       "name": "Jetour: no battery-electric passenger car",
       "make": "Jetour",
       "powertrain": "bev",
@@ -974,16 +919,6 @@
     {
       "name": "Foton: no battery-electric passenger car",
       "make": "Foton",
-      "powertrain": "bev",
-      "scope": "brand",
-      "status": "not-on-sale",
-      "checkedAt": "2026-07-30",
-      "recheckAfter": "2027-01-01",
-      "note": "Sells cars here but no BEV passenger car at survey."
-    },
-    {
-      "name": "Denza: no battery-electric passenger car",
-      "make": "Denza",
       "powertrain": "bev",
       "scope": "brand",
       "status": "not-on-sale",
@@ -1042,16 +977,6 @@
       "note": "Sells no PHEV in Australia at survey."
     },
     {
-      "name": "Kia: no plug-in hybrid",
-      "make": "Kia",
-      "powertrain": "phev",
-      "scope": "brand",
-      "status": "not-on-sale",
-      "checkedAt": "2026-07-28",
-      "recheckAfter": "2027-01-01",
-      "note": "Sells no PHEV in Australia at survey."
-    },
-    {
       "name": "Subaru: no plug-in hybrid",
       "make": "Subaru",
       "powertrain": "phev",
@@ -1077,9 +1002,9 @@
       "powertrain": "phev",
       "scope": "brand",
       "status": "not-on-sale",
-      "checkedAt": "2026-07-28",
-      "recheckAfter": "2027-01-01",
-      "note": "Sells no PHEV in Australia at survey."
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "No PHEV on sale; Navara Pro PHEV ute due 2027 (see its own entry)."
     },
     {
       "name": "Genesis: no plug-in hybrid",
@@ -1320,6 +1245,747 @@
       "checkedAt": "2026-07-30",
       "recheckAfter": "2027-07-01",
       "note": "No new cars sold in Australia at survey."
+    },
+    {
+      "name": "BMW i4",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "not-on-sale",
+      "familyId": "bmw-i4",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-11-26",
+      "note": "Gone from BMW AU line-up; replaced by the new i3 sedan (sweep 2026-11-26). Family removed."
+    },
+    {
+      "name": "Mercedes-Benz EQB",
+      "make": "Mercedes-Benz",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "not-on-sale",
+      "familyId": "mercedes-eqb",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-11-26",
+      "note": "Replaced by the electric GLB (sweep 2026-11-26). Family removed."
+    },
+    {
+      "name": "BMW X5 50e (new generation)",
+      "make": "BMW",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "pre-launch",
+      "familyId": "bmw-x5-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "Old X5 50e is run-out stock only; family removed 2026-11-26. New X5 50e due Q2 2027: research as new under the same id."
+    },
+    {
+      "name": "Maserati Grecale Folgore",
+      "make": "Maserati",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "familyId": "maserati-grecale-folgore",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Family removed 2026-11-26: MY2025 Folgore absent from MY2026 AU line-up (CarExpert, CarsGuide, carsales list GT/Modena/Trofeo only); maserati.com/au 403. Refreshed Folgore expected H1 2027. Last held list $207,500."
+    },
+    {
+      "name": "BMW iX3 40 (RWD)",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "bmw-ix3",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2026-12-15",
+      "note": "$89,900 before ORC (CarExpert 6 Nov 2026), deliveries Q4 2026; orderability unconfirmed (bmw.com.au 503). Near the $91,661 threshold. Add as bmw-ix3-40 when on the configurator."
+    },
+    {
+      "name": "BMW iX3 M60",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "bmw-ix3",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Australian launch unconfirmed, expected 2027."
+    },
+    {
+      "name": "Audi Q4 e-tron RWD 150kW (MY27)",
+      "make": "Audi",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "audi-q4-e-tron",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "SUV and Sportback $71,650 MLP; ordering details later, H1 2027 arrival. 59 kWh net, EU WLTP 440/451 km. New ids audi-q4-e-tron-rwd / -sportback-rwd."
+    },
+    {
+      "name": "Zeekr 7X Black Edition Package",
+      "make": "Zeekr",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "zeekr-7x",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-31",
+      "note": "MY27 Black Edition is an option pack on Performance AWD, price unannounced; CarsGuide lists $75,990 Black Edition line. Confirm whether it is a separate price line."
+    },
+    {
+      "name": "Deepal S07 update",
+      "make": "Deepal",
+      "powertrain": "any",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "deepal-s07",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "Held S07 is run-out stock (while stocks last). Updated S07 (possibly REEV) teased Oct 2026. Move to not-on-sale if stock clears."
+    },
+    {
+      "name": "Chery New E5 (MY27)",
+      "make": "Chery",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "chery-e5",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "Facelift of the same car, coming soon, unpriced. Same family and id when it launches."
+    },
+    {
+      "name": "Volvo XC60 PHEV long-range (MY27)",
+      "make": "Volvo",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "volvo-xc60-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "MY26 T8 in run-out; long-range T8 (~189 km WLTP AU spec) due Q2 2027."
+    },
+    {
+      "name": "Mercedes-Benz EQA run-out",
+      "make": "Mercedes-Benz",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "mercedes-eqa",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Run-out; replaced by electric GLA (mid-2027). Remove the family when it leaves the configurator."
+    },
+    {
+      "name": "VW ID.5 run-out",
+      "make": "Volkswagen",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "vw-id5",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "No MY27; dealer stock only (MY26 Pro, MY25 GTX). Remove the family when VW Offers & Pricing drops the ID.5 carlines."
+    },
+    {
+      "name": "Volvo XC90 T8 long-range (MY27)",
+      "make": "Volvo",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "volvo-xc90-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "Larger-battery XC90 T8 expected Q2 2027. Add or replace grades when priced and orderable."
+    },
+    {
+      "name": "Mercedes-AMG CLA 45 (electric)",
+      "make": "Mercedes-Benz",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "mercedes-cla-ev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "AMG electric CLA not yet priced or orderable in Australia."
+    },
+    {
+      "name": "Mercedes-AMG GLC63 S E Performance",
+      "make": "Mercedes-Benz",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "unrepresentable",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-07-01",
+      "note": "PHEV with about 6 kWh battery and about 12 km electric range, under the battery and range floors. SUV $194,000, Coupe $200,700."
+    },
+    {
+      "name": "Mercedes-Benz C-Class C 300 e (updated)",
+      "make": "Mercedes-Benz",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "mercedes-c-350e-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Updated C-Class due 1H 2027; current C350e is run-out. Replace the row when the new PHEV is priced; check the C350e is still orderable."
+    },
+    {
+      "name": "Mercedes-Benz GLA 250 e run-out",
+      "make": "Mercedes-Benz",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "mercedes-gla-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "All-new GLA due 1H 2027 as EV or mild hybrid only, no plug-in. Remove the family when the 250 e leaves the configurator."
+    },
+    {
+      "name": "BMW iX run-out",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "bmw-ix",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "iX5 60 xDrive due about mid-2027 as successor. Recheck for an AU run-out or removal."
+    },
+    {
+      "name": "BMW iX1 xDrive30 Sport Collection",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "bmw-ix1",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-31",
+      "note": "Limited edition, list backed out of $79,900 drive-away (may be under $75,000). Deliveries end 31 Mar 2027; remove the row then if not extended."
+    },
+    {
+      "name": "Volvo EX40 MY27.5 facelift",
+      "make": "Volvo",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "volvo-ex40",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Facelift with same powertrains confirmed for 2027, no AU price yet."
+    },
+    {
+      "name": "Lexus RZ600e F Sport Performance",
+      "make": "Lexus",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "lexus-rz",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-26",
+      "note": "Limited to 9 AU cars, expression of interest only, $135,000 before on-road costs. Add only if it becomes orderable at a dealer."
+    },
+    {
+      "name": "Lexus NX 450h+ facelift",
+      "make": "Lexus",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "lexus-nx-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Facelift due 1H 2027 with about 23 kWh battery, over 100 km WLTP and DC charging. Update rows when priced."
+    },
+    {
+      "name": "Toyota RAV4 GXL 2WD PHEV",
+      "make": "Toyota",
+      "powertrain": "phev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "toyota-rav4-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "New entry PHEV grade due Q1 2027, unpriced (outlet estimate $53,990 is not a price)."
+    },
+    {
+      "name": "Polestar 2 run-out",
+      "make": "Polestar",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "polestar-2",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "Production ended Oct 2026; stock offer to 31 Dec 2026, deliveries by 31 Jan 2027. Move to not-on-sale if the configurator closes."
+    },
+    {
+      "name": "Polestar 2 (next generation)",
+      "make": "Polestar",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-06-01",
+      "note": "All-new successor; production about mid-2027, AU arrival expected late 2027."
+    },
+    {
+      "name": "MINI Cooper E",
+      "make": "Mini",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "mini-cooper-electric",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Listed as currently unavailable; CarsGuide 2027 page still shows $53,990. mini.com.au returned 503; recheck whether it has returned."
+    },
+    {
+      "name": "Lotus Eletre X",
+      "make": "Lotus",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "pre-launch",
+      "familyId": "lotus-eletre-x",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-04-01",
+      "note": "70 kWh plug-in with the engine mainly as a range-extender; due Q2 2027, outlet estimate $237,500. Classify PHEV or REEV at launch."
+    },
+    {
+      "name": "Cadillac Optiq-V",
+      "make": "Cadillac",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "cadillac-optiq",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-06-01",
+      "note": "GM ANZ: not for our market (CarExpert, 4 Jun 2026)."
+    },
+    {
+      "name": "Cadillac Lyriq-V deliveries",
+      "make": "Cadillac",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "cadillac-lyriq",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-04-01",
+      "note": "Lyriq-V added at $99,000 with orders open; deliveries late Q1 to Q2 2027. Confirm deliveries and any AU tow rating."
+    },
+    {
+      "name": "Jeep Avenger run-out",
+      "make": "Jeep",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "jeep-avenger",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-03-01",
+      "note": "All grades are MY24 stock with a $40,000 drive-away offer; Europe has a MY27 facelift, AU timing unannounced. Remove or update when Jeep AU changes the range."
+    },
+    {
+      "name": "Forthing Taikon name dispute",
+      "make": "Forthing",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "forthing-taikon-5",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-02-27",
+      "note": "Porsche opposed the Taikon trademark; Forthing markets the car as Forthing Electric but it is still badged Taikon 5. Rename the family only if the model name formally changes."
+    },
+    {
+      "name": "Leapmotor C10 Style (BEV)",
+      "make": "Leapmotor",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "not-on-sale",
+      "familyId": "leapmotor-c10",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-03-01",
+      "note": "Entry BEV Style dropped in the June 2026 MY26 update (EV Central); Leapmotor AU page still names Style, so evidence is mixed."
+    },
+    {
+      "name": "Leapmotor C10 AWD Sports+ Special Edition",
+      "make": "Leapmotor",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "leapmotor-c10",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-02-01",
+      "note": "50-car run from March 2026. Remove the row when sold out."
+    },
+    {
+      "name": "Nissan Ariya facelift",
+      "make": "Nissan",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "pre-launch",
+      "familyId": "nissan-ariya",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-03-01",
+      "note": "Held grades are MY25 run-out with drive-away deals to 31 Mar 2027; facelift revealed overseas, no AU date. Advance+ orderability is uncertain."
+    },
+    {
+      "name": "Renault Scenic E-Tech battery update",
+      "make": "Renault",
+      "powertrain": "bev",
+      "scope": "variant",
+      "status": "backlog",
+      "familyId": "renault-scenic-e-tech",
+      "checkedAt": "2026-11-27",
+      "recheckAfter": "2027-06-01",
+      "note": "Europe moved to EV67/EV89 packs; AU still lists 60/87 kWh."
+    },
+    {
+      "name": "Mitsubishi ASX VR-e",
+      "make": "Mitsubishi",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "mitsubishi-asx-vr-e",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Denza D9",
+      "make": "Denza",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "denza-d9",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Lexus ES (electric)",
+      "make": "Lexus",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "lexus-es",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "BMW iX4",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "bmw-ix4",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "BMW i3 (new sedan)",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "bmw-i3",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Leapmotor B03X",
+      "make": "Leapmotor",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "leapmotor-b03x",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Polestar 4 SUV (or fold into polestar-4)",
+      "make": "Polestar",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "polestar-4-suv",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Range Rover Sport Electric",
+      "make": "Land Rover",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "land-rover-range-rover-sport-electric",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "GWM Haval H7 PHEV",
+      "make": "GWM",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "gwm-haval-h7-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "BYD Atto 2 DM-i",
+      "make": "BYD",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "byd-atto2-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "BYD M9 PHEV",
+      "make": "BYD",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "byd-m9-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "GAC M8 PHEV",
+      "make": "GAC",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "gac-m8-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Mercedes-Benz GLE 450e",
+      "make": "Mercedes-Benz",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "mercedes-gle-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Range Rover Velar P400e",
+      "make": "Land Rover",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "land-rover-range-rover-velar-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Range Rover Sport PHEV",
+      "make": "Land Rover",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "land-rover-range-rover-sport-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "VW Touareg PHEV",
+      "make": "Volkswagen",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "vw-touareg-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Cupra Leon PHEV",
+      "make": "Cupra",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "backlog",
+      "familyId": "cupra-leon-phev",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "On sale per the 2026-11-26 sweep (see docs/refresh-log/2026-11-26/sweep.md); not yet researched. Research as a new family."
+    },
+    {
+      "name": "Kia PV5",
+      "make": "Kia",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2026-12-15",
+      "note": "Due Dec 2026. (2026-11-26 sweep)"
+    },
+    {
+      "name": "XPeng L03",
+      "make": "XPeng",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-02-01",
+      "note": "Pre-orders open at sweep. (2026-11-26 sweep)"
+    },
+    {
+      "name": "HQ E-HS9",
+      "make": "Hongqi",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-01-15",
+      "note": "Due Jan 2027. (2026-11-26 sweep)"
+    },
+    {
+      "name": "HQ EHS5",
+      "make": "Hongqi",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "HQ EHS4",
+      "make": "Hongqi",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Mercedes-Benz C 400 electric",
+      "make": "Mercedes-Benz",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Electric C-Class announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Mercedes-Benz GLA electric",
+      "make": "Mercedes-Benz",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Due 1H 2027, replaces the EQA. (2026-11-26 sweep)"
+    },
+    {
+      "name": "BMW iX5",
+      "make": "BMW",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-04-01",
+      "note": "Due about mid-2027, succeeds the iX. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Geely Monjaro EM-i",
+      "make": "Geely",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Geely Emgrand L EM-i",
+      "make": "Geely",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Geely Battleship 700",
+      "make": "Geely",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Nissan Navara Pro PHEV",
+      "make": "Nissan",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Ute PHEV confirmed for AU in 2027. (2026-11-26 sweep)"
+    },
+    {
+      "name": "VW ID. Tiguan",
+      "make": "Volkswagen",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Genesis GV90",
+      "make": "Genesis",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Cupra Raval",
+      "make": "Cupra",
+      "powertrain": "bev",
+      "scope": "model",
+      "status": "pre-launch",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-03-01",
+      "note": "Announced for AU. (2026-11-26 sweep)"
+    },
+    {
+      "name": "Range Rover Evoque P300e",
+      "make": "Land Rover",
+      "powertrain": "phev",
+      "scope": "model",
+      "status": "not-on-sale",
+      "checkedAt": "2026-11-26",
+      "recheckAfter": "2027-05-26",
+      "note": "Dropped for MY27 (2026-11-26 sweep)."
     }
   ]
 }

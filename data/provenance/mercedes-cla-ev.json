@@ -1,0 +1,173 @@
+{
+  "familyId": "mercedes-cla-ev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mercedes-cla-ev-200-eq": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-rwd-electric-jskakawf20260717",
+        "note": "CarExpert MY2027 variant page, released in Australia 5 July 2026; Chasing Cars 22 Oct 2026 says the sedan is 'currently offered in Australia in 200, 220 and 350 trims'. mercedes-benz.com.au configurator returns 403."
+      },
+      "listPrice": {
+        "value": 72200,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-rwd-electric-jskakawf20260717",
+        "note": "CarExpert MY2027 page: 'prices starting at $72,200' before on-road costs; same figure in CarExpert price-and-specs article ('Price before on-roads' table header) and Chasing Cars review (5 Aug 2026). No price change reported since launch. Manufacturer price list unreachable (403)."
+      },
+      "batteryKwh": {
+        "value": 58,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3370/Mercedes-Benz-CLA-200",
+        "note": "usable; EV Database gives 60 kWh nominal, 58 kWh usable for the same variant; CarExpert AU spec also says 58 kWh usable"
+      },
+      "rangeKm": {
+        "value": 470,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-rwd-electric-jskakawf20260717",
+        "note": "WLTP combined for the AU 18-inch spec; below EV Database WLTP band (542 km TEL / 458 km TEH), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-rwd-electric-jskakawf20260717",
+        "note": "WLTP combined 144 Wh/km (rated, includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 405,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-rwd-electric-jskakawf20260717",
+        "note": "VDA, rear seats up to the lower window edge (cargo-cover convention); 101 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 666,
+        "basis": "judged",
+        "note": "no seats-folded figure published for the sedan (Mercedes quotes 1,290 L only for the Shooting Brake). Scaled 405 × (977/594) from the tesla-model-3 sedan ratio; held 900 had no recorded basis. The wagon ratio (1290/455) would give ~1,150 but a sedan's boot aperture limits it."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-rwd-electric-jskakawf20260717"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mercedes-benz-cla-price-and-specs",
+        "note": "CarExpert AU price-and-specs table, braked; EV Database agrees (1500 kg)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-rwd-electric-jskakawf20260717",
+        "note": "60 months, unlimited km, whole vehicle; battery 96 months/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "kept at held value; anchored to tesla-model-3-long-range-rwd ($61,900, 2550 — Tesla premiums run high), polestar-2-long-range-dual-motor ($71,400, 2200) and mercedes-eqa-250-plus ($86,700, 2250)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one curve per Mercedes brand by owner convention: matches mercedes-eqa (refreshed 2026-11-26). Steeper than mainstream default on weak Mercedes EV resale (EQA run-out stock at ~$65,490 drive-away against $86,700 RRP)."
+      }
+    },
+    "mercedes-cla-ev-350-4matic-eq": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-4x4-electric-jskakawk20260717",
+        "note": "CarExpert MY2027 variant page, released in Australia 5 July 2026; Chasing Cars 22 Oct 2026 says the sedan is 'currently offered in Australia in 200, 220 and 350 trims'. mercedes-benz.com.au configurator returns 403."
+      },
+      "listPrice": {
+        "value": 91300,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-4x4-electric-jskakawk20260717",
+        "note": "CarExpert MY2027 page: 'prices starting at $91,300' before on-road costs; same figure in CarExpert price-and-specs article ('Price before on-roads' table header) and Chasing Cars review (5 Aug 2026). No price change reported since launch. Manufacturer price list unreachable (403)."
+      },
+      "batteryKwh": {
+        "value": 85,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3140/Mercedes-Benz-CLA-350-4MATIC",
+        "note": "usable; EV Database gives 90 kWh nominal, 85 kWh usable for the same variant; CarExpert AU spec also says 85 kWh usable"
+      },
+      "rangeKm": {
+        "value": 663,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-4x4-electric-jskakawk20260717",
+        "note": "WLTP combined for the AU 19-inch spec; below EV Database WLTP band (770 km TEL / 648 km TEH), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-4x4-electric-jskakawk20260717",
+        "note": "WLTP combined 149 Wh/km (rated, includes charging losses)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 405,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-4x4-electric-jskakawk20260717",
+        "note": "VDA, rear seats up to the lower window edge (cargo-cover convention); 101 L frunk not added"
+      },
+      "bootLitresSeatsDown": {
+        "value": 666,
+        "basis": "judged",
+        "note": "no seats-folded figure published for the sedan (Mercedes quotes 1,290 L only for the Shooting Brake). Scaled 405 × (977/594) from the tesla-model-3 sedan ratio; held 900 had no recorded basis. The wagon ratio (1290/455) would give ~1,150 but a sedan's boot aperture limits it."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-4x4-electric-jskakawk20260717"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mercedes-benz-cla-price-and-specs",
+        "note": "CarExpert AU price-and-specs table, braked; EV Database agrees (1800 kg)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/mercedes-benz/cla/2027-sedan-4x4-electric-jskakawk20260717",
+        "note": "60 months, unlimited km, whole vehicle; battery 96 months/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2500,
+        "basis": "judged",
+        "note": "kept at held value; anchored to polestar-2-long-range-dual-motor-performance ($85,080, 2600), mercedes-eqa-250-plus ($86,700, 2250) and tesla-model-3-performance ($80,900, 3150)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one curve per Mercedes brand by owner convention: matches mercedes-eqa (refreshed 2026-11-26). Steeper than mainstream default on weak Mercedes EV resale (EQA run-out stock at ~$65,490 drive-away against $86,700 RRP)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mercedes-cla-ev-200-eq.bootLitresSeatsDown: judged by ratio from tesla-model-3; no published sedan figure",
+    "mercedes-cla-ev-350-4matic-eq.bootLitresSeatsDown: judged by ratio from tesla-model-3; no published sedan figure",
+    "mercedes-cla-ev-200-eq.listPrice: CarExpert/Chasing Cars 'before on-road costs', not the manufacturer price list (403)",
+    "mercedes-cla-ev-350-4matic-eq.listPrice: CarExpert 'before on-road costs', not the manufacturer price list (403); $361 under the LCT threshold, so any MY27 rise would cross it",
+    "mercedes-cla-ev-200-eq.availability: configurator unreachable (403); rests on CarExpert MY27 listing and Chasing Cars Oct 2026",
+    "mercedes-cla-ev-350-4matic-eq.availability: configurator unreachable (403); rests on CarExpert MY27 listing and Chasing Cars Oct 2026",
+    "mercedes-cla-ev-200-eq.depreciationCurve: judged, brand convention",
+    "mercedes-cla-ev-350-4matic-eq.depreciationCurve: judged, brand convention",
+    "mercedes-cla-ev-200-eq.insuranceAnnual: judged",
+    "mercedes-cla-ev-350-4matic-eq.insuranceAnnual: judged"
+  ]
+}

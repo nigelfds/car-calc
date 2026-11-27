@@ -11,8 +11,8 @@
     "batteryKwh": 18.9,
     "rangeKm": 86,
     "consumptionKwhPer100km": 22.0,
-    "combinedRangeKm": 877,
-    "fuelConsumptionL100km": 6.7,
+    "combinedRangeKm": 832,
+    "fuelConsumptionL100km": 7.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 472,
@@ -21,8 +21,15 @@
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 1650,
-    "depreciationCurve": [1, 0.76, 0.66, 0.58, 0.51, 0.45],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.76,
+      0.66,
+      0.58,
+      0.51,
+      0.45
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mitsubishi-outlander-phev-aspire",
@@ -34,10 +41,10 @@
     "powertrain": "phev",
     "listPrice": 66790,
     "batteryKwh": 18.9,
-    "rangeKm": 86,
-    "consumptionKwhPer100km": 22.0,
-    "combinedRangeKm": 877,
-    "fuelConsumptionL100km": 6.7,
+    "rangeKm": 83,
+    "consumptionKwhPer100km": 22.8,
+    "combinedRangeKm": 829,
+    "fuelConsumptionL100km": 7.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 191,
@@ -46,8 +53,15 @@
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 1750,
-    "depreciationCurve": [1, 0.76, 0.66, 0.58, 0.51, 0.45],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.76,
+      0.66,
+      0.58,
+      0.51,
+      0.45
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mitsubishi-outlander-phev-exceed",
@@ -59,10 +73,10 @@
     "powertrain": "phev",
     "listPrice": 71640,
     "batteryKwh": 18.9,
-    "rangeKm": 86,
-    "consumptionKwhPer100km": 22.0,
-    "combinedRangeKm": 877,
-    "fuelConsumptionL100km": 6.7,
+    "rangeKm": 83,
+    "consumptionKwhPer100km": 22.8,
+    "combinedRangeKm": 829,
+    "fuelConsumptionL100km": 7.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 472,
@@ -71,8 +85,15 @@
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 1800,
-    "depreciationCurve": [1, 0.76, 0.66, 0.58, 0.51, 0.45],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.76,
+      0.66,
+      0.58,
+      0.51,
+      0.45
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mitsubishi-outlander-phev-exceed-tourer",
@@ -84,10 +105,10 @@
     "powertrain": "phev",
     "listPrice": 74490,
     "batteryKwh": 18.9,
-    "rangeKm": 86,
-    "consumptionKwhPer100km": 22.0,
-    "combinedRangeKm": 877,
-    "fuelConsumptionL100km": 6.7,
+    "rangeKm": 83,
+    "consumptionKwhPer100km": 22.8,
+    "combinedRangeKm": 829,
+    "fuelConsumptionL100km": 7.1,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 472,
@@ -96,7 +117,14 @@
     "towKg": 1600,
     "warrantyYears": 5,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.76, 0.66, 0.58, 0.51, 0.45],
-    "sourcedAt": "2026-07-28"
+    "depreciationCurve": [
+      1,
+      0.76,
+      0.66,
+      0.58,
+      0.51,
+      0.45
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

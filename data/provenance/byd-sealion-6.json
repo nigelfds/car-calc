@@ -1,0 +1,316 @@
+{
+  "familyId": "byd-sealion-6",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-sealion-6-essential": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-6",
+        "note": "bydautomotive.com.au/configurator/sealion-6 301-redirects to BYD's VirtualYard configurator; on 2026-11-26 it lists exactly three grades: Essential $42,990, Dynamic Extended $46,990, Premium Extended $52,990. Dynamic Standard Range and Premium Standard Range (both in BYD's May 2026 brochure and CarExpert's 2026 review line-up) are no longer offered. CarExpert's 2026 model page also lists the same three variants."
+      },
+      "listPrice": {
+        "value": 42990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/sealion-6/2025-essential-1-5l-suv-fwd-electric-jsgmsofk20260101",
+        "note": "CarExpert spec page: 'prices starting at $42,990' before on-road costs (drive-away $47,182 Sydney shown separately); CarExpert 2026 review '$42,990 plus on-road costs'. BYD configurator shows $42,990 on 2026-11-26 with drive-away needing a postcode; $42,990 is below the computed Victorian drive-away ($45,676), so it is the list price."
+      },
+      "batteryKwh": {
+        "value": 18.3,
+        "basis": "sourced",
+        "url": "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf",
+        "note": "usable: EU Seal U DM-i 2026 leaflet (CZ) 'Kapacita baterie - vyuzitelna (usable) 18,3 kWh' for Boost (FWD, 160kW, same powertrain); CarExpert lists 18.3 usable / 18.32 max; AU brochure 18.3kWh."
+      },
+      "rangeKm": {
+        "value": 80,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf",
+        "note": "EU Seal U DM-i Boost (FWD, 18.3kWh, 160kW, same powertrain as AU Essential) WLTP electric range combined 80km. AU brochure figure 92km is explicitly 'NEDC' (SOC 25-100%) and higher than WLTP, so rejected per direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 22.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 18.3/80 = 22.875. EU leaflet's 19 kWh/100km and AU 169 Wh/km are label/weighted quantities, not used."
+      },
+      "combinedRangeKm": {
+        "value": 1151,
+        "basis": "derived",
+        "note": "80 WLTP electric + 60L tank (AU brochure) / 5.6 L/100km x 100 = 80 + 1071.4 = 1151"
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.6,
+        "basis": "sourced",
+        "url": "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf",
+        "note": "Charge-sustaining WLTP: EU Boost 'Spotreba paliva - kombinovana 5,6 l/100 km', listed with low/medium/high CS phases and separate from the 2.2 weighted figure. Chosen over AU brochure 'SOC <25%' 4.72 (ADR 81/02, NEDC-based) for consistency with byd-shark-6 (WLTP CS). CarExpert measured 4.8 indicated starting from full charge."
+      },
+      "insuranceAnnual": {
+        "value": 1450,
+        "basis": "judged",
+        "note": "Kept held value. Anchored to jaecoo-j7-shs-summit ($42,990, 1600), geely-starray-em-i-complete ($37,490, 1500) and byd-sealion-5-premium ($37,990, 1320); BYD rows run lower than Chery-group rows at similar prices."
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/sealion-6/2025-essential-1-5l-suv-fwd-electric-jsgmsofk20260101",
+        "note": "CarExpert spec page: 750kg braked, 750kg unbraked; EU Boost leaflet 750 braked."
+      },
+      "bootLitresSeatsUp": {
+        "value": 425,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "BYD AU brochure 'Boot / Load Space Min (L) 425', all grades; CarExpert spec pages give 425L VDA to the window line (cargo-cover convention). Same figure on the EU Seal U leaflet for 18.3kWh cars."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1440,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "BYD AU brochure 'Boot / Load Space Max (L) 1,440', all grades; CarExpert lists 1,440L VDA seats down. Not stated whether to roof or belt line."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "brochure 'Seating capacity 5'"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/sealion-6/2025-essential-1-5l-suv-fwd-electric-jsgmsofk20260101",
+        "note": "72 months/150,000km whole vehicle; battery 96 months/160,000km (in pros). Matches BYD reference value 6; BYD AU model page states 6 years/150,000km."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Sealion 5, Seal 6, Sealion 7, Atto 1/2, Dolphin, Shark 6 as re-set today). Kept from held data; no evidence specific to the Sealion 6 to deviate. Note byd-atto3 carries a steeper family-specific curve."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "AU brochure combined fuel consumption 'SOC 25%-100%' 1.1 L/100km (ADR 81/02 label) <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined tailpipe CO2 <= 120 g/km; AU brochure CO2 24 g/km."
+      }
+    },
+    "byd-sealion-6-dynamic-extended-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-6",
+        "note": "bydautomotive.com.au/configurator/sealion-6 301-redirects to BYD's VirtualYard configurator; on 2026-11-26 it lists exactly three grades: Essential $42,990, Dynamic Extended $46,990, Premium Extended $52,990. Dynamic Standard Range and Premium Standard Range (both in BYD's May 2026 brochure and CarExpert's 2026 review line-up) are no longer offered. CarExpert's 2026 model page also lists the same three variants."
+      },
+      "listPrice": {
+        "value": 46990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/byd-sealion-6-new-long-range-option-joins-phev-suv-lineup",
+        "note": "CarExpert launch news: '$46,990 before on-road costs'; RACQ 'RRP (excluding on-road costs)' $46,990. BYD configurator lists Dynamic Extended at $46,990 on 2026-11-26; below computed Vic drive-away ($49,844), so list."
+      },
+      "batteryKwh": {
+        "value": 26.6,
+        "basis": "sourced",
+        "url": "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf",
+        "note": "usable: EU Seal U DM-i 2026 leaflet (CZ) Comfort (FWD, 160kW, same powertrain) 'vyuzitelna (usable) 26,6 kWh'; AU brochure 26.6kWh."
+      },
+      "rangeKm": {
+        "value": 125,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf",
+        "note": "EU Seal U DM-i Comfort (FWD, 26.6kWh, 160kW, same powertrain) WLTP electric range combined 125km. AU brochure 140km is labelled NEDC (SOC 20-100%), higher than WLTP, rejected. The 2027 facelift Comfort (130km, DE brochure) has a different 175kW powertrain and is not this car."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 26.6/125 = 21.28"
+      },
+      "combinedRangeKm": {
+        "value": 1178,
+        "basis": "derived",
+        "note": "125 WLTP electric + 60L tank / 5.7 x 100 = 125 + 1052.6 = 1178"
+      },
+      "fuelConsumptionL100km": {
+        "value": 5.7,
+        "basis": "sourced",
+        "url": "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf",
+        "note": "Charge-sustaining WLTP: EU Comfort 'kombinovana 5,7 l/100 km' (weighted 1.5 shown separately). AU brochure 'SOC <20%' 4.8 is NEDC-based; WLTP chosen for consistency with the Essential row and byd-shark-6."
+      },
+      "insuranceAnnual": {
+        "value": 1500,
+        "basis": "judged",
+        "note": "Kept held value: $50 above the Essential for $4,000 more; anchored to jaecoo-j7-shs-summit-awd ($45,990, 1700) and geely-starray-em-i-inspire-extended-range ($41,490, 1600)."
+      },
+      "towKg": {
+        "value": 750,
+        "basis": "sourced",
+        "url": "https://www.byd.com/material/byd-site/cz/pdfs/042026/cz/SEAL%20U%20DM-i%20%282026%29_CZ_web.pdf",
+        "note": "EU Comfort (same FWD 26.6kWh powertrain) braked 750kg; CarExpert gives 750kg for the AU FWD Essential and 1,300kg only for AWD grades. No AU sheet lists this grade separately."
+      },
+      "bootLitresSeatsUp": {
+        "value": 425,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "BYD AU brochure 'Boot / Load Space Min (L) 425', all grades; CarExpert spec pages give 425L VDA to the window line (cargo-cover convention). Same figure on the EU Seal U leaflet for 18.3kWh cars."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1440,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "BYD AU brochure 'Boot / Load Space Max (L) 1,440', all grades; CarExpert lists 1,440L VDA seats down. Not stated whether to roof or belt line."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "brochure 'Seating capacity 5'"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/sealion-6/2025-essential-1-5l-suv-fwd-electric-jsgmsofk20260101",
+        "note": "72 months/150,000km whole vehicle; battery 96 months/160,000km (in pros). Matches BYD reference value 6; BYD AU model page states 6 years/150,000km."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Sealion 5, Seal 6, Sealion 7, Atto 1/2, Dolphin, Shark 6 as re-set today). Kept from held data; no evidence specific to the Sealion 6 to deviate. Note byd-atto3 carries a steeper family-specific curve."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "AU brochure combined 'SOC 20%-100%' 0.8 L/100km (ADR 81/02 label) <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car = CO2 <= 120 g/km; AU brochure CO2 17 g/km."
+      }
+    },
+    "byd-sealion-6-premium-extended-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-sealion-6",
+        "note": "bydautomotive.com.au/configurator/sealion-6 301-redirects to BYD's VirtualYard configurator; on 2026-11-26 it lists exactly three grades: Essential $42,990, Dynamic Extended $46,990, Premium Extended $52,990. Dynamic Standard Range and Premium Standard Range (both in BYD's May 2026 brochure and CarExpert's 2026 review line-up) are no longer offered. CarExpert's 2026 model page also lists the same three variants."
+      },
+      "listPrice": {
+        "value": 52990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/sealion-6/2025-premium-extended-1-5l-suv-4x4-electric-jsgwsgs520260101",
+        "note": "CarExpert spec page: 'Prices start at $52,990 before on-road costs' (drive-away $57,642 Sydney separately); RACQ '$52,990 RRP (excluding on-road costs)'. BYD configurator lists Premium Extended at $52,990 on 2026-11-26; below computed Vic drive-away ($56,096), so list."
+      },
+      "batteryKwh": {
+        "value": 26.6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "AU brochure Premium Extended Range 26.6kWh; same Blade pack the EU leaflet (CZ) labels usable 26.6kWh on the Comfort."
+      },
+      "rangeKm": {
+        "value": 111,
+        "basis": "derived",
+        "note": "No market sells this exact car (pre-facelift 253kW AWD + 26.6kWh): EU pre-facelift Design AWD has 18.3kWh; EU 2027 facelift Design AWD has 26.6kWh but a 275kW powertrain (WLTP 114km, DE brochure). Derived: AU NEDC 128km x WLTP/NEDC ratio of the AWD 18.3kWh pair (EU Design 70km WLTP / AU Premium Standard 81km NEDC = 0.864) = 110.6. Cross-checks: FWD ratios 0.870/0.893 give 111-114; facelift 26.6 AWD WLTP 114."
+      },
+      "consumptionKwhPer100km": {
+        "value": 24,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 26.6/111 = 23.96; the 2027 facelift Design AWD 26.6kWh publishes 24.0 kWh/100km WLTP."
+      },
+      "combinedRangeKm": {
+        "value": 1007,
+        "basis": "derived",
+        "note": "111 electric + 60L tank / 6.7 x 100 = 111 + 895.5 = 1007"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.7,
+        "basis": "judged",
+        "note": "No WLTP charge-sustaining figure for this exact car. Scaled from AU brochure low-SOC figures: Premium Extended 'SOC <20%' 5.5 vs Premium Standard 'SOC <25%' 5.8 (NEDC), applied to EU pre-facelift Design AWD WLTP CS 7.1: 7.1 x 5.5/5.8 = 6.73. Equivalently AU 5.5 x the AWD WLTP/NEDC ratio 1.224. Sits with geely-starray-em-i-inspire-awd 6.7 and jaecoo-j7-shs-summit-awd 6.4; held value was 5.8."
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "Kept held Premium AWD value; anchored to geely-starray-em-i-inspire-awd ($44,990, 1700), jaecoo-j7-shs-summit-awd ($45,990, 1700) and mitsubishi-outlander-phev-es ($58,990, 1650)."
+      },
+      "towKg": {
+        "value": 1300,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/sealion-6/2025-premium-extended-1-5l-suv-4x4-electric-jsgwsgs520260101",
+        "note": "CarExpert Premium Extended spec page: 1,300kg braked, 750kg unbraked; EU AWD leaflet 1,300 braked."
+      },
+      "bootLitresSeatsUp": {
+        "value": 425,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "BYD AU brochure 'Boot / Load Space Min (L) 425', all grades; CarExpert spec pages give 425L VDA to the window line (cargo-cover convention). Same figure on the EU Seal U leaflet for 18.3kWh cars."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1440,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "BYD AU brochure 'Boot / Load Space Max (L) 1,440', all grades; CarExpert lists 1,440L VDA seats down. Not stated whether to roof or belt line."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "brochure 'Seating capacity 5'"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/byd/sealion-6/2025-essential-1-5l-suv-fwd-electric-jsgmsofk20260101",
+        "note": "72 months/150,000km whole vehicle; battery 96 months/160,000km (in pros). Matches BYD reference value 6; BYD AU model page states 6 years/150,000km."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by most BYD rows (Sealion 5, Seal 6, Sealion 7, Atto 1/2, Dolphin, Shark 6 as re-set today). Kept from held data; no evidence specific to the Sealion 6 to deviate. Note byd-atto3 carries a steeper family-specific curve."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-SEALION-6-2025.pdf",
+        "note": "AU brochure combined 'SOC 20%-100%' 1.1 L/100km (ADR 81/02 label) <= 3.5; RACQ also quotes 1.1"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car = CO2 <= 120 g/km; AU brochure CO2 25 g/km."
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-sealion-6-premium-extended-range.fuelConsumptionL100km: judged 6.7 by scaling; no WLTP charge-sustaining figure exists for the 253kW AWD 26.6kWh car",
+    "byd-sealion-6-premium-extended-range.rangeKm: derived 111 from AU NEDC 128 x AWD WLTP/NEDC ratio; no market publishes WLTP for this exact powertrain (facelift 275kW car gets 114)",
+    "byd-sealion-6-premium-extended-range.combinedRangeKm: built on the derived range and judged fuel figure",
+    "byd-sealion-6-dynamic-extended-range.towKg: 750 from the EU Comfort leaflet and the AU FWD Essential; no AU source lists this grade separately",
+    "byd-sealion-6-*.bootLitresSeatsDown: 1,440 VDA, not stated whether to roof or belt line",
+    "byd-sealion-6-*.insuranceAnnual: judged, held values kept",
+    "byd-sealion-6-*.fuelConsumptionL100km (Essential, Dynamic Extended): EU WLTP charge-sustaining for the same powertrain, chosen over the lower AU NEDC low-SOC figures (4.72/4.8)"
+  ]
+}

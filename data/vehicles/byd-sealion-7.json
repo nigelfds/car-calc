@@ -9,15 +9,22 @@
     "listPrice": 54990,
     "batteryKwh": 82.5,
     "rangeKm": 482,
-    "consumptionKwhPer100km": 17.0,
+    "consumptionKwhPer100km": 19.9,
     "bootLitresSeatsUp": 500,
     "bootLitresSeatsDown": 1789,
     "seats": 5,
     "towKg": 750,
     "warrantyYears": 6,
     "insuranceAnnual": 1650,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-sealion-7-performance",
@@ -29,14 +36,21 @@
     "listPrice": 63990,
     "batteryKwh": 82.5,
     "rangeKm": 456,
-    "consumptionKwhPer100km": 17.9,
+    "consumptionKwhPer100km": 21.4,
     "bootLitresSeatsUp": 500,
     "bootLitresSeatsDown": 1789,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 6,
     "insuranceAnnual": 1900,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-26"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

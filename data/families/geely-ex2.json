@@ -1,27 +1,31 @@
 {
   "id": "geely-ex2",
-  "summary": "The EX2 is Geely's second Australian model and its cheapest, a rear-wheel-drive electric light hatch that opened for order in July 2026 at $26,490 before on-road costs. Reviewers rate the packaging highly for the money — 375 litres of boot plus a 70-litre frunk, genuine rear legroom and a cabin that reads above its price — but early drives split on the chassis, with Chasing Cars criticising body control and tyre grip while CarExpert found it agile and fun around town. The bigger caveats are objective: the base car's 252km WLTP range and 14.2-second 0-100km/h, and no ANCAP result at the research date.",
+  "summary": "The EX2 is Geely's cheapest Australian model, a rear-wheel-drive electric light hatch on sale since July 2026 at $26,490 before on-road costs, and it earned a five-star ANCAP rating under the 2026 criteria. Reviewers rate the packaging highly for the money \u2014 375 litres of boot plus a 70-litre frunk, genuine rear legroom and a cabin that reads above its price \u2014 but the dynamics divide them: CarExpert's full review and Chasing Cars both criticise the bobbing ride, body roll and grip, while RACV found its road manners solid. The objective caveats are the base car's 252km WLTP range and 14.2-second 0-100km/h.",
   "pros": [
     "Second-cheapest new EV in Australia at $26,490 plus on-road costs, undercut only by the BYD Atto 1 Essential at $23,990",
     "375-litre boot plus a 70-litre frunk beats the Hyundai Inster's 280 litres from a 4,135mm-long body",
-    "Rear-wheel drive with multi-link independent rear suspension, rare in a light hatch where the BYD Dolphin and MG 4 Urban rivals are front-drive or pricier",
+    "Five-star ANCAP rating under the 2026-28 criteria covering both grades built from June 2026 (86% crash protection), though eCall is not active until September 2027",
     "Seven-year unlimited-kilometre vehicle warranty with eight years on the high-voltage battery, matching the Geely EX5",
-    "Launch offer running 12 July to 31 August 2026 adds a 7kW home charger (installation excluded) and a free premium paint upgrade"
+    "Efficient in practice: CarExpert measured 13.8kWh/100km on test against the Complete's 15.9kWh/100km WLTP claim"
   ],
   "cons": [
     "The 60kW Complete takes a claimed 14.2 seconds to 100km/h, which reviewers flag as marginal for freeway merging; the 85kW Inspire is still 11.5s",
-    "252km WLTP on the Complete is the shortest range of any EV in this price band — the Inspire's 345km costs $4,500 more",
+    "252km WLTP on the Complete is the shortest range of any EV in this price band \u2014 the Inspire's 345km costs $4,500 more",
     "DC charging peaks at just 60kW (Complete) and 80kW (Inspire), and AC at 6.6kW, so it is a poor road-trip car",
-    "No ANCAP or Euro NCAP crash rating published as at July 2026, unlike the five-star Geely EX5",
-    "Chasing Cars' pre-launch drive found poor body control under brakes and through corners plus noisy, low-grip tyres, a criticism CarExpert's short local drive did not reproduce"
+    "CarExpert's full review found the ride bobs on smooth roads and thumps over joins, with slow steering and body roll when pushed, echoing Chasing Cars' criticism of body control and tyre grip",
+    "Not rated to tow: no braked towing capacity is published for either grade"
   ],
   "sources": [
+    "https://www.geely.com.au/build/geely-ex2",
     "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
-    "https://www.carexpert.com.au/car-reviews/2026-geely-ex2-review-quick-drive",
+    "https://www.carexpert.com.au/car-reviews/2026-geely-ex2-review",
+    "https://www.carexpert.com.au/geely/ex2/2027-complete-hatchback-rwd-electric-jskf5w8o20260714",
+    "https://www.carexpert.com.au/geely/ex2/2027/inspire/features-and-specs",
+    "https://www.racv.com.au/royalauto/car-reviews/geely/2026-geely-ex2-review.html",
     "https://www.chasingcars.com.au/reviews/small-suvs/geely-ex2-2026-review-international-first-drive/",
-    "https://www.racv.com.au/royalauto/transport/electric-vehicles/2026-geely-ex2-price-specs-release-date.html",
-    "https://www.carsales.com.au/editorial/details/2026-geely-ex2-priced-for-australia-152473/",
-    "https://www.geely.com.au/build/geely-ex2"
+    "https://www.ancap.com.au/safety-ratings/geely/ex2/300d6e",
+    "https://ev-database.org/uk/car/3700/Geely-EX2-35-kWh",
+    "https://ev-database.org/uk/car/3701/Geely-EX2-47-kWh"
   ],
-  "sourcedAt": "2026-07-31"
+  "sourcedAt": "2026-11-26"
 }

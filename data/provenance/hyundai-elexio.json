@@ -1,0 +1,177 @@
+{
+  "familyId": "hyundai-elexio",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "hyundai-elexio-base": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/elexio",
+        "note": "Hyundai AU model page lists two grades, ELEXIO (Base) and Elite (Elite-only features flagged), meta 'from $58,990. Build yours'; Build & Price (/elexio-1) is JS-rendered and showed no price lines to a fetch. CarsGuide lists 2026 and 2027 MY at $58,990-$61,990, consistent with two grades."
+      },
+      "listPrice": {
+        "value": 58990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-hyundai-elexio-new-base-model-priced-for-australia",
+        "note": "CarExpert (23 Feb 2026): 'priced from $58,990 before on-road costs' in words. Re-verified 2026-11-26: Hyundai AU model page meta 'from $58,990' (manufacturer's own figure; does not itself say plus on-roads); CarsGuide MSRP $58,990 for 2026 and 2027 MY. Hyundai 'Big Runout' bonuses (deducted from drive-away, models unnamed, to 31 Dec 2026) are campaigns, not used."
+      },
+      "batteryKwh": {
+        "value": 84,
+        "basis": "derived",
+        "url": "https://evdb.nz/v/kia-ev5",
+        "note": "Settled gross vs usable: Hyundai AU spec sheet gives 'Capacity 88.1 kWh' at 399.42 V, LFP, no gross/usable label; CarExpert calls it a 'BYD-supplied LFP battery pack'. This is the same pack as the Kia EV5 long-range (Kia AU brochure 399.4 V x 220.6 Ah = 88.1 kWh, labelled '(Gross)' by Kia NZ), so the E-GMP gross rule is not what applies, but Kia's own gross label on the identical BYD pack is. Usable taken as evdb.nz's 84 kWh for the 88.1 kWh nominal EV5 pack, matching kia-ev5 rows. ZeCar's '88.1 kWh usable of 90 kWh' rejected (no 90 kWh figure anywhere in Hyundai's documents); EVKX reports ~87 usable but returned 403 and is not cited."
+      },
+      "rangeKm": {
+        "value": 562,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet (dated 16 Feb 2026): 'All electric range (WLTP)' 562 km for this grade on 18-inch 225/60 R18. No European WLTP exists (not sold there); China-market CLTC is 722 km for the 88.1 kWh 2WD (carnewschina database), so the AU figure is lower than CLTC and not a CLTC/NEDC carry-over. Implied 84/562 = 14.9 kWh/100km is plausible WLTP; Kia EV5 same pack 555 km WLTP."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.2,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet 'Electric driving efficiency (Combined)' 18.2 kWh/100 km, ADR 81/02, one figure for both grades; grid-to-wheel incl. charging losses, so sits ~18-22% above usable/range. CarExpert tested 20.2."
+      },
+      "bootLitresSeatsUp": {
+        "value": 506,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet 'Cargo space behind 2nd row (VDA)' 506 L (VDA, to the cargo cover); frunk '-' (none). Model page also says 506 L; one feature blurb says 504 L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1540,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet 'Maximum cargo volume (VDA)' 1,540 L. Hyundai does not say whether this is to the belt line or to the roof; 'maximum' VDA is often to the roof. No to-belt-line figure found in a review."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Spec sheet: 40:60 split rear bench with 3 rear top-tether anchors, two front seats; 5 seats"
+      },
+      "towKg": {
+        "value": 1250,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet towing capacity: braked 1,250 kg, unbraked 750 kg, max ball 100 kg; CarExpert review agrees 1,250 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/elexio",
+        "note": "Hyundai AU model page footnote H1: standard warranty 5 years unlimited km; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros). EV battery 8 yr/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "kept from held data; anchored to kia-ev5-air-long-range ($61,170, $1,800), xpeng-g6 RWD Long Range ($56,800, $1,900) and byd-sealion-7 Premium ($54,990, $1,650)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "kept softer Hyundai EV curve, matching hyundai-kona-electric and hyundai-inster (refreshed 2026-11-26 with the same curve); evidence: drive-away campaigns since launch ($59,990 D/A Elite to 31 Mar 2026; $57,990/$59,990 D/A per The Driven, May 2026) and Hyundai 'Big Runout' bonuses to 31 Dec 2026. Note hyundai-ioniq-5/ioniq-9 use the mainstream default, so the Hyundai brand is not yet on one curve."
+      }
+    },
+    "hyundai-elexio-elite": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/elexio",
+        "note": "Hyundai AU model page lists two grades, ELEXIO (Base) and Elite (Elite-only features flagged), meta 'from $58,990. Build yours'; Build & Price (/elexio-1) is JS-rendered and showed no price lines to a fetch. CarsGuide lists 2026 and 2027 MY at $58,990-$61,990, consistent with two grades."
+      },
+      "listPrice": {
+        "value": 61990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-hyundai-elexio-new-base-model-priced-for-australia",
+        "note": "CarExpert (23 Feb 2026): Elite 'will rise to $61,990 plus on-roads once the current $59,990 D/A launch offer ends on March 31, 2026'; CarExpert review table $61,990 before on-road costs. Re-verified 2026-11-26 via CarsGuide 2026/2027 MY range top $61,990. Hyundai's configurator did not render a price to a fetch. The Driven (May 2026) $59,990 drive-away was a campaign."
+      },
+      "batteryKwh": {
+        "value": 84,
+        "basis": "derived",
+        "url": "https://evdb.nz/v/kia-ev5",
+        "note": "Settled gross vs usable: Hyundai AU spec sheet gives 'Capacity 88.1 kWh' at 399.42 V, LFP, no gross/usable label; CarExpert calls it a 'BYD-supplied LFP battery pack'. This is the same pack as the Kia EV5 long-range (Kia AU brochure 399.4 V x 220.6 Ah = 88.1 kWh, labelled '(Gross)' by Kia NZ), so the E-GMP gross rule is not what applies, but Kia's own gross label on the identical BYD pack is. Usable taken as evdb.nz's 84 kWh for the 88.1 kWh nominal EV5 pack, matching kia-ev5 rows. ZeCar's '88.1 kWh usable of 90 kWh' rejected (no 90 kWh figure anywhere in Hyundai's documents); EVKX reports ~87 usable but returned 403 and is not cited."
+      },
+      "rangeKm": {
+        "value": 546,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet (dated 16 Feb 2026): 'All electric range (WLTP)' 546 km for this grade on 20-inch 255/45 R20. No European WLTP exists (not sold there); China-market CLTC is 722 km for the 88.1 kWh 2WD (carnewschina database), so the AU figure is lower than CLTC and not a CLTC/NEDC carry-over. Implied 84/546 = 15.4 kWh/100km is plausible WLTP; Kia EV5 same pack 555 km WLTP."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.2,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet 'Electric driving efficiency (Combined)' 18.2 kWh/100 km, ADR 81/02, one figure for both grades; grid-to-wheel incl. charging losses, so sits ~18-22% above usable/range. CarExpert tested 20.2."
+      },
+      "bootLitresSeatsUp": {
+        "value": 506,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet 'Cargo space behind 2nd row (VDA)' 506 L (VDA, to the cargo cover); frunk '-' (none). Model page also says 506 L; one feature blurb says 504 L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1540,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet 'Maximum cargo volume (VDA)' 1,540 L. Hyundai does not say whether this is to the belt line or to the roof; 'maximum' VDA is often to the roof. No to-belt-line figure found in a review."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Spec sheet: 40:60 split rear bench with 3 rear top-tether anchors, two front seats; 5 seats"
+      },
+      "towKg": {
+        "value": 1250,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/elexio/docs/Hyundai_ELEXIO_Specification_Sheet.pdf",
+        "note": "Hyundai AU spec sheet towing capacity: braked 1,250 kg, unbraked 750 kg, max ball 100 kg; CarExpert review agrees 1,250 kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.hyundai.com/au/en/cars/eco/elexio",
+        "note": "Hyundai AU model page footnote H1: standard warranty 5 years unlimited km; 7 years only if all scheduled services at an authorised Hyundai dealer (conditional, in pros). EV battery 8 yr/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "kept from held data; anchored to kia-ev5-air-long-range ($61,170, $1,800), xpeng-g6 RWD Long Range ($56,800, $1,900) and byd-sealion-7 Premium ($54,990, $1,650)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "kept softer Hyundai EV curve, matching hyundai-kona-electric and hyundai-inster (refreshed 2026-11-26 with the same curve); evidence: drive-away campaigns since launch ($59,990 D/A Elite to 31 Mar 2026; $57,990/$59,990 D/A per The Driven, May 2026) and Hyundai 'Big Runout' bonuses to 31 Dec 2026. Note hyundai-ioniq-5/ioniq-9 use the mainstream default, so the Hyundai brand is not yet on one curve."
+      }
+    }
+  },
+  "lowConfidence": [
+    "hyundai-elexio-base.depreciationCurve: brand split - Kona/Inster/Elexio use the softer curve, Ioniq 5/9 the mainstream default; orchestrator must pick one Hyundai curve",
+    "hyundai-elexio-elite.depreciationCurve: same brand split",
+    "hyundai-elexio-base.batteryKwh: 84 usable inferred from the identical Kia EV5 88.1 kWh pack (Kia NZ gross label, evdb.nz 84 usable); no Elexio-specific gross/usable statement found",
+    "hyundai-elexio-elite.batteryKwh: same as base",
+    "hyundai-elexio-base.bootLitresSeatsDown: 1,540 L 'maximum (VDA)' may be to the roof rather than the belt line",
+    "hyundai-elexio-elite.bootLitresSeatsDown: same as base",
+    "hyundai-elexio-base.listPrice: Hyundai Build & Price JS-rendered; $58,990 from Hyundai model page 'from' figure plus CarExpert 'before on-road costs' (Feb 2026) and CarsGuide MSRP; no dated Nov 2026 list-price statement",
+    "hyundai-elexio-elite.listPrice: no manufacturer-page Elite price; CarExpert (Feb 2026) and CarsGuide 2027 MY range top $61,990",
+    "hyundai-elexio-base.insuranceAnnual: judged, anchored to siblings",
+    "hyundai-elexio-elite.insuranceAnnual: judged, anchored to siblings"
+  ]
+}

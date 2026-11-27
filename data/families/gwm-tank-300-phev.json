@@ -1,38 +1,34 @@
 {
   "id": "gwm-tank-300-phev",
-  "summary": "The Tank 300 Hi4-T is the plug-in version of GWM's boxy body-on-frame off-roader, and Australian reviewers agree it is the cheapest way into a genuinely capable plug-in 4x4 — a 37.11kWh battery, a mechanical transfer case with front and rear locking diffs, and a 3000kg braked tow rating for about $56,000, where the only other plug-in SUV rated to tow 3000kg here costs more than twice as much. They also agree on where it falls down: the drivetrain calibration is the most-criticised thing about the car, with CarsGuide calling the throttle response 'awful' and carsales and EV Central both describing hesitation between petrol and electric power. Scores land in a narrow band — Chasing Cars 8.0/10, carsales 76/100 — and every reviewer makes the same caveat, that the running-cost case rests entirely on charging at home, because once the battery is flat this is a 2.6-tonne petrol 4x4 drinking 10 to 12L/100km.",
+  "summary": "The Tank 300 Hi4-T is the plug-in version of GWM's boxy body-on-frame off-roader, and Australian reviewers agree it is the cheapest way into a genuinely capable plug-in 4x4 — a 37.11kWh battery, a mechanical transfer case with front and rear locking diffs, and a 3000kg braked tow rating for $57,990 drive-away in Victoria, where the only other plug-in SUV rated to tow 3000kg here costs more than twice as much. They also agree on where it falls down: the drivetrain calibration is the most-criticised thing about the car, with CarsGuide calling the throttle calibration 'awful' and EV Central describing hesitation between petrol and electric power. Chasing Cars scores it 8.0/10, and every reviewer makes the same caveat, that the running-cost case rests entirely on charging at home, because once the battery is flat this is a 2.6-tonne petrol 4x4 drinking 10 to 12L/100km.",
   "pros": [
-    "A 3000kg braked tow rating with a genuine mechanical transfer case and front and rear locking differentials, at $55,990 — the only other plug-in hybrid SUV on sale in Australia rated to 3000kg is the Land Rover Defender 110 P300e, which starts at over $131,000, and every cheaper plug-in SUV tops out at 1500-2500kg",
-    "The 37.11kWh pack is the largest in any plug-in hybrid SUV under $60,000 here, claiming 115km of electric range, and independent testers got closer to the claim than usual: Chasing Cars saw 85-95km and EV Central about 90km, enough to cover a typical commute on the plug alone",
+    "A 3000kg braked tow rating with a genuine mechanical transfer case and front and rear locking differentials, from $57,990 drive-away ($54,732 before on-roads) — the only other plug-in hybrid SUV on sale in Australia rated to 3000kg is the Land Rover Defender 110 P300e, which starts at over $131,000, and every cheaper plug-in SUV tops out at 1500-2500kg",
+    "The 37.11kWh pack is the largest in any plug-in hybrid SUV under $60,000 before on-roads here, claiming 115km of electric range (NEDC), and independent testers got closer to the claim than usual: Chasing Cars saw 85-95km in stop-start driving and EV Central about 90km, enough to cover a typical commute on the plug alone",
     "300kW and 750Nm for a claimed 6.3sec 0-100km/h, plus 50kW DC fast charging on CCS2 (30-80 per cent in about 24 minutes) and 6kW vehicle-to-load — DC charging is rare at this price and lets the pack be usefully topped up on a trip rather than only overnight",
     "7-year/unlimited-km unconditional warranty with no dealer-servicing condition attached, plus separate 8-year/unlimited-km cover on the drive battery",
-    "Undercuts the Denza B5, its nearest plug-in off-road rival, by roughly $19,000 ($74,990), which is why reviewers repeatedly describe it as the cheapest serious plug-in hybrid four-wheel drive on sale in Australia"
+    "Undercuts the Denza B5, its nearest plug-in off-road rival, which launched at $74,990 drive-away, by roughly $17,000, which is why reviewers repeatedly describe it as the cheapest serious plug-in hybrid four-wheel drive on sale in Australia"
   ],
   "cons": [
     "The 1.9L/100km label figure is meaningless once the battery is flat: GWM's own low-charge figure is 8.3L/100km, and testers did worse again — CarsGuide recorded 11.0L/100km around town and 8.5L/100km in the country, Chasing Cars about 10L/100km in town, and EV Central over 12L/100km on the freeway. A buyer who cannot charge at home is running a 2.6-tonne petrol four-wheel drive",
-    "Electric range is quoted on the superseded NEDC cycle only and no WLTP figure exists for this car — GWM does not sell the Tank 300 in the UK or continental Europe, so the Hi4-T has never been type-approved there and there is no European number to fall back on. Read 115km as an optimistic upper bound against the 85-95km testers actually returned",
+    "Electric range is quoted on the superseded NEDC cycle only and GWM publishes no WLTP figure for this car — it is not sold in the UK or continental Europe, so the Hi4-T has never been type-approved there and there is no European number to fall back on. Chasing Cars quotes an unsourced 100km 'WLTP' figure; read GWM's 115km as an optimistic upper bound against the 85-95km testers actually returned",
     "Practicality is thin for a 4.76m off-roader: 360L behind the second row (1520L folded) is less than the coupe-rooflined Haval H6 GT PHEV manages, payload is only 610kg, and the 3000kg tow rating sits 500kg below GWM's own Cannon Alpha PHEV ute and a diesel Ford Everest or Toyota Prado",
-    "Drivability is the consistent complaint across every Australian review: CarsGuide calls the throttle calibration 'awful' with a hesitant initial response followed by a surge, carsales notes laggy powertrain response and a jittery ride, EV Central describes hesitation handing over between power sources, and Chasing Cars reports cabin creaks and a lumpy on-road ride. The part-time four-wheel-drive system also cannot be used on sealed roads",
-    "Pricing is campaign-driven rather than stable — GWM launched both grades at $55,990 and $59,990 drive-away and then added $2,000 on 1 June 2026, taking the drive-away figures to $57,990 and $61,990 — and the Chinese-market Tank 300L facelift with a 59.6kWh pack and roughly double the electric range is already public, which would date this car sharply if it reaches Australia"
+    "Drivability is the consistent complaint across Australian reviews: CarsGuide calls the throttle calibration 'awful', with little response at first and then a sudden surge that can spin the tyres on gravel, EV Central describes hesitation handing over between power sources, and Chasing Cars reports cabin creaks and a lumpy on-road ride. The part-time four-wheel-drive system also cannot be used on sealed roads",
+    "Pricing is campaign-driven rather than stable — GWM launched both grades at $55,990 and $59,990 drive-away and then added $2,000 on 1 June 2026, taking the Victorian drive-away figures to $57,990 and $61,990 ($54,732 and $58,571 before on-roads), and the Chinese-market Tank 300L facelift with a 59.6kWh pack and roughly double the electric range is already public, which would date this car sharply if it reaches Australia"
   ],
   "sources": [
     "https://www.gwmanz.com/au/models/suv/tank-300/",
+    "https://www.gwmanz.com/au/config/tank-300/",
+    "https://www.gwmanz.com/au/offers/",
     "https://www.gwmanz.com/au/news/gwm-confirms-pricing-and-grades-for-the-all-new-tank-300-hi4-t-phev/",
     "https://www.carexpert.com.au/car-news/2026-gwm-tank-300-price-and-specs",
-    "https://www.carexpert.com.au/car-news/2026-gwm-tank-300-hi4-t-phev-priced-significantly-undercuts-denza-b5",
-    "https://www.carexpert.com.au/car-news/2027-gwm-tank-300l-detailed-as-longer-phev-only-off-roader-not-yet-confirmed-for-australia",
+    "https://www.carexpert.com.au/car-reviews/2027-gwm-tank-300-ultra-hi4-t-review-long-term-introduction",
     "https://www.carsguide.com.au/adventure/gwm-tank-300-hi4-t-phev-101525",
     "https://www.carsguide.com.au/gwm/tank-300/price/2026",
-    "https://www.carsales.com.au/editorial/details/gwm-tank-300-hi4-t-phev-ultra-2026-review-151918/",
-    "https://www.carsales.com.au/editorial/details/plug-in-hybrid-2026-gwm-tank-300-hi4-t-priced-151312/",
-    "https://www.carsales.com.au/research/gwm/tank-300/",
+    "https://www.carsales.com.au/research/gwm/tank-300/2026/ultra-hi4-t-phev/",
     "https://www.chasingcars.com.au/reviews/midsize-suvs/gwm-tank-300-ultra-phev-2026-review/",
-    "https://www.chasingcars.com.au/news/future-cars/gwm-tank-300-phev-2026-off-road-suv-features-105km-ev-driving-range-priced-from-55990-drive-away-to-rival-denza-b5/",
     "https://evcentral.com.au/gwm-tank-300-plug-in-full-spec-and-technical-details-confirmed-including-115km-ev-range/",
     "https://evcentral.com.au/2026-gwm-tank-300-hi4-t-phev-review-plug-in-hybrid-system-takes-the-off-road-fight-to-denza-toyota-and-ford/",
-    "https://unsealed4x4.com.au/gwm-tank-300-hi4-t-phev-pricing-confirmed/",
-    "https://gwmcars.co.uk/",
     "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
   ],
-  "sourcedAt": "2026-07-28"
+  "sourcedAt": "2026-11-26"
 }

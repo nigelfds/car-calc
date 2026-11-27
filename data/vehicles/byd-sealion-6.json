@@ -9,10 +9,10 @@
     "powertrain": "phev",
     "listPrice": 42990,
     "batteryKwh": 18.3,
-    "rangeKm": 92,
-    "consumptionKwhPer100km": 19.9,
-    "combinedRangeKm": 1092,
-    "fuelConsumptionL100km": 4.8,
+    "rangeKm": 80,
+    "consumptionKwhPer100km": 22.9,
+    "combinedRangeKm": 1151,
+    "fuelConsumptionL100km": 5.6,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 425,
@@ -22,7 +22,7 @@
     "warrantyYears": 6,
     "insuranceAnnual": 1450,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "byd-sealion-6-dynamic-extended-range",
@@ -34,10 +34,10 @@
     "powertrain": "phev",
     "listPrice": 46990,
     "batteryKwh": 26.6,
-    "rangeKm": 140,
-    "consumptionKwhPer100km": 19.0,
-    "combinedRangeKm": 1340,
-    "fuelConsumptionL100km": 5.0,
+    "rangeKm": 125,
+    "consumptionKwhPer100km": 21.3,
+    "combinedRangeKm": 1178,
+    "fuelConsumptionL100km": 5.7,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 425,
@@ -47,22 +47,22 @@
     "warrantyYears": 6,
     "insuranceAnnual": 1500,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   },
   {
-    "id": "byd-sealion-6-premium-awd",
+    "id": "byd-sealion-6-premium-extended-range",
     "familyId": "byd-sealion-6",
     "make": "BYD",
     "model": "Sealion 6",
-    "variant": "Premium AWD",
+    "variant": "Premium Extended Range",
     "bodyType": "SUV",
     "powertrain": "phev",
     "listPrice": 52990,
-    "batteryKwh": 18.3,
-    "rangeKm": 81,
-    "consumptionKwhPer100km": 22.6,
-    "combinedRangeKm": 1115,
-    "fuelConsumptionL100km": 5.8,
+    "batteryKwh": 26.6,
+    "rangeKm": 111,
+    "consumptionKwhPer100km": 24.0,
+    "combinedRangeKm": 1007,
+    "fuelConsumptionL100km": 6.7,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 425,
@@ -72,6 +72,6 @@
     "warrantyYears": 6,
     "insuranceAnnual": 1700,
     "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   }
 ]

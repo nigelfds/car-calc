@@ -7,7 +7,7 @@
     "variant": "Elexio",
     "bodyType": "SUV",
     "listPrice": 58990,
-    "batteryKwh": 88.1,
+    "batteryKwh": 84,
     "rangeKm": 562,
     "consumptionKwhPer100km": 18.2,
     "bootLitresSeatsUp": 506,
@@ -16,8 +16,15 @@
     "towKg": 1250,
     "warrantyYears": 5,
     "insuranceAnnual": 1750,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "hyundai-elexio-elite",
@@ -27,7 +34,7 @@
     "variant": "Elite",
     "bodyType": "SUV",
     "listPrice": 61990,
-    "batteryKwh": 88.1,
+    "batteryKwh": 84,
     "rangeKm": 546,
     "consumptionKwhPer100km": 18.2,
     "bootLitresSeatsUp": 506,
@@ -36,7 +43,14 @@
     "towKg": 1250,
     "warrantyYears": 5,
     "insuranceAnnual": 1850,
-    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
-    "sourcedAt": "2026-07-31"
+    "depreciationCurve": [
+      1,
+      0.74,
+      0.63,
+      0.55,
+      0.48,
+      0.42
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

@@ -1,0 +1,251 @@
+{
+  "familyId": "mini-cooper-electric",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mini-cooper-electric-se-favoured": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/mini/cooper/2027/",
+        "note": "SE Favoured listed for MY2027 on carsales research; Mini configurator unreachable (503)"
+      },
+      "listPrice": {
+        "value": 58990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "CarExpert 2026 price list, 'before on-road costs' in words; mini.com.au returned 503. App drive-away 62,348 sits just under carsales MY27 indicative drive-away band 62,507-66,538"
+      },
+      "batteryKwh": {
+        "value": 49.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE",
+        "note": "usable; EV Database gives 54.2 nominal / 49.2 usable for the J01 pack. Australian outlets quote the 54.2 gross figure unlabelled"
+      },
+      "rangeKm": {
+        "value": 400,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "Mini Australia's quoted WLTP range per CarExpert; carsales MY27 shows 371-402km WLTP band, EV Database 385-402 (SE) TEH-TEL"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.7,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE",
+        "note": "EV Database WLTP rated consumption, TEH (141 TEL / 147 TEH Wh/km); includes charging losses, hence above 49.2/400"
+      },
+      "bootLitresSeatsUp": {
+        "value": 210,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "Mini's quoted figure (VDA, to the cover); EV Database lists 200L. No frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "electric models quote 800L, confirmed in CarExpert review"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE",
+        "note": "EV Database: braked 0kg, no tow hitch possible"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "5 years unlimited km; battery 8 years/100,000km"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "anchored to mini-aceman-se-favoured (2000 at $60,990); slightly lower for lower price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "Brand curve shared with mini-aceman rows: small-volume premium EV with steep early losses and heavy Cooper E run-out discounting (CarExpert run-out reporting, 2025). Carried from 2026-07-27 judgement; note mini-countryman-electric held a different curve at research time"
+      }
+    },
+    "mini-cooper-electric-se-paul-smith-edition": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/mini/cooper/2027/",
+        "note": "SE Paul Smith Edition listed as a MY2027 variant on carsales research, so the edition continued past MY26; no source calls it limited or gives a unit count. Mini configurator unreachable (503)"
+      },
+      "listPrice": {
+        "value": 60990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-se-paul-smith-edition-arrives-in-australia",
+        "note": "CarExpert 30 Apr 2026: $60,990 before on-road costs ($2,000 over SE); GoAuto also '$60,990 plus on-road costs'. carsales MY27 indicative drive-away 64,567-68,668 vs app 64,432"
+      },
+      "batteryKwh": {
+        "value": 49.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE",
+        "note": "usable; EV Database gives 54.2 nominal / 49.2 usable for the J01 pack. Australian outlets quote the 54.2 gross figure unlabelled"
+      },
+      "rangeKm": {
+        "value": 400,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "Mini Australia's quoted WLTP range per CarExpert; carsales MY27 shows 371-402km WLTP band, EV Database 385-402 (SE) TEH-TEL"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.7,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE",
+        "note": "same drivetrain and wheels as SE per CarExpert; EV Database SE TEH rated consumption"
+      },
+      "bootLitresSeatsUp": {
+        "value": 210,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "Mini's quoted figure (VDA, to the cover); EV Database lists 200L. No frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "electric models quote 800L, confirmed in CarExpert review"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE",
+        "note": "EV Database: braked 0kg, no tow hitch possible"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "5 years unlimited km; battery 8 years/100,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "matches mini-aceman-se-favoured at the same $60,990 price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "Brand curve shared with mini-aceman rows: small-volume premium EV with steep early losses and heavy Cooper E run-out discounting (CarExpert run-out reporting, 2025). Carried from 2026-07-27 judgement; note mini-countryman-electric held a different curve at research time"
+      }
+    },
+    "mini-cooper-electric-jcw-e-favoured": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsales.com.au/research/mini/cooper/2027/",
+        "note": "JCW E listed for MY2027 on carsales research (named 'JCW E', same drive-away band as MY26 JCW E Favoured); Mini configurator unreachable (503)"
+      },
+      "listPrice": {
+        "value": 63990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "CarExpert 2026 price list, 'before on-road costs' in words; carsales MY27 'JCW E' indicative drive-away 67,657-71,863 vs app 67,558"
+      },
+      "batteryKwh": {
+        "value": 49.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE",
+        "note": "usable; EV Database gives 54.2 nominal / 49.2 usable for the J01 pack. Australian outlets quote the 54.2 gross figure unlabelled"
+      },
+      "rangeKm": {
+        "value": 371,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "Mini Australia's quoted WLTP range per CarExpert; carsales MY27 shows 371-402km WLTP band, EV Database 385-402 (SE) TEH-TEL"
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.6,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3058/Mini-Cooper-JCW",
+        "note": "EV Database WLTP rated consumption, TEH 156 Wh/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 210,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "Mini's quoted figure (VDA, to the cover); EV Database lists 200L. No frunk"
+      },
+      "bootLitresSeatsDown": {
+        "value": 800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "electric models quote 800L, confirmed in CarExpert review"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/1998/Mini-Cooper-SE"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3058/Mini-Cooper-JCW",
+        "note": "EV Database: braked 0kg, no tow hitch possible"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mini-cooper-price-and-specs",
+        "note": "5 years unlimited km; battery 8 years/100,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2300,
+        "basis": "judged",
+        "note": "anchored to mini-aceman-jcw-e-favoured (2350 at $65,990)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.59,
+          0.5,
+          0.43,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "Brand curve shared with mini-aceman rows: small-volume premium EV with steep early losses and heavy Cooper E run-out discounting (CarExpert run-out reporting, 2025). Carried from 2026-07-27 judgement; note mini-countryman-electric held a different curve at research time"
+      }
+    }
+  },
+  "lowConfidence": [
+    "mini-cooper-electric-se-paul-smith-edition.availability: Mini AU configurator unreachable (503); still orderable inferred from carsales MY27 variant list, no unit count published",
+    "mini-cooper-electric-se-favoured.listPrice: Mini's own price page unreadable; CarExpert Jan 2026 list price cross-checked only against carsales MY27 indicative drive-away",
+    "mini-cooper-electric-jcw-e-favoured.listPrice: as above; MY27 grade named 'JCW E' on carsales, Favoured suffix not confirmed for MY27",
+    "mini-cooper-electric-jcw-e-favoured.insuranceAnnual: judged from Aceman sibling",
+    "mini-cooper-electric-se-favoured.insuranceAnnual: judged from Aceman sibling",
+    "mini-cooper-electric-se-paul-smith-edition.insuranceAnnual: judged from Aceman sibling",
+    "mini-cooper-electric-*.depreciationCurve: judged; brand curve conflicts with mini-countryman-electric's held curve",
+    "mini-cooper-electric-*.towKg: from EV Database European spec, no Australian tow figure found"
+  ]
+}

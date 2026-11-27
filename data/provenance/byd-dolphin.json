@@ -1,0 +1,173 @@
+{
+  "familyId": "byd-dolphin",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "byd-dolphin-essential": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-dolphin",
+        "note": "BYD AU configurator (bydautomotive.com.au/configurator/dolphin 301s here) lists exactly two grades, Essential and Premium; TheDriven (Sep 2026) confirms two variants. CarsGuide's 2026 price list still carries a Dynamic at $36,890, which CarExpert's review says was discontinued when Essential arrived."
+      },
+      "listPrice": {
+        "value": 29990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-dolphin",
+        "note": "Configurator shows $29,990 beside the grade with drive-away estimated separately by postcode; TheDriven (20 Sep 2026) gives $29,990 'before on-road costs' in words; CarsGuide 2026 MSRP agrees and 'excludes stamp duty, other government charges'. The configurator's $28,888 'Driveaway Campaign' (NSW delivery, orders 15 Sep-15 Dec 2026, delivered by 31 Dec) is a campaign and ignored."
+      },
+      "batteryKwh": {
+        "value": 44.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/1917/BYD-DOLPHIN-449-kWh-Active",
+        "note": "EV Database UK, Dolphin 44.9 kWh Active (same 70kW FWD pack): nominal 46.0, usable 44.9. AU brochure prints 44.9 unlabelled."
+      },
+      "rangeKm": {
+        "value": 340,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
+        "note": "AU brochure '*Electric range: WLTP Combined Cycle (km) 340' (NEDC 410 alongside, rejected). EV Database UK Active: WLTP 211 mi = 340 km, same pack and 70kW motor; AU Essential on 195/60 R16."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.2,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/1917/BYD-DOLPHIN-449-kWh-Active",
+        "note": "EV Database WLTP rated consumption 245 Wh/mi = 15.2 kWh/100km (includes charging losses; battery/range gives 13.2)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 345,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
+        "note": "AU brochure 'Luggage capacity - Min (L) 345'; measurement method not stated, assumed to the cargo cover. CarExpert also 345L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1310,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
+        "note": "AU brochure 'Luggage capacity - Max (L) 1,310'; method not stated and likely to the roof rather than the belt line, so may overstate the cover convention. No review gives a to-the-belt-line figure."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
+        "note": "'Seating capacity 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/1917/BYD-DOLPHIN-449-kWh-Active",
+        "note": "EV Database: braked towing 0 kg, 'Tow Hitch Possible: No'. AU brochure lists no towing capacity; CarsGuide spec shows a dash for braked trailer weight."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-byd-dolphin-dynamic-review",
+        "note": "CarExpert: 6 years/150,000km vehicle; battery 8 years/160,000km. CarsGuide 2026 Essential page agrees."
+      },
+      "insuranceAnnual": {
+        "value": 1250,
+        "basis": "judged",
+        "note": "Kept: matches mg-4-urban-43 ($29,856, $1,250) and geely-ex2-inspire ($30,990, $1,250)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by Atto 1/2, Seal 6, Sealion 5/6/7 and Shark 6 (one curve per brand). byd-atto3 refreshed today on a steeper curve; flagged for the orchestrator. Repeated Dolphin campaigns (Sep 2026 $28,888 drive-away) are the kind of evidence the brand curve already reflects."
+      }
+    },
+    "byd-dolphin-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-dolphin",
+        "note": "BYD AU configurator (bydautomotive.com.au/configurator/dolphin 301s here) lists exactly two grades, Essential and Premium; TheDriven (Sep 2026) confirms two variants. CarsGuide's 2026 price list still carries a Dynamic at $36,890, which CarExpert's review says was discontinued when Essential arrived."
+      },
+      "listPrice": {
+        "value": 36990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-dolphin",
+        "note": "Configurator shows $36,990 beside the grade with drive-away estimated separately by postcode; TheDriven (20 Sep 2026) gives $36,990 'before on-road costs' in words; CarsGuide 2026 MSRP agrees and 'excludes stamp duty, other government charges'. No campaign on Premium."
+      },
+      "batteryKwh": {
+        "value": 60.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3297/BYD-DOLPHIN-604-kWh",
+        "note": "EV Database UK, Dolphin 60.4 kWh (150kW): nominal 62.0, usable 60.5. AU brochure prints 60.48 unlabelled, consistent with usable."
+      },
+      "rangeKm": {
+        "value": 427,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
+        "note": "AU brochure 'WLTP Combined Cycle (km) 427' (NEDC 490 alongside, rejected). EV Database UK 60.4 kWh: WLTP 265 mi = 427 km; AU Premium on 205/50 R17."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3297/BYD-DOLPHIN-604-kWh",
+        "note": "EV Database WLTP rated consumption 256 Wh/mi = 15.9 kWh/100km (includes charging losses; battery/range gives 14.2)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 345,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
+        "note": "AU brochure 'Luggage capacity - Min (L) 345'; measurement method not stated, assumed to the cargo cover. CarExpert also 345L."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1310,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
+        "note": "AU brochure 'Luggage capacity - Max (L) 1,310'; method not stated and likely to the roof rather than the belt line, so may overstate the cover convention. No review gives a to-the-belt-line figure."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-DOLPHIN-2025.pdf",
+        "note": "'Seating capacity 5'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3297/BYD-DOLPHIN-604-kWh",
+        "note": "EV Database: braked towing 0 kg, 'Tow Hitch Possible: No'. AU brochure lists no towing capacity; CarsGuide spec shows a dash for braked trailer weight."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-byd-dolphin-dynamic-review",
+        "note": "CarExpert: 6 years/150,000km vehicle; battery 8 years/160,000km. CarsGuide 2026 Essential page agrees."
+      },
+      "insuranceAnnual": {
+        "value": 1400,
+        "basis": "judged",
+        "note": "Kept: between byd-atto2-premium ($35,990, $1,400) and mg-4-essence-64 ($37,534, $1,450)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention used by Atto 1/2, Seal 6, Sealion 5/6/7 and Shark 6 (one curve per brand). byd-atto3 refreshed today on a steeper curve; flagged for the orchestrator. Repeated Dolphin campaigns (Sep 2026 $28,888 drive-away) are the kind of evidence the brand curve already reflects."
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-dolphin-essential.bootLitresSeatsDown: brochure 1,310L method unstated, likely to roof rather than belt line (same for premium)",
+    "byd-dolphin-premium.bootLitresSeatsDown: as above",
+    "byd-dolphin-essential.insuranceAnnual: judged, anchored to mg-4-urban-43 and geely-ex2-inspire",
+    "byd-dolphin-premium.insuranceAnnual: judged, anchored to byd-atto2-premium and mg-4-essence-64",
+    "byd-dolphin-*.depreciationCurve: BYD brand convention; byd-atto3 uses a different curve today",
+    "byd-dolphin-*.towKg: 0 from EV Database UK and absence of an AU rating; no AU document states 'not rated to tow'"
+  ]
+}

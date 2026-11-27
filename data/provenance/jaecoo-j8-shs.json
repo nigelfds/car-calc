@@ -1,0 +1,117 @@
+{
+  "familyId": "jaecoo-j8-shs",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "jaecoo-j8-shs-summit": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/j8-shs-build-your-own",
+        "note": "MY27 J8 SHS-P Summit (AWD) is the only SHS variant on the configurator, 'From $59,990*' with per-state drive-away prices; CarExpert pricing news agrees on one SHS grade. Petrol Track/Ridge are not PHEV and out of this family"
+      },
+      "listPrice": {
+        "value": 59990,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/j8-shs-build-your-own",
+        "note": "Jaecoo configurator variant data-price 59990.00, with separate per-state drive-away prices above it (VIC $64,581.50, NSW $64,456.60, NT $61,990.20, WA $66,220.20; 'Driveaway price includes all on-road costs (delivery fee, CTP, stamp duty, and registration)'), so $59,990 is the list price, not drive-away. 'Before on-road costs' in words: CarExpert pricing news and review; CarsGuide 2027 price page MSRP $59,990. App Vic drive-away for 59,990 = $63,389.58, $1,192 below Jaecoo's VIC figure (dealer delivery). Unlike the J7 (national DAP = MSRP + $2,000), no campaign DAP applies to the J8; only a $1,000 gift card to 30/11/2026"
+      },
+      "batteryKwh": {
+        "value": 34.46,
+        "basis": "sourced",
+        "url": "https://jaecoo.co.uk/jaecoo-8/",
+        "note": "Jaecoo UK '34.46 kWh traction battery' (same 1.5T 3DHT AWD pack, NCM); AU spec sheet '34'. Gross/usable not stated anywhere found; treated as usable, as on omoda-9-shs (34.46)"
+      },
+      "rangeKm": {
+        "value": 134,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://jaecoo.co.uk/jaecoo-8/",
+        "note": "Jaecoo UK 8 SHS Luxury 7-seat AWD, 20in 245/50 R20 as AU: 83 miles WLTP = 133.6 km. AU spec sheet 169 km is NEDC (ADR 81/02) and higher than WLTP: rejected per direction test. CarExpert observed 124 km"
+      },
+      "consumptionKwhPer100km": {
+        "value": 25.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 34.46/134 = 25.7; AU 193 Wh/km is the NEDC ADR label (not used)"
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.6,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-jaecoo-j8-shs-review",
+        "note": "CarExpert review real-world hybrid mode with battery depleted: 6.6 L/100km over 100 km (closer to 10 in stop-start city). Corroborated by Auto Express 43.5 mpg (6.5 L/100km) in hybrid mode. Jaecoo UK quotes an unlabelled 50.5 mpg (5.6) beside 47 g/km; not used as it is not labelled charge-sustaining and would put the 2,275 kg J8 below same-powertrain omoda-9-shs (7.0) and chery-tiggo-9-phev-ultimate (6.3)"
+      },
+      "combinedRangeKm": {
+        "value": 1195,
+        "basis": "derived",
+        "note": "134 WLTP + 70 L tank (AU spec sheet) / 6.6 x 100 = 1194.6, rounded 1195"
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-07/230_25_Jaecoo_J8_Spec_Sheet_AU_SHS%20UPDATES_v0.2.pdf",
+        "note": "AU spec sheet Fuel Consumption - Combined (NEDC, ADR 81/02) 1.2 L/100km <= 3.5"
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/motor-vehicle-duty-current-rates",
+        "note": "SRO green passenger car: combined tailpipe CO2 <= 120 g/km; AU spec sheet CO2 combined 28 g/km"
+      },
+      "bootLitresSeatsUp": {
+        "value": 110,
+        "basis": "sourced",
+        "url": "https://www.carwow.co.uk/jaecoo/8/specifications",
+        "note": "All three rows up. Carwow UK spec 'Boot (seats up) 110 - 200 L', Auto Express '110 litres' in 7-seat mode. AU spec sheet and CarExpert give only 200 L 'measured up to roof'; 110 is taken as the to-the-cover figure (carwow pairs 448/738 L the same way for third row folded), method not stated by either UK source. Held 200 was the to-roof figure. Seven-seat convention: seats-up = all rows up (byd-sealion-8, kia-sorento-phev)"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2021,
+        "basis": "sourced",
+        "url": "https://www.autoexpress.co.uk/jaecoo/8",
+        "note": "Second and third rows folded '2,021 litres' (Auto Express; carwow max 2,021). UK sells only the SHS, so battery fitted. Method unstated, likely to the roof; no to-the-belt-line figure published. Kept to-roof as jaecoo-j7-shs did today for its folded figure"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-07/230_25_Jaecoo_J8_Spec_Sheet_AU_SHS%20UPDATES_v0.2.pdf",
+        "note": "'Number Of Seats 7'"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/sites/default/files/2026-07/230_25_Jaecoo_J8_Spec_Sheet_AU_SHS%20UPDATES_v0.2.pdf",
+        "note": "AU spec sheet 'Maximum Towing Mass - Braked Trailer 1,600' (unbraked 750)"
+      },
+      "warrantyYears": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://www.omodajaecoo.com.au/legal/owners/vehicle-warranty-terms-and-conditions",
+        "note": "8 years/unlimited km from first registration; conditional on servicing per manufacturer guidelines (not dealer-only); no shorter private-use fallback (8 yr/150,000 km only for taxi/rideshare/rental). HV battery 8 yr/unlimited km separately"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "kept: matches chery-tiggo-9-phev-ultimate (same 34.5 kWh 3DHT powertrain, seven seats, same $59,990) at 1950; between byd-sealion-8-dynamic-fwd ($56,990, 1850) and dynamic-awd ($63,990, 2000)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Omoda/Jaecoo brand convention (jaecoo-j7-shs refreshed today, omoda-9-shs, chery-tiggo-9-phev): young brand with unproven resale above $50,000, rolling gift-card/finance campaigns, J7 MY27 drive-away cuts of $3,000-4,000 within ~15 months"
+      }
+    }
+  },
+  "lowConfidence": [
+    "jaecoo-j8-shs-summit.bootLitresSeatsUp: 110 L from UK carwow/Auto Express with method unstated, inferred as to-the-cover against the AU 200 L to-roof figure",
+    "jaecoo-j8-shs-summit.bootLitresSeatsDown: 2,021 L method unstated, likely to the roof; no to-cover folded figure published",
+    "jaecoo-j8-shs-summit.fuelConsumptionL100km: real-world review figure (CarExpert 6.6, Auto Express 6.5), no labelled charge-sustaining figure; Jaecoo UK's unlabelled 50.5 mpg would give 5.6",
+    "jaecoo-j8-shs-summit.combinedRangeKm: built on the review fuel figure",
+    "jaecoo-j8-shs-summit.batteryKwh: 34.46 nominal, gross vs usable never stated; consumption derived from it",
+    "jaecoo-j8-shs-summit.insuranceAnnual: judged",
+    "jaecoo-j8-shs-summit.depreciationCurve: judged brand convention"
+  ]
+}

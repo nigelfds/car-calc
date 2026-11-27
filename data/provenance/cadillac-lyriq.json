@@ -1,0 +1,180 @@
+{
+  "familyId": "cadillac-lyriq",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "cadillac-lyriq-sport": {
+      "batteryKwh": {
+        "value": 91,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3266/Cadillac-LYRIQ-V",
+        "note": "usable. EV Database gives 95.0 kWh nominal / 91.0 kWh usable for the Lyriq-V's export NMC pack; CarExpert and Cadillac's MY27 AU spec sheet confirm Sport and V share the same 92 kWh pack, which Cadillac labels 'Battery Rated Energy 92 kWh' (between nominal and usable, so not taken as usable). Held 102 kWh was the old MY25/26 pack (EV Database: 102.0 usable / 106.8 nominal)."
+      },
+      "rangeKm": {
+        "value": 503,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+        "note": "Cadillac AU MY27 spec sheet (August 2026), 'Max Range (WLTP)', footnote 2 names WLTP; Sport on 21-inch, V on 22-inch wheels, one wheel per grade. Same figure in CarExpert MY27 articles."
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.2,
+        "basis": "sourced",
+        "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+        "note": "Cadillac AU spec sheet 'Combined electric energy consumption' (WLTP, includes charging losses); battery/range = 18.1, within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 588,
+        "basis": "sourced",
+        "url": "https://insideevs.de/reviews/733950/cadillac-lyriq-test-preis-reichweite/",
+        "note": "European figure for the same body, 588 L seats up (EV Database Lyriq-V page gives the same 588/1687). Cadillac AU's 793 L is to the roof (The Beep: '793 litres to the roof'), so replaced per the cargo-cover convention. The cited pages do not name the standard; German-market figures are conventionally VDA to the parcel shelf."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1687,
+        "basis": "sourced",
+        "url": "https://insideevs.de/reviews/733950/cadillac-lyriq-test-preis-reichweite/",
+        "note": "European folded figure for the same body; probably VDA to the roof rather than to the belt line (no belt-line figure published). Cadillac AU quotes 1,722 L."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+        "note": "5-seat Large SUV"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/cadillac/lyriq/towing-capacity/2026",
+        "note": "CarsGuide lists 0 kg braked for every 2026 Lyriq grade incl. V; CarsGuide review: 'not rated for towing in Australia'. Cadillac AU MY27 spec sheet lists no tow rating. Europe rates it 1,587 kg, so an AU rating could appear."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+        "note": "5 years, unlimited km, unconditional; battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 2850,
+        "basis": "judged",
+        "note": "carried anchor: held Lyriq value at the same $90,000; between cadillac-optiq (2500 at $80,000) and cadillac-vistiq (3000 at $116,000), above ford-mustang-mach-e-gt 2800"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "One Cadillac brand curve, chosen as [1,0.66,0.54,0.45,0.38,0.32] (the held cadillac-vistiq curve, also used by volvo-ex90): thin local volume, no VFACTS reporting and the 2026 $32,000 cut justify a steep premium-EV curve; the held Lyriq-only [..0.64..0.31] curve priced the cut's one-off re-basing of pre-cut cars, which a car bought at today's $90,000 no longer carries. All Cadillac rows should share this curve."
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.cadillacanz.com/au-en/lyriq-electric-suv",
+        "note": "Cadillac AU Lyriq page with BUILD & PRICE link to shop.cadillacanz.com configurator (configurator is a JS app; its price API was not fetched). CarExpert 1 and 5 Sep 2026: Sport AWD is the sole MY27 regular grade, Luxury dropped."
+      },
+      "listPrice": {
+        "value": 90000,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/2027-cadillac-lyriq-v-price-specs-australia",
+        "note": "The Beep 18 Sep 2026: Lyriq Sport $90,000 before on-road costs, VIC drive-away $96,350 (app model gives $94,660; real figure above computed, consistent with a genuine list price). CarExpert 5 Sep 2026 (MY27 price and specs): '$90,000 before on-road costs'. Cadillac AU site shows no price in static HTML; no later change found as of 2026-11-27."
+      }
+    },
+    "cadillac-lyriq-v": {
+      "batteryKwh": {
+        "value": 91,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3266/Cadillac-LYRIQ-V",
+        "note": "usable. EV Database gives 95.0 kWh nominal / 91.0 kWh usable for the Lyriq-V's export NMC pack; CarExpert and Cadillac's MY27 AU spec sheet confirm Sport and V share the same 92 kWh pack, which Cadillac labels 'Battery Rated Energy 92 kWh' (between nominal and usable, so not taken as usable). Held 102 kWh was the old MY25/26 pack (EV Database: 102.0 usable / 106.8 nominal)."
+      },
+      "rangeKm": {
+        "value": 471,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+        "note": "Cadillac AU MY27 spec sheet (August 2026), 'Max Range (WLTP)', footnote 2 names WLTP; Sport on 21-inch, V on 22-inch wheels, one wheel per grade. Same figure in CarExpert MY27 articles."
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.6,
+        "basis": "sourced",
+        "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+        "note": "Cadillac AU spec sheet 'Combined electric energy consumption' (WLTP, includes charging losses); battery/range = 19.3, within tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 588,
+        "basis": "sourced",
+        "url": "https://insideevs.de/reviews/733950/cadillac-lyriq-test-preis-reichweite/",
+        "note": "European figure for the same body, 588 L seats up (EV Database Lyriq-V page gives the same 588/1687). Cadillac AU's 793 L is to the roof (The Beep: '793 litres to the roof'), so replaced per the cargo-cover convention. The cited pages do not name the standard; German-market figures are conventionally VDA to the parcel shelf."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1687,
+        "basis": "sourced",
+        "url": "https://insideevs.de/reviews/733950/cadillac-lyriq-test-preis-reichweite/",
+        "note": "European folded figure for the same body; probably VDA to the roof rather than to the belt line (no belt-line figure published). Cadillac AU quotes 1,722 L."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+        "note": "5-seat Large SUV"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/cadillac/lyriq/towing-capacity/2026",
+        "note": "CarsGuide lists 0 kg braked for every 2026 Lyriq grade incl. V; CarsGuide review: 'not rated for towing in Australia'. Cadillac AU MY27 spec sheet lists no tow rating. Europe rates it 1,587 kg, so an AU rating could appear."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.cadillacanz.com/content/dam/cadillac/oc/au/en/index/lyriq-electric-suv/01-pdf/v3/Specifications-MY27-LYRIQ-Sport-and-V-Series.pdf",
+        "note": "5 years, unlimited km, unconditional; battery 8 yr/160,000 km"
+      },
+      "insuranceAnnual": {
+        "value": 3050,
+        "basis": "judged",
+        "note": "judged: Sport 2850 plus a premium for 459kW/3.6s performance and $9,000 higher value; under cadillac-vistiq 3000->3050 vs volvo-ex90-ultra 3150 at $134,990"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "One Cadillac brand curve, chosen as [1,0.66,0.54,0.45,0.38,0.32] (the held cadillac-vistiq curve, also used by volvo-ex90): thin local volume, no VFACTS reporting and the 2026 $32,000 cut justify a steep premium-EV curve; the held Lyriq-only [..0.64..0.31] curve priced the cut's one-off re-basing of pre-cut cars, which a car bought at today's $90,000 no longer carries. All Cadillac rows should share this curve."
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.cadillacanz.com/au-en/lyriq-electric-suv/lyriq-v",
+        "note": "Cadillac AU 2027 LYRIQ-V page and nav carry a BUILD & PRICE entry into the shop.cadillacanz.com configurator (its bundle hard-codes a Lyriq-V variant 6MN26 2SV); The Beep 18 Sep 2026: 'Orders are open now'; CarExpert 14 Nov 2026: deliveries from late Q1 into Q2 2027. Configurator price not read directly (price API fetch refused)."
+      },
+      "listPrice": {
+        "value": 99000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-cadillac-lyriq-v-price-and-specs-delivery-timing-confirmed-for-hot-electric-suv",
+        "note": "CarExpert 14 Nov 2026: '$99,000 before on-road costs'. The Beep 18 Sep 2026 agrees, VIC drive-away $108,585 (app model gives $104,038; real figure above computed, gap likely Victorian luxury-band duty plus dealer delivery). Above $91,661."
+      }
+    }
+  },
+  "lowConfidence": [
+    "cadillac-lyriq-sport.bootLitresSeatsDown: European 1,687 L likely to the roof, no belt-line figure published",
+    "cadillac-lyriq-v.bootLitresSeatsDown: European 1,687 L likely to the roof, no belt-line figure published",
+    "cadillac-lyriq-v.availability: configurator entry seen but price API not read; orders-open claim is The Beep's from 18 Sep 2026",
+    "cadillac-lyriq-sport.bootLitresSeatsUp: 588 L is the European (likely VDA) figure; cited pages do not name the standard",
+    "cadillac-lyriq-v.bootLitresSeatsUp: 588 L is the European (likely VDA) figure; cited pages do not name the standard",
+    "cadillac-lyriq-sport.batteryKwh: 91 usable from EV Database's Lyriq-V entry, applied to the Sport's identical pack",
+    "cadillac-lyriq-sport.towKg: 0 from CarsGuide's 2026 listing; MY27 AU rating unpublished (Europe 1,587 kg)",
+    "cadillac-lyriq-v.towKg: 0 from CarsGuide's 2026 listing; MY27 AU rating unpublished (Europe 1,587 kg)",
+    "cadillac-lyriq-v.insuranceAnnual: judged",
+    "cadillac-lyriq-sport.insuranceAnnual: judged",
+    "cadillac-lyriq-sport.depreciationCurve: judged brand curve",
+    "cadillac-lyriq-v.depreciationCurve: judged brand curve",
+    "cadillac-lyriq-sport.listPrice: latest dated 'before on-road costs' source is 18 Sep 2026; Cadillac configurator price not read"
+  ]
+}

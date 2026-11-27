@@ -7,12 +7,12 @@
     "variant": "30e xDrive",
     "bodyType": "SUV",
     "powertrain": "phev",
-    "listPrice": 104800,
+    "listPrice": 107700,
     "batteryKwh": 19.7,
-    "rangeKm": 85,
-    "consumptionKwhPer100km": 23.2,
-    "combinedRangeKm": 743,
-    "fuelConsumptionL100km": 7.6,
+    "rangeKm": 86,
+    "consumptionKwhPer100km": 22.9,
+    "combinedRangeKm": 735,
+    "fuelConsumptionL100km": 7.7,
     "isFuelEfficientForLct": true,
     "isGreenForVicDuty": true,
     "bootLitresSeatsUp": 460,
@@ -23,12 +23,12 @@
     "insuranceAnnual": 2600,
     "depreciationCurve": [
       1,
-      0.7,
-      0.58,
-      0.49,
-      0.42,
-      0.36
+      0.72,
+      0.61,
+      0.53,
+      0.46,
+      0.4
     ],
-    "sourcedAt": "2026-07-28"
+    "sourcedAt": "2026-11-26"
   }
 ]

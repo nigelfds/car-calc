@@ -1,0 +1,256 @@
+{
+  "familyId": "mg-im6",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mg-im6-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/im6?ref=website",
+        "note": "IM6 PREMIUM live in the MG configurator with a price on 2026-11-26; three grades (Premium, Platinum, Performance), matching CarExpert's range guide."
+      },
+      "listPrice": {
+        "value": 57612,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/im6?ref=website",
+        "note": "No list price published; MG prices IM drive-away only (configurator header 'Drive Away Price'; CarExpert, Chasing Cars and the NRMA all call launch prices drive-away). Configurator shows $60,990 struck through (regular national drive-away; launch-era Platinum $69,990 and Performance $80,990 were cut to $67,990/$77,990, Premium unchanged at $60,990) and $57,990* including a $3,000 cashback on IM5/IM6 sold and delivered 01 Nov-31 Dec 2026 (campaign, not used; $500 accessories bonus and Black Friday servicing/charger offer also ignored). Back-out: (60990 - 958.80) / 1.042 = 57,612; round-trip driveAwayPrice(57687) = 60,989.85. Independent check: the configurator's VIC per-state 'discounts' (which cancel on-road costs so every state lands on one national figure) are $4,370.15 / $4,655.75 / $5,058.95 for Premium / Platinum / Performance; the steps of $285.60 (= 34 x $8.40 duty units) and $403.20 (= 48 units) imply dutiable gaps of ~$6,800 and ~$9,600, matching the backed-out list gaps of $6,718 and $9,597 rather than the $7,000 and $10,000 drive-away gaps. Configurator T&Cs say the drive-away includes the maximum dealer delivery charge, so this list may overstate the true list by roughly $1,000-2,000 (the VIC discounts imply on-roads ~$1,000 above the app's model). Re-derived 2026-11-27 for VIC rego $958.80 (was 57,687 at $880; round trip 60990.50)."
+      },
+      "batteryKwh": {
+        "value": 73.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3822/MG-IM6-Standard-Range",
+        "note": "usable 73.5 kWh; nominal (gross) 75.0 kWh on the same page, matching MG AU brochure's 75 kWh"
+      },
+      "rangeKm": {
+        "value": 450,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Driving Range: WLTP Combined Cycle (km)' per ADR 81/02, 20-inch wheels as the AU grade ships; brochure separately lists NEDC figures (505/670/600), not used. Direction test: below EV Database's UK WLTP best case where published (Long Range TEL 625; Performance TEH 505)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.1,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-mg-im6-price-and-specs",
+        "note": "CarExpert spec table 'Energy consumption', footnoted 'Green Vehicle Guide data' (AU label, includes charging losses). batteryKwh / rangeKm x 100 = 16.3, within the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 665,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume with Seats in Place (L)'; measurement method not stated (search snippet of CarExpert's dimensions database labels 665L 'Rear Seat Up to Lower Window' but the page would not render). 32L frunk not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1640,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume with Seats Folded (L)'; method not stated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "brochure 'Seats 5'"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "brochure 'Maximum Towing Capacity Braked (kg)' 1500 (unbraked 750)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/im-mgu9-warranty",
+        "note": "IM warranty: non-commercial 5 years/unlimited km; 7 years/unlimited km Extended Warranty only with exclusive servicing at an authorised IM dealer (conditional, in pros). HV battery 8 years/160,000km. IM is excluded from MG's 7/10-year terms (explore/warranty)."
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "Held value kept: anchored to mg-im5 (2000/2200/2800 at the same prices), tesla-model-y (2300 at $58,900, 2550 at $68,900, 3200 at $84,900) and xpeng-g6 (1750-2100). IM6 sits slightly above IM5 as a larger, heavier SUV; Performance reflects 572kW."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 that every MG row (MG, IM, HS) uses it, despite list cuts and cashbacks that would otherwise argue for a steeper curve."
+      }
+    },
+    "mg-im6-platinum": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/im6?ref=website",
+        "note": "IM6 PLATINUM live in the MG configurator with a price on 2026-11-26; three grades (Premium, Platinum, Performance), matching CarExpert's range guide."
+      },
+      "listPrice": {
+        "value": 64329,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/im6?ref=website",
+        "note": "No list price published; MG prices IM drive-away only (configurator header 'Drive Away Price'; CarExpert, Chasing Cars and the NRMA all call launch prices drive-away). Configurator shows $67,990 struck through (regular national drive-away; launch-era Platinum $69,990 and Performance $80,990 were cut to $67,990/$77,990, Premium unchanged at $60,990) and $64,990* including a $3,000 cashback on IM5/IM6 sold and delivered 01 Nov-31 Dec 2026 (campaign, not used; $500 accessories bonus and Black Friday servicing/charger offer also ignored). Back-out: (67990 - 958.80) / 1.042 = 64,329; round-trip driveAwayPrice(64405) = 67,990.01. Independent check: the configurator's VIC per-state 'discounts' (which cancel on-road costs so every state lands on one national figure) are $4,370.15 / $4,655.75 / $5,058.95 for Premium / Platinum / Performance; the steps of $285.60 (= 34 x $8.40 duty units) and $403.20 (= 48 units) imply dutiable gaps of ~$6,800 and ~$9,600, matching the backed-out list gaps of $6,718 and $9,597 rather than the $7,000 and $10,000 drive-away gaps. Configurator T&Cs say the drive-away includes the maximum dealer delivery charge, so this list may overstate the true list by roughly $1,000-2,000 (the VIC discounts imply on-roads ~$1,000 above the app's model). Re-derived 2026-11-27 for VIC rego $958.80 (was 64,405 at $880; round trip 67989.62)."
+      },
+      "batteryKwh": {
+        "value": 96.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3247/MG-IM6-Long-Range",
+        "note": "usable 96.5 kWh; nominal (gross) 100.0 kWh on the same page, matching MG AU brochure's 100 kWh"
+      },
+      "rangeKm": {
+        "value": 555,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Driving Range: WLTP Combined Cycle (km)' per ADR 81/02, 21-inch wheels as the AU grade ships; brochure separately lists NEDC figures (505/670/600), not used. Direction test: below EV Database's UK WLTP best case where published (Long Range TEL 625; Performance TEH 505)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-mg-im6-price-and-specs",
+        "note": "CarExpert spec table 'Energy consumption', footnoted 'Green Vehicle Guide data' (AU label, includes charging losses). batteryKwh / rangeKm x 100 = 17.4, within the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 665,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume with Seats in Place (L)'; measurement method not stated (search snippet of CarExpert's dimensions database labels 665L 'Rear Seat Up to Lower Window' but the page would not render). 32L frunk not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1640,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume with Seats Folded (L)'; method not stated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "brochure 'Seats 5'"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "brochure 'Maximum Towing Capacity Braked (kg)' 1500 (unbraked 750)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/im-mgu9-warranty",
+        "note": "IM warranty: non-commercial 5 years/unlimited km; 7 years/unlimited km Extended Warranty only with exclusive servicing at an authorised IM dealer (conditional, in pros). HV battery 8 years/160,000km. IM is excluded from MG's 7/10-year terms (explore/warranty)."
+      },
+      "insuranceAnnual": {
+        "value": 2400,
+        "basis": "judged",
+        "note": "Held value kept: anchored to mg-im5 (2000/2200/2800 at the same prices), tesla-model-y (2300 at $58,900, 2550 at $68,900, 3200 at $84,900) and xpeng-g6 (1750-2100). IM6 sits slightly above IM5 as a larger, heavier SUV; Performance reflects 572kW."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 that every MG row (MG, IM, HS) uses it, despite list cuts and cashbacks that would otherwise argue for a steeper curve."
+      }
+    },
+    "mg-im6-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.mgmotor.com.au/configurator/im6?ref=website",
+        "note": "IM6 PERFORMANCE live in the MG configurator with a price on 2026-11-26; three grades (Premium, Platinum, Performance), matching CarExpert's range guide."
+      },
+      "listPrice": {
+        "value": 73926,
+        "basis": "backed-out",
+        "url": "https://www.mgmotor.com.au/configurator/im6?ref=website",
+        "note": "No list price published; MG prices IM drive-away only (configurator header 'Drive Away Price'; CarExpert, Chasing Cars and the NRMA all call launch prices drive-away). Configurator shows $77,990 struck through (regular national drive-away; launch-era Platinum $69,990 and Performance $80,990 were cut to $67,990/$77,990, Premium unchanged at $60,990) and $74,990* including a $3,000 cashback on IM5/IM6 sold and delivered 01 Nov-31 Dec 2026 (campaign, not used; $500 accessories bonus and Black Friday servicing/charger offer also ignored). Back-out: (77990 - 958.80) / 1.042 = 73,926; round-trip driveAwayPrice(74002) = 77,990.08. Independent check: the configurator's VIC per-state 'discounts' (which cancel on-road costs so every state lands on one national figure) are $4,370.15 / $4,655.75 / $5,058.95 for Premium / Platinum / Performance; the steps of $285.60 (= 34 x $8.40 duty units) and $403.20 (= 48 units) imply dutiable gaps of ~$6,800 and ~$9,600, matching the backed-out list gaps of $6,718 and $9,597 rather than the $7,000 and $10,000 drive-away gaps. Configurator T&Cs say the drive-away includes the maximum dealer delivery charge, so this list may overstate the true list by roughly $1,000-2,000 (the VIC discounts imply on-roads ~$1,000 above the app's model). Re-derived 2026-11-27 for VIC rego $958.80 (was 74,002 at $880; round trip 77989.69)."
+      },
+      "batteryKwh": {
+        "value": 96.5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3248/MG-IM6-Performance",
+        "note": "usable 96.5 kWh; nominal (gross) 100.0 kWh on the same page, matching MG AU brochure's 100 kWh"
+      },
+      "rangeKm": {
+        "value": 505,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Driving Range: WLTP Combined Cycle (km)' per ADR 81/02, 21-inch wheels as the AU grade ships; brochure separately lists NEDC figures (505/670/600), not used. Direction test: below EV Database's UK WLTP best case where published (Long Range TEL 625; Performance TEH 505)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.4,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2025-mg-im6-price-and-specs",
+        "note": "CarExpert spec table 'Energy consumption', footnoted 'Green Vehicle Guide data' (AU label, includes charging losses). batteryKwh / rangeKm x 100 = 19.1, within the 25% cross-check."
+      },
+      "bootLitresSeatsUp": {
+        "value": 646,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume with Seats in Place (L)'; measurement method not stated (search snippet of CarExpert's dimensions database labels 665L 'Rear Seat Up to Lower Window' but the page would not render). 32L frunk not added."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1621,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "MG AU brochure 'Boot Volume with Seats Folded (L)'; method not stated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "brochure 'Seats 5'"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/brochures/MG_IM6_Brochure_v2.pdf",
+        "note": "brochure 'Maximum Towing Capacity Braked (kg)' 1500 (unbraked 750)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://mgmotor.com.au/explore/im-mgu9-warranty",
+        "note": "IM warranty: non-commercial 5 years/unlimited km; 7 years/unlimited km Extended Warranty only with exclusive servicing at an authorised IM dealer (conditional, in pros). HV battery 8 years/160,000km. IM is excluded from MG's 7/10-year terms (explore/warranty)."
+      },
+      "insuranceAnnual": {
+        "value": 2900,
+        "basis": "judged",
+        "note": "Held value kept: anchored to mg-im5 (2000/2200/2800 at the same prices), tesla-model-y (2300 at $58,900, 2550 at $68,900, 3200 at $84,900) and xpeng-g6 (1750-2100). IM6 sits slightly above IM5 as a larger, heavier SUV; Performance reflects 572kW."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Mainstream default; owner decision 2026-11-26 that every MG row (MG, IM, HS) uses it, despite list cuts and cashbacks that would otherwise argue for a steeper curve."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mg-im6-performance.listPrice: backed out of MG's flat national drive-away (includes max dealer delivery); true list may be $1,000-2,000 lower. Sits $998 under the $75,000 cap either way, but no MG source gives a list figure.",
+    "mg-im6-premium.listPrice: backed out of national drive-away; may overstate by dealer delivery.",
+    "mg-im6-platinum.listPrice: backed out of national drive-away; may overstate by dealer delivery.",
+    "mg-im6-premium.bootLitresSeatsUp: MG does not state the measurement method; to-cover vs to-roof unconfirmed (applies to all rows' boot figures).",
+    "mg-im6-platinum.bootLitresSeatsUp: measurement method unstated.",
+    "mg-im6-performance.bootLitresSeatsUp: measurement method unstated.",
+    "mg-im6-premium.insuranceAnnual: judged, anchored to mg-im5 and tesla-model-y.",
+    "mg-im6-platinum.insuranceAnnual: judged.",
+    "mg-im6-performance.insuranceAnnual: judged.",
+    "mg-im6-premium.consumptionKwhPer100km: Green Vehicle Guide figure read via CarExpert's table, not the GVG site itself (applies to all rows)."
+  ]
+}

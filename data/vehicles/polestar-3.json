@@ -8,7 +8,7 @@
     "bodyType": "SUV",
     "listPrice": 116700,
     "batteryKwh": 88,
-    "rangeKm": 604,
+    "rangeKm": 603,
     "consumptionKwhPer100km": 17.6,
     "bootLitresSeatsUp": 484,
     "bootLitresSeatsDown": 1411,
@@ -16,8 +16,15 @@
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 3000,
-    "depreciationCurve": [1, 0.66, 0.55, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-08-06"
+    "depreciationCurve": [
+      1,
+      0.66,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "polestar-3-dual-motor",
@@ -28,7 +35,7 @@
     "bodyType": "SUV",
     "listPrice": 131100,
     "batteryKwh": 102,
-    "rangeKm": 635,
+    "rangeKm": 647,
     "consumptionKwhPer100km": 19.1,
     "bootLitresSeatsUp": 484,
     "bootLitresSeatsDown": 1411,
@@ -36,8 +43,15 @@
     "towKg": 2200,
     "warrantyYears": 5,
     "insuranceAnnual": 3200,
-    "depreciationCurve": [1, 0.66, 0.55, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-08-06"
+    "depreciationCurve": [
+      1,
+      0.66,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-27"
   },
   {
     "id": "polestar-3-performance",
@@ -48,7 +62,7 @@
     "bodyType": "SUV",
     "listPrice": 146700,
     "batteryKwh": 102,
-    "rangeKm": 593,
+    "rangeKm": 601,
     "consumptionKwhPer100km": 20.6,
     "bootLitresSeatsUp": 484,
     "bootLitresSeatsDown": 1411,
@@ -56,7 +70,14 @@
     "towKg": 2200,
     "warrantyYears": 5,
     "insuranceAnnual": 3600,
-    "depreciationCurve": [1, 0.66, 0.55, 0.46, 0.39, 0.33],
-    "sourcedAt": "2026-08-06"
+    "depreciationCurve": [
+      1,
+      0.66,
+      0.55,
+      0.46,
+      0.39,
+      0.33
+    ],
+    "sourcedAt": "2026-11-27"
   }
 ]

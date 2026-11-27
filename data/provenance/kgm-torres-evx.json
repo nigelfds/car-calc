@@ -1,0 +1,93 @@
+{
+  "familyId": "kgm-torres-evx",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "kgm-torres-evx-2wd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://kgm.com.au/models/torres",
+        "note": "KGM AU Torres model page lists one EVX grade (FWD) at $53,690 drive-away incl. metallic paint ($700). The configurator page is JS-rendered and returned no grade list to the fetcher; CarExpert and CarsGuide (price page) both list a single 2WD variant."
+      },
+      "listPrice": {
+        "value": 55188,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/kgm/torres/2026-evx-suv-fwd-electric-jsk5mmg520251125",
+        "note": "CarExpert spec page: 'prices starting at $55,188' before on-road costs against $58,000 drive-away (Sydney basis). CarsGuide 2026 price page: $55,188 MSRP, one variant. KGM publishes only drive-away: RRP $58,000, currently $52,990 (solid) / $53,690 (metallic) after a $5,010 'Torres EVX Factory Bonus' limited to MY26 cars built in calendar 2025, 'limited time and while stocks last' (KGM model page; The Beep shows the -$5,010 change, bonus from 10 Nov 2025 'ongoing'). Bonus treated as a campaign per price rule 2, so the regular list is kept. Round-trip: $55,188 through calc/onroad.js gives VIC drive-away $58,386, $386 above KGM's flat national $58,000 (which bundles dealer delivery but NSW-level duty); the SUV back-out of $58,000 would give $54,817. The campaign $52,990 backs out to $50,010 (round-trip $52,990)."
+      },
+      "batteryKwh": {
+        "value": 80.6,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3389/KGM-Torres-EVX-806-kWh",
+        "note": "EV Database: usable 80.6 kWh, nominal 83.0 kWh, BYD Blade LFP. KGM AU MY26 spec sheet gives 'Capacity 80.6 kWh', 390.4 V, unlabelled - matches the usable figure."
+      },
+      "rangeKm": {
+        "value": 462,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM-MY26-Torres-EVX_Specs-and-Features.pdf",
+        "note": "KGM AU MY26 spec sheet footnote 3: WLTP combined, 18-inch 225/60 R18. Direction test: below EV Database's European WLTP 503 km, so not an NEDC submission; local figure used."
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.7,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM-MY26-Torres-EVX_Specs-and-Features.pdf",
+        "note": "KGM AU spec sheet: electric energy consumption (combined, WLTP) 186.5 Wh/km, rounded to 18.7. Battery/range gives 17.4; WLTP figure includes charging losses."
+      },
+      "bootLitresSeatsUp": {
+        "value": 465,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM-MY26-Torres-EVX_Specs-and-Features.pdf",
+        "note": "KGM AU spec sheet VDA 'All seats up (to top of seat back)' 465 L - to-the-cover convention; 703 L to roof not used."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1526,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM-MY26-Torres-EVX_Specs-and-Features.pdf",
+        "note": "KGM AU spec sheet VDA 'All seats folded down' 1,526 L; measurement height unstated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM-MY26-Torres-EVX_Specs-and-Features.pdf",
+        "note": "60/40 split rear seats, 3 rear top tethers; five seats."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://kgm-rebuild-nextjs-postgres-assets-s3.s3.ap-southeast-2.amazonaws.com/KGM-MY26-Torres-EVX_Specs-and-Features.pdf",
+        "note": "KGM AU spec sheet: braked 1,500 kg, unbraked 500 kg, towball 150 kg."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://kgm.com.au/owners-and-service/warranty/warranty-terms",
+        "note": "7 years bumper to bumper, no general km limit; servicing elsewhere allowed with invoices, so unconditional. HV battery 10 years/unlimited km, 70% SoH."
+      },
+      "insuranceAnnual": {
+        "value": 1800,
+        "basis": "judged",
+        "note": "Held value kept. Anchors: kgm-musso-ev-2wd 1850 at $57,130, byd-sealion-7-premium 1650 at $54,990, kia-ev5-air-standard-range 1700 at $56,770; placed above the BYD/Kia for a thin-volume brand with no ANCAP rating, below the Musso EV ute."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "KGM brand convention, identical to kgm-musso-ev. Below mainstream: $5,010 factory bonus on new stock, KGM 2025 sales down 23.7% (held research), no ANCAP rating, CarsGuide notes rivals 'from brands that might hold their value better' (held research)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "kgm-torres-evx-2wd.listPrice: KGM publishes drive-away only; $55,188 is the before-on-roads figure on CarExpert's data-provider page (CarsGuide MSRP likely the same feed). The $5,010 factory bonus ($52,990 drive-away, list-equivalent ~$50,010) has run since Nov 2025 and may be the effective price for all current stock",
+    "kgm-torres-evx-2wd.rangeKm: 462 km is the same figure KGM published for the earlier 73.4 kWh pack while Europe rates the 80.6 kWh car at 503 km WLTP; may be a carried-over claim",
+    "kgm-torres-evx-2wd.depreciationCurve: KGM brand convention, no Australian resale data for the nameplate",
+    "kgm-torres-evx-2wd.insuranceAnnual: judged against Musso EV, Sealion 7 and EV5",
+    "kgm-torres-evx-2wd.bootLitresSeatsDown: VDA folded figure, measurement height unstated"
+  ]
+}

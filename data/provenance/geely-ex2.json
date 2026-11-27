@@ -1,0 +1,175 @@
+{
+  "familyId": "geely-ex2",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "geely-ex2-complete": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.geely.com.au/build/geely-ex2",
+        "note": "Configurator lists Complete $26,490 and Inspire $30,990 on 2026-11-26"
+      },
+      "listPrice": {
+        "value": 26490,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+        "note": "CarExpert price table 'Price before on-road costs'; manufacturer configurator https://www.geely.com.au/build/geely-ex2 shows the same figure without basis wording; RACV review 11 Aug 2026 also 'before on-road costs'. Round-trip: app model gives $28,483 Vic drive-away; RACV quotes $29,807 Victorian drive-away, above the computed figure (dealer delivery included), so $26,490 is a list price."
+      },
+      "batteryKwh": {
+        "value": 35.35,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex2/2027-complete-hatchback-rwd-electric-jskf5w8o20260714",
+        "note": "Usable. CarExpert spec page gives 35.35 kWh (unlabelled); EV Database UK lists nominal 35.4 and useable 35.4 kWh (not marked estimated) for this LFP pack. EVKX claims 33.2 usable (lead only)."
+      },
+      "rangeKm": {
+        "value": 252,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/geely/ex2/2027-complete-hatchback-rwd-electric-jskf5w8o20260714",
+        "note": "WLTP combined, 16-inch wheels as on the AU grade; matches EV Database UK WLTP for the same pack (https://ev-database.org/uk/car/3700/Geely-EX2-35-kWh). No separate AU-certified figure found."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.9,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex2/2027-complete-hatchback-rwd-electric-jskf5w8o20260714",
+        "note": "WLTP combined 159 Wh/km; EV Database UK WLTP rated consumption agrees"
+      },
+      "bootLitresSeatsUp": {
+        "value": 375,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+        "note": "Geely claimed figure; 70L frunk not added (owner convention). RACV prints 350L; Geely's 375L is kept as the manufacturer figure, measurement basis (to cover) not stated."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1320,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+        "note": "Seats folded; RACV and EV Database agree"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+        "note": "Five seats, five-door hatch"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked towing capacity published by CarExpert spec pages, RACV or EV Database ('No Data'); treated as not rated to tow, as held."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex2/2027-complete-hatchback-rwd-electric-jskf5w8o20260714",
+        "note": "84 months / unlimited km whole vehicle, no servicing condition; battery 96 months / unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 1150,
+        "basis": "judged",
+        "note": "Held value kept; anchored between byd-atto1-essential ($23,990, $1,100) and byd-dolphin-essential ($29,990, $1,250)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Geely brand convention, matching geely-starray-em-i and geely-ex5: steeper than the mainstream default for a brand with ~2 years of Australian sales, repeated campaign discounting (Black Friday 25-28 Nov 2026 on geely.com.au: $500 factory bonus, 0.68% finance, free home charger) and no resale record. Held value was [1,0.74,...]; changed to the brand curve."
+      }
+    },
+    "geely-ex2-inspire": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.geely.com.au/build/geely-ex2",
+        "note": "Configurator lists Complete $26,490 and Inspire $30,990 on 2026-11-26"
+      },
+      "listPrice": {
+        "value": 30990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+        "note": "CarExpert price table 'Price before on-road costs'; manufacturer configurator https://www.geely.com.au/build/geely-ex2 shows the same figure without basis wording; RACV review 11 Aug 2026 also 'before on-road costs'. Round-trip: app model gives $33,172 Vic drive-away; RACV quotes $34,501 Victorian drive-away, above the computed figure, so $30,990 is a list price."
+      },
+      "batteryKwh": {
+        "value": 47.14,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex2/2027/inspire/features-and-specs",
+        "note": "Usable: CarExpert spec page labels 47.14 kWh 'usable'; EV Database UK lists nominal 47.1 and useable 47.1 kWh (not marked estimated). EVKX claims 44.3 usable (lead only)."
+      },
+      "rangeKm": {
+        "value": 345,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/geely/ex2/2027/inspire/features-and-specs",
+        "note": "WLTP combined, 16-inch wheels as on the AU grade; matches EV Database UK WLTP for the same pack (https://ev-database.org/uk/car/3701/Geely-EX2-47-kWh). No separate AU-certified figure found."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex2/2027/inspire/features-and-specs",
+        "note": "WLTP combined 155 Wh/km; EV Database UK WLTP rated consumption agrees"
+      },
+      "bootLitresSeatsUp": {
+        "value": 375,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+        "note": "Geely claimed figure; 70L frunk not added (owner convention). RACV prints 350L; Geely's 375L is kept as the manufacturer figure, measurement basis (to cover) not stated."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1320,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+        "note": "Seats folded; RACV and EV Database agree"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-geely-ex2-price-and-specs",
+        "note": "Five seats, five-door hatch"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked towing capacity published by CarExpert spec pages, RACV or EV Database ('No Data'); treated as not rated to tow, as held."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/geely/ex2/2027/inspire/features-and-specs",
+        "note": "84 months / unlimited km whole vehicle, no servicing condition; battery 96 months / unlimited km"
+      },
+      "insuranceAnnual": {
+        "value": 1250,
+        "basis": "judged",
+        "note": "Held value kept; anchored to byd-dolphin-essential ($29,990, $1,250), mg-4-urban-43 ($29,856, $1,250) and byd-atto2-dynamic ($31,990, $1,300)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.75,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Geely brand convention, matching geely-starray-em-i and geely-ex5: steeper than the mainstream default for a brand with ~2 years of Australian sales, repeated campaign discounting (Black Friday 25-28 Nov 2026 on geely.com.au: $500 factory bonus, 0.68% finance, free home charger) and no resale record. Held value was [1,0.74,...]; changed to the brand curve."
+      }
+    }
+  },
+  "lowConfidence": [
+    "geely-ex2-complete.batteryKwh: usable = gross per EV Database; EVKX claims a ~2 kWh buffer (33.2 usable)",
+    "geely-ex2-inspire.batteryKwh: usable = gross per EV Database and CarExpert; EVKX claims 44.3 usable",
+    "geely-ex2-complete.bootLitresSeatsUp: 375L manufacturer figure vs RACV 350L; measurement to cover not confirmed",
+    "geely-ex2-inspire.bootLitresSeatsUp: as Complete",
+    "geely-ex2-complete.towKg: 0 inferred from no published braked rating",
+    "geely-ex2-inspire.towKg: as Complete",
+    "geely-ex2-complete.insuranceAnnual: judged",
+    "geely-ex2-inspire.insuranceAnnual: judged",
+    "geely-ex2-complete.depreciationCurve: judged brand curve",
+    "geely-ex2-inspire.depreciationCurve: judged brand curve"
+  ]
+}

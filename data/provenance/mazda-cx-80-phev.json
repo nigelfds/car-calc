@@ -1,0 +1,420 @@
+{
+  "familyId": "mazda-cx-80-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "mazda-cx-80-phev-touring": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-80-prices-diesels-phevs-more-affordable-than-before",
+        "note": "Mazda AU Build & Price (https://www.mazda.com.au/build/cx-80/) and the CX-80 model page render no grade or price data to automated fetches; the model page names Pure, Touring, GT, Azami and Azami with SP Pack and the 241kW PHEV. CarExpert's July 2026 table lists four P50e lines (Touring, GT, Azami, Azami SP); EV Central (23 Jul 2026) and CarsGuide's 2027 CX-80 price page list the same four P50e grades at the same prices, so the line-up carried into MY27 unchanged. Pure is petrol/diesel only. No 'Vision' rename on the CX-80. P50e Touring orderable."
+      },
+      "listPrice": {
+        "value": 68100,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-80-prices-diesels-phevs-more-affordable-than-before",
+        "note": "CarExpert 22 Jul 2026 price table headed 'Price before on-road costs': P50e Touring $68,100. EV Central 23 Jul 2026 gives the same figure 'before on-road costs' (https://evcentral.com.au/mazda-takes-the-axe-to-phev-pricing-cx-60-and-cx-80-plug-ins-now-up-to-8119-cheaper/). No Mazda AU MLP release for the July 2026 repricing was found (mazda-news listing shows no CX-80 pricing item; 2024 launch release has no prices), so the manufacturer's own figure could not be read. Unchanged since the held 2026-07-28 data; CarsGuide's 2027 page (MSRP, excludes on-roads) also shows $68,100 but is not relied on because it lists the Azami SP as 7 seats. Current Mazda offers (Nov 2026: G40e Pure drive-away, $2,000 cashback) are campaigns, not list changes."
+      },
+      "batteryKwh": {
+        "value": 14.0,
+        "basis": "judged",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazitaet (Brutto) 17,8 kWh'; Mazda AU 2024 launch release '17.8 kWh Lithium ion battery'). Same pack as mazda-cx-60-phev, which judges 14.0 kWh usable (heise: engine refires near 19-26% SoC). Cross-check: CarExpert's Touring week measured 26.3 kWh/100km grid energy; WLTP 60 km x 23.3 kWh/100km = 14.0 kWh. Aligned to the sibling."
+      },
+      "rangeKm": {
+        "value": 60,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "European WLTP electric range for the current (ab 11/25) CX-80 PHEV on 235/50R20, 60 km (same on Takumi, https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346718/); the 10/24-11/25 car was 61 km (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/334509/). Current certification used, matching mazda-cx-60-phev. Australian 65 km (Mazda AU page 'up to 65km'; CarExpert labels it NEDC) is higher than WLTP and rejected by the direction test. EU lists only 20-inch PHEVs; CarExpert reports the AU Touring on 18-inch wheels, so the Touring's real WLTP could be a km or two higher."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 60 x 100. ADAC's 14.6 kWh/100km and Mazda AU's label are utility-weighted, not used. Consistent with CarExpert's measured 26.3 kWh/100km at the plug less charging loss."
+      },
+      "combinedRangeKm": {
+        "value": 935,
+        "basis": "derived",
+        "note": "WLTP electric 60 km + 70 L tank / 8.0 L/100km x 100 (875 km) = 935 km. Tank 70 L from ADAC and CarExpert Touring review."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.0,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 8.0 L/100km (ab 11/25; 8.1 for 10/24-11/25). Same basis as kia-sorento-phev and mazda-cx-60-phev (ADAC battery-empty). Australian real-world: GoAuto Azami SP week 7.8 L/100km; Driving Enthusiast 7.0-7.2. Held 7.0 was the real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-80/",
+        "note": "Mazda AU CX-80 page: 2.7L/100km (ADR 81/02 combined) for the PHEV, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CX-80 P50e label is 64 g/km (CarExpert launch price-and-specs, https://carexpert.com.au/car-news/2025-mazda-cx-80-price-and-specs-seven-seat-suv-undercuts-cx-60)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 258,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "258 L with all three rows up (CarExpert 2026 Touring review; CarExpert launch article says measured to seatback height); ADAC 'Kofferraumvolumen normal' 258 L for the PHEV. Battery under floor, same as petrol/diesel. Matches sibling 7-seaters' all-rows-up basis (kia-sorento-phev)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1971,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "1,971 L with second and third rows folded, to the roof (CarExpert; ADAC 'dachhoch' 1971 L). To-the-roof, matching the folded basis on kia-sorento-phev (1988 L roof) refreshed today; ADAC's window-height folded figure is 1,221 L, which the cargo-cover convention would strictly prefer."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "Seven seats, 2+3+2."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "CarExpert Touring review braked 2,500 kg; ADAC 2,500 kg; EV Central tow list 2,500 kg."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "Five years, unlimited km, unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "Held judgement kept (list unchanged at $68,100). Anchors: kia-sorento-phev S $71,175 -> $1,800, Sport+ $78,755 -> $1,950, GT-Line $86,115 -> $2,100; mitsubishi-outlander-phev Exceed Tourer $74,490 -> $1,850; mazda-cx-60-phev GT $70,640 -> $1,900."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand, Mazda [1,0.74,0.63,0.55,0.48,0.42] as on mazda-6e and mazda-cx-6e. Replaces held [1,0.71,...]."
+      }
+    },
+    "mazda-cx-80-phev-gt": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-80-prices-diesels-phevs-more-affordable-than-before",
+        "note": "Mazda AU Build & Price (https://www.mazda.com.au/build/cx-80/) and the CX-80 model page render no grade or price data to automated fetches; the model page names Pure, Touring, GT, Azami and Azami with SP Pack and the 241kW PHEV. CarExpert's July 2026 table lists four P50e lines (Touring, GT, Azami, Azami SP); EV Central (23 Jul 2026) and CarsGuide's 2027 CX-80 price page list the same four P50e grades at the same prices, so the line-up carried into MY27 unchanged. Pure is petrol/diesel only. No 'Vision' rename on the CX-80. P50e GT orderable."
+      },
+      "listPrice": {
+        "value": 75100,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-80-prices-diesels-phevs-more-affordable-than-before",
+        "note": "CarExpert 22 Jul 2026 price table headed 'Price before on-road costs': P50e GT $75,100. EV Central 23 Jul 2026 gives the same figure 'before on-road costs' (https://evcentral.com.au/mazda-takes-the-axe-to-phev-pricing-cx-60-and-cx-80-plug-ins-now-up-to-8119-cheaper/). No Mazda AU MLP release for the July 2026 repricing was found (mazda-news listing shows no CX-80 pricing item; 2024 launch release has no prices), so the manufacturer's own figure could not be read. Unchanged since the held 2026-07-28 data; CarsGuide's 2027 page (MSRP, excludes on-roads) also shows $75,100 but is not relied on because it lists the Azami SP as 7 seats. Current Mazda offers (Nov 2026: G40e Pure drive-away, $2,000 cashback) are campaigns, not list changes."
+      },
+      "batteryKwh": {
+        "value": 14.0,
+        "basis": "judged",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazitaet (Brutto) 17,8 kWh'; Mazda AU 2024 launch release '17.8 kWh Lithium ion battery'). Same pack as mazda-cx-60-phev, which judges 14.0 kWh usable (heise: engine refires near 19-26% SoC). Cross-check: CarExpert's Touring week measured 26.3 kWh/100km grid energy; WLTP 60 km x 23.3 kWh/100km = 14.0 kWh. Aligned to the sibling."
+      },
+      "rangeKm": {
+        "value": 60,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "European WLTP electric range for the current (ab 11/25) CX-80 PHEV on 235/50R20, 60 km (same on Takumi, https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346718/); the 10/24-11/25 car was 61 km (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/334509/). Current certification used, matching mazda-cx-60-phev. Australian 65 km (Mazda AU page 'up to 65km'; CarExpert labels it NEDC) is higher than WLTP and rejected by the direction test. EU lists only 20-inch PHEVs; CarExpert reports the AU Touring on 18-inch wheels, so the Touring's real WLTP could be a km or two higher."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 60 x 100. ADAC's 14.6 kWh/100km and Mazda AU's label are utility-weighted, not used. Consistent with CarExpert's measured 26.3 kWh/100km at the plug less charging loss."
+      },
+      "combinedRangeKm": {
+        "value": 935,
+        "basis": "derived",
+        "note": "WLTP electric 60 km + 70 L tank / 8.0 L/100km x 100 (875 km) = 935 km. Tank 70 L from ADAC and CarExpert Touring review."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.0,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 8.0 L/100km (ab 11/25; 8.1 for 10/24-11/25). Same basis as kia-sorento-phev and mazda-cx-60-phev (ADAC battery-empty). Australian real-world: GoAuto Azami SP week 7.8 L/100km; Driving Enthusiast 7.0-7.2. Held 7.0 was the real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-80/",
+        "note": "Mazda AU CX-80 page: 2.7L/100km (ADR 81/02 combined) for the PHEV, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CX-80 P50e label is 64 g/km (CarExpert launch price-and-specs, https://carexpert.com.au/car-news/2025-mazda-cx-80-price-and-specs-seven-seat-suv-undercuts-cx-60)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 258,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "258 L with all three rows up (CarExpert 2026 Touring review; CarExpert launch article says measured to seatback height); ADAC 'Kofferraumvolumen normal' 258 L for the PHEV. Battery under floor, same as petrol/diesel. Matches sibling 7-seaters' all-rows-up basis (kia-sorento-phev)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1971,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "1,971 L with second and third rows folded, to the roof (CarExpert; ADAC 'dachhoch' 1971 L). To-the-roof, matching the folded basis on kia-sorento-phev (1988 L roof) refreshed today; ADAC's window-height folded figure is 1,221 L, which the cargo-cover convention would strictly prefer."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "Seven seats, 2+3+2."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "CarExpert Touring review braked 2,500 kg; ADAC 2,500 kg; EV Central tow list 2,500 kg."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "Five years, unlimited km, unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "Held judgement kept (list unchanged at $75,100). Anchors: kia-sorento-phev S $71,175 -> $1,800, Sport+ $78,755 -> $1,950, GT-Line $86,115 -> $2,100; mitsubishi-outlander-phev Exceed Tourer $74,490 -> $1,850; mazda-cx-60-phev GT $70,640 -> $1,900."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand, Mazda [1,0.74,0.63,0.55,0.48,0.42] as on mazda-6e and mazda-cx-6e. Replaces held [1,0.71,...]."
+      }
+    },
+    "mazda-cx-80-phev-azami": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-80-prices-diesels-phevs-more-affordable-than-before",
+        "note": "Mazda AU Build & Price (https://www.mazda.com.au/build/cx-80/) and the CX-80 model page render no grade or price data to automated fetches; the model page names Pure, Touring, GT, Azami and Azami with SP Pack and the 241kW PHEV. CarExpert's July 2026 table lists four P50e lines (Touring, GT, Azami, Azami SP); EV Central (23 Jul 2026) and CarsGuide's 2027 CX-80 price page list the same four P50e grades at the same prices, so the line-up carried into MY27 unchanged. Pure is petrol/diesel only. No 'Vision' rename on the CX-80. P50e Azami orderable."
+      },
+      "listPrice": {
+        "value": 80300,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-80-prices-diesels-phevs-more-affordable-than-before",
+        "note": "CarExpert 22 Jul 2026 price table headed 'Price before on-road costs': P50e Azami $80,300. EV Central 23 Jul 2026 gives the same figure 'before on-road costs' (https://evcentral.com.au/mazda-takes-the-axe-to-phev-pricing-cx-60-and-cx-80-plug-ins-now-up-to-8119-cheaper/). No Mazda AU MLP release for the July 2026 repricing was found (mazda-news listing shows no CX-80 pricing item; 2024 launch release has no prices), so the manufacturer's own figure could not be read. Unchanged since the held 2026-07-28 data; CarsGuide's 2027 page (MSRP, excludes on-roads) also shows $80,300 but is not relied on because it lists the Azami SP as 7 seats. Current Mazda offers (Nov 2026: G40e Pure drive-away, $2,000 cashback) are campaigns, not list changes."
+      },
+      "batteryKwh": {
+        "value": 14.0,
+        "basis": "judged",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazitaet (Brutto) 17,8 kWh'; Mazda AU 2024 launch release '17.8 kWh Lithium ion battery'). Same pack as mazda-cx-60-phev, which judges 14.0 kWh usable (heise: engine refires near 19-26% SoC). Cross-check: CarExpert's Touring week measured 26.3 kWh/100km grid energy; WLTP 60 km x 23.3 kWh/100km = 14.0 kWh. Aligned to the sibling."
+      },
+      "rangeKm": {
+        "value": 60,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "European WLTP electric range for the current (ab 11/25) CX-80 PHEV on 235/50R20, 60 km (same on Takumi, https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346718/); the 10/24-11/25 car was 61 km (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/334509/). Current certification used, matching mazda-cx-60-phev. Australian 65 km (Mazda AU page 'up to 65km'; CarExpert labels it NEDC) is higher than WLTP and rejected by the direction test. EU lists only 20-inch PHEVs; CarExpert reports the AU Touring on 18-inch wheels, so the Touring's real WLTP could be a km or two higher."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 60 x 100. ADAC's 14.6 kWh/100km and Mazda AU's label are utility-weighted, not used. Consistent with CarExpert's measured 26.3 kWh/100km at the plug less charging loss."
+      },
+      "combinedRangeKm": {
+        "value": 935,
+        "basis": "derived",
+        "note": "WLTP electric 60 km + 70 L tank / 8.0 L/100km x 100 (875 km) = 935 km. Tank 70 L from ADAC and CarExpert Touring review."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.0,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 8.0 L/100km (ab 11/25; 8.1 for 10/24-11/25). Same basis as kia-sorento-phev and mazda-cx-60-phev (ADAC battery-empty). Australian real-world: GoAuto Azami SP week 7.8 L/100km; Driving Enthusiast 7.0-7.2. Held 7.0 was the real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-80/",
+        "note": "Mazda AU CX-80 page: 2.7L/100km (ADR 81/02 combined) for the PHEV, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CX-80 P50e label is 64 g/km (CarExpert launch price-and-specs, https://carexpert.com.au/car-news/2025-mazda-cx-80-price-and-specs-seven-seat-suv-undercuts-cx-60)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 258,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "258 L with all three rows up (CarExpert 2026 Touring review; CarExpert launch article says measured to seatback height); ADAC 'Kofferraumvolumen normal' 258 L for the PHEV. Battery under floor, same as petrol/diesel. Matches sibling 7-seaters' all-rows-up basis (kia-sorento-phev)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1971,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "1,971 L with second and third rows folded, to the roof (CarExpert; ADAC 'dachhoch' 1971 L). To-the-roof, matching the folded basis on kia-sorento-phev (1988 L roof) refreshed today; ADAC's window-height folded figure is 1,221 L, which the cargo-cover convention would strictly prefer."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "Seven seats, 2+3+2."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "CarExpert Touring review braked 2,500 kg; ADAC 2,500 kg; EV Central tow list 2,500 kg."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "Five years, unlimited km, unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 2050,
+        "basis": "judged",
+        "note": "Held judgement kept (list unchanged at $80,300). Anchors: kia-sorento-phev S $71,175 -> $1,800, Sport+ $78,755 -> $1,950, GT-Line $86,115 -> $2,100; mitsubishi-outlander-phev Exceed Tourer $74,490 -> $1,850; mazda-cx-60-phev GT $70,640 -> $1,900."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand, Mazda [1,0.74,0.63,0.55,0.48,0.42] as on mazda-6e and mazda-cx-6e. Replaces held [1,0.71,...]."
+      }
+    },
+    "mazda-cx-80-phev-azami-sp": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-80-prices-diesels-phevs-more-affordable-than-before",
+        "note": "Mazda AU Build & Price (https://www.mazda.com.au/build/cx-80/) and the CX-80 model page render no grade or price data to automated fetches; the model page names Pure, Touring, GT, Azami and Azami with SP Pack and the 241kW PHEV. CarExpert's July 2026 table lists four P50e lines (Touring, GT, Azami, Azami SP); EV Central (23 Jul 2026) and CarsGuide's 2027 CX-80 price page list the same four P50e grades at the same prices, so the line-up carried into MY27 unchanged. Pure is petrol/diesel only. No 'Vision' rename on the CX-80. P50e Azami SP orderable."
+      },
+      "listPrice": {
+        "value": 85300,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-mazda-cx-80-prices-diesels-phevs-more-affordable-than-before",
+        "note": "CarExpert 22 Jul 2026 price table headed 'Price before on-road costs': P50e Azami SP $85,300. EV Central 23 Jul 2026 gives the same figure 'before on-road costs' (https://evcentral.com.au/mazda-takes-the-axe-to-phev-pricing-cx-60-and-cx-80-plug-ins-now-up-to-8119-cheaper/). No Mazda AU MLP release for the July 2026 repricing was found (mazda-news listing shows no CX-80 pricing item; 2024 launch release has no prices), so the manufacturer's own figure could not be read. Unchanged since the held 2026-07-28 data; CarsGuide's 2027 page (MSRP, excludes on-roads) also shows $85,300 but is not relied on because it lists the Azami SP as 7 seats. Current Mazda offers (Nov 2026: G40e Pure drive-away, $2,000 cashback) are campaigns, not list changes."
+      },
+      "batteryKwh": {
+        "value": 14.0,
+        "basis": "judged",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "Usable capacity is unpublished. 17.8 kWh is gross (ADAC 'Batteriekapazitaet (Brutto) 17,8 kWh'; Mazda AU 2024 launch release '17.8 kWh Lithium ion battery'). Same pack as mazda-cx-60-phev, which judges 14.0 kWh usable (heise: engine refires near 19-26% SoC). Cross-check: CarExpert's Touring week measured 26.3 kWh/100km grid energy; WLTP 60 km x 23.3 kWh/100km = 14.0 kWh. Aligned to the sibling."
+      },
+      "rangeKm": {
+        "value": 60,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "European WLTP electric range for the current (ab 11/25) CX-80 PHEV on 235/50R20, 60 km (same on Takumi, https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346718/); the 10/24-11/25 car was 61 km (https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/334509/). Current certification used, matching mazda-cx-60-phev. Australian 65 km (Mazda AU page 'up to 65km'; CarExpert labels it NEDC) is higher than WLTP and rejected by the direction test. EU lists only 20-inch PHEVs; CarExpert reports the AU Touring on 18-inch wheels, so the Touring's real WLTP could be a km or two higher."
+      },
+      "consumptionKwhPer100km": {
+        "value": 23.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 14.0 / 60 x 100. ADAC's 14.6 kWh/100km and Mazda AU's label are utility-weighted, not used. Consistent with CarExpert's measured 26.3 kWh/100km at the plug less charging loss."
+      },
+      "combinedRangeKm": {
+        "value": 935,
+        "basis": "derived",
+        "note": "WLTP electric 60 km + 70 L tank / 8.0 L/100km x 100 (875 km) = 935 km. Tank 70 L from ADAC and CarExpert Touring review."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.0,
+        "basis": "sourced",
+        "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mazda/cx-80/kl/346716/",
+        "note": "European WLTP 'Verbrauch kombiniert (WLTP) PHEV (Batterie leer)' 8.0 L/100km (ab 11/25; 8.1 for 10/24-11/25). Same basis as kia-sorento-phev and mazda-cx-60-phev (ADAC battery-empty). Australian real-world: GoAuto Azami SP week 7.8 L/100km; Driving Enthusiast 7.0-7.2. Held 7.0 was the real-world figure."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.mazda.com.au/cars/cx-80/",
+        "note": "Mazda AU CX-80 page: 2.7L/100km (ADR 81/02 combined) for the PHEV, below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO green car = combined tailpipe CO2 120 g/km or less; CX-80 P50e label is 64 g/km (CarExpert launch price-and-specs, https://carexpert.com.au/car-news/2025-mazda-cx-80-price-and-specs-seven-seat-suv-undercuts-cx-60)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 258,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "258 L with all three rows up (CarExpert 2026 Touring review; CarExpert launch article says measured to seatback height); ADAC 'Kofferraumvolumen normal' 258 L for the PHEV. Battery under floor, same as petrol/diesel. Matches sibling 7-seaters' all-rows-up basis (kia-sorento-phev)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1971,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "1,971 L with second and third rows folded, to the roof (CarExpert; ADAC 'dachhoch' 1971 L). To-the-roof, matching the folded basis on kia-sorento-phev (1988 L roof) refreshed today; ADAC's window-height folded figure is 1,221 L, which the cargo-cover convention would strictly prefer."
+      },
+      "seats": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.goauto.com.au/car-reviews/mazda/cx80/azami-sp/2025-06-11/96561.html",
+        "note": "GoAuto Azami SP review: SP Pack includes 'second-row ventilated captain's chairs (making for a six-seat configuration)'. CarsGuide's 7 is wrong."
+      },
+      "towKg": {
+        "value": 2500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "CarExpert Touring review braked 2,500 kg; ADAC 2,500 kg; EV Central tow list 2,500 kg."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-mazda-cx-80-p50e-touring-review",
+        "note": "Five years, unlimited km, unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "Held judgement kept (list unchanged at $85,300). Anchors: kia-sorento-phev S $71,175 -> $1,800, Sport+ $78,755 -> $1,950, GT-Line $86,115 -> $2,100; mitsubishi-outlander-phev Exceed Tourer $74,490 -> $1,850; mazda-cx-60-phev GT $70,640 -> $1,900."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "Owner convention: one curve per brand, Mazda [1,0.74,0.63,0.55,0.48,0.42] as on mazda-6e and mazda-cx-6e. Replaces held [1,0.71,...]."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mazda-cx-80-phev-*.batteryKwh: 14.0 kWh usable judged from 17.8 gross, aligned to mazda-cx-60-phev; no source states usable",
+    "mazda-cx-80-phev-*.listPrice: no Mazda AU MLP source reachable (configurator renders nothing to fetches, no CX-80 pricing release found); CarExpert and EV Central 'before on-road costs' only",
+    "mazda-cx-80-phev-touring.rangeKm: WLTP 60 km is a 20-inch EU figure; AU Touring reportedly on 18-inch wheels",
+    "mazda-cx-80-phev-*.bootLitresSeatsDown: 1971 L is to the roof, matching sibling 7-seaters; window-height figure is 1221 L",
+    "mazda-cx-80-phev-azami-sp.bootLitresSeatsUp/Down: six-seat layout's figures unpublished; seven-seat figures used",
+    "mazda-cx-80-phev-*.insuranceAnnual: judged",
+    "mazda-cx-80-phev-*.depreciationCurve: judged (brand convention)"
+  ]
+}

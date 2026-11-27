@@ -1,0 +1,258 @@
+{
+  "familyId": "xpeng-g6",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "xpeng-g6-standard-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "'RWD Standard Range' is one of three versions (carVersionCode FFCP) on XPeng AU New G6 configurator, 2026-11-26 (cache 2026-11-26 05:33)"
+      },
+      "listPrice": {
+        "value": 51800,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "Configurator data msrpBeforeSubsidy/msrpAfterDiscount 51800, isExistDiscount 0; the configurator's price breakdown separates 'Manufacturer list price' from dealer delivery, stamp duty and registration, and the drive-away figure is computed per state on top. CarExpert price news (7 Jul 2026), CarExpert quick drive (10 Jul 2026) and Chasing Cars (9 Jul 2026) all give $51,800 'before on-road costs' in words. A separate private-buyer drive-away campaign (ends 31 Dec 2026) runs below list-plus-on-roads and is not used."
+      },
+      "batteryKwh": {
+        "value": 67.8,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3402/XPENG-G6-RWD-Standard-Range",
+        "note": "usable; EV Database MY25 Standard Range: 68.5 kWh nominal, 67.8 kWh usable; same 68.5 kWh LFP pack as XPeng AU sheet; EU WLTP 470 km (TEL) consistent with AU's 470 km R20 figure. XPeng AU configurator spec labels 68.5 kWh as gross."
+      },
+      "rangeKm": {
+        "value": 480,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec sheet: 480 km WLTP on the standard 18-inch wheel (470 km on optional 20-inch); matches manufacturer European WLTP (EV Database), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.6,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec sheet consumption 16.6 kWh/100km (R18; 16.9 on R20); sits ~17.5% above usable/range, consistent with a grid-to-wheel figure including charging losses (EV Database's WLTP vehicle consumption is lower)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 571,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec: 'Boot: 571 L (1,374 L with rear seats folded)', all three grades; same on xpeng.com/au/g6"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1374,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec, rear seats folded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec: Seats 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-xpeng-g6-review-quick-drive",
+        "note": "CarExpert AU quick drive (10 Jul 2026): 1,500 kg braked; EV Database also 1,500 kg braked / 750 kg unbraked. Not found on an XPeng AU technical sheet."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.xpeng.com/au/insight/warranty",
+        "note": "XPeng AU warranty page: 7 years unlimited km private use (7yr/160,000km commercial); key parts incl. traction battery 8yr/160,000km, min 70% capacity. No servicing-conditional extension advertised."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "anchored to byd-sealion-7-premium ($54,990, $1,650) and zeekr-7x-rwd ($57,900, $2,200); priced between them, nearer BYD"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default kept from held data; XPeng holds only this family so no brand convention to match. Evidence that might justify a steeper curve: $3,000 cut at the July 2026 relaunch, a below-list drive-away campaign to 31 Dec 2026, thin volume and past distributor changes (siblings: zeekr-7x 0.70 at year 1, tesla-model-y 0.73, byd-sealion-7 0.74)."
+      }
+    },
+    "xpeng-g6-long-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "'RWD Long Range' is one of three versions (carVersionCode FFAP) on XPeng AU New G6 configurator, 2026-11-26 (cache 2026-11-26 05:33)"
+      },
+      "listPrice": {
+        "value": 56800,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "Configurator data msrpBeforeSubsidy/msrpAfterDiscount 56800, isExistDiscount 0; the configurator's price breakdown separates 'Manufacturer list price' from dealer delivery, stamp duty and registration, and the drive-away figure is computed per state on top. CarExpert price news (7 Jul 2026), CarExpert quick drive (10 Jul 2026) and Chasing Cars (9 Jul 2026) all give $56,800 'before on-road costs' in words. A separate private-buyer drive-away campaign (ends 31 Dec 2026) runs below list-plus-on-roads and is not used."
+      },
+      "batteryKwh": {
+        "value": 80.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/uk/car/3275/XPENG-G6-RWD-Long-Range",
+        "note": "usable; EV Database MY25 RWD Long Range (UK page): 80.8 kWh nominal, 80.0 kWh usable; UK WLTP 326 mi = 525 km matches AU. XPeng AU configurator spec labels 80.8 kWh as gross."
+      },
+      "rangeKm": {
+        "value": 525,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec sheet: 525 km WLTP (R20, standard wheel); matches manufacturer European WLTP (EV Database), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.9,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec sheet consumption 17.9 kWh/100km (R20); sits ~17.5% above usable/range, consistent with a grid-to-wheel figure including charging losses (EV Database's WLTP vehicle consumption is lower)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 571,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec: 'Boot: 571 L (1,374 L with rear seats folded)', all three grades; same on xpeng.com/au/g6"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1374,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec, rear seats folded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec: Seats 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-xpeng-g6-review-quick-drive",
+        "note": "CarExpert AU quick drive (10 Jul 2026): 1,500 kg braked; EV Database also 1,500 kg braked / 750 kg unbraked. Not found on an XPeng AU technical sheet."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.xpeng.com/au/insight/warranty",
+        "note": "XPeng AU warranty page: 7 years unlimited km private use (7yr/160,000km commercial); key parts incl. traction battery 8yr/160,000km, min 70% capacity. No servicing-conditional extension advertised."
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "anchored to zeekr-7x-rwd ($57,900, $2,200) and byd-sealion-7 rows; kept from held data"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default kept from held data; XPeng holds only this family so no brand convention to match. Evidence that might justify a steeper curve: $3,000 cut at the July 2026 relaunch, a below-list drive-away campaign to 31 Dec 2026, thin volume and past distributor changes (siblings: zeekr-7x 0.70 at year 1, tesla-model-y 0.73, byd-sealion-7 0.74)."
+      }
+    },
+    "xpeng-g6-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "'AWD Performance' is one of three versions (carVersionCode FFBP) on XPeng AU New G6 configurator, 2026-11-26 (cache 2026-11-26 05:33)"
+      },
+      "listPrice": {
+        "value": 63800,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "Configurator data msrpBeforeSubsidy/msrpAfterDiscount 63800, isExistDiscount 0; the configurator's price breakdown separates 'Manufacturer list price' from dealer delivery, stamp duty and registration, and the drive-away figure is computed per state on top. CarExpert price news (7 Jul 2026), CarExpert quick drive (10 Jul 2026) and Chasing Cars (9 Jul 2026) all give $63,800 'before on-road costs' in words. A separate private-buyer drive-away campaign (ends 31 Dec 2026) runs below list-plus-on-roads and is not used."
+      },
+      "batteryKwh": {
+        "value": 80.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3276/XPENG-G6-AWD-Performance",
+        "note": "usable; EV Database MY25 AWD Performance: 80.8 kWh nominal, 80.0 kWh usable; EU WLTP 510 km matches AU. XPeng AU configurator spec labels 80.8 kWh as gross."
+      },
+      "rangeKm": {
+        "value": 510,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec sheet: 510 km WLTP (R20, standard wheel); matches manufacturer European WLTP (EV Database), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.4,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec sheet consumption 18.4 kWh/100km (R20); sits ~17.5% above usable/range, consistent with a grid-to-wheel figure including charging losses (EV Database's WLTP vehicle consumption is lower)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 571,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec: 'Boot: 571 L (1,374 L with rear seats folded)', all three grades; same on xpeng.com/au/g6"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1374,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec, rear seats folded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_G6R",
+        "note": "XPeng AU configurator spec: Seats 5"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-xpeng-g6-review-quick-drive",
+        "note": "CarExpert AU quick drive (10 Jul 2026): 1,500 kg braked; EV Database also 1,500 kg braked / 750 kg unbraked. Not found on an XPeng AU technical sheet."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.xpeng.com/au/insight/warranty",
+        "note": "XPeng AU warranty page: 7 years unlimited km private use (7yr/160,000km commercial); key parts incl. traction battery 8yr/160,000km, min 70% capacity. No servicing-conditional extension advertised."
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "anchored to byd-sealion-7-performance ($63,990, $1,900) and zeekr-7x-long-range-rwd ($63,900, $2,400); 358 kW dual-motor warrants a premium over BYD"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "mainstream default kept from held data; XPeng holds only this family so no brand convention to match. Evidence that might justify a steeper curve: $3,000 cut at the July 2026 relaunch, a below-list drive-away campaign to 31 Dec 2026, thin volume and past distributor changes (siblings: zeekr-7x 0.70 at year 1, tesla-model-y 0.73, byd-sealion-7 0.74)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "xpeng-g6-standard-range.depreciationCurve: mainstream default kept although discounting, relaunch price cut and siblings (Zeekr 0.70, Tesla 0.73, BYD 0.74 at year 1) all point steeper",
+    "xpeng-g6-long-range.depreciationCurve: as standard-range",
+    "xpeng-g6-performance.depreciationCurve: as standard-range",
+    "xpeng-g6-standard-range.towKg: 1,500 kg from CarExpert and EV Database, not an XPeng AU technical sheet",
+    "xpeng-g6-long-range.towKg: as standard-range",
+    "xpeng-g6-performance.towKg: as standard-range",
+    "xpeng-g6-standard-range.batteryKwh: usable 67.8 from EV Database only; XPeng publishes gross 68.5",
+    "xpeng-g6-long-range.batteryKwh: usable 80.0 from EV Database only; XPeng publishes gross 80.8",
+    "xpeng-g6-performance.batteryKwh: usable 80.0 from EV Database only; XPeng publishes gross 80.8",
+    "xpeng-g6-standard-range.insuranceAnnual: judged against byd-sealion-7 and zeekr-7x",
+    "xpeng-g6-long-range.insuranceAnnual: judged against byd-sealion-7 and zeekr-7x",
+    "xpeng-g6-performance.insuranceAnnual: judged against byd-sealion-7-performance and zeekr-7x"
+  ]
+}

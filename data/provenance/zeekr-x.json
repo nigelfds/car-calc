@@ -1,0 +1,176 @@
+{
+  "familyId": "zeekr-x",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "zeekr-x-rwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
+        "note": "Zeekr AU MY26 X page lists RWD and AWD with a live Build & Price link (conf.zeekrlife.com/en-au/?linkCode=1581, client-rendered; a deeper fetch of it was refused by a permission check). No MY27 X announced as of 2026-11-27; the Oct/Nov MY27 update was the 7X only. Two-grade line-up confirmed by CarExpert and The Beep."
+      },
+      "listPrice": {
+        "value": 46009,
+        "basis": "backed-out",
+        "url": "https://thebeep.com.au/car-news/2026-zeekr-x-price-specs-australia",
+        "note": "Zeekr quotes $48,900 drive-away; The Beep FAQ: 'all-inclusive with no additional on-road costs', national flat figure (CarExpert https://www.carexpert.com.au/car-news/2026-zeekr-x-price-and-specs-updated-ev-gets-massive-price-cuts-1). No 'before on-road costs' list price published by Zeekr; CarExpert/Zecar/CarsGuide database pages label $48,900 as MSRP/before on-roads, but CarExpert's own Sydney drive-away then adds ~$3,018 on top (shows the database stores the drive-away figure as MSRP), so rejected in favour of the manufacturer's drive-away wording. (48900 - 958.80)/1.042 = 46,009; round-trip driveAwayPrice total 48899.53. Zeekr sells agency-direct, so no dealer delivery is bundled; whether CTP is included is unstated. Unverified against an independent on-road estimate (configurator unreadable). Re-derived 2026-11-27 for VIC rego $958.80 (was 46,084 at $880; round trip 48900.18)."
+      },
+      "batteryKwh": {
+        "value": 60,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3585/Zeekr-X-Long-Range-RWD",
+        "note": "EV Database MY26 EU: usable 60 kWh, nominal 61 kWh (usable marked estimated); Zeekr AU quotes the pack as 61kWh LFP (RWD) / 66kWh NCM (AWD). Held 59/65"
+      },
+      "rangeKm": {
+        "value": 405,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
+        "note": "Zeekr AU WLTP 405km; matches EV Database EU WLTP for the MY26 car; AU wheel 19in"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.4,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3585/Zeekr-X-Long-Range-RWD",
+        "note": "EV Database WLTP rated consumption 174 Wh/km (incl. charging losses), same quantity used for zeekr-7x. Zeekr AU publishes no RWD claim; EV Central's spec sheet quotes 15.5kWh/100km for the AWD (likely battery-side). Cross-check: 60/405 = 14.8"
+      },
+      "bootLitresSeatsUp": {
+        "value": 404,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
+        "note": "404L rear boot per Zeekr AU; the separate 12L frunk is not added (owner convention). Zeekr does not say whether 404L is to the cargo cover"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1247,
+        "basis": "sourced",
+        "url": "https://carexpert.com.au/car-reviews/2026-zeekr-x-review-quick-drive",
+        "note": "1247L seats folded per Zeekr via CarExpert (also EV Central). Measurement height unstated; CarExpert's database page says 1182L but that record also lists a 540km range and 13.9kWh/100km, so discarded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/zeekr/x/2026-suv-rwd-electric-jsgk5kfo20260417",
+        "note": "five seats (2+3); only seat count used from this database record"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3585/Zeekr-X-Long-Range-RWD",
+        "note": "1600kg braked on EV Database (EU MY26); CarsGuide 2026 AU towing page also 1600kg braked for every grade (https://www.carsguide.com.au/zeekr/x/towing-capacity/2026); EV Central says 1600kg. No Zeekr AU tech sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
+        "note": "5 years unlimited km; battery 8yr/160,000km. 7-year pre-order offer closed 31 May 2026 (The Beep)"
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "anchored to SEA-platform siblings volvo-ex30-single-ultra and smart-1-premium (1900) at similar list price and power; held 1950"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "matches zeekr-7x exactly (one curve per brand, owner convention); steeper than mainstream for a brand on sale since 2024 whose X was repriced down $5-10k in one model year. Held [1,0.68,0.57,0.48,0.41,0.35]"
+      }
+    },
+    "zeekr-x-performance-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
+        "note": "Zeekr AU MY26 X page lists RWD and AWD with a live Build & Price link (conf.zeekrlife.com/en-au/?linkCode=1581, client-rendered; a deeper fetch of it was refused by a permission check). No MY27 X announced as of 2026-11-27; the Oct/Nov MY27 update was the 7X only. Two-grade line-up confirmed by CarExpert and The Beep."
+      },
+      "listPrice": {
+        "value": 54646,
+        "basis": "backed-out",
+        "url": "https://thebeep.com.au/car-news/2026-zeekr-x-price-specs-australia",
+        "note": "Zeekr quotes $57,900 drive-away; The Beep FAQ: 'all-inclusive with no additional on-road costs', national flat figure (CarExpert https://www.carexpert.com.au/car-news/2026-zeekr-x-price-and-specs-updated-ev-gets-massive-price-cuts-1). No 'before on-road costs' list price published by Zeekr; CarExpert/Zecar/CarsGuide database pages label $57,900 as MSRP/before on-roads, but CarExpert's own Sydney drive-away then adds ~$3,018 on top (shows the database stores the drive-away figure as MSRP), so rejected in favour of the manufacturer's drive-away wording. (57900 - 958.80)/1.042 = 54,646; round-trip driveAwayPrice total 57900.32. Zeekr sells agency-direct, so no dealer delivery is bundled; whether CTP is included is unstated. Unverified against an independent on-road estimate (configurator unreadable). Re-derived 2026-11-27 for VIC rego $958.80 (was 54,722 at $880; round trip 57899.93)."
+      },
+      "batteryKwh": {
+        "value": 65,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3586/Zeekr-X-Privilege-AWD",
+        "note": "EV Database MY26 EU: usable 65 kWh, nominal 69 kWh; Zeekr AU quotes the pack as 61kWh LFP (RWD) / 66kWh NCM (AWD). Held 59/65"
+      },
+      "rangeKm": {
+        "value": 415,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
+        "note": "Zeekr AU WLTP 415km; matches EV Database EU WLTP for the MY26 car; AU wheel 20in"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18.1,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3586/Zeekr-X-Privilege-AWD",
+        "note": "EV Database WLTP rated consumption 181 Wh/km (incl. charging losses), same quantity used for zeekr-7x. Zeekr AU publishes no RWD claim; EV Central's spec sheet quotes 15.5kWh/100km for the AWD (likely battery-side). Cross-check: 65/415 = 15.7"
+      },
+      "bootLitresSeatsUp": {
+        "value": 404,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
+        "note": "404L rear boot per Zeekr AU; the separate 12L frunk is not added (owner convention). Zeekr does not say whether 404L is to the cargo cover"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1247,
+        "basis": "sourced",
+        "url": "https://carexpert.com.au/car-reviews/2026-zeekr-x-review-quick-drive",
+        "note": "1247L seats folded per Zeekr via CarExpert (also EV Central). Measurement height unstated; CarExpert's database page says 1182L but that record also lists a 540km range and 13.9kWh/100km, so discarded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/zeekr/x/2026-suv-rwd-electric-jsgk5kfo20260417",
+        "note": "five seats (2+3); only seat count used from this database record"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3586/Zeekr-X-Privilege-AWD",
+        "note": "1600kg braked on EV Database (EU MY26); CarsGuide 2026 AU towing page also 1600kg braked for every grade (https://www.carsguide.com.au/zeekr/x/towing-capacity/2026); EV Central says 1600kg. No Zeekr AU tech sheet found"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/new-zeekr-x",
+        "note": "5 years unlimited km; battery 8yr/160,000km. 7-year pre-order offer closed 31 May 2026 (The Beep)"
+      },
+      "insuranceAnnual": {
+        "value": 2300,
+        "basis": "judged",
+        "note": "anchored to SEA dual-motor siblings smart-1-brabus and volvo-ex30-cross-country-ultra (2300); 365kW justifies matching them despite the lower list price; held 2350"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "matches zeekr-7x exactly (one curve per brand, owner convention); steeper than mainstream for a brand on sale since 2024 whose X was repriced down $5-10k in one model year. Held [1,0.68,0.57,0.48,0.41,0.35]"
+      }
+    }
+  },
+  "lowConfidence": [
+    "zeekr-x-rwd.listPrice: backed out of $48,900 national drive-away; no list price published, configurator unreadable, no independent on-road check",
+    "zeekr-x-performance-awd.listPrice: backed out of $57,900 national drive-away; same caveats",
+    "zeekr-x-rwd.batteryKwh: usable 60 is EV Database's estimate (nominal 61); no manufacturer usable figure",
+    "zeekr-x-performance-awd.batteryKwh: usable 65 from EV Database (EU nominal 69 vs AU-quoted 66kWh)",
+    "zeekr-x-*.consumptionKwhPer100km: EU WLTP rated figures via EV Database, not an Australian-published figure",
+    "zeekr-x-*.bootLitresSeatsDown: 1247L measurement height unstated; possibly to the roof",
+    "zeekr-x-*.towKg: EV Database and CarsGuide aggregator only; no Zeekr AU tech sheet",
+    "zeekr-x-*.insuranceAnnual: judged, anchored to SEA siblings",
+    "zeekr-x-*.depreciationCurve: judged; brand curve copied from zeekr-7x"
+  ]
+}

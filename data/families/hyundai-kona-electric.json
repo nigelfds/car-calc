@@ -1,24 +1,26 @@
 {
   "id": "hyundai-kona-electric",
-  "summary": "Australian reviewers see the Kona Electric as a competent, easy-to-live-with small SUV with genuinely spacious packaging and a comfortable, relaxed ride around town, backed by Hyundai's dealer network. The Extended Range base grade is widely rated the pick of the range as strong value, while the Standard Range's real-world range and slow 100kW charging are seen as behind newer rivals, and the step up to Premium is questioned as not clearly worth the extra outlay. Recent price cuts of roughly $8,000 across the range have sharpened its position against cheaper Chinese EVs without changing the fundamental verdict: a sound, unexciting choice rather than a class leader.",
+  "summary": "Australian reviewers see the Kona Electric as a competent, easy-to-live-with small SUV with genuinely spacious packaging and a comfortable, relaxed ride around town, backed by Hyundai's dealer network. The Extended Range base grade is widely rated the pick of the range for value, while the Standard Range's 370km WLTP range and slow 100kW charging are seen as behind newer rivals, and the MY27 Standard Range also lost its heat pump and interior V2L outlet to hit its price. Permanent cuts of $8,000 in June 2026, plus a new $53,000 Elite slotted between Extended Range and Premium, have sharpened its position against cheaper Chinese EVs without changing the fundamental verdict: a sound, unexciting choice rather than a class leader.",
   "pros": [
     "Spacious, well-packaged interior for the class, with strong rear legroom and a rare space-saver spare wheel",
     "Comfortable, well-damped ride that soaks up potholes and speed bumps around town",
     "Easy-to-use dual-screen infotainment with thoughtful right-hand-drive ergonomics",
-    "Extended Range grade seen by reviewers as strong value following 2026 price cuts, undercutting the Premium by around $10,000 for similar underlying capability"
+    "Extended Range grade ($50,000 before on-roads) undercuts the Premium by $10,000 with the same 64.8kWh battery, and its 17-inch wheels give the range's best 505km WLTP figure",
+    "Warranty extends from 5 to 7 years with unlimited km if every scheduled service is done at a Hyundai dealer; the drive battery is covered for 8 years/160,000km, and 64.8kWh grades are rated to tow 750kg braked"
   ],
   "cons": [
-    "Standard Range's real-world range (around 350km) looks light for a modern EV, especially for interstate trips",
-    "100kW DC fast-charging trails newer 800V rivals and is described by reviewers as not great for the segment",
-    "Chassis gets bouncy and less composed at highway speed or when pushed harder",
-    "Premium trim's price premium over Extended Range is questioned as not clearly justified by the added equipment"
+    "Standard Range's 370km WLTP range looks light for a modern EV, and for MY27 it loses the heat pump (hurting cold-weather range), interior V2L and portable charging cable, and is not rated to tow",
+    "100kW DC fast-charging (10-80% in about 45 minutes) trails newer 800V rivals and is described by reviewers as not great for the segment",
+    "Chassis gets bouncy and less composed over large crests and dips at highway speed",
+    "The 19-inch wheels on Elite, Premium and Premium N Line cut WLTP range from 505km to 444km, and the Premium's $7,000 step over the Elite is questioned as not clearly justified"
   ],
   "sources": [
-    "https://www.carexpert.com.au/car-reviews/2024-hyundai-kona-electric-premium-review",
-    "https://www.carsales.com.au/editorial/details/hyundai-kona-electric-standard-range-2026-review-151240/",
+    "https://www.hyundai.com/au/en/cars/eco/kona-electric",
+    "https://www.hyundai.com/content/dam/hyundai/au/en/models/kona-ev/key-features/MY27_Specification_Sheet_KONA_Electric.pdf",
     "https://www.carexpert.com.au/car-news/hyundai-kona-ioniq-5-ev-pricing-slashed-by-thousands",
     "https://www.chasingcars.com.au/news/new-car-prices/prices-slashed-by-8000-for-hyundai-ioniq-5-and-kona-electric-as-cheaper-rivals-continue-to-flood-australias-ev-market/",
-    "https://www.gridly.com.au/blog/hyundai-kona-electric-review-australia-2026"
+    "https://thebeep.com.au/car-news/2027-hyundai-kona-electric-ioniq-5-price-cut-australia",
+    "https://www.carexpert.com.au/car-reviews/2024-hyundai-kona-electric-premium-review"
   ],
-  "sourcedAt": "2026-07-26"
+  "sourcedAt": "2026-11-26"
 }

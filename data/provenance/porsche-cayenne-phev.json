@@ -1,0 +1,834 @@
+{
+  "familyId": "porsche-cayenne-phev",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "porsche-cayenne-phev-e-hybrid": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://configurator.porsche.com/en-AU/mode/model/9YAAV1",
+        "note": "Porsche AU MY27 configurator entry for this model code; listed as its own model on https://www.porsche.com/australia/models/cayenne/cayenne-models/"
+      },
+      "listPrice": {
+        "value": 164800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "CarExpert 2025 Cayenne review pricing table, 'price before on-road costs', $164,800. Porsche AU configurator (MY27) states 'Recommended price includes GST and LCT, but excludes all other taxes, duties and Government/other charges' but did not render the base price to automated reads. Corroborated as current by CarExpert's 21 Sep 2026 Cayenne Electric review (Electric $167,700 is 'about $3000 higher' than the E-Hybrid) and CarExpert's current Sydney drive-away $175,158 (2026 price-and-specs), which is consistent with this list price."
+      },
+      "batteryKwh": {
+        "value": 21.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert spec: 25.9 kWh max, 21.8 kWh usable; Porsche AU/international give 25.9 kWh gross only. Same pack on all E-Hybrid and S E-Hybrid grades."
+      },
+      "rangeKm": {
+        "value": 76,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche international MY27: electric range combined (model range) 69-76 km; top of band used. Porsche AU quotes 86 km on the ECE cycle, higher than the WLTP best case, so rejected per the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 21.8 / 76 x 100"
+      },
+      "combinedRangeKm": {
+        "value": 762,
+        "basis": "derived",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "76 km WLTP electric + 70 L tank / 10.2 L/100km x 100 = 762. MY27 Porsche page states a 70-litre tank (held row used 75 L; one CarExpert page also says 75 L, another 70 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.2,
+        "basis": "sourced",
+        "url": "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+        "note": "Porsche newsroom WLTP fuel consumption with depleted battery: E-Hybrid 10.5-9.8, S E-Hybrid 10.6-9.8 L/100km; midpoint of E-Hybrid band used for all rows for consistency."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche AU weighted combined 1.9 L/100km, under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined CO2 of 120 g/km or less; Cayenne E-Hybrid ~43-44 g/km (carsales S E-Hybrid 43 g/km)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 627,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche AU: 627 L up to the upper edge of the rear seats (CarExpert labels the SUV figure \"to lower window\"), taken as the to-the-cover convention. Porsche also lists a smaller \"rear V210-2\" figure (545 L) whose method is not explained."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1563,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche AU: behind the front seats up to the roof. No belt-line folded figure published; to-the-roof figure kept."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "Five-seat SUV/Coupé."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche AU technical data: 3,500 kg braked, 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "3 years unlimited km; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 3400,
+        "basis": "judged",
+        "note": "Held Porsche scale ($3,400 at $164,800 rising ~$100 per $5-7k), above land-rover-defender-phev ($3,000-3,200 at $131-143k) and volvo-xc90-phev ($2,700-2,850)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.73,
+          0.62,
+          0.54,
+          0.47,
+          0.41
+        ],
+        "basis": "judged",
+        "note": "Kept the held Porsche convention (steeper than the mainstream default, in line with the premium PHEV siblings land-rover-defender-phev, bmw-x3-phev, volvo-xc90-phev, mercedes-glc-phev at 0.64-0.70 after year one), stepping down with price."
+      }
+    },
+    "porsche-cayenne-phev-e-hybrid-black-edition": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://configurator.porsche.com/en-AU/mode/model/9YADV1",
+        "note": "Porsche AU MY27 configurator entry for this model code; listed as its own model on https://www.porsche.com/australia/models/cayenne/cayenne-models/. Black Edition is a separate model code, not an option pack (the only BE option is the $2,680 Extended package Black Edition)."
+      },
+      "listPrice": {
+        "value": 175800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert variant page (2026 E-Hybrid Black Edition SUV): 'prices starting at $175,800 before on-road costs'; same figure in the 2025 review table and the Black Edition launch article's 'Price before on-road costs' table."
+      },
+      "batteryKwh": {
+        "value": 21.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert spec: 25.9 kWh max, 21.8 kWh usable; Porsche AU/international give 25.9 kWh gross only. Same pack on all E-Hybrid and S E-Hybrid grades."
+      },
+      "rangeKm": {
+        "value": 76,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche international MY27: electric range combined (model range) 69-76 km; top of band used. Porsche AU quotes 86 km on the ECE cycle, higher than the WLTP best case, so rejected per the direction test. Black Edition ships on 21-inch wheels; no BE-specific WLTP figure found, so the top of the model band may overstate it by a few km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 21.8 / 76 x 100"
+      },
+      "combinedRangeKm": {
+        "value": 762,
+        "basis": "derived",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "76 km WLTP electric + 70 L tank / 10.2 L/100km x 100 = 762. MY27 Porsche page states a 70-litre tank (held row used 75 L; one CarExpert page also says 75 L, another 70 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.2,
+        "basis": "sourced",
+        "url": "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+        "note": "Porsche newsroom WLTP fuel consumption with depleted battery: E-Hybrid 10.5-9.8, S E-Hybrid 10.6-9.8 L/100km; midpoint of E-Hybrid band used for all rows for consistency."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche AU weighted combined 1.9 L/100km, under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined CO2 of 120 g/km or less; Cayenne E-Hybrid ~43-44 g/km (carsales S E-Hybrid 43 g/km)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 627,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche AU: 627 L up to the upper edge of the rear seats (CarExpert labels the SUV figure \"to lower window\"), taken as the to-the-cover convention. Porsche also lists a smaller \"rear V210-2\" figure (545 L) whose method is not explained."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1563,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche AU: behind the front seats up to the roof. No belt-line folded figure published; to-the-roof figure kept."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "Five-seat SUV/Coupé."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-e-hybrid/",
+        "note": "Porsche AU technical data: 3,500 kg braked, 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "3 years unlimited km; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 3600,
+        "basis": "judged",
+        "note": "Held Porsche scale ($3,400 at $164,800 rising ~$100 per $5-7k), above land-rover-defender-phev ($3,000-3,200 at $131-143k) and volvo-xc90-phev ($2,700-2,850). Black Edition interpolated by list price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "Kept the held Porsche convention (steeper than the mainstream default, in line with the premium PHEV siblings land-rover-defender-phev, bmw-x3-phev, volvo-xc90-phev, mercedes-glc-phev at 0.64-0.70 after year one), stepping down with price. Black Edition slotted by list price."
+      }
+    },
+    "porsche-cayenne-phev-e-hybrid-coupe": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://configurator.porsche.com/en-AU/mode/model/9YBAV1",
+        "note": "Porsche AU MY27 configurator entry for this model code; listed as its own model on https://www.porsche.com/australia/models/cayenne/cayenne-models/"
+      },
+      "listPrice": {
+        "value": 171400,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "CarExpert 2025 Cayenne review pricing table, 'price before on-road costs'. CarExpert current Sydney drive-away $182,088 sits exactly $10,688 above it, the same NSW on-road gap pattern as the other rows (+5% duty on the $6,600 difference)."
+      },
+      "batteryKwh": {
+        "value": 21.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert spec: 25.9 kWh max, 21.8 kWh usable; Porsche AU/international give 25.9 kWh gross only. Same pack on all E-Hybrid and S E-Hybrid grades."
+      },
+      "rangeKm": {
+        "value": 76,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche international MY27: electric range combined (model range) 69-76 km; top of band used. Porsche AU quotes 86 km on the ECE cycle, higher than the WLTP best case, so rejected per the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 21.8 / 76 x 100"
+      },
+      "combinedRangeKm": {
+        "value": 762,
+        "basis": "derived",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "76 km WLTP electric + 70 L tank / 10.2 L/100km x 100 = 762. MY27 Porsche page states a 70-litre tank (held row used 75 L; one CarExpert page also says 75 L, another 70 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.2,
+        "basis": "sourced",
+        "url": "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+        "note": "Porsche newsroom WLTP fuel consumption with depleted battery: E-Hybrid 10.5-9.8, S E-Hybrid 10.6-9.8 L/100km; midpoint of E-Hybrid band used for all rows for consistency."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU weighted combined 1.9 L/100km, under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined CO2 of 120 g/km or less; Cayenne E-Hybrid ~43-44 g/km (carsales S E-Hybrid 43 g/km)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 434,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU: 434 L up to the upper edge of the rear seats (CarExpert labels the SUV figure \"to lower window\"), taken as the to-the-cover convention. Porsche also lists a smaller \"rear V210-2\" figure (404 L) whose method is not explained."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1344,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU: behind the front seats up to the roof. No belt-line folded figure published; to-the-roof figure kept."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "Five-seat SUV/Coupé."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU technical data: 3,500 kg braked, 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "3 years unlimited km; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 3500,
+        "basis": "judged",
+        "note": "Held Porsche scale ($3,400 at $164,800 rising ~$100 per $5-7k), above land-rover-defender-phev ($3,000-3,200 at $131-143k) and volvo-xc90-phev ($2,700-2,850)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "Kept the held Porsche convention (steeper than the mainstream default, in line with the premium PHEV siblings land-rover-defender-phev, bmw-x3-phev, volvo-xc90-phev, mercedes-glc-phev at 0.64-0.70 after year one), stepping down with price."
+      }
+    },
+    "porsche-cayenne-phev-e-hybrid-coupe-black-edition": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://configurator.porsche.com/en-AU/mode/model/9YBDV1",
+        "note": "Porsche AU MY27 configurator entry for this model code; listed as its own model on https://www.porsche.com/australia/models/cayenne/cayenne-models/. Black Edition is a separate model code, not an option pack (the only BE option is the $2,680 Extended package Black Edition)."
+      },
+      "listPrice": {
+        "value": 180500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026--jsgwaww520250710",
+        "note": "CarExpert variant page (2026 E-Hybrid Black Edition Coupé): 'prices starting at $180,500' before on-road costs; matches the 2025 review table and launch article."
+      },
+      "batteryKwh": {
+        "value": 21.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert spec: 25.9 kWh max, 21.8 kWh usable; Porsche AU/international give 25.9 kWh gross only. Same pack on all E-Hybrid and S E-Hybrid grades."
+      },
+      "rangeKm": {
+        "value": 76,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche international MY27: electric range combined (model range) 69-76 km; top of band used. Porsche AU quotes 86 km on the ECE cycle, higher than the WLTP best case, so rejected per the direction test. Black Edition ships on 21-inch wheels; no BE-specific WLTP figure found, so the top of the model band may overstate it by a few km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.7,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 21.8 / 76 x 100"
+      },
+      "combinedRangeKm": {
+        "value": 762,
+        "basis": "derived",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "76 km WLTP electric + 70 L tank / 10.2 L/100km x 100 = 762. MY27 Porsche page states a 70-litre tank (held row used 75 L; one CarExpert page also says 75 L, another 70 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.2,
+        "basis": "sourced",
+        "url": "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+        "note": "Porsche newsroom WLTP fuel consumption with depleted battery: E-Hybrid 10.5-9.8, S E-Hybrid 10.6-9.8 L/100km; midpoint of E-Hybrid band used for all rows for consistency."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU weighted combined 1.9 L/100km, under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined CO2 of 120 g/km or less; Cayenne E-Hybrid ~43-44 g/km (carsales S E-Hybrid 43 g/km)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 434,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU: 434 L up to the upper edge of the rear seats (CarExpert labels the SUV figure \"to lower window\"), taken as the to-the-cover convention. Porsche also lists a smaller \"rear V210-2\" figure (404 L) whose method is not explained."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1344,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU: behind the front seats up to the roof. No belt-line folded figure published; to-the-roof figure kept."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "Five-seat SUV/Coupé."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU technical data: 3,500 kg braked, 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "3 years unlimited km; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 3700,
+        "basis": "judged",
+        "note": "Held Porsche scale ($3,400 at $164,800 rising ~$100 per $5-7k), above land-rover-defender-phev ($3,000-3,200 at $131-143k) and volvo-xc90-phev ($2,700-2,850). Black Edition interpolated by list price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.6,
+          0.52,
+          0.45,
+          0.39
+        ],
+        "basis": "judged",
+        "note": "Kept the held Porsche convention (steeper than the mainstream default, in line with the premium PHEV siblings land-rover-defender-phev, bmw-x3-phev, volvo-xc90-phev, mercedes-glc-phev at 0.64-0.70 after year one), stepping down with price. Black Edition slotted by list price."
+      }
+    },
+    "porsche-cayenne-phev-s-e-hybrid": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://configurator.porsche.com/en-AU/mode/model/9YABN1",
+        "note": "Porsche AU MY27 configurator entry for this model code; listed as its own model on https://www.porsche.com/australia/models/cayenne/cayenne-models/"
+      },
+      "listPrice": {
+        "value": 187800,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "CarExpert 2025 Cayenne review pricing table, 'price before on-road costs'. CarExpert's current Sydney drive-away $199,413 fits a list $100 higher ($187,900) on the NSW pattern the other seven rows fit exactly; not confirmed, kept at the stated list figure."
+      },
+      "batteryKwh": {
+        "value": 21.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert spec: 25.9 kWh max, 21.8 kWh usable; Porsche AU/international give 25.9 kWh gross only. Same pack on all E-Hybrid and S E-Hybrid grades."
+      },
+      "rangeKm": {
+        "value": 77,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche international MY27: electric range combined (model range) 70-77 km; top of band used. Porsche AU quotes 88 km on the ECE cycle, higher than the WLTP best case, so rejected per the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 21.8 / 77 x 100"
+      },
+      "combinedRangeKm": {
+        "value": 763,
+        "basis": "derived",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "77 km WLTP electric + 70 L tank / 10.2 L/100km x 100 = 763. MY27 Porsche page states a 70-litre tank (held row used 75 L; one CarExpert page also says 75 L, another 70 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.2,
+        "basis": "sourced",
+        "url": "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+        "note": "Porsche newsroom WLTP fuel consumption with depleted battery: E-Hybrid 10.5-9.8, S E-Hybrid 10.6-9.8 L/100km; midpoint of E-Hybrid band used for all rows for consistency."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche AU weighted combined 2.0 L/100km, under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined CO2 of 120 g/km or less; Cayenne E-Hybrid ~43-44 g/km (carsales S E-Hybrid 43 g/km)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 627,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche AU: 627 L up to the upper edge of the rear seats (CarExpert labels the SUV figure \"to lower window\"), taken as the to-the-cover convention. Porsche also lists a smaller \"rear V210-2\" figure (545 L) whose method is not explained."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1563,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche AU: behind the front seats up to the roof. No belt-line folded figure published; to-the-roof figure kept."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "Five-seat SUV/Coupé."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche AU technical data: 3,500 kg braked, 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "3 years unlimited km; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 3800,
+        "basis": "judged",
+        "note": "Held Porsche scale ($3,400 at $164,800 rising ~$100 per $5-7k), above land-rover-defender-phev ($3,000-3,200 at $131-143k) and volvo-xc90-phev ($2,700-2,850)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.71,
+          0.6,
+          0.52,
+          0.45,
+          0.39
+        ],
+        "basis": "judged",
+        "note": "Kept the held Porsche convention (steeper than the mainstream default, in line with the premium PHEV siblings land-rover-defender-phev, bmw-x3-phev, volvo-xc90-phev, mercedes-glc-phev at 0.64-0.70 after year one), stepping down with price."
+      }
+    },
+    "porsche-cayenne-phev-s-e-hybrid-black-edition": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://configurator.porsche.com/en-AU/mode/model/9YAEN1",
+        "note": "Porsche AU MY27 configurator entry for this model code; listed as its own model on https://www.porsche.com/australia/models/cayenne/cayenne-models/. Black Edition is a separate model code, not an option pack (the only BE option is the $2,680 Extended package Black Edition)."
+      },
+      "listPrice": {
+        "value": 195500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-v6-s-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawss20250710",
+        "note": "CarExpert variant page (2026 S E-Hybrid Black Edition SUV): 'prices starting at $195,500' before on-road costs; matches the 2025 review table and launch article."
+      },
+      "batteryKwh": {
+        "value": 21.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert spec: 25.9 kWh max, 21.8 kWh usable; Porsche AU/international give 25.9 kWh gross only. Same pack on all E-Hybrid and S E-Hybrid grades."
+      },
+      "rangeKm": {
+        "value": 77,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche international MY27: electric range combined (model range) 70-77 km; top of band used. Porsche AU quotes 88 km on the ECE cycle, higher than the WLTP best case, so rejected per the direction test. Black Edition ships on 21-inch wheels; no BE-specific WLTP figure found, so the top of the model band may overstate it by a few km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 21.8 / 77 x 100"
+      },
+      "combinedRangeKm": {
+        "value": 763,
+        "basis": "derived",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "77 km WLTP electric + 70 L tank / 10.2 L/100km x 100 = 763. MY27 Porsche page states a 70-litre tank (held row used 75 L; one CarExpert page also says 75 L, another 70 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.2,
+        "basis": "sourced",
+        "url": "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+        "note": "Porsche newsroom WLTP fuel consumption with depleted battery: E-Hybrid 10.5-9.8, S E-Hybrid 10.6-9.8 L/100km; midpoint of E-Hybrid band used for all rows for consistency."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche AU weighted combined 2.0 L/100km, under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined CO2 of 120 g/km or less; Cayenne E-Hybrid ~43-44 g/km (carsales S E-Hybrid 43 g/km)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 627,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche AU: 627 L up to the upper edge of the rear seats (CarExpert labels the SUV figure \"to lower window\"), taken as the to-the-cover convention. Porsche also lists a smaller \"rear V210-2\" figure (545 L) whose method is not explained."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1563,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche AU: behind the front seats up to the roof. No belt-line folded figure published; to-the-roof figure kept."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "Five-seat SUV/Coupé."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche AU technical data: 3,500 kg braked, 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "3 years unlimited km; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 3950,
+        "basis": "judged",
+        "note": "Held Porsche scale ($3,400 at $164,800 rising ~$100 per $5-7k), above land-rover-defender-phev ($3,000-3,200 at $131-143k) and volvo-xc90-phev ($2,700-2,850). Black Edition interpolated by list price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.59,
+          0.51,
+          0.44,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "Kept the held Porsche convention (steeper than the mainstream default, in line with the premium PHEV siblings land-rover-defender-phev, bmw-x3-phev, volvo-xc90-phev, mercedes-glc-phev at 0.64-0.70 after year one), stepping down with price. Black Edition slotted by list price."
+      }
+    },
+    "porsche-cayenne-phev-s-e-hybrid-coupe": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://configurator.porsche.com/en-AU/mode/model/9YBBN1",
+        "note": "Porsche AU MY27 configurator entry for this model code; listed as its own model on https://www.porsche.com/australia/models/cayenne/cayenne-models/"
+      },
+      "listPrice": {
+        "value": 194700,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "CarExpert 2025 Cayenne review pricing table, 'price before on-road costs'; carsales research (RedBook) 'Price when new' $194,700 for the S E-Hybrid 9YB (Coupé) agrees. CarExpert's current drive-away $206,658 fits a list $100 higher on the NSW pattern; not confirmed."
+      },
+      "batteryKwh": {
+        "value": 21.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert spec: 25.9 kWh max, 21.8 kWh usable; Porsche AU/international give 25.9 kWh gross only. Same pack on all E-Hybrid and S E-Hybrid grades."
+      },
+      "rangeKm": {
+        "value": 77,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche international MY27: electric range combined (model range) 70-77 km; top of band used. Porsche AU quotes 88 km on the ECE cycle, higher than the WLTP best case, so rejected per the direction test."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 21.8 / 77 x 100"
+      },
+      "combinedRangeKm": {
+        "value": 763,
+        "basis": "derived",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "77 km WLTP electric + 70 L tank / 10.2 L/100km x 100 = 763. MY27 Porsche page states a 70-litre tank (held row used 75 L; one CarExpert page also says 75 L, another 70 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.2,
+        "basis": "sourced",
+        "url": "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+        "note": "Porsche newsroom WLTP fuel consumption with depleted battery: E-Hybrid 10.5-9.8, S E-Hybrid 10.6-9.8 L/100km; midpoint of E-Hybrid band used for all rows for consistency."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU weighted combined 2.0 L/100km, under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined CO2 of 120 g/km or less; Cayenne E-Hybrid ~43-44 g/km (carsales S E-Hybrid 43 g/km)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 434,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU: 434 L up to the upper edge of the rear seats (CarExpert labels the SUV figure \"to lower window\"), taken as the to-the-cover convention. Porsche also lists a smaller \"rear V210-2\" figure (404 L) whose method is not explained."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1344,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU: behind the front seats up to the roof. No belt-line folded figure published; to-the-roof figure kept."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "Five-seat SUV/Coupé."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU technical data: 3,500 kg braked, 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "3 years unlimited km; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 3900,
+        "basis": "judged",
+        "note": "Held Porsche scale ($3,400 at $164,800 rising ~$100 per $5-7k), above land-rover-defender-phev ($3,000-3,200 at $131-143k) and volvo-xc90-phev ($2,700-2,850)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.59,
+          0.51,
+          0.44,
+          0.38
+        ],
+        "basis": "judged",
+        "note": "Kept the held Porsche convention (steeper than the mainstream default, in line with the premium PHEV siblings land-rover-defender-phev, bmw-x3-phev, volvo-xc90-phev, mercedes-glc-phev at 0.64-0.70 after year one), stepping down with price."
+      }
+    },
+    "porsche-cayenne-phev-s-e-hybrid-coupe-black-edition": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://configurator.porsche.com/en-AU/mode/model/9YBEN1",
+        "note": "Porsche AU MY27 configurator entry for this model code; listed as its own model on https://www.porsche.com/australia/models/cayenne/cayenne-models/. Black Edition is a separate model code, not an option pack (the only BE option is the $2,680 Extended package Black Edition)."
+      },
+      "listPrice": {
+        "value": 197600,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-v6-s-e-hybrid-black-edition-auto-3l-coupe-4x4-electric-jsgwaww820250710",
+        "note": "CarExpert variant page (2026 S E-Hybrid Black Edition Coupé): 'prices starting at $197,600' before on-road costs; matches the 2025 review table and launch article."
+      },
+      "batteryKwh": {
+        "value": 21.8,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "CarExpert spec: 25.9 kWh max, 21.8 kWh usable; Porsche AU/international give 25.9 kWh gross only. Same pack on all E-Hybrid and S E-Hybrid grades."
+      },
+      "rangeKm": {
+        "value": 77,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "Porsche international MY27: electric range combined (model range) 70-77 km; top of band used. Porsche AU quotes 88 km on the ECE cycle, higher than the WLTP best case, so rejected per the direction test. Black Edition ships on 21-inch wheels; no BE-specific WLTP figure found, so the top of the model band may overstate it by a few km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 28.3,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 21.8 / 77 x 100"
+      },
+      "combinedRangeKm": {
+        "value": 763,
+        "basis": "derived",
+        "url": "https://www.porsche.com/international/models/cayenne/cayenne-models/cayenne-s-e-hybrid/",
+        "note": "77 km WLTP electric + 70 L tank / 10.2 L/100km x 100 = 763. MY27 Porsche page states a 70-litre tank (held row used 75 L; one CarExpert page also says 75 L, another 70 L)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 10.2,
+        "basis": "sourced",
+        "url": "https://newsroom.porsche.com/en/2023/products/porsche-the-new-cayenne-s-e-hybrid-33885.html",
+        "note": "Porsche newsroom WLTP fuel consumption with depleted battery: E-Hybrid 10.5-9.8, S E-Hybrid 10.6-9.8 L/100km; midpoint of E-Hybrid band used for all rows for consistency."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU weighted combined 2.0 L/100km, under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/motor-vehicle-duty-current-rates",
+        "note": "SRO: green passenger car = combined CO2 of 120 g/km or less; Cayenne E-Hybrid ~43-44 g/km (carsales S E-Hybrid 43 g/km)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 434,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU: 434 L up to the upper edge of the rear seats (CarExpert labels the SUV figure \"to lower window\"), taken as the to-the-cover convention. Porsche also lists a smaller \"rear V210-2\" figure (404 L) whose method is not explained."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1344,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU: behind the front seats up to the roof. No belt-line folded figure published; to-the-roof figure kept."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/porsche/cayenne/2026-30-e-hybrid-black-edition-auto-3l-suv-4x4-electric-jsgwawso20250710",
+        "note": "Five-seat SUV/Coupé."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.porsche.com/australia/models/cayenne/cayenne-coupe-models/cayenne-coupe-e-hybrid/",
+        "note": "Porsche AU technical data: 3,500 kg braked, 750 kg unbraked."
+      },
+      "warrantyYears": {
+        "value": 3,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2025-porsche-cayenne-review",
+        "note": "3 years unlimited km; HV battery 8 years/160,000 km."
+      },
+      "insuranceAnnual": {
+        "value": 4000,
+        "basis": "judged",
+        "note": "Held Porsche scale ($3,400 at $164,800 rising ~$100 per $5-7k), above land-rover-defender-phev ($3,000-3,200 at $131-143k) and volvo-xc90-phev ($2,700-2,850). Black Edition interpolated by list price."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.69,
+          0.58,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "Kept the held Porsche convention (steeper than the mainstream default, in line with the premium PHEV siblings land-rover-defender-phev, bmw-x3-phev, volvo-xc90-phev, mercedes-glc-phev at 0.64-0.70 after year one), stepping down with price. Black Edition slotted by list price."
+      }
+    }
+  },
+  "lowConfidence": [
+    "porsche-cayenne-phev-s-e-hybrid.listPrice: Aug 2025 review figure; current CarExpert drive-away implies $187,900; Porsche AU configurator would not render base prices",
+    "porsche-cayenne-phev-s-e-hybrid-coupe.listPrice: as above, drive-away implies $194,800",
+    "porsche-cayenne-phev-*.listPrice: no Porsche-published MY27 list price could be read; review/variant-page figures with drive-away cross-check",
+    "porsche-cayenne-phev-*-black-edition.rangeKm: top of the model WLTP band; Black Editions ship on 21-inch wheels",
+    "porsche-cayenne-phev-*.bootLitresSeatsDown: to the roof, not belt line",
+    "porsche-cayenne-phev-*.bootLitresSeatsUp: Porsche \"upper edge of rear seats\" taken as to-the-cover; Porsche also lists smaller V210-2 figures (545/404 L)",
+    "porsche-cayenne-phev-*.depreciationCurve: judged, steeper than mainstream default without Porsche-specific resale data",
+    "porsche-cayenne-phev-*.insuranceAnnual: judged",
+    "porsche-cayenne-phev-*.fuelConsumptionL100km: midpoint of the WLTP depleted-battery band, 2023 newsroom figures"
+  ]
+}

@@ -11,13 +11,20 @@
     "rangeKm": 470,
     "consumptionKwhPer100km": 14.4,
     "bootLitresSeatsUp": 405,
-    "bootLitresSeatsDown": 900,
+    "bootLitresSeatsDown": 666,
     "seats": 5,
     "towKg": 1500,
     "warrantyYears": 5,
     "insuranceAnnual": 1950,
-    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-07-30"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   },
   {
     "id": "mercedes-cla-ev-350-4matic-eq",
@@ -31,12 +38,19 @@
     "rangeKm": 663,
     "consumptionKwhPer100km": 14.9,
     "bootLitresSeatsUp": 405,
-    "bootLitresSeatsDown": 900,
+    "bootLitresSeatsDown": 666,
     "seats": 5,
     "towKg": 1800,
     "warrantyYears": 5,
     "insuranceAnnual": 2500,
-    "depreciationCurve": [1, 0.72, 0.61, 0.53, 0.46, 0.4],
-    "sourcedAt": "2026-07-30"
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-26"
   }
 ]

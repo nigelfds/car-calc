@@ -1,0 +1,174 @@
+{
+  "familyId": "leapmotor-c10",
+  "researchedAt": "2026-11-27",
+  "mode": "update",
+  "variants": {
+    "leapmotor-c10-design-lr": {
+      "bootLitresSeatsUp": {
+        "value": 435,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "to the cargo cover: EV Database / Leapmotor EU 435L seats up (Auto Express UK also 435L, frunk 32-34L not added). Leapmotor AU's 581L is measured to the roof per CarsGuide (https://www.carsguide.com.au/car-reviews/leapmotor-c10-design-96589), so rejected under the cargo-cover convention"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1410,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "EV Database cargo max 1,410L, same figure Leapmotor AU and Auto Express quote; measurement height not stated, probably to the roof rather than belt line"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "EV Database seats 5; Leapmotor AU page describes a five-seat two-row layout"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "EV Database braked 1,500kg (EU spec); carsales AU research page also lists 1,500kg braked (https://www.carsales.com.au/research/leapmotor/c10/2026/style/). No Leapmotor AU spec sheet found; Auto Express UK says the C10 'isn't rated to tow'. Kept, low confidence"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/services-for-you/maintenance-and-warranty",
+        "note": "Leapmotor AU warranty page: vehicle 'up to 6 years or 150,000 km', battery 8 years/160,000km; carsales lists 6yr/150,000km for the C10. CarExpert's 2025 review predates the MY25 cut from 7 years"
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "anchored to byd-sealion-7-premium ($54,990, $1,650) and leapmotor-b10-design-lr ($40,888, $1,600); small premium over Sealion 7 for a new brand with a thin repair network, value unchanged from held"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.59,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "one curve for every Leapmotor row (owner convention): the brand curve already used by leapmotor-b10 and the held C10 Style/Design LR rows. Steeper than mainstream default on thin local volume, recurring cashback/$0 on-road campaigns, the MY25 warranty cut and carsales' private-buy guide of $32,200-35,600 for a $45,888 Style. The AWD row's former separate steeper curve was dropped to keep one brand convention"
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/models/c10",
+        "note": "Leapmotor AU has no public configurator or price list (pricing page defers to a calculator not readable here); C10 model page lists the 81.9kWh/510km WLTP Design LR with current 1 Oct-31 Dec 2026 offer terms. CarExpert's 2026 listing (https://www.carexpert.com.au/leapmotor/c10/2026) carries Design LR and Sports+ only"
+      },
+      "listPrice": {
+        "value": 49888,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/big-changes-for-leapmotor-c10-ev-in-australia-line-up-rationalised-range-extended-good-news-story-on-price/",
+        "note": "EV Central (June 2026 line-up change) MSRP $49,888 excluding on-road costs; GoAuto, CarExpert and Zecar MY26 launch reports all say $49,888 before/plus on-road costs in words. No manufacturer price published. CarExpert 2026 Sydney drive-away from $54,500 is consistent (VIC model gives $52,863). Leapmotor's $0 on-roads/free wallbox offer (to 31 Dec 2026) is a campaign, not applied"
+      },
+      "batteryKwh": {
+        "value": 81.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "usable; EV Database gives 81.9 usable / 84.0 nominal for the C10 RWD 81.9 kWh. Leapmotor AU quotes 81.9 kWh unlabelled"
+      },
+      "rangeKm": {
+        "value": 510,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.leapmotor.net/en-au/models/c10",
+        "note": "Leapmotor AU spec table 'Electric WLTP range up to 510 km' for 81.9 kWh; matches EV Database EU WLTP 510km. NEDC is 605km (The Driven, Zecar); the page's FAQ line '510 km NEDC' is mislabelled"
+      },
+      "consumptionKwhPer100km": {
+        "value": 18,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/models/c10",
+        "note": "Leapmotor AU spec table 18 kWh/100km (WLTP) for 81.9 kWh; EV Database rated 180 Wh/km. Grid figure, 12% above usable/range (16.1)"
+      }
+    },
+    "leapmotor-c10-awd-sports-plus": {
+      "bootLitresSeatsUp": {
+        "value": 435,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "to the cargo cover: EV Database / Leapmotor EU 435L seats up (Auto Express UK also 435L, frunk 32-34L not added). Leapmotor AU's 581L is measured to the roof per CarsGuide (https://www.carsguide.com.au/car-reviews/leapmotor-c10-design-96589), so rejected under the cargo-cover convention"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1410,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "EV Database cargo max 1,410L, same figure Leapmotor AU and Auto Express quote; measurement height not stated, probably to the roof rather than belt line"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "EV Database seats 5; Leapmotor AU page describes a five-seat two-row layout"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3387/Leapmotor-C10-RWD-819-kWh",
+        "note": "EV Database braked 1,500kg (EU spec); carsales AU research page also lists 1,500kg braked (https://www.carsales.com.au/research/leapmotor/c10/2026/style/). No Leapmotor AU spec sheet found; Auto Express UK says the C10 'isn't rated to tow'. Kept, low confidence"
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/services-for-you/maintenance-and-warranty",
+        "note": "Leapmotor AU warranty page: vehicle 'up to 6 years or 150,000 km', battery 8 years/160,000km; carsales lists 6yr/150,000km for the C10. CarExpert's 2025 review predates the MY25 cut from 7 years"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "lowered from held $2,400: anchored to byd-sealion-7-performance ($63,990, 390kW AWD, $1,900) and leapmotor-c10-design-lr ($1,750); 440kW and a 4.0s 0-100 justify a step above the Sealion 7 Performance despite the lower price"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.59,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "one curve for every Leapmotor row (owner convention): the brand curve already used by leapmotor-b10 and the held C10 Style/Design LR rows. Steeper than mainstream default on thin local volume, recurring cashback/$0 on-road campaigns, the MY25 warranty cut and carsales' private-buy guide of $32,200-35,600 for a $45,888 Style. The AWD row's former separate steeper curve was dropped to keep one brand convention"
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/models/c10-awd-sports",
+        "note": "Leapmotor AU AWD Sports+ page: 'Pre-Order at your Local Dealer', End of Year offer applies to new and demonstrator Special Edition models delivered 1 Oct-31 Dec 2026. CarExpert 2026 listing shows Sports+ from $58,700 drive-away (Sydney). Limited to 50 cars (CarExpert, March 2026), so remaining stock is uncertain"
+      },
+      "listPrice": {
+        "value": 53888,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/leapmotor-c10-awd-sports-is-an-exclusive-but-affordable-model-y-performance-rival",
+        "note": "CarExpert launch report '$53,888 before on-road costs' in words; EV Central and Zecar same MSRP. No manufacturer price published. CarExpert Sydney drive-away $58,700, $4,200 above Design LR, consistent with $4,000 list gap (VIC model gives $57,031)"
+      },
+      "batteryKwh": {
+        "value": 81.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3388/Leapmotor-C10-AWD-819-kWh",
+        "note": "usable; EV Database gives 81.9 usable / 84.0 nominal for the C10 AWD 81.9 kWh"
+      },
+      "rangeKm": {
+        "value": 437,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://ev-database.org/car/3388/Leapmotor-C10-AWD-819-kWh",
+        "note": "EV Database WLTP 437km; CarExpert and EV Central report the same claimed WLTP. Leapmotor AU AWD page quotes 'up to 510km NEDC' (higher, rejected)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.9,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3388/Leapmotor-C10-AWD-819-kWh",
+        "note": "EV Database rated WLTP 209 Wh/km (grid figure); usable/range = 18.7, 12% under"
+      }
+    }
+  },
+  "lowConfidence": [
+    "leapmotor-c10-awd-sports-plus.availability: 50-car Special Edition from March 2026; Leapmotor still takes pre-orders and CarExpert lists it, but unsold stock in Victoria is unverified",
+    "leapmotor-c10-*.listPrice: no manufacturer price list or configurator; prices are June/March 2026 launch MSRPs from reviews, re-checked only against CarExpert's current Sydney drive-away",
+    "leapmotor-c10-*.towKg: 1,500kg from EV Database (EU) and carsales, no Leapmotor AU spec sheet; Auto Express UK says not rated to tow",
+    "leapmotor-c10-*.bootLitresSeatsDown: 1,410L likely to the roof, not the belt line",
+    "leapmotor-c10-awd-sports-plus.insuranceAnnual: judged, lowered $2,400 to $2,100",
+    "leapmotor-c10-design-lr.insuranceAnnual: judged",
+    "leapmotor-c10-*.depreciationCurve: judged brand curve"
+  ]
+}

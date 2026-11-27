@@ -1,0 +1,176 @@
+{
+  "familyId": "audi-q4-e-tron",
+  "researchedAt": "2026-11-26",
+  "mode": "update",
+  "variants": {
+    "audi-q4-e-tron-55-quattro": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/new-horizons",
+        "note": "Audi Australia: quattro 'can already be ordered through Audi dealers' ahead of H1 2027 arrival; MLP published. audi.com.au configurator returned HTTP 403 to automated reads, so not checked directly. Corroborated by Chasing Cars and Zecar ('available to order now')."
+      },
+      "listPrice": {
+        "value": 81650,
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/new-horizons",
+        "note": "Audi AU Manufacturer List Pricing, 'excludes dealer delivery and government statutory charges'; same 81650 'before on-road costs' in words at https://www.chasingcars.com.au/news/new-car-prices/audi-q4-e-tron-2027-price-slashed-for-updated-bmw-ix1-and-mercedes-benz-gla-rival/ and https://www.carexpert.com.au/car-news/2027-audi-q4-e-tron-ev-prices-slashed-by-up-to-dollar18000"
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.audi.com/de/pressemitteilungen/audi-q4-e-tron-elektrischer-bestseller-wird-noch-funktionaler-17102/download",
+        "note": "usable: Audi press release 'Mit 82 kWh (77 kWh netto) gro\u00dfer Batterie'; Audi AU magazine also gives 82 gross / 77 net. VW Group gross vs net settled: 77 is net."
+      },
+      "rangeKm": {
+        "value": 494,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://magazine.audi.com.au/article/new-horizons",
+        "note": "Audi AU figure for the AU SUV quattro on 20-inch S line wheels; below the European best case (541 km, Audi press release), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.7,
+        "basis": "derived",
+        "note": "Audi WLTP combined band for Q4 SUV e-tron quattro performance is 18.9-16.2 kWh/100km against 541 km max range (Audi press release); scaled to the AU 494 km figure: 16.2 x 541/494 = 17.7. Includes charging losses, matching the sibling VW Group rows' WLTP-combined basis. Battery/range = 15.6."
+      },
+      "bootLitresSeatsUp": {
+        "value": 515,
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/first-look-at-revised-audi-q4-models",
+        "note": "Audi AU magazine: SUV 515 L, 1,487 L seats folded"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1487,
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/first-look-at-revised-audi-q4-models",
+        "note": "Audi AU magazine: SUV 515 L, 1,487 L seats folded"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-audi-q4-e-tron-review-quick-drive",
+        "note": "five-seat medium SUV"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/first-look-at-revised-audi-q4-models",
+        "note": "Audi AU magazine: quattro models 1,800 kg trailer load, up 400 kg (international launch spec). Audi AU has not published AU-spec towing for MY27; MY26 AU 55 quattro was 1,200 kg against 1,400 kg in Europe, so AU spec may be lower."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-audi-q4-e-tron-ev-prices-slashed-by-up-to-dollar18000",
+        "note": "five-year unlimited-km new vehicle warranty; also Zecar"
+      },
+      "insuranceAnnual": {
+        "value": 2400,
+        "basis": "judged",
+        "note": "anchored to cupra-tavascan-vz (2150 at $74,490), vw-id5-gtx (2100 at $72,990), skoda-enyaq-rs (2150) and audi-q6-e-tron-rwd (2800 at $99,900); premium-badge loading at $81,650"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.67,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "kept the held Audi quattro curve (brand convention, sits between audi-q6-e-tron-rwd and -performance). The $18k price cut lowers the new-car baseline rather than this curve; thin early volume is not yet evidenced."
+      }
+    },
+    "audi-q4-e-tron-sportback-55-quattro": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/new-horizons",
+        "note": "Audi Australia: quattro 'can already be ordered through Audi dealers' ahead of H1 2027 arrival; MLP published. audi.com.au configurator returned HTTP 403 to automated reads, so not checked directly. Corroborated by Chasing Cars and Zecar ('available to order now')."
+      },
+      "listPrice": {
+        "value": 83250,
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/new-horizons",
+        "note": "Audi AU Manufacturer List Pricing, 'excludes dealer delivery and government statutory charges'; same 83250 'before on-road costs' in words at https://www.chasingcars.com.au/news/new-car-prices/audi-q4-e-tron-2027-price-slashed-for-updated-bmw-ix1-and-mercedes-benz-gla-rival/ and https://www.carexpert.com.au/car-news/2027-audi-q4-e-tron-ev-prices-slashed-by-up-to-dollar18000"
+      },
+      "batteryKwh": {
+        "value": 77,
+        "basis": "sourced",
+        "url": "https://www.audi.com/de/pressemitteilungen/audi-q4-e-tron-elektrischer-bestseller-wird-noch-funktionaler-17102/download",
+        "note": "usable: Audi press release 'Mit 82 kWh (77 kWh netto) gro\u00dfer Batterie'; Audi AU magazine also gives 82 gross / 77 net. VW Group gross vs net settled: 77 is net."
+      },
+      "rangeKm": {
+        "value": 509,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://magazine.audi.com.au/article/new-horizons",
+        "note": "Audi AU figure for the AU Sportback quattro on 20-inch S line wheels; below the European best case (554 km, Audi press release), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.2,
+        "basis": "derived",
+        "note": "Audi WLTP combined band for Q4 Sportback e-tron quattro performance is 18.5-15.8 kWh/100km against 554 km max range (Audi press release); scaled to the AU 509 km figure: 15.8 x 554/509 = 17.2. Battery/range = 15.1."
+      },
+      "bootLitresSeatsUp": {
+        "value": 527,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-audi-q4-e-tron-review-quick-drive",
+        "note": "CarExpert quick drive text: Sportback 527 L seats up, 1,460 L seats down (its spec table says 535 L, the pre-facelift figure); Audi has not published Sportback boot for the facelift in AU"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1460,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-audi-q4-e-tron-review-quick-drive",
+        "note": "CarExpert quick drive text: Sportback 527 L seats up, 1,460 L seats down (its spec table says 535 L, the pre-facelift figure); Audi has not published Sportback boot for the facelift in AU"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-audi-q4-e-tron-review-quick-drive",
+        "note": "five-seat medium SUV"
+      },
+      "towKg": {
+        "value": 1800,
+        "basis": "sourced",
+        "url": "https://magazine.audi.com.au/article/first-look-at-revised-audi-q4-models",
+        "note": "Audi AU magazine: quattro models 1,800 kg trailer load, up 400 kg (international launch spec). Audi AU has not published AU-spec towing for MY27; MY26 AU 55 quattro was 1,200 kg against 1,400 kg in Europe, so AU spec may be lower."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-audi-q4-e-tron-ev-prices-slashed-by-up-to-dollar18000",
+        "note": "five-year unlimited-km new vehicle warranty; also Zecar"
+      },
+      "insuranceAnnual": {
+        "value": 2450,
+        "basis": "judged",
+        "note": "SUV quattro row plus 50 for the Sportback, as in the held data; anchors as for audi-q4-e-tron-55-quattro"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.67,
+          0.55,
+          0.46,
+          0.39,
+          0.33
+        ],
+        "basis": "judged",
+        "note": "kept the held Audi quattro curve (brand convention, sits between audi-q6-e-tron-rwd and -performance). The $18k price cut lowers the new-car baseline rather than this curve; thin early volume is not yet evidenced."
+      }
+    }
+  },
+  "lowConfidence": [
+    "audi-q4-e-tron-55-quattro.towKg: 1,800 kg is Audi's international facelift figure; AU spec unpublished and MY26 AU was 200 kg below Europe",
+    "audi-q4-e-tron-sportback-55-quattro.towKg: as for the SUV",
+    "audi-q4-e-tron-sportback-55-quattro.bootLitresSeatsUp: 527 L from CarExpert text only; its own spec table says 535",
+    "audi-q4-e-tron-55-quattro.availability: configurator unreadable (403); orderability rests on Audi AU magazine pre-order statement, deliveries H1 2027",
+    "audi-q4-e-tron-sportback-55-quattro.availability: as for the SUV",
+    "audi-q4-e-tron-55-quattro.consumptionKwhPer100km: scaled from Audi's WLTP band to the AU range, not a published per-wheel figure",
+    "audi-q4-e-tron-sportback-55-quattro.consumptionKwhPer100km: as for the SUV",
+    "audi-q4-e-tron-55-quattro.insuranceAnnual: judged",
+    "audi-q4-e-tron-sportback-55-quattro.insuranceAnnual: judged",
+    "audi-q4-e-tron-55-quattro.depreciationCurve: judged, kept held curve",
+    "audi-q4-e-tron-sportback-55-quattro.depreciationCurve: judged, kept held curve"
+  ]
+}
