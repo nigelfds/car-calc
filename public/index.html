@@ -20,8 +20,8 @@
   <link rel="stylesheet" href="styles.css" />
   <!-- Start the dataset download with the page rather than after ui/app.js
        and its imports have loaded. crossorigin makes this request match the
-       one fetch('/api/dataset') makes, so the browser reuses it. -->
-  <link rel="preload" href="/api/dataset" as="fetch" crossorigin />
+       one fetch('/dataset.json') makes, so the browser reuses it. -->
+  <link rel="preload" href="/dataset.json" as="fetch" crossorigin />
 </head>
 <body>
 

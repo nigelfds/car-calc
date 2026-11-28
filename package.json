@@ -7,7 +7,7 @@
     "node": "22.x"
   },
   "scripts": {
-    "build": "node scripts/build-dataset.js",
+    "build": "node scripts/build-dataset.js && node scripts/build-site.js",
     "prestart": "node scripts/build-dataset.js",
     "start": "node server/index.js",
     "pretest": "node scripts/build-dataset.js",

@@ -65,11 +65,11 @@
     // interpolated strings — author names here, straight from Wikimedia
     // metadata — out of innerHTML unescaped.
 
-    // Same single /api/dataset fetch ui/app.js makes at boot (see that
+    // Same single /dataset.json fetch ui/app.js makes at boot (see that
     // file's opening comment). Deriving the list from the live dataset
     // rather than a generated file means this page cannot drift from what
     // the site actually ships.
-    fetch('/api/dataset')
+    fetch('/dataset.json')
       .then(res => res.json())
       .then(renderCredits)
       // A failed fetch must still leave a real sentence on the page, not a
@@ -78,7 +78,7 @@
       // yet" would be false, not merely unhelpful — that sentence means
       // curation hasn't started, not that the network failed.
       .catch(err => {
-        console.error('Could not load /api/dataset', err);
+        console.error('Could not load /dataset.json', err);
         showMessage('Could not load image credits — try reloading the page.');
       });
 

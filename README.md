@@ -93,7 +93,7 @@ best *visible* car.
 ## No model in the loop
 
 Nothing in the app calls a model. The free-text "describe your situation" box and the
-plain-English verdict explanation are currently unwired, so after the single `/api/dataset` fetch
+plain-English verdict explanation are currently unwired, so after the single `/dataset.json` fetch
 at boot there are no network calls at all — every number, the ranking and the shortlist are
 computed locally and deterministically. The server has no model routes and no Anthropic
 dependency.
@@ -132,7 +132,7 @@ build step — `calc/` is imported unchanged by both).
 
 ### The pre-push hook
 
-`main` auto-deploys to Heroku on every push, with no CI gate and no review step in between, so a
+`main` deploys to production on every push, with no CI gate and no review step in between, so a
 red commit reaching `main` reaches production. `.githooks/pre-push` runs the suite and refuses the
 push unless it is green.
 
@@ -151,7 +151,7 @@ bypasses it — reasonable for a WIP branch, rarely so for `main`.
 ## Refreshing the dataset
 
 `data/vehicles.json` and `data/families.json` are **generated artefacts** and are not committed.
-Heroku builds them at deploy (`npm run build`), and `npm start`, `npm test` and `npm run curate`
+The deploy builds them (`npm run build`), and `npm start`, `npm test` and `npm run curate`
 rebuild them first, so a fresh clone needs no extra step. The source of truth is the per-model
 research files under `data/vehicles/*.json` and `data/families/*.json`. To add or update a model,
 edit (or add) its file there; to rebuild and validate by hand:
@@ -239,19 +239,28 @@ rates move, so check them against a real quote before relying on the numbers her
 
 No bundler, no framework, no build step — native ES modules throughout, so the pure calculation
 core (`calc/`) is imported completely unchanged by both the Node test runner and the browser.
-Express (`server/`) serves the static frontend (`public/`), the dataset, and two thin API
-routes: `/api/dataset` (vehicles, families, rates and tax tables, fetched once at boot) and
-`/api/health`. Responses are gzipped. `index.html` is sent with the header's dataset counts already
+Express (`server/`) serves the static frontend (`public/`) and the dataset at `/dataset.json`
+(vehicles, families, rates and tax tables, fetched once at boot), plus `/api/health`, for local
+use; production is the same output written to static files (see Deployment). `index.html` is sent with the header's dataset counts already
 written in and with `<link rel="modulepreload">` for every module `ui/app.js` imports (found by
-walking the imports at startup), and it preloads `/api/dataset`, so the header is complete on first
+walking the imports at startup), and it preloads `/dataset.json`, so the header is complete on first
 paint and the car data downloads alongside the scripts instead of after them.
 Purchasing power (`calc/capacity.js`) and shortlist ranking (`calc/rank.js`) are deterministic
 functions that never call a model — the same inputs always produce the same order, for free, offline.
 
 ## Deployment
 
-Heroku deploys every push to `main` straight to production; there is no CI or staging step, so the
-pre-push hook above is the only gate. The Node buildpack runs `npm run build`
-(`scripts/build-dataset.js`) to generate `data/vehicles.json` and `data/families.json`, which are
-not committed; a row that fails validation fails the build, and the previous release keeps serving.
-The `Procfile` then starts `node server/index.js`. The app needs no API keys or other secrets.
+The live site is **https://carcalc.fyi**, served as static files by Cloudflare (Workers static
+assets, no Worker script; see `wrangler.jsonc`). Nothing the server sends depends on the request,
+so `npm run build` does it all ahead of time: `scripts/build-dataset.js` generates
+`data/vehicles.json` and `data/families.json` (a row that fails validation fails the build), then
+`scripts/build-site.js` writes `dist/` with `index.html` (header counts and module preloads filled
+in by the same `renderSite()` the Express server uses), `dataset.json`, `public/`, and `calc/`
+without its tests. Cloudflare compresses responses itself. Deploy by hand with
+`npm run build && npx wrangler deploy` (needs `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`),
+or connect the repo under Workers & Pages → car-calc → Settings → Builds so every push to `main`
+deploys. The app needs no API keys or other secrets.
+
+The old Heroku app (carcalc.nig.fm) still deploys every push to `main` via the `Procfile`
+(`node server/index.js`) until it is retired. There is no CI or staging step, so the pre-push hook
+above is the only gate.
