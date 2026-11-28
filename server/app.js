@@ -34,7 +34,12 @@ export function moduleGraph(entry = '/ui/app.js') {
   return [...seen];
 }
 
-export function createApp() {
+// Everything the site serves that is not a plain file in public/ or calc/:
+// index.html with the header stats written in and the module graph
+// preloaded, and the dataset as one JSON body. None of it depends on the
+// request, so the Express server below and the static build
+// (scripts/build-site.js, deployed to Cloudflare) both use this one function.
+export function renderSite() {
   const dataset = loadDataset({
     vehicles: readJson('vehicles.json'),
     families: readJson('families.json')
@@ -45,8 +50,7 @@ export function createApp() {
     for (const s of dataset.skipped) console.warn(`  ${s.id}: ${s.errors.join('; ')}`);
   }
 
-  // The dataset never changes while the process runs (it is rebuilt at
-  // deploy), so serialise it once rather than on every request.
+  // The dataset never changes after the build, so serialise it once.
   const datasetBody = JSON.stringify({
     vehicles: dataset.vehicles,
     families: dataset.families,
@@ -65,6 +69,12 @@ export function createApp() {
       `<p class="site-header__stats" id="dataset-stats">${statsLine}</p>`)
     .replace('</head>', `${preloads}\n</head>`);
 
+  return { dataset, datasetBody, indexHtml };
+}
+
+export function createApp() {
+  const { dataset, datasetBody, indexHtml } = renderSite();
+
   const app = express();
   app.use(compression());
   app.use(express.json({ limit: '64kb' }));
@@ -80,7 +90,7 @@ export function createApp() {
   app.use('/calc', (req, res, next) => (req.path.endsWith('.test.js') ? res.sendStatus(404) : next()));
   app.use('/calc', express.static(calcDir));
 
-  app.get('/api/dataset', (req, res) => {
+  app.get('/dataset.json', (req, res) => {
     res.type('json').send(datasetBody);
   });
 

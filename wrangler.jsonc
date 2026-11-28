@@ -1,0 +1,13 @@
+// Cloudflare Workers static-assets deploy of carcalc.fyi. There is no Worker
+// script: `npm run build` writes the whole site to dist/ and Cloudflare
+// serves those files (and compresses them) on its own.
+{
+  "name": "car-calc",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [
+    { "pattern": "carcalc.fyi", "custom_domain": true }
+  ]
+}

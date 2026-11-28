@@ -2,7 +2,7 @@
 // state to the DOM, and keeps the verdict, chart, shortlist and URL in
 // sync. Ranking and filtering are local and deterministic (calc/rank.js,
 // ui/cars.js) so they can run on every keystroke or drag with no network
-// call. After the one /api/dataset fetch at boot this file makes no network
+// call. After the one /dataset.json fetch at boot this file makes no network
 // calls at all: the free-text parse and the verdict explanation that used
 // them are currently unwired (see the note where maybeExplain used to be).
 
@@ -129,10 +129,10 @@ function syncFieldInputs(root, state) {
 }
 
 export function start(root = document) {
-  return fetch('/api/dataset')
+  return fetch('/dataset.json')
     .then(res => res.json())
     .then(dataset => boot(root, dataset))
-    .catch(err => console.error('Could not load /api/dataset', err));
+    .catch(err => console.error('Could not load /dataset.json', err));
 }
 
 function boot(root, dataset) {

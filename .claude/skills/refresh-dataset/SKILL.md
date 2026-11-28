@@ -7,7 +7,7 @@ description: Run a refresh of the car-calc car dataset end to end, from the mark
 
 You are the orchestrator. You run the brand sweep, dispatch research agents (each follows the
 `research-car-family` skill), integrate their files, and hand the person one pull request with a
-change report. Pushing to `main` deploys to production at carcalc.nig.fm, so all work lands on a
+change report. Pushing to `main` deploys to production at carcalc.fyi, so all work lands on a
 branch and only the person merges.
 
 The refresh is a **diff against what we hold**: held families are updated, new families added,

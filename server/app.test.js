@@ -23,7 +23,7 @@ test('index.html arrives with the header stats already written in', async () => 
 
 test('index.html preloads the dataset and every module app.js imports', async () => {
   const html = await (await fetch(`${base}/`)).text();
-  assert.ok(html.includes('<link rel="preload" href="/api/dataset" as="fetch" crossorigin />'));
+  assert.ok(html.includes('<link rel="preload" href="/dataset.json" as="fetch" crossorigin />'));
   const modules = moduleGraph();
   assert.ok(modules.includes('/ui/app.js'));
   assert.ok(modules.includes('/calc/rank.js'));
@@ -36,7 +36,7 @@ test('index.html preloads the dataset and every module app.js imports', async ()
 });
 
 test('the dataset is served gzipped when the browser accepts it', async () => {
-  const res = await fetch(`${base}/api/dataset`, { headers: { 'accept-encoding': 'gzip' } });
+  const res = await fetch(`${base}/dataset.json`, { headers: { 'accept-encoding': 'gzip' } });
   assert.equal(res.headers.get('content-encoding'), 'gzip');
   // undici decompresses transparently, so check the body still parses and
   // the compressed size the server would have sent is a fraction of it.

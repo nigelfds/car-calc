@@ -224,7 +224,7 @@ export function renderVerdict(root, verdict) {
 // rate straight in. `rates` (data/rates.json's shape, `sources` included) is
 // injected rather than imported so this module stays usable under `node
 // --test` with no filesystem/browser JSON-loading split; ui/app.js fetches
-// it once from /api/dataset and passes it through. Fields with no research
+// it once from /dataset.json and passes it through. Fields with no research
 // source (opportunityRatePct is an assumption about what your own savings
 // would otherwise earn, not a published rate; residualPctOverride and
 // deposit are personal choices, not market figures) get an honest note
@@ -383,7 +383,7 @@ export function renderRatesPanel(root, state, onChange, rates = null) {
         // is called with no `rates` (rates === null), the researched-default
         // fields (leaseRatePct, loanRatePct, adminFeeAnnual,
         // opportunityRatePct) have nothing to reset to. ui/app.js always
-        // fetches /api/dataset once and passes rates through, so this branch
+        // fetches /dataset.json once and passes rates through, so this branch
         // is a defence-in-depth guard, not the primary fix.
         if (!(field in currentDefaults) || currentDefaults[field] === undefined) return;
         panel._ratesOnChange({ ...panel._ratesState, [field]: currentDefaults[field] });
