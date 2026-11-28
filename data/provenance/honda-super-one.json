@@ -1,0 +1,179 @@
+{
+  "familyId": "honda-super-one",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "honda-super-one-mono-tone": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.honda.com.au/cars/configurator/build-superone.html",
+        "note": "Honda AU configurator lists two grades, Mono Tone and Two Tone; pre-orders through Honda Centres (Honda AU page https://www.honda.com.au/news/2025/honda-super-one). Grade/colour stock flags show 'Limited Stock'/'Out Of Stock'; CarExpert (https://www.carexpert.com.au/car-reviews/2027-honda-super-one-review) reports first ~130 cars sold out, waits up to ~12 months depending on colour. Orderable with a long wait."
+      },
+      "listPrice": {
+        "value": 34493,
+        "basis": "backed-out",
+        "url": "https://www.honda.com.au/news/2025/honda-super-one",
+        "note": "Honda AU lists Mono Tone at $36,900 under its fixed national drive-away 'One Price Promise' (same drive-away price in every state, https://www.carexpert.com.au/car-news/how-hondas-one-price-promise-works); Honda publishes no before-on-road price. Backed out (DA - 958.80)/1.042; round trip via calc/onroad.js driveAwayPrice = $36,900.51 (target $36,900). Because the Honda figure is the actual Melbourne out-of-pocket price, the back-out reproduces it by construction; it is not a per-state calculation. CarExpert's spec page labels $36,900 'before on-road costs' and shows $40,763 Sydney DA, contradicting Honda's own drive-away basis; owner convention prefers the manufacturer, so rejected."
+      },
+      "batteryKwh": {
+        "value": 28,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3656/Honda-Super-N",
+        "note": "usable 28.0 kWh; nominal 29.6 kWh on the same page (Honda UK sells this car as Super-N; Honda AU quotes 29.6 kWh, the nominal figure)"
+      },
+      "rangeKm": {
+        "value": 202,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.honda.com.au/news/2025/honda-super-one",
+        "note": "Honda AU 'Up to 202km (WLTP) or 253km (NEDC)'; 15-inch wheels (configurator). Lower than Honda UK Super-N 128 mi (206 km) WLTP, so passes the direction test; NEDC 253 km rejected"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.8,
+        "basis": "sourced",
+        "url": "https://www.honda.co.uk/cars/new/super-n/specifications.html",
+        "note": "Honda UK Super-N spec 'EV Operation Efficiency 14.8 kWh/100km' WLTP, 15-inch wheels, same car; includes charging losses so above 28/202x100 = 13.9. CarExpert database 12.1 kWh/100km rejected (implies ~231 km on 28 kWh, not WLTP-consistent)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 162,
+        "basis": "sourced",
+        "url": "https://www.honda.co.uk/cars/new/super-n/specifications.html",
+        "note": "'Boot Capacity - Rear Seat up. VDA method' 162 L; CarExpert review agrees 162 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 618,
+        "basis": "sourced",
+        "url": "https://www.honda.co.uk/cars/new/super-n/specifications.html",
+        "note": "'Rear Seat Down Load to Window. VDA method' 618 L (belt-line convention); 967 L to the roof not used. CarExpert review: 618 L to the lower window line, 967 L to roof"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://www.honda.com.au/cars/configurator/build-superone.html",
+        "note": "Honda AU configurator 'Seating: 4'; CarExpert review 'strictly four-seater'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3656/Honda-Super-N",
+        "note": "EV Database braked towing 0 (not rated); no Honda AU tow figure published"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.honda.com.au/news/2025/honda-super-one",
+        "note": "5-year unlimited km unconditional; Honda Extend adds up to 3 years if serviced at Honda (conditional, in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 1300,
+        "basis": "judged",
+        "note": "anchored to hyundai-inster-standard-range ($37,500, $1,300), byd-dolphin-premium ($36,990, $1,400) and byd-atto1-premium ($27,990, $1,200); lower price than Inster but rare low-volume Japanese import with no ANCAP rating, so matched Inster. Two Tone is a paint option, same premium"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "New brand Honda. Adopted the small-EV/Japanese-mainstream curve held by Mazda, Subaru, Suzuki, Hyundai and BYD (incl. siblings hyundai-inster, byd-atto1, byd-dolphin). Fixed national price (no discounting) and supply far below demand (~130 cars 2026, ~7,000 EOIs) support early values; offset by short 202 km range ageing badly against cheaper Chinese rivals and no ANCAP rating. Neither documented strongly enough to deviate. Honda AU sells no PHEV, so this is the brand's only curve."
+      }
+    },
+    "honda-super-one-two-tone": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.honda.com.au/cars/configurator/build-superone.html",
+        "note": "Honda AU configurator lists two grades, Mono Tone and Two Tone; pre-orders through Honda Centres (Honda AU page https://www.honda.com.au/news/2025/honda-super-one). Grade/colour stock flags show 'Limited Stock'/'Out Of Stock'; CarExpert (https://www.carexpert.com.au/car-reviews/2027-honda-super-one-review) reports first ~130 cars sold out, waits up to ~12 months depending on colour. Orderable with a long wait."
+      },
+      "listPrice": {
+        "value": 34972,
+        "basis": "backed-out",
+        "url": "https://www.honda.com.au/news/2025/honda-super-one",
+        "note": "Honda AU lists Two Tone at $37,400 under its fixed national drive-away 'One Price Promise' (same drive-away price in every state, https://www.carexpert.com.au/car-news/how-hondas-one-price-promise-works); Honda publishes no before-on-road price. Backed out (DA - 958.80)/1.042; round trip via calc/onroad.js driveAwayPrice = $37,399.62 (target $37,400). Because the Honda figure is the actual Melbourne out-of-pocket price, the back-out reproduces it by construction; it is not a per-state calculation. CarExpert's spec page labels $36,900 'before on-road costs' and shows $40,763 Sydney DA, contradicting Honda's own drive-away basis; owner convention prefers the manufacturer, so rejected."
+      },
+      "batteryKwh": {
+        "value": 28,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3656/Honda-Super-N",
+        "note": "usable 28.0 kWh; nominal 29.6 kWh on the same page (Honda UK sells this car as Super-N; Honda AU quotes 29.6 kWh, the nominal figure)"
+      },
+      "rangeKm": {
+        "value": 202,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.honda.com.au/news/2025/honda-super-one",
+        "note": "Honda AU 'Up to 202km (WLTP) or 253km (NEDC)'; 15-inch wheels (configurator). Lower than Honda UK Super-N 128 mi (206 km) WLTP, so passes the direction test; NEDC 253 km rejected"
+      },
+      "consumptionKwhPer100km": {
+        "value": 14.8,
+        "basis": "sourced",
+        "url": "https://www.honda.co.uk/cars/new/super-n/specifications.html",
+        "note": "Honda UK Super-N spec 'EV Operation Efficiency 14.8 kWh/100km' WLTP, 15-inch wheels, same car; includes charging losses so above 28/202x100 = 13.9. CarExpert database 12.1 kWh/100km rejected (implies ~231 km on 28 kWh, not WLTP-consistent)"
+      },
+      "bootLitresSeatsUp": {
+        "value": 162,
+        "basis": "sourced",
+        "url": "https://www.honda.co.uk/cars/new/super-n/specifications.html",
+        "note": "'Boot Capacity - Rear Seat up. VDA method' 162 L; CarExpert review agrees 162 L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 618,
+        "basis": "sourced",
+        "url": "https://www.honda.co.uk/cars/new/super-n/specifications.html",
+        "note": "'Rear Seat Down Load to Window. VDA method' 618 L (belt-line convention); 967 L to the roof not used. CarExpert review: 618 L to the lower window line, 967 L to roof"
+      },
+      "seats": {
+        "value": 4,
+        "basis": "sourced",
+        "url": "https://www.honda.com.au/cars/configurator/build-superone.html",
+        "note": "Honda AU configurator 'Seating: 4'; CarExpert review 'strictly four-seater'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/imp/car/3656/Honda-Super-N",
+        "note": "EV Database braked towing 0 (not rated); no Honda AU tow figure published"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.honda.com.au/news/2025/honda-super-one",
+        "note": "5-year unlimited km unconditional; Honda Extend adds up to 3 years if serviced at Honda (conditional, in pros)"
+      },
+      "insuranceAnnual": {
+        "value": 1300,
+        "basis": "judged",
+        "note": "anchored to hyundai-inster-standard-range ($37,500, $1,300), byd-dolphin-premium ($36,990, $1,400) and byd-atto1-premium ($27,990, $1,200); lower price than Inster but rare low-volume Japanese import with no ANCAP rating, so matched Inster. Two Tone is a paint option, same premium"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "New brand Honda. Adopted the small-EV/Japanese-mainstream curve held by Mazda, Subaru, Suzuki, Hyundai and BYD (incl. siblings hyundai-inster, byd-atto1, byd-dolphin). Fixed national price (no discounting) and supply far below demand (~130 cars 2026, ~7,000 EOIs) support early values; offset by short 202 km range ageing badly against cheaper Chinese rivals and no ANCAP rating. Neither documented strongly enough to deviate. Honda AU sells no PHEV, so this is the brand's only curve."
+      }
+    }
+  },
+  "lowConfidence": [
+    "honda-super-one-mono-tone.depreciationCurve: new brand, judged; no Australian used-price data for the model",
+    "honda-super-one-two-tone.depreciationCurve: new brand, judged; no Australian used-price data for the model",
+    "honda-super-one-mono-tone.insuranceAnnual: judged from siblings",
+    "honda-super-one-two-tone.insuranceAnnual: judged from siblings",
+    "honda-super-one-mono-tone.listPrice: backed out of Honda's national drive-away; Honda's page also carries a generic postcode-dependent drive-away disclaimer, and the configurator's live price did not render (placeholder), so the figure rests on the Honda news/model page",
+    "honda-super-one-two-tone.listPrice: as Mono Tone; $37,400 also on carsauce and CarExpert review",
+    "honda-super-one-mono-tone.towKg: no Honda AU tow figure; EV Database 0 kg",
+    "honda-super-one-two-tone.towKg: no Honda AU tow figure; EV Database 0 kg",
+    "honda-super-one-mono-tone.batteryKwh: usable 28.0 kWh from EV Database (UK Super-N); Honda publishes only 29.6 kWh nominal",
+    "honda-super-one-two-tone.batteryKwh: usable 28.0 kWh from EV Database (UK Super-N); Honda publishes only 29.6 kWh nominal",
+    "honda-super-one-mono-tone.consumptionKwhPer100km: UK WLTP figure for the 206 km UK car, applied to the 202 km AU car",
+    "honda-super-one-two-tone.consumptionKwhPer100km: UK WLTP figure for the 206 km UK car, applied to the 202 km AU car"
+  ]
+}

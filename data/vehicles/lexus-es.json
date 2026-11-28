@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lexus-es-350e-sports-luxury",
+    "familyId": "lexus-es",
+    "make": "Lexus",
+    "model": "ES",
+    "variant": "350e Sports Luxury FWD",
+    "bodyType": "Sedan",
+    "listPrice": 77000,
+    "batteryKwh": 71.0,
+    "rangeKm": 510,
+    "consumptionKwhPer100km": 16.4,
+    "bootLitresSeatsUp": 517,
+    "bootLitresSeatsDown": 517,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1950,
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-11-27"
+  },
+  {
+    "id": "lexus-es-500e-sports-luxury",
+    "familyId": "lexus-es",
+    "make": "Lexus",
+    "model": "ES",
+    "variant": "500e Sports Luxury AWD",
+    "bodyType": "Sedan",
+    "listPrice": 84000,
+    "batteryKwh": 71.0,
+    "rangeKm": 465,
+    "consumptionKwhPer100km": 17.9,
+    "bootLitresSeatsUp": 517,
+    "bootLitresSeatsDown": 517,
+    "seats": 5,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2100,
+    "depreciationCurve": [1, 0.78, 0.68, 0.6, 0.53, 0.47],
+    "sourcedAt": "2026-11-27"
+  }
+]

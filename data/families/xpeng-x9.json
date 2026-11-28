@@ -1,0 +1,29 @@
+{
+  "id": "xpeng-x9",
+  "summary": "The XPeng X9 is a large seven-seat electric people mover sold in two grades, a $89,900 FWD Standard Range and a $109,900 AWD Performance, pitched at the Kia Carnival, Denza D9 and Zeekr 009. Australian reviewers rate it highly for space, luxury and comfort: CarExpert calls the third row surprisingly usable and the four-wheel steering makes it feel smaller than it is. The knocks are software gremlins (a test car that shut down and wouldn't select a gear), an intrusive lane-keeping system, a ride that can wallow in its softest mode, and a $20,000 jump to the AWD grade.",
+  "pros": [
+    "721 L boot with all seven seats in use and up to 2,554 L with the second and third rows folded, plus an adult-usable, heated third row",
+    "Fast 800V charging: up to 537 kW (Standard Range) and 542 kW (AWD), a claimed 10-80% in 12 minutes",
+    "Long WLTP range for the class: 535 km (94.8 kWh LFP) and 580 km (110 kWh NCM) on 20-inch wheels",
+    "Four-wheel steering gives a 5.4 m turning circle, and CarExpert says it makes the X9 feel smaller than it is",
+    "7-year unlimited-km warranty for private buyers, with the battery and drive motor covered for 8 years/160,000 km"
+  ],
+  "cons": [
+    "Software and key gremlins: CarExpert's test car shut down mid-test and would not engage a gear until the NFC card was used",
+    "Lane-keeping assist is intrusive enough that CarExpert switched it off on every drive",
+    "The FWD Standard Range is not approved for towing; only the AWD Performance takes a tow bar (1,500 kg braked)",
+    "The AWD Performance costs $20,000 more and sits above the $91,661 luxury car tax threshold, while the Standard Range sits just under it",
+    "No spare wheel, no capped-price servicing, and connected services become a paid plan after one year"
+  ],
+  "sources": [
+    "https://store.xpeng.com/au/configurator/New_X9",
+    "https://www.xpeng.com/au/news/019fa2860f529f8481378a02820600b3",
+    "https://www.carexpert.com.au/car-news/2026-xpeng-x9-prices-futuristic-ev-enters-growing-luxury-people-mover-segment",
+    "https://www.carexpert.com.au/car-reviews/2027-xpeng-x9-review",
+    "https://thedriven.io/2026/07/21/xpeng-launches-x9-luxury-people-mover-in-australia-priced-from-89900/",
+    "https://thedriven.io/2026/05/16/xpengs-next-ev-approved-for-sale-in-australia-a-fast-charging-electric-people-mover/",
+    "https://ev-database.org/car/3611/XPENG-X9-FWD-Standard-Range",
+    "https://ev-database.org/car/3613/XPENG-X9-AWD-Performance"
+  ],
+  "sourcedAt": "2026-11-27"
+}

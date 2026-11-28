@@ -1,0 +1,323 @@
+{
+  "familyId": "gac-m8-phev",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "gac-m8-phev-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "GAC AU M8 PHEV specification/comparison page (linked 'Specification' from the model page, which also links Drive Away Price and Reserve) lists three grades with salePrice: Luxury Plus 84990, Luxury 83590, Premium 76590. Premium column."
+      },
+      "listPrice": {
+        "value": 76590,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "GAC AU specification page data (opened 2026-11-27): vehModelName 'Premium' salePrice 76590, shown under the site's 'Base MSRP' label (manufacturer's own figure; drive-away is a separate postcode calculator). CarExpert launch news (https://www.carexpert.com.au/car-news/2026-gac-m8-price-and-specs-phev-people-mover-arrives-to-take-on-carnival-hybrid) and quick drive, EV Central ('plus on-road costs'), Chasing Cars ('+ ORCs') and Carscoops ('before on-road costs') all give $76,590 in words. Direction check: app VIC drive-away $80,765.58; Chasing Cars 'roughly $80,000 driveaway' and EV Central $78,320 drive-away table figure sit at or below it but were launch-offer figures ($1,000 cashback/early-order deals), not mislabelled list prices, since four sources say before on-roads in words."
+      },
+      "batteryKwh": {
+        "value": 25.57,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gac/m8/premium/powertrain-and-performance",
+        "note": "CarExpert spec: 25.57 kWh, 355.2 V (CarExpert labels it usable on the Luxury Plus page); CarsGuide review and CarExpert news also 25.57 kWh. No source states gross and usable side by side, and chemistry conflicts (CarExpert NMC, Chasing Cars LFP 'Magazine' pack). Same pack on all grades (one powertrain). Chasing Cars observed ~90 km at ~28 kWh/100km (~25 kWh), consistent with most of 25.57 being usable."
+      },
+      "rangeKm": {
+        "value": 106,
+        "basis": "sourced",
+        "standard": "other",
+        "url": "https://www.gacgroup.com/en-au/mpv/gac-m8-phev",
+        "note": "GAC AU model page: '106 km pure electric range (WLTC standard)'. WLTC is the Chinese-homologated WLTP-cycle claim; no UK/EU market takes the M8 PHEV, so no European WLTP homologation exists. CarExpert, EV Central and CarsGuide label the same 106 km 'WLTP'. No higher NEDC figure published locally to reject."
+      },
+      "consumptionKwhPer100km": {
+        "value": 24.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 25.57/106 x 100 = 24.12; Chasing Cars launch news quotes '106km, at 24.1kWh/100km', the same figure. Chasing Cars measured ~28 kWh/100km real-world."
+      },
+      "combinedRangeKm": {
+        "value": 1024,
+        "basis": "derived",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "rangeKm 106 + 56 L tank (GAC spec page 'Fuel Tank Capacity (L)' 56) / 6.1 L/100km x 100 = 106 + 918.0 = 1024. GAC's own 1032 km total claim not used (WLTC basis, not reproducible)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.1,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/gac-m8-review-radical-plug-in-hybrid-people-mover-brings-the-wow-factor-to-tempt-people-away-from-lexus-zeekr-ldv-and-kia/",
+        "note": "EV Central: 'GAC says to expect more like 6.05L/100km when it's running in hybrid mode' (charge-sustaining); CarExpert quick drive '6.05L/100km WLTP' and CarsGuide/Chasing Cars spec '6.1'. Rounded 6.05 -> 6.1. Real-world: Chasing Cars ~7.2 L/100km with battery low; Carscoops 6.4 over a mixed week; CarsGuide 6.2 with regular charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/gac-m8-review-radical-plug-in-hybrid-people-mover-brings-the-wow-factor-to-tempt-people-away-from-lexus-zeekr-ldv-and-kia/",
+        "note": "EV Central: 'Fuel use is claimed at 1.3 litres per 100km when tested to the government standard' (ADR 81/02 label); Carscoops also 'GAC claims 1.3 l/100 km'. At or below 3.5. CarExpert's spec database lists 'ADR 81/02 Combined 6 L/100km' but that is the charge-sustaining claim mis-entered: a 106 km PHEV cannot carry a 6.0 ADR 81/02 weighted label. Decides LCT on Luxury and Luxury Plus (above $80,809, below $91,661)."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "derived",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green car = passenger car with combined CO2 of 120 g/km or less. No CO2 figure published by GAC AU; a 1.3 L/100km ADR label implies ~30 g/km (1.3 x ~23.2 g per 0.1 L petrol). Carsales listings and CarExpert quick drive print 228 g/km, which is inconsistent with both 1.3 and 6.05 L/100km (6.05 L ~ 141 g/km) and is treated as a database error; Green Vehicle Guide is a JS app that could not be read without a browser."
+      },
+      "bootLitresSeatsUp": {
+        "value": 280,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/vans/gac-m8-2026-review/",
+        "note": "Chasing Cars review: 280 litres with all seven seats in use 'to the window line' (cargo-cover convention). Same 280 L in CarExpert quick drive and CarsGuide."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gac-m8-review-quick-drive",
+        "note": "CarExpert quick drive: 'up to 1500L' behind the second row with the third row folded; Chasing Cars and CarsGuide same. Measurement height not stated ('up to' suggests to the roof); no both-rows-folded figure published (second-row captain's chairs do not fold flat)."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "GAC spec page 'Seating Capacity' 7 on all three grades (2+2+3)."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/vans/gac-m8-2026-review/",
+        "note": "Chasing Cars review: 'has not been rated to tow'; CarsGuide review also 'not rated for towing'. GAC AU spec page publishes no towing figure. Carsales listings' '3000kg braked' is the GVM (3,000 kg per Chasing Cars)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://eu-www-resouce-cdn.gacgroup.com/static/AU/tenant/cms/material/202608/1787037645132-Warranty-Terms-and-Conditions-FINAL-.pdf",
+        "note": "GAC AU warranty T&Cs (Aug 2026): '7 Year Unlimited Kilometre Warranty - Private/General Fleet & Government' for vehicles sold from 18 Nov 2025; the 8-year term is for 'Electrical Vehicle' only, so the PHEV gets 7. Not servicing-conditional. Traction battery 8 yr/200,000 km private. CarExpert (84 months), Chasing Cars and CarsGuide reviews say 7; EV Central and Chasing Cars launch news say 8 (wrong for a PHEV)."
+      },
+      "insuranceAnnual": {
+        "value": 2000,
+        "basis": "judged",
+        "note": "anchored to byd-m9-phev-premium 2050 ($72,990), kia-sorento-phev-sport-plus-awd 1950 ($78,755), mazda-cx-80-phev-gt 1950 ($75,100); a $76,590 seven-seat PHEV from a new brand with no repair-cost history sits at 2000."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one GAC brand curve [1,0.7,0.58,0.49,0.42,0.36], identical to gac-aion-v and gac-aion-ut: brand new to Australia (launched Dec 2025), ~10 service centres (CarsGuide), no resale history, launch cashback offers. Dispatcher-specified."
+      }
+    },
+    "gac-m8-phev-luxury": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "Same GAC AU specification page; Luxury column (salePrice 83590)."
+      },
+      "listPrice": {
+        "value": 83590,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "GAC AU specification page data: vehModelName 'Luxury' salePrice 83590 ('Base MSRP'). CarExpert launch news and quick drive, CarsGuide review ('before on-road costs'), EV Central ('plus on-road costs'), Chasing Cars review ('$83,590 + ORCs (about $91,493 on-road)'). Direction check: app VIC drive-away $88,059.58; Chasing Cars' ~$91,493 on-road (NSW-style) sits above it, consistent with a genuine list price."
+      },
+      "batteryKwh": {
+        "value": 25.57,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gac/m8/premium/powertrain-and-performance",
+        "note": "CarExpert spec: 25.57 kWh, 355.2 V (CarExpert labels it usable on the Luxury Plus page); CarsGuide review and CarExpert news also 25.57 kWh. No source states gross and usable side by side, and chemistry conflicts (CarExpert NMC, Chasing Cars LFP 'Magazine' pack). Same pack on all grades (one powertrain). Chasing Cars observed ~90 km at ~28 kWh/100km (~25 kWh), consistent with most of 25.57 being usable."
+      },
+      "rangeKm": {
+        "value": 106,
+        "basis": "sourced",
+        "standard": "other",
+        "url": "https://www.gacgroup.com/en-au/mpv/gac-m8-phev",
+        "note": "GAC AU model page: '106 km pure electric range (WLTC standard)'. WLTC is the Chinese-homologated WLTP-cycle claim; no UK/EU market takes the M8 PHEV, so no European WLTP homologation exists. CarExpert, EV Central and CarsGuide label the same 106 km 'WLTP'. No higher NEDC figure published locally to reject."
+      },
+      "consumptionKwhPer100km": {
+        "value": 24.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 25.57/106 x 100 = 24.12; Chasing Cars launch news quotes '106km, at 24.1kWh/100km', the same figure. Chasing Cars measured ~28 kWh/100km real-world."
+      },
+      "combinedRangeKm": {
+        "value": 1024,
+        "basis": "derived",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "rangeKm 106 + 56 L tank (GAC spec page 'Fuel Tank Capacity (L)' 56) / 6.1 L/100km x 100 = 106 + 918.0 = 1024. GAC's own 1032 km total claim not used (WLTC basis, not reproducible)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.1,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/gac-m8-review-radical-plug-in-hybrid-people-mover-brings-the-wow-factor-to-tempt-people-away-from-lexus-zeekr-ldv-and-kia/",
+        "note": "EV Central: 'GAC says to expect more like 6.05L/100km when it's running in hybrid mode' (charge-sustaining); CarExpert quick drive '6.05L/100km WLTP' and CarsGuide/Chasing Cars spec '6.1'. Rounded 6.05 -> 6.1. Real-world: Chasing Cars ~7.2 L/100km with battery low; Carscoops 6.4 over a mixed week; CarsGuide 6.2 with regular charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/gac-m8-review-radical-plug-in-hybrid-people-mover-brings-the-wow-factor-to-tempt-people-away-from-lexus-zeekr-ldv-and-kia/",
+        "note": "EV Central: 'Fuel use is claimed at 1.3 litres per 100km when tested to the government standard' (ADR 81/02 label); Carscoops also 'GAC claims 1.3 l/100 km'. At or below 3.5. CarExpert's spec database lists 'ADR 81/02 Combined 6 L/100km' but that is the charge-sustaining claim mis-entered: a 106 km PHEV cannot carry a 6.0 ADR 81/02 weighted label. Decides LCT on Luxury and Luxury Plus (above $80,809, below $91,661)."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "derived",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green car = passenger car with combined CO2 of 120 g/km or less. No CO2 figure published by GAC AU; a 1.3 L/100km ADR label implies ~30 g/km (1.3 x ~23.2 g per 0.1 L petrol). Carsales listings and CarExpert quick drive print 228 g/km, which is inconsistent with both 1.3 and 6.05 L/100km (6.05 L ~ 141 g/km) and is treated as a database error; Green Vehicle Guide is a JS app that could not be read without a browser."
+      },
+      "bootLitresSeatsUp": {
+        "value": 280,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/vans/gac-m8-2026-review/",
+        "note": "Chasing Cars review: 280 litres with all seven seats in use 'to the window line' (cargo-cover convention). Same 280 L in CarExpert quick drive and CarsGuide."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gac-m8-review-quick-drive",
+        "note": "CarExpert quick drive: 'up to 1500L' behind the second row with the third row folded; Chasing Cars and CarsGuide same. Measurement height not stated ('up to' suggests to the roof); no both-rows-folded figure published (second-row captain's chairs do not fold flat)."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "GAC spec page 'Seating Capacity' 7 on all three grades (2+2+3)."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/vans/gac-m8-2026-review/",
+        "note": "Chasing Cars review: 'has not been rated to tow'; CarsGuide review also 'not rated for towing'. GAC AU spec page publishes no towing figure. Carsales listings' '3000kg braked' is the GVM (3,000 kg per Chasing Cars)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://eu-www-resouce-cdn.gacgroup.com/static/AU/tenant/cms/material/202608/1787037645132-Warranty-Terms-and-Conditions-FINAL-.pdf",
+        "note": "GAC AU warranty T&Cs (Aug 2026): '7 Year Unlimited Kilometre Warranty - Private/General Fleet & Government' for vehicles sold from 18 Nov 2025; the 8-year term is for 'Electrical Vehicle' only, so the PHEV gets 7. Not servicing-conditional. Traction battery 8 yr/200,000 km private. CarExpert (84 months), Chasing Cars and CarsGuide reviews say 7; EV Central and Chasing Cars launch news say 8 (wrong for a PHEV)."
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "anchored to mazda-cx-80-phev-azami 2050 ($80,300) and kia-sorento-phev-gt-line-awd 2100 ($86,115); Luxury +100 over Premium for the $7,000 price step."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one GAC brand curve [1,0.7,0.58,0.49,0.42,0.36], identical to gac-aion-v and gac-aion-ut: brand new to Australia (launched Dec 2025), ~10 service centres (CarsGuide), no resale history, launch cashback offers. Dispatcher-specified."
+      }
+    },
+    "gac-m8-phev-luxury-plus": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "Same GAC AU specification page; Luxury Plus column (salePrice 84990): adds embedded fridge, 17.3-inch rear ceiling screen, rear AEB and Fusion automatic parking assist over the Luxury, so a distinct trim line rather than a round-number option pack. CarExpert carries it as a separate variant from 3 July 2026."
+      },
+      "listPrice": {
+        "value": 84990,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "GAC AU specification page data: vehModelName 'Luxury Plus' salePrice 84990 ('Base MSRP'), listed as a third grade beside Premium and Luxury. CarExpert variant page (https://www.carexpert.com.au/gac/m8/2026-luxury-plus-2l-mpv-fwd-electric-jsk8wf5w20260701): 'prices starting at $84,990' before on-road costs, released 3 July 2026. Not in the launch reviews (it post-dates them). App VIC drive-away $89,518.38."
+      },
+      "batteryKwh": {
+        "value": 25.57,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gac/m8/premium/powertrain-and-performance",
+        "note": "CarExpert spec: 25.57 kWh, 355.2 V (CarExpert labels it usable on the Luxury Plus page); CarsGuide review and CarExpert news also 25.57 kWh. No source states gross and usable side by side, and chemistry conflicts (CarExpert NMC, Chasing Cars LFP 'Magazine' pack). Same pack on all grades (one powertrain). Chasing Cars observed ~90 km at ~28 kWh/100km (~25 kWh), consistent with most of 25.57 being usable."
+      },
+      "rangeKm": {
+        "value": 106,
+        "basis": "sourced",
+        "standard": "other",
+        "url": "https://www.gacgroup.com/en-au/mpv/gac-m8-phev",
+        "note": "GAC AU model page: '106 km pure electric range (WLTC standard)'. WLTC is the Chinese-homologated WLTP-cycle claim; no UK/EU market takes the M8 PHEV, so no European WLTP homologation exists. CarExpert, EV Central and CarsGuide label the same 106 km 'WLTP'. No higher NEDC figure published locally to reject."
+      },
+      "consumptionKwhPer100km": {
+        "value": 24.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 25.57/106 x 100 = 24.12; Chasing Cars launch news quotes '106km, at 24.1kWh/100km', the same figure. Chasing Cars measured ~28 kWh/100km real-world."
+      },
+      "combinedRangeKm": {
+        "value": 1024,
+        "basis": "derived",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "rangeKm 106 + 56 L tank (GAC spec page 'Fuel Tank Capacity (L)' 56) / 6.1 L/100km x 100 = 106 + 918.0 = 1024. GAC's own 1032 km total claim not used (WLTC basis, not reproducible)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 6.1,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/gac-m8-review-radical-plug-in-hybrid-people-mover-brings-the-wow-factor-to-tempt-people-away-from-lexus-zeekr-ldv-and-kia/",
+        "note": "EV Central: 'GAC says to expect more like 6.05L/100km when it's running in hybrid mode' (charge-sustaining); CarExpert quick drive '6.05L/100km WLTP' and CarsGuide/Chasing Cars spec '6.1'. Rounded 6.05 -> 6.1. Real-world: Chasing Cars ~7.2 L/100km with battery low; Carscoops 6.4 over a mixed week; CarsGuide 6.2 with regular charging."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://evcentral.com.au/gac-m8-review-radical-plug-in-hybrid-people-mover-brings-the-wow-factor-to-tempt-people-away-from-lexus-zeekr-ldv-and-kia/",
+        "note": "EV Central: 'Fuel use is claimed at 1.3 litres per 100km when tested to the government standard' (ADR 81/02 label); Carscoops also 'GAC claims 1.3 l/100 km'. At or below 3.5. CarExpert's spec database lists 'ADR 81/02 Combined 6 L/100km' but that is the charge-sustaining claim mis-entered: a 106 km PHEV cannot carry a 6.0 ADR 81/02 weighted label. Decides LCT on Luxury and Luxury Plus (above $80,809, below $91,661)."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "derived",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green car = passenger car with combined CO2 of 120 g/km or less. No CO2 figure published by GAC AU; a 1.3 L/100km ADR label implies ~30 g/km (1.3 x ~23.2 g per 0.1 L petrol). Carsales listings and CarExpert quick drive print 228 g/km, which is inconsistent with both 1.3 and 6.05 L/100km (6.05 L ~ 141 g/km) and is treated as a database error; Green Vehicle Guide is a JS app that could not be read without a browser."
+      },
+      "bootLitresSeatsUp": {
+        "value": 280,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/vans/gac-m8-2026-review/",
+        "note": "Chasing Cars review: 280 litres with all seven seats in use 'to the window line' (cargo-cover convention). Same 280 L in CarExpert quick drive and CarsGuide."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-gac-m8-review-quick-drive",
+        "note": "CarExpert quick drive: 'up to 1500L' behind the second row with the third row folded; Chasing Cars and CarsGuide same. Measurement height not stated ('up to' suggests to the roof); no both-rows-folded figure published (second-row captain's chairs do not fold flat)."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+        "note": "GAC spec page 'Seating Capacity' 7 on all three grades (2+2+3)."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/vans/gac-m8-2026-review/",
+        "note": "Chasing Cars review: 'has not been rated to tow'; CarsGuide review also 'not rated for towing'. GAC AU spec page publishes no towing figure. Carsales listings' '3000kg braked' is the GVM (3,000 kg per Chasing Cars)."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://eu-www-resouce-cdn.gacgroup.com/static/AU/tenant/cms/material/202608/1787037645132-Warranty-Terms-and-Conditions-FINAL-.pdf",
+        "note": "GAC AU warranty T&Cs (Aug 2026): '7 Year Unlimited Kilometre Warranty - Private/General Fleet & Government' for vehicles sold from 18 Nov 2025; the 8-year term is for 'Electrical Vehicle' only, so the PHEV gets 7. Not servicing-conditional. Traction battery 8 yr/200,000 km private. CarExpert (84 months), Chasing Cars and CarsGuide reviews say 7; EV Central and Chasing Cars launch news say 8 (wrong for a PHEV)."
+      },
+      "insuranceAnnual": {
+        "value": 2150,
+        "basis": "judged",
+        "note": "Luxury +50 for the $1,400 step and extra rear screen/fridge hardware; between kia-sorento-phev-gt-line-awd 2100 ($86,115) and xpeng-x9 2350 ($89,900)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "one GAC brand curve [1,0.7,0.58,0.49,0.42,0.36], identical to gac-aion-v and gac-aion-ut: brand new to Australia (launched Dec 2025), ~10 service centres (CarsGuide), no resale history, launch cashback offers. Dispatcher-specified."
+      }
+    }
+  },
+  "lowConfidence": [
+    "gac-m8-phev-luxury.isFuelEfficientForLct: rests on the 1.3 L/100km ADR label quoted by EV Central and Carscoops; no GAC AU or Green Vehicle Guide page opened; CarExpert's database says 6.0. If wrong, Luxury and Luxury Plus pay LCT",
+    "gac-m8-phev-luxury-plus.isFuelEfficientForLct: same as Luxury",
+    "gac-m8-phev-premium.isGreenForVicDuty: CO2 not published; inferred ~30 g/km from the 1.3 L label; aggregator 228 g/km figure treated as an error (applies to all three rows)",
+    "gac-m8-phev-premium.batteryKwh: 25.57 kWh unlabelled gross vs usable, chemistry sources conflict (applies to all three rows)",
+    "gac-m8-phev-premium.rangeKm: 106 km is a WLTC (Chinese) claim, standard 'other'; no European WLTP homologation (all rows)",
+    "gac-m8-phev-premium.bootLitresSeatsDown: 1500 L 'up to', likely to the roof, behind row two only (all rows)",
+    "gac-m8-phev-premium.insuranceAnnual: judged (all rows)",
+    "gac-m8-phev-luxury-plus.listPrice: manufacturer page data plus CarExpert only; no review covers the Luxury Plus"
+  ]
+}

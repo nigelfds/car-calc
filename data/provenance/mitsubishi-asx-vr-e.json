@@ -1,0 +1,328 @@
+{
+  "familyId": "mitsubishi-asx-vr-e",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "mitsubishi-asx-vr-e-ls": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mitsubishi-asx-vr-e-price-and-specs",
+        "note": "Four grades (LS, Aspire, Exceed RWD; GSR AWD) priced by Mitsubishi Australia with a national launch drive-away offer; due in showrooms before end-2026 (Chasing Cars: December). mitsubishi-motors.com.au returns HTTP 403 to automated fetches, so the configurator itself could not be opened. Same four-grade list in The Beep, zecar and CarSauce."
+      },
+      "listPrice": {
+        "value": 46740,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mitsubishi-asx-vr-e-price-and-specs",
+        "note": "CarExpert price table 'before on-road costs' in words; same RRP in The Beep, zecar and CarSauce. The national launch drive-away offer ($45,990) is a campaign and not used. Chasing Cars' earlier figures were NZ-dollar conversions made before AU pricing and are superseded."
+      },
+      "batteryKwh": {
+        "value": 57.7,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ: usable 57.7 kWh, nominal 59 kWh (asterisked); Australian reports quote 57.7kWh LFP (CATL) unlabelled. Same pack all grades."
+      },
+      "rangeKm": {
+        "value": 403,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://zecar.com/reviews/mitsubishi-asx-vr-e-price-specs-australia",
+        "note": "Mitsubishi Australia's per-grade WLTP figures as reported by zecar, The Beep and CarExpert; matches the NZ WLTP figures on https://evdb.nz/v/mitsubishi-asx. Taiwanese NEDC figures (516/466km) rejected. Wheel: 18-inch."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.3,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ WLTP consumption for this grade (163 Wh/km); battery/range gives 14.3, the gap consistent with charging losses being included."
+      },
+      "bootLitresSeatsUp": {
+        "value": 320,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ 'Boot space' 320 L; Chasing Cars also gives 320 L. Measurement method not stated (VDA vs to-roof unknown). Frunk (30 L per EVDB / 52 L per Chasing Cars, Aspire and above) not added, per convention."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1043,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ 'Boot space (max)' 1043 L; measurement method not stated, likely to the roof as most max figures are."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "5 seats all grades; 60:40 split-fold rear bench (EV Central)."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked towing capacity published by Mitsubishi AU press material as reported by CarExpert, The Beep, zecar, CarSauce, EV Central or Chasing Cars; EV Database NZ shows none. Treated as not rated to tow, following the dataset precedent for unpublished figures. The 1,200 kg seen on aggregators is the petrol ASX."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/mitsubishi-asx-vr-e-price-specs-australia/",
+        "note": "Unconditional 5 years/100,000 km; 10 years/200,000 km only with Mitsubishi dealer servicing; battery 8 years/160,000 km (70% capacity)."
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "anchored to kia-ev3-air-standard ($47,600, 1450), byd-atto3-evo-premium ($46,990, 1700) and geely-ex5-inspire ($45,990, 1700); new nameplate with an unproven Taiwanese-built parts supply, so above the Kia"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.76,
+          0.66,
+          0.58,
+          0.51,
+          0.45
+        ],
+        "basis": "judged",
+        "note": "Mitsubishi brand curve taken from mitsubishi-outlander-phev by owner convention (one curve per brand). An unknown Foxtron-built nameplate and an aggressive launch drive-away offer argue for steeper, but brand convention kept."
+      }
+    },
+    "mitsubishi-asx-vr-e-aspire": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mitsubishi-asx-vr-e-price-and-specs",
+        "note": "Four grades (LS, Aspire, Exceed RWD; GSR AWD) priced by Mitsubishi Australia with a national launch drive-away offer; due in showrooms before end-2026 (Chasing Cars: December). mitsubishi-motors.com.au returns HTTP 403 to automated fetches, so the configurator itself could not be opened. Same four-grade list in The Beep, zecar and CarSauce."
+      },
+      "listPrice": {
+        "value": 53990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mitsubishi-asx-vr-e-price-and-specs",
+        "note": "CarExpert price table 'before on-road costs' in words; same RRP in The Beep, zecar and CarSauce. The national launch drive-away offer ($53,990) is a campaign and not used. Chasing Cars' earlier figures were NZ-dollar conversions made before AU pricing and are superseded."
+      },
+      "batteryKwh": {
+        "value": 57.7,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ: usable 57.7 kWh, nominal 59 kWh (asterisked); Australian reports quote 57.7kWh LFP (CATL) unlabelled. Same pack all grades."
+      },
+      "rangeKm": {
+        "value": 398,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://zecar.com/reviews/mitsubishi-asx-vr-e-price-specs-australia",
+        "note": "Mitsubishi Australia's per-grade WLTP figures as reported by zecar, The Beep and CarExpert; matches the NZ WLTP figures on https://evdb.nz/v/mitsubishi-asx. Taiwanese NEDC figures (516/466km) rejected. Wheel: 18-inch (no wheel change listed in the grade walk)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.5,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ WLTP consumption for this grade (165 Wh/km); battery/range gives 14.5, the gap consistent with charging losses being included."
+      },
+      "bootLitresSeatsUp": {
+        "value": 320,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ 'Boot space' 320 L; Chasing Cars also gives 320 L. Measurement method not stated (VDA vs to-roof unknown). Frunk (30 L per EVDB / 52 L per Chasing Cars, Aspire and above) not added, per convention."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1043,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ 'Boot space (max)' 1043 L; measurement method not stated, likely to the roof as most max figures are."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "5 seats all grades; 60:40 split-fold rear bench (EV Central)."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked towing capacity published by Mitsubishi AU press material as reported by CarExpert, The Beep, zecar, CarSauce, EV Central or Chasing Cars; EV Database NZ shows none. Treated as not rated to tow, following the dataset precedent for unpublished figures. The 1,200 kg seen on aggregators is the petrol ASX."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/mitsubishi-asx-vr-e-price-specs-australia/",
+        "note": "Unconditional 5 years/100,000 km; 10 years/200,000 km only with Mitsubishi dealer servicing; battery 8 years/160,000 km (70% capacity)."
+      },
+      "insuranceAnnual": {
+        "value": 1700,
+        "basis": "judged",
+        "note": "stepped from the LS by price; anchored to xpeng-g6-standard-range ($51,800, 1750) and hyundai-kona-electric-elite ($53,000, 1550)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.76,
+          0.66,
+          0.58,
+          0.51,
+          0.45
+        ],
+        "basis": "judged",
+        "note": "Mitsubishi brand curve taken from mitsubishi-outlander-phev by owner convention (one curve per brand). An unknown Foxtron-built nameplate and an aggressive launch drive-away offer argue for steeper, but brand convention kept."
+      }
+    },
+    "mitsubishi-asx-vr-e-exceed": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mitsubishi-asx-vr-e-price-and-specs",
+        "note": "Four grades (LS, Aspire, Exceed RWD; GSR AWD) priced by Mitsubishi Australia with a national launch drive-away offer; due in showrooms before end-2026 (Chasing Cars: December). mitsubishi-motors.com.au returns HTTP 403 to automated fetches, so the configurator itself could not be opened. Same four-grade list in The Beep, zecar and CarSauce."
+      },
+      "listPrice": {
+        "value": 57990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mitsubishi-asx-vr-e-price-and-specs",
+        "note": "CarExpert price table 'before on-road costs' in words; same RRP in The Beep, zecar and CarSauce. The national launch drive-away offer ($58,990) is a campaign and not used. Chasing Cars' earlier figures were NZ-dollar conversions made before AU pricing and are superseded."
+      },
+      "batteryKwh": {
+        "value": 57.7,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ: usable 57.7 kWh, nominal 59 kWh (asterisked); Australian reports quote 57.7kWh LFP (CATL) unlabelled. Same pack all grades."
+      },
+      "rangeKm": {
+        "value": 380,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://zecar.com/reviews/mitsubishi-asx-vr-e-price-specs-australia",
+        "note": "Mitsubishi Australia's per-grade WLTP figures as reported by zecar, The Beep and CarExpert; matches the NZ WLTP figures on https://evdb.nz/v/mitsubishi-asx. Taiwanese NEDC figures (516/466km) rejected. Wheel: 20-inch."
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.4,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ WLTP consumption for this grade (174 Wh/km); battery/range gives 15.2, the gap consistent with charging losses being included."
+      },
+      "bootLitresSeatsUp": {
+        "value": 320,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ 'Boot space' 320 L; Chasing Cars also gives 320 L. Measurement method not stated (VDA vs to-roof unknown). Frunk (30 L per EVDB / 52 L per Chasing Cars, Aspire and above) not added, per convention."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1043,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ 'Boot space (max)' 1043 L; measurement method not stated, likely to the roof as most max figures are."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "5 seats all grades; 60:40 split-fold rear bench (EV Central)."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked towing capacity published by Mitsubishi AU press material as reported by CarExpert, The Beep, zecar, CarSauce, EV Central or Chasing Cars; EV Database NZ shows none. Treated as not rated to tow, following the dataset precedent for unpublished figures. The 1,200 kg seen on aggregators is the petrol ASX."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/mitsubishi-asx-vr-e-price-specs-australia/",
+        "note": "Unconditional 5 years/100,000 km; 10 years/200,000 km only with Mitsubishi dealer servicing; battery 8 years/160,000 km (70% capacity)."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "stepped by price; anchored to renault-scenic-e-tech-techno-ev60 ($55,990, 1750) and kia-ev5-air-standard-range ($56,770, 1700)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.76,
+          0.66,
+          0.58,
+          0.51,
+          0.45
+        ],
+        "basis": "judged",
+        "note": "Mitsubishi brand curve taken from mitsubishi-outlander-phev by owner convention (one curve per brand). An unknown Foxtron-built nameplate and an aggressive launch drive-away offer argue for steeper, but brand convention kept."
+      }
+    },
+    "mitsubishi-asx-vr-e-gsr-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mitsubishi-asx-vr-e-price-and-specs",
+        "note": "Four grades (LS, Aspire, Exceed RWD; GSR AWD) priced by Mitsubishi Australia with a national launch drive-away offer; due in showrooms before end-2026 (Chasing Cars: December). mitsubishi-motors.com.au returns HTTP 403 to automated fetches, so the configurator itself could not be opened. Same four-grade list in The Beep, zecar and CarSauce."
+      },
+      "listPrice": {
+        "value": 64990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-mitsubishi-asx-vr-e-price-and-specs",
+        "note": "CarExpert price table 'before on-road costs' in words; same RRP in The Beep, zecar and CarSauce. The national launch drive-away offer ($68,990) is a campaign and not used. Chasing Cars' earlier figures were NZ-dollar conversions made before AU pricing and are superseded."
+      },
+      "batteryKwh": {
+        "value": 57.7,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ: usable 57.7 kWh, nominal 59 kWh (asterisked); Australian reports quote 57.7kWh LFP (CATL) unlabelled. Same pack all grades."
+      },
+      "rangeKm": {
+        "value": 328,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://zecar.com/reviews/mitsubishi-asx-vr-e-price-specs-australia",
+        "note": "Mitsubishi Australia's per-grade WLTP figures as reported by zecar, The Beep and CarExpert; matches the NZ WLTP figures on https://evdb.nz/v/mitsubishi-asx. Taiwanese NEDC figures (516/466km) rejected. Wheel: 20-inch (inherits Exceed features)."
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.5,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ WLTP consumption for this grade (195 Wh/km); battery/range gives 17.6, the gap consistent with charging losses being included."
+      },
+      "bootLitresSeatsUp": {
+        "value": 320,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ 'Boot space' 320 L; Chasing Cars also gives 320 L. Measurement method not stated (VDA vs to-roof unknown). Frunk (30 L per EVDB / 52 L per Chasing Cars, Aspire and above) not added, per convention."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1043,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "EV Database NZ 'Boot space (max)' 1043 L; measurement method not stated, likely to the roof as most max figures are."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://evdb.nz/v/mitsubishi-asx",
+        "note": "5 seats all grades; 60:40 split-fold rear bench (EV Central)."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked towing capacity published by Mitsubishi AU press material as reported by CarExpert, The Beep, zecar, CarSauce, EV Central or Chasing Cars; EV Database NZ shows none. Treated as not rated to tow, following the dataset precedent for unpublished figures. The 1,200 kg seen on aggregators is the petrol ASX."
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://thebeep.com.au/car-news/mitsubishi-asx-vr-e-price-specs-australia/",
+        "note": "Unconditional 5 years/100,000 km; 10 years/200,000 km only with Mitsubishi dealer servicing; battery 8 years/160,000 km (70% capacity)."
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "performance loading for 342kW / 3.9s 0-100; anchored to zeekr-x-performance-awd ($54,646, 2300), leapmotor-c10-awd-sports-plus ($53,888, 2100) and tesla-model-y-premium-rwd ($58,900, 2300)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.76,
+          0.66,
+          0.58,
+          0.51,
+          0.45
+        ],
+        "basis": "judged",
+        "note": "Mitsubishi brand curve taken from mitsubishi-outlander-phev by owner convention (one curve per brand). An unknown Foxtron-built nameplate and an aggressive launch drive-away offer argue for steeper, but brand convention kept."
+      }
+    }
+  },
+  "lowConfidence": [
+    "mitsubishi-asx-vr-e-ls.towKg: unpublished for all grades; 0 is judged, a real rating may exist once Mitsubishi AU publishes a spec sheet (applies to all four rows)",
+    "mitsubishi-asx-vr-e-ls.bootLitresSeatsDown: 1043 L method unstated and probably to the roof, overstating the to-cover figure (all rows)",
+    "mitsubishi-asx-vr-e-ls.bootLitresSeatsUp: 320 L method unstated; sourced via EV Database NZ and Chasing Cars only (all rows)",
+    "mitsubishi-asx-vr-e-ls.availability: configurator returned HTTP 403; on-sale status rests on Mitsubishi's announced RRP and national launch offer as reported by four outlets, with showroom arrival 'before end-2026' (all rows)",
+    "mitsubishi-asx-vr-e-ls.batteryKwh: usable 57.7 kWh from EV Database NZ only; Australian sources give the figure unlabelled (all rows)",
+    "mitsubishi-asx-vr-e-gsr-awd.insuranceAnnual: judged performance loading",
+    "mitsubishi-asx-vr-e-ls.consumptionKwhPer100km: from EV Database NZ, not Mitsubishi directly (all rows)"
+  ]
+}

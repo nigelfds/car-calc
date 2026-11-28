@@ -1,0 +1,223 @@
+{
+  "familyId": "jac-hunter-phev",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "jac-hunter-phev-pro": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/adventure/jac-hunter-phev-x-102492",
+        "note": "CarsGuide 4 Sep 2026 launch review lists both grades, Pro 4X4 and X 4X4, as MSRP-priced current models; carsales research page shows indicative drive-away ranges by state for both grades (release April 2026, showrooms from Aug 2026 per GoAuto). JAC's own site (jacmotors.com.au) returned a 503 / JS redirect to /lander throughout, so no manufacturer configurator was readable. No evidence of a Victoria-specific restriction found. Cab-chassis (Pro/Oasis-based, unpriced) excluded."
+      },
+      "listPrice": {
+        "value": 49988,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/adventure/jac-hunter-phev-x-102492",
+        "note": "CarsGuide: 'Pro 4X4 $49,988' MSRP excluding on-road costs; CarExpert news 10 Jul 2026 '$49,988 before on-road costs'; GoAuto '$49,988 + ORC'. JAC's own price list unreachable (site down). Cross-check: carsales indicative drive-away Pro $51,537-$55,274 brackets the app's VIC ute drive-away of $52,296 for this list. Rejected CarExpert showroom 'Driveaway $47,676' (Sydney): identical for both grades and below the list price, a data error. No current price campaign found (launch offer is a charger/$500 voucher only, to 31 Dec 2026)."
+      },
+      "batteryKwh": {
+        "value": 31.2,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+        "note": "CarExpert spec grid labels 31.2 kWh 'usable'; every other source (CarsGuide, 4X4 Australia, EV Central, carsales) quotes 31.2kWh LFP unlabelled; GoAuto once said 32kWh. Usable vs gross not settled by a manufacturer source."
+      },
+      "rangeKm": {
+        "value": 100,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://evcentral.com.au/2026-jac-hunter-x-phev-review-australias-cheapest-phev-ute-combines-serious-capability-with-useful-ev-range/",
+        "note": "EV Central '100km NEDC'; CarExpert 2026 news 'up to 100km based on NEDC testing'. No WLTP figure found: the T9 PHEV is not sold in a WLTP market (Malaysia/AU/China). Measured: CarsGuide ~80km, EV Central 75-80km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 31.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 31.2 / 100 x 100; no published EV-mode figure (EV Central spec sheet 'TBA'). Tautological against the cross-check."
+      },
+      "combinedRangeKm": {
+        "value": 1006,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 100 + 77 / 8.5 x 100 = 1006. Tank 77L per CarExpert spec page, 4X4 Australia, EV Central, carsales. JAC's own claim is 1005km NEDC (4X4 Australia)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.5,
+        "basis": "derived",
+        "note": "No published charge-sustaining figure. Derived from JAC's claimed 1005km NEDC total range with 100km EV range and 77L tank: (1005-100)/77 = 11.75 km/L = 8.51 L/100km. Same method as the sibling gwm-cannon-phev (8.1). Real-world evidence is worse: EV Central ~14 L/100km with the engine driving, CarsGuide ~9.5 mixed (partly EV), 4X4 Australia 6.2 on test (with charging), EV Central pre-production estimate ~10."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.4x4australia.com.au/news/jac-hunter-phev-range-and-fuel-efficiency-figures-confirmed",
+        "note": "JAC combined label 1.6 L/100km (NEDC), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": false,
+        "basis": "derived",
+        "note": "Ute: field rules require false on every ute row; Victoria charges utes as goods vehicles (isNonPassengerForVicDuty true)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 1136,
+        "basis": "judged",
+        "url": "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+        "note": "Tub litres unpublished. CarExpert spec page: load length 1520mm, width 1590mm, height 470mm (same in carsales research). 1520 x 1590 x 470 = 1136 L; reads 10-20% high because arches are ignored. Siblings: Cannon PHEV 1196, Shark 6 1200, Ranger PHEV 1160."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1136,
+        "basis": "judged",
+        "note": "Ute: equals tub volume (bootLitresSeatsUp)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+        "note": "Seating capacity 5 (2+3), dual-cab pickup."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+        "note": "'Braked 3,500 kg, unbraked 750 kg'; CarsGuide and EV Central '3,500kg braked'; CarExpert FAQ says shared by all variants. JAC technical sheet unreachable (site down). GCM 6430kg per 4X4 Australia."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/adventure/jac-hunter-phev-x-102492",
+        "note": "Vehicle 7 years, no km limit; battery 8 years/150,000km. CarExpert review: 7yr/unlimited for all buyer types including commercial; capped servicing and roadside need JAC servicing but the warranty term does not."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "Anchored to gwm-cannon-phev-lux (1700 at $48,716) and ford-ranger-phev-xl (1700 at $56,515); +50 for a low-volume new brand with uncertain parts supply and 360kW claimed output."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "New brand to the dataset; one curve for all JAC rows. Chose the low-volume curve held by KGM (kgm-musso-ev) rather than the GWM/Chery new-Chinese curve [1,0.7,...]: JAC is a small distributor-run brand with a thin network, its diesel T9 was cut by $3,500 cashback in its first year-end run-out (CarExpert, Nov 2025), the Hunter is a first-year nameplate with no resale history. Steeper than GWM, which has an established ute resale market (Cannon diesel)."
+      }
+    },
+    "jac-hunter-phev-x": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/adventure/jac-hunter-phev-x-102492",
+        "note": "CarsGuide 4 Sep 2026 launch review lists both grades, Pro 4X4 and X 4X4, as MSRP-priced current models; carsales research page shows indicative drive-away ranges by state for both grades (release April 2026, showrooms from Aug 2026 per GoAuto). JAC's own site (jacmotors.com.au) returned a 503 / JS redirect to /lander throughout, so no manufacturer configurator was readable. No evidence of a Victoria-specific restriction found. Cab-chassis (Pro/Oasis-based, unpriced) excluded."
+      },
+      "listPrice": {
+        "value": 54844,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/adventure/jac-hunter-phev-x-102492",
+        "note": "CarsGuide: 'X 4X4 $54,844' MSRP excluding on-road costs; GoAuto '$54,844 + ORC'; CarExpert 2027 review and 4X4 Australia '$54,844 + ORC'. JAC's own price list unreachable (site down). Cross-check: carsales indicative drive-away X $56,537-$60,399 brackets the app's VIC ute drive-away of $57,284 for this list. Rejected CarExpert showroom 'Driveaway $47,676' (Sydney): identical for both grades and below the list price, a data error. No current price campaign found (launch offer is a charger/$500 voucher only, to 31 Dec 2026)."
+      },
+      "batteryKwh": {
+        "value": 31.2,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+        "note": "CarExpert spec grid labels 31.2 kWh 'usable'; every other source (CarsGuide, 4X4 Australia, EV Central, carsales) quotes 31.2kWh LFP unlabelled; GoAuto once said 32kWh. Usable vs gross not settled by a manufacturer source."
+      },
+      "rangeKm": {
+        "value": 100,
+        "basis": "sourced",
+        "standard": "NEDC",
+        "url": "https://evcentral.com.au/2026-jac-hunter-x-phev-review-australias-cheapest-phev-ute-combines-serious-capability-with-useful-ev-range/",
+        "note": "EV Central '100km NEDC'; CarExpert 2026 news 'up to 100km based on NEDC testing'. No WLTP figure found: the T9 PHEV is not sold in a WLTP market (Malaysia/AU/China). Measured: CarsGuide ~80km, EV Central 75-80km."
+      },
+      "consumptionKwhPer100km": {
+        "value": 31.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 31.2 / 100 x 100; no published EV-mode figure (EV Central spec sheet 'TBA'). Tautological against the cross-check."
+      },
+      "combinedRangeKm": {
+        "value": 1006,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 100 + 77 / 8.5 x 100 = 1006. Tank 77L per CarExpert spec page, 4X4 Australia, EV Central, carsales. JAC's own claim is 1005km NEDC (4X4 Australia)."
+      },
+      "fuelConsumptionL100km": {
+        "value": 8.5,
+        "basis": "derived",
+        "note": "No published charge-sustaining figure. Derived from JAC's claimed 1005km NEDC total range with 100km EV range and 77L tank: (1005-100)/77 = 11.75 km/L = 8.51 L/100km. Same method as the sibling gwm-cannon-phev (8.1). Real-world evidence is worse: EV Central ~14 L/100km with the engine driving, CarsGuide ~9.5 mixed (partly EV), 4X4 Australia 6.2 on test (with charging), EV Central pre-production estimate ~10."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.4x4australia.com.au/news/jac-hunter-phev-range-and-fuel-efficiency-figures-confirmed",
+        "note": "JAC combined label 1.6 L/100km (NEDC), at or below 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": false,
+        "basis": "derived",
+        "note": "Ute: field rules require false on every ute row; Victoria charges utes as goods vehicles (isNonPassengerForVicDuty true)."
+      },
+      "bootLitresSeatsUp": {
+        "value": 1136,
+        "basis": "judged",
+        "url": "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+        "note": "Tub litres unpublished. CarExpert spec page: load length 1520mm, width 1590mm, height 470mm (same in carsales research). 1520 x 1590 x 470 = 1136 L; reads 10-20% high because arches are ignored. Siblings: Cannon PHEV 1196, Shark 6 1200, Ranger PHEV 1160."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1136,
+        "basis": "judged",
+        "note": "Ute: equals tub volume (bootLitresSeatsUp)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+        "note": "Seating capacity 5 (2+3), dual-cab pickup."
+      },
+      "towKg": {
+        "value": 3500,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/jac/hunter/2026-pro-2l-utility-4x4-electric-jskf5kgf20260713",
+        "note": "'Braked 3,500 kg, unbraked 750 kg'; CarsGuide and EV Central '3,500kg braked'; CarExpert FAQ says shared by all variants. JAC technical sheet unreachable (site down). GCM 6430kg per 4X4 Australia."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/adventure/jac-hunter-phev-x-102492",
+        "note": "Vehicle 7 years, no km limit; battery 8 years/150,000km. CarExpert review: 7yr/unlimited for all buyer types including commercial; capped servicing and roadside need JAC servicing but the warranty term does not."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "Anchored to gwm-cannon-phev-ultra (1800 at $52,611) and byd-shark-6-premium (1800 at $57,900); +50 for a low-volume brand."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.66,
+          0.54,
+          0.45,
+          0.38,
+          0.32
+        ],
+        "basis": "judged",
+        "note": "New brand to the dataset; one curve for all JAC rows. Chose the low-volume curve held by KGM (kgm-musso-ev) rather than the GWM/Chery new-Chinese curve [1,0.7,...]: JAC is a small distributor-run brand with a thin network, its diesel T9 was cut by $3,500 cashback in its first year-end run-out (CarExpert, Nov 2025), the Hunter is a first-year nameplate with no resale history. Steeper than GWM, which has an established ute resale market (Cannon diesel)."
+      }
+    }
+  },
+  "lowConfidence": [
+    "jac-hunter-phev-pro.depreciationCurve: judged for a brand new to the dataset with no resale data; chose KGM's low-volume curve (same for X)",
+    "jac-hunter-phev-x.depreciationCurve: as Pro",
+    "jac-hunter-phev-pro.fuelConsumptionL100km: derived 8.5 from JAC's NEDC 1005km total-range claim; EV Central saw ~14 L/100km with the engine driving, so petrol running cost is likely understated (same for X)",
+    "jac-hunter-phev-x.fuelConsumptionL100km: as Pro",
+    "jac-hunter-phev-pro.combinedRangeKm: computed from the derived 8.5 L/100km and NEDC electric range (same for X)",
+    "jac-hunter-phev-x.combinedRangeKm: as Pro",
+    "jac-hunter-phev-pro.listPrice: JAC's own site was down (503 / redirect), so price rests on CarsGuide MSRP, CarExpert and GoAuto 'before on-road costs' wording, cross-checked against carsales indicative drive-away; not read from a manufacturer configurator (same for X)",
+    "jac-hunter-phev-x.listPrice: as Pro",
+    "jac-hunter-phev-pro.availability: orderable status in Victoria rests on launch reviews and carsales listings; no manufacturer configurator readable (same for X)",
+    "jac-hunter-phev-x.availability: as Pro",
+    "jac-hunter-phev-pro.rangeKm: NEDC only, no WLTP exists; testers saw 75-80km (same for X)",
+    "jac-hunter-phev-x.rangeKm: as Pro",
+    "jac-hunter-phev-pro.batteryKwh: 31.2 labelled usable only by CarExpert's spec grid; unlabelled elsewhere (same for X)",
+    "jac-hunter-phev-x.batteryKwh: as Pro",
+    "jac-hunter-phev-pro.bootLitresSeatsUp: tub volume multiplied out from dimensions, reads high (same for X and SeatsDown)",
+    "jac-hunter-phev-x.bootLitresSeatsUp: as Pro",
+    "jac-hunter-phev-pro.insuranceAnnual: judged against Cannon PHEV, Ranger PHEV and Shark 6 rows",
+    "jac-hunter-phev-x.insuranceAnnual: judged"
+  ]
+}

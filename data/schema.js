@@ -46,7 +46,7 @@ const PHEV_ONLY_FIELDS = [
 // which is what keeps the batteryKwh/rangeKm consistency check below valid
 // for both.
 const PHEV_BOUNDS = {
-  batteryKwh: [8, 60],
+  batteryKwh: [7, 60],
   rangeKm: [30, 200],
   combinedRangeKm: [300, 1500],
   fuelConsumptionL100km: [1, 15]

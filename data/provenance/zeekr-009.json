@@ -1,0 +1,247 @@
+{
+  "familyId": "zeekr-009",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "zeekr-009-7-seat-fwd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "Zeekr AU 009 page carries Build & Price and a 'Choose Your Zeekr 009' spec table listing exactly three versions: 7-Seat FWD, 7-Seat AWD, 6-Seat AWD; CarExpert review (Feb 2026) lists the same three. Configurator conf.zeekr.au renders client-side, so per-grade configurator entries could not be read"
+      },
+      "listPrice": {
+        "value": 115900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-zeekr-009-review",
+        "note": "$115,900 'before on-road costs' in words (CarExpert review 2 Feb 2026 and CarExpert news 14 Nov 2025); EV Central '$115,900 plus on-road costs'; CarExpert variant page (fetched 2026-11-27) still lists MSRP $115,900 with Sydney drive-away $124,065. Zeekr AU configurator (conf.zeekr.au) renders client-side and returned no price to fetch; Zeekr promised no model-year change for 12-18 months from Nov 2025 and no MY27 009 announcement was found"
+      },
+      "batteryKwh": {
+        "value": 116,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "Zeekr AU 'Battery Capacity 116 kWh' (same pack FWD and AWD per EV Central). Gross/usable not stated by Zeekr; evdb.nz lists 116 nominal / 116 usable (likely a copy). Treated as usable, unverified"
+      },
+      "rangeKm": {
+        "value": 604,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "WLTP 604km FWD on 19in wheels per Zeekr AU spec table and 2026 AU brochure (https://www.datocms-assets.com/130529/1771919710-zeekr-009-brochure_2026.pdf). CarExpert variant page's 686km 'range' exceeds WLTP so is a non-WLTP (NEDC/CLTC-type) figure: rejected"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 116/604 x 100. Published figures are grid/other quantities: CarExpert news 21.4 kWh/100km WLTP for FWD, evdb.nz 222 Wh/km AWD, CarExpert spec 19.5; CarExpert tested 28.2 on the 6-Seat AWD"
+      },
+      "bootLitresSeatsUp": {
+        "value": 574,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/zeekr/009/2026-base-mpv-fwd-electric-jska5wga20260318",
+        "note": "574L behind the third row, 'to lower window' (matches cover convention); 29L frunk not added. evdb.nz gives 579L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2979,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/zeekr/009/2026-base-mpv-fwd-electric-jska5wga20260318",
+        "note": "'rear seat down' 2,979L, measurement height not stated and likely to the roof; CarExpert review says the third row cannot be removed or folded flat, so this is a theoretical maximum. No to-the-belt-line figure found"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "7-seater 2+2+3, 6-seater 2+2+2 per Zeekr AU"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked tow rating published: Zeekr AU 009 page and brochure give none; CarExpert AU variant page lists none; CarsGuide towing page (https://www.carsguide.com.au/zeekr/009/towing-capacity) shows 0kg 'yet to be specified'; evdb.nz blank. Treated as not rated to tow"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-zeekr-009-review",
+        "note": "5 years unlimited km (3yr/120,000km commercial use); battery 8yr/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 2800,
+        "basis": "judged",
+        "note": "anchored to kia-ev9-gt-line-awd ($121,000, 2700), hyundai-ioniq-9-calligraphy-awd ($119,668, 2700), cadillac-vistiq-platinum ($116,000, 3000, thin network) and polestar-3-rear-motor ($116,700, 3000); Zeekr's young network and a 2.8-2.9t body put it toward the upper anchors; AWD grades scale up with price toward volvo-ex90-ultra ($134,990, 3150)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Zeekr brand curve from zeekr-7x (one curve per brand). Thin volume supports it: CarExpert pricing page shows 123 sales in 2025 and 109 in 2026 YTD (https://www.carexpert.com.au/zeekr/009/pricing)"
+      }
+    },
+    "zeekr-009-7-seat-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "Zeekr AU 009 page carries Build & Price and a 'Choose Your Zeekr 009' spec table listing exactly three versions: 7-Seat FWD, 7-Seat AWD, 6-Seat AWD; CarExpert review (Feb 2026) lists the same three. Configurator conf.zeekr.au renders client-side, so per-grade configurator entries could not be read"
+      },
+      "listPrice": {
+        "value": 135900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-zeekr-009-review",
+        "note": "$135,900 'before on-road costs' in words (CarExpert review 2 Feb 2026; CarExpert news 14 Nov 2025); EV Central '$135,900 plus on-roads'. Zeekr AU configurator renders client-side, no price fetchable; no MY27 009 pricing found on the research date"
+      },
+      "batteryKwh": {
+        "value": 116,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "Zeekr AU 'Battery Capacity 116 kWh' (same pack FWD and AWD per EV Central). Gross/usable not stated by Zeekr; evdb.nz lists 116 nominal / 116 usable (likely a copy). Treated as usable, unverified"
+      },
+      "rangeKm": {
+        "value": 582,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "WLTP 582km AWD on 20in wheels per Zeekr AU spec table and 2026 AU brochure (https://www.datocms-assets.com/130529/1771919710-zeekr-009-brochure_2026.pdf). CarExpert variant page's 686km 'range' exceeds WLTP so is a non-WLTP (NEDC/CLTC-type) figure: rejected"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 116/582 x 100. Published figures are grid/other quantities: CarExpert news 21.4 kWh/100km WLTP for FWD, evdb.nz 222 Wh/km AWD, CarExpert spec 19.5; CarExpert tested 28.2 on the 6-Seat AWD"
+      },
+      "bootLitresSeatsUp": {
+        "value": 574,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/zeekr/009/2026-mpv-4x4-electric-jsgkos8a20260701",
+        "note": "574L behind the third row, 'to lower window' (matches cover convention); 29L frunk not added. evdb.nz gives 579L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2979,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/zeekr/009/2026-mpv-4x4-electric-jsgkos8a20260701",
+        "note": "'rear seat down' 2,979L, measurement height not stated and likely to the roof; CarExpert review says the third row cannot be removed or folded flat, so this is a theoretical maximum. No to-the-belt-line figure found"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "7-seater 2+2+3, 6-seater 2+2+2 per Zeekr AU"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked tow rating published: Zeekr AU 009 page and brochure give none; CarExpert AU variant page lists none; CarsGuide towing page (https://www.carsguide.com.au/zeekr/009/towing-capacity) shows 0kg 'yet to be specified'; evdb.nz blank. Treated as not rated to tow"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-zeekr-009-review",
+        "note": "5 years unlimited km (3yr/120,000km commercial use); battery 8yr/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 3100,
+        "basis": "judged",
+        "note": "anchored to kia-ev9-gt-line-awd ($121,000, 2700), hyundai-ioniq-9-calligraphy-awd ($119,668, 2700), cadillac-vistiq-platinum ($116,000, 3000, thin network) and polestar-3-rear-motor ($116,700, 3000); Zeekr's young network and a 2.8-2.9t body put it toward the upper anchors; AWD grades scale up with price toward volvo-ex90-ultra ($134,990, 3150)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Zeekr brand curve from zeekr-7x (one curve per brand). Thin volume supports it: CarExpert pricing page shows 123 sales in 2025 and 109 in 2026 YTD (https://www.carexpert.com.au/zeekr/009/pricing)"
+      }
+    },
+    "zeekr-009-6-seat-awd": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "Zeekr AU 009 page carries Build & Price and a 'Choose Your Zeekr 009' spec table listing exactly three versions: 7-Seat FWD, 7-Seat AWD, 6-Seat AWD; CarExpert review (Feb 2026) lists the same three. Configurator conf.zeekr.au renders client-side, so per-grade configurator entries could not be read"
+      },
+      "listPrice": {
+        "value": 139900,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-zeekr-009-review",
+        "note": "$139,900 'before on-road costs' in words (CarExpert review 2 Feb 2026, the tested grade); CarsGuide 2026 price page (MSRP, excludes stamp duty and government charges) and CarExpert variant page (MSRP $139,900, Sydney drive-away $149,377) both fetched 2026-11-27. Zeekr AU configurator renders client-side, no price fetchable"
+      },
+      "batteryKwh": {
+        "value": 116,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "Zeekr AU 'Battery Capacity 116 kWh' (same pack FWD and AWD per EV Central). Gross/usable not stated by Zeekr; evdb.nz lists 116 nominal / 116 usable (likely a copy). Treated as usable, unverified"
+      },
+      "rangeKm": {
+        "value": 582,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "WLTP 582km AWD on 20in wheels per Zeekr AU spec table and 2026 AU brochure (https://www.datocms-assets.com/130529/1771919710-zeekr-009-brochure_2026.pdf). CarExpert variant page's 686km 'range' exceeds WLTP so is a non-WLTP (NEDC/CLTC-type) figure: rejected"
+      },
+      "consumptionKwhPer100km": {
+        "value": 19.9,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 116/582 x 100. Published figures are grid/other quantities: CarExpert news 21.4 kWh/100km WLTP for FWD, evdb.nz 222 Wh/km AWD, CarExpert spec 19.5; CarExpert tested 28.2 on the 6-Seat AWD"
+      },
+      "bootLitresSeatsUp": {
+        "value": 574,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/zeekr/009/2026-mpv-4x4-electric-jsgkos8a20260701",
+        "note": "574L behind the third row, 'to lower window' (matches cover convention); 29L frunk not added. evdb.nz gives 579L"
+      },
+      "bootLitresSeatsDown": {
+        "value": 2979,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/zeekr/009/2026-mpv-4x4-electric-jsgkos8a20260701",
+        "note": "'rear seat down' 2,979L, measurement height not stated and likely to the roof; CarExpert review says the third row cannot be removed or folded flat, so this is a theoretical maximum. No to-the-belt-line figure found"
+      },
+      "seats": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.zeekrlife.com/en-au/models/009/",
+        "note": "7-seater 2+2+3, 6-seater 2+2+2 per Zeekr AU"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "judged",
+        "note": "No braked tow rating published: Zeekr AU 009 page and brochure give none; CarExpert AU variant page lists none; CarsGuide towing page (https://www.carsguide.com.au/zeekr/009/towing-capacity) shows 0kg 'yet to be specified'; evdb.nz blank. Treated as not rated to tow"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-zeekr-009-review",
+        "note": "5 years unlimited km (3yr/120,000km commercial use); battery 8yr/160,000km"
+      },
+      "insuranceAnnual": {
+        "value": 3200,
+        "basis": "judged",
+        "note": "anchored to kia-ev9-gt-line-awd ($121,000, 2700), hyundai-ioniq-9-calligraphy-awd ($119,668, 2700), cadillac-vistiq-platinum ($116,000, 3000, thin network) and polestar-3-rear-motor ($116,700, 3000); Zeekr's young network and a 2.8-2.9t body put it toward the upper anchors; AWD grades scale up with price toward volvo-ex90-ultra ($134,990, 3150)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "Zeekr brand curve from zeekr-7x (one curve per brand). Thin volume supports it: CarExpert pricing page shows 123 sales in 2025 and 109 in 2026 YTD (https://www.carexpert.com.au/zeekr/009/pricing)"
+      }
+    }
+  },
+  "lowConfidence": [
+    "zeekr-009-*.bootLitresSeatsDown: 2979L is unlabelled and likely to the roof; third row does not fold flat, so it overstates usable folded space (no to-belt-line figure exists)",
+    "zeekr-009-*.towKg: 0 judged from absence of any published rating (Zeekr AU silent; CarsGuide 'yet to be specified'); the car may carry an overseas rating",
+    "zeekr-009-*.batteryKwh: 116 kWh headline; gross vs usable not stated by Zeekr (evdb.nz 116/116 likely copied)",
+    "zeekr-009-7-seat-awd.listPrice: $135,900 from launch-era reviews (Nov 2025-Feb 2026); not re-read off a dated manufacturer page on the research date because the configurator renders client-side",
+    "zeekr-009-*.listPrice: no manufacturer price page fetchable; research-date confirmation is via CarExpert variant pages and CarsGuide MSRP",
+    "zeekr-009-*.insuranceAnnual: judged 2800/3100/3200 from $116k-$135k BEV anchors",
+    "zeekr-009-*.depreciationCurve: brand curve from zeekr-7x, no 009 resale data"
+  ]
+}

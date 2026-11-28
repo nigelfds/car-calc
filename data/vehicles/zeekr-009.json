@@ -1,0 +1,83 @@
+[
+  {
+    "id": "zeekr-009-7-seat-fwd",
+    "familyId": "zeekr-009",
+    "make": "Zeekr",
+    "model": "009",
+    "variant": "7-Seat FWD",
+    "bodyType": "SUV",
+    "listPrice": 115900,
+    "batteryKwh": 116,
+    "rangeKm": 604,
+    "consumptionKwhPer100km": 19.2,
+    "bootLitresSeatsUp": 574,
+    "bootLitresSeatsDown": 2979,
+    "seats": 7,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2800,
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-27"
+  },
+  {
+    "id": "zeekr-009-7-seat-awd",
+    "familyId": "zeekr-009",
+    "make": "Zeekr",
+    "model": "009",
+    "variant": "7-Seat AWD",
+    "bodyType": "SUV",
+    "listPrice": 135900,
+    "batteryKwh": 116,
+    "rangeKm": 582,
+    "consumptionKwhPer100km": 19.9,
+    "bootLitresSeatsUp": 574,
+    "bootLitresSeatsDown": 2979,
+    "seats": 7,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 3100,
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-27"
+  },
+  {
+    "id": "zeekr-009-6-seat-awd",
+    "familyId": "zeekr-009",
+    "make": "Zeekr",
+    "model": "009",
+    "variant": "6-Seat AWD",
+    "bodyType": "SUV",
+    "listPrice": 139900,
+    "batteryKwh": 116,
+    "rangeKm": 582,
+    "consumptionKwhPer100km": 19.9,
+    "bootLitresSeatsUp": 574,
+    "bootLitresSeatsDown": 2979,
+    "seats": 6,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 3200,
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-27"
+  }
+]

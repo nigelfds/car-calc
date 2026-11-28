@@ -1,0 +1,33 @@
+{
+  "id": "gwm-haval-h7-phev",
+  "summary": "The new-generation, boxy Haval H7 plug-in hybrid arrived in October 2026 in two AWD grades, Lux at $50,990 and Vanta at $53,990 drive-away, pairing a 33.7kWh LFP battery with a 320kW Hi4 system for a 4.9-second 0-100km/h claim. Australian launch reviewers (CarExpert, RACQ, RACV, CarsGuide) agree it is strong value and that the PHEV is the pick of the range over the hybrid, but mark down a fidgety ride on rough roads, numb steering, awkward lane-assist and the lack of an ANCAP rating at launch. GWM claims 137km of electric range, but the same Hi4 variant is rated 129km WLTP in Europe.",
+  "pros": [
+    "About 129-137km of electric range from a 33.7kWh LFP pack (129km WLTP for the Hi4 in Europe, GWM AU claims 137km), well beyond the H6 PHEV's 106km NEDC claim, for $50,990 drive-away",
+    "320kW/670Nm Hi4 dual-motor AWD with a claimed 4.9-second 0-100km/h, plus a mechanical locking rear differential and 210mm ground clearance on both grades",
+    "Seven-year/unlimited-km vehicle warranty with no servicing condition, eight-year/unlimited-km cover on the drive battery, and seven years of capped-price servicing at $460 a visit",
+    "DC charging 30-80 per cent in about 19 minutes and up to 6kW of V2L output, both uncommon at this price",
+    "Claimed 586L boot and 1404L folded, ahead of the BYD Sealion 6's 425L, with a full-size spare on the tailgate"
+  ],
+  "cons": [
+    "With a flat battery GWM's own figure is 7.5L/100km in a 2150kg SUV, so the 0.9L/100km label is meaningless for a buyer without home charging; CarExpert saw 6.1L/100km in hybrid mode",
+    "Towing is limited to 1500kg braked on both grades, half the 3000kg of GWM's Tank 300 PHEV, so it suits a small trailer rather than a caravan",
+    "The boot is shallow with a high load floor and no underfloor storage (RACQ, RACV), the side-hinged tailgate is heavy and manual, and the external spare limits rear vision",
+    "No ANCAP rating at launch, and reviewers flag awkward lane-keeping assistance, numb steering and a fidgety ride on rough roads",
+    "GWM's 137km range claim comes from internal testing; the same Hi4 variant is rated 129km WLTP in Europe"
+  ],
+  "sources": [
+    "https://www.gwmanz.com/au/models/suv/haval-h7/",
+    "https://www.gwmanz.com/au/offers/",
+    "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+    "https://www.carexpert.com.au/car-reviews/2027-gwm-haval-h7-review",
+    "https://www.carexpert.com.au/gwm/h7/powertrain-and-performance",
+    "https://www.racq.com.au/articles/car-reviews/2027-gwm-haval-h7-vanta-phev-review",
+    "https://www.racv.com.au/royalauto/car-reviews/gwm/2026-gwm-haval-h7-review.html",
+    "https://www.carsguide.com.au/ev/gwm-haval-h7-103095",
+    "https://evcentral.com.au/toyota-rav4-phev-undercut-gwm-haval-h7-plug-in-hybrid-medium-suv-launches-at-49990-drive-away/",
+    "https://www.km77.com/coches/gwm/haval-h7/2025/estandar/phev/haval-h7-phev-advance-hi4/datos",
+    "https://www.autocolumn.com/e-auto-nachrichten/gwm-haval-h7-preis-35990-euro-plug-in-hybrid-150-km-hi4-deutschland/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-11-27"
+}

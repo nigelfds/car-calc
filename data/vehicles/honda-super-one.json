@@ -1,0 +1,42 @@
+[
+  {
+    "id": "honda-super-one-mono-tone",
+    "familyId": "honda-super-one",
+    "make": "Honda",
+    "model": "Super-ONE",
+    "variant": "Mono Tone",
+    "bodyType": "Hatch",
+    "listPrice": 34493,
+    "batteryKwh": 28,
+    "rangeKm": 202,
+    "consumptionKwhPer100km": 14.8,
+    "bootLitresSeatsUp": 162,
+    "bootLitresSeatsDown": 618,
+    "seats": 4,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1300,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-11-27"
+  },
+  {
+    "id": "honda-super-one-two-tone",
+    "familyId": "honda-super-one",
+    "make": "Honda",
+    "model": "Super-ONE",
+    "variant": "Two Tone",
+    "bodyType": "Hatch",
+    "listPrice": 34972,
+    "batteryKwh": 28,
+    "rangeKm": 202,
+    "consumptionKwhPer100km": 14.8,
+    "bootLitresSeatsUp": 162,
+    "bootLitresSeatsDown": 618,
+    "seats": 4,
+    "towKg": 0,
+    "warrantyYears": 5,
+    "insuranceAnnual": 1300,
+    "depreciationCurve": [1, 0.74, 0.63, 0.55, 0.48, 0.42],
+    "sourcedAt": "2026-11-27"
+  }
+]

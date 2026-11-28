@@ -1,0 +1,35 @@
+{
+  "id": "gac-m8-phev",
+  "summary": "The M8 is GAC's three-row plug-in hybrid people mover, on sale since late 2025 in three grades \u2014 Premium ($76,590), Luxury ($83,590) and, from July 2026, Luxury Plus ($84,990), all before on-road costs on GAC's own price data \u2014 and it is the only plug-in hybrid people mover in Australia, pitched between the Kia Carnival Hybrid and the far dearer Lexus LM and Zeekr 009. Australian reviewers agree it is quiet, smooth-riding and generously equipped in the second row, with CarsGuide scoring the Luxury 7.5/10 and EV Central 3.5/5, but CarExpert withheld a recommendation and all of them note it feels slow and heavy once the 25.57kWh battery is flat, with a tight third row and little luggage room when all seven seats are used. The 2.0-litre turbo engine can drive the front wheels through a two-speed dedicated hybrid transmission, so it is a true plug-in hybrid rather than a range-extender.",
+  "pros": [
+    "106km claimed electric range (WLTC) from a 25.57kWh pack, enough for most suburban weeks on electricity alone; CarsGuide averaged 6.2L/100km over a week with regular charging and Chasing Cars saw about 90km of real EV range",
+    "Its 1.3L/100km government-label figure clears the 3.5L/100km fuel-efficient LCT test, so even the $83,590 Luxury and $84,990 Luxury Plus stay under the $91,661 threshold and pay no luxury car tax",
+    "274kW/630Nm combined output with a 0-100km/h time of 8.8 seconds (CarsGuide), and an electromagnetically damped ride that Chasing Cars found calm enough to work on a laptop in the second row",
+    "Luxury grades add powered, heated, cooled and massaging semi-aniline second-row captain's chairs with leg rests; Luxury Plus adds a built-in fridge and a 17.3-inch rear ceiling screen for $1,400 more",
+    "7-year/unlimited-km vehicle warranty with no dealer-servicing condition, plus an 8-year/200,000km traction battery warranty for private buyers (GAC's 8-year term applies to its EVs, not this PHEV)"
+  ],
+  "cons": [
+    "Once the battery is depleted it runs on the 140kW engine alone and reviewers call it slow and heavy; GAC claims 6.05L/100km in hybrid mode but Chasing Cars measured about 7.2L/100km with a low battery, so without home charging the economics fall back to a large petrol van",
+    "Only 280 litres of boot behind the third row (to the window line); the 1500-litre figure requires folding the third row, which makes it a four-seater",
+    "Not rated to tow at all, and at 2420kg kerb against a 3000kg GVM payload is only 580kg (Chasing Cars), less than a Kia Carnival GT-Line Hybrid's 646kg",
+    "Not ANCAP-tested, capped-price servicing not yet published, and a brand new to Australia with about 10 service centres (CarsGuide) and no resale history",
+    "Dearer than the Kia Carnival Hybrid that dominates the segment (CarsGuide puts the Carnival Hybrid from $76,630, against $83,590 for the M8 Luxury), and Chasing Cars finds the interior more mainstream than truly luxurious and the price high for a new brand"
+  ],
+  "sources": [
+    "https://www.gacgroup.com/en-au/mpv/gac-m8-phev",
+    "https://www.gacgroup.com/en-au/configuration/m8-phev/2024",
+    "https://eu-www-resouce-cdn.gacgroup.com/static/AU/tenant/cms/material/202608/1787037645132-Warranty-Terms-and-Conditions-FINAL-.pdf",
+    "https://www.carexpert.com.au/car-news/2026-gac-m8-price-and-specs-phev-people-mover-arrives-to-take-on-carnival-hybrid",
+    "https://www.carexpert.com.au/car-reviews/2026-gac-m8-review-quick-drive",
+    "https://www.carexpert.com.au/gac/m8/2026-luxury-plus-2l-mpv-fwd-electric-jsk8wf5w20260701",
+    "https://www.carexpert.com.au/gac/m8/premium/powertrain-and-performance",
+    "https://evcentral.com.au/gac-m8-review-radical-plug-in-hybrid-people-mover-brings-the-wow-factor-to-tempt-people-away-from-lexus-zeekr-ldv-and-kia/",
+    "https://www.chasingcars.com.au/news/new-car-prices/gac-m8-hybrid-mpv-priced-to-heat-up-australias-new-luxury-van-battleground/",
+    "https://www.chasingcars.com.au/reviews/vans/gac-m8-2026-review/",
+    "https://carsguide.com.au/ev/gac-m8-phev-luxury-100689",
+    "https://www.carsguide.com.au/gac/m8/boot-space",
+    "https://www.carscoops.com/2026/07/gac-m8-phev-review/",
+    "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty"
+  ],
+  "sourcedAt": "2026-11-27"
+}

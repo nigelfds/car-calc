@@ -1,0 +1,254 @@
+{
+  "familyId": "vw-id-buzz",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "vw-id-buzz-pro-swb": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/configurator.html/__app/id-buzz.app",
+        "note": "VW AU configurator lists two ID. Buzz variants, 'Pro' (2 batteries = SWB 79kWh / LWB 86kWh) and 'GTX'; prices not rendered to fetch. VW AU model page https://www.volkswagen.com.au/en/models/id-buzz.html shows MY25 and MY26 Pro SWB from $77,990 / $79,990 Driveaway; CarExpert 2027 spec page says MY27 released 4 Sep 2026"
+      },
+      "listPrice": {
+        "value": 75990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-volkswagen-id-buzz-lineup-announced-with-new-grade-new-equipment",
+        "note": "MY27 Pro SWB '$75,990 before on-road costs' (CarExpert 3 Aug 2026, unchanged from the Feb 2026 cut, CarExpert price-cut article); GoAuto 29 Jul 2026 same, ex on-roads; CarExpert 2027 spec page 'starting at $75,990'. VW AU's own page shows only the MY26 campaign 'From $79,990 Driveaway' (private buyers, purchased 1/10-31/12/2026); app computes VIC drive-away $80,140 for $75,990, so the campaign sits $150 under: consistent with list $75,990"
+      },
+      "batteryKwh": {
+        "value": 79,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU MY25 brochure spec table 'Battery Capacity (Net) kWh 79'; brochure text 84/79 kWh (Gross/Net); CarExpert 2027 spec page 84 gross / 79 usable"
+      },
+      "rangeKm": {
+        "value": 422,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Combined electric range (km)^ 422', footnote: calculated under WLTP; 19-inch wheels as standard; CarExpert 2027 spec page 422km WLTP (MY27 unchanged)"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.7,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Combined energy consumption' 207 Wh/km = 20.7 kWh/100km (WLTP, includes charging losses); CarExpert 2027 spec page 20.7 kWh/100km. battery/range = 18.7, 10% under the published figure"
+      },
+      "bootLitresSeatsUp": {
+        "value": 1121,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volkswagen/id-buzz/2027-pro-mpv-rwd-electric-jsggms5820260924",
+        "note": "CarExpert 2027 spec page 'Rear Seat Up to Lower Window' 1,121L (behind 2nd row); VW AU brochure 'Boot capacity (2nd row seats up)' 1,121"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1581,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volkswagen/id-buzz/2027-pro-mpv-rwd-electric-jsggms5820260924",
+        "note": "CarExpert 2027 spec page 'rear seats down' 1,581L; measurement basis not labelled but listed alongside the to-lower-window figure. VW AU brochure gives 2,232 / 'up to 2,205' (all rear seats down), which reads as to-the-roof and is rejected under the cargo-cover convention"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Seating capacity 5 (2+3)' for Pro SWB"
+      },
+      "towKg": {
+        "value": 1200,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure: braked 1,200kg (Pro SWB), unbraked 750, towball 75, with VW genuine tow bar; CarExpert 2027 spec page 1,200kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id-buzz.html",
+        "note": "VW AU: '5 years unlimited kilometre warranty' and '8 years battery warranty'; CarExpert 2027 spec page: 60 months/unlimited km vehicle, 96 months/160,000km battery"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "Anchored to vw-id5-gtx (2100 at $72,990), mazda-cx-80-phev-azami (2050 at $80,300), kia-sorento-phev-gt-line-awd (2100 at $86,115); large van body, panel-heavy repairs, low volume"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention: identical to vw-id4 and vw-id5 rows. ID. Buzz list prices were cut $10,000-12,000 in Feb 2026 and it sells on campaign drive-away offers, which argues for at least the brand's already-steep curve; no Buzz-specific used-market data"
+      }
+    },
+    "vw-id-buzz-pro-lwb": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/configurator.html/__app/id-buzz.app",
+        "note": "VW AU configurator lists two ID. Buzz variants, 'Pro' (2 batteries = SWB 79kWh / LWB 86kWh) and 'GTX'; prices not rendered to fetch. VW AU model page https://www.volkswagen.com.au/en/models/id-buzz.html shows MY25 and MY26 Pro LWB from $84,990 Driveaway"
+      },
+      "listPrice": {
+        "value": 80990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-volkswagen-id-buzz-lineup-announced-with-new-grade-new-equipment",
+        "note": "MY27 Pro LWB '$80,990' before on-road costs (CarExpert 3 Aug 2026; GoAuto 29 Jul 2026 ex on-roads; CarExpert 2027 spec page 'starting at $80,990'). Carsales reportedly lists $79,990 (page 403, not opened). VW AU page shows MY25/MY26 campaign 'From $84,990 Driveaway'; app computes VIC drive-away $85,350 for $80,990, campaign $360 under: consistent"
+      },
+      "batteryKwh": {
+        "value": 86,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Battery Capacity (Net) kWh 86', text 91/86 kWh (Gross/Net); CarExpert 2027 spec page 91 gross / 86 usable"
+      },
+      "rangeKm": {
+        "value": 452,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 452km, WLTP footnote; 19-inch wheels standard; CarExpert 2027 spec page 452km WLTP"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.1,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 211 Wh/km = 21.1 kWh/100km WLTP; CarExpert 2027 spec page same. battery/range = 19.0, 10% under"
+      },
+      "bootLitresSeatsUp": {
+        "value": 306,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Boot capacity (3rd row seats up) (Liters) 306', behind the third row, matching the dataset's 7-seat convention (kia-ev9 333, volvo-ex90 324). VW does not label the measurement basis; CarExpert and Chasing Cars quote the same 306L. The 1,340L behind the 2nd row to the lower window (CarExpert) is not used"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1878,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volkswagen/id-buzz/2027-pro-mpv-rwd-electric-jsggms5520260924",
+        "note": "CarExpert 2027 spec page 'rear seats down' 1,878L, listed alongside '1,340L to lower window'. VW AU brochure 'all rear seats down' 2,469 reads as to-the-roof and is rejected under the cargo-cover convention"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Seating capacity 7 (2+3+2)'"
+      },
+      "towKg": {
+        "value": 1000,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure: braked 1,000kg (Pro LWB), unbraked 750, towball 50; CarExpert 2027 spec page 1,000kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id-buzz.html",
+        "note": "VW AU: '5 years unlimited kilometre warranty' and '8 years battery warranty'; CarExpert 2027 spec page: 60 months/unlimited km vehicle, 96 months/160,000km battery"
+      },
+      "insuranceAnnual": {
+        "value": 2200,
+        "basis": "judged",
+        "note": "Anchored a step above vw-id-buzz-pro-swb for $5,000 more and seven seats; mazda-cx-80-phev-azami 2050 at $80,300, kia-sorento-phev-gt-line-awd 2100 at $86,115"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention: identical to vw-id4 and vw-id5 rows. ID. Buzz list prices were cut $10,000-12,000 in Feb 2026 and it sells on campaign drive-away offers, which argues for at least the brand's already-steep curve; no Buzz-specific used-market data"
+      }
+    },
+    "vw-id-buzz-gtx-lwb": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/configurator.html/__app/id-buzz.app",
+        "note": "VW AU configurator lists two ID. Buzz variants, 'Pro' (2 batteries = SWB 79kWh / LWB 86kWh) and 'GTX'; prices not rendered to fetch. VW AU model page https://www.volkswagen.com.au/en/models/id-buzz.html shows the GTX with a 'Configure now' link but no price"
+      },
+      "listPrice": {
+        "value": 106990,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-volkswagen-id-buzz-lineup-announced-with-new-grade-new-equipment",
+        "note": "MY27 GTX LWB '$106,990' (+$2,000) before on-road costs (CarExpert 3 Aug 2026; GoAuto 29 Jul 2026 ex on-roads; CarExpert 2027 spec page 'starting at $106,990'). MY26 was $104,990 (CarExpert 3 Feb 2026). VW AU's page shows the GTX with no price and no drive-away campaign; no manufacturer figure available"
+      },
+      "batteryKwh": {
+        "value": 86,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Battery Capacity (Net) kWh 86' for GTX (7-seater); CarExpert 2027 spec page 91 gross / 86 usable"
+      },
+      "rangeKm": {
+        "value": 450,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 450km WLTP footnote, GTX on standard 21-inch wheels; CarExpert 2027 spec page 450km WLTP"
+      },
+      "consumptionKwhPer100km": {
+        "value": 21.2,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 212 Wh/km = 21.2 kWh/100km WLTP; CarExpert 2027 spec page same. battery/range = 19.1, 10% under"
+      },
+      "bootLitresSeatsUp": {
+        "value": 306,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Boot capacity (3rd row seats up) 306' for GTX; same body as Pro LWB"
+      },
+      "bootLitresSeatsDown": {
+        "value": 1878,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/volkswagen/id-buzz/2027-gtx-mpv-4x4-electric-jsggms5a20260924",
+        "note": "CarExpert 2027 GTX spec page 'rear seats down' 1,878L, alongside '1,340L to lower window'; VW AU brochure 2,469 to-roof rejected"
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure 'Seating capacity 7 (2+3+2)' for GTX LWB; CarExpert 2027 page row counts 3 + 2 rear"
+      },
+      "towKg": {
+        "value": 1600,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+        "note": "VW AU brochure: braked 1,600kg (GTX), unbraked 750, towball 65; CarExpert 2027 GTX spec page 1,600kg"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.volkswagen.com.au/en/models/id-buzz.html",
+        "note": "VW AU: '5 years unlimited kilometre warranty' and '8 years battery warranty'; CarExpert 2027 spec page: 60 months/unlimited km vehicle, 96 months/160,000km battery"
+      },
+      "insuranceAnnual": {
+        "value": 2600,
+        "basis": "judged",
+        "note": "Anchored to kia-ev9-earth-awd (2600 at $106,500) and volvo-ex90-plus-single-motor (2700 at $106,990); 250kW AWD, 21-inch wheels"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.61,
+          0.53,
+          0.46,
+          0.4
+        ],
+        "basis": "judged",
+        "note": "VW brand convention: identical to vw-id4 and vw-id5 rows. ID. Buzz list prices were cut $10,000-12,000 in Feb 2026 and it sells on campaign drive-away offers, which argues for at least the brand's already-steep curve; no Buzz-specific used-market data"
+      }
+    }
+  },
+  "lowConfidence": [
+    "vw-id-buzz-pro-lwb.bootLitresSeatsDown / vw-id-buzz-gtx-lwb.bootLitresSeatsDown: 1,878L from CarExpert spec data only, measurement basis not labelled; VW publishes only the to-roof 2,469",
+    "vw-id-buzz-pro-swb.bootLitresSeatsDown: 1,581L from CarExpert spec data only, basis not labelled; VW publishes 2,205/2,232 to-roof",
+    "vw-id-buzz-pro-lwb.bootLitresSeatsUp / vw-id-buzz-gtx-lwb.bootLitresSeatsUp: 306L behind third row, measurement basis not labelled by VW",
+    "vw-id-buzz-gtx-lwb.listPrice: MY27 $106,990 from media (CarExpert, GoAuto) only; VW AU site shows the GTX unpriced and its configurator prices did not render",
+    "vw-id-buzz-pro-swb.listPrice / vw-id-buzz-pro-lwb.listPrice: from media 'before on-road costs'; VW AU shows only MY25/MY26 drive-away campaigns (consistent within $150-360)",
+    "vw-id-buzz-*.insuranceAnnual: judged; no comparable people mover in the dataset",
+    "vw-id-buzz-*.depreciationCurve: VW brand curve; Buzz-specific resale unknown",
+    "vw-id-buzz-*.batteryKwh/rangeKm/consumptionKwhPer100km: from the VW AU MY25 brochure, confirmed for MY27 by CarExpert spec pages only; no MY27 VW brochure opened"
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "familyId": "byd-m9-phev",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "byd-m9-phev-dynamic": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-m9",
+        "note": "BYD AU Build & Price (BYD-run configurator host that bydautomotive.com.au configurators redirect to, as for byd-sealion-8) lists 'BYD M9 Dynamic $61,990' and 'BYD M9 Premium $72,990' under 'Choose your model' with a 'Place order' button on 2026-11-27. Two grades also per CarExpert (18 Sep 2026), EV Central and the Oct 2026 MY26 spec sheet. Caveat: the BYD model page still labels the 2+3+3 Dynamic 'coming soon'; CarsGuide (20 Nov 2026) says BYD expects it in showrooms before year end; ANCAP five stars covers only the Premium (CarExpert review). Priced configurator entry treated as orderable per the skill rule."
+      },
+      "listPrice": {
+        "value": 61990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-m9",
+        "note": "BYD configurator variant price $61,990; drive-away is computed separately from a postcode, so this is the list figure (manufacturer price preferred per owner). 'Before on-road costs' in words: CarExpert review (20 Nov 2026, https://www.carexpert.com.au/car-reviews/2027-byd-m9-review) and CarsGuide first drive (https://www.carsguide.com.au/ev/byd-m9-103166) for both grades; CarExpert news says '$61,990 before on-road costs' (Dynamic) and '$72,990 plus on-roads' (Premium); EV Central 'plus ORCs' for both. No campaign price seen."
+      },
+      "batteryKwh": {
+        "value": 20.4,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "MY26 AU spec sheet (PDF title 'MY26 BYD M9 DM-i_Spec Sheet_261026') 'Battery size (kWh)' 20.4 (Blade LFP). Unlabelled gross vs usable; no source states both. CarExpert/EV Central quote 20.39 kWh."
+      },
+      "rangeKm": {
+        "value": 80,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet '*Electric range (km) - WLTP combined cycle' 80, AU-spec car on 235/60 R18 (only wheel offered). CLTC (China) figure is 100 km per CarNewsChina search results, so WLTP/CLTC = 0.8, plausible. Dynamic not yet tested by any review."
+      },
+      "consumptionKwhPer100km": {
+        "value": 25.5,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 20.4/80x100. BYD's spec sheet prints '*Energy consumption (kWh/100km) - WLTP combined cycle' 19.2, not used: its ratio to battery/range (19.2/25.5 ~ 0.75) tracks the WLTP utility factor at 80 km on both grades, so it appears to be the utility-factor-weighted figure the field rules forbid (and the Dynamic's would fail the 25% cross-check against a possibly gross battery). Inference, not stated by BYD."
+      },
+      "combinedRangeKm": {
+        "value": 784,
+        "basis": "derived",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "rangeKm 80 + 50L tank (spec sheet 'Fuel tank capacity (litres)' 50) / 7.1 L/100km x 100 = 784.2. BYD's own WLTP 'Combined range' is 790 km."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.1,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet '*Fuel consumption below critical SOC (l/100km) - WLTP combined cycle' 7.1: BYD's published WLTP charge-sustaining figure. Untested by reviews; Premium's 7.3 claim matched CarExpert's 7.2 real-world."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet '*Fuel consumption above critical SOC (l/100km) - WLTP combined cycle' 2.7, at or below 3.5 (treated as the combined-cycle label). Moot for LCT: list price is under the $80,809 ordinary threshold anyway."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'CO2 emissions (g/km)' 20; SRO definition (https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty): green car = combined tailpipe CO2 120 g/km or less."
+      },
+      "bootLitresSeatsUp": {
+        "value": 470,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'Boot Capacity - All seats up (L)' 470; CarExpert and CarsGuide agree (Kia Carnival 627 per CarsGuide). Measurement method (to cover vs roof) not stated; a van has no cargo cover, likely to the roof."
+      },
+      "bootLitresSeatsDown": {
+        "value": 2036,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'Boot capacity - Second row seats folded' 2,036; CarsGuide gives 2036 L with the third row folded and says the second-row captain's chairs cannot be stowed, so this is the maximum. BYD model page prints 2,063 (taken as a transposition; spec sheet preferred). Method unstated, likely to the roof."
+      },
+      "seats": {
+        "value": 8,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'Seating Capacity' 8; seating configuration 2+3+3."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'Towing capacity (kg) - braked' 1,500 (both grades); unbraked 750. CarsGuide and CarExpert agree 1500."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/m9",
+        "note": "BYD AU M9 page: vehicle 6 years/150,000km; traction battery 8 years/160,000km. CarsGuide/CarExpert add drive unit 8 years/150,000km. Matches BYD reference 6."
+      },
+      "insuranceAnnual": {
+        "value": 1900,
+        "basis": "judged",
+        "note": "Anchored between byd-sealion-8-dynamic-fwd 1850 ($56,990, 7 seats) and byd-sealion-8-dynamic-awd 2000 ($63,990, 359kW); M9 Dynamic is FWD 191kW at $61,990. chery-tiggo-9-phev-ultimate and jaecoo-j8-shs-summit 1950 at $59,990."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention held on every BYD row (Seal, Seal 6, Atto 1/2/3, Dolphin, Sealion 5/6/7/8, Shark 6), per one curve per brand."
+      }
+    },
+    "byd-m9-phev-premium": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-m9",
+        "note": "BYD AU Build & Price (BYD-run configurator host that bydautomotive.com.au configurators redirect to, as for byd-sealion-8) lists 'BYD M9 Dynamic $61,990' and 'BYD M9 Premium $72,990' under 'Choose your model' with a 'Place order' button on 2026-11-27. Two grades also per CarExpert (18 Sep 2026), EV Central and the Oct 2026 MY26 spec sheet. Premium is the launch grade, reviewed by CarExpert and CarsGuide in Nov 2026."
+      },
+      "listPrice": {
+        "value": 72990,
+        "basis": "sourced",
+        "url": "https://evdealergroup-byd.com.au/configurator/byd-m9",
+        "note": "BYD configurator variant price $72,990; drive-away is computed separately from a postcode, so this is the list figure (manufacturer price preferred per owner). 'Before on-road costs' in words: CarExpert review (20 Nov 2026, https://www.carexpert.com.au/car-reviews/2027-byd-m9-review) and CarsGuide first drive (https://www.carsguide.com.au/ev/byd-m9-103166) for both grades; CarExpert news says '$61,990 before on-road costs' (Dynamic) and '$72,990 plus on-roads' (Premium); EV Central 'plus ORCs' for both. No campaign price seen."
+      },
+      "batteryKwh": {
+        "value": 36.6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "MY26 AU spec sheet (PDF title 'MY26 BYD M9 DM-i_Spec Sheet_261026') 'Battery size (kWh)' 36.6 (Blade LFP). Unlabelled gross vs usable; no source states both. CarExpert/CarsGuide agree 36.6 kWh."
+      },
+      "rangeKm": {
+        "value": 145,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet '*Electric range (km) - WLTP combined cycle' 145, AU-spec car on 235/60 R18 (only wheel offered). CLTC (China) figure is 180 km per CarNewsChina search results, so WLTP/CLTC = 0.8, plausible. CarExpert real-world: 'just over 120km', mostly motorway."
+      },
+      "consumptionKwhPer100km": {
+        "value": 25.2,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 36.6/145x100. BYD's spec sheet prints '*Energy consumption (kWh/100km) - WLTP combined cycle' 22.4, not used: its ratio to battery/range (22.4/25.2 ~ 0.89) tracks the WLTP utility factor at 145 km on both grades, so it appears to be the utility-factor-weighted figure the field rules forbid (and the Dynamic's would fail the 25% cross-check against a possibly gross battery). Inference, not stated by BYD."
+      },
+      "combinedRangeKm": {
+        "value": 830,
+        "basis": "derived",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "rangeKm 145 + 50L tank (spec sheet 'Fuel tank capacity (litres)' 50) / 7.3 L/100km x 100 = 829.9. BYD's own WLTP 'Combined range' is 850 km."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.3,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet '*Fuel consumption below critical SOC (l/100km) - WLTP combined cycle' 7.3: BYD's published WLTP charge-sustaining figure. CarExpert measured 7.2 L/100km depleted, loaded with five occupants and luggage; CarsGuide quotes 7.3 claim."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet '*Fuel consumption above critical SOC (l/100km) - WLTP combined cycle' 0.4, at or below 3.5 (treated as the combined-cycle label). Moot for LCT: list price is under the $80,809 ordinary threshold anyway."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'CO2 emissions (g/km)' 9; SRO definition (https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty): green car = combined tailpipe CO2 120 g/km or less."
+      },
+      "bootLitresSeatsUp": {
+        "value": 470,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'Boot Capacity - All seats up (L)' 470; CarExpert and CarsGuide agree (Kia Carnival 627 per CarsGuide). Measurement method (to cover vs roof) not stated; a van has no cargo cover, likely to the roof."
+      },
+      "bootLitresSeatsDown": {
+        "value": 2036,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'Boot capacity - Second row seats folded' 2,036; CarsGuide gives 2036 L with the third row folded and says the second-row captain's chairs cannot be stowed, so this is the maximum. BYD model page prints 2,063 (taken as a transposition; spec sheet preferred). Method unstated, likely to the roof."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'Seating Capacity' 7; seating configuration 2+2+3."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/brochures/BYD-M9-2026-v2.pdf",
+        "note": "Spec sheet 'Towing capacity (kg) - braked' 1,500 (both grades); unbraked 750. CarsGuide and CarExpert agree 1500."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://bydautomotive.com.au/m9",
+        "note": "BYD AU M9 page: vehicle 6 years/150,000km; traction battery 8 years/160,000km. CarsGuide/CarExpert add drive unit 8 years/150,000km. Matches BYD reference 6."
+      },
+      "insuranceAnnual": {
+        "value": 2050,
+        "basis": "judged",
+        "note": "Matched to byd-sealion-8-premium-awd 2050 ($70,990, 359kW): M9 Premium is dearer ($72,990) but much less powerful (218kW FWD); kia-sorento-phev-sport-awd 1850 at $73,825, mazda-cx-80-phev-gt 1950 at $75,100."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.74,
+          0.63,
+          0.55,
+          0.48,
+          0.42
+        ],
+        "basis": "judged",
+        "note": "BYD brand convention held on every BYD row (Seal, Seal 6, Atto 1/2/3, Dolphin, Sealion 5/6/7/8, Shark 6), per one curve per brand."
+      }
+    }
+  },
+  "lowConfidence": [
+    "byd-m9-phev-dynamic.availability: configurator lists it with a price and Place order, but the BYD model page says 'coming soon' and CarsGuide says showrooms before end of 2026; not yet reviewed or ANCAP-rated.",
+    "byd-m9-phev-*.batteryKwh: unlabelled gross vs usable (20.4 / 36.6); no source gives both.",
+    "byd-m9-phev-*.consumptionKwhPer100km: derived from battery/range because BYD's published WLTP 'energy consumption' (19.2 / 22.4) looks utility-factor-weighted (my inference); if it is actually the charge-depleting figure, the derived values (25.5 / 25.2) are ~12-33% high and the battery is gross.",
+    "byd-m9-phev-*.bootLitresSeatsUp and bootLitresSeatsDown: 470 / 2,036 L method unstated, probably to the roof not the cargo-cover line; BYD model page prints 2,063 for the folded figure.",
+    "byd-m9-phev-dynamic.fuelConsumptionL100km: BYD WLTP charge-sustaining claim 7.1, untested (Premium's 7.3 claim matched CarExpert's 7.2 real-world).",
+    "byd-m9-phev-*.isFuelEfficientForLct: label figure taken as the spec sheet's 'above critical SOC' WLTP combined (2.7 / 0.4); moot below $80,809.",
+    "byd-m9-phev-*.insuranceAnnual: judged.",
+    "byd-m9-phev-*.depreciationCurve: BYD brand convention, no M9 resale data (new model)."
+  ]
+}

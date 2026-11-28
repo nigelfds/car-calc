@@ -1,0 +1,176 @@
+{
+  "familyId": "lexus-es",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "lexus-es-350e-sports-luxury": {
+      "bootLitresSeatsUp": {
+        "value": 517,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/lexus-es-350e-sports-luxury-102233",
+        "note": "517 L VDA (CarsGuide review); CarExpert review, carsales research and EV Database also 517 L. Sedan boot to the parcel shelf, i.e. cover convention. 493 L in some listings is the ES300h hybrid"
+      },
+      "bootLitresSeatsDown": {
+        "value": 517,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/lexus-es-350e-sports-luxury-102233",
+        "note": "CarsGuide: rear backrests are fixed and do not fold; Chasing Cars: no folding rear backrest, only a ski port. No extension possible, so seats-down equals seats-up"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/es/sports-luxury/technology",
+        "note": "two front buckets plus a three-seat rear bench; EV Database 5 seats"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/lexus/es350e/2026",
+        "note": "CarsGuide spec page lists 0 kg braked; EV Database lists no towing capability for the ES 350e; no AU source rates it to tow. Lexus AU spec sheet unreachable (403)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-lexus-es350e-sports-luxury-review",
+        "note": "5 years/unlimited km vehicle; 8 years/160,000 km HV battery (also Chasing Cars)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Lexus brand curve (mainstream default), matching lexus-rz rows per owner convention of one curve per brand"
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/es/sports-luxury/technology",
+        "note": "lexus.com.au returned 403 (configurator unreachable). CarExpert's current variant page lists Sports Luxury Electric FWD with a live drive-away estimate ($82,968 Sydney); carsales research page shows 11 ES350e Sports Luxury cars for sale and a $81,572-86,321 drive-away band. Lexus prices nationally; no Victoria-specific restriction found"
+      },
+      "listPrice": {
+        "value": 77000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-lexus-es-price-and-specs-new-generation-luxury-sedan-brings-ev-power-for-a-small-premium",
+        "note": "CarExpert price table headed 'Price before on-road costs'; CarExpert review and CarsGuide review 'from $77,000 before on-road costs'; EV Central 'before on-road costs'. Cross-check: CarExpert drive-away estimates differ by $7,350 between grades, consistent with the $7,000 list gap plus NSW duty"
+      },
+      "batteryKwh": {
+        "value": 71.0,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/large-cars/lexus-es500e-sports-luxury-awd-2026-review/",
+        "note": "Chasing Cars: 74.7 kWh gross, 71 kWh usable, for the ES500e; CarExpert review says the ES350e uses the same 74.7 kWh battery (CarExpert tech page: 74.69 kWh, 104 cells, both electric grades). Same e-TNGA pack as lexus-rz 500e (71 usable). EU ES 350e uses a 77/72 kWh pack (EV Database) which AU does not get"
+      },
+      "rangeKm": {
+        "value": 510,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.carexpert.com.au/car-news/2026-lexus-es-price-and-specs-new-generation-luxury-sedan-brings-ev-power-for-a-small-premium",
+        "note": "WLTP, 21-inch wheels (CarExpert, CarsGuide, EV Central). Direction test: EU ES 350e WLTP 581 km on the larger 77 kWh pack; AU figure lower, so not NEDC inflation"
+      },
+      "consumptionKwhPer100km": {
+        "value": 16.4,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/lexus-es-350e-sports-luxury-102233",
+        "note": "CarsGuide 16.4 kWh/100km WLTP; CarExpert claimed 16.4. battery/range = 13.9, 18% off (claim includes charging losses), within tolerance"
+      },
+      "insuranceAnnual": {
+        "value": 1950,
+        "basis": "judged",
+        "note": "anchored to lexus-rz-500e-luxury ($84,500, 2100) scaled down for price, and mercedes-cla-ev-200-eq sedan ($72,200, 1950)"
+      }
+    },
+    "lexus-es-500e-sports-luxury": {
+      "bootLitresSeatsUp": {
+        "value": 517,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/lexus-es-350e-sports-luxury-102233",
+        "note": "517 L VDA (CarsGuide review); CarExpert review, carsales research and EV Database also 517 L. Sedan boot to the parcel shelf, i.e. cover convention. 493 L in some listings is the ES300h hybrid"
+      },
+      "bootLitresSeatsDown": {
+        "value": 517,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/ev/lexus-es-350e-sports-luxury-102233",
+        "note": "CarsGuide: rear backrests are fixed and do not fold; Chasing Cars: no folding rear backrest, only a ski port. No extension possible, so seats-down equals seats-up"
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/es/sports-luxury/technology",
+        "note": "two front buckets plus a three-seat rear bench; EV Database 5 seats"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/lexus/es500e/2026",
+        "note": "CarsGuide spec page lists 0 kg braked; EV Database lists no towing capability for the ES 350e; no AU source rates it to tow. Lexus AU spec sheet unreachable (403)"
+      },
+      "warrantyYears": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2026-lexus-es350e-sports-luxury-review",
+        "note": "5 years/unlimited km vehicle; 8 years/160,000 km HV battery (also Chasing Cars)"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "Lexus brand curve (mainstream default), matching lexus-rz rows per owner convention of one curve per brand"
+      },
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/lexus/es/sports-luxury/technology",
+        "note": "lexus.com.au returned 403. CarExpert's current variant page lists Sports Luxury Electric 4x4 with a live drive-away estimate ($90,318 Sydney); Chasing Cars reviewed a local ES500e at $84,000 list"
+      },
+      "listPrice": {
+        "value": 84000,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2026-lexus-es-price-and-specs-new-generation-luxury-sedan-brings-ev-power-for-a-small-premium",
+        "note": "CarExpert price table headed 'Price before on-road costs'; Chasing Cars '$84,000 list before on-road costs'; EV Central 'before on-road costs'"
+      },
+      "batteryKwh": {
+        "value": 71.0,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/large-cars/lexus-es500e-sports-luxury-awd-2026-review/",
+        "note": "Chasing Cars: 74.7 kWh gross, 71 kWh usable"
+      },
+      "rangeKm": {
+        "value": 465,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.chasingcars.com.au/reviews/large-cars/lexus-es500e-sports-luxury-awd-2026-review/",
+        "note": "WLTP 465 km on 21-inch 235/45R21 (Chasing Cars, CarExpert news, EV Central). Lower than the FWD grade's 510 as expected for dual motor"
+      },
+      "consumptionKwhPer100km": {
+        "value": 17.9,
+        "basis": "sourced",
+        "url": "https://www.chasingcars.com.au/reviews/large-cars/lexus-es500e-sports-luxury-awd-2026-review/",
+        "note": "Chasing Cars: 17.9 kWh/100km ADR81/02 combined claim (EV Central same). battery/range = 15.3, 17% off, within tolerance; Chasing Cars measured 16.8 on test"
+      },
+      "insuranceAnnual": {
+        "value": 2100,
+        "basis": "judged",
+        "note": "matched to lexus-rz-500e-luxury ($84,500, 2100), near-identical price and brand"
+      }
+    }
+  },
+  "lowConfidence": [
+    "lexus-es-350e-sports-luxury.availability: lexus.com.au configurator returned 403; availability rests on CarExpert/carsales current listings, not a Lexus Victorian Build & Price",
+    "lexus-es-500e-sports-luxury.availability: as above",
+    "lexus-es-350e-sports-luxury.batteryKwh: usable 71 is from Chasing Cars' ES500e review; applied to the ES350e because both carry the same 74.7 kWh pack",
+    "lexus-es-350e-sports-luxury.towKg: 0 from CarsGuide spec database and EV Database (EU car); no Lexus AU spec sheet opened",
+    "lexus-es-500e-sports-luxury.towKg: 0 from CarsGuide spec database only",
+    "lexus-es-350e-sports-luxury.insuranceAnnual: judged",
+    "lexus-es-500e-sports-luxury.insuranceAnnual: judged",
+    "lexus-es-350e-sports-luxury.listPrice: launch price (mid-2026); no Lexus-own page reachable to confirm it is unchanged on 2026-11-27",
+    "lexus-es-500e-sports-luxury.listPrice: as above"
+  ]
+}

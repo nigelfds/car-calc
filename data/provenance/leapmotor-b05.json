@@ -1,0 +1,177 @@
+{
+  "familyId": "leapmotor-b05",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "leapmotor-b05-style": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/models/b05",
+        "note": "Leapmotor AU B05 page names Style and Design LR with 'Request a Quote'/'Book a Test Drive' and an active $35,990 drive-away offer (1 Jul-31 Dec, while stocks last); offers page (https://www.leapmotor.net/en-au/offers) runs the same campaign. Leapmotor AU has no public configurator with prices. Chasing Cars (3 Jul 2026) says orders open; CarExpert review (22 Oct 2026) confirms both grades on sale."
+      },
+      "listPrice": {
+        "value": 35888,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-leapmotor-b05-review",
+        "note": "CarExpert review (22 Oct 2026): Style $35,888 before on-road costs. Same figure in CarExpert price news (4 Jul 2026, https://www.carexpert.com.au/car-news/2026-leapmotor-b05-price-and-specs) and Chasing Cars (3 Jul 2026, https://www.chasingcars.com.au/news/new-car-prices/leapmotor-b05-2026-rear-wheel-drive-hatchback-priced-from-35888-to-rival-mg4-and-model-3-rwd/: 'All prices listed are before on-road costs'). No manufacturer list price is published; Leapmotor prints only the drive-away campaign. Victorian drive-away via calc/onroad.js: $38,354. The current $35,990 d/a Lightning Yellow offer (to 31 Dec 2026, incl. 12 months rego, CTP, stamp duty, dealer delivery) sits below that, i.e. a discounted campaign, not a mislabelled list."
+      },
+      "batteryKwh": {
+        "value": 55,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3563/Leapmotor-B05-562-kWh",
+        "note": "usable, EV Database (European car, same 56.2 kWh LFP pack Leapmotor AU prints unlabelled in the MY26 buyer's guide https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf). CarExpert spec page labels 56.2 'useable', which matches the nominal figure and is treated as gross, as on leapmotor-b10."
+      },
+      "rangeKm": {
+        "value": 401,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Leapmotor AU MY26 buyer's guide (June 2026): EV range up to 401 km (WLTP combined); no NEDC figure published for the B05. Both grades on 19-inch alloys (225/45R19 front, 235/45R19 rear), so the 'up to' figure is the local wheel. EV Database agrees."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.8,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Leapmotor AU buyer's guide: energy consumption 158 Wh/km WLTP. Usable/range gives 13.7; the gap is charging loss, inside the 25% tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 357,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Leapmotor AU buyer's guide: rear cargo volume behind 2nd row 357 L. CarExpert spec page (https://www.carexpert.com.au/leapmotor/b05/2026-style-hatchback-rwd-electric-jskawmwm20260701) labels 357 L 'rear seat up; to lower window', i.e. to the cargo cover. The 345 L in European sources (EV Database, Auto Express, and the FAQ on Leapmotor's AU page) is a different measurement, not used. No frunk."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1205,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Leapmotor AU buyer's guide: behind 1st row 1,205 L. European sources give 1,400 L (different method)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/leapmotor/b05/2026-style-hatchback-rwd-electric-jskawmwm20260701",
+        "note": "CarExpert spec: 2 front + 3 rear; EV Database 5."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/leapmotor/b05/towing-capacity/2026",
+        "note": "CarsGuide 2026 table: Style and Design LR 0 kg braked. Leapmotor AU buyer's guide gives no towing figure. EV Database 0 kg; Auto Express (UK, https://www.autoexpress.co.uk/leapmotor/b05/369770/new-leapmotor-b05-2026-review-lack-thrills-dents-its-appeal) says the B05 'is not capable of towing'. CarExpert spec pages list 750 kg braked and 750 kg unbraked (equal figures, likely a database default); not used. Matches leapmotor-b10 electric (0 kg)."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Buyer's guide: vehicle warranty 6 years/150,000 km, high-voltage battery 8 years/160,000 km, 8 years roadside and capped-price servicing. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1500,
+        "basis": "judged",
+        "note": "anchored to mg-4-essence-64 ($37,458, $1,450), byd-dolphin-premium ($36,990, $1,400), gac-aion-ut-luxury ($35,990, $1,450) and leapmotor-b10-style ($37,888, $1,550); a step above the hatch rivals for 160 kW RWD performance, below the B10 SUV"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.59,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "Leapmotor brand curve [1, 0.72, 0.59, 0.5, 0.43, 0.37], as held on leapmotor-b10 and leapmotor-c10, per the one-curve-per-brand convention. Below mainstream for thin local volume, no resale history, and drive-away campaigning from launch."
+      }
+    },
+    "leapmotor-b05-design-lr": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/en-au/models/b05",
+        "note": "Leapmotor AU B05 page names Style and Design LR with 'Request a Quote'/'Book a Test Drive' and an active $35,990 drive-away offer (1 Jul-31 Dec, while stocks last); offers page (https://www.leapmotor.net/en-au/offers) runs the same campaign. Leapmotor AU has no public configurator with prices. Chasing Cars (3 Jul 2026) says orders open; CarExpert review (22 Oct 2026) confirms both grades on sale."
+      },
+      "listPrice": {
+        "value": 39888,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-leapmotor-b05-review",
+        "note": "CarExpert review (22 Oct 2026): Design LR $39,888 before on-road costs. Same figure in CarExpert price news (4 Jul 2026, https://www.carexpert.com.au/car-news/2026-leapmotor-b05-price-and-specs) and Chasing Cars (3 Jul 2026, https://www.chasingcars.com.au/news/new-car-prices/leapmotor-b05-2026-rear-wheel-drive-hatchback-priced-from-35888-to-rival-mg4-and-model-3-rwd/: 'All prices listed are before on-road costs'). No manufacturer list price is published; Leapmotor prints only the drive-away campaign. Victorian drive-away via calc/onroad.js: $42,522. Launch d/a offer for Design LR to 30 Sep 2026 was $38,990 (CarExpert) or $39,990 (Chasing Cars, RACV), now expired; both below the computed drive-away, i.e. campaign."
+      },
+      "batteryKwh": {
+        "value": 65,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3564/Leapmotor-B05-671-kWh",
+        "note": "usable, EV Database (European car, same 67.1 kWh LFP pack Leapmotor AU prints unlabelled in the MY26 buyer's guide https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf). CarExpert spec page labels 67.1 'useable', which matches the nominal figure and is treated as gross, as on leapmotor-b10."
+      },
+      "rangeKm": {
+        "value": 482,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Leapmotor AU MY26 buyer's guide (June 2026): EV range up to 482 km (WLTP combined); no NEDC figure published for the B05. Both grades on 19-inch alloys (225/45R19 front, 235/45R19 rear), so the 'up to' figure is the local wheel. EV Database agrees."
+      },
+      "consumptionKwhPer100km": {
+        "value": 15.9,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Leapmotor AU buyer's guide: energy consumption 159 Wh/km WLTP. Usable/range gives 13.5; the gap is charging loss, inside the 25% tolerance."
+      },
+      "bootLitresSeatsUp": {
+        "value": 357,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Leapmotor AU buyer's guide: rear cargo volume behind 2nd row 357 L. CarExpert spec page (https://www.carexpert.com.au/leapmotor/b05/2026-design-lr-hatchback-rwd-electric-jskawmwo20260701) labels 357 L 'rear seat up; to lower window', i.e. to the cargo cover. The 345 L in European sources (EV Database, Auto Express, and the FAQ on Leapmotor's AU page) is a different measurement, not used. No frunk."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1205,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Leapmotor AU buyer's guide: behind 1st row 1,205 L. European sources give 1,400 L (different method)."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/leapmotor/b05/2026-design-lr-hatchback-rwd-electric-jskawmwo20260701",
+        "note": "CarExpert spec: 2 front + 3 rear; EV Database 5."
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://www.carsguide.com.au/leapmotor/b05/towing-capacity/2026",
+        "note": "CarsGuide 2026 table: Style and Design LR 0 kg braked. Leapmotor AU buyer's guide gives no towing figure. EV Database 0 kg; Auto Express (UK, https://www.autoexpress.co.uk/leapmotor/b05/369770/new-leapmotor-b05-2026-review-lack-thrills-dents-its-appeal) says the B05 'is not capable of towing'. CarExpert spec pages list 750 kg braked and 750 kg unbraked (equal figures, likely a database default); not used. Matches leapmotor-b10 electric (0 kg)."
+      },
+      "warrantyYears": {
+        "value": 6,
+        "basis": "sourced",
+        "url": "https://www.leapmotor.net/docs/default-source/b05-library/b05-buyersguide-my26-v101.pdf",
+        "note": "Buyer's guide: vehicle warranty 6 years/150,000 km, high-voltage battery 8 years/160,000 km, 8 years roadside and capped-price servicing. Unconditional."
+      },
+      "insuranceAnnual": {
+        "value": 1550,
+        "basis": "judged",
+        "note": "anchored to leapmotor-b10-design-lr ($40,888, $1,600), byd-atto3-essential ($39,990, $1,500) and leapmotor-b05-style ($1,500); 6.7 s 0-100 km/h, $1,000 below the B10 Design LR"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.72,
+          0.59,
+          0.5,
+          0.43,
+          0.37
+        ],
+        "basis": "judged",
+        "note": "Leapmotor brand curve [1, 0.72, 0.59, 0.5, 0.43, 0.37], as held on leapmotor-b10 and leapmotor-c10, per the one-curve-per-brand convention. Below mainstream for thin local volume, no resale history, and drive-away campaigning from launch."
+      }
+    }
+  },
+  "lowConfidence": [
+    "leapmotor-b05-style.towKg: 0 kg from CarsGuide, EV Database and a UK review; Leapmotor AU silent; CarExpert lists 750 kg braked",
+    "leapmotor-b05-design-lr.towKg: as for Style",
+    "leapmotor-b05-style.listPrice: no manufacturer list price exists (Leapmotor publishes only a $35,990 drive-away campaign); $35,888 from CarExpert and Chasing Cars 'before on-road costs', latest CarExpert review 22 Oct 2026",
+    "leapmotor-b05-design-lr.listPrice: as for Style; $39,888 from CarExpert and Chasing Cars, no manufacturer confirmation",
+    "leapmotor-b05-style.batteryKwh: 55.0 usable is an EV Database estimate; Leapmotor publishes only 56.2 (unlabelled, treated as gross)",
+    "leapmotor-b05-design-lr.batteryKwh: 65.0 usable is an EV Database estimate; Leapmotor publishes only 67.1 (Stellantis UK press reportedly calls 67.1 usable)",
+    "leapmotor-b05-style.insuranceAnnual: judged",
+    "leapmotor-b05-design-lr.insuranceAnnual: judged",
+    "leapmotor-b05-style.depreciationCurve: judged brand curve",
+    "leapmotor-b05-design-lr.depreciationCurve: judged brand curve"
+  ]
+}

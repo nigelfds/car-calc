@@ -1,0 +1,177 @@
+{
+  "familyId": "xpeng-x9",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "xpeng-x9-fwd-standard-range": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "'FWD Standard Range' is one of two versions (carVersionCode HEAP) on XPeng AU X9 configurator, fetched 2026-11-27 (cache 2026-11-27 10:33)"
+      },
+      "listPrice": {
+        "value": 89900,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "Configurator data msrpBeforeSubsidy/msrpAfterDiscount 89900, isExistDiscount 0; configurator price breakdown labels 'Manufacturer list price' separately from dealer delivery, stamp duty and registration. XPeng AU launch release (21 Jul 2026) '$89,900 plus on road costs'; CarExpert price news (21 Jul 2026) and review (19 Sep 2026) '$89,900 before on-road costs' in words. Premium paints are +$1,500 options."
+      },
+      "batteryKwh": {
+        "value": 93.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3611/XPENG-X9-FWD-Standard-Range",
+        "note": "usable; EV Database MY26 FWD Standard Range: 94.8 kWh nominal LFP, 93.0 kWh usable (marked with an asterisk, i.e. possibly estimated). Same 94.8 kWh LFP pack the XPeng AU configurator labels 'gross'; same 535 km WLTP."
+      },
+      "rangeKm": {
+        "value": 535,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator spec 'WLTP range: 535 km (R20)'; 20-inch is the only AU wheel; equals manufacturer European WLTP (EV Database, TEL), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.2,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator spec 'Consumption: 20.2 kWh/100 km (R20)'; EV Database rated WLTP 200 Wh/km (grid incl. charging losses). 8.6% above 93.0/535 (17.4), consistent with charging losses."
+      },
+      "bootLitresSeatsUp": {
+        "value": 721,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator spec 'Boot: 721 L' (seven seats in use), both grades; XPeng AU launch release and CarExpert agree. Measurement method (VDA to a cover vs to the roof) not stated anywhere found; an MPV has no cargo cover. Auto Express UK gives 721-2,250 L, EV Database 2,386 L (unlabelled)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 2554,
+        "basis": "sourced",
+        "url": "https://www.xpeng.com/au/news/019fa2860f529f8481378a02820600b3",
+        "note": "XPeng AU launch release 'up to 2554 litres' with second and third rows folded (CarExpert price news: 'with the second and third rows dropped'); matches kia-ev9 convention (2nd+3rd folded). Method unstated; likely to the roof, so may read high against the cover convention."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator spec 'Seats: 7'"
+      },
+      "towKg": {
+        "value": 0,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator disclaimer: 'The tow bar option is not available for the X9 FWD Standard Range, as this variant is not approved for towing.' EV Database's 1,500 kg is the European spec and does not apply here."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.xpeng.com/au/news/019fa2860f529f8481378a02820600b3",
+        "note": "Configurator data and XPeng AU launch release (21 Jul 2026): 7 years/unlimited km private (7yr/160,000km commercial); traction battery, BMS, drive motor 8yr/160,000km; no servicing-conditional extension. CarExpert price news agrees."
+      },
+      "insuranceAnnual": {
+        "value": 2350,
+        "basis": "judged",
+        "note": "judged: anchored to kia-ev9-air-rwd ($97,000, $2,400) and denza-b8-7s ($91,000, $2,500); priced slightly below EV9 Air, consistent with xpeng-g6 sitting below rivals"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "XPeng brand curve taken from xpeng-g6 (mainstream default), one curve per brand by owner convention. Evidence for a steeper curve not applied: thin volume for a $90k+ Chinese-brand people mover, launched Jul 2026, reliability/key gremlins reported by CarExpert."
+      }
+    },
+    "xpeng-x9-awd-performance": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "'AWD Performance' is one of two versions (carVersionCode HECP) on XPeng AU X9 configurator, fetched 2026-11-27 (cache 2026-11-27 10:33)"
+      },
+      "listPrice": {
+        "value": 109900,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "Configurator data msrpBeforeSubsidy/msrpAfterDiscount 109900, isExistDiscount 0; configurator price breakdown labels 'Manufacturer list price' separately from dealer delivery, stamp duty and registration. XPeng AU launch release (21 Jul 2026) '$109,900 plus on road costs'; CarExpert price news (21 Jul 2026) and review (19 Sep 2026) '$109,900 before on-road costs' in words. Premium paints are +$1,500 options."
+      },
+      "batteryKwh": {
+        "value": 106.0,
+        "basis": "sourced",
+        "url": "https://ev-database.org/car/3613/XPENG-X9-AWD-Performance",
+        "note": "usable; EV Database MY26 AWD Performance: 110.0 kWh nominal NMC, 106.0 kWh usable (estimated). XPeng AU configurator: '110 kWh (gross), NCM'; same 580 km WLTP."
+      },
+      "rangeKm": {
+        "value": 580,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator spec 'WLTP range: 580 km (R20)'; 20-inch is the only AU wheel; equals manufacturer European WLTP (EV Database, TEL), so passes the direction test"
+      },
+      "consumptionKwhPer100km": {
+        "value": 20.8,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator spec 'Consumption: 20.8 kWh/100 km (R20)'; EV Database rated WLTP 208 Wh/km. 13.8% above 106.0/580 (18.3), consistent with charging losses."
+      },
+      "bootLitresSeatsUp": {
+        "value": 721,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator spec 'Boot: 721 L' (seven seats in use), both grades; XPeng AU launch release and CarExpert agree. Measurement method (VDA to a cover vs to the roof) not stated anywhere found; an MPV has no cargo cover. Auto Express UK gives 721-2,250 L, EV Database 2,386 L (unlabelled)."
+      },
+      "bootLitresSeatsDown": {
+        "value": 2554,
+        "basis": "sourced",
+        "url": "https://www.xpeng.com/au/news/019fa2860f529f8481378a02820600b3",
+        "note": "XPeng AU launch release 'up to 2554 litres' with second and third rows folded (CarExpert price news: 'with the second and third rows dropped'); matches kia-ev9 convention (2nd+3rd folded). Method unstated; likely to the roof, so may read high against the cover convention."
+      },
+      "seats": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://store.xpeng.com/au/configurator/New_X9",
+        "note": "XPeng AU configurator spec 'Seats: 7'"
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://thedriven.io/2026/05/16/xpengs-next-ev-approved-for-sale-in-australia-a-fast-charging-electric-people-mover/",
+        "note": "1,500 kg braked / 750 kg unbraked per The Driven's report of the ROVER approval (16 May 2026) and EV Database; CarExpert review: electric tow bar is an option on AWD Performance only. No XPeng AU technical sheet with the figure found."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.xpeng.com/au/news/019fa2860f529f8481378a02820600b3",
+        "note": "Configurator data and XPeng AU launch release (21 Jul 2026): 7 years/unlimited km private (7yr/160,000km commercial); traction battery, BMS, drive motor 8yr/160,000km; no servicing-conditional extension. CarExpert price news agrees."
+      },
+      "insuranceAnnual": {
+        "value": 2650,
+        "basis": "judged",
+        "note": "judged: anchored to kia-ev9-earth-awd ($106,500, $2,600) and volvo-ex90-plus-single-motor ($106,990, $2,700); 370 kW dual-motor adds a little"
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.78,
+          0.68,
+          0.6,
+          0.53,
+          0.47
+        ],
+        "basis": "judged",
+        "note": "XPeng brand curve taken from xpeng-g6 (mainstream default), one curve per brand by owner convention. Evidence for a steeper curve not applied: thin volume for a $90k+ Chinese-brand people mover, launched Jul 2026, reliability/key gremlins reported by CarExpert."
+      }
+    }
+  },
+  "lowConfidence": [
+    "xpeng-x9-fwd-standard-range.bootLitresSeatsDown: 2,554 L method unstated (likely to the roof); Auto Express UK says 2,250 L and EV Database 2,386 L",
+    "xpeng-x9-awd-performance.bootLitresSeatsDown: as for the Standard Range",
+    "xpeng-x9-fwd-standard-range.bootLitresSeatsUp: 721 L method unstated; an MPV has no cargo cover, so may be to the roof",
+    "xpeng-x9-awd-performance.bootLitresSeatsUp: as for the Standard Range",
+    "xpeng-x9-awd-performance.batteryKwh: 106.0 usable is EV Database's estimate",
+    "xpeng-x9-awd-performance.towKg: 1,500 kg from the ROVER report (The Driven) and EV Database, not an XPeng AU spec sheet",
+    "xpeng-x9-fwd-standard-range.batteryKwh: 93.0 usable from EV Database, asterisked",
+    "xpeng-x9-awd-performance.insuranceAnnual: judged",
+    "xpeng-x9-fwd-standard-range.insuranceAnnual: judged",
+    "xpeng-x9-*.depreciationCurve: brand default; thin-volume luxury people mover may depreciate faster"
+  ]
+}

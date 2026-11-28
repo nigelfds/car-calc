@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mercedes-glb-ev-250-plus",
+    "familyId": "mercedes-glb-ev",
+    "make": "Mercedes-Benz",
+    "model": "GLB",
+    "variant": "250+",
+    "bodyType": "SUV",
+    "listPrice": 74990,
+    "batteryKwh": 85,
+    "rangeKm": 570,
+    "consumptionKwhPer100km": 17.5,
+    "bootLitresSeatsUp": 145,
+    "bootLitresSeatsDown": 1605,
+    "seats": 7,
+    "towKg": 1500,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2000,
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-27"
+  },
+  {
+    "id": "mercedes-glb-ev-350-4matic",
+    "familyId": "mercedes-glb-ev",
+    "make": "Mercedes-Benz",
+    "model": "GLB",
+    "variant": "350 4MATIC",
+    "bodyType": "SUV",
+    "listPrice": 86200,
+    "batteryKwh": 85,
+    "rangeKm": 554,
+    "consumptionKwhPer100km": 17.7,
+    "bootLitresSeatsUp": 145,
+    "bootLitresSeatsDown": 1605,
+    "seats": 7,
+    "towKg": 2000,
+    "warrantyYears": 5,
+    "insuranceAnnual": 2250,
+    "depreciationCurve": [
+      1,
+      0.7,
+      0.58,
+      0.49,
+      0.42,
+      0.36
+    ],
+    "sourcedAt": "2026-11-27"
+  }
+]

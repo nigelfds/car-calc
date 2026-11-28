@@ -1,0 +1,218 @@
+{
+  "familyId": "gwm-haval-h7-phev",
+  "researchedAt": "2026-11-27",
+  "mode": "new",
+  "variants": {
+    "gwm-haval-h7-phev-lux": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h7/",
+        "note": "GWM AU H7 model page lists four grades: Lux HEV, Vanta HEV, Lux PHEV, Vanta PHEV (Build & Price is script-rendered, as for the other GWM families). GWM offers page carries a live Lux PHEV launch offer to 30 Nov 2026 (VIC private buyers). CarExpert launch article (29 Oct 2026, 'now arriving' at dealers), CarExpert, RACQ and RACV launch reviews agree on two PHEV grades, both AWD (Hi4)."
+      },
+      "listPrice": {
+        "value": 48015,
+        "basis": "backed-out",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "Only drive-away prices exist from GWM's channel: Lux PHEV AWD $50,990 drive-away (CarExpert launch article and review, RACQ, RACV, EV Central all agree; CarExpert says Sydney basis; GWM's own H7 page gives only the Lux HEV as 'from $45,990 driveaway ... private buyers in VIC', i.e. the same national figure less the $1,000 launch offer, so these are flat national drive-aways). Lux PHEV introductory $49,990 ($1,000 launch offer, ends 30 Nov 2026 per GWM offers page) ignored as a campaign. (50990 - 958.80) / 1.042 = 48015; round-trip through calc/onroad.js driveAwayPrice = 50,990.43. No independent on-road estimate to verify against. CarsGuide range table (RedBook MSRP) shows Lux PHEV $48,990 / Vanta PHEV $51,990; owner convention prefers the manufacturer's (drive-away) figure, same treatment as gwm-haval-h6-phev."
+      },
+      "batteryKwh": {
+        "value": 33.7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "'33.7kWh LFP' (also CarExpert powertrain page: CATL LFP, 352.8V, 33.7kWh; RACQ, RACV, EV Central). Unlabelled; ecomento (Germany) calls 33.8 kWh gross. Usable not published anywhere found, so probably gross/nominal."
+      },
+      "rangeKm": {
+        "value": 129,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.km77.com/coches/gwm/haval-h7/2025/estandar/phev/haval-h7-phev-advance-hi4/datos",
+        "note": "WLTP combined electric range for the European H7 PHEV Advance Hi4 4WD: same 320kW/435PS Hi4 AWD system, same 33.7kWh LFP pack, 255/60 R19, 2225kg (km77 Spain; autocolumn and Spanish press also give 129km for the Hi4 vs 150km for the FWD Hi2). GWM AU claims 'up to 137km' (labelled WLTP by CarExpert/RACV/EV Central, but GWM's footnote says 'GWM internal testing under optimal conditions'); it sits above the same-variant WLTP figure, so per the direction test it is not used. AU 7.5 L/100km charge-sustaining matches the European Hi4 exactly, so the AU car is the same variant."
+      },
+      "consumptionKwhPer100km": {
+        "value": 26.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 33.7 / 129 x 100 = 26.12. Published figures conflict: GWM Germany WLTP 20.5 kWh/100km for the Hi4 (autocolumn, GWM press table), CarExpert AU 242 Wh/km (= 33.7/137, itself a battery/range artifact). Derived value is tautological against the cross-check; if 33.7 is gross the true figure is lower."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h7/powertrain-and-performance",
+        "note": "Charge-sustaining 7.5 L/100km on CarExpert's AU powertrain page; RACV: GWM claim 'PHEV 7.5L/100km with a low battery'; GWM Germany Hi4 'bei leerem Akku' 7.5 (autocolumn). CarExpert tested 6.1 L/100km in HEV mode (not a fully depleted figure)."
+      },
+      "combinedRangeKm": {
+        "value": 862,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 129 + 55 / 7.5 x 100 = 862.3. Tank 55L per CarExpert launch article and CarsGuide review ('55L, shared by HEV and PHEV'), km77 Europe 55L; CarExpert's model-database pages show 61L but carry previous-generation H7 data (483L boot, 1.5T 4-speed), so discarded. GWM's own 844km claim implies ~53L at 7.5 L/100km."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "Combined label 0.9 L/100km (CarExpert launch article; CarExpert powertrain page 'UF weighted'). European WLTP for the Hi4 is 2.2 L/100km, also under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green car = passenger car with combined CO2 of 120 g/km or less. CarExpert AU powertrain page lists 19 g/km; GWM Germany WLTP 33 g/km (ecomento) for the FWD; either is far below 120."
+      },
+      "bootLitresSeatsUp": {
+        "value": 586,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "586L seats up per GWM (CarExpert, RACQ, RACV, EV Central, cars.co.za all quote the same claim). Measurement method unpublished; CarExpert's review 'presumes it's measured to the roof'. No to-the-cover figure found: km77 lists 341L with two rows for the European car (method unstated); CarExpert/CarsGuide database 483L is the previous-generation H7. May overstate the to-cover volume."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1404,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "1404L rear seats folded per GWM (CarExpert, RACQ, EV Central, km77 Europe 1,404L). Method unstated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-gwm-haval-h7-review",
+        "note": "Five seats (CarExpert review)."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.racq.com.au/articles/car-reviews/2027-gwm-haval-h7-vanta-phev-review",
+        "note": "1,500kg braked (750kg unbraked) for both HEV and PHEV (RACQ); 1500kg braked in CarExpert launch article, CarExpert review, RACV, EV Central. No GWM AU technical spec sheet found online to confirm."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h7/",
+        "note": "'7-year unlimited km warranty' on GWM's H7 page (commercial use 7yr/150,000km); 8yr/unlimited-km HV battery per CarExpert. No servicing condition."
+      },
+      "insuranceAnnual": {
+        "value": 1750,
+        "basis": "judged",
+        "note": "Anchored to gwm-haval-h6-phev-ultra-awd (1750 at $48,015, same price and Hi4 AWD)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "GWM brand curve per dispatcher and owner convention (one curve per brand), as on gwm-haval-h6-phev, gwm-haval-h6-gt-phev, gwm-tank-300-phev. Evidence: national drive-away pricing with launch discounts within a month of arrival."
+      }
+    },
+    "gwm-haval-h7-phev-vanta": {
+      "availability": {
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h7/",
+        "note": "GWM AU H7 model page lists four grades: Lux HEV, Vanta HEV, Lux PHEV, Vanta PHEV (Build & Price is script-rendered, as for the other GWM families). GWM offers page carries a live Lux PHEV launch offer to 30 Nov 2026 (VIC private buyers). CarExpert launch article (29 Oct 2026, 'now arriving' at dealers), CarExpert, RACQ and RACV launch reviews agree on two PHEV grades, both AWD (Hi4)."
+      },
+      "listPrice": {
+        "value": 50894,
+        "basis": "backed-out",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "Only drive-away prices exist from GWM's channel: Vanta PHEV AWD $53,990 drive-away (CarExpert launch article and review, RACQ, RACV, EV Central all agree; CarExpert says Sydney basis; GWM's own H7 page gives only the Lux HEV as 'from $45,990 driveaway ... private buyers in VIC', i.e. the same national figure less the $1,000 launch offer, so these are flat national drive-aways). Lux PHEV introductory $49,990 ($1,000 launch offer, ends 30 Nov 2026 per GWM offers page) ignored as a campaign. (53990 - 958.80) / 1.042 = 50894; round-trip through calc/onroad.js driveAwayPrice = 53,990.35. No independent on-road estimate to verify against. CarsGuide range table (RedBook MSRP) shows Lux PHEV $48,990 / Vanta PHEV $51,990; owner convention prefers the manufacturer's (drive-away) figure, same treatment as gwm-haval-h6-phev."
+      },
+      "batteryKwh": {
+        "value": 33.7,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "'33.7kWh LFP' (also CarExpert powertrain page: CATL LFP, 352.8V, 33.7kWh; RACQ, RACV, EV Central). Unlabelled; ecomento (Germany) calls 33.8 kWh gross. Usable not published anywhere found, so probably gross/nominal."
+      },
+      "rangeKm": {
+        "value": 129,
+        "basis": "sourced",
+        "standard": "WLTP",
+        "url": "https://www.km77.com/coches/gwm/haval-h7/2025/estandar/phev/haval-h7-phev-advance-hi4/datos",
+        "note": "WLTP combined electric range for the European H7 PHEV Advance Hi4 4WD: same 320kW/435PS Hi4 AWD system, same 33.7kWh LFP pack, 255/60 R19, 2225kg (km77 Spain; autocolumn and Spanish press also give 129km for the Hi4 vs 150km for the FWD Hi2). GWM AU claims 'up to 137km' (labelled WLTP by CarExpert/RACV/EV Central, but GWM's footnote says 'GWM internal testing under optimal conditions'); it sits above the same-variant WLTP figure, so per the direction test it is not used. AU 7.5 L/100km charge-sustaining matches the European Hi4 exactly, so the AU car is the same variant."
+      },
+      "consumptionKwhPer100km": {
+        "value": 26.1,
+        "basis": "derived",
+        "note": "batteryKwh / rangeKm x 100 = 33.7 / 129 x 100 = 26.12. Published figures conflict: GWM Germany WLTP 20.5 kWh/100km for the Hi4 (autocolumn, GWM press table), CarExpert AU 242 Wh/km (= 33.7/137, itself a battery/range artifact). Derived value is tautological against the cross-check; if 33.7 is gross the true figure is lower."
+      },
+      "fuelConsumptionL100km": {
+        "value": 7.5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/gwm/h7/powertrain-and-performance",
+        "note": "Charge-sustaining 7.5 L/100km on CarExpert's AU powertrain page; RACV: GWM claim 'PHEV 7.5L/100km with a low battery'; GWM Germany Hi4 'bei leerem Akku' 7.5 (autocolumn). CarExpert tested 6.1 L/100km in HEV mode (not a fully depleted figure)."
+      },
+      "combinedRangeKm": {
+        "value": 862,
+        "basis": "derived",
+        "note": "rangeKm + tank / fuelConsumptionL100km x 100 = 129 + 55 / 7.5 x 100 = 862.3. Tank 55L per CarExpert launch article and CarsGuide review ('55L, shared by HEV and PHEV'), km77 Europe 55L; CarExpert's model-database pages show 61L but carry previous-generation H7 data (483L boot, 1.5T 4-speed), so discarded. GWM's own 844km claim implies ~53L at 7.5 L/100km."
+      },
+      "isFuelEfficientForLct": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "Combined label 0.9 L/100km (CarExpert launch article; CarExpert powertrain page 'UF weighted'). European WLTP for the Hi4 is 2.2 L/100km, also under 3.5."
+      },
+      "isGreenForVicDuty": {
+        "value": true,
+        "basis": "sourced",
+        "url": "https://www.sro.vic.gov.au/vehicles-and-car-parks/motor-vehicle-duty/understanding-motor-vehicle-duty",
+        "note": "SRO: green car = passenger car with combined CO2 of 120 g/km or less. CarExpert AU powertrain page lists 19 g/km; GWM Germany WLTP 33 g/km (ecomento) for the FWD; either is far below 120."
+      },
+      "bootLitresSeatsUp": {
+        "value": 586,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "586L seats up per GWM (CarExpert, RACQ, RACV, EV Central, cars.co.za all quote the same claim). Measurement method unpublished; CarExpert's review 'presumes it's measured to the roof'. No to-the-cover figure found: km77 lists 341L with two rows for the European car (method unstated); CarExpert/CarsGuide database 483L is the previous-generation H7. May overstate the to-cover volume."
+      },
+      "bootLitresSeatsDown": {
+        "value": 1404,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-news/2027-gwm-haval-h7-price-and-specs-boxy-new-generation-phev-hybrid-suv-reaches-showrooms",
+        "note": "1404L rear seats folded per GWM (CarExpert, RACQ, EV Central, km77 Europe 1,404L). Method unstated."
+      },
+      "seats": {
+        "value": 5,
+        "basis": "sourced",
+        "url": "https://www.carexpert.com.au/car-reviews/2027-gwm-haval-h7-review",
+        "note": "Five seats (CarExpert review)."
+      },
+      "towKg": {
+        "value": 1500,
+        "basis": "sourced",
+        "url": "https://www.racq.com.au/articles/car-reviews/2027-gwm-haval-h7-vanta-phev-review",
+        "note": "1,500kg braked (750kg unbraked) for both HEV and PHEV (RACQ); 1500kg braked in CarExpert launch article, CarExpert review, RACV, EV Central. No GWM AU technical spec sheet found online to confirm."
+      },
+      "warrantyYears": {
+        "value": 7,
+        "basis": "sourced",
+        "url": "https://www.gwmanz.com/au/models/suv/haval-h7/",
+        "note": "'7-year unlimited km warranty' on GWM's H7 page (commercial use 7yr/150,000km); 8yr/unlimited-km HV battery per CarExpert. No servicing condition."
+      },
+      "insuranceAnnual": {
+        "value": 1850,
+        "basis": "judged",
+        "note": "Anchored to between gwm-haval-h6-phev-ultra-awd (1750 at $48,015) and gwm-tank-300-phev-lux (1850 at $54,732) / gwm-haval-h6-gt-phev (1950 at $51,853)."
+      },
+      "depreciationCurve": {
+        "value": [
+          1,
+          0.7,
+          0.58,
+          0.49,
+          0.42,
+          0.36
+        ],
+        "basis": "judged",
+        "note": "GWM brand curve per dispatcher and owner convention (one curve per brand), as on gwm-haval-h6-phev, gwm-haval-h6-gt-phev, gwm-tank-300-phev. Evidence: national drive-away pricing with launch discounts within a month of arrival."
+      }
+    }
+  },
+  "lowConfidence": [
+    "gwm-haval-h7-phev-lux.bootLitresSeatsUp: 586L is GWM's claim with method unstated (CarExpert presumes to the roof); no to-cover figure found, km77 lists 341L for the European car; applies to both rows",
+    "gwm-haval-h7-phev-lux.rangeKm: 129km is the European Hi4 WLTP figure (km77 / Spanish press, no manufacturer page opened); GWM AU claims 137km 'WLTP' from internal testing; applies to both rows",
+    "gwm-haval-h7-phev-lux.consumptionKwhPer100km: derived 26.1 from an unlabelled (probably gross) 33.7kWh; GWM Germany publishes 20.5 kWh/100km WLTP; applies to both rows",
+    "gwm-haval-h7-phev-lux.listPrice: backed out of a flat national drive-away, no independent on-road check; RedBook MSRP $48,990 ($975 higher); likewise vanta ($51,990 RedBook vs 50,894)",
+    "gwm-haval-h7-phev-lux.combinedRangeKm: tank 55L vs 61L conflict between sources; applies to both rows",
+    "gwm-haval-h7-phev-lux.towKg: reviews only, no GWM spec sheet; applies to both rows",
+    "gwm-haval-h7-phev-lux.insuranceAnnual: judged; gwm-haval-h7-phev-vanta.insuranceAnnual: judged"
+  ]
+}

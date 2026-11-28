@@ -1,0 +1,34 @@
+{
+  "id": "vw-id-buzz",
+  "summary": "The ID. Buzz is Volkswagen's retro-styled electric people mover, sold as a five-seat short-wheelbase Pro with a 79kWh usable pack and as seven-seat long-wheelbase Pro and dual-motor GTX models with 86kWh, for 422-452km of WLTP range. Australian reviewers rate its packaging, adult-sized third row and refinement highly, but mark down its sheer size, numb steering, firm ride on big wheels and fiddly haptic controls. After cuts of $10,000-12,000 in February 2026 the Pro SWB lists at $75,990 and the seven-seat Pro LWB at $80,990, while the GTX at $106,990 sits well above the luxury car tax threshold; the new MY27 Pro+ grade is reported by the media but did not appear on Volkswagen's own site on the research date.",
+  "pros": [
+    "The seven-seat Pro LWB lists at $80,990 before on-roads, well under the $91,661 LCT threshold, and Chasing Cars calls its third row 'hugely roomy and comfortable for adults' - rare among electric seven-seaters at this price",
+    "Practical van packaging: 1,121L behind the second row in the SWB to the lower window, sliding doors on both sides and a removable centre console, with 306L still left behind the third row in the LWB",
+    "Real-world efficiency close to the claim: CarExpert recorded 21.4kWh/100km in a laden LWB against 21.1kWh/100km WLTP, and the RACV saw about 19kWh/100km on a mixed Newcastle loop in the Pro LWB",
+    "DC charging at up to 185kW (SWB) or 200kW (LWB) gives a claimed 10-80% in 26 minutes, and Chasing Cars quoted six years or 90,000km of servicing at $1,450",
+    "Five-year unlimited-kilometre warranty plus an eight-year/160,000km battery warranty; the GTX adds 250kW all-wheel drive and a 1,600kg braked tow rating"
+  ],
+  "cons": [
+    "The base Pro SWB lists at $75,990, $990 over the $75,000 FBT full-exemption cap from 1 April 2027, and the GTX at $106,990 pays luxury car tax",
+    "A big, heavy vehicle that feels it: CarExpert notes artificially weighted low-speed steering and firm brake pedal, and Chasing Cars found an 'abrupt, reactive' ride and numb steering on 21-inch wheels",
+    "Low braked tow ratings for its size: 1,200kg for the Pro SWB and only 1,000kg for the Pro LWB; there is no spare wheel, only a repair kit",
+    "Haptic steering-wheel buttons are easy to bump and the touchscreen sliders take learning, and options such as two-tone paint (about $4,000) push it towards six figures",
+    "Volkswagen cut prices by $10,000-12,000 in February 2026 and still sells it on drive-away campaigns, which weighs on resale"
+  ],
+  "sources": [
+    "https://www.volkswagen.com.au/en/models/id-buzz.html",
+    "https://www.volkswagen.com.au/en/configurator.html/__app/id-buzz.app",
+    "https://www.volkswagen.com.au/idhub/content/dam/onehub_pkw/importers/au/model/id-buzz/2025/VW_CV_ID%20Buzz%20GTX_2025_Brochure.pdf",
+    "https://www.carexpert.com.au/car-news/2027-volkswagen-id-buzz-lineup-announced-with-new-grade-new-equipment",
+    "https://www.carexpert.com.au/car-news/volkswagen-id-buzz-gets-another-round-of-price-cuts",
+    "https://www.goauto.com.au/new-models/volkswagen/id-buzz/2026-07-29/99961.html",
+    "https://www.carexpert.com.au/volkswagen/id-buzz/2027-pro-mpv-rwd-electric-jsggms5820260924",
+    "https://www.carexpert.com.au/volkswagen/id-buzz/2027-pro-mpv-rwd-electric-jsggms5520260924",
+    "https://www.carexpert.com.au/volkswagen/id-buzz/2027-gtx-mpv-4x4-electric-jsggms5a20260924",
+    "https://www.carexpert.com.au/car-reviews/2025-volkswagen-id-buzz-review",
+    "https://chasingcars.com.au/reviews/vans/volkswagen-id-buzz-pro-2025-review",
+    "https://www.racv.com.au/royalauto/car-reviews/volkswagen/2025-volkswagen-id-buzz-review.html",
+    "https://www.carsguide.com.au/car-news/family-ev-keeps-low-price-2026-volkswagen-id-buzz-electric-van-keeps-sharp-drive-away"
+  ],
+  "sourcedAt": "2026-11-27"
+}
