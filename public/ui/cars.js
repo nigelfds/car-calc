@@ -120,6 +120,20 @@ export function diagnoseEmptyFilters(vehicles, filters) {
 // Header provenance: how much data is behind the answers, and how fresh it
 // is. Derived from the dataset itself rather than written into the markup, so
 // the numbers cannot quietly drift from what actually ships.
+// The header's one-line summary. Shared with server/app.js, which writes the
+// same line into index.html before it is sent, so the header is complete on
+// first paint instead of filling in once the dataset has downloaded.
+export function datasetStatsLine(stats) {
+  return [
+    // "cars" for the model count was ambiguous — it read as either the
+    // number of brands or the number of buyable variants, and was neither.
+    `${stats.brands} brands`,
+    `${stats.models} models`,
+    `${stats.variants} variants`,
+    stats.updated ? `last updated ${stats.updated}` : null
+  ].filter(Boolean).join(' · ');
+}
+
 export function datasetStats({ vehicles = [], families = [] } = {}) {
   const withVariants = new Set(vehicles.map(v => v.familyId));
   // Families with no rows are not cars anyone can be shown, so they are not

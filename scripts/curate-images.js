@@ -27,7 +27,7 @@ import { CAR_IMAGE_DIR } from '../public/ui/image-constants.js';
 // fileURLToPath, not new URL(...).pathname — the latter percent-encodes
 // spaces rather than decoding them, so a checkout under a path containing a
 // space would resolve every join() built on these to a directory that does
-// not exist. See server/index.js for the same precedent.
+// not exist. See server/app.js for the same precedent.
 const here = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(here, '..');
 const dataDir = join(rootDir, 'data');

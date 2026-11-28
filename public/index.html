@@ -18,6 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Start the dataset download with the page rather than after ui/app.js
+       and its imports have loaded. crossorigin makes this request match the
+       one fetch('/api/dataset') makes, so the browser reuses it. -->
+  <link rel="preload" href="/api/dataset" as="fetch" crossorigin />
 </head>
 <body>
 
@@ -40,8 +44,9 @@
         <p class="site-header__subhead">Melbourne EVs matched to what you earn and what they really cost to
           own — purchase, tax, running costs and resale, over the whole term.</p>
       </div>
-      <!-- Populated at boot from /api/dataset (ui/app.js) rather than written
-           here, so the counts cannot drift from the data actually shipped. -->
+      <!-- Left empty here: server/app.js writes the counts in from the live
+           dataset before sending the page (so the header is complete on first
+           paint), and ui/app.js writes the same line again at boot. -->
       <p class="site-header__stats" id="dataset-stats"></p>
     </div>
     <div class="route-rule" aria-hidden="true">

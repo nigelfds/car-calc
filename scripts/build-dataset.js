@@ -17,7 +17,7 @@ import { CAR_IMAGE_DIR } from '../public/ui/image-constants.js';
 // fileURLToPath, not new URL(...).pathname — the latter percent-encodes
 // spaces (and other reserved characters) rather than decoding them, so a
 // checkout under a path containing a space silently breaks both this guard
-// and every join() built on it. See server/index.js for the same precedent.
+// and every join() built on it. See server/app.js for the same precedent.
 const here = dirname(fileURLToPath(import.meta.url));
 const dataDir = join(here, '..', 'data');
 const publicDir = join(here, '..', 'public');
