@@ -241,7 +241,10 @@ No bundler, no framework, no build step — native ES modules throughout, so the
 core (`calc/`) is imported completely unchanged by both the Node test runner and the browser.
 Express (`server/`) serves the static frontend (`public/`), the dataset, and two thin API
 routes: `/api/dataset` (vehicles, families, rates and tax tables, fetched once at boot) and
-`/api/health`.
+`/api/health`. Responses are gzipped. `index.html` is sent with the header's dataset counts already
+written in and with `<link rel="modulepreload">` for every module `ui/app.js` imports (found by
+walking the imports at startup), and it preloads `/api/dataset`, so the header is complete on first
+paint and the car data downloads alongside the scripts instead of after them.
 Purchasing power (`calc/capacity.js`) and shortlist ranking (`calc/rank.js`) are deterministic
 functions that never call a model — the same inputs always produce the same order, for free, offline.
 

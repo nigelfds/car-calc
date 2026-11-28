@@ -11,7 +11,7 @@ import { renderInputs, bindPresets, syncPresets, renderEchoes } from './sections
 import { verdictAt, renderVerdict, renderRatesPanel, debounce } from './slider.js';
 import { renderChart } from './crossover-chart.js';
 import {
-  filterVehicles, cardModel, renderCards, datasetStats, diagnoseEmptyFilters
+  filterVehicles, cardModel, renderCards, datasetStats, datasetStatsLine, diagnoseEmptyFilters
 } from './cars.js';
 import { rankVehicles, bracketAroundPrice } from '../../calc/rank.js';
 import { fbtCliff } from '../../calc/compare.js';
@@ -542,15 +542,7 @@ function boot(root, dataset) {
   // during a session, so this does not belong in render().
   const statsEl = root.querySelector('#dataset-stats');
   if (statsEl) {
-    const stats = datasetStats({ vehicles, families });
-    statsEl.textContent = [
-      // "cars" for the model count was ambiguous — it read as either the
-      // number of brands or the number of buyable variants, and was neither.
-      `${stats.brands} brands`,
-      `${stats.models} models`,
-      `${stats.variants} variants`,
-      stats.updated ? `last updated ${stats.updated}` : null
-    ].filter(Boolean).join(' · ');
+    statsEl.textContent = datasetStatsLine(datasetStats({ vehicles, families }));
   }
 
   const slider = root.querySelector('#budgetSlider');
